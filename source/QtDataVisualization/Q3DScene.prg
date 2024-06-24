@@ -200,7 +200,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETPRIMARYSUBVIEWPORT )
     if (ISNUMPAR(1) && ISQRECT(1))
     {
 #endif
-      obj->setPrimarySubViewport( *PQRECT(1));
+      obj->setPrimarySubViewport(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWPORT )
     if (ISNUMPAR(1) && ISQRECT(1))
     {
 #endif
-      obj->setSecondarySubViewport( *PQRECT(1));
+      obj->setSecondarySubViewport(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSELECTIONQUERYPOSITION )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      obj->setSelectionQueryPosition( *PQPOINT(1));
+      obj->setSelectionQueryPosition(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETGRAPHPOSITIONQUERY )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      obj->setGraphPositionQuery( *PQPOINT(1));
+      obj->setGraphPositionQuery(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISPOINTINPRIMARYSUBVIEW )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      RBOOL(obj->isPointInPrimarySubView( *PQPOINT(1)));
+      RBOOL(obj->isPointInPrimarySubView(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -691,7 +691,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISPOINTINSECONDARYSUBVIEW )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      RBOOL(obj->isPointInSecondarySubView( *PQPOINT(1)));
+      RBOOL(obj->isPointInSecondarySubView(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

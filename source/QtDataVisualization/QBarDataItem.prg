@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QBARDATAITEM_NEW )
     QBarDataItem( const QBarDataItem & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QBarDataItem( *PQBARDATAITEM(1));
+    auto obj = new QBarDataItem(*PQBARDATAITEM(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 

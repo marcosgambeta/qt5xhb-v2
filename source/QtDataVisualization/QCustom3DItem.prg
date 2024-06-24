@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETPOSITION )
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      obj->setPosition( *PQVECTOR3D(1));
+      obj->setPosition(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETSCALING )
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      obj->setScaling( *PQVECTOR3D(1));
+      obj->setScaling(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETROTATION )
     if (ISNUMPAR(1) && ISQQUATERNION(1))
     {
 #endif
-      obj->setRotation( *PQQUATERNION(1));
+      obj->setRotation(*PQQUATERNION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -642,7 +642,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETROTATIONAXISANDANGLE )
     if (ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRotationAxisAndAngle( *PQVECTOR3D(1), PFLOAT(2));
+      obj->setRotationAxisAndAngle(*PQVECTOR3D(1), PFLOAT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETTEXTUREIMAGE )
     if (ISNUMPAR(1) && ISQIMAGE(1))
     {
 #endif
-      obj->setTextureImage( *PQIMAGE(1));
+      obj->setTextureImage(*PQIMAGE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

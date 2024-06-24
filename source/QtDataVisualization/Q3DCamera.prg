@@ -328,7 +328,7 @@ HB_FUNC_STATIC( Q3DCAMERA_SETCAMERAPRESET )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCameraPreset( static_cast<Q3DCamera::CameraPreset>( hb_parni(1)));
+      obj->setCameraPreset(static_cast<Q3DCamera::CameraPreset>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( Q3DCAMERA_SETTARGET )
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      obj->setTarget( *PQVECTOR3D(1));
+      obj->setTarget(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( Q3DCAMERA_COPYVALUESFROM )
     if (ISNUMPAR(1) && ISQ3DOBJECT(1))
     {
 #endif
-      obj->copyValuesFrom( *PQ3DOBJECT(1));
+      obj->copyValuesFrom(*PQ3DOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

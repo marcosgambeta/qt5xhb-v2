@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETSELECTEDPOINT )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      obj->setSelectedPoint( *PQPOINT(1));
+      obj->setSelectedPoint(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETDRAWMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDrawMode( static_cast<QSurface3DSeries::DrawFlags>( hb_parni(1)));
+      obj->setDrawMode(static_cast<QSurface3DSeries::DrawFlags>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETTEXTURE )
     if (ISNUMPAR(1) && ISQIMAGE(1))
     {
 #endif
-      obj->setTexture( *PQIMAGE(1));
+      obj->setTexture(*PQIMAGE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

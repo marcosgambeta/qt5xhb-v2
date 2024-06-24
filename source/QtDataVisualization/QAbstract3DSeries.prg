@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESH )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMesh( static_cast<QAbstract3DSeries::Mesh>( hb_parni(1)));
+      obj->setMesh(static_cast<QAbstract3DSeries::Mesh>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHROTATION )
     if (ISNUMPAR(1) && ISQQUATERNION(1))
     {
 #endif
-      obj->setMeshRotation( *PQQUATERNION(1));
+      obj->setMeshRotation(*PQQUATERNION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETCOLORSTYLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setColorStyle( static_cast<Q3DTheme::ColorStyle>( hb_parni(1)));
+      obj->setColorStyle(static_cast<Q3DTheme::ColorStyle>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETBASEGRADIENT )
     if (ISNUMPAR(1) && ISQLINEARGRADIENT(1))
     {
 #endif
-      obj->setBaseGradient( *PQLINEARGRADIENT(1));
+      obj->setBaseGradient(*PQLINEARGRADIENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTGRADIENT )
     if (ISNUMPAR(1) && ISQLINEARGRADIENT(1))
     {
 #endif
-      obj->setSingleHighlightGradient( *PQLINEARGRADIENT(1));
+      obj->setSingleHighlightGradient(*PQLINEARGRADIENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -850,7 +850,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMULTIHIGHLIGHTGRADIENT )
     if (ISNUMPAR(1) && ISQLINEARGRADIENT(1))
     {
 #endif
-      obj->setMultiHighlightGradient( *PQLINEARGRADIENT(1));
+      obj->setMultiHighlightGradient(*PQLINEARGRADIENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHAXISANDANGLE )
     if (ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setMeshAxisAndAngle( *PQVECTOR3D(1), PFLOAT(2));
+      obj->setMeshAxisAndAngle(*PQVECTOR3D(1), PFLOAT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -807,7 +807,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWROLEPATTERN )
     if (ISNUMPAR(1) && ISQREGEXP(1))
     {
 #endif
-      obj->setRowRolePattern( *PQREGEXP(1));
+      obj->setRowRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNROLEPATTERN )
     if (ISNUMPAR(1) && ISQREGEXP(1))
     {
 #endif
-      obj->setColumnRolePattern( *PQREGEXP(1));
+      obj->setColumnRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETVALUEROLEPATTERN )
     if (ISNUMPAR(1) && ISQREGEXP(1))
     {
 #endif
-      obj->setValueRolePattern( *PQREGEXP(1));
+      obj->setValueRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROTATIONROLEPATTERN )
     if (ISNUMPAR(1) && ISQREGEXP(1))
     {
 #endif
-      obj->setRotationRolePattern( *PQREGEXP(1));
+      obj->setRotationRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1242,7 +1242,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETMULTIMATCHBEHAVIOR )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMultiMatchBehavior( static_cast<QItemModelBarDataProxy::MultiMatchBehavior>( hb_parni(1)));
+      obj->setMultiMatchBehavior(static_cast<QItemModelBarDataProxy::MultiMatchBehavior>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

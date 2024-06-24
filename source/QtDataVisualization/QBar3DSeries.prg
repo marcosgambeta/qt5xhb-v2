@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_SETSELECTEDBAR )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      obj->setSelectedBar( *PQPOINT(1));
+      obj->setSelectedBar(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

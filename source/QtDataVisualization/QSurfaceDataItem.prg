@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_NEW )
     QSurfaceDataItem( const QVector3D & position )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QSurfaceDataItem( *PQVECTOR3D(1));
+    auto obj = new QSurfaceDataItem(*PQVECTOR3D(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_NEW )
     QSurfaceDataItem( const QSurfaceDataItem & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QSurfaceDataItem( *PQSURFACEDATAITEM(1));
+    auto obj = new QSurfaceDataItem(*PQSURFACEDATAITEM(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_SETPOSITION )
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      obj->setPosition( *PQVECTOR3D(1));
+      obj->setPosition(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

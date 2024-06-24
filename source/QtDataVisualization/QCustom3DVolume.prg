@@ -828,7 +828,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMEWIDTHS )
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      obj->setSliceFrameWidths( *PQVECTOR3D(1));
+      obj->setSliceFrameWidths(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMEGAPS )
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      obj->setSliceFrameGaps( *PQVECTOR3D(1));
+      obj->setSliceFrameGaps(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -938,7 +938,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMETHICKNESSES )
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      obj->setSliceFrameThicknesses( *PQVECTOR3D(1));
+      obj->setSliceFrameThicknesses(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1046,7 +1046,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
 
     if (obj != nullptr)
     {
-      obj->setSubTextureData( static_cast<Qt::Axis>( hb_parni(1)), PINT(2), PCONSTUCHAR(3));
+      obj->setSubTextureData(static_cast<Qt::Axis>(hb_parni(1)), PINT(2), PCONSTUCHAR(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1063,7 +1063,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
 
     if (obj != nullptr)
     {
-      obj->setSubTextureData( static_cast<Qt::Axis>( hb_parni(1)), PINT(2), *PQIMAGE(3));
+      obj->setSubTextureData(static_cast<Qt::Axis>(hb_parni(1)), PINT(2), *PQIMAGE(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1090,7 +1090,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREFORMAT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextureFormat( static_cast<QImage::Format>( hb_parni(1)));
+      obj->setTextureFormat(static_cast<QImage::Format>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1144,7 +1144,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_RENDERSLICE )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      auto ptr = new QImage(obj->renderSlice( static_cast<Qt::Axis>( hb_parni(1)), PINT(2)));
+      auto ptr = new QImage(obj->renderSlice(static_cast<Qt::Axis>(hb_parni(1)), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

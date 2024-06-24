@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETSELECTIONMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSelectionMode( static_cast<QAbstract3DGraph::SelectionFlags>( hb_parni(1)));
+      obj->setSelectionMode(static_cast<QAbstract3DGraph::SelectionFlags>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETSHADOWQUALITY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setShadowQuality( static_cast<QAbstract3DGraph::ShadowQuality>( hb_parni(1)));
+      obj->setShadowQuality(static_cast<QAbstract3DGraph::ShadowQuality>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -659,7 +659,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETOPTIMIZATIONHINTS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOptimizationHints( static_cast<QAbstract3DGraph::OptimizationHints>( hb_parni(1)));
+      obj->setOptimizationHints(static_cast<QAbstract3DGraph::OptimizationHints>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -984,7 +984,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETLOCALE )
     if (ISNUMPAR(1) && ISQLOCALE(1))
     {
 #endif
-      obj->setLocale( *PQLOCALE(1));
+      obj->setLocale(*PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1154,7 +1154,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_INPUTHANDLERS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -1259,7 +1259,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_THEMES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -1439,7 +1439,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_REMOVECUSTOMITEMAT )
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      obj->removeCustomItemAt( *PQVECTOR3D(1));
+      obj->removeCustomItemAt(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1500,7 +1500,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_CUSTOMITEMS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

@@ -143,7 +143,7 @@ HB_FUNC_STATIC( Q3DTHEME_NEW )
     Q3DTheme( Q3DTheme::Theme themeType, QObject * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new Q3DTheme( static_cast<Q3DTheme::Theme>( hb_parni(1)), OPQOBJECT( 2, nullptr));
+    auto obj = new Q3DTheme(static_cast<Q3DTheme::Theme>(hb_parni(1)), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETTYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setType( static_cast<Q3DTheme::Theme>( hb_parni(1)));
+      obj->setType(static_cast<Q3DTheme::Theme>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( Q3DTHEME_BASECOLORS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -298,13 +298,13 @@ HB_FUNC_STATIC( Q3DTHEME_SETBASECOLORS )
     {
 #endif
       QList<QColor> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QColor*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << *static_cast<QColor*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->setBaseColors( par1);
+      obj->setBaseColors(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( Q3DTHEME_BASEGRADIENTS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -825,13 +825,13 @@ HB_FUNC_STATIC( Q3DTHEME_SETBASEGRADIENTS )
     {
 #endif
       QList<QLinearGradient> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QLinearGradient*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << *static_cast<QLinearGradient*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->setBaseGradients( par1);
+      obj->setBaseGradients(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETSINGLEHIGHLIGHTGRADIENT )
     if (ISNUMPAR(1) && ISQLINEARGRADIENT(1))
     {
 #endif
-      obj->setSingleHighlightGradient( *PQLINEARGRADIENT(1));
+      obj->setSingleHighlightGradient(*PQLINEARGRADIENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETMULTIHIGHLIGHTGRADIENT )
     if (ISNUMPAR(1) && ISQLINEARGRADIENT(1))
     {
 #endif
-      obj->setMultiHighlightGradient( *PQLINEARGRADIENT(1));
+      obj->setMultiHighlightGradient(*PQLINEARGRADIENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1212,7 +1212,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETFONT )
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setFont( *PQFONT(1));
+      obj->setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1428,7 +1428,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETCOLORSTYLE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setColorStyle( static_cast<Q3DTheme::ColorStyle>( hb_parni(1)));
+      obj->setColorStyle(static_cast<Q3DTheme::ColorStyle>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1636,7 +1636,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASECOLORSCHANGED )
             auto pArg1 = hb_itemArrayNew(0);
             if (pDynSym != nullptr)
             {
-              for( const auto & item : arg1 )
+              for (const auto & item : arg1)
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();
@@ -1711,7 +1711,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
             auto pArg1 = hb_itemArrayNew(0);
             if (pDynSym != nullptr)
             {
-              for( const auto & item : arg1 )
+              for (const auto & item : arg1)
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();

@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTVIEW )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setInputView( static_cast<QAbstract3DInputHandler::InputView>( hb_parni(1)));
+      obj->setInputView(static_cast<QAbstract3DInputHandler::InputView>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION )
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      obj->setInputPosition( *PQPOINT(1));
+      obj->setInputPosition(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -173,7 +173,7 @@ HB_FUNC_STATIC( Q3DOBJECT_SETPOSITION )
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      obj->setPosition( *PQVECTOR3D(1));
+      obj->setPosition(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( Q3DOBJECT_COPYVALUESFROM )
     if (ISNUMPAR(1) && ISQ3DOBJECT(1))
     {
 #endif
-      obj->copyValuesFrom( *PQ3DOBJECT(1));
+      obj->copyValuesFrom(*PQ3DOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

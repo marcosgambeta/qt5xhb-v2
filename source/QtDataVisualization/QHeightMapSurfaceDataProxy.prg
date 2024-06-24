@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_NEW )
     QHeightMapSurfaceDataProxy( const QImage & image, QObject * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QHeightMapSurfaceDataProxy( *PQIMAGE(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QHeightMapSurfaceDataProxy(*PQIMAGE(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAP )
     if (ISNUMPAR(1) && ISQIMAGE(1))
     {
 #endif
-      obj->setHeightMap( *PQIMAGE(1));
+      obj->setHeightMap(*PQIMAGE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

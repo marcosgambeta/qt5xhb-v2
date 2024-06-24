@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETXPOSROLEPATTERN )
     if (ISNUMPAR(1) && ISQREGEXP(1))
     {
 #endif
-      obj->setXPosRolePattern( *PQREGEXP(1));
+      obj->setXPosRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETYPOSROLEPATTERN )
     if (ISNUMPAR(1) && ISQREGEXP(1))
     {
 #endif
-      obj->setYPosRolePattern( *PQREGEXP(1));
+      obj->setYPosRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETZPOSROLEPATTERN )
     if (ISNUMPAR(1) && ISQREGEXP(1))
     {
 #endif
-      obj->setZPosRolePattern( *PQREGEXP(1));
+      obj->setZPosRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEPATTERN )
     if (ISNUMPAR(1) && ISQREGEXP(1))
     {
 #endif
-      obj->setRotationRolePattern( *PQREGEXP(1));
+      obj->setRotationRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

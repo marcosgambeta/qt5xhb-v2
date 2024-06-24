@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETROWROLEPATTERN )
     if (ISNUMPAR(1) && ISQREGEXP(1))
     {
 #endif
-      obj->setRowRolePattern( *PQREGEXP(1));
+      obj->setRowRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEPATTERN )
     if (ISNUMPAR(1) && ISQREGEXP(1))
     {
 #endif
-      obj->setColumnRolePattern( *PQREGEXP(1));
+      obj->setColumnRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -980,7 +980,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETXPOSROLEPATTERN )
     if (ISNUMPAR(1) && ISQREGEXP(1))
     {
 #endif
-      obj->setXPosRolePattern( *PQREGEXP(1));
+      obj->setXPosRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1035,7 +1035,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETYPOSROLEPATTERN )
     if (ISNUMPAR(1) && ISQREGEXP(1))
     {
 #endif
-      obj->setYPosRolePattern( *PQREGEXP(1));
+      obj->setYPosRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1090,7 +1090,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETZPOSROLEPATTERN )
     if (ISNUMPAR(1) && ISQREGEXP(1))
     {
 #endif
-      obj->setZPosRolePattern( *PQREGEXP(1));
+      obj->setZPosRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1414,7 +1414,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETMULTIMATCHBEHAVIOR )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMultiMatchBehavior( static_cast<QItemModelSurfaceDataProxy::MultiMatchBehavior>( hb_parni(1)));
+      obj->setMultiMatchBehavior(static_cast<QItemModelSurfaceDataProxy::MultiMatchBehavior>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_NEW )
     QScatterDataItem( const QVector3D & position )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QScatterDataItem( *PQVECTOR3D(1));
+    auto obj = new QScatterDataItem(*PQVECTOR3D(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_NEW )
     QScatterDataItem( const QVector3D & position, const QQuaternion & rotation )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QScatterDataItem( *PQVECTOR3D(1), *PQQUATERNION(2));
+    auto obj = new QScatterDataItem(*PQVECTOR3D(1), *PQQUATERNION(2));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_NEW )
     QScatterDataItem( const QScatterDataItem & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QScatterDataItem( *PQSCATTERDATAITEM(1));
+    auto obj = new QScatterDataItem(*PQSCATTERDATAITEM(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETPOSITION )
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      obj->setPosition( *PQVECTOR3D(1));
+      obj->setPosition(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETROTATION )
     if (ISNUMPAR(1) && ISQQUATERNION(1))
     {
 #endif
-      obj->setRotation( *PQQUATERNION(1));
+      obj->setRotation(*PQQUATERNION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

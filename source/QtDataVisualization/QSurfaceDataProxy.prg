@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
 
     if (obj != nullptr)
     {
-      auto ptr = obj->itemAt( *PQPOINT(1));
+      auto ptr = obj->itemAt(*PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QSURFACEDATAITEM", false);
     }
 #endif
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_SETITEM )
 
     if (obj != nullptr)
     {
-      obj->setItem( *PQPOINT(1), *PQSURFACEDATAITEM(2));
+      obj->setItem(*PQPOINT(1), *PQSURFACEDATAITEM(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());

@@ -286,7 +286,7 @@ HB_FUNC_STATIC( Q3DBARS_SETBARSPACING )
     if (ISNUMPAR(1) && ISQSIZEF(1))
     {
 #endif
-      obj->setBarSpacing( *PQSIZEF(1));
+      obj->setBarSpacing(*PQSIZEF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( Q3DBARS_SERIESLIST )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -863,7 +863,7 @@ HB_FUNC_STATIC( Q3DBARS_AXES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
