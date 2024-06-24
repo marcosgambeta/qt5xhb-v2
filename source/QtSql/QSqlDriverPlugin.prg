@@ -51,7 +51,7 @@ RETURN
 
 #include <QtSql/QSqlDriver>
 
-HB_FUNC_STATIC( QSQLDRIVERPLUGIN_DELETE )
+HB_FUNC_STATIC(QSQLDRIVERPLUGIN_DELETE)
 {
   auto obj = qobject_cast<QSqlDriverPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -70,9 +70,9 @@ HB_FUNC_STATIC( QSQLDRIVERPLUGIN_DELETE )
 }
 
 /*
-virtual QSqlDriver * create( const QString & key ) = 0
+virtual QSqlDriver * create(const QString & key) = 0
 */
-HB_FUNC_STATIC( QSQLDRIVERPLUGIN_CREATE )
+HB_FUNC_STATIC(QSQLDRIVERPLUGIN_CREATE)
 {
   auto obj = qobject_cast<QSqlDriverPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

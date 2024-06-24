@@ -59,7 +59,7 @@ RETURN
 #include <QtSql/QSqlRelation>
 #endif
 
-HB_FUNC_STATIC( QSQLRELATION_NEW )
+HB_FUNC_STATIC(QSQLRELATION_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QSQLRELATION_NEW )
   else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
   {
     /*
-    QSqlRelation( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
+    QSqlRelation(const QString & tableName, const QString & indexColumn, const QString & displayColumn)
     */
     auto obj = new QSqlRelation(PQSTRING(1), PQSTRING(2), PQSTRING(3));
     Qt5xHb::returnNewObject(obj, true);
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSQLRELATION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSQLRELATION_DELETE )
+HB_FUNC_STATIC(QSQLRELATION_DELETE)
 {
   auto obj = static_cast<QSqlRelation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSQLRELATION_DELETE )
 /*
 QString displayColumn() const
 */
-HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
+HB_FUNC_STATIC(QSQLRELATION_DISPLAYCOLUMN)
 {
   auto obj = static_cast<QSqlRelation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
 /*
 QString indexColumn() const
 */
-HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
+HB_FUNC_STATIC(QSQLRELATION_INDEXCOLUMN)
 {
   auto obj = static_cast<QSqlRelation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QSQLRELATION_ISVALID )
+HB_FUNC_STATIC(QSQLRELATION_ISVALID)
 {
   auto obj = static_cast<QSqlRelation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSQLRELATION_ISVALID )
 /*
 QString tableName() const
 */
-HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
+HB_FUNC_STATIC(QSQLRELATION_TABLENAME)
 {
   auto obj = static_cast<QSqlRelation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
   }
 }
 
-HB_FUNC_STATIC( QSQLRELATION_NEWFROM )
+HB_FUNC_STATIC(QSQLRELATION_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -227,22 +227,22 @@ HB_FUNC_STATIC( QSQLRELATION_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSQLRELATION_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSQLRELATION_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QSQLRELATION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSQLRELATION_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSQLRELATION_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QSQLRELATION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSQLRELATION_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSQLRELATION_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSQLRELATION_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSQLRELATION_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

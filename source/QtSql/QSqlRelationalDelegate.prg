@@ -52,13 +52,13 @@ RETURN
 #endif
 
 /*
-QSqlRelationalDelegate( QObject * aParent = nullptr )
+QSqlRelationalDelegate(QObject * aParent = nullptr)
 */
-HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_NEW )
+HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QSqlRelationalDelegate( OPQOBJECT( 1, nullptr));
+    auto obj = new QSqlRelationalDelegate(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_DELETE )
+HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_DELETE)
 {
   auto obj = static_cast<QSqlRelationalDelegate*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -86,9 +86,9 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_DELETE )
 }
 
 /*
-QWidget * createEditor( QWidget * aParent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
+QWidget * createEditor(QWidget * aParent, const QStyleOptionViewItem & option, const QModelIndex & index) const
 */
-HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
+HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_CREATEEDITOR)
 {
   auto obj = static_cast<QSqlRelationalDelegate*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
     {
 #endif
       auto ptr = obj->createEditor(PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3));
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,9 +111,9 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
 }
 
 /*
-void setModelData( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
+void setModelData(QWidget * editor, QAbstractItemModel * model, const QModelIndex & index) const
 */
-HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_SETMODELDATA )
+HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_SETMODELDATA)
 {
   auto obj = static_cast<QSqlRelationalDelegate*>(Qt5xHb::itemGetPtrStackSelfItem());
 

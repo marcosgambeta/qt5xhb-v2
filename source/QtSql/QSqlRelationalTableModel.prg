@@ -63,13 +63,13 @@ RETURN
 #endif
 
 /*
-QSqlRelationalTableModel( QObject * parent = nullptr, QSqlDatabase db = QSqlDatabase() )
+QSqlRelationalTableModel(QObject * parent = nullptr, QSqlDatabase db = QSqlDatabase())
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_NEW )
+HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && (ISQSQLDATABASE(2) || HB_ISNIL(2)))
   {
-    auto obj = new QSqlRelationalTableModel( OPQOBJECT( 1, nullptr ), HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtr(2)));
+    auto obj = new QSqlRelationalTableModel(OPQOBJECT(1, nullptr), HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase*>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DELETE )
+HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DELETE)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -97,9 +97,9 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DELETE )
 }
 
 /*
-QSqlRelation relation( int column ) const
+QSqlRelation relation(int column) const
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATION )
+HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATION)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -122,9 +122,9 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATION )
 }
 
 /*
-virtual QSqlTableModel * relationModel( int column ) const
+virtual QSqlTableModel * relationModel(int column) const
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATIONMODEL )
+HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATIONMODEL)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -147,9 +147,9 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATIONMODEL )
 }
 
 /*
-virtual void setRelation( int column, const QSqlRelation & relation )
+virtual void setRelation(int column, const QSqlRelation & relation)
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETRELATION )
+HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETRELATION)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETRELATION )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_CLEAR )
+HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_CLEAR)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -199,9 +199,9 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_CLEAR )
 }
 
 /*
-QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
+QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DATA )
+HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DATA)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DATA )
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr = new QVariant(obj->data(*PQMODELINDEX(1), OPINT( 2, Qt::DisplayRole )));
+      auto ptr = new QVariant(obj->data(*PQMODELINDEX(1), OPINT(2, Qt::DisplayRole)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -224,9 +224,9 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DATA )
 }
 
 /*
-bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
+bool removeColumns(int column, int count, const QModelIndex & parent = QModelIndex())
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS )
+HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS )
 /*
 bool select()
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SELECT )
+HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SELECT)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -272,9 +272,9 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SELECT )
 }
 
 /*
-bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
+bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole)
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETDATA )
+HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETDATA)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETDATA )
     if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT( 3, Qt::EditRole )));
+      RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT(3, Qt::EditRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,9 +296,9 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETDATA )
 }
 
 /*
-void setTable( const QString & table )
+void setTable(const QString & table)
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETTABLE )
+HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETTABLE)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -322,9 +322,9 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETTABLE )
 }
 
 /*
-void revertRow( int row )
+void revertRow(int row)
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REVERTROW )
+HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REVERTROW)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -348,9 +348,9 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REVERTROW )
 }
 
 /*
-void setJoinMode( QSqlRelationalTableModel::JoinMode joinMode )
+void setJoinMode(QSqlRelationalTableModel::JoinMode joinMode)
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETJOINMODE )
+HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETJOINMODE)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
