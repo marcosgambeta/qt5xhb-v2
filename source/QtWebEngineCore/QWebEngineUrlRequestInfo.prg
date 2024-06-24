@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_REDIRECT )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->redirect( *PQURL(1));
+      obj->redirect(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_SETHTTPHEADER )
     if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2))
     {
 #endif
-      obj->setHttpHeader( *PQBYTEARRAY(1), *PQBYTEARRAY(2));
+      obj->setHttpHeader(*PQBYTEARRAY(1), *PQBYTEARRAY(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
