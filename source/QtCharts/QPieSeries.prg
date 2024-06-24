@@ -560,13 +560,13 @@ HB_FUNC_STATIC( QPIESERIES_APPEND )
     if (obj != nullptr)
     {
       QList<QPieSlice *> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << static_cast<QPieSlice*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << static_cast<QPieSlice*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      RBOOL(obj->append( par1));
+      RBOOL(obj->append(par1));
     }
 #endif
 
@@ -718,7 +718,7 @@ HB_FUNC_STATIC( QPIESERIES_SLICES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QPIESERIES_SETLABELSPOSITION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLabelsPosition( static_cast<QPieSlice::LabelPosition>( hb_parni(1)));
+      obj->setLabelsPosition(static_cast<QPieSlice::LabelPosition>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QPIESERIES_ONADDED )
             auto pArg1 = hb_itemArrayNew(0);
             if (pDynSym != nullptr)
             {
-              for( auto item : arg1 )
+              for (auto item : arg1)
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();
@@ -1261,7 +1261,7 @@ HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
             auto pArg1 = hb_itemArrayNew(0);
             if (pDynSym != nullptr)
             {
-              for( auto item : arg1 )
+              for (auto item : arg1)
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();

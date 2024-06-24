@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSPOSITION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLabelsPosition( static_cast<QAbstractBarSeries::LabelsPosition>( hb_parni(1)));
+      obj->setLabelsPosition(static_cast<QAbstractBarSeries::LabelsPosition>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -433,13 +433,13 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_APPEND )
     if (obj != nullptr)
     {
       QList<QBarSet *> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << static_cast<QBarSet*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << static_cast<QBarSet*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      RBOOL(obj->append( par1));
+      RBOOL(obj->append(par1));
     }
 #endif
 
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_BARSETS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
             auto pArg1 = hb_itemArrayNew(0);
             if (pDynSym != nullptr)
             {
-              for( auto item : arg1 )
+              for (auto item : arg1)
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
             auto pArg1 = hb_itemArrayNew(0);
             if (pDynSym != nullptr)
             {
-              for( auto item : arg1 )
+              for (auto item : arg1)
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();

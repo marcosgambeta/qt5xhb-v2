@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QLEGEND_SETCOLOR )
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setColor( *PQCOLOR(1));
+      obj->setColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QLEGEND_SETBORDERCOLOR )
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setBorderColor( *PQCOLOR(1));
+      obj->setBorderColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QLEGEND_SETFONT )
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setFont( *PQFONT(1));
+      obj->setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QLEGEND_SETLABELCOLOR )
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setLabelColor( *PQCOLOR(1));
+      obj->setLabelColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QLEGEND_SETMARKERSHAPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMarkerShape( static_cast<QLegend::MarkerShape>( hb_parni(1)));
+      obj->setMarkerShape(static_cast<QLegend::MarkerShape>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QLEGEND_SETBRUSH )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBrush( *PQBRUSH(1));
+      obj->setBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QLEGEND_SETPEN )
     if (ISNUMPAR(1) && ISQPEN(1))
     {
 #endif
-      obj->setPen( *PQPEN(1));
+      obj->setPen(*PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QLEGEND_SETLABELBRUSH )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setLabelBrush( *PQBRUSH(1));
+      obj->setLabelBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QLEGEND_SETALIGNMENT )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlignment( static_cast<Qt::Alignment>( hb_parni(1)));
+      obj->setAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( QLEGEND_MARKERS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QBOXSET_SETPEN )
     if (ISNUMPAR(1) && ISQPEN(1))
     {
 #endif
-      obj->setPen( *PQPEN(1));
+      obj->setPen(*PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QBOXSET_SETBRUSH )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBrush( *PQBRUSH(1));
+      obj->setBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,15 +271,15 @@ HB_FUNC_STATIC( QBOXSET_APPEND )
     if (obj != nullptr)
     {
       QList<qreal> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
       qreal temp1;
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
         temp1 = hb_arrayGetND(aList1, i1+1);
         par1 << temp1;
       }
-      obj->append( par1);
+      obj->append(par1);
     }
 
     hb_itemReturn(hb_stackSelfItem());

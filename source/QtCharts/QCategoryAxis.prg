@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_SETLABELSPOSITION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLabelsPosition( static_cast<QCategoryAxis::AxisLabelsPosition>( hb_parni(1)));
+      obj->setLabelsPosition(static_cast<QCategoryAxis::AxisLabelsPosition>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

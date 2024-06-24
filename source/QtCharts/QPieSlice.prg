@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELPOSITION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLabelPosition( static_cast<QPieSlice::LabelPosition>( hb_parni(1)));
+      obj->setLabelPosition(static_cast<QPieSlice::LabelPosition>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QPIESLICE_SETPEN )
     if (ISNUMPAR(1) && ISQPEN(1))
     {
 #endif
-      obj->setPen( *PQPEN(1));
+      obj->setPen(*PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QPIESLICE_SETBORDERCOLOR )
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setBorderColor( *PQCOLOR(1));
+      obj->setBorderColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QPIESLICE_SETBRUSH )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBrush( *PQBRUSH(1));
+      obj->setBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QPIESLICE_SETCOLOR )
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setColor( *PQCOLOR(1));
+      obj->setColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELBRUSH )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setLabelBrush( *PQBRUSH(1));
+      obj->setLabelBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELCOLOR )
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setLabelColor( *PQCOLOR(1));
+      obj->setLabelColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -863,7 +863,7 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELFONT )
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setLabelFont( *PQFONT(1));
+      obj->setLabelFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

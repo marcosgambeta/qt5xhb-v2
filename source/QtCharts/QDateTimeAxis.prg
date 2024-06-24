@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_SETMIN )
     if (ISNUMPAR(1) && ISQDATETIME(1))
     {
 #endif
-      obj->setMin( *PQDATETIME(1));
+      obj->setMin(*PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_SETMAX )
     if (ISNUMPAR(1) && ISQDATETIME(1))
     {
 #endif
-      obj->setMax( *PQDATETIME(1));
+      obj->setMax(*PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_SETRANGE )
     if (ISNUMPAR(2) && ISQDATETIME(1) && ISQDATETIME(2))
     {
 #endif
-      obj->setRange( *PQDATETIME(1), *PQDATETIME(2));
+      obj->setRange(*PQDATETIME(1), *PQDATETIME(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

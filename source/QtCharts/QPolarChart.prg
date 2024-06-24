@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QPOLARCHART_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(0, 2) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    auto obj = new QPolarChart( HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(1)), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( Qt::WindowFlags() ) : static_cast<Qt::WindowFlags >( hb_parni(2)));
+    auto obj = new QPolarChart( HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(1)), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( Qt::WindowFlags() ) : static_cast<Qt::WindowFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QPOLARCHART_ADDAXIS )
     if (ISNUMPAR(2) && ISQABSTRACTAXIS(1) && HB_ISNUM(2))
     {
 #endif
-      obj->addAxis(PQABSTRACTAXIS(1), static_cast<QPolarChart::PolarOrientation>( hb_parni(2)));
+      obj->addAxis(PQABSTRACTAXIS(1), static_cast<QPolarChart::PolarOrientation>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

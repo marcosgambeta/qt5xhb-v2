@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBRUSH )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBrush( *PQBRUSH(1));
+      obj->setBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETPEN )
     if (ISNUMPAR(1) && ISQPEN(1))
     {
 #endif
-      obj->setPen( *PQPEN(1));
+      obj->setPen(*PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -750,13 +750,13 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_APPEND )
     if (obj != nullptr)
     {
       QList<QCandlestickSet *> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << static_cast<QCandlestickSet*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << static_cast<QCandlestickSet*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      RBOOL(obj->append( par1));
+      RBOOL(obj->append(par1));
     }
 #endif
 
@@ -795,13 +795,13 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_REMOVE )
     if (obj != nullptr)
     {
       QList<QCandlestickSet *> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << static_cast<QCandlestickSet*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << static_cast<QCandlestickSet*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      RBOOL(obj->remove( par1));
+      RBOOL(obj->remove(par1));
     }
 #endif
 
@@ -911,7 +911,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -1155,7 +1155,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED )
             auto pArg1 = hb_itemArrayNew(0);
             if (pDynSym != nullptr)
             {
-              for( auto item : arg1 )
+              for (auto item : arg1)
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();
@@ -1230,7 +1230,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED )
             auto pArg1 = hb_itemArrayNew(0);
             if (pDynSym != nullptr)
             {
-              for( auto item : arg1 )
+              for (auto item : arg1)
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();

@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QBARSET_SETPEN )
     if (ISNUMPAR(1) && ISQPEN(1))
     {
 #endif
-      obj->setPen( *PQPEN(1));
+      obj->setPen(*PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QBARSET_SETBRUSH )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBrush( *PQBRUSH(1));
+      obj->setBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QBARSET_SETLABELBRUSH )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setLabelBrush( *PQBRUSH(1));
+      obj->setLabelBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QBARSET_SETLABELFONT )
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setLabelFont( *PQFONT(1));
+      obj->setLabelFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QBARSET_SETCOLOR )
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setColor( *PQCOLOR(1));
+      obj->setColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QBARSET_SETBORDERCOLOR )
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setBorderColor( *PQCOLOR(1));
+      obj->setBorderColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QBARSET_SETLABELCOLOR )
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setLabelColor( *PQCOLOR(1));
+      obj->setLabelColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -608,15 +608,15 @@ HB_FUNC_STATIC( QBARSET_APPEND )
     if (obj != nullptr)
     {
       QList<qreal> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
       qreal temp1;
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
         temp1 = hb_arrayGetND(aList1, i1+1);
         par1 << temp1;
       }
-      obj->append( par1);
+      obj->append(par1);
     }
 
     hb_itemReturn(hb_stackSelfItem());

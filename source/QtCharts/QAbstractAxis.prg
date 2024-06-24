@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLINEPEN )
     if (ISNUMPAR(1) && ISQPEN(1))
     {
 #endif
-      obj->setLinePen( *PQPEN(1));
+      obj->setLinePen(*PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLINEPENCOLOR )
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setLinePenColor( *PQCOLOR(1));
+      obj->setLinePenColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETGRIDLINEPEN )
     if (ISNUMPAR(1) && ISQPEN(1))
     {
 #endif
-      obj->setGridLinePen( *PQPEN(1));
+      obj->setGridLinePen(*PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETMINORGRIDLINEPEN )
     if (ISNUMPAR(1) && ISQPEN(1))
     {
 #endif
-      obj->setMinorGridLinePen( *PQPEN(1));
+      obj->setMinorGridLinePen(*PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLABELSBRUSH )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setLabelsBrush( *PQBRUSH(1));
+      obj->setLabelsBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLABELSFONT )
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setLabelsFont( *PQFONT(1));
+      obj->setLabelsFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -969,7 +969,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLABELSCOLOR )
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setLabelsColor( *PQCOLOR(1));
+      obj->setLabelsColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1078,7 +1078,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETTITLEBRUSH )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setTitleBrush( *PQBRUSH(1));
+      obj->setTitleBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1133,7 +1133,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETTITLEFONT )
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setTitleFont( *PQFONT(1));
+      obj->setTitleFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETSHADESPEN )
     if (ISNUMPAR(1) && ISQPEN(1))
     {
 #endif
-      obj->setShadesPen( *PQPEN(1));
+      obj->setShadesPen(*PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1351,7 +1351,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETSHADESBRUSH )
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setShadesBrush( *PQBRUSH(1));
+      obj->setShadesBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1406,7 +1406,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETSHADESCOLOR )
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setShadesColor( *PQCOLOR(1));
+      obj->setShadesColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1461,7 +1461,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETSHADESBORDERCOLOR )
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setShadesBorderColor( *PQCOLOR(1));
+      obj->setShadesBorderColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1677,7 +1677,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETMIN )
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
-      obj->setMin( *PQVARIANT(1));
+      obj->setMin(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1705,7 +1705,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETMAX )
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
-      obj->setMax( *PQVARIANT(1));
+      obj->setMax(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1733,7 +1733,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETRANGE )
     if (ISNUMPAR(2) && ISQVARIANT(1) && ISQVARIANT(2))
     {
 #endif
-      obj->setRange( *PQVARIANT(1), *PQVARIANT(2));
+      obj->setRange(*PQVARIANT(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
