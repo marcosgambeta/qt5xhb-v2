@@ -51,7 +51,7 @@ RETURN
 /*
 virtual ~QVirtualKeyboardExtensionPlugin()
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDEXTENSIONPLUGIN_DELETE )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDEXTENSIONPLUGIN_DELETE)
 {
   auto obj = qobject_cast<QVirtualKeyboardExtensionPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -70,9 +70,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDEXTENSIONPLUGIN_DELETE )
 }
 
 /*
-virtual void registerTypes( const char * uri ) const
+virtual void registerTypes(const char * uri) const
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDEXTENSIONPLUGIN_REGISTERTYPES )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDEXTENSIONPLUGIN_REGISTERTYPES)
 {
   auto obj = qobject_cast<QVirtualKeyboardExtensionPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

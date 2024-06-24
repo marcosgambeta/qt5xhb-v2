@@ -72,13 +72,13 @@ RETURN
 #endif
 
 /*
-QVirtualKeyboardTrace( QObject * parent = nullptr )
+QVirtualKeyboardTrace(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_NEW )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QVirtualKeyboardTrace( OPQOBJECT( 1, nullptr));
+    auto obj = new QVirtualKeyboardTrace(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_NEW )
 /*
 ~QVirtualKeyboardTrace()
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_DELETE )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_DELETE)
 {
   auto obj = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_DELETE )
 /*
 int traceId() const
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_TRACEID )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_TRACEID)
 {
   auto obj = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -133,9 +133,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_TRACEID )
 }
 
 /*
-void setTraceId( int id )
+void setTraceId(int id)
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETTRACEID )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETTRACEID)
 {
   auto obj = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETTRACEID )
 /*
 QStringList channels() const
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELS )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_CHANNELS)
 {
   auto obj = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -183,9 +183,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELS )
 }
 
 /*
-void setChannels( const QStringList & channels )
+void setChannels(const QStringList & channels)
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCHANNELS )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETCHANNELS)
 {
   auto obj = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCHANNELS )
 /*
 int length() const
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_LENGTH )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_LENGTH)
 {
   auto obj = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_LENGTH )
 /*
 bool isFinal() const
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ISFINAL )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_ISFINAL)
 {
   auto obj = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -257,9 +257,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ISFINAL )
 }
 
 /*
-void setFinal( bool final )
+void setFinal(bool final)
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETFINAL )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETFINAL)
 {
   auto obj = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETFINAL )
 /*
 bool isCanceled() const
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ISCANCELED )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_ISCANCELED)
 {
   auto obj = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -307,9 +307,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ISCANCELED )
 }
 
 /*
-void setCanceled( bool canceled )
+void setCanceled(bool canceled)
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCANCELED )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETCANCELED)
 {
   auto obj = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCANCELED )
 /*
 qreal opacity() const
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_OPACITY )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_OPACITY)
 {
   auto obj = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -357,9 +357,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_OPACITY )
 }
 
 /*
-void setOpacity( qreal opacity )
+void setOpacity(qreal opacity)
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETOPACITY )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETOPACITY)
 {
   auto obj = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -383,9 +383,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETOPACITY )
 }
 
 /*
-Q_INVOKABLE QVariantList points( int pos = 0, int count = -1 ) const
+Q_INVOKABLE QVariantList points(int pos = 0, int count = -1) const
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_POINTS )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_POINTS)
 {
   auto obj = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_POINTS )
     if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      auto list = obj->points( OPINT( 1, 0 ), OPINT( 2, -1));
+      auto list = obj->points(OPINT(1, 0), OPINT(2, -1));
       auto pDynSym = hb_dynsymFindName("QVARIANT");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
@@ -433,9 +433,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_POINTS )
 }
 
 /*
-Q_INVOKABLE int addPoint( const QPointF & point )
+Q_INVOKABLE int addPoint(const QPointF & point)
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ADDPOINT )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_ADDPOINT)
 {
   auto obj = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -457,9 +457,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ADDPOINT )
 }
 
 /*
-Q_INVOKABLE void setChannelData( const QString & channel, int index, const QVariant & data )
+Q_INVOKABLE void setChannelData(const QString & channel, int index, const QVariant & data)
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCHANNELDATA )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETCHANNELDATA)
 {
   auto obj = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -483,9 +483,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCHANNELDATA )
 }
 
 /*
-Q_INVOKABLE QVariantList channelData( const QString & channel, int pos = 0, int count = -1 ) const
+Q_INVOKABLE QVariantList channelData(const QString & channel, int pos = 0, int count = -1) const
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELDATA )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_CHANNELDATA)
 {
   auto obj = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELDATA )
     if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      auto list = obj->channelData(PQSTRING(1), OPINT( 2, 0 ), OPINT( 3, -1));
+      auto list = obj->channelData(PQSTRING(1), OPINT(2, 0), OPINT(3, -1));
       auto pDynSym = hb_dynsymFindName("QVARIANT");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
@@ -533,9 +533,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELDATA )
 }
 
 /*
-void traceIdChanged( int traceId )
+void traceIdChanged(int traceId)
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONTRACEIDCHANGED )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_ONTRACEIDCHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONTRACEIDCHANGED )
 /*
 void channelsChanged()
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCHANNELSCHANGED )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_ONCHANNELSCHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -631,9 +631,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCHANNELSCHANGED )
 }
 
 /*
-void lengthChanged( int length )
+void lengthChanged(int length)
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONLENGTHCHANGED )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_ONLENGTHCHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -681,9 +681,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONLENGTHCHANGED )
 }
 
 /*
-void finalChanged( bool isFinal )
+void finalChanged(bool isFinal)
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONFINALCHANGED )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_ONFINALCHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -731,9 +731,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONFINALCHANGED )
 }
 
 /*
-void canceledChanged( bool isCanceled )
+void canceledChanged(bool isCanceled)
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCANCELEDCHANGED )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_ONCANCELEDCHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -781,9 +781,9 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCANCELEDCHANGED )
 }
 
 /*
-void opacityChanged( qreal opacity )
+void opacityChanged(qreal opacity)
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONOPACITYCHANGED )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_ONOPACITYCHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardTrace*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
