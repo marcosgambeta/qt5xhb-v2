@@ -51,13 +51,13 @@ RETURN
 #endif
 
 /*
-QAxSelect( QWidget * parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags() )
+QAxSelect(QWidget * parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags())
 */
-HB_FUNC_STATIC( QAXSELECT_NEW )
+HB_FUNC_STATIC(QAXSELECT_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    auto obj = new QAxSelect( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( Qt::WindowFlags() ) : static_cast<Qt::WindowFlags >(hb_parni(2)));
+    auto obj = new QAxSelect(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >(Qt::WindowFlags()) : static_cast<Qt::WindowFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QAXSELECT_NEW )
 /*
 ~QAxSelect() override
 */
-HB_FUNC_STATIC( QAXSELECT_DELETE )
+HB_FUNC_STATIC(QAXSELECT_DELETE)
 {
   auto obj = qobject_cast<QAxSelect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QAXSELECT_DELETE )
 /*
 QString clsid() const
 */
-HB_FUNC_STATIC( QAXSELECT_CLSID )
+HB_FUNC_STATIC(QAXSELECT_CLSID)
 {
   auto obj = qobject_cast<QAxSelect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QAXSELECT_CLSID )
 /*
 QAxSelect::SandboxingLevel sandboxingLevel() const
 */
-HB_FUNC_STATIC( QAXSELECT_SANDBOXINGLEVEL )
+HB_FUNC_STATIC(QAXSELECT_SANDBOXINGLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   auto obj = qobject_cast<QAxSelect*>(Qt5xHb::getQObjectPointerFromSelfItem());

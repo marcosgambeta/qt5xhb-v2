@@ -71,7 +71,7 @@ RETURN
 #include <ActiveQt/QAxFactory>
 #endif
 
-HB_FUNC_STATIC( QAXFACTORY_DELETE )
+HB_FUNC_STATIC(QAXFACTORY_DELETE)
 {
   auto obj = static_cast<QAxFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QAXFACTORY_DELETE )
 /*
 virtual QUuid appID() const
 */
-HB_FUNC_STATIC( QAXFACTORY_APPID )
+HB_FUNC_STATIC(QAXFACTORY_APPID)
 {
   auto obj = static_cast<QAxFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -115,9 +115,9 @@ HB_FUNC_STATIC( QAXFACTORY_APPID )
 }
 
 /*
-virtual QUuid classID( const QString & key ) const
+virtual QUuid classID(const QString & key) const
 */
-HB_FUNC_STATIC( QAXFACTORY_CLASSID )
+HB_FUNC_STATIC(QAXFACTORY_CLASSID)
 {
   auto obj = static_cast<QAxFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -140,9 +140,9 @@ HB_FUNC_STATIC( QAXFACTORY_CLASSID )
 }
 
 /*
-virtual QObject * createObject( const QString & key ) = 0
+virtual QObject * createObject(const QString & key) = 0
 */
-HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
+HB_FUNC_STATIC(QAXFACTORY_CREATEOBJECT)
 {
   auto obj = static_cast<QAxFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -165,9 +165,9 @@ HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
 }
 
 /*
-virtual QUuid eventsID( const QString & key ) const
+virtual QUuid eventsID(const QString & key) const
 */
-HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
+HB_FUNC_STATIC(QAXFACTORY_EVENTSID)
 {
   auto obj = static_cast<QAxFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -190,9 +190,9 @@ HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
 }
 
 /*
-virtual QString exposeToSuperClass( const QString & key ) const
+virtual QString exposeToSuperClass(const QString & key) const
 */
-HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
+HB_FUNC_STATIC(QAXFACTORY_EXPOSETOSUPERCLASS)
 {
   auto obj = static_cast<QAxFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
 /*
 virtual QStringList featureList() const = 0
 */
-HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
+HB_FUNC_STATIC(QAXFACTORY_FEATURELIST)
 {
   auto obj = static_cast<QAxFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -238,9 +238,9 @@ HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
 }
 
 /*
-virtual bool hasStockEvents( const QString & key ) const
+virtual bool hasStockEvents(const QString & key) const
 */
-HB_FUNC_STATIC( QAXFACTORY_HASSTOCKEVENTS )
+HB_FUNC_STATIC(QAXFACTORY_HASSTOCKEVENTS)
 {
   auto obj = static_cast<QAxFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -262,9 +262,9 @@ HB_FUNC_STATIC( QAXFACTORY_HASSTOCKEVENTS )
 }
 
 /*
-virtual QUuid interfaceID( const QString & key ) const
+virtual QUuid interfaceID(const QString & key) const
 */
-HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
+HB_FUNC_STATIC(QAXFACTORY_INTERFACEID)
 {
   auto obj = static_cast<QAxFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
 /*
 virtual bool isService() const
 */
-HB_FUNC_STATIC( QAXFACTORY_ISSERVICE )
+HB_FUNC_STATIC(QAXFACTORY_ISSERVICE)
 {
   auto obj = static_cast<QAxFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -311,9 +311,9 @@ HB_FUNC_STATIC( QAXFACTORY_ISSERVICE )
 }
 
 /*
-virtual const QMetaObject * metaObject( const QString & key ) const = 0
+virtual const QMetaObject * metaObject(const QString & key) const = 0
 */
-HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
+HB_FUNC_STATIC(QAXFACTORY_METAOBJECT)
 {
   auto obj = static_cast<QAxFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -336,9 +336,9 @@ HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
 }
 
 /*
-virtual void registerClass( const QString & key, QSettings * settings ) const
+virtual void registerClass(const QString & key, QSettings * settings) const
 */
-HB_FUNC_STATIC( QAXFACTORY_REGISTERCLASS )
+HB_FUNC_STATIC(QAXFACTORY_REGISTERCLASS)
 {
   auto obj = static_cast<QAxFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -362,9 +362,9 @@ HB_FUNC_STATIC( QAXFACTORY_REGISTERCLASS )
 }
 
 /*
-virtual bool stayTopLevel( const QString & key ) const
+virtual bool stayTopLevel(const QString & key) const
 */
-HB_FUNC_STATIC( QAXFACTORY_STAYTOPLEVEL )
+HB_FUNC_STATIC(QAXFACTORY_STAYTOPLEVEL)
 {
   auto obj = static_cast<QAxFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QAXFACTORY_STAYTOPLEVEL )
 /*
 virtual QUuid typeLibID() const
 */
-HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
+HB_FUNC_STATIC(QAXFACTORY_TYPELIBID)
 {
   auto obj = static_cast<QAxFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -411,9 +411,9 @@ HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
 }
 
 /*
-virtual void unregisterClass( const QString & key, QSettings * settings ) const
+virtual void unregisterClass(const QString & key, QSettings * settings) const
 */
-HB_FUNC_STATIC( QAXFACTORY_UNREGISTERCLASS )
+HB_FUNC_STATIC(QAXFACTORY_UNREGISTERCLASS)
 {
   auto obj = static_cast<QAxFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -437,9 +437,9 @@ HB_FUNC_STATIC( QAXFACTORY_UNREGISTERCLASS )
 }
 
 /*
-virtual bool validateLicenseKey( const QString & key, const QString & licenseKey ) const
+virtual bool validateLicenseKey(const QString & key, const QString & licenseKey) const
 */
-HB_FUNC_STATIC( QAXFACTORY_VALIDATELICENSEKEY )
+HB_FUNC_STATIC(QAXFACTORY_VALIDATELICENSEKEY)
 {
   auto obj = static_cast<QAxFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -463,13 +463,13 @@ HB_FUNC_STATIC( QAXFACTORY_VALIDATELICENSEKEY )
 /*
 static bool isServer()
 */
-HB_FUNC_STATIC( QAXFACTORY_ISSERVER )
+HB_FUNC_STATIC(QAXFACTORY_ISSERVER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QAxFactory::isServer());
+    RBOOL(QAxFactory::isServer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -480,15 +480,15 @@ HB_FUNC_STATIC( QAXFACTORY_ISSERVER )
 }
 
 /*
-static bool registerActiveObject( QObject * object )
+static bool registerActiveObject(QObject * object)
 */
-HB_FUNC_STATIC( QAXFACTORY_REGISTERACTIVEOBJECT )
+HB_FUNC_STATIC(QAXFACTORY_REGISTERACTIVEOBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQOBJECT(1))
   {
 #endif
-    RBOOL( QAxFactory::registerActiveObject(PQOBJECT(1)));
+    RBOOL(QAxFactory::registerActiveObject(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -501,13 +501,13 @@ HB_FUNC_STATIC( QAXFACTORY_REGISTERACTIVEOBJECT )
 /*
 static QString serverDirPath()
 */
-HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
+HB_FUNC_STATIC(QAXFACTORY_SERVERDIRPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RQSTRING( QAxFactory::serverDirPath());
+    RQSTRING(QAxFactory::serverDirPath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -520,13 +520,13 @@ HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
 /*
 static QString serverFilePath()
 */
-HB_FUNC_STATIC( QAXFACTORY_SERVERFILEPATH )
+HB_FUNC_STATIC(QAXFACTORY_SERVERFILEPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RQSTRING( QAxFactory::serverFilePath());
+    RQSTRING(QAxFactory::serverFilePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -537,15 +537,15 @@ HB_FUNC_STATIC( QAXFACTORY_SERVERFILEPATH )
 }
 
 /*
-static bool startServer( QAxFactory::ServerType type = QAxFactory::MultipleInstances )
+static bool startServer(QAxFactory::ServerType type = QAxFactory::MultipleInstances)
 */
-HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
+HB_FUNC_STATIC(QAXFACTORY_STARTSERVER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
 #endif
-    RBOOL( QAxFactory::startServer( HB_ISNIL(1) ? static_cast<QAxFactory::ServerType >( QAxFactory::MultipleInstances ) : static_cast<QAxFactory::ServerType >(hb_parni(1))));
+    RBOOL(QAxFactory::startServer(HB_ISNIL(1) ? static_cast<QAxFactory::ServerType >(QAxFactory::MultipleInstances) : static_cast<QAxFactory::ServerType >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -558,13 +558,13 @@ HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
 /*
 static bool stopServer()
 */
-HB_FUNC_STATIC( QAXFACTORY_STOPSERVER )
+HB_FUNC_STATIC(QAXFACTORY_STOPSERVER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QAxFactory::stopServer());
+    RBOOL(QAxFactory::stopServer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

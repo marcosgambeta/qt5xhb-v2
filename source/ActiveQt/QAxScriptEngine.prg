@@ -55,9 +55,9 @@ RETURN
 #endif
 
 /*
-QAxScriptEngine( const QString & language, QAxScript * script )
+QAxScriptEngine(const QString & language, QAxScript * script)
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
+HB_FUNC_STATIC(QAXSCRIPTENGINE_NEW)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQAXSCRIPT(2))
   {
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QAXSCRIPTENGINE_DELETE )
+HB_FUNC_STATIC(QAXSCRIPTENGINE_DELETE)
 {
   auto obj = static_cast<QAxScriptEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -89,9 +89,9 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_DELETE )
 }
 
 /*
-void addItem( const QString & name )
+void addItem(const QString & name)
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
+HB_FUNC_STATIC(QAXSCRIPTENGINE_ADDITEM)
 {
   auto obj = static_cast<QAxScriptEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
 /*
 bool hasIntrospection() const
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
+HB_FUNC_STATIC(QAXSCRIPTENGINE_HASINTROSPECTION)
 {
   auto obj = static_cast<QAxScriptEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
+HB_FUNC_STATIC(QAXSCRIPTENGINE_ISVALID)
 {
   auto obj = static_cast<QAxScriptEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
 /*
 QString scriptLanguage() const
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
+HB_FUNC_STATIC(QAXSCRIPTENGINE_SCRIPTLANGUAGE)
 {
   auto obj = static_cast<QAxScriptEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -187,9 +187,9 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 }
 
 /*
-void setState( QAxScriptEngine::State st )
+void setState(QAxScriptEngine::State st)
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
+HB_FUNC_STATIC(QAXSCRIPTENGINE_SETSTATE)
 {
   auto obj = static_cast<QAxScriptEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
 /*
 QAxScriptEngine::State state() const
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_STATE )
+HB_FUNC_STATIC(QAXSCRIPTENGINE_STATE)
 {
   auto obj = static_cast<QAxScriptEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 

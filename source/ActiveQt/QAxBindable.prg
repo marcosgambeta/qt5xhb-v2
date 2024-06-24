@@ -63,7 +63,7 @@ RETURN
 /*
 QAxBindable()
 */
-HB_FUNC_STATIC( QAXBINDABLE_NEW )
+HB_FUNC_STATIC(QAXBINDABLE_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QAXBINDABLE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QAXBINDABLE_DELETE )
+HB_FUNC_STATIC(QAXBINDABLE_DELETE)
 {
   auto obj = static_cast<QAxBindable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QAXBINDABLE_DELETE )
 /*
 virtual QAxAggregated * createAggregate()
 */
-HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
+HB_FUNC_STATIC(QAXBINDABLE_CREATEAGGREGATE)
 {
   auto obj = static_cast<QAxBindable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -118,9 +118,9 @@ HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
 }
 
 /*
-virtual bool readData( QIODevice * source, const QString & format )
+virtual bool readData(QIODevice * source, const QString & format)
 */
-HB_FUNC_STATIC( QAXBINDABLE_READDATA )
+HB_FUNC_STATIC(QAXBINDABLE_READDATA)
 {
   auto obj = static_cast<QAxBindable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -142,9 +142,9 @@ HB_FUNC_STATIC( QAXBINDABLE_READDATA )
 }
 
 /*
-void reportError( int code, const QString & src, const QString & desc, const QString & context = QString() )
+void reportError(int code, const QString & src, const QString & desc, const QString & context = QString())
 */
-HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
+HB_FUNC_STATIC(QAXBINDABLE_REPORTERROR)
 {
   auto obj = static_cast<QAxBindable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -168,9 +168,9 @@ HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
 }
 
 /*
-virtual bool writeData( QIODevice * sink )
+virtual bool writeData(QIODevice * sink)
 */
-HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
+HB_FUNC_STATIC(QAXBINDABLE_WRITEDATA)
 {
   auto obj = static_cast<QAxBindable*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
   }
 }
 
-HB_FUNC_STATIC( QAXBINDABLE_NEWFROM )
+HB_FUNC_STATIC(QAXBINDABLE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -221,22 +221,22 @@ HB_FUNC_STATIC( QAXBINDABLE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QAXBINDABLE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QAXBINDABLE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QAXBINDABLE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QAXBINDABLE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QAXBINDABLE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QAXBINDABLE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QAXBINDABLE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QAXBINDABLE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QAXBINDABLE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QAXBINDABLE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
