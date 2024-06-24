@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QACCELEROMETER_SETACCELERATIONMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAccelerationMode( static_cast<QAccelerometer::AccelerationMode>( hb_parni(1)));
+      obj->setAccelerationMode(static_cast<QAccelerometer::AccelerationMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

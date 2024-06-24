@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QAMBIENTLIGHTREADING_SETLIGHTLEVEL )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLightLevel( static_cast<QAmbientLightReading::LightLevel>( hb_parni(1)));
+      obj->setLightLevel(static_cast<QAmbientLightReading::LightLevel>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

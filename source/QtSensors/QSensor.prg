@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSENSOR_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
-    auto obj = new QSensor( *PQBYTEARRAY(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QSensor(*PQBYTEARRAY(1), OPQOBJECT( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QSENSOR_SETIDENTIFIER )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setIdentifier( *PQBYTEARRAY(1));
+      obj->setIdentifier(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QSENSOR_FILTERS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( auto item : list )
+        for (auto item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QSENSOR_ISFEATURESUPPORTED )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->isFeatureSupported( static_cast<QSensor::Feature>( hb_parni(1))));
+      RBOOL(obj->isFeatureSupported(static_cast<QSensor::Feature>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QSENSOR_SETAXESORIENTATIONMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAxesOrientationMode( static_cast<QSensor::AxesOrientationMode>( hb_parni(1)));
+      obj->setAxesOrientationMode(static_cast<QSensor::AxesOrientationMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1187,7 +1187,7 @@ HB_FUNC_STATIC( QSENSOR_SENSORTYPES )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -1229,12 +1229,12 @@ HB_FUNC_STATIC( QSENSOR_SENSORSFORTYPE )
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
 #endif
-    auto list = QSensor::sensorsForType( *PQBYTEARRAY(1));
+    auto list = QSensor::sensorsForType(*PQBYTEARRAY(1));
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -1276,7 +1276,7 @@ HB_FUNC_STATIC( QSENSOR_DEFAULTSENSORFORTYPE )
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
 #endif
-    auto ptr = new QByteArray( QSensor::defaultSensorForType( *PQBYTEARRAY(1)));
+    auto ptr = new QByteArray( QSensor::defaultSensorForType(*PQBYTEARRAY(1)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
