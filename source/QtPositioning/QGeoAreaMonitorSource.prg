@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_STARTMONITORING )
     if (ISNUMPAR(1) && ISQGEOAREAMONITORINFO(1))
     {
 #endif
-      RBOOL(obj->startMonitoring( *PQGEOAREAMONITORINFO(1)));
+      RBOOL(obj->startMonitoring(*PQGEOAREAMONITORINFO(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_STOPMONITORING )
     if (ISNUMPAR(1) && ISQGEOAREAMONITORINFO(1))
     {
 #endif
-      RBOOL(obj->stopMonitoring( *PQGEOAREAMONITORINFO(1)));
+      RBOOL(obj->stopMonitoring(*PQGEOAREAMONITORINFO(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_REQUESTUPDATE )
     if (ISNUMPAR(2) && ISQGEOAREAMONITORINFO(1) && HB_ISCHAR(2))
     {
 #endif
-      RBOOL(obj->requestUpdate( *PQGEOAREAMONITORINFO(1), PCONSTCHAR(2)));
+      RBOOL(obj->requestUpdate(*PQGEOAREAMONITORINFO(1), PCONSTCHAR(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ACTIVEMONITORS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -354,12 +354,12 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ACTIVEMONITORS )
 
     if (obj != nullptr)
     {
-      auto list = obj->activeMonitors( *PQGEOSHAPE(1));
+      auto list = obj->activeMonitors(*PQGEOSHAPE(1));
       auto pDynSym = hb_dynsymFindName("QGEOAREAMONITORINFO");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

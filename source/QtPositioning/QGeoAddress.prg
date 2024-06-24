@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QGEOADDRESS_NEW )
     QGeoAddress( const QGeoAddress & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QGeoAddress( *PQGEOADDRESS(1));
+    auto obj = new QGeoAddress(*PQGEOADDRESS(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 

@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW )
     QGeoAreaMonitorInfo( const QGeoAreaMonitorInfo & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QGeoAreaMonitorInfo( *PQGEOAREAMONITORINFO(1));
+    auto obj = new QGeoAreaMonitorInfo(*PQGEOAREAMONITORINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETAREA )
     if (ISNUMPAR(1) && ISQGEOSHAPE(1))
     {
 #endif
-      obj->setArea( *PQGEOSHAPE(1));
+      obj->setArea(*PQGEOSHAPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETEXPIRATION )
     if (ISNUMPAR(1) && ISQDATETIME(1))
     {
 #endif
-      obj->setExpiration( *PQDATETIME(1));
+      obj->setExpiration(*PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

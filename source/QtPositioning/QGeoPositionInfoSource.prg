@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_SETPREFERREDPOSITIONINGMETHODS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPreferredPositioningMethods( static_cast<QGeoPositionInfoSource::PositioningMethods>( hb_parni(1)));
+      obj->setPreferredPositioningMethods(static_cast<QGeoPositionInfoSource::PositioningMethods>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

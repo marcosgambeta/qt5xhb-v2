@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QGEOLOCATION_NEW )
     QGeoLocation( const QGeoLocation & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QGeoLocation( *PQGEOLOCATION(1));
+    auto obj = new QGeoLocation(*PQGEOLOCATION(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QGEOLOCATION_SETADDRESS )
     if (ISNUMPAR(1) && ISQGEOADDRESS(1))
     {
 #endif
-      obj->setAddress( *PQGEOADDRESS(1));
+      obj->setAddress(*PQGEOADDRESS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QGEOLOCATION_SETCOORDINATE )
     if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
 #endif
-      obj->setCoordinate( *PQGEOCOORDINATE(1));
+      obj->setCoordinate(*PQGEOCOORDINATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QGEOLOCATION_SETBOUNDINGBOX )
     if (ISNUMPAR(1) && ISQGEORECTANGLE(1))
     {
 #endif
-      obj->setBoundingBox( *PQGEORECTANGLE(1));
+      obj->setBoundingBox(*PQGEORECTANGLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

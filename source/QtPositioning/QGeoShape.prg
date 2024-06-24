@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QGEOSHAPE_NEW )
     QGeoShape( const QGeoShape & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QGeoShape( *PQGEOSHAPE(1));
+    auto obj = new QGeoShape(*PQGEOSHAPE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QGEOSHAPE_CONTAINS )
     if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
 #endif
-      RBOOL(obj->contains( *PQGEOCOORDINATE(1)));
+      RBOOL(obj->contains(*PQGEOCOORDINATE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

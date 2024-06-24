@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_NEW )
     QGeoCoordinate( const QGeoCoordinate & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QGeoCoordinate( *PQGEOCOORDINATE(1));
+    auto obj = new QGeoCoordinate(*PQGEOCOORDINATE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_DISTANCETO )
     if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
 #endif
-      RQREAL(obj->distanceTo( *PQGEOCOORDINATE(1)));
+      RQREAL(obj->distanceTo(*PQGEOCOORDINATE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_AZIMUTHTO )
     if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
 #endif
-      RQREAL(obj->azimuthTo( *PQGEOCOORDINATE(1)));
+      RQREAL(obj->azimuthTo(*PQGEOCOORDINATE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_TOSTRING )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RQSTRING(obj->toString( HB_ISNIL(1) ? static_cast<QGeoCoordinate::CoordinateFormat >( QGeoCoordinate::DegreesMinutesSecondsWithHemisphere ) : static_cast<QGeoCoordinate::CoordinateFormat >( hb_parni(1))));
+      RQSTRING(obj->toString( HB_ISNIL(1) ? static_cast<QGeoCoordinate::CoordinateFormat >( QGeoCoordinate::DegreesMinutesSecondsWithHemisphere ) : static_cast<QGeoCoordinate::CoordinateFormat >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

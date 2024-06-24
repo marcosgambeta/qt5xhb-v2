@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW )
     QGeoPositionInfo( const QGeoCoordinate & coordinate, const QDateTime & updateTime )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QGeoPositionInfo( *PQGEOCOORDINATE(1), *PQDATETIME(2));
+    auto obj = new QGeoPositionInfo(*PQGEOCOORDINATE(1), *PQDATETIME(2));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW )
     QGeoPositionInfo( const QGeoPositionInfo & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QGeoPositionInfo( *PQGEOPOSITIONINFO(1));
+    auto obj = new QGeoPositionInfo(*PQGEOPOSITIONINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_SETTIMESTAMP )
     if (ISNUMPAR(1) && ISQDATETIME(1))
     {
 #endif
-      obj->setTimestamp( *PQDATETIME(1));
+      obj->setTimestamp(*PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_SETCOORDINATE )
     if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
 #endif
-      obj->setCoordinate( *PQGEOCOORDINATE(1));
+      obj->setCoordinate(*PQGEOCOORDINATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_SETATTRIBUTE )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setAttribute( static_cast<QGeoPositionInfo::Attribute>( hb_parni(1)), PQREAL(2));
+      obj->setAttribute(static_cast<QGeoPositionInfo::Attribute>(hb_parni(1)), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_ATTRIBUTE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQREAL(obj->attribute( static_cast<QGeoPositionInfo::Attribute>( hb_parni(1))));
+      RQREAL(obj->attribute(static_cast<QGeoPositionInfo::Attribute>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_REMOVEATTRIBUTE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->removeAttribute( static_cast<QGeoPositionInfo::Attribute>( hb_parni(1)));
+      obj->removeAttribute(static_cast<QGeoPositionInfo::Attribute>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_HASATTRIBUTE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->hasAttribute( static_cast<QGeoPositionInfo::Attribute>( hb_parni(1))));
+      RBOOL(obj->hasAttribute(static_cast<QGeoPositionInfo::Attribute>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

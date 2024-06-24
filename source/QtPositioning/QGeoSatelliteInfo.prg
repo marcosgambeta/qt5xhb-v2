@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW )
     QGeoSatelliteInfo( const QGeoSatelliteInfo & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QGeoSatelliteInfo( *PQGEOSATELLITEINFO(1));
+    auto obj = new QGeoSatelliteInfo(*PQGEOSATELLITEINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSATELLITESYSTEM )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSatelliteSystem( static_cast<QGeoSatelliteInfo::SatelliteSystem>( hb_parni(1)));
+      obj->setSatelliteSystem(static_cast<QGeoSatelliteInfo::SatelliteSystem>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SETATTRIBUTE )
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setAttribute( static_cast<QGeoSatelliteInfo::Attribute>( hb_parni(1)), PQREAL(2));
+      obj->setAttribute(static_cast<QGeoSatelliteInfo::Attribute>(hb_parni(1)), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_ATTRIBUTE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQREAL(obj->attribute( static_cast<QGeoSatelliteInfo::Attribute>( hb_parni(1))));
+      RQREAL(obj->attribute(static_cast<QGeoSatelliteInfo::Attribute>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_REMOVEATTRIBUTE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->removeAttribute( static_cast<QGeoSatelliteInfo::Attribute>( hb_parni(1)));
+      obj->removeAttribute(static_cast<QGeoSatelliteInfo::Attribute>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_HASATTRIBUTE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->hasAttribute( static_cast<QGeoSatelliteInfo::Attribute>( hb_parni(1))));
+      RBOOL(obj->hasAttribute(static_cast<QGeoSatelliteInfo::Attribute>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW )
     QGeoCircle( const QGeoCoordinate & center, qreal radius = -1.0 )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QGeoCircle( *PQGEOCOORDINATE(1), OPQREAL( 2, -1.0));
+    auto obj = new QGeoCircle(*PQGEOCOORDINATE(1), OPQREAL( 2, -1.0));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW )
     QGeoCircle( const QGeoCircle & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QGeoCircle( *PQGEOCIRCLE(1));
+    auto obj = new QGeoCircle(*PQGEOCIRCLE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW )
     QGeoCircle( const QGeoShape & other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QGeoCircle( *PQGEOSHAPE(1));
+    auto obj = new QGeoCircle(*PQGEOSHAPE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_SETCENTER )
     if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
 #endif
-      obj->setCenter( *PQGEOCOORDINATE(1));
+      obj->setCenter(*PQGEOCOORDINATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
             auto pArg1 = hb_itemArrayNew(0);
             if (pDynSym != nullptr)
             {
-              for( const auto & item : arg1 )
+              for (const auto & item : arg1)
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
             auto pArg1 = hb_itemArrayNew(0);
             if (pDynSym != nullptr)
             {
-              for( const auto & item : arg1 )
+              for (const auto & item : arg1)
               {
                 hb_vmPushDynSym(pDynSym);
                 hb_vmPushNil();
