@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QSQLFIELD_NEW )
     /*
     QSqlField( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
     */
-    auto obj = new QSqlField( OPQSTRING(1, QString() ), HB_ISNIL(2) ? static_cast<QVariant::Type >( QVariant::Invalid ) : static_cast<QVariant::Type >( hb_parni(2)));
+    auto obj = new QSqlField( OPQSTRING(1, QString() ), HB_ISNIL(2) ? static_cast<QVariant::Type >( QVariant::Invalid ) : static_cast<QVariant::Type >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSQLFIELD_NEW )
     /*
     QSqlField( const QSqlField & other )
     */
-    auto obj = new QSqlField( *PQSQLFIELD(1));
+    auto obj = new QSqlField(*PQSQLFIELD(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETDEFAULTVALUE )
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
-      obj->setDefaultValue( *PQVARIANT(1));
+      obj->setDefaultValue(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETREQUIREDSTATUS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRequiredStatus( static_cast<QSqlField::RequiredStatus>( hb_parni(1)));
+      obj->setRequiredStatus(static_cast<QSqlField::RequiredStatus>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETTYPE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setType( static_cast<QVariant::Type>( hb_parni(1)));
+      obj->setType(static_cast<QVariant::Type>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETVALUE )
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
-      obj->setValue( *PQVARIANT(1));
+      obj->setValue(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

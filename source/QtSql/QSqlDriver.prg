@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
-      RQSTRING(obj->escapeIdentifier(PQSTRING(1), static_cast<QSqlDriver::IdentifierType>( hb_parni(2))));
+      RQSTRING(obj->escapeIdentifier(PQSTRING(1), static_cast<QSqlDriver::IdentifierType>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
     if (ISBETWEEN(1, 2) && ISQSQLFIELD(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      RQSTRING(obj->formatValue( *PQSQLFIELD(1), OPBOOL( 2, false )));
+      RQSTRING(obj->formatValue(*PQSQLFIELD(1), OPBOOL( 2, false )));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QSQLDRIVER_HASFEATURE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->hasFeature( static_cast<QSqlDriver::DriverFeature>( hb_parni(1))));
+      RBOOL(obj->hasFeature(static_cast<QSqlDriver::DriverFeature>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
-      RBOOL(obj->isIdentifierEscaped(PQSTRING(1), static_cast<QSqlDriver::IdentifierType>( hb_parni(2))));
+      RBOOL(obj->isIdentifierEscaped(PQSTRING(1), static_cast<QSqlDriver::IdentifierType>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SETNUMERICALPRECISIONPOLICY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setNumericalPrecisionPolicy( static_cast<QSql::NumericalPrecisionPolicy>( hb_parni(1)));
+      obj->setNumericalPrecisionPolicy(static_cast<QSql::NumericalPrecisionPolicy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQSQLRECORD(3) && HB_ISLOG(4))
     {
 #endif
-      RQSTRING(obj->sqlStatement( static_cast<QSqlDriver::StatementType>( hb_parni(1)), PQSTRING(2), *PQSQLRECORD(3), PBOOL(4)));
+      RQSTRING(obj->sqlStatement(static_cast<QSqlDriver::StatementType>(hb_parni(1)), PQSTRING(2), *PQSQLRECORD(3), PBOOL(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
-      RQSTRING(obj->stripDelimiters(PQSTRING(1), static_cast<QSqlDriver::IdentifierType>( hb_parni(2))));
+      RQSTRING(obj->stripDelimiters(PQSTRING(1), static_cast<QSqlDriver::IdentifierType>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QSQLDRIVER_TABLES )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRINGLIST(obj->tables( static_cast<QSql::TableType>( hb_parni(1))));
+      RQSTRINGLIST(obj->tables(static_cast<QSql::TableType>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

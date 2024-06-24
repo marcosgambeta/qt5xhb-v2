@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSQLRECORD_NEW )
     /*
     QSqlRecord( const QSqlRecord & other )
     */
-    auto obj = new QSqlRecord( *PQSQLRECORD(1));
+    auto obj = new QSqlRecord(*PQSQLRECORD(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSQLRECORD_APPEND )
     if (ISNUMPAR(1) && ISQSQLFIELD(1))
     {
 #endif
-      obj->append( *PQSQLFIELD(1));
+      obj->append(*PQSQLFIELD(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QSQLRECORD_KEYVALUES )
     if (ISNUMPAR(1) && ISQSQLRECORD(1))
     {
 #endif
-      auto ptr = new QSqlRecord(obj->keyValues( *PQSQLRECORD(1)));
+      auto ptr = new QSqlRecord(obj->keyValues(*PQSQLRECORD(1)));
       Qt5xHb::createReturnClass(ptr, "QSQLRECORD", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

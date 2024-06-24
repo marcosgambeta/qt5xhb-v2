@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSQLINDEX_NEW )
     /*
     QSqlIndex( const QSqlIndex & other )
     */
-    auto obj = new QSqlIndex( *PQSQLINDEX(1));
+    auto obj = new QSqlIndex(*PQSQLINDEX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSQLINDEX_APPEND )
 
     if (obj != nullptr)
     {
-      obj->append( *PQSQLFIELD(1));
+      obj->append(*PQSQLFIELD(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSQLINDEX_APPEND )
 
     if (obj != nullptr)
     {
-      obj->append( *PQSQLFIELD(1), PBOOL(2));
+      obj->append(*PQSQLFIELD(1), PBOOL(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());

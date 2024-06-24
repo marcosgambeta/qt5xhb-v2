@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEW )
     /*
     QSqlQuery( QSqlDatabase db )
     */
-    auto obj = new QSqlQuery( *PQSQLDATABASE(1));
+    auto obj = new QSqlQuery(*PQSQLDATABASE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEW )
     /*
     QSqlQuery( const QSqlQuery & other )
     */
-    auto obj = new QSqlQuery( *PQSQLQUERY(1));
+    auto obj = new QSqlQuery(*PQSQLQUERY(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
     if (ISBETWEEN(1, 2) && ISQVARIANT(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->addBindValue( *PQVARIANT(1), HB_ISNIL(2) ? static_cast<QSql::ParamType >( QSql::In ) : static_cast<QSql::ParamType >( hb_parni(2)));
+      obj->addBindValue(*PQVARIANT(1), HB_ISNIL(2) ? static_cast<QSql::ParamType >( QSql::In ) : static_cast<QSql::ParamType >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
 
     if (obj != nullptr)
     {
-      obj->bindValue(PQSTRING(1), *PQVARIANT(2), HB_ISNIL(3) ? static_cast<QSql::ParamType >( QSql::In ) : static_cast<QSql::ParamType >( hb_parni(3)));
+      obj->bindValue(PQSTRING(1), *PQVARIANT(2), HB_ISNIL(3) ? static_cast<QSql::ParamType >( QSql::In ) : static_cast<QSql::ParamType >(hb_parni(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
 
     if (obj != nullptr)
     {
-      obj->bindValue(PINT(1), *PQVARIANT(2), HB_ISNIL(3) ? static_cast<QSql::ParamType >( QSql::In ) : static_cast<QSql::ParamType >( hb_parni(3)));
+      obj->bindValue(PINT(1), *PQVARIANT(2), HB_ISNIL(3) ? static_cast<QSql::ParamType >( QSql::In ) : static_cast<QSql::ParamType >(hb_parni(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RBOOL(obj->execBatch( HB_ISNIL(1) ? static_cast<QSqlQuery::BatchExecutionMode >( QSqlQuery::ValuesAsRows ) : static_cast<QSqlQuery::BatchExecutionMode >( hb_parni(1))));
+      RBOOL(obj->execBatch( HB_ISNIL(1) ? static_cast<QSqlQuery::BatchExecutionMode >( QSqlQuery::ValuesAsRows ) : static_cast<QSqlQuery::BatchExecutionMode >(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -830,7 +830,7 @@ HB_FUNC_STATIC( QSQLQUERY_SETNUMERICALPRECISIONPOLICY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setNumericalPrecisionPolicy( static_cast<QSql::NumericalPrecisionPolicy>( hb_parni(1)));
+      obj->setNumericalPrecisionPolicy(static_cast<QSql::NumericalPrecisionPolicy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
