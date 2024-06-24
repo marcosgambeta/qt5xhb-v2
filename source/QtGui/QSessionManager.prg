@@ -64,7 +64,7 @@ RETURN
 /*
 QString sessionId() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONID )
+HB_FUNC_STATIC(QSESSIONMANAGER_SESSIONID)
 {
   auto obj = qobject_cast<QSessionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONID )
 /*
 QString sessionKey() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONKEY )
+HB_FUNC_STATIC(QSESSIONMANAGER_SESSIONKEY)
 {
   auto obj = qobject_cast<QSessionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONKEY )
 /*
 bool allowsInteraction()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSINTERACTION )
+HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSINTERACTION)
 {
   auto obj = qobject_cast<QSessionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSINTERACTION )
 /*
 bool allowsErrorInteraction()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
+HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSERRORINTERACTION)
 {
   auto obj = qobject_cast<QSessionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
 /*
 void release()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_RELEASE )
+HB_FUNC_STATIC(QSESSIONMANAGER_RELEASE)
 {
   auto obj = qobject_cast<QSessionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RELEASE )
 /*
 void cancel()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_CANCEL )
+HB_FUNC_STATIC(QSESSIONMANAGER_CANCEL)
 {
   auto obj = qobject_cast<QSessionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -210,9 +210,9 @@ HB_FUNC_STATIC( QSESSIONMANAGER_CANCEL )
 }
 
 /*
-void setRestartHint( QSessionManager::RestartHint )
+void setRestartHint(QSessionManager::RestartHint)
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTHINT )
+HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTHINT)
 {
   auto obj = qobject_cast<QSessionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTHINT )
 /*
 QSessionManager::RestartHint restartHint() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTHINT )
+HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTHINT)
 {
   auto obj = qobject_cast<QSessionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -260,9 +260,9 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTHINT )
 }
 
 /*
-void setRestartCommand( const QStringList & )
+void setRestartCommand(const QStringList &)
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTCOMMAND )
+HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTCOMMAND)
 {
   auto obj = qobject_cast<QSessionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTCOMMAND )
 /*
 QStringList restartCommand() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTCOMMAND )
+HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTCOMMAND)
 {
   auto obj = qobject_cast<QSessionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -310,9 +310,9 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTCOMMAND )
 }
 
 /*
-void setDiscardCommand( const QStringList & )
+void setDiscardCommand(const QStringList &)
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SETDISCARDCOMMAND )
+HB_FUNC_STATIC(QSESSIONMANAGER_SETDISCARDCOMMAND)
 {
   auto obj = qobject_cast<QSessionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETDISCARDCOMMAND )
 /*
 QStringList discardCommand() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
+HB_FUNC_STATIC(QSESSIONMANAGER_DISCARDCOMMAND)
 {
   auto obj = qobject_cast<QSessionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -359,12 +359,12 @@ HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
   }
 }
 
-HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
+HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    void setManagerProperty( const QString & name, const QString & value )
+    void setManagerProperty(const QString & name, const QString & value)
     */
     auto obj = qobject_cast<QSessionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
     /*
-    void setManagerProperty( const QString & name, const QStringList & value )
+    void setManagerProperty(const QString & name, const QStringList & value)
     */
     auto obj = qobject_cast<QSessionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
 /*
 bool isPhase2() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_ISPHASE2 )
+HB_FUNC_STATIC(QSESSIONMANAGER_ISPHASE2)
 {
   auto obj = qobject_cast<QSessionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ISPHASE2 )
 /*
 void requestPhase2()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_REQUESTPHASE2 )
+HB_FUNC_STATIC(QSESSIONMANAGER_REQUESTPHASE2)
 {
   auto obj = qobject_cast<QSessionManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

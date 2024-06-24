@@ -55,7 +55,7 @@ RETURN
 #include <QtCore/QList>
 #include <QtGui/QWindow>
 
-HB_FUNC_STATIC( QTOUCHEVENT_DELETE )
+HB_FUNC_STATIC(QTOUCHEVENT_DELETE)
 {
   auto obj = static_cast<QTouchEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_DELETE )
 /*
 QWindow * window() const
 */
-HB_FUNC_STATIC( QTOUCHEVENT_WINDOW )
+HB_FUNC_STATIC(QTOUCHEVENT_WINDOW)
 {
   auto obj = static_cast<QTouchEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_WINDOW )
 /*
 QObject * target() const
 */
-HB_FUNC_STATIC( QTOUCHEVENT_TARGET )
+HB_FUNC_STATIC(QTOUCHEVENT_TARGET)
 {
   auto obj = static_cast<QTouchEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_TARGET )
 /*
 Qt::TouchPointStates touchPointStates() const
 */
-HB_FUNC_STATIC( QTOUCHEVENT_TOUCHPOINTSTATES )
+HB_FUNC_STATIC(QTOUCHEVENT_TOUCHPOINTSTATES)
 {
   auto obj = static_cast<QTouchEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_TOUCHPOINTSTATES )
 /*
 QTouchDevice * device() const
 */
-HB_FUNC_STATIC( QTOUCHEVENT_DEVICE )
+HB_FUNC_STATIC(QTOUCHEVENT_DEVICE)
 {
   auto obj = static_cast<QTouchEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

@@ -68,12 +68,12 @@ RETURN
 #include <QtGui/QFontInfo>
 #endif
 
-HB_FUNC_STATIC( QFONTINFO_NEW )
+HB_FUNC_STATIC(QFONTINFO_NEW)
 {
   if (ISNUMPAR(1) && ISQFONT(1))
   {
     /*
-    QFontInfo( const QFont & font )
+    QFontInfo(const QFont & font)
     */
     auto obj = new QFontInfo(*PQFONT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QFONTINFO_NEW )
   else if (ISNUMPAR(1) && ISQFONTINFO(1))
   {
     /*
-    QFontInfo( const QFontInfo & fi )
+    QFontInfo(const QFontInfo & fi)
     */
     auto obj = new QFontInfo(*PQFONTINFO(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QFONTINFO_NEW )
   }
 }
 
-HB_FUNC_STATIC( QFONTINFO_DELETE )
+HB_FUNC_STATIC(QFONTINFO_DELETE)
 {
   auto obj = static_cast<QFontInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QFONTINFO_DELETE )
 /*
 bool bold() const
 */
-HB_FUNC_STATIC( QFONTINFO_BOLD )
+HB_FUNC_STATIC(QFONTINFO_BOLD)
 {
   auto obj = static_cast<QFontInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QFONTINFO_BOLD )
 /*
 bool exactMatch() const
 */
-HB_FUNC_STATIC( QFONTINFO_EXACTMATCH )
+HB_FUNC_STATIC(QFONTINFO_EXACTMATCH)
 {
   auto obj = static_cast<QFontInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QFONTINFO_EXACTMATCH )
 /*
 QString family() const
 */
-HB_FUNC_STATIC( QFONTINFO_FAMILY )
+HB_FUNC_STATIC(QFONTINFO_FAMILY)
 {
   auto obj = static_cast<QFontInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QFONTINFO_FAMILY )
 /*
 bool fixedPitch() const
 */
-HB_FUNC_STATIC( QFONTINFO_FIXEDPITCH )
+HB_FUNC_STATIC(QFONTINFO_FIXEDPITCH)
 {
   auto obj = static_cast<QFontInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QFONTINFO_FIXEDPITCH )
 /*
 bool italic() const
 */
-HB_FUNC_STATIC( QFONTINFO_ITALIC )
+HB_FUNC_STATIC(QFONTINFO_ITALIC)
 {
   auto obj = static_cast<QFontInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QFONTINFO_ITALIC )
 /*
 int pixelSize() const
 */
-HB_FUNC_STATIC( QFONTINFO_PIXELSIZE )
+HB_FUNC_STATIC(QFONTINFO_PIXELSIZE)
 {
   auto obj = static_cast<QFontInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QFONTINFO_PIXELSIZE )
 /*
 int pointSize() const
 */
-HB_FUNC_STATIC( QFONTINFO_POINTSIZE )
+HB_FUNC_STATIC(QFONTINFO_POINTSIZE)
 {
   auto obj = static_cast<QFontInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QFONTINFO_POINTSIZE )
 /*
 qreal pointSizeF() const
 */
-HB_FUNC_STATIC( QFONTINFO_POINTSIZEF )
+HB_FUNC_STATIC(QFONTINFO_POINTSIZEF)
 {
   auto obj = static_cast<QFontInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QFONTINFO_POINTSIZEF )
 /*
 bool rawMode() const
 */
-HB_FUNC_STATIC( QFONTINFO_RAWMODE )
+HB_FUNC_STATIC(QFONTINFO_RAWMODE)
 {
   auto obj = static_cast<QFontInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QFONTINFO_RAWMODE )
 /*
 QFont::Style style() const
 */
-HB_FUNC_STATIC( QFONTINFO_STYLE )
+HB_FUNC_STATIC(QFONTINFO_STYLE)
 {
   auto obj = static_cast<QFontInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLE )
 /*
 QFont::StyleHint styleHint() const
 */
-HB_FUNC_STATIC( QFONTINFO_STYLEHINT )
+HB_FUNC_STATIC(QFONTINFO_STYLEHINT)
 {
   auto obj = static_cast<QFontInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLEHINT )
 /*
 QString styleName() const
 */
-HB_FUNC_STATIC( QFONTINFO_STYLENAME )
+HB_FUNC_STATIC(QFONTINFO_STYLENAME)
 {
   auto obj = static_cast<QFontInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLENAME )
 /*
 int weight() const
 */
-HB_FUNC_STATIC( QFONTINFO_WEIGHT )
+HB_FUNC_STATIC(QFONTINFO_WEIGHT)
 {
   auto obj = static_cast<QFontInfo*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QFONTINFO_WEIGHT )
   }
 }
 
-HB_FUNC_STATIC( QFONTINFO_NEWFROM )
+HB_FUNC_STATIC(QFONTINFO_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -452,22 +452,22 @@ HB_FUNC_STATIC( QFONTINFO_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QFONTINFO_NEWFROMOBJECT )
+HB_FUNC_STATIC(QFONTINFO_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QFONTINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QFONTINFO_NEWFROMPOINTER )
+HB_FUNC_STATIC(QFONTINFO_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QFONTINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QFONTINFO_SELFDESTRUCTION )
+HB_FUNC_STATIC(QFONTINFO_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QFONTINFO_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QFONTINFO_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

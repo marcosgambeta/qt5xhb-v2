@@ -68,7 +68,7 @@ RETURN
 #include <QtGui/QPolygon>
 #endif
 
-HB_FUNC_STATIC( QPOLYGON_NEW )
+HB_FUNC_STATIC(QPOLYGON_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QPolygon( int size )
+    QPolygon(int size)
     */
     auto obj = new QPolygon(PINT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
   else if (ISNUMPAR(1) && ISQPOLYGON(1))
   {
     /*
-    QPolygon( const QPolygon & a )
+    QPolygon(const QPolygon & a)
     */
     auto obj = new QPolygon(*PQPOLYGON(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    QPolygon( const QVector<QPoint> & v )
+    QPolygon(const QVector<QPoint> & v)
     */
     QVector<QPoint> par1;
     auto aList1 = hb_param(1, HB_IT_ARRAY);
@@ -116,9 +116,9 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
   else if (ISBETWEEN(1, 2) && ISQRECT(1) && ISOPTLOG(2))
   {
     /*
-    QPolygon( const QRect & r, bool closed = false )
+    QPolygon(const QRect & r, bool closed = false)
     */
-    auto obj = new QPolygon(*PQRECT(1), OPBOOL( 2, false));
+    auto obj = new QPolygon(*PQRECT(1), OPBOOL(2, false));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPOLYGON_DELETE )
+HB_FUNC_STATIC(QPOLYGON_DELETE)
 {
   auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -145,9 +145,9 @@ HB_FUNC_STATIC( QPOLYGON_DELETE )
 }
 
 /*
-void swap( QPolygon & other )
+void swap(QPolygon & other)
 */
-HB_FUNC_STATIC( QPOLYGON_SWAP )
+HB_FUNC_STATIC(QPOLYGON_SWAP)
 {
   auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -170,12 +170,12 @@ HB_FUNC_STATIC( QPOLYGON_SWAP )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QPOLYGON_TRANSLATE )
+HB_FUNC_STATIC(QPOLYGON_TRANSLATE)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    void translate( int dx, int dy )
+    void translate(int dx, int dy)
     */
     auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATE )
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    void translate( const QPoint & offset )
+    void translate(const QPoint & offset)
     */
     auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -208,12 +208,12 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATE )
   }
 }
 
-HB_FUNC_STATIC( QPOLYGON_TRANSLATED )
+HB_FUNC_STATIC(QPOLYGON_TRANSLATED)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QPolygon translated( int dx, int dy ) const
+    QPolygon translated(int dx, int dy) const
     */
     auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATED )
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QPolygon translated( const QPoint & offset ) const
+    QPolygon translated(const QPoint & offset) const
     */
     auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATED )
 /*
 QRect boundingRect() const
 */
-HB_FUNC_STATIC( QPOLYGON_BOUNDINGRECT )
+HB_FUNC_STATIC(QPOLYGON_BOUNDINGRECT)
 {
   auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -269,12 +269,12 @@ HB_FUNC_STATIC( QPOLYGON_BOUNDINGRECT )
   }
 }
 
-HB_FUNC_STATIC( QPOLYGON_POINT )
+HB_FUNC_STATIC(QPOLYGON_POINT)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    void point( int i, int * x, int * y ) const
+    void point(int i, int * x, int * y) const
     */
     auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QPOLYGON_POINT )
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QPoint point( int i ) const
+    QPoint point(int i) const
     */
     auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -310,12 +310,12 @@ HB_FUNC_STATIC( QPOLYGON_POINT )
   }
 }
 
-HB_FUNC_STATIC( QPOLYGON_SETPOINT )
+HB_FUNC_STATIC(QPOLYGON_SETPOINT)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    void setPoint( int index, int x, int y )
+    void setPoint(int index, int x, int y)
     */
     auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QPOLYGON_SETPOINT )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINT(2))
   {
     /*
-    void setPoint( int index, const QPoint & p )
+    void setPoint(int index, const QPoint & p)
     */
     auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -349,9 +349,9 @@ HB_FUNC_STATIC( QPOLYGON_SETPOINT )
 }
 
 /*
-void putPoints( int index, int nPoints, const QPolygon & from, int fromIndex = 0 )
+void putPoints(int index, int nPoints, const QPolygon & from, int fromIndex = 0)
 */
-HB_FUNC_STATIC( QPOLYGON_PUTPOINTS )
+HB_FUNC_STATIC(QPOLYGON_PUTPOINTS)
 {
   auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QPOLYGON_PUTPOINTS )
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQPOLYGON(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->putPoints(PINT(1), PINT(2), *PQPOLYGON(3), OPINT( 4, 0));
+      obj->putPoints(PINT(1), PINT(2), *PQPOLYGON(3), OPINT(4, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,9 +375,9 @@ HB_FUNC_STATIC( QPOLYGON_PUTPOINTS )
 }
 
 /*
-bool containsPoint( const QPoint & pt, Qt::FillRule fillRule ) const
+bool containsPoint(const QPoint & pt, Qt::FillRule fillRule) const
 */
-HB_FUNC_STATIC( QPOLYGON_CONTAINSPOINT )
+HB_FUNC_STATIC(QPOLYGON_CONTAINSPOINT)
 {
   auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -399,9 +399,9 @@ HB_FUNC_STATIC( QPOLYGON_CONTAINSPOINT )
 }
 
 /*
-QPolygon united( const QPolygon & r ) const
+QPolygon united(const QPolygon & r) const
 */
-HB_FUNC_STATIC( QPOLYGON_UNITED )
+HB_FUNC_STATIC(QPOLYGON_UNITED)
 {
   auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -424,9 +424,9 @@ HB_FUNC_STATIC( QPOLYGON_UNITED )
 }
 
 /*
-QPolygon intersected( const QPolygon & r ) const
+QPolygon intersected(const QPolygon & r) const
 */
-HB_FUNC_STATIC( QPOLYGON_INTERSECTED )
+HB_FUNC_STATIC(QPOLYGON_INTERSECTED)
 {
   auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -449,9 +449,9 @@ HB_FUNC_STATIC( QPOLYGON_INTERSECTED )
 }
 
 /*
-QPolygon subtracted( const QPolygon & r ) const
+QPolygon subtracted(const QPolygon & r) const
 */
-HB_FUNC_STATIC( QPOLYGON_SUBTRACTED )
+HB_FUNC_STATIC(QPOLYGON_SUBTRACTED)
 {
   auto obj = static_cast<QPolygon*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QPOLYGON_SUBTRACTED )
   }
 }
 
-HB_FUNC_STATIC( QPOLYGON_NEWFROM )
+HB_FUNC_STATIC(QPOLYGON_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -503,22 +503,22 @@ HB_FUNC_STATIC( QPOLYGON_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QPOLYGON_NEWFROMOBJECT )
+HB_FUNC_STATIC(QPOLYGON_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QPOLYGON_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPOLYGON_NEWFROMPOINTER )
+HB_FUNC_STATIC(QPOLYGON_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QPOLYGON_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPOLYGON_SELFDESTRUCTION )
+HB_FUNC_STATIC(QPOLYGON_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QPOLYGON_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QPOLYGON_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

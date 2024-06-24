@@ -70,7 +70,7 @@ RETURN
 
 #include <QtGui/QTextBlock>
 
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DELETE )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DELETE)
 {
   auto obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -89,9 +89,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DELETE )
 }
 
 /*
-QString anchorAt( const QPointF & position ) const
+QString anchorAt(const QPointF & position) const
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT)
 {
   auto obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -113,9 +113,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
 }
 
 /*
-virtual QRectF blockBoundingRect( const QTextBlock & block ) const = 0
+virtual QRectF blockBoundingRect(const QTextBlock & block) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 {
   auto obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
 /*
 QTextDocument * document() const
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT)
 {
   auto obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT )
 /*
 virtual QSizeF documentSize() const = 0
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
 {
   auto obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -188,9 +188,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
 }
 
 /*
-virtual QRectF frameBoundingRect( QTextFrame * frame ) const = 0
+virtual QRectF frameBoundingRect(QTextFrame * frame) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 {
   auto obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -213,9 +213,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
 }
 
 /*
-QTextObjectInterface * handlerForObject( int objectType ) const
+QTextObjectInterface * handlerForObject(int objectType) const
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT)
 {
   auto obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -238,9 +238,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
 }
 
 /*
-virtual int hitTest( const QPointF & point, Qt::HitTestAccuracy accuracy ) const = 0
+virtual int hitTest(const QPointF & point, Qt::HitTestAccuracy accuracy) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST)
 {
   auto obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
 /*
 virtual int pageCount() const = 0
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT)
 {
   auto obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT )
 /*
 QPaintDevice * paintDevice() const
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE)
 {
   auto obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -311,9 +311,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE )
 }
 
 /*
-void registerHandler( int objectType, QObject * component )
+void registerHandler(int objectType, QObject * component)
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER)
 {
   auto obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -337,9 +337,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER )
 }
 
 /*
-void setPaintDevice( QPaintDevice * device )
+void setPaintDevice(QPaintDevice * device)
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE)
 {
   auto obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -363,9 +363,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE )
 }
 
 /*
-void documentSizeChanged( const QSizeF & newSize )
+void documentSizeChanged(const QSizeF & newSize)
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED)
 {
   auto sender = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTTEXTDOCUMENTLAYOUT");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZEF");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QSIZEF");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -413,9 +413,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
 }
 
 /*
-void pageCountChanged( int newPages )
+void pageCountChanged(int newPages)
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED)
 {
   auto sender = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -463,9 +463,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
 }
 
 /*
-void update( const QRectF & rect = QRectF( 0., 0., 1000000000., 1000000000. ) )
+void update(const QRectF & rect = QRectF(0., 0., 1000000000., 1000000000.))
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE)
 {
   auto sender = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTTEXTDOCUMENTLAYOUT");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QRECTF");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QRECTF");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -513,9 +513,9 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
 }
 
 /*
-void updateBlock( const QTextBlock & block )
+void updateBlock(const QTextBlock & block)
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK)
 {
   auto sender = qobject_cast<QAbstractTextDocumentLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTTEXTDOCUMENTLAYOUT");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QTEXTBLOCK");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QTEXTBLOCK");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

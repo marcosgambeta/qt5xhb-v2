@@ -48,9 +48,9 @@ RETURN
 #endif
 
 /*
-QWhatsThisClickedEvent( const QString & href )
+QWhatsThisClickedEvent(const QString & href)
 */
-HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
+HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_DELETE )
+HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_DELETE)
 {
   auto obj = static_cast<QWhatsThisClickedEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_DELETE )
 /*
 QString href() const
 */
-HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_HREF )
+HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_HREF)
 {
   auto obj = static_cast<QWhatsThisClickedEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

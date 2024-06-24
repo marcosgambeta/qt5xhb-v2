@@ -60,7 +60,7 @@ RETURN
 #include <QtGui/QGradient>
 #endif
 
-HB_FUNC_STATIC( QGRADIENT_DELETE )
+HB_FUNC_STATIC(QGRADIENT_DELETE)
 {
   auto obj = static_cast<QGradient*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QGRADIENT_DELETE )
 /*
 QGradient::CoordinateMode coordinateMode() const
 */
-HB_FUNC_STATIC( QGRADIENT_COORDINATEMODE )
+HB_FUNC_STATIC(QGRADIENT_COORDINATEMODE)
 {
   auto obj = static_cast<QGradient*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -101,9 +101,9 @@ HB_FUNC_STATIC( QGRADIENT_COORDINATEMODE )
 }
 
 /*
-void setColorAt( qreal position, const QColor & color )
+void setColorAt(qreal position, const QColor & color)
 */
-HB_FUNC_STATIC( QGRADIENT_SETCOLORAT )
+HB_FUNC_STATIC(QGRADIENT_SETCOLORAT)
 {
   auto obj = static_cast<QGradient*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QGRADIENT_SETCOLORAT )
     if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2)))
     {
 #endif
-      obj->setColorAt(PQREAL(1), HB_ISOBJECT(2) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(2)) : QColor( hb_parc(2)));
+      obj->setColorAt(PQREAL(1), HB_ISOBJECT(2) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,9 +127,9 @@ HB_FUNC_STATIC( QGRADIENT_SETCOLORAT )
 }
 
 /*
-void setCoordinateMode( QGradient::CoordinateMode mode )
+void setCoordinateMode(QGradient::CoordinateMode mode)
 */
-HB_FUNC_STATIC( QGRADIENT_SETCOORDINATEMODE )
+HB_FUNC_STATIC(QGRADIENT_SETCOORDINATEMODE)
 {
   auto obj = static_cast<QGradient*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -153,9 +153,9 @@ HB_FUNC_STATIC( QGRADIENT_SETCOORDINATEMODE )
 }
 
 /*
-void setSpread( QGradient::Spread method )
+void setSpread(QGradient::Spread method)
 */
-HB_FUNC_STATIC( QGRADIENT_SETSPREAD )
+HB_FUNC_STATIC(QGRADIENT_SETSPREAD)
 {
   auto obj = static_cast<QGradient*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QGRADIENT_SETSPREAD )
 /*
 QGradient::Spread spread() const
 */
-HB_FUNC_STATIC( QGRADIENT_SPREAD )
+HB_FUNC_STATIC(QGRADIENT_SPREAD)
 {
   auto obj = static_cast<QGradient*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QGRADIENT_SPREAD )
 /*
 QGradient::Type type() const
 */
-HB_FUNC_STATIC( QGRADIENT_TYPE )
+HB_FUNC_STATIC(QGRADIENT_TYPE)
 {
   auto obj = static_cast<QGradient*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QGRADIENT_TYPE )
   }
 }
 
-HB_FUNC_STATIC( QGRADIENT_NEWFROM )
+HB_FUNC_STATIC(QGRADIENT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -256,22 +256,22 @@ HB_FUNC_STATIC( QGRADIENT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGRADIENT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGRADIENT_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QGRADIENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGRADIENT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGRADIENT_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QGRADIENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGRADIENT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGRADIENT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGRADIENT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGRADIENT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

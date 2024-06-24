@@ -52,13 +52,13 @@ RETURN
 #include <QtWidgets/QAction>
 
 /*
-QActionEvent( int type, QAction * action, QAction * before = nullptr )
+QActionEvent(int type, QAction * action, QAction * before = nullptr)
 */
-HB_FUNC_STATIC( QACTIONEVENT_NEW )
+HB_FUNC_STATIC(QACTIONEVENT_NEW)
 {
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQACTION(2) && (ISQACTION(3) || HB_ISNIL(3)))
   {
-    auto obj = new QActionEvent(PINT(1), PQACTION(2), OPQACTION( 3, nullptr));
+    auto obj = new QActionEvent(PINT(1), PQACTION(2), OPQACTION(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QACTIONEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QACTIONEVENT_DELETE )
+HB_FUNC_STATIC(QACTIONEVENT_DELETE)
 {
   auto obj = static_cast<QActionEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QACTIONEVENT_DELETE )
 /*
 QAction * action() const
 */
-HB_FUNC_STATIC( QACTIONEVENT_ACTION )
+HB_FUNC_STATIC(QACTIONEVENT_ACTION)
 {
   auto obj = static_cast<QActionEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QACTIONEVENT_ACTION )
 /*
 QAction * before() const
 */
-HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
+HB_FUNC_STATIC(QACTIONEVENT_BEFORE)
 {
   auto obj = static_cast<QActionEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

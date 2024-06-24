@@ -79,7 +79,7 @@ RETURN
 #include <QtGui/QQuaternion>
 #endif
 
-HB_FUNC_STATIC( QQUATERNION_NEW )
+HB_FUNC_STATIC(QQUATERNION_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QQUATERNION_NEW )
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    QQuaternion( float scalar, float xpos, float ypos, float zpos )
+    QQuaternion(float scalar, float xpos, float ypos, float zpos)
     */
     auto obj = new QQuaternion(PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4));
     Qt5xHb::returnNewObject(obj, true);
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QQUATERNION_NEW )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISOBJECT(2))
   {
     /*
-    QQuaternion( float scalar, const QVector3D & vector )
+    QQuaternion(float scalar, const QVector3D & vector)
     */
     auto obj = new QQuaternion(PFLOAT(1), *PQVECTOR3D(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QQUATERNION_NEW )
   else if (ISNUMPAR(1) && HB_ISOBJECT(1))
   {
     /*
-    QQuaternion( const QVector4D & vector )
+    QQuaternion(const QVector4D & vector)
     */
     auto obj = new QQuaternion(*PQVECTOR4D(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QQUATERNION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QQUATERNION_DELETE )
+HB_FUNC_STATIC(QQUATERNION_DELETE)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QQUATERNION_DELETE )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QQUATERNION_ISNULL )
+HB_FUNC_STATIC(QQUATERNION_ISNULL)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QQUATERNION_ISNULL )
 /*
 bool isIdentity() const
 */
-HB_FUNC_STATIC( QQUATERNION_ISIDENTITY )
+HB_FUNC_STATIC(QQUATERNION_ISIDENTITY)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QQUATERNION_ISIDENTITY )
 /*
 QVector3D vector() const
 */
-HB_FUNC_STATIC( QQUATERNION_VECTOR )
+HB_FUNC_STATIC(QQUATERNION_VECTOR)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -212,12 +212,12 @@ HB_FUNC_STATIC( QQUATERNION_VECTOR )
   }
 }
 
-HB_FUNC_STATIC( QQUATERNION_SETVECTOR )
+HB_FUNC_STATIC(QQUATERNION_SETVECTOR)
 {
   if (ISNUMPAR(1) && ISQVECTOR3D(1))
   {
     /*
-    void setVector( const QVector3D & vector )
+    void setVector(const QVector3D & vector)
     */
     auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QQUATERNION_SETVECTOR )
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    void setVector( float x, float y, float z )
+    void setVector(float x, float y, float z)
     */
     auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QQUATERNION_SETVECTOR )
 /*
 float x() const
 */
-HB_FUNC_STATIC( QQUATERNION_X )
+HB_FUNC_STATIC(QQUATERNION_X)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QQUATERNION_X )
 /*
 float y() const
 */
-HB_FUNC_STATIC( QQUATERNION_Y )
+HB_FUNC_STATIC(QQUATERNION_Y)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QQUATERNION_Y )
 /*
 float z() const
 */
-HB_FUNC_STATIC( QQUATERNION_Z )
+HB_FUNC_STATIC(QQUATERNION_Z)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QQUATERNION_Z )
 /*
 float scalar() const
 */
-HB_FUNC_STATIC( QQUATERNION_SCALAR )
+HB_FUNC_STATIC(QQUATERNION_SCALAR)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -347,9 +347,9 @@ HB_FUNC_STATIC( QQUATERNION_SCALAR )
 }
 
 /*
-void setX( float x )
+void setX(float x)
 */
-HB_FUNC_STATIC( QQUATERNION_SETX )
+HB_FUNC_STATIC(QQUATERNION_SETX)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -373,9 +373,9 @@ HB_FUNC_STATIC( QQUATERNION_SETX )
 }
 
 /*
-void setY( float y )
+void setY(float y)
 */
-HB_FUNC_STATIC( QQUATERNION_SETY )
+HB_FUNC_STATIC(QQUATERNION_SETY)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -399,9 +399,9 @@ HB_FUNC_STATIC( QQUATERNION_SETY )
 }
 
 /*
-void setZ( float z )
+void setZ(float z)
 */
-HB_FUNC_STATIC( QQUATERNION_SETZ )
+HB_FUNC_STATIC(QQUATERNION_SETZ)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -425,9 +425,9 @@ HB_FUNC_STATIC( QQUATERNION_SETZ )
 }
 
 /*
-void setScalar( float scalar )
+void setScalar(float scalar)
 */
-HB_FUNC_STATIC( QQUATERNION_SETSCALAR )
+HB_FUNC_STATIC(QQUATERNION_SETSCALAR)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QQUATERNION_SETSCALAR )
 /*
 float length() const
 */
-HB_FUNC_STATIC( QQUATERNION_LENGTH )
+HB_FUNC_STATIC(QQUATERNION_LENGTH)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QQUATERNION_LENGTH )
 /*
 float lengthSquared() const
 */
-HB_FUNC_STATIC( QQUATERNION_LENGTHSQUARED )
+HB_FUNC_STATIC(QQUATERNION_LENGTHSQUARED)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QQUATERNION_LENGTHSQUARED )
 /*
 QQuaternion normalized() const
 */
-HB_FUNC_STATIC( QQUATERNION_NORMALIZED )
+HB_FUNC_STATIC(QQUATERNION_NORMALIZED)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QQUATERNION_NORMALIZED )
 /*
 void normalize()
 */
-HB_FUNC_STATIC( QQUATERNION_NORMALIZE )
+HB_FUNC_STATIC(QQUATERNION_NORMALIZE)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QQUATERNION_NORMALIZE )
 /*
 QQuaternion conjugate() const
 */
-HB_FUNC_STATIC( QQUATERNION_CONJUGATE )
+HB_FUNC_STATIC(QQUATERNION_CONJUGATE)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -575,9 +575,9 @@ HB_FUNC_STATIC( QQUATERNION_CONJUGATE )
 }
 
 /*
-QVector3D rotatedVector( const QVector3D & vector ) const
+QVector3D rotatedVector(const QVector3D & vector) const
 */
-HB_FUNC_STATIC( QQUATERNION_ROTATEDVECTOR )
+HB_FUNC_STATIC(QQUATERNION_ROTATEDVECTOR)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QQUATERNION_ROTATEDVECTOR )
 /*
 QVector4D toVector4D() const
 */
-HB_FUNC_STATIC( QQUATERNION_TOVECTOR4D )
+HB_FUNC_STATIC(QQUATERNION_TOVECTOR4D)
 {
   auto obj = static_cast<QQuaternion*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -624,25 +624,25 @@ HB_FUNC_STATIC( QQUATERNION_TOVECTOR4D )
   }
 }
 
-HB_FUNC_STATIC( QQUATERNION_FROMAXISANDANGLE )
+HB_FUNC_STATIC(QQUATERNION_FROMAXISANDANGLE)
 {
   if (ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2))
   {
     /*
-    static QQuaternion fromAxisAndAngle( const QVector3D & axis, float angle )
+    static QQuaternion fromAxisAndAngle(const QVector3D & axis, float angle)
     */
 
-    auto ptr = new QQuaternion( QQuaternion::fromAxisAndAngle(*PQVECTOR3D(1), PFLOAT(2)));
+    auto ptr = new QQuaternion(QQuaternion::fromAxisAndAngle(*PQVECTOR3D(1), PFLOAT(2)));
     Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 
   }
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    static QQuaternion fromAxisAndAngle( float x, float y, float z, float angle )
+    static QQuaternion fromAxisAndAngle(float x, float y, float z, float angle)
     */
 
-    auto ptr = new QQuaternion( QQuaternion::fromAxisAndAngle(PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4)));
+    auto ptr = new QQuaternion(QQuaternion::fromAxisAndAngle(PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4)));
     Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 
   }
@@ -653,15 +653,15 @@ HB_FUNC_STATIC( QQUATERNION_FROMAXISANDANGLE )
 }
 
 /*
-static QQuaternion slerp( const QQuaternion & q1, const QQuaternion & q2, float t )
+static QQuaternion slerp(const QQuaternion & q1, const QQuaternion & q2, float t)
 */
-HB_FUNC_STATIC( QQUATERNION_SLERP )
+HB_FUNC_STATIC(QQUATERNION_SLERP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(3) && ISQQUATERNION(1) && ISQQUATERNION(2) && HB_ISNUM(3))
   {
 #endif
-    auto ptr = new QQuaternion( QQuaternion::slerp(*PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3)));
+    auto ptr = new QQuaternion(QQuaternion::slerp(*PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3)));
     Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -673,15 +673,15 @@ HB_FUNC_STATIC( QQUATERNION_SLERP )
 }
 
 /*
-static QQuaternion nlerp( const QQuaternion & q1, const QQuaternion & q2, float t )
+static QQuaternion nlerp(const QQuaternion & q1, const QQuaternion & q2, float t)
 */
-HB_FUNC_STATIC( QQUATERNION_NLERP )
+HB_FUNC_STATIC(QQUATERNION_NLERP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(3) && ISQQUATERNION(1) && ISQQUATERNION(2) && HB_ISNUM(3))
   {
 #endif
-    auto ptr = new QQuaternion( QQuaternion::nlerp(*PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3)));
+    auto ptr = new QQuaternion(QQuaternion::nlerp(*PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3)));
     Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QQUATERNION_NLERP )
 #endif
 }
 
-HB_FUNC_STATIC( QQUATERNION_NEWFROM )
+HB_FUNC_STATIC(QQUATERNION_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -722,22 +722,22 @@ HB_FUNC_STATIC( QQUATERNION_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QQUATERNION_NEWFROMOBJECT )
+HB_FUNC_STATIC(QQUATERNION_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QQUATERNION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQUATERNION_NEWFROMPOINTER )
+HB_FUNC_STATIC(QQUATERNION_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QQUATERNION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQUATERNION_SELFDESTRUCTION )
+HB_FUNC_STATIC(QQUATERNION_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QQUATERNION_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QQUATERNION_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

@@ -57,7 +57,7 @@ RETURN
 /*
 QTextFormat format() const
 */
-HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
+HB_FUNC_STATIC(QTEXTOBJECT_FORMAT)
 {
   auto obj = qobject_cast<QTextObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
 /*
 int formatIndex() const
 */
-HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
+HB_FUNC_STATIC(QTEXTOBJECT_FORMATINDEX)
 {
   auto obj = qobject_cast<QTextObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
 /*
 QTextDocument * document() const
 */
-HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
+HB_FUNC_STATIC(QTEXTOBJECT_DOCUMENT)
 {
   auto obj = qobject_cast<QTextObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
 /*
 int objectIndex() const
 */
-HB_FUNC_STATIC( QTEXTOBJECT_OBJECTINDEX )
+HB_FUNC_STATIC(QTEXTOBJECT_OBJECTINDEX)
 {
   auto obj = qobject_cast<QTextObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

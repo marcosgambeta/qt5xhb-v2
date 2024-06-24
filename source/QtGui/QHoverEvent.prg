@@ -47,9 +47,9 @@ RETURN
 #endif
 
 /*
-QHoverEvent( QEvent::Type type, const QPoint & pos, const QPoint & oldPos )
+QHoverEvent(QEvent::Type type, const QPoint & pos, const QPoint & oldPos)
 */
-HB_FUNC_STATIC( QHOVEREVENT_NEW )
+HB_FUNC_STATIC(QHOVEREVENT_NEW)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3))
   {
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QHOVEREVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QHOVEREVENT_DELETE )
+HB_FUNC_STATIC(QHOVEREVENT_DELETE)
 {
   auto obj = static_cast<QHoverEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

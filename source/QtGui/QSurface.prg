@@ -60,7 +60,7 @@ RETURN
 #include <QtGui/QSurface>
 #endif
 
-HB_FUNC_STATIC( QSURFACE_DELETE )
+HB_FUNC_STATIC(QSURFACE_DELETE)
 {
   auto obj = static_cast<QSurface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSURFACE_DELETE )
 /*
 QSurface::SurfaceClass surfaceClass() const
 */
-HB_FUNC_STATIC( QSURFACE_SURFACECLASS )
+HB_FUNC_STATIC(QSURFACE_SURFACECLASS)
 {
   auto obj = static_cast<QSurface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QSURFACE_SURFACECLASS )
 /*
 virtual QSurfaceFormat format() const = 0
 */
-HB_FUNC_STATIC( QSURFACE_FORMAT )
+HB_FUNC_STATIC(QSURFACE_FORMAT)
 {
   auto obj = static_cast<QSurface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSURFACE_FORMAT )
 /*
 virtual QSurface::SurfaceType surfaceType() const = 0
 */
-HB_FUNC_STATIC( QSURFACE_SURFACETYPE )
+HB_FUNC_STATIC(QSURFACE_SURFACETYPE)
 {
   auto obj = static_cast<QSurface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSURFACE_SURFACETYPE )
 /*
 virtual QSize size() const = 0
 */
-HB_FUNC_STATIC( QSURFACE_SIZE )
+HB_FUNC_STATIC(QSURFACE_SIZE)
 {
   auto obj = static_cast<QSurface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSURFACE_SIZE )
   }
 }
 
-HB_FUNC_STATIC( QSURFACE_NEWFROM )
+HB_FUNC_STATIC(QSURFACE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -204,22 +204,22 @@ HB_FUNC_STATIC( QSURFACE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSURFACE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSURFACE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QSURFACE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSURFACE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSURFACE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QSURFACE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSURFACE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSURFACE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSURFACE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSURFACE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

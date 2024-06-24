@@ -45,7 +45,7 @@ RETURN
 #include <QtGui/QAccessibleStateChangeEvent>
 #endif
 
-HB_FUNC_STATIC( QACCESSIBLESTATECHANGEEVENT_DELETE )
+HB_FUNC_STATIC(QACCESSIBLESTATECHANGEEVENT_DELETE)
 {
   auto obj = static_cast<QAccessibleStateChangeEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

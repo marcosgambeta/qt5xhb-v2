@@ -49,9 +49,9 @@ RETURN
 #endif
 
 /*
-QAccessibleTextInsertEvent( QObject * obj, int position, const QString & text )
+QAccessibleTextInsertEvent(QObject * obj, int position, const QString & text)
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINSERTEVENT_NEW )
+HB_FUNC_STATIC(QACCESSIBLETEXTINSERTEVENT_NEW)
 {
   if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISCHAR(3))
   {
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINSERTEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QACCESSIBLETEXTINSERTEVENT_DELETE )
+HB_FUNC_STATIC(QACCESSIBLETEXTINSERTEVENT_DELETE)
 {
   auto obj = static_cast<QAccessibleTextInsertEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINSERTEVENT_DELETE )
 /*
 QString textInserted() const
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINSERTEVENT_TEXTINSERTED )
+HB_FUNC_STATIC(QACCESSIBLETEXTINSERTEVENT_TEXTINSERTED)
 {
   auto obj = static_cast<QAccessibleTextInsertEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINSERTEVENT_TEXTINSERTED )
 /*
 int changePosition() const
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTINSERTEVENT_CHANGEPOSITION )
+HB_FUNC_STATIC(QACCESSIBLETEXTINSERTEVENT_CHANGEPOSITION)
 {
   auto obj = static_cast<QAccessibleTextInsertEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

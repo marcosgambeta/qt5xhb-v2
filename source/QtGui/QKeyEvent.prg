@@ -56,13 +56,13 @@ RETURN
 #endif
 
 /*
-QKeyEvent( QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QString & text = QString(), bool autorep = false, ushort count = 1 )
+QKeyEvent(QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QString & text = QString(), bool autorep = false, ushort count = 1)
 */
-HB_FUNC_STATIC( QKEYEVENT_NEW )
+HB_FUNC_STATIC(QKEYEVENT_NEW)
 {
   if (ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISLOG(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)))
   {
-    auto obj = new QKeyEvent(static_cast<QEvent::Type>(hb_parni(1)), PINT(2), static_cast<Qt::KeyboardModifiers>(hb_parni(3)), OPQSTRING(4, QString() ), OPBOOL( 5, false ), OPUSHORT( 6, 1));
+    auto obj = new QKeyEvent(static_cast<QEvent::Type>(hb_parni(1)), PINT(2), static_cast<Qt::KeyboardModifiers>(hb_parni(3)), OPQSTRING(4, QString()), OPBOOL(5, false), OPUSHORT(6, 1));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QKEYEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QKEYEVENT_DELETE )
+HB_FUNC_STATIC(QKEYEVENT_DELETE)
 {
   auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QKEYEVENT_DELETE )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QKEYEVENT_COUNT )
+HB_FUNC_STATIC(QKEYEVENT_COUNT)
 {
   auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QKEYEVENT_COUNT )
 /*
 bool isAutoRepeat() const
 */
-HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
+HB_FUNC_STATIC(QKEYEVENT_ISAUTOREPEAT)
 {
   auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
 /*
 int key() const
 */
-HB_FUNC_STATIC( QKEYEVENT_KEY )
+HB_FUNC_STATIC(QKEYEVENT_KEY)
 {
   auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -160,9 +160,9 @@ HB_FUNC_STATIC( QKEYEVENT_KEY )
 }
 
 /*
-bool matches( QKeySequence::StandardKey key ) const
+bool matches(QKeySequence::StandardKey key) const
 */
-HB_FUNC_STATIC( QKEYEVENT_MATCHES )
+HB_FUNC_STATIC(QKEYEVENT_MATCHES)
 {
   auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QKEYEVENT_MATCHES )
 /*
 Qt::KeyboardModifiers modifiers() const
 */
-HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
+HB_FUNC_STATIC(QKEYEVENT_MODIFIERS)
 {
   auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
 /*
 quint32 nativeModifiers() const
 */
-HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
+HB_FUNC_STATIC(QKEYEVENT_NATIVEMODIFIERS)
 {
   auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
 /*
 quint32 nativeScanCode() const
 */
-HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
+HB_FUNC_STATIC(QKEYEVENT_NATIVESCANCODE)
 {
   auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
 /*
 quint32 nativeVirtualKey() const
 */
-HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
+HB_FUNC_STATIC(QKEYEVENT_NATIVEVIRTUALKEY)
 {
   auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QKEYEVENT_TEXT )
+HB_FUNC_STATIC(QKEYEVENT_TEXT)
 {
   auto obj = static_cast<QKeyEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

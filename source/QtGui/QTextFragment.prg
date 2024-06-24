@@ -65,7 +65,7 @@ RETURN
 #include <QtGui/QTextFragment>
 #endif
 
-HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
+HB_FUNC_STATIC(QTEXTFRAGMENT_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
   else if (ISNUMPAR(1) && ISQTEXTFRAGMENT(1))
   {
     /*
-    QTextFragment( const QTextFragment & o )
+    QTextFragment(const QTextFragment & o)
     */
     auto obj = new QTextFragment(*PQTEXTFRAGMENT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTEXTFRAGMENT_DELETE )
+HB_FUNC_STATIC(QTEXTFRAGMENT_DELETE)
 {
   auto obj = static_cast<QTextFragment*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_DELETE )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
+HB_FUNC_STATIC(QTEXTFRAGMENT_ISVALID)
 {
   auto obj = static_cast<QTextFragment*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
 /*
 int position() const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
+HB_FUNC_STATIC(QTEXTFRAGMENT_POSITION)
 {
   auto obj = static_cast<QTextFragment*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
 /*
 int length() const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
+HB_FUNC_STATIC(QTEXTFRAGMENT_LENGTH)
 {
   auto obj = static_cast<QTextFragment*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -180,9 +180,9 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
 }
 
 /*
-bool contains( int position ) const
+bool contains(int position) const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
+HB_FUNC_STATIC(QTEXTFRAGMENT_CONTAINS)
 {
   auto obj = static_cast<QTextFragment*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
 /*
 QTextCharFormat charFormat() const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
+HB_FUNC_STATIC(QTEXTFRAGMENT_CHARFORMAT)
 {
   auto obj = static_cast<QTextFragment*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
 /*
 int charFormatIndex() const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
+HB_FUNC_STATIC(QTEXTFRAGMENT_CHARFORMATINDEX)
 {
   auto obj = static_cast<QTextFragment*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
+HB_FUNC_STATIC(QTEXTFRAGMENT_TEXT)
 {
   auto obj = static_cast<QTextFragment*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -277,9 +277,9 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
 }
 
 /*
-QList<QGlyphRun> glyphRuns( int from = -1, int length = -1 ) const
+QList<QGlyphRun> glyphRuns(int from = -1, int length = -1) const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
+HB_FUNC_STATIC(QTEXTFRAGMENT_GLYPHRUNS)
 {
   auto obj = static_cast<QTextFragment*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
     if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      auto list = obj->glyphRuns( OPINT( 1, -1 ), OPINT( 2, -1));
+      auto list = obj->glyphRuns(OPINT(1, -1), OPINT(2, -1));
       auto pDynSym = hb_dynsymFindName("QGLYPHRUN");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
   }
 }
 
-HB_FUNC_STATIC( QTEXTFRAGMENT_NEWFROM )
+HB_FUNC_STATIC(QTEXTFRAGMENT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -356,22 +356,22 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QTEXTFRAGMENT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QTEXTFRAGMENT_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QTEXTFRAGMENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTFRAGMENT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QTEXTFRAGMENT_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QTEXTFRAGMENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTFRAGMENT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTFRAGMENT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QTEXTFRAGMENT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTFRAGMENT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

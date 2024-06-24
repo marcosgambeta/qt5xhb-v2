@@ -58,7 +58,7 @@ RETURN
 #include <QtGui/QTextLength>
 #endif
 
-HB_FUNC_STATIC( QTEXTLENGTH_NEW )
+HB_FUNC_STATIC(QTEXTLENGTH_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QTextLength( QTextLength::Type type, qreal value )
+    QTextLength(QTextLength::Type type, qreal value)
     */
     auto obj = new QTextLength(static_cast<QTextLength::Type>(hb_parni(1)), PQREAL(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTEXTLENGTH_DELETE )
+HB_FUNC_STATIC(QTEXTLENGTH_DELETE)
 {
   auto obj = static_cast<QTextLength*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_DELETE )
 /*
 QTextLength::Type type() const
 */
-HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
+HB_FUNC_STATIC(QTEXTLENGTH_TYPE)
 {
   auto obj = static_cast<QTextLength*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -125,9 +125,9 @@ HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
 }
 
 /*
-qreal value( qreal maximumLength ) const
+qreal value(qreal maximumLength) const
 */
-HB_FUNC_STATIC( QTEXTLENGTH_VALUE )
+HB_FUNC_STATIC(QTEXTLENGTH_VALUE)
 {
   auto obj = static_cast<QTextLength*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_VALUE )
 /*
 qreal rawValue() const
 */
-HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
+HB_FUNC_STATIC(QTEXTLENGTH_RAWVALUE)
 {
   auto obj = static_cast<QTextLength*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
   }
 }
 
-HB_FUNC_STATIC( QTEXTLENGTH_NEWFROM )
+HB_FUNC_STATIC(QTEXTLENGTH_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -202,22 +202,22 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QTEXTLENGTH_NEWFROMOBJECT )
+HB_FUNC_STATIC(QTEXTLENGTH_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QTEXTLENGTH_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTLENGTH_NEWFROMPOINTER )
+HB_FUNC_STATIC(QTEXTLENGTH_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QTEXTLENGTH_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTLENGTH_SELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTLENGTH_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QTEXTLENGTH_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTLENGTH_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

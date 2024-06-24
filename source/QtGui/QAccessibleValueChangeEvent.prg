@@ -50,9 +50,9 @@ RETURN
 #endif
 
 /*
-QAccessibleValueChangeEvent( QObject * obj, const QVariant & val )
+QAccessibleValueChangeEvent(QObject * obj, const QVariant & val)
 */
-HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_NEW )
+HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_NEW)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && ISQVARIANT(2))
   {
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_DELETE )
+HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_DELETE)
 {
   auto obj = static_cast<QAccessibleValueChangeEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -82,9 +82,9 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_DELETE )
 }
 
 /*
-void setValue( const QVariant & val)
+void setValue(const QVariant & val)
 */
-HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_SETVALUE )
+HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_SETVALUE)
 {
   auto obj = static_cast<QAccessibleValueChangeEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_SETVALUE )
 /*
 QVariant value() const
 */
-HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_VALUE )
+HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_VALUE)
 {
   auto obj = static_cast<QAccessibleValueChangeEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

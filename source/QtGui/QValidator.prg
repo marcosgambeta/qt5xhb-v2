@@ -52,7 +52,7 @@ RETURN
 #include <QtGui/QValidator>
 #endif
 
-HB_FUNC_STATIC( QVALIDATOR_DELETE )
+HB_FUNC_STATIC(QVALIDATOR_DELETE)
 {
   auto obj = qobject_cast<QValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -71,9 +71,9 @@ HB_FUNC_STATIC( QVALIDATOR_DELETE )
 }
 
 /*
-virtual void fixup( QString & input ) const
+virtual void fixup(QString & input) const
 */
-HB_FUNC_STATIC( QVALIDATOR_FIXUP )
+HB_FUNC_STATIC(QVALIDATOR_FIXUP)
 {
   auto obj = qobject_cast<QValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QVALIDATOR_FIXUP )
 #endif
       QString par1 = hb_parc(1);
       obj->fixup(par1);
-      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storc(QSTRINGTOSTRING(par1), 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QVALIDATOR_FIXUP )
 /*
 QLocale locale() const
 */
-HB_FUNC_STATIC( QVALIDATOR_LOCALE )
+HB_FUNC_STATIC(QVALIDATOR_LOCALE)
 {
   auto obj = qobject_cast<QValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -124,9 +124,9 @@ HB_FUNC_STATIC( QVALIDATOR_LOCALE )
 }
 
 /*
-void setLocale( const QLocale & locale )
+void setLocale(const QLocale & locale)
 */
-HB_FUNC_STATIC( QVALIDATOR_SETLOCALE )
+HB_FUNC_STATIC(QVALIDATOR_SETLOCALE)
 {
   auto obj = qobject_cast<QValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -150,9 +150,9 @@ HB_FUNC_STATIC( QVALIDATOR_SETLOCALE )
 }
 
 /*
-virtual QValidator::State validate( QString & input, int & pos ) const = 0
+virtual QValidator::State validate(QString & input, int & pos) const = 0
 */
-HB_FUNC_STATIC( QVALIDATOR_VALIDATE )
+HB_FUNC_STATIC(QVALIDATOR_VALIDATE)
 {
   auto obj = qobject_cast<QValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QVALIDATOR_VALIDATE )
       QString par1 = hb_parc(1);
       int par2;
       RENUM(obj->validate(par1, par2));
-      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storc(QSTRINGTOSTRING(par1), 1);
       hb_storni(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

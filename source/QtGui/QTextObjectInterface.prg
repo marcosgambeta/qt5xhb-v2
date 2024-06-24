@@ -57,7 +57,7 @@ RETURN
 #include <QtGui/QTextObjectInterface>
 #endif
 
-HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DELETE )
+HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DELETE)
 {
   auto obj = static_cast<QTextObjectInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -74,9 +74,9 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DELETE )
 }
 
 /*
-virtual QSizeF intrinsicSize( QTextDocument * doc, int posInDocument, const QTextFormat & format ) = 0
+virtual QSizeF intrinsicSize(QTextDocument * doc, int posInDocument, const QTextFormat & format) = 0
 */
-HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
+HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_INTRINSICSIZE)
 {
   auto obj = static_cast<QTextObjectInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -99,9 +99,9 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
 }
 
 /*
-virtual void drawObject( QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format ) = 0
+virtual void drawObject(QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format) = 0
 */
-HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
+HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DRAWOBJECT)
 {
   auto obj = static_cast<QTextObjectInterface*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_NEWFROM )
+HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -154,22 +154,22 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QTEXTOBJECTINTERFACE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QTEXTOBJECTINTERFACE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

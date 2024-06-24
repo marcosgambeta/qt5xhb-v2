@@ -51,13 +51,13 @@ RETURN
 #endif
 
 /*
-QDragMoveEvent( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::DragMove )
+QDragMoveEvent(const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::DragMove)
 */
-HB_FUNC_STATIC( QDRAGMOVEEVENT_NEW )
+HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
 {
   if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) && (HB_ISNUM(6) || HB_ISNIL(6)))
   {
-    auto obj = new QDragMoveEvent(*PQPOINT(1), static_cast<Qt::DropActions>(hb_parni(2)), PQMIMEDATA(3), static_cast<Qt::MouseButtons>(hb_parni(4)), static_cast<Qt::KeyboardModifiers>(hb_parni(5)), HB_ISNIL(6) ? static_cast<QEvent::Type >( QEvent::DragMove ) : static_cast<QEvent::Type >(hb_parni(6)));
+    auto obj = new QDragMoveEvent(*PQPOINT(1), static_cast<Qt::DropActions>(hb_parni(2)), PQMIMEDATA(3), static_cast<Qt::MouseButtons>(hb_parni(4)), static_cast<Qt::KeyboardModifiers>(hb_parni(5)), HB_ISNIL(6) ? static_cast<QEvent::Type >(QEvent::DragMove) : static_cast<QEvent::Type >(hb_parni(6)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDRAGMOVEEVENT_DELETE )
+HB_FUNC_STATIC(QDRAGMOVEEVENT_DELETE)
 {
   auto obj = static_cast<QDragMoveEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -82,12 +82,12 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
+HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
 {
   if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    void accept( const QRect & rectangle )
+    void accept(const QRect & rectangle)
     */
     auto obj = static_cast<QDragMoveEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
 /*
 QRect answerRect() const
 */
-HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
+HB_FUNC_STATIC(QDRAGMOVEEVENT_ANSWERRECT)
 {
   auto obj = static_cast<QDragMoveEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -145,12 +145,12 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
   }
 }
 
-HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE )
+HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
 {
   if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    void ignore( const QRect & rectangle )
+    void ignore(const QRect & rectangle)
     */
     auto obj = static_cast<QDragMoveEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

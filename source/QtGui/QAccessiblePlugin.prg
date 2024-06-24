@@ -49,7 +49,7 @@ RETURN
 #include <QtGui/QAccessiblePlugin>
 #endif
 
-HB_FUNC_STATIC( QACCESSIBLEPLUGIN_DELETE )
+HB_FUNC_STATIC(QACCESSIBLEPLUGIN_DELETE)
 {
   auto obj = qobject_cast<QAccessiblePlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -68,9 +68,9 @@ HB_FUNC_STATIC( QACCESSIBLEPLUGIN_DELETE )
 }
 
 /*
-virtual QAccessibleInterface * create( const QString & key, QObject * object ) = 0
+virtual QAccessibleInterface * create(const QString & key, QObject * object) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEPLUGIN_CREATE )
+HB_FUNC_STATIC(QACCESSIBLEPLUGIN_CREATE)
 {
   auto obj = qobject_cast<QAccessiblePlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

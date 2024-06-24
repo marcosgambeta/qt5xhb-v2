@@ -57,15 +57,15 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
+HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QRegularExpressionValidator( QObject * parent = nullptr )
+    QRegularExpressionValidator(QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    auto obj = new QRegularExpressionValidator( OPQOBJECT( 1, nullptr));
+    auto obj = new QRegularExpressionValidator(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -73,10 +73,10 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
   else if (ISBETWEEN(1, 2) && ISQREGULAREXPRESSION(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QRegularExpressionValidator( const QRegularExpression & re, QObject * parent = nullptr )
+    QRegularExpressionValidator(const QRegularExpression & re, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    auto obj = new QRegularExpressionValidator(*PQREGULAREXPRESSION(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QRegularExpressionValidator(*PQREGULAREXPRESSION(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_DELETE )
+HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QRegularExpressionValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_DELETE )
 /*
 QRegularExpression regularExpression() const
 */
-HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
+HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QRegularExpressionValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -135,9 +135,9 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
 }
 
 /*
-void setRegularExpression( const QRegularExpression & re )
+void setRegularExpression(const QRegularExpression & re)
 */
-HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
+HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QRegularExpressionValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -163,9 +163,9 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
 }
 
 /*
-void regularExpressionChanged( const QRegularExpression & re )
+void regularExpressionChanged(const QRegularExpression & re)
 */
-HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
+HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = qobject_cast<QRegularExpressionValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QREGULAREXPRESSIONVALIDATOR");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGULAREXPRESSION");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QREGULAREXPRESSION");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

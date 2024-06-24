@@ -65,7 +65,7 @@ RETURN
 #include <QtGui/QGlyphRun>
 #endif
 
-HB_FUNC_STATIC( QGLYPHRUN_NEW )
+HB_FUNC_STATIC(QGLYPHRUN_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW )
   else if (ISNUMPAR(1) && ISQGLYPHRUN(1))
   {
     /*
-    QGlyphRun( const QGlyphRun & other )
+    QGlyphRun(const QGlyphRun & other)
     */
     auto obj = new QGlyphRun(*PQGLYPHRUN(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_DELETE )
+HB_FUNC_STATIC(QGLYPHRUN_DELETE)
 {
   auto obj = static_cast<QGlyphRun*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QGLYPHRUN_DELETE )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
+HB_FUNC_STATIC(QGLYPHRUN_CLEAR)
 {
   auto obj = static_cast<QGlyphRun*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
 /*
 bool overline() const
 */
-HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
+HB_FUNC_STATIC(QGLYPHRUN_OVERLINE)
 {
   auto obj = static_cast<QGlyphRun*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
 /*
 QRawFont rawFont() const
 */
-HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
+HB_FUNC_STATIC(QGLYPHRUN_RAWFONT)
 {
   auto obj = static_cast<QGlyphRun*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -183,9 +183,9 @@ HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
 }
 
 /*
-void setOverline( bool overline )
+void setOverline(bool overline)
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
+HB_FUNC_STATIC(QGLYPHRUN_SETOVERLINE)
 {
   auto obj = static_cast<QGlyphRun*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -209,9 +209,9 @@ HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
 }
 
 /*
-void setRawFont( const QRawFont & rawFont )
+void setRawFont(const QRawFont & rawFont)
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
+HB_FUNC_STATIC(QGLYPHRUN_SETRAWFONT)
 {
   auto obj = static_cast<QGlyphRun*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -235,9 +235,9 @@ HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
 }
 
 /*
-void setStrikeOut( bool strikeOut )
+void setStrikeOut(bool strikeOut)
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
+HB_FUNC_STATIC(QGLYPHRUN_SETSTRIKEOUT)
 {
   auto obj = static_cast<QGlyphRun*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -261,9 +261,9 @@ HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
 }
 
 /*
-void setUnderline( bool underline )
+void setUnderline(bool underline)
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
+HB_FUNC_STATIC(QGLYPHRUN_SETUNDERLINE)
 {
   auto obj = static_cast<QGlyphRun*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
 /*
 bool strikeOut() const
 */
-HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
+HB_FUNC_STATIC(QGLYPHRUN_STRIKEOUT)
 {
   auto obj = static_cast<QGlyphRun*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
 /*
 bool underline() const
 */
-HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
+HB_FUNC_STATIC(QGLYPHRUN_UNDERLINE)
 {
   auto obj = static_cast<QGlyphRun*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
   }
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_NEWFROM )
+HB_FUNC_STATIC(QGLYPHRUN_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -364,22 +364,22 @@ HB_FUNC_STATIC( QGLYPHRUN_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGLYPHRUN_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QGLYPHRUN_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGLYPHRUN_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QGLYPHRUN_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGLYPHRUN_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGLYPHRUN_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

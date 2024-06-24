@@ -58,23 +58,23 @@ RETURN
 #include <QtGui/QDoubleValidator>
 #endif
 
-HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW )
+HB_FUNC_STATIC(QDOUBLEVALIDATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QDoubleValidator( QObject * parent = nullptr )
+    QDoubleValidator(QObject * parent = nullptr)
     */
-    auto obj = new QDoubleValidator( OPQOBJECT( 1, nullptr));
+    auto obj = new QDoubleValidator(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
-    QDoubleValidator( double bottom, double top, int decimals, QObject * parent = nullptr )
+    QDoubleValidator(double bottom, double top, int decimals, QObject * parent = nullptr)
     */
-    auto obj = new QDoubleValidator(PDOUBLE(1), PDOUBLE(2), PINT(3), OPQOBJECT( 4, nullptr));
+    auto obj = new QDoubleValidator(PDOUBLE(1), PDOUBLE(2), PINT(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDOUBLEVALIDATOR_DELETE )
+HB_FUNC_STATIC(QDOUBLEVALIDATOR_DELETE)
 {
   auto obj = qobject_cast<QDoubleValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_DELETE )
 /*
 double bottom() const
 */
-HB_FUNC_STATIC( QDOUBLEVALIDATOR_BOTTOM )
+HB_FUNC_STATIC(QDOUBLEVALIDATOR_BOTTOM)
 {
   auto obj = qobject_cast<QDoubleValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_BOTTOM )
 /*
 int decimals() const
 */
-HB_FUNC_STATIC( QDOUBLEVALIDATOR_DECIMALS )
+HB_FUNC_STATIC(QDOUBLEVALIDATOR_DECIMALS)
 {
   auto obj = qobject_cast<QDoubleValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_DECIMALS )
 /*
 QDoubleValidator::Notation notation() const
 */
-HB_FUNC_STATIC( QDOUBLEVALIDATOR_NOTATION )
+HB_FUNC_STATIC(QDOUBLEVALIDATOR_NOTATION)
 {
   auto obj = qobject_cast<QDoubleValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -175,9 +175,9 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NOTATION )
 }
 
 /*
-void setBottom( double )
+void setBottom(double)
 */
-HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETBOTTOM )
+HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETBOTTOM)
 {
   auto obj = qobject_cast<QDoubleValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -201,9 +201,9 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETBOTTOM )
 }
 
 /*
-void setDecimals( int )
+void setDecimals(int)
 */
-HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETDECIMALS )
+HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETDECIMALS)
 {
   auto obj = qobject_cast<QDoubleValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -227,9 +227,9 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETDECIMALS )
 }
 
 /*
-void setNotation( QDoubleValidator::Notation )
+void setNotation(QDoubleValidator::Notation)
 */
-HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETNOTATION )
+HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETNOTATION)
 {
   auto obj = qobject_cast<QDoubleValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -253,9 +253,9 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETNOTATION )
 }
 
 /*
-virtual void setRange( double minimum, double maximum, int decimals = 0 )
+virtual void setRange(double minimum, double maximum, int decimals = 0)
 */
-HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
+HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETRANGE)
 {
   auto obj = qobject_cast<QDoubleValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->setRange(PDOUBLE(1), PDOUBLE(2), OPINT( 3, 0));
+      obj->setRange(PDOUBLE(1), PDOUBLE(2), OPINT(3, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,9 +279,9 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
 }
 
 /*
-void setTop( double )
+void setTop(double)
 */
-HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETTOP )
+HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETTOP)
 {
   auto obj = qobject_cast<QDoubleValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETTOP )
 /*
 double top() const
 */
-HB_FUNC_STATIC( QDOUBLEVALIDATOR_TOP )
+HB_FUNC_STATIC(QDOUBLEVALIDATOR_TOP)
 {
   auto obj = qobject_cast<QDoubleValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -329,9 +329,9 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_TOP )
 }
 
 /*
-virtual QValidator::State validate( QString & input, int & pos ) const
+virtual QValidator::State validate(QString & input, int & pos) const
 */
-HB_FUNC_STATIC( QDOUBLEVALIDATOR_VALIDATE )
+HB_FUNC_STATIC(QDOUBLEVALIDATOR_VALIDATE)
 {
   auto obj = qobject_cast<QDoubleValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_VALIDATE )
       QString par1 = hb_parc(1);
       int par2;
       RENUM(obj->validate(par1, par2));
-      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storc(QSTRINGTOSTRING(par1), 1);
       hb_storni(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

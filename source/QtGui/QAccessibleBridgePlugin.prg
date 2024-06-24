@@ -49,7 +49,7 @@ RETURN
 #include <QtGui/QAccessibleBridgePlugin>
 #endif
 
-HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_DELETE )
+HB_FUNC_STATIC(QACCESSIBLEBRIDGEPLUGIN_DELETE)
 {
   auto obj = qobject_cast<QAccessibleBridgePlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -68,9 +68,9 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_DELETE )
 }
 
 /*
-virtual QAccessibleBridge * create( const QString & key ) = 0
+virtual QAccessibleBridge * create(const QString & key) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_CREATE )
+HB_FUNC_STATIC(QACCESSIBLEBRIDGEPLUGIN_CREATE)
 {
   auto obj = qobject_cast<QAccessibleBridgePlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

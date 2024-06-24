@@ -50,7 +50,7 @@ RETURN
 #include <QtGui/QPictureFormatPlugin>
 #endif
 
-HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_DELETE )
+HB_FUNC_STATIC(QPICTUREFORMATPLUGIN_DELETE)
 {
   auto obj = qobject_cast<QPictureFormatPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -69,9 +69,9 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_DELETE )
 }
 
 /*
-virtual bool loadPicture( const QString & format, const QString & filename, QPicture * pic )
+virtual bool loadPicture(const QString & format, const QString & filename, QPicture * pic)
 */
-HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_LOADPICTURE )
+HB_FUNC_STATIC(QPICTUREFORMATPLUGIN_LOADPICTURE)
 {
   auto obj = qobject_cast<QPictureFormatPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -93,9 +93,9 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_LOADPICTURE )
 }
 
 /*
-virtual bool savePicture( const QString & format, const QString & filename, const QPicture & pic )
+virtual bool savePicture(const QString & format, const QString & filename, const QPicture & pic)
 */
-HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_SAVEPICTURE )
+HB_FUNC_STATIC(QPICTUREFORMATPLUGIN_SAVEPICTURE)
 {
   auto obj = qobject_cast<QPictureFormatPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -117,9 +117,9 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_SAVEPICTURE )
 }
 
 /*
-virtual bool installIOHandler( const QString & format ) = 0
+virtual bool installIOHandler(const QString & format) = 0
 */
-HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_INSTALLIOHANDLER )
+HB_FUNC_STATIC(QPICTUREFORMATPLUGIN_INSTALLIOHANDLER)
 {
   auto obj = qobject_cast<QPictureFormatPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

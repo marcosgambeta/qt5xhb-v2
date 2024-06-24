@@ -71,7 +71,7 @@ RETURN
 
 #include <QtGui/QTextCursor>
 
-HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
+HB_FUNC_STATIC(QTEXTTABLECELL_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
   else if (ISNUMPAR(1) && ISQTEXTTABLECELL(1))
   {
     /*
-    QTextTableCell( const QTextTableCell & o )
+    QTextTableCell(const QTextTableCell & o)
     */
     auto obj = new QTextTableCell(*PQTEXTTABLECELL(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTEXTTABLECELL_DELETE )
+HB_FUNC_STATIC(QTEXTTABLECELL_DELETE)
 {
   auto obj = static_cast<QTextTableCell*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -114,9 +114,9 @@ HB_FUNC_STATIC( QTEXTTABLECELL_DELETE )
 }
 
 /*
-void setFormat( const QTextCharFormat & format )
+void setFormat(const QTextCharFormat & format)
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_SETFORMAT )
+HB_FUNC_STATIC(QTEXTTABLECELL_SETFORMAT)
 {
   auto obj = static_cast<QTextTableCell*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_SETFORMAT )
 /*
 QTextCharFormat format() const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_FORMAT )
+HB_FUNC_STATIC(QTEXTTABLECELL_FORMAT)
 {
   auto obj = static_cast<QTextTableCell*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FORMAT )
 /*
 int row() const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_ROW )
+HB_FUNC_STATIC(QTEXTTABLECELL_ROW)
 {
   auto obj = static_cast<QTextTableCell*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ROW )
 /*
 int column() const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_COLUMN )
+HB_FUNC_STATIC(QTEXTTABLECELL_COLUMN)
 {
   auto obj = static_cast<QTextTableCell*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_COLUMN )
 /*
 int rowSpan() const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_ROWSPAN )
+HB_FUNC_STATIC(QTEXTTABLECELL_ROWSPAN)
 {
   auto obj = static_cast<QTextTableCell*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ROWSPAN )
 /*
 int columnSpan() const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_COLUMNSPAN )
+HB_FUNC_STATIC(QTEXTTABLECELL_COLUMNSPAN)
 {
   auto obj = static_cast<QTextTableCell*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_COLUMNSPAN )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_ISVALID )
+HB_FUNC_STATIC(QTEXTTABLECELL_ISVALID)
 {
   auto obj = static_cast<QTextTableCell*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ISVALID )
 /*
 QTextCursor firstCursorPosition() const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTCURSORPOSITION )
+HB_FUNC_STATIC(QTEXTTABLECELL_FIRSTCURSORPOSITION)
 {
   auto obj = static_cast<QTextTableCell*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTCURSORPOSITION )
 /*
 QTextCursor lastCursorPosition() const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_LASTCURSORPOSITION )
+HB_FUNC_STATIC(QTEXTTABLECELL_LASTCURSORPOSITION)
 {
   auto obj = static_cast<QTextTableCell*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_LASTCURSORPOSITION )
 /*
 int firstPosition() const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTPOSITION )
+HB_FUNC_STATIC(QTEXTTABLECELL_FIRSTPOSITION)
 {
   auto obj = static_cast<QTextTableCell*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTPOSITION )
 /*
 int lastPosition() const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_LASTPOSITION )
+HB_FUNC_STATIC(QTEXTTABLECELL_LASTPOSITION)
 {
   auto obj = static_cast<QTextTableCell*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_LASTPOSITION )
 /*
 int tableCellFormatIndex() const
 */
-HB_FUNC_STATIC( QTEXTTABLECELL_TABLECELLFORMATINDEX )
+HB_FUNC_STATIC(QTEXTTABLECELL_TABLECELLFORMATINDEX)
 {
   auto obj = static_cast<QTextTableCell*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_TABLECELLFORMATINDEX )
   }
 }
 
-HB_FUNC_STATIC( QTEXTTABLECELL_NEWFROM )
+HB_FUNC_STATIC(QTEXTTABLECELL_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -436,22 +436,22 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QTEXTTABLECELL_NEWFROMOBJECT )
+HB_FUNC_STATIC(QTEXTTABLECELL_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QTEXTTABLECELL_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTTABLECELL_NEWFROMPOINTER )
+HB_FUNC_STATIC(QTEXTTABLECELL_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QTEXTTABLECELL_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTTABLECELL_SELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTTABLECELL_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QTEXTTABLECELL_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTTABLECELL_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

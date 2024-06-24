@@ -49,7 +49,7 @@ RETURN
 /*
 QHideEvent()
 */
-HB_FUNC_STATIC( QHIDEEVENT_NEW )
+HB_FUNC_STATIC(QHIDEEVENT_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QHIDEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QHIDEEVENT_DELETE )
+HB_FUNC_STATIC(QHIDEEVENT_DELETE)
 {
   auto obj = static_cast<QHideEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

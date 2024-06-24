@@ -60,7 +60,7 @@ RETURN
 #include <QtGui/QTextDocumentFragment>
 #endif
 
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
+HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
   else if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
   {
     /*
-    QTextDocumentFragment( const QTextDocument * document )
+    QTextDocumentFragment(const QTextDocument * document)
     */
     auto obj = new QTextDocumentFragment(PQTEXTDOCUMENT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
   else if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
   {
     /*
-    QTextDocumentFragment( const QTextCursor & range )
+    QTextDocumentFragment(const QTextCursor & range)
     */
     auto obj = new QTextDocumentFragment(*PQTEXTCURSOR(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
   else if (ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1))
   {
     /*
-    QTextDocumentFragment( const QTextDocumentFragment & rhs )
+    QTextDocumentFragment(const QTextDocumentFragment & rhs)
     */
     auto obj = new QTextDocumentFragment(*PQTEXTDOCUMENTFRAGMENT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_DELETE )
+HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_DELETE)
 {
   auto obj = static_cast<QTextDocumentFragment*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_DELETE )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
+HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_ISEMPTY)
 {
   auto obj = static_cast<QTextDocumentFragment*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
 /*
 QString toPlainText() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
+HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT)
 {
   auto obj = static_cast<QTextDocumentFragment*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -169,9 +169,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
 }
 
 /*
-QString toHtml( const QByteArray & encoding = QByteArray() ) const
+QString toHtml(const QByteArray & encoding = QByteArray()) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML )
+HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOHTML)
 {
   auto obj = static_cast<QTextDocumentFragment*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML )
     if (ISBETWEEN(0, 1) && (ISQBYTEARRAY(1) || HB_ISNIL(1)))
     {
 #endif
-      RQSTRING(obj->toHtml( HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(1))));
+      RQSTRING(obj->toHtml(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray*>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,15 +193,15 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML )
 }
 
 /*
-static QTextDocumentFragment fromPlainText( const QString & plainText )
+static QTextDocumentFragment fromPlainText(const QString & plainText)
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT )
+HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    auto ptr = new QTextDocumentFragment( QTextDocumentFragment::fromPlainText(PQSTRING(1)));
+    auto ptr = new QTextDocumentFragment(QTextDocumentFragment::fromPlainText(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QTEXTDOCUMENTFRAGMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -212,25 +212,25 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT )
 #endif
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
+HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMHTML)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QTextDocumentFragment fromHtml( const QString & html )
+    static QTextDocumentFragment fromHtml(const QString & html)
     */
 
-    auto ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml(PQSTRING(1)));
+    auto ptr = new QTextDocumentFragment(QTextDocumentFragment::fromHtml(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QTEXTDOCUMENTFRAGMENT", true);
 
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQTEXTDOCUMENT(2))
   {
     /*
-    static QTextDocumentFragment fromHtml( const QString & html, const QTextDocument * resourceProvider )
+    static QTextDocumentFragment fromHtml(const QString & html, const QTextDocument * resourceProvider)
     */
 
-    auto ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml(PQSTRING(1), PQTEXTDOCUMENT(2)));
+    auto ptr = new QTextDocumentFragment(QTextDocumentFragment::fromHtml(PQSTRING(1), PQTEXTDOCUMENT(2)));
     Qt5xHb::createReturnClass(ptr, "QTEXTDOCUMENTFRAGMENT", true);
 
   }
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
   }
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEWFROM )
+HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -270,22 +270,22 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QTEXTDOCUMENTFRAGMENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QTEXTDOCUMENTFRAGMENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

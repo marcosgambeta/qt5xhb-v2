@@ -51,7 +51,7 @@ RETURN
 
 #include <QtCore/QUrl>
 
-HB_FUNC_STATIC( QFILEOPENEVENT_DELETE )
+HB_FUNC_STATIC(QFILEOPENEVENT_DELETE)
 {
   auto obj = static_cast<QFileOpenEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_DELETE )
 /*
 QString file() const
 */
-HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
+HB_FUNC_STATIC(QFILEOPENEVENT_FILE)
 {
   auto obj = static_cast<QFileOpenEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -92,9 +92,9 @@ HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
 }
 
 /*
-bool openFile( QFile & file, QIODevice::OpenMode flags ) const
+bool openFile(QFile & file, QIODevice::OpenMode flags) const
 */
-HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
+HB_FUNC_STATIC(QFILEOPENEVENT_OPENFILE)
 {
   auto obj = static_cast<QFileOpenEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QFILEOPENEVENT_URL )
+HB_FUNC_STATIC(QFILEOPENEVENT_URL)
 {
   auto obj = static_cast<QFileOpenEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

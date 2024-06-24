@@ -49,7 +49,7 @@ RETURN
 /*
 QCloseEvent()
 */
-HB_FUNC_STATIC( QCLOSEEVENT_NEW )
+HB_FUNC_STATIC(QCLOSEEVENT_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QCLOSEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QCLOSEEVENT_DELETE )
+HB_FUNC_STATIC(QCLOSEEVENT_DELETE)
 {
   auto obj = static_cast<QCloseEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

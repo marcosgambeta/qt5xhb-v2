@@ -55,13 +55,13 @@ RETURN
 #endif
 
 /*
-QOpenGLVertexArrayObject( QObject * parent = nullptr )
+QOpenGLVertexArrayObject(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_NEW )
+HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QOpenGLVertexArrayObject( OPQOBJECT( 1, nullptr));
+    auto obj = new QOpenGLVertexArrayObject(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_DELETE )
+HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_DELETE)
 {
   auto obj = qobject_cast<QOpenGLVertexArrayObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_DELETE )
 /*
 bool create()
 */
-HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_CREATE )
+HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_CREATE)
 {
   auto obj = qobject_cast<QOpenGLVertexArrayObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_CREATE )
 /*
 void destroy()
 */
-HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_DESTROY )
+HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_DESTROY)
 {
   auto obj = qobject_cast<QOpenGLVertexArrayObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_DESTROY )
 /*
 bool isCreated() const
 */
-HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_ISCREATED )
+HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_ISCREATED)
 {
   auto obj = qobject_cast<QOpenGLVertexArrayObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_ISCREATED )
 /*
 GLuint objectId() const
 */
-HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_OBJECTID )
+HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_OBJECTID)
 {
   auto obj = qobject_cast<QOpenGLVertexArrayObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_OBJECTID )
 /*
 void bind()
 */
-HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_BIND )
+HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_BIND)
 {
   auto obj = qobject_cast<QOpenGLVertexArrayObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_BIND )
 /*
 void release()
 */
-HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_RELEASE )
+HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_RELEASE)
 {
   auto obj = qobject_cast<QOpenGLVertexArrayObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

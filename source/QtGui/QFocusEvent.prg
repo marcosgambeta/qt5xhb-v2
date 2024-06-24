@@ -50,13 +50,13 @@ RETURN
 #endif
 
 /*
-QFocusEvent( QEvent::Type type, Qt::FocusReason reason = Qt::OtherFocusReason )
+QFocusEvent(QEvent::Type type, Qt::FocusReason reason = Qt::OtherFocusReason)
 */
-HB_FUNC_STATIC( QFOCUSEVENT_NEW )
+HB_FUNC_STATIC(QFOCUSEVENT_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    auto obj = new QFocusEvent(static_cast<QEvent::Type>(hb_parni(1)), HB_ISNIL(2) ? static_cast<Qt::FocusReason >( Qt::OtherFocusReason ) : static_cast<Qt::FocusReason >(hb_parni(2)));
+    auto obj = new QFocusEvent(static_cast<QEvent::Type>(hb_parni(1)), HB_ISNIL(2) ? static_cast<Qt::FocusReason >(Qt::OtherFocusReason) : static_cast<Qt::FocusReason >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QFOCUSEVENT_DELETE )
+HB_FUNC_STATIC(QFOCUSEVENT_DELETE)
 {
   auto obj = static_cast<QFocusEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_DELETE )
 /*
 bool gotFocus() const
 */
-HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
+HB_FUNC_STATIC(QFOCUSEVENT_GOTFOCUS)
 {
   auto obj = static_cast<QFocusEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
 /*
 bool lostFocus() const
 */
-HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
+HB_FUNC_STATIC(QFOCUSEVENT_LOSTFOCUS)
 {
   auto obj = static_cast<QFocusEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
 /*
 Qt::FocusReason reason() const
 */
-HB_FUNC_STATIC( QFOCUSEVENT_REASON )
+HB_FUNC_STATIC(QFOCUSEVENT_REASON)
 {
   auto obj = static_cast<QFocusEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

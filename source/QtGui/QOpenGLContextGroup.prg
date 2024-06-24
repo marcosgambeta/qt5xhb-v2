@@ -50,7 +50,7 @@ RETURN
 #include <QtGui/QOpenGLContextGroup>
 #endif
 
-HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_DELETE )
+HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_DELETE)
 {
   auto obj = qobject_cast<QOpenGLContextGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -69,9 +69,9 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_DELETE )
 }
 
 /*
-QList<QOpenGLContext *> shares() const
+QList<QOpenGLContext*> shares() const
 */
-HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
+HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_SHARES)
 {
   auto obj = qobject_cast<QOpenGLContextGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
 /*
 static QOpenGLContextGroup * currentContextGroup()
 */
-HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_CURRENTCONTEXTGROUP )
+HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_CURRENTCONTEXTGROUP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))

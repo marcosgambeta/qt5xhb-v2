@@ -73,9 +73,9 @@ RETURN
 #include <QtGui/QPixmap>
 
 /*
-QDrag( QObject * dragSource )
+QDrag(QObject * dragSource)
 */
-HB_FUNC_STATIC( QDRAG_NEW )
+HB_FUNC_STATIC(QDRAG_NEW)
 {
   if (ISNUMPAR(1) && ISQOBJECT(1))
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QDRAG_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDRAG_DELETE )
+HB_FUNC_STATIC(QDRAG_DELETE)
 {
   auto obj = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QDRAG_DELETE )
 /*
 Qt::DropAction defaultAction() const
 */
-HB_FUNC_STATIC( QDRAG_DEFAULTACTION )
+HB_FUNC_STATIC(QDRAG_DEFAULTACTION)
 {
   auto obj = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -131,9 +131,9 @@ HB_FUNC_STATIC( QDRAG_DEFAULTACTION )
 }
 
 /*
-QPixmap dragCursor( Qt::DropAction action ) const
+QPixmap dragCursor(Qt::DropAction action) const
 */
-HB_FUNC_STATIC( QDRAG_DRAGCURSOR )
+HB_FUNC_STATIC(QDRAG_DRAGCURSOR)
 {
   auto obj = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -155,25 +155,25 @@ HB_FUNC_STATIC( QDRAG_DRAGCURSOR )
   }
 }
 
-HB_FUNC_STATIC( QDRAG_EXEC )
+HB_FUNC_STATIC(QDRAG_EXEC)
 {
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
-    Qt::DropAction exec( Qt::DropActions supportedActions = Qt::MoveAction )
+    Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
     */
     auto obj = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr)
     {
-      RENUM(obj->exec( HB_ISNIL(1) ? static_cast<Qt::DropActions >( Qt::MoveAction ) : static_cast<Qt::DropActions >(hb_parni(1))));
+      RENUM(obj->exec(HB_ISNIL(1) ? static_cast<Qt::DropActions >(Qt::MoveAction) : static_cast<Qt::DropActions >(hb_parni(1))));
     }
 
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    Qt::DropAction exec( Qt::DropActions supportedActions, Qt::DropAction defaultDropAction )
+    Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
     */
     auto obj = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QDRAG_EXEC )
 /*
 QPoint hotSpot() const
 */
-HB_FUNC_STATIC( QDRAG_HOTSPOT )
+HB_FUNC_STATIC(QDRAG_HOTSPOT)
 {
   auto obj = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QDRAG_HOTSPOT )
 /*
 QMimeData * mimeData() const
 */
-HB_FUNC_STATIC( QDRAG_MIMEDATA )
+HB_FUNC_STATIC(QDRAG_MIMEDATA)
 {
   auto obj = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QDRAG_MIMEDATA )
 /*
 QPixmap pixmap() const
 */
-HB_FUNC_STATIC( QDRAG_PIXMAP )
+HB_FUNC_STATIC(QDRAG_PIXMAP)
 {
   auto obj = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -265,9 +265,9 @@ HB_FUNC_STATIC( QDRAG_PIXMAP )
 }
 
 /*
-void setDragCursor( const QPixmap & cursor, Qt::DropAction action )
+void setDragCursor(const QPixmap & cursor, Qt::DropAction action)
 */
-HB_FUNC_STATIC( QDRAG_SETDRAGCURSOR )
+HB_FUNC_STATIC(QDRAG_SETDRAGCURSOR)
 {
   auto obj = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -291,9 +291,9 @@ HB_FUNC_STATIC( QDRAG_SETDRAGCURSOR )
 }
 
 /*
-void setHotSpot( const QPoint & hotspot )
+void setHotSpot(const QPoint & hotspot)
 */
-HB_FUNC_STATIC( QDRAG_SETHOTSPOT )
+HB_FUNC_STATIC(QDRAG_SETHOTSPOT)
 {
   auto obj = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -317,9 +317,9 @@ HB_FUNC_STATIC( QDRAG_SETHOTSPOT )
 }
 
 /*
-void setMimeData( QMimeData * data )
+void setMimeData(QMimeData * data)
 */
-HB_FUNC_STATIC( QDRAG_SETMIMEDATA )
+HB_FUNC_STATIC(QDRAG_SETMIMEDATA)
 {
   auto obj = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -343,9 +343,9 @@ HB_FUNC_STATIC( QDRAG_SETMIMEDATA )
 }
 
 /*
-void setPixmap( const QPixmap & pixmap )
+void setPixmap(const QPixmap & pixmap)
 */
-HB_FUNC_STATIC( QDRAG_SETPIXMAP )
+HB_FUNC_STATIC(QDRAG_SETPIXMAP)
 {
   auto obj = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QDRAG_SETPIXMAP )
 /*
 QObject * source() const
 */
-HB_FUNC_STATIC( QDRAG_SOURCE )
+HB_FUNC_STATIC(QDRAG_SOURCE)
 {
   auto obj = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QDRAG_SOURCE )
 /*
 Qt::DropActions supportedActions() const
 */
-HB_FUNC_STATIC( QDRAG_SUPPORTEDACTIONS )
+HB_FUNC_STATIC(QDRAG_SUPPORTEDACTIONS)
 {
   auto obj = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QDRAG_SUPPORTEDACTIONS )
 /*
 QObject * target() const
 */
-HB_FUNC_STATIC( QDRAG_TARGET )
+HB_FUNC_STATIC(QDRAG_TARGET)
 {
   auto obj = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -443,9 +443,9 @@ HB_FUNC_STATIC( QDRAG_TARGET )
 }
 
 /*
-void actionChanged( Qt::DropAction action )
+void actionChanged(Qt::DropAction action)
 */
-HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
+HB_FUNC_STATIC(QDRAG_ONACTIONCHANGED)
 {
   auto sender = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -493,9 +493,9 @@ HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
 }
 
 /*
-void targetChanged( QObject * newTarget )
+void targetChanged(QObject * newTarget)
 */
-HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
+HB_FUNC_STATIC(QDRAG_ONTARGETCHANGED)
 {
   auto sender = qobject_cast<QDrag*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

@@ -61,7 +61,7 @@ RETURN
 #include <QtGui/QTextItem>
 #endif
 
-HB_FUNC_STATIC( QTEXTITEM_DELETE )
+HB_FUNC_STATIC(QTEXTITEM_DELETE)
 {
   auto obj = static_cast<QTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QTEXTITEM_DELETE )
 /*
 qreal descent() const
 */
-HB_FUNC_STATIC( QTEXTITEM_DESCENT )
+HB_FUNC_STATIC(QTEXTITEM_DESCENT)
 {
   auto obj = static_cast<QTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QTEXTITEM_DESCENT )
 /*
 qreal ascent() const
 */
-HB_FUNC_STATIC( QTEXTITEM_ASCENT )
+HB_FUNC_STATIC(QTEXTITEM_ASCENT)
 {
   auto obj = static_cast<QTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QTEXTITEM_ASCENT )
 /*
 qreal width() const
 */
-HB_FUNC_STATIC( QTEXTITEM_WIDTH )
+HB_FUNC_STATIC(QTEXTITEM_WIDTH)
 {
   auto obj = static_cast<QTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QTEXTITEM_WIDTH )
 /*
 QTextItem::RenderFlags renderFlags() const
 */
-HB_FUNC_STATIC( QTEXTITEM_RENDERFLAGS )
+HB_FUNC_STATIC(QTEXTITEM_RENDERFLAGS)
 {
   auto obj = static_cast<QTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QTEXTITEM_RENDERFLAGS )
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QTEXTITEM_TEXT )
+HB_FUNC_STATIC(QTEXTITEM_TEXT)
 {
   auto obj = static_cast<QTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QTEXTITEM_TEXT )
 /*
 QFont font() const
 */
-HB_FUNC_STATIC( QTEXTITEM_FONT )
+HB_FUNC_STATIC(QTEXTITEM_FONT)
 {
   auto obj = static_cast<QTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QTEXTITEM_FONT )
   }
 }
 
-HB_FUNC_STATIC( QTEXTITEM_NEWFROM )
+HB_FUNC_STATIC(QTEXTITEM_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -252,22 +252,22 @@ HB_FUNC_STATIC( QTEXTITEM_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QTEXTITEM_NEWFROMOBJECT )
+HB_FUNC_STATIC(QTEXTITEM_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QTEXTITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTITEM_NEWFROMPOINTER )
+HB_FUNC_STATIC(QTEXTITEM_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QTEXTITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTITEM_SELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTITEM_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QTEXTITEM_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTITEM_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

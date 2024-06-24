@@ -60,13 +60,13 @@ RETURN
 #include <QtCore/QMimeData>
 
 /*
-QDropEvent( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::Drop )
+QDropEvent(const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::Drop)
 */
-HB_FUNC_STATIC( QDROPEVENT_NEW )
+HB_FUNC_STATIC(QDROPEVENT_NEW)
 {
   if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) && (HB_ISNUM(6) || HB_ISNIL(6)))
   {
-    auto obj = new QDropEvent(*PQPOINT(1), static_cast<Qt::DropActions>(hb_parni(2)), PQMIMEDATA(3), static_cast<Qt::MouseButtons>(hb_parni(4)), static_cast<Qt::KeyboardModifiers>(hb_parni(5)), HB_ISNIL(6) ? static_cast<QEvent::Type >( QEvent::Drop ) : static_cast<QEvent::Type >(hb_parni(6)));
+    auto obj = new QDropEvent(*PQPOINT(1), static_cast<Qt::DropActions>(hb_parni(2)), PQMIMEDATA(3), static_cast<Qt::MouseButtons>(hb_parni(4)), static_cast<Qt::KeyboardModifiers>(hb_parni(5)), HB_ISNIL(6) ? static_cast<QEvent::Type >(QEvent::Drop) : static_cast<QEvent::Type >(hb_parni(6)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QDROPEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDROPEVENT_DELETE )
+HB_FUNC_STATIC(QDROPEVENT_DELETE)
 {
   auto obj = static_cast<QDropEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QDROPEVENT_DELETE )
 /*
 void acceptProposedAction()
 */
-HB_FUNC_STATIC( QDROPEVENT_ACCEPTPROPOSEDACTION )
+HB_FUNC_STATIC(QDROPEVENT_ACCEPTPROPOSEDACTION)
 {
   auto obj = static_cast<QDropEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDROPEVENT_ACCEPTPROPOSEDACTION )
 /*
 Qt::DropAction dropAction() const
 */
-HB_FUNC_STATIC( QDROPEVENT_DROPACTION )
+HB_FUNC_STATIC(QDROPEVENT_DROPACTION)
 {
   auto obj = static_cast<QDropEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QDROPEVENT_DROPACTION )
 /*
 Qt::KeyboardModifiers keyboardModifiers() const
 */
-HB_FUNC_STATIC( QDROPEVENT_KEYBOARDMODIFIERS )
+HB_FUNC_STATIC(QDROPEVENT_KEYBOARDMODIFIERS)
 {
   auto obj = static_cast<QDropEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QDROPEVENT_KEYBOARDMODIFIERS )
 /*
 const QMimeData * mimeData() const
 */
-HB_FUNC_STATIC( QDROPEVENT_MIMEDATA )
+HB_FUNC_STATIC(QDROPEVENT_MIMEDATA)
 {
   auto obj = static_cast<QDropEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QDROPEVENT_MIMEDATA )
 /*
 Qt::MouseButtons mouseButtons() const
 */
-HB_FUNC_STATIC( QDROPEVENT_MOUSEBUTTONS )
+HB_FUNC_STATIC(QDROPEVENT_MOUSEBUTTONS)
 {
   auto obj = static_cast<QDropEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QDROPEVENT_MOUSEBUTTONS )
 /*
 Qt::DropActions possibleActions() const
 */
-HB_FUNC_STATIC( QDROPEVENT_POSSIBLEACTIONS )
+HB_FUNC_STATIC(QDROPEVENT_POSSIBLEACTIONS)
 {
   auto obj = static_cast<QDropEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QDROPEVENT_POSSIBLEACTIONS )
 /*
 Qt::DropAction proposedAction() const
 */
-HB_FUNC_STATIC( QDROPEVENT_PROPOSEDACTION )
+HB_FUNC_STATIC(QDROPEVENT_PROPOSEDACTION)
 {
   auto obj = static_cast<QDropEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -263,9 +263,9 @@ HB_FUNC_STATIC( QDROPEVENT_PROPOSEDACTION )
 }
 
 /*
-void setDropAction( Qt::DropAction action )
+void setDropAction(Qt::DropAction action)
 */
-HB_FUNC_STATIC( QDROPEVENT_SETDROPACTION )
+HB_FUNC_STATIC(QDROPEVENT_SETDROPACTION)
 {
   auto obj = static_cast<QDropEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QDROPEVENT_SETDROPACTION )
 /*
 QObject * source() const
 */
-HB_FUNC_STATIC( QDROPEVENT_SOURCE )
+HB_FUNC_STATIC(QDROPEVENT_SOURCE)
 {
   auto obj = static_cast<QDropEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

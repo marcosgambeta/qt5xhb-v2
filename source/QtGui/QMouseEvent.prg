@@ -56,12 +56,12 @@ RETURN
 #include <QtGui/QMouseEvent>
 #endif
 
-HB_FUNC_STATIC( QMOUSEEVENT_NEW )
+HB_FUNC_STATIC(QMOUSEEVENT_NEW)
 {
   if (ISNUMPAR(5) && HB_ISNUM(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
     /*
-    QMouseEvent( QEvent::Type type, const QPointF & localPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
+    QMouseEvent(QEvent::Type type, const QPointF & localPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
     */
     auto obj = new QMouseEvent(static_cast<QEvent::Type>(hb_parni(1)), *PQPOINTF(2), static_cast<Qt::MouseButton>(hb_parni(3)), static_cast<Qt::MouseButtons>(hb_parni(4)), static_cast<Qt::KeyboardModifiers>(hb_parni(5)));
     Qt5xHb::returnNewObject(obj, false);
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
   else if (ISNUMPAR(6) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6))
   {
     /*
-    QMouseEvent( QEvent::Type type, const QPointF & localPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
+    QMouseEvent(QEvent::Type type, const QPointF & localPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
     */
     auto obj = new QMouseEvent(static_cast<QEvent::Type>(hb_parni(1)), *PQPOINTF(2), *PQPOINTF(3), static_cast<Qt::MouseButton>(hb_parni(4)), static_cast<Qt::MouseButtons>(hb_parni(5)), static_cast<Qt::KeyboardModifiers>(hb_parni(6)));
     Qt5xHb::returnNewObject(obj, false);
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
   else if (ISNUMPAR(7) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7))
   {
     /*
-    QMouseEvent( QEvent::Type type, const QPointF & localPos, const QPointF & windowPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
+    QMouseEvent(QEvent::Type type, const QPointF & localPos, const QPointF & windowPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
     */
     auto obj = new QMouseEvent(static_cast<QEvent::Type>(hb_parni(1)), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), static_cast<Qt::MouseButton>(hb_parni(5)), static_cast<Qt::MouseButtons>(hb_parni(6)), static_cast<Qt::KeyboardModifiers>(hb_parni(7)));
     Qt5xHb::returnNewObject(obj, false);
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMOUSEEVENT_DELETE )
+HB_FUNC_STATIC(QMOUSEEVENT_DELETE)
 {
   auto obj = static_cast<QMouseEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_DELETE )
 /*
 Qt::MouseButton button() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
+HB_FUNC_STATIC(QMOUSEEVENT_BUTTON)
 {
   auto obj = static_cast<QMouseEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
 /*
 Qt::MouseButtons buttons() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
+HB_FUNC_STATIC(QMOUSEEVENT_BUTTONS)
 {
   auto obj = static_cast<QMouseEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
 /*
 int globalX() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
+HB_FUNC_STATIC(QMOUSEEVENT_GLOBALX)
 {
   auto obj = static_cast<QMouseEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
 /*
 int globalY() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
+HB_FUNC_STATIC(QMOUSEEVENT_GLOBALY)
 {
   auto obj = static_cast<QMouseEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
 /*
 const QPointF & localPos() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_LOCALPOS )
+HB_FUNC_STATIC(QMOUSEEVENT_LOCALPOS)
 {
   auto obj = static_cast<QMouseEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_LOCALPOS )
 /*
 const QPointF & screenPos() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_SCREENPOS )
+HB_FUNC_STATIC(QMOUSEEVENT_SCREENPOS)
 {
   auto obj = static_cast<QMouseEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_SCREENPOS )
 /*
 const QPointF & windowPos() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_WINDOWPOS )
+HB_FUNC_STATIC(QMOUSEEVENT_WINDOWPOS)
 {
   auto obj = static_cast<QMouseEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_WINDOWPOS )
 /*
 int x() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_X )
+HB_FUNC_STATIC(QMOUSEEVENT_X)
 {
   auto obj = static_cast<QMouseEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_X )
 /*
 int y() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_Y )
+HB_FUNC_STATIC(QMOUSEEVENT_Y)
 {
   auto obj = static_cast<QMouseEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

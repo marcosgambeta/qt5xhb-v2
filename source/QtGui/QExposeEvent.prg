@@ -49,9 +49,9 @@ RETURN
 #endif
 
 /*
-QExposeEvent( const QRegion & rgn )
+QExposeEvent(const QRegion & rgn)
 */
-HB_FUNC_STATIC( QEXPOSEEVENT_NEW )
+HB_FUNC_STATIC(QEXPOSEEVENT_NEW)
 {
   if (ISNUMPAR(1) && ISQREGION(1))
   {
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QEXPOSEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QEXPOSEEVENT_DELETE )
+HB_FUNC_STATIC(QEXPOSEEVENT_DELETE)
 {
   auto obj = static_cast<QExposeEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QEXPOSEEVENT_DELETE )
 /*
 const QRegion & region() const
 */
-HB_FUNC_STATIC( QEXPOSEEVENT_REGION )
+HB_FUNC_STATIC(QEXPOSEEVENT_REGION)
 {
   auto obj = static_cast<QExposeEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

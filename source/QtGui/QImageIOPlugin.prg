@@ -50,7 +50,7 @@ RETURN
 #include <QtGui/QImageIOPlugin>
 #endif
 
-HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
+HB_FUNC_STATIC(QIMAGEIOPLUGIN_DELETE)
 {
   auto obj = qobject_cast<QImageIOPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -69,9 +69,9 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
 }
 
 /*
-virtual QImageIOPlugin::Capabilities capabilities( QIODevice * device, const QByteArray & format ) const = 0
+virtual QImageIOPlugin::Capabilities capabilities(QIODevice * device, const QByteArray & format) const = 0
 */
-HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
+HB_FUNC_STATIC(QIMAGEIOPLUGIN_CAPABILITIES)
 {
   auto obj = qobject_cast<QImageIOPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -93,9 +93,9 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 }
 
 /*
-virtual QImageIOHandler * create( QIODevice * device, const QByteArray & format = QByteArray() ) const = 0
+virtual QImageIOHandler * create(QIODevice * device, const QByteArray & format = QByteArray()) const = 0
 */
-HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
+HB_FUNC_STATIC(QIMAGEIOPLUGIN_CREATE)
 {
   auto obj = qobject_cast<QImageIOPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

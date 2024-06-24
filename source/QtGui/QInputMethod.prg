@@ -78,7 +78,7 @@ RETURN
 /*
 QRectF cursorRectangle() const
 */
-HB_FUNC_STATIC( QINPUTMETHOD_CURSORRECTANGLE )
+HB_FUNC_STATIC(QINPUTMETHOD_CURSORRECTANGLE)
 {
   auto obj = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_CURSORRECTANGLE )
 /*
 Qt::LayoutDirection inputDirection() const
 */
-HB_FUNC_STATIC( QINPUTMETHOD_INPUTDIRECTION )
+HB_FUNC_STATIC(QINPUTMETHOD_INPUTDIRECTION)
 {
   auto obj = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_INPUTDIRECTION )
 /*
 QTransform inputItemTransform() const
 */
-HB_FUNC_STATIC( QINPUTMETHOD_INPUTITEMTRANSFORM )
+HB_FUNC_STATIC(QINPUTMETHOD_INPUTITEMTRANSFORM)
 {
   auto obj = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_INPUTITEMTRANSFORM )
 /*
 bool isAnimating() const
 */
-HB_FUNC_STATIC( QINPUTMETHOD_ISANIMATING )
+HB_FUNC_STATIC(QINPUTMETHOD_ISANIMATING)
 {
   auto obj = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ISANIMATING )
 /*
 bool isVisible() const
 */
-HB_FUNC_STATIC( QINPUTMETHOD_ISVISIBLE )
+HB_FUNC_STATIC(QINPUTMETHOD_ISVISIBLE)
 {
   auto obj = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ISVISIBLE )
 /*
 QRectF keyboardRectangle() const
 */
-HB_FUNC_STATIC( QINPUTMETHOD_KEYBOARDRECTANGLE )
+HB_FUNC_STATIC(QINPUTMETHOD_KEYBOARDRECTANGLE)
 {
   auto obj = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_KEYBOARDRECTANGLE )
 /*
 QLocale locale() const
 */
-HB_FUNC_STATIC( QINPUTMETHOD_LOCALE )
+HB_FUNC_STATIC(QINPUTMETHOD_LOCALE)
 {
   auto obj = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -248,9 +248,9 @@ HB_FUNC_STATIC( QINPUTMETHOD_LOCALE )
 }
 
 /*
-void setInputItemTransform( const QTransform & transform )
+void setInputItemTransform(const QTransform & transform)
 */
-HB_FUNC_STATIC( QINPUTMETHOD_SETINPUTITEMTRANSFORM )
+HB_FUNC_STATIC(QINPUTMETHOD_SETINPUTITEMTRANSFORM)
 {
   auto obj = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -274,9 +274,9 @@ HB_FUNC_STATIC( QINPUTMETHOD_SETINPUTITEMTRANSFORM )
 }
 
 /*
-void setVisible( bool visible )
+void setVisible(bool visible)
 */
-HB_FUNC_STATIC( QINPUTMETHOD_SETVISIBLE )
+HB_FUNC_STATIC(QINPUTMETHOD_SETVISIBLE)
 {
   auto obj = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_SETVISIBLE )
 /*
 void commit()
 */
-HB_FUNC_STATIC( QINPUTMETHOD_COMMIT )
+HB_FUNC_STATIC(QINPUTMETHOD_COMMIT)
 {
   auto obj = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_COMMIT )
 /*
 void hide()
 */
-HB_FUNC_STATIC( QINPUTMETHOD_HIDE )
+HB_FUNC_STATIC(QINPUTMETHOD_HIDE)
 {
   auto obj = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -352,9 +352,9 @@ HB_FUNC_STATIC( QINPUTMETHOD_HIDE )
 }
 
 /*
-void invokeAction( QInputMethod::Action a, int cursorPosition )
+void invokeAction(QInputMethod::Action a, int cursorPosition)
 */
-HB_FUNC_STATIC( QINPUTMETHOD_INVOKEACTION )
+HB_FUNC_STATIC(QINPUTMETHOD_INVOKEACTION)
 {
   auto obj = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_INVOKEACTION )
 /*
 void reset()
 */
-HB_FUNC_STATIC( QINPUTMETHOD_RESET )
+HB_FUNC_STATIC(QINPUTMETHOD_RESET)
 {
   auto obj = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_RESET )
 /*
 void show()
 */
-HB_FUNC_STATIC( QINPUTMETHOD_SHOW )
+HB_FUNC_STATIC(QINPUTMETHOD_SHOW)
 {
   auto obj = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -430,9 +430,9 @@ HB_FUNC_STATIC( QINPUTMETHOD_SHOW )
 }
 
 /*
-void update( Qt::InputMethodQueries queries )
+void update(Qt::InputMethodQueries queries)
 */
-HB_FUNC_STATIC( QINPUTMETHOD_UPDATE )
+HB_FUNC_STATIC(QINPUTMETHOD_UPDATE)
 {
   auto obj = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_UPDATE )
 /*
 void animatingChanged()
 */
-HB_FUNC_STATIC( QINPUTMETHOD_ONANIMATINGCHANGED )
+HB_FUNC_STATIC(QINPUTMETHOD_ONANIMATINGCHANGED)
 {
   auto sender = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONANIMATINGCHANGED )
 /*
 void cursorRectangleChanged()
 */
-HB_FUNC_STATIC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
+HB_FUNC_STATIC(QINPUTMETHOD_ONCURSORRECTANGLECHANGED)
 {
   auto sender = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -552,9 +552,9 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
 }
 
 /*
-void inputDirectionChanged( Qt::LayoutDirection newDirection )
+void inputDirectionChanged(Qt::LayoutDirection newDirection)
 */
-HB_FUNC_STATIC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
+HB_FUNC_STATIC(QINPUTMETHOD_ONINPUTDIRECTIONCHANGED)
 {
   auto sender = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
 /*
 void keyboardRectangleChanged()
 */
-HB_FUNC_STATIC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
+HB_FUNC_STATIC(QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED)
 {
   auto sender = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
 /*
 void localeChanged()
 */
-HB_FUNC_STATIC( QINPUTMETHOD_ONLOCALECHANGED )
+HB_FUNC_STATIC(QINPUTMETHOD_ONLOCALECHANGED)
 {
   auto sender = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_ONLOCALECHANGED )
 /*
 void visibleChanged()
 */
-HB_FUNC_STATIC( QINPUTMETHOD_ONVISIBLECHANGED )
+HB_FUNC_STATIC(QINPUTMETHOD_ONVISIBLECHANGED)
 {
   auto sender = qobject_cast<QInputMethod*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

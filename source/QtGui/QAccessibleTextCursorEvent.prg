@@ -49,9 +49,9 @@ RETURN
 #endif
 
 /*
-QAccessibleTextCursorEvent( QObject * obj, int cursorPos )
+QAccessibleTextCursorEvent(QObject * obj, int cursorPos)
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_NEW )
+HB_FUNC_STATIC(QACCESSIBLETEXTCURSOREVENT_NEW)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2))
   {
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_DELETE )
+HB_FUNC_STATIC(QACCESSIBLETEXTCURSOREVENT_DELETE)
 {
   auto obj = static_cast<QAccessibleTextCursorEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -81,9 +81,9 @@ HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_DELETE )
 }
 
 /*
-void setCursorPosition( int position )
+void setCursorPosition(int position)
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_SETCURSORPOSITION )
+HB_FUNC_STATIC(QACCESSIBLETEXTCURSOREVENT_SETCURSORPOSITION)
 {
   auto obj = static_cast<QAccessibleTextCursorEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_SETCURSORPOSITION )
 /*
 int cursorPosition() const
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_CURSORPOSITION )
+HB_FUNC_STATIC(QACCESSIBLETEXTCURSOREVENT_CURSORPOSITION)
 {
   auto obj = static_cast<QAccessibleTextCursorEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

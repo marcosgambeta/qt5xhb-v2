@@ -52,23 +52,23 @@ RETURN
 #include <QtGui/QRegExpValidator>
 #endif
 
-HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
+HB_FUNC_STATIC(QREGEXPVALIDATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QRegExpValidator( QObject * parent = nullptr )
+    QRegExpValidator(QObject * parent = nullptr)
     */
-    auto obj = new QRegExpValidator( OPQOBJECT( 1, nullptr));
+    auto obj = new QRegExpValidator(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2) && ISQREGEXP(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QRegExpValidator( const QRegExp & rx, QObject * parent = nullptr )
+    QRegExpValidator(const QRegExp & rx, QObject * parent = nullptr)
     */
-    auto obj = new QRegExpValidator(*PQREGEXP(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QRegExpValidator(*PQREGEXP(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
+HB_FUNC_STATIC(QREGEXPVALIDATOR_DELETE)
 {
   auto obj = qobject_cast<QRegExpValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 /*
 const QRegExp & regExp() const
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
+HB_FUNC_STATIC(QREGEXPVALIDATOR_REGEXP)
 {
   auto obj = qobject_cast<QRegExpValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -122,9 +122,9 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
 }
 
 /*
-void setRegExp( const QRegExp & rx )
+void setRegExp(const QRegExp & rx)
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
+HB_FUNC_STATIC(QREGEXPVALIDATOR_SETREGEXP)
 {
   auto obj = qobject_cast<QRegExpValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -148,9 +148,9 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 }
 
 /*
-virtual QValidator::State validate( QString & input, int & pos ) const
+virtual QValidator::State validate(QString & input, int & pos) const
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
+HB_FUNC_STATIC(QREGEXPVALIDATOR_VALIDATE)
 {
   auto obj = qobject_cast<QRegExpValidator*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
       QString par1 = hb_parc(1);
       int par2;
       RENUM(obj->validate(par1, par2));
-      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storc(QSTRINGTOSTRING(par1), 1);
       hb_storni(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

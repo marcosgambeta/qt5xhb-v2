@@ -68,7 +68,7 @@ RETURN
 #include <QtGui/QIconEngine>
 #endif
 
-HB_FUNC_STATIC( QICONENGINE_DELETE )
+HB_FUNC_STATIC(QICONENGINE_DELETE)
 {
   auto obj = static_cast<QIconEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -85,9 +85,9 @@ HB_FUNC_STATIC( QICONENGINE_DELETE )
 }
 
 /*
-virtual QSize actualSize( const QSize & size, QIcon::Mode mode, QIcon::State state )
+virtual QSize actualSize(const QSize & size, QIcon::Mode mode, QIcon::State state)
 */
-HB_FUNC_STATIC( QICONENGINE_ACTUALSIZE )
+HB_FUNC_STATIC(QICONENGINE_ACTUALSIZE)
 {
   auto obj = static_cast<QIconEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -110,9 +110,9 @@ HB_FUNC_STATIC( QICONENGINE_ACTUALSIZE )
 }
 
 /*
-virtual void addFile( const QString & fileName, const QSize & size, QIcon::Mode mode, QIcon::State state )
+virtual void addFile(const QString & fileName, const QSize & size, QIcon::Mode mode, QIcon::State state)
 */
-HB_FUNC_STATIC( QICONENGINE_ADDFILE )
+HB_FUNC_STATIC(QICONENGINE_ADDFILE)
 {
   auto obj = static_cast<QIconEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -136,9 +136,9 @@ HB_FUNC_STATIC( QICONENGINE_ADDFILE )
 }
 
 /*
-virtual void addPixmap( const QPixmap & pixmap, QIcon::Mode mode, QIcon::State state )
+virtual void addPixmap(const QPixmap & pixmap, QIcon::Mode mode, QIcon::State state)
 */
-HB_FUNC_STATIC( QICONENGINE_ADDPIXMAP )
+HB_FUNC_STATIC(QICONENGINE_ADDPIXMAP)
 {
   auto obj = static_cast<QIconEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -162,9 +162,9 @@ HB_FUNC_STATIC( QICONENGINE_ADDPIXMAP )
 }
 
 /*
-virtual QList<QSize> availableSizes( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
+virtual QList<QSize> availableSizes(QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
 */
-HB_FUNC_STATIC( QICONENGINE_AVAILABLESIZES )
+HB_FUNC_STATIC(QICONENGINE_AVAILABLESIZES)
 {
   auto obj = static_cast<QIconEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QICONENGINE_AVAILABLESIZES )
     if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      auto list = obj->availableSizes( HB_ISNIL(1) ? static_cast<QIcon::Mode >( QIcon::Normal ) : static_cast<QIcon::Mode >(hb_parni(1)), HB_ISNIL(2) ? static_cast<QIcon::State >( QIcon::Off ) : static_cast<QIcon::State >(hb_parni(2)));
+      auto list = obj->availableSizes(HB_ISNIL(1) ? static_cast<QIcon::Mode >(QIcon::Normal) : static_cast<QIcon::Mode >(hb_parni(1)), HB_ISNIL(2) ? static_cast<QIcon::State >(QIcon::Off) : static_cast<QIcon::State >(hb_parni(2)));
       auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QICONENGINE_AVAILABLESIZES )
 /*
 virtual QIconEngine * clone() const = 0
 */
-HB_FUNC_STATIC( QICONENGINE_CLONE )
+HB_FUNC_STATIC(QICONENGINE_CLONE)
 {
   auto obj = static_cast<QIconEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QICONENGINE_CLONE )
 /*
 virtual QString iconName() const
 */
-HB_FUNC_STATIC( QICONENGINE_ICONNAME )
+HB_FUNC_STATIC(QICONENGINE_ICONNAME)
 {
   auto obj = static_cast<QIconEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QICONENGINE_ICONNAME )
 /*
 virtual QString key() const
 */
-HB_FUNC_STATIC( QICONENGINE_KEY )
+HB_FUNC_STATIC(QICONENGINE_KEY)
 {
   auto obj = static_cast<QIconEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -285,9 +285,9 @@ HB_FUNC_STATIC( QICONENGINE_KEY )
 }
 
 /*
-virtual void paint( QPainter * painter, const QRect & rect, QIcon::Mode mode, QIcon::State state ) = 0
+virtual void paint(QPainter * painter, const QRect & rect, QIcon::Mode mode, QIcon::State state) = 0
 */
-HB_FUNC_STATIC( QICONENGINE_PAINT )
+HB_FUNC_STATIC(QICONENGINE_PAINT)
 {
   auto obj = static_cast<QIconEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -311,9 +311,9 @@ HB_FUNC_STATIC( QICONENGINE_PAINT )
 }
 
 /*
-virtual QPixmap pixmap( const QSize & size, QIcon::Mode mode, QIcon::State state )
+virtual QPixmap pixmap(const QSize & size, QIcon::Mode mode, QIcon::State state)
 */
-HB_FUNC_STATIC( QICONENGINE_PIXMAP )
+HB_FUNC_STATIC(QICONENGINE_PIXMAP)
 {
   auto obj = static_cast<QIconEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -336,9 +336,9 @@ HB_FUNC_STATIC( QICONENGINE_PIXMAP )
 }
 
 /*
-virtual bool read( QDataStream & in )
+virtual bool read(QDataStream & in)
 */
-HB_FUNC_STATIC( QICONENGINE_READ )
+HB_FUNC_STATIC(QICONENGINE_READ)
 {
   auto obj = static_cast<QIconEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -360,9 +360,9 @@ HB_FUNC_STATIC( QICONENGINE_READ )
 }
 
 /*
-virtual void virtual_hook( int id, void * data )
+virtual void virtual_hook(int id, void * data)
 */
-HB_FUNC_STATIC( QICONENGINE_VIRTUAL_HOOK )
+HB_FUNC_STATIC(QICONENGINE_VIRTUAL_HOOK)
 {
   auto obj = static_cast<QIconEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -386,9 +386,9 @@ HB_FUNC_STATIC( QICONENGINE_VIRTUAL_HOOK )
 }
 
 /*
-virtual bool write( QDataStream & out ) const
+virtual bool write(QDataStream & out) const
 */
-HB_FUNC_STATIC( QICONENGINE_WRITE )
+HB_FUNC_STATIC(QICONENGINE_WRITE)
 {
   auto obj = static_cast<QIconEngine*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QICONENGINE_WRITE )
   }
 }
 
-HB_FUNC_STATIC( QICONENGINE_NEWFROM )
+HB_FUNC_STATIC(QICONENGINE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -439,22 +439,22 @@ HB_FUNC_STATIC( QICONENGINE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QICONENGINE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QICONENGINE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QICONENGINE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QICONENGINE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QICONENGINE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QICONENGINE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QICONENGINE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QICONENGINE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QICONENGINE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QICONENGINE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

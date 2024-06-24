@@ -64,7 +64,7 @@ RETURN
 /*
 QTouchDevice()
 */
-HB_FUNC_STATIC( QTOUCHDEVICE_NEW )
+HB_FUNC_STATIC(QTOUCHDEVICE_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTOUCHDEVICE_DELETE )
+HB_FUNC_STATIC(QTOUCHDEVICE_DELETE)
 {
   auto obj = static_cast<QTouchDevice*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_DELETE )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QTOUCHDEVICE_NAME )
+HB_FUNC_STATIC(QTOUCHDEVICE_NAME)
 {
   auto obj = static_cast<QTouchDevice*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_NAME )
 /*
 QTouchDevice::DeviceType type() const
 */
-HB_FUNC_STATIC( QTOUCHDEVICE_TYPE )
+HB_FUNC_STATIC(QTOUCHDEVICE_TYPE)
 {
   auto obj = static_cast<QTouchDevice*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_TYPE )
 /*
 QTouchDevice::Capabilities capabilities() const
 */
-HB_FUNC_STATIC( QTOUCHDEVICE_CAPABILITIES )
+HB_FUNC_STATIC(QTOUCHDEVICE_CAPABILITIES)
 {
   auto obj = static_cast<QTouchDevice*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -166,9 +166,9 @@ HB_FUNC_STATIC( QTOUCHDEVICE_CAPABILITIES )
 }
 
 /*
-void setName( const QString & name )
+void setName(const QString & name)
 */
-HB_FUNC_STATIC( QTOUCHDEVICE_SETNAME )
+HB_FUNC_STATIC(QTOUCHDEVICE_SETNAME)
 {
   auto obj = static_cast<QTouchDevice*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -192,9 +192,9 @@ HB_FUNC_STATIC( QTOUCHDEVICE_SETNAME )
 }
 
 /*
-void setType( QTouchDevice::DeviceType devType )
+void setType(QTouchDevice::DeviceType devType)
 */
-HB_FUNC_STATIC( QTOUCHDEVICE_SETTYPE )
+HB_FUNC_STATIC(QTOUCHDEVICE_SETTYPE)
 {
   auto obj = static_cast<QTouchDevice*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -218,9 +218,9 @@ HB_FUNC_STATIC( QTOUCHDEVICE_SETTYPE )
 }
 
 /*
-void setCapabilities( QTouchDevice::Capabilities caps )
+void setCapabilities(QTouchDevice::Capabilities caps)
 */
-HB_FUNC_STATIC( QTOUCHDEVICE_SETCAPABILITIES )
+HB_FUNC_STATIC(QTOUCHDEVICE_SETCAPABILITIES)
 {
   auto obj = static_cast<QTouchDevice*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_SETCAPABILITIES )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QTOUCHDEVICE_NEWFROM )
+HB_FUNC_STATIC(QTOUCHDEVICE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -273,22 +273,22 @@ HB_FUNC_STATIC( QTOUCHDEVICE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QTOUCHDEVICE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QTOUCHDEVICE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QTOUCHDEVICE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTOUCHDEVICE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QTOUCHDEVICE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QTOUCHDEVICE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTOUCHDEVICE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QTOUCHDEVICE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QTOUCHDEVICE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QTOUCHDEVICE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

@@ -52,9 +52,9 @@ RETURN
 #include <QtGui/QScreen>
 
 /*
-QScreenOrientationChangeEvent( QScreen * screen, Qt::ScreenOrientation orientation )
+QScreenOrientationChangeEvent(QScreen * screen, Qt::ScreenOrientation orientation)
 */
-HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_NEW )
+HB_FUNC_STATIC(QSCREENORIENTATIONCHANGEEVENT_NEW)
 {
   if (ISNUMPAR(2) && ISQSCREEN(1) && HB_ISNUM(2))
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_DELETE )
+HB_FUNC_STATIC(QSCREENORIENTATIONCHANGEEVENT_DELETE)
 {
   auto obj = static_cast<QScreenOrientationChangeEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_DELETE )
 /*
 QScreen * screen() const
 */
-HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_SCREEN )
+HB_FUNC_STATIC(QSCREENORIENTATIONCHANGEEVENT_SCREEN)
 {
   auto obj = static_cast<QScreenOrientationChangeEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_SCREEN )
 /*
 Qt::ScreenOrientation orientation() const
 */
-HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_ORIENTATION )
+HB_FUNC_STATIC(QSCREENORIENTATIONCHANGEEVENT_ORIENTATION)
 {
   auto obj = static_cast<QScreenOrientationChangeEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

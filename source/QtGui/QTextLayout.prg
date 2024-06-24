@@ -97,7 +97,7 @@ RETURN
 #include <QtGui/QTextBlock>
 #include <QtGui/QTextCursor>
 
-HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
+HB_FUNC_STATIC(QTEXTLAYOUT_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QTextLayout( const QString & text )
+    QTextLayout(const QString & text)
     */
     auto obj = new QTextLayout(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
   else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQFONT(2) && (HB_ISOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QTextLayout( const QString & text, const QFont & font, QPaintDevice * paintdevice = nullptr )
+    QTextLayout(const QString & text, const QFont & font, QPaintDevice * paintdevice = nullptr)
     */
     auto obj = new QTextLayout(PQSTRING(1), *PQFONT(2), HB_ISNIL(3) ? nullptr : static_cast<QPaintDevice*>(Qt5xHb::itemGetPtr(3)));
     Qt5xHb::returnNewObject(obj, true);
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
   else if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
   {
     /*
-    QTextLayout( const QTextBlock & b )
+    QTextLayout(const QTextBlock & b)
     */
     auto obj = new QTextLayout(*PQTEXTBLOCK(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTEXTLAYOUT_DELETE )
+HB_FUNC_STATIC(QTEXTLAYOUT_DELETE)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -158,9 +158,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_DELETE )
 }
 
 /*
-void setFont( const QFont & f )
+void setFont(const QFont & f)
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_SETFONT )
+HB_FUNC_STATIC(QTEXTLAYOUT_SETFONT)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETFONT )
 /*
 QFont font() const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_FONT )
+HB_FUNC_STATIC(QTEXTLAYOUT_FONT)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -209,9 +209,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_FONT )
 }
 
 /*
-void setRawFont( const QRawFont & rawFont )
+void setRawFont(const QRawFont & rawFont)
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_SETRAWFONT )
+HB_FUNC_STATIC(QTEXTLAYOUT_SETRAWFONT)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -235,9 +235,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETRAWFONT )
 }
 
 /*
-void setText( const QString & string )
+void setText(const QString & string)
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXT )
+HB_FUNC_STATIC(QTEXTLAYOUT_SETTEXT)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXT )
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_TEXT )
+HB_FUNC_STATIC(QTEXTLAYOUT_TEXT)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -285,9 +285,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_TEXT )
 }
 
 /*
-void setTextOption( const QTextOption & option )
+void setTextOption(const QTextOption & option)
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXTOPTION )
+HB_FUNC_STATIC(QTEXTLAYOUT_SETTEXTOPTION)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXTOPTION )
 /*
 const QTextOption & textOption() const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_TEXTOPTION )
+HB_FUNC_STATIC(QTEXTLAYOUT_TEXTOPTION)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -336,9 +336,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_TEXTOPTION )
 }
 
 /*
-void setPreeditArea( int position, const QString & text )
+void setPreeditArea(int position, const QString & text)
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_SETPREEDITAREA )
+HB_FUNC_STATIC(QTEXTLAYOUT_SETPREEDITAREA)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETPREEDITAREA )
 /*
 int preeditAreaPosition() const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREAPOSITION )
+HB_FUNC_STATIC(QTEXTLAYOUT_PREEDITAREAPOSITION)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREAPOSITION )
 /*
 QString preeditAreaText() const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREATEXT )
+HB_FUNC_STATIC(QTEXTLAYOUT_PREEDITAREATEXT)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREATEXT )
 /*
 void clearAdditionalFormats()
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_CLEARADDITIONALFORMATS )
+HB_FUNC_STATIC(QTEXTLAYOUT_CLEARADDITIONALFORMATS)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -436,9 +436,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CLEARADDITIONALFORMATS )
 }
 
 /*
-void setCacheEnabled( bool enable )
+void setCacheEnabled(bool enable)
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_SETCACHEENABLED )
+HB_FUNC_STATIC(QTEXTLAYOUT_SETCACHEENABLED)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETCACHEENABLED )
 /*
 bool cacheEnabled() const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_CACHEENABLED )
+HB_FUNC_STATIC(QTEXTLAYOUT_CACHEENABLED)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -486,9 +486,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CACHEENABLED )
 }
 
 /*
-void setCursorMoveStyle( Qt::CursorMoveStyle style )
+void setCursorMoveStyle(Qt::CursorMoveStyle style)
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_SETCURSORMOVESTYLE )
+HB_FUNC_STATIC(QTEXTLAYOUT_SETCURSORMOVESTYLE)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETCURSORMOVESTYLE )
 /*
 Qt::CursorMoveStyle cursorMoveStyle() const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_CURSORMOVESTYLE )
+HB_FUNC_STATIC(QTEXTLAYOUT_CURSORMOVESTYLE)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CURSORMOVESTYLE )
 /*
 void beginLayout()
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_BEGINLAYOUT )
+HB_FUNC_STATIC(QTEXTLAYOUT_BEGINLAYOUT)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_BEGINLAYOUT )
 /*
 void endLayout()
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_ENDLAYOUT )
+HB_FUNC_STATIC(QTEXTLAYOUT_ENDLAYOUT)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_ENDLAYOUT )
 /*
 void clearLayout()
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_CLEARLAYOUT )
+HB_FUNC_STATIC(QTEXTLAYOUT_CLEARLAYOUT)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CLEARLAYOUT )
 /*
 QTextLine createLine()
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_CREATELINE )
+HB_FUNC_STATIC(QTEXTLAYOUT_CREATELINE)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CREATELINE )
 /*
 int lineCount() const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_LINECOUNT )
+HB_FUNC_STATIC(QTEXTLAYOUT_LINECOUNT)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -663,9 +663,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINECOUNT )
 }
 
 /*
-QTextLine lineAt( int i ) const
+QTextLine lineAt(int i) const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_LINEAT )
+HB_FUNC_STATIC(QTEXTLAYOUT_LINEAT)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -688,9 +688,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEAT )
 }
 
 /*
-QTextLine lineForTextPosition( int pos ) const
+QTextLine lineForTextPosition(int pos) const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_LINEFORTEXTPOSITION )
+HB_FUNC_STATIC(QTEXTLAYOUT_LINEFORTEXTPOSITION)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -713,9 +713,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEFORTEXTPOSITION )
 }
 
 /*
-bool isValidCursorPosition( int pos ) const
+bool isValidCursorPosition(int pos) const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_ISVALIDCURSORPOSITION )
+HB_FUNC_STATIC(QTEXTLAYOUT_ISVALIDCURSORPOSITION)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -737,9 +737,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_ISVALIDCURSORPOSITION )
 }
 
 /*
-int nextCursorPosition( int oldPos, QTextLayout::CursorMode mode = QTextLayout::SkipCharacters ) const
+int nextCursorPosition(int oldPos, QTextLayout::CursorMode mode = QTextLayout::SkipCharacters) const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_NEXTCURSORPOSITION )
+HB_FUNC_STATIC(QTEXTLAYOUT_NEXTCURSORPOSITION)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEXTCURSORPOSITION )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RINT(obj->nextCursorPosition(PINT(1), HB_ISNIL(2) ? static_cast<QTextLayout::CursorMode >( QTextLayout::SkipCharacters ) : static_cast<QTextLayout::CursorMode >(hb_parni(2))));
+      RINT(obj->nextCursorPosition(PINT(1), HB_ISNIL(2) ? static_cast<QTextLayout::CursorMode >(QTextLayout::SkipCharacters) : static_cast<QTextLayout::CursorMode >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -761,9 +761,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEXTCURSORPOSITION )
 }
 
 /*
-int previousCursorPosition( int oldPos, QTextLayout::CursorMode mode = QTextLayout::SkipCharacters) const
+int previousCursorPosition(int oldPos, QTextLayout::CursorMode mode = QTextLayout::SkipCharacters) const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_PREVIOUSCURSORPOSITION )
+HB_FUNC_STATIC(QTEXTLAYOUT_PREVIOUSCURSORPOSITION)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREVIOUSCURSORPOSITION )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RINT(obj->previousCursorPosition(PINT(1), HB_ISNIL(2) ? static_cast<QTextLayout::CursorMode >( QTextLayout::SkipCharacters ) : static_cast<QTextLayout::CursorMode >(hb_parni(2))));
+      RINT(obj->previousCursorPosition(PINT(1), HB_ISNIL(2) ? static_cast<QTextLayout::CursorMode >(QTextLayout::SkipCharacters) : static_cast<QTextLayout::CursorMode >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -785,9 +785,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREVIOUSCURSORPOSITION )
 }
 
 /*
-int leftCursorPosition( int oldPos ) const
+int leftCursorPosition(int oldPos) const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_LEFTCURSORPOSITION )
+HB_FUNC_STATIC(QTEXTLAYOUT_LEFTCURSORPOSITION)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -809,9 +809,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LEFTCURSORPOSITION )
 }
 
 /*
-int rightCursorPosition( int oldPos ) const
+int rightCursorPosition(int oldPos) const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_RIGHTCURSORPOSITION )
+HB_FUNC_STATIC(QTEXTLAYOUT_RIGHTCURSORPOSITION)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -832,12 +832,12 @@ HB_FUNC_STATIC( QTEXTLAYOUT_RIGHTCURSORPOSITION )
   }
 }
 
-HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR )
+HB_FUNC_STATIC(QTEXTLAYOUT_DRAWCURSOR)
 {
   if (ISNUMPAR(3) && ISQPAINTER(1) && ISQPOINTF(2) && HB_ISNUM(3))
   {
     /*
-    void drawCursor( QPainter * p, const QPointF & pos, int cursorPosition ) const
+    void drawCursor(QPainter * p, const QPointF & pos, int cursorPosition) const
     */
     auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -852,7 +852,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR )
   else if (ISNUMPAR(4) && ISQPAINTER(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    void drawCursor( QPainter * p, const QPointF & pos, int cursorPosition, int width ) const
+    void drawCursor(QPainter * p, const QPointF & pos, int cursorPosition, int width) const
     */
     auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR )
 /*
 QPointF position() const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_POSITION )
+HB_FUNC_STATIC(QTEXTLAYOUT_POSITION)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -896,9 +896,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_POSITION )
 }
 
 /*
-void setPosition( const QPointF & p )
+void setPosition(const QPointF & p)
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_SETPOSITION )
+HB_FUNC_STATIC(QTEXTLAYOUT_SETPOSITION)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -924,7 +924,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETPOSITION )
 /*
 QRectF boundingRect() const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_BOUNDINGRECT )
+HB_FUNC_STATIC(QTEXTLAYOUT_BOUNDINGRECT)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -949,7 +949,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_BOUNDINGRECT )
 /*
 qreal minimumWidth() const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_MINIMUMWIDTH )
+HB_FUNC_STATIC(QTEXTLAYOUT_MINIMUMWIDTH)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -973,7 +973,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_MINIMUMWIDTH )
 /*
 qreal maximumWidth() const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_MAXIMUMWIDTH )
+HB_FUNC_STATIC(QTEXTLAYOUT_MAXIMUMWIDTH)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -995,9 +995,9 @@ HB_FUNC_STATIC( QTEXTLAYOUT_MAXIMUMWIDTH )
 }
 
 /*
-void setFlags( int flags )
+void setFlags(int flags)
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_SETFLAGS )
+HB_FUNC_STATIC(QTEXTLAYOUT_SETFLAGS)
 {
   auto obj = static_cast<QTextLayout*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETFLAGS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QTEXTLAYOUT_NEWFROM )
+HB_FUNC_STATIC(QTEXTLAYOUT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -1050,22 +1050,22 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QTEXTLAYOUT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QTEXTLAYOUT_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QTEXTLAYOUT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTLAYOUT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QTEXTLAYOUT_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QTEXTLAYOUT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTLAYOUT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTLAYOUT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QTEXTLAYOUT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTLAYOUT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

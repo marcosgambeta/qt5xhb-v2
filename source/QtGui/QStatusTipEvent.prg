@@ -48,9 +48,9 @@ RETURN
 #endif
 
 /*
-QStatusTipEvent( const QString & tip )
+QStatusTipEvent(const QString & tip)
 */
-HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
+HB_FUNC_STATIC(QSTATUSTIPEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSTATUSTIPEVENT_DELETE )
+HB_FUNC_STATIC(QSTATUSTIPEVENT_DELETE)
 {
   auto obj = static_cast<QStatusTipEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_DELETE )
 /*
 QString tip() const
 */
-HB_FUNC_STATIC( QSTATUSTIPEVENT_TIP )
+HB_FUNC_STATIC(QSTATUSTIPEVENT_TIP)
 {
   auto obj = static_cast<QStatusTipEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

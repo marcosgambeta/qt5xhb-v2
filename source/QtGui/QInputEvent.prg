@@ -46,7 +46,7 @@ RETURN
 #include <QtGui/QInputEvent>
 #endif
 
-HB_FUNC_STATIC( QINPUTEVENT_DELETE )
+HB_FUNC_STATIC(QINPUTEVENT_DELETE)
 {
   auto obj = static_cast<QInputEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QINPUTEVENT_DELETE )
 /*
 Qt::KeyboardModifiers modifiers() const
 */
-HB_FUNC_STATIC( QINPUTEVENT_MODIFIERS )
+HB_FUNC_STATIC(QINPUTEVENT_MODIFIERS)
 {
   auto obj = static_cast<QInputEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
