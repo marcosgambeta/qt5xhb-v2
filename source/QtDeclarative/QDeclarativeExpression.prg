@@ -72,7 +72,7 @@ RETURN
 #include <QtDeclarative/QDeclarativeContext>
 #include <QtDeclarative/QDeclarativeEngine>
 
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -86,9 +86,9 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
   else if (ISBETWEEN(3, 4) && ISQDECLARATIVECONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
-    QDeclarativeExpression( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
+    QDeclarativeExpression(QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr)
     */
-    auto obj = new QDeclarativeExpression(PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT( 4, nullptr));
+    auto obj = new QDeclarativeExpression(PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_DELETE )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_DELETE)
 {
   auto obj = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_DELETE )
 /*
 void clearError()
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CLEARERROR )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_CLEARERROR)
 {
   auto obj = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CLEARERROR )
 /*
 QDeclarativeContext * context() const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CONTEXT )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_CONTEXT)
 {
   auto obj = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CONTEXT )
 /*
 QDeclarativeEngine * engine() const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ENGINE )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_ENGINE)
 {
   auto obj = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ENGINE )
 /*
 QDeclarativeError error() const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ERROR )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_ERROR)
 {
   auto obj = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -218,9 +218,9 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ERROR )
 }
 
 /*
-QVariant evaluate( bool * valueIsUndefined = nullptr )
+QVariant evaluate(bool * valueIsUndefined = nullptr)
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_EVALUATE)
 {
   auto obj = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
     {
 #endif
       bool par1;
-      auto ptr = new QVariant(obj->evaluate( &par1));
+      auto ptr = new QVariant(obj->evaluate(&par1));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
 /*
 QString expression() const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EXPRESSION )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_EXPRESSION)
 {
   auto obj = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EXPRESSION )
 /*
 bool hasError() const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_HASERROR )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_HASERROR)
 {
   auto obj = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_HASERROR )
 /*
 int lineNumber() const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_LINENUMBER )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_LINENUMBER)
 {
   auto obj = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_LINENUMBER )
 /*
 bool notifyOnValueChanged() const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED)
 {
   auto obj = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED )
 /*
 QObject * scopeObject() const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SCOPEOBJECT)
 {
   auto obj = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -366,9 +366,9 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
 }
 
 /*
-void setExpression( const QString & expression )
+void setExpression(const QString & expression)
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETEXPRESSION )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETEXPRESSION)
 {
   auto obj = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -392,9 +392,9 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETEXPRESSION )
 }
 
 /*
-void setNotifyOnValueChanged( bool notifyOnChange )
+void setNotifyOnValueChanged(bool notifyOnChange)
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED)
 {
   auto obj = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -418,9 +418,9 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED )
 }
 
 /*
-void setSourceLocation( const QString & url, int line )
+void setSourceLocation(const QString & url, int line)
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETSOURCELOCATION)
 {
   auto obj = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
 /*
 QString sourceFile() const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SOURCEFILE)
 {
   auto obj = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
 /*
 void valueChanged()
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ONVALUECHANGED )
+HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_ONVALUECHANGED)
 {
   auto sender = qobject_cast<QDeclarativeExpression*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

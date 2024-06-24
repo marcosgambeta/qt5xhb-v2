@@ -72,23 +72,23 @@ RETURN
 #include <QtDeclarative/QDeclarativeError>
 #include <QtWidgets/QGraphicsObject>
 
-HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QDeclarativeView( QWidget * parent = nullptr )
+    QDeclarativeView(QWidget * parent = nullptr)
     */
-    auto obj = new QDeclarativeView( OPQWIDGET( 1, nullptr));
+    auto obj = new QDeclarativeView(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QDeclarativeView( const QUrl & source, QWidget * parent = nullptr )
+    QDeclarativeView(const QUrl & source, QWidget * parent = nullptr)
     */
-    auto obj = new QDeclarativeView(*PQURL(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QDeclarativeView(*PQURL(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_DELETE)
 {
   auto obj = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
 /*
 QDeclarativeEngine * engine() const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_ENGINE)
 {
   auto obj = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
 /*
 QList<QDeclarativeError> errors() const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_ERRORS)
 {
   auto obj = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 /*
 QSize initialSize() const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_INITIALSIZE)
 {
   auto obj = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
 /*
 QDeclarativeView::ResizeMode resizeMode() const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_RESIZEMODE)
 {
   auto obj = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
 /*
 QDeclarativeContext * rootContext() const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_ROOTCONTEXT)
 {
   auto obj = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
 /*
 QGraphicsObject * rootObject() const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_ROOTOBJECT)
 {
   auto obj = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -291,9 +291,9 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
 }
 
 /*
-void setResizeMode( QDeclarativeView::ResizeMode )
+void setResizeMode(QDeclarativeView::ResizeMode)
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_SETRESIZEMODE)
 {
   auto obj = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -317,9 +317,9 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
 }
 
 /*
-void setSource( const QUrl & url )
+void setSource(const QUrl & url)
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_SETSOURCE)
 {
   auto obj = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
 /*
 QUrl source() const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_SOURCE)
 {
   auto obj = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
 /*
 QDeclarativeView::Status status() const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_STATUS)
 {
   auto obj = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -392,9 +392,9 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
 }
 
 /*
-void sceneResized( QSize size )
+void sceneResized(QSize size)
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_ONSCENERESIZED)
 {
   auto sender = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDECLARATIVEVIEW");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZE");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QSIZE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -442,9 +442,9 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
 }
 
 /*
-void statusChanged( QDeclarativeView::Status status )
+void statusChanged(QDeclarativeView::Status status)
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_ONSTATUSCHANGED)
 {
   auto sender = qobject_cast<QDeclarativeView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

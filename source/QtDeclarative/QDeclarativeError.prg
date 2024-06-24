@@ -65,7 +65,7 @@ RETURN
 #include <QtDeclarative/QDeclarativeError>
 #endif
 
-HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
+HB_FUNC_STATIC(QDECLARATIVEERROR_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
   else if (ISNUMPAR(1) && ISQDECLARATIVEERROR(1))
   {
     /*
-    QDeclarativeError( const QDeclarativeError & other )
+    QDeclarativeError(const QDeclarativeError & other)
     */
     auto obj = new QDeclarativeError(*PQDECLARATIVEERROR(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
 /*
 int column() const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
+HB_FUNC_STATIC(QDECLARATIVEERROR_COLUMN)
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
 /*
 QString description() const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
+HB_FUNC_STATIC(QDECLARATIVEERROR_DESCRIPTION)
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
+HB_FUNC_STATIC(QDECLARATIVEERROR_ISVALID)
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
 /*
 int line() const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
+HB_FUNC_STATIC(QDECLARATIVEERROR_LINE)
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -188,9 +188,9 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
 }
 
 /*
-void setColumn( int column )
+void setColumn(int column)
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
+HB_FUNC_STATIC(QDECLARATIVEERROR_SETCOLUMN)
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -214,9 +214,9 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
 }
 
 /*
-void setDescription( const QString & description )
+void setDescription(const QString & description)
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
+HB_FUNC_STATIC(QDECLARATIVEERROR_SETDESCRIPTION)
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -240,9 +240,9 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
 }
 
 /*
-void setLine( int line )
+void setLine(int line)
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
+HB_FUNC_STATIC(QDECLARATIVEERROR_SETLINE)
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -266,9 +266,9 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
 }
 
 /*
-void setUrl( const QUrl & url )
+void setUrl(const QUrl & url)
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
+HB_FUNC_STATIC(QDECLARATIVEERROR_SETURL)
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
 /*
 QString toString() const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
+HB_FUNC_STATIC(QDECLARATIVEERROR_TOSTRING)
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_URL )
+HB_FUNC_STATIC(QDECLARATIVEERROR_URL)
 {
   auto obj = static_cast<QDeclarativeError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_URL )
   }
 }
 
-HB_FUNC_STATIC( QDECLARATIVEERROR_NEWFROM )
+HB_FUNC_STATIC(QDECLARATIVEERROR_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -370,22 +370,22 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDECLARATIVEERROR_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDECLARATIVEERROR_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QDECLARATIVEERROR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDECLARATIVEERROR_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDECLARATIVEERROR_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QDECLARATIVEERROR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDECLARATIVEERROR_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDECLARATIVEERROR_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDECLARATIVEERROR_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDECLARATIVEERROR_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

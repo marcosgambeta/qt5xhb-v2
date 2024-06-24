@@ -85,13 +85,13 @@ RETURN
 #include <QtNetwork/QNetworkAccessManager>
 
 /*
-QDeclarativeEngine( QObject * parent = nullptr )
+QDeclarativeEngine(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QDeclarativeEngine( OPQOBJECT( 1, nullptr));
+    auto obj = new QDeclarativeEngine(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDECLARATIVEENGINE_DELETE )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_DELETE)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -119,9 +119,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_DELETE )
 }
 
 /*
-void addImageProvider( const QString & providerId, QDeclarativeImageProvider * provider )
+void addImageProvider(const QString & providerId, QDeclarativeImageProvider * provider)
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMAGEPROVIDER )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDIMAGEPROVIDER)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -145,9 +145,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMAGEPROVIDER )
 }
 
 /*
-void addImportPath( const QString & path )
+void addImportPath(const QString & path)
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMPORTPATH )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDIMPORTPATH)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -171,9 +171,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMPORTPATH )
 }
 
 /*
-void addPluginPath( const QString & path )
+void addPluginPath(const QString & path)
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDPLUGINPATH )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDPLUGINPATH)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDPLUGINPATH )
 /*
 QUrl baseUrl() const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_BASEURL )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_BASEURL)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_BASEURL )
 /*
 void clearComponentCache()
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_CLEARCOMPONENTCACHE )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_CLEARCOMPONENTCACHE)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -248,9 +248,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_CLEARCOMPONENTCACHE )
 }
 
 /*
-QDeclarativeImageProvider * imageProvider( const QString & providerId ) const
+QDeclarativeImageProvider * imageProvider(const QString & providerId) const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_IMAGEPROVIDER )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_IMAGEPROVIDER)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMAGEPROVIDER )
 /*
 QStringList importPathList() const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPATHLIST )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_IMPORTPATHLIST)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPATHLIST )
 /*
 QNetworkAccessManager * networkAccessManager() const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_NETWORKACCESSMANAGER)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
 /*
 QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory() const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
 /*
 QString offlineStoragePath() const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_OFFLINESTORAGEPATH)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
 /*
 bool outputWarningsToStandardError() const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
 /*
 QStringList pluginPathList() const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_PLUGINPATHLIST )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_PLUGINPATHLIST)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -419,9 +419,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_PLUGINPATHLIST )
 }
 
 /*
-void removeImageProvider( const QString & providerId )
+void removeImageProvider(const QString & providerId)
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER )
 /*
 QDeclarativeContext * rootContext() const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_ROOTCONTEXT)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -470,9 +470,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
 }
 
 /*
-void setBaseUrl( const QUrl & url )
+void setBaseUrl(const QUrl & url)
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_SETBASEURL )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_SETBASEURL)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -496,9 +496,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETBASEURL )
 }
 
 /*
-void setImportPathList( const QStringList & paths )
+void setImportPathList(const QStringList & paths)
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_SETIMPORTPATHLIST )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_SETIMPORTPATHLIST)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -522,9 +522,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETIMPORTPATHLIST )
 }
 
 /*
-void setNetworkAccessManagerFactory( QDeclarativeNetworkAccessManagerFactory * factory )
+void setNetworkAccessManagerFactory(QDeclarativeNetworkAccessManagerFactory * factory)
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -548,9 +548,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY )
 }
 
 /*
-void setOfflineStoragePath( const QString & dir )
+void setOfflineStoragePath(const QString & dir)
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -574,9 +574,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH )
 }
 
 /*
-void setOutputWarningsToStandardError( bool enabled )
+void setOutputWarningsToStandardError(bool enabled)
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -600,9 +600,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
 }
 
 /*
-void setPluginPathList( const QStringList & paths )
+void setPluginPathList(const QStringList & paths)
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_SETPLUGINPATHLIST )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_SETPLUGINPATHLIST)
 {
   auto obj = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -626,9 +626,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETPLUGINPATHLIST )
 }
 
 /*
-static QDeclarativeContext * contextForObject( const QObject * object )
+static QDeclarativeContext * contextForObject(const QObject * object)
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_CONTEXTFOROBJECT )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_CONTEXTFOROBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQOBJECT(1))
@@ -646,15 +646,15 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_CONTEXTFOROBJECT )
 }
 
 /*
-static QDeclarativeEngine::ObjectOwnership objectOwnership( QObject * object )
+static QDeclarativeEngine::ObjectOwnership objectOwnership(QObject * object)
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_OBJECTOWNERSHIP )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_OBJECTOWNERSHIP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQOBJECT(1))
   {
 #endif
-    RENUM( QDeclarativeEngine::objectOwnership(PQOBJECT(1)));
+    RENUM(QDeclarativeEngine::objectOwnership(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -665,9 +665,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OBJECTOWNERSHIP )
 }
 
 /*
-static void setContextForObject( QObject * object, QDeclarativeContext * context )
+static void setContextForObject(QObject * object, QDeclarativeContext * context)
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_SETCONTEXTFOROBJECT )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_SETCONTEXTFOROBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVECONTEXT(2))
@@ -686,9 +686,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETCONTEXTFOROBJECT )
 }
 
 /*
-static void setObjectOwnership( QObject * object, QDeclarativeEngine::ObjectOwnership ownership )
+static void setObjectOwnership(QObject * object, QDeclarativeEngine::ObjectOwnership ownership)
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_SETOBJECTOWNERSHIP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2))
@@ -709,7 +709,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
 /*
 void quit()
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_ONQUIT )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_ONQUIT)
 {
   auto sender = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -755,9 +755,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ONQUIT )
 }
 
 /*
-void warnings( const QList<QDeclarativeError> & warnings )
+void warnings(const QList<QDeclarativeError> & warnings)
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
+HB_FUNC_STATIC(QDECLARATIVEENGINE_ONWARNINGS)
 {
   auto sender = qobject_cast<QDeclarativeEngine*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

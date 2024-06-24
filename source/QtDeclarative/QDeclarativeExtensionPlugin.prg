@@ -49,9 +49,9 @@ RETURN
 #endif
 
 /*
-virtual void initializeEngine( QDeclarativeEngine * engine, const char * uri )
+virtual void initializeEngine(QDeclarativeEngine * engine, const char * uri)
 */
-HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE )
+HB_FUNC_STATIC(QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE)
 {
   auto obj = qobject_cast<QDeclarativeExtensionPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -75,9 +75,9 @@ HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE )
 }
 
 /*
-virtual void registerTypes( const char * uri ) = 0
+virtual void registerTypes(const char * uri) = 0
 */
-HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES )
+HB_FUNC_STATIC(QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES)
 {
   auto obj = qobject_cast<QDeclarativeExtensionPlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
