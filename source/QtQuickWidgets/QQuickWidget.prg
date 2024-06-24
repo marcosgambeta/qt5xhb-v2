@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_NEW )
     QQuickWidget( const QUrl & source, QWidget * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-    auto obj = new QQuickWidget( *PQURL(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QQuickWidget(*PQURL(1), OPQWIDGET( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETSOURCE )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setSource( *PQURL(1));
+      obj->setSource(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETRESIZEMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setResizeMode( static_cast<QQuickWidget::ResizeMode>( hb_parni(1)));
+      obj->setResizeMode(static_cast<QQuickWidget::ResizeMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ERRORS )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETCONTENT )
     if (ISNUMPAR(3) && ISQURL(1) && ISQQMLCOMPONENT(2) && ISQOBJECT(3))
     {
 #endif
-      obj->setContent( *PQURL(1), PQQMLCOMPONENT(2), PQOBJECT(3));
+      obj->setContent(*PQURL(1), PQQMLCOMPONENT(2), PQOBJECT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETFORMAT )
     if (ISNUMPAR(1) && ISQSURFACEFORMAT(1))
     {
 #endif
-      obj->setFormat( *PQSURFACEFORMAT(1));
+      obj->setFormat(*PQSURFACEFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
