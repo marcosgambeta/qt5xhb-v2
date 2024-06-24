@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETCONTENTSSIZE )
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setContentsSize( *PQSIZE(1));
+      obj->setContentsSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINT )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setPerformanceHint( static_cast<QQuickPaintedItem::PerformanceHint>( hb_parni(1)), OPBOOL( 2, true));
+      obj->setPerformanceHint(static_cast<QQuickPaintedItem::PerformanceHint>(hb_parni(1)), OPBOOL( 2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINTS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPerformanceHints( static_cast<QQuickPaintedItem::PerformanceHints>( hb_parni(1)));
+      obj->setPerformanceHints(static_cast<QQuickPaintedItem::PerformanceHints>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETRENDERTARGET )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRenderTarget( static_cast<QQuickPaintedItem::RenderTarget>( hb_parni(1)));
+      obj->setRenderTarget(static_cast<QQuickPaintedItem::RenderTarget>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

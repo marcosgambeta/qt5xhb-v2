@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QQUICKVIEW_NEW )
     /*
     QQuickView( const QUrl & source, QWindow * parent = nullptr )
     */
-    auto obj = new QQuickView( *PQURL(1), OPQWINDOW( 2, nullptr));
+    auto obj = new QQuickView(*PQURL(1), OPQWINDOW( 2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QQUICKVIEW_SETRESIZEMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setResizeMode( static_cast<QQuickView::ResizeMode>( hb_parni(1)));
+      obj->setResizeMode(static_cast<QQuickView::ResizeMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QQUICKVIEW_SETSOURCE )
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setSource( *PQURL(1));
+      obj->setSource(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

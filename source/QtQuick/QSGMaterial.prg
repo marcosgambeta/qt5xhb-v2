@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSGMATERIAL_SETFLAG )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setFlag( static_cast<QSGMaterial::Flags>( hb_parni(1)), OPBOOL( 2, true));
+      obj->setFlag(static_cast<QSGMaterial::Flags>(hb_parni(1)), OPBOOL( 2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

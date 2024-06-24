@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QQUICKITEM_CONTAINS )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      RBOOL(obj->contains( *PQPOINTF(1)));
+      RBOOL(obj->contains(*PQPOINTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QQUICKITEM_INPUTMETHODQUERY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant(obj->inputMethodQuery( static_cast<Qt::InputMethodQuery>( hb_parni(1))));
+      auto ptr = new QVariant(obj->inputMethodQuery(static_cast<Qt::InputMethodQuery>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPFROMSCENE )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      auto ptr = new QPointF(obj->mapFromScene( *PQPOINTF(1)));
+      auto ptr = new QPointF(obj->mapFromScene(*PQPOINTF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTFROMSCENE )
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      auto ptr = new QRectF(obj->mapRectFromScene( *PQRECTF(1)));
+      auto ptr = new QRectF(obj->mapRectFromScene(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -922,7 +922,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTTOSCENE )
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      auto ptr = new QRectF(obj->mapRectToScene( *PQRECTF(1)));
+      auto ptr = new QRectF(obj->mapRectToScene(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPTOSCENE )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      auto ptr = new QPointF(obj->mapToScene( *PQPOINTF(1)));
+      auto ptr = new QPointF(obj->mapToScene(*PQPOINTF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1223,7 +1223,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETACCEPTEDMOUSEBUTTONS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAcceptedMouseButtons( static_cast<Qt::MouseButtons>( hb_parni(1)));
+      obj->setAcceptedMouseButtons(static_cast<Qt::MouseButtons>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1327,7 +1327,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETCURSOR )
     if (ISNUMPAR(1) && ISQCURSOR(1))
     {
 #endif
-      obj->setCursor( *PQCURSOR(1));
+      obj->setCursor(*PQCURSOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1405,7 +1405,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETFLAG )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setFlag( static_cast<QQuickItem::Flag>( hb_parni(1)), OPBOOL( 2, true));
+      obj->setFlag(static_cast<QQuickItem::Flag>(hb_parni(1)), OPBOOL( 2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1431,7 +1431,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETFLAGS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFlags( static_cast<QQuickItem::Flags>( hb_parni(1)));
+      obj->setFlags(static_cast<QQuickItem::Flags>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1769,7 +1769,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETTRANSFORMORIGIN )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTransformOrigin( static_cast<QQuickItem::TransformOrigin>( hb_parni(1)));
+      obj->setTransformOrigin(static_cast<QQuickItem::TransformOrigin>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

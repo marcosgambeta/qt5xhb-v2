@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_SETINDEXDATAPATTERN )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setIndexDataPattern( static_cast<QSGGeometry::DataPattern>( hb_parni(1)));
+      obj->setIndexDataPattern(static_cast<QSGGeometry::DataPattern>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_SETVERTEXDATAPATTERN )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setVertexDataPattern( static_cast<QSGGeometry::DataPattern>( hb_parni(1)));
+      obj->setVertexDataPattern(static_cast<QSGGeometry::DataPattern>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

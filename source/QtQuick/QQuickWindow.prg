@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMID )
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSIZE(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      auto ptr = obj->createTextureFromId(PUINT(1), *PQSIZE(2), HB_ISNIL(3) ? static_cast<QQuickWindow::CreateTextureOptions >( QQuickWindow::CreateTextureOption( 0 ) ) : static_cast<QQuickWindow::CreateTextureOptions >( hb_parni(3)));
+      auto ptr = obj->createTextureFromId(PUINT(1), *PQSIZE(2), HB_ISNIL(3) ? static_cast<QQuickWindow::CreateTextureOptions >( QQuickWindow::CreateTextureOption( 0 ) ) : static_cast<QQuickWindow::CreateTextureOptions >(hb_parni(3)));
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMIMAGE )
     if (ISNUMPAR(1) && ISQIMAGE(1))
     {
 #endif
-      auto ptr = obj->createTextureFromImage( *PQIMAGE(1));
+      auto ptr = obj->createTextureFromImage(*PQIMAGE(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

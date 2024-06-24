@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSGCLIPNODE_SETCLIPRECT )
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      obj->setClipRect( *PQRECTF(1));
+      obj->setClipRect(*PQRECTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
