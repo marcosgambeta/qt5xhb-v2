@@ -65,14 +65,14 @@ RETURN
 #include <QtGui/QWindow>
 
 /*
-QWinThumbnailToolBar( QObject * parent = nullptr )
+QWinThumbnailToolBar(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_NEW )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QWinThumbnailToolBar( OPQOBJECT( 1, nullptr));
+    auto obj = new QWinThumbnailToolBar(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_DELETE )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_DELETE )
 /*
 QWindow * window() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_WINDOW )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_WINDOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -130,9 +130,9 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_WINDOW )
 }
 
 /*
-void setWindow( QWindow * window )
+void setWindow(QWindow * window)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_SETWINDOW )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_SETWINDOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -158,9 +158,9 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_SETWINDOW )
 }
 
 /*
-void addButton( QWinThumbnailToolButton * button )
+void addButton(QWinThumbnailToolButton * button)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_ADDBUTTON )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_ADDBUTTON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -186,9 +186,9 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_ADDBUTTON )
 }
 
 /*
-void removeButton( QWinThumbnailToolButton * button )
+void removeButton(QWinThumbnailToolButton * button)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_REMOVEBUTTON )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_REMOVEBUTTON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -214,9 +214,9 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_REMOVEBUTTON )
 }
 
 /*
-void setButtons( const QList<QWinThumbnailToolButton *> & buttons )
+void setButtons(const QList<QWinThumbnailToolButton*> & buttons)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_SETBUTTONS )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_SETBUTTONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_SETBUTTONS )
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      QList<QWinThumbnailToolButton *> par1;
+      QList<QWinThumbnailToolButton*> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
       for (auto i1 = 0; i1 < nLen1; i1++)
@@ -249,9 +249,9 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_SETBUTTONS )
 }
 
 /*
-QList<QWinThumbnailToolButton *> buttons() const
+QList<QWinThumbnailToolButton*> buttons() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_BUTTONS )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_BUTTONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_BUTTONS )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_COUNT )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_COUNT )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_CLEAR )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());

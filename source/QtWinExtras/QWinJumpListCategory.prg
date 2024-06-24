@@ -74,14 +74,14 @@ RETURN
 #endif
 
 /*
-QWinJumpListCategory( const QString & title = QString() )
+QWinJumpListCategory(const QString & title = QString())
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEW )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
   {
-    auto obj = new QWinJumpListCategory( OPQSTRING(1, QString()));
+    auto obj = new QWinJumpListCategory(OPQSTRING(1, QString()));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_DELETE )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QWinJumpListCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_DELETE )
 /*
 QWinJumpListCategory::Type type() const
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_TYPE )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QWinJumpListCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_TYPE )
 /*
 bool isVisible() const
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ISVISIBLE )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ISVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QWinJumpListCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -162,9 +162,9 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ISVISIBLE )
 }
 
 /*
-void setVisible( bool visible )
+void setVisible(bool visible)
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SETVISIBLE )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_SETVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QWinJumpListCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SETVISIBLE )
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_TITLE )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_TITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QWinJumpListCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -216,9 +216,9 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_TITLE )
 }
 
 /*
-void setTitle( const QString & title )
+void setTitle(const QString & title)
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SETTITLE )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_SETTITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QWinJumpListCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SETTITLE )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_COUNT )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QWinJumpListCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_COUNT )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ISEMPTY )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ISEMPTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QWinJumpListCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -296,9 +296,9 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ISEMPTY )
 }
 
 /*
-QList<QWinJumpListItem *> items() const
+QList<QWinJumpListItem*> items() const
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ITEMS )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ITEMS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QWinJumpListCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -345,9 +345,9 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ITEMS )
 }
 
 /*
-void addItem( QWinJumpListItem * item )
+void addItem(QWinJumpListItem * item)
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDITEM )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QWinJumpListCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -373,9 +373,9 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDITEM )
 }
 
 /*
-QWinJumpListItem * addDestination( const QString & filePath )
+QWinJumpListItem * addDestination(const QString & filePath)
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDDESTINATION )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDDESTINATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QWinJumpListCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -399,19 +399,19 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDDESTINATION )
 #endif
 }
 
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDLINK)
 {
   if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISOPTARRAY(3))
   {
     /*
-    QWinJumpListItem * addLink( const QString & title, const QString & executablePath, const QStringList & arguments = QStringList() )
+    QWinJumpListItem * addLink(const QString & title, const QString & executablePath, const QStringList & arguments = QStringList())
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = static_cast<QWinJumpListCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr)
     {
-      auto ptr = obj->addLink(PQSTRING(1), PQSTRING(2), OPQSTRINGLIST( 3, QStringList()));
+      auto ptr = obj->addLink(PQSTRING(1), PQSTRING(2), OPQSTRINGLIST(3, QStringList()));
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTITEM", false);
     }
 #endif
@@ -420,14 +420,14 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
   else if (ISBETWEEN(3, 4) && ISQICON(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISOPTARRAY(4))
   {
     /*
-    QWinJumpListItem * addLink( const QIcon & icon, const QString & title, const QString & executablePath, const QStringList & arguments = QStringList() )
+    QWinJumpListItem * addLink(const QIcon & icon, const QString & title, const QString & executablePath, const QStringList & arguments = QStringList())
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     auto obj = static_cast<QWinJumpListCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr)
     {
-      auto ptr = obj->addLink( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)), PQSTRING(2), PQSTRING(3), OPQSTRINGLIST( 4, QStringList()));
+      auto ptr = obj->addLink(HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2), PQSTRING(3), OPQSTRINGLIST(4, QStringList()));
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTITEM", false);
     }
 #endif
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
 /*
 QWinJumpListItem * addSeparator()
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDSEPARATOR )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDSEPARATOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QWinJumpListCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDSEPARATOR )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_CLEAR )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QWinJumpListCategory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_CLEAR )
 #endif
 }
 
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEWFROM )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -524,22 +524,22 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEWFROMOBJECT )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QWINJUMPLISTCATEGORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEWFROMPOINTER )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QWINJUMPLISTCATEGORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SELFDESTRUCTION )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

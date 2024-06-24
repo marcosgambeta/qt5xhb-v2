@@ -72,14 +72,14 @@ RETURN
 #endif
 
 /*
-QWinThumbnailToolButton( QObject * parent = nullptr )
+QWinThumbnailToolButton(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_NEW )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QWinThumbnailToolButton( OPQOBJECT( 1, nullptr));
+    auto obj = new QWinThumbnailToolButton(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_DELETE )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_DELETE )
 /*
 QString toolTip() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_TOOLTIP )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_TOOLTIP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -136,9 +136,9 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_TOOLTIP )
 }
 
 /*
-void setToolTip( const QString & toolTip )
+void setToolTip(const QString & toolTip)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETTOOLTIP )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETTOOLTIP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETTOOLTIP )
 /*
 QIcon icon() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ICON )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -191,9 +191,9 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ICON )
 }
 
 /*
-void setIcon( const QIcon & icon )
+void setIcon(const QIcon & icon)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETICON )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETICON )
     if (ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)));
+      obj->setIcon(HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETICON )
 /*
 bool isEnabled() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISENABLED )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ISENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -245,9 +245,9 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISENABLED )
 }
 
 /*
-void setEnabled( bool enabled )
+void setEnabled(bool enabled)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETENABLED )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETENABLED )
 /*
 bool isInteractive() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISINTERACTIVE )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ISINTERACTIVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -299,9 +299,9 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISINTERACTIVE )
 }
 
 /*
-void setInteractive( bool interactive )
+void setInteractive(bool interactive)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETINTERACTIVE )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETINTERACTIVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETINTERACTIVE )
 /*
 bool isVisible() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISVISIBLE )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ISVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -353,9 +353,9 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISVISIBLE )
 }
 
 /*
-void setVisible( bool visible )
+void setVisible(bool visible)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETVISIBLE )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETVISIBLE )
 /*
 bool dismissOnClick() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_DISMISSONCLICK )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_DISMISSONCLICK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -407,9 +407,9 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_DISMISSONCLICK )
 }
 
 /*
-void setDismissOnClick( bool dismiss )
+void setDismissOnClick(bool dismiss)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETDISMISSONCLICK )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETDISMISSONCLICK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETDISMISSONCLICK )
 /*
 bool isFlat() const
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISFLAT )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ISFLAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -461,9 +461,9 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISFLAT )
 }
 
 /*
-void setFlat( bool flat )
+void setFlat(bool flat)
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETFLAT )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETFLAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETFLAT )
 /*
 void click()
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_CLICK )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_CLICK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_CLICK )
 /*
 void clicked()
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCLICKED )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ONCLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCLICKED )
 /*
 void changed()
 */
-HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCHANGED )
+HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = qobject_cast<QWinThumbnailToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());

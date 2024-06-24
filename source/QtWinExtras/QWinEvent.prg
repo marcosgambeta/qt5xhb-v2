@@ -51,9 +51,9 @@ RETURN
 #endif
 
 /*
-QWinEvent( int type )
+QWinEvent(int type)
 */
-HB_FUNC_STATIC( QWINEVENT_NEW )
+HB_FUNC_STATIC(QWINEVENT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if (ISNUMPAR(1) && HB_ISNUM(1))
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QWINEVENT_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QWINEVENT_DELETE )
+HB_FUNC_STATIC(QWINEVENT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = static_cast<QWinEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
