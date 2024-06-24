@@ -72,14 +72,14 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-QValue3DAxis( QObject * parent = nullptr )
+QValue3DAxis(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_NEW )
+HB_FUNC_STATIC(QVALUE3DAXIS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QValue3DAxis( OPQOBJECT( 1, nullptr));
+    auto obj = new QValue3DAxis(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_NEW )
 /*
 virtual ~QValue3DAxis()
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_DELETE )
+HB_FUNC_STATIC(QVALUE3DAXIS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_DELETE )
 /*
 int segmentCount() const
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_SEGMENTCOUNT )
+HB_FUNC_STATIC(QVALUE3DAXIS_SEGMENTCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -139,9 +139,9 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SEGMENTCOUNT )
 }
 
 /*
-void setSegmentCount( int count )
+void setSegmentCount(int count)
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_SETSEGMENTCOUNT )
+HB_FUNC_STATIC(QVALUE3DAXIS_SETSEGMENTCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SETSEGMENTCOUNT )
 /*
 int subSegmentCount() const
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_SUBSEGMENTCOUNT )
+HB_FUNC_STATIC(QVALUE3DAXIS_SUBSEGMENTCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -193,9 +193,9 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SUBSEGMENTCOUNT )
 }
 
 /*
-void setSubSegmentCount( int count )
+void setSubSegmentCount(int count)
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_SETSUBSEGMENTCOUNT )
+HB_FUNC_STATIC(QVALUE3DAXIS_SETSUBSEGMENTCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SETSUBSEGMENTCOUNT )
 /*
 QString labelFormat() const
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_LABELFORMAT )
+HB_FUNC_STATIC(QVALUE3DAXIS_LABELFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -247,9 +247,9 @@ HB_FUNC_STATIC( QVALUE3DAXIS_LABELFORMAT )
 }
 
 /*
-void setLabelFormat( const QString & format )
+void setLabelFormat(const QString & format)
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_SETLABELFORMAT )
+HB_FUNC_STATIC(QVALUE3DAXIS_SETLABELFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SETLABELFORMAT )
 /*
 QValue3DAxisFormatter * formatter() const
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_FORMATTER )
+HB_FUNC_STATIC(QVALUE3DAXIS_FORMATTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -302,9 +302,9 @@ HB_FUNC_STATIC( QVALUE3DAXIS_FORMATTER )
 }
 
 /*
-void setFormatter( QValue3DAxisFormatter * formatter )
+void setFormatter(QValue3DAxisFormatter * formatter)
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_SETFORMATTER )
+HB_FUNC_STATIC(QVALUE3DAXIS_SETFORMATTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SETFORMATTER )
 /*
 bool reversed() const
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_REVERSED )
+HB_FUNC_STATIC(QVALUE3DAXIS_REVERSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -356,9 +356,9 @@ HB_FUNC_STATIC( QVALUE3DAXIS_REVERSED )
 }
 
 /*
-void setReversed( bool enable )
+void setReversed(bool enable)
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_SETREVERSED )
+HB_FUNC_STATIC(QVALUE3DAXIS_SETREVERSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -384,9 +384,9 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SETREVERSED )
 }
 
 /*
-void formatterChanged( QValue3DAxisFormatter * formatter )
+void formatterChanged(QValue3DAxisFormatter * formatter)
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_ONFORMATTERCHANGED )
+HB_FUNC_STATIC(QVALUE3DAXIS_ONFORMATTERCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -438,9 +438,9 @@ HB_FUNC_STATIC( QVALUE3DAXIS_ONFORMATTERCHANGED )
 }
 
 /*
-void labelFormatChanged( const QString & format )
+void labelFormatChanged(const QString & format)
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_ONLABELFORMATCHANGED )
+HB_FUNC_STATIC(QVALUE3DAXIS_ONLABELFORMATCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -492,9 +492,9 @@ HB_FUNC_STATIC( QVALUE3DAXIS_ONLABELFORMATCHANGED )
 }
 
 /*
-void reversedChanged( bool enable )
+void reversedChanged(bool enable)
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_ONREVERSEDCHANGED )
+HB_FUNC_STATIC(QVALUE3DAXIS_ONREVERSEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -546,9 +546,9 @@ HB_FUNC_STATIC( QVALUE3DAXIS_ONREVERSEDCHANGED )
 }
 
 /*
-void segmentCountChanged( int count )
+void segmentCountChanged(int count)
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_ONSEGMENTCOUNTCHANGED )
+HB_FUNC_STATIC(QVALUE3DAXIS_ONSEGMENTCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -600,9 +600,9 @@ HB_FUNC_STATIC( QVALUE3DAXIS_ONSEGMENTCOUNTCHANGED )
 }
 
 /*
-void subSegmentCountChanged( int count )
+void subSegmentCountChanged(int count)
 */
-HB_FUNC_STATIC( QVALUE3DAXIS_ONSUBSEGMENTCOUNTCHANGED )
+HB_FUNC_STATIC(QVALUE3DAXIS_ONSUBSEGMENTCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QValue3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());

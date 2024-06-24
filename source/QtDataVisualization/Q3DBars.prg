@@ -97,14 +97,14 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-Q3DBars( const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr )
+Q3DBars(const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr)
 */
-HB_FUNC_STATIC( Q3DBARS_NEW )
+HB_FUNC_STATIC(Q3DBARS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(0, 2) && (ISQSURFACEFORMAT(1) || HB_ISNIL(1)) && (ISQWINDOW(2) || HB_ISNIL(2)))
   {
-    auto obj = new Q3DBars( HB_ISNIL(1) ? nullptr : static_cast<QSurfaceFormat*>(Qt5xHb::itemGetPtr(1)), OPQWINDOW( 2, nullptr));
+    auto obj = new Q3DBars(HB_ISNIL(1) ? nullptr : static_cast<QSurfaceFormat*>(Qt5xHb::itemGetPtr(1)), OPQWINDOW(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( Q3DBARS_NEW )
 /*
 virtual ~Q3DBars()
 */
-HB_FUNC_STATIC( Q3DBARS_DELETE )
+HB_FUNC_STATIC(Q3DBARS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( Q3DBARS_DELETE )
 /*
 bool isMultiSeriesUniform() const
 */
-HB_FUNC_STATIC( Q3DBARS_ISMULTISERIESUNIFORM )
+HB_FUNC_STATIC(Q3DBARS_ISMULTISERIESUNIFORM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -164,9 +164,9 @@ HB_FUNC_STATIC( Q3DBARS_ISMULTISERIESUNIFORM )
 }
 
 /*
-void setMultiSeriesUniform( bool uniform )
+void setMultiSeriesUniform(bool uniform)
 */
-HB_FUNC_STATIC( Q3DBARS_SETMULTISERIESUNIFORM )
+HB_FUNC_STATIC(Q3DBARS_SETMULTISERIESUNIFORM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( Q3DBARS_SETMULTISERIESUNIFORM )
 /*
 float barThickness() const
 */
-HB_FUNC_STATIC( Q3DBARS_BARTHICKNESS )
+HB_FUNC_STATIC(Q3DBARS_BARTHICKNESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -218,9 +218,9 @@ HB_FUNC_STATIC( Q3DBARS_BARTHICKNESS )
 }
 
 /*
-void setBarThickness( float thicknessRatio )
+void setBarThickness(float thicknessRatio)
 */
-HB_FUNC_STATIC( Q3DBARS_SETBARTHICKNESS )
+HB_FUNC_STATIC(Q3DBARS_SETBARTHICKNESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( Q3DBARS_SETBARTHICKNESS )
 /*
 QSizeF barSpacing() const
 */
-HB_FUNC_STATIC( Q3DBARS_BARSPACING )
+HB_FUNC_STATIC(Q3DBARS_BARSPACING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -273,9 +273,9 @@ HB_FUNC_STATIC( Q3DBARS_BARSPACING )
 }
 
 /*
-void setBarSpacing( const QSizeF & spacing )
+void setBarSpacing(const QSizeF & spacing)
 */
-HB_FUNC_STATIC( Q3DBARS_SETBARSPACING )
+HB_FUNC_STATIC(Q3DBARS_SETBARSPACING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( Q3DBARS_SETBARSPACING )
 /*
 bool isBarSpacingRelative() const
 */
-HB_FUNC_STATIC( Q3DBARS_ISBARSPACINGRELATIVE )
+HB_FUNC_STATIC(Q3DBARS_ISBARSPACINGRELATIVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -327,9 +327,9 @@ HB_FUNC_STATIC( Q3DBARS_ISBARSPACINGRELATIVE )
 }
 
 /*
-void setBarSpacingRelative( bool relative )
+void setBarSpacingRelative(bool relative)
 */
-HB_FUNC_STATIC( Q3DBARS_SETBARSPACINGRELATIVE )
+HB_FUNC_STATIC(Q3DBARS_SETBARSPACINGRELATIVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( Q3DBARS_SETBARSPACINGRELATIVE )
 /*
 QCategory3DAxis * rowAxis() const
 */
-HB_FUNC_STATIC( Q3DBARS_ROWAXIS )
+HB_FUNC_STATIC(Q3DBARS_ROWAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -382,9 +382,9 @@ HB_FUNC_STATIC( Q3DBARS_ROWAXIS )
 }
 
 /*
-void setRowAxis( QCategory3DAxis * axis )
+void setRowAxis(QCategory3DAxis * axis)
 */
-HB_FUNC_STATIC( Q3DBARS_SETROWAXIS )
+HB_FUNC_STATIC(Q3DBARS_SETROWAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( Q3DBARS_SETROWAXIS )
 /*
 QCategory3DAxis * columnAxis() const
 */
-HB_FUNC_STATIC( Q3DBARS_COLUMNAXIS )
+HB_FUNC_STATIC(Q3DBARS_COLUMNAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -437,9 +437,9 @@ HB_FUNC_STATIC( Q3DBARS_COLUMNAXIS )
 }
 
 /*
-void setColumnAxis( QCategory3DAxis * axis )
+void setColumnAxis(QCategory3DAxis * axis)
 */
-HB_FUNC_STATIC( Q3DBARS_SETCOLUMNAXIS )
+HB_FUNC_STATIC(Q3DBARS_SETCOLUMNAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( Q3DBARS_SETCOLUMNAXIS )
 /*
 QValue3DAxis * valueAxis() const
 */
-HB_FUNC_STATIC( Q3DBARS_VALUEAXIS )
+HB_FUNC_STATIC(Q3DBARS_VALUEAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -492,9 +492,9 @@ HB_FUNC_STATIC( Q3DBARS_VALUEAXIS )
 }
 
 /*
-void setValueAxis( QValue3DAxis * axis )
+void setValueAxis(QValue3DAxis * axis)
 */
-HB_FUNC_STATIC( Q3DBARS_SETVALUEAXIS )
+HB_FUNC_STATIC(Q3DBARS_SETVALUEAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( Q3DBARS_SETVALUEAXIS )
 /*
 QBar3DSeries * primarySeries() const
 */
-HB_FUNC_STATIC( Q3DBARS_PRIMARYSERIES )
+HB_FUNC_STATIC(Q3DBARS_PRIMARYSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -547,9 +547,9 @@ HB_FUNC_STATIC( Q3DBARS_PRIMARYSERIES )
 }
 
 /*
-void setPrimarySeries( QBar3DSeries * series )
+void setPrimarySeries(QBar3DSeries * series)
 */
-HB_FUNC_STATIC( Q3DBARS_SETPRIMARYSERIES )
+HB_FUNC_STATIC(Q3DBARS_SETPRIMARYSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( Q3DBARS_SETPRIMARYSERIES )
 /*
 QBar3DSeries * selectedSeries() const
 */
-HB_FUNC_STATIC( Q3DBARS_SELECTEDSERIES )
+HB_FUNC_STATIC(Q3DBARS_SELECTEDSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( Q3DBARS_SELECTEDSERIES )
 /*
 float floorLevel() const
 */
-HB_FUNC_STATIC( Q3DBARS_FLOORLEVEL )
+HB_FUNC_STATIC(Q3DBARS_FLOORLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -628,9 +628,9 @@ HB_FUNC_STATIC( Q3DBARS_FLOORLEVEL )
 }
 
 /*
-void setFloorLevel( float level )
+void setFloorLevel(float level)
 */
-HB_FUNC_STATIC( Q3DBARS_SETFLOORLEVEL )
+HB_FUNC_STATIC(Q3DBARS_SETFLOORLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -656,9 +656,9 @@ HB_FUNC_STATIC( Q3DBARS_SETFLOORLEVEL )
 }
 
 /*
-void addSeries( QBar3DSeries * series )
+void addSeries(QBar3DSeries * series)
 */
-HB_FUNC_STATIC( Q3DBARS_ADDSERIES )
+HB_FUNC_STATIC(Q3DBARS_ADDSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -684,9 +684,9 @@ HB_FUNC_STATIC( Q3DBARS_ADDSERIES )
 }
 
 /*
-void removeSeries( QBar3DSeries * series )
+void removeSeries(QBar3DSeries * series)
 */
-HB_FUNC_STATIC( Q3DBARS_REMOVESERIES )
+HB_FUNC_STATIC(Q3DBARS_REMOVESERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -712,9 +712,9 @@ HB_FUNC_STATIC( Q3DBARS_REMOVESERIES )
 }
 
 /*
-void insertSeries( int index, QBar3DSeries * series )
+void insertSeries(int index, QBar3DSeries * series)
 */
-HB_FUNC_STATIC( Q3DBARS_INSERTSERIES )
+HB_FUNC_STATIC(Q3DBARS_INSERTSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -740,9 +740,9 @@ HB_FUNC_STATIC( Q3DBARS_INSERTSERIES )
 }
 
 /*
-QList<QBar3DSeries *> seriesList() const
+QList<QBar3DSeries*> seriesList() const
 */
-HB_FUNC_STATIC( Q3DBARS_SERIESLIST )
+HB_FUNC_STATIC(Q3DBARS_SERIESLIST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -789,9 +789,9 @@ HB_FUNC_STATIC( Q3DBARS_SERIESLIST )
 }
 
 /*
-void addAxis( QAbstract3DAxis * axis )
+void addAxis(QAbstract3DAxis * axis)
 */
-HB_FUNC_STATIC( Q3DBARS_ADDAXIS )
+HB_FUNC_STATIC(Q3DBARS_ADDAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -817,9 +817,9 @@ HB_FUNC_STATIC( Q3DBARS_ADDAXIS )
 }
 
 /*
-void releaseAxis( QAbstract3DAxis * axis )
+void releaseAxis(QAbstract3DAxis * axis)
 */
-HB_FUNC_STATIC( Q3DBARS_RELEASEAXIS )
+HB_FUNC_STATIC(Q3DBARS_RELEASEAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -845,9 +845,9 @@ HB_FUNC_STATIC( Q3DBARS_RELEASEAXIS )
 }
 
 /*
-QList<QAbstract3DAxis *> axes() const
+QList<QAbstract3DAxis*> axes() const
 */
-HB_FUNC_STATIC( Q3DBARS_AXES )
+HB_FUNC_STATIC(Q3DBARS_AXES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -894,9 +894,9 @@ HB_FUNC_STATIC( Q3DBARS_AXES )
 }
 
 /*
-void multiSeriesUniformChanged( bool uniform )
+void multiSeriesUniformChanged(bool uniform)
 */
-HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
+HB_FUNC_STATIC(Q3DBARS_ONMULTISERIESUNIFORMCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -948,9 +948,9 @@ HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
 }
 
 /*
-void barThicknessChanged( float thicknessRatio )
+void barThicknessChanged(float thicknessRatio)
 */
-HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
+HB_FUNC_STATIC(Q3DBARS_ONBARTHICKNESSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1002,9 +1002,9 @@ HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
 }
 
 /*
-void barSpacingChanged( const QSizeF & spacing )
+void barSpacingChanged(const QSizeF & spacing)
 */
-HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
+HB_FUNC_STATIC(Q3DBARS_ONBARSPACINGCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1029,7 +1029,7 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZEF");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QSIZEF");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1056,9 +1056,9 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
 }
 
 /*
-void barSpacingRelativeChanged( bool relative )
+void barSpacingRelativeChanged(bool relative)
 */
-HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
+HB_FUNC_STATIC(Q3DBARS_ONBARSPACINGRELATIVECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1110,9 +1110,9 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
 }
 
 /*
-void rowAxisChanged( QCategory3DAxis * axis )
+void rowAxisChanged(QCategory3DAxis * axis)
 */
-HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
+HB_FUNC_STATIC(Q3DBARS_ONROWAXISCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1164,9 +1164,9 @@ HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
 }
 
 /*
-void columnAxisChanged( QCategory3DAxis * axis )
+void columnAxisChanged(QCategory3DAxis * axis)
 */
-HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
+HB_FUNC_STATIC(Q3DBARS_ONCOLUMNAXISCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1218,9 +1218,9 @@ HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
 }
 
 /*
-void valueAxisChanged( QValue3DAxis * axis )
+void valueAxisChanged(QValue3DAxis * axis)
 */
-HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
+HB_FUNC_STATIC(Q3DBARS_ONVALUEAXISCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1272,9 +1272,9 @@ HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
 }
 
 /*
-void primarySeriesChanged( QBar3DSeries * series )
+void primarySeriesChanged(QBar3DSeries * series)
 */
-HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
+HB_FUNC_STATIC(Q3DBARS_ONPRIMARYSERIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1326,9 +1326,9 @@ HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
 }
 
 /*
-void selectedSeriesChanged( QBar3DSeries * series )
+void selectedSeriesChanged(QBar3DSeries * series)
 */
-HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
+HB_FUNC_STATIC(Q3DBARS_ONSELECTEDSERIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1380,9 +1380,9 @@ HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
 }
 
 /*
-void floorLevelChanged( float level )
+void floorLevelChanged(float level)
 */
-HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
+HB_FUNC_STATIC(Q3DBARS_ONFLOORLEVELCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DBars*>(Qt5xHb::getQObjectPointerFromSelfItem());

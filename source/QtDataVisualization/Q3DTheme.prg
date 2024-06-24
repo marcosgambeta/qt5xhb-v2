@@ -124,15 +124,15 @@ RETURN
 
 using namespace QtDataVisualization;
 
-HB_FUNC_STATIC( Q3DTHEME_NEW )
+HB_FUNC_STATIC(Q3DTHEME_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    Q3DTheme( QObject * parent = nullptr )
+    Q3DTheme(QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new Q3DTheme( OPQOBJECT( 1, nullptr));
+    auto obj = new Q3DTheme(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -140,10 +140,10 @@ HB_FUNC_STATIC( Q3DTHEME_NEW )
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    Q3DTheme( Q3DTheme::Theme themeType, QObject * parent = nullptr )
+    Q3DTheme(Q3DTheme::Theme themeType, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new Q3DTheme(static_cast<Q3DTheme::Theme>(hb_parni(1)), OPQOBJECT( 2, nullptr));
+    auto obj = new Q3DTheme(static_cast<Q3DTheme::Theme>(hb_parni(1)), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( Q3DTHEME_NEW )
 /*
 virtual ~Q3DTheme()
 */
-HB_FUNC_STATIC( Q3DTHEME_DELETE )
+HB_FUNC_STATIC(Q3DTHEME_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( Q3DTHEME_DELETE )
 /*
 Q3DTheme::Theme type() const
 */
-HB_FUNC_STATIC( Q3DTHEME_TYPE )
+HB_FUNC_STATIC(Q3DTHEME_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -204,9 +204,9 @@ HB_FUNC_STATIC( Q3DTHEME_TYPE )
 }
 
 /*
-void setType( Q3DTheme::Theme themeType )
+void setType(Q3DTheme::Theme themeType)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETTYPE )
+HB_FUNC_STATIC(Q3DTHEME_SETTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETTYPE )
 /*
 QList<QColor> baseColors() const
 */
-HB_FUNC_STATIC( Q3DTHEME_BASECOLORS )
+HB_FUNC_STATIC(Q3DTHEME_BASECOLORS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -284,9 +284,9 @@ HB_FUNC_STATIC( Q3DTHEME_BASECOLORS )
 }
 
 /*
-void setBaseColors( const QList<QColor> & colors )
+void setBaseColors(const QList<QColor> & colors)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETBASECOLORS )
+HB_FUNC_STATIC(Q3DTHEME_SETBASECOLORS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETBASECOLORS )
 /*
 QColor backgroundColor() const
 */
-HB_FUNC_STATIC( Q3DTHEME_BACKGROUNDCOLOR )
+HB_FUNC_STATIC(Q3DTHEME_BACKGROUNDCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -346,9 +346,9 @@ HB_FUNC_STATIC( Q3DTHEME_BACKGROUNDCOLOR )
 }
 
 /*
-void setBackgroundColor( const QColor & color )
+void setBackgroundColor(const QColor & color)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETBACKGROUNDCOLOR )
+HB_FUNC_STATIC(Q3DTHEME_SETBACKGROUNDCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETBACKGROUNDCOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setBackgroundColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setBackgroundColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETBACKGROUNDCOLOR )
 /*
 QColor windowColor() const
 */
-HB_FUNC_STATIC( Q3DTHEME_WINDOWCOLOR )
+HB_FUNC_STATIC(Q3DTHEME_WINDOWCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -401,9 +401,9 @@ HB_FUNC_STATIC( Q3DTHEME_WINDOWCOLOR )
 }
 
 /*
-void setWindowColor( const QColor & color )
+void setWindowColor(const QColor & color)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETWINDOWCOLOR )
+HB_FUNC_STATIC(Q3DTHEME_SETWINDOWCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETWINDOWCOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setWindowColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setWindowColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETWINDOWCOLOR )
 /*
 QColor labelTextColor() const
 */
-HB_FUNC_STATIC( Q3DTHEME_LABELTEXTCOLOR )
+HB_FUNC_STATIC(Q3DTHEME_LABELTEXTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -456,9 +456,9 @@ HB_FUNC_STATIC( Q3DTHEME_LABELTEXTCOLOR )
 }
 
 /*
-void setLabelTextColor( const QColor & color )
+void setLabelTextColor(const QColor & color)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETLABELTEXTCOLOR )
+HB_FUNC_STATIC(Q3DTHEME_SETLABELTEXTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLABELTEXTCOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setLabelTextColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setLabelTextColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLABELTEXTCOLOR )
 /*
 QColor labelBackgroundColor() const
 */
-HB_FUNC_STATIC( Q3DTHEME_LABELBACKGROUNDCOLOR )
+HB_FUNC_STATIC(Q3DTHEME_LABELBACKGROUNDCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -511,9 +511,9 @@ HB_FUNC_STATIC( Q3DTHEME_LABELBACKGROUNDCOLOR )
 }
 
 /*
-void setLabelBackgroundColor( const QColor & color )
+void setLabelBackgroundColor(const QColor & color)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETLABELBACKGROUNDCOLOR )
+HB_FUNC_STATIC(Q3DTHEME_SETLABELBACKGROUNDCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLABELBACKGROUNDCOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setLabelBackgroundColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setLabelBackgroundColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLABELBACKGROUNDCOLOR )
 /*
 QColor gridLineColor() const
 */
-HB_FUNC_STATIC( Q3DTHEME_GRIDLINECOLOR )
+HB_FUNC_STATIC(Q3DTHEME_GRIDLINECOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -566,9 +566,9 @@ HB_FUNC_STATIC( Q3DTHEME_GRIDLINECOLOR )
 }
 
 /*
-void setGridLineColor( const QColor & color )
+void setGridLineColor(const QColor & color)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETGRIDLINECOLOR )
+HB_FUNC_STATIC(Q3DTHEME_SETGRIDLINECOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETGRIDLINECOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setGridLineColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setGridLineColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETGRIDLINECOLOR )
 /*
 QColor singleHighlightColor() const
 */
-HB_FUNC_STATIC( Q3DTHEME_SINGLEHIGHLIGHTCOLOR )
+HB_FUNC_STATIC(Q3DTHEME_SINGLEHIGHLIGHTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -621,9 +621,9 @@ HB_FUNC_STATIC( Q3DTHEME_SINGLEHIGHLIGHTCOLOR )
 }
 
 /*
-void setSingleHighlightColor( const QColor & color )
+void setSingleHighlightColor(const QColor & color)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETSINGLEHIGHLIGHTCOLOR )
+HB_FUNC_STATIC(Q3DTHEME_SETSINGLEHIGHLIGHTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETSINGLEHIGHLIGHTCOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setSingleHighlightColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setSingleHighlightColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETSINGLEHIGHLIGHTCOLOR )
 /*
 QColor multiHighlightColor() const
 */
-HB_FUNC_STATIC( Q3DTHEME_MULTIHIGHLIGHTCOLOR )
+HB_FUNC_STATIC(Q3DTHEME_MULTIHIGHLIGHTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -676,9 +676,9 @@ HB_FUNC_STATIC( Q3DTHEME_MULTIHIGHLIGHTCOLOR )
 }
 
 /*
-void setMultiHighlightColor( const QColor & color )
+void setMultiHighlightColor(const QColor & color)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETMULTIHIGHLIGHTCOLOR )
+HB_FUNC_STATIC(Q3DTHEME_SETMULTIHIGHLIGHTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETMULTIHIGHLIGHTCOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setMultiHighlightColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setMultiHighlightColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETMULTIHIGHLIGHTCOLOR )
 /*
 QColor lightColor() const
 */
-HB_FUNC_STATIC( Q3DTHEME_LIGHTCOLOR )
+HB_FUNC_STATIC(Q3DTHEME_LIGHTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -731,9 +731,9 @@ HB_FUNC_STATIC( Q3DTHEME_LIGHTCOLOR )
 }
 
 /*
-void setLightColor( const QColor & color )
+void setLightColor(const QColor & color)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETLIGHTCOLOR )
+HB_FUNC_STATIC(Q3DTHEME_SETLIGHTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -744,7 +744,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLIGHTCOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setLightColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setLightColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLIGHTCOLOR )
 /*
 QList<QLinearGradient> baseGradients() const
 */
-HB_FUNC_STATIC( Q3DTHEME_BASEGRADIENTS )
+HB_FUNC_STATIC(Q3DTHEME_BASEGRADIENTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -811,9 +811,9 @@ HB_FUNC_STATIC( Q3DTHEME_BASEGRADIENTS )
 }
 
 /*
-void setBaseGradients( const QList<QLinearGradient> & gradients )
+void setBaseGradients(const QList<QLinearGradient> & gradients)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETBASEGRADIENTS )
+HB_FUNC_STATIC(Q3DTHEME_SETBASEGRADIENTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETBASEGRADIENTS )
 /*
 QLinearGradient singleHighlightGradient() const
 */
-HB_FUNC_STATIC( Q3DTHEME_SINGLEHIGHLIGHTGRADIENT )
+HB_FUNC_STATIC(Q3DTHEME_SINGLEHIGHLIGHTGRADIENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -873,9 +873,9 @@ HB_FUNC_STATIC( Q3DTHEME_SINGLEHIGHLIGHTGRADIENT )
 }
 
 /*
-void setSingleHighlightGradient( const QLinearGradient & gradient )
+void setSingleHighlightGradient(const QLinearGradient & gradient)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETSINGLEHIGHLIGHTGRADIENT )
+HB_FUNC_STATIC(Q3DTHEME_SETSINGLEHIGHLIGHTGRADIENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETSINGLEHIGHLIGHTGRADIENT )
 /*
 QLinearGradient multiHighlightGradient() const
 */
-HB_FUNC_STATIC( Q3DTHEME_MULTIHIGHLIGHTGRADIENT )
+HB_FUNC_STATIC(Q3DTHEME_MULTIHIGHLIGHTGRADIENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -928,9 +928,9 @@ HB_FUNC_STATIC( Q3DTHEME_MULTIHIGHLIGHTGRADIENT )
 }
 
 /*
-void setMultiHighlightGradient( const QLinearGradient & gradient )
+void setMultiHighlightGradient(const QLinearGradient & gradient)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETMULTIHIGHLIGHTGRADIENT )
+HB_FUNC_STATIC(Q3DTHEME_SETMULTIHIGHLIGHTGRADIENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -958,7 +958,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETMULTIHIGHLIGHTGRADIENT )
 /*
 float lightStrength() const
 */
-HB_FUNC_STATIC( Q3DTHEME_LIGHTSTRENGTH )
+HB_FUNC_STATIC(Q3DTHEME_LIGHTSTRENGTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -982,9 +982,9 @@ HB_FUNC_STATIC( Q3DTHEME_LIGHTSTRENGTH )
 }
 
 /*
-void setLightStrength( float strength )
+void setLightStrength(float strength)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETLIGHTSTRENGTH )
+HB_FUNC_STATIC(Q3DTHEME_SETLIGHTSTRENGTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLIGHTSTRENGTH )
 /*
 float ambientLightStrength() const
 */
-HB_FUNC_STATIC( Q3DTHEME_AMBIENTLIGHTSTRENGTH )
+HB_FUNC_STATIC(Q3DTHEME_AMBIENTLIGHTSTRENGTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1036,9 +1036,9 @@ HB_FUNC_STATIC( Q3DTHEME_AMBIENTLIGHTSTRENGTH )
 }
 
 /*
-void setAmbientLightStrength( float strength )
+void setAmbientLightStrength(float strength)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETAMBIENTLIGHTSTRENGTH )
+HB_FUNC_STATIC(Q3DTHEME_SETAMBIENTLIGHTSTRENGTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETAMBIENTLIGHTSTRENGTH )
 /*
 float highlightLightStrength() const
 */
-HB_FUNC_STATIC( Q3DTHEME_HIGHLIGHTLIGHTSTRENGTH )
+HB_FUNC_STATIC(Q3DTHEME_HIGHLIGHTLIGHTSTRENGTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1090,9 +1090,9 @@ HB_FUNC_STATIC( Q3DTHEME_HIGHLIGHTLIGHTSTRENGTH )
 }
 
 /*
-void setHighlightLightStrength( float strength )
+void setHighlightLightStrength(float strength)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETHIGHLIGHTLIGHTSTRENGTH )
+HB_FUNC_STATIC(Q3DTHEME_SETHIGHLIGHTLIGHTSTRENGTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1120,7 +1120,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETHIGHLIGHTLIGHTSTRENGTH )
 /*
 bool isLabelBorderEnabled() const
 */
-HB_FUNC_STATIC( Q3DTHEME_ISLABELBORDERENABLED )
+HB_FUNC_STATIC(Q3DTHEME_ISLABELBORDERENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1144,9 +1144,9 @@ HB_FUNC_STATIC( Q3DTHEME_ISLABELBORDERENABLED )
 }
 
 /*
-void setLabelBorderEnabled( bool enabled )
+void setLabelBorderEnabled(bool enabled)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETLABELBORDERENABLED )
+HB_FUNC_STATIC(Q3DTHEME_SETLABELBORDERENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1174,7 +1174,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLABELBORDERENABLED )
 /*
 QFont font() const
 */
-HB_FUNC_STATIC( Q3DTHEME_FONT )
+HB_FUNC_STATIC(Q3DTHEME_FONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1199,9 +1199,9 @@ HB_FUNC_STATIC( Q3DTHEME_FONT )
 }
 
 /*
-void setFont( const QFont & font )
+void setFont(const QFont & font)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETFONT )
+HB_FUNC_STATIC(Q3DTHEME_SETFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETFONT )
 /*
 bool isBackgroundEnabled() const
 */
-HB_FUNC_STATIC( Q3DTHEME_ISBACKGROUNDENABLED )
+HB_FUNC_STATIC(Q3DTHEME_ISBACKGROUNDENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1253,9 +1253,9 @@ HB_FUNC_STATIC( Q3DTHEME_ISBACKGROUNDENABLED )
 }
 
 /*
-void setBackgroundEnabled( bool enabled )
+void setBackgroundEnabled(bool enabled)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETBACKGROUNDENABLED )
+HB_FUNC_STATIC(Q3DTHEME_SETBACKGROUNDENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1283,7 +1283,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETBACKGROUNDENABLED )
 /*
 bool isGridEnabled() const
 */
-HB_FUNC_STATIC( Q3DTHEME_ISGRIDENABLED )
+HB_FUNC_STATIC(Q3DTHEME_ISGRIDENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1307,9 +1307,9 @@ HB_FUNC_STATIC( Q3DTHEME_ISGRIDENABLED )
 }
 
 /*
-void setGridEnabled( bool enabled )
+void setGridEnabled(bool enabled)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETGRIDENABLED )
+HB_FUNC_STATIC(Q3DTHEME_SETGRIDENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1337,7 +1337,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETGRIDENABLED )
 /*
 bool isLabelBackgroundEnabled() const
 */
-HB_FUNC_STATIC( Q3DTHEME_ISLABELBACKGROUNDENABLED )
+HB_FUNC_STATIC(Q3DTHEME_ISLABELBACKGROUNDENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1361,9 +1361,9 @@ HB_FUNC_STATIC( Q3DTHEME_ISLABELBACKGROUNDENABLED )
 }
 
 /*
-void setLabelBackgroundEnabled( bool enabled )
+void setLabelBackgroundEnabled(bool enabled)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETLABELBACKGROUNDENABLED )
+HB_FUNC_STATIC(Q3DTHEME_SETLABELBACKGROUNDENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1391,7 +1391,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLABELBACKGROUNDENABLED )
 /*
 Q3DTheme::ColorStyle colorStyle() const
 */
-HB_FUNC_STATIC( Q3DTHEME_COLORSTYLE )
+HB_FUNC_STATIC(Q3DTHEME_COLORSTYLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1415,9 +1415,9 @@ HB_FUNC_STATIC( Q3DTHEME_COLORSTYLE )
 }
 
 /*
-void setColorStyle( Q3DTheme::ColorStyle style )
+void setColorStyle(Q3DTheme::ColorStyle style)
 */
-HB_FUNC_STATIC( Q3DTHEME_SETCOLORSTYLE )
+HB_FUNC_STATIC(Q3DTHEME_SETCOLORSTYLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1443,9 +1443,9 @@ HB_FUNC_STATIC( Q3DTHEME_SETCOLORSTYLE )
 }
 
 /*
-void ambientLightStrengthChanged( float strength )
+void ambientLightStrengthChanged(float strength)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1497,9 +1497,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED )
 }
 
 /*
-void backgroundColorChanged( const QColor & color )
+void backgroundColorChanged(const QColor & color)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDCOLORCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONBACKGROUNDCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1524,7 +1524,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDCOLORCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DTHEME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1551,9 +1551,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDCOLORCHANGED )
 }
 
 /*
-void backgroundEnabledChanged( bool enabled )
+void backgroundEnabledChanged(bool enabled)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDENABLEDCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONBACKGROUNDENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1605,9 +1605,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDENABLEDCHANGED )
 }
 
 /*
-void baseColorsChanged( const QList<QColor> & colors )
+void baseColorsChanged(const QList<QColor> & colors)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONBASECOLORSCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONBASECOLORSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1680,9 +1680,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASECOLORSCHANGED )
 }
 
 /*
-void baseGradientsChanged( const QList<QLinearGradient> & gradients )
+void baseGradientsChanged(const QList<QLinearGradient> & gradients)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONBASEGRADIENTSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1755,9 +1755,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
 }
 
 /*
-void colorStyleChanged( Q3DTheme::ColorStyle style )
+void colorStyleChanged(Q3DTheme::ColorStyle style)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONCOLORSTYLECHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONCOLORSTYLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1809,9 +1809,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONCOLORSTYLECHANGED )
 }
 
 /*
-void fontChanged( const QFont & font )
+void fontChanged(const QFont & font)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONFONTCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONFONTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1836,7 +1836,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONFONTCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DTHEME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QFONT");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QFONT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1863,9 +1863,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONFONTCHANGED )
 }
 
 /*
-void gridEnabledChanged( bool enabled )
+void gridEnabledChanged(bool enabled)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONGRIDENABLEDCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONGRIDENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1917,9 +1917,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDENABLEDCHANGED )
 }
 
 /*
-void gridLineColorChanged( const QColor & color )
+void gridLineColorChanged(const QColor & color)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONGRIDLINECOLORCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONGRIDLINECOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1944,7 +1944,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDLINECOLORCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DTHEME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1971,9 +1971,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONGRIDLINECOLORCHANGED )
 }
 
 /*
-void highlightLightStrengthChanged( float strength )
+void highlightLightStrengthChanged(float strength)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2025,9 +2025,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED )
 }
 
 /*
-void labelBackgroundColorChanged( const QColor & color )
+void labelBackgroundColorChanged(const QColor & color)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2052,7 +2052,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DTHEME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2079,9 +2079,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED )
 }
 
 /*
-void labelBackgroundEnabledChanged( bool enabled )
+void labelBackgroundEnabledChanged(bool enabled)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2133,9 +2133,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED )
 }
 
 /*
-void labelBorderEnabledChanged( bool enabled )
+void labelBorderEnabledChanged(bool enabled)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONLABELBORDERENABLEDCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONLABELBORDERENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2187,9 +2187,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELBORDERENABLEDCHANGED )
 }
 
 /*
-void labelTextColorChanged( const QColor & color )
+void labelTextColorChanged(const QColor & color)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONLABELTEXTCOLORCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONLABELTEXTCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2214,7 +2214,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELTEXTCOLORCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DTHEME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2241,9 +2241,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONLABELTEXTCOLORCHANGED )
 }
 
 /*
-void lightColorChanged( const QColor & color )
+void lightColorChanged(const QColor & color)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONLIGHTCOLORCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONLIGHTCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2268,7 +2268,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTCOLORCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DTHEME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2295,9 +2295,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTCOLORCHANGED )
 }
 
 /*
-void lightStrengthChanged( float strength )
+void lightStrengthChanged(float strength)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONLIGHTSTRENGTHCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONLIGHTSTRENGTHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2349,9 +2349,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONLIGHTSTRENGTHCHANGED )
 }
 
 /*
-void multiHighlightColorChanged( const QColor & color )
+void multiHighlightColorChanged(const QColor & color)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2376,7 +2376,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DTHEME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2403,9 +2403,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED )
 }
 
 /*
-void multiHighlightGradientChanged( const QLinearGradient & gradient )
+void multiHighlightGradientChanged(const QLinearGradient & gradient)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2430,7 +2430,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DTHEME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QLINEARGRADIENT");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QLINEARGRADIENT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2457,9 +2457,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED )
 }
 
 /*
-void singleHighlightColorChanged( const QColor & color )
+void singleHighlightColorChanged(const QColor & color)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2484,7 +2484,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DTHEME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2511,9 +2511,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED )
 }
 
 /*
-void singleHighlightGradientChanged( const QLinearGradient & gradient )
+void singleHighlightGradientChanged(const QLinearGradient & gradient)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2538,7 +2538,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DTHEME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QLINEARGRADIENT");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QLINEARGRADIENT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2565,9 +2565,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
 }
 
 /*
-void typeChanged( Q3DTheme::Theme themeType )
+void typeChanged(Q3DTheme::Theme themeType)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONTYPECHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONTYPECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2619,9 +2619,9 @@ HB_FUNC_STATIC( Q3DTHEME_ONTYPECHANGED )
 }
 
 /*
-void windowColorChanged( const QColor & color )
+void windowColorChanged(const QColor & color)
 */
-HB_FUNC_STATIC( Q3DTHEME_ONWINDOWCOLORCHANGED )
+HB_FUNC_STATIC(Q3DTHEME_ONWINDOWCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DTheme*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2646,7 +2646,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONWINDOWCOLORCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DTHEME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

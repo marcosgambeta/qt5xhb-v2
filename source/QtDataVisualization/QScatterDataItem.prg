@@ -73,7 +73,7 @@ RETURN
 
 using namespace QtDataVisualization;
 
-HB_FUNC_STATIC( QSCATTERDATAITEM_NEW )
+HB_FUNC_STATIC(QSCATTERDATAITEM_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_NEW )
   else if (ISNUMPAR(1) && ISQVECTOR3D(1))
   {
     /*
-    QScatterDataItem( const QVector3D & position )
+    QScatterDataItem(const QVector3D & position)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = new QScatterDataItem(*PQVECTOR3D(1));
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_NEW )
   else if (ISNUMPAR(2) && ISQVECTOR3D(1) && ISQQUATERNION(2))
   {
     /*
-    QScatterDataItem( const QVector3D & position, const QQuaternion & rotation )
+    QScatterDataItem(const QVector3D & position, const QQuaternion & rotation)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = new QScatterDataItem(*PQVECTOR3D(1), *PQQUATERNION(2));
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_NEW )
   else if (ISNUMPAR(1) && ISQSCATTERDATAITEM(1))
   {
     /*
-    QScatterDataItem( const QScatterDataItem & other )
+    QScatterDataItem(const QScatterDataItem & other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = new QScatterDataItem(*PQSCATTERDATAITEM(1));
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_NEW )
 /*
 ~QScatterDataItem()
 */
-HB_FUNC_STATIC( QSCATTERDATAITEM_DELETE )
+HB_FUNC_STATIC(QSCATTERDATAITEM_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QScatterDataItem*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -147,9 +147,9 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_DELETE )
 }
 
 /*
-void setPosition( const QVector3D & pos )
+void setPosition(const QVector3D & pos)
 */
-HB_FUNC_STATIC( QSCATTERDATAITEM_SETPOSITION )
+HB_FUNC_STATIC(QSCATTERDATAITEM_SETPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QScatterDataItem*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETPOSITION )
 /*
 QVector3D position() const
 */
-HB_FUNC_STATIC( QSCATTERDATAITEM_POSITION )
+HB_FUNC_STATIC(QSCATTERDATAITEM_POSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QScatterDataItem*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -202,9 +202,9 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_POSITION )
 }
 
 /*
-void setRotation( const QQuaternion & rot )
+void setRotation(const QQuaternion & rot)
 */
-HB_FUNC_STATIC( QSCATTERDATAITEM_SETROTATION )
+HB_FUNC_STATIC(QSCATTERDATAITEM_SETROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QScatterDataItem*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETROTATION )
 /*
 QQuaternion rotation() const
 */
-HB_FUNC_STATIC( QSCATTERDATAITEM_ROTATION )
+HB_FUNC_STATIC(QSCATTERDATAITEM_ROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QScatterDataItem*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -257,9 +257,9 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_ROTATION )
 }
 
 /*
-void setX( float value )
+void setX(float value)
 */
-HB_FUNC_STATIC( QSCATTERDATAITEM_SETX )
+HB_FUNC_STATIC(QSCATTERDATAITEM_SETX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QScatterDataItem*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -285,9 +285,9 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETX )
 }
 
 /*
-void setY( float value )
+void setY(float value)
 */
-HB_FUNC_STATIC( QSCATTERDATAITEM_SETY )
+HB_FUNC_STATIC(QSCATTERDATAITEM_SETY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QScatterDataItem*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -313,9 +313,9 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETY )
 }
 
 /*
-void setZ( float value )
+void setZ(float value)
 */
-HB_FUNC_STATIC( QSCATTERDATAITEM_SETZ )
+HB_FUNC_STATIC(QSCATTERDATAITEM_SETZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QScatterDataItem*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETZ )
 /*
 float x() const
 */
-HB_FUNC_STATIC( QSCATTERDATAITEM_X )
+HB_FUNC_STATIC(QSCATTERDATAITEM_X)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QScatterDataItem*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_X )
 /*
 float y() const
 */
-HB_FUNC_STATIC( QSCATTERDATAITEM_Y )
+HB_FUNC_STATIC(QSCATTERDATAITEM_Y)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QScatterDataItem*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_Y )
 /*
 float z() const
 */
-HB_FUNC_STATIC( QSCATTERDATAITEM_Z )
+HB_FUNC_STATIC(QSCATTERDATAITEM_Z)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QScatterDataItem*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_Z )
 #endif
 }
 
-HB_FUNC_STATIC( QSCATTERDATAITEM_NEWFROM )
+HB_FUNC_STATIC(QSCATTERDATAITEM_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -448,22 +448,22 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSCATTERDATAITEM_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSCATTERDATAITEM_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QSCATTERDATAITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSCATTERDATAITEM_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSCATTERDATAITEM_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QSCATTERDATAITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSCATTERDATAITEM_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSCATTERDATAITEM_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSCATTERDATAITEM_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSCATTERDATAITEM_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

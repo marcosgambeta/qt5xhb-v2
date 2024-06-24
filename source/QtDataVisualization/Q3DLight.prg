@@ -59,14 +59,14 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-Q3DLight( QObject * parent = nullptr )
+Q3DLight(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( Q3DLIGHT_NEW )
+HB_FUNC_STATIC(Q3DLIGHT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new Q3DLight( OPQOBJECT( 1, nullptr));
+    auto obj = new Q3DLight(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( Q3DLIGHT_NEW )
 /*
 virtual ~Q3DLight()
 */
-HB_FUNC_STATIC( Q3DLIGHT_DELETE )
+HB_FUNC_STATIC(Q3DLIGHT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DLight*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -100,9 +100,9 @@ HB_FUNC_STATIC( Q3DLIGHT_DELETE )
 }
 
 /*
-void setAutoPosition( bool enabled )
+void setAutoPosition(bool enabled)
 */
-HB_FUNC_STATIC( Q3DLIGHT_SETAUTOPOSITION )
+HB_FUNC_STATIC(Q3DLIGHT_SETAUTOPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = qobject_cast<Q3DLight*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( Q3DLIGHT_SETAUTOPOSITION )
 /*
 bool isAutoPosition()
 */
-HB_FUNC_STATIC( Q3DLIGHT_ISAUTOPOSITION )
+HB_FUNC_STATIC(Q3DLIGHT_ISAUTOPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto obj = qobject_cast<Q3DLight*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -154,9 +154,9 @@ HB_FUNC_STATIC( Q3DLIGHT_ISAUTOPOSITION )
 }
 
 /*
-void autoPositionChanged( bool autoPosition )
+void autoPositionChanged(bool autoPosition)
 */
-HB_FUNC_STATIC( Q3DLIGHT_ONAUTOPOSITIONCHANGED )
+HB_FUNC_STATIC(Q3DLIGHT_ONAUTOPOSITIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto sender = qobject_cast<Q3DLight*>(Qt5xHb::getQObjectPointerFromSelfItem());

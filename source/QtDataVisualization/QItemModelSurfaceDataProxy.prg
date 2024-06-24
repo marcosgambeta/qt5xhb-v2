@@ -126,15 +126,15 @@ RETURN
 
 using namespace QtDataVisualization;
 
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_NEW )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QItemModelSurfaceDataProxy( QObject * parent = nullptr )
+    QItemModelSurfaceDataProxy(QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QItemModelSurfaceDataProxy( OPQOBJECT( 1, nullptr));
+    auto obj = new QItemModelSurfaceDataProxy(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -142,10 +142,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_NEW )
   else if (ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, QObject * parent = nullptr )
+    QItemModelSurfaceDataProxy(QAbstractItemModel * itemModel, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -153,10 +153,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_NEW )
   else if (ISBETWEEN(2, 3) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & yPosRole, QObject * parent = nullptr )
+    QItemModelSurfaceDataProxy(QAbstractItemModel * itemModel, const QString & yPosRole, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT( 3, nullptr));
+    auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -164,10 +164,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_NEW )
   else if (ISBETWEEN(4, 5) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && (ISQOBJECT(5) || HB_ISNIL(5)))
   {
     /*
-    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & yPosRole, QObject * parent = nullptr )
+    QItemModelSurfaceDataProxy(QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & yPosRole, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT( 5, nullptr));
+    auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -175,10 +175,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_NEW )
   else if (ISBETWEEN(6, 7) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISCHAR(5) && HB_ISCHAR(6) && (ISQOBJECT(7) || HB_ISNIL(7)))
   {
     /*
-    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, QObject * parent = nullptr )
+    QItemModelSurfaceDataProxy(QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), OPQOBJECT( 7, nullptr));
+    auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), OPQOBJECT(7, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -186,10 +186,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_NEW )
   else if (ISBETWEEN(6, 7)  && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISARRAY(5) && HB_ISARRAY(6) && (ISQOBJECT(7) || HB_ISNIL(7)))
   {
     /*
-    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & yPosRole, const QStringList & rowCategories, const QStringList & columnCategories, QObject * parent = nullptr )
+    QItemModelSurfaceDataProxy(QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & yPosRole, const QStringList & rowCategories, const QStringList & columnCategories, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT( 7, nullptr));
+    auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT(7, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -197,10 +197,10 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_NEW )
   else if (ISBETWEEN(8, 9) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISCHAR(5) && HB_ISCHAR(6) && HB_ISARRAY(7) && HB_ISARRAY(8) && (ISQOBJECT(9) || HB_ISNIL(9)))
   {
     /*
-    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, const QStringList & rowCategories, const QStringList & columnCategories, QObject * parent = nullptr )
+    QItemModelSurfaceDataProxy(QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, const QStringList & rowCategories, const QStringList & columnCategories, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), PQSTRINGLIST(7), PQSTRINGLIST(8), OPQOBJECT( 9, nullptr));
+    auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), PQSTRINGLIST(7), PQSTRINGLIST(8), OPQOBJECT(9, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_NEW )
 /*
 virtual ~QItemModelSurfaceDataProxy()
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_DELETE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_DELETE )
 /*
 QAbstractItemModel * itemModel() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ITEMMODEL )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ITEMMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -262,9 +262,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ITEMMODEL )
 }
 
 /*
-void setItemModel( QAbstractItemModel * itemModel )
+void setItemModel(QAbstractItemModel * itemModel)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETITEMMODEL )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETITEMMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETITEMMODEL )
 /*
 QString rowRole() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ROWROLE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -316,9 +316,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ROWROLE )
 }
 
 /*
-void setRowRole( const QString & role )
+void setRowRole(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETROWROLE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETROWROLE )
 /*
 QString columnRole() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_COLUMNROLE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -370,9 +370,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_COLUMNROLE )
 }
 
 /*
-void setColumnRole( const QString & role )
+void setColumnRole(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLE )
 /*
 QString xPosRole() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_XPOSROLE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -424,9 +424,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_XPOSROLE )
 }
 
 /*
-void setXPosRole( const QString & role )
+void setXPosRole(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETXPOSROLE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETXPOSROLE )
 /*
 QString yPosRole() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_YPOSROLE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -478,9 +478,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_YPOSROLE )
 }
 
 /*
-void setYPosRole( const QString & role )
+void setYPosRole(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETYPOSROLE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETYPOSROLE )
 /*
 QString zPosRole() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ZPOSROLE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -532,9 +532,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ZPOSROLE )
 }
 
 /*
-void setZPosRole( const QString & role )
+void setZPosRole(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETZPOSROLE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETZPOSROLE )
 /*
 QStringList rowCategories() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ROWCATEGORIES )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -586,9 +586,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ROWCATEGORIES )
 }
 
 /*
-void setRowCategories( const QStringList & categories )
+void setRowCategories(const QStringList & categories)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETROWCATEGORIES )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETROWCATEGORIES )
 /*
 QStringList columnCategories() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORIES )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -640,9 +640,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORIES )
 }
 
 /*
-void setColumnCategories( const QStringList & categories )
+void setColumnCategories(const QStringList & categories)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETCOLUMNCATEGORIES )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETCOLUMNCATEGORIES )
 /*
 bool useModelCategories() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_USEMODELCATEGORIES )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_USEMODELCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -694,9 +694,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_USEMODELCATEGORIES )
 }
 
 /*
-void setUseModelCategories( bool enable )
+void setUseModelCategories(bool enable)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETUSEMODELCATEGORIES )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETUSEMODELCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -724,7 +724,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETUSEMODELCATEGORIES )
 /*
 bool autoRowCategories() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_AUTOROWCATEGORIES )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_AUTOROWCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -748,9 +748,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_AUTOROWCATEGORIES )
 }
 
 /*
-void setAutoRowCategories( bool enable )
+void setAutoRowCategories(bool enable)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETAUTOROWCATEGORIES )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETAUTOROWCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETAUTOROWCATEGORIES )
 /*
 bool autoColumnCategories() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_AUTOCOLUMNCATEGORIES )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_AUTOCOLUMNCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -802,9 +802,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_AUTOCOLUMNCATEGORIES )
 }
 
 /*
-void setAutoColumnCategories( bool enable )
+void setAutoColumnCategories(bool enable)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETAUTOCOLUMNCATEGORIES )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETAUTOCOLUMNCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -832,7 +832,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETAUTOCOLUMNCATEGORIES )
 /*
 QRegExp rowRolePattern() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ROWROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -857,9 +857,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ROWROLEPATTERN )
 }
 
 /*
-void setRowRolePattern( const QRegExp & pattern )
+void setRowRolePattern(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETROWROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -887,7 +887,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETROWROLEPATTERN )
 /*
 QRegExp columnRolePattern() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_COLUMNROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -912,9 +912,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_COLUMNROLEPATTERN )
 }
 
 /*
-void setColumnRolePattern( const QRegExp & pattern )
+void setColumnRolePattern(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEPATTERN )
 /*
 QRegExp xPosRolePattern() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_XPOSROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -967,9 +967,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_XPOSROLEPATTERN )
 }
 
 /*
-void setXPosRolePattern( const QRegExp & pattern )
+void setXPosRolePattern(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETXPOSROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETXPOSROLEPATTERN )
 /*
 QRegExp yPosRolePattern() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_YPOSROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1022,9 +1022,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_YPOSROLEPATTERN )
 }
 
 /*
-void setYPosRolePattern( const QRegExp & pattern )
+void setYPosRolePattern(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETYPOSROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1052,7 +1052,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETYPOSROLEPATTERN )
 /*
 QRegExp zPosRolePattern() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ZPOSROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1077,9 +1077,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ZPOSROLEPATTERN )
 }
 
 /*
-void setZPosRolePattern( const QRegExp & pattern )
+void setZPosRolePattern(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETZPOSROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETZPOSROLEPATTERN )
 /*
 QString rowRoleReplace() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ROWROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1131,9 +1131,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ROWROLEREPLACE )
 }
 
 /*
-void setRowRoleReplace( const QString & replace )
+void setRowRoleReplace(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETROWROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1161,7 +1161,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETROWROLEREPLACE )
 /*
 QString columnRoleReplace() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_COLUMNROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1185,9 +1185,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_COLUMNROLEREPLACE )
 }
 
 /*
-void setColumnRoleReplace( const QString & replace )
+void setColumnRoleReplace(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1215,7 +1215,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEREPLACE )
 /*
 QString xPosRoleReplace() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_XPOSROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1239,9 +1239,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_XPOSROLEREPLACE )
 }
 
 /*
-void setXPosRoleReplace( const QString & replace )
+void setXPosRoleReplace(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETXPOSROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1269,7 +1269,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETXPOSROLEREPLACE )
 /*
 QString yPosRoleReplace() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_YPOSROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1293,9 +1293,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_YPOSROLEREPLACE )
 }
 
 /*
-void setYPosRoleReplace( const QString & replace )
+void setYPosRoleReplace(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETYPOSROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1323,7 +1323,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETYPOSROLEREPLACE )
 /*
 QString zPosRoleReplace() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ZPOSROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1347,9 +1347,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ZPOSROLEREPLACE )
 }
 
 /*
-void setZPosRoleReplace( const QString & replace )
+void setZPosRoleReplace(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETZPOSROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1377,7 +1377,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETZPOSROLEREPLACE )
 /*
 QItemModelSurfaceDataProxy::MultiMatchBehavior multiMatchBehavior() const
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_MULTIMATCHBEHAVIOR )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_MULTIMATCHBEHAVIOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1401,9 +1401,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_MULTIMATCHBEHAVIOR )
 }
 
 /*
-void setMultiMatchBehavior( QItemModelSurfaceDataProxy::MultiMatchBehavior behavior )
+void setMultiMatchBehavior(QItemModelSurfaceDataProxy::MultiMatchBehavior behavior)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETMULTIMATCHBEHAVIOR )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETMULTIMATCHBEHAVIOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1429,9 +1429,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETMULTIMATCHBEHAVIOR )
 }
 
 /*
-void remap( const QString & rowRole, const QString & columnRole, const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, const QStringList & rowCategories, const QStringList & columnCategories )
+void remap(const QString & rowRole, const QString & columnRole, const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, const QStringList & rowCategories, const QStringList & columnCategories)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_REMAP )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_REMAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1457,9 +1457,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_REMAP )
 }
 
 /*
-Q_INVOKABLE int rowCategoryIndex( const QString & category )
+Q_INVOKABLE int rowCategoryIndex(const QString & category)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ROWCATEGORYINDEX )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWCATEGORYINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1483,9 +1483,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ROWCATEGORYINDEX )
 }
 
 /*
-Q_INVOKABLE int columnCategoryIndex( const QString & category )
+Q_INVOKABLE int columnCategoryIndex(const QString & category)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORYINDEX )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORYINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1509,9 +1509,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORYINDEX )
 }
 
 /*
-void autoColumnCategoriesChanged( bool enable )
+void autoColumnCategoriesChanged(bool enable)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1563,9 +1563,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
 }
 
 /*
-void autoRowCategoriesChanged( bool enable )
+void autoRowCategoriesChanged(bool enable)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONAUTOROWCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1619,7 +1619,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
 /*
 void columnCategoriesChanged()
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONCOLUMNCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1669,9 +1669,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
 }
 
 /*
-void columnRoleChanged( const QString & role )
+void columnRoleChanged(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLECHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1723,9 +1723,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLECHANGED )
 }
 
 /*
-void columnRolePatternChanged( const QRegExp & pattern )
+void columnRolePatternChanged(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1750,7 +1750,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSURFACEDATAPROXY");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGEXP");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QREGEXP");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1777,9 +1777,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
 }
 
 /*
-void columnRoleReplaceChanged( const QString & replace )
+void columnRoleReplaceChanged(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1831,9 +1831,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
 }
 
 /*
-void itemModelChanged( const QAbstractItemModel * itemModel )
+void itemModelChanged(const QAbstractItemModel * itemModel)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONITEMMODELCHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONITEMMODELCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1885,9 +1885,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONITEMMODELCHANGED )
 }
 
 /*
-void multiMatchBehaviorChanged( QItemModelSurfaceDataProxy::MultiMatchBehavior behavior )
+void multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior behavior)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1941,7 +1941,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
 /*
 void rowCategoriesChanged()
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWCATEGORIESCHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONROWCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1991,9 +1991,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWCATEGORIESCHANGED )
 }
 
 /*
-void rowRoleChanged( const QString & role )
+void rowRoleChanged(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWROLECHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONROWROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2045,9 +2045,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWROLECHANGED )
 }
 
 /*
-void rowRolePatternChanged( const QRegExp & pattern )
+void rowRolePatternChanged(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWROLEPATTERNCHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONROWROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2072,7 +2072,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWROLEPATTERNCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSURFACEDATAPROXY");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGEXP");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QREGEXP");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2099,9 +2099,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWROLEPATTERNCHANGED )
 }
 
 /*
-void rowRoleReplaceChanged( const QString & replace )
+void rowRoleReplaceChanged(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWROLEREPLACECHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONROWROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2153,9 +2153,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWROLEREPLACECHANGED )
 }
 
 /*
-void useModelCategoriesChanged( bool enable )
+void useModelCategoriesChanged(bool enable)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONUSEMODELCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2207,9 +2207,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
 }
 
 /*
-void xPosRoleChanged( const QString & role )
+void xPosRoleChanged(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLECHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONXPOSROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2261,9 +2261,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLECHANGED )
 }
 
 /*
-void xPosRolePatternChanged( const QRegExp & pattern )
+void xPosRolePatternChanged(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLEPATTERNCHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONXPOSROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2288,7 +2288,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLEPATTERNCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSURFACEDATAPROXY");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGEXP");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QREGEXP");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2315,9 +2315,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLEPATTERNCHANGED )
 }
 
 /*
-void xPosRoleReplaceChanged( const QString & replace )
+void xPosRoleReplaceChanged(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLEREPLACECHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONXPOSROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2369,9 +2369,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLEREPLACECHANGED )
 }
 
 /*
-void yPosRoleChanged( const QString & role )
+void yPosRoleChanged(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLECHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONYPOSROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2423,9 +2423,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLECHANGED )
 }
 
 /*
-void yPosRolePatternChanged( const QRegExp & pattern )
+void yPosRolePatternChanged(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLEPATTERNCHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONYPOSROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2450,7 +2450,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLEPATTERNCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSURFACEDATAPROXY");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGEXP");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QREGEXP");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2477,9 +2477,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLEPATTERNCHANGED )
 }
 
 /*
-void yPosRoleReplaceChanged( const QString & replace )
+void yPosRoleReplaceChanged(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLEREPLACECHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONYPOSROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2531,9 +2531,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLEREPLACECHANGED )
 }
 
 /*
-void zPosRoleChanged( const QString & role )
+void zPosRoleChanged(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLECHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONZPOSROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2585,9 +2585,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLECHANGED )
 }
 
 /*
-void zPosRolePatternChanged( const QRegExp & pattern )
+void zPosRolePatternChanged(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLEPATTERNCHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONZPOSROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2612,7 +2612,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLEPATTERNCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSURFACEDATAPROXY");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGEXP");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QREGEXP");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -2639,9 +2639,9 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLEPATTERNCHANGED )
 }
 
 /*
-void zPosRoleReplaceChanged( const QString & replace )
+void zPosRoleReplaceChanged(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLEREPLACECHANGED )
+HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONZPOSROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelSurfaceDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());

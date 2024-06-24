@@ -97,15 +97,15 @@ RETURN
 
 using namespace QtDataVisualization;
 
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_NEW )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QItemModelScatterDataProxy( QObject * parent = nullptr )
+    QItemModelScatterDataProxy(QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QItemModelScatterDataProxy( OPQOBJECT( 1, nullptr));
+    auto obj = new QItemModelScatterDataProxy(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -113,10 +113,10 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_NEW )
   else if (ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QItemModelScatterDataProxy( QAbstractItemModel * itemModel, QObject * parent = nullptr )
+    QItemModelScatterDataProxy(QAbstractItemModel * itemModel, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QItemModelScatterDataProxy(PQABSTRACTITEMMODEL(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QItemModelScatterDataProxy(PQABSTRACTITEMMODEL(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -124,10 +124,10 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_NEW )
   else if (ISBETWEEN(4, 5) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && (ISQOBJECT(5) || HB_ISNIL(5)))
   {
     /*
-    QItemModelScatterDataProxy( QAbstractItemModel * itemModel, const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, QObject * parent = nullptr )
+    QItemModelScatterDataProxy(QAbstractItemModel * itemModel, const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QItemModelScatterDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT( 5, nullptr));
+    auto obj = new QItemModelScatterDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -135,10 +135,10 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_NEW )
   else if (ISBETWEEN(5, 6) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISCHAR(5) && (ISQOBJECT(6) || HB_ISNIL(6)))
   {
     /*
-    QItemModelScatterDataProxy( QAbstractItemModel * itemModel, const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, const QString & rotationRole, QObject * parent = nullptr )
+    QItemModelScatterDataProxy(QAbstractItemModel * itemModel, const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, const QString & rotationRole, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QItemModelScatterDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), OPQOBJECT( 6, nullptr));
+    auto obj = new QItemModelScatterDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), OPQOBJECT(6, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_NEW )
 /*
 virtual ~QItemModelScatterDataProxy()
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_DELETE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_DELETE )
 /*
 QAbstractItemModel * itemModel() const
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ITEMMODEL )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ITEMMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -200,9 +200,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ITEMMODEL )
 }
 
 /*
-void setItemModel( QAbstractItemModel * itemModel )
+void setItemModel(QAbstractItemModel * itemModel)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETITEMMODEL )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETITEMMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETITEMMODEL )
 /*
 QString xPosRole() const
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_XPOSROLE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_XPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -254,9 +254,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_XPOSROLE )
 }
 
 /*
-void setXPosRole( const QString & role )
+void setXPosRole(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETXPOSROLE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETXPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETXPOSROLE )
 /*
 QString yPosRole() const
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_YPOSROLE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_YPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -308,9 +308,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_YPOSROLE )
 }
 
 /*
-void setYPosRole( const QString & role )
+void setYPosRole(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETYPOSROLE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETYPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETYPOSROLE )
 /*
 QString zPosRole() const
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ZPOSROLE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ZPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -362,9 +362,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ZPOSROLE )
 }
 
 /*
-void setZPosRole( const QString & role )
+void setZPosRole(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETZPOSROLE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETZPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETZPOSROLE )
 /*
 QString rotationRole() const
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ROTATIONROLE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ROTATIONROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -416,9 +416,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ROTATIONROLE )
 }
 
 /*
-void setRotationRole( const QString & role )
+void setRotationRole(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETROTATIONROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLE )
 /*
 QRegExp xPosRolePattern() const
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_XPOSROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_XPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -471,9 +471,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_XPOSROLEPATTERN )
 }
 
 /*
-void setXPosRolePattern( const QRegExp & pattern )
+void setXPosRolePattern(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETXPOSROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETXPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETXPOSROLEPATTERN )
 /*
 QRegExp yPosRolePattern() const
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_YPOSROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_YPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -526,9 +526,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_YPOSROLEPATTERN )
 }
 
 /*
-void setYPosRolePattern( const QRegExp & pattern )
+void setYPosRolePattern(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETYPOSROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETYPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETYPOSROLEPATTERN )
 /*
 QRegExp zPosRolePattern() const
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ZPOSROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ZPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -581,9 +581,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ZPOSROLEPATTERN )
 }
 
 /*
-void setZPosRolePattern( const QRegExp & pattern )
+void setZPosRolePattern(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETZPOSROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETZPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETZPOSROLEPATTERN )
 /*
 QRegExp rotationRolePattern() const
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ROTATIONROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ROTATIONROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -636,9 +636,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ROTATIONROLEPATTERN )
 }
 
 /*
-void setRotationRolePattern( const QRegExp & pattern )
+void setRotationRolePattern(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEPATTERN )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEPATTERN )
 /*
 QString xPosRoleReplace() const
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_XPOSROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_XPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -690,9 +690,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_XPOSROLEREPLACE )
 }
 
 /*
-void setXPosRoleReplace( const QString & replace )
+void setXPosRoleReplace(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETXPOSROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETXPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETXPOSROLEREPLACE )
 /*
 QString yPosRoleReplace() const
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_YPOSROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_YPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -744,9 +744,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_YPOSROLEREPLACE )
 }
 
 /*
-void setYPosRoleReplace( const QString & replace )
+void setYPosRoleReplace(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETYPOSROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETYPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETYPOSROLEREPLACE )
 /*
 QString zPosRoleReplace() const
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ZPOSROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ZPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -798,9 +798,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ZPOSROLEREPLACE )
 }
 
 /*
-void setZPosRoleReplace( const QString & replace )
+void setZPosRoleReplace(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETZPOSROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETZPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -828,7 +828,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETZPOSROLEREPLACE )
 /*
 QString rotationRoleReplace() const
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ROTATIONROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ROTATIONROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -852,9 +852,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ROTATIONROLEREPLACE )
 }
 
 /*
-void setRotationRoleReplace( const QString & replace )
+void setRotationRoleReplace(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEREPLACE )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -880,9 +880,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEREPLACE )
 }
 
 /*
-void remap( const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, const QString & rotationRole )
+void remap(const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, const QString & rotationRole)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_REMAP )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_REMAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -908,9 +908,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_REMAP )
 }
 
 /*
-void itemModelChanged( const QAbstractItemModel * itemModel )
+void itemModelChanged(const QAbstractItemModel * itemModel)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONITEMMODELCHANGED )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONITEMMODELCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -962,9 +962,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONITEMMODELCHANGED )
 }
 
 /*
-void rotationRoleChanged( const QString & role )
+void rotationRoleChanged(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLECHANGED )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1016,9 +1016,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLECHANGED )
 }
 
 /*
-void rotationRolePatternChanged( const QRegExp & pattern )
+void rotationRolePatternChanged(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1043,7 +1043,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGEXP");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QREGEXP");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1070,9 +1070,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
 }
 
 /*
-void rotationRoleReplaceChanged( const QString & replace )
+void rotationRoleReplaceChanged(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEREPLACECHANGED )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1124,9 +1124,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEREPLACECHANGED )
 }
 
 /*
-void xPosRoleChanged( const QString & role )
+void xPosRoleChanged(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLECHANGED )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1178,9 +1178,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLECHANGED )
 }
 
 /*
-void xPosRolePatternChanged( const QRegExp & pattern )
+void xPosRolePatternChanged(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1205,7 +1205,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGEXP");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QREGEXP");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1232,9 +1232,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED )
 }
 
 /*
-void xPosRoleReplaceChanged( const QString & replace )
+void xPosRoleReplaceChanged(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEREPLACECHANGED )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1286,9 +1286,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEREPLACECHANGED )
 }
 
 /*
-void yPosRoleChanged( const QString & role )
+void yPosRoleChanged(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLECHANGED )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1340,9 +1340,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLECHANGED )
 }
 
 /*
-void yPosRolePatternChanged( const QRegExp & pattern )
+void yPosRolePatternChanged(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1367,7 +1367,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGEXP");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QREGEXP");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1394,9 +1394,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED )
 }
 
 /*
-void yPosRoleReplaceChanged( const QString & replace )
+void yPosRoleReplaceChanged(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEREPLACECHANGED )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1448,9 +1448,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEREPLACECHANGED )
 }
 
 /*
-void zPosRoleChanged( const QString & role )
+void zPosRoleChanged(const QString & role)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLECHANGED )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1502,9 +1502,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLECHANGED )
 }
 
 /*
-void zPosRolePatternChanged( const QRegExp & pattern )
+void zPosRolePatternChanged(const QRegExp & pattern)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1529,7 +1529,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGEXP");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QREGEXP");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1556,9 +1556,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED )
 }
 
 /*
-void zPosRoleReplaceChanged( const QString & replace )
+void zPosRoleReplaceChanged(const QString & replace)
 */
-HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEREPLACECHANGED )
+HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QItemModelScatterDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());

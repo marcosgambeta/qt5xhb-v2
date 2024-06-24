@@ -86,7 +86,7 @@ using namespace QtDataVisualization;
 /*
 virtual ~QAbstract3DAxis()
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_DELETE )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_DELETE )
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_TITLE )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_TITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -133,9 +133,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_TITLE )
 }
 
 /*
-void setTitle( const QString & title )
+void setTitle(const QString & title)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLE )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLE )
 /*
 QStringList labels() const
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_LABELS )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -187,9 +187,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_LABELS )
 }
 
 /*
-void setLabels( const QStringList & labels )
+void setLabels(const QStringList & labels)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_SETLABELS )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETLABELS )
 /*
 QAbstract3DAxis::AxisOrientation orientation() const
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ORIENTATION )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_ORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ORIENTATION )
 /*
 QAbstract3DAxis::AxisType type() const
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_TYPE )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_TYPE )
 /*
 float min() const
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_MIN )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_MIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -293,9 +293,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_MIN )
 }
 
 /*
-void setMin( float min )
+void setMin(float min)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_SETMIN )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_SETMIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETMIN )
 /*
 float max() const
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_MAX )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_MAX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -347,9 +347,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_MAX )
 }
 
 /*
-void setMax( float max )
+void setMax(float max)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_SETMAX )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_SETMAX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETMAX )
 /*
 bool isAutoAdjustRange() const
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ISAUTOADJUSTRANGE )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_ISAUTOADJUSTRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -401,9 +401,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ISAUTOADJUSTRANGE )
 }
 
 /*
-void setAutoAdjustRange( bool autoAdjust )
+void setAutoAdjustRange(bool autoAdjust)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_SETAUTOADJUSTRANGE )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_SETAUTOADJUSTRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETAUTOADJUSTRANGE )
 /*
 float labelAutoRotation() const
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_LABELAUTOROTATION )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELAUTOROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -455,9 +455,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_LABELAUTOROTATION )
 }
 
 /*
-void setLabelAutoRotation( float angle )
+void setLabelAutoRotation(float angle)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_SETLABELAUTOROTATION )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELAUTOROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETLABELAUTOROTATION )
 /*
 bool isTitleVisible() const
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ISTITLEVISIBLE )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -509,9 +509,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ISTITLEVISIBLE )
 }
 
 /*
-void setTitleVisible( bool visible )
+void setTitleVisible(bool visible)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLEVISIBLE )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLEVISIBLE )
 /*
 bool isTitleFixed() const
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ISTITLEFIXED )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEFIXED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -563,9 +563,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ISTITLEFIXED )
 }
 
 /*
-void setTitleFixed( bool fixed )
+void setTitleFixed(bool fixed)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLEFIXED )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEFIXED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -591,9 +591,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLEFIXED )
 }
 
 /*
-void setRange( float min, float max )
+void setRange(float min, float max)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_SETRANGE )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_SETRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -619,9 +619,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETRANGE )
 }
 
 /*
-void titleChanged( const QString & newTitle )
+void titleChanged(const QString & newTitle)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLECHANGED )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_ONTITLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLECHANGED )
 /*
 void labelsChanged()
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELSCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_ONLABELSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -725,9 +725,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELSCHANGED )
 }
 
 /*
-void orientationChanged( QAbstract3DAxis::AxisOrientation orientation )
+void orientationChanged(QAbstract3DAxis::AxisOrientation orientation)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_ONORIENTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -779,9 +779,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
 }
 
 /*
-void minChanged( float value )
+void minChanged(float value)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_ONMINCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -833,9 +833,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
 }
 
 /*
-void maxChanged( float value )
+void maxChanged(float value)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_ONMAXCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -887,9 +887,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
 }
 
 /*
-void rangeChanged( float min, float max )
+void rangeChanged(float min, float max)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_ONRANGECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -943,9 +943,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
 }
 
 /*
-void autoAdjustRangeChanged( bool autoAdjust )
+void autoAdjustRangeChanged(bool autoAdjust)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -997,9 +997,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
 }
 
 /*
-void labelAutoRotationChanged( float angle )
+void labelAutoRotationChanged(float angle)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1051,9 +1051,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
 }
 
 /*
-void titleVisibilityChanged( bool visible )
+void titleVisibilityChanged(bool visible)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1105,9 +1105,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
 }
 
 /*
-void titleFixedChanged( bool fixed )
+void titleFixedChanged(bool fixed)
 */
-HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());

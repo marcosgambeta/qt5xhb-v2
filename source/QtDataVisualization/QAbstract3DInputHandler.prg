@@ -68,7 +68,7 @@ using namespace QtDataVisualization;
 /*
 virtual ~QAbstract3DInputHandler()
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_DELETE )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_DELETE )
 /*
 QAbstract3DInputHandler::InputView inputView() const
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTVIEW )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTVIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -115,9 +115,9 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTVIEW )
 }
 
 /*
-void setInputView( QAbstract3DInputHandler::InputView inputView )
+void setInputView(QAbstract3DInputHandler::InputView inputView)
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTVIEW )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTVIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTVIEW )
 /*
 QPoint inputPosition() const
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTPOSITION )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -170,9 +170,9 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTPOSITION )
 }
 
 /*
-void setInputPosition( const QPoint & position )
+void setInputPosition(const QPoint & position)
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION )
 /*
 Q3DScene * scene() const
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SCENE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -225,9 +225,9 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
 }
 
 /*
-void setScene( Q3DScene * scene )
+void setScene(Q3DScene * scene)
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETSCENE )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETSCENE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -272,9 +272,9 @@ virtual void wheelEvent(QWheelEvent *event)
 */
 
 /*
-void inputViewChanged( QAbstract3DInputHandler::InputView view )
+void inputViewChanged(QAbstract3DInputHandler::InputView view)
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -326,9 +326,9 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
 }
 
 /*
-void positionChanged( const QPoint & position )
+void positionChanged(const QPoint & position)
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DINPUTHANDLER");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QPOINT");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QPOINT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -380,9 +380,9 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
 }
 
 /*
-void sceneChanged( Q3DScene * scene )
+void sceneChanged(Q3DScene * scene)
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONSCENECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DInputHandler*>(Qt5xHb::getQObjectPointerFromSelfItem());

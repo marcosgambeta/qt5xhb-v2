@@ -78,14 +78,14 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-Q3DSurface( const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr )
+Q3DSurface(const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr)
 */
-HB_FUNC_STATIC( Q3DSURFACE_NEW )
+HB_FUNC_STATIC(Q3DSURFACE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(0, 2) && (ISQSURFACEFORMAT(1) || HB_ISNIL(1)) && (ISQWINDOW(2) || HB_ISNIL(2)))
   {
-    auto obj = new Q3DSurface( HB_ISNIL(1) ? nullptr : static_cast<QSurfaceFormat*>(Qt5xHb::itemGetPtr(1)), OPQWINDOW( 2, nullptr));
+    auto obj = new Q3DSurface(HB_ISNIL(1) ? nullptr : static_cast<QSurfaceFormat*>(Qt5xHb::itemGetPtr(1)), OPQWINDOW(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( Q3DSURFACE_NEW )
 /*
 virtual ~Q3DSurface()
 */
-HB_FUNC_STATIC( Q3DSURFACE_DELETE )
+HB_FUNC_STATIC(Q3DSURFACE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( Q3DSURFACE_DELETE )
 /*
 QValue3DAxis * axisX() const
 */
-HB_FUNC_STATIC( Q3DSURFACE_AXISX )
+HB_FUNC_STATIC(Q3DSURFACE_AXISX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -146,9 +146,9 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISX )
 }
 
 /*
-void setAxisX( QValue3DAxis * axis )
+void setAxisX(QValue3DAxis * axis)
 */
-HB_FUNC_STATIC( Q3DSURFACE_SETAXISX )
+HB_FUNC_STATIC(Q3DSURFACE_SETAXISX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISX )
 /*
 QValue3DAxis * axisY() const
 */
-HB_FUNC_STATIC( Q3DSURFACE_AXISY )
+HB_FUNC_STATIC(Q3DSURFACE_AXISY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -201,9 +201,9 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISY )
 }
 
 /*
-void setAxisY( QValue3DAxis * axis )
+void setAxisY(QValue3DAxis * axis)
 */
-HB_FUNC_STATIC( Q3DSURFACE_SETAXISY )
+HB_FUNC_STATIC(Q3DSURFACE_SETAXISY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISY )
 /*
 QValue3DAxis * axisZ() const
 */
-HB_FUNC_STATIC( Q3DSURFACE_AXISZ )
+HB_FUNC_STATIC(Q3DSURFACE_AXISZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -256,9 +256,9 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISZ )
 }
 
 /*
-void setAxisZ( QValue3DAxis * axis )
+void setAxisZ(QValue3DAxis * axis)
 */
-HB_FUNC_STATIC( Q3DSURFACE_SETAXISZ )
+HB_FUNC_STATIC(Q3DSURFACE_SETAXISZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISZ )
 /*
 QSurface3DSeries * selectedSeries() const
 */
-HB_FUNC_STATIC( Q3DSURFACE_SELECTEDSERIES )
+HB_FUNC_STATIC(Q3DSURFACE_SELECTEDSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SELECTEDSERIES )
 /*
 bool flipHorizontalGrid() const
 */
-HB_FUNC_STATIC( Q3DSURFACE_FLIPHORIZONTALGRID )
+HB_FUNC_STATIC(Q3DSURFACE_FLIPHORIZONTALGRID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -337,9 +337,9 @@ HB_FUNC_STATIC( Q3DSURFACE_FLIPHORIZONTALGRID )
 }
 
 /*
-void setFlipHorizontalGrid( bool flip )
+void setFlipHorizontalGrid(bool flip)
 */
-HB_FUNC_STATIC( Q3DSURFACE_SETFLIPHORIZONTALGRID )
+HB_FUNC_STATIC(Q3DSURFACE_SETFLIPHORIZONTALGRID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -365,9 +365,9 @@ HB_FUNC_STATIC( Q3DSURFACE_SETFLIPHORIZONTALGRID )
 }
 
 /*
-void addSeries( QSurface3DSeries * series )
+void addSeries(QSurface3DSeries * series)
 */
-HB_FUNC_STATIC( Q3DSURFACE_ADDSERIES )
+HB_FUNC_STATIC(Q3DSURFACE_ADDSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -393,9 +393,9 @@ HB_FUNC_STATIC( Q3DSURFACE_ADDSERIES )
 }
 
 /*
-void removeSeries( QSurface3DSeries * series )
+void removeSeries(QSurface3DSeries * series)
 */
-HB_FUNC_STATIC( Q3DSURFACE_REMOVESERIES )
+HB_FUNC_STATIC(Q3DSURFACE_REMOVESERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -421,9 +421,9 @@ HB_FUNC_STATIC( Q3DSURFACE_REMOVESERIES )
 }
 
 /*
-QList<QSurface3DSeries *> seriesList() const
+QList<QSurface3DSeries*> seriesList() const
 */
-HB_FUNC_STATIC( Q3DSURFACE_SERIESLIST )
+HB_FUNC_STATIC(Q3DSURFACE_SERIESLIST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -470,9 +470,9 @@ HB_FUNC_STATIC( Q3DSURFACE_SERIESLIST )
 }
 
 /*
-void addAxis( QValue3DAxis * axis )
+void addAxis(QValue3DAxis * axis)
 */
-HB_FUNC_STATIC( Q3DSURFACE_ADDAXIS )
+HB_FUNC_STATIC(Q3DSURFACE_ADDAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -498,9 +498,9 @@ HB_FUNC_STATIC( Q3DSURFACE_ADDAXIS )
 }
 
 /*
-void releaseAxis( QValue3DAxis * axis )
+void releaseAxis(QValue3DAxis * axis)
 */
-HB_FUNC_STATIC( Q3DSURFACE_RELEASEAXIS )
+HB_FUNC_STATIC(Q3DSURFACE_RELEASEAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -526,9 +526,9 @@ HB_FUNC_STATIC( Q3DSURFACE_RELEASEAXIS )
 }
 
 /*
-QList<QValue3DAxis *> axes() const
+QList<QValue3DAxis*> axes() const
 */
-HB_FUNC_STATIC( Q3DSURFACE_AXES )
+HB_FUNC_STATIC(Q3DSURFACE_AXES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -575,9 +575,9 @@ HB_FUNC_STATIC( Q3DSURFACE_AXES )
 }
 
 /*
-void axisXChanged( QValue3DAxis * axis )
+void axisXChanged(QValue3DAxis * axis)
 */
-HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
+HB_FUNC_STATIC(Q3DSURFACE_ONAXISXCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -629,9 +629,9 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
 }
 
 /*
-void axisYChanged( QValue3DAxis * axis )
+void axisYChanged(QValue3DAxis * axis)
 */
-HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
+HB_FUNC_STATIC(Q3DSURFACE_ONAXISYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -683,9 +683,9 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
 }
 
 /*
-void axisZChanged( QValue3DAxis * axis )
+void axisZChanged(QValue3DAxis * axis)
 */
-HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
+HB_FUNC_STATIC(Q3DSURFACE_ONAXISZCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -737,9 +737,9 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
 }
 
 /*
-void flipHorizontalGridChanged( bool flip )
+void flipHorizontalGridChanged(bool flip)
 */
-HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
+HB_FUNC_STATIC(Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -791,9 +791,9 @@ HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
 }
 
 /*
-void selectedSeriesChanged( QSurface3DSeries * series )
+void selectedSeriesChanged(QSurface3DSeries * series)
 */
-HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
+HB_FUNC_STATIC(Q3DSURFACE_ONSELECTEDSERIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DSurface*>(Qt5xHb::getQObjectPointerFromSelfItem());

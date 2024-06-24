@@ -78,15 +78,15 @@ RETURN
 
 using namespace QtDataVisualization;
 
-HB_FUNC_STATIC( QCUSTOM3DLABEL_NEW  )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_NEW )
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QCustom3DLabel( QObject * parent = nullptr )
+    QCustom3DLabel(QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QCustom3DLabel( OPQOBJECT( 1, nullptr));
+    auto obj = new QCustom3DLabel(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -94,10 +94,10 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_NEW  )
   else if (ISBETWEEN(5, 6) && HB_ISCHAR(1) && ISQFONT(2) && ISQVECTOR3D(3) && ISQVECTOR3D(4) && ISQQUATERNION(5) && (ISQOBJECT(6) || HB_ISNIL(6)))
   {
     /*
-    QCustom3DLabel( const QString & text, const QFont & font, const QVector3D & position, const QVector3D & scaling, const QQuaternion & rotation, QObject * parent = nullptr )
+    QCustom3DLabel(const QString & text, const QFont & font, const QVector3D & position, const QVector3D & scaling, const QQuaternion & rotation, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QCustom3DLabel(PQSTRING(1), *PQFONT(2), *PQVECTOR3D(3), *PQVECTOR3D(4), *PQQUATERNION(5), OPQOBJECT( 6, nullptr));
+    auto obj = new QCustom3DLabel(PQSTRING(1), *PQFONT(2), *PQVECTOR3D(3), *PQVECTOR3D(4), *PQQUATERNION(5), OPQOBJECT(6, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_NEW  )
 /*
 virtual ~QCustom3DLabel()
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_DELETE )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_DELETE )
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_TEXT )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -158,9 +158,9 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_TEXT )
 }
 
 /*
-void setText( const QString & text )
+void setText(const QString & text)
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_SETTEXT )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETTEXT )
 /*
 QFont font() const
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_FONT )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_FONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -213,9 +213,9 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_FONT )
 }
 
 /*
-void setFont( const QFont & font )
+void setFont(const QFont & font)
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_SETFONT )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETFONT )
 /*
 QColor textColor() const
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_TEXTCOLOR )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -268,9 +268,9 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_TEXTCOLOR )
 }
 
 /*
-void setTextColor( const QColor & color )
+void setTextColor(const QColor & color)
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_SETTEXTCOLOR )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETTEXTCOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setTextColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setTextColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETTEXTCOLOR )
 /*
 QColor backgroundColor() const
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_BACKGROUNDCOLOR )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_BACKGROUNDCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -323,9 +323,9 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_BACKGROUNDCOLOR )
 }
 
 /*
-void setBackgroundColor( const QColor & color )
+void setBackgroundColor(const QColor & color)
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBACKGROUNDCOLOR )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBACKGROUNDCOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setBackgroundColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setBackgroundColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBACKGROUNDCOLOR )
 /*
 bool isBorderEnabled() const
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_ISBORDERENABLED )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBORDERENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -377,9 +377,9 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ISBORDERENABLED )
 }
 
 /*
-void setBorderEnabled( bool enabled )
+void setBorderEnabled(bool enabled)
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBORDERENABLED )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBORDERENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBORDERENABLED )
 /*
 bool isBackgroundEnabled() const
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_ISBACKGROUNDENABLED )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBACKGROUNDENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -431,9 +431,9 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ISBACKGROUNDENABLED )
 }
 
 /*
-void setBackgroundEnabled( bool enabled )
+void setBackgroundEnabled(bool enabled)
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBACKGROUNDENABLED )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBACKGROUNDENABLED )
 /*
 bool isFacingCamera() const
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_ISFACINGCAMERA )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_ISFACINGCAMERA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -485,9 +485,9 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ISFACINGCAMERA )
 }
 
 /*
-void setFacingCamera( bool enabled )
+void setFacingCamera(bool enabled)
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_SETFACINGCAMERA )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFACINGCAMERA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -513,9 +513,9 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETFACINGCAMERA )
 }
 
 /*
-void backgroundColorChanged( const QColor & color )
+void backgroundColorChanged(const QColor & color)
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DLABEL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -567,9 +567,9 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED )
 }
 
 /*
-void backgroundEnabledChanged( bool enabled )
+void backgroundEnabledChanged(bool enabled)
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -621,9 +621,9 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED )
 }
 
 /*
-void borderEnabledChanged( bool enabled )
+void borderEnabledChanged(bool enabled)
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -675,9 +675,9 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED )
 }
 
 /*
-void facingCameraChanged( bool enabled )
+void facingCameraChanged(bool enabled)
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFACINGCAMERACHANGED )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_ONFACINGCAMERACHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -729,9 +729,9 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFACINGCAMERACHANGED )
 }
 
 /*
-void fontChanged( const QFont & font )
+void fontChanged(const QFont & font)
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFONTCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_ONFONTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFONTCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DLABEL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QFONT");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QFONT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -783,9 +783,9 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFONTCHANGED )
 }
 
 /*
-void textChanged( const QString & text )
+void textChanged(const QString & text)
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_ONTEXTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -837,9 +837,9 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCHANGED )
 }
 
 /*
-void textColorChanged( const QColor & color )
+void textColorChanged(const QColor & color)
 */
-HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCOLORCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DLABEL_ONTEXTCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -864,7 +864,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCOLORCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DLABEL");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

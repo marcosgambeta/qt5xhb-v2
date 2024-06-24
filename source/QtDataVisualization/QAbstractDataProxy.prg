@@ -57,7 +57,7 @@ using namespace QtDataVisualization;
 /*
 virtual ~QAbstractDataProxy()
 */
-HB_FUNC_STATIC( QABSTRACTDATAPROXY_DELETE )
+HB_FUNC_STATIC(QABSTRACTDATAPROXY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QABSTRACTDATAPROXY_DELETE )
 /*
 QAbstractDataProxy::DataType type() const
 */
-HB_FUNC_STATIC( QABSTRACTDATAPROXY_TYPE )
+HB_FUNC_STATIC(QABSTRACTDATAPROXY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstractDataProxy*>(Qt5xHb::getQObjectPointerFromSelfItem());

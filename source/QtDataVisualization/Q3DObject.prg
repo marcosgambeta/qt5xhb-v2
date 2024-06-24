@@ -65,14 +65,14 @@ using namespace QtDataVisualization;
 #include <QtDataVisualization/Q3DScene>
 
 /*
-Q3DObject( QObject * parent = nullptr )
+Q3DObject(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( Q3DOBJECT_NEW )
+HB_FUNC_STATIC(Q3DOBJECT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new Q3DObject( OPQOBJECT( 1, nullptr));
+    auto obj = new Q3DObject(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( Q3DOBJECT_NEW )
 /*
 virtual ~Q3DObject()
 */
-HB_FUNC_STATIC( Q3DOBJECT_DELETE )
+HB_FUNC_STATIC(Q3DOBJECT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( Q3DOBJECT_DELETE )
 /*
 Q3DScene * parentScene()
 */
-HB_FUNC_STATIC( Q3DOBJECT_PARENTSCENE )
+HB_FUNC_STATIC(Q3DOBJECT_PARENTSCENE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( Q3DOBJECT_PARENTSCENE )
 /*
 QVector3D position() const
 */
-HB_FUNC_STATIC( Q3DOBJECT_POSITION )
+HB_FUNC_STATIC(Q3DOBJECT_POSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -160,9 +160,9 @@ HB_FUNC_STATIC( Q3DOBJECT_POSITION )
 }
 
 /*
-void setPosition( const QVector3D & position )
+void setPosition(const QVector3D & position)
 */
-HB_FUNC_STATIC( Q3DOBJECT_SETPOSITION )
+HB_FUNC_STATIC(Q3DOBJECT_SETPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -188,9 +188,9 @@ HB_FUNC_STATIC( Q3DOBJECT_SETPOSITION )
 }
 
 /*
-virtual void copyValuesFrom( const Q3DObject & source )
+virtual void copyValuesFrom(const Q3DObject & source)
 */
-HB_FUNC_STATIC( Q3DOBJECT_COPYVALUESFROM )
+HB_FUNC_STATIC(Q3DOBJECT_COPYVALUESFROM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<Q3DObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -216,9 +216,9 @@ HB_FUNC_STATIC( Q3DOBJECT_COPYVALUESFROM )
 }
 
 /*
-void positionChanged( const QVector3D & position )
+void positionChanged(const QVector3D & position)
 */
-HB_FUNC_STATIC( Q3DOBJECT_ONPOSITIONCHANGED )
+HB_FUNC_STATIC(Q3DOBJECT_ONPOSITIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<Q3DObject*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( Q3DOBJECT_ONPOSITIONCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DOBJECT");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QVECTOR3D");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QVECTOR3D");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

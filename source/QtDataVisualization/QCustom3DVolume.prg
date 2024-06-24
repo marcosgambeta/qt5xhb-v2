@@ -112,13 +112,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-QCustom3DVolume( QObject * parent = nullptr )
+QCustom3DVolume(QObject * parent = nullptr)
 */
 
 /*
 virtual ~QCustom3DVolume()
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_DELETE )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_DELETE )
 /*
 int textureWidth() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREWIDTH )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_TEXTUREWIDTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -165,9 +165,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREWIDTH )
 }
 
 /*
-void setTextureWidth( int value )
+void setTextureWidth(int value)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREWIDTH )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETTEXTUREWIDTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREWIDTH )
 /*
 int textureHeight() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREHEIGHT )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_TEXTUREHEIGHT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -219,9 +219,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREHEIGHT )
 }
 
 /*
-void setTextureHeight( int value )
+void setTextureHeight(int value)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREHEIGHT )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETTEXTUREHEIGHT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREHEIGHT )
 /*
 int textureDepth() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREDEPTH )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_TEXTUREDEPTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -273,9 +273,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREDEPTH )
 }
 
 /*
-void setTextureDepth( int value )
+void setTextureDepth(int value)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREDEPTH )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETTEXTUREDEPTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREDEPTH )
 /*
 int sliceIndexX() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXX )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEINDEXX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -327,9 +327,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXX )
 }
 
 /*
-void setSliceIndexX( int value )
+void setSliceIndexX(int value)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXX )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEINDEXX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXX )
 /*
 int sliceIndexY() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXY )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEINDEXY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -381,9 +381,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXY )
 }
 
 /*
-void setSliceIndexY( int value )
+void setSliceIndexY(int value)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXY )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEINDEXY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXY )
 /*
 int sliceIndexZ() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXZ )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEINDEXZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -435,9 +435,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXZ )
 }
 
 /*
-void setSliceIndexZ( int value )
+void setSliceIndexZ(int value)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXZ )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEINDEXZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXZ )
 /*
 float alphaMultiplier() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ALPHAMULTIPLIER )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ALPHAMULTIPLIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -489,9 +489,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ALPHAMULTIPLIER )
 }
 
 /*
-void setAlphaMultiplier( float mult )
+void setAlphaMultiplier(float mult)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETALPHAMULTIPLIER )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETALPHAMULTIPLIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETALPHAMULTIPLIER )
 /*
 bool preserveOpacity() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_PRESERVEOPACITY )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_PRESERVEOPACITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -543,9 +543,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_PRESERVEOPACITY )
 }
 
 /*
-void setPreserveOpacity( bool enable )
+void setPreserveOpacity(bool enable)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETPRESERVEOPACITY )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETPRESERVEOPACITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETPRESERVEOPACITY )
 /*
 bool useHighDefShader() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_USEHIGHDEFSHADER )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_USEHIGHDEFSHADER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -597,9 +597,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_USEHIGHDEFSHADER )
 }
 
 /*
-void setUseHighDefShader( bool enable )
+void setUseHighDefShader(bool enable)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETUSEHIGHDEFSHADER )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETUSEHIGHDEFSHADER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETUSEHIGHDEFSHADER )
 /*
 bool drawSlices() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_DRAWSLICES )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_DRAWSLICES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -651,9 +651,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_DRAWSLICES )
 }
 
 /*
-void setDrawSlices( bool enable )
+void setDrawSlices(bool enable)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETDRAWSLICES )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETDRAWSLICES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETDRAWSLICES )
 /*
 bool drawSliceFrames() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_DRAWSLICEFRAMES )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_DRAWSLICEFRAMES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -705,9 +705,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_DRAWSLICEFRAMES )
 }
 
 /*
-void setDrawSliceFrames( bool enable )
+void setDrawSliceFrames(bool enable)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETDRAWSLICEFRAMES )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETDRAWSLICEFRAMES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETDRAWSLICEFRAMES )
 /*
 QColor sliceFrameColor() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMECOLOR )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEFRAMECOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -760,9 +760,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMECOLOR )
 }
 
 /*
-void setSliceFrameColor( const QColor & color )
+void setSliceFrameColor(const QColor & color)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMECOLOR )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEFRAMECOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMECOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setSliceFrameColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setSliceFrameColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMECOLOR )
 /*
 QVector3D sliceFrameWidths() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMEWIDTHS )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEFRAMEWIDTHS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -815,9 +815,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMEWIDTHS )
 }
 
 /*
-void setSliceFrameWidths( const QVector3D & values )
+void setSliceFrameWidths(const QVector3D & values)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMEWIDTHS )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEFRAMEWIDTHS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMEWIDTHS )
 /*
 QVector3D sliceFrameGaps() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMEGAPS )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEFRAMEGAPS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -870,9 +870,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMEGAPS )
 }
 
 /*
-void setSliceFrameGaps( const QVector3D & values )
+void setSliceFrameGaps(const QVector3D & values)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMEGAPS )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEFRAMEGAPS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMEGAPS )
 /*
 QVector3D sliceFrameThicknesses() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMETHICKNESSES )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEFRAMETHICKNESSES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -925,9 +925,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMETHICKNESSES )
 }
 
 /*
-void setSliceFrameThicknesses( const QVector3D & values )
+void setSliceFrameThicknesses(const QVector3D & values)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMETHICKNESSES )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEFRAMETHICKNESSES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -953,9 +953,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMETHICKNESSES )
 }
 
 /*
-void setTextureDimensions( int width, int height, int depth )
+void setTextureDimensions(int width, int height, int depth)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREDIMENSIONS )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETTEXTUREDIMENSIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREDIMENSIONS )
 /*
 int textureDataWidth() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREDATAWIDTH )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_TEXTUREDATAWIDTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1007,9 +1007,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREDATAWIDTH )
 }
 
 /*
-void setSliceIndices( int x, int y, int z )
+void setSliceIndices(int x, int y, int z)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDICES )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEINDICES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1034,12 +1034,12 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDICES )
 #endif
 }
 
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSUBTEXTUREDATA)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3))
   {
     /*
-    void setSubTextureData( Qt::Axis axis, int index, const uchar * data )
+    void setSubTextureData(Qt::Axis axis, int index, const uchar * data)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1056,7 +1056,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQIMAGE(3))
   {
     /*
-    void setSubTextureData( Qt::Axis axis, int index, const QImage & image )
+    void setSubTextureData(Qt::Axis axis, int index, const QImage & image)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1077,9 +1077,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
 }
 
 /*
-void setTextureFormat( QImage::Format format )
+void setTextureFormat(QImage::Format format)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREFORMAT )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETTEXTUREFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREFORMAT )
 /*
 QImage::Format textureFormat() const
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREFORMAT )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_TEXTUREFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1131,9 +1131,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREFORMAT )
 }
 
 /*
-QImage renderSlice( Qt::Axis axis, int index )
+QImage renderSlice(Qt::Axis axis, int index)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_RENDERSLICE )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_RENDERSLICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1158,9 +1158,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_RENDERSLICE )
 }
 
 /*
-void alphaMultiplierChanged( float mult )
+void alphaMultiplierChanged(float mult)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1214,7 +1214,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
 /*
 void colorTableChanged()
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONCOLORTABLECHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONCOLORTABLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1264,9 +1264,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONCOLORTABLECHANGED )
 }
 
 /*
-void drawSliceFramesChanged( bool enabled )
+void drawSliceFramesChanged(bool enabled)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1318,9 +1318,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
 }
 
 /*
-void drawSlicesChanged( bool enabled )
+void drawSlicesChanged(bool enabled)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1372,9 +1372,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
 }
 
 /*
-void preserveOpacityChanged( bool enabled )
+void preserveOpacityChanged(bool enabled)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1426,9 +1426,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
 }
 
 /*
-void sliceFrameColorChanged( const QColor & color )
+void sliceFrameColorChanged(const QColor & color)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1453,7 +1453,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1480,9 +1480,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
 }
 
 /*
-void sliceFrameGapsChanged( const QVector3D & values )
+void sliceFrameGapsChanged(const QVector3D & values)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1507,7 +1507,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QVECTOR3D");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QVECTOR3D");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1534,9 +1534,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
 }
 
 /*
-void sliceFrameThicknessesChanged( const QVector3D & values )
+void sliceFrameThicknessesChanged(const QVector3D & values)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1561,7 +1561,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QVECTOR3D");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QVECTOR3D");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1588,9 +1588,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
 }
 
 /*
-void sliceFrameWidthsChanged( const QVector3D & values )
+void sliceFrameWidthsChanged(const QVector3D & values)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1615,7 +1615,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QVECTOR3D");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QVECTOR3D");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1642,9 +1642,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
 }
 
 /*
-void sliceIndexXChanged( int value )
+void sliceIndexXChanged(int value)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1696,9 +1696,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
 }
 
 /*
-void sliceIndexYChanged( int value )
+void sliceIndexYChanged(int value)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1750,9 +1750,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
 }
 
 /*
-void sliceIndexZChanged( int value )
+void sliceIndexZChanged(int value)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1804,9 +1804,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
 }
 
 /*
-void textureDepthChanged( int value )
+void textureDepthChanged(int value)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1858,9 +1858,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
 }
 
 /*
-void textureFormatChanged( QImage::Format format )
+void textureFormatChanged(QImage::Format format)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1912,9 +1912,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
 }
 
 /*
-void textureHeightChanged( int value )
+void textureHeightChanged(int value)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1966,9 +1966,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
 }
 
 /*
-void textureWidthChanged( int value )
+void textureWidthChanged(int value)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2020,9 +2020,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
 }
 
 /*
-void useHighDefShaderChanged( bool enabled )
+void useHighDefShaderChanged(bool enabled)
 */
-HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
+HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCustom3DVolume*>(Qt5xHb::getQObjectPointerFromSelfItem());

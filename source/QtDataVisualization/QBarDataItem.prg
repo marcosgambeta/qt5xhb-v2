@@ -65,7 +65,7 @@ RETURN
 
 using namespace QtDataVisualization;
 
-HB_FUNC_STATIC( QBARDATAITEM_NEW )
+HB_FUNC_STATIC(QBARDATAITEM_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QBARDATAITEM_NEW )
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QBarDataItem( float value )
+    QBarDataItem(float value)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = new QBarDataItem(PFLOAT(1));
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QBARDATAITEM_NEW )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QBarDataItem( float value, float angle )
+    QBarDataItem(float value, float angle)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = new QBarDataItem(PFLOAT(1), PFLOAT(2));
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QBARDATAITEM_NEW )
   else if (ISNUMPAR(1) && ISQBARDATAITEM(1))
   {
     /*
-    QBarDataItem( const QBarDataItem & other )
+    QBarDataItem(const QBarDataItem & other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     auto obj = new QBarDataItem(*PQBARDATAITEM(1));
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QBARDATAITEM_NEW )
 /*
 ~QBarDataItem()
 */
-HB_FUNC_STATIC( QBARDATAITEM_DELETE )
+HB_FUNC_STATIC(QBARDATAITEM_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QBarDataItem*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -139,9 +139,9 @@ HB_FUNC_STATIC( QBARDATAITEM_DELETE )
 }
 
 /*
-void setValue( float val )
+void setValue(float val)
 */
-HB_FUNC_STATIC( QBARDATAITEM_SETVALUE )
+HB_FUNC_STATIC(QBARDATAITEM_SETVALUE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QBarDataItem*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QBARDATAITEM_SETVALUE )
 /*
 float value() const
 */
-HB_FUNC_STATIC( QBARDATAITEM_VALUE )
+HB_FUNC_STATIC(QBARDATAITEM_VALUE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QBarDataItem*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -193,9 +193,9 @@ HB_FUNC_STATIC( QBARDATAITEM_VALUE )
 }
 
 /*
-void setRotation( float angle )
+void setRotation(float angle)
 */
-HB_FUNC_STATIC( QBARDATAITEM_SETROTATION )
+HB_FUNC_STATIC(QBARDATAITEM_SETROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QBarDataItem*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QBARDATAITEM_SETROTATION )
 /*
 float rotation() const
 */
-HB_FUNC_STATIC( QBARDATAITEM_ROTATION )
+HB_FUNC_STATIC(QBARDATAITEM_ROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = static_cast<QBarDataItem*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QBARDATAITEM_ROTATION )
 #endif
 }
 
-HB_FUNC_STATIC( QBARDATAITEM_NEWFROM )
+HB_FUNC_STATIC(QBARDATAITEM_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -276,22 +276,22 @@ HB_FUNC_STATIC( QBARDATAITEM_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QBARDATAITEM_NEWFROMOBJECT )
+HB_FUNC_STATIC(QBARDATAITEM_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QBARDATAITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QBARDATAITEM_NEWFROMPOINTER )
+HB_FUNC_STATIC(QBARDATAITEM_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QBARDATAITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QBARDATAITEM_SELFDESTRUCTION )
+HB_FUNC_STATIC(QBARDATAITEM_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QBARDATAITEM_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QBARDATAITEM_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

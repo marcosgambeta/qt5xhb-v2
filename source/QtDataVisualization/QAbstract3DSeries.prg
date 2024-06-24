@@ -109,7 +109,7 @@ using namespace QtDataVisualization;
 /*
 virtual ~QAbstract3DSeries()
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_DELETE )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_DELETE )
 /*
 QAbstract3DSeries::SeriesType type() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_TYPE )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_TYPE )
 /*
 QString itemLabelFormat() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ITEMLABELFORMAT )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ITEMLABELFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -182,9 +182,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ITEMLABELFORMAT )
 }
 
 /*
-void setItemLabelFormat( const QString & format )
+void setItemLabelFormat(const QString & format)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SETITEMLABELFORMAT )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SETITEMLABELFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETITEMLABELFORMAT )
 /*
 bool isVisible() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ISVISIBLE )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ISVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -236,9 +236,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ISVISIBLE )
 }
 
 /*
-void setVisible( bool visible )
+void setVisible(bool visible)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SETVISIBLE )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SETVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETVISIBLE )
 /*
 QAbstract3DSeries::Mesh mesh() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_MESH )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_MESH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -290,9 +290,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MESH )
 }
 
 /*
-void setMesh( QAbstract3DSeries::Mesh mesh )
+void setMesh(QAbstract3DSeries::Mesh mesh)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESH )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESH )
 /*
 bool isMeshSmooth() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ISMESHSMOOTH )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ISMESHSMOOTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -344,9 +344,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ISMESHSMOOTH )
 }
 
 /*
-void setMeshSmooth( bool enable )
+void setMeshSmooth(bool enable)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHSMOOTH )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHSMOOTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHSMOOTH )
 /*
 QQuaternion meshRotation() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_MESHROTATION )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_MESHROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -399,9 +399,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MESHROTATION )
 }
 
 /*
-void setMeshRotation( const QQuaternion & rotation )
+void setMeshRotation(const QQuaternion & rotation)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHROTATION )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHROTATION )
 /*
 QString userDefinedMesh() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_USERDEFINEDMESH )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_USERDEFINEDMESH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -453,9 +453,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_USERDEFINEDMESH )
 }
 
 /*
-void setUserDefinedMesh( const QString & fileName )
+void setUserDefinedMesh(const QString & fileName)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SETUSERDEFINEDMESH )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SETUSERDEFINEDMESH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETUSERDEFINEDMESH )
 /*
 Q3DTheme::ColorStyle colorStyle() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_COLORSTYLE )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_COLORSTYLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -507,9 +507,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_COLORSTYLE )
 }
 
 /*
-void setColorStyle( Q3DTheme::ColorStyle style )
+void setColorStyle(Q3DTheme::ColorStyle style)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SETCOLORSTYLE )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SETCOLORSTYLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETCOLORSTYLE )
 /*
 QColor baseColor() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_BASECOLOR )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_BASECOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -562,9 +562,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_BASECOLOR )
 }
 
 /*
-void setBaseColor( const QColor & color )
+void setBaseColor(const QColor & color)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SETBASECOLOR )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SETBASECOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETBASECOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setBaseColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setBaseColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETBASECOLOR )
 /*
 QLinearGradient baseGradient() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_BASEGRADIENT )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_BASEGRADIENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -617,9 +617,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_BASEGRADIENT )
 }
 
 /*
-void setBaseGradient( const QLinearGradient & gradient )
+void setBaseGradient(const QLinearGradient & gradient)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SETBASEGRADIENT )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SETBASEGRADIENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETBASEGRADIENT )
 /*
 QColor singleHighlightColor() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -672,9 +672,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR )
 }
 
 /*
-void setSingleHighlightColor( const QColor & color )
+void setSingleHighlightColor(const QColor & color)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTCOLOR )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -685,7 +685,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTCOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setSingleHighlightColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setSingleHighlightColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTCOLOR )
 /*
 QLinearGradient singleHighlightGradient() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SINGLEHIGHLIGHTGRADIENT )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTGRADIENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -727,9 +727,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SINGLEHIGHLIGHTGRADIENT )
 }
 
 /*
-void setSingleHighlightGradient( const QLinearGradient & gradient )
+void setSingleHighlightGradient(const QLinearGradient & gradient)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTGRADIENT )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTGRADIENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTGRADIENT )
 /*
 QColor multiHighlightColor() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -782,9 +782,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR )
 }
 
 /*
-void setMultiHighlightColor( const QColor & color )
+void setMultiHighlightColor(const QColor & color)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMULTIHIGHLIGHTCOLOR )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMULTIHIGHLIGHTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMULTIHIGHLIGHTCOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setMultiHighlightColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setMultiHighlightColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMULTIHIGHLIGHTCOLOR )
 /*
 QLinearGradient multiHighlightGradient() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_MULTIHIGHLIGHTGRADIENT )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTGRADIENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -837,9 +837,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MULTIHIGHLIGHTGRADIENT )
 }
 
 /*
-void setMultiHighlightGradient( const QLinearGradient & gradient )
+void setMultiHighlightGradient(const QLinearGradient & gradient)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMULTIHIGHLIGHTGRADIENT )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMULTIHIGHLIGHTGRADIENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMULTIHIGHLIGHTGRADIENT )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_NAME )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -891,9 +891,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_NAME )
 }
 
 /*
-void setName( const QString & name )
+void setName(const QString & name)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SETNAME )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SETNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -921,7 +921,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETNAME )
 /*
 QString itemLabel() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ITEMLABEL )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ITEMLABEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -947,7 +947,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ITEMLABEL )
 /*
 bool isItemLabelVisible() const
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ISITEMLABELVISIBLE )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ISITEMLABELVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -971,9 +971,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ISITEMLABELVISIBLE )
 }
 
 /*
-void setItemLabelVisible( bool visible )
+void setItemLabelVisible(bool visible)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SETITEMLABELVISIBLE )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SETITEMLABELVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -999,9 +999,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETITEMLABELVISIBLE )
 }
 
 /*
-Q_INVOKABLE void setMeshAxisAndAngle( const QVector3D & axis, float angle )
+Q_INVOKABLE void setMeshAxisAndAngle(const QVector3D & axis, float angle)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHAXISANDANGLE )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHAXISANDANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1027,9 +1027,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHAXISANDANGLE )
 }
 
 /*
-void baseColorChanged( const QColor & color )
+void baseColorChanged(const QColor & color)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASECOLORCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ONBASECOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASECOLORCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1081,9 +1081,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASECOLORCHANGED )
 }
 
 /*
-void baseGradientChanged( const QLinearGradient & gradient )
+void baseGradientChanged(const QLinearGradient & gradient)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QLINEARGRADIENT");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QLINEARGRADIENT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1135,9 +1135,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED )
 }
 
 /*
-void colorStyleChanged( Q3DTheme::ColorStyle style )
+void colorStyleChanged(Q3DTheme::ColorStyle style)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ONCOLORSTYLECHANGED )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ONCOLORSTYLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1189,9 +1189,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONCOLORSTYLECHANGED )
 }
 
 /*
-void itemLabelChanged( const QString & label )
+void itemLabelChanged(const QString & label)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1243,9 +1243,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELCHANGED )
 }
 
 /*
-void itemLabelFormatChanged( const QString & format )
+void itemLabelFormatChanged(const QString & format)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1297,9 +1297,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED )
 }
 
 /*
-void itemLabelVisibilityChanged( bool visible )
+void itemLabelVisibilityChanged(bool visible)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1351,9 +1351,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED )
 }
 
 /*
-void meshChanged( QAbstract3DSeries::Mesh mesh )
+void meshChanged(QAbstract3DSeries::Mesh mesh)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1405,9 +1405,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHCHANGED )
 }
 
 /*
-void meshRotationChanged( const QQuaternion & rotation )
+void meshRotationChanged(const QQuaternion & rotation)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHROTATIONCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHROTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1432,7 +1432,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHROTATIONCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QQUATERNION");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QQUATERNION");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1459,9 +1459,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHROTATIONCHANGED )
 }
 
 /*
-void meshSmoothChanged( bool enabled )
+void meshSmoothChanged(bool enabled)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1513,9 +1513,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED )
 }
 
 /*
-void multiHighlightColorChanged( const QColor & color )
+void multiHighlightColorChanged(const QColor & color)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1540,7 +1540,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1567,9 +1567,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED )
 }
 
 /*
-void multiHighlightGradientChanged( const QLinearGradient & gradient )
+void multiHighlightGradientChanged(const QLinearGradient & gradient)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1594,7 +1594,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QLINEARGRADIENT");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QLINEARGRADIENT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1621,9 +1621,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED )
 }
 
 /*
-void nameChanged( const QString & name )
+void nameChanged(const QString & name)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ONNAMECHANGED )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ONNAMECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1675,9 +1675,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONNAMECHANGED )
 }
 
 /*
-void singleHighlightColorChanged( const QColor & color )
+void singleHighlightColorChanged(const QColor & color)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1702,7 +1702,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1729,9 +1729,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED )
 }
 
 /*
-void singleHighlightGradientChanged( const QLinearGradient & gradient )
+void singleHighlightGradientChanged(const QLinearGradient & gradient)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1756,7 +1756,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QLINEARGRADIENT");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QLINEARGRADIENT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1783,9 +1783,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
 }
 
 /*
-void userDefinedMeshChanged( const QString & fileName )
+void userDefinedMeshChanged(const QString & fileName)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1837,9 +1837,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED )
 }
 
 /*
-void visibilityChanged( bool visible )
+void visibilityChanged(bool visible)
 */
-HB_FUNC_STATIC( QABSTRACT3DSERIES_ONVISIBILITYCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DSERIES_ONVISIBILITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QAbstract3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());

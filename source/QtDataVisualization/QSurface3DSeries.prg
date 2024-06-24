@@ -79,15 +79,15 @@ RETURN
 
 using namespace QtDataVisualization;
 
-HB_FUNC_STATIC( QSURFACE3DSERIES_NEW )
+HB_FUNC_STATIC(QSURFACE3DSERIES_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QSurface3DSeries( QObject * parent = nullptr )
+    QSurface3DSeries(QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QSurface3DSeries( OPQOBJECT( 1, nullptr));
+    auto obj = new QSurface3DSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -95,10 +95,10 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_NEW )
   else if (ISBETWEEN(1, 2) && ISQSURFACEDATAPROXY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QSurface3DSeries( QSurfaceDataProxy * dataProxy, QObject * parent = nullptr )
+    QSurface3DSeries(QSurfaceDataProxy * dataProxy, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    auto obj = new QSurface3DSeries(PQSURFACEDATAPROXY(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QSurface3DSeries(PQSURFACEDATAPROXY(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_NEW )
 /*
 virtual ~QSurface3DSeries()
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_DELETE )
+HB_FUNC_STATIC(QSURFACE3DSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_DELETE )
 /*
 QSurfaceDataProxy * dataProxy() const
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_DATAPROXY )
+HB_FUNC_STATIC(QSURFACE3DSERIES_DATAPROXY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -160,9 +160,9 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_DATAPROXY )
 }
 
 /*
-void setDataProxy( QSurfaceDataProxy * proxy )
+void setDataProxy(QSurfaceDataProxy * proxy)
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_SETDATAPROXY )
+HB_FUNC_STATIC(QSURFACE3DSERIES_SETDATAPROXY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETDATAPROXY )
 /*
 QPoint selectedPoint() const
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_SELECTEDPOINT )
+HB_FUNC_STATIC(QSURFACE3DSERIES_SELECTEDPOINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -215,9 +215,9 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SELECTEDPOINT )
 }
 
 /*
-void setSelectedPoint( const QPoint & position )
+void setSelectedPoint(const QPoint & position)
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_SETSELECTEDPOINT )
+HB_FUNC_STATIC(QSURFACE3DSERIES_SETSELECTEDPOINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETSELECTEDPOINT )
 /*
 bool isFlatShadingEnabled() const
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_ISFLATSHADINGENABLED )
+HB_FUNC_STATIC(QSURFACE3DSERIES_ISFLATSHADINGENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -269,9 +269,9 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ISFLATSHADINGENABLED )
 }
 
 /*
-void setFlatShadingEnabled( bool enabled )
+void setFlatShadingEnabled(bool enabled)
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_SETFLATSHADINGENABLED )
+HB_FUNC_STATIC(QSURFACE3DSERIES_SETFLATSHADINGENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETFLATSHADINGENABLED )
 /*
 bool isFlatShadingSupported() const
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_ISFLATSHADINGSUPPORTED )
+HB_FUNC_STATIC(QSURFACE3DSERIES_ISFLATSHADINGSUPPORTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ISFLATSHADINGSUPPORTED )
 /*
 QSurface3DSeries::DrawFlags drawMode() const
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_DRAWMODE )
+HB_FUNC_STATIC(QSURFACE3DSERIES_DRAWMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -349,9 +349,9 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_DRAWMODE )
 }
 
 /*
-void setDrawMode( QSurface3DSeries::DrawFlags mode )
+void setDrawMode(QSurface3DSeries::DrawFlags mode)
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_SETDRAWMODE )
+HB_FUNC_STATIC(QSURFACE3DSERIES_SETDRAWMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETDRAWMODE )
 /*
 QImage texture() const
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_TEXTURE )
+HB_FUNC_STATIC(QSURFACE3DSERIES_TEXTURE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -404,9 +404,9 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_TEXTURE )
 }
 
 /*
-void setTexture( const QImage & texture )
+void setTexture(const QImage & texture)
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_SETTEXTURE )
+HB_FUNC_STATIC(QSURFACE3DSERIES_SETTEXTURE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETTEXTURE )
 /*
 QString textureFile() const
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_TEXTUREFILE )
+HB_FUNC_STATIC(QSURFACE3DSERIES_TEXTUREFILE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -458,9 +458,9 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_TEXTUREFILE )
 }
 
 /*
-void setTextureFile( const QString & filename )
+void setTextureFile(const QString & filename)
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_SETTEXTUREFILE )
+HB_FUNC_STATIC(QSURFACE3DSERIES_SETTEXTUREFILE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -488,14 +488,14 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETTEXTUREFILE )
 /*
 static QPoint invalidSelectionPosition()
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_INVALIDSELECTIONPOSITION )
+HB_FUNC_STATIC(QSURFACE3DSERIES_INVALIDSELECTIONPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    auto ptr = new QPoint( QSurface3DSeries::invalidSelectionPosition());
+    auto ptr = new QPoint(QSurface3DSeries::invalidSelectionPosition());
     Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -508,9 +508,9 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_INVALIDSELECTIONPOSITION )
 }
 
 /*
-void dataProxyChanged( QSurfaceDataProxy * proxy )
+void dataProxyChanged(QSurfaceDataProxy * proxy)
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_ONDATAPROXYCHANGED )
+HB_FUNC_STATIC(QSURFACE3DSERIES_ONDATAPROXYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -562,9 +562,9 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDATAPROXYCHANGED )
 }
 
 /*
-void drawModeChanged( QSurface3DSeries::DrawFlags mode )
+void drawModeChanged(QSurface3DSeries::DrawFlags mode)
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_ONDRAWMODECHANGED )
+HB_FUNC_STATIC(QSURFACE3DSERIES_ONDRAWMODECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -616,9 +616,9 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONDRAWMODECHANGED )
 }
 
 /*
-void flatShadingEnabledChanged( bool enable )
+void flatShadingEnabledChanged(bool enable)
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED )
+HB_FUNC_STATIC(QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -670,9 +670,9 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED )
 }
 
 /*
-void flatShadingSupportedChanged( bool enable )
+void flatShadingSupportedChanged(bool enable)
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED )
+HB_FUNC_STATIC(QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -724,9 +724,9 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED )
 }
 
 /*
-void selectedPointChanged( const QPoint & position )
+void selectedPointChanged(const QPoint & position)
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
+HB_FUNC_STATIC(QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSURFACE3DSERIES");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QPOINT");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QPOINT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -778,9 +778,9 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED )
 }
 
 /*
-void textureChanged( const QImage & image )
+void textureChanged(const QImage & image)
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTURECHANGED )
+HB_FUNC_STATIC(QSURFACE3DSERIES_ONTEXTURECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTURECHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSURFACE3DSERIES");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QIMAGE");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QIMAGE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -832,9 +832,9 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTURECHANGED )
 }
 
 /*
-void textureFileChanged( const QString & filename )
+void textureFileChanged(const QString & filename)
 */
-HB_FUNC_STATIC( QSURFACE3DSERIES_ONTEXTUREFILECHANGED )
+HB_FUNC_STATIC(QSURFACE3DSERIES_ONTEXTUREFILECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QSurface3DSeries*>(Qt5xHb::getQObjectPointerFromSelfItem());

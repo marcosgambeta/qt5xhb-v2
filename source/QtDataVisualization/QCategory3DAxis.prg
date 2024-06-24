@@ -59,14 +59,14 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-QCategory3DAxis( QObject * parent = nullptr )
+QCategory3DAxis(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QCATEGORY3DAXIS_NEW )
+HB_FUNC_STATIC(QCATEGORY3DAXIS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QCategory3DAxis( OPQOBJECT( 1, nullptr));
+    auto obj = new QCategory3DAxis(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_NEW )
 /*
 virtual ~QCategory3DAxis()
 */
-HB_FUNC_STATIC( QCATEGORY3DAXIS_DELETE )
+HB_FUNC_STATIC(QCATEGORY3DAXIS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCategory3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_DELETE )
 /*
 QStringList labels() const
 */
-HB_FUNC_STATIC( QCATEGORY3DAXIS_LABELS )
+HB_FUNC_STATIC(QCATEGORY3DAXIS_LABELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCategory3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -126,9 +126,9 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_LABELS )
 }
 
 /*
-void setLabels( const QStringList & labels )
+void setLabels(const QStringList & labels)
 */
-HB_FUNC_STATIC( QCATEGORY3DAXIS_SETLABELS )
+HB_FUNC_STATIC(QCATEGORY3DAXIS_SETLABELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = qobject_cast<QCategory3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_SETLABELS )
 /*
 void labelsChanged()
 */
-HB_FUNC_STATIC( QCATEGORY3DAXIS_ONLABELSCHANGED )
+HB_FUNC_STATIC(QCATEGORY3DAXIS_ONLABELSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto sender = qobject_cast<QCategory3DAxis*>(Qt5xHb::getQObjectPointerFromSelfItem());
