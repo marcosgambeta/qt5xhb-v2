@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_JAVAVM )
   if (ISNUMPAR(0))
   {
 #endif
-    hb_retptr( static_cast< JavaVM*>( QAndroidJniEnvironment::javaVM()));
+    hb_retptr(static_cast< JavaVM*>( QAndroidJniEnvironment::javaVM()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_FINDCLASS )
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      hb_retptr( static_cast< jclass >(obj->findClass(PCONSTCHAR(1))));
+      hb_retptr(static_cast< jclass >(obj->findClass(PCONSTCHAR(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QTANDROID_STARTINTENTSENDER )
   if (ISBETWEEN(2, 3) && ISQANDROIDJNIOBJECT(1) && HB_ISNUM(2) && (ISQANDROIDACTIVITYRESULTRECEIVER(3) || HB_ISNIL(3)))
   {
 #endif
-    QtAndroid::startIntentSender( *PQANDROIDJNIOBJECT(1), PINT(2), HB_ISNIL(3) ? nullptr : static_cast<QAndroidActivityResultReceiver*>(Qt5xHb::itemGetPtr(3)));
+    QtAndroid::startIntentSender(*PQANDROIDJNIOBJECT(1), PINT(2), HB_ISNIL(3) ? nullptr : static_cast<QAndroidActivityResultReceiver*>(Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QTANDROID_STARTACTIVITY )
   if (ISBETWEEN(2, 3) && ISQANDROIDJNIOBJECT(1) && HB_ISNUM(2) && (ISQANDROIDACTIVITYRESULTRECEIVER(3) || HB_ISNIL(3)))
   {
 #endif
-    QtAndroid::startActivity( *PQANDROIDJNIOBJECT(1), PINT(2), HB_ISNIL(3) ? nullptr : static_cast<QAndroidActivityResultReceiver*>(Qt5xHb::itemGetPtr(3)));
+    QtAndroid::startActivity(*PQANDROIDJNIOBJECT(1), PINT(2), HB_ISNIL(3) ? nullptr : static_cast<QAndroidActivityResultReceiver*>(Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QTANDROID_BINDSERVICE )
   if (ISBETWEEN(2, 3) && ISQANDROIDINTENT(1) && ISQANDROIDSERVICECONNECTION(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
 #endif
-    RBOOL( QtAndroid::bindService( *PQANDROIDINTENT(1), *PQANDROIDSERVICECONNECTION(2), HB_ISNIL(3) ? static_cast<QtAndroid::BindFlags >( QtAndroid::BindFlag::None ) : static_cast<QtAndroid::BindFlags >( hb_parni(3))));
+    RBOOL( QtAndroid::bindService(*PQANDROIDINTENT(1), *PQANDROIDSERVICECONNECTION(2), HB_ISNIL(3) ? static_cast<QtAndroid::BindFlags >( QtAndroid::BindFlag::None ) : static_cast<QtAndroid::BindFlags >(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

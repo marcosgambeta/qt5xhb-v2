@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_NEW )
     QAndroidServiceConnection( const QAndroidJniObject & serviceConnection )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    auto obj = new QAndroidServiceConnection( *PQANDROIDJNIOBJECT(1));
+    auto obj = new QAndroidServiceConnection(*PQANDROIDJNIOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 

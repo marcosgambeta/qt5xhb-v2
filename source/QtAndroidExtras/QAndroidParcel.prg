@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_NEW )
     QAndroidParcel( const QAndroidJniObject & parcel )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    auto obj = new QAndroidParcel( *PQANDROIDJNIOBJECT(1));
+    auto obj = new QAndroidParcel(*PQANDROIDJNIOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_WRITEDATA )
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->writeData( *PQBYTEARRAY(1));
+      obj->writeData(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_WRITEVARIANT )
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
-      obj->writeVariant( *PQVARIANT(1));
+      obj->writeVariant(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_WRITEBINDER )
     if (ISNUMPAR(1) && ISQANDROIDBINDER(1))
     {
 #endif
-      obj->writeBinder( *PQANDROIDBINDER(1));
+      obj->writeBinder(*PQANDROIDBINDER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

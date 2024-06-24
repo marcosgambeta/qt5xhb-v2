@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QANDROIDINTENT_NEW )
     QAndroidIntent( const QAndroidJniObject & intent )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    auto obj = new QAndroidIntent( *PQANDROIDJNIOBJECT(1));
+    auto obj = new QAndroidIntent(*PQANDROIDJNIOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QANDROIDINTENT_NEW )
     QAndroidIntent( const QAndroidJniObject & packageContext, const char * className )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    auto obj = new QAndroidIntent( *PQANDROIDJNIOBJECT(1), PCONSTCHAR(2));
+    auto obj = new QAndroidIntent(*PQANDROIDJNIOBJECT(1), PCONSTCHAR(2));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
