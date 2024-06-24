@@ -51,7 +51,7 @@ RETURN
 
 #include <QtCore/QUrl>
 
-HB_FUNC_STATIC( QABSTRACTURIRESOLVER_DELETE )
+HB_FUNC_STATIC(QABSTRACTURIRESOLVER_DELETE)
 {
   auto obj = qobject_cast<QAbstractUriResolver*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -70,9 +70,9 @@ HB_FUNC_STATIC( QABSTRACTURIRESOLVER_DELETE )
 }
 
 /*
-virtual QUrl resolve( const QUrl & relative, const QUrl & baseURI ) const = 0
+virtual QUrl resolve(const QUrl & relative, const QUrl & baseURI) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
+HB_FUNC_STATIC(QABSTRACTURIRESOLVER_RESOLVE)
 {
   auto obj = qobject_cast<QAbstractUriResolver*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

@@ -63,7 +63,7 @@ RETURN
 #include <QtXmlPatterns/QSourceLocation>
 #endif
 
-HB_FUNC_STATIC( QSOURCELOCATION_NEW )
+HB_FUNC_STATIC(QSOURCELOCATION_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW )
   else if (ISNUMPAR(1) && ISQSOURCELOCATION(1))
   {
     /*
-    QSourceLocation( const QSourceLocation & other )
+    QSourceLocation(const QSourceLocation & other)
     */
     auto obj = new QSourceLocation(*PQSOURCELOCATION(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -86,9 +86,9 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW )
   else if (ISBETWEEN(1, 3) && ISQURL(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QSourceLocation( const QUrl & u, int l = -1, int c = -1 )
+    QSourceLocation(const QUrl & u, int l = -1, int c = -1)
     */
-    auto obj = new QSourceLocation(*PQURL(1), OPINT( 2, -1 ), OPINT( 3, -1));
+    auto obj = new QSourceLocation(*PQURL(1), OPINT(2, -1), OPINT(3, -1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSOURCELOCATION_DELETE )
+HB_FUNC_STATIC(QSOURCELOCATION_DELETE)
 {
   auto obj = static_cast<QSourceLocation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_DELETE )
 /*
 qint64 column() const
 */
-HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
+HB_FUNC_STATIC(QSOURCELOCATION_COLUMN)
 {
   auto obj = static_cast<QSourceLocation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
+HB_FUNC_STATIC(QSOURCELOCATION_ISNULL)
 {
   auto obj = static_cast<QSourceLocation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
 /*
 qint64 line() const
 */
-HB_FUNC_STATIC( QSOURCELOCATION_LINE )
+HB_FUNC_STATIC(QSOURCELOCATION_LINE)
 {
   auto obj = static_cast<QSourceLocation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -187,9 +187,9 @@ HB_FUNC_STATIC( QSOURCELOCATION_LINE )
 }
 
 /*
-void setColumn( qint64 newColumn )
+void setColumn(qint64 newColumn)
 */
-HB_FUNC_STATIC( QSOURCELOCATION_SETCOLUMN )
+HB_FUNC_STATIC(QSOURCELOCATION_SETCOLUMN)
 {
   auto obj = static_cast<QSourceLocation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -213,9 +213,9 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETCOLUMN )
 }
 
 /*
-void setLine( qint64 newLine )
+void setLine(qint64 newLine)
 */
-HB_FUNC_STATIC( QSOURCELOCATION_SETLINE )
+HB_FUNC_STATIC(QSOURCELOCATION_SETLINE)
 {
   auto obj = static_cast<QSourceLocation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -239,9 +239,9 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETLINE )
 }
 
 /*
-void setUri( const QUrl & newUri )
+void setUri(const QUrl & newUri)
 */
-HB_FUNC_STATIC( QSOURCELOCATION_SETURI )
+HB_FUNC_STATIC(QSOURCELOCATION_SETURI)
 {
   auto obj = static_cast<QSourceLocation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETURI )
 /*
 QUrl uri() const
 */
-HB_FUNC_STATIC( QSOURCELOCATION_URI )
+HB_FUNC_STATIC(QSOURCELOCATION_URI)
 {
   auto obj = static_cast<QSourceLocation*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_URI )
   }
 }
 
-HB_FUNC_STATIC( QSOURCELOCATION_NEWFROM )
+HB_FUNC_STATIC(QSOURCELOCATION_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -319,22 +319,22 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSOURCELOCATION_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSOURCELOCATION_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QSOURCELOCATION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSOURCELOCATION_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSOURCELOCATION_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QSOURCELOCATION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSOURCELOCATION_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSOURCELOCATION_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSOURCELOCATION_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSOURCELOCATION_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

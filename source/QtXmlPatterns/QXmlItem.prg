@@ -64,7 +64,7 @@ RETURN
 
 #include <QtCore/QVariant>
 
-HB_FUNC_STATIC( QXMLITEM_NEW )
+HB_FUNC_STATIC(QXMLITEM_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
   else if (ISNUMPAR(1) && ISQXMLITEM(1))
   {
     /*
-    QXmlItem( const QXmlItem & other )
+    QXmlItem(const QXmlItem & other)
     */
     auto obj = new QXmlItem(*PQXMLITEM(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
   else if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
   {
     /*
-    QXmlItem( const QXmlNodeModelIndex & node )
+    QXmlItem(const QXmlNodeModelIndex & node)
     */
     auto obj = new QXmlItem(*PQXMLNODEMODELINDEX(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
   else if (ISNUMPAR(1) && ISQVARIANT(1))
   {
     /*
-    QXmlItem( const QVariant & atomicValue )
+    QXmlItem(const QVariant & atomicValue)
     */
     auto obj = new QXmlItem(*PQVARIANT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
   }
 }
 
-HB_FUNC_STATIC( QXMLITEM_DELETE )
+HB_FUNC_STATIC(QXMLITEM_DELETE)
 {
   auto obj = static_cast<QXmlItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QXMLITEM_DELETE )
 /*
 bool isAtomicValue() const
 */
-HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
+HB_FUNC_STATIC(QXMLITEM_ISATOMICVALUE)
 {
   auto obj = static_cast<QXmlItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
 /*
 bool isNode() const
 */
-HB_FUNC_STATIC( QXMLITEM_ISNODE )
+HB_FUNC_STATIC(QXMLITEM_ISNODE)
 {
   auto obj = static_cast<QXmlItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QXMLITEM_ISNODE )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QXMLITEM_ISNULL )
+HB_FUNC_STATIC(QXMLITEM_ISNULL)
 {
   auto obj = static_cast<QXmlItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QXMLITEM_ISNULL )
 /*
 QVariant toAtomicValue() const
 */
-HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
+HB_FUNC_STATIC(QXMLITEM_TOATOMICVALUE)
 {
   auto obj = static_cast<QXmlItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
 /*
 QXmlNodeModelIndex toNodeModelIndex() const
 */
-HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
+HB_FUNC_STATIC(QXMLITEM_TONODEMODELINDEX)
 {
   auto obj = static_cast<QXmlItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
   }
 }
 
-HB_FUNC_STATIC( QXMLITEM_NEWFROM )
+HB_FUNC_STATIC(QXMLITEM_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -276,22 +276,22 @@ HB_FUNC_STATIC( QXMLITEM_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QXMLITEM_NEWFROMOBJECT )
+HB_FUNC_STATIC(QXMLITEM_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QXMLITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLITEM_NEWFROMPOINTER )
+HB_FUNC_STATIC(QXMLITEM_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QXMLITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLITEM_SELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLITEM_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QXMLITEM_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLITEM_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

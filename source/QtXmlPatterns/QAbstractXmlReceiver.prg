@@ -66,7 +66,7 @@ RETURN
 #include <QtXmlPatterns/QAbstractXmlReceiver>
 #endif
 
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_DELETE )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_DELETE)
 {
   auto obj = static_cast<QAbstractXmlReceiver*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -83,9 +83,9 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_DELETE )
 }
 
 /*
-virtual void atomicValue( const QVariant & value ) = 0
+virtual void atomicValue(const QVariant & value) = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ATOMICVALUE )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ATOMICVALUE)
 {
   auto obj = static_cast<QAbstractXmlReceiver*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -109,9 +109,9 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ATOMICVALUE )
 }
 
 /*
-virtual void attribute( const QXmlName & name, const QStringRef & value ) = 0
+virtual void attribute(const QXmlName & name, const QStringRef & value) = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ATTRIBUTE )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ATTRIBUTE)
 {
   auto obj = static_cast<QAbstractXmlReceiver*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -135,9 +135,9 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ATTRIBUTE )
 }
 
 /*
-virtual void characters( const QStringRef & value ) = 0
+virtual void characters(const QStringRef & value) = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_CHARACTERS )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_CHARACTERS)
 {
   auto obj = static_cast<QAbstractXmlReceiver*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -161,9 +161,9 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_CHARACTERS )
 }
 
 /*
-virtual void comment( const QString & value ) = 0
+virtual void comment(const QString & value) = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_COMMENT )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_COMMENT)
 {
   auto obj = static_cast<QAbstractXmlReceiver*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_COMMENT )
 /*
 virtual void endDocument() = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDDOCUMENT )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ENDDOCUMENT)
 {
   auto obj = static_cast<QAbstractXmlReceiver*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDDOCUMENT )
 /*
 virtual void endElement() = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDELEMENT )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ENDELEMENT)
 {
   auto obj = static_cast<QAbstractXmlReceiver*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDELEMENT )
 /*
 virtual void endOfSequence() = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDOFSEQUENCE )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ENDOFSEQUENCE)
 {
   auto obj = static_cast<QAbstractXmlReceiver*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -265,9 +265,9 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDOFSEQUENCE )
 }
 
 /*
-virtual void namespaceBinding( const QXmlName & name ) = 0
+virtual void namespaceBinding(const QXmlName & name) = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_NAMESPACEBINDING )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_NAMESPACEBINDING)
 {
   auto obj = static_cast<QAbstractXmlReceiver*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -291,9 +291,9 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_NAMESPACEBINDING )
 }
 
 /*
-virtual void processingInstruction( const QXmlName & target, const QString & value ) = 0
+virtual void processingInstruction(const QXmlName & target, const QString & value) = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION)
 {
   auto obj = static_cast<QAbstractXmlReceiver*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION )
 /*
 virtual void startDocument() = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTDOCUMENT )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_STARTDOCUMENT)
 {
   auto obj = static_cast<QAbstractXmlReceiver*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -343,9 +343,9 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTDOCUMENT )
 }
 
 /*
-virtual void startElement( const QXmlName & name ) = 0
+virtual void startElement(const QXmlName & name) = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTELEMENT )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_STARTELEMENT)
 {
   auto obj = static_cast<QAbstractXmlReceiver*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTELEMENT )
 /*
 virtual void startOfSequence() = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTOFSEQUENCE )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_STARTOFSEQUENCE)
 {
   auto obj = static_cast<QAbstractXmlReceiver*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTOFSEQUENCE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_NEWFROM )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -424,22 +424,22 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QABSTRACTXMLRECEIVER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QABSTRACTXMLRECEIVER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

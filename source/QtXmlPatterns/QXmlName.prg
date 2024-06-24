@@ -62,7 +62,7 @@ RETURN
 #include <QtXmlPatterns/QXmlName>
 #endif
 
-HB_FUNC_STATIC( QXMLNAME_NEW )
+HB_FUNC_STATIC(QXMLNAME_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -76,9 +76,9 @@ HB_FUNC_STATIC( QXMLNAME_NEW )
   else if (ISBETWEEN(2, 4) && ISQXMLNAMEPOOL(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)))
   {
     /*
-    QXmlName( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
+    QXmlName(QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString())
     */
-    auto obj = new QXmlName(*PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING(3, QString() ), OPQSTRING(4, QString()));
+    auto obj = new QXmlName(*PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING(3, QString()), OPQSTRING(4, QString()));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QXMLNAME_NEW )
   }
 }
 
-HB_FUNC_STATIC( QXMLNAME_DELETE )
+HB_FUNC_STATIC(QXMLNAME_DELETE)
 {
   auto obj = static_cast<QXmlName*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QXMLNAME_DELETE )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QXMLNAME_ISNULL )
+HB_FUNC_STATIC(QXMLNAME_ISNULL)
 {
   auto obj = static_cast<QXmlName*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -129,9 +129,9 @@ HB_FUNC_STATIC( QXMLNAME_ISNULL )
 }
 
 /*
-QString localName( const QXmlNamePool & namePool ) const
+QString localName(const QXmlNamePool & namePool) const
 */
-HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
+HB_FUNC_STATIC(QXMLNAME_LOCALNAME)
 {
   auto obj = static_cast<QXmlName*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -153,9 +153,9 @@ HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
 }
 
 /*
-QString namespaceUri( const QXmlNamePool & namePool ) const
+QString namespaceUri(const QXmlNamePool & namePool) const
 */
-HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
+HB_FUNC_STATIC(QXMLNAME_NAMESPACEURI)
 {
   auto obj = static_cast<QXmlName*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -177,9 +177,9 @@ HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
 }
 
 /*
-QString prefix( const QXmlNamePool & namePool ) const
+QString prefix(const QXmlNamePool & namePool) const
 */
-HB_FUNC_STATIC( QXMLNAME_PREFIX )
+HB_FUNC_STATIC(QXMLNAME_PREFIX)
 {
   auto obj = static_cast<QXmlName*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -201,9 +201,9 @@ HB_FUNC_STATIC( QXMLNAME_PREFIX )
 }
 
 /*
-QString toClarkName( const QXmlNamePool & namePool ) const
+QString toClarkName(const QXmlNamePool & namePool) const
 */
-HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
+HB_FUNC_STATIC(QXMLNAME_TOCLARKNAME)
 {
   auto obj = static_cast<QXmlName*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -225,15 +225,15 @@ HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
 }
 
 /*
-static QXmlName fromClarkName( const QString & clarkName, const QXmlNamePool & namePool )
+static QXmlName fromClarkName(const QString & clarkName, const QXmlNamePool & namePool)
 */
-HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
+HB_FUNC_STATIC(QXMLNAME_FROMCLARKNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQXMLNAMEPOOL(2))
   {
 #endif
-    auto ptr = new QXmlName( QXmlName::fromClarkName(PQSTRING(1), *PQXMLNAMEPOOL(2)));
+    auto ptr = new QXmlName(QXmlName::fromClarkName(PQSTRING(1), *PQXMLNAMEPOOL(2)));
     Qt5xHb::createReturnClass(ptr, "QXMLNAME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -245,15 +245,15 @@ HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
 }
 
 /*
-static bool isNCName( const QString & candidate )
+static bool isNCName(const QString & candidate)
 */
-HB_FUNC_STATIC( QXMLNAME_ISNCNAME )
+HB_FUNC_STATIC(QXMLNAME_ISNCNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    RBOOL( QXmlName::isNCName(PQSTRING(1)));
+    RBOOL(QXmlName::isNCName(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QXMLNAME_ISNCNAME )
 #endif
 }
 
-HB_FUNC_STATIC( QXMLNAME_NEWFROM )
+HB_FUNC_STATIC(QXMLNAME_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -293,22 +293,22 @@ HB_FUNC_STATIC( QXMLNAME_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QXMLNAME_NEWFROMOBJECT )
+HB_FUNC_STATIC(QXMLNAME_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QXMLNAME_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLNAME_NEWFROMPOINTER )
+HB_FUNC_STATIC(QXMLNAME_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QXMLNAME_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLNAME_SELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLNAME_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QXMLNAME_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLNAME_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

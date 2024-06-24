@@ -75,7 +75,7 @@ RETURN
 #include <QtXmlPatterns/QAbstractUriResolver>
 #include <QtXmlPatterns/QXmlSchema>
 
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
   else if (ISNUMPAR(1) && ISQXMLSCHEMA(1))
   {
     /*
-    QXmlSchemaValidator( const QXmlSchema & schema )
+    QXmlSchemaValidator(const QXmlSchema & schema)
     */
     auto obj = new QXmlSchemaValidator(*PQXMLSCHEMA(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_DELETE )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_DELETE)
 {
   auto obj = static_cast<QXmlSchemaValidator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_DELETE )
 /*
 QAbstractMessageHandler * messageHandler() const
 */
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_MESSAGEHANDLER )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_MESSAGEHANDLER)
 {
   auto obj = static_cast<QXmlSchemaValidator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_MESSAGEHANDLER )
 /*
 QXmlNamePool namePool() const
 */
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NAMEPOOL )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NAMEPOOL)
 {
   auto obj = static_cast<QXmlSchemaValidator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NAMEPOOL )
 /*
 QNetworkAccessManager * networkAccessManager() const
 */
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER)
 {
   auto obj = static_cast<QXmlSchemaValidator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER )
 /*
 QXmlSchema schema() const
 */
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SCHEMA )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SCHEMA)
 {
   auto obj = static_cast<QXmlSchemaValidator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -218,9 +218,9 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SCHEMA )
 }
 
 /*
-void setMessageHandler( QAbstractMessageHandler * handler )
+void setMessageHandler(QAbstractMessageHandler * handler)
 */
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETMESSAGEHANDLER )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETMESSAGEHANDLER)
 {
   auto obj = static_cast<QXmlSchemaValidator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -244,9 +244,9 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETMESSAGEHANDLER )
 }
 
 /*
-void setNetworkAccessManager( QNetworkAccessManager * manager )
+void setNetworkAccessManager(QNetworkAccessManager * manager)
 */
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETNETWORKACCESSMANAGER )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETNETWORKACCESSMANAGER)
 {
   auto obj = static_cast<QXmlSchemaValidator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -270,9 +270,9 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETNETWORKACCESSMANAGER )
 }
 
 /*
-void setSchema( const QXmlSchema & schema )
+void setSchema(const QXmlSchema & schema)
 */
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETSCHEMA )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETSCHEMA)
 {
   auto obj = static_cast<QXmlSchemaValidator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -296,9 +296,9 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETSCHEMA )
 }
 
 /*
-void setUriResolver( const QAbstractUriResolver * resolver )
+void setUriResolver(const QAbstractUriResolver * resolver)
 */
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETURIRESOLVER )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETURIRESOLVER)
 {
   auto obj = static_cast<QXmlSchemaValidator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETURIRESOLVER )
 /*
 const QAbstractUriResolver * uriResolver() const
 */
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_URIRESOLVER )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_URIRESOLVER)
 {
   auto obj = static_cast<QXmlSchemaValidator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -346,12 +346,12 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_URIRESOLVER )
   }
 }
 
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_VALIDATE)
 {
   if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    bool validate( const QUrl & source ) const
+    bool validate(const QUrl & source) const
     */
     auto obj = static_cast<QXmlSchemaValidator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
   else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQURL(2) || HB_ISNIL(2)))
   {
     /*
-    bool validate( QIODevice * source, const QUrl & documentUri = QUrl() ) const
+    bool validate(QIODevice * source, const QUrl & documentUri = QUrl()) const
     */
     auto obj = static_cast<QXmlSchemaValidator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
   else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQURL(2) || HB_ISNIL(2)))
   {
     /*
-    bool validate( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
+    bool validate(const QByteArray & data, const QUrl & documentUri = QUrl()) const
     */
     auto obj = static_cast<QXmlSchemaValidator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
   }
 }
 
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEWFROM )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -423,22 +423,22 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEWFROMOBJECT )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QXMLSCHEMAVALIDATOR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEWFROMPOINTER )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QXMLSCHEMAVALIDATOR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
