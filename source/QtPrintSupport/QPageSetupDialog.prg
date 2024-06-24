@@ -54,23 +54,23 @@ RETURN
 #include <QtPrintSupport/QPageSetupDialog>
 #endif
 
-HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
+HB_FUNC_STATIC(QPAGESETUPDIALOG_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQPRINTER(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QPageSetupDialog( QPrinter * printer, QWidget * parent = nullptr )
+    QPageSetupDialog(QPrinter * printer, QWidget * parent = nullptr)
     */
-    auto obj = new QPageSetupDialog(PQPRINTER(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QPageSetupDialog(PQPRINTER(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QPageSetupDialog( QWidget * parent = nullptr )
+    QPageSetupDialog(QWidget * parent = nullptr)
     */
-    auto obj = new QPageSetupDialog( OPQWIDGET( 1, nullptr));
+    auto obj = new QPageSetupDialog(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPAGESETUPDIALOG_DELETE )
+HB_FUNC_STATIC(QPAGESETUPDIALOG_DELETE)
 {
   auto obj = qobject_cast<QPageSetupDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -99,9 +99,9 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_DELETE )
 }
 
 /*
-void open(  QObject * receiver, const char * member )
+void open( QObject * receiver, const char * member)
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
+HB_FUNC_STATIC(QPAGESETUPDIALOG_OPEN)
 {
   auto obj = qobject_cast<QPageSetupDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
 /*
 QPrinter * printer()
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
+HB_FUNC_STATIC(QPAGESETUPDIALOG_PRINTER)
 {
   auto obj = qobject_cast<QPageSetupDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -150,9 +150,9 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
 }
 
 /*
-virtual void setVisible( bool visible )
+virtual void setVisible(bool visible)
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
+HB_FUNC_STATIC(QPAGESETUPDIALOG_SETVISIBLE)
 {
   auto obj = qobject_cast<QPageSetupDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
 /*
 virtual int exec()
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_EXEC )
+HB_FUNC_STATIC(QPAGESETUPDIALOG_EXEC)
 {
   auto obj = qobject_cast<QPageSetupDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -200,9 +200,9 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_EXEC )
 }
 
 /*
-void done( int result )
+void done(int result)
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_DONE )
+HB_FUNC_STATIC(QPAGESETUPDIALOG_DONE)
 {
   auto obj = qobject_cast<QPageSetupDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

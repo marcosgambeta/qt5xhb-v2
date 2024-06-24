@@ -124,23 +124,23 @@ RETURN
 #include <QtPrintSupport/QPrinter>
 #endif
 
-HB_FUNC_STATIC( QPRINTER_NEW )
+HB_FUNC_STATIC(QPRINTER_NEW)
 {
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
-    QPrinter( QPrinter::PrinterMode mode = QPrinter::ScreenResolution )
+    QPrinter(QPrinter::PrinterMode mode = QPrinter::ScreenResolution)
     */
-    auto obj = new QPrinter( HB_ISNIL(1) ? static_cast<QPrinter::PrinterMode >( QPrinter::ScreenResolution ) : static_cast<QPrinter::PrinterMode >(hb_parni(1)));
+    auto obj = new QPrinter(HB_ISNIL(1) ? static_cast<QPrinter::PrinterMode >(QPrinter::ScreenResolution) : static_cast<QPrinter::PrinterMode >(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
   else if (ISBETWEEN(1, 2) && ISQPRINTERINFO(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QPrinter( const QPrinterInfo & printer, QPrinter::PrinterMode mode = QPrinter::ScreenResolution )
+    QPrinter(const QPrinterInfo & printer, QPrinter::PrinterMode mode = QPrinter::ScreenResolution)
     */
-    auto obj = new QPrinter(*PQPRINTERINFO(1), HB_ISNIL(2) ? static_cast<QPrinter::PrinterMode >( QPrinter::ScreenResolution ) : static_cast<QPrinter::PrinterMode >(hb_parni(2)));
+    auto obj = new QPrinter(*PQPRINTERINFO(1), HB_ISNIL(2) ? static_cast<QPrinter::PrinterMode >(QPrinter::ScreenResolution) : static_cast<QPrinter::PrinterMode >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QPRINTER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPRINTER_DELETE )
+HB_FUNC_STATIC(QPRINTER_DELETE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QPRINTER_DELETE )
 /*
 bool abort()
 */
-HB_FUNC_STATIC( QPRINTER_ABORT )
+HB_FUNC_STATIC(QPRINTER_ABORT)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QPRINTER_ABORT )
 /*
 bool collateCopies() const
 */
-HB_FUNC_STATIC( QPRINTER_COLLATECOPIES )
+HB_FUNC_STATIC(QPRINTER_COLLATECOPIES)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -215,9 +215,9 @@ HB_FUNC_STATIC( QPRINTER_COLLATECOPIES )
 }
 
 /*
-void setCollateCopies( bool collate )
+void setCollateCopies(bool collate)
 */
-HB_FUNC_STATIC( QPRINTER_SETCOLLATECOPIES )
+HB_FUNC_STATIC(QPRINTER_SETCOLLATECOPIES)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QPRINTER_SETCOLLATECOPIES )
 /*
 QPrinter::ColorMode colorMode() const
 */
-HB_FUNC_STATIC( QPRINTER_COLORMODE )
+HB_FUNC_STATIC(QPRINTER_COLORMODE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -265,9 +265,9 @@ HB_FUNC_STATIC( QPRINTER_COLORMODE )
 }
 
 /*
-void setColorMode( QPrinter::ColorMode newColorMode )
+void setColorMode(QPrinter::ColorMode newColorMode)
 */
-HB_FUNC_STATIC( QPRINTER_SETCOLORMODE )
+HB_FUNC_STATIC(QPRINTER_SETCOLORMODE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QPRINTER_SETCOLORMODE )
 /*
 int copyCount() const
 */
-HB_FUNC_STATIC( QPRINTER_COPYCOUNT )
+HB_FUNC_STATIC(QPRINTER_COPYCOUNT)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -315,9 +315,9 @@ HB_FUNC_STATIC( QPRINTER_COPYCOUNT )
 }
 
 /*
-void setCopyCount( int count )
+void setCopyCount(int count)
 */
-HB_FUNC_STATIC( QPRINTER_SETCOPYCOUNT )
+HB_FUNC_STATIC(QPRINTER_SETCOPYCOUNT)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QPRINTER_SETCOPYCOUNT )
 /*
 QString creator() const
 */
-HB_FUNC_STATIC( QPRINTER_CREATOR )
+HB_FUNC_STATIC(QPRINTER_CREATOR)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -365,9 +365,9 @@ HB_FUNC_STATIC( QPRINTER_CREATOR )
 }
 
 /*
-void setCreator( const QString & creator )
+void setCreator(const QString & creator)
 */
-HB_FUNC_STATIC( QPRINTER_SETCREATOR )
+HB_FUNC_STATIC(QPRINTER_SETCREATOR)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QPRINTER_SETCREATOR )
 /*
 QString docName() const
 */
-HB_FUNC_STATIC( QPRINTER_DOCNAME )
+HB_FUNC_STATIC(QPRINTER_DOCNAME)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -415,9 +415,9 @@ HB_FUNC_STATIC( QPRINTER_DOCNAME )
 }
 
 /*
-void setDocName( const QString & name )
+void setDocName(const QString & name)
 */
-HB_FUNC_STATIC( QPRINTER_SETDOCNAME )
+HB_FUNC_STATIC(QPRINTER_SETDOCNAME)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QPRINTER_SETDOCNAME )
 /*
 bool doubleSidedPrinting() const
 */
-HB_FUNC_STATIC( QPRINTER_DOUBLESIDEDPRINTING )
+HB_FUNC_STATIC(QPRINTER_DOUBLESIDEDPRINTING)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -465,9 +465,9 @@ HB_FUNC_STATIC( QPRINTER_DOUBLESIDEDPRINTING )
 }
 
 /*
-void setDoubleSidedPrinting( bool doubleSided )
+void setDoubleSidedPrinting(bool doubleSided)
 */
-HB_FUNC_STATIC( QPRINTER_SETDOUBLESIDEDPRINTING )
+HB_FUNC_STATIC(QPRINTER_SETDOUBLESIDEDPRINTING)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QPRINTER_SETDOUBLESIDEDPRINTING )
 /*
 QPrinter::DuplexMode duplex() const
 */
-HB_FUNC_STATIC( QPRINTER_DUPLEX )
+HB_FUNC_STATIC(QPRINTER_DUPLEX)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -515,9 +515,9 @@ HB_FUNC_STATIC( QPRINTER_DUPLEX )
 }
 
 /*
-void setDuplex( QPrinter::DuplexMode duplex )
+void setDuplex(QPrinter::DuplexMode duplex)
 */
-HB_FUNC_STATIC( QPRINTER_SETDUPLEX )
+HB_FUNC_STATIC(QPRINTER_SETDUPLEX)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QPRINTER_SETDUPLEX )
 /*
 bool fontEmbeddingEnabled() const
 */
-HB_FUNC_STATIC( QPRINTER_FONTEMBEDDINGENABLED )
+HB_FUNC_STATIC(QPRINTER_FONTEMBEDDINGENABLED)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -565,9 +565,9 @@ HB_FUNC_STATIC( QPRINTER_FONTEMBEDDINGENABLED )
 }
 
 /*
-void setFontEmbeddingEnabled( bool enable )
+void setFontEmbeddingEnabled(bool enable)
 */
-HB_FUNC_STATIC( QPRINTER_SETFONTEMBEDDINGENABLED )
+HB_FUNC_STATIC(QPRINTER_SETFONTEMBEDDINGENABLED)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QPRINTER_SETFONTEMBEDDINGENABLED )
 /*
 int fromPage() const
 */
-HB_FUNC_STATIC( QPRINTER_FROMPAGE )
+HB_FUNC_STATIC(QPRINTER_FROMPAGE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QPRINTER_FROMPAGE )
 /*
 bool fullPage() const
 */
-HB_FUNC_STATIC( QPRINTER_FULLPAGE )
+HB_FUNC_STATIC(QPRINTER_FULLPAGE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -639,9 +639,9 @@ HB_FUNC_STATIC( QPRINTER_FULLPAGE )
 }
 
 /*
-void setFullPage( bool fp )
+void setFullPage(bool fp)
 */
-HB_FUNC_STATIC( QPRINTER_SETFULLPAGE )
+HB_FUNC_STATIC(QPRINTER_SETFULLPAGE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -665,9 +665,9 @@ HB_FUNC_STATIC( QPRINTER_SETFULLPAGE )
 }
 
 /*
-void getPageMargins( qreal * left, qreal * top, qreal * right, qreal * bottom, QPrinter::Unit unit ) const
+void getPageMargins(qreal * left, qreal * top, qreal * right, qreal * bottom, QPrinter::Unit unit) const
 */
-HB_FUNC_STATIC( QPRINTER_GETPAGEMARGINS )
+HB_FUNC_STATIC(QPRINTER_GETPAGEMARGINS)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QPRINTER_GETPAGEMARGINS )
       qreal par2;
       qreal par3;
       qreal par4;
-      obj->getPageMargins( &par1, &par2, &par3, &par4, static_cast<QPrinter::Unit>(hb_parni(5)));
+      obj->getPageMargins(&par1, &par2, &par3, &par4, static_cast<QPrinter::Unit>(hb_parni(5)));
       hb_stornd(par1, 1);
       hb_stornd(par2, 2);
       hb_stornd(par3, 3);
@@ -698,12 +698,12 @@ HB_FUNC_STATIC( QPRINTER_GETPAGEMARGINS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QPRINTER_SETPAGEMARGINS )
+HB_FUNC_STATIC(QPRINTER_SETPAGEMARGINS)
 {
   if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
     /*
-    void setPageMargins( qreal left, qreal top, qreal right, qreal bottom, QPrinter::Unit unit )
+    void setPageMargins(qreal left, qreal top, qreal right, qreal bottom, QPrinter::Unit unit)
     */
     auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -718,7 +718,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAGEMARGINS )
   else if (ISNUMPAR(2) && ISQMARGINSF(1) && HB_ISNUM(2))
   {
     /*
-    bool setPageMargins( const QMarginsF & margins, QPageLayout::Unit units )
+    bool setPageMargins(const QMarginsF & margins, QPageLayout::Unit units)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAGEMARGINS )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QPRINTER_ISVALID )
+HB_FUNC_STATIC(QPRINTER_ISVALID)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QPRINTER_ISVALID )
 /*
 bool newPage()
 */
-HB_FUNC_STATIC( QPRINTER_NEWPAGE )
+HB_FUNC_STATIC(QPRINTER_NEWPAGE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -787,7 +787,7 @@ HB_FUNC_STATIC( QPRINTER_NEWPAGE )
 /*
 QPrinter::Orientation orientation() const
 */
-HB_FUNC_STATIC( QPRINTER_ORIENTATION )
+HB_FUNC_STATIC(QPRINTER_ORIENTATION)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -809,9 +809,9 @@ HB_FUNC_STATIC( QPRINTER_ORIENTATION )
 }
 
 /*
-void setOrientation( QPrinter::Orientation orientation )
+void setOrientation(QPrinter::Orientation orientation)
 */
-HB_FUNC_STATIC( QPRINTER_SETORIENTATION )
+HB_FUNC_STATIC(QPRINTER_SETORIENTATION)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QPRINTER_SETORIENTATION )
 /*
 QString outputFileName() const
 */
-HB_FUNC_STATIC( QPRINTER_OUTPUTFILENAME )
+HB_FUNC_STATIC(QPRINTER_OUTPUTFILENAME)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -859,9 +859,9 @@ HB_FUNC_STATIC( QPRINTER_OUTPUTFILENAME )
 }
 
 /*
-void setOutputFileName( const QString & fileName )
+void setOutputFileName(const QString & fileName)
 */
-HB_FUNC_STATIC( QPRINTER_SETOUTPUTFILENAME )
+HB_FUNC_STATIC(QPRINTER_SETOUTPUTFILENAME)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -887,7 +887,7 @@ HB_FUNC_STATIC( QPRINTER_SETOUTPUTFILENAME )
 /*
 QPrinter::OutputFormat outputFormat() const
 */
-HB_FUNC_STATIC( QPRINTER_OUTPUTFORMAT )
+HB_FUNC_STATIC(QPRINTER_OUTPUTFORMAT)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -909,9 +909,9 @@ HB_FUNC_STATIC( QPRINTER_OUTPUTFORMAT )
 }
 
 /*
-void setOutputFormat( QPrinter::OutputFormat format )
+void setOutputFormat(QPrinter::OutputFormat format)
 */
-HB_FUNC_STATIC( QPRINTER_SETOUTPUTFORMAT )
+HB_FUNC_STATIC(QPRINTER_SETOUTPUTFORMAT)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -937,7 +937,7 @@ HB_FUNC_STATIC( QPRINTER_SETOUTPUTFORMAT )
 /*
 QPrinter::PageOrder pageOrder() const
 */
-HB_FUNC_STATIC( QPRINTER_PAGEORDER )
+HB_FUNC_STATIC(QPRINTER_PAGEORDER)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -959,9 +959,9 @@ HB_FUNC_STATIC( QPRINTER_PAGEORDER )
 }
 
 /*
-void setPageOrder( QPrinter::PageOrder pageOrder )
+void setPageOrder(QPrinter::PageOrder pageOrder)
 */
-HB_FUNC_STATIC( QPRINTER_SETPAGEORDER )
+HB_FUNC_STATIC(QPRINTER_SETPAGEORDER)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -984,7 +984,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAGEORDER )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QPRINTER_PAGERECT )
+HB_FUNC_STATIC(QPRINTER_PAGERECT)
 {
   if (ISNUMPAR(0))
   {
@@ -1003,7 +1003,7 @@ HB_FUNC_STATIC( QPRINTER_PAGERECT )
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QRectF pageRect( QPrinter::Unit unit ) const
+    QRectF pageRect(QPrinter::Unit unit) const
     */
     auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC( QPRINTER_PAGERECT )
   }
 }
 
-HB_FUNC_STATIC( QPRINTER_PAPERRECT )
+HB_FUNC_STATIC(QPRINTER_PAPERRECT)
 {
   if (ISNUMPAR(0))
   {
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC( QPRINTER_PAPERRECT )
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QRectF paperRect( QPrinter::Unit unit ) const
+    QRectF paperRect(QPrinter::Unit unit) const
     */
     auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1056,7 +1056,7 @@ HB_FUNC_STATIC( QPRINTER_PAPERRECT )
   }
 }
 
-HB_FUNC_STATIC( QPRINTER_PAPERSIZE )
+HB_FUNC_STATIC(QPRINTER_PAPERSIZE)
 {
   if (ISNUMPAR(0))
   {
@@ -1074,7 +1074,7 @@ HB_FUNC_STATIC( QPRINTER_PAPERSIZE )
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QSizeF paperSize( QPrinter::Unit unit ) const
+    QSizeF paperSize(QPrinter::Unit unit) const
     */
     auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC( QPRINTER_PAPERSIZE )
 /*
 QPrinter::PaperSource paperSource() const
 */
-HB_FUNC_STATIC( QPRINTER_PAPERSOURCE )
+HB_FUNC_STATIC(QPRINTER_PAPERSOURCE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1116,9 +1116,9 @@ HB_FUNC_STATIC( QPRINTER_PAPERSOURCE )
 }
 
 /*
-void setPaperSource( QPrinter::PaperSource source )
+void setPaperSource(QPrinter::PaperSource source)
 */
-HB_FUNC_STATIC( QPRINTER_SETPAPERSOURCE )
+HB_FUNC_STATIC(QPRINTER_SETPAPERSOURCE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1144,7 +1144,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAPERSOURCE )
 /*
 QPrintEngine * printEngine() const
 */
-HB_FUNC_STATIC( QPRINTER_PRINTENGINE )
+HB_FUNC_STATIC(QPRINTER_PRINTENGINE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1169,7 +1169,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTENGINE )
 /*
 QString printProgram() const
 */
-HB_FUNC_STATIC( QPRINTER_PRINTPROGRAM )
+HB_FUNC_STATIC(QPRINTER_PRINTPROGRAM)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1191,9 +1191,9 @@ HB_FUNC_STATIC( QPRINTER_PRINTPROGRAM )
 }
 
 /*
-void setPrintProgram( const QString & printProg )
+void setPrintProgram(const QString & printProg)
 */
-HB_FUNC_STATIC( QPRINTER_SETPRINTPROGRAM )
+HB_FUNC_STATIC(QPRINTER_SETPRINTPROGRAM)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1219,7 +1219,7 @@ HB_FUNC_STATIC( QPRINTER_SETPRINTPROGRAM )
 /*
 QPrinter::PrintRange printRange() const
 */
-HB_FUNC_STATIC( QPRINTER_PRINTRANGE )
+HB_FUNC_STATIC(QPRINTER_PRINTRANGE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1241,9 +1241,9 @@ HB_FUNC_STATIC( QPRINTER_PRINTRANGE )
 }
 
 /*
-void setPrintRange( QPrinter::PrintRange range )
+void setPrintRange(QPrinter::PrintRange range)
 */
-HB_FUNC_STATIC( QPRINTER_SETPRINTRANGE )
+HB_FUNC_STATIC(QPRINTER_SETPRINTRANGE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1269,7 +1269,7 @@ HB_FUNC_STATIC( QPRINTER_SETPRINTRANGE )
 /*
 QString printerName() const
 */
-HB_FUNC_STATIC( QPRINTER_PRINTERNAME )
+HB_FUNC_STATIC(QPRINTER_PRINTERNAME)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1291,9 +1291,9 @@ HB_FUNC_STATIC( QPRINTER_PRINTERNAME )
 }
 
 /*
-void setPrinterName( const QString & name )
+void setPrinterName(const QString & name)
 */
-HB_FUNC_STATIC( QPRINTER_SETPRINTERNAME )
+HB_FUNC_STATIC(QPRINTER_SETPRINTERNAME)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1319,7 +1319,7 @@ HB_FUNC_STATIC( QPRINTER_SETPRINTERNAME )
 /*
 QString printerSelectionOption () const
 */
-HB_FUNC_STATIC( QPRINTER_PRINTERSELECTIONOPTION )
+HB_FUNC_STATIC(QPRINTER_PRINTERSELECTIONOPTION)
 {
 #if !defined(Q_OS_WIN) 
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1345,7 +1345,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTERSELECTIONOPTION )
 /*
 QPrinter::PrinterState printerState() const
 */
-HB_FUNC_STATIC( QPRINTER_PRINTERSTATE )
+HB_FUNC_STATIC(QPRINTER_PRINTERSTATE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1369,7 +1369,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTERSTATE )
 /*
 int resolution() const
 */
-HB_FUNC_STATIC( QPRINTER_RESOLUTION )
+HB_FUNC_STATIC(QPRINTER_RESOLUTION)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1391,9 +1391,9 @@ HB_FUNC_STATIC( QPRINTER_RESOLUTION )
 }
 
 /*
-void setResolution( int dpi )
+void setResolution(int dpi)
 */
-HB_FUNC_STATIC( QPRINTER_SETRESOLUTION )
+HB_FUNC_STATIC(QPRINTER_SETRESOLUTION)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1417,9 +1417,9 @@ HB_FUNC_STATIC( QPRINTER_SETRESOLUTION )
 }
 
 /*
-void setFromTo( int from, int to )
+void setFromTo(int from, int to)
 */
-HB_FUNC_STATIC( QPRINTER_SETFROMTO )
+HB_FUNC_STATIC(QPRINTER_SETFROMTO)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1442,12 +1442,12 @@ HB_FUNC_STATIC( QPRINTER_SETFROMTO )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE )
+HB_FUNC_STATIC(QPRINTER_SETPAPERSIZE)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void setPaperSize( QPrinter::PaperSize newPaperSize )
+    void setPaperSize(QPrinter::PaperSize newPaperSize)
     */
     auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1462,7 +1462,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE )
   else if (ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2))
   {
     /*
-    void setPaperSize( const QSizeF & paperSize, QPrinter::Unit unit )
+    void setPaperSize(const QSizeF & paperSize, QPrinter::Unit unit)
     */
     auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1481,9 +1481,9 @@ HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE )
 }
 
 /*
-void setPrinterSelectionOption ( const QString & option )
+void setPrinterSelectionOption (const QString & option)
 */
-HB_FUNC_STATIC( QPRINTER_SETPRINTERSELECTIONOPTION )
+HB_FUNC_STATIC(QPRINTER_SETPRINTERSELECTIONOPTION)
 {
 #if !defined(Q_OS_WIN) 
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1509,9 +1509,9 @@ HB_FUNC_STATIC( QPRINTER_SETPRINTERSELECTIONOPTION )
 }
 
 /*
-void setWinPageSize ( int pageSize )
+void setWinPageSize (int pageSize)
 */
-HB_FUNC_STATIC( QPRINTER_SETWINPAGESIZE )
+HB_FUNC_STATIC(QPRINTER_SETWINPAGESIZE)
 {
 #ifdef Q_OS_WIN
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1539,7 +1539,7 @@ HB_FUNC_STATIC( QPRINTER_SETWINPAGESIZE )
 /*
 QList<PaperSource> supportedPaperSources () const
 */
-HB_FUNC_STATIC( QPRINTER_SUPPORTEDPAPERSOURCES )
+HB_FUNC_STATIC(QPRINTER_SUPPORTEDPAPERSOURCES)
 {
 #ifdef Q_OS_WIN
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1573,7 +1573,7 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTEDPAPERSOURCES )
 /*
 QList<int> supportedResolutions() const
 */
-HB_FUNC_STATIC( QPRINTER_SUPPORTEDRESOLUTIONS )
+HB_FUNC_STATIC(QPRINTER_SUPPORTEDRESOLUTIONS)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1584,7 +1584,7 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTEDRESOLUTIONS )
     {
 #endif
       auto list = obj->supportedResolutions();
-      Qt5xHb::convert_qlist_int_to_array( list);
+      Qt5xHb::convert_qlist_int_to_array(list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1598,7 +1598,7 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTEDRESOLUTIONS )
 /*
 bool supportsMultipleCopies() const
 */
-HB_FUNC_STATIC( QPRINTER_SUPPORTSMULTIPLECOPIES )
+HB_FUNC_STATIC(QPRINTER_SUPPORTSMULTIPLECOPIES)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1622,7 +1622,7 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTSMULTIPLECOPIES )
 /*
 int toPage() const
 */
-HB_FUNC_STATIC( QPRINTER_TOPAGE )
+HB_FUNC_STATIC(QPRINTER_TOPAGE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1646,7 +1646,7 @@ HB_FUNC_STATIC( QPRINTER_TOPAGE )
 /*
 int winPageSize () const
 */
-HB_FUNC_STATIC( QPRINTER_WINPAGESIZE )
+HB_FUNC_STATIC(QPRINTER_WINPAGESIZE)
 {
 #ifdef Q_OS_WIN
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1672,7 +1672,7 @@ HB_FUNC_STATIC( QPRINTER_WINPAGESIZE )
 /*
 QPaintEngine * paintEngine() const
 */
-HB_FUNC_STATIC( QPRINTER_PAINTENGINE )
+HB_FUNC_STATIC(QPRINTER_PAINTENGINE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1697,7 +1697,7 @@ HB_FUNC_STATIC( QPRINTER_PAINTENGINE )
 /*
 int devType() const
 */
-HB_FUNC_STATIC( QPRINTER_DEVTYPE )
+HB_FUNC_STATIC(QPRINTER_DEVTYPE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1721,7 +1721,7 @@ HB_FUNC_STATIC( QPRINTER_DEVTYPE )
 /*
 QPrinter::PageSize pageSize() const
 */
-HB_FUNC_STATIC( QPRINTER_PAGESIZE )
+HB_FUNC_STATIC(QPRINTER_PAGESIZE)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1742,12 +1742,12 @@ HB_FUNC_STATIC( QPRINTER_PAGESIZE )
   }
 }
 
-HB_FUNC_STATIC( QPRINTER_SETPAGESIZE )
+HB_FUNC_STATIC(QPRINTER_SETPAGESIZE)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void setPageSize( QPrinter::PageSize )
+    void setPageSize(QPrinter::PageSize)
     */
     auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1762,7 +1762,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAGESIZE )
   else if (ISNUMPAR(1) && ISQPAGESIZE(1))
   {
     /*
-    bool setPageSize( const QPageSize & pageSize )
+    bool setPageSize(const QPageSize & pageSize)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1781,9 +1781,9 @@ HB_FUNC_STATIC( QPRINTER_SETPAGESIZE )
 }
 
 /*
-void setPageSizeMM( const QSizeF & size )
+void setPageSizeMM(const QSizeF & size)
 */
-HB_FUNC_STATIC( QPRINTER_SETPAGESIZEMM )
+HB_FUNC_STATIC(QPRINTER_SETPAGESIZEMM)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1809,7 +1809,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAGESIZEMM )
 /*
 QString paperName() const
 */
-HB_FUNC_STATIC( QPRINTER_PAPERNAME )
+HB_FUNC_STATIC(QPRINTER_PAPERNAME)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1831,9 +1831,9 @@ HB_FUNC_STATIC( QPRINTER_PAPERNAME )
 }
 
 /*
-void setPaperName( const QString & paperName )
+void setPaperName(const QString & paperName)
 */
-HB_FUNC_STATIC( QPRINTER_SETPAPERNAME )
+HB_FUNC_STATIC(QPRINTER_SETPAPERNAME)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1859,7 +1859,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAPERNAME )
 /*
 int numCopies() const
 */
-HB_FUNC_STATIC( QPRINTER_NUMCOPIES )
+HB_FUNC_STATIC(QPRINTER_NUMCOPIES)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1881,9 +1881,9 @@ HB_FUNC_STATIC( QPRINTER_NUMCOPIES )
 }
 
 /*
-void setNumCopies( int )
+void setNumCopies(int)
 */
-HB_FUNC_STATIC( QPRINTER_SETNUMCOPIES )
+HB_FUNC_STATIC(QPRINTER_SETNUMCOPIES)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1909,7 +1909,7 @@ HB_FUNC_STATIC( QPRINTER_SETNUMCOPIES )
 /*
 int actualNumCopies() const
 */
-HB_FUNC_STATIC( QPRINTER_ACTUALNUMCOPIES )
+HB_FUNC_STATIC(QPRINTER_ACTUALNUMCOPIES)
 {
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1933,7 +1933,7 @@ HB_FUNC_STATIC( QPRINTER_ACTUALNUMCOPIES )
 /*
 QPageLayout pageLayout() const
 */
-HB_FUNC_STATIC( QPRINTER_PAGELAYOUT )
+HB_FUNC_STATIC(QPRINTER_PAGELAYOUT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1960,7 +1960,7 @@ HB_FUNC_STATIC( QPRINTER_PAGELAYOUT )
 /*
 QPagedPaintDevice::PdfVersion pdfVersion() const
 */
-HB_FUNC_STATIC( QPRINTER_PDFVERSION )
+HB_FUNC_STATIC(QPRINTER_PDFVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1984,9 +1984,9 @@ HB_FUNC_STATIC( QPRINTER_PDFVERSION )
 }
 
 /*
-bool setPageLayout( const QPageLayout & newLayout )
+bool setPageLayout(const QPageLayout & newLayout)
 */
-HB_FUNC_STATIC( QPRINTER_SETPAGELAYOUT )
+HB_FUNC_STATIC(QPRINTER_SETPAGELAYOUT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -2010,9 +2010,9 @@ HB_FUNC_STATIC( QPRINTER_SETPAGELAYOUT )
 }
 
 /*
-bool setPageOrientation( QPageLayout::Orientation orientation )
+bool setPageOrientation(QPageLayout::Orientation orientation)
 */
-HB_FUNC_STATIC( QPRINTER_SETPAGEORIENTATION )
+HB_FUNC_STATIC(QPRINTER_SETPAGEORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -2036,9 +2036,9 @@ HB_FUNC_STATIC( QPRINTER_SETPAGEORIENTATION )
 }
 
 /*
-void setPdfVersion( QPagedPaintDevice::PdfVersion version )
+void setPdfVersion(QPagedPaintDevice::PdfVersion version)
 */
-HB_FUNC_STATIC( QPRINTER_SETPDFVERSION )
+HB_FUNC_STATIC(QPRINTER_SETPDFVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QPrinter*>(Qt5xHb::itemGetPtrStackSelfItem());
