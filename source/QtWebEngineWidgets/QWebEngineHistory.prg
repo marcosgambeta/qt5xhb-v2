@@ -76,7 +76,7 @@ RETURN
 /*
 void clear()
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_CLEAR )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QWebEngineHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CLEAR )
 /*
 QList<QWebEngineHistoryItem> items() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMS )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_ITEMS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QWebEngineHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -154,9 +154,9 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMS )
 }
 
 /*
-QList<QWebEngineHistoryItem> backItems( int maxItems ) const
+QList<QWebEngineHistoryItem> backItems(int maxItems) const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEMS )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_BACKITEMS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QWebEngineHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -206,9 +206,9 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEMS )
 }
 
 /*
-QList<QWebEngineHistoryItem> forwardItems( int maxItems ) const
+QList<QWebEngineHistoryItem> forwardItems(int maxItems) const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEMS )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARDITEMS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QWebEngineHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEMS )
 /*
 bool canGoBack() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_CANGOBACK )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_CANGOBACK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QWebEngineHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CANGOBACK )
 /*
 bool canGoForward() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_CANGOFORWARD )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_CANGOFORWARD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QWebEngineHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CANGOFORWARD )
 /*
 void back()
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_BACK )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_BACK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QWebEngineHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACK )
 /*
 void forward()
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARD )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QWebEngineHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -366,9 +366,9 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARD )
 }
 
 /*
-void goToItem( const QWebEngineHistoryItem & item )
+void goToItem(const QWebEngineHistoryItem & item)
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_GOTOITEM )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_GOTOITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QWebEngineHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_GOTOITEM )
 /*
 QWebEngineHistoryItem backItem() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEM )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_BACKITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QWebEngineHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEM )
 /*
 QWebEngineHistoryItem currentItem() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEM )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_CURRENTITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QWebEngineHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEM )
 /*
 QWebEngineHistoryItem forwardItem() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEM )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARDITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QWebEngineHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -475,9 +475,9 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEM )
 }
 
 /*
-QWebEngineHistoryItem itemAt( int i ) const
+QWebEngineHistoryItem itemAt(int i) const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMAT )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_ITEMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QWebEngineHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMAT )
 /*
 int currentItemIndex() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEMINDEX )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_CURRENTITEMINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QWebEngineHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEMINDEX )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORY_COUNT )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = static_cast<QWebEngineHistory*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_COUNT )
 #endif
 }
 
-HB_FUNC_STATIC( QWEBENGINEHISTORY_NEWFROM )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -583,22 +583,22 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QWEBENGINEHISTORY_NEWFROMOBJECT )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QWEBENGINEHISTORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBENGINEHISTORY_NEWFROMPOINTER )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QWEBENGINEHISTORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBENGINEHISTORY_SELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QWEBENGINEHISTORY_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBENGINEHISTORY_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

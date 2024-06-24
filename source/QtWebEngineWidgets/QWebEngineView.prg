@@ -89,14 +89,14 @@ RETURN
 #include <QtWidgets/QAction>
 
 /*
-QWebEngineView( QWidget * parent = nullptr )
+QWebEngineView(QWidget * parent = nullptr)
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_NEW )
+HB_FUNC_STATIC(QWEBENGINEVIEW_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QWebEngineView( OPQWIDGET( 1, nullptr));
+    auto obj = new QWebEngineView(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QWEBENGINEVIEW_DELETE )
+HB_FUNC_STATIC(QWEBENGINEVIEW_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_DELETE )
 /*
 QWebEnginePage * page() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_PAGE )
+HB_FUNC_STATIC(QWEBENGINEVIEW_PAGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -154,9 +154,9 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGE )
 }
 
 /*
-void setPage( QWebEnginePage * page )
+void setPage(QWebEnginePage * page)
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_SETPAGE )
+HB_FUNC_STATIC(QWEBENGINEVIEW_SETPAGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -182,9 +182,9 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETPAGE )
 }
 
 /*
-void load( const QUrl & url )
+void load(const QUrl & url)
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_LOAD )
+HB_FUNC_STATIC(QWEBENGINEVIEW_LOAD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -210,9 +210,9 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_LOAD )
 }
 
 /*
-void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
+void setHtml(const QString & html, const QUrl & baseUrl = QUrl())
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_SETHTML )
+HB_FUNC_STATIC(QWEBENGINEVIEW_SETHTML)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -238,9 +238,9 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETHTML )
 }
 
 /*
-void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
+void setContent(const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl())
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_SETCONTENT )
+HB_FUNC_STATIC(QWEBENGINEVIEW_SETCONTENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETCONTENT )
     if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQURL(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString() ), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(3)));
+      obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETCONTENT )
 /*
 QWebEngineHistory * history() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_HISTORY )
+HB_FUNC_STATIC(QWEBENGINEVIEW_HISTORY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_HISTORY )
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_TITLE )
+HB_FUNC_STATIC(QWEBENGINEVIEW_TITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_TITLE )
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_URL )
+HB_FUNC_STATIC(QWEBENGINEVIEW_URL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -346,9 +346,9 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_URL )
 }
 
 /*
-void setUrl( const QUrl & url )
+void setUrl(const QUrl & url)
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_SETURL )
+HB_FUNC_STATIC(QWEBENGINEVIEW_SETURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETURL )
 /*
 QUrl iconUrl() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_ICONURL )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ICONURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ICONURL )
 /*
 bool hasSelection() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_HASSELECTION )
+HB_FUNC_STATIC(QWEBENGINEVIEW_HASSELECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_HASSELECTION )
 /*
 QString selectedText() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_SELECTEDTEXT )
+HB_FUNC_STATIC(QWEBENGINEVIEW_SELECTEDTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SELECTEDTEXT )
 /*
 QAction* pageAction(QWebEnginePage::WebAction action) const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_PAGEACTION )
+HB_FUNC_STATIC(QWEBENGINEVIEW_PAGEACTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 #ifndef QT_NO_ACTION
@@ -482,9 +482,9 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGEACTION )
 }
 
 /*
-void triggerPageAction( QWebEnginePage::WebAction action, bool checked = false )
+void triggerPageAction(QWebEnginePage::WebAction action, bool checked = false)
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_TRIGGERPAGEACTION )
+HB_FUNC_STATIC(QWEBENGINEVIEW_TRIGGERPAGEACTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_TRIGGERPAGEACTION )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->triggerPageAction(static_cast<QWebEnginePage::WebAction>(hb_parni(1)), OPBOOL( 2, false));
+      obj->triggerPageAction(static_cast<QWebEnginePage::WebAction>(hb_parni(1)), OPBOOL(2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_TRIGGERPAGEACTION )
 /*
 qreal zoomFactor() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_ZOOMFACTOR )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ZOOMFACTOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -536,9 +536,9 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ZOOMFACTOR )
 }
 
 /*
-void setZoomFactor( qreal factor )
+void setZoomFactor(qreal factor)
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_SETZOOMFACTOR )
+HB_FUNC_STATIC(QWEBENGINEVIEW_SETZOOMFACTOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETZOOMFACTOR )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_SIZEHINT )
+HB_FUNC_STATIC(QWEBENGINEVIEW_SIZEHINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SIZEHINT )
 /*
 void stop()
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_STOP )
+HB_FUNC_STATIC(QWEBENGINEVIEW_STOP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_STOP )
 /*
 void back()
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_BACK )
+HB_FUNC_STATIC(QWEBENGINEVIEW_BACK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_BACK )
 /*
 void forward()
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_FORWARD )
+HB_FUNC_STATIC(QWEBENGINEVIEW_FORWARD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_FORWARD )
 /*
 void reload()
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_RELOAD )
+HB_FUNC_STATIC(QWEBENGINEVIEW_RELOAD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_RELOAD )
 /*
 void loadStarted()
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADSTARTED )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ONLOADSTARTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -755,9 +755,9 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADSTARTED )
 }
 
 /*
-void loadProgress( int progress )
+void loadProgress(int progress)
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADPROGRESS )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ONLOADPROGRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -809,9 +809,9 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADPROGRESS )
 }
 
 /*
-void loadFinished( bool b )
+void loadFinished(bool b)
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADFINISHED )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ONLOADFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -863,9 +863,9 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADFINISHED )
 }
 
 /*
-void titleChanged( const QString & title )
+void titleChanged(const QString & title)
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_ONTITLECHANGED )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ONTITLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -919,7 +919,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONTITLECHANGED )
 /*
 void selectionChanged()
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_ONSELECTIONCHANGED )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ONSELECTIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -969,9 +969,9 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONSELECTIONCHANGED )
 }
 
 /*
-void urlChanged( const QUrl & url )
+void urlChanged(const QUrl & url)
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_ONURLCHANGED )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ONURLCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -996,7 +996,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONURLCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBENGINEVIEW");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1023,9 +1023,9 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONURLCHANGED )
 }
 
 /*
-void iconUrlChanged( const QUrl & url )
+void iconUrlChanged(const QUrl & url)
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_ONICONURLCHANGED )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ONICONURLCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto sender = qobject_cast<QWebEngineView*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ONICONURLCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBENGINEVIEW");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
