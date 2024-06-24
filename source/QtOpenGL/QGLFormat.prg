@@ -109,7 +109,7 @@ RETURN
 #include <QtOpenGL/QGLFormat>
 #endif
 
-HB_FUNC_STATIC( QGLFORMAT_NEW )
+HB_FUNC_STATIC(QGLFORMAT_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -123,16 +123,16 @@ HB_FUNC_STATIC( QGLFORMAT_NEW )
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QGLFormat( QGL::FormatOptions options, int plane = 0 )
+    QGLFormat(QGL::FormatOptions options, int plane = 0)
     */
-    auto obj = new QGLFormat(static_cast<QGL::FormatOptions>(hb_parni(1)), OPINT( 2, 0));
+    auto obj = new QGLFormat(static_cast<QGL::FormatOptions>(hb_parni(1)), OPINT(2, 0));
     Qt5xHb::returnNewObject(obj, true);
 
   }
   else if (ISNUMPAR(1) && ISQGLFORMAT(1))
   {
     /*
-    QGLFormat( const QGLFormat & other )
+    QGLFormat(const QGLFormat & other)
     */
     auto obj = new QGLFormat(*PQGLFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QGLFORMAT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGLFORMAT_DELETE )
+HB_FUNC_STATIC(QGLFORMAT_DELETE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QGLFORMAT_DELETE )
 /*
 bool accum() const
 */
-HB_FUNC_STATIC( QGLFORMAT_ACCUM )
+HB_FUNC_STATIC(QGLFORMAT_ACCUM)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QGLFORMAT_ACCUM )
 /*
 int accumBufferSize() const
 */
-HB_FUNC_STATIC( QGLFORMAT_ACCUMBUFFERSIZE )
+HB_FUNC_STATIC(QGLFORMAT_ACCUMBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QGLFORMAT_ACCUMBUFFERSIZE )
 /*
 bool alpha() const
 */
-HB_FUNC_STATIC( QGLFORMAT_ALPHA )
+HB_FUNC_STATIC(QGLFORMAT_ALPHA)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QGLFORMAT_ALPHA )
 /*
 int alphaBufferSize() const
 */
-HB_FUNC_STATIC( QGLFORMAT_ALPHABUFFERSIZE )
+HB_FUNC_STATIC(QGLFORMAT_ALPHABUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QGLFORMAT_ALPHABUFFERSIZE )
 /*
 int blueBufferSize() const
 */
-HB_FUNC_STATIC( QGLFORMAT_BLUEBUFFERSIZE )
+HB_FUNC_STATIC(QGLFORMAT_BLUEBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QGLFORMAT_BLUEBUFFERSIZE )
 /*
 bool depth() const
 */
-HB_FUNC_STATIC( QGLFORMAT_DEPTH )
+HB_FUNC_STATIC(QGLFORMAT_DEPTH)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QGLFORMAT_DEPTH )
 /*
 int depthBufferSize() const
 */
-HB_FUNC_STATIC( QGLFORMAT_DEPTHBUFFERSIZE )
+HB_FUNC_STATIC(QGLFORMAT_DEPTHBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QGLFORMAT_DEPTHBUFFERSIZE )
 /*
 bool directRendering() const
 */
-HB_FUNC_STATIC( QGLFORMAT_DIRECTRENDERING )
+HB_FUNC_STATIC(QGLFORMAT_DIRECTRENDERING)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QGLFORMAT_DIRECTRENDERING )
 /*
 bool doubleBuffer() const
 */
-HB_FUNC_STATIC( QGLFORMAT_DOUBLEBUFFER )
+HB_FUNC_STATIC(QGLFORMAT_DOUBLEBUFFER)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QGLFORMAT_DOUBLEBUFFER )
 /*
 int greenBufferSize() const
 */
-HB_FUNC_STATIC( QGLFORMAT_GREENBUFFERSIZE )
+HB_FUNC_STATIC(QGLFORMAT_GREENBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QGLFORMAT_GREENBUFFERSIZE )
 /*
 bool hasOverlay() const
 */
-HB_FUNC_STATIC( QGLFORMAT_HASOVERLAY )
+HB_FUNC_STATIC(QGLFORMAT_HASOVERLAY)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QGLFORMAT_HASOVERLAY )
 /*
 int majorVersion() const
 */
-HB_FUNC_STATIC( QGLFORMAT_MAJORVERSION )
+HB_FUNC_STATIC(QGLFORMAT_MAJORVERSION)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QGLFORMAT_MAJORVERSION )
 /*
 int minorVersion() const
 */
-HB_FUNC_STATIC( QGLFORMAT_MINORVERSION )
+HB_FUNC_STATIC(QGLFORMAT_MINORVERSION)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QGLFORMAT_MINORVERSION )
 /*
 int plane() const
 */
-HB_FUNC_STATIC( QGLFORMAT_PLANE )
+HB_FUNC_STATIC(QGLFORMAT_PLANE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QGLFORMAT_PLANE )
 /*
 QGLFormat::OpenGLContextProfile profile() const
 */
-HB_FUNC_STATIC( QGLFORMAT_PROFILE )
+HB_FUNC_STATIC(QGLFORMAT_PROFILE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QGLFORMAT_PROFILE )
 /*
 int redBufferSize() const
 */
-HB_FUNC_STATIC( QGLFORMAT_REDBUFFERSIZE )
+HB_FUNC_STATIC(QGLFORMAT_REDBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QGLFORMAT_REDBUFFERSIZE )
 /*
 bool rgba() const
 */
-HB_FUNC_STATIC( QGLFORMAT_RGBA )
+HB_FUNC_STATIC(QGLFORMAT_RGBA)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QGLFORMAT_RGBA )
 /*
 bool sampleBuffers() const
 */
-HB_FUNC_STATIC( QGLFORMAT_SAMPLEBUFFERS )
+HB_FUNC_STATIC(QGLFORMAT_SAMPLEBUFFERS)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QGLFORMAT_SAMPLEBUFFERS )
 /*
 int samples() const
 */
-HB_FUNC_STATIC( QGLFORMAT_SAMPLES )
+HB_FUNC_STATIC(QGLFORMAT_SAMPLES)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -617,9 +617,9 @@ HB_FUNC_STATIC( QGLFORMAT_SAMPLES )
 }
 
 /*
-void setAccum( bool enable )
+void setAccum(bool enable)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETACCUM )
+HB_FUNC_STATIC(QGLFORMAT_SETACCUM)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -643,9 +643,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETACCUM )
 }
 
 /*
-void setAccumBufferSize( int size )
+void setAccumBufferSize(int size)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETACCUMBUFFERSIZE )
+HB_FUNC_STATIC(QGLFORMAT_SETACCUMBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -669,9 +669,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETACCUMBUFFERSIZE )
 }
 
 /*
-void setAlpha( bool enable )
+void setAlpha(bool enable)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETALPHA )
+HB_FUNC_STATIC(QGLFORMAT_SETALPHA)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -695,9 +695,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETALPHA )
 }
 
 /*
-void setAlphaBufferSize( int size )
+void setAlphaBufferSize(int size)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETALPHABUFFERSIZE )
+HB_FUNC_STATIC(QGLFORMAT_SETALPHABUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -721,9 +721,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETALPHABUFFERSIZE )
 }
 
 /*
-void setBlueBufferSize( int size )
+void setBlueBufferSize(int size)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETBLUEBUFFERSIZE )
+HB_FUNC_STATIC(QGLFORMAT_SETBLUEBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -747,9 +747,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETBLUEBUFFERSIZE )
 }
 
 /*
-void setDepth( bool enable )
+void setDepth(bool enable)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETDEPTH )
+HB_FUNC_STATIC(QGLFORMAT_SETDEPTH)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -773,9 +773,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETDEPTH )
 }
 
 /*
-void setDepthBufferSize( int size )
+void setDepthBufferSize(int size)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETDEPTHBUFFERSIZE )
+HB_FUNC_STATIC(QGLFORMAT_SETDEPTHBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -799,9 +799,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETDEPTHBUFFERSIZE )
 }
 
 /*
-void setDirectRendering( bool enable )
+void setDirectRendering(bool enable)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETDIRECTRENDERING )
+HB_FUNC_STATIC(QGLFORMAT_SETDIRECTRENDERING)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -825,9 +825,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETDIRECTRENDERING )
 }
 
 /*
-void setDoubleBuffer( bool enable )
+void setDoubleBuffer(bool enable)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETDOUBLEBUFFER )
+HB_FUNC_STATIC(QGLFORMAT_SETDOUBLEBUFFER)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -851,9 +851,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETDOUBLEBUFFER )
 }
 
 /*
-void setGreenBufferSize( int size )
+void setGreenBufferSize(int size)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETGREENBUFFERSIZE )
+HB_FUNC_STATIC(QGLFORMAT_SETGREENBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -877,9 +877,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETGREENBUFFERSIZE )
 }
 
 /*
-void setOption( QGL::FormatOptions opt )
+void setOption(QGL::FormatOptions opt)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETOPTION )
+HB_FUNC_STATIC(QGLFORMAT_SETOPTION)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -903,9 +903,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETOPTION )
 }
 
 /*
-void setOverlay( bool enable )
+void setOverlay(bool enable)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETOVERLAY )
+HB_FUNC_STATIC(QGLFORMAT_SETOVERLAY)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -929,9 +929,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETOVERLAY )
 }
 
 /*
-void setPlane( int plane )
+void setPlane(int plane)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETPLANE )
+HB_FUNC_STATIC(QGLFORMAT_SETPLANE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -955,9 +955,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETPLANE )
 }
 
 /*
-void setProfile( QGLFormat::OpenGLContextProfile profile )
+void setProfile(QGLFormat::OpenGLContextProfile profile)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETPROFILE )
+HB_FUNC_STATIC(QGLFORMAT_SETPROFILE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -981,9 +981,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETPROFILE )
 }
 
 /*
-void setRedBufferSize( int size )
+void setRedBufferSize(int size)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETREDBUFFERSIZE )
+HB_FUNC_STATIC(QGLFORMAT_SETREDBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1007,9 +1007,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETREDBUFFERSIZE )
 }
 
 /*
-void setRgba( bool enable )
+void setRgba(bool enable)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETRGBA )
+HB_FUNC_STATIC(QGLFORMAT_SETRGBA)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1033,9 +1033,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETRGBA )
 }
 
 /*
-void setSampleBuffers( bool enable )
+void setSampleBuffers(bool enable)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETSAMPLEBUFFERS )
+HB_FUNC_STATIC(QGLFORMAT_SETSAMPLEBUFFERS)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1059,9 +1059,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETSAMPLEBUFFERS )
 }
 
 /*
-void setSamples( int numSamples )
+void setSamples(int numSamples)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETSAMPLES )
+HB_FUNC_STATIC(QGLFORMAT_SETSAMPLES)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1085,9 +1085,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETSAMPLES )
 }
 
 /*
-void setStencil( bool enable )
+void setStencil(bool enable)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETSTENCIL )
+HB_FUNC_STATIC(QGLFORMAT_SETSTENCIL)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1111,9 +1111,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETSTENCIL )
 }
 
 /*
-void setStencilBufferSize( int size )
+void setStencilBufferSize(int size)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETSTENCILBUFFERSIZE )
+HB_FUNC_STATIC(QGLFORMAT_SETSTENCILBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1137,9 +1137,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETSTENCILBUFFERSIZE )
 }
 
 /*
-void setStereo( bool enable )
+void setStereo(bool enable)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETSTEREO )
+HB_FUNC_STATIC(QGLFORMAT_SETSTEREO)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1163,9 +1163,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETSTEREO )
 }
 
 /*
-void setSwapInterval( int interval )
+void setSwapInterval(int interval)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETSWAPINTERVAL )
+HB_FUNC_STATIC(QGLFORMAT_SETSWAPINTERVAL)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1189,9 +1189,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETSWAPINTERVAL )
 }
 
 /*
-void setVersion( int major, int minor )
+void setVersion(int major, int minor)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETVERSION )
+HB_FUNC_STATIC(QGLFORMAT_SETVERSION)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1217,7 +1217,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETVERSION )
 /*
 bool stencil() const
 */
-HB_FUNC_STATIC( QGLFORMAT_STENCIL )
+HB_FUNC_STATIC(QGLFORMAT_STENCIL)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1241,7 +1241,7 @@ HB_FUNC_STATIC( QGLFORMAT_STENCIL )
 /*
 int stencilBufferSize() const
 */
-HB_FUNC_STATIC( QGLFORMAT_STENCILBUFFERSIZE )
+HB_FUNC_STATIC(QGLFORMAT_STENCILBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1265,7 +1265,7 @@ HB_FUNC_STATIC( QGLFORMAT_STENCILBUFFERSIZE )
 /*
 bool stereo() const
 */
-HB_FUNC_STATIC( QGLFORMAT_STEREO )
+HB_FUNC_STATIC(QGLFORMAT_STEREO)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1289,7 +1289,7 @@ HB_FUNC_STATIC( QGLFORMAT_STEREO )
 /*
 int swapInterval() const
 */
-HB_FUNC_STATIC( QGLFORMAT_SWAPINTERVAL )
+HB_FUNC_STATIC(QGLFORMAT_SWAPINTERVAL)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1311,9 +1311,9 @@ HB_FUNC_STATIC( QGLFORMAT_SWAPINTERVAL )
 }
 
 /*
-bool testOption( QGL::FormatOptions opt ) const
+bool testOption(QGL::FormatOptions opt) const
 */
-HB_FUNC_STATIC( QGLFORMAT_TESTOPTION )
+HB_FUNC_STATIC(QGLFORMAT_TESTOPTION)
 {
   auto obj = static_cast<QGLFormat*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1337,13 +1337,13 @@ HB_FUNC_STATIC( QGLFORMAT_TESTOPTION )
 /*
 static QGLFormat defaultFormat()
 */
-HB_FUNC_STATIC( QGLFORMAT_DEFAULTFORMAT )
+HB_FUNC_STATIC(QGLFORMAT_DEFAULTFORMAT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    auto ptr = new QGLFormat( QGLFormat::defaultFormat());
+    auto ptr = new QGLFormat(QGLFormat::defaultFormat());
     Qt5xHb::createReturnClass(ptr, "QGLFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -1357,13 +1357,13 @@ HB_FUNC_STATIC( QGLFORMAT_DEFAULTFORMAT )
 /*
 static QGLFormat defaultOverlayFormat()
 */
-HB_FUNC_STATIC( QGLFORMAT_DEFAULTOVERLAYFORMAT )
+HB_FUNC_STATIC(QGLFORMAT_DEFAULTOVERLAYFORMAT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    auto ptr = new QGLFormat( QGLFormat::defaultOverlayFormat());
+    auto ptr = new QGLFormat(QGLFormat::defaultOverlayFormat());
     Qt5xHb::createReturnClass(ptr, "QGLFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -1377,13 +1377,13 @@ HB_FUNC_STATIC( QGLFORMAT_DEFAULTOVERLAYFORMAT )
 /*
 static bool hasOpenGL()
 */
-HB_FUNC_STATIC( QGLFORMAT_HASOPENGL )
+HB_FUNC_STATIC(QGLFORMAT_HASOPENGL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QGLFormat::hasOpenGL());
+    RBOOL(QGLFormat::hasOpenGL());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1396,13 +1396,13 @@ HB_FUNC_STATIC( QGLFORMAT_HASOPENGL )
 /*
 static bool hasOpenGLOverlays()
 */
-HB_FUNC_STATIC( QGLFORMAT_HASOPENGLOVERLAYS )
+HB_FUNC_STATIC(QGLFORMAT_HASOPENGLOVERLAYS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QGLFormat::hasOpenGLOverlays());
+    RBOOL(QGLFormat::hasOpenGLOverlays());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1415,13 +1415,13 @@ HB_FUNC_STATIC( QGLFORMAT_HASOPENGLOVERLAYS )
 /*
 static QGLFormat::OpenGLVersionFlags openGLVersionFlags()
 */
-HB_FUNC_STATIC( QGLFORMAT_OPENGLVERSIONFLAGS )
+HB_FUNC_STATIC(QGLFORMAT_OPENGLVERSIONFLAGS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RENUM( QGLFormat::openGLVersionFlags());
+    RENUM(QGLFormat::openGLVersionFlags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1432,9 +1432,9 @@ HB_FUNC_STATIC( QGLFORMAT_OPENGLVERSIONFLAGS )
 }
 
 /*
-static void setDefaultFormat( const QGLFormat & f )
+static void setDefaultFormat(const QGLFormat & f)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTFORMAT )
+HB_FUNC_STATIC(QGLFORMAT_SETDEFAULTFORMAT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQGLFORMAT(1))
@@ -1453,9 +1453,9 @@ HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTFORMAT )
 }
 
 /*
-static void setDefaultOverlayFormat( const QGLFormat & f )
+static void setDefaultOverlayFormat(const QGLFormat & f)
 */
-HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTOVERLAYFORMAT )
+HB_FUNC_STATIC(QGLFORMAT_SETDEFAULTOVERLAYFORMAT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQGLFORMAT(1))
@@ -1473,7 +1473,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTOVERLAYFORMAT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QGLFORMAT_NEWFROM )
+HB_FUNC_STATIC(QGLFORMAT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -1503,22 +1503,22 @@ HB_FUNC_STATIC( QGLFORMAT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGLFORMAT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGLFORMAT_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QGLFORMAT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGLFORMAT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGLFORMAT_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QGLFORMAT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGLFORMAT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGLFORMAT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGLFORMAT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGLFORMAT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

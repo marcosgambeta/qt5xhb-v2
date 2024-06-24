@@ -77,9 +77,9 @@ RETURN
 #endif
 
 /*
-QGLContext( const QGLFormat & format )
+QGLContext(const QGLFormat & format)
 */
-HB_FUNC_STATIC( QGLCONTEXT_NEW )
+HB_FUNC_STATIC(QGLCONTEXT_NEW)
 {
   if (ISNUMPAR(1) && ISQGLFORMAT(1))
   {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QGLCONTEXT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGLCONTEXT_DELETE )
+HB_FUNC_STATIC(QGLCONTEXT_DELETE)
 {
   auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -108,12 +108,12 @@ HB_FUNC_STATIC( QGLCONTEXT_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
+HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
 {
   if (ISNUMPAR(4) && ISQIMAGE(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    GLuint bindTexture( const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options )
+    GLuint bindTexture(const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options)
     */
     auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    GLuint bindTexture( const QString & fileName )
+    GLuint bindTexture(const QString & fileName)
     */
     auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -139,33 +139,33 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
   else if (ISBETWEEN(1, 3) && ISQIMAGE(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    GLuint bindTexture( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
+    GLuint bindTexture(const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
     */
     auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr)
     {
-      RGLUINT(obj->bindTexture(*PQIMAGE(1), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA )));
+      RGLUINT(obj->bindTexture(*PQIMAGE(1), OPGLENUM(2, GL_TEXTURE_2D), OPGLINT(3, GL_RGBA)));
     }
 
   }
   else if (ISBETWEEN(1, 3) && ISQPIXMAP(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    GLuint bindTexture( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
+    GLuint bindTexture(const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
     */
     auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr)
     {
-      RGLUINT(obj->bindTexture(*PQPIXMAP(1), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA )));
+      RGLUINT(obj->bindTexture(*PQPIXMAP(1), OPGLENUM(2, GL_TEXTURE_2D), OPGLINT(3, GL_RGBA)));
     }
 
   }
   else if (ISNUMPAR(4) && ISQPIXMAP(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    GLuint bindTexture( const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options )
+    GLuint bindTexture(const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options)
     */
     auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -182,9 +182,9 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
 }
 
 /*
-void deleteTexture( GLuint id )
+void deleteTexture(GLuint id)
 */
-HB_FUNC_STATIC( QGLCONTEXT_DELETETEXTURE )
+HB_FUNC_STATIC(QGLCONTEXT_DELETETEXTURE)
 {
   auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DELETETEXTURE )
 /*
 QPaintDevice * device() const
 */
-HB_FUNC_STATIC( QGLCONTEXT_DEVICE )
+HB_FUNC_STATIC(QGLCONTEXT_DEVICE)
 {
   auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DEVICE )
 /*
 virtual void doneCurrent()
 */
-HB_FUNC_STATIC( QGLCONTEXT_DONECURRENT )
+HB_FUNC_STATIC(QGLCONTEXT_DONECURRENT)
 {
   auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -258,18 +258,18 @@ HB_FUNC_STATIC( QGLCONTEXT_DONECURRENT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
+HB_FUNC_STATIC(QGLCONTEXT_DRAWTEXTURE)
 {
   if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    void drawTexture( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+    void drawTexture(const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
     */
     auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr)
     {
-      obj->drawTexture(*PQRECTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
+      obj->drawTexture(*PQRECTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -278,13 +278,13 @@ HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
   else if (ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    void drawTexture( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+    void drawTexture(const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
     */
     auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr)
     {
-      obj->drawTexture(*PQPOINTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D));
+      obj->drawTexture(*PQPOINTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
 /*
 QGLFormat format() const
 */
-HB_FUNC_STATIC( QGLCONTEXT_FORMAT )
+HB_FUNC_STATIC(QGLCONTEXT_FORMAT)
 {
   auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QGLCONTEXT_FORMAT )
 /*
 bool isSharing() const
 */
-HB_FUNC_STATIC( QGLCONTEXT_ISSHARING )
+HB_FUNC_STATIC(QGLCONTEXT_ISSHARING)
 {
   auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ISSHARING )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QGLCONTEXT_ISVALID )
+HB_FUNC_STATIC(QGLCONTEXT_ISVALID)
 {
   auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ISVALID )
 /*
 virtual void makeCurrent()
 */
-HB_FUNC_STATIC( QGLCONTEXT_MAKECURRENT )
+HB_FUNC_STATIC(QGLCONTEXT_MAKECURRENT)
 {
   auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QGLCONTEXT_MAKECURRENT )
 /*
 QColor overlayTransparentColor() const
 */
-HB_FUNC_STATIC( QGLCONTEXT_OVERLAYTRANSPARENTCOLOR )
+HB_FUNC_STATIC(QGLCONTEXT_OVERLAYTRANSPARENTCOLOR)
 {
   auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QGLCONTEXT_OVERLAYTRANSPARENTCOLOR )
 /*
 QGLFormat requestedFormat() const
 */
-HB_FUNC_STATIC( QGLCONTEXT_REQUESTEDFORMAT )
+HB_FUNC_STATIC(QGLCONTEXT_REQUESTEDFORMAT)
 {
   auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QGLCONTEXT_REQUESTEDFORMAT )
 /*
 void reset()
 */
-HB_FUNC_STATIC( QGLCONTEXT_RESET )
+HB_FUNC_STATIC(QGLCONTEXT_RESET)
 {
   auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -472,9 +472,9 @@ HB_FUNC_STATIC( QGLCONTEXT_RESET )
 }
 
 /*
-void setFormat( const QGLFormat & format )
+void setFormat(const QGLFormat & format)
 */
-HB_FUNC_STATIC( QGLCONTEXT_SETFORMAT )
+HB_FUNC_STATIC(QGLCONTEXT_SETFORMAT)
 {
   auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QGLCONTEXT_SETFORMAT )
 /*
 virtual void swapBuffers() const
 */
-HB_FUNC_STATIC( QGLCONTEXT_SWAPBUFFERS )
+HB_FUNC_STATIC(QGLCONTEXT_SWAPBUFFERS)
 {
   auto obj = static_cast<QGLContext*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -524,15 +524,15 @@ HB_FUNC_STATIC( QGLCONTEXT_SWAPBUFFERS )
 }
 
 /*
-static bool areSharing( const QGLContext * context1, const QGLContext * context2 )
+static bool areSharing(const QGLContext * context1, const QGLContext * context2)
 */
-HB_FUNC_STATIC( QGLCONTEXT_ARESHARING )
+HB_FUNC_STATIC(QGLCONTEXT_ARESHARING)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && ISQGLCONTEXT(1) && ISQGLCONTEXT(2))
   {
 #endif
-    RBOOL( QGLContext::areSharing(PQGLCONTEXT(1), PQGLCONTEXT(2)));
+    RBOOL(QGLContext::areSharing(PQGLCONTEXT(1), PQGLCONTEXT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ARESHARING )
 /*
 static const QGLContext * currentContext()
 */
-HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
+HB_FUNC_STATIC(QGLCONTEXT_CURRENTCONTEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
@@ -563,9 +563,9 @@ HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
 }
 
 /*
-static void setTextureCacheLimit( int size )
+static void setTextureCacheLimit(int size)
 */
-HB_FUNC_STATIC( QGLCONTEXT_SETTEXTURECACHELIMIT )
+HB_FUNC_STATIC(QGLCONTEXT_SETTEXTURECACHELIMIT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1))
@@ -586,13 +586,13 @@ HB_FUNC_STATIC( QGLCONTEXT_SETTEXTURECACHELIMIT )
 /*
 static int textureCacheLimit()
 */
-HB_FUNC_STATIC( QGLCONTEXT_TEXTURECACHELIMIT )
+HB_FUNC_STATIC(QGLCONTEXT_TEXTURECACHELIMIT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RINT( QGLContext::textureCacheLimit());
+    RINT(QGLContext::textureCacheLimit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QGLCONTEXT_TEXTURECACHELIMIT )
 #endif
 }
 
-HB_FUNC_STATIC( QGLCONTEXT_NEWFROM )
+HB_FUNC_STATIC(QGLCONTEXT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -632,22 +632,22 @@ HB_FUNC_STATIC( QGLCONTEXT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGLCONTEXT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGLCONTEXT_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QGLCONTEXT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGLCONTEXT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGLCONTEXT_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QGLCONTEXT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGLCONTEXT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGLCONTEXT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGLCONTEXT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGLCONTEXT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
