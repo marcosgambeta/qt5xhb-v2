@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setOption( static_cast<QPrintDialog::PrintDialogOption>( hb_parni(1)), OPBOOL( 2, true));
+      obj->setOption(static_cast<QPrintDialog::PrintDialogOption>(hb_parni(1)), OPBOOL( 2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTIONS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOptions( static_cast<QPrintDialog::PrintDialogOptions>( hb_parni(1)));
+      obj->setOptions(static_cast<QPrintDialog::PrintDialogOptions>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->testOption( static_cast<QPrintDialog::PrintDialogOption>( hb_parni(1))));
+      RBOOL(obj->testOption(static_cast<QPrintDialog::PrintDialogOption>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

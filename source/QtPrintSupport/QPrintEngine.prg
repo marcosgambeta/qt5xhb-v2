@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QPRINTENGINE_METRIC )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT(obj->metric( static_cast<QPaintDevice::PaintDeviceMetric>( hb_parni(1))));
+      RINT(obj->metric(static_cast<QPaintDevice::PaintDeviceMetric>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant(obj->property( static_cast<QPrintEngine::PrintEnginePropertyKey>( hb_parni(1))));
+      auto ptr = new QVariant(obj->property(static_cast<QPrintEngine::PrintEnginePropertyKey>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
 #endif
-      obj->setProperty( static_cast<QPrintEngine::PrintEnginePropertyKey>( hb_parni(1)), *PQVARIANT(2));
+      obj->setProperty(static_cast<QPrintEngine::PrintEnginePropertyKey>(hb_parni(1)), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

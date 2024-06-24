@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW )
     /*
     QPrinterInfo( const QPrinterInfo & src )
     */
-    auto obj = new QPrinterInfo( *PQPRINTERINFO(1));
+    auto obj = new QPrinterInfo(*PQPRINTERINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW )
     /*
     QPrinterInfo( const QPrinter & printer )
     */
-    auto obj = new QPrinterInfo( *PQPRINTER(1));
+    auto obj = new QPrinterInfo(*PQPRINTER(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
 #endif
       auto list = obj->supportedPaperSizes();
       auto pArray = hb_itemArrayNew(0);
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
     {
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAGESIZES )
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDDUPLEXMODES )
 #endif
       auto list = obj->supportedDuplexModes();
       auto pArray = hb_itemArrayNew(0);
-      for( const auto & item : list )
+      for (const auto & item : list)
       {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);

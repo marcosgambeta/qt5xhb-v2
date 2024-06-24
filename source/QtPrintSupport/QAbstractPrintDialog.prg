@@ -292,13 +292,13 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETOPTIONTABS )
     {
 #endif
       QList<QWidget *> par1;
-      auto aList1 = hb_param( 1, HB_IT_ARRAY);
-      int nLen1 = hb_arrayLen( aList1);
-      for( auto i1 = 0; i1 < nLen1; i1++ )
+      auto aList1 = hb_param(1, HB_IT_ARRAY);
+      int nLen1 = hb_arrayLen(aList1);
+      for (auto i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << static_cast<QWidget*>( hb_itemGetPtr( hb_objSendMsg(hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0)));
+        par1 << static_cast<QWidget*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
-      obj->setOptionTabs( par1);
+      obj->setOptionTabs(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETPRINTRANGE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPrintRange( static_cast<QAbstractPrintDialog::PrintRange>( hb_parni(1)));
+      obj->setPrintRange(static_cast<QAbstractPrintDialog::PrintRange>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ADDENABLEDOPTION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->addEnabledOption( static_cast<QAbstractPrintDialog::PrintDialogOption>( hb_parni(1)));
+      obj->addEnabledOption(static_cast<QAbstractPrintDialog::PrintDialogOption>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETENABLEDOPTIONS )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setEnabledOptions( static_cast<QAbstractPrintDialog::PrintDialogOptions>( hb_parni(1)));
+      obj->setEnabledOptions(static_cast<QAbstractPrintDialog::PrintDialogOptions>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ISOPTIONENABLED )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL(obj->isOptionEnabled( static_cast<QAbstractPrintDialog::PrintDialogOption>( hb_parni(1))));
+      RBOOL(obj->isOptionEnabled(static_cast<QAbstractPrintDialog::PrintDialogOption>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

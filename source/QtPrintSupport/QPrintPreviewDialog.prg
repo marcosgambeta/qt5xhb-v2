@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW )
     /*
     QPrintPreviewDialog( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
     */
-    auto obj = new QPrintPreviewDialog(PQPRINTER(1), OPQWIDGET( 2, nullptr ), HB_ISNIL(3) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(3)));
+    auto obj = new QPrintPreviewDialog(PQPRINTER(1), OPQWIDGET( 2, nullptr ), HB_ISNIL(3) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW )
     /*
     QPrintPreviewDialog( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
     */
-    auto obj = new QPrintPreviewDialog( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2)));
+    auto obj = new QPrintPreviewDialog( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
 
   }

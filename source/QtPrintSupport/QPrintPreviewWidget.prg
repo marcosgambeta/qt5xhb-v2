@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
     /*
     QPrintPreviewWidget( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
     */
-    auto obj = new QPrintPreviewWidget(PQPRINTER(1), OPQWIDGET( 2, nullptr ), HB_ISNIL(3) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(3)));
+    auto obj = new QPrintPreviewWidget(PQPRINTER(1), OPQWIDGET( 2, nullptr ), HB_ISNIL(3) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
     /*
     QPrintPreviewWidget( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
     */
-    auto obj = new QPrintPreviewWidget( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >( hb_parni(2)));
+    auto obj = new QPrintPreviewWidget( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETORIENTATION )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOrientation( static_cast<QPrinter::Orientation>( hb_parni(1)));
+      obj->setOrientation(static_cast<QPrinter::Orientation>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVIEWMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setViewMode( static_cast<QPrintPreviewWidget::ViewMode>( hb_parni(1)));
+      obj->setViewMode(static_cast<QPrintPreviewWidget::ViewMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setZoomMode( static_cast<QPrintPreviewWidget::ZoomMode>( hb_parni(1)));
+      obj->setZoomMode(static_cast<QPrintPreviewWidget::ZoomMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
