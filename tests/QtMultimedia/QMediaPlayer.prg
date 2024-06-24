@@ -24,9 +24,9 @@ PROCEDURE Main()
    // play the music and quit the application
 
    oPlayer := QMediaPlayer():new()
-   oPlayer:onStateChanged( {|oSender,nState|iif( nState == QMediaPlayer_StoppedState, oApp:quit(), NIL )} )
-   oPlayer:setMedia( QMediaContent():new( QUrl():fromLocalFile( "C:\Users\username\Music\somemusic.mp3" ) ) )
-   oPlayer:setVolume( 50 )
+   oPlayer:onStateChanged({|oSender,nState|iif(nState == QMediaPlayer_StoppedState, oApp:quit(), NIL)})
+   oPlayer:setMedia(QMediaContent():new(QUrl():fromLocalFile("C:\Users\username\Music\somemusic.mp3")))
+   oPlayer:setVolume(50)
    oPlayer:play()
 
    oApp:exec()

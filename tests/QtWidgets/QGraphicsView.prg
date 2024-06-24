@@ -23,9 +23,9 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oScene := QGraphicsScene():new()
-   oScene:addText( "Hello, world!" )
+   oScene:addText("Hello, world!")
 
-   oView := QGraphicsView():new( oScene )
+   oView := QGraphicsView():new(oScene)
    oView:show()
 
    oApp:exec()

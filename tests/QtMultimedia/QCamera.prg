@@ -26,8 +26,8 @@ PROCEDURE Main()
 
    aCameras := QCameraInfo():availableCameras()
 
-   IF len( aCameras ) == 0
-      oMB := QMessageBox():new( QMessageBox_Information, "Info", "Camera not found", QMessageBox_Ok, QWidget() )
+   IF len(aCameras) == 0
+      oMB := QMessageBox():new(QMessageBox_Information, "Info", "Camera not found", QMessageBox_Ok, QWidget())
       oMB:exec()
       oMB:delete()
       oApp:delete()
@@ -35,12 +35,12 @@ PROCEDURE Main()
    ENDIF
 
    oVideoWidget := QVideoWidget():new()
-   oVideoWidget:resize( 640, 480 )
+   oVideoWidget:resize(640, 480)
    oVideoWidget:show()
 
-   oCamera := QCamera():new( aCameras[ 1 ] )
+   oCamera := QCamera():new(aCameras[1])
    oCamera:start()
-   oCamera:setViewfinder( oVideoWidget )
+   oCamera:setViewfinder(oVideoWidget)
 
    oApp:exec()
 

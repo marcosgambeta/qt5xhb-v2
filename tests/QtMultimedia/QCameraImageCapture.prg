@@ -28,27 +28,27 @@ PROCEDURE Main()
 
    aCameras := QCameraInfo():availableCameras()
 
-   IF len( aCameras ) == 0
-      ShowMessage( "Info", "Camera not found", QWidget() )
+   IF len(aCameras) == 0
+      ShowMessage("Info", "Camera not found", QWidget())
       oApp:delete()
       QUIT
    ENDIF
 
    oVideoWidget := QVideoWidget():new()
-   oVideoWidget:resize( 640, 480 )
+   oVideoWidget:resize(640, 480)
    oVideoWidget:show()
 
-   oCamera := QCamera():new( aCameras[ 1 ] )
+   oCamera := QCamera():new(aCameras[1])
    oCamera:start()
-   oCamera:setViewfinder( oVideoWidget )
+   oCamera:setViewfinder(oVideoWidget)
 
-   oCapture := QCameraImageCapture():new( oCamera )
-   oCapture:setBufferFormat( QVideoFrame_Format_Jpeg )
-   oCapture:setCaptureDestination( QCameraImageCapture_CaptureToFile )
+   oCapture := QCameraImageCapture():new(oCamera)
+   oCapture:setBufferFormat(QVideoFrame_Format_Jpeg)
+   oCapture:setCaptureDestination(QCameraImageCapture_CaptureToFile)
 
    // press 'C' to capture the image (look in the 'Images' folder)
-   oShortcut := QShortcut():new( QKeySequence():new( "C" ), oVideoWidget )
-   oShortcut:onActivated( {||iif( oCapture:isReadyForCapture(), oCapture:capture( "capture" + alltrim( str( ++nCounter ) ) ), ShowMessage( "Info", "Not ready for capture", oVideoWidget ) )} )
+   oShortcut := QShortcut():new(QKeySequence():new("C"), oVideoWidget)
+   oShortcut:onActivated({||iif(oCapture:isReadyForCapture(), oCapture:capture("capture" + alltrim(str(++nCounter))), ShowMessage("Info", "Not ready for capture", oVideoWidget))})
 
    oApp:exec()
 
@@ -59,11 +59,11 @@ PROCEDURE Main()
 
 RETURN
 
-STATIC FUNCTION ShowMessage( cTitle, cMessage, oParent )
+STATIC FUNCTION ShowMessage(cTitle, cMessage, oParent)
 
    LOCAL oMB
 
-   oMB := QMessageBox():new( QMessageBox_Information, cTitle, cMessage, QMessageBox_Ok, oParent )
+   oMB := QMessageBox():new(QMessageBox_Information, cTitle, cMessage, QMessageBox_Ok, oParent)
 
    oMB:exec()
 

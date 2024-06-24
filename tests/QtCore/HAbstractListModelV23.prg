@@ -24,15 +24,15 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle( "Teste" )
-   oWindow:resize( 800, 600 )
+   oWindow:setWindowTitle("Teste")
+   oWindow:resize(800, 600)
 
    oModel := myModel():new()
 
-   oView := QTableView():new( oWindow )
-   oView:move( 10, 10 )
-   oView:resize( 800 - 20, 600 - 20 )
-   oView:setModel( oModel )
+   oView := QTableView():new(oWindow)
+   oView:move(10, 10)
+   oView:resize(800 - 20, 600 - 20)
+   oView:setModel(oModel)
 
    oWindow:show()
 
@@ -57,20 +57,20 @@ CLASS myModel INHERIT HAbstractListModelV2
 
 END CLASS
 
-METHOD new( ... ) CLASS myModel
+METHOD new(...) CLASS myModel
 
-   ::super:new( ... )
+   ::super:new(...)
 
-   ::setRowCountCB( {|...|::rowCount( ... )} )
-   ::setDataCB( {|...|::data( ... )} )
-   ::setHeaderDataCB( {|...|::headerData( ... )} )
+   ::setRowCountCB({|...|::rowCount(...)})
+   ::setDataCB({|...|::data(...)})
+   ::setHeaderDataCB({|...|::headerData(...)})
 
 RETURN self
 
 METHOD rowCount() CLASS myModel
 RETURN 100
 
-METHOD data( oIndex, nRole ) CLASS myModel
+METHOD data(oIndex, nRole) CLASS myModel
 
    LOCAL oVariant := QVariant():new()
    LOCAL nRow := oIndex:row()
@@ -78,19 +78,19 @@ METHOD data( oIndex, nRole ) CLASS myModel
    IF oIndex:isValid()
 
       IF nRole == Qt_DisplayRole
-         oVariant := QVariant():new( "Célula " + alltrim( str( nRow ) ) )
+         oVariant := QVariant():new("Célula " + alltrim(str(nRow)))
       ENDIF
 
    ENDIF
 
 RETURN oVariant
 
-METHOD headerData( nSection, nOrientation, nRole ) CLASS myModel
+METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
 
    LOCAL oVariant := QVariant():new()
 
    IF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new( "Linha " + alltrim( str( nSection ) ) )
+      oVariant := QVariant():new("Linha " + alltrim(str(nSection)))
    ENDIF
 
 RETURN oVariant
