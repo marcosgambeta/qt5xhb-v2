@@ -72,7 +72,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QANDROIDPARCEL_NEW )
+HB_FUNC_STATIC(QANDROIDPARCEL_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_NEW )
   else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1))
   {
     /*
-    QAndroidParcel( const QAndroidJniObject & parcel )
+    QAndroidParcel(const QAndroidJniObject & parcel)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
     auto obj = new QAndroidParcel(*PQANDROIDJNIOBJECT(1));
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_NEW )
 /*
 virtual ~QAndroidParcel()
 */
-HB_FUNC_STATIC( QANDROIDPARCEL_DELETE )
+HB_FUNC_STATIC(QANDROIDPARCEL_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QAndroidParcel*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -124,9 +124,9 @@ HB_FUNC_STATIC( QANDROIDPARCEL_DELETE )
 }
 
 /*
-void writeData( const QByteArray & data ) const
+void writeData(const QByteArray & data) const
 */
-HB_FUNC_STATIC( QANDROIDPARCEL_WRITEDATA )
+HB_FUNC_STATIC(QANDROIDPARCEL_WRITEDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QAndroidParcel*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -152,9 +152,9 @@ HB_FUNC_STATIC( QANDROIDPARCEL_WRITEDATA )
 }
 
 /*
-void writeVariant( const QVariant & value ) const
+void writeVariant(const QVariant & value) const
 */
-HB_FUNC_STATIC( QANDROIDPARCEL_WRITEVARIANT )
+HB_FUNC_STATIC(QANDROIDPARCEL_WRITEVARIANT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QAndroidParcel*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -180,9 +180,9 @@ HB_FUNC_STATIC( QANDROIDPARCEL_WRITEVARIANT )
 }
 
 /*
-void writeBinder( const QAndroidBinder & binder ) const
+void writeBinder(const QAndroidBinder & binder) const
 */
-HB_FUNC_STATIC( QANDROIDPARCEL_WRITEBINDER )
+HB_FUNC_STATIC(QANDROIDPARCEL_WRITEBINDER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QAndroidParcel*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -208,9 +208,9 @@ HB_FUNC_STATIC( QANDROIDPARCEL_WRITEBINDER )
 }
 
 /*
-void writeFileDescriptor( int fd ) const
+void writeFileDescriptor(int fd) const
 */
-HB_FUNC_STATIC( QANDROIDPARCEL_WRITEFILEDESCRIPTOR )
+HB_FUNC_STATIC(QANDROIDPARCEL_WRITEFILEDESCRIPTOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QAndroidParcel*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_WRITEFILEDESCRIPTOR )
 /*
 QByteArray readData() const
 */
-HB_FUNC_STATIC( QANDROIDPARCEL_READDATA )
+HB_FUNC_STATIC(QANDROIDPARCEL_READDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QAndroidParcel*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_READDATA )
 /*
 QVariant readVariant() const
 */
-HB_FUNC_STATIC( QANDROIDPARCEL_READVARIANT )
+HB_FUNC_STATIC(QANDROIDPARCEL_READVARIANT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QAndroidParcel*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_READVARIANT )
 /*
 QAndroidBinder readBinder() const
 */
-HB_FUNC_STATIC( QANDROIDPARCEL_READBINDER )
+HB_FUNC_STATIC(QANDROIDPARCEL_READBINDER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QAndroidParcel*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_READBINDER )
 /*
 int readFileDescriptor() const
 */
-HB_FUNC_STATIC( QANDROIDPARCEL_READFILEDESCRIPTOR )
+HB_FUNC_STATIC(QANDROIDPARCEL_READFILEDESCRIPTOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QAndroidParcel*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_READFILEDESCRIPTOR )
 /*
 QAndroidJniObject handle() const
 */
-HB_FUNC_STATIC( QANDROIDPARCEL_HANDLE )
+HB_FUNC_STATIC(QANDROIDPARCEL_HANDLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QAndroidParcel*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_HANDLE )
 #endif
 }
 
-HB_FUNC_STATIC( QANDROIDPARCEL_NEWFROM )
+HB_FUNC_STATIC(QANDROIDPARCEL_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -399,22 +399,22 @@ HB_FUNC_STATIC( QANDROIDPARCEL_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QANDROIDPARCEL_NEWFROMOBJECT )
+HB_FUNC_STATIC(QANDROIDPARCEL_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QANDROIDPARCEL_NEWFROM);
 }
 
-HB_FUNC_STATIC( QANDROIDPARCEL_NEWFROMPOINTER )
+HB_FUNC_STATIC(QANDROIDPARCEL_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QANDROIDPARCEL_NEWFROM);
 }
 
-HB_FUNC_STATIC( QANDROIDPARCEL_SELFDESTRUCTION )
+HB_FUNC_STATIC(QANDROIDPARCEL_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QANDROIDPARCEL_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QANDROIDPARCEL_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

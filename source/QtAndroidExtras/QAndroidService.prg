@@ -57,13 +57,13 @@ RETURN
 /*
 QAndroidService(int &argc, char **argv)
 */
-HB_FUNC_STATIC( QANDROIDSERVICE_NEW )
+HB_FUNC_STATIC(QANDROIDSERVICE_NEW)
 {
   int argc;
   char ** argv;
   argc = hb_cmdargARGC();
   argv = hb_cmdargARGV();
-  auto obj = new QAndroidService( argc, argv);
+  auto obj = new QAndroidService(argc, argv);
   Qt5xHb::returnNewObject(obj, false);
 }
 
@@ -74,7 +74,7 @@ QAndroidService(int &argc, char **argv, const std::function<QAndroidBinder*(cons
 /*
 virtual ~QAndroidService()
 */
-HB_FUNC_STATIC( QANDROIDSERVICE_DELETE )
+HB_FUNC_STATIC(QANDROIDSERVICE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAndroidService*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -95,9 +95,9 @@ HB_FUNC_STATIC( QANDROIDSERVICE_DELETE )
 }
 
 /*
-virtual QAndroidBinder * onBind( const QAndroidIntent & intent )
+virtual QAndroidBinder * onBind(const QAndroidIntent & intent)
 */
-HB_FUNC_STATIC( QANDROIDSERVICE_ONBIND )
+HB_FUNC_STATIC(QANDROIDSERVICE_ONBIND)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QAndroidService*>(Qt5xHb::getQObjectPointerFromSelfItem());
