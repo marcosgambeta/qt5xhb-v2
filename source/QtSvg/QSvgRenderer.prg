@@ -67,41 +67,41 @@ RETURN
 #include <QtSvg/QSvgRenderer>
 #endif
 
-HB_FUNC_STATIC( QSVGRENDERER_NEW )
+HB_FUNC_STATIC(QSVGRENDERER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QSvgRenderer( QObject * parent = nullptr )
+    QSvgRenderer(QObject * parent = nullptr)
     */
-    auto obj = new QSvgRenderer( OPQOBJECT( 1, nullptr));
+    auto obj = new QSvgRenderer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QSvgRenderer( const QString & filename, QObject * parent = nullptr )
+    QSvgRenderer(const QString & filename, QObject * parent = nullptr)
     */
-    auto obj = new QSvgRenderer(PQSTRING(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QSvgRenderer(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QSvgRenderer( const QByteArray & contents, QObject * parent = nullptr )
+    QSvgRenderer(const QByteArray & contents, QObject * parent = nullptr)
     */
-    auto obj = new QSvgRenderer(*PQBYTEARRAY(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QSvgRenderer(*PQBYTEARRAY(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2) && ISQXMLSTREAMREADER(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QSvgRenderer( QXmlStreamReader * contents, QObject * parent = nullptr )
+    QSvgRenderer(QXmlStreamReader * contents, QObject * parent = nullptr)
     */
-    auto obj = new QSvgRenderer(PQXMLSTREAMREADER(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QSvgRenderer(PQXMLSTREAMREADER(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSVGRENDERER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSVGRENDERER_DELETE )
+HB_FUNC_STATIC(QSVGRENDERER_DELETE)
 {
   auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSVGRENDERER_DELETE )
 /*
 bool animated() const
 */
-HB_FUNC_STATIC( QSVGRENDERER_ANIMATED )
+HB_FUNC_STATIC(QSVGRENDERER_ANIMATED)
 {
   auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -154,9 +154,9 @@ HB_FUNC_STATIC( QSVGRENDERER_ANIMATED )
 }
 
 /*
-QRectF boundsOnElement( const QString & id ) const
+QRectF boundsOnElement(const QString & id) const
 */
-HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
+HB_FUNC_STATIC(QSVGRENDERER_BOUNDSONELEMENT)
 {
   auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
 /*
 QSize defaultSize() const
 */
-HB_FUNC_STATIC( QSVGRENDERER_DEFAULTSIZE )
+HB_FUNC_STATIC(QSVGRENDERER_DEFAULTSIZE)
 {
   auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -204,9 +204,9 @@ HB_FUNC_STATIC( QSVGRENDERER_DEFAULTSIZE )
 }
 
 /*
-bool elementExists( const QString & id ) const
+bool elementExists(const QString & id) const
 */
-HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
+HB_FUNC_STATIC(QSVGRENDERER_ELEMENTEXISTS)
 {
   auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
 /*
 int framesPerSecond() const
 */
-HB_FUNC_STATIC( QSVGRENDERER_FRAMESPERSECOND )
+HB_FUNC_STATIC(QSVGRENDERER_FRAMESPERSECOND)
 {
   auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QSVGRENDERER_FRAMESPERSECOND )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QSVGRENDERER_ISVALID )
+HB_FUNC_STATIC(QSVGRENDERER_ISVALID)
 {
   auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -276,9 +276,9 @@ HB_FUNC_STATIC( QSVGRENDERER_ISVALID )
 }
 
 /*
-QMatrix matrixForElement( const QString & id ) const
+QMatrix matrixForElement(const QString & id) const
 */
-HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
+HB_FUNC_STATIC(QSVGRENDERER_MATRIXFORELEMENT)
 {
   auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -301,9 +301,9 @@ HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
 }
 
 /*
-void setFramesPerSecond( int num )
+void setFramesPerSecond(int num)
 */
-HB_FUNC_STATIC( QSVGRENDERER_SETFRAMESPERSECOND )
+HB_FUNC_STATIC(QSVGRENDERER_SETFRAMESPERSECOND)
 {
   auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -326,12 +326,12 @@ HB_FUNC_STATIC( QSVGRENDERER_SETFRAMESPERSECOND )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX )
+HB_FUNC_STATIC(QSVGRENDERER_SETVIEWBOX)
 {
   if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    void setViewBox( const QRect & viewbox )
+    void setViewBox(const QRect & viewbox)
     */
     auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX )
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    void setViewBox( const QRectF & viewbox )
+    void setViewBox(const QRectF & viewbox)
     */
     auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX )
 /*
 QRect viewBox() const
 */
-HB_FUNC_STATIC( QSVGRENDERER_VIEWBOX )
+HB_FUNC_STATIC(QSVGRENDERER_VIEWBOX)
 {
   auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOX )
 /*
 QRectF viewBoxF() const
 */
-HB_FUNC_STATIC( QSVGRENDERER_VIEWBOXF )
+HB_FUNC_STATIC(QSVGRENDERER_VIEWBOXF)
 {
   auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -414,12 +414,12 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOXF )
   }
 }
 
-HB_FUNC_STATIC( QSVGRENDERER_LOAD )
+HB_FUNC_STATIC(QSVGRENDERER_LOAD)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    bool load( const QString & filename )
+    bool load(const QString & filename)
     */
     auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD )
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    bool load( const QByteArray & contents )
+    bool load(const QByteArray & contents)
     */
     auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD )
   else if (ISNUMPAR(1) && ISQXMLSTREAMREADER(1))
   {
     /*
-    bool load( QXmlStreamReader * contents )
+    bool load(QXmlStreamReader * contents)
     */
     auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -461,12 +461,12 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD )
   }
 }
 
-HB_FUNC_STATIC( QSVGRENDERER_RENDER )
+HB_FUNC_STATIC(QSVGRENDERER_RENDER)
 {
   if (ISNUMPAR(1) && ISQPAINTER(1))
   {
     /*
-    void render( QPainter * painter )
+    void render(QPainter * painter)
     */
     auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER )
   else if (ISNUMPAR(2) && ISQPAINTER(1) && ISQRECTF(2))
   {
     /*
-    void render( QPainter * painter, const QRectF & bounds )
+    void render(QPainter * painter, const QRectF & bounds)
     */
     auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER )
   else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISCHAR(2) && (ISQRECTF(3) || HB_ISNIL(3)))
   {
     /*
-    void render( QPainter * painter, const QString & elementId, const QRectF & bounds = QRectF() )
+    void render(QPainter * painter, const QString & elementId, const QRectF & bounds = QRectF())
     */
     auto obj = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER )
 /*
 void repaintNeeded()
 */
-HB_FUNC_STATIC( QSVGRENDERER_ONREPAINTNEEDED )
+HB_FUNC_STATIC(QSVGRENDERER_ONREPAINTNEEDED)
 {
   auto sender = qobject_cast<QSvgRenderer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

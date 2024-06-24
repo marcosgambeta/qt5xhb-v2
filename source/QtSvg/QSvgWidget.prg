@@ -55,23 +55,23 @@ RETURN
 
 #include <QtSvg/QSvgRenderer>
 
-HB_FUNC_STATIC( QSVGWIDGET_NEW )
+HB_FUNC_STATIC(QSVGWIDGET_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QSvgWidget( QWidget * parent = nullptr )
+    QSvgWidget(QWidget * parent = nullptr)
     */
-    auto obj = new QSvgWidget( OPQWIDGET( 1, nullptr));
+    auto obj = new QSvgWidget(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QSvgWidget( const QString & file, QWidget * parent = nullptr )
+    QSvgWidget(const QString & file, QWidget * parent = nullptr)
     */
-    auto obj = new QSvgWidget(PQSTRING(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QSvgWidget(PQSTRING(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSVGWIDGET_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSVGWIDGET_DELETE )
+HB_FUNC_STATIC(QSVGWIDGET_DELETE)
 {
   auto obj = qobject_cast<QSvgWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSVGWIDGET_DELETE )
 /*
 QSvgRenderer * renderer() const
 */
-HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
+HB_FUNC_STATIC(QSVGWIDGET_RENDERER)
 {
   auto obj = qobject_cast<QSvgWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
+HB_FUNC_STATIC(QSVGWIDGET_SIZEHINT)
 {
   auto obj = qobject_cast<QSvgWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -149,12 +149,12 @@ HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
   }
 }
 
-HB_FUNC_STATIC( QSVGWIDGET_LOAD )
+HB_FUNC_STATIC(QSVGWIDGET_LOAD)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void load( const QString & file )
+    void load(const QString & file)
     */
     auto obj = qobject_cast<QSvgWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QSVGWIDGET_LOAD )
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    void load( const QByteArray & contents )
+    void load(const QByteArray & contents)
     */
     auto obj = qobject_cast<QSvgWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
