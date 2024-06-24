@@ -57,13 +57,13 @@ RETURN
 #endif
 
 /*
-QGraphicsColorizeEffect( QObject * parent = nullptr )
+QGraphicsColorizeEffect(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
+HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QGraphicsColorizeEffect( OPQOBJECT( 1, nullptr));
+    auto obj = new QGraphicsColorizeEffect(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_DELETE )
+HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_DELETE)
 {
   auto obj = qobject_cast<QGraphicsColorizeEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_DELETE )
 /*
 QColor color() const
 */
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
+HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_COLOR)
 {
   auto obj = qobject_cast<QGraphicsColorizeEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
 /*
 qreal strength() const
 */
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
+HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_STRENGTH)
 {
   auto obj = qobject_cast<QGraphicsColorizeEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -140,9 +140,9 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
 }
 
 /*
-void setColor( const QColor & c )
+void setColor(const QColor & c)
 */
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
+HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_SETCOLOR)
 {
   auto obj = qobject_cast<QGraphicsColorizeEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,9 +166,9 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
 }
 
 /*
-void setStrength( qreal strength )
+void setStrength(qreal strength)
 */
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
+HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH)
 {
   auto obj = qobject_cast<QGraphicsColorizeEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -192,9 +192,9 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
 }
 
 /*
-void colorChanged( const QColor & color )
+void colorChanged(const QColor & color)
 */
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
+HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED)
 {
   auto sender = qobject_cast<QGraphicsColorizeEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGRAPHICSCOLORIZEEFFECT");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QCOLOR");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -242,9 +242,9 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
 }
 
 /*
-void strengthChanged( qreal strength )
+void strengthChanged(qreal strength)
 */
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
+HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED)
 {
   auto sender = qobject_cast<QGraphicsColorizeEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

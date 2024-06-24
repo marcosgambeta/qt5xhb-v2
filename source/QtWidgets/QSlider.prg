@@ -68,23 +68,23 @@ RETURN
 #include <QtWidgets/QSlider>
 #endif
 
-HB_FUNC_STATIC( QSLIDER_NEW )
+HB_FUNC_STATIC(QSLIDER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QSlider( QWidget * parent = nullptr )
+    QSlider(QWidget * parent = nullptr)
     */
-    auto obj = new QSlider( OPQWIDGET( 1, nullptr));
+    auto obj = new QSlider(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QSlider( Qt::Orientation orientation, QWidget * parent = nullptr )
+    QSlider(Qt::Orientation orientation, QWidget * parent = nullptr)
     */
-    auto obj = new QSlider(static_cast<Qt::Orientation>(hb_parni(1)), OPQWIDGET( 2, nullptr));
+    auto obj = new QSlider(static_cast<Qt::Orientation>(hb_parni(1)), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSLIDER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSLIDER_DELETE )
+HB_FUNC_STATIC(QSLIDER_DELETE)
 {
   auto obj = qobject_cast<QSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSLIDER_DELETE )
 /*
 int tickInterval() const
 */
-HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
+HB_FUNC_STATIC(QSLIDER_TICKINTERVAL)
 {
   auto obj = qobject_cast<QSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -137,9 +137,9 @@ HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
 }
 
 /*
-void setTickInterval( int ti )
+void setTickInterval(int ti)
 */
-HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
+HB_FUNC_STATIC(QSLIDER_SETTICKINTERVAL)
 {
   auto obj = qobject_cast<QSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
 /*
 QSlider::TickPosition tickPosition() const
 */
-HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
+HB_FUNC_STATIC(QSLIDER_TICKPOSITION)
 {
   auto obj = qobject_cast<QSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -187,9 +187,9 @@ HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
 }
 
 /*
-void setTickPosition( QSlider::TickPosition position )
+void setTickPosition(QSlider::TickPosition position)
 */
-HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
+HB_FUNC_STATIC(QSLIDER_SETTICKPOSITION)
 {
   auto obj = qobject_cast<QSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -213,9 +213,9 @@ HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
 }
 
 /*
-virtual bool event( QEvent * event )
+virtual bool event(QEvent * event)
 */
-HB_FUNC_STATIC( QSLIDER_EVENT )
+HB_FUNC_STATIC(QSLIDER_EVENT)
 {
   auto obj = qobject_cast<QSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSLIDER_EVENT )
 /*
 virtual QSize minimumSizeHint() const
 */
-HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
+HB_FUNC_STATIC(QSLIDER_MINIMUMSIZEHINT)
 {
   auto obj = qobject_cast<QSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QSLIDER_SIZEHINT )
+HB_FUNC_STATIC(QSLIDER_SIZEHINT)
 {
   auto obj = qobject_cast<QSlider*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

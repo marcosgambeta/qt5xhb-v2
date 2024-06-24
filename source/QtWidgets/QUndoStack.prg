@@ -84,13 +84,13 @@ RETURN
 #include <QtWidgets/QAction>
 
 /*
-QUndoStack( QObject * parent = nullptr )
+QUndoStack(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QUNDOSTACK_NEW )
+HB_FUNC_STATIC(QUNDOSTACK_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QUndoStack( OPQOBJECT( 1, nullptr));
+    auto obj = new QUndoStack(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QUNDOSTACK_NEW )
   }
 }
 
-HB_FUNC_STATIC( QUNDOSTACK_DELETE )
+HB_FUNC_STATIC(QUNDOSTACK_DELETE)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -118,9 +118,9 @@ HB_FUNC_STATIC( QUNDOSTACK_DELETE )
 }
 
 /*
-void beginMacro( const QString & text )
+void beginMacro(const QString & text)
 */
-HB_FUNC_STATIC( QUNDOSTACK_BEGINMACRO )
+HB_FUNC_STATIC(QUNDOSTACK_BEGINMACRO)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QUNDOSTACK_BEGINMACRO )
 /*
 bool canRedo() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_CANREDO )
+HB_FUNC_STATIC(QUNDOSTACK_CANREDO)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CANREDO )
 /*
 bool canUndo() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_CANUNDO )
+HB_FUNC_STATIC(QUNDOSTACK_CANUNDO)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CANUNDO )
 /*
 int cleanIndex() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_CLEANINDEX )
+HB_FUNC_STATIC(QUNDOSTACK_CLEANINDEX)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CLEANINDEX )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QUNDOSTACK_CLEAR )
+HB_FUNC_STATIC(QUNDOSTACK_CLEAR)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -242,9 +242,9 @@ HB_FUNC_STATIC( QUNDOSTACK_CLEAR )
 }
 
 /*
-const QUndoCommand * command( int index ) const
+const QUndoCommand * command(int index) const
 */
-HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
+HB_FUNC_STATIC(QUNDOSTACK_COMMAND)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_COUNT )
+HB_FUNC_STATIC(QUNDOSTACK_COUNT)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -291,9 +291,9 @@ HB_FUNC_STATIC( QUNDOSTACK_COUNT )
 }
 
 /*
-QAction * createRedoAction( QObject * parent, const QString & prefix = QString() ) const
+QAction * createRedoAction(QObject * parent, const QString & prefix = QString()) const
 */
-HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
+HB_FUNC_STATIC(QUNDOSTACK_CREATEREDOACTION)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -316,9 +316,9 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
 }
 
 /*
-QAction * createUndoAction( QObject * parent, const QString & prefix = QString() ) const
+QAction * createUndoAction(QObject * parent, const QString & prefix = QString()) const
 */
-HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
+HB_FUNC_STATIC(QUNDOSTACK_CREATEUNDOACTION)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
 /*
 void endMacro()
 */
-HB_FUNC_STATIC( QUNDOSTACK_ENDMACRO )
+HB_FUNC_STATIC(QUNDOSTACK_ENDMACRO)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ENDMACRO )
 /*
 int index() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_INDEX )
+HB_FUNC_STATIC(QUNDOSTACK_INDEX)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QUNDOSTACK_INDEX )
 /*
 bool isActive() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_ISACTIVE )
+HB_FUNC_STATIC(QUNDOSTACK_ISACTIVE)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ISACTIVE )
 /*
 bool isClean() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
+HB_FUNC_STATIC(QUNDOSTACK_ISCLEAN)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -439,9 +439,9 @@ HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
 }
 
 /*
-void push( QUndoCommand * cmd )
+void push(QUndoCommand * cmd)
 */
-HB_FUNC_STATIC( QUNDOSTACK_PUSH )
+HB_FUNC_STATIC(QUNDOSTACK_PUSH)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QUNDOSTACK_PUSH )
 /*
 QString redoText() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_REDOTEXT )
+HB_FUNC_STATIC(QUNDOSTACK_REDOTEXT)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -489,9 +489,9 @@ HB_FUNC_STATIC( QUNDOSTACK_REDOTEXT )
 }
 
 /*
-void setUndoLimit( int limit )
+void setUndoLimit(int limit)
 */
-HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
+HB_FUNC_STATIC(QUNDOSTACK_SETUNDOLIMIT)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -515,9 +515,9 @@ HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
 }
 
 /*
-QString text( int idx ) const
+QString text(int idx) const
 */
-HB_FUNC_STATIC( QUNDOSTACK_TEXT )
+HB_FUNC_STATIC(QUNDOSTACK_TEXT)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QUNDOSTACK_TEXT )
 /*
 int undoLimit() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_UNDOLIMIT )
+HB_FUNC_STATIC(QUNDOSTACK_UNDOLIMIT)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDOLIMIT )
 /*
 QString undoText() const
 */
-HB_FUNC_STATIC( QUNDOSTACK_UNDOTEXT )
+HB_FUNC_STATIC(QUNDOSTACK_UNDOTEXT)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDOTEXT )
 /*
 void redo()
 */
-HB_FUNC_STATIC( QUNDOSTACK_REDO )
+HB_FUNC_STATIC(QUNDOSTACK_REDO)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -613,9 +613,9 @@ HB_FUNC_STATIC( QUNDOSTACK_REDO )
 }
 
 /*
-void setActive( bool active = true )
+void setActive(bool active = true)
 */
-HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
+HB_FUNC_STATIC(QUNDOSTACK_SETACTIVE)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->setActive( OPBOOL( 1, true));
+      obj->setActive(OPBOOL(1, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
 /*
 void setClean()
 */
-HB_FUNC_STATIC( QUNDOSTACK_SETCLEAN )
+HB_FUNC_STATIC(QUNDOSTACK_SETCLEAN)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -665,9 +665,9 @@ HB_FUNC_STATIC( QUNDOSTACK_SETCLEAN )
 }
 
 /*
-void setIndex( int idx )
+void setIndex(int idx)
 */
-HB_FUNC_STATIC( QUNDOSTACK_SETINDEX )
+HB_FUNC_STATIC(QUNDOSTACK_SETINDEX)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETINDEX )
 /*
 void undo()
 */
-HB_FUNC_STATIC( QUNDOSTACK_UNDO )
+HB_FUNC_STATIC(QUNDOSTACK_UNDO)
 {
   auto obj = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -717,9 +717,9 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDO )
 }
 
 /*
-void canRedoChanged( bool canRedo )
+void canRedoChanged(bool canRedo)
 */
-HB_FUNC_STATIC( QUNDOSTACK_ONCANREDOCHANGED )
+HB_FUNC_STATIC(QUNDOSTACK_ONCANREDOCHANGED)
 {
   auto sender = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -767,9 +767,9 @@ HB_FUNC_STATIC( QUNDOSTACK_ONCANREDOCHANGED )
 }
 
 /*
-void canUndoChanged( bool canUndo )
+void canUndoChanged(bool canUndo)
 */
-HB_FUNC_STATIC( QUNDOSTACK_ONCANUNDOCHANGED )
+HB_FUNC_STATIC(QUNDOSTACK_ONCANUNDOCHANGED)
 {
   auto sender = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -817,9 +817,9 @@ HB_FUNC_STATIC( QUNDOSTACK_ONCANUNDOCHANGED )
 }
 
 /*
-void cleanChanged( bool clean )
+void cleanChanged(bool clean)
 */
-HB_FUNC_STATIC( QUNDOSTACK_ONCLEANCHANGED )
+HB_FUNC_STATIC(QUNDOSTACK_ONCLEANCHANGED)
 {
   auto sender = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -867,9 +867,9 @@ HB_FUNC_STATIC( QUNDOSTACK_ONCLEANCHANGED )
 }
 
 /*
-void indexChanged( int idx )
+void indexChanged(int idx)
 */
-HB_FUNC_STATIC( QUNDOSTACK_ONINDEXCHANGED )
+HB_FUNC_STATIC(QUNDOSTACK_ONINDEXCHANGED)
 {
   auto sender = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -917,9 +917,9 @@ HB_FUNC_STATIC( QUNDOSTACK_ONINDEXCHANGED )
 }
 
 /*
-void redoTextChanged( const QString & redoText )
+void redoTextChanged(const QString & redoText)
 */
-HB_FUNC_STATIC( QUNDOSTACK_ONREDOTEXTCHANGED )
+HB_FUNC_STATIC(QUNDOSTACK_ONREDOTEXTCHANGED)
 {
   auto sender = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -967,9 +967,9 @@ HB_FUNC_STATIC( QUNDOSTACK_ONREDOTEXTCHANGED )
 }
 
 /*
-void undoTextChanged( const QString & undoText )
+void undoTextChanged(const QString & undoText)
 */
-HB_FUNC_STATIC( QUNDOSTACK_ONUNDOTEXTCHANGED )
+HB_FUNC_STATIC(QUNDOSTACK_ONUNDOTEXTCHANGED)
 {
   auto sender = qobject_cast<QUndoStack*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

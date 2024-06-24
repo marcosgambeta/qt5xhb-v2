@@ -51,7 +51,7 @@ RETURN
 #include <QtWidgets/QSwipeGesture>
 #endif
 
-HB_FUNC_STATIC( QSWIPEGESTURE_DELETE )
+HB_FUNC_STATIC(QSWIPEGESTURE_DELETE)
 {
   auto obj = qobject_cast<QSwipeGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_DELETE )
 /*
 QSwipeGesture::SwipeDirection horizontalDirection() const
 */
-HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
+HB_FUNC_STATIC(QSWIPEGESTURE_HORIZONTALDIRECTION)
 {
   auto obj = qobject_cast<QSwipeGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -94,9 +94,9 @@ HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
 }
 
 /*
-void setSwipeAngle( qreal value )
+void setSwipeAngle(qreal value)
 */
-HB_FUNC_STATIC( QSWIPEGESTURE_SETSWIPEANGLE )
+HB_FUNC_STATIC(QSWIPEGESTURE_SETSWIPEANGLE)
 {
   auto obj = qobject_cast<QSwipeGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_SETSWIPEANGLE )
 /*
 qreal swipeAngle() const
 */
-HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
+HB_FUNC_STATIC(QSWIPEGESTURE_SWIPEANGLE)
 {
   auto obj = qobject_cast<QSwipeGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
 /*
 QSwipeGesture::SwipeDirection verticalDirection() const
 */
-HB_FUNC_STATIC( QSWIPEGESTURE_VERTICALDIRECTION )
+HB_FUNC_STATIC(QSWIPEGESTURE_VERTICALDIRECTION)
 {
   auto obj = qobject_cast<QSwipeGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

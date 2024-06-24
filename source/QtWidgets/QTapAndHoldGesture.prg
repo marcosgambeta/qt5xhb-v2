@@ -52,7 +52,7 @@ RETURN
 #include <QtWidgets/QTapAndHoldGesture>
 #endif
 
-HB_FUNC_STATIC( QTAPANDHOLDGESTURE_DELETE )
+HB_FUNC_STATIC(QTAPANDHOLDGESTURE_DELETE)
 {
   auto obj = qobject_cast<QTapAndHoldGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_DELETE )
 /*
 QPointF position() const
 */
-HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
+HB_FUNC_STATIC(QTAPANDHOLDGESTURE_POSITION)
 {
   auto obj = qobject_cast<QTapAndHoldGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -96,9 +96,9 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
 }
 
 /*
-void setPosition( const QPointF & pos )
+void setPosition(const QPointF & pos)
 */
-HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETPOSITION )
+HB_FUNC_STATIC(QTAPANDHOLDGESTURE_SETPOSITION)
 {
   auto obj = qobject_cast<QTapAndHoldGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -122,9 +122,9 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETPOSITION )
 }
 
 /*
-static void setTimeout( int msecs )
+static void setTimeout(int msecs)
 */
-HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETTIMEOUT )
+HB_FUNC_STATIC(QTAPANDHOLDGESTURE_SETTIMEOUT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1))
@@ -145,13 +145,13 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETTIMEOUT )
 /*
 static int timeout()
 */
-HB_FUNC_STATIC( QTAPANDHOLDGESTURE_TIMEOUT )
+HB_FUNC_STATIC(QTAPANDHOLDGESTURE_TIMEOUT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RINT( QTapAndHoldGesture::timeout());
+    RINT(QTapAndHoldGesture::timeout());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

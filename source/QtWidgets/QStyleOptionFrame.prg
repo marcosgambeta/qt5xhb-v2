@@ -53,7 +53,7 @@ RETURN
 #include <QtWidgets/QStyleOptionFrame>
 #endif
 
-HB_FUNC_STATIC( QSTYLEOPTIONFRAME_NEW )
+HB_FUNC_STATIC(QSTYLEOPTIONFRAME_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_NEW )
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONFRAME(1))
   {
     /*
-    QStyleOptionFrame( const QStyleOptionFrame & other )
+    QStyleOptionFrame(const QStyleOptionFrame & other)
     */
     auto obj = new QStyleOptionFrame(*PQSTYLEOPTIONFRAME(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_NEW )
 /*
 int lineWidth
 */
-HB_FUNC_STATIC( QSTYLEOPTIONFRAME_LINEWIDTH )
+HB_FUNC_STATIC(QSTYLEOPTIONFRAME_LINEWIDTH)
 {
   auto obj = static_cast<QStyleOptionFrame*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_LINEWIDTH )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETLINEWIDTH )
+HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETLINEWIDTH)
 {
   auto obj = static_cast<QStyleOptionFrame*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETLINEWIDTH )
 /*
 int midLineWidth
 */
-HB_FUNC_STATIC( QSTYLEOPTIONFRAME_MIDLINEWIDTH )
+HB_FUNC_STATIC(QSTYLEOPTIONFRAME_MIDLINEWIDTH)
 {
   auto obj = static_cast<QStyleOptionFrame*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_MIDLINEWIDTH )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETMIDLINEWIDTH )
+HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETMIDLINEWIDTH)
 {
   auto obj = static_cast<QStyleOptionFrame*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETMIDLINEWIDTH )
 /*
 FrameFeatures features
 */
-HB_FUNC_STATIC( QSTYLEOPTIONFRAME_FEATURES )
+HB_FUNC_STATIC(QSTYLEOPTIONFRAME_FEATURES)
 {
   auto obj = static_cast<QStyleOptionFrame*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_FEATURES )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETFEATURES )
+HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETFEATURES)
 {
   auto obj = static_cast<QStyleOptionFrame*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETFEATURES )
 /*
 QFrame::Shape frameShape
 */
-HB_FUNC_STATIC( QSTYLEOPTIONFRAME_FRAMESHAPE )
+HB_FUNC_STATIC(QSTYLEOPTIONFRAME_FRAMESHAPE)
 {
   auto obj = static_cast<QStyleOptionFrame*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_FRAMESHAPE )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETFRAMESHAPE )
+HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETFRAMESHAPE)
 {
   auto obj = static_cast<QStyleOptionFrame*>(Qt5xHb::itemGetPtrStackSelfItem());
 

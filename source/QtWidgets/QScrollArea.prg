@@ -62,13 +62,13 @@ RETURN
 #endif
 
 /*
-QScrollArea( QWidget * parent = nullptr )
+QScrollArea(QWidget * parent = nullptr)
 */
-HB_FUNC_STATIC( QSCROLLAREA_NEW )
+HB_FUNC_STATIC(QSCROLLAREA_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QScrollArea( OPQWIDGET( 1, nullptr));
+    auto obj = new QScrollArea(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QSCROLLAREA_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSCROLLAREA_DELETE )
+HB_FUNC_STATIC(QSCROLLAREA_DELETE)
 {
   auto obj = qobject_cast<QScrollArea*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSCROLLAREA_DELETE )
 /*
 Qt::Alignment alignment() const
 */
-HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
+HB_FUNC_STATIC(QSCROLLAREA_ALIGNMENT)
 {
   auto obj = qobject_cast<QScrollArea*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -120,9 +120,9 @@ HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
 }
 
 /*
-void ensureVisible( int x, int y, int xmargin = 50, int ymargin = 50 )
+void ensureVisible(int x, int y, int xmargin = 50, int ymargin = 50)
 */
-HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
+HB_FUNC_STATIC(QSCROLLAREA_ENSUREVISIBLE)
 {
   auto obj = qobject_cast<QScrollArea*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
     if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->ensureVisible(PINT(1), PINT(2), OPINT( 3, 50 ), OPINT( 4, 50));
+      obj->ensureVisible(PINT(1), PINT(2), OPINT(3, 50), OPINT(4, 50));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,9 +146,9 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
 }
 
 /*
-void ensureWidgetVisible( QWidget * childWidget, int xmargin = 50, int ymargin = 50 )
+void ensureWidgetVisible(QWidget * childWidget, int xmargin = 50, int ymargin = 50)
 */
-HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
+HB_FUNC_STATIC(QSCROLLAREA_ENSUREWIDGETVISIBLE)
 {
   auto obj = qobject_cast<QScrollArea*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
     if (ISBETWEEN(1, 3) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->ensureWidgetVisible(PQWIDGET(1), OPINT( 2, 50 ), OPINT( 3, 50));
+      obj->ensureWidgetVisible(PQWIDGET(1), OPINT(2, 50), OPINT(3, 50));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,9 +172,9 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
 }
 
 /*
-void setAlignment( Qt::Alignment )
+void setAlignment(Qt::Alignment)
 */
-HB_FUNC_STATIC( QSCROLLAREA_SETALIGNMENT )
+HB_FUNC_STATIC(QSCROLLAREA_SETALIGNMENT)
 {
   auto obj = qobject_cast<QScrollArea*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -198,9 +198,9 @@ HB_FUNC_STATIC( QSCROLLAREA_SETALIGNMENT )
 }
 
 /*
-void setWidget( QWidget * widget )
+void setWidget(QWidget * widget)
 */
-HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
+HB_FUNC_STATIC(QSCROLLAREA_SETWIDGET)
 {
   auto obj = qobject_cast<QScrollArea*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -224,9 +224,9 @@ HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
 }
 
 /*
-void setWidgetResizable( bool resizable )
+void setWidgetResizable(bool resizable)
 */
-HB_FUNC_STATIC( QSCROLLAREA_SETWIDGETRESIZABLE )
+HB_FUNC_STATIC(QSCROLLAREA_SETWIDGETRESIZABLE)
 {
   auto obj = qobject_cast<QScrollArea*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QSCROLLAREA_SETWIDGETRESIZABLE )
 /*
 QWidget * takeWidget()
 */
-HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
+HB_FUNC_STATIC(QSCROLLAREA_TAKEWIDGET)
 {
   auto obj = qobject_cast<QScrollArea*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
     {
 #endif
       auto ptr = obj->takeWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
 /*
 QWidget * widget() const
 */
-HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
+HB_FUNC_STATIC(QSCROLLAREA_WIDGET)
 {
   auto obj = qobject_cast<QScrollArea*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
     {
 #endif
       auto ptr = obj->widget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
 /*
 bool widgetResizable() const
 */
-HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
+HB_FUNC_STATIC(QSCROLLAREA_WIDGETRESIZABLE)
 {
   auto obj = qobject_cast<QScrollArea*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -324,9 +324,9 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
 }
 
 /*
-virtual bool focusNextPrevChild( bool next )
+virtual bool focusNextPrevChild(bool next)
 */
-HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
+HB_FUNC_STATIC(QSCROLLAREA_FOCUSNEXTPREVCHILD)
 {
   auto obj = qobject_cast<QScrollArea*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QSCROLLAREA_SIZEHINT )
+HB_FUNC_STATIC(QSCROLLAREA_SIZEHINT)
 {
   auto obj = qobject_cast<QScrollArea*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

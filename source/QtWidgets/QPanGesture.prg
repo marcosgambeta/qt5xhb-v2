@@ -55,7 +55,7 @@ RETURN
 #include <QtWidgets/QPanGesture>
 #endif
 
-HB_FUNC_STATIC( QPANGESTURE_DELETE )
+HB_FUNC_STATIC(QPANGESTURE_DELETE)
 {
   auto obj = qobject_cast<QPanGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QPANGESTURE_DELETE )
 /*
 qreal acceleration() const
 */
-HB_FUNC_STATIC( QPANGESTURE_ACCELERATION )
+HB_FUNC_STATIC(QPANGESTURE_ACCELERATION)
 {
   auto obj = qobject_cast<QPanGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QPANGESTURE_ACCELERATION )
 /*
 QPointF delta() const
 */
-HB_FUNC_STATIC( QPANGESTURE_DELTA )
+HB_FUNC_STATIC(QPANGESTURE_DELTA)
 {
   auto obj = qobject_cast<QPanGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QPANGESTURE_DELTA )
 /*
 QPointF lastOffset() const
 */
-HB_FUNC_STATIC( QPANGESTURE_LASTOFFSET )
+HB_FUNC_STATIC(QPANGESTURE_LASTOFFSET)
 {
   auto obj = qobject_cast<QPanGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QPANGESTURE_LASTOFFSET )
 /*
 QPointF offset() const
 */
-HB_FUNC_STATIC( QPANGESTURE_OFFSET )
+HB_FUNC_STATIC(QPANGESTURE_OFFSET)
 {
   auto obj = qobject_cast<QPanGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -173,9 +173,9 @@ HB_FUNC_STATIC( QPANGESTURE_OFFSET )
 }
 
 /*
-void setAcceleration( qreal value )
+void setAcceleration(qreal value)
 */
-HB_FUNC_STATIC( QPANGESTURE_SETACCELERATION )
+HB_FUNC_STATIC(QPANGESTURE_SETACCELERATION)
 {
   auto obj = qobject_cast<QPanGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -199,9 +199,9 @@ HB_FUNC_STATIC( QPANGESTURE_SETACCELERATION )
 }
 
 /*
-void setLastOffset( const QPointF & value )
+void setLastOffset(const QPointF & value)
 */
-HB_FUNC_STATIC( QPANGESTURE_SETLASTOFFSET )
+HB_FUNC_STATIC(QPANGESTURE_SETLASTOFFSET)
 {
   auto obj = qobject_cast<QPanGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -225,9 +225,9 @@ HB_FUNC_STATIC( QPANGESTURE_SETLASTOFFSET )
 }
 
 /*
-void setOffset( const QPointF & value )
+void setOffset(const QPointF & value)
 */
-HB_FUNC_STATIC( QPANGESTURE_SETOFFSET )
+HB_FUNC_STATIC(QPANGESTURE_SETOFFSET)
 {
   auto obj = qobject_cast<QPanGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

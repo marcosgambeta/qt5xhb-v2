@@ -65,13 +65,13 @@ RETURN
 #endif
 
 /*
-QFrame( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+QFrame(QWidget * parent = nullptr, Qt::WindowFlags f = 0)
 */
-HB_FUNC_STATIC( QFRAME_NEW )
+HB_FUNC_STATIC(QFRAME_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    auto obj = new QFrame( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(2)));
+    auto obj = new QFrame(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >(0) : static_cast<Qt::WindowFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QFRAME_NEW )
   }
 }
 
-HB_FUNC_STATIC( QFRAME_DELETE )
+HB_FUNC_STATIC(QFRAME_DELETE)
 {
   auto obj = qobject_cast<QFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QFRAME_DELETE )
 /*
 QRect frameRect() const
 */
-HB_FUNC_STATIC( QFRAME_FRAMERECT )
+HB_FUNC_STATIC(QFRAME_FRAMERECT)
 {
   auto obj = qobject_cast<QFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QFRAME_FRAMERECT )
 /*
 QFrame::Shadow frameShadow() const
 */
-HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
+HB_FUNC_STATIC(QFRAME_FRAMESHADOW)
 {
   auto obj = qobject_cast<QFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
 /*
 QFrame::Shape frameShape() const
 */
-HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
+HB_FUNC_STATIC(QFRAME_FRAMESHAPE)
 {
   auto obj = qobject_cast<QFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
 /*
 int frameStyle() const
 */
-HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
+HB_FUNC_STATIC(QFRAME_FRAMESTYLE)
 {
   auto obj = qobject_cast<QFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
 /*
 int frameWidth() const
 */
-HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
+HB_FUNC_STATIC(QFRAME_FRAMEWIDTH)
 {
   auto obj = qobject_cast<QFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
 /*
 int lineWidth() const
 */
-HB_FUNC_STATIC( QFRAME_LINEWIDTH )
+HB_FUNC_STATIC(QFRAME_LINEWIDTH)
 {
   auto obj = qobject_cast<QFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QFRAME_LINEWIDTH )
 /*
 int midLineWidth() const
 */
-HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
+HB_FUNC_STATIC(QFRAME_MIDLINEWIDTH)
 {
   auto obj = qobject_cast<QFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -268,9 +268,9 @@ HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
 }
 
 /*
-void setFrameRect( const QRect & )
+void setFrameRect(const QRect &)
 */
-HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
+HB_FUNC_STATIC(QFRAME_SETFRAMERECT)
 {
   auto obj = qobject_cast<QFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -294,9 +294,9 @@ HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
 }
 
 /*
-void setFrameShadow( QFrame::Shadow )
+void setFrameShadow(QFrame::Shadow)
 */
-HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
+HB_FUNC_STATIC(QFRAME_SETFRAMESHADOW)
 {
   auto obj = qobject_cast<QFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -320,9 +320,9 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
 }
 
 /*
-void setFrameShape( QFrame::Shape )
+void setFrameShape(QFrame::Shape)
 */
-HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
+HB_FUNC_STATIC(QFRAME_SETFRAMESHAPE)
 {
   auto obj = qobject_cast<QFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -346,9 +346,9 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
 }
 
 /*
-void setFrameStyle( int style )
+void setFrameStyle(int style)
 */
-HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
+HB_FUNC_STATIC(QFRAME_SETFRAMESTYLE)
 {
   auto obj = qobject_cast<QFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -372,9 +372,9 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
 }
 
 /*
-void setLineWidth( int )
+void setLineWidth(int)
 */
-HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
+HB_FUNC_STATIC(QFRAME_SETLINEWIDTH)
 {
   auto obj = qobject_cast<QFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -398,9 +398,9 @@ HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
 }
 
 /*
-void setMidLineWidth( int )
+void setMidLineWidth(int)
 */
-HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
+HB_FUNC_STATIC(QFRAME_SETMIDLINEWIDTH)
 {
   auto obj = qobject_cast<QFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QFRAME_SIZEHINT )
+HB_FUNC_STATIC(QFRAME_SIZEHINT)
 {
   auto obj = qobject_cast<QFrame*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

@@ -51,7 +51,7 @@ RETURN
 /*
 QCommonStyle()
 */
-HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
+HB_FUNC_STATIC(QCOMMONSTYLE_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QCOMMONSTYLE_DELETE )
+HB_FUNC_STATIC(QCOMMONSTYLE_DELETE)
 {
   auto obj = qobject_cast<QCommonStyle*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

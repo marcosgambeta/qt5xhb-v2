@@ -64,21 +64,21 @@ RETURN
 #include <QtWidgets/QUndoCommand>
 #endif
 
-HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
+HB_FUNC_STATIC(QUNDOCOMMAND_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQUNDOCOMMAND(1) || HB_ISNIL(1)))
   {
     /*
-    QUndoCommand( QUndoCommand * parent = nullptr )
+    QUndoCommand(QUndoCommand * parent = nullptr)
     */
-    auto obj = new QUndoCommand( HB_ISNIL(1) ? nullptr : static_cast<QUndoCommand*>(Qt5xHb::itemGetPtr(1)));
+    auto obj = new QUndoCommand(HB_ISNIL(1) ? nullptr : static_cast<QUndoCommand*>(Qt5xHb::itemGetPtr(1)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQUNDOCOMMAND(2) || HB_ISNIL(2)))
   {
     /*
-    QUndoCommand( const QString & text, QUndoCommand * parent = nullptr )
+    QUndoCommand(const QString & text, QUndoCommand * parent = nullptr)
     */
     auto obj = new QUndoCommand(PQSTRING(1), HB_ISNIL(2) ? nullptr : static_cast<QUndoCommand*>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, false);
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
   }
 }
 
-HB_FUNC_STATIC( QUNDOCOMMAND_DELETE )
+HB_FUNC_STATIC(QUNDOCOMMAND_DELETE)
 {
   auto obj = static_cast<QUndoCommand*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_DELETE )
 /*
 QString actionText() const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_ACTIONTEXT )
+HB_FUNC_STATIC(QUNDOCOMMAND_ACTIONTEXT)
 {
   auto obj = static_cast<QUndoCommand*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -131,9 +131,9 @@ HB_FUNC_STATIC( QUNDOCOMMAND_ACTIONTEXT )
 }
 
 /*
-const QUndoCommand * child( int index ) const
+const QUndoCommand * child(int index) const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
+HB_FUNC_STATIC(QUNDOCOMMAND_CHILD)
 {
   auto obj = static_cast<QUndoCommand*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
 /*
 int childCount() const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
+HB_FUNC_STATIC(QUNDOCOMMAND_CHILDCOUNT)
 {
   auto obj = static_cast<QUndoCommand*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
 /*
 virtual int id() const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_ID )
+HB_FUNC_STATIC(QUNDOCOMMAND_ID)
 {
   auto obj = static_cast<QUndoCommand*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -204,9 +204,9 @@ HB_FUNC_STATIC( QUNDOCOMMAND_ID )
 }
 
 /*
-virtual bool mergeWith( const QUndoCommand * command )
+virtual bool mergeWith(const QUndoCommand * command)
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
+HB_FUNC_STATIC(QUNDOCOMMAND_MERGEWITH)
 {
   auto obj = static_cast<QUndoCommand*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
 /*
 virtual void redo()
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
+HB_FUNC_STATIC(QUNDOCOMMAND_REDO)
 {
   auto obj = static_cast<QUndoCommand*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -254,9 +254,9 @@ HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
 }
 
 /*
-void setText( const QString & text )
+void setText(const QString & text)
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_SETTEXT )
+HB_FUNC_STATIC(QUNDOCOMMAND_SETTEXT)
 {
   auto obj = static_cast<QUndoCommand*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_SETTEXT )
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
+HB_FUNC_STATIC(QUNDOCOMMAND_TEXT)
 {
   auto obj = static_cast<QUndoCommand*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
 /*
 virtual void undo()
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_UNDO )
+HB_FUNC_STATIC(QUNDOCOMMAND_UNDO)
 {
   auto obj = static_cast<QUndoCommand*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_UNDO )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QUNDOCOMMAND_NEWFROM )
+HB_FUNC_STATIC(QUNDOCOMMAND_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -359,22 +359,22 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QUNDOCOMMAND_NEWFROMOBJECT )
+HB_FUNC_STATIC(QUNDOCOMMAND_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QUNDOCOMMAND_NEWFROM);
 }
 
-HB_FUNC_STATIC( QUNDOCOMMAND_NEWFROMPOINTER )
+HB_FUNC_STATIC(QUNDOCOMMAND_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QUNDOCOMMAND_NEWFROM);
 }
 
-HB_FUNC_STATIC( QUNDOCOMMAND_SELFDESTRUCTION )
+HB_FUNC_STATIC(QUNDOCOMMAND_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QUNDOCOMMAND_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QUNDOCOMMAND_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

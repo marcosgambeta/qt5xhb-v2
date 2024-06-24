@@ -57,7 +57,7 @@ RETURN
 #include <QtGui/QBrush>
 #include <QtGui/QPen>
 
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_DELETE )
+HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_DELETE)
 {
   auto obj = static_cast<QAbstractGraphicsShapeItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_DELETE )
 /*
 QBrush brush() const
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_BRUSH )
+HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_BRUSH)
 {
   auto obj = static_cast<QAbstractGraphicsShapeItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -99,9 +99,9 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_BRUSH )
 }
 
 /*
-void setBrush( const QBrush & brush )
+void setBrush(const QBrush & brush)
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH )
+HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH)
 {
   auto obj = static_cast<QAbstractGraphicsShapeItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH )
 /*
 QPen pen() const
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_PEN )
+HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_PEN)
 {
   auto obj = static_cast<QAbstractGraphicsShapeItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -150,9 +150,9 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_PEN )
 }
 
 /*
-void setPen( const QPen & pen )
+void setPen(const QPen & pen)
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETPEN )
+HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETPEN)
 {
   auto obj = static_cast<QAbstractGraphicsShapeItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -176,9 +176,9 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETPEN )
 }
 
 /*
-bool isObscuredBy( const QGraphicsItem * item ) const
+bool isObscuredBy(const QGraphicsItem * item) const
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY )
+HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY)
 {
   auto obj = static_cast<QAbstractGraphicsShapeItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY )
 /*
 QPainterPath opaqueArea() const
 */
-HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA )
+HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA)
 {
   auto obj = static_cast<QAbstractGraphicsShapeItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 

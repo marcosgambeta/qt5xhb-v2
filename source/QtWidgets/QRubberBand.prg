@@ -53,13 +53,13 @@ RETURN
 #endif
 
 /*
-QRubberBand( QRubberBand::Shape s, QWidget * p = nullptr )
+QRubberBand(QRubberBand::Shape s, QWidget * p = nullptr)
 */
-HB_FUNC_STATIC( QRUBBERBAND_NEW )
+HB_FUNC_STATIC(QRUBBERBAND_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
-    auto obj = new QRubberBand(static_cast<QRubberBand::Shape>(hb_parni(1)), OPQWIDGET( 2, nullptr));
+    auto obj = new QRubberBand(static_cast<QRubberBand::Shape>(hb_parni(1)), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QRUBBERBAND_NEW )
   }
 }
 
-HB_FUNC_STATIC( QRUBBERBAND_DELETE )
+HB_FUNC_STATIC(QRUBBERBAND_DELETE)
 {
   auto obj = qobject_cast<QRubberBand*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -86,12 +86,12 @@ HB_FUNC_STATIC( QRUBBERBAND_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QRUBBERBAND_MOVE )
+HB_FUNC_STATIC(QRUBBERBAND_MOVE)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    void move( int x, int y )
+    void move(int x, int y)
     */
     auto obj = qobject_cast<QRubberBand*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE )
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    void move( const QPoint & p )
+    void move(const QPoint & p)
     */
     auto obj = qobject_cast<QRubberBand*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -124,12 +124,12 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE )
   }
 }
 
-HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
+HB_FUNC_STATIC(QRUBBERBAND_RESIZE)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    void resize( int width, int height )
+    void resize(int width, int height)
     */
     auto obj = qobject_cast<QRubberBand*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
   else if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
-    void resize( const QSize & size )
+    void resize(const QSize & size)
     */
     auto obj = qobject_cast<QRubberBand*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -162,12 +162,12 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
   }
 }
 
-HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
+HB_FUNC_STATIC(QRUBBERBAND_SETGEOMETRY)
 {
   if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    void setGeometry( const QRect & rect )
+    void setGeometry(const QRect & rect)
     */
     auto obj = qobject_cast<QRubberBand*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    void setGeometry( int x, int y, int width, int height )
+    void setGeometry(int x, int y, int width, int height)
     */
     auto obj = qobject_cast<QRubberBand*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
 /*
 QRubberBand::Shape shape() const
 */
-HB_FUNC_STATIC( QRUBBERBAND_SHAPE )
+HB_FUNC_STATIC(QRUBBERBAND_SHAPE)
 {
   auto obj = qobject_cast<QRubberBand*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

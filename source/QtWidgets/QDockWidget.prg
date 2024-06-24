@@ -70,23 +70,23 @@ RETURN
 
 #include <QtWidgets/QAction>
 
-HB_FUNC_STATIC( QDOCKWIDGET_NEW )
+HB_FUNC_STATIC(QDOCKWIDGET_NEW)
 {
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QDockWidget( const QString & title, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+    QDockWidget(const QString & title, QWidget * parent = nullptr, Qt::WindowFlags flags = 0)
     */
-    auto obj = new QDockWidget(PQSTRING(1), OPQWIDGET( 2, nullptr ), HB_ISNIL(3) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(3)));
+    auto obj = new QDockWidget(PQSTRING(1), OPQWIDGET(2, nullptr), HB_ISNIL(3) ? static_cast<Qt::WindowFlags >(0) : static_cast<Qt::WindowFlags >(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QDockWidget( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+    QDockWidget(QWidget * parent = nullptr, Qt::WindowFlags flags = 0)
     */
-    auto obj = new QDockWidget( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(2)));
+    auto obj = new QDockWidget(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >(0) : static_cast<Qt::WindowFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDOCKWIDGET_DELETE )
+HB_FUNC_STATIC(QDOCKWIDGET_DELETE)
 {
   auto obj = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_DELETE )
 /*
 Qt::DockWidgetAreas allowedAreas() const
 */
-HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
+HB_FUNC_STATIC(QDOCKWIDGET_ALLOWEDAREAS)
 {
   auto obj = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
 /*
 QDockWidget::DockWidgetFeatures features() const
 */
-HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
+HB_FUNC_STATIC(QDOCKWIDGET_FEATURES)
 {
   auto obj = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -163,9 +163,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
 }
 
 /*
-bool isAreaAllowed( Qt::DockWidgetArea area ) const
+bool isAreaAllowed(Qt::DockWidgetArea area) const
 */
-HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
+HB_FUNC_STATIC(QDOCKWIDGET_ISAREAALLOWED)
 {
   auto obj = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
 /*
 bool isFloating() const
 */
-HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
+HB_FUNC_STATIC(QDOCKWIDGET_ISFLOATING)
 {
   auto obj = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -211,9 +211,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
 }
 
 /*
-void setAllowedAreas( Qt::DockWidgetAreas areas )
+void setAllowedAreas(Qt::DockWidgetAreas areas)
 */
-HB_FUNC_STATIC( QDOCKWIDGET_SETALLOWEDAREAS )
+HB_FUNC_STATIC(QDOCKWIDGET_SETALLOWEDAREAS)
 {
   auto obj = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -237,9 +237,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETALLOWEDAREAS )
 }
 
 /*
-void setFeatures( QDockWidget::DockWidgetFeatures features )
+void setFeatures(QDockWidget::DockWidgetFeatures features)
 */
-HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
+HB_FUNC_STATIC(QDOCKWIDGET_SETFEATURES)
 {
   auto obj = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -263,9 +263,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
 }
 
 /*
-void setFloating( bool floating )
+void setFloating(bool floating)
 */
-HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
+HB_FUNC_STATIC(QDOCKWIDGET_SETFLOATING)
 {
   auto obj = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -289,9 +289,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
 }
 
 /*
-void setTitleBarWidget( QWidget * widget )
+void setTitleBarWidget(QWidget * widget)
 */
-HB_FUNC_STATIC( QDOCKWIDGET_SETTITLEBARWIDGET )
+HB_FUNC_STATIC(QDOCKWIDGET_SETTITLEBARWIDGET)
 {
   auto obj = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -315,9 +315,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETTITLEBARWIDGET )
 }
 
 /*
-void setWidget( QWidget * widget )
+void setWidget(QWidget * widget)
 */
-HB_FUNC_STATIC( QDOCKWIDGET_SETWIDGET )
+HB_FUNC_STATIC(QDOCKWIDGET_SETWIDGET)
 {
   auto obj = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETWIDGET )
 /*
 QWidget * titleBarWidget() const
 */
-HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
+HB_FUNC_STATIC(QDOCKWIDGET_TITLEBARWIDGET)
 {
   auto obj = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
     {
 #endif
       auto ptr = obj->titleBarWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
 /*
 QAction * toggleViewAction() const
 */
-HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
+HB_FUNC_STATIC(QDOCKWIDGET_TOGGLEVIEWACTION)
 {
   auto obj = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
 /*
 QWidget * widget() const
 */
-HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
+HB_FUNC_STATIC(QDOCKWIDGET_WIDGET)
 {
   auto obj = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
     {
 #endif
       auto ptr = obj->widget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -416,9 +416,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
 }
 
 /*
-void allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
+void allowedAreasChanged(Qt::DockWidgetAreas allowedAreas)
 */
-HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
+HB_FUNC_STATIC(QDOCKWIDGET_ONALLOWEDAREASCHANGED)
 {
   auto sender = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -466,9 +466,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
 }
 
 /*
-void dockLocationChanged( Qt::DockWidgetArea area )
+void dockLocationChanged(Qt::DockWidgetArea area)
 */
-HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
+HB_FUNC_STATIC(QDOCKWIDGET_ONDOCKLOCATIONCHANGED)
 {
   auto sender = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -516,9 +516,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
 }
 
 /*
-void featuresChanged( QDockWidget::DockWidgetFeatures features )
+void featuresChanged(QDockWidget::DockWidgetFeatures features)
 */
-HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
+HB_FUNC_STATIC(QDOCKWIDGET_ONFEATURESCHANGED)
 {
   auto sender = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -566,9 +566,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
 }
 
 /*
-void topLevelChanged( bool topLevel )
+void topLevelChanged(bool topLevel)
 */
-HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
+HB_FUNC_STATIC(QDOCKWIDGET_ONTOPLEVELCHANGED)
 {
   auto sender = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -616,9 +616,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
 }
 
 /*
-void visibilityChanged( bool visible )
+void visibilityChanged(bool visible)
 */
-HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
+HB_FUNC_STATIC(QDOCKWIDGET_ONVISIBILITYCHANGED)
 {
   auto sender = qobject_cast<QDockWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

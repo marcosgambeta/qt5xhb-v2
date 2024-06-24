@@ -61,13 +61,13 @@ RETURN
 #endif
 
 /*
-QGraphicsRotation( QObject * parent = nullptr )
+QGraphicsRotation(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
+HB_FUNC_STATIC(QGRAPHICSROTATION_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QGraphicsRotation( OPQOBJECT( 1, nullptr));
+    auto obj = new QGraphicsRotation(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSROTATION_DELETE )
+HB_FUNC_STATIC(QGRAPHICSROTATION_DELETE)
 {
   auto obj = qobject_cast<QGraphicsRotation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_DELETE )
 /*
 qreal angle() const
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_ANGLE )
+HB_FUNC_STATIC(QGRAPHICSROTATION_ANGLE)
 {
   auto obj = qobject_cast<QGraphicsRotation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ANGLE )
 /*
 QVector3D axis() const
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_AXIS )
+HB_FUNC_STATIC(QGRAPHICSROTATION_AXIS)
 {
   auto obj = qobject_cast<QGraphicsRotation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_AXIS )
 /*
 QVector3D origin() const
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
+HB_FUNC_STATIC(QGRAPHICSROTATION_ORIGIN)
 {
   auto obj = qobject_cast<QGraphicsRotation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -169,9 +169,9 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
 }
 
 /*
-void setAngle( qreal )
+void setAngle(qreal)
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
+HB_FUNC_STATIC(QGRAPHICSROTATION_SETANGLE)
 {
   auto obj = qobject_cast<QGraphicsRotation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -194,12 +194,12 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
+HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
 {
   if (ISNUMPAR(1) && HB_ISOBJECT(1))
   {
     /*
-    void setAxis( const QVector3D & axis )
+    void setAxis(const QVector3D & axis)
     */
     auto obj = qobject_cast<QGraphicsRotation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void setAxis( Qt::Axis axis )
+    void setAxis(Qt::Axis axis)
     */
     auto obj = qobject_cast<QGraphicsRotation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -233,9 +233,9 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 }
 
 /*
-void setOrigin( const QVector3D & point )
+void setOrigin(const QVector3D & point)
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_SETORIGIN )
+HB_FUNC_STATIC(QGRAPHICSROTATION_SETORIGIN)
 {
   auto obj = qobject_cast<QGraphicsRotation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -259,9 +259,9 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETORIGIN )
 }
 
 /*
-virtual void applyTo( QMatrix4x4 * matrix ) const
+virtual void applyTo(QMatrix4x4 * matrix) const
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_APPLYTO )
+HB_FUNC_STATIC(QGRAPHICSROTATION_APPLYTO)
 {
   auto obj = qobject_cast<QGraphicsRotation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_APPLYTO )
 /*
 void angleChanged()
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
+HB_FUNC_STATIC(QGRAPHICSROTATION_ONANGLECHANGED)
 {
   auto sender = qobject_cast<QGraphicsRotation*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
 /*
 void axisChanged()
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
+HB_FUNC_STATIC(QGRAPHICSROTATION_ONAXISCHANGED)
 {
   auto sender = qobject_cast<QGraphicsRotation*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
 /*
 void originChanged()
 */
-HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
+HB_FUNC_STATIC(QGRAPHICSROTATION_ONORIGINCHANGED)
 {
   auto sender = qobject_cast<QGraphicsRotation*>(Qt5xHb::getQObjectPointerFromSelfItem());
   

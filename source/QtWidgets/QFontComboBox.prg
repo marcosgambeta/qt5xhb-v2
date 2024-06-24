@@ -60,13 +60,13 @@ RETURN
 #endif
 
 /*
-QFontComboBox( QWidget * parent = nullptr )
+QFontComboBox(QWidget * parent = nullptr)
 */
-HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
+HB_FUNC_STATIC(QFONTCOMBOBOX_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QFontComboBox( OPQWIDGET( 1, nullptr));
+    auto obj = new QFontComboBox(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
   }
 }
 
-HB_FUNC_STATIC( QFONTCOMBOBOX_DELETE )
+HB_FUNC_STATIC(QFONTCOMBOBOX_DELETE)
 {
   auto obj = qobject_cast<QFontComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_DELETE )
 /*
 QFont currentFont() const
 */
-HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
+HB_FUNC_STATIC(QFONTCOMBOBOX_CURRENTFONT)
 {
   auto obj = qobject_cast<QFontComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
 /*
 QFontComboBox::FontFilters fontFilters() const
 */
-HB_FUNC_STATIC( QFONTCOMBOBOX_FONTFILTERS )
+HB_FUNC_STATIC(QFONTCOMBOBOX_FONTFILTERS)
 {
   auto obj = qobject_cast<QFontComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -143,9 +143,9 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_FONTFILTERS )
 }
 
 /*
-void setFontFilters( QFontComboBox::FontFilters filters )
+void setFontFilters(QFontComboBox::FontFilters filters)
 */
-HB_FUNC_STATIC( QFONTCOMBOBOX_SETFONTFILTERS )
+HB_FUNC_STATIC(QFONTCOMBOBOX_SETFONTFILTERS)
 {
   auto obj = qobject_cast<QFontComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -169,9 +169,9 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETFONTFILTERS )
 }
 
 /*
-void setWritingSystem( QFontDatabase::WritingSystem script )
+void setWritingSystem(QFontDatabase::WritingSystem script)
 */
-HB_FUNC_STATIC( QFONTCOMBOBOX_SETWRITINGSYSTEM )
+HB_FUNC_STATIC(QFONTCOMBOBOX_SETWRITINGSYSTEM)
 {
   auto obj = qobject_cast<QFontComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETWRITINGSYSTEM )
 /*
 QFontDatabase::WritingSystem writingSystem() const
 */
-HB_FUNC_STATIC( QFONTCOMBOBOX_WRITINGSYSTEM )
+HB_FUNC_STATIC(QFONTCOMBOBOX_WRITINGSYSTEM)
 {
   auto obj = qobject_cast<QFontComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_WRITINGSYSTEM )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QFONTCOMBOBOX_SIZEHINT )
+HB_FUNC_STATIC(QFONTCOMBOBOX_SIZEHINT)
 {
   auto obj = qobject_cast<QFontComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -244,9 +244,9 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SIZEHINT )
 }
 
 /*
-void setCurrentFont( const QFont & font )
+void setCurrentFont(const QFont & font)
 */
-HB_FUNC_STATIC( QFONTCOMBOBOX_SETCURRENTFONT )
+HB_FUNC_STATIC(QFONTCOMBOBOX_SETCURRENTFONT)
 {
   auto obj = qobject_cast<QFontComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -270,9 +270,9 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETCURRENTFONT )
 }
 
 /*
-void currentFontChanged( const QFont & font )
+void currentFontChanged(const QFont & font)
 */
-HB_FUNC_STATIC( QFONTCOMBOBOX_ONCURRENTFONTCHANGED )
+HB_FUNC_STATIC(QFONTCOMBOBOX_ONCURRENTFONTCHANGED)
 {
   auto sender = qobject_cast<QFontComboBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_ONCURRENTFONTCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QFONTCOMBOBOX");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QFONT");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QFONT");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

@@ -65,12 +65,12 @@ RETURN
 #include <QtWidgets/QCheckBox>
 #endif
 
-HB_FUNC_STATIC( QCHECKBOX_NEW )
+HB_FUNC_STATIC(QCHECKBOX_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QCheckBox( QWidget * parent = nullptr )
+    QCheckBox(QWidget * parent = nullptr)
     */
     auto obj = new QCheckBox(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QCHECKBOX_NEW )
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QCheckBox( const QString & text, QWidget * parent = nullptr )
+    QCheckBox(const QString & text, QWidget * parent = nullptr)
     */
     auto obj = new QCheckBox(PQSTRING(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QCHECKBOX_NEW )
   }
 }
 
-HB_FUNC_STATIC( QCHECKBOX_DELETE )
+HB_FUNC_STATIC(QCHECKBOX_DELETE)
 {
   auto obj = qobject_cast<QCheckBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QCHECKBOX_DELETE )
 /*
 Qt::CheckState checkState() const
 */
-HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
+HB_FUNC_STATIC(QCHECKBOX_CHECKSTATE)
 {
   auto obj = qobject_cast<QCheckBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
 /*
 bool isTristate() const
 */
-HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
+HB_FUNC_STATIC(QCHECKBOX_ISTRISTATE)
 {
   auto obj = qobject_cast<QCheckBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -158,9 +158,9 @@ HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 }
 
 /*
-void setCheckState( Qt::CheckState state )
+void setCheckState(Qt::CheckState state)
 */
-HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
+HB_FUNC_STATIC(QCHECKBOX_SETCHECKSTATE)
 {
   auto obj = qobject_cast<QCheckBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -184,9 +184,9 @@ HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 }
 
 /*
-void setTristate( bool y = true )
+void setTristate(bool y = true)
 */
-HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
+HB_FUNC_STATIC(QCHECKBOX_SETTRISTATE)
 {
   auto obj = qobject_cast<QCheckBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 /*
 QSize minimumSizeHint() const
 */
-HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
+HB_FUNC_STATIC(QCHECKBOX_MINIMUMSIZEHINT)
 {
   auto obj = qobject_cast<QCheckBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
 /*
 QSize sizeHint() const
 */
-HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
+HB_FUNC_STATIC(QCHECKBOX_SIZEHINT)
 {
   auto obj = qobject_cast<QCheckBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -260,9 +260,9 @@ HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
 }
 
 /*
-void stateChanged( int state )
+void stateChanged(int state)
 */
-HB_FUNC_STATIC( QCHECKBOX_ONSTATECHANGED )
+HB_FUNC_STATIC(QCHECKBOX_ONSTATECHANGED)
 {
   auto sender = qobject_cast<QCheckBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
   

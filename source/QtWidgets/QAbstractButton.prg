@@ -144,7 +144,7 @@ RETURN
 /*
 ~QAbstractButton()
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_DELETE )
+HB_FUNC_STATIC(QABSTRACTBUTTON_DELETE)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_DELETE )
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
+HB_FUNC_STATIC(QABSTRACTBUTTON_TEXT)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -187,9 +187,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
 }
 
 /*
-void setText( const QString & text )
+void setText(const QString & text)
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
+HB_FUNC_STATIC(QABSTRACTBUTTON_SETTEXT)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
 /*
 QIcon icon() const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
+HB_FUNC_STATIC(QABSTRACTBUTTON_ICON)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -238,9 +238,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
 }
 
 /*
-void setIcon( const QIcon & icon )
+void setIcon(const QIcon & icon)
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETICON )
+HB_FUNC_STATIC(QABSTRACTBUTTON_SETICON)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETICON )
 /*
 QSize iconSize() const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
+HB_FUNC_STATIC(QABSTRACTBUTTON_ICONSIZE)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -289,9 +289,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
 }
 
 /*
-void setIconSize( const QSize & size )
+void setIconSize(const QSize & size)
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETICONSIZE )
+HB_FUNC_STATIC(QABSTRACTBUTTON_SETICONSIZE)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETICONSIZE )
 /*
 QKeySequence shortcut() const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SHORTCUT )
+HB_FUNC_STATIC(QABSTRACTBUTTON_SHORTCUT)
 {
 #ifndef QT_NO_SHORTCUT
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -342,9 +342,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SHORTCUT )
 }
 
 /*
-void setShortcut( const QKeySequence & key )
+void setShortcut(const QKeySequence & key)
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
+HB_FUNC_STATIC(QABSTRACTBUTTON_SETSHORTCUT)
 {
 #ifndef QT_NO_SHORTCUT
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
 /*
 bool isCheckable() const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
+HB_FUNC_STATIC(QABSTRACTBUTTON_ISCHECKABLE)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -394,9 +394,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
 }
 
 /*
-void setCheckable( bool )
+void setCheckable(bool)
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
+HB_FUNC_STATIC(QABSTRACTBUTTON_SETCHECKABLE)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
 /*
 bool isChecked() const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
+HB_FUNC_STATIC(QABSTRACTBUTTON_ISCHECKED)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -444,9 +444,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
 }
 
 /*
-void setChecked( bool )
+void setChecked(bool)
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
+HB_FUNC_STATIC(QABSTRACTBUTTON_SETCHECKED)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
 /*
 bool autoRepeat() const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
+HB_FUNC_STATIC(QABSTRACTBUTTON_AUTOREPEAT)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -494,9 +494,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
 }
 
 /*
-void setAutoRepeat( bool )
+void setAutoRepeat(bool)
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
+HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOREPEAT)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
 /*
 bool autoExclusive() const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
+HB_FUNC_STATIC(QABSTRACTBUTTON_AUTOEXCLUSIVE)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -544,9 +544,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
 }
 
 /*
-void setAutoExclusive( bool )
+void setAutoExclusive(bool)
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
+HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOEXCLUSIVE)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
 /*
 int autoRepeatDelay() const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
+HB_FUNC_STATIC(QABSTRACTBUTTON_AUTOREPEATDELAY)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -594,9 +594,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
 }
 
 /*
-void setAutoRepeatDelay( int )
+void setAutoRepeatDelay(int)
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
+HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOREPEATDELAY)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
 /*
 int autoRepeatInterval() const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
+HB_FUNC_STATIC(QABSTRACTBUTTON_AUTOREPEATINTERVAL)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -644,9 +644,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
 }
 
 /*
-void setAutoRepeatInterval( int )
+void setAutoRepeatInterval(int)
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
+HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOREPEATINTERVAL)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
 /*
 bool isDown() const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
+HB_FUNC_STATIC(QABSTRACTBUTTON_ISDOWN)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -694,9 +694,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
 }
 
 /*
-void setDown( bool )
+void setDown(bool)
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETDOWN )
+HB_FUNC_STATIC(QABSTRACTBUTTON_SETDOWN)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETDOWN )
 /*
 QButtonGroup * group() const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
+HB_FUNC_STATIC(QABSTRACTBUTTON_GROUP)
 {
 #ifndef QT_NO_BUTTONGROUP
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -747,9 +747,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
 }
 
 /*
-void animateClick( int msec = 100 ) [SLOT]
+void animateClick(int msec = 100) [SLOT]
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
+HB_FUNC_STATIC(QABSTRACTBUTTON_ANIMATECLICK)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -775,7 +775,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
 /*
 void click()
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_CLICK )
+HB_FUNC_STATIC(QABSTRACTBUTTON_CLICK)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_CLICK )
 /*
 void toggle()
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_TOGGLE )
+HB_FUNC_STATIC(QABSTRACTBUTTON_TOGGLE)
 {
   auto obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -825,9 +825,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TOGGLE )
 }
 
 /*
-void clicked( bool checked = false )
+void clicked(bool checked = false)
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
+HB_FUNC_STATIC(QABSTRACTBUTTON_ONCLICKED)
 {
   auto sender = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -877,7 +877,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
 /*
 void pressed()
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
+HB_FUNC_STATIC(QABSTRACTBUTTON_ONPRESSED)
 {
   auto sender = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
 /*
 void released()
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
+HB_FUNC_STATIC(QABSTRACTBUTTON_ONRELEASED)
 {
   auto sender = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -971,9 +971,9 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
 }
 
 /*
-void toggled( bool checked )
+void toggled(bool checked)
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
+HB_FUNC_STATIC(QABSTRACTBUTTON_ONTOGGLED)
 {
   auto sender = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
   

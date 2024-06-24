@@ -55,12 +55,12 @@ RETURN
 #include <QtWidgets/QTileRules>
 #endif
 
-HB_FUNC_STATIC( QTILERULES_NEW )
+HB_FUNC_STATIC(QTILERULES_NEW)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QTileRules( Qt::TileRule horizontalRule, Qt::TileRule verticalRule )
+    QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
     */
     auto obj = new QTileRules(static_cast<Qt::TileRule>(hb_parni(1)), static_cast<Qt::TileRule>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
@@ -69,9 +69,9 @@ HB_FUNC_STATIC( QTILERULES_NEW )
   else if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
-    QTileRules( Qt::TileRule rule = Qt::StretchTile )
+    QTileRules(Qt::TileRule rule = Qt::StretchTile)
     */
-    auto obj = new QTileRules( HB_ISNIL(1) ? static_cast<Qt::TileRule >( Qt::StretchTile ) : static_cast<Qt::TileRule >(hb_parni(1)));
+    auto obj = new QTileRules(HB_ISNIL(1) ? static_cast<Qt::TileRule >(Qt::StretchTile) : static_cast<Qt::TileRule >(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QTILERULES_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTILERULES_DELETE )
+HB_FUNC_STATIC(QTILERULES_DELETE)
 {
   auto obj = static_cast<QTileRules*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QTILERULES_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QTILERULES_NEWFROM )
+HB_FUNC_STATIC(QTILERULES_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -127,22 +127,22 @@ HB_FUNC_STATIC( QTILERULES_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QTILERULES_NEWFROMOBJECT )
+HB_FUNC_STATIC(QTILERULES_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QTILERULES_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTILERULES_NEWFROMPOINTER )
+HB_FUNC_STATIC(QTILERULES_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QTILERULES_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTILERULES_SELFDESTRUCTION )
+HB_FUNC_STATIC(QTILERULES_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QTILERULES_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QTILERULES_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

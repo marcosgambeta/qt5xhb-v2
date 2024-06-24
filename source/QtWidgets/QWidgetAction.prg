@@ -54,9 +54,9 @@ RETURN
 #endif
 
 /*
-QWidgetAction( QObject * parent )
+QWidgetAction(QObject * parent)
 */
-HB_FUNC_STATIC( QWIDGETACTION_NEW )
+HB_FUNC_STATIC(QWIDGETACTION_NEW)
 {
   if (ISNUMPAR(1) && ISQOBJECT(1))
   {
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QWIDGETACTION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QWIDGETACTION_DELETE )
+HB_FUNC_STATIC(QWIDGETACTION_DELETE)
 {
   auto obj = qobject_cast<QWidgetAction*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QWIDGETACTION_DELETE )
 /*
 QWidget * defaultWidget() const
 */
-HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
+HB_FUNC_STATIC(QWIDGETACTION_DEFAULTWIDGET)
 {
   auto obj = qobject_cast<QWidgetAction*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
     {
 #endif
       auto ptr = obj->defaultWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -113,9 +113,9 @@ HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
 }
 
 /*
-void releaseWidget( QWidget * widget )
+void releaseWidget(QWidget * widget)
 */
-HB_FUNC_STATIC( QWIDGETACTION_RELEASEWIDGET )
+HB_FUNC_STATIC(QWIDGETACTION_RELEASEWIDGET)
 {
   auto obj = qobject_cast<QWidgetAction*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -139,9 +139,9 @@ HB_FUNC_STATIC( QWIDGETACTION_RELEASEWIDGET )
 }
 
 /*
-QWidget * requestWidget( QWidget * parent )
+QWidget * requestWidget(QWidget * parent)
 */
-HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
+HB_FUNC_STATIC(QWIDGETACTION_REQUESTWIDGET)
 {
   auto obj = qobject_cast<QWidgetAction*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
     {
 #endif
       auto ptr = obj->requestWidget(PQWIDGET(1));
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,9 +164,9 @@ HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
 }
 
 /*
-void setDefaultWidget( QWidget * widget )
+void setDefaultWidget(QWidget * widget)
 */
-HB_FUNC_STATIC( QWIDGETACTION_SETDEFAULTWIDGET )
+HB_FUNC_STATIC(QWIDGETACTION_SETDEFAULTWIDGET)
 {
   auto obj = qobject_cast<QWidgetAction*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

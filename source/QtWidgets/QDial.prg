@@ -78,13 +78,13 @@ RETURN
 #endif
 
 /*
-QDial( QWidget * parent = nullptr )
+QDial(QWidget * parent = nullptr)
 */
-HB_FUNC_STATIC( QDIAL_NEW )
+HB_FUNC_STATIC(QDIAL_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QDial( OPQWIDGET( 1, nullptr));
+    auto obj = new QDial(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QDIAL_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDIAL_DELETE )
+HB_FUNC_STATIC(QDIAL_DELETE)
 {
   auto obj = qobject_cast<QDial*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QDIAL_DELETE )
 /*
 int notchSize() const
 */
-HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
+HB_FUNC_STATIC(QDIAL_NOTCHSIZE)
 {
   auto obj = qobject_cast<QDial*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
 /*
 qreal notchTarget() const
 */
-HB_FUNC_STATIC( QDIAL_NOTCHTARGET )
+HB_FUNC_STATIC(QDIAL_NOTCHTARGET)
 {
   auto obj = qobject_cast<QDial*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHTARGET )
 /*
 bool notchesVisible() const
 */
-HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
+HB_FUNC_STATIC(QDIAL_NOTCHESVISIBLE)
 {
   auto obj = qobject_cast<QDial*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -184,9 +184,9 @@ HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
 }
 
 /*
-void setNotchTarget( double target )
+void setNotchTarget(double target)
 */
-HB_FUNC_STATIC( QDIAL_SETNOTCHTARGET )
+HB_FUNC_STATIC(QDIAL_SETNOTCHTARGET)
 {
   auto obj = qobject_cast<QDial*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QDIAL_SETNOTCHTARGET )
 /*
 bool wrapping() const
 */
-HB_FUNC_STATIC( QDIAL_WRAPPING )
+HB_FUNC_STATIC(QDIAL_WRAPPING)
 {
   auto obj = qobject_cast<QDial*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QDIAL_WRAPPING )
 /*
 virtual QSize minimumSizeHint() const
 */
-HB_FUNC_STATIC( QDIAL_MINIMUMSIZEHINT )
+HB_FUNC_STATIC(QDIAL_MINIMUMSIZEHINT)
 {
   auto obj = qobject_cast<QDial*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QDIAL_MINIMUMSIZEHINT )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QDIAL_SIZEHINT )
+HB_FUNC_STATIC(QDIAL_SIZEHINT)
 {
   auto obj = qobject_cast<QDial*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -284,9 +284,9 @@ HB_FUNC_STATIC( QDIAL_SIZEHINT )
 }
 
 /*
-void setNotchesVisible( bool visible )
+void setNotchesVisible(bool visible)
 */
-HB_FUNC_STATIC( QDIAL_SETNOTCHESVISIBLE )
+HB_FUNC_STATIC(QDIAL_SETNOTCHESVISIBLE)
 {
   auto obj = qobject_cast<QDial*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -310,9 +310,9 @@ HB_FUNC_STATIC( QDIAL_SETNOTCHESVISIBLE )
 }
 
 /*
-void setWrapping( bool on )
+void setWrapping(bool on)
 */
-HB_FUNC_STATIC( QDIAL_SETWRAPPING )
+HB_FUNC_STATIC(QDIAL_SETWRAPPING)
 {
   auto obj = qobject_cast<QDial*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

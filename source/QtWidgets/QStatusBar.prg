@@ -61,13 +61,13 @@ RETURN
 #endif
 
 /*
-QStatusBar( QWidget * parent = nullptr )
+QStatusBar(QWidget * parent = nullptr)
 */
-HB_FUNC_STATIC( QSTATUSBAR_NEW )
+HB_FUNC_STATIC(QSTATUSBAR_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QStatusBar( OPQWIDGET( 1, nullptr));
+    auto obj = new QStatusBar(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSTATUSBAR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSTATUSBAR_DELETE )
+HB_FUNC_STATIC(QSTATUSBAR_DELETE)
 {
   auto obj = qobject_cast<QStatusBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -95,9 +95,9 @@ HB_FUNC_STATIC( QSTATUSBAR_DELETE )
 }
 
 /*
-void addPermanentWidget( QWidget * widget, int stretch = 0 )
+void addPermanentWidget(QWidget * widget, int stretch = 0)
 */
-HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
+HB_FUNC_STATIC(QSTATUSBAR_ADDPERMANENTWIDGET)
 {
   auto obj = qobject_cast<QStatusBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
     if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->addPermanentWidget(PQWIDGET(1), OPINT( 2, 0));
+      obj->addPermanentWidget(PQWIDGET(1), OPINT(2, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,9 +121,9 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
 }
 
 /*
-void addWidget( QWidget * widget, int stretch = 0 )
+void addWidget(QWidget * widget, int stretch = 0)
 */
-HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
+HB_FUNC_STATIC(QSTATUSBAR_ADDWIDGET)
 {
   auto obj = qobject_cast<QStatusBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
     if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->addWidget(PQWIDGET(1), OPINT( 2, 0));
+      obj->addWidget(PQWIDGET(1), OPINT(2, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
 /*
 QString currentMessage() const
 */
-HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
+HB_FUNC_STATIC(QSTATUSBAR_CURRENTMESSAGE)
 {
   auto obj = qobject_cast<QStatusBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -171,9 +171,9 @@ HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
 }
 
 /*
-int insertPermanentWidget( int index, QWidget * widget, int stretch = 0 )
+int insertPermanentWidget(int index, QWidget * widget, int stretch = 0)
 */
-HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
+HB_FUNC_STATIC(QSTATUSBAR_INSERTPERMANENTWIDGET)
 {
   auto obj = qobject_cast<QStatusBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQWIDGET(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RINT(obj->insertPermanentWidget(PINT(1), PQWIDGET(2), OPINT( 3, 0 )));
+      RINT(obj->insertPermanentWidget(PINT(1), PQWIDGET(2), OPINT(3, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,9 +195,9 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
 }
 
 /*
-int insertWidget( int index, QWidget * widget, int stretch = 0 )
+int insertWidget(int index, QWidget * widget, int stretch = 0)
 */
-HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
+HB_FUNC_STATIC(QSTATUSBAR_INSERTWIDGET)
 {
   auto obj = qobject_cast<QStatusBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQWIDGET(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RINT(obj->insertWidget(PINT(1), PQWIDGET(2), OPINT( 3, 0 )));
+      RINT(obj->insertWidget(PINT(1), PQWIDGET(2), OPINT(3, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
 /*
 bool isSizeGripEnabled() const
 */
-HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
+HB_FUNC_STATIC(QSTATUSBAR_ISSIZEGRIPENABLED)
 {
   auto obj = qobject_cast<QStatusBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -243,9 +243,9 @@ HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
 }
 
 /*
-void removeWidget( QWidget * widget )
+void removeWidget(QWidget * widget)
 */
-HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
+HB_FUNC_STATIC(QSTATUSBAR_REMOVEWIDGET)
 {
   auto obj = qobject_cast<QStatusBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -269,9 +269,9 @@ HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
 }
 
 /*
-void setSizeGripEnabled( bool )
+void setSizeGripEnabled(bool)
 */
-HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
+HB_FUNC_STATIC(QSTATUSBAR_SETSIZEGRIPENABLED)
 {
   auto obj = qobject_cast<QStatusBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
 /*
 void clearMessage()
 */
-HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
+HB_FUNC_STATIC(QSTATUSBAR_CLEARMESSAGE)
 {
   auto obj = qobject_cast<QStatusBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -321,9 +321,9 @@ HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
 }
 
 /*
-void showMessage( const QString & message, int timeout = 0 )
+void showMessage(const QString & message, int timeout = 0)
 */
-HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
+HB_FUNC_STATIC(QSTATUSBAR_SHOWMESSAGE)
 {
   auto obj = qobject_cast<QStatusBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->showMessage(PQSTRING(1), OPINT( 2, 0));
+      obj->showMessage(PQSTRING(1), OPINT(2, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,9 +347,9 @@ HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
 }
 
 /*
-void messageChanged( const QString & message )
+void messageChanged(const QString & message)
 */
-HB_FUNC_STATIC( QSTATUSBAR_ONMESSAGECHANGED )
+HB_FUNC_STATIC(QSTATUSBAR_ONMESSAGECHANGED)
 {
   auto sender = qobject_cast<QStatusBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

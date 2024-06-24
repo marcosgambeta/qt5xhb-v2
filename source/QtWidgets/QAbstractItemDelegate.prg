@@ -64,7 +64,7 @@ RETURN
 #include <QtWidgets/QAbstractItemDelegate>
 #endif
 
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_DELETE)
 {
   auto obj = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -83,9 +83,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
 }
 
 /*
-virtual QWidget * createEditor( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
+virtual QWidget * createEditor(QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_CREATEEDITOR)
 {
   auto obj = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
     {
 #endif
       auto ptr = obj->createEditor(PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3));
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -108,9 +108,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
 }
 
 /*
-virtual bool editorEvent( QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index )
+virtual bool editorEvent(QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index)
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_EDITOREVENT)
 {
   auto obj = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -132,9 +132,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
 }
 
 /*
-virtual void paint( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
+virtual void paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_PAINT)
 {
   auto obj = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -158,9 +158,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
 }
 
 /*
-virtual void setEditorData( QWidget * editor, const QModelIndex & index ) const
+virtual void setEditorData(QWidget * editor, const QModelIndex & index) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_SETEDITORDATA)
 {
   auto obj = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -184,9 +184,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
 }
 
 /*
-virtual void setModelData( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
+virtual void setModelData(QWidget * editor, QAbstractItemModel * model, const QModelIndex & index) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_SETMODELDATA)
 {
   auto obj = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -210,9 +210,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
 }
 
 /*
-virtual QSize sizeHint( const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
+virtual QSize sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_SIZEHINT)
 {
   auto obj = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -235,9 +235,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
 }
 
 /*
-virtual void updateEditorGeometry( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index ) const
+virtual void updateEditorGeometry(QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY)
 {
   auto obj = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -261,9 +261,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
 }
 
 /*
-virtual bool helpEvent( QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index )
+virtual bool helpEvent(QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index)
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_HELPEVENT)
 {
   auto obj = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -285,9 +285,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
 }
 
 /*
-virtual void destroyEditor( QWidget * editor, const QModelIndex & index ) const
+virtual void destroyEditor(QWidget * editor, const QModelIndex & index) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DESTROYEDITOR )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_DESTROYEDITOR)
 {
   auto obj = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -311,15 +311,15 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DESTROYEDITOR )
 }
 
 /*
-static QString elidedText( const QFontMetrics & fontMetrics, int width, Qt::TextElideMode mode, const QString &text )
+static QString elidedText(const QFontMetrics & fontMetrics, int width, Qt::TextElideMode mode, const QString &text)
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ELIDEDTEXT )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_ELIDEDTEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(4) && ISQFONTMETRICS(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISCHAR(4))
   {
 #endif
-    RQSTRING( QAbstractItemDelegate::elidedText(*PQFONTMETRICS(1), PINT(2), static_cast<Qt::TextElideMode>(hb_parni(3)), PQSTRING(4)));
+    RQSTRING(QAbstractItemDelegate::elidedText(*PQFONTMETRICS(1), PINT(2), static_cast<Qt::TextElideMode>(hb_parni(3)), PQSTRING(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ELIDEDTEXT )
 /*
 virtual QVector<int> paintingRoles() const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINTINGROLES )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_PAINTINGROLES)
 {
   auto obj = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -362,9 +362,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINTINGROLES )
 }
 
 /*
-void closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QAbstractItemDelegate::NoHint )
+void closeEditor(QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QAbstractItemDelegate::NoHint)
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_ONCLOSEEDITOR)
 {
   auto sender = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -414,9 +414,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
 }
 
 /*
-void commitData( QWidget * editor )
+void commitData(QWidget * editor)
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_ONCOMMITDATA)
 {
   auto sender = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -464,9 +464,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
 }
 
 /*
-void sizeHintChanged( const QModelIndex & index )
+void sizeHintChanged(const QModelIndex & index)
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED)
 {
   auto sender = qobject_cast<QAbstractItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTITEMDELEGATE");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

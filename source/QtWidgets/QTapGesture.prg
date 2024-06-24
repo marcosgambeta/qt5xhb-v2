@@ -50,7 +50,7 @@ RETURN
 #include <QtWidgets/QTapGesture>
 #endif
 
-HB_FUNC_STATIC( QTAPGESTURE_DELETE )
+HB_FUNC_STATIC(QTAPGESTURE_DELETE)
 {
   auto obj = qobject_cast<QTapGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QTAPGESTURE_DELETE )
 /*
 QPointF position() const
 */
-HB_FUNC_STATIC( QTAPGESTURE_POSITION )
+HB_FUNC_STATIC(QTAPGESTURE_POSITION)
 {
   auto obj = qobject_cast<QTapGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -94,9 +94,9 @@ HB_FUNC_STATIC( QTAPGESTURE_POSITION )
 }
 
 /*
-void setPosition( const QPointF & pos )
+void setPosition(const QPointF & pos)
 */
-HB_FUNC_STATIC( QTAPGESTURE_SETPOSITION )
+HB_FUNC_STATIC(QTAPGESTURE_SETPOSITION)
 {
   auto obj = qobject_cast<QTapGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

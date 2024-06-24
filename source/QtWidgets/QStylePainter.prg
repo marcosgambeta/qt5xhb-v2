@@ -53,7 +53,7 @@ RETURN
 #include <QtWidgets/QStylePainter>
 #endif
 
-HB_FUNC_STATIC( QSTYLEPAINTER_NEW )
+HB_FUNC_STATIC(QSTYLEPAINTER_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_NEW )
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    QStylePainter( QWidget * w )
+    QStylePainter(QWidget * w)
     */
     auto obj = new QStylePainter(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_NEW )
   else if (ISNUMPAR(2) && ISQPAINTDEVICE(1) && ISQWIDGET(2))
   {
     /*
-    QStylePainter( QPaintDevice * pd, QWidget * w )
+    QStylePainter(QPaintDevice * pd, QWidget * w)
     */
     auto obj = new QStylePainter(PQPAINTDEVICE(1), PQWIDGET(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -88,12 +88,12 @@ HB_FUNC_STATIC( QSTYLEPAINTER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEPAINTER_BEGIN )
+HB_FUNC_STATIC(QSTYLEPAINTER_BEGIN)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    bool begin( QWidget * w )
+    bool begin(QWidget * w)
     */
     auto obj = static_cast<QStylePainter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_BEGIN )
   else if (ISNUMPAR(2) && ISQPAINTDEVICE(1) && ISQWIDGET(2))
   {
     /*
-    bool begin( QPaintDevice * pd, QWidget * w )
+    bool begin(QPaintDevice * pd, QWidget * w)
     */
     auto obj = static_cast<QStylePainter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -123,9 +123,9 @@ HB_FUNC_STATIC( QSTYLEPAINTER_BEGIN )
 }
 
 /*
-void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption & opt )
+void drawPrimitive(QStyle::PrimitiveElement pe, const QStyleOption & opt)
 */
-HB_FUNC_STATIC( QSTYLEPAINTER_DRAWPRIMITIVE )
+HB_FUNC_STATIC(QSTYLEPAINTER_DRAWPRIMITIVE)
 {
   auto obj = static_cast<QStylePainter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -149,9 +149,9 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWPRIMITIVE )
 }
 
 /*
-void drawControl( QStyle::ControlElement ce, const QStyleOption & opt )
+void drawControl(QStyle::ControlElement ce, const QStyleOption & opt)
 */
-HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCONTROL )
+HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCONTROL)
 {
   auto obj = static_cast<QStylePainter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -175,9 +175,9 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCONTROL )
 }
 
 /*
-void drawComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex & opt )
+void drawComplexControl(QStyle::ComplexControl cc, const QStyleOptionComplex & opt)
 */
-HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCOMPLEXCONTROL )
+HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCOMPLEXCONTROL)
 {
   auto obj = static_cast<QStylePainter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -201,9 +201,9 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCOMPLEXCONTROL )
 }
 
 /*
-void drawItemText( const QRect & r, int flags, const QPalette & pal, bool enabled, const QString & text, QPalette::ColorRole textRole = QPalette::NoRole )
+void drawItemText(const QRect & r, int flags, const QPalette & pal, bool enabled, const QString & text, QPalette::ColorRole textRole = QPalette::NoRole)
 */
-HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMTEXT )
+HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMTEXT)
 {
   auto obj = static_cast<QStylePainter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMTEXT )
     if (ISBETWEEN(5, 6) && ISQRECT(1) && HB_ISNUM(2) && ISQPALETTE(3) && HB_ISLOG(4) && HB_ISCHAR(5) && (HB_ISNUM(6) || HB_ISNIL(6)))
     {
 #endif
-      obj->drawItemText(*PQRECT(1), PINT(2), *PQPALETTE(3), PBOOL(4), PQSTRING(5), HB_ISNIL(6) ? static_cast<QPalette::ColorRole >( QPalette::NoRole ) : static_cast<QPalette::ColorRole >(hb_parni(6)));
+      obj->drawItemText(*PQRECT(1), PINT(2), *PQPALETTE(3), PBOOL(4), PQSTRING(5), HB_ISNIL(6) ? static_cast<QPalette::ColorRole >(QPalette::NoRole) : static_cast<QPalette::ColorRole >(hb_parni(6)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,9 +227,9 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMTEXT )
 }
 
 /*
-void drawItemPixmap( const QRect & r, int flags, const QPixmap & pixmap )
+void drawItemPixmap(const QRect & r, int flags, const QPixmap & pixmap)
 */
-HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMPIXMAP )
+HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMPIXMAP)
 {
   auto obj = static_cast<QStylePainter*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMPIXMAP )
 /*
 QStyle * style() const
 */
-HB_FUNC_STATIC( QSTYLEPAINTER_STYLE )
+HB_FUNC_STATIC(QSTYLEPAINTER_STYLE)
 {
   auto obj = static_cast<QStylePainter*>(Qt5xHb::itemGetPtrStackSelfItem());
 

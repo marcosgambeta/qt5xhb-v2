@@ -52,7 +52,7 @@ RETURN
 #include <QtWidgets/QGraphicsAnchor>
 #endif
 
-HB_FUNC_STATIC( QGRAPHICSANCHOR_DELETE )
+HB_FUNC_STATIC(QGRAPHICSANCHOR_DELETE)
 {
   auto obj = qobject_cast<QGraphicsAnchor*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -71,9 +71,9 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_DELETE )
 }
 
 /*
-void setSizePolicy( QSizePolicy::Policy policy )
+void setSizePolicy(QSizePolicy::Policy policy)
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
+HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSIZEPOLICY)
 {
   auto obj = qobject_cast<QGraphicsAnchor*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -97,9 +97,9 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
 }
 
 /*
-void setSpacing( qreal spacing )
+void setSpacing(qreal spacing)
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSPACING )
+HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSPACING)
 {
   auto obj = qobject_cast<QGraphicsAnchor*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSPACING )
 /*
 QSizePolicy::Policy sizePolicy() const
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_SIZEPOLICY )
+HB_FUNC_STATIC(QGRAPHICSANCHOR_SIZEPOLICY)
 {
   auto obj = qobject_cast<QGraphicsAnchor*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SIZEPOLICY )
 /*
 qreal spacing() const
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
+HB_FUNC_STATIC(QGRAPHICSANCHOR_SPACING)
 {
   auto obj = qobject_cast<QGraphicsAnchor*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
 /*
 void unsetSpacing()
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_UNSETSPACING )
+HB_FUNC_STATIC(QGRAPHICSANCHOR_UNSETSPACING)
 {
   auto obj = qobject_cast<QGraphicsAnchor*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

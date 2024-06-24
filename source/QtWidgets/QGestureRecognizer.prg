@@ -62,7 +62,7 @@ RETURN
 
 #include <QtWidgets/QGesture>
 
-HB_FUNC_STATIC( QGESTURERECOGNIZER_DELETE )
+HB_FUNC_STATIC(QGESTURERECOGNIZER_DELETE)
 {
   auto obj = static_cast<QGestureRecognizer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -79,9 +79,9 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_DELETE )
 }
 
 /*
-virtual QGesture * create( QObject * target )
+virtual QGesture * create(QObject * target)
 */
-HB_FUNC_STATIC( QGESTURERECOGNIZER_CREATE )
+HB_FUNC_STATIC(QGESTURERECOGNIZER_CREATE)
 {
   auto obj = static_cast<QGestureRecognizer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -104,9 +104,9 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_CREATE )
 }
 
 /*
-virtual QGestureRecognizer::Result recognize( QGesture * gesture, QObject * watched, QEvent * event ) = 0
+virtual QGestureRecognizer::Result recognize(QGesture * gesture, QObject * watched, QEvent * event) = 0
 */
-HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
+HB_FUNC_STATIC(QGESTURERECOGNIZER_RECOGNIZE)
 {
   auto obj = static_cast<QGestureRecognizer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -128,9 +128,9 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
 }
 
 /*
-virtual void reset( QGesture * gesture )
+virtual void reset(QGesture * gesture)
 */
-HB_FUNC_STATIC( QGESTURERECOGNIZER_RESET )
+HB_FUNC_STATIC(QGESTURERECOGNIZER_RESET)
 {
   auto obj = static_cast<QGestureRecognizer*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -154,15 +154,15 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RESET )
 }
 
 /*
-static Qt::GestureType registerRecognizer( QGestureRecognizer * recognizer )
+static Qt::GestureType registerRecognizer(QGestureRecognizer * recognizer)
 */
-HB_FUNC_STATIC( QGESTURERECOGNIZER_REGISTERRECOGNIZER )
+HB_FUNC_STATIC(QGESTURERECOGNIZER_REGISTERRECOGNIZER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQGESTURERECOGNIZER(1))
   {
 #endif
-    RENUM( QGestureRecognizer::registerRecognizer(PQGESTURERECOGNIZER(1)));
+    RENUM(QGestureRecognizer::registerRecognizer(PQGESTURERECOGNIZER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -173,9 +173,9 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_REGISTERRECOGNIZER )
 }
 
 /*
-static void unregisterRecognizer( Qt::GestureType type )
+static void unregisterRecognizer(Qt::GestureType type)
 */
-HB_FUNC_STATIC( QGESTURERECOGNIZER_UNREGISTERRECOGNIZER )
+HB_FUNC_STATIC(QGESTURERECOGNIZER_UNREGISTERRECOGNIZER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1))
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_UNREGISTERRECOGNIZER )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QGESTURERECOGNIZER_NEWFROM )
+HB_FUNC_STATIC(QGESTURERECOGNIZER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -223,22 +223,22 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGESTURERECOGNIZER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGESTURERECOGNIZER_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QGESTURERECOGNIZER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGESTURERECOGNIZER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGESTURERECOGNIZER_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QGESTURERECOGNIZER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGESTURERECOGNIZER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGESTURERECOGNIZER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGESTURERECOGNIZER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGESTURERECOGNIZER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

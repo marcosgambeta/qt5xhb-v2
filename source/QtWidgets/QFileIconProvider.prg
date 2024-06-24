@@ -61,7 +61,7 @@ RETURN
 /*
 QFileIconProvider()
 */
-HB_FUNC_STATIC( QFILEICONPROVIDER_NEW )
+HB_FUNC_STATIC(QFILEICONPROVIDER_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QFILEICONPROVIDER_DELETE )
+HB_FUNC_STATIC(QFILEICONPROVIDER_DELETE)
 {
   auto obj = static_cast<QFileIconProvider*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -90,12 +90,12 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
+HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    virtual QIcon icon( QFileIconProvider::IconType type ) const
+    virtual QIcon icon(QFileIconProvider::IconType type) const
     */
     auto obj = static_cast<QFileIconProvider*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
   else if (ISNUMPAR(1) && ISQFILEINFO(1))
   {
     /*
-    virtual QIcon icon( const QFileInfo & info ) const
+    virtual QIcon icon(const QFileInfo & info) const
     */
     auto obj = static_cast<QFileIconProvider*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -127,9 +127,9 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
 }
 
 /*
-virtual QString type( const QFileInfo & info ) const
+virtual QString type(const QFileInfo & info) const
 */
-HB_FUNC_STATIC( QFILEICONPROVIDER_TYPE )
+HB_FUNC_STATIC(QFILEICONPROVIDER_TYPE)
 {
   auto obj = static_cast<QFileIconProvider*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_TYPE )
   }
 }
 
-HB_FUNC_STATIC( QFILEICONPROVIDER_NEWFROM )
+HB_FUNC_STATIC(QFILEICONPROVIDER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -180,22 +180,22 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QFILEICONPROVIDER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QFILEICONPROVIDER_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QFILEICONPROVIDER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QFILEICONPROVIDER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QFILEICONPROVIDER_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QFILEICONPROVIDER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QFILEICONPROVIDER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QFILEICONPROVIDER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QFILEICONPROVIDER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QFILEICONPROVIDER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

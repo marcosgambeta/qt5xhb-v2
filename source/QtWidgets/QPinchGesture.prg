@@ -70,7 +70,7 @@ RETURN
 #include <QtWidgets/QPinchGesture>
 #endif
 
-HB_FUNC_STATIC( QPINCHGESTURE_DELETE )
+HB_FUNC_STATIC(QPINCHGESTURE_DELETE)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_DELETE )
 /*
 QPointF centerPoint() const
 */
-HB_FUNC_STATIC( QPINCHGESTURE_CENTERPOINT )
+HB_FUNC_STATIC(QPINCHGESTURE_CENTERPOINT)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_CENTERPOINT )
 /*
 QPinchGesture::ChangeFlags changeFlags() const
 */
-HB_FUNC_STATIC( QPINCHGESTURE_CHANGEFLAGS )
+HB_FUNC_STATIC(QPINCHGESTURE_CHANGEFLAGS)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_CHANGEFLAGS )
 /*
 QPointF lastCenterPoint() const
 */
-HB_FUNC_STATIC( QPINCHGESTURE_LASTCENTERPOINT )
+HB_FUNC_STATIC(QPINCHGESTURE_LASTCENTERPOINT)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_LASTCENTERPOINT )
 /*
 qreal lastRotationAngle() const
 */
-HB_FUNC_STATIC( QPINCHGESTURE_LASTROTATIONANGLE )
+HB_FUNC_STATIC(QPINCHGESTURE_LASTROTATIONANGLE)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_LASTROTATIONANGLE )
 /*
 qreal lastScaleFactor() const
 */
-HB_FUNC_STATIC( QPINCHGESTURE_LASTSCALEFACTOR )
+HB_FUNC_STATIC(QPINCHGESTURE_LASTSCALEFACTOR)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_LASTSCALEFACTOR )
 /*
 qreal rotationAngle() const
 */
-HB_FUNC_STATIC( QPINCHGESTURE_ROTATIONANGLE )
+HB_FUNC_STATIC(QPINCHGESTURE_ROTATIONANGLE)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_ROTATIONANGLE )
 /*
 qreal scaleFactor() const
 */
-HB_FUNC_STATIC( QPINCHGESTURE_SCALEFACTOR )
+HB_FUNC_STATIC(QPINCHGESTURE_SCALEFACTOR)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -259,9 +259,9 @@ HB_FUNC_STATIC( QPINCHGESTURE_SCALEFACTOR )
 }
 
 /*
-void setCenterPoint( const QPointF & value )
+void setCenterPoint(const QPointF & value)
 */
-HB_FUNC_STATIC( QPINCHGESTURE_SETCENTERPOINT )
+HB_FUNC_STATIC(QPINCHGESTURE_SETCENTERPOINT)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -285,9 +285,9 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETCENTERPOINT )
 }
 
 /*
-void setChangeFlags( QPinchGesture::ChangeFlags value )
+void setChangeFlags(QPinchGesture::ChangeFlags value)
 */
-HB_FUNC_STATIC( QPINCHGESTURE_SETCHANGEFLAGS )
+HB_FUNC_STATIC(QPINCHGESTURE_SETCHANGEFLAGS)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -311,9 +311,9 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETCHANGEFLAGS )
 }
 
 /*
-void setLastCenterPoint( const QPointF & value )
+void setLastCenterPoint(const QPointF & value)
 */
-HB_FUNC_STATIC( QPINCHGESTURE_SETLASTCENTERPOINT )
+HB_FUNC_STATIC(QPINCHGESTURE_SETLASTCENTERPOINT)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -337,9 +337,9 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTCENTERPOINT )
 }
 
 /*
-void setLastRotationAngle( qreal value )
+void setLastRotationAngle(qreal value)
 */
-HB_FUNC_STATIC( QPINCHGESTURE_SETLASTROTATIONANGLE )
+HB_FUNC_STATIC(QPINCHGESTURE_SETLASTROTATIONANGLE)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -363,9 +363,9 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTROTATIONANGLE )
 }
 
 /*
-void setLastScaleFactor( qreal value )
+void setLastScaleFactor(qreal value)
 */
-HB_FUNC_STATIC( QPINCHGESTURE_SETLASTSCALEFACTOR )
+HB_FUNC_STATIC(QPINCHGESTURE_SETLASTSCALEFACTOR)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -389,9 +389,9 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTSCALEFACTOR )
 }
 
 /*
-void setRotationAngle( qreal value )
+void setRotationAngle(qreal value)
 */
-HB_FUNC_STATIC( QPINCHGESTURE_SETROTATIONANGLE )
+HB_FUNC_STATIC(QPINCHGESTURE_SETROTATIONANGLE)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -415,9 +415,9 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETROTATIONANGLE )
 }
 
 /*
-void setScaleFactor( qreal value )
+void setScaleFactor(qreal value)
 */
-HB_FUNC_STATIC( QPINCHGESTURE_SETSCALEFACTOR )
+HB_FUNC_STATIC(QPINCHGESTURE_SETSCALEFACTOR)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -441,9 +441,9 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETSCALEFACTOR )
 }
 
 /*
-void setStartCenterPoint( const QPointF & value )
+void setStartCenterPoint(const QPointF & value)
 */
-HB_FUNC_STATIC( QPINCHGESTURE_SETSTARTCENTERPOINT )
+HB_FUNC_STATIC(QPINCHGESTURE_SETSTARTCENTERPOINT)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -467,9 +467,9 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETSTARTCENTERPOINT )
 }
 
 /*
-void setTotalChangeFlags( QPinchGesture::ChangeFlags value )
+void setTotalChangeFlags(QPinchGesture::ChangeFlags value)
 */
-HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALCHANGEFLAGS )
+HB_FUNC_STATIC(QPINCHGESTURE_SETTOTALCHANGEFLAGS)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -493,9 +493,9 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALCHANGEFLAGS )
 }
 
 /*
-void setTotalRotationAngle( qreal value )
+void setTotalRotationAngle(qreal value)
 */
-HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALROTATIONANGLE )
+HB_FUNC_STATIC(QPINCHGESTURE_SETTOTALROTATIONANGLE)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -519,9 +519,9 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALROTATIONANGLE )
 }
 
 /*
-void setTotalScaleFactor( qreal value )
+void setTotalScaleFactor(qreal value)
 */
-HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALSCALEFACTOR )
+HB_FUNC_STATIC(QPINCHGESTURE_SETTOTALSCALEFACTOR)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALSCALEFACTOR )
 /*
 QPointF startCenterPoint() const
 */
-HB_FUNC_STATIC( QPINCHGESTURE_STARTCENTERPOINT )
+HB_FUNC_STATIC(QPINCHGESTURE_STARTCENTERPOINT)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_STARTCENTERPOINT )
 /*
 QPinchGesture::ChangeFlags totalChangeFlags() const
 */
-HB_FUNC_STATIC( QPINCHGESTURE_TOTALCHANGEFLAGS )
+HB_FUNC_STATIC(QPINCHGESTURE_TOTALCHANGEFLAGS)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_TOTALCHANGEFLAGS )
 /*
 qreal totalRotationAngle() const
 */
-HB_FUNC_STATIC( QPINCHGESTURE_TOTALROTATIONANGLE )
+HB_FUNC_STATIC(QPINCHGESTURE_TOTALROTATIONANGLE)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_TOTALROTATIONANGLE )
 /*
 qreal totalScaleFactor() const
 */
-HB_FUNC_STATIC( QPINCHGESTURE_TOTALSCALEFACTOR )
+HB_FUNC_STATIC(QPINCHGESTURE_TOTALSCALEFACTOR)
 {
   auto obj = qobject_cast<QPinchGesture*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

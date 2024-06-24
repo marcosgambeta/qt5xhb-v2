@@ -54,7 +54,7 @@ RETURN
 #include <QtWidgets/QGraphicsSceneWheelEvent>
 #endif
 
-HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELETE )
+HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_DELETE)
 {
   auto obj = static_cast<QGraphicsSceneWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELETE )
 /*
 Qt::MouseButtons buttons() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_BUTTONS )
+HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_BUTTONS)
 {
   auto obj = static_cast<QGraphicsSceneWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_BUTTONS )
 /*
 int delta() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELTA )
+HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_DELTA)
 {
   auto obj = static_cast<QGraphicsSceneWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELTA )
 /*
 Qt::KeyboardModifiers modifiers() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_MODIFIERS )
+HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_MODIFIERS)
 {
   auto obj = static_cast<QGraphicsSceneWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_MODIFIERS )
 /*
 Qt::Orientation orientation() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_ORIENTATION )
+HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_ORIENTATION)
 {
   auto obj = static_cast<QGraphicsSceneWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_ORIENTATION )
 /*
 QPointF pos() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_POS )
+HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_POS)
 {
   auto obj = static_cast<QGraphicsSceneWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_POS )
 /*
 QPointF scenePos() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCENEPOS )
+HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_SCENEPOS)
 {
   auto obj = static_cast<QGraphicsSceneWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCENEPOS )
 /*
 QPoint screenPos() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCREENPOS )
+HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_SCREENPOS)
 {
   auto obj = static_cast<QGraphicsSceneWheelEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 

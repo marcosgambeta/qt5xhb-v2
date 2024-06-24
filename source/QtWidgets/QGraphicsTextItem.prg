@@ -89,21 +89,21 @@ RETURN
 #include <QtGui/QTextCursor>
 #include <QtGui/QTextDocument>
 
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
   {
     /*
-    QGraphicsTextItem( QGraphicsItem * parent = nullptr )
+    QGraphicsTextItem(QGraphicsItem * parent = nullptr)
     */
-    auto obj = new QGraphicsTextItem( HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(1)));
+    auto obj = new QGraphicsTextItem(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(1)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2)&& HB_ISCHAR(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsTextItem( const QString & text, QGraphicsItem * parent = nullptr )
+    QGraphicsTextItem(const QString & text, QGraphicsItem * parent = nullptr)
     */
     auto obj = new QGraphicsTextItem(PQSTRING(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, false);
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DELETE )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_DELETE)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DELETE )
 /*
 void adjustSize()
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ADJUSTSIZE )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_ADJUSTSIZE)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ADJUSTSIZE )
 /*
 QColor defaultTextColor() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
 /*
 QTextDocument * document() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_DOCUMENT)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
 /*
 QFont font() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_FONT)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
 /*
 bool openExternalLinks() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPENEXTERNALLINKS )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_OPENEXTERNALLINKS)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -259,9 +259,9 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPENEXTERNALLINKS )
 }
 
 /*
-void setDefaultTextColor( const QColor & col )
+void setDefaultTextColor(const QColor & col)
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR )
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setDefaultTextColor( HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor( hb_parc(1)));
+      obj->setDefaultTextColor(HB_ISOBJECT(1) ? *static_cast<QColor*>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,9 +285,9 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR )
 }
 
 /*
-void setDocument( QTextDocument * document )
+void setDocument(QTextDocument * document)
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDOCUMENT )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETDOCUMENT)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -311,9 +311,9 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDOCUMENT )
 }
 
 /*
-void setFont( const QFont & font )
+void setFont(const QFont & font)
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETFONT )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETFONT)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -337,9 +337,9 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETFONT )
 }
 
 /*
-void setHtml( const QString & text )
+void setHtml(const QString & text)
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETHTML )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETHTML)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -363,9 +363,9 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETHTML )
 }
 
 /*
-void setOpenExternalLinks( bool open )
+void setOpenExternalLinks(bool open)
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -389,9 +389,9 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS )
 }
 
 /*
-void setPlainText( const QString & text )
+void setPlainText(const QString & text)
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETPLAINTEXT )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETPLAINTEXT)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -415,9 +415,9 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETPLAINTEXT )
 }
 
 /*
-void setTabChangesFocus( bool b )
+void setTabChangesFocus(bool b)
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -441,9 +441,9 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS )
 }
 
 /*
-void setTextCursor( const QTextCursor & cursor )
+void setTextCursor(const QTextCursor & cursor)
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTCURSOR )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTEXTCURSOR)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -467,9 +467,9 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTCURSOR )
 }
 
 /*
-void setTextInteractionFlags( Qt::TextInteractionFlags flags )
+void setTextInteractionFlags(Qt::TextInteractionFlags flags)
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -493,9 +493,9 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS )
 }
 
 /*
-void setTextWidth( qreal width )
+void setTextWidth(qreal width)
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTWIDTH )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTEXTWIDTH)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTWIDTH )
 /*
 bool tabChangesFocus() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TABCHANGESFOCUS )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TABCHANGESFOCUS)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TABCHANGESFOCUS )
 /*
 QTextCursor textCursor() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TEXTCURSOR)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
 /*
 Qt::TextInteractionFlags textInteractionFlags() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS )
 /*
 qreal textWidth() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TEXTWIDTH)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
 /*
 QString toHtml() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TOHTML)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -642,7 +642,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
 /*
 QString toPlainText() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TOPLAINTEXT)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
 /*
 virtual QRectF boundingRect() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_BOUNDINGRECT )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_BOUNDINGRECT)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -689,9 +689,9 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_BOUNDINGRECT )
 }
 
 /*
-virtual bool contains( const QPointF & point ) const
+virtual bool contains(const QPointF & point) const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_CONTAINS )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_CONTAINS)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -713,9 +713,9 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_CONTAINS )
 }
 
 /*
-virtual bool isObscuredBy( const QGraphicsItem * item ) const
+virtual bool isObscuredBy(const QGraphicsItem * item) const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ISOBSCUREDBY )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_ISOBSCUREDBY)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ISOBSCUREDBY )
 /*
 virtual QPainterPath opaqueArea() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPAQUEAREA )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_OPAQUEAREA)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -762,9 +762,9 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPAQUEAREA )
 }
 
 /*
-virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
+virtual void paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget)
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_PAINT )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_PAINT)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_PAINT )
 /*
 virtual QPainterPath shape() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SHAPE)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
 /*
 virtual int type() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TYPE)
 {
   auto obj = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -837,9 +837,9 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
 }
 
 /*
-void linkActivated( const QString & link )
+void linkActivated(const QString & link)
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKACTIVATED )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_ONLINKACTIVATED)
 {
   auto sender = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -887,9 +887,9 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKACTIVATED )
 }
 
 /*
-void linkHovered( const QString & link )
+void linkHovered(const QString & link)
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_ONLINKHOVERED)
 {
   auto sender = qobject_cast<QGraphicsTextItem*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

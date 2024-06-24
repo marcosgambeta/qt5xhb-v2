@@ -84,7 +84,7 @@ RETURN
 #include <QtWidgets/QLayout>
 #endif
 
-HB_FUNC_STATIC( QLAYOUT_DELETE )
+HB_FUNC_STATIC(QLAYOUT_DELETE)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QLAYOUT_DELETE )
 /*
 bool activate()
 */
-HB_FUNC_STATIC( QLAYOUT_ACTIVATE )
+HB_FUNC_STATIC(QLAYOUT_ACTIVATE)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -127,9 +127,9 @@ HB_FUNC_STATIC( QLAYOUT_ACTIVATE )
 }
 
 /*
-virtual void addItem( QLayoutItem * item ) = 0
+virtual void addItem(QLayoutItem * item) = 0
 */
-HB_FUNC_STATIC( QLAYOUT_ADDITEM )
+HB_FUNC_STATIC(QLAYOUT_ADDITEM)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -153,9 +153,9 @@ HB_FUNC_STATIC( QLAYOUT_ADDITEM )
 }
 
 /*
-void addWidget( QWidget * w )
+void addWidget(QWidget * w)
 */
-HB_FUNC_STATIC( QLAYOUT_ADDWIDGET )
+HB_FUNC_STATIC(QLAYOUT_ADDWIDGET)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QLAYOUT_ADDWIDGET )
 /*
 QMargins contentsMargins() const
 */
-HB_FUNC_STATIC( QLAYOUT_CONTENTSMARGINS )
+HB_FUNC_STATIC(QLAYOUT_CONTENTSMARGINS)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QLAYOUT_CONTENTSMARGINS )
 /*
 QRect contentsRect() const
 */
-HB_FUNC_STATIC( QLAYOUT_CONTENTSRECT )
+HB_FUNC_STATIC(QLAYOUT_CONTENTSRECT)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QLAYOUT_CONTENTSRECT )
 /*
 virtual int count() const = 0
 */
-HB_FUNC_STATIC( QLAYOUT_COUNT )
+HB_FUNC_STATIC(QLAYOUT_COUNT)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -253,9 +253,9 @@ HB_FUNC_STATIC( QLAYOUT_COUNT )
 }
 
 /*
-virtual int indexOf( QWidget * widget ) const
+virtual int indexOf(QWidget * widget) const
 */
-HB_FUNC_STATIC( QLAYOUT_INDEXOF )
+HB_FUNC_STATIC(QLAYOUT_INDEXOF)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QLAYOUT_INDEXOF )
 /*
 bool isEnabled() const
 */
-HB_FUNC_STATIC( QLAYOUT_ISENABLED )
+HB_FUNC_STATIC(QLAYOUT_ISENABLED)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -301,9 +301,9 @@ HB_FUNC_STATIC( QLAYOUT_ISENABLED )
 }
 
 /*
-virtual QLayoutItem * itemAt( int index ) const = 0
+virtual QLayoutItem * itemAt(int index) const = 0
 */
-HB_FUNC_STATIC( QLAYOUT_ITEMAT )
+HB_FUNC_STATIC(QLAYOUT_ITEMAT)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QLAYOUT_ITEMAT )
 /*
 QWidget * menuBar() const
 */
-HB_FUNC_STATIC( QLAYOUT_MENUBAR )
+HB_FUNC_STATIC(QLAYOUT_MENUBAR)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QLAYOUT_MENUBAR )
     {
 #endif
       auto ptr = obj->menuBar();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QLAYOUT_MENUBAR )
 /*
 QWidget * parentWidget() const
 */
-HB_FUNC_STATIC( QLAYOUT_PARENTWIDGET )
+HB_FUNC_STATIC(QLAYOUT_PARENTWIDGET)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QLAYOUT_PARENTWIDGET )
     {
 #endif
       auto ptr = obj->parentWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -376,9 +376,9 @@ HB_FUNC_STATIC( QLAYOUT_PARENTWIDGET )
 }
 
 /*
-void removeItem( QLayoutItem * item )
+void removeItem(QLayoutItem * item)
 */
-HB_FUNC_STATIC( QLAYOUT_REMOVEITEM )
+HB_FUNC_STATIC(QLAYOUT_REMOVEITEM)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -402,9 +402,9 @@ HB_FUNC_STATIC( QLAYOUT_REMOVEITEM )
 }
 
 /*
-void removeWidget( QWidget * widget )
+void removeWidget(QWidget * widget)
 */
-HB_FUNC_STATIC( QLAYOUT_REMOVEWIDGET )
+HB_FUNC_STATIC(QLAYOUT_REMOVEWIDGET)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QLAYOUT_REMOVEWIDGET )
 }
 
 /*
-bool setAlignment( QWidget * w, Qt::Alignment alignment )
+bool setAlignment(QWidget * w, Qt::Alignment alignment)
 */
 void QLayout_setAlignment1()
 {
@@ -441,7 +441,7 @@ void QLayout_setAlignment1()
 }
 
 /*
-void setAlignment( Qt::Alignment alignment )
+void setAlignment(Qt::Alignment alignment)
 */
 void QLayout_setAlignment2()
 {
@@ -456,7 +456,7 @@ void QLayout_setAlignment2()
 }
 
 /*
-bool setAlignment( QLayout * l, Qt::Alignment alignment )
+bool setAlignment(QLayout * l, Qt::Alignment alignment)
 */
 void QLayout_setAlignment3()
 {
@@ -468,7 +468,7 @@ void QLayout_setAlignment3()
   }
 }
 
-HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
+HB_FUNC_STATIC(QLAYOUT_SETALIGNMENT)
 {
   if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2))
   {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
 }
 
 /*
-void setContentsMargins( int left, int top, int right, int bottom )
+void setContentsMargins(int left, int top, int right, int bottom)
 */
 void QLayout_setContentsMargins1()
 {
@@ -504,7 +504,7 @@ void QLayout_setContentsMargins1()
 }
 
 /*
-void setContentsMargins( const QMargins & margins )
+void setContentsMargins(const QMargins & margins)
 */
 void QLayout_setContentsMargins2()
 {
@@ -518,7 +518,7 @@ void QLayout_setContentsMargins2()
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QLAYOUT_SETCONTENTSMARGINS )
+HB_FUNC_STATIC(QLAYOUT_SETCONTENTSMARGINS)
 {
   if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
@@ -535,9 +535,9 @@ HB_FUNC_STATIC( QLAYOUT_SETCONTENTSMARGINS )
 }
 
 /*
-void setEnabled( bool enable )
+void setEnabled(bool enable)
 */
-HB_FUNC_STATIC( QLAYOUT_SETENABLED )
+HB_FUNC_STATIC(QLAYOUT_SETENABLED)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -561,9 +561,9 @@ HB_FUNC_STATIC( QLAYOUT_SETENABLED )
 }
 
 /*
-void setMenuBar( QWidget * widget )
+void setMenuBar(QWidget * widget)
 */
-HB_FUNC_STATIC( QLAYOUT_SETMENUBAR )
+HB_FUNC_STATIC(QLAYOUT_SETMENUBAR)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -587,9 +587,9 @@ HB_FUNC_STATIC( QLAYOUT_SETMENUBAR )
 }
 
 /*
-void setSizeConstraint( QLayout::SizeConstraint )
+void setSizeConstraint(QLayout::SizeConstraint)
 */
-HB_FUNC_STATIC( QLAYOUT_SETSIZECONSTRAINT )
+HB_FUNC_STATIC(QLAYOUT_SETSIZECONSTRAINT)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -613,9 +613,9 @@ HB_FUNC_STATIC( QLAYOUT_SETSIZECONSTRAINT )
 }
 
 /*
-void setSpacing( int )
+void setSpacing(int)
 */
-HB_FUNC_STATIC( QLAYOUT_SETSPACING )
+HB_FUNC_STATIC(QLAYOUT_SETSPACING)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QLAYOUT_SETSPACING )
 /*
 QLayout::SizeConstraint sizeConstraint() const
 */
-HB_FUNC_STATIC( QLAYOUT_SIZECONSTRAINT )
+HB_FUNC_STATIC(QLAYOUT_SIZECONSTRAINT)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QLAYOUT_SIZECONSTRAINT )
 /*
 int spacing() const
 */
-HB_FUNC_STATIC( QLAYOUT_SPACING )
+HB_FUNC_STATIC(QLAYOUT_SPACING)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -687,9 +687,9 @@ HB_FUNC_STATIC( QLAYOUT_SPACING )
 }
 
 /*
-virtual QLayoutItem * takeAt( int index ) = 0
+virtual QLayoutItem * takeAt(int index) = 0
 */
-HB_FUNC_STATIC( QLAYOUT_TAKEAT )
+HB_FUNC_STATIC(QLAYOUT_TAKEAT)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( QLAYOUT_TAKEAT )
 /*
 void update()
 */
-HB_FUNC_STATIC( QLAYOUT_UPDATE )
+HB_FUNC_STATIC(QLAYOUT_UPDATE)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QLAYOUT_UPDATE )
 /*
 virtual Qt::Orientations expandingDirections() const
 */
-HB_FUNC_STATIC( QLAYOUT_EXPANDINGDIRECTIONS )
+HB_FUNC_STATIC(QLAYOUT_EXPANDINGDIRECTIONS)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QLAYOUT_EXPANDINGDIRECTIONS )
 /*
 virtual QRect geometry() const
 */
-HB_FUNC_STATIC( QLAYOUT_GEOMETRY )
+HB_FUNC_STATIC(QLAYOUT_GEOMETRY)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QLAYOUT_GEOMETRY )
 /*
 virtual void invalidate()
 */
-HB_FUNC_STATIC( QLAYOUT_INVALIDATE )
+HB_FUNC_STATIC(QLAYOUT_INVALIDATE)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QLAYOUT_INVALIDATE )
 /*
 virtual bool isEmpty() const
 */
-HB_FUNC_STATIC( QLAYOUT_ISEMPTY )
+HB_FUNC_STATIC(QLAYOUT_ISEMPTY)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QLAYOUT_ISEMPTY )
 /*
 virtual QLayout * layout()
 */
-HB_FUNC_STATIC( QLAYOUT_LAYOUT )
+HB_FUNC_STATIC(QLAYOUT_LAYOUT)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -864,7 +864,7 @@ HB_FUNC_STATIC( QLAYOUT_LAYOUT )
 /*
 virtual QSize maximumSize() const
 */
-HB_FUNC_STATIC( QLAYOUT_MAXIMUMSIZE )
+HB_FUNC_STATIC(QLAYOUT_MAXIMUMSIZE)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QLAYOUT_MAXIMUMSIZE )
 /*
 virtual QSize minimumSize() const
 */
-HB_FUNC_STATIC( QLAYOUT_MINIMUMSIZE )
+HB_FUNC_STATIC(QLAYOUT_MINIMUMSIZE)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -912,9 +912,9 @@ HB_FUNC_STATIC( QLAYOUT_MINIMUMSIZE )
 }
 
 /*
-virtual void setGeometry( const QRect & r )
+virtual void setGeometry(const QRect & r)
 */
-HB_FUNC_STATIC( QLAYOUT_SETGEOMETRY )
+HB_FUNC_STATIC(QLAYOUT_SETGEOMETRY)
 {
   auto obj = qobject_cast<QLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -938,15 +938,15 @@ HB_FUNC_STATIC( QLAYOUT_SETGEOMETRY )
 }
 
 /*
-static QSize closestAcceptableSize( const QWidget * widget, const QSize & size )
+static QSize closestAcceptableSize(const QWidget * widget, const QSize & size)
 */
-HB_FUNC_STATIC( QLAYOUT_CLOSESTACCEPTABLESIZE )
+HB_FUNC_STATIC(QLAYOUT_CLOSESTACCEPTABLESIZE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && ISQWIDGET(1) && ISQSIZE(2))
   {
 #endif
-    auto ptr = new QSize( QLayout::closestAcceptableSize(PQWIDGET(1), *PQSIZE(2)));
+    auto ptr = new QSize(QLayout::closestAcceptableSize(PQWIDGET(1), *PQSIZE(2)));
     Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

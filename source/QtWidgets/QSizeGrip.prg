@@ -52,9 +52,9 @@ RETURN
 #endif
 
 /*
-QSizeGrip( QWidget * parent )
+QSizeGrip(QWidget * parent)
 */
-HB_FUNC_STATIC( QSIZEGRIP_NEW )
+HB_FUNC_STATIC(QSIZEGRIP_NEW)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1))
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSIZEGRIP_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSIZEGRIP_DELETE )
+HB_FUNC_STATIC(QSIZEGRIP_DELETE)
 {
   auto obj = qobject_cast<QSizeGrip*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -86,9 +86,9 @@ HB_FUNC_STATIC( QSIZEGRIP_DELETE )
 }
 
 /*
-virtual void setVisible( bool visible )
+virtual void setVisible(bool visible)
 */
-HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
+HB_FUNC_STATIC(QSIZEGRIP_SETVISIBLE)
 {
   auto obj = qobject_cast<QSizeGrip*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
+HB_FUNC_STATIC(QSIZEGRIP_SIZEHINT)
 {
   auto obj = qobject_cast<QSizeGrip*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

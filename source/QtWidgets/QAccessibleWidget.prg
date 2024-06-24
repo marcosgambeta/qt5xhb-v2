@@ -68,13 +68,13 @@ RETURN
 #include <QtGui/QWindow>
 
 /*
-QAccessibleWidget( QWidget * o, QAccessible::Role r = QAccessible::Client, const QString & name = QString() )
+QAccessibleWidget(QWidget * o, QAccessible::Role r = QAccessible::Client, const QString & name = QString())
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_NEW)
 {
   if (ISBETWEEN(1, 3) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISCHAR(3) || HB_ISNIL(3)))
   {
-    auto obj = new QAccessibleWidget(PQWIDGET(1), HB_ISNIL(2) ? static_cast<QAccessible::Role >( QAccessible::Client ) : static_cast<QAccessible::Role >(hb_parni(2)), OPQSTRING(3, QString()));
+    auto obj = new QAccessibleWidget(PQWIDGET(1), HB_ISNIL(2) ? static_cast<QAccessible::Role >(QAccessible::Client) : static_cast<QAccessible::Role >(hb_parni(2)), OPQSTRING(3, QString()));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_ISVALID )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_ISVALID)
 {
   auto obj = static_cast<QAccessibleWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ISVALID )
 /*
 QWindow * window() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_WINDOW )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_WINDOW)
 {
   auto obj = static_cast<QAccessibleWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_WINDOW )
 /*
 int childCount() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDCOUNT )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_CHILDCOUNT)
 {
   auto obj = static_cast<QAccessibleWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -157,9 +157,9 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDCOUNT )
 }
 
 /*
-int indexOfChild( const QAccessibleInterface * child ) const
+int indexOfChild(const QAccessibleInterface * child) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_INDEXOFCHILD )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_INDEXOFCHILD)
 {
   auto obj = static_cast<QAccessibleWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_INDEXOFCHILD )
 /*
 QAccessibleInterface * focusChild() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_FOCUSCHILD )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_FOCUSCHILD)
 {
   auto obj = static_cast<QAccessibleWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_FOCUSCHILD )
 /*
 QRect rect() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_RECT)
 {
   auto obj = static_cast<QAccessibleWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
 /*
 QAccessibleInterface * parent() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_PARENT )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_PARENT)
 {
   auto obj = static_cast<QAccessibleWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -256,9 +256,9 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_PARENT )
 }
 
 /*
-QAccessibleInterface * child( int index ) const
+QAccessibleInterface * child(int index) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILD )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_CHILD)
 {
   auto obj = static_cast<QAccessibleWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -281,9 +281,9 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILD )
 }
 
 /*
-QString text( QAccessible::Text t ) const
+QString text(QAccessible::Text t) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_TEXT)
 {
   auto obj = static_cast<QAccessibleWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
 /*
 QAccessible::Role role() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_ROLE )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_ROLE)
 {
   auto obj = static_cast<QAccessibleWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ROLE )
 /*
 QColor foregroundColor() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_FOREGROUNDCOLOR )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_FOREGROUNDCOLOR)
 {
   auto obj = static_cast<QAccessibleWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_FOREGROUNDCOLOR )
 /*
 QColor backgroundColor() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_BACKGROUNDCOLOR )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_BACKGROUNDCOLOR)
 {
   auto obj = static_cast<QAccessibleWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -379,9 +379,9 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_BACKGROUNDCOLOR )
 }
 
 /*
-void * interface_cast( QAccessible::InterfaceType t )
+void * interface_cast(QAccessible::InterfaceType t)
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_INTERFACE_CAST )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_INTERFACE_CAST)
 {
   auto obj = static_cast<QAccessibleWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_INTERFACE_CAST )
 /*
 QStringList actionNames() const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_ACTIONNAMES )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_ACTIONNAMES)
 {
   auto obj = static_cast<QAccessibleWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -427,9 +427,9 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ACTIONNAMES )
 }
 
 /*
-void doAction( const QString & actionName )
+void doAction(const QString & actionName)
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_DOACTION )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_DOACTION)
 {
   auto obj = static_cast<QAccessibleWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -453,9 +453,9 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_DOACTION )
 }
 
 /*
-QStringList keyBindingsForAction( const QString & actionName ) const
+QStringList keyBindingsForAction(const QString & actionName) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_KEYBINDINGSFORACTION )
+HB_FUNC_STATIC(QACCESSIBLEWIDGET_KEYBINDINGSFORACTION)
 {
   auto obj = static_cast<QAccessibleWidget*>(Qt5xHb::itemGetPtrStackSelfItem());
 

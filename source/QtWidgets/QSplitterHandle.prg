@@ -56,9 +56,9 @@ RETURN
 #endif
 
 /*
-QSplitterHandle( Qt::Orientation orientation, QSplitter * parent )
+QSplitterHandle(Qt::Orientation orientation, QSplitter * parent)
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
+HB_FUNC_STATIC(QSPLITTERHANDLE_NEW)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSPLITTER(2))
   {
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSPLITTERHANDLE_DELETE )
+HB_FUNC_STATIC(QSPLITTERHANDLE_DELETE)
 {
   auto obj = qobject_cast<QSplitterHandle*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_DELETE )
 /*
 bool opaqueResize() const
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
+HB_FUNC_STATIC(QSPLITTERHANDLE_OPAQUERESIZE)
 {
   auto obj = qobject_cast<QSplitterHandle*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
 /*
 Qt::Orientation orientation() const
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
+HB_FUNC_STATIC(QSPLITTERHANDLE_ORIENTATION)
 {
   auto obj = qobject_cast<QSplitterHandle*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -138,9 +138,9 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
 }
 
 /*
-void setOrientation( Qt::Orientation orientation )
+void setOrientation(Qt::Orientation orientation)
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
+HB_FUNC_STATIC(QSPLITTERHANDLE_SETORIENTATION)
 {
   auto obj = qobject_cast<QSplitterHandle*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
 /*
 QSplitter * splitter() const
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
+HB_FUNC_STATIC(QSPLITTERHANDLE_SPLITTER)
 {
   auto obj = qobject_cast<QSplitterHandle*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
     {
 #endif
       auto ptr = obj->splitter();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QSPLITTER");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QSPLITTER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_SIZEHINT )
+HB_FUNC_STATIC(QSPLITTERHANDLE_SIZEHINT)
 {
   auto obj = qobject_cast<QSplitterHandle*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

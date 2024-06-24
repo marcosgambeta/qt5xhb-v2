@@ -59,16 +59,16 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
+HB_FUNC_STATIC(QKEYSEQUENCEEDIT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QKeySequenceEdit( QWidget * parent = nullptr )
+    QKeySequenceEdit(QWidget * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QKeySequenceEdit( OPQWIDGET( 1, nullptr));
+    auto obj = new QKeySequenceEdit(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -76,10 +76,10 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
   else if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QKeySequenceEdit( const QKeySequence & keySequence, QWidget * parent = nullptr )
+    QKeySequenceEdit(const QKeySequence & keySequence, QWidget * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    auto obj = new QKeySequenceEdit(*PQKEYSEQUENCE(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QKeySequenceEdit(*PQKEYSEQUENCE(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QKEYSEQUENCEEDIT_DELETE )
+HB_FUNC_STATIC(QKEYSEQUENCEEDIT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QKeySequenceEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_DELETE )
 /*
 QKeySequence keySequence() const
 */
-HB_FUNC_STATIC( QKEYSEQUENCEEDIT_KEYSEQUENCE )
+HB_FUNC_STATIC(QKEYSEQUENCEEDIT_KEYSEQUENCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QKeySequenceEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -139,9 +139,9 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_KEYSEQUENCE )
 }
 
 /*
-void setKeySequence( const QKeySequence & keySequence )
+void setKeySequence(const QKeySequence & keySequence)
 */
-HB_FUNC_STATIC( QKEYSEQUENCEEDIT_SETKEYSEQUENCE )
+HB_FUNC_STATIC(QKEYSEQUENCEEDIT_SETKEYSEQUENCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QKeySequenceEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_SETKEYSEQUENCE )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QKEYSEQUENCEEDIT_CLEAR )
+HB_FUNC_STATIC(QKEYSEQUENCEEDIT_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QKeySequenceEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_CLEAR )
 /*
 void editingFinished()
 */
-HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
+HB_FUNC_STATIC(QKEYSEQUENCEEDIT_ONEDITINGFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = qobject_cast<QKeySequenceEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -247,9 +247,9 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
 }
 
 /*
-void keySequenceChanged( const QKeySequence & keySequence )
+void keySequenceChanged(const QKeySequence & keySequence)
 */
-HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
+HB_FUNC_STATIC(QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = qobject_cast<QKeySequenceEdit*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QKEYSEQUENCEEDIT");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QKEYSEQUENCE");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QKEYSEQUENCE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

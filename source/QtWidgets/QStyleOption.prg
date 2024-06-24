@@ -77,21 +77,21 @@ RETURN
 #include <QtWidgets/QStyleOption>
 #endif
 
-HB_FUNC_STATIC( QSTYLEOPTION_NEW )
+HB_FUNC_STATIC(QSTYLEOPTION_NEW)
 {
   if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QStyleOption( int version = QStyleOption::Version, int type = QStyleOption::SO_Default )
+    QStyleOption(int version = QStyleOption::Version, int type = QStyleOption::SO_Default)
     */
-    auto obj = new QStyleOption( OPINT( 1, QStyleOption::Version ), OPINT( 2, QStyleOption::SO_Default));
+    auto obj = new QStyleOption(OPINT(1, QStyleOption::Version), OPINT(2, QStyleOption::SO_Default));
     Qt5xHb::returnNewObject(obj, true);
 
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTION(1))
   {
     /*
-    QStyleOption( const QStyleOption & other )
+    QStyleOption(const QStyleOption & other)
     */
     auto obj = new QStyleOption(*PQSTYLEOPTION(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_NEW )
 /*
 ~QStyleOption()
 */
-HB_FUNC_STATIC( QSTYLEOPTION_DELETE )
+HB_FUNC_STATIC(QSTYLEOPTION_DELETE)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -123,9 +123,9 @@ HB_FUNC_STATIC( QSTYLEOPTION_DELETE )
 }
 
 /*
-void init( const QWidget * w )
+void init(const QWidget * w)
 */
-HB_FUNC_STATIC( QSTYLEOPTION_INIT )
+HB_FUNC_STATIC(QSTYLEOPTION_INIT)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -149,9 +149,9 @@ HB_FUNC_STATIC( QSTYLEOPTION_INIT )
 }
 
 /*
-void initFrom( const QWidget * w )
+void initFrom(const QWidget * w)
 */
-HB_FUNC_STATIC( QSTYLEOPTION_INITFROM )
+HB_FUNC_STATIC(QSTYLEOPTION_INITFROM)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_INITFROM )
 /*
 int version
 */
-HB_FUNC_STATIC( QSTYLEOPTION_VERSION )
+HB_FUNC_STATIC(QSTYLEOPTION_VERSION)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_VERSION )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTION_SETVERSION )
+HB_FUNC_STATIC(QSTYLEOPTION_SETVERSION)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETVERSION )
 /*
 int type
 */
-HB_FUNC_STATIC( QSTYLEOPTION_TYPE )
+HB_FUNC_STATIC(QSTYLEOPTION_TYPE)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_TYPE )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTION_SETTYPE )
+HB_FUNC_STATIC(QSTYLEOPTION_SETTYPE)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETTYPE )
 /*
 QStyle::State state
 */
-HB_FUNC_STATIC( QSTYLEOPTION_STATE )
+HB_FUNC_STATIC(QSTYLEOPTION_STATE)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_STATE )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTION_SETSTATE )
+HB_FUNC_STATIC(QSTYLEOPTION_SETSTATE)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETSTATE )
 /*
 Qt::LayoutDirection direction
 */
-HB_FUNC_STATIC( QSTYLEOPTION_DIRECTION )
+HB_FUNC_STATIC(QSTYLEOPTION_DIRECTION)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_DIRECTION )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTION_SETDIRECTION )
+HB_FUNC_STATIC(QSTYLEOPTION_SETDIRECTION)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETDIRECTION )
 /*
 QRect rect
 */
-HB_FUNC_STATIC( QSTYLEOPTION_RECT )
+HB_FUNC_STATIC(QSTYLEOPTION_RECT)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_RECT )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTION_SETRECT )
+HB_FUNC_STATIC(QSTYLEOPTION_SETRECT)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETRECT )
 /*
 QFontMetrics fontMetrics
 */
-HB_FUNC_STATIC( QSTYLEOPTION_FONTMETRICS )
+HB_FUNC_STATIC(QSTYLEOPTION_FONTMETRICS)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_FONTMETRICS )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTION_SETFONTMETRICS )
+HB_FUNC_STATIC(QSTYLEOPTION_SETFONTMETRICS)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETFONTMETRICS )
 /*
 QPalette palette
 */
-HB_FUNC_STATIC( QSTYLEOPTION_PALETTE )
+HB_FUNC_STATIC(QSTYLEOPTION_PALETTE)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_PALETTE )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTION_SETPALETTE )
+HB_FUNC_STATIC(QSTYLEOPTION_SETPALETTE)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETPALETTE )
 /*
 QObject *styleObject
 */
-HB_FUNC_STATIC( QSTYLEOPTION_STYLEOBJECT )
+HB_FUNC_STATIC(QSTYLEOPTION_STYLEOBJECT)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_STYLEOBJECT )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTION_SETSTYLEOBJECT )
+HB_FUNC_STATIC(QSTYLEOPTION_SETSTYLEOBJECT)
 {
   auto obj = static_cast<QStyleOption*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETSTYLEOBJECT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QSTYLEOPTION_NEWFROM )
+HB_FUNC_STATIC(QSTYLEOPTION_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -520,22 +520,22 @@ HB_FUNC_STATIC( QSTYLEOPTION_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSTYLEOPTION_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSTYLEOPTION_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QSTYLEOPTION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSTYLEOPTION_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSTYLEOPTION_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QSTYLEOPTION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSTYLEOPTION_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSTYLEOPTION_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSTYLEOPTION_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSTYLEOPTION_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

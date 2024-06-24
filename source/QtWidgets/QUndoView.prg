@@ -62,32 +62,32 @@ RETURN
 #include <QtWidgets/QUndoGroup>
 #include <QtWidgets/QUndoStack>
 
-HB_FUNC_STATIC( QUNDOVIEW_NEW )
+HB_FUNC_STATIC(QUNDOVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QUndoView( QWidget * parent = nullptr )
+    QUndoView(QWidget * parent = nullptr)
     */
-    auto obj = new QUndoView( OPQWIDGET( 1, nullptr));
+    auto obj = new QUndoView(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2) && ISQUNDOSTACK(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QUndoView( QUndoStack * stack, QWidget * parent = nullptr )
+    QUndoView(QUndoStack * stack, QWidget * parent = nullptr)
     */
-    auto obj = new QUndoView(PQUNDOSTACK(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QUndoView(PQUNDOSTACK(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2) && ISQUNDOGROUP(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QUndoView( QUndoGroup * group, QWidget * parent = nullptr )
+    QUndoView(QUndoGroup * group, QWidget * parent = nullptr)
     */
-    auto obj = new QUndoView(PQUNDOGROUP(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QUndoView(PQUNDOGROUP(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW )
   }
 }
 
-HB_FUNC_STATIC( QUNDOVIEW_DELETE )
+HB_FUNC_STATIC(QUNDOVIEW_DELETE)
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QUNDOVIEW_DELETE )
 /*
 QIcon cleanIcon() const
 */
-HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
+HB_FUNC_STATIC(QUNDOVIEW_CLEANICON)
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
 /*
 QString emptyLabel() const
 */
-HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
+HB_FUNC_STATIC(QUNDOVIEW_EMPTYLABEL)
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 /*
 QUndoGroup * group() const
 */
-HB_FUNC_STATIC( QUNDOVIEW_GROUP )
+HB_FUNC_STATIC(QUNDOVIEW_GROUP)
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -190,9 +190,9 @@ HB_FUNC_STATIC( QUNDOVIEW_GROUP )
 }
 
 /*
-void setCleanIcon( const QIcon & icon )
+void setCleanIcon(const QIcon & icon)
 */
-HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
+HB_FUNC_STATIC(QUNDOVIEW_SETCLEANICON)
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
     if (ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setCleanIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)));
+      obj->setCleanIcon(HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,9 +216,9 @@ HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
 }
 
 /*
-void setEmptyLabel( const QString & label )
+void setEmptyLabel(const QString & label)
 */
-HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
+HB_FUNC_STATIC(QUNDOVIEW_SETEMPTYLABEL)
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
 /*
 QUndoStack * stack() const
 */
-HB_FUNC_STATIC( QUNDOVIEW_STACK )
+HB_FUNC_STATIC(QUNDOVIEW_STACK)
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -267,9 +267,9 @@ HB_FUNC_STATIC( QUNDOVIEW_STACK )
 }
 
 /*
-void setGroup( QUndoGroup * group )
+void setGroup(QUndoGroup * group)
 */
-HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
+HB_FUNC_STATIC(QUNDOVIEW_SETGROUP)
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -293,9 +293,9 @@ HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
 }
 
 /*
-void setStack( QUndoStack * stack )
+void setStack(QUndoStack * stack)
 */
-HB_FUNC_STATIC( QUNDOVIEW_SETSTACK )
+HB_FUNC_STATIC(QUNDOVIEW_SETSTACK)
 {
   auto obj = qobject_cast<QUndoView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

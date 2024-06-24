@@ -68,23 +68,23 @@ RETURN
 #include <QtWidgets/QLCDNumber>
 #endif
 
-HB_FUNC_STATIC( QLCDNUMBER_NEW )
+HB_FUNC_STATIC(QLCDNUMBER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QLCDNumber( QWidget * parent = nullptr )
+    QLCDNumber(QWidget * parent = nullptr)
     */
-    auto obj = new QLCDNumber( OPQWIDGET( 1, nullptr));
+    auto obj = new QLCDNumber(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QLCDNumber( uint numDigits, QWidget * parent = nullptr )
+    QLCDNumber(uint numDigits, QWidget * parent = nullptr)
     */
-    auto obj = new QLCDNumber(PUINT(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QLCDNumber(PUINT(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QLCDNUMBER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QLCDNUMBER_DELETE )
+HB_FUNC_STATIC(QLCDNUMBER_DELETE)
 {
   auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -112,17 +112,17 @@ HB_FUNC_STATIC( QLCDNUMBER_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
+HB_FUNC_STATIC(QLCDNUMBER_CHECKOVERFLOW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     auto pNum = hb_param(1, HB_IT_NUMERIC);
-    if( pNum )
+    if(pNum)
     {
-      if( HB_IS_DOUBLE(pNum) )
+      if(HB_IS_DOUBLE(pNum))
       {
         /*
-        bool checkOverflow( double num ) const
+        bool checkOverflow(double num) const
         */
         auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -132,10 +132,10 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
         }
 
       }
-      else if( HB_IS_INTEGER(pNum) )
+      else if(HB_IS_INTEGER(pNum))
       {
         /*
-        bool checkOverflow( int num ) const
+        bool checkOverflow(int num) const
         */
         auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 /*
 int digitCount() const
 */
-HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
+HB_FUNC_STATIC(QLCDNUMBER_DIGITCOUNT)
 {
   auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
 /*
 int intValue() const
 */
-HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
+HB_FUNC_STATIC(QLCDNUMBER_INTVALUE)
 {
   auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
 /*
 QLCDNumber::Mode mode() const
 */
-HB_FUNC_STATIC( QLCDNUMBER_MODE )
+HB_FUNC_STATIC(QLCDNUMBER_MODE)
 {
   auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QLCDNUMBER_MODE )
 /*
 QLCDNumber::SegmentStyle segmentStyle() const
 */
-HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
+HB_FUNC_STATIC(QLCDNUMBER_SEGMENTSTYLE)
 {
   auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -258,9 +258,9 @@ HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
 }
 
 /*
-void setDigitCount( int numDigits )
+void setDigitCount(int numDigits)
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
+HB_FUNC_STATIC(QLCDNUMBER_SETDIGITCOUNT)
 {
   auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -284,9 +284,9 @@ HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
 }
 
 /*
-void setMode( QLCDNumber::Mode )
+void setMode(QLCDNumber::Mode)
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
+HB_FUNC_STATIC(QLCDNUMBER_SETMODE)
 {
   auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -310,9 +310,9 @@ HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
 }
 
 /*
-void setSegmentStyle( QLCDNumber::SegmentStyle )
+void setSegmentStyle(QLCDNumber::SegmentStyle)
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
+HB_FUNC_STATIC(QLCDNUMBER_SETSEGMENTSTYLE)
 {
   auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
 /*
 bool smallDecimalPoint() const
 */
-HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
+HB_FUNC_STATIC(QLCDNUMBER_SMALLDECIMALPOINT)
 {
   auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
 /*
 double value() const
 */
-HB_FUNC_STATIC( QLCDNUMBER_VALUE )
+HB_FUNC_STATIC(QLCDNUMBER_VALUE)
 {
   auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QLCDNUMBER_VALUE )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
+HB_FUNC_STATIC(QLCDNUMBER_SIZEHINT)
 {
   auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -408,14 +408,14 @@ HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
   }
 }
 
-HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
+HB_FUNC_STATIC(QLCDNUMBER_DISPLAY)
 {
   if (ISNUMPAR(1))
   {
-    if( HB_ISCHAR(1))
+    if(HB_ISCHAR(1))
     {
       /*
-      void display( const QString & s )
+      void display(const QString & s)
       */
       auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -427,15 +427,15 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
       hb_itemReturn(hb_stackSelfItem());
 
     }
-    else if( HB_ISNUM(1))
+    else if(HB_ISNUM(1))
     {
       auto pNum = hb_param(1, HB_IT_NUMERIC);
-      if( pNum )
+      if(pNum)
       {
-        if( HB_IS_DOUBLE(pNum) )
+        if(HB_IS_DOUBLE(pNum))
         {
           /*
-          void display( double num )
+          void display(double num)
           */
           auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -447,10 +447,10 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
           hb_itemReturn(hb_stackSelfItem());
 
         }
-        else if( HB_IS_INTEGER(pNum) )
+        else if(HB_IS_INTEGER(pNum))
         {
           /*
-          void display( int num )
+          void display(int num)
           */
           auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 /*
 void setBinMode()
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
+HB_FUNC_STATIC(QLCDNUMBER_SETBINMODE)
 {
   auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
 /*
 void setDecMode()
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
+HB_FUNC_STATIC(QLCDNUMBER_SETDECMODE)
 {
   auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
 /*
 void setHexMode()
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
+HB_FUNC_STATIC(QLCDNUMBER_SETHEXMODE)
 {
   auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
 /*
 void setOctMode()
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
+HB_FUNC_STATIC(QLCDNUMBER_SETOCTMODE)
 {
   auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -588,9 +588,9 @@ HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
 }
 
 /*
-void setSmallDecimalPoint( bool )
+void setSmallDecimalPoint(bool)
 */
-HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
+HB_FUNC_STATIC(QLCDNUMBER_SETSMALLDECIMALPOINT)
 {
   auto obj = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
 /*
 void overflow()
 */
-HB_FUNC_STATIC( QLCDNUMBER_ONOVERFLOW )
+HB_FUNC_STATIC(QLCDNUMBER_ONOVERFLOW)
 {
   auto sender = qobject_cast<QLCDNumber*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

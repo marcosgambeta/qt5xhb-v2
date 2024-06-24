@@ -47,7 +47,7 @@ RETURN
 #include <QtWidgets/QStyleOptionSizeGrip>
 #endif
 
-HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_NEW )
+HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_NEW )
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONSIZEGRIP(1))
   {
     /*
-    QStyleOptionSizeGrip( const QStyleOptionSizeGrip & other )
+    QStyleOptionSizeGrip(const QStyleOptionSizeGrip & other)
     */
     auto obj = new QStyleOptionSizeGrip(*PQSTYLEOPTIONSIZEGRIP(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_NEW )
 /*
 Qt::Corner corner
 */
-HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_CORNER )
+HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_CORNER)
 {
   auto obj = static_cast<QStyleOptionSizeGrip*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_CORNER )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_SETCORNER )
+HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_SETCORNER)
 {
   auto obj = static_cast<QStyleOptionSizeGrip*>(Qt5xHb::itemGetPtrStackSelfItem());
 

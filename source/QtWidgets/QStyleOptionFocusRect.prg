@@ -48,7 +48,7 @@ RETURN
 #include <QtWidgets/QStyleOptionFocusRect>
 #endif
 
-HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
+HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONFOCUSRECT(1))
   {
     /*
-    QStyleOptionFocusRect( const QStyleOptionFocusRect & other )
+    QStyleOptionFocusRect(const QStyleOptionFocusRect & other)
     */
     auto obj = new QStyleOptionFocusRect(*PQSTYLEOPTIONFOCUSRECT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
 /*
 QColor backgroundColor
 */
-HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR )
+HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR)
 {
   auto obj = static_cast<QStyleOptionFocusRect*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_SETBACKGROUNDCOLOR )
+HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_SETBACKGROUNDCOLOR)
 {
   auto obj = static_cast<QStyleOptionFocusRect*>(Qt5xHb::itemGetPtrStackSelfItem());
 

@@ -92,9 +92,9 @@ RETURN
 #include <QtWidgets/QMenu>
 
 /*
-QToolButton( QWidget * parent = nullptr )
+QToolButton(QWidget * parent = nullptr)
 */
-HB_FUNC_STATIC( QTOOLBUTTON_NEW )
+HB_FUNC_STATIC(QTOOLBUTTON_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTOOLBUTTON_DELETE )
+HB_FUNC_STATIC(QTOOLBUTTON_DELETE)
 {
   auto obj = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_DELETE )
 /*
 Qt::ArrowType arrowType() const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_ARROWTYPE )
+HB_FUNC_STATIC(QTOOLBUTTON_ARROWTYPE)
 {
   auto obj = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_ARROWTYPE )
 /*
 bool autoRaise() const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_AUTORAISE )
+HB_FUNC_STATIC(QTOOLBUTTON_AUTORAISE)
 {
   auto obj = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_AUTORAISE )
 /*
 QAction * defaultAction() const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_DEFAULTACTION )
+HB_FUNC_STATIC(QTOOLBUTTON_DEFAULTACTION)
 {
   auto obj = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_DEFAULTACTION )
 /*
 QMenu * menu () const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_MENU )
+HB_FUNC_STATIC(QTOOLBUTTON_MENU)
 {
 #ifndef QT_NO_MENU
   auto obj = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_MENU )
 /*
 ToolButtonPopupMode popupMode () const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_POPUPMODE )
+HB_FUNC_STATIC(QTOOLBUTTON_POPUPMODE)
 {
 #ifndef QT_NO_MENU
   auto obj = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -252,9 +252,9 @@ HB_FUNC_STATIC( QTOOLBUTTON_POPUPMODE )
 }
 
 /*
-void setArrowType( Qt::ArrowType type )
+void setArrowType(Qt::ArrowType type)
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETARROWTYPE )
+HB_FUNC_STATIC(QTOOLBUTTON_SETARROWTYPE)
 {
   auto obj = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -278,9 +278,9 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETARROWTYPE )
 }
 
 /*
-void setAutoRaise( bool enable )
+void setAutoRaise(bool enable)
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETAUTORAISE )
+HB_FUNC_STATIC(QTOOLBUTTON_SETAUTORAISE)
 {
   auto obj = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -304,9 +304,9 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETAUTORAISE )
 }
 
 /*
-void setMenu ( QMenu * menu )
+void setMenu (QMenu * menu)
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETMENU )
+HB_FUNC_STATIC(QTOOLBUTTON_SETMENU)
 {
 #ifndef QT_NO_MENU
   auto obj = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -332,9 +332,9 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETMENU )
 }
 
 /*
-void setPopupMode ( ToolButtonPopupMode mode )
+void setPopupMode (ToolButtonPopupMode mode)
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETPOPUPMODE )
+HB_FUNC_STATIC(QTOOLBUTTON_SETPOPUPMODE)
 {
 #ifndef QT_NO_MENU
   auto obj = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETPOPUPMODE )
 /*
 Qt::ToolButtonStyle toolButtonStyle() const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_TOOLBUTTONSTYLE )
+HB_FUNC_STATIC(QTOOLBUTTON_TOOLBUTTONSTYLE)
 {
   auto obj = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_TOOLBUTTONSTYLE )
 /*
 QSize minimumSizeHint() const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_MINIMUMSIZEHINT )
+HB_FUNC_STATIC(QTOOLBUTTON_MINIMUMSIZEHINT)
 {
   auto obj = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_MINIMUMSIZEHINT )
 /*
 QSize sizeHint() const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SIZEHINT )
+HB_FUNC_STATIC(QTOOLBUTTON_SIZEHINT)
 {
   auto obj = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -434,9 +434,9 @@ HB_FUNC_STATIC( QTOOLBUTTON_SIZEHINT )
 }
 
 /*
-void setDefaultAction( QAction * action )
+void setDefaultAction(QAction * action)
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETDEFAULTACTION )
+HB_FUNC_STATIC(QTOOLBUTTON_SETDEFAULTACTION)
 {
   auto obj = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -460,9 +460,9 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETDEFAULTACTION )
 }
 
 /*
-void setToolButtonStyle( Qt::ToolButtonStyle style )
+void setToolButtonStyle(Qt::ToolButtonStyle style)
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETTOOLBUTTONSTYLE )
+HB_FUNC_STATIC(QTOOLBUTTON_SETTOOLBUTTONSTYLE)
 {
   auto obj = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETTOOLBUTTONSTYLE )
 /*
 void showMenu ()
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SHOWMENU )
+HB_FUNC_STATIC(QTOOLBUTTON_SHOWMENU)
 {
 #ifndef QT_NO_MENU
   auto obj = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -514,9 +514,9 @@ HB_FUNC_STATIC( QTOOLBUTTON_SHOWMENU )
 }
 
 /*
-void triggered( QAction * action )
+void triggered(QAction * action)
 */
-HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
+HB_FUNC_STATIC(QTOOLBUTTON_ONTRIGGERED)
 {
   auto sender = qobject_cast<QToolButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
   

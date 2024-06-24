@@ -48,7 +48,7 @@ RETURN
 #include <QtWidgets/QHBoxLayout>
 #endif
 
-HB_FUNC_STATIC( QHBOXLAYOUT_NEW )
+HB_FUNC_STATIC(QHBOXLAYOUT_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QHBOXLAYOUT_NEW )
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    QHBoxLayout( QWidget * parent )
+    QHBoxLayout(QWidget * parent)
     */
     auto obj = new QHBoxLayout(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, false);
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QHBOXLAYOUT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QHBOXLAYOUT_DELETE )
+HB_FUNC_STATIC(QHBOXLAYOUT_DELETE)
 {
   auto obj = qobject_cast<QHBoxLayout*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

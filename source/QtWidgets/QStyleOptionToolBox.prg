@@ -54,7 +54,7 @@ RETURN
 #include <QtWidgets/QStyleOptionToolBox>
 #endif
 
-HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_NEW )
+HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_NEW )
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBOX(1))
   {
     /*
-    QStyleOptionToolBox( const QStyleOptionToolBox & other )
+    QStyleOptionToolBox(const QStyleOptionToolBox & other)
     */
     auto obj = new QStyleOptionToolBox(*PQSTYLEOPTIONTOOLBOX(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_NEW )
 /*
 QString text
 */
-HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_TEXT )
+HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_TEXT)
 {
   auto obj = static_cast<QStyleOptionToolBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_TEXT )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETTEXT )
+HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETTEXT)
 {
   auto obj = static_cast<QStyleOptionToolBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETTEXT )
 /*
 QIcon icon
 */
-HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_ICON )
+HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_ICON)
 {
   auto obj = static_cast<QStyleOptionToolBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_ICON )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETICON )
+HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETICON)
 {
   auto obj = static_cast<QStyleOptionToolBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETICON )
 /*
 TabPosition position
 */
-HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_POSITION )
+HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_POSITION)
 {
   auto obj = static_cast<QStyleOptionToolBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_POSITION )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETPOSITION )
+HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETPOSITION)
 {
   auto obj = static_cast<QStyleOptionToolBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETPOSITION )
 /*
 SelectedPosition selectedPosition
 */
-HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SELECTEDPOSITION )
+HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SELECTEDPOSITION)
 {
   auto obj = static_cast<QStyleOptionToolBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SELECTEDPOSITION )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETSELECTEDPOSITION )
+HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETSELECTEDPOSITION)
 {
   auto obj = static_cast<QStyleOptionToolBox*>(Qt5xHb::itemGetPtrStackSelfItem());
 

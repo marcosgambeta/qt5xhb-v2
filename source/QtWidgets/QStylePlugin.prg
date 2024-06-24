@@ -51,7 +51,7 @@ RETURN
 
 #include <QtWidgets/QStyle>
 
-HB_FUNC_STATIC( QSTYLEPLUGIN_DELETE )
+HB_FUNC_STATIC(QSTYLEPLUGIN_DELETE)
 {
   auto obj = qobject_cast<QStylePlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -70,9 +70,9 @@ HB_FUNC_STATIC( QSTYLEPLUGIN_DELETE )
 }
 
 /*
-virtual QStyle * create( const QString & key ) = 0
+virtual QStyle * create(const QString & key) = 0
 */
-HB_FUNC_STATIC( QSTYLEPLUGIN_CREATE )
+HB_FUNC_STATIC(QSTYLEPLUGIN_CREATE)
 {
   auto obj = qobject_cast<QStylePlugin*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

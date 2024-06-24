@@ -60,13 +60,13 @@ RETURN
 #endif
 
 /*
-QGestureEvent( const QList<QGesture *> & gestures )
+QGestureEvent(const QList<QGesture*> & gestures)
 */
-HB_FUNC_STATIC( QGESTUREEVENT_NEW )
+HB_FUNC_STATIC(QGESTUREEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
-    QList<QGesture *> par1;
+    QList<QGesture*> par1;
     auto aList1 = hb_param(1, HB_IT_ARRAY);
     int nLen1 = hb_arrayLen(aList1);
     for (auto i1 = 0; i1 < nLen1; i1++)
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGESTUREEVENT_DELETE )
+HB_FUNC_STATIC(QGESTUREEVENT_DELETE)
 {
   auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
+HB_FUNC_STATIC(QGESTUREEVENT_ACCEPT)
 {
   if (ISNUMPAR(0))
   {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
   else if (ISNUMPAR(1) && ISQGESTURE(1))
   {
     /*
-    void accept( QGesture * gesture )
+    void accept(QGesture * gesture)
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void accept( Qt::GestureType gestureType )
+    void accept(Qt::GestureType gestureType)
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -152,9 +152,9 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
 }
 
 /*
-QList<QGesture *> activeGestures() const
+QList<QGesture*> activeGestures() const
 */
-HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
+HB_FUNC_STATIC(QGESTUREEVENT_ACTIVEGESTURES)
 {
   auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -199,9 +199,9 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
 }
 
 /*
-QList<QGesture *> canceledGestures() const
+QList<QGesture*> canceledGestures() const
 */
-HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
+HB_FUNC_STATIC(QGESTUREEVENT_CANCELEDGESTURES)
 {
   auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -246,9 +246,9 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
 }
 
 /*
-QGesture * gesture( Qt::GestureType type ) const
+QGesture * gesture(Qt::GestureType type) const
 */
-HB_FUNC_STATIC( QGESTUREEVENT_GESTURE )
+HB_FUNC_STATIC(QGESTUREEVENT_GESTURE)
 {
   auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -271,9 +271,9 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURE )
 }
 
 /*
-QList<QGesture *> gestures() const
+QList<QGesture*> gestures() const
 */
-HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
+HB_FUNC_STATIC(QGESTUREEVENT_GESTURES)
 {
   auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
   }
 }
 
-HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
+HB_FUNC_STATIC(QGESTUREEVENT_IGNORE)
 {
   if (ISNUMPAR(0))
   {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
   else if (ISNUMPAR(1) && ISQGESTURE(1))
   {
     /*
-    void ignore( QGesture * gesture )
+    void ignore(QGesture * gesture)
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void ignore( Qt::GestureType gestureType )
+    void ignore(Qt::GestureType gestureType)
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
   }
 }
 
-HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
+HB_FUNC_STATIC(QGESTUREEVENT_ISACCEPTED)
 {
   if (ISNUMPAR(0))
   {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
   else if (ISNUMPAR(1) && ISQGESTURE(1))
   {
     /*
-    bool isAccepted( QGesture * gesture ) const
+    bool isAccepted(QGesture * gesture) const
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    bool isAccepted( Qt::GestureType gestureType ) const
+    bool isAccepted(Qt::GestureType gestureType) const
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -418,9 +418,9 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
 }
 
 /*
-QPointF mapToGraphicsScene( const QPointF & gesturePoint ) const
+QPointF mapToGraphicsScene(const QPointF & gesturePoint) const
 */
-HB_FUNC_STATIC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
+HB_FUNC_STATIC(QGESTUREEVENT_MAPTOGRAPHICSSCENE)
 {
   auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -442,12 +442,12 @@ HB_FUNC_STATIC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
   }
 }
 
-HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
+HB_FUNC_STATIC(QGESTUREEVENT_SETACCEPTED)
 {
   if (ISNUMPAR(1) && HB_ISLOG(1))
   {
     /*
-    void setAccepted( bool accepted )
+    void setAccepted(bool accepted)
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
   else if (ISNUMPAR(2) && ISQGESTURE(1) && HB_ISLOG(2))
   {
     /*
-    void setAccepted( QGesture * gesture, bool value )
+    void setAccepted(QGesture * gesture, bool value)
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
   {
     /*
-    void setAccepted( Qt::GestureType gestureType, bool value )
+    void setAccepted(Qt::GestureType gestureType, bool value)
     */
     auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
 /*
 QWidget * widget() const
 */
-HB_FUNC_STATIC( QGESTUREEVENT_WIDGET )
+HB_FUNC_STATIC(QGESTUREEVENT_WIDGET)
 {
   auto obj = static_cast<QGestureEvent*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_WIDGET )
     {
 #endif
       auto ptr = obj->widget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

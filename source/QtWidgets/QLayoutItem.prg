@@ -78,7 +78,7 @@ RETURN
 
 #include <QtWidgets/QLayout>
 
-HB_FUNC_STATIC( QLAYOUTITEM_DELETE )
+HB_FUNC_STATIC(QLAYOUTITEM_DELETE)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_DELETE )
 /*
 Qt::Alignment alignment() const
 */
-HB_FUNC_STATIC( QLAYOUTITEM_ALIGNMENT )
+HB_FUNC_STATIC(QLAYOUTITEM_ALIGNMENT)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_ALIGNMENT )
 /*
 QSizePolicy::ControlTypes controlTypes() const
 */
-HB_FUNC_STATIC( QLAYOUTITEM_CONTROLTYPES )
+HB_FUNC_STATIC(QLAYOUTITEM_CONTROLTYPES)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_CONTROLTYPES )
 /*
 virtual Qt::Orientations expandingDirections() const = 0
 */
-HB_FUNC_STATIC( QLAYOUTITEM_EXPANDINGDIRECTIONS )
+HB_FUNC_STATIC(QLAYOUTITEM_EXPANDINGDIRECTIONS)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_EXPANDINGDIRECTIONS )
 /*
 virtual QRect geometry() const = 0
 */
-HB_FUNC_STATIC( QLAYOUTITEM_GEOMETRY )
+HB_FUNC_STATIC(QLAYOUTITEM_GEOMETRY)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_GEOMETRY )
 /*
 virtual bool hasHeightForWidth() const
 */
-HB_FUNC_STATIC( QLAYOUTITEM_HASHEIGHTFORWIDTH )
+HB_FUNC_STATIC(QLAYOUTITEM_HASHEIGHTFORWIDTH)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -216,9 +216,9 @@ HB_FUNC_STATIC( QLAYOUTITEM_HASHEIGHTFORWIDTH )
 }
 
 /*
-virtual int heightForWidth( int w ) const
+virtual int heightForWidth(int w) const
 */
-HB_FUNC_STATIC( QLAYOUTITEM_HEIGHTFORWIDTH )
+HB_FUNC_STATIC(QLAYOUTITEM_HEIGHTFORWIDTH)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_HEIGHTFORWIDTH )
 /*
 virtual void invalidate()
 */
-HB_FUNC_STATIC( QLAYOUTITEM_INVALIDATE )
+HB_FUNC_STATIC(QLAYOUTITEM_INVALIDATE)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_INVALIDATE )
 /*
 virtual bool isEmpty() const = 0
 */
-HB_FUNC_STATIC( QLAYOUTITEM_ISEMPTY )
+HB_FUNC_STATIC(QLAYOUTITEM_ISEMPTY)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_ISEMPTY )
 /*
 virtual QLayout * layout()
 */
-HB_FUNC_STATIC( QLAYOUTITEM_LAYOUT )
+HB_FUNC_STATIC(QLAYOUTITEM_LAYOUT)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_LAYOUT )
 /*
 virtual QSize maximumSize() const = 0
 */
-HB_FUNC_STATIC( QLAYOUTITEM_MAXIMUMSIZE )
+HB_FUNC_STATIC(QLAYOUTITEM_MAXIMUMSIZE)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -340,9 +340,9 @@ HB_FUNC_STATIC( QLAYOUTITEM_MAXIMUMSIZE )
 }
 
 /*
-virtual int minimumHeightForWidth( int w ) const
+virtual int minimumHeightForWidth(int w) const
 */
-HB_FUNC_STATIC( QLAYOUTITEM_MINIMUMHEIGHTFORWIDTH )
+HB_FUNC_STATIC(QLAYOUTITEM_MINIMUMHEIGHTFORWIDTH)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_MINIMUMHEIGHTFORWIDTH )
 /*
 virtual QSize minimumSize() const = 0
 */
-HB_FUNC_STATIC( QLAYOUTITEM_MINIMUMSIZE )
+HB_FUNC_STATIC(QLAYOUTITEM_MINIMUMSIZE)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -389,9 +389,9 @@ HB_FUNC_STATIC( QLAYOUTITEM_MINIMUMSIZE )
 }
 
 /*
-void setAlignment( Qt::Alignment alignment )
+void setAlignment(Qt::Alignment alignment)
 */
-HB_FUNC_STATIC( QLAYOUTITEM_SETALIGNMENT )
+HB_FUNC_STATIC(QLAYOUTITEM_SETALIGNMENT)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -415,9 +415,9 @@ HB_FUNC_STATIC( QLAYOUTITEM_SETALIGNMENT )
 }
 
 /*
-virtual void setGeometry( const QRect & r ) = 0
+virtual void setGeometry(const QRect & r) = 0
 */
-HB_FUNC_STATIC( QLAYOUTITEM_SETGEOMETRY )
+HB_FUNC_STATIC(QLAYOUTITEM_SETGEOMETRY)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_SETGEOMETRY )
 /*
 virtual QSize sizeHint() const = 0
 */
-HB_FUNC_STATIC( QLAYOUTITEM_SIZEHINT )
+HB_FUNC_STATIC(QLAYOUTITEM_SIZEHINT)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_SIZEHINT )
 /*
 virtual QSpacerItem * spacerItem()
 */
-HB_FUNC_STATIC( QLAYOUTITEM_SPACERITEM )
+HB_FUNC_STATIC(QLAYOUTITEM_SPACERITEM)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_SPACERITEM )
 /*
 virtual QWidget * widget()
 */
-HB_FUNC_STATIC( QLAYOUTITEM_WIDGET )
+HB_FUNC_STATIC(QLAYOUTITEM_WIDGET)
 {
   auto obj = static_cast<QLayoutItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_WIDGET )
     {
 #endif
       auto ptr = obj->widget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_WIDGET )
   }
 }
 
-HB_FUNC_STATIC( QLAYOUTITEM_NEWFROM )
+HB_FUNC_STATIC(QLAYOUTITEM_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -545,22 +545,22 @@ HB_FUNC_STATIC( QLAYOUTITEM_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QLAYOUTITEM_NEWFROMOBJECT )
+HB_FUNC_STATIC(QLAYOUTITEM_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QLAYOUTITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QLAYOUTITEM_NEWFROMPOINTER )
+HB_FUNC_STATIC(QLAYOUTITEM_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QLAYOUTITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QLAYOUTITEM_SELFDESTRUCTION )
+HB_FUNC_STATIC(QLAYOUTITEM_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QLAYOUTITEM_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QLAYOUTITEM_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

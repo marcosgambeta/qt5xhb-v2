@@ -51,13 +51,13 @@ RETURN
 #endif
 
 /*
-QErrorMessage( QWidget * parent = nullptr )
+QErrorMessage(QWidget * parent = nullptr)
 */
-HB_FUNC_STATIC( QERRORMESSAGE_NEW )
+HB_FUNC_STATIC(QERRORMESSAGE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QErrorMessage( OPQWIDGET( 1, nullptr));
+    auto obj = new QErrorMessage(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
+HB_FUNC_STATIC(QERRORMESSAGE_DELETE)
 {
   auto obj = qobject_cast<QErrorMessage*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -84,12 +84,12 @@ HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
+HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void showMessage( const QString & message )
+    void showMessage(const QString & message)
     */
     auto obj = qobject_cast<QErrorMessage*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    void showMessage( const QString & message, const QString & type )
+    void showMessage(const QString & message, const QString & type)
     */
     auto obj = qobject_cast<QErrorMessage*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -125,14 +125,14 @@ HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
 /*
 static QErrorMessage * qtHandler()
 */
-HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
+HB_FUNC_STATIC(QERRORMESSAGE_QTHANDLER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
     auto ptr = QErrorMessage::qtHandler();
-    Qt5xHb::createReturnQWidgetClass( ptr, "QERRORMESSAGE");
+    Qt5xHb::createReturnQWidgetClass(ptr, "QERRORMESSAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

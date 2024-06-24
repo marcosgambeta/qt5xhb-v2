@@ -68,13 +68,13 @@ RETURN
 #endif
 
 /*
-QSpinBox( QWidget * parent = nullptr )
+QSpinBox(QWidget * parent = nullptr)
 */
-HB_FUNC_STATIC( QSPINBOX_NEW )
+HB_FUNC_STATIC(QSPINBOX_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QSpinBox( OPQWIDGET( 1, nullptr));
+    auto obj = new QSpinBox(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QSPINBOX_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSPINBOX_DELETE )
+HB_FUNC_STATIC(QSPINBOX_DELETE)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSPINBOX_DELETE )
 /*
 QString cleanText() const
 */
-HB_FUNC_STATIC( QSPINBOX_CLEANTEXT )
+HB_FUNC_STATIC(QSPINBOX_CLEANTEXT)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSPINBOX_CLEANTEXT )
 /*
 int maximum() const
 */
-HB_FUNC_STATIC( QSPINBOX_MAXIMUM )
+HB_FUNC_STATIC(QSPINBOX_MAXIMUM)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -150,9 +150,9 @@ HB_FUNC_STATIC( QSPINBOX_MAXIMUM )
 }
 
 /*
-void setMaximum( int max )
+void setMaximum(int max)
 */
-HB_FUNC_STATIC( QSPINBOX_SETMAXIMUM )
+HB_FUNC_STATIC(QSPINBOX_SETMAXIMUM)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSPINBOX_SETMAXIMUM )
 /*
 int minimum() const
 */
-HB_FUNC_STATIC( QSPINBOX_MINIMUM )
+HB_FUNC_STATIC(QSPINBOX_MINIMUM)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -200,9 +200,9 @@ HB_FUNC_STATIC( QSPINBOX_MINIMUM )
 }
 
 /*
-void setMinimum( int min )
+void setMinimum(int min)
 */
-HB_FUNC_STATIC( QSPINBOX_SETMINIMUM )
+HB_FUNC_STATIC(QSPINBOX_SETMINIMUM)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QSPINBOX_SETMINIMUM )
 /*
 QString prefix() const
 */
-HB_FUNC_STATIC( QSPINBOX_PREFIX )
+HB_FUNC_STATIC(QSPINBOX_PREFIX)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -250,9 +250,9 @@ HB_FUNC_STATIC( QSPINBOX_PREFIX )
 }
 
 /*
-void setPrefix( const QString & prefix )
+void setPrefix(const QString & prefix)
 */
-HB_FUNC_STATIC( QSPINBOX_SETPREFIX )
+HB_FUNC_STATIC(QSPINBOX_SETPREFIX)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -276,9 +276,9 @@ HB_FUNC_STATIC( QSPINBOX_SETPREFIX )
 }
 
 /*
-void setRange( int min, int max )
+void setRange(int min, int max)
 */
-HB_FUNC_STATIC( QSPINBOX_SETRANGE )
+HB_FUNC_STATIC(QSPINBOX_SETRANGE)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QSPINBOX_SETRANGE )
 /*
 int singleStep() const
 */
-HB_FUNC_STATIC( QSPINBOX_SINGLESTEP )
+HB_FUNC_STATIC(QSPINBOX_SINGLESTEP)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -326,9 +326,9 @@ HB_FUNC_STATIC( QSPINBOX_SINGLESTEP )
 }
 
 /*
-void setSingleStep( int val )
+void setSingleStep(int val)
 */
-HB_FUNC_STATIC( QSPINBOX_SETSINGLESTEP )
+HB_FUNC_STATIC(QSPINBOX_SETSINGLESTEP)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QSPINBOX_SETSINGLESTEP )
 /*
 QString suffix() const
 */
-HB_FUNC_STATIC( QSPINBOX_SUFFIX )
+HB_FUNC_STATIC(QSPINBOX_SUFFIX)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -376,9 +376,9 @@ HB_FUNC_STATIC( QSPINBOX_SUFFIX )
 }
 
 /*
-void setSuffix( const QString & suffix )
+void setSuffix(const QString & suffix)
 */
-HB_FUNC_STATIC( QSPINBOX_SETSUFFIX )
+HB_FUNC_STATIC(QSPINBOX_SETSUFFIX)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QSPINBOX_SETSUFFIX )
 /*
 int value() const
 */
-HB_FUNC_STATIC( QSPINBOX_VALUE )
+HB_FUNC_STATIC(QSPINBOX_VALUE)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -426,9 +426,9 @@ HB_FUNC_STATIC( QSPINBOX_VALUE )
 }
 
 /*
-void setValue( int val )
+void setValue(int val)
 */
-HB_FUNC_STATIC( QSPINBOX_SETVALUE )
+HB_FUNC_STATIC(QSPINBOX_SETVALUE)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QSPINBOX_SETVALUE )
 /*
 int displayIntegerBase() const
 */
-HB_FUNC_STATIC( QSPINBOX_DISPLAYINTEGERBASE )
+HB_FUNC_STATIC(QSPINBOX_DISPLAYINTEGERBASE)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -476,9 +476,9 @@ HB_FUNC_STATIC( QSPINBOX_DISPLAYINTEGERBASE )
 }
 
 /*
-void setDisplayIntegerBase( int base )
+void setDisplayIntegerBase(int base)
 */
-HB_FUNC_STATIC( QSPINBOX_SETDISPLAYINTEGERBASE )
+HB_FUNC_STATIC(QSPINBOX_SETDISPLAYINTEGERBASE)
 {
   auto obj = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -502,9 +502,9 @@ HB_FUNC_STATIC( QSPINBOX_SETDISPLAYINTEGERBASE )
 }
 
 /*
-void valueChanged( int value )
+void valueChanged(int value)
 */
-HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED1 )
+HB_FUNC_STATIC(QSPINBOX_ONVALUECHANGED1)
 {
   auto sender = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -552,9 +552,9 @@ HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED1 )
 }
 
 /*
-void valueChanged( const QString & text )
+void valueChanged(const QString & text)
 */
-HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED2 )
+HB_FUNC_STATIC(QSPINBOX_ONVALUECHANGED2)
 {
   auto sender = qobject_cast<QSpinBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

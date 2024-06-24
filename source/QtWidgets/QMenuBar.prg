@@ -82,13 +82,13 @@ RETURN
 #endif
 
 /*
-QMenuBar( QWidget * parent = nullptr )
+QMenuBar(QWidget * parent = nullptr)
 */
-HB_FUNC_STATIC( QMENUBAR_NEW )
+HB_FUNC_STATIC(QMENUBAR_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QMenuBar( OPQWIDGET( 1, nullptr));
+    auto obj = new QMenuBar(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QMENUBAR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMENUBAR_DELETE )
+HB_FUNC_STATIC(QMENUBAR_DELETE)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QMENUBAR_DELETE )
 /*
 QAction * activeAction() const
 */
-HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
+HB_FUNC_STATIC(QMENUBAR_ACTIVEACTION)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -140,12 +140,12 @@ HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
   }
 }
 
-HB_FUNC_STATIC( QMENUBAR_ADDACTION )
+HB_FUNC_STATIC(QMENUBAR_ADDACTION)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QAction * addAction( const QString & text )
+    QAction * addAction(const QString & text)
     */
     auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION )
   else if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3))
   {
     /*
-    QAction * addAction( const QString & text, const QObject * receiver, const char * member )
+    QAction * addAction(const QString & text, const QObject * receiver, const char * member)
     */
     auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION )
   else if (ISNUMPAR(1) && ISQACTION(1))
   {
     /*
-    void addAction( QAction * action )
+    void addAction(QAction * action)
     */
     auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -191,12 +191,12 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION )
   }
 }
 
-HB_FUNC_STATIC( QMENUBAR_ADDMENU )
+HB_FUNC_STATIC(QMENUBAR_ADDMENU)
 {
   if (ISNUMPAR(1) && ISQMENU(1))
   {
     /*
-    QAction * addMenu( QMenu * menu )
+    QAction * addMenu(QMenu * menu)
     */
     auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -210,28 +210,28 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU )
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QMenu * addMenu( const QString & title )
+    QMenu * addMenu(const QString & title)
     */
     auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr)
     {
       auto ptr = obj->addMenu(PQSTRING(1));
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
 
   }
   else if (ISNUMPAR(2) && (ISQICON(1)|| HB_ISCHAR(1)) && HB_ISCHAR(2))
   {
     /*
-    QMenu * addMenu( const QIcon & icon, const QString & title )
+    QMenu * addMenu(const QIcon & icon, const QString & title)
     */
     auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr)
     {
-      auto ptr = obj->addMenu( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)), PQSTRING(2));
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
+      auto ptr = obj->addMenu(HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2));
+      Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
 
   }
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU )
 /*
 QAction * addSeparator()
 */
-HB_FUNC_STATIC( QMENUBAR_ADDSEPARATOR )
+HB_FUNC_STATIC(QMENUBAR_ADDSEPARATOR)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDSEPARATOR )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QMENUBAR_CLEAR )
+HB_FUNC_STATIC(QMENUBAR_CLEAR)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -293,9 +293,9 @@ HB_FUNC_STATIC( QMENUBAR_CLEAR )
 }
 
 /*
-QAction * insertMenu( QAction * before, QMenu * menu )
+QAction * insertMenu(QAction * before, QMenu * menu)
 */
-HB_FUNC_STATIC( QMENUBAR_INSERTMENU )
+HB_FUNC_STATIC(QMENUBAR_INSERTMENU)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -318,9 +318,9 @@ HB_FUNC_STATIC( QMENUBAR_INSERTMENU )
 }
 
 /*
-QAction * insertSeparator( QAction * before )
+QAction * insertSeparator(QAction * before)
 */
-HB_FUNC_STATIC( QMENUBAR_INSERTSEPARATOR )
+HB_FUNC_STATIC(QMENUBAR_INSERTSEPARATOR)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QMENUBAR_INSERTSEPARATOR )
 /*
 bool isDefaultUp() const
 */
-HB_FUNC_STATIC( QMENUBAR_ISDEFAULTUP )
+HB_FUNC_STATIC(QMENUBAR_ISDEFAULTUP)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -367,9 +367,9 @@ HB_FUNC_STATIC( QMENUBAR_ISDEFAULTUP )
 }
 
 /*
-void setDefaultUp( bool )
+void setDefaultUp(bool)
 */
-HB_FUNC_STATIC( QMENUBAR_SETDEFAULTUP )
+HB_FUNC_STATIC(QMENUBAR_SETDEFAULTUP)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QMENUBAR_SETDEFAULTUP )
 /*
 bool isNativeMenuBar() const
 */
-HB_FUNC_STATIC( QMENUBAR_ISNATIVEMENUBAR )
+HB_FUNC_STATIC(QMENUBAR_ISNATIVEMENUBAR)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -417,9 +417,9 @@ HB_FUNC_STATIC( QMENUBAR_ISNATIVEMENUBAR )
 }
 
 /*
-void setNativeMenuBar( bool nativeMenuBar )
+void setNativeMenuBar(bool nativeMenuBar)
 */
-HB_FUNC_STATIC( QMENUBAR_SETNATIVEMENUBAR )
+HB_FUNC_STATIC(QMENUBAR_SETNATIVEMENUBAR)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -443,9 +443,9 @@ HB_FUNC_STATIC( QMENUBAR_SETNATIVEMENUBAR )
 }
 
 /*
-void setActiveAction( QAction * act )
+void setActiveAction(QAction * act)
 */
-HB_FUNC_STATIC( QMENUBAR_SETACTIVEACTION )
+HB_FUNC_STATIC(QMENUBAR_SETACTIVEACTION)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -469,9 +469,9 @@ HB_FUNC_STATIC( QMENUBAR_SETACTIVEACTION )
 }
 
 /*
-int heightForWidth( int ) const
+int heightForWidth(int) const
 */
-HB_FUNC_STATIC( QMENUBAR_HEIGHTFORWIDTH )
+HB_FUNC_STATIC(QMENUBAR_HEIGHTFORWIDTH)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QMENUBAR_HEIGHTFORWIDTH )
 /*
 QSize minimumSizeHint() const
 */
-HB_FUNC_STATIC( QMENUBAR_MINIMUMSIZEHINT )
+HB_FUNC_STATIC(QMENUBAR_MINIMUMSIZEHINT)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QMENUBAR_MINIMUMSIZEHINT )
 /*
 QSize sizeHint() const
 */
-HB_FUNC_STATIC( QMENUBAR_SIZEHINT )
+HB_FUNC_STATIC(QMENUBAR_SIZEHINT)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -543,9 +543,9 @@ HB_FUNC_STATIC( QMENUBAR_SIZEHINT )
 }
 
 /*
-virtual void setVisible( bool visible )
+virtual void setVisible(bool visible)
 */
-HB_FUNC_STATIC( QMENUBAR_SETVISIBLE )
+HB_FUNC_STATIC(QMENUBAR_SETVISIBLE)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -569,9 +569,9 @@ HB_FUNC_STATIC( QMENUBAR_SETVISIBLE )
 }
 
 /*
-QRect actionGeometry( QAction * ) const
+QRect actionGeometry(QAction *) const
 */
-HB_FUNC_STATIC( QMENUBAR_ACTIONGEOMETRY )
+HB_FUNC_STATIC(QMENUBAR_ACTIONGEOMETRY)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -594,9 +594,9 @@ HB_FUNC_STATIC( QMENUBAR_ACTIONGEOMETRY )
 }
 
 /*
-QAction * actionAt( const QPoint & ) const
+QAction * actionAt(const QPoint &) const
 */
-HB_FUNC_STATIC( QMENUBAR_ACTIONAT )
+HB_FUNC_STATIC(QMENUBAR_ACTIONAT)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -619,9 +619,9 @@ HB_FUNC_STATIC( QMENUBAR_ACTIONAT )
 }
 
 /*
-QWidget * cornerWidget( Qt::Corner corner = Qt::TopRightCorner ) const
+QWidget * cornerWidget(Qt::Corner corner = Qt::TopRightCorner) const
 */
-HB_FUNC_STATIC( QMENUBAR_CORNERWIDGET )
+HB_FUNC_STATIC(QMENUBAR_CORNERWIDGET)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -631,8 +631,8 @@ HB_FUNC_STATIC( QMENUBAR_CORNERWIDGET )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      auto ptr = obj->cornerWidget( HB_ISNIL(1) ? static_cast<Qt::Corner >( Qt::TopRightCorner ) : static_cast<Qt::Corner >(hb_parni(1)));
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      auto ptr = obj->cornerWidget(HB_ISNIL(1) ? static_cast<Qt::Corner >(Qt::TopRightCorner) : static_cast<Qt::Corner >(hb_parni(1)));
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -644,9 +644,9 @@ HB_FUNC_STATIC( QMENUBAR_CORNERWIDGET )
 }
 
 /*
-void setCornerWidget( QWidget * w, Qt::Corner corner = Qt::TopRightCorner )
+void setCornerWidget(QWidget * w, Qt::Corner corner = Qt::TopRightCorner)
 */
-HB_FUNC_STATIC( QMENUBAR_SETCORNERWIDGET )
+HB_FUNC_STATIC(QMENUBAR_SETCORNERWIDGET)
 {
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QMENUBAR_SETCORNERWIDGET )
     if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setCornerWidget(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::Corner >( Qt::TopRightCorner ) : static_cast<Qt::Corner >(hb_parni(2)));
+      obj->setCornerWidget(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::Corner >(Qt::TopRightCorner) : static_cast<Qt::Corner >(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -670,9 +670,9 @@ HB_FUNC_STATIC( QMENUBAR_SETCORNERWIDGET )
 }
 
 /*
-void setDefaultAction ( QAction * act )
+void setDefaultAction (QAction * act)
 */
-HB_FUNC_STATIC( QMENUBAR_SETDEFAULTACTION )
+HB_FUNC_STATIC(QMENUBAR_SETDEFAULTACTION)
 {
 #ifdef Q_OS_WINCE
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QMENUBAR_SETDEFAULTACTION )
 /*
 QAction * defaultAction () const
 */
-HB_FUNC_STATIC( QMENUBAR_DEFAULTACTION )
+HB_FUNC_STATIC(QMENUBAR_DEFAULTACTION)
 {
 #ifdef Q_OS_WINCE
   auto obj = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QMENUBAR_DEFAULTACTION )
 /*
 static void wceCommands(uint command)
 */
-HB_FUNC_STATIC( QMENUBAR_WCECOMMANDS )
+HB_FUNC_STATIC(QMENUBAR_WCECOMMANDS)
 {
 #ifdef Q_OS_WINCE
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -750,7 +750,7 @@ HB_FUNC_STATIC( QMENUBAR_WCECOMMANDS )
 /*
 static void wceRefresh()
 */
-HB_FUNC_STATIC( QMENUBAR_WCEREFRESH )
+HB_FUNC_STATIC(QMENUBAR_WCEREFRESH)
 {
 #ifdef Q_OS_WINCE
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QMENUBAR_WCEREFRESH )
 /*
 NSMenu * QMenuBar::toNSMenu()
 */
-HB_FUNC_STATIC( QMENUBAR_TONSMENU )
+HB_FUNC_STATIC(QMENUBAR_TONSMENU)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifdef Q_OS_OSX
@@ -799,9 +799,9 @@ HB_FUNC_STATIC( QMENUBAR_TONSMENU )
 }
 
 /*
-void hovered( QAction * action )
+void hovered(QAction * action)
 */
-HB_FUNC_STATIC( QMENUBAR_ONHOVERED )
+HB_FUNC_STATIC(QMENUBAR_ONHOVERED)
 {
   auto sender = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -849,9 +849,9 @@ HB_FUNC_STATIC( QMENUBAR_ONHOVERED )
 }
 
 /*
-void triggered( QAction * action )
+void triggered(QAction * action)
 */
-HB_FUNC_STATIC( QMENUBAR_ONTRIGGERED )
+HB_FUNC_STATIC(QMENUBAR_ONTRIGGERED)
 {
   auto sender = qobject_cast<QMenuBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   

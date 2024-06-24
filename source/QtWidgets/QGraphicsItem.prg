@@ -200,7 +200,7 @@ RETURN
 #include <QtWidgets/QGraphicsScene>
 #include <QtWidgets/QGraphicsWidget>
 
-HB_FUNC_STATIC( QGRAPHICSITEM_DELETE )
+HB_FUNC_STATIC(QGRAPHICSITEM_DELETE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_DELETE )
 /*
 bool acceptDrops() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTDROPS )
+HB_FUNC_STATIC(QGRAPHICSITEM_ACCEPTDROPS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTDROPS )
 /*
 bool acceptHoverEvents() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTHOVEREVENTS )
+HB_FUNC_STATIC(QGRAPHICSITEM_ACCEPTHOVEREVENTS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTHOVEREVENTS )
 /*
 bool acceptTouchEvents() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTTOUCHEVENTS )
+HB_FUNC_STATIC(QGRAPHICSITEM_ACCEPTTOUCHEVENTS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTTOUCHEVENTS )
 /*
 Qt::MouseButtons acceptedMouseButtons() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTEDMOUSEBUTTONS )
+HB_FUNC_STATIC(QGRAPHICSITEM_ACCEPTEDMOUSEBUTTONS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -313,9 +313,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTEDMOUSEBUTTONS )
 }
 
 /*
-virtual void advance( int phase )
+virtual void advance(int phase)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ADVANCE )
+HB_FUNC_STATIC(QGRAPHICSITEM_ADVANCE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ADVANCE )
 /*
 virtual QRectF boundingRect() const = 0
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGRECT )
+HB_FUNC_STATIC(QGRAPHICSITEM_BOUNDINGRECT)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -364,9 +364,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGRECT )
 }
 
 /*
-QRegion boundingRegion( const QTransform & itemToDeviceTransform ) const
+QRegion boundingRegion(const QTransform & itemToDeviceTransform) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGREGION )
+HB_FUNC_STATIC(QGRAPHICSITEM_BOUNDINGREGION)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGREGION )
 /*
 qreal boundingRegionGranularity() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGREGIONGRANULARITY )
+HB_FUNC_STATIC(QGRAPHICSITEM_BOUNDINGREGIONGRANULARITY)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGREGIONGRANULARITY )
 /*
 QGraphicsItem::CacheMode cacheMode() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_CACHEMODE )
+HB_FUNC_STATIC(QGRAPHICSITEM_CACHEMODE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CACHEMODE )
 /*
 QRectF childrenBoundingRect() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_CHILDRENBOUNDINGRECT )
+HB_FUNC_STATIC(QGRAPHICSITEM_CHILDRENBOUNDINGRECT)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CHILDRENBOUNDINGRECT )
 /*
 void clearFocus()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_CLEARFOCUS )
+HB_FUNC_STATIC(QGRAPHICSITEM_CLEARFOCUS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CLEARFOCUS )
 /*
 QPainterPath clipPath() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_CLIPPATH )
+HB_FUNC_STATIC(QGRAPHICSITEM_CLIPPATH)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -513,9 +513,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CLIPPATH )
 }
 
 /*
-virtual bool collidesWithItem( const QGraphicsItem * other, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
+virtual bool collidesWithItem(const QGraphicsItem * other, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHITEM )
+HB_FUNC_STATIC(QGRAPHICSITEM_COLLIDESWITHITEM)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHITEM )
     if (ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RBOOL(obj->collidesWithItem(PQGRAPHICSITEM(1), HB_ISNIL(2) ? static_cast<Qt::ItemSelectionMode >( Qt::IntersectsItemShape ) : static_cast<Qt::ItemSelectionMode >(hb_parni(2))));
+      RBOOL(obj->collidesWithItem(PQGRAPHICSITEM(1), HB_ISNIL(2) ? static_cast<Qt::ItemSelectionMode >(Qt::IntersectsItemShape) : static_cast<Qt::ItemSelectionMode >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -537,9 +537,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHITEM )
 }
 
 /*
-virtual bool collidesWithPath( const QPainterPath & path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
+virtual bool collidesWithPath(const QPainterPath & path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHPATH )
+HB_FUNC_STATIC(QGRAPHICSITEM_COLLIDESWITHPATH)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHPATH )
     if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RBOOL(obj->collidesWithPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? static_cast<Qt::ItemSelectionMode >( Qt::IntersectsItemShape ) : static_cast<Qt::ItemSelectionMode >(hb_parni(2))));
+      RBOOL(obj->collidesWithPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? static_cast<Qt::ItemSelectionMode >(Qt::IntersectsItemShape) : static_cast<Qt::ItemSelectionMode >(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -561,9 +561,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHPATH )
 }
 
 /*
-QGraphicsItem * commonAncestorItem( const QGraphicsItem * other ) const
+QGraphicsItem * commonAncestorItem(const QGraphicsItem * other) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_COMMONANCESTORITEM )
+HB_FUNC_STATIC(QGRAPHICSITEM_COMMONANCESTORITEM)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -586,9 +586,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COMMONANCESTORITEM )
 }
 
 /*
-virtual bool contains( const QPointF & point ) const
+virtual bool contains(const QPointF & point) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_CONTAINS )
+HB_FUNC_STATIC(QGRAPHICSITEM_CONTAINS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CONTAINS )
 /*
 QCursor cursor() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_CURSOR )
+HB_FUNC_STATIC(QGRAPHICSITEM_CURSOR)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -635,9 +635,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CURSOR )
 }
 
 /*
-QVariant data( int key ) const
+QVariant data(int key) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_DATA )
+HB_FUNC_STATIC(QGRAPHICSITEM_DATA)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -660,9 +660,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_DATA )
 }
 
 /*
-QTransform deviceTransform( const QTransform & viewportTransform ) const
+QTransform deviceTransform(const QTransform & viewportTransform) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_DEVICETRANSFORM )
+HB_FUNC_STATIC(QGRAPHICSITEM_DEVICETRANSFORM)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_DEVICETRANSFORM )
 /*
 qreal effectiveOpacity() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_EFFECTIVEOPACITY )
+HB_FUNC_STATIC(QGRAPHICSITEM_EFFECTIVEOPACITY)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -708,18 +708,18 @@ HB_FUNC_STATIC( QGRAPHICSITEM_EFFECTIVEOPACITY )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
+HB_FUNC_STATIC(QGRAPHICSITEM_ENSUREVISIBLE)
 {
   if (ISBETWEEN(0, 3) && (ISQRECTF(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    void ensureVisible( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
+    void ensureVisible(const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50)
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr)
     {
-      obj->ensureVisible( HB_ISNIL(1) ? QRectF() : *static_cast<QRectF*>(Qt5xHb::itemGetPtr(1)), OPINT( 2, 50 ), OPINT( 3, 50));
+      obj->ensureVisible(HB_ISNIL(1) ? QRectF() : *static_cast<QRectF*>(Qt5xHb::itemGetPtr(1)), OPINT(2, 50), OPINT(3, 50));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -728,13 +728,13 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
   if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)))
   {
     /*
-    void ensureVisible( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
+    void ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50)
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr)
     {
-      obj->ensureVisible(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPINT( 5, 50 ), OPINT( 6, 50));
+      obj->ensureVisible(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPINT(5, 50), OPINT(6, 50));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
 /*
 bool filtersChildEvents() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_FILTERSCHILDEVENTS )
+HB_FUNC_STATIC(QGRAPHICSITEM_FILTERSCHILDEVENTS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_FILTERSCHILDEVENTS )
 /*
 QGraphicsItem::GraphicsItemFlags flags() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_FLAGS )
+HB_FUNC_STATIC(QGRAPHICSITEM_FLAGS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_FLAGS )
 /*
 QGraphicsItem * focusItem() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_FOCUSITEM )
+HB_FUNC_STATIC(QGRAPHICSITEM_FOCUSITEM)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_FOCUSITEM )
 /*
 QGraphicsItem * focusProxy() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_FOCUSPROXY )
+HB_FUNC_STATIC(QGRAPHICSITEM_FOCUSPROXY)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_FOCUSPROXY )
 /*
 void grabKeyboard()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_GRABKEYBOARD )
+HB_FUNC_STATIC(QGRAPHICSITEM_GRABKEYBOARD)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_GRABKEYBOARD )
 /*
 void grabMouse()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_GRABMOUSE )
+HB_FUNC_STATIC(QGRAPHICSITEM_GRABMOUSE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -899,7 +899,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_GRABMOUSE )
 /*
 QGraphicsEffect * graphicsEffect() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_GRAPHICSEFFECT )
+HB_FUNC_STATIC(QGRAPHICSITEM_GRAPHICSEFFECT)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -924,7 +924,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_GRAPHICSEFFECT )
 /*
 QGraphicsItemGroup * group() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_GROUP )
+HB_FUNC_STATIC(QGRAPHICSITEM_GROUP)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -949,7 +949,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_GROUP )
 /*
 bool hasCursor() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_HASCURSOR )
+HB_FUNC_STATIC(QGRAPHICSITEM_HASCURSOR)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -973,7 +973,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_HASCURSOR )
 /*
 bool hasFocus() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_HASFOCUS )
+HB_FUNC_STATIC(QGRAPHICSITEM_HASFOCUS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_HASFOCUS )
 /*
 void hide()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_HIDE )
+HB_FUNC_STATIC(QGRAPHICSITEM_HIDE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1023,7 +1023,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_HIDE )
 /*
 Qt::InputMethodHints inputMethodHints() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_INPUTMETHODHINTS )
+HB_FUNC_STATIC(QGRAPHICSITEM_INPUTMETHODHINTS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1045,9 +1045,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_INPUTMETHODHINTS )
 }
 
 /*
-void installSceneEventFilter( QGraphicsItem * filterItem )
+void installSceneEventFilter(QGraphicsItem * filterItem)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_INSTALLSCENEEVENTFILTER )
+HB_FUNC_STATIC(QGRAPHICSITEM_INSTALLSCENEEVENTFILTER)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_INSTALLSCENEEVENTFILTER )
 /*
 bool isActive() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISACTIVE )
+HB_FUNC_STATIC(QGRAPHICSITEM_ISACTIVE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1095,9 +1095,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISACTIVE )
 }
 
 /*
-bool isAncestorOf( const QGraphicsItem * child ) const
+bool isAncestorOf(const QGraphicsItem * child) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISANCESTOROF )
+HB_FUNC_STATIC(QGRAPHICSITEM_ISANCESTOROF)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1119,12 +1119,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISANCESTOROF )
 }
 
 /*
-bool isBlockedByModalPanel ( QGraphicsItem ** blockingPanel = nullptr ) const
+bool isBlockedByModalPanel (QGraphicsItem ** blockingPanel = nullptr) const
 */
 /*
 bool isClipped() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISCLIPPED )
+HB_FUNC_STATIC(QGRAPHICSITEM_ISCLIPPED)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1148,7 +1148,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISCLIPPED )
 /*
 bool isEnabled() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISENABLED )
+HB_FUNC_STATIC(QGRAPHICSITEM_ISENABLED)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1169,7 +1169,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISENABLED )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
+HB_FUNC_STATIC(QGRAPHICSITEM_ISOBSCURED)
 {
   if (ISNUMPAR(0))
   {
@@ -1187,7 +1187,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    bool isObscured( qreal x, qreal y, qreal w, qreal h ) const
+    bool isObscured(qreal x, qreal y, qreal w, qreal h) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1200,7 +1200,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    bool isObscured( const QRectF & rect ) const
+    bool isObscured(const QRectF & rect) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1217,9 +1217,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
 }
 
 /*
-virtual bool isObscuredBy( const QGraphicsItem * item ) const
+virtual bool isObscuredBy(const QGraphicsItem * item) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCUREDBY )
+HB_FUNC_STATIC(QGRAPHICSITEM_ISOBSCUREDBY)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1243,7 +1243,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCUREDBY )
 /*
 bool isPanel() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISPANEL )
+HB_FUNC_STATIC(QGRAPHICSITEM_ISPANEL)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1267,7 +1267,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISPANEL )
 /*
 bool isSelected() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISSELECTED )
+HB_FUNC_STATIC(QGRAPHICSITEM_ISSELECTED)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1291,7 +1291,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISSELECTED )
 /*
 bool isUnderMouse() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISUNDERMOUSE )
+HB_FUNC_STATIC(QGRAPHICSITEM_ISUNDERMOUSE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1315,7 +1315,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISUNDERMOUSE )
 /*
 bool isVisible() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISVISIBLE )
+HB_FUNC_STATIC(QGRAPHICSITEM_ISVISIBLE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1337,9 +1337,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISVISIBLE )
 }
 
 /*
-bool isVisibleTo( const QGraphicsItem * parent ) const
+bool isVisibleTo(const QGraphicsItem * parent) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISVISIBLETO )
+HB_FUNC_STATIC(QGRAPHICSITEM_ISVISIBLETO)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1363,7 +1363,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISVISIBLETO )
 /*
 bool isWidget() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISWIDGET )
+HB_FUNC_STATIC(QGRAPHICSITEM_ISWIDGET)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1387,7 +1387,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISWIDGET )
 /*
 bool isWindow() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ISWINDOW )
+HB_FUNC_STATIC(QGRAPHICSITEM_ISWINDOW)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1409,9 +1409,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISWINDOW )
 }
 
 /*
-QTransform itemTransform( const QGraphicsItem * other, bool * ok = nullptr ) const
+QTransform itemTransform(const QGraphicsItem * other, bool * ok = nullptr) const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ITEMTRANSFORM )
+HB_FUNC_STATIC(QGRAPHICSITEM_ITEMTRANSFORM)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1435,12 +1435,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ITEMTRANSFORM )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
+HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMITEM)
 {
   if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPOINTF(2))
   {
     /*
-    QPointF mapFromItem( const QGraphicsItem * item, const QPointF & point ) const
+    QPointF mapFromItem(const QGraphicsItem * item, const QPointF & point) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1454,7 +1454,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
   else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQRECTF(2))
   {
     /*
-    QPolygonF mapFromItem( const QGraphicsItem * item, const QRectF & rect ) const
+    QPolygonF mapFromItem(const QGraphicsItem * item, const QRectF & rect) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1468,7 +1468,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
   else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPOLYGONF(2))
   {
     /*
-    QPolygonF mapFromItem( const QGraphicsItem * item, const QPolygonF & polygon ) const
+    QPolygonF mapFromItem(const QGraphicsItem * item, const QPolygonF & polygon) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1482,7 +1482,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
   else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPAINTERPATH(2))
   {
     /*
-    QPainterPath mapFromItem( const QGraphicsItem * item, const QPainterPath & path ) const
+    QPainterPath mapFromItem(const QGraphicsItem * item, const QPainterPath & path) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1496,7 +1496,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
   else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
     /*
-    QPolygonF mapFromItem( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+    QPolygonF mapFromItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1510,7 +1510,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
   else if (ISNUMPAR(3) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    QPointF mapFromItem( const QGraphicsItem * item, qreal x, qreal y ) const
+    QPointF mapFromItem(const QGraphicsItem * item, qreal x, qreal y) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1527,12 +1527,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
+HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMPARENT)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QPointF mapFromParent( const QPointF & point ) const
+    QPointF mapFromParent(const QPointF & point) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1546,7 +1546,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    QPolygonF mapFromParent( const QRectF & rect ) const
+    QPolygonF mapFromParent(const QRectF & rect) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1560,7 +1560,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
   else if (ISNUMPAR(1) && ISQPOLYGONF(1))
   {
     /*
-    QPolygonF mapFromParent( const QPolygonF & polygon ) const
+    QPolygonF mapFromParent(const QPolygonF & polygon) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1574,7 +1574,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
   else if (ISNUMPAR(1) && ISQPAINTERPATH(1))
   {
     /*
-    QPainterPath mapFromParent( const QPainterPath & path ) const
+    QPainterPath mapFromParent(const QPainterPath & path) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1588,7 +1588,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    QPolygonF mapFromParent( qreal x, qreal y, qreal w, qreal h ) const
+    QPolygonF mapFromParent(qreal x, qreal y, qreal w, qreal h) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1602,7 +1602,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QPointF mapFromParent( qreal x, qreal y ) const
+    QPointF mapFromParent(qreal x, qreal y) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1619,12 +1619,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
+HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMSCENE)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QPointF mapFromScene( const QPointF & point ) const
+    QPointF mapFromScene(const QPointF & point) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1638,7 +1638,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    QPolygonF mapFromScene( const QRectF & rect ) const
+    QPolygonF mapFromScene(const QRectF & rect) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1652,7 +1652,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
   else if (ISNUMPAR(1) && ISQPOLYGONF(1))
   {
     /*
-    QPolygonF mapFromScene( const QPolygonF & polygon ) const
+    QPolygonF mapFromScene(const QPolygonF & polygon) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1666,7 +1666,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
   else if (ISNUMPAR(1) && ISQPAINTERPATH(1))
   {
     /*
-    QPainterPath mapFromScene( const QPainterPath & path ) const
+    QPainterPath mapFromScene(const QPainterPath & path) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1680,7 +1680,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    QPolygonF mapFromScene( qreal x, qreal y, qreal w, qreal h ) const
+    QPolygonF mapFromScene(qreal x, qreal y, qreal w, qreal h) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1694,7 +1694,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QPointF mapFromScene( qreal x, qreal y ) const
+    QPointF mapFromScene(qreal x, qreal y) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1711,12 +1711,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMITEM )
+HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMITEM)
 {
   if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQRECTF(2))
   {
     /*
-    QRectF mapRectFromItem( const QGraphicsItem * item, const QRectF & rect ) const
+    QRectF mapRectFromItem(const QGraphicsItem * item, const QRectF & rect) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1730,7 +1730,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMITEM )
   else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
     /*
-    QRectF mapRectFromItem( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+    QRectF mapRectFromItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1747,12 +1747,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMITEM )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
+HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMPARENT)
 {
   if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    QRectF mapRectFromParent( const QRectF & rect ) const
+    QRectF mapRectFromParent(const QRectF & rect) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1766,7 +1766,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    QRectF mapRectFromParent( qreal x, qreal y, qreal w, qreal h ) const
+    QRectF mapRectFromParent(qreal x, qreal y, qreal w, qreal h) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1783,12 +1783,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMSCENE )
+HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMSCENE)
 {
   if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    QRectF mapRectFromScene( const QRectF & rect ) const
+    QRectF mapRectFromScene(const QRectF & rect) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1802,7 +1802,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMSCENE )
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    QRectF mapRectFromScene( qreal x, qreal y, qreal w, qreal h ) const
+    QRectF mapRectFromScene(qreal x, qreal y, qreal w, qreal h) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1819,12 +1819,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMSCENE )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOITEM )
+HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOITEM)
 {
   if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQRECTF(2))
   {
     /*
-    QRectF mapRectToItem( const QGraphicsItem * item, const QRectF & rect ) const
+    QRectF mapRectToItem(const QGraphicsItem * item, const QRectF & rect) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1838,7 +1838,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOITEM )
   else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
     /*
-    QRectF mapRectToItem( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+    QRectF mapRectToItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1855,12 +1855,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOITEM )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOPARENT )
+HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOPARENT)
 {
   if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    QRectF mapRectToParent( const QRectF & rect ) const
+    QRectF mapRectToParent(const QRectF & rect) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1874,7 +1874,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOPARENT )
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    QRectF mapRectToParent( qreal x, qreal y, qreal w, qreal h ) const
+    QRectF mapRectToParent(qreal x, qreal y, qreal w, qreal h) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1891,12 +1891,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOPARENT )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOSCENE )
+HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOSCENE)
 {
   if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    QRectF mapRectToScene( const QRectF & rect ) const
+    QRectF mapRectToScene(const QRectF & rect) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1910,7 +1910,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOSCENE )
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    QRectF mapRectToScene( qreal x, qreal y, qreal w, qreal h ) const
+    QRectF mapRectToScene(qreal x, qreal y, qreal w, qreal h) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1927,12 +1927,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOSCENE )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
+HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOITEM)
 {
   if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPOINTF(2))
   {
     /*
-    QPointF mapToItem( const QGraphicsItem * item, const QPointF & point ) const
+    QPointF mapToItem(const QGraphicsItem * item, const QPointF & point) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1946,7 +1946,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
   else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQRECTF(2))
   {
     /*
-    QPolygonF mapToItem( const QGraphicsItem * item, const QRectF & rect ) const
+    QPolygonF mapToItem(const QGraphicsItem * item, const QRectF & rect) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1960,7 +1960,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
   else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPOLYGONF(2))
   {
     /*
-    QPolygonF mapToItem( const QGraphicsItem * item, const QPolygonF & polygon ) const
+    QPolygonF mapToItem(const QGraphicsItem * item, const QPolygonF & polygon) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1974,7 +1974,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
   else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPAINTERPATH(2))
   {
     /*
-    QPainterPath mapToItem( const QGraphicsItem * item, const QPainterPath & path ) const
+    QPainterPath mapToItem(const QGraphicsItem * item, const QPainterPath & path) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1988,7 +1988,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
   else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
     /*
-    QPolygonF mapToItem( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+    QPolygonF mapToItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2002,7 +2002,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
   else if (ISNUMPAR(3) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    QPointF mapToItem( const QGraphicsItem * item, qreal x, qreal y ) const
+    QPointF mapToItem(const QGraphicsItem * item, qreal x, qreal y) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2019,12 +2019,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
+HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOPARENT)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QPointF mapToParent( const QPointF & point ) const
+    QPointF mapToParent(const QPointF & point) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2038,7 +2038,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    QPolygonF mapToParent( const QRectF & rect ) const
+    QPolygonF mapToParent(const QRectF & rect) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2052,7 +2052,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
   else if (ISNUMPAR(1) && ISQPOLYGONF(1))
   {
     /*
-    QPolygonF mapToParent( const QPolygonF & polygon ) const
+    QPolygonF mapToParent(const QPolygonF & polygon) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2066,7 +2066,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
   else if (ISNUMPAR(1) && ISQPAINTERPATH(1))
   {
     /*
-    QPainterPath mapToParent( const QPainterPath & path ) const
+    QPainterPath mapToParent(const QPainterPath & path) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2080,7 +2080,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    QPolygonF mapToParent( qreal x, qreal y, qreal w, qreal h ) const
+    QPolygonF mapToParent(qreal x, qreal y, qreal w, qreal h) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2094,7 +2094,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QPointF mapToParent( qreal x, qreal y ) const
+    QPointF mapToParent(qreal x, qreal y) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2111,12 +2111,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
+HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOSCENE)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QPointF mapToScene( const QPointF & point ) const
+    QPointF mapToScene(const QPointF & point) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2130,7 +2130,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    QPolygonF mapToScene( const QRectF & rect ) const
+    QPolygonF mapToScene(const QRectF & rect) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2144,7 +2144,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
   else if (ISNUMPAR(1) && ISQPOLYGONF(1))
   {
     /*
-    QPolygonF mapToScene( const QPolygonF & polygon ) const
+    QPolygonF mapToScene(const QPolygonF & polygon) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2158,7 +2158,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
   else if (ISNUMPAR(1) && ISQPAINTERPATH(1))
   {
     /*
-    QPainterPath mapToScene( const QPainterPath & path ) const
+    QPainterPath mapToScene(const QPainterPath & path) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2172,7 +2172,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    QPolygonF mapToScene( qreal x, qreal y, qreal w, qreal h ) const
+    QPolygonF mapToScene(qreal x, qreal y, qreal w, qreal h) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2186,7 +2186,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QPointF mapToScene( qreal x, qreal y ) const
+    QPointF mapToScene(qreal x, qreal y) const
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2204,9 +2204,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
 }
 
 /*
-void moveBy( qreal dx, qreal dy )
+void moveBy(qreal dx, qreal dy)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_MOVEBY )
+HB_FUNC_STATIC(QGRAPHICSITEM_MOVEBY)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2232,7 +2232,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MOVEBY )
 /*
 qreal opacity() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_OPACITY )
+HB_FUNC_STATIC(QGRAPHICSITEM_OPACITY)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2256,7 +2256,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_OPACITY )
 /*
 virtual QPainterPath opaqueArea() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_OPAQUEAREA )
+HB_FUNC_STATIC(QGRAPHICSITEM_OPAQUEAREA)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2279,9 +2279,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_OPAQUEAREA )
 }
 
 /*
-virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr ) = 0
+virtual void paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr) = 0
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_PAINT )
+HB_FUNC_STATIC(QGRAPHICSITEM_PAINT)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2291,7 +2291,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PAINT )
     if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->paint(PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET( 3, nullptr));
+      obj->paint(PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2307,7 +2307,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PAINT )
 /*
 QGraphicsItem * panel() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_PANEL )
+HB_FUNC_STATIC(QGRAPHICSITEM_PANEL)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2332,7 +2332,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PANEL )
 /*
 QGraphicsItem::PanelModality panelModality() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_PANELMODALITY )
+HB_FUNC_STATIC(QGRAPHICSITEM_PANELMODALITY)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2356,7 +2356,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PANELMODALITY )
 /*
 QGraphicsItem * parentItem() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_PARENTITEM )
+HB_FUNC_STATIC(QGRAPHICSITEM_PARENTITEM)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2381,7 +2381,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PARENTITEM )
 /*
 QGraphicsObject * parentObject() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_PARENTOBJECT )
+HB_FUNC_STATIC(QGRAPHICSITEM_PARENTOBJECT)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2406,7 +2406,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PARENTOBJECT )
 /*
 QGraphicsWidget * parentWidget() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_PARENTWIDGET )
+HB_FUNC_STATIC(QGRAPHICSITEM_PARENTWIDGET)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2431,7 +2431,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PARENTWIDGET )
 /*
 QPointF pos() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_POS )
+HB_FUNC_STATIC(QGRAPHICSITEM_POS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2454,9 +2454,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_POS )
 }
 
 /*
-void removeSceneEventFilter( QGraphicsItem * filterItem )
+void removeSceneEventFilter(QGraphicsItem * filterItem)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_REMOVESCENEEVENTFILTER )
+HB_FUNC_STATIC(QGRAPHICSITEM_REMOVESCENEEVENTFILTER)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2482,7 +2482,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_REMOVESCENEEVENTFILTER )
 /*
 void resetTransform()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_RESETTRANSFORM )
+HB_FUNC_STATIC(QGRAPHICSITEM_RESETTRANSFORM)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2508,7 +2508,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_RESETTRANSFORM )
 /*
 qreal rotation() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ROTATION )
+HB_FUNC_STATIC(QGRAPHICSITEM_ROTATION)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2532,7 +2532,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ROTATION )
 /*
 qreal scale() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SCALE )
+HB_FUNC_STATIC(QGRAPHICSITEM_SCALE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2556,7 +2556,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCALE )
 /*
 QGraphicsScene * scene() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SCENE )
+HB_FUNC_STATIC(QGRAPHICSITEM_SCENE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2581,7 +2581,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCENE )
 /*
 QRectF sceneBoundingRect() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SCENEBOUNDINGRECT )
+HB_FUNC_STATIC(QGRAPHICSITEM_SCENEBOUNDINGRECT)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2606,7 +2606,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCENEBOUNDINGRECT )
 /*
 QPointF scenePos() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SCENEPOS )
+HB_FUNC_STATIC(QGRAPHICSITEM_SCENEPOS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2631,7 +2631,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCENEPOS )
 /*
 QTransform sceneTransform() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SCENETRANSFORM )
+HB_FUNC_STATIC(QGRAPHICSITEM_SCENETRANSFORM)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2654,9 +2654,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCENETRANSFORM )
 }
 
 /*
-void scroll( qreal dx, qreal dy, const QRectF & rect = QRectF() )
+void scroll(qreal dx, qreal dy, const QRectF & rect = QRectF())
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SCROLL )
+HB_FUNC_STATIC(QGRAPHICSITEM_SCROLL)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2680,9 +2680,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCROLL )
 }
 
 /*
-void setAcceptDrops( bool on )
+void setAcceptDrops(bool on)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTDROPS )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETACCEPTDROPS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2706,9 +2706,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTDROPS )
 }
 
 /*
-void setAcceptHoverEvents( bool enabled )
+void setAcceptHoverEvents(bool enabled)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTHOVEREVENTS )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETACCEPTHOVEREVENTS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2732,9 +2732,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTHOVEREVENTS )
 }
 
 /*
-void setAcceptTouchEvents( bool enabled )
+void setAcceptTouchEvents(bool enabled)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTTOUCHEVENTS )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETACCEPTTOUCHEVENTS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2758,9 +2758,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTTOUCHEVENTS )
 }
 
 /*
-void setAcceptedMouseButtons( Qt::MouseButtons buttons )
+void setAcceptedMouseButtons(Qt::MouseButtons buttons)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTEDMOUSEBUTTONS )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETACCEPTEDMOUSEBUTTONS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2784,9 +2784,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTEDMOUSEBUTTONS )
 }
 
 /*
-void setActive( bool active )
+void setActive(bool active)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETACTIVE )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETACTIVE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2810,9 +2810,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACTIVE )
 }
 
 /*
-void setBoundingRegionGranularity( qreal granularity )
+void setBoundingRegionGranularity(qreal granularity)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETBOUNDINGREGIONGRANULARITY )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETBOUNDINGREGIONGRANULARITY)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2836,9 +2836,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETBOUNDINGREGIONGRANULARITY )
 }
 
 /*
-void setCacheMode( QGraphicsItem::CacheMode mode, const QSize & logicalCacheSize = QSize() )
+void setCacheMode(QGraphicsItem::CacheMode mode, const QSize & logicalCacheSize = QSize())
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETCACHEMODE )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETCACHEMODE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2862,9 +2862,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETCACHEMODE )
 }
 
 /*
-void setCursor( const QCursor & cursor )
+void setCursor(const QCursor & cursor)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETCURSOR )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETCURSOR)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2888,9 +2888,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETCURSOR )
 }
 
 /*
-void setData( int key, const QVariant & value )
+void setData(int key, const QVariant & value)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETDATA )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETDATA)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2914,9 +2914,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETDATA )
 }
 
 /*
-void setEnabled( bool enabled )
+void setEnabled(bool enabled)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETENABLED )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETENABLED)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2940,9 +2940,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETENABLED )
 }
 
 /*
-void setFiltersChildEvents( bool enabled )
+void setFiltersChildEvents(bool enabled)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETFILTERSCHILDEVENTS )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETFILTERSCHILDEVENTS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2966,9 +2966,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFILTERSCHILDEVENTS )
 }
 
 /*
-void setFlag( QGraphicsItem::GraphicsItemFlag flag, bool enabled = true )
+void setFlag(QGraphicsItem::GraphicsItemFlag flag, bool enabled = true)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAG )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETFLAG)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -2978,7 +2978,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAG )
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setFlag(static_cast<QGraphicsItem::GraphicsItemFlag>(hb_parni(1)), OPBOOL( 2, true));
+      obj->setFlag(static_cast<QGraphicsItem::GraphicsItemFlag>(hb_parni(1)), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2992,9 +2992,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAG )
 }
 
 /*
-void setFlags( QGraphicsItem::GraphicsItemFlags flags )
+void setFlags(QGraphicsItem::GraphicsItemFlags flags)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAGS )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETFLAGS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3018,9 +3018,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAGS )
 }
 
 /*
-void setFocus( Qt::FocusReason focusReason = Qt::OtherFocusReason )
+void setFocus(Qt::FocusReason focusReason = Qt::OtherFocusReason)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUS )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETFOCUS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3030,7 +3030,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUS )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->setFocus( HB_ISNIL(1) ? static_cast<Qt::FocusReason >( Qt::OtherFocusReason ) : static_cast<Qt::FocusReason >(hb_parni(1)));
+      obj->setFocus(HB_ISNIL(1) ? static_cast<Qt::FocusReason >(Qt::OtherFocusReason) : static_cast<Qt::FocusReason >(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3044,9 +3044,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUS )
 }
 
 /*
-void setFocusProxy( QGraphicsItem * item )
+void setFocusProxy(QGraphicsItem * item)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUSPROXY )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETFOCUSPROXY)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3070,9 +3070,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUSPROXY )
 }
 
 /*
-void setGraphicsEffect( QGraphicsEffect * effect )
+void setGraphicsEffect(QGraphicsEffect * effect)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETGRAPHICSEFFECT )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETGRAPHICSEFFECT)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3096,9 +3096,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETGRAPHICSEFFECT )
 }
 
 /*
-void setGroup( QGraphicsItemGroup * group )
+void setGroup(QGraphicsItemGroup * group)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETGROUP )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETGROUP)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3122,9 +3122,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETGROUP )
 }
 
 /*
-void setInputMethodHints( Qt::InputMethodHints hints )
+void setInputMethodHints(Qt::InputMethodHints hints)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETINPUTMETHODHINTS )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETINPUTMETHODHINTS)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3148,9 +3148,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETINPUTMETHODHINTS )
 }
 
 /*
-void setOpacity( qreal opacity )
+void setOpacity(qreal opacity)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETOPACITY )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETOPACITY)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3174,9 +3174,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETOPACITY )
 }
 
 /*
-void setPanelModality( QGraphicsItem::PanelModality panelModality )
+void setPanelModality(QGraphicsItem::PanelModality panelModality)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETPANELMODALITY )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETPANELMODALITY)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3200,9 +3200,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETPANELMODALITY )
 }
 
 /*
-void setParentItem( QGraphicsItem * newParent )
+void setParentItem(QGraphicsItem * newParent)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETPARENTITEM )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETPARENTITEM)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3225,12 +3225,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETPARENTITEM )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_SETPOS )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETPOS)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    void setPos( const QPointF & pos )
+    void setPos(const QPointF & pos)
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3245,7 +3245,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETPOS )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    void setPos( qreal x, qreal y )
+    void setPos(qreal x, qreal y)
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3264,12 +3264,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETPOS )
 }
 
 /*
-V2void setRotation( qreal angle )
+V2void setRotation(qreal angle)
 */
 /*
-void setScale( qreal factor )
+void setScale(qreal factor)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETSCALE )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETSCALE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3293,9 +3293,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETSCALE )
 }
 
 /*
-void setSelected( bool selected )
+void setSelected(bool selected)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETSELECTED )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETSELECTED)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3319,9 +3319,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETSELECTED )
 }
 
 /*
-void setToolTip( const QString & toolTip )
+void setToolTip(const QString & toolTip)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETTOOLTIP )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETTOOLTIP)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3345,9 +3345,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTOOLTIP )
 }
 
 /*
-void setTransform( const QTransform & matrix, bool combine = false )
+void setTransform(const QTransform & matrix, bool combine = false)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORM )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETTRANSFORM)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3357,7 +3357,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORM )
     if (ISBETWEEN(1, 2) && ISQTRANSFORM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setTransform(*PQTRANSFORM(1), OPBOOL( 2, false));
+      obj->setTransform(*PQTRANSFORM(1), OPBOOL(2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3370,12 +3370,12 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORM )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORMORIGINPOINT )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETTRANSFORMORIGINPOINT)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    void setTransformOriginPoint( const QPointF & origin )
+    void setTransformOriginPoint(const QPointF & origin)
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3390,7 +3390,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORMORIGINPOINT )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    void setTransformOriginPoint( qreal x, qreal y )
+    void setTransformOriginPoint(qreal x, qreal y)
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3409,9 +3409,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORMORIGINPOINT )
 }
 
 /*
-void setVisible( bool visible )
+void setVisible(bool visible)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETVISIBLE )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETVISIBLE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3435,9 +3435,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETVISIBLE )
 }
 
 /*
-void setX( qreal x )
+void setX(qreal x)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETX )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETX)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3461,9 +3461,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETX )
 }
 
 /*
-void setY( qreal y )
+void setY(qreal y)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETY )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETY)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3487,9 +3487,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETY )
 }
 
 /*
-void setZValue( qreal z )
+void setZValue(qreal z)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETZVALUE )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETZVALUE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3515,7 +3515,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETZVALUE )
 /*
 virtual QPainterPath shape() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SHAPE )
+HB_FUNC_STATIC(QGRAPHICSITEM_SHAPE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3540,7 +3540,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SHAPE )
 /*
 void show()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SHOW )
+HB_FUNC_STATIC(QGRAPHICSITEM_SHOW)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3564,9 +3564,9 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SHOW )
 }
 
 /*
-void stackBefore( const QGraphicsItem * sibling )
+void stackBefore(const QGraphicsItem * sibling)
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_STACKBEFORE )
+HB_FUNC_STATIC(QGRAPHICSITEM_STACKBEFORE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3592,7 +3592,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_STACKBEFORE )
 /*
 QGraphicsObject * toGraphicsObject()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_TOGRAPHICSOBJECT )
+HB_FUNC_STATIC(QGRAPHICSITEM_TOGRAPHICSOBJECT)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3617,7 +3617,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOGRAPHICSOBJECT )
 /*
 QString toolTip() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_TOOLTIP )
+HB_FUNC_STATIC(QGRAPHICSITEM_TOOLTIP)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3641,7 +3641,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOOLTIP )
 /*
 QGraphicsItem * topLevelItem() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_TOPLEVELITEM )
+HB_FUNC_STATIC(QGRAPHICSITEM_TOPLEVELITEM)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3666,7 +3666,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOPLEVELITEM )
 /*
 QGraphicsWidget * topLevelWidget() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_TOPLEVELWIDGET )
+HB_FUNC_STATIC(QGRAPHICSITEM_TOPLEVELWIDGET)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3691,7 +3691,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOPLEVELWIDGET )
 /*
 QTransform transform() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORM )
+HB_FUNC_STATIC(QGRAPHICSITEM_TRANSFORM)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3716,7 +3716,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORM )
 /*
 QPointF transformOriginPoint() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORMORIGINPOINT )
+HB_FUNC_STATIC(QGRAPHICSITEM_TRANSFORMORIGINPOINT)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3741,7 +3741,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORMORIGINPOINT )
 /*
 virtual int type() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_TYPE )
+HB_FUNC_STATIC(QGRAPHICSITEM_TYPE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3765,7 +3765,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TYPE )
 /*
 void ungrabKeyboard()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_UNGRABKEYBOARD )
+HB_FUNC_STATIC(QGRAPHICSITEM_UNGRABKEYBOARD)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3791,7 +3791,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UNGRABKEYBOARD )
 /*
 void ungrabMouse()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_UNGRABMOUSE )
+HB_FUNC_STATIC(QGRAPHICSITEM_UNGRABMOUSE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3817,7 +3817,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UNGRABMOUSE )
 /*
 void unsetCursor()
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_UNSETCURSOR )
+HB_FUNC_STATIC(QGRAPHICSITEM_UNSETCURSOR)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3840,18 +3840,18 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UNSETCURSOR )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_UPDATE )
+HB_FUNC_STATIC(QGRAPHICSITEM_UPDATE)
 {
   if (ISBETWEEN(0, 1) && (ISQRECTF(1) || HB_ISNIL(1)))
   {
     /*
-    void update( const QRectF & rect = QRectF() )
+    void update(const QRectF & rect = QRectF())
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr)
     {
-      obj->update( HB_ISNIL(1) ? QRectF() : *static_cast<QRectF*>(Qt5xHb::itemGetPtr(1)));
+      obj->update(HB_ISNIL(1) ? QRectF() : *static_cast<QRectF*>(Qt5xHb::itemGetPtr(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -3860,7 +3860,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UPDATE )
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    void update( qreal x, qreal y, qreal width, qreal height )
+    void update(qreal x, qreal y, qreal width, qreal height)
     */
     auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3881,7 +3881,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UPDATE )
 /*
 QGraphicsWidget * window() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_WINDOW )
+HB_FUNC_STATIC(QGRAPHICSITEM_WINDOW)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3906,7 +3906,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_WINDOW )
 /*
 qreal x() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_X )
+HB_FUNC_STATIC(QGRAPHICSITEM_X)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3930,7 +3930,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_X )
 /*
 qreal y() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_Y )
+HB_FUNC_STATIC(QGRAPHICSITEM_Y)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3954,7 +3954,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_Y )
 /*
 qreal zValue() const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_ZVALUE )
+HB_FUNC_STATIC(QGRAPHICSITEM_ZVALUE)
 {
   auto obj = static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -3975,7 +3975,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ZVALUE )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_NEWFROM )
+HB_FUNC_STATIC(QGRAPHICSITEM_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -4005,22 +4005,22 @@ HB_FUNC_STATIC( QGRAPHICSITEM_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGRAPHICSITEM_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QGRAPHICSITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGRAPHICSITEM_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QGRAPHICSITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGRAPHICSITEM_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGRAPHICSITEM_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGRAPHICSITEM_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

@@ -75,13 +75,13 @@ RETURN
 #include <QtWidgets/QAbstractButton>
 
 /*
-QButtonGroup( QObject * parent = nullptr )
+QButtonGroup(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QBUTTONGROUP_NEW )
+HB_FUNC_STATIC(QBUTTONGROUP_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QButtonGroup( OPQOBJECT( 1, nullptr));
+    auto obj = new QButtonGroup(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_NEW )
   }
 }
 
-HB_FUNC_STATIC( QBUTTONGROUP_DELETE )
+HB_FUNC_STATIC(QBUTTONGROUP_DELETE)
 {
   auto obj = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -108,12 +108,12 @@ HB_FUNC_STATIC( QBUTTONGROUP_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
+HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
 {
   if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
   {
     /*
-    void addButton( QAbstractButton * button )
+    void addButton(QAbstractButton * button)
     */
     auto obj = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
   else if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2))
   {
     /*
-    void addButton( QAbstractButton * button, int id )
+    void addButton(QAbstractButton * button, int id)
     */
     auto obj = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -147,9 +147,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
 }
 
 /*
-QAbstractButton * button( int id ) const
+QAbstractButton * button(int id) const
 */
-HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
+HB_FUNC_STATIC(QBUTTONGROUP_BUTTON)
 {
   auto obj = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
     {
 #endif
       auto ptr = obj->button(PINT(1));
-      Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QABSTRACTBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,9 +172,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
 }
 
 /*
-QList<QAbstractButton *> buttons() const
+QList<QAbstractButton*> buttons() const
 */
-HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
+HB_FUNC_STATIC(QBUTTONGROUP_BUTTONS)
 {
   auto obj = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
 /*
 QAbstractButton * checkedButton() const
 */
-HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
+HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDBUTTON)
 {
   auto obj = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
     {
 #endif
       auto ptr = obj->checkedButton();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QABSTRACTBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
 /*
 int checkedId() const
 */
-HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
+HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDID)
 {
   auto obj = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
 /*
 bool exclusive() const
 */
-HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
+HB_FUNC_STATIC(QBUTTONGROUP_EXCLUSIVE)
 {
   auto obj = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -292,9 +292,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
 }
 
 /*
-int id( QAbstractButton * button ) const
+int id(QAbstractButton * button) const
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ID )
+HB_FUNC_STATIC(QBUTTONGROUP_ID)
 {
   auto obj = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -316,9 +316,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ID )
 }
 
 /*
-void removeButton( QAbstractButton * button )
+void removeButton(QAbstractButton * button)
 */
-HB_FUNC_STATIC( QBUTTONGROUP_REMOVEBUTTON )
+HB_FUNC_STATIC(QBUTTONGROUP_REMOVEBUTTON)
 {
   auto obj = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -342,9 +342,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_REMOVEBUTTON )
 }
 
 /*
-void setExclusive( bool )
+void setExclusive(bool)
 */
-HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
+HB_FUNC_STATIC(QBUTTONGROUP_SETEXCLUSIVE)
 {
   auto obj = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -368,9 +368,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
 }
 
 /*
-void setId( QAbstractButton * button, int id )
+void setId(QAbstractButton * button, int id)
 */
-HB_FUNC_STATIC( QBUTTONGROUP_SETID )
+HB_FUNC_STATIC(QBUTTONGROUP_SETID)
 {
   auto obj = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -394,9 +394,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETID )
 }
 
 /*
-void buttonClicked( QAbstractButton * button )
+void buttonClicked(QAbstractButton * button)
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
+HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONCLICKED1)
 {
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
-                                           QOverload<QAbstractButton *>::of(&QButtonGroup::buttonClicked),
+                                           QOverload<QAbstractButton*>::of(&QButtonGroup::buttonClicked),
                                            [sender, indexOfCodeBlock]
                                            (QAbstractButton * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -444,9 +444,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
 }
 
 /*
-void buttonClicked( int id )
+void buttonClicked(int id)
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
+HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONCLICKED2)
 {
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -494,9 +494,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
 }
 
 /*
-void buttonPressed( QAbstractButton * button )
+void buttonPressed(QAbstractButton * button)
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
+HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONPRESSED1)
 {
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
-                                           QOverload<QAbstractButton *>::of(&QButtonGroup::buttonPressed),
+                                           QOverload<QAbstractButton*>::of(&QButtonGroup::buttonPressed),
                                            [sender, indexOfCodeBlock]
                                            (QAbstractButton * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -544,9 +544,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
 }
 
 /*
-void buttonPressed( int id )
+void buttonPressed(int id)
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
+HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONPRESSED2)
 {
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -594,9 +594,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
 }
 
 /*
-void buttonReleased( QAbstractButton * button )
+void buttonReleased(QAbstractButton * button)
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
+HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONRELEASED1)
 {
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
         auto connection = QObject::connect(sender,
-                                           QOverload<QAbstractButton *>::of(&QButtonGroup::buttonReleased),
+                                           QOverload<QAbstractButton*>::of(&QButtonGroup::buttonReleased),
                                            [sender, indexOfCodeBlock]
                                            (QAbstractButton * arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -644,9 +644,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
 }
 
 /*
-void buttonReleased( int id )
+void buttonReleased(int id)
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
+HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONRELEASED2)
 {
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -694,9 +694,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
 }
 
 /*
-void buttonToggled( QAbstractButton * button, bool checked )
+void buttonToggled(QAbstractButton * button, bool checked)
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONTOGGLED1 )
+HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONTOGGLED1)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -750,9 +750,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONTOGGLED1 )
 }
 
 /*
-void buttonToggled( int id, bool checked )
+void buttonToggled(int id, bool checked)
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONTOGGLED2 )
+HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONTOGGLED2)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -806,9 +806,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONTOGGLED2 )
 }
 
 /*
-void idClicked( int id )
+void idClicked(int id)
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ONIDCLICKED )
+HB_FUNC_STATIC(QBUTTONGROUP_ONIDCLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -860,9 +860,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDCLICKED )
 }
 
 /*
-void idPressed( int id )
+void idPressed(int id)
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ONIDPRESSED )
+HB_FUNC_STATIC(QBUTTONGROUP_ONIDPRESSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -914,9 +914,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDPRESSED )
 }
 
 /*
-void idReleased( int id )
+void idReleased(int id)
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ONIDRELEASED )
+HB_FUNC_STATIC(QBUTTONGROUP_ONIDRELEASED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -968,9 +968,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONIDRELEASED )
 }
 
 /*
-void idToggled( int id, bool checked )
+void idToggled(int id, bool checked)
 */
-HB_FUNC_STATIC( QBUTTONGROUP_ONIDTOGGLED )
+HB_FUNC_STATIC(QBUTTONGROUP_ONIDTOGGLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
   auto sender = qobject_cast<QButtonGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());

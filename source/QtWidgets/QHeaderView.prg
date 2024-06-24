@@ -164,9 +164,9 @@ RETURN
 #endif
 
 /*
-QHeaderView( Qt::Orientation orientation, QWidget * parent = nullptr )
+QHeaderView(Qt::Orientation orientation, QWidget * parent = nullptr)
 */
-HB_FUNC_STATIC( QHEADERVIEW_NEW )
+HB_FUNC_STATIC(QHEADERVIEW_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QHEADERVIEW_NEW )
   }
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_DELETE )
+HB_FUNC_STATIC(QHEADERVIEW_DELETE)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QHEADERVIEW_DELETE )
 /*
 bool cascadingSectionResizes() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_CASCADINGSECTIONRESIZES )
+HB_FUNC_STATIC(QHEADERVIEW_CASCADINGSECTIONRESIZES)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -222,9 +222,9 @@ HB_FUNC_STATIC( QHEADERVIEW_CASCADINGSECTIONRESIZES )
 }
 
 /*
-void setCascadingSectionResizes( bool enable )
+void setCascadingSectionResizes(bool enable)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETCASCADINGSECTIONRESIZES )
+HB_FUNC_STATIC(QHEADERVIEW_SETCASCADINGSECTIONRESIZES)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETCASCADINGSECTIONRESIZES )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_COUNT )
+HB_FUNC_STATIC(QHEADERVIEW_COUNT)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QHEADERVIEW_COUNT )
 /*
 Qt::Alignment defaultAlignment() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_DEFAULTALIGNMENT )
+HB_FUNC_STATIC(QHEADERVIEW_DEFAULTALIGNMENT)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -296,9 +296,9 @@ HB_FUNC_STATIC( QHEADERVIEW_DEFAULTALIGNMENT )
 }
 
 /*
-void setDefaultAlignment( Qt::Alignment alignment )
+void setDefaultAlignment(Qt::Alignment alignment)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTALIGNMENT )
+HB_FUNC_STATIC(QHEADERVIEW_SETDEFAULTALIGNMENT)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTALIGNMENT )
 /*
 int defaultSectionSize() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_DEFAULTSECTIONSIZE )
+HB_FUNC_STATIC(QHEADERVIEW_DEFAULTSECTIONSIZE)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -346,9 +346,9 @@ HB_FUNC_STATIC( QHEADERVIEW_DEFAULTSECTIONSIZE )
 }
 
 /*
-void setDefaultSectionSize( int size )
+void setDefaultSectionSize(int size)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTSECTIONSIZE )
+HB_FUNC_STATIC(QHEADERVIEW_SETDEFAULTSECTIONSIZE)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTSECTIONSIZE )
 /*
 int hiddenSectionCount() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_HIDDENSECTIONCOUNT )
+HB_FUNC_STATIC(QHEADERVIEW_HIDDENSECTIONCOUNT)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -396,9 +396,9 @@ HB_FUNC_STATIC( QHEADERVIEW_HIDDENSECTIONCOUNT )
 }
 
 /*
-void hideSection( int logicalIndex )
+void hideSection(int logicalIndex)
 */
-HB_FUNC_STATIC( QHEADERVIEW_HIDESECTION )
+HB_FUNC_STATIC(QHEADERVIEW_HIDESECTION)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HIDESECTION )
 /*
 bool highlightSections() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_HIGHLIGHTSECTIONS )
+HB_FUNC_STATIC(QHEADERVIEW_HIGHLIGHTSECTIONS)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -446,9 +446,9 @@ HB_FUNC_STATIC( QHEADERVIEW_HIGHLIGHTSECTIONS )
 }
 
 /*
-void setHighlightSections( bool highlight )
+void setHighlightSections(bool highlight)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETHIGHLIGHTSECTIONS )
+HB_FUNC_STATIC(QHEADERVIEW_SETHIGHLIGHTSECTIONS)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -472,9 +472,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SETHIGHLIGHTSECTIONS )
 }
 
 /*
-bool isSectionHidden( int logicalIndex ) const
+bool isSectionHidden(int logicalIndex) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_ISSECTIONHIDDEN )
+HB_FUNC_STATIC(QHEADERVIEW_ISSECTIONHIDDEN)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISSECTIONHIDDEN )
 /*
 bool isSortIndicatorShown() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_ISSORTINDICATORSHOWN )
+HB_FUNC_STATIC(QHEADERVIEW_ISSORTINDICATORSHOWN)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -520,9 +520,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ISSORTINDICATORSHOWN )
 }
 
 /*
-void setSortIndicatorShown( bool show )
+void setSortIndicatorShown(bool show)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATORSHOWN )
+HB_FUNC_STATIC(QHEADERVIEW_SETSORTINDICATORSHOWN)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATORSHOWN )
 /*
 int length() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_LENGTH )
+HB_FUNC_STATIC(QHEADERVIEW_LENGTH)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -570,9 +570,9 @@ HB_FUNC_STATIC( QHEADERVIEW_LENGTH )
 }
 
 /*
-int logicalIndex( int visualIndex ) const
+int logicalIndex(int visualIndex) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEX )
+HB_FUNC_STATIC(QHEADERVIEW_LOGICALINDEX)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -593,12 +593,12 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEX )
   }
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
+HB_FUNC_STATIC(QHEADERVIEW_LOGICALINDEXAT)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    int logicalIndexAt( int position ) const
+    int logicalIndexAt(int position) const
     */
     auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    int logicalIndexAt( int x, int y ) const
+    int logicalIndexAt(int x, int y) const
     */
     auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    int logicalIndexAt( const QPoint & pos ) const
+    int logicalIndexAt(const QPoint & pos) const
     */
     auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
 /*
 int minimumSectionSize() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_MINIMUMSECTIONSIZE )
+HB_FUNC_STATIC(QHEADERVIEW_MINIMUMSECTIONSIZE)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -665,9 +665,9 @@ HB_FUNC_STATIC( QHEADERVIEW_MINIMUMSECTIONSIZE )
 }
 
 /*
-void setMinimumSectionSize( int size )
+void setMinimumSectionSize(int size)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETMINIMUMSECTIONSIZE )
+HB_FUNC_STATIC(QHEADERVIEW_SETMINIMUMSECTIONSIZE)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -691,9 +691,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMINIMUMSECTIONSIZE )
 }
 
 /*
-void moveSection( int from, int to )
+void moveSection(int from, int to)
 */
-HB_FUNC_STATIC( QHEADERVIEW_MOVESECTION )
+HB_FUNC_STATIC(QHEADERVIEW_MOVESECTION)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QHEADERVIEW_MOVESECTION )
 /*
 int offset() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_OFFSET )
+HB_FUNC_STATIC(QHEADERVIEW_OFFSET)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -743,7 +743,7 @@ HB_FUNC_STATIC( QHEADERVIEW_OFFSET )
 /*
 Qt::Orientation orientation() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_ORIENTATION )
+HB_FUNC_STATIC(QHEADERVIEW_ORIENTATION)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -765,9 +765,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ORIENTATION )
 }
 
 /*
-void resizeSection( int logicalIndex, int size )
+void resizeSection(int logicalIndex, int size)
 */
-HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTION )
+HB_FUNC_STATIC(QHEADERVIEW_RESIZESECTION)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -791,9 +791,9 @@ HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTION )
 }
 
 /*
-void resizeSections( QHeaderView::ResizeMode mode )
+void resizeSections(QHeaderView::ResizeMode mode)
 */
-HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTIONS )
+HB_FUNC_STATIC(QHEADERVIEW_RESIZESECTIONS)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -817,9 +817,9 @@ HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTIONS )
 }
 
 /*
-bool restoreState( const QByteArray & state )
+bool restoreState(const QByteArray & state)
 */
-HB_FUNC_STATIC( QHEADERVIEW_RESTORESTATE )
+HB_FUNC_STATIC(QHEADERVIEW_RESTORESTATE)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -843,7 +843,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESTORESTATE )
 /*
 QByteArray saveState() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SAVESTATE )
+HB_FUNC_STATIC(QHEADERVIEW_SAVESTATE)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -866,9 +866,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SAVESTATE )
 }
 
 /*
-int sectionPosition( int logicalIndex ) const
+int sectionPosition(int logicalIndex) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SECTIONPOSITION )
+HB_FUNC_STATIC(QHEADERVIEW_SECTIONPOSITION)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -890,9 +890,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONPOSITION )
 }
 
 /*
-int sectionSize( int logicalIndex ) const
+int sectionSize(int logicalIndex) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZE )
+HB_FUNC_STATIC(QHEADERVIEW_SECTIONSIZE)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -914,9 +914,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZE )
 }
 
 /*
-int sectionSizeHint( int logicalIndex ) const
+int sectionSizeHint(int logicalIndex) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZEHINT )
+HB_FUNC_STATIC(QHEADERVIEW_SECTIONSIZEHINT)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -938,9 +938,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZEHINT )
 }
 
 /*
-int sectionViewportPosition( int logicalIndex ) const
+int sectionViewportPosition(int logicalIndex) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SECTIONVIEWPORTPOSITION )
+HB_FUNC_STATIC(QHEADERVIEW_SECTIONVIEWPORTPOSITION)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -964,7 +964,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONVIEWPORTPOSITION )
 /*
 bool sectionsHidden() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SECTIONSHIDDEN )
+HB_FUNC_STATIC(QHEADERVIEW_SECTIONSHIDDEN)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -988,7 +988,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSHIDDEN )
 /*
 bool sectionsMoved() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SECTIONSMOVED )
+HB_FUNC_STATIC(QHEADERVIEW_SECTIONSMOVED)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1010,9 +1010,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSMOVED )
 }
 
 /*
-void setSectionHidden( int logicalIndex, bool hide )
+void setSectionHidden(int logicalIndex, bool hide)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONHIDDEN )
+HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONHIDDEN)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1036,9 +1036,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONHIDDEN )
 }
 
 /*
-void setSortIndicator( int logicalIndex, Qt::SortOrder order )
+void setSortIndicator(int logicalIndex, Qt::SortOrder order)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATOR )
+HB_FUNC_STATIC(QHEADERVIEW_SETSORTINDICATOR)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1064,7 +1064,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATOR )
 /*
 bool stretchLastSection() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_STRETCHLASTSECTION )
+HB_FUNC_STATIC(QHEADERVIEW_STRETCHLASTSECTION)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1086,9 +1086,9 @@ HB_FUNC_STATIC( QHEADERVIEW_STRETCHLASTSECTION )
 }
 
 /*
-void setStretchLastSection( bool stretch )
+void setStretchLastSection(bool stretch)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETSTRETCHLASTSECTION )
+HB_FUNC_STATIC(QHEADERVIEW_SETSTRETCHLASTSECTION)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1112,9 +1112,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSTRETCHLASTSECTION )
 }
 
 /*
-void showSection( int logicalIndex )
+void showSection(int logicalIndex)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SHOWSECTION )
+HB_FUNC_STATIC(QHEADERVIEW_SHOWSECTION)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1140,7 +1140,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SHOWSECTION )
 /*
 Qt::SortOrder sortIndicatorOrder() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORORDER )
+HB_FUNC_STATIC(QHEADERVIEW_SORTINDICATORORDER)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1164,7 +1164,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORORDER )
 /*
 int sortIndicatorSection() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORSECTION )
+HB_FUNC_STATIC(QHEADERVIEW_SORTINDICATORSECTION)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1188,7 +1188,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORSECTION )
 /*
 int stretchSectionCount() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_STRETCHSECTIONCOUNT )
+HB_FUNC_STATIC(QHEADERVIEW_STRETCHSECTIONCOUNT)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1210,9 +1210,9 @@ HB_FUNC_STATIC( QHEADERVIEW_STRETCHSECTIONCOUNT )
 }
 
 /*
-void swapSections( int first, int second )
+void swapSections(int first, int second)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SWAPSECTIONS )
+HB_FUNC_STATIC(QHEADERVIEW_SWAPSECTIONS)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1236,9 +1236,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SWAPSECTIONS )
 }
 
 /*
-int visualIndex( int logicalIndex ) const
+int visualIndex(int logicalIndex) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEX )
+HB_FUNC_STATIC(QHEADERVIEW_VISUALINDEX)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1260,9 +1260,9 @@ HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEX )
 }
 
 /*
-int visualIndexAt( int position ) const
+int visualIndexAt(int position) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEXAT )
+HB_FUNC_STATIC(QHEADERVIEW_VISUALINDEXAT)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1286,7 +1286,7 @@ HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEXAT )
 /*
 void reset()
 */
-HB_FUNC_STATIC( QHEADERVIEW_RESET )
+HB_FUNC_STATIC(QHEADERVIEW_RESET)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1310,9 +1310,9 @@ HB_FUNC_STATIC( QHEADERVIEW_RESET )
 }
 
 /*
-void setModel( QAbstractItemModel * model )
+void setModel(QAbstractItemModel * model)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETMODEL )
+HB_FUNC_STATIC(QHEADERVIEW_SETMODEL)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1338,7 +1338,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMODEL )
 /*
 QSize sizeHint() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SIZEHINT )
+HB_FUNC_STATIC(QHEADERVIEW_SIZEHINT)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1361,9 +1361,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SIZEHINT )
 }
 
 /*
-void headerDataChanged( Qt::Orientation orientation, int logicalFirst, int logicalLast )
+void headerDataChanged(Qt::Orientation orientation, int logicalFirst, int logicalLast)
 */
-HB_FUNC_STATIC( QHEADERVIEW_HEADERDATACHANGED )
+HB_FUNC_STATIC(QHEADERVIEW_HEADERDATACHANGED)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1387,9 +1387,9 @@ HB_FUNC_STATIC( QHEADERVIEW_HEADERDATACHANGED )
 }
 
 /*
-void setOffset( int offset )
+void setOffset(int offset)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETOFFSET )
+HB_FUNC_STATIC(QHEADERVIEW_SETOFFSET)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1415,7 +1415,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSET )
 /*
 void setOffsetToLastSection()
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOLASTSECTION )
+HB_FUNC_STATIC(QHEADERVIEW_SETOFFSETTOLASTSECTION)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1439,9 +1439,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOLASTSECTION )
 }
 
 /*
-void setOffsetToSectionPosition( int visualIndex )
+void setOffsetToSectionPosition(int visualIndex)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOSECTIONPOSITION )
+HB_FUNC_STATIC(QHEADERVIEW_SETOFFSETTOSECTIONPOSITION)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1465,9 +1465,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOSECTIONPOSITION )
 }
 
 /*
-void setVisible( bool v )
+void setVisible(bool v)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETVISIBLE )
+HB_FUNC_STATIC(QHEADERVIEW_SETVISIBLE)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1491,9 +1491,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SETVISIBLE )
 }
 
 /*
-void setSectionsMovable( bool movable )
+void setSectionsMovable(bool movable)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONSMOVABLE )
+HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONSMOVABLE)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1519,7 +1519,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONSMOVABLE )
 /*
 bool sectionsMovable() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SECTIONSMOVABLE )
+HB_FUNC_STATIC(QHEADERVIEW_SECTIONSMOVABLE)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1541,9 +1541,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSMOVABLE )
 }
 
 /*
-void setSectionsClickable( bool clickable )
+void setSectionsClickable(bool clickable)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONSCLICKABLE )
+HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONSCLICKABLE)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1569,7 +1569,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONSCLICKABLE )
 /*
 bool sectionsClickable() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SECTIONSCLICKABLE )
+HB_FUNC_STATIC(QHEADERVIEW_SECTIONSCLICKABLE)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1591,9 +1591,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSCLICKABLE )
 }
 
 /*
-QHeaderView::ResizeMode sectionResizeMode( int logicalIndex ) const
+QHeaderView::ResizeMode sectionResizeMode(int logicalIndex) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SECTIONRESIZEMODE )
+HB_FUNC_STATIC(QHEADERVIEW_SECTIONRESIZEMODE)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1614,12 +1614,12 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONRESIZEMODE )
   }
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONRESIZEMODE )
+HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONRESIZEMODE)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void setSectionResizeMode( QHeaderView::ResizeMode mode )
+    void setSectionResizeMode(QHeaderView::ResizeMode mode)
     */
     auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1634,7 +1634,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONRESIZEMODE )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    void setSectionResizeMode( int logicalIndex, QHeaderView::ResizeMode mode )
+    void setSectionResizeMode(int logicalIndex, QHeaderView::ResizeMode mode)
     */
     auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1653,9 +1653,9 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONRESIZEMODE )
 }
 
 /*
-void setResizeContentsPrecision( int precision )
+void setResizeContentsPrecision(int precision)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETRESIZECONTENTSPRECISION )
+HB_FUNC_STATIC(QHEADERVIEW_SETRESIZECONTENTSPRECISION)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1681,7 +1681,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETRESIZECONTENTSPRECISION )
 /*
 int resizeContentsPrecision() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_RESIZECONTENTSPRECISION )
+HB_FUNC_STATIC(QHEADERVIEW_RESIZECONTENTSPRECISION)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1705,7 +1705,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESIZECONTENTSPRECISION )
 /*
 int maximumSectionSize() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_MAXIMUMSECTIONSIZE )
+HB_FUNC_STATIC(QHEADERVIEW_MAXIMUMSECTIONSIZE)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1727,9 +1727,9 @@ HB_FUNC_STATIC( QHEADERVIEW_MAXIMUMSECTIONSIZE )
 }
 
 /*
-void setMaximumSectionSize( int size )
+void setMaximumSectionSize(int size)
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETMAXIMUMSECTIONSIZE )
+HB_FUNC_STATIC(QHEADERVIEW_SETMAXIMUMSECTIONSIZE)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1755,7 +1755,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMAXIMUMSECTIONSIZE )
 /*
 void doItemsLayout()
 */
-HB_FUNC_STATIC( QHEADERVIEW_DOITEMSLAYOUT )
+HB_FUNC_STATIC(QHEADERVIEW_DOITEMSLAYOUT)
 {
   auto obj = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1781,7 +1781,7 @@ HB_FUNC_STATIC( QHEADERVIEW_DOITEMSLAYOUT )
 /*
 void geometriesChanged()
 */
-HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
+HB_FUNC_STATIC(QHEADERVIEW_ONGEOMETRIESCHANGED)
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1827,9 +1827,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
 }
 
 /*
-void sectionClicked( int logicalIndex )
+void sectionClicked(int logicalIndex)
 */
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONCLICKED)
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1877,9 +1877,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
 }
 
 /*
-void sectionCountChanged( int oldCount, int newCount )
+void sectionCountChanged(int oldCount, int newCount)
 */
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONCOUNTCHANGED)
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1929,9 +1929,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
 }
 
 /*
-void sectionDoubleClicked( int logicalIndex )
+void sectionDoubleClicked(int logicalIndex)
 */
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONDOUBLECLICKED)
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1979,9 +1979,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
 }
 
 /*
-void sectionEntered( int logicalIndex )
+void sectionEntered(int logicalIndex)
 */
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONENTERED)
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -2029,9 +2029,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
 }
 
 /*
-void sectionHandleDoubleClicked( int logicalIndex )
+void sectionHandleDoubleClicked(int logicalIndex)
 */
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED)
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -2079,9 +2079,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
 }
 
 /*
-void sectionMoved( int logicalIndex, int oldVisualIndex, int newVisualIndex )
+void sectionMoved(int logicalIndex, int oldVisualIndex, int newVisualIndex)
 */
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONMOVED)
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -2133,9 +2133,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
 }
 
 /*
-void sectionPressed( int logicalIndex )
+void sectionPressed(int logicalIndex)
 */
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONPRESSED)
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -2183,9 +2183,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
 }
 
 /*
-void sectionResized( int logicalIndex, int oldSize, int newSize )
+void sectionResized(int logicalIndex, int oldSize, int newSize)
 */
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONRESIZED)
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -2237,9 +2237,9 @@ HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
 }
 
 /*
-void sortIndicatorChanged( int logicalIndex, Qt::SortOrder order )
+void sortIndicatorChanged(int logicalIndex, Qt::SortOrder order)
 */
-HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSORTINDICATORCHANGED)
 {
   auto sender = qobject_cast<QHeaderView*>(Qt5xHb::getQObjectPointerFromSelfItem());
   

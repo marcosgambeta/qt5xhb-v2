@@ -60,7 +60,7 @@ RETURN
 #include <QtWidgets/QDesktopWidget>
 #endif
 
-HB_FUNC_STATIC( QDESKTOPWIDGET_DELETE )
+HB_FUNC_STATIC(QDESKTOPWIDGET_DELETE)
 {
   auto obj = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -78,18 +78,18 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
+HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
 {
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
-    const QRect availableGeometry( int screen = -1 ) const
+    const QRect availableGeometry(int screen = -1) const
     */
     auto obj = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr)
     {
-      auto ptr = new QRect(obj->availableGeometry( OPINT( 1, -1 )));
+      auto ptr = new QRect(obj->availableGeometry(OPINT(1, -1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    const QRect availableGeometry( const QWidget * widget ) const
+    const QRect availableGeometry(const QWidget * widget) const
     */
     auto obj = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    const QRect availableGeometry( const QPoint & p ) const
+    const QRect availableGeometry(const QPoint & p) const
     */
     auto obj = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 /*
 bool isVirtualDesktop() const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
+HB_FUNC_STATIC(QDESKTOPWIDGET_ISVIRTUALDESKTOP)
 {
   auto obj = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
 /*
 int primaryScreen() const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
+HB_FUNC_STATIC(QDESKTOPWIDGET_PRIMARYSCREEN)
 {
   auto obj = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -177,9 +177,9 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
 }
 
 /*
-QWidget * screen( int screen = -1 )
+QWidget * screen(int screen = -1)
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
+HB_FUNC_STATIC(QDESKTOPWIDGET_SCREEN)
 {
   auto obj = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -189,8 +189,8 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      auto ptr = obj->screen( OPINT( 1, -1));
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      auto ptr = obj->screen(OPINT(1, -1));
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
 /*
 int screenCount() const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
+HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENCOUNT)
 {
   auto obj = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -225,18 +225,18 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
   }
 }
 
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
+HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
 {
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
-    const QRect screenGeometry( int screen = -1 ) const
+    const QRect screenGeometry(int screen = -1) const
     */
     auto obj = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr)
     {
-      auto ptr = new QRect(obj->screenGeometry( OPINT( 1, -1 )));
+      auto ptr = new QRect(obj->screenGeometry(OPINT(1, -1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    const QRect screenGeometry( const QWidget * widget ) const
+    const QRect screenGeometry(const QWidget * widget) const
     */
     auto obj = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    const QRect screenGeometry( const QPoint & p ) const
+    const QRect screenGeometry(const QPoint & p) const
     */
     auto obj = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -275,25 +275,25 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
   }
 }
 
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
+HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENNUMBER)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    int screenNumber( const QWidget * widget = nullptr ) const
+    int screenNumber(const QWidget * widget = nullptr) const
     */
     auto obj = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr)
     {
-      RINT(obj->screenNumber( OPQWIDGET( 1, nullptr )));
+      RINT(obj->screenNumber(OPQWIDGET(1, nullptr)));
     }
 
   }
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    int screenNumber( const QPoint & point ) const
+    int screenNumber(const QPoint & point) const
     */
     auto obj = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -310,9 +310,9 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 }
 
 /*
-void resized( int screen )
+void resized(int screen)
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
+HB_FUNC_STATIC(QDESKTOPWIDGET_ONRESIZED)
 {
   auto sender = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -360,9 +360,9 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
 }
 
 /*
-void screenCountChanged( int newCount )
+void screenCountChanged(int newCount)
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
+HB_FUNC_STATIC(QDESKTOPWIDGET_ONSCREENCOUNTCHANGED)
 {
   auto sender = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -410,9 +410,9 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
 }
 
 /*
-void workAreaResized( int screen )
+void workAreaResized(int screen)
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
+HB_FUNC_STATIC(QDESKTOPWIDGET_ONWORKAREARESIZED)
 {
   auto sender = qobject_cast<QDesktopWidget*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

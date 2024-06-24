@@ -62,21 +62,21 @@ RETURN
 
 #include <QtGui/QFont>
 
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW )
+HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
   {
     /*
-    QGraphicsSimpleTextItem( QGraphicsItem * parent = nullptr )
+    QGraphicsSimpleTextItem(QGraphicsItem * parent = nullptr)
     */
-    auto obj = new QGraphicsSimpleTextItem( HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(1)));
+    auto obj = new QGraphicsSimpleTextItem(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(1)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsSimpleTextItem( const QString & text, QGraphicsItem * parent = nullptr )
+    QGraphicsSimpleTextItem(const QString & text, QGraphicsItem * parent = nullptr)
     */
     auto obj = new QGraphicsSimpleTextItem(PQSTRING(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem*>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, true);
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_DELETE )
+HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_DELETE)
 {
   auto obj = static_cast<QGraphicsSimpleTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_DELETE )
 /*
 QFont font() const
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_FONT )
+HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_FONT)
 {
   auto obj = static_cast<QGraphicsSimpleTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -130,9 +130,9 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_FONT )
 }
 
 /*
-void setFont( const QFont & font )
+void setFont(const QFont & font)
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETFONT )
+HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_SETFONT)
 {
   auto obj = static_cast<QGraphicsSimpleTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -156,9 +156,9 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETFONT )
 }
 
 /*
-void setText( const QString & text )
+void setText(const QString & text)
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETTEXT )
+HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_SETTEXT)
 {
   auto obj = static_cast<QGraphicsSimpleTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETTEXT )
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TEXT )
+HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_TEXT)
 {
   auto obj = static_cast<QGraphicsSimpleTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TEXT )
 /*
 virtual QRectF boundingRect() const
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT )
+HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT)
 {
   auto obj = static_cast<QGraphicsSimpleTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -231,9 +231,9 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT )
 }
 
 /*
-virtual bool contains( const QPointF & point ) const
+virtual bool contains(const QPointF & point) const
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_CONTAINS )
+HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_CONTAINS)
 {
   auto obj = static_cast<QGraphicsSimpleTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -255,9 +255,9 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_CONTAINS )
 }
 
 /*
-virtual bool isObscuredBy( const QGraphicsItem * item ) const
+virtual bool isObscuredBy(const QGraphicsItem * item) const
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_ISOBSCUREDBY )
+HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_ISOBSCUREDBY)
 {
   auto obj = static_cast<QGraphicsSimpleTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_ISOBSCUREDBY )
 /*
 virtual QPainterPath opaqueArea() const
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA )
+HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA)
 {
   auto obj = static_cast<QGraphicsSimpleTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -304,9 +304,9 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA )
 }
 
 /*
-virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
+virtual void paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget)
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_PAINT )
+HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_PAINT)
 {
   auto obj = static_cast<QGraphicsSimpleTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_PAINT )
 /*
 virtual QPainterPath shape() const
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SHAPE )
+HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_SHAPE)
 {
   auto obj = static_cast<QGraphicsSimpleTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SHAPE )
 /*
 virtual int type() const
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TYPE )
+HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_TYPE)
 {
   auto obj = static_cast<QGraphicsSimpleTextItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 

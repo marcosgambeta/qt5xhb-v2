@@ -86,23 +86,23 @@ RETURN
 #include <QtGui/QIcon>
 #include <QtWidgets/QAction>
 
-HB_FUNC_STATIC( QTOOLBAR_NEW )
+HB_FUNC_STATIC(QTOOLBAR_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QToolBar( const QString & title, QWidget * parent = nullptr )
+    QToolBar(const QString & title, QWidget * parent = nullptr)
     */
-    auto obj = new QToolBar(PQSTRING(1), OPQWIDGET( 2, nullptr));
+    auto obj = new QToolBar(PQSTRING(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QToolBar( QWidget * parent = nullptr )
+    QToolBar(QWidget * parent = nullptr)
     */
-    auto obj = new QToolBar( OPQWIDGET( 1, nullptr));
+    auto obj = new QToolBar(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QTOOLBAR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTOOLBAR_DELETE )
+HB_FUNC_STATIC(QTOOLBAR_DELETE)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -130,12 +130,12 @@ HB_FUNC_STATIC( QTOOLBAR_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
+HB_FUNC_STATIC(QTOOLBAR_ACTIONAT)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QAction * actionAt( int x, int y ) const
+    QAction * actionAt(int x, int y) const
     */
     auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QAction * actionAt( const QPoint & p ) const
+    QAction * actionAt(const QPoint & p) const
     */
     auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -166,12 +166,12 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
   }
 }
 
-HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
+HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
 {
   if (ISNUMPAR(1) && ISQACTION(1))
   {
     /*
-    void addAction( QAction * action )
+    void addAction(QAction * action)
     */
     auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QAction * addAction( const QString & text )
+    QAction * addAction(const QString & text)
     */
     auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -200,13 +200,13 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
   else if (ISNUMPAR(2) && (ISQICON(1)|| HB_ISCHAR(1)) && HB_ISCHAR(2))
   {
     /*
-    QAction * addAction( const QIcon & icon, const QString & text )
+    QAction * addAction(const QIcon & icon, const QString & text)
     */
     auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr)
     {
-      auto ptr = obj->addAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)), PQSTRING(2));
+      auto ptr = obj->addAction(HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
   else if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3))
   {
     /*
-    QAction * addAction( const QString & text, const QObject * receiver, const char * member )
+    QAction * addAction(const QString & text, const QObject * receiver, const char * member)
     */
     auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -228,13 +228,13 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
   else if (ISNUMPAR(4) && (ISQICON(1)|| HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4))
   {
     /*
-    QAction * addAction( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
+    QAction * addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member)
     */
     auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr)
     {
-      auto ptr = obj->addAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4));
+      auto ptr = obj->addAction(HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 /*
 QAction * addSeparator()
 */
-HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
+HB_FUNC_STATIC(QTOOLBAR_ADDSEPARATOR)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -271,9 +271,9 @@ HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
 }
 
 /*
-QAction * addWidget( QWidget * widget )
+QAction * addWidget(QWidget * widget)
 */
-HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
+HB_FUNC_STATIC(QTOOLBAR_ADDWIDGET)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
 /*
 Qt::ToolBarAreas allowedAreas() const
 */
-HB_FUNC_STATIC( QTOOLBAR_ALLOWEDAREAS )
+HB_FUNC_STATIC(QTOOLBAR_ALLOWEDAREAS)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QTOOLBAR_ALLOWEDAREAS )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QTOOLBAR_CLEAR )
+HB_FUNC_STATIC(QTOOLBAR_CLEAR)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QTOOLBAR_CLEAR )
 /*
 QSize iconSize() const
 */
-HB_FUNC_STATIC( QTOOLBAR_ICONSIZE )
+HB_FUNC_STATIC(QTOOLBAR_ICONSIZE)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -371,9 +371,9 @@ HB_FUNC_STATIC( QTOOLBAR_ICONSIZE )
 }
 
 /*
-QAction * insertSeparator( QAction * before )
+QAction * insertSeparator(QAction * before)
 */
-HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
+HB_FUNC_STATIC(QTOOLBAR_INSERTSEPARATOR)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -396,9 +396,9 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
 }
 
 /*
-QAction * insertWidget( QAction * before, QWidget * widget )
+QAction * insertWidget(QAction * before, QWidget * widget)
 */
-HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
+HB_FUNC_STATIC(QTOOLBAR_INSERTWIDGET)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -421,9 +421,9 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
 }
 
 /*
-bool isAreaAllowed( Qt::ToolBarArea area ) const
+bool isAreaAllowed(Qt::ToolBarArea area) const
 */
-HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
+HB_FUNC_STATIC(QTOOLBAR_ISAREAALLOWED)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
 /*
 bool isFloatable() const
 */
-HB_FUNC_STATIC( QTOOLBAR_ISFLOATABLE )
+HB_FUNC_STATIC(QTOOLBAR_ISFLOATABLE)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISFLOATABLE )
 /*
 bool isFloating() const
 */
-HB_FUNC_STATIC( QTOOLBAR_ISFLOATING )
+HB_FUNC_STATIC(QTOOLBAR_ISFLOATING)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISFLOATING )
 /*
 bool isMovable() const
 */
-HB_FUNC_STATIC( QTOOLBAR_ISMOVABLE )
+HB_FUNC_STATIC(QTOOLBAR_ISMOVABLE)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISMOVABLE )
 /*
 Qt::Orientation orientation() const
 */
-HB_FUNC_STATIC( QTOOLBAR_ORIENTATION )
+HB_FUNC_STATIC(QTOOLBAR_ORIENTATION)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -541,9 +541,9 @@ HB_FUNC_STATIC( QTOOLBAR_ORIENTATION )
 }
 
 /*
-void setAllowedAreas( Qt::ToolBarAreas areas )
+void setAllowedAreas(Qt::ToolBarAreas areas)
 */
-HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
+HB_FUNC_STATIC(QTOOLBAR_SETALLOWEDAREAS)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -567,9 +567,9 @@ HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
 }
 
 /*
-void setFloatable( bool floatable )
+void setFloatable(bool floatable)
 */
-HB_FUNC_STATIC( QTOOLBAR_SETFLOATABLE )
+HB_FUNC_STATIC(QTOOLBAR_SETFLOATABLE)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -593,9 +593,9 @@ HB_FUNC_STATIC( QTOOLBAR_SETFLOATABLE )
 }
 
 /*
-void setMovable( bool movable )
+void setMovable(bool movable)
 */
-HB_FUNC_STATIC( QTOOLBAR_SETMOVABLE )
+HB_FUNC_STATIC(QTOOLBAR_SETMOVABLE)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -619,9 +619,9 @@ HB_FUNC_STATIC( QTOOLBAR_SETMOVABLE )
 }
 
 /*
-void setOrientation( Qt::Orientation orientation )
+void setOrientation(Qt::Orientation orientation)
 */
-HB_FUNC_STATIC( QTOOLBAR_SETORIENTATION )
+HB_FUNC_STATIC(QTOOLBAR_SETORIENTATION)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETORIENTATION )
 /*
 QAction * toggleViewAction() const
 */
-HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
+HB_FUNC_STATIC(QTOOLBAR_TOGGLEVIEWACTION)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
 /*
 Qt::ToolButtonStyle toolButtonStyle() const
 */
-HB_FUNC_STATIC( QTOOLBAR_TOOLBUTTONSTYLE )
+HB_FUNC_STATIC(QTOOLBAR_TOOLBUTTONSTYLE)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -694,9 +694,9 @@ HB_FUNC_STATIC( QTOOLBAR_TOOLBUTTONSTYLE )
 }
 
 /*
-QWidget * widgetForAction( QAction * action ) const
+QWidget * widgetForAction(QAction * action) const
 */
-HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
+HB_FUNC_STATIC(QTOOLBAR_WIDGETFORACTION)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
     {
 #endif
       auto ptr = obj->widgetForAction(PQACTION(1));
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -719,9 +719,9 @@ HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
 }
 
 /*
-void setIconSize( const QSize & iconSize )
+void setIconSize(const QSize & iconSize)
 */
-HB_FUNC_STATIC( QTOOLBAR_SETICONSIZE )
+HB_FUNC_STATIC(QTOOLBAR_SETICONSIZE)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -745,9 +745,9 @@ HB_FUNC_STATIC( QTOOLBAR_SETICONSIZE )
 }
 
 /*
-void setToolButtonStyle( Qt::ToolButtonStyle toolButtonStyle )
+void setToolButtonStyle(Qt::ToolButtonStyle toolButtonStyle)
 */
-HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
+HB_FUNC_STATIC(QTOOLBAR_SETTOOLBUTTONSTYLE)
 {
   auto obj = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -771,9 +771,9 @@ HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
 }
 
 /*
-void actionTriggered( QAction * action )
+void actionTriggered(QAction * action)
 */
-HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
+HB_FUNC_STATIC(QTOOLBAR_ONACTIONTRIGGERED)
 {
   auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -821,9 +821,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
 }
 
 /*
-void allowedAreasChanged( Qt::ToolBarAreas allowedAreas )
+void allowedAreasChanged(Qt::ToolBarAreas allowedAreas)
 */
-HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
+HB_FUNC_STATIC(QTOOLBAR_ONALLOWEDAREASCHANGED)
 {
   auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -871,9 +871,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
 }
 
 /*
-void iconSizeChanged( const QSize & iconSize )
+void iconSizeChanged(const QSize & iconSize)
 */
-HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
+HB_FUNC_STATIC(QTOOLBAR_ONICONSIZECHANGED)
 {
   auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -897,7 +897,7 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTOOLBAR");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSIZE");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QSIZE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -921,9 +921,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
 }
 
 /*
-void movableChanged( bool movable )
+void movableChanged(bool movable)
 */
-HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
+HB_FUNC_STATIC(QTOOLBAR_ONMOVABLECHANGED)
 {
   auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -971,9 +971,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
 }
 
 /*
-void orientationChanged( Qt::Orientation orientation )
+void orientationChanged(Qt::Orientation orientation)
 */
-HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
+HB_FUNC_STATIC(QTOOLBAR_ONORIENTATIONCHANGED)
 {
   auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1021,9 +1021,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
 }
 
 /*
-void toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
+void toolButtonStyleChanged(Qt::ToolButtonStyle toolButtonStyle)
 */
-HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
+HB_FUNC_STATIC(QTOOLBAR_ONTOOLBUTTONSTYLECHANGED)
 {
   auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1071,9 +1071,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
 }
 
 /*
-void topLevelChanged( bool topLevel )
+void topLevelChanged(bool topLevel)
 */
-HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
+HB_FUNC_STATIC(QTOOLBAR_ONTOPLEVELCHANGED)
 {
   auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1121,9 +1121,9 @@ HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
 }
 
 /*
-void visibilityChanged( bool visible )
+void visibilityChanged(bool visible)
 */
-HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
+HB_FUNC_STATIC(QTOOLBAR_ONVISIBILITYCHANGED)
 {
   auto sender = qobject_cast<QToolBar*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

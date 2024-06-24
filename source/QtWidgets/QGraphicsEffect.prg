@@ -55,7 +55,7 @@ RETURN
 #include <QtWidgets/QGraphicsEffect>
 #endif
 
-HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
+HB_FUNC_STATIC(QGRAPHICSEFFECT_DELETE)
 {
   auto obj = qobject_cast<QGraphicsEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
 /*
 QRectF boundingRect() const
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
+HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECT)
 {
   auto obj = qobject_cast<QGraphicsEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -99,9 +99,9 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
 }
 
 /*
-virtual QRectF boundingRectFor( const QRectF & rect ) const
+virtual QRectF boundingRectFor(const QRectF & rect) const
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
+HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECTFOR)
 {
   auto obj = qobject_cast<QGraphicsEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
 /*
 bool isEnabled() const
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
+HB_FUNC_STATIC(QGRAPHICSEFFECT_ISENABLED)
 {
   auto obj = qobject_cast<QGraphicsEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -148,9 +148,9 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
 }
 
 /*
-void setEnabled( bool enable )
+void setEnabled(bool enable)
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
+HB_FUNC_STATIC(QGRAPHICSEFFECT_SETENABLED)
 {
   auto obj = qobject_cast<QGraphicsEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
 /*
 void update()
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
+HB_FUNC_STATIC(QGRAPHICSEFFECT_UPDATE)
 {
   auto obj = qobject_cast<QGraphicsEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -200,9 +200,9 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
 }
 
 /*
-void enabledChanged( bool enabled )
+void enabledChanged(bool enabled)
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
+HB_FUNC_STATIC(QGRAPHICSEFFECT_ONENABLEDCHANGED)
 {
   auto sender = qobject_cast<QGraphicsEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

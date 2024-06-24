@@ -92,23 +92,23 @@ RETURN
 
 #include <QtGui/QMovie>
 
-HB_FUNC_STATIC( QLABEL_NEW )
+HB_FUNC_STATIC(QLABEL_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QLabel( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+    QLabel(QWidget * parent = nullptr, Qt::WindowFlags f = 0)
     */
-    auto obj = new QLabel( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(2)));
+    auto obj = new QLabel(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >(0) : static_cast<Qt::WindowFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QLabel( const QString & text, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+    QLabel(const QString & text, QWidget * parent = nullptr, Qt::WindowFlags f = 0)
     */
-    auto obj = new QLabel(PQSTRING(1), OPQWIDGET( 2, nullptr ), HB_ISNIL(3) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(3)));
+    auto obj = new QLabel(PQSTRING(1), OPQWIDGET(2, nullptr), HB_ISNIL(3) ? static_cast<Qt::WindowFlags >(0) : static_cast<Qt::WindowFlags >(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QLABEL_NEW )
   }
 }
 
-HB_FUNC_STATIC( QLABEL_DELETE )
+HB_FUNC_STATIC(QLABEL_DELETE)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QLABEL_DELETE )
 /*
 Qt::Alignment alignment() const
 */
-HB_FUNC_STATIC( QLABEL_ALIGNMENT )
+HB_FUNC_STATIC(QLABEL_ALIGNMENT)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QLABEL_ALIGNMENT )
 /*
 QWidget * buddy() const
 */
-HB_FUNC_STATIC( QLABEL_BUDDY )
+HB_FUNC_STATIC(QLABEL_BUDDY)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QLABEL_BUDDY )
     {
 #endif
       auto ptr = obj->buddy();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QLABEL_BUDDY )
 /*
 bool hasScaledContents() const
 */
-HB_FUNC_STATIC( QLABEL_HASSCALEDCONTENTS )
+HB_FUNC_STATIC(QLABEL_HASSCALEDCONTENTS)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QLABEL_HASSCALEDCONTENTS )
 /*
 bool hasSelectedText() const
 */
-HB_FUNC_STATIC( QLABEL_HASSELECTEDTEXT )
+HB_FUNC_STATIC(QLABEL_HASSELECTEDTEXT)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QLABEL_HASSELECTEDTEXT )
 /*
 int indent() const
 */
-HB_FUNC_STATIC( QLABEL_INDENT )
+HB_FUNC_STATIC(QLABEL_INDENT)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QLABEL_INDENT )
 /*
 int margin() const
 */
-HB_FUNC_STATIC( QLABEL_MARGIN )
+HB_FUNC_STATIC(QLABEL_MARGIN)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QLABEL_MARGIN )
 /*
 QMovie * movie() const
 */
-HB_FUNC_STATIC( QLABEL_MOVIE )
+HB_FUNC_STATIC(QLABEL_MOVIE)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QLABEL_MOVIE )
 /*
 bool openExternalLinks() const
 */
-HB_FUNC_STATIC( QLABEL_OPENEXTERNALLINKS )
+HB_FUNC_STATIC(QLABEL_OPENEXTERNALLINKS)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QLABEL_OPENEXTERNALLINKS )
 /*
 const QPicture * picture() const
 */
-HB_FUNC_STATIC( QLABEL_PICTURE )
+HB_FUNC_STATIC(QLABEL_PICTURE)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QLABEL_PICTURE )
 /*
 const QPixmap * pixmap() const
 */
-HB_FUNC_STATIC( QLABEL_PIXMAP )
+HB_FUNC_STATIC(QLABEL_PIXMAP)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QLABEL_PIXMAP )
 /*
 QString selectedText() const
 */
-HB_FUNC_STATIC( QLABEL_SELECTEDTEXT )
+HB_FUNC_STATIC(QLABEL_SELECTEDTEXT)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -405,9 +405,9 @@ HB_FUNC_STATIC( QLABEL_SELECTEDTEXT )
 }
 
 /*
-void setAlignment( Qt::Alignment )
+void setAlignment(Qt::Alignment)
 */
-HB_FUNC_STATIC( QLABEL_SETALIGNMENT )
+HB_FUNC_STATIC(QLABEL_SETALIGNMENT)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -431,9 +431,9 @@ HB_FUNC_STATIC( QLABEL_SETALIGNMENT )
 }
 
 /*
-void setBuddy( QWidget * buddy )
+void setBuddy(QWidget * buddy)
 */
-HB_FUNC_STATIC( QLABEL_SETBUDDY )
+HB_FUNC_STATIC(QLABEL_SETBUDDY)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -457,9 +457,9 @@ HB_FUNC_STATIC( QLABEL_SETBUDDY )
 }
 
 /*
-void setIndent( int )
+void setIndent(int)
 */
-HB_FUNC_STATIC( QLABEL_SETINDENT )
+HB_FUNC_STATIC(QLABEL_SETINDENT)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -483,9 +483,9 @@ HB_FUNC_STATIC( QLABEL_SETINDENT )
 }
 
 /*
-void setMargin( int )
+void setMargin(int)
 */
-HB_FUNC_STATIC( QLABEL_SETMARGIN )
+HB_FUNC_STATIC(QLABEL_SETMARGIN)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -509,9 +509,9 @@ HB_FUNC_STATIC( QLABEL_SETMARGIN )
 }
 
 /*
-void setOpenExternalLinks( bool open )
+void setOpenExternalLinks(bool open)
 */
-HB_FUNC_STATIC( QLABEL_SETOPENEXTERNALLINKS )
+HB_FUNC_STATIC(QLABEL_SETOPENEXTERNALLINKS)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -535,9 +535,9 @@ HB_FUNC_STATIC( QLABEL_SETOPENEXTERNALLINKS )
 }
 
 /*
-void setScaledContents( bool )
+void setScaledContents(bool)
 */
-HB_FUNC_STATIC( QLABEL_SETSCALEDCONTENTS )
+HB_FUNC_STATIC(QLABEL_SETSCALEDCONTENTS)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -561,9 +561,9 @@ HB_FUNC_STATIC( QLABEL_SETSCALEDCONTENTS )
 }
 
 /*
-void setSelection( int start, int length )
+void setSelection(int start, int length)
 */
-HB_FUNC_STATIC( QLABEL_SETSELECTION )
+HB_FUNC_STATIC(QLABEL_SETSELECTION)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -587,9 +587,9 @@ HB_FUNC_STATIC( QLABEL_SETSELECTION )
 }
 
 /*
-void setTextFormat( Qt::TextFormat )
+void setTextFormat(Qt::TextFormat)
 */
-HB_FUNC_STATIC( QLABEL_SETTEXTFORMAT )
+HB_FUNC_STATIC(QLABEL_SETTEXTFORMAT)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -613,9 +613,9 @@ HB_FUNC_STATIC( QLABEL_SETTEXTFORMAT )
 }
 
 /*
-void setTextInteractionFlags( Qt::TextInteractionFlags flags )
+void setTextInteractionFlags(Qt::TextInteractionFlags flags)
 */
-HB_FUNC_STATIC( QLABEL_SETTEXTINTERACTIONFLAGS )
+HB_FUNC_STATIC(QLABEL_SETTEXTINTERACTIONFLAGS)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -639,9 +639,9 @@ HB_FUNC_STATIC( QLABEL_SETTEXTINTERACTIONFLAGS )
 }
 
 /*
-void setWordWrap( bool on )
+void setWordWrap(bool on)
 */
-HB_FUNC_STATIC( QLABEL_SETWORDWRAP )
+HB_FUNC_STATIC(QLABEL_SETWORDWRAP)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QLABEL_SETWORDWRAP )
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QLABEL_TEXT )
+HB_FUNC_STATIC(QLABEL_TEXT)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -691,7 +691,7 @@ HB_FUNC_STATIC( QLABEL_TEXT )
 /*
 Qt::TextFormat textFormat() const
 */
-HB_FUNC_STATIC( QLABEL_TEXTFORMAT )
+HB_FUNC_STATIC(QLABEL_TEXTFORMAT)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QLABEL_TEXTFORMAT )
 /*
 Qt::TextInteractionFlags textInteractionFlags() const
 */
-HB_FUNC_STATIC( QLABEL_TEXTINTERACTIONFLAGS )
+HB_FUNC_STATIC(QLABEL_TEXTINTERACTIONFLAGS)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QLABEL_TEXTINTERACTIONFLAGS )
 /*
 bool wordWrap() const
 */
-HB_FUNC_STATIC( QLABEL_WORDWRAP )
+HB_FUNC_STATIC(QLABEL_WORDWRAP)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -761,9 +761,9 @@ HB_FUNC_STATIC( QLABEL_WORDWRAP )
 }
 
 /*
-virtual int heightForWidth( int w ) const
+virtual int heightForWidth(int w) const
 */
-HB_FUNC_STATIC( QLABEL_HEIGHTFORWIDTH )
+HB_FUNC_STATIC(QLABEL_HEIGHTFORWIDTH)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -787,7 +787,7 @@ HB_FUNC_STATIC( QLABEL_HEIGHTFORWIDTH )
 /*
 virtual QSize minimumSizeHint() const
 */
-HB_FUNC_STATIC( QLABEL_MINIMUMSIZEHINT )
+HB_FUNC_STATIC(QLABEL_MINIMUMSIZEHINT)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QLABEL_MINIMUMSIZEHINT )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QLABEL_SIZEHINT )
+HB_FUNC_STATIC(QLABEL_SIZEHINT)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QLABEL_SIZEHINT )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QLABEL_CLEAR )
+HB_FUNC_STATIC(QLABEL_CLEAR)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -861,9 +861,9 @@ HB_FUNC_STATIC( QLABEL_CLEAR )
 }
 
 /*
-void setMovie( QMovie * movie )
+void setMovie(QMovie * movie)
 */
-HB_FUNC_STATIC( QLABEL_SETMOVIE )
+HB_FUNC_STATIC(QLABEL_SETMOVIE)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -886,18 +886,18 @@ HB_FUNC_STATIC( QLABEL_SETMOVIE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QLABEL_SETNUM )
+HB_FUNC_STATIC(QLABEL_SETNUM)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     auto pNum = hb_param(1, HB_IT_NUMERIC);
 
-    if( pNum )
+    if(pNum)
     {
-      if( HB_IS_DOUBLE(pNum) )
+      if(HB_IS_DOUBLE(pNum))
       {
         /*
-        void setNum( double num )
+        void setNum(double num)
         */
         auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -909,10 +909,10 @@ HB_FUNC_STATIC( QLABEL_SETNUM )
         hb_itemReturn(hb_stackSelfItem());
 
       }
-      else if( HB_IS_INTEGER(pNum) )
+      else if(HB_IS_INTEGER(pNum))
       {
         /*
-        void setNum( int num )
+        void setNum(int num)
         */
         auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -937,9 +937,9 @@ HB_FUNC_STATIC( QLABEL_SETNUM )
 }
 
 /*
-void setPicture( const QPicture & picture )
+void setPicture(const QPicture & picture)
 */
-HB_FUNC_STATIC( QLABEL_SETPICTURE )
+HB_FUNC_STATIC(QLABEL_SETPICTURE)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -963,9 +963,9 @@ HB_FUNC_STATIC( QLABEL_SETPICTURE )
 }
 
 /*
-void setPixmap( const QPixmap & )
+void setPixmap(const QPixmap &)
 */
-HB_FUNC_STATIC( QLABEL_SETPIXMAP )
+HB_FUNC_STATIC(QLABEL_SETPIXMAP)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -989,9 +989,9 @@ HB_FUNC_STATIC( QLABEL_SETPIXMAP )
 }
 
 /*
-void setText( const QString & )
+void setText(const QString &)
 */
-HB_FUNC_STATIC( QLABEL_SETTEXT )
+HB_FUNC_STATIC(QLABEL_SETTEXT)
 {
   auto obj = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1015,9 +1015,9 @@ HB_FUNC_STATIC( QLABEL_SETTEXT )
 }
 
 /*
-void linkActivated( const QString & link )
+void linkActivated(const QString & link)
 */
-HB_FUNC_STATIC( QLABEL_ONLINKACTIVATED )
+HB_FUNC_STATIC(QLABEL_ONLINKACTIVATED)
 {
   auto sender = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1065,9 +1065,9 @@ HB_FUNC_STATIC( QLABEL_ONLINKACTIVATED )
 }
 
 /*
-void linkHovered( const QString & link )
+void linkHovered(const QString & link)
 */
-HB_FUNC_STATIC( QLABEL_ONLINKHOVERED )
+HB_FUNC_STATIC(QLABEL_ONLINKHOVERED)
 {
   auto sender = qobject_cast<QLabel*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

@@ -64,12 +64,12 @@ RETURN
 #include <QtWidgets/QCommandLinkButton>
 #endif
 
-HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
+HB_FUNC_STATIC(QCOMMANDLINKBUTTON_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QCommandLinkButton( QWidget * parent = nullptr )
+    QCommandLinkButton(QWidget * parent = nullptr)
     */
     auto obj = new QCommandLinkButton(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QCommandLinkButton( const QString & text, QWidget * parent = nullptr )
+    QCommandLinkButton(const QString & text, QWidget * parent = nullptr)
     */
     auto obj = new QCommandLinkButton(PQSTRING(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
   else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
   {
     /*
-    QCommandLinkButton( const QString & text, const QString & description, QWidget * parent = nullptr )
+    QCommandLinkButton(const QString & text, const QString & description, QWidget * parent = nullptr)
     */
     auto obj = new QCommandLinkButton(PQSTRING(1), PQSTRING(2), OPQWIDGET(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
   }
 }
 
-HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DELETE )
+HB_FUNC_STATIC(QCOMMANDLINKBUTTON_DELETE)
 {
   auto obj = qobject_cast<QCommandLinkButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DELETE )
 /*
 QString description() const
 */
-HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
+HB_FUNC_STATIC(QCOMMANDLINKBUTTON_DESCRIPTION)
 {
   auto obj = qobject_cast<QCommandLinkButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -142,9 +142,9 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 }
 
 /*
-void setDescription( const QString & description )
+void setDescription(const QString & description)
 */
-HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
+HB_FUNC_STATIC(QCOMMANDLINKBUTTON_SETDESCRIPTION)
 {
   auto obj = qobject_cast<QCommandLinkButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
 /*
 bool isFlat() const
 */
-HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
+HB_FUNC_STATIC(QCOMMANDLINKBUTTON_ISFLAT)
 {
   auto obj = qobject_cast<QCommandLinkButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -192,9 +192,9 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 }
 
 /*
-void setFlat( bool )
+void setFlat(bool)
 */
-HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
+HB_FUNC_STATIC(QCOMMANDLINKBUTTON_SETFLAT)
 {
   auto obj = qobject_cast<QCommandLinkButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

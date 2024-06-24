@@ -79,13 +79,13 @@ RETURN
 #endif
 
 /*
-QTextBrowser( QWidget * parent = nullptr )
+QTextBrowser(QWidget * parent = nullptr)
 */
-HB_FUNC_STATIC( QTEXTBROWSER_NEW )
+HB_FUNC_STATIC(QTEXTBROWSER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    auto obj = new QTextBrowser( OPQWIDGET( 1, nullptr));
+    auto obj = new QTextBrowser(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTEXTBROWSER_DELETE )
+HB_FUNC_STATIC(QTEXTBROWSER_DELETE)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_DELETE )
 /*
 int backwardHistoryCount() const
 */
-HB_FUNC_STATIC( QTEXTBROWSER_BACKWARDHISTORYCOUNT )
+HB_FUNC_STATIC(QTEXTBROWSER_BACKWARDHISTORYCOUNT)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_BACKWARDHISTORYCOUNT )
 /*
 void clearHistory()
 */
-HB_FUNC_STATIC( QTEXTBROWSER_CLEARHISTORY )
+HB_FUNC_STATIC(QTEXTBROWSER_CLEARHISTORY)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_CLEARHISTORY )
 /*
 int forwardHistoryCount() const
 */
-HB_FUNC_STATIC( QTEXTBROWSER_FORWARDHISTORYCOUNT )
+HB_FUNC_STATIC(QTEXTBROWSER_FORWARDHISTORYCOUNT)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -187,9 +187,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_FORWARDHISTORYCOUNT )
 }
 
 /*
-QString historyTitle( int i ) const
+QString historyTitle(int i) const
 */
-HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
+HB_FUNC_STATIC(QTEXTBROWSER_HISTORYTITLE)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -211,9 +211,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
 }
 
 /*
-QUrl historyUrl( int i ) const
+QUrl historyUrl(int i) const
 */
-HB_FUNC_STATIC( QTEXTBROWSER_HISTORYURL )
+HB_FUNC_STATIC(QTEXTBROWSER_HISTORYURL)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYURL )
 /*
 bool isBackwardAvailable() const
 */
-HB_FUNC_STATIC( QTEXTBROWSER_ISBACKWARDAVAILABLE )
+HB_FUNC_STATIC(QTEXTBROWSER_ISBACKWARDAVAILABLE)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ISBACKWARDAVAILABLE )
 /*
 bool isForwardAvailable() const
 */
-HB_FUNC_STATIC( QTEXTBROWSER_ISFORWARDAVAILABLE )
+HB_FUNC_STATIC(QTEXTBROWSER_ISFORWARDAVAILABLE)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ISFORWARDAVAILABLE )
 /*
 bool openExternalLinks() const
 */
-HB_FUNC_STATIC( QTEXTBROWSER_OPENEXTERNALLINKS )
+HB_FUNC_STATIC(QTEXTBROWSER_OPENEXTERNALLINKS)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_OPENEXTERNALLINKS )
 /*
 bool openLinks() const
 */
-HB_FUNC_STATIC( QTEXTBROWSER_OPENLINKS )
+HB_FUNC_STATIC(QTEXTBROWSER_OPENLINKS)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_OPENLINKS )
 /*
 QStringList searchPaths() const
 */
-HB_FUNC_STATIC( QTEXTBROWSER_SEARCHPATHS )
+HB_FUNC_STATIC(QTEXTBROWSER_SEARCHPATHS)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -356,9 +356,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_SEARCHPATHS )
 }
 
 /*
-void setOpenExternalLinks( bool open )
+void setOpenExternalLinks(bool open)
 */
-HB_FUNC_STATIC( QTEXTBROWSER_SETOPENEXTERNALLINKS )
+HB_FUNC_STATIC(QTEXTBROWSER_SETOPENEXTERNALLINKS)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -382,9 +382,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETOPENEXTERNALLINKS )
 }
 
 /*
-void setOpenLinks( bool open )
+void setOpenLinks(bool open)
 */
-HB_FUNC_STATIC( QTEXTBROWSER_SETOPENLINKS )
+HB_FUNC_STATIC(QTEXTBROWSER_SETOPENLINKS)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -408,9 +408,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETOPENLINKS )
 }
 
 /*
-void setSearchPaths( const QStringList & paths )
+void setSearchPaths(const QStringList & paths)
 */
-HB_FUNC_STATIC( QTEXTBROWSER_SETSEARCHPATHS )
+HB_FUNC_STATIC(QTEXTBROWSER_SETSEARCHPATHS)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETSEARCHPATHS )
 /*
 QUrl source() const
 */
-HB_FUNC_STATIC( QTEXTBROWSER_SOURCE )
+HB_FUNC_STATIC(QTEXTBROWSER_SOURCE)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -459,9 +459,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_SOURCE )
 }
 
 /*
-virtual QVariant loadResource( int type, const QUrl & name )
+virtual QVariant loadResource(int type, const QUrl & name)
 */
-HB_FUNC_STATIC( QTEXTBROWSER_LOADRESOURCE )
+HB_FUNC_STATIC(QTEXTBROWSER_LOADRESOURCE)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_LOADRESOURCE )
 /*
 virtual void backward()
 */
-HB_FUNC_STATIC( QTEXTBROWSER_BACKWARD )
+HB_FUNC_STATIC(QTEXTBROWSER_BACKWARD)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_BACKWARD )
 /*
 virtual void forward()
 */
-HB_FUNC_STATIC( QTEXTBROWSER_FORWARD )
+HB_FUNC_STATIC(QTEXTBROWSER_FORWARD)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_FORWARD )
 /*
 virtual void home()
 */
-HB_FUNC_STATIC( QTEXTBROWSER_HOME )
+HB_FUNC_STATIC(QTEXTBROWSER_HOME)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HOME )
 /*
 virtual void reload()
 */
-HB_FUNC_STATIC( QTEXTBROWSER_RELOAD )
+HB_FUNC_STATIC(QTEXTBROWSER_RELOAD)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -588,9 +588,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_RELOAD )
 }
 
 /*
-virtual void setSource( const QUrl & name )
+virtual void setSource(const QUrl & name)
 */
-HB_FUNC_STATIC( QTEXTBROWSER_SETSOURCE )
+HB_FUNC_STATIC(QTEXTBROWSER_SETSOURCE)
 {
   auto obj = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -614,9 +614,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETSOURCE )
 }
 
 /*
-void anchorClicked( const QUrl & link )
+void anchorClicked(const QUrl & link)
 */
-HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
+HB_FUNC_STATIC(QTEXTBROWSER_ONANCHORCLICKED)
 {
   auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -664,9 +664,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
 }
 
 /*
-void backwardAvailable( bool available )
+void backwardAvailable(bool available)
 */
-HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
+HB_FUNC_STATIC(QTEXTBROWSER_ONBACKWARDAVAILABLE)
 {
   auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -714,9 +714,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
 }
 
 /*
-void forwardAvailable( bool available )
+void forwardAvailable(bool available)
 */
-HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
+HB_FUNC_STATIC(QTEXTBROWSER_ONFORWARDAVAILABLE)
 {
   auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -764,9 +764,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
 }
 
 /*
-void highlighted( const QUrl & link )
+void highlighted(const QUrl & link)
 */
-HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
+HB_FUNC_STATIC(QTEXTBROWSER_ONHIGHLIGHTED1)
 {
   auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -814,9 +814,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
 }
 
 /*
-void highlighted( const QString & link )
+void highlighted(const QString & link)
 */
-HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
+HB_FUNC_STATIC(QTEXTBROWSER_ONHIGHLIGHTED2)
 {
   auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
 /*
 void historyChanged()
 */
-HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
+HB_FUNC_STATIC(QTEXTBROWSER_ONHISTORYCHANGED)
 {
   auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -912,9 +912,9 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
 }
 
 /*
-void sourceChanged( const QUrl & src )
+void sourceChanged(const QUrl & src)
 */
-HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
+HB_FUNC_STATIC(QTEXTBROWSER_ONSOURCECHANGED)
 {
   auto sender = qobject_cast<QTextBrowser*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -938,7 +938,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTBROWSER");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

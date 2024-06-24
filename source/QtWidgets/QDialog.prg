@@ -73,13 +73,13 @@ RETURN
 #endif
 
 /*
-QDialog( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+QDialog(QWidget * parent = nullptr, Qt::WindowFlags f = 0)
 */
-HB_FUNC_STATIC( QDIALOG_NEW )
+HB_FUNC_STATIC(QDIALOG_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    auto obj = new QDialog( OPQWIDGET( 1, nullptr ), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >( 0 ) : static_cast<Qt::WindowFlags >(hb_parni(2)));
+    auto obj = new QDialog(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags >(0) : static_cast<Qt::WindowFlags >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QDIALOG_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDIALOG_DELETE )
+HB_FUNC_STATIC(QDIALOG_DELETE)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QDIALOG_DELETE )
 /*
 bool isSizeGripEnabled() const
 */
-HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
+HB_FUNC_STATIC(QDIALOG_ISSIZEGRIPENABLED)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -131,9 +131,9 @@ HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
 }
 
 /*
-void setSizeGripEnabled( bool )
+void setSizeGripEnabled(bool)
 */
-HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
+HB_FUNC_STATIC(QDIALOG_SETSIZEGRIPENABLED)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
 /*
 int result() const
 */
-HB_FUNC_STATIC( QDIALOG_RESULT )
+HB_FUNC_STATIC(QDIALOG_RESULT)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -181,9 +181,9 @@ HB_FUNC_STATIC( QDIALOG_RESULT )
 }
 
 /*
-void setModal( bool modal )
+void setModal(bool modal)
 */
-HB_FUNC_STATIC( QDIALOG_SETMODAL )
+HB_FUNC_STATIC(QDIALOG_SETMODAL)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -207,9 +207,9 @@ HB_FUNC_STATIC( QDIALOG_SETMODAL )
 }
 
 /*
-void setResult( int i )
+void setResult(int i)
 */
-HB_FUNC_STATIC( QDIALOG_SETRESULT )
+HB_FUNC_STATIC(QDIALOG_SETRESULT)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QDIALOG_SETRESULT )
 /*
 QSize minimumSizeHint() const
 */
-HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
+HB_FUNC_STATIC(QDIALOG_MINIMUMSIZEHINT)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -258,9 +258,9 @@ HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
 }
 
 /*
-void setVisible( bool visible )
+void setVisible(bool visible)
 */
-HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
+HB_FUNC_STATIC(QDIALOG_SETVISIBLE)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
 /*
 QSize sizeHint() const
 */
-HB_FUNC_STATIC( QDIALOG_SIZEHINT )
+HB_FUNC_STATIC(QDIALOG_SIZEHINT)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QDIALOG_SIZEHINT )
 /*
 virtual void accept()
 */
-HB_FUNC_STATIC( QDIALOG_ACCEPT )
+HB_FUNC_STATIC(QDIALOG_ACCEPT)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -335,9 +335,9 @@ HB_FUNC_STATIC( QDIALOG_ACCEPT )
 }
 
 /*
-virtual void done( int r )
+virtual void done(int r)
 */
-HB_FUNC_STATIC( QDIALOG_DONE )
+HB_FUNC_STATIC(QDIALOG_DONE)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QDIALOG_DONE )
 /*
 virtual int exec()
 */
-HB_FUNC_STATIC( QDIALOG_EXEC )
+HB_FUNC_STATIC(QDIALOG_EXEC)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QDIALOG_EXEC )
 /*
 virtual void open()
 */
-HB_FUNC_STATIC( QDIALOG_OPEN )
+HB_FUNC_STATIC(QDIALOG_OPEN)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QDIALOG_OPEN )
 /*
 virtual void reject()
 */
-HB_FUNC_STATIC( QDIALOG_REJECT )
+HB_FUNC_STATIC(QDIALOG_REJECT)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QDIALOG_REJECT )
 /*
 Qt::Orientation orientation() const
 */
-HB_FUNC_STATIC( QDIALOG_ORIENTATION )
+HB_FUNC_STATIC(QDIALOG_ORIENTATION)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -461,9 +461,9 @@ HB_FUNC_STATIC( QDIALOG_ORIENTATION )
 }
 
 /*
-void setOrientation( Qt::Orientation orientation )
+void setOrientation(Qt::Orientation orientation)
 */
-HB_FUNC_STATIC( QDIALOG_SETORIENTATION )
+HB_FUNC_STATIC(QDIALOG_SETORIENTATION)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QDIALOG_SETORIENTATION )
 /*
 QWidget * extension() const
 */
-HB_FUNC_STATIC( QDIALOG_EXTENSION )
+HB_FUNC_STATIC(QDIALOG_EXTENSION)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QDIALOG_EXTENSION )
     {
 #endif
       auto ptr = obj->extension();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -512,9 +512,9 @@ HB_FUNC_STATIC( QDIALOG_EXTENSION )
 }
 
 /*
-void setExtension( QWidget * extension )
+void setExtension(QWidget * extension)
 */
-HB_FUNC_STATIC( QDIALOG_SETEXTENSION )
+HB_FUNC_STATIC(QDIALOG_SETEXTENSION)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -538,9 +538,9 @@ HB_FUNC_STATIC( QDIALOG_SETEXTENSION )
 }
 
 /*
-void showExtension( bool )
+void showExtension(bool)
 */
-HB_FUNC_STATIC( QDIALOG_SHOWEXTENSION )
+HB_FUNC_STATIC(QDIALOG_SHOWEXTENSION)
 {
   auto obj = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QDIALOG_SHOWEXTENSION )
 /*
 void accepted()
 */
-HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
+HB_FUNC_STATIC(QDIALOG_ONACCEPTED)
 {
   auto sender = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -612,9 +612,9 @@ HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
 }
 
 /*
-void finished( int result )
+void finished(int result)
 */
-HB_FUNC_STATIC( QDIALOG_ONFINISHED )
+HB_FUNC_STATIC(QDIALOG_ONFINISHED)
 {
   auto sender = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QDIALOG_ONFINISHED )
 /*
 void rejected()
 */
-HB_FUNC_STATIC( QDIALOG_ONREJECTED )
+HB_FUNC_STATIC(QDIALOG_ONREJECTED)
 {
   auto sender = qobject_cast<QDialog*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

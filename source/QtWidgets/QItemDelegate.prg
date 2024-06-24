@@ -54,13 +54,13 @@ RETURN
 #endif
 
 /*
-QItemDelegate( QObject * parent = nullptr )
+QItemDelegate(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QITEMDELEGATE_NEW )
+HB_FUNC_STATIC(QITEMDELEGATE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QItemDelegate( OPQOBJECT( 1, nullptr));
+    auto obj = new QItemDelegate(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QITEMDELEGATE_DELETE )
+HB_FUNC_STATIC(QITEMDELEGATE_DELETE)
 {
   auto obj = qobject_cast<QItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_DELETE )
 /*
 bool hasClipping() const
 */
-HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
+HB_FUNC_STATIC(QITEMDELEGATE_HASCLIPPING)
 {
   auto obj = qobject_cast<QItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
 /*
 QItemEditorFactory * itemEditorFactory() const
 */
-HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
+HB_FUNC_STATIC(QITEMDELEGATE_ITEMEDITORFACTORY)
 {
   auto obj = qobject_cast<QItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -137,9 +137,9 @@ HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
 }
 
 /*
-void setClipping( bool clip )
+void setClipping(bool clip)
 */
-HB_FUNC_STATIC( QITEMDELEGATE_SETCLIPPING )
+HB_FUNC_STATIC(QITEMDELEGATE_SETCLIPPING)
 {
   auto obj = qobject_cast<QItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -163,9 +163,9 @@ HB_FUNC_STATIC( QITEMDELEGATE_SETCLIPPING )
 }
 
 /*
-void setItemEditorFactory( QItemEditorFactory * factory )
+void setItemEditorFactory(QItemEditorFactory * factory)
 */
-HB_FUNC_STATIC( QITEMDELEGATE_SETITEMEDITORFACTORY )
+HB_FUNC_STATIC(QITEMDELEGATE_SETITEMEDITORFACTORY)
 {
   auto obj = qobject_cast<QItemDelegate*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

@@ -58,13 +58,13 @@ RETURN
 #endif
 
 /*
-QGraphicsBlurEffect( QObject * parent = nullptr )
+QGraphicsBlurEffect(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
+HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QGraphicsBlurEffect( OPQOBJECT( 1, nullptr));
+    auto obj = new QGraphicsBlurEffect(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_DELETE )
+HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_DELETE)
 {
   auto obj = qobject_cast<QGraphicsBlurEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_DELETE )
 /*
 QGraphicsBlurEffect::BlurHints blurHints() const
 */
-HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
+HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURHINTS)
 {
   auto obj = qobject_cast<QGraphicsBlurEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
 /*
 qreal blurRadius() const
 */
-HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURRADIUS )
+HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURRADIUS)
 {
   auto obj = qobject_cast<QGraphicsBlurEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -140,9 +140,9 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURRADIUS )
 }
 
 /*
-virtual QRectF boundingRectFor( const QRectF & rect ) const
+virtual QRectF boundingRectFor(const QRectF & rect) const
 */
-HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
+HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR)
 {
   auto obj = qobject_cast<QGraphicsBlurEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -165,9 +165,9 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
 }
 
 /*
-void setBlurHints( QGraphicsBlurEffect::BlurHints hints )
+void setBlurHints(QGraphicsBlurEffect::BlurHints hints)
 */
-HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
+HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURHINTS)
 {
   auto obj = qobject_cast<QGraphicsBlurEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -191,9 +191,9 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
 }
 
 /*
-void setBlurRadius( qreal blurRadius )
+void setBlurRadius(qreal blurRadius)
 */
-HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
+HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURRADIUS)
 {
   auto obj = qobject_cast<QGraphicsBlurEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -217,9 +217,9 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
 }
 
 /*
-void blurHintsChanged( QGraphicsBlurEffect::BlurHints hints )
+void blurHintsChanged(QGraphicsBlurEffect::BlurHints hints)
 */
-HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
+HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED)
 {
   auto sender = qobject_cast<QGraphicsBlurEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -267,9 +267,9 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
 }
 
 /*
-void blurRadiusChanged( qreal radius )
+void blurRadiusChanged(qreal radius)
 */
-HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
+HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED)
 {
   auto sender = qobject_cast<QGraphicsBlurEffect*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

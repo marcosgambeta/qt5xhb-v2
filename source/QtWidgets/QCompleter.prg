@@ -93,23 +93,23 @@ RETURN
 #include <QtCore/QStringList>
 #include <QtWidgets/QAbstractItemView>
 
-HB_FUNC_STATIC( QCOMPLETER_NEW )
+HB_FUNC_STATIC(QCOMPLETER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QCompleter( QObject * parent = nullptr )
+    QCompleter(QObject * parent = nullptr)
     */
-    auto obj = new QCompleter( OPQOBJECT( 1, nullptr));
+    auto obj = new QCompleter(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QCompleter( QAbstractItemModel * model, QObject * parent = nullptr )
+    QCompleter(QAbstractItemModel * model, QObject * parent = nullptr)
     */
-    auto obj = new QCompleter(PQABSTRACTITEMMODEL(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QCompleter(PQABSTRACTITEMMODEL(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -117,9 +117,9 @@ HB_FUNC_STATIC( QCOMPLETER_NEW )
   else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QCompleter( const QStringList & list, QObject * parent = nullptr )
+    QCompleter(const QStringList & list, QObject * parent = nullptr)
     */
-    auto obj = new QCompleter(PQSTRINGLIST(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QCompleter(PQSTRINGLIST(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QCOMPLETER_NEW )
 /*
 ~QCompleter()
 */
-HB_FUNC_STATIC( QCOMPLETER_DELETE )
+HB_FUNC_STATIC(QCOMPLETER_DELETE)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QCOMPLETER_DELETE )
 /*
 Qt::CaseSensitivity caseSensitivity() const
 */
-HB_FUNC_STATIC( QCOMPLETER_CASESENSITIVITY )
+HB_FUNC_STATIC(QCOMPLETER_CASESENSITIVITY)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QCOMPLETER_CASESENSITIVITY )
 /*
 int completionColumn() const
 */
-HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOLUMN )
+HB_FUNC_STATIC(QCOMPLETER_COMPLETIONCOLUMN)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOLUMN )
 /*
 int completionCount() const
 */
-HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOUNT )
+HB_FUNC_STATIC(QCOMPLETER_COMPLETIONCOUNT)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOUNT )
 /*
 QCompleter::CompletionMode completionMode() const
 */
-HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODE )
+HB_FUNC_STATIC(QCOMPLETER_COMPLETIONMODE)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODE )
 /*
 QAbstractItemModel * completionModel() const
 */
-HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODEL )
+HB_FUNC_STATIC(QCOMPLETER_COMPLETIONMODEL)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODEL )
 /*
 QString completionPrefix() const
 */
-HB_FUNC_STATIC( QCOMPLETER_COMPLETIONPREFIX )
+HB_FUNC_STATIC(QCOMPLETER_COMPLETIONPREFIX)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONPREFIX )
 /*
 int completionRole() const
 */
-HB_FUNC_STATIC( QCOMPLETER_COMPLETIONROLE )
+HB_FUNC_STATIC(QCOMPLETER_COMPLETIONROLE)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONROLE )
 /*
 QString currentCompletion() const
 */
-HB_FUNC_STATIC( QCOMPLETER_CURRENTCOMPLETION )
+HB_FUNC_STATIC(QCOMPLETER_CURRENTCOMPLETION)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTCOMPLETION )
 /*
 QModelIndex currentIndex() const
 */
-HB_FUNC_STATIC( QCOMPLETER_CURRENTINDEX )
+HB_FUNC_STATIC(QCOMPLETER_CURRENTINDEX)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTINDEX )
 /*
 int currentRow() const
 */
-HB_FUNC_STATIC( QCOMPLETER_CURRENTROW )
+HB_FUNC_STATIC(QCOMPLETER_CURRENTROW)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTROW )
 /*
 int maxVisibleItems() const
 */
-HB_FUNC_STATIC( QCOMPLETER_MAXVISIBLEITEMS )
+HB_FUNC_STATIC(QCOMPLETER_MAXVISIBLEITEMS)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QCOMPLETER_MAXVISIBLEITEMS )
 /*
 QAbstractItemModel * model() const
 */
-HB_FUNC_STATIC( QCOMPLETER_MODEL )
+HB_FUNC_STATIC(QCOMPLETER_MODEL)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QCOMPLETER_MODEL )
 /*
 QCompleter::ModelSorting modelSorting() const
 */
-HB_FUNC_STATIC( QCOMPLETER_MODELSORTING )
+HB_FUNC_STATIC(QCOMPLETER_MODELSORTING)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -467,9 +467,9 @@ HB_FUNC_STATIC( QCOMPLETER_MODELSORTING )
 }
 
 /*
-virtual QString pathFromIndex( const QModelIndex & index ) const
+virtual QString pathFromIndex(const QModelIndex & index) const
 */
-HB_FUNC_STATIC( QCOMPLETER_PATHFROMINDEX )
+HB_FUNC_STATIC(QCOMPLETER_PATHFROMINDEX)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QCOMPLETER_PATHFROMINDEX )
 /*
 QAbstractItemView * popup() const
 */
-HB_FUNC_STATIC( QCOMPLETER_POPUP )
+HB_FUNC_STATIC(QCOMPLETER_POPUP)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QCOMPLETER_POPUP )
     {
 #endif
       auto ptr = obj->popup();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTITEMVIEW");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QABSTRACTITEMVIEW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -516,9 +516,9 @@ HB_FUNC_STATIC( QCOMPLETER_POPUP )
 }
 
 /*
-void setCaseSensitivity( Qt::CaseSensitivity caseSensitivity )
+void setCaseSensitivity(Qt::CaseSensitivity caseSensitivity)
 */
-HB_FUNC_STATIC( QCOMPLETER_SETCASESENSITIVITY )
+HB_FUNC_STATIC(QCOMPLETER_SETCASESENSITIVITY)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -542,9 +542,9 @@ HB_FUNC_STATIC( QCOMPLETER_SETCASESENSITIVITY )
 }
 
 /*
-void setCompletionColumn( int column )
+void setCompletionColumn(int column)
 */
-HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONCOLUMN )
+HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONCOLUMN)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -568,9 +568,9 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONCOLUMN )
 }
 
 /*
-void setCompletionMode( QCompleter::CompletionMode mode )
+void setCompletionMode(QCompleter::CompletionMode mode)
 */
-HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONMODE )
+HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONMODE)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -594,9 +594,9 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONMODE )
 }
 
 /*
-void setCompletionRole( int role )
+void setCompletionRole(int role)
 */
-HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONROLE )
+HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONROLE)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -620,9 +620,9 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONROLE )
 }
 
 /*
-bool setCurrentRow( int row )
+bool setCurrentRow(int row)
 */
-HB_FUNC_STATIC( QCOMPLETER_SETCURRENTROW )
+HB_FUNC_STATIC(QCOMPLETER_SETCURRENTROW)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -644,9 +644,9 @@ HB_FUNC_STATIC( QCOMPLETER_SETCURRENTROW )
 }
 
 /*
-void setMaxVisibleItems( int maxItems )
+void setMaxVisibleItems(int maxItems)
 */
-HB_FUNC_STATIC( QCOMPLETER_SETMAXVISIBLEITEMS )
+HB_FUNC_STATIC(QCOMPLETER_SETMAXVISIBLEITEMS)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -670,9 +670,9 @@ HB_FUNC_STATIC( QCOMPLETER_SETMAXVISIBLEITEMS )
 }
 
 /*
-void setModel( QAbstractItemModel * model )
+void setModel(QAbstractItemModel * model)
 */
-HB_FUNC_STATIC( QCOMPLETER_SETMODEL )
+HB_FUNC_STATIC(QCOMPLETER_SETMODEL)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -696,9 +696,9 @@ HB_FUNC_STATIC( QCOMPLETER_SETMODEL )
 }
 
 /*
-void setModelSorting( QCompleter::ModelSorting sorting )
+void setModelSorting(QCompleter::ModelSorting sorting)
 */
-HB_FUNC_STATIC( QCOMPLETER_SETMODELSORTING )
+HB_FUNC_STATIC(QCOMPLETER_SETMODELSORTING)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -722,9 +722,9 @@ HB_FUNC_STATIC( QCOMPLETER_SETMODELSORTING )
 }
 
 /*
-void setPopup( QAbstractItemView * popup )
+void setPopup(QAbstractItemView * popup)
 */
-HB_FUNC_STATIC( QCOMPLETER_SETPOPUP )
+HB_FUNC_STATIC(QCOMPLETER_SETPOPUP)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -748,9 +748,9 @@ HB_FUNC_STATIC( QCOMPLETER_SETPOPUP )
 }
 
 /*
-void setWidget( QWidget * widget )
+void setWidget(QWidget * widget)
 */
-HB_FUNC_STATIC( QCOMPLETER_SETWIDGET )
+HB_FUNC_STATIC(QCOMPLETER_SETWIDGET)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -774,9 +774,9 @@ HB_FUNC_STATIC( QCOMPLETER_SETWIDGET )
 }
 
 /*
-virtual QStringList splitPath( const QString & path ) const
+virtual QStringList splitPath(const QString & path) const
 */
-HB_FUNC_STATIC( QCOMPLETER_SPLITPATH )
+HB_FUNC_STATIC(QCOMPLETER_SPLITPATH)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -800,7 +800,7 @@ HB_FUNC_STATIC( QCOMPLETER_SPLITPATH )
 /*
 QWidget * widget() const
 */
-HB_FUNC_STATIC( QCOMPLETER_WIDGET )
+HB_FUNC_STATIC(QCOMPLETER_WIDGET)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -811,7 +811,7 @@ HB_FUNC_STATIC( QCOMPLETER_WIDGET )
     {
 #endif
       auto ptr = obj->widget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -825,7 +825,7 @@ HB_FUNC_STATIC( QCOMPLETER_WIDGET )
 /*
 bool wrapAround() const
 */
-HB_FUNC_STATIC( QCOMPLETER_WRAPAROUND )
+HB_FUNC_STATIC(QCOMPLETER_WRAPAROUND)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -847,9 +847,9 @@ HB_FUNC_STATIC( QCOMPLETER_WRAPAROUND )
 }
 
 /*
-void complete( const QRect & rect = QRect() )
+void complete(const QRect & rect = QRect())
 */
-HB_FUNC_STATIC( QCOMPLETER_COMPLETE )
+HB_FUNC_STATIC(QCOMPLETER_COMPLETE)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -859,7 +859,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETE )
     if (ISBETWEEN(0, 1) && (ISQRECT(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->complete( HB_ISNIL(1) ? QRect() : *static_cast<QRect*>(Qt5xHb::itemGetPtr(1)));
+      obj->complete(HB_ISNIL(1) ? QRect() : *static_cast<QRect*>(Qt5xHb::itemGetPtr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -873,9 +873,9 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETE )
 }
 
 /*
-void setCompletionPrefix( const QString & prefix )
+void setCompletionPrefix(const QString & prefix)
 */
-HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONPREFIX )
+HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONPREFIX)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -899,9 +899,9 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONPREFIX )
 }
 
 /*
-void setWrapAround( bool wrap )
+void setWrapAround(bool wrap)
 */
-HB_FUNC_STATIC( QCOMPLETER_SETWRAPAROUND )
+HB_FUNC_STATIC(QCOMPLETER_SETWRAPAROUND)
 {
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -925,9 +925,9 @@ HB_FUNC_STATIC( QCOMPLETER_SETWRAPAROUND )
 }
 
 /*
-void setFilterMode( Qt::MatchFlags filterMode )
+void setFilterMode(Qt::MatchFlags filterMode)
 */
-HB_FUNC_STATIC( QCOMPLETER_SETFILTERMODE )
+HB_FUNC_STATIC(QCOMPLETER_SETFILTERMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -955,7 +955,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETFILTERMODE )
 /*
 Qt::MatchFlags filterMode() const
 */
-HB_FUNC_STATIC( QCOMPLETER_FILTERMODE )
+HB_FUNC_STATIC(QCOMPLETER_FILTERMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -979,9 +979,9 @@ HB_FUNC_STATIC( QCOMPLETER_FILTERMODE )
 }
 
 /*
-void activated( const QString & text )
+void activated(const QString & text)
 */
-HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
+HB_FUNC_STATIC(QCOMPLETER_ONACTIVATED1)
 {
   auto sender = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1029,9 +1029,9 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
 }
 
 /*
-void activated( const QModelIndex & index )
+void activated(const QModelIndex & index)
 */
-HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
+HB_FUNC_STATIC(QCOMPLETER_ONACTIVATED2)
 {
   auto sender = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMPLETER");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1079,9 +1079,9 @@ HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
 }
 
 /*
-void highlighted( const QString & text )
+void highlighted(const QString & text)
 */
-HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
+HB_FUNC_STATIC(QCOMPLETER_ONHIGHLIGHTED1)
 {
   auto sender = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
   
@@ -1129,9 +1129,9 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
 }
 
 /*
-void highlighted( const QModelIndex & index )
+void highlighted(const QModelIndex & index)
 */
-HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
+HB_FUNC_STATIC(QCOMPLETER_ONHIGHLIGHTED2)
 {
   auto sender = qobject_cast<QCompleter*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1155,7 +1155,7 @@ HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOMPLETER");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QMODELINDEX");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

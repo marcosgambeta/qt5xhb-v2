@@ -58,13 +58,13 @@ RETURN
 #endif
 
 /*
-QSpacerItem( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy = QSizePolicy::Minimum )
+QSpacerItem(int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy = QSizePolicy::Minimum)
 */
-HB_FUNC_STATIC( QSPACERITEM_NEW )
+HB_FUNC_STATIC(QSPACERITEM_NEW)
 {
   if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
-    auto obj = new QSpacerItem(PINT(1), PINT(2), HB_ISNIL(3) ? static_cast<QSizePolicy::Policy >( QSizePolicy::Minimum ) : static_cast<QSizePolicy::Policy >(hb_parni(3)), HB_ISNIL(4) ? static_cast<QSizePolicy::Policy >( QSizePolicy::Minimum ) : static_cast<QSizePolicy::Policy >(hb_parni(4)));
+    auto obj = new QSpacerItem(PINT(1), PINT(2), HB_ISNIL(3) ? static_cast<QSizePolicy::Policy >(QSizePolicy::Minimum) : static_cast<QSizePolicy::Policy >(hb_parni(3)), HB_ISNIL(4) ? static_cast<QSizePolicy::Policy >(QSizePolicy::Minimum) : static_cast<QSizePolicy::Policy >(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QSPACERITEM_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSPACERITEM_DELETE )
+HB_FUNC_STATIC(QSPACERITEM_DELETE)
 {
   auto obj = static_cast<QSpacerItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -90,9 +90,9 @@ HB_FUNC_STATIC( QSPACERITEM_DELETE )
 }
 
 /*
-void changeSize( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy = QSizePolicy::Minimum )
+void changeSize(int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy = QSizePolicy::Minimum)
 */
-HB_FUNC_STATIC( QSPACERITEM_CHANGESIZE )
+HB_FUNC_STATIC(QSPACERITEM_CHANGESIZE)
 {
   auto obj = static_cast<QSpacerItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSPACERITEM_CHANGESIZE )
     if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->changeSize(PINT(1), PINT(2), HB_ISNIL(3) ? static_cast<QSizePolicy::Policy >( QSizePolicy::Minimum ) : static_cast<QSizePolicy::Policy >(hb_parni(3)), HB_ISNIL(4) ? static_cast<QSizePolicy::Policy >( QSizePolicy::Minimum ) : static_cast<QSizePolicy::Policy >(hb_parni(4)));
+      obj->changeSize(PINT(1), PINT(2), HB_ISNIL(3) ? static_cast<QSizePolicy::Policy >(QSizePolicy::Minimum) : static_cast<QSizePolicy::Policy >(hb_parni(3)), HB_ISNIL(4) ? static_cast<QSizePolicy::Policy >(QSizePolicy::Minimum) : static_cast<QSizePolicy::Policy >(hb_parni(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSPACERITEM_CHANGESIZE )
 /*
 virtual Qt::Orientations expandingDirections() const
 */
-HB_FUNC_STATIC( QSPACERITEM_EXPANDINGDIRECTIONS )
+HB_FUNC_STATIC(QSPACERITEM_EXPANDINGDIRECTIONS)
 {
   auto obj = static_cast<QSpacerItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSPACERITEM_EXPANDINGDIRECTIONS )
 /*
 virtual QRect geometry() const
 */
-HB_FUNC_STATIC( QSPACERITEM_GEOMETRY )
+HB_FUNC_STATIC(QSPACERITEM_GEOMETRY)
 {
   auto obj = static_cast<QSpacerItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSPACERITEM_GEOMETRY )
 /*
 virtual bool isEmpty() const
 */
-HB_FUNC_STATIC( QSPACERITEM_ISEMPTY )
+HB_FUNC_STATIC(QSPACERITEM_ISEMPTY)
 {
   auto obj = static_cast<QSpacerItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QSPACERITEM_ISEMPTY )
 /*
 virtual QSize maximumSize() const
 */
-HB_FUNC_STATIC( QSPACERITEM_MAXIMUMSIZE )
+HB_FUNC_STATIC(QSPACERITEM_MAXIMUMSIZE)
 {
   auto obj = static_cast<QSpacerItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QSPACERITEM_MAXIMUMSIZE )
 /*
 virtual QSize minimumSize() const
 */
-HB_FUNC_STATIC( QSPACERITEM_MINIMUMSIZE )
+HB_FUNC_STATIC(QSPACERITEM_MINIMUMSIZE)
 {
   auto obj = static_cast<QSpacerItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -239,9 +239,9 @@ HB_FUNC_STATIC( QSPACERITEM_MINIMUMSIZE )
 }
 
 /*
-virtual void setGeometry( const QRect & r )
+virtual void setGeometry(const QRect & r)
 */
-HB_FUNC_STATIC( QSPACERITEM_SETGEOMETRY )
+HB_FUNC_STATIC(QSPACERITEM_SETGEOMETRY)
 {
   auto obj = static_cast<QSpacerItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSPACERITEM_SETGEOMETRY )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QSPACERITEM_SIZEHINT )
+HB_FUNC_STATIC(QSPACERITEM_SIZEHINT)
 {
   auto obj = static_cast<QSpacerItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QSPACERITEM_SIZEHINT )
 /*
 virtual QSpacerItem * spacerItem()
 */
-HB_FUNC_STATIC( QSPACERITEM_SPACERITEM )
+HB_FUNC_STATIC(QSPACERITEM_SPACERITEM)
 {
   auto obj = static_cast<QSpacerItem*>(Qt5xHb::itemGetPtrStackSelfItem());
 

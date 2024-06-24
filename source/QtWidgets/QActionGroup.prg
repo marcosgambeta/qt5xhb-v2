@@ -63,9 +63,9 @@ RETURN
 #endif
 
 /*
-QActionGroup( QObject * parent )
+QActionGroup(QObject * parent)
 */
-HB_FUNC_STATIC( QACTIONGROUP_NEW )
+HB_FUNC_STATIC(QACTIONGROUP_NEW)
 {
   if (ISNUMPAR(1) && ISQOBJECT(1))
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QACTIONGROUP_NEW )
   }
 }
 
-HB_FUNC_STATIC( QACTIONGROUP_DELETE )
+HB_FUNC_STATIC(QACTIONGROUP_DELETE)
 {
   auto obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -96,12 +96,12 @@ HB_FUNC_STATIC( QACTIONGROUP_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
+HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
 {
   if (ISNUMPAR(1) && ISQACTION(1))
   {
     /*
-    QAction * addAction( QAction * action )
+    QAction * addAction(QAction * action)
     */
     auto obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QAction * addAction( const QString & text )
+    QAction * addAction(const QString & text)
     */
     auto obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -129,13 +129,13 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
   else if (ISNUMPAR(2) && (ISQICON(1)|| HB_ISCHAR(1)) && HB_ISCHAR(2))
   {
     /*
-    QAction * addAction( const QIcon & icon, const QString & text )
+    QAction * addAction(const QIcon & icon, const QString & text)
     */
     auto obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr)
     {
-      auto ptr = obj->addAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon( hb_parc(1)), PQSTRING(2));
+      auto ptr = obj->addAction(HB_ISOBJECT(1) ? *static_cast<QIcon*>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
 /*
 QAction * checkedAction() const
 */
-HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
+HB_FUNC_STATIC(QACTIONGROUP_CHECKEDACTION)
 {
   auto obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
 /*
 bool isEnabled() const
 */
-HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
+HB_FUNC_STATIC(QACTIONGROUP_ISENABLED)
 {
   auto obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
 /*
 bool isExclusive() const
 */
-HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
+HB_FUNC_STATIC(QACTIONGROUP_ISEXCLUSIVE)
 {
   auto obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
 /*
 bool isVisible() const
 */
-HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
+HB_FUNC_STATIC(QACTIONGROUP_ISVISIBLE)
 {
   auto obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -244,9 +244,9 @@ HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
 }
 
 /*
-void removeAction( QAction * action )
+void removeAction(QAction * action)
 */
-HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
+HB_FUNC_STATIC(QACTIONGROUP_REMOVEACTION)
 {
   auto obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -270,9 +270,9 @@ HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
 }
 
 /*
-void setDisabled( bool b )
+void setDisabled(bool b)
 */
-HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
+HB_FUNC_STATIC(QACTIONGROUP_SETDISABLED)
 {
   auto obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -296,9 +296,9 @@ HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
 }
 
 /*
-void setEnabled( bool )
+void setEnabled(bool)
 */
-HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
+HB_FUNC_STATIC(QACTIONGROUP_SETENABLED)
 {
   auto obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -322,9 +322,9 @@ HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
 }
 
 /*
-void setExclusive( bool )
+void setExclusive(bool)
 */
-HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
+HB_FUNC_STATIC(QACTIONGROUP_SETEXCLUSIVE)
 {
   auto obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -348,9 +348,9 @@ HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
 }
 
 /*
-void setVisible( bool )
+void setVisible(bool)
 */
-HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
+HB_FUNC_STATIC(QACTIONGROUP_SETVISIBLE)
 {
   auto obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -374,9 +374,9 @@ HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
 }
 
 /*
-void hovered( QAction * action )
+void hovered(QAction * action)
 */
-HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
+HB_FUNC_STATIC(QACTIONGROUP_ONHOVERED)
 {
   auto sender = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -424,9 +424,9 @@ HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
 }
 
 /*
-void triggered( QAction * action )
+void triggered(QAction * action)
 */
-HB_FUNC_STATIC( QACTIONGROUP_ONTRIGGERED )
+HB_FUNC_STATIC(QACTIONGROUP_ONTRIGGERED)
 {
   auto sender = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
   

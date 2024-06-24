@@ -48,7 +48,7 @@ RETURN
 #include <QtWidgets/QGraphicsTransform>
 #endif
 
-HB_FUNC_STATIC( QGRAPHICSTRANSFORM_DELETE )
+HB_FUNC_STATIC(QGRAPHICSTRANSFORM_DELETE)
 {
   auto obj = qobject_cast<QGraphicsTransform*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -67,9 +67,9 @@ HB_FUNC_STATIC( QGRAPHICSTRANSFORM_DELETE )
 }
 
 /*
-virtual void applyTo( QMatrix4x4 * matrix ) const = 0
+virtual void applyTo(QMatrix4x4 * matrix) const = 0
 */
-HB_FUNC_STATIC( QGRAPHICSTRANSFORM_APPLYTO )
+HB_FUNC_STATIC(QGRAPHICSTRANSFORM_APPLYTO)
 {
   auto obj = qobject_cast<QGraphicsTransform*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
