@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETASPECTRATIOMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAspectRatioMode( static_cast<Qt::AspectRatioMode>( hb_parni(1)));
+      obj->setAspectRatioMode(static_cast<Qt::AspectRatioMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETOFFSET )
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setOffset( *PQPOINTF(1));
+      obj->setOffset(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETSIZE )
     if (ISNUMPAR(1) && ISQSIZEF(1))
     {
 #endif
-      obj->setSize( *PQSIZEF(1));
+      obj->setSize(*PQSIZEF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

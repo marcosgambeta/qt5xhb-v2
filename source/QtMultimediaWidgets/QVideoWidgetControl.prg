@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETASPECTRATIOMODE )
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAspectRatioMode( static_cast<Qt::AspectRatioMode>( hb_parni(1)));
+      obj->setAspectRatioMode(static_cast<Qt::AspectRatioMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
