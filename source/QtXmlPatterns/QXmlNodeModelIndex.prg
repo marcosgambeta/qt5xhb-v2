@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
     /*
     QXmlNodeModelIndex( const QXmlNodeModelIndex & other )
     */
-    auto obj = new QXmlNodeModelIndex( *PQXMLNODEMODELINDEX(1));
+    auto obj = new QXmlNodeModelIndex(*PQXMLNODEMODELINDEX(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
     if (ISNUMPAR(0))
     {
 #endif
-      hb_retptr( static_cast< void*>(obj->internalPointer()));
+      hb_retptr(static_cast< void*>(obj->internalPointer()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

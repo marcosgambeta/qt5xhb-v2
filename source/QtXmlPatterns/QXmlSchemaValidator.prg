@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
     /*
     QXmlSchemaValidator( const QXmlSchema & schema )
     */
-    auto obj = new QXmlSchemaValidator( *PQXMLSCHEMA(1));
+    auto obj = new QXmlSchemaValidator(*PQXMLSCHEMA(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETSCHEMA )
     if (ISNUMPAR(1) && ISQXMLSCHEMA(1))
     {
 #endif
-      obj->setSchema( *PQXMLSCHEMA(1));
+      obj->setSchema(*PQXMLSCHEMA(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->validate( *PQURL(1)));
+      RBOOL(obj->validate(*PQURL(1)));
     }
 
   }
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->validate( *PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2))));
+      RBOOL(obj->validate(*PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2))));
     }
 
   }

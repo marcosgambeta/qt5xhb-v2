@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QXMLQUERY_NEW )
     /*
     QXmlQuery( const QXmlQuery & other )
     */
-    auto obj = new QXmlQuery( *PQXMLQUERY(1));
+    auto obj = new QXmlQuery(*PQXMLQUERY(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QXMLQUERY_NEW )
     /*
     QXmlQuery( const QXmlNamePool & np )
     */
-    auto obj = new QXmlQuery( *PQXMLNAMEPOOL(1));
+    auto obj = new QXmlQuery(*PQXMLNAMEPOOL(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QXMLQUERY_NEW )
     /*
     QXmlQuery( QXmlQuery::QueryLanguage queryLanguage, const QXmlNamePool & np = QXmlNamePool() )
     */
-    auto obj = new QXmlQuery( static_cast<QXmlQuery::QueryLanguage>( hb_parni(1)), HB_ISNIL(2) ? QXmlNamePool() : *static_cast<QXmlNamePool*>(Qt5xHb::itemGetPtr(2)));
+    auto obj = new QXmlQuery(static_cast<QXmlQuery::QueryLanguage>(hb_parni(1)), HB_ISNIL(2) ? QXmlNamePool() : *static_cast<QXmlNamePool*>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE )
 
     if (obj != nullptr)
     {
-      obj->bindVariable( *PQXMLNAME(1), *PQXMLITEM(2));
+      obj->bindVariable(*PQXMLNAME(1), *PQXMLITEM(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE )
 
     if (obj != nullptr)
     {
-      obj->bindVariable( *PQXMLNAME(1), PQIODEVICE(2));
+      obj->bindVariable(*PQXMLNAME(1), PQIODEVICE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE )
 
     if (obj != nullptr)
     {
-      obj->bindVariable( *PQXMLNAME(1), *PQXMLQUERY(2));
+      obj->bindVariable(*PQXMLNAME(1), *PQXMLQUERY(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETFOCUS )
 
     if (obj != nullptr)
     {
-      obj->setFocus( *PQXMLITEM(1));
+      obj->setFocus(*PQXMLITEM(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETFOCUS )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->setFocus( *PQURL(1)));
+      RBOOL(obj->setFocus(*PQURL(1)));
     }
 
   }
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETINITIALTEMPLATENAME )
 
     if (obj != nullptr)
     {
-      obj->setInitialTemplateName( *PQXMLNAME(1));
+      obj->setInitialTemplateName(*PQXMLNAME(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETQUERY )
 
     if (obj != nullptr)
     {
-      obj->setQuery( *PQURL(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2)));
+      obj->setQuery(*PQURL(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());

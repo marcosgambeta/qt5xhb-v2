@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_BASEURI )
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
-      auto ptr = new QUrl(obj->baseUri( *PQXMLNODEMODELINDEX(1)));
+      auto ptr = new QUrl(obj->baseUri(*PQXMLNODEMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_ELEMENTBYID )
     if (ISNUMPAR(1) && ISQXMLNAME(1))
     {
 #endif
-      auto ptr = new QXmlNodeModelIndex(obj->elementById( *PQXMLNAME(1)));
+      auto ptr = new QXmlNodeModelIndex(obj->elementById(*PQXMLNAME(1)));
       Qt5xHb::createReturnClass(ptr, "QXMLNODEMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -161,12 +161,12 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
-      auto list = obj->namespaceBindings( *PQXMLNODEMODELINDEX(1));
+      auto list = obj->namespaceBindings(*PQXMLNODEMODELINDEX(1));
       auto pDynSym = hb_dynsymFindName("QXMLNAME");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -211,12 +211,12 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
     if (ISNUMPAR(1) && ISQXMLNAME(1))
     {
 #endif
-      auto list = obj->nodesByIdref( *PQXMLNAME(1));
+      auto list = obj->nodesByIdref(*PQXMLNAME(1));
       auto pDynSym = hb_dynsymFindName("QXMLNODEMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_STRINGVALUE )
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
-      RQSTRING(obj->stringValue( *PQXMLNODEMODELINDEX(1)));
+      RQSTRING(obj->stringValue(*PQXMLNODEMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ATOMICVALUE )
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
-      obj->atomicValue( *PQVARIANT(1));
+      obj->atomicValue(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ATTRIBUTE )
     if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQSTRINGREF(2))
     {
 #endif
-      obj->attribute( *PQXMLNAME(1), *PQSTRINGREF(2));
+      obj->attribute(*PQXMLNAME(1), *PQSTRINGREF(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_CHARACTERS )
     if (ISNUMPAR(1) && ISQSTRINGREF(1))
     {
 #endif
-      obj->characters( *PQSTRINGREF(1));
+      obj->characters(*PQSTRINGREF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_NAMESPACEBINDING )
     if (ISNUMPAR(1) && ISQXMLNAME(1))
     {
 #endif
-      obj->namespaceBinding( *PQXMLNAME(1));
+      obj->namespaceBinding(*PQXMLNAME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION )
     if (ISNUMPAR(2) && ISQXMLNAME(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->processingInstruction( *PQXMLNAME(1), PQSTRING(2));
+      obj->processingInstruction(*PQXMLNAME(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTELEMENT )
     if (ISNUMPAR(1) && ISQXMLNAME(1))
     {
 #endif
-      obj->startElement( *PQXMLNAME(1));
+      obj->startElement(*PQXMLNAME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

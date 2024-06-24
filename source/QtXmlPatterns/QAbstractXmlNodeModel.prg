@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_BASEURI )
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
-      auto ptr = new QUrl(obj->baseUri( *PQXMLNODEMODELINDEX(1)));
+      auto ptr = new QUrl(obj->baseUri(*PQXMLNODEMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_COMPAREORDER )
     if (ISNUMPAR(2) && ISQXMLNODEMODELINDEX(1) && ISQXMLNODEMODELINDEX(2))
     {
 #endif
-      RENUM(obj->compareOrder( *PQXMLNODEMODELINDEX(1), *PQXMLNODEMODELINDEX(2)));
+      RENUM(obj->compareOrder(*PQXMLNODEMODELINDEX(1), *PQXMLNODEMODELINDEX(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DOCUMENTURI )
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
-      auto ptr = new QUrl(obj->documentUri( *PQXMLNODEMODELINDEX(1)));
+      auto ptr = new QUrl(obj->documentUri(*PQXMLNODEMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ELEMENTBYID )
     if (ISNUMPAR(1) && ISQXMLNAME(1))
     {
 #endif
-      auto ptr = new QXmlNodeModelIndex(obj->elementById( *PQXMLNAME(1)));
+      auto ptr = new QXmlNodeModelIndex(obj->elementById(*PQXMLNAME(1)));
       Qt5xHb::createReturnClass(ptr, "QXMLNODEMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_KIND )
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
-      RENUM(obj->kind( *PQXMLNODEMODELINDEX(1)));
+      RENUM(obj->kind(*PQXMLNODEMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAME )
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
-      auto ptr = new QXmlName(obj->name( *PQXMLNODEMODELINDEX(1)));
+      auto ptr = new QXmlName(obj->name(*PQXMLNODEMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QXMLNAME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -244,12 +244,12 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS )
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
-      auto list = obj->namespaceBindings( *PQXMLNODEMODELINDEX(1));
+      auto list = obj->namespaceBindings(*PQXMLNODEMODELINDEX(1));
       auto pDynSym = hb_dynsymFindName("QXMLNAME");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -294,12 +294,12 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NODESBYIDREF )
     if (ISNUMPAR(1) && ISQXMLNAME(1))
     {
 #endif
-      auto list = obj->nodesByIdref( *PQXMLNAME(1));
+      auto list = obj->nodesByIdref(*PQXMLNAME(1));
       auto pDynSym = hb_dynsymFindName("QXMLNODEMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
       {
-        for( const auto & item : list )
+        for (const auto & item : list)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ROOT )
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
-      auto ptr = new QXmlNodeModelIndex(obj->root( *PQXMLNODEMODELINDEX(1)));
+      auto ptr = new QXmlNodeModelIndex(obj->root(*PQXMLNODEMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QXMLNODEMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_SOURCELOCATION )
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
-      auto ptr = new QSourceLocation(obj->sourceLocation( *PQXMLNODEMODELINDEX(1)));
+      auto ptr = new QSourceLocation(obj->sourceLocation(*PQXMLNODEMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QSOURCELOCATION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_STRINGVALUE )
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
-      RQSTRING(obj->stringValue( *PQXMLNODEMODELINDEX(1)));
+      RQSTRING(obj->stringValue(*PQXMLNODEMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_TYPEDVALUE )
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
-      auto ptr = new QVariant(obj->typedValue( *PQXMLNODEMODELINDEX(1)));
+      auto ptr = new QVariant(obj->typedValue(*PQXMLNODEMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

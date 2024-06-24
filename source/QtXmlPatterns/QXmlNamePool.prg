@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QXMLNAMEPOOL_NEW )
     /*
     QXmlNamePool( const QXmlNamePool & other )
     */
-    auto obj = new QXmlNamePool( *PQXMLNAMEPOOL(1));
+    auto obj = new QXmlNamePool(*PQXMLNAMEPOOL(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }

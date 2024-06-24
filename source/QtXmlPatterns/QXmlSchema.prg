@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEW )
     /*
     QXmlSchema( const QXmlSchema & other )
     */
-    auto obj = new QXmlSchema( *PQXMLSCHEMA(1));
+    auto obj = new QXmlSchema(*PQXMLSCHEMA(1));
     Qt5xHb::returnNewObject(obj, true);
 
   }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->load( *PQURL(1)));
+      RBOOL(obj->load(*PQURL(1)));
     }
 
   }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
 
     if (obj != nullptr)
     {
-      RBOOL(obj->load( *PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2))));
+      RBOOL(obj->load(*PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>(Qt5xHb::itemGetPtr(2))));
     }
 
   }
