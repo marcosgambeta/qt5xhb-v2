@@ -64,7 +64,7 @@ RETURN
 #endif
 #endif
 
-HB_FUNC_STATIC( QVOICE_NEW )
+HB_FUNC_STATIC(QVOICE_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QVOICE_NEW )
   else if (ISNUMPAR(1) && ISQVOICE(1))
   {
     /*
-    QVoice( const QVoice & other )
+    QVoice(const QVoice & other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
     auto obj = new QVoice(*PQVOICE(1));
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QVOICE_NEW )
 /*
 ~QVoice()
 */
-HB_FUNC_STATIC( QVOICE_DELETE )
+HB_FUNC_STATIC(QVOICE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QVoice*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QVOICE_DELETE )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QVOICE_NAME )
+HB_FUNC_STATIC(QVOICE_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QVoice*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QVOICE_NAME )
 /*
 QVoice::Gender gender() const
 */
-HB_FUNC_STATIC( QVOICE_GENDER )
+HB_FUNC_STATIC(QVOICE_GENDER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QVoice*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QVOICE_GENDER )
 /*
 QVoice::Age age() const
 */
-HB_FUNC_STATIC( QVOICE_AGE )
+HB_FUNC_STATIC(QVOICE_AGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = static_cast<QVoice*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -194,16 +194,16 @@ HB_FUNC_STATIC( QVOICE_AGE )
 }
 
 /*
-static QString genderName( QVoice::Gender gender )
+static QString genderName(QVoice::Gender gender)
 */
-HB_FUNC_STATIC( QVOICE_GENDERNAME )
+HB_FUNC_STATIC(QVOICE_GENDERNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RQSTRING( QVoice::genderName(static_cast<QVoice::Gender>(hb_parni(1))));
+    RQSTRING(QVoice::genderName(static_cast<QVoice::Gender>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -215,16 +215,16 @@ HB_FUNC_STATIC( QVOICE_GENDERNAME )
 }
 
 /*
-static QString ageName( QVoice::Age age )
+static QString ageName(QVoice::Age age)
 */
-HB_FUNC_STATIC( QVOICE_AGENAME )
+HB_FUNC_STATIC(QVOICE_AGENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    RQSTRING( QVoice::ageName(static_cast<QVoice::Age>(hb_parni(1))));
+    RQSTRING(QVoice::ageName(static_cast<QVoice::Age>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QVOICE_AGENAME )
 #endif
 }
 
-HB_FUNC_STATIC( QVOICE_NEWFROM )
+HB_FUNC_STATIC(QVOICE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -265,22 +265,22 @@ HB_FUNC_STATIC( QVOICE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QVOICE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QVOICE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QVOICE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QVOICE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QVOICE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QVOICE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QVOICE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QVOICE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QVOICE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QVOICE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

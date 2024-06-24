@@ -83,15 +83,15 @@ RETURN
 #include <QtCore/QVector>
 #include <QtTextToSpeech/QVoice>
 
-HB_FUNC_STATIC( QTEXTTOSPEECH_NEW )
+HB_FUNC_STATIC(QTEXTTOSPEECH_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QTextToSpeech( QObject * parent = nullptr )
+    QTextToSpeech(QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    auto obj = new QTextToSpeech( OPQOBJECT( 1, nullptr));
+    auto obj = new QTextToSpeech(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -99,10 +99,10 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_NEW )
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QTextToSpeech( const QString & engine, QObject * parent = nullptr )
+    QTextToSpeech(const QString & engine, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    auto obj = new QTextToSpeech(PQSTRING(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QTextToSpeech(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_NEW )
 /*
 QTextToSpeech::State state() const
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_STATE )
+HB_FUNC_STATIC(QTEXTTOSPEECH_STATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_STATE )
 /*
 QLocale locale() const
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_LOCALE )
+HB_FUNC_STATIC(QTEXTTOSPEECH_LOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -167,9 +167,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_LOCALE )
 }
 
 /*
-void setLocale( const QLocale & locale )
+void setLocale(const QLocale & locale)
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_SETLOCALE )
+HB_FUNC_STATIC(QTEXTTOSPEECH_SETLOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SETLOCALE )
 /*
 QVoice voice() const
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_VOICE )
+HB_FUNC_STATIC(QTEXTTOSPEECH_VOICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -222,9 +222,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_VOICE )
 }
 
 /*
-void setVoice( const QVoice & voice )
+void setVoice(const QVoice & voice)
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_SETVOICE )
+HB_FUNC_STATIC(QTEXTTOSPEECH_SETVOICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SETVOICE )
 /*
 double rate() const
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_RATE )
+HB_FUNC_STATIC(QTEXTTOSPEECH_RATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -276,9 +276,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_RATE )
 }
 
 /*
-void setRate( double rate )
+void setRate(double rate)
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_SETRATE )
+HB_FUNC_STATIC(QTEXTTOSPEECH_SETRATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SETRATE )
 /*
 double pitch() const
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_PITCH )
+HB_FUNC_STATIC(QTEXTTOSPEECH_PITCH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -330,9 +330,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_PITCH )
 }
 
 /*
-void setPitch( double pitch )
+void setPitch(double pitch)
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_SETPITCH )
+HB_FUNC_STATIC(QTEXTTOSPEECH_SETPITCH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SETPITCH )
 /*
 double volume() const
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_VOLUME )
+HB_FUNC_STATIC(QTEXTTOSPEECH_VOLUME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -384,9 +384,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_VOLUME )
 }
 
 /*
-void setVolume( double volume )
+void setVolume(double volume)
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_SETVOLUME )
+HB_FUNC_STATIC(QTEXTTOSPEECH_SETVOLUME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SETVOLUME )
 /*
 QVector<QLocale> availableLocales() const
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLELOCALES )
+HB_FUNC_STATIC(QTEXTTOSPEECH_AVAILABLELOCALES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLELOCALES )
 /*
 QVector<QVoice> availableVoices() const
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLEVOICES )
+HB_FUNC_STATIC(QTEXTTOSPEECH_AVAILABLEVOICES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -518,14 +518,14 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLEVOICES )
 /*
 static QStringList availableEngines()
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLEENGINES )
+HB_FUNC_STATIC(QTEXTTOSPEECH_AVAILABLEENGINES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RQSTRINGLIST( QTextToSpeech::availableEngines());
+    RQSTRINGLIST(QTextToSpeech::availableEngines());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -537,9 +537,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLEENGINES )
 }
 
 /*
-void say( const QString & text )
+void say(const QString & text)
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_SAY )
+HB_FUNC_STATIC(QTEXTTOSPEECH_SAY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SAY )
 /*
 void stop()
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_STOP )
+HB_FUNC_STATIC(QTEXTTOSPEECH_STOP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_STOP )
 /*
 void pause()
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_PAUSE )
+HB_FUNC_STATIC(QTEXTTOSPEECH_PAUSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_PAUSE )
 /*
 void resume()
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_RESUME )
+HB_FUNC_STATIC(QTEXTTOSPEECH_RESUME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto obj = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -649,9 +649,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_RESUME )
 }
 
 /*
-void localeChanged( const QLocale & locale )
+void localeChanged(const QLocale & locale)
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
+HB_FUNC_STATIC(QTEXTTOSPEECH_ONLOCALECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTTOSPEECH");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QLOCALE");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QLOCALE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -703,9 +703,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
 }
 
 /*
-void pitchChanged( double pitch )
+void pitchChanged(double pitch)
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
+HB_FUNC_STATIC(QTEXTTOSPEECH_ONPITCHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -757,9 +757,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
 }
 
 /*
-void rateChanged( double rate )
+void rateChanged(double rate)
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
+HB_FUNC_STATIC(QTEXTTOSPEECH_ONRATECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -811,9 +811,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
 }
 
 /*
-void stateChanged( QTextToSpeech::State state )
+void stateChanged(QTextToSpeech::State state)
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
+HB_FUNC_STATIC(QTEXTTOSPEECH_ONSTATECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -865,9 +865,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
 }
 
 /*
-void voiceChanged( const QVoice & voice )
+void voiceChanged(const QVoice & voice)
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
+HB_FUNC_STATIC(QTEXTTOSPEECH_ONVOICECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTTOSPEECH");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QVOICE");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QVOICE");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -919,9 +919,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
 }
 
 /*
-void volumeChanged( int volume )
+void volumeChanged(int volume)
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED1 )
+HB_FUNC_STATIC(QTEXTTOSPEECH_ONVOLUMECHANGED1)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -973,9 +973,9 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED1 )
 }
 
 /*
-void volumeChanged( double volume )
+void volumeChanged(double volume)
 */
-HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED2 )
+HB_FUNC_STATIC(QTEXTTOSPEECH_ONVOLUMECHANGED2)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   auto sender = qobject_cast<QTextToSpeech*>(Qt5xHb::getQObjectPointerFromSelfItem());
