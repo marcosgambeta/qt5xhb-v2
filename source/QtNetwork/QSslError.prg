@@ -60,7 +60,7 @@ RETURN
 #include <QtNetwork/QSslError>
 #endif
 
-HB_FUNC_STATIC( QSSLERROR_NEW )
+HB_FUNC_STATIC(QSSLERROR_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QSslError( QSslError::SslError error )
+    QSslError(QSslError::SslError error)
     */
     auto obj = new QSslError(static_cast<QSslError::SslError>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
   else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSSLCERTIFICATE(2))
   {
     /*
-    QSslError( QSslError::SslError error, const QSslCertificate & certificate )
+    QSslError(QSslError::SslError error, const QSslCertificate & certificate)
     */
     auto obj = new QSslError(static_cast<QSslError::SslError>(hb_parni(1)), *PQSSLCERTIFICATE(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
   else if (ISNUMPAR(1) && ISQSSLERROR(1))
   {
     /*
-    QSslError( const QSslError & other )
+    QSslError(const QSslError & other)
     */
     auto obj = new QSslError(*PQSSLERROR(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
 /*
 ~QSslError()
 */
-HB_FUNC_STATIC( QSSLERROR_DELETE )
+HB_FUNC_STATIC(QSSLERROR_DELETE)
 {
   auto obj = static_cast<QSslError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSSLERROR_DELETE )
 /*
 QSslCertificate certificate() const
 */
-HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
+HB_FUNC_STATIC(QSSLERROR_CERTIFICATE)
 {
   auto obj = static_cast<QSslError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
 /*
 QSslError::SslError error() const
 */
-HB_FUNC_STATIC( QSSLERROR_ERROR )
+HB_FUNC_STATIC(QSSLERROR_ERROR)
 {
   auto obj = static_cast<QSslError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSSLERROR_ERROR )
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
+HB_FUNC_STATIC(QSSLERROR_ERRORSTRING)
 {
   auto obj = static_cast<QSslError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -197,9 +197,9 @@ HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
 }
 
 /*
-void swap( QSslError & other ) Q_DECL_NOTHROW
+void swap(QSslError & other) Q_DECL_NOTHROW
 */
-HB_FUNC_STATIC( QSSLERROR_SWAP )
+HB_FUNC_STATIC(QSSLERROR_SWAP)
 {
   auto obj = static_cast<QSslError*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSSLERROR_SWAP )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QSSLERROR_NEWFROM )
+HB_FUNC_STATIC(QSSLERROR_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -252,22 +252,22 @@ HB_FUNC_STATIC( QSSLERROR_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSSLERROR_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSSLERROR_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QSSLERROR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSSLERROR_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSSLERROR_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QSSLERROR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSSLERROR_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSSLERROR_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSSLERROR_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSSLERROR_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

@@ -62,13 +62,13 @@ RETURN
 #endif
 
 /*
-QNetworkConfigurationManager( QObject * parent = nullptr )
+QNetworkConfigurationManager(QObject * parent = nullptr)
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_NEW )
+HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new QNetworkConfigurationManager( OPQOBJECT( 1, nullptr));
+    auto obj = new QNetworkConfigurationManager(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_NEW )
 /*
 virtual ~QNetworkConfigurationManager()
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DELETE )
+HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DELETE)
 {
   auto obj = qobject_cast<QNetworkConfigurationManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -99,9 +99,9 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DELETE )
 }
 
 /*
-QList<QNetworkConfiguration> allConfigurations( QNetworkConfiguration::StateFlags filter = QNetworkConfiguration::StateFlags() ) const
+QList<QNetworkConfiguration> allConfigurations(QNetworkConfiguration::StateFlags filter = QNetworkConfiguration::StateFlags()) const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
+HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS)
 {
   auto obj = qobject_cast<QNetworkConfigurationManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      auto list = obj->allConfigurations( HB_ISNIL(1) ? static_cast<QNetworkConfiguration::StateFlags >( QNetworkConfiguration::StateFlags() ) : static_cast<QNetworkConfiguration::StateFlags >(hb_parni(1)));
+      auto list = obj->allConfigurations(HB_ISNIL(1) ? static_cast<QNetworkConfiguration::StateFlags >(QNetworkConfiguration::StateFlags()) : static_cast<QNetworkConfiguration::StateFlags >(hb_parni(1)));
       auto pDynSym = hb_dynsymFindName("QNETWORKCONFIGURATION");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
 /*
 QNetworkConfigurationManager::Capabilities capabilities() const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CAPABILITIES )
+HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CAPABILITIES)
 {
   auto obj = qobject_cast<QNetworkConfigurationManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -173,9 +173,9 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CAPABILITIES )
 }
 
 /*
-QNetworkConfiguration configurationFromIdentifier( const QString & identifier ) const
+QNetworkConfiguration configurationFromIdentifier(const QString & identifier) const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER )
+HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER)
 {
   auto obj = qobject_cast<QNetworkConfigurationManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER )
 /*
 QNetworkConfiguration defaultConfiguration() const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION )
+HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION)
 {
   auto obj = qobject_cast<QNetworkConfigurationManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION )
 /*
 bool isOnline() const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ISONLINE )
+HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ISONLINE)
 {
   auto obj = qobject_cast<QNetworkConfigurationManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ISONLINE )
 /*
 void updateConfigurations() 
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
+HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS)
 {
   auto obj = qobject_cast<QNetworkConfigurationManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -273,9 +273,9 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
 }
 
 /*
-void configurationAdded( const QNetworkConfiguration & config )
+void configurationAdded(const QNetworkConfiguration & config)
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
+HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED)
 {
   auto sender = qobject_cast<QNetworkConfigurationManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKCONFIGURATIONMANAGER");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKCONFIGURATION");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QNETWORKCONFIGURATION");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -323,9 +323,9 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
 }
 
 /*
-void configurationChanged( const QNetworkConfiguration & config )
+void configurationChanged(const QNetworkConfiguration & config)
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED )
+HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED)
 {
   auto sender = qobject_cast<QNetworkConfigurationManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKCONFIGURATIONMANAGER");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKCONFIGURATION");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QNETWORKCONFIGURATION");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -373,9 +373,9 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED )
 }
 
 /*
-void configurationRemoved( const QNetworkConfiguration & config )
+void configurationRemoved(const QNetworkConfiguration & config)
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED )
+HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED)
 {
   auto sender = qobject_cast<QNetworkConfigurationManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKCONFIGURATIONMANAGER");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QNETWORKCONFIGURATION");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QNETWORKCONFIGURATION");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -423,9 +423,9 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED )
 }
 
 /*
-void onlineStateChanged( bool isOnline )
+void onlineStateChanged(bool isOnline)
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED )
+HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED)
 {
   auto sender = qobject_cast<QNetworkConfigurationManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED )
 /*
 void updateCompleted()
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED )
+HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED)
 {
   auto sender = qobject_cast<QNetworkConfigurationManager*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

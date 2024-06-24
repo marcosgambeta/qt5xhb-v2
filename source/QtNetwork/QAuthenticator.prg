@@ -66,7 +66,7 @@ RETURN
 #include <QtNetwork/QAuthenticator>
 #endif
 
-HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
+HB_FUNC_STATIC(QAUTHENTICATOR_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
   else if (ISNUMPAR(1) && ISQAUTHENTICATOR(1))
   {
     /*
-    QAuthenticator( const QAuthenticator & other )
+    QAuthenticator(const QAuthenticator & other)
     */
     auto obj = new QAuthenticator(*PQAUTHENTICATOR(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
 /*
 ~QAuthenticator()
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_DELETE )
+HB_FUNC_STATIC(QAUTHENTICATOR_DELETE)
 {
   auto obj = static_cast<QAuthenticator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_DELETE )
 /*
 QString user() const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_USER )
+HB_FUNC_STATIC(QAUTHENTICATOR_USER)
 {
   auto obj = static_cast<QAuthenticator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -136,9 +136,9 @@ HB_FUNC_STATIC( QAUTHENTICATOR_USER )
 }
 
 /*
-void setUser( const QString & user )
+void setUser(const QString & user)
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_SETUSER )
+HB_FUNC_STATIC(QAUTHENTICATOR_SETUSER)
 {
   auto obj = static_cast<QAuthenticator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETUSER )
 /*
 QString password() const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_PASSWORD )
+HB_FUNC_STATIC(QAUTHENTICATOR_PASSWORD)
 {
   auto obj = static_cast<QAuthenticator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -186,9 +186,9 @@ HB_FUNC_STATIC( QAUTHENTICATOR_PASSWORD )
 }
 
 /*
-void setPassword( const QString & password )
+void setPassword(const QString & password)
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_SETPASSWORD )
+HB_FUNC_STATIC(QAUTHENTICATOR_SETPASSWORD)
 {
   auto obj = static_cast<QAuthenticator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETPASSWORD )
 /*
 QString realm() const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_REALM )
+HB_FUNC_STATIC(QAUTHENTICATOR_REALM)
 {
   auto obj = static_cast<QAuthenticator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -236,9 +236,9 @@ HB_FUNC_STATIC( QAUTHENTICATOR_REALM )
 }
 
 /*
-void setRealm( const QString & realm )
+void setRealm(const QString & realm)
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_SETREALM )
+HB_FUNC_STATIC(QAUTHENTICATOR_SETREALM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = static_cast<QAuthenticator*>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -264,9 +264,9 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETREALM )
 }
 
 /*
-QVariant option( const QString & opt ) const
+QVariant option(const QString & opt) const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_OPTION )
+HB_FUNC_STATIC(QAUTHENTICATOR_OPTION)
 {
   auto obj = static_cast<QAuthenticator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -289,9 +289,9 @@ HB_FUNC_STATIC( QAUTHENTICATOR_OPTION )
 }
 
 /*
-void setOption( const QString & opt, const QVariant & value )
+void setOption(const QString & opt, const QVariant & value)
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_SETOPTION )
+HB_FUNC_STATIC(QAUTHENTICATOR_SETOPTION)
 {
   auto obj = static_cast<QAuthenticator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETOPTION )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_ISNULL )
+HB_FUNC_STATIC(QAUTHENTICATOR_ISNULL)
 {
   auto obj = static_cast<QAuthenticator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_ISNULL )
 /*
 void detach()
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_DETACH )
+HB_FUNC_STATIC(QAUTHENTICATOR_DETACH)
 {
   auto obj = static_cast<QAuthenticator*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_DETACH )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QAUTHENTICATOR_NEWFROM )
+HB_FUNC_STATIC(QAUTHENTICATOR_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -394,22 +394,22 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QAUTHENTICATOR_NEWFROMOBJECT )
+HB_FUNC_STATIC(QAUTHENTICATOR_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QAUTHENTICATOR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QAUTHENTICATOR_NEWFROMPOINTER )
+HB_FUNC_STATIC(QAUTHENTICATOR_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QAUTHENTICATOR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QAUTHENTICATOR_SELFDESTRUCTION )
+HB_FUNC_STATIC(QAUTHENTICATOR_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QAUTHENTICATOR_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QAUTHENTICATOR_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

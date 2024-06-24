@@ -79,33 +79,33 @@ RETURN
 
 #include <QtNetwork/QHostAddress>
 
-HB_FUNC_STATIC( QDNSLOOKUP_NEW )
+HB_FUNC_STATIC(QDNSLOOKUP_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QDnsLookup( QObject * parent = nullptr )
+    QDnsLookup(QObject * parent = nullptr)
     */
-    auto obj = new QDnsLookup( OPQOBJECT( 1, nullptr));
+    auto obj = new QDnsLookup(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QDnsLookup( QDnsLookup::Type type, const QString & name, QObject * parent = nullptr )
+    QDnsLookup(QDnsLookup::Type type, const QString & name, QObject * parent = nullptr)
     */
-    auto obj = new QDnsLookup(static_cast<QDnsLookup::Type>(hb_parni(1)), PQSTRING(2), OPQOBJECT( 3, nullptr));
+    auto obj = new QDnsLookup(static_cast<QDnsLookup::Type>(hb_parni(1)), PQSTRING(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQHOSTADDRESS(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
-    QDnsLookup( QDnsLookup::Type type, const QString & name, const QHostAddress & nameserver, QObject * parent = nullptr )
+    QDnsLookup(QDnsLookup::Type type, const QString & name, const QHostAddress & nameserver, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-    auto obj = new QDnsLookup(static_cast<QDnsLookup::Type>(hb_parni(1)), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT( 4, nullptr));
+    auto obj = new QDnsLookup(static_cast<QDnsLookup::Type>(hb_parni(1)), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NEW )
 /*
 ~QDnsLookup()
 */
-HB_FUNC_STATIC( QDNSLOOKUP_DELETE )
+HB_FUNC_STATIC(QDNSLOOKUP_DELETE)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_DELETE )
 /*
 QDnsLookup::Error error() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_ERROR )
+HB_FUNC_STATIC(QDNSLOOKUP_ERROR)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ERROR )
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_ERRORSTRING )
+HB_FUNC_STATIC(QDNSLOOKUP_ERRORSTRING)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ERRORSTRING )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_NAME )
+HB_FUNC_STATIC(QDNSLOOKUP_NAME)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -210,9 +210,9 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAME )
 }
 
 /*
-void setName( const QString & name )
+void setName(const QString & name)
 */
-HB_FUNC_STATIC( QDNSLOOKUP_SETNAME )
+HB_FUNC_STATIC(QDNSLOOKUP_SETNAME)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SETNAME )
 /*
 QDnsLookup::Type type() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_TYPE )
+HB_FUNC_STATIC(QDNSLOOKUP_TYPE)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -260,9 +260,9 @@ HB_FUNC_STATIC( QDNSLOOKUP_TYPE )
 }
 
 /*
-void setType( QDnsLookup::Type )
+void setType(QDnsLookup::Type)
 */
-HB_FUNC_STATIC( QDNSLOOKUP_SETTYPE )
+HB_FUNC_STATIC(QDNSLOOKUP_SETTYPE)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SETTYPE )
 /*
 QHostAddress nameserver() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_NAMESERVER )
+HB_FUNC_STATIC(QDNSLOOKUP_NAMESERVER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -313,9 +313,9 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAMESERVER )
 }
 
 /*
-void setNameserver( const QHostAddress & nameserver )
+void setNameserver(const QHostAddress & nameserver)
 */
-HB_FUNC_STATIC( QDNSLOOKUP_SETNAMESERVER )
+HB_FUNC_STATIC(QDNSLOOKUP_SETNAMESERVER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SETNAMESERVER )
 /*
 bool isFinished() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_ISFINISHED )
+HB_FUNC_STATIC(QDNSLOOKUP_ISFINISHED)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ISFINISHED )
 /*
 QList<QDnsDomainNameRecord> canonicalNameRecords() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_CANONICALNAMERECORDS )
+HB_FUNC_STATIC(QDNSLOOKUP_CANONICALNAMERECORDS)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_CANONICALNAMERECORDS )
 /*
 QList<QDnsHostAddressRecord> hostAddressRecords() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_HOSTADDRESSRECORDS )
+HB_FUNC_STATIC(QDNSLOOKUP_HOSTADDRESSRECORDS)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_HOSTADDRESSRECORDS )
 /*
 QList<QDnsMailExchangeRecord> mailExchangeRecords() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_MAILEXCHANGERECORDS )
+HB_FUNC_STATIC(QDNSLOOKUP_MAILEXCHANGERECORDS)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_MAILEXCHANGERECORDS )
 /*
 QList<QDnsDomainNameRecord> nameServerRecords() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_NAMESERVERRECORDS )
+HB_FUNC_STATIC(QDNSLOOKUP_NAMESERVERRECORDS)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAMESERVERRECORDS )
 /*
 QList<QDnsDomainNameRecord> pointerRecords() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_POINTERRECORDS )
+HB_FUNC_STATIC(QDNSLOOKUP_POINTERRECORDS)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_POINTERRECORDS )
 /*
 QList<QDnsServiceRecord> serviceRecords() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_SERVICERECORDS )
+HB_FUNC_STATIC(QDNSLOOKUP_SERVICERECORDS)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SERVICERECORDS )
 /*
 QList<QDnsTextRecord> textRecords() const
 */
-HB_FUNC_STATIC( QDNSLOOKUP_TEXTRECORDS )
+HB_FUNC_STATIC(QDNSLOOKUP_TEXTRECORDS)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_TEXTRECORDS )
 /*
 void abort()
 */
-HB_FUNC_STATIC( QDNSLOOKUP_ABORT )
+HB_FUNC_STATIC(QDNSLOOKUP_ABORT)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -743,7 +743,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ABORT )
 /*
 void lookup()
 */
-HB_FUNC_STATIC( QDNSLOOKUP_LOOKUP )
+HB_FUNC_STATIC(QDNSLOOKUP_LOOKUP)
 {
   auto obj = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_LOOKUP )
 /*
 void finished()
 */
-HB_FUNC_STATIC( QDNSLOOKUP_ONFINISHED )
+HB_FUNC_STATIC(QDNSLOOKUP_ONFINISHED)
 {
   auto sender = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -815,9 +815,9 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONFINISHED )
 }
 
 /*
-void nameChanged( const QString & name )
+void nameChanged(const QString & name)
 */
-HB_FUNC_STATIC( QDNSLOOKUP_ONNAMECHANGED )
+HB_FUNC_STATIC(QDNSLOOKUP_ONNAMECHANGED)
 {
   auto sender = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -865,9 +865,9 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMECHANGED )
 }
 
 /*
-void nameserverChanged( const QHostAddress & nameserver )
+void nameserverChanged(const QHostAddress & nameserver)
 */
-HB_FUNC_STATIC( QDNSLOOKUP_ONNAMESERVERCHANGED )
+HB_FUNC_STATIC(QDNSLOOKUP_ONNAMESERVERCHANGED)
 {
   auto sender = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -891,7 +891,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMESERVERCHANGED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDNSLOOKUP");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QHOSTADDRESS");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QHOSTADDRESS");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -915,9 +915,9 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMESERVERCHANGED )
 }
 
 /*
-void typeChanged( QDnsLookup::Type type )
+void typeChanged(QDnsLookup::Type type)
 */
-HB_FUNC_STATIC( QDNSLOOKUP_ONTYPECHANGED )
+HB_FUNC_STATIC(QDNSLOOKUP_ONTYPECHANGED)
 {
   auto sender = qobject_cast<QDnsLookup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

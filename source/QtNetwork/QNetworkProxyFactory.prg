@@ -68,7 +68,7 @@ QNetworkProxyFactory() [ABSTRACT]
 /*
 virtual ~QNetworkProxyFactory()
 */
-HB_FUNC_STATIC( QNETWORKPROXYFACTORY_DELETE )
+HB_FUNC_STATIC(QNETWORKPROXYFACTORY_DELETE)
 {
   auto obj = static_cast<QNetworkProxyFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -85,9 +85,9 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_DELETE )
 }
 
 /*
-virtual QList<QNetworkProxy> queryProxy( const QNetworkProxyQuery & query = QNetworkProxyQuery() ) = 0
+virtual QList<QNetworkProxy> queryProxy(const QNetworkProxyQuery & query = QNetworkProxyQuery()) = 0
 */
-HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
+HB_FUNC_STATIC(QNETWORKPROXYFACTORY_QUERYPROXY)
 {
   auto obj = static_cast<QNetworkProxyFactory*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
     if (ISBETWEEN(0, 1) && (ISQNETWORKPROXYQUERY(1) || HB_ISNIL(1)))
     {
 #endif
-      auto list = obj->queryProxy( HB_ISNIL(1) ? QNetworkProxyQuery() : *static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtr(1)));
+      auto list = obj->queryProxy(HB_ISNIL(1) ? QNetworkProxyQuery() : *static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtr(1)));
       auto pDynSym = hb_dynsymFindName("QNETWORKPROXY");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr)
@@ -135,9 +135,9 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
 }
 
 /*
-static QList<QNetworkProxy> proxyForQuery( const QNetworkProxyQuery & query )
+static QList<QNetworkProxy> proxyForQuery(const QNetworkProxyQuery & query)
 */
-HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
+HB_FUNC_STATIC(QNETWORKPROXYFACTORY_PROXYFORQUERY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQNETWORKPROXYQUERY(1))
@@ -180,9 +180,9 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
 }
 
 /*
-static void setApplicationProxyFactory( QNetworkProxyFactory * factory )
+static void setApplicationProxyFactory(QNetworkProxyFactory * factory)
 */
-HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY )
+HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQNETWORKPROXYFACTORY(1))
@@ -201,9 +201,9 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY )
 }
 
 /*
-static void setUseSystemConfiguration( bool enable )
+static void setUseSystemConfiguration(bool enable)
 */
-HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETUSESYSTEMCONFIGURATION )
+HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SETUSESYSTEMCONFIGURATION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISLOG(1))
@@ -222,15 +222,15 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETUSESYSTEMCONFIGURATION )
 }
 
 /*
-static QList<QNetworkProxy> systemProxyForQuery( const QNetworkProxyQuery & query = QNetworkProxyQuery() )
+static QList<QNetworkProxy> systemProxyForQuery(const QNetworkProxyQuery & query = QNetworkProxyQuery())
 */
-HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY )
+HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(0, 1) && (ISQNETWORKPROXYQUERY(1) || HB_ISNIL(1)))
   {
 #endif
-    auto list = QNetworkProxyFactory::systemProxyForQuery( HB_ISNIL(1) ? QNetworkProxyQuery() : *static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtr(1)));
+    auto list = QNetworkProxyFactory::systemProxyForQuery(HB_ISNIL(1) ? QNetworkProxyQuery() : *static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtr(1)));
     auto pDynSym = hb_dynsymFindName("QNETWORKPROXY");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr)
@@ -269,14 +269,14 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY )
 /*
 static bool usesSystemConfiguration()
 */
-HB_FUNC_STATIC( QNETWORKPROXYFACTORY_USESSYSTEMCONFIGURATION )
+HB_FUNC_STATIC(QNETWORKPROXYFACTORY_USESSYSTEMCONFIGURATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QNetworkProxyFactory::usesSystemConfiguration());
+    RBOOL(QNetworkProxyFactory::usesSystemConfiguration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_USESSYSTEMCONFIGURATION )
 #endif
 }
 
-HB_FUNC_STATIC( QNETWORKPROXYFACTORY_NEWFROM )
+HB_FUNC_STATIC(QNETWORKPROXYFACTORY_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -317,22 +317,22 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QNETWORKPROXYFACTORY_NEWFROMOBJECT )
+HB_FUNC_STATIC(QNETWORKPROXYFACTORY_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QNETWORKPROXYFACTORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QNETWORKPROXYFACTORY_NEWFROMPOINTER )
+HB_FUNC_STATIC(QNETWORKPROXYFACTORY_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QNETWORKPROXYFACTORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SELFDESTRUCTION )
+HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

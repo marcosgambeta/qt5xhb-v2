@@ -53,23 +53,23 @@ RETURN
 #include <QtNetwork/QHttpMultiPart>
 #endif
 
-HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
+HB_FUNC_STATIC(QHTTPMULTIPART_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QHttpMultiPart( QObject * parent = nullptr )
+    QHttpMultiPart(QObject * parent = nullptr)
     */
-    auto obj = new QHttpMultiPart( OPQOBJECT( 1, nullptr));
+    auto obj = new QHttpMultiPart(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QHttpMultiPart( QHttpMultiPart::ContentType contentType, QObject * parent = nullptr )
+    QHttpMultiPart(QHttpMultiPart::ContentType contentType, QObject * parent = nullptr)
     */
-    auto obj = new QHttpMultiPart(static_cast<QHttpMultiPart::ContentType>(hb_parni(1)), OPQOBJECT( 2, nullptr));
+    auto obj = new QHttpMultiPart(static_cast<QHttpMultiPart::ContentType>(hb_parni(1)), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 /*
 ~QHttpMultiPart()
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_DELETE )
+HB_FUNC_STATIC(QHTTPMULTIPART_DELETE)
 {
   auto obj = qobject_cast<QHttpMultiPart*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -101,9 +101,9 @@ HB_FUNC_STATIC( QHTTPMULTIPART_DELETE )
 }
 
 /*
-void append( const QHttpPart & httpPart )
+void append(const QHttpPart & httpPart)
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
+HB_FUNC_STATIC(QHTTPMULTIPART_APPEND)
 {
   auto obj = qobject_cast<QHttpMultiPart*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
 /*
 QByteArray boundary() const
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
+HB_FUNC_STATIC(QHTTPMULTIPART_BOUNDARY)
 {
   auto obj = qobject_cast<QHttpMultiPart*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -152,9 +152,9 @@ HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
 }
 
 /*
-void setBoundary( const QByteArray & boundary )
+void setBoundary(const QByteArray & boundary)
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
+HB_FUNC_STATIC(QHTTPMULTIPART_SETBOUNDARY)
 {
   auto obj = qobject_cast<QHttpMultiPart*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -178,9 +178,9 @@ HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
 }
 
 /*
-void setContentType( QHttpMultiPart::ContentType contentType )
+void setContentType(QHttpMultiPart::ContentType contentType)
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_SETCONTENTTYPE )
+HB_FUNC_STATIC(QHTTPMULTIPART_SETCONTENTTYPE)
 {
   auto obj = qobject_cast<QHttpMultiPart*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

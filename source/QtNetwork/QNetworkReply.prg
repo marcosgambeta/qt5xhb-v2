@@ -89,7 +89,7 @@ RETURN
 /*
 ~QNetworkReply()
 */
-HB_FUNC_STATIC( QNETWORKREPLY_DELETE )
+HB_FUNC_STATIC(QNETWORKREPLY_DELETE)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_DELETE )
 /*
 virtual void close() Q_DECL_OVERRIDE
 */
-HB_FUNC_STATIC( QNETWORKREPLY_CLOSE )
+HB_FUNC_STATIC(QNETWORKREPLY_CLOSE)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_CLOSE )
 /*
 virtual bool isSequential() const Q_DECL_OVERRIDE
 */
-HB_FUNC_STATIC( QNETWORKREPLY_ISSEQUENTIAL )
+HB_FUNC_STATIC(QNETWORKREPLY_ISSEQUENTIAL)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISSEQUENTIAL )
 /*
 qint64 readBufferSize() const
 */
-HB_FUNC_STATIC( QNETWORKREPLY_READBUFFERSIZE )
+HB_FUNC_STATIC(QNETWORKREPLY_READBUFFERSIZE)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -182,9 +182,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_READBUFFERSIZE )
 }
 
 /*
-virtual void setReadBufferSize( qint64 size )
+virtual void setReadBufferSize(qint64 size)
 */
-HB_FUNC_STATIC( QNETWORKREPLY_SETREADBUFFERSIZE )
+HB_FUNC_STATIC(QNETWORKREPLY_SETREADBUFFERSIZE)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SETREADBUFFERSIZE )
 /*
 QNetworkAccessManager * manager() const
 */
-HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
+HB_FUNC_STATIC(QNETWORKREPLY_MANAGER)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
 /*
 QNetworkAccessManager::Operation operation() const
 */
-HB_FUNC_STATIC( QNETWORKREPLY_OPERATION )
+HB_FUNC_STATIC(QNETWORKREPLY_OPERATION)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_OPERATION )
 /*
 QNetworkRequest request() const
 */
-HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
+HB_FUNC_STATIC(QNETWORKREPLY_REQUEST)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
 /*
 QNetworkReply::NetworkError error() const
 */
-HB_FUNC_STATIC( QNETWORKREPLY_ERROR )
+HB_FUNC_STATIC(QNETWORKREPLY_ERROR)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ERROR )
 /*
 bool isFinished() const
 */
-HB_FUNC_STATIC( QNETWORKREPLY_ISFINISHED )
+HB_FUNC_STATIC(QNETWORKREPLY_ISFINISHED)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISFINISHED )
 /*
 bool isRunning() const
 */
-HB_FUNC_STATIC( QNETWORKREPLY_ISRUNNING )
+HB_FUNC_STATIC(QNETWORKREPLY_ISRUNNING)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISRUNNING )
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QNETWORKREPLY_URL )
+HB_FUNC_STATIC(QNETWORKREPLY_URL)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -379,9 +379,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_URL )
 }
 
 /*
-QVariant header( QNetworkRequest::KnownHeaders header ) const
+QVariant header(QNetworkRequest::KnownHeaders header) const
 */
-HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
+HB_FUNC_STATIC(QNETWORKREPLY_HEADER)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -404,9 +404,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
 }
 
 /*
-bool hasRawHeader( const QByteArray & headerName ) const
+bool hasRawHeader(const QByteArray & headerName) const
 */
-HB_FUNC_STATIC( QNETWORKREPLY_HASRAWHEADER )
+HB_FUNC_STATIC(QNETWORKREPLY_HASRAWHEADER)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_HASRAWHEADER )
 /*
 QList<QByteArray> rawHeaderList() const
 */
-HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
+HB_FUNC_STATIC(QNETWORKREPLY_RAWHEADERLIST)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -478,9 +478,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
 }
 
 /*
-QByteArray rawHeader( const QByteArray & headerName ) const
+QByteArray rawHeader(const QByteArray & headerName) const
 */
-HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADER )
+HB_FUNC_STATIC(QNETWORKREPLY_RAWHEADER)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -506,9 +506,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADER )
 const QList<RawHeaderPair>& rawHeaderPairs() const;
 */
 /*
-QVariant attribute( QNetworkRequest::Attribute code ) const
+QVariant attribute(QNetworkRequest::Attribute code) const
 */
-HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
+HB_FUNC_STATIC(QNETWORKREPLY_ATTRIBUTE)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
 /*
 QSslConfiguration sslConfiguration() const
 */
-HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
+HB_FUNC_STATIC(QNETWORKREPLY_SSLCONFIGURATION)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -556,9 +556,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
 }
 
 /*
-void setSslConfiguration( const QSslConfiguration & configuration )
+void setSslConfiguration(const QSslConfiguration & configuration)
 */
-HB_FUNC_STATIC( QNETWORKREPLY_SETSSLCONFIGURATION )
+HB_FUNC_STATIC(QNETWORKREPLY_SETSSLCONFIGURATION)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SETSSLCONFIGURATION )
 /*
 virtual void abort() = 0
 */
-HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
+HB_FUNC_STATIC(QNETWORKREPLY_ABORT)
 {
   auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -607,12 +607,12 @@ HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
+HB_FUNC_STATIC(QNETWORKREPLY_IGNORESSLERRORS)
 {
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void ignoreSslErrors( const QList<QSslError> & errors )
+    void ignoreSslErrors(const QList<QSslError> & errors)
     */
     auto obj = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -653,9 +653,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
 }
 
 /*
-void downloadProgress( qint64 bytesReceived, qint64 bytesTotal )
+void downloadProgress(qint64 bytesReceived, qint64 bytesTotal)
 */
-HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
+HB_FUNC_STATIC(QNETWORKREPLY_ONDOWNLOADPROGRESS)
 {
   auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -679,8 +679,8 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKREPLY");
-            auto pArg1 = hb_itemPutNLL( nullptr, arg1);
-            auto pArg2 = hb_itemPutNLL( nullptr, arg2);
+            auto pArg1 = hb_itemPutNLL(nullptr, arg1);
+            auto pArg2 = hb_itemPutNLL(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -705,9 +705,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
 }
 
 /*
-void error( QNetworkReply::NetworkError code )
+void error(QNetworkReply::NetworkError code)
 */
-HB_FUNC_STATIC( QNETWORKREPLY_ONERROR )
+HB_FUNC_STATIC(QNETWORKREPLY_ONERROR)
 {
   auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONERROR )
 /*
 void finished()
 */
-HB_FUNC_STATIC( QNETWORKREPLY_ONFINISHED )
+HB_FUNC_STATIC(QNETWORKREPLY_ONFINISHED)
 {
   auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONFINISHED )
 /*
 void metaDataChanged()
 */
-HB_FUNC_STATIC( QNETWORKREPLY_ONMETADATACHANGED )
+HB_FUNC_STATIC(QNETWORKREPLY_ONMETADATACHANGED)
 {
   auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -851,9 +851,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONMETADATACHANGED )
 }
 
 /*
-void uploadProgress( qint64 bytesSent, qint64 bytesTotal )
+void uploadProgress(qint64 bytesSent, qint64 bytesTotal)
 */
-HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
+HB_FUNC_STATIC(QNETWORKREPLY_ONUPLOADPROGRESS)
 {
   auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -877,8 +877,8 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKREPLY");
-            auto pArg1 = hb_itemPutNLL( nullptr, arg1);
-            auto pArg2 = hb_itemPutNLL( nullptr, arg2);
+            auto pArg1 = hb_itemPutNLL(nullptr, arg1);
+            auto pArg2 = hb_itemPutNLL(nullptr, arg2);
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -905,7 +905,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
 /*
 void encrypted()
 */
-HB_FUNC_STATIC( QNETWORKREPLY_ONENCRYPTED )
+HB_FUNC_STATIC(QNETWORKREPLY_ONENCRYPTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -955,9 +955,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONENCRYPTED )
 }
 
 /*
-void sslErrors( const QList<QSslError> & errors )
+void sslErrors(const QList<QSslError> & errors)
 */
-HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
+HB_FUNC_STATIC(QNETWORKREPLY_ONSSLERRORS)
 {
   auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1026,9 +1026,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
 }
 
 /*
-void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
+void preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator * authenticator)
 */
-HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
+HB_FUNC_STATIC(QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1053,7 +1053,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKREPLY");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QSSLPRESHAREDKEYAUTHENTICATOR");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) arg1, "QSSLPRESHAREDKEYAUTHENTICATOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1080,9 +1080,9 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 }
 
 /*
-void redirected( const QUrl & url )
+void redirected(const QUrl & url)
 */
-HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
+HB_FUNC_STATIC(QNETWORKREPLY_ONREDIRECTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
   auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKREPLY");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QURL");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QURL");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
@@ -1136,7 +1136,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
 /*
 void redirectAllowed()
 */
-HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTALLOWED )
+HB_FUNC_STATIC(QNETWORKREPLY_ONREDIRECTALLOWED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   auto sender = qobject_cast<QNetworkReply*>(Qt5xHb::getQObjectPointerFromSelfItem());

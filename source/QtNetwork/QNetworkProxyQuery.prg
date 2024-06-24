@@ -75,7 +75,7 @@ RETURN
 #include <QtCore/QUrl>
 #include <QtNetwork/QNetworkConfiguration>
 
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -89,61 +89,61 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
   else if (ISBETWEEN(1, 2) && ISQURL(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QNetworkProxyQuery( const QUrl & requestUrl, QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::UrlRequest )
+    QNetworkProxyQuery(const QUrl & requestUrl, QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::UrlRequest)
     */
-    auto obj = new QNetworkProxyQuery(*PQURL(1), HB_ISNIL(2) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::UrlRequest ) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(2)));
+    auto obj = new QNetworkProxyQuery(*PQURL(1), HB_ISNIL(2) ? static_cast<QNetworkProxyQuery::QueryType >(QNetworkProxyQuery::UrlRequest) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
   else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    QNetworkProxyQuery( const QString & hostname, int port, const QString & protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpSocket )
+    QNetworkProxyQuery(const QString & hostname, int port, const QString & protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpSocket)
     */
-    auto obj = new QNetworkProxyQuery(PQSTRING(1), PINT(2), OPQSTRING(3, QString() ), HB_ISNIL(4) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::TcpSocket ) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(4)));
+    auto obj = new QNetworkProxyQuery(PQSTRING(1), PINT(2), OPQSTRING(3, QString()), HB_ISNIL(4) ? static_cast<QNetworkProxyQuery::QueryType >(QNetworkProxyQuery::TcpSocket) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
   else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QNetworkProxyQuery( quint16 bindPort, const QString & protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpServer )
+    QNetworkProxyQuery(quint16 bindPort, const QString & protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpServer)
     */
-    auto obj = new QNetworkProxyQuery(PQUINT16(1), OPQSTRING(2, QString() ), HB_ISNIL(3) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::TcpServer ) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(3)));
+    auto obj = new QNetworkProxyQuery(PQUINT16(1), OPQSTRING(2, QString()), HB_ISNIL(3) ? static_cast<QNetworkProxyQuery::QueryType >(QNetworkProxyQuery::TcpServer) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
   else if (ISBETWEEN(2, 3) && ISQNETWORKCONFIGURATION(1) && ISQURL(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QNetworkProxyQuery( const QNetworkConfiguration & networkConfiguration, const QUrl & requestUrl, QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::UrlRequest )
+    QNetworkProxyQuery(const QNetworkConfiguration & networkConfiguration, const QUrl & requestUrl, QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::UrlRequest)
     */
-    auto obj = new QNetworkProxyQuery(*PQNETWORKCONFIGURATION(1), *PQURL(2), HB_ISNIL(3) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::UrlRequest ) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(3)));
+    auto obj = new QNetworkProxyQuery(*PQNETWORKCONFIGURATION(1), *PQURL(2), HB_ISNIL(3) ? static_cast<QNetworkProxyQuery::QueryType >(QNetworkProxyQuery::UrlRequest) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
   else if (ISBETWEEN(3, 5) && ISQNETWORKCONFIGURATION(1) && HB_ISCHAR(2) && HB_ISNUM(3) && (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    QNetworkProxyQuery( const QNetworkConfiguration & networkConfiguration, const QString & hostname, int port, const QString & protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpSocket )
+    QNetworkProxyQuery(const QNetworkConfiguration & networkConfiguration, const QString & hostname, int port, const QString & protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpSocket)
     */
-    auto obj = new QNetworkProxyQuery(*PQNETWORKCONFIGURATION(1), PQSTRING(2), PINT(3), OPQSTRING(4, QString() ), HB_ISNIL(5) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::TcpSocket ) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(5)));
+    auto obj = new QNetworkProxyQuery(*PQNETWORKCONFIGURATION(1), PQSTRING(2), PINT(3), OPQSTRING(4, QString()), HB_ISNIL(5) ? static_cast<QNetworkProxyQuery::QueryType >(QNetworkProxyQuery::TcpSocket) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(5)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
   else if (ISBETWEEN(2, 4) && ISQNETWORKCONFIGURATION(1) && HB_ISNUM(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    QNetworkProxyQuery( const QNetworkConfiguration & networkConfiguration, quint16 bindPort, const QString & protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpServer )
+    QNetworkProxyQuery(const QNetworkConfiguration & networkConfiguration, quint16 bindPort, const QString & protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpServer)
     */
-    auto obj = new QNetworkProxyQuery(*PQNETWORKCONFIGURATION(1), PQUINT16(2), OPQSTRING(3, QString() ), HB_ISNIL(4) ? static_cast<QNetworkProxyQuery::QueryType >( QNetworkProxyQuery::TcpServer ) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(4)));
+    auto obj = new QNetworkProxyQuery(*PQNETWORKCONFIGURATION(1), PQUINT16(2), OPQSTRING(3, QString()), HB_ISNIL(4) ? static_cast<QNetworkProxyQuery::QueryType >(QNetworkProxyQuery::TcpServer) : static_cast<QNetworkProxyQuery::QueryType >(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, true);
 
   }
   else if (ISNUMPAR(1) && ISQNETWORKPROXYQUERY(1))
   {
     /*
-    QNetworkProxyQuery( const QNetworkProxyQuery & other )
+    QNetworkProxyQuery(const QNetworkProxyQuery & other)
     */
     auto obj = new QNetworkProxyQuery(*PQNETWORKPROXYQUERY(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
 /*
 ~QNetworkProxyQuery()
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_DELETE )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_DELETE)
 {
   auto obj = static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_DELETE )
 /*
 int localPort() const
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_LOCALPORT )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_LOCALPORT)
 {
   auto obj = static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_LOCALPORT )
 /*
 QString peerHostName() const
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERHOSTNAME )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_PEERHOSTNAME)
 {
   auto obj = static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERHOSTNAME )
 /*
 int peerPort() const
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERPORT )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_PEERPORT)
 {
   auto obj = static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERPORT )
 /*
 QString protocolTag() const
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_PROTOCOLTAG )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_PROTOCOLTAG)
 {
   auto obj = static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_PROTOCOLTAG )
 /*
 QNetworkProxyQuery::QueryType queryType() const
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_QUERYTYPE )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_QUERYTYPE)
 {
   auto obj = static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -295,9 +295,9 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_QUERYTYPE )
 }
 
 /*
-void setLocalPort( int port )
+void setLocalPort(int port)
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETLOCALPORT )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETLOCALPORT)
 {
   auto obj = static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -321,9 +321,9 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETLOCALPORT )
 }
 
 /*
-void setPeerHostName( const QString & hostname )
+void setPeerHostName(const QString & hostname)
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPEERHOSTNAME )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPEERHOSTNAME)
 {
   auto obj = static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -347,9 +347,9 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPEERHOSTNAME )
 }
 
 /*
-void setPeerPort( int port )
+void setPeerPort(int port)
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPEERPORT )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPEERPORT)
 {
   auto obj = static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -373,9 +373,9 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPEERPORT )
 }
 
 /*
-void setProtocolTag( const QString & protocolTag )
+void setProtocolTag(const QString & protocolTag)
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPROTOCOLTAG )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPROTOCOLTAG)
 {
   auto obj = static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -399,9 +399,9 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPROTOCOLTAG )
 }
 
 /*
-void setQueryType( QNetworkProxyQuery::QueryType type )
+void setQueryType(QNetworkProxyQuery::QueryType type)
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETQUERYTYPE )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETQUERYTYPE)
 {
   auto obj = static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -425,9 +425,9 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETQUERYTYPE )
 }
 
 /*
-void setUrl( const QUrl & url )
+void setUrl(const QUrl & url)
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETURL )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETURL)
 {
   auto obj = static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETURL )
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_URL )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_URL)
 {
   auto obj = static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -476,9 +476,9 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_URL )
 }
 
 /*
-void swap( QNetworkProxyQuery & other ) Q_DECL_NOTHROW
+void swap(QNetworkProxyQuery & other) Q_DECL_NOTHROW
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_SWAP )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_SWAP)
 {
   auto obj = static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SWAP )
 /*
 QNetworkConfiguration networkConfiguration() const
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_NETWORKCONFIGURATION )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_NETWORKCONFIGURATION)
 {
   auto obj = static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -527,9 +527,9 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NETWORKCONFIGURATION )
 }
 
 /*
-void setNetworkConfiguration( const QNetworkConfiguration & networkConfiguration )
+void setNetworkConfiguration(const QNetworkConfiguration & networkConfiguration)
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETNETWORKCONFIGURATION )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETNETWORKCONFIGURATION)
 {
   auto obj = static_cast<QNetworkProxyQuery*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETNETWORKCONFIGURATION )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEWFROM )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -582,22 +582,22 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEWFROMOBJECT )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QNETWORKPROXYQUERY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEWFROMPOINTER )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QNETWORKPROXYQUERY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_SELFDESTRUCTION )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
