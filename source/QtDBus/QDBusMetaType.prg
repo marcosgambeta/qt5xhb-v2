@@ -57,7 +57,7 @@ RETURN
 #include <QtDBus/QDBusMetaType>
 #endif
 
-HB_FUNC_STATIC( QDBUSMETATYPE_DELETE )
+HB_FUNC_STATIC(QDBUSMETATYPE_DELETE)
 {
   auto obj = static_cast<QDBusMetaType*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -74,15 +74,15 @@ HB_FUNC_STATIC( QDBUSMETATYPE_DELETE )
 }
 
 /*
-static bool demarshall( const QDBusArgument &, int id, void * data )
+static bool demarshall(const QDBusArgument &, int id, void * data)
 */
-HB_FUNC_STATIC( QDBUSMETATYPE_DEMARSHALL )
+HB_FUNC_STATIC(QDBUSMETATYPE_DEMARSHALL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(3) && ISQDBUSARGUMENT(1) && HB_ISNUM(2) && HB_ISPOINTER(3))
   {
 #endif
-    RBOOL( QDBusMetaType::demarshall(*PQDBUSARGUMENT(1), PINT(2), static_cast< void*>(hb_parptr(3))));
+    RBOOL(QDBusMetaType::demarshall(*PQDBUSARGUMENT(1), PINT(2), static_cast< void*>(hb_parptr(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -93,15 +93,15 @@ HB_FUNC_STATIC( QDBUSMETATYPE_DEMARSHALL )
 }
 
 /*
-static int signatureToType( const char * signature )
+static int signatureToType(const char * signature)
 */
-HB_FUNC_STATIC( QDBUSMETATYPE_SIGNATURETOTYPE )
+HB_FUNC_STATIC(QDBUSMETATYPE_SIGNATURETOTYPE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    RINT( QDBusMetaType::signatureToType(PCONSTCHAR(1)));
+    RINT(QDBusMetaType::signatureToType(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -112,15 +112,15 @@ HB_FUNC_STATIC( QDBUSMETATYPE_SIGNATURETOTYPE )
 }
 
 /*
-static const char * typeToSignature( int type )
+static const char * typeToSignature(int type)
 */
-HB_FUNC_STATIC( QDBUSMETATYPE_TYPETOSIGNATURE )
+HB_FUNC_STATIC(QDBUSMETATYPE_TYPETOSIGNATURE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    hb_retc(static_cast< const char*>( QDBusMetaType::typeToSignature(PINT(1))));
+    hb_retc(static_cast< const char*>(QDBusMetaType::typeToSignature(PINT(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QDBUSMETATYPE_TYPETOSIGNATURE )
 #endif
 }
 
-HB_FUNC_STATIC( QDBUSMETATYPE_NEWFROM )
+HB_FUNC_STATIC(QDBUSMETATYPE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -160,22 +160,22 @@ HB_FUNC_STATIC( QDBUSMETATYPE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDBUSMETATYPE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDBUSMETATYPE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QDBUSMETATYPE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDBUSMETATYPE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDBUSMETATYPE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QDBUSMETATYPE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDBUSMETATYPE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDBUSMETATYPE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDBUSMETATYPE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDBUSMETATYPE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

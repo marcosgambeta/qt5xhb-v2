@@ -54,7 +54,7 @@ RETURN
 /*
 virtual ~QDBusVirtualObject()
 */
-HB_FUNC_STATIC( QDBUSVIRTUALOBJECT_DELETE )
+HB_FUNC_STATIC(QDBUSVIRTUALOBJECT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = qobject_cast<QDBusVirtualObject*>(Qt5xHb::getQObjectPointerFromSelfItem());

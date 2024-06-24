@@ -69,7 +69,7 @@ RETURN
 #include <QtDBus/QDBusArgument>
 #endif
 
-HB_FUNC_STATIC( QDBUSARGUMENT_NEW )
+HB_FUNC_STATIC(QDBUSARGUMENT_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_NEW )
   else if (ISNUMPAR(1) && ISQDBUSARGUMENT(1))
   {
     /*
-    QDBusArgument( const QDBusArgument & other )
+    QDBusArgument(const QDBusArgument & other)
     */
     auto obj = new QDBusArgument(*PQDBUSARGUMENT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDBUSARGUMENT_DELETE )
+HB_FUNC_STATIC(QDBUSARGUMENT_DELETE)
 {
   auto obj = static_cast<QDBusArgument*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_DELETE )
 /*
 void beginStructure()
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_BEGINSTRUCTURE )
+HB_FUNC_STATIC(QDBUSARGUMENT_BEGINSTRUCTURE)
 {
   auto obj = static_cast<QDBusArgument*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINSTRUCTURE )
 /*
 void endStructure()
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_ENDSTRUCTURE )
+HB_FUNC_STATIC(QDBUSARGUMENT_ENDSTRUCTURE)
 {
   auto obj = static_cast<QDBusArgument*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -163,12 +163,12 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDSTRUCTURE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY )
+HB_FUNC_STATIC(QDBUSARGUMENT_BEGINARRAY)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void beginArray( int elementMetaTypeId )
+    void beginArray(int elementMetaTypeId)
     */
     auto obj = static_cast<QDBusArgument*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY )
 /*
 void endArray()
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_ENDARRAY )
+HB_FUNC_STATIC(QDBUSARGUMENT_ENDARRAY)
 {
   auto obj = static_cast<QDBusArgument*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -227,12 +227,12 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDARRAY )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP )
+HB_FUNC_STATIC(QDBUSARGUMENT_BEGINMAP)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    void beginMap( int keyMetaTypeId, int valueMetaTypeId )
+    void beginMap(int keyMetaTypeId, int valueMetaTypeId)
     */
     auto obj = static_cast<QDBusArgument*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP )
 /*
 void endMap()
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_ENDMAP )
+HB_FUNC_STATIC(QDBUSARGUMENT_ENDMAP)
 {
   auto obj = static_cast<QDBusArgument*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDMAP )
 /*
 void beginMapEntry()
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAPENTRY )
+HB_FUNC_STATIC(QDBUSARGUMENT_BEGINMAPENTRY)
 {
   auto obj = static_cast<QDBusArgument*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAPENTRY )
 /*
 void endMapEntry()
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_ENDMAPENTRY )
+HB_FUNC_STATIC(QDBUSARGUMENT_ENDMAPENTRY)
 {
   auto obj = static_cast<QDBusArgument*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -344,9 +344,9 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDMAPENTRY )
 }
 
 /*
-void appendVariant( const QVariant & v )
+void appendVariant(const QVariant & v)
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_APPENDVARIANT )
+HB_FUNC_STATIC(QDBUSARGUMENT_APPENDVARIANT)
 {
   auto obj = static_cast<QDBusArgument*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_APPENDVARIANT )
 /*
 QString currentSignature() const
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTSIGNATURE )
+HB_FUNC_STATIC(QDBUSARGUMENT_CURRENTSIGNATURE)
 {
   auto obj = static_cast<QDBusArgument*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTSIGNATURE )
 /*
 QDBusArgument::ElementType currentType() const
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTTYPE )
+HB_FUNC_STATIC(QDBUSARGUMENT_CURRENTTYPE)
 {
   auto obj = static_cast<QDBusArgument*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTTYPE )
 /*
 bool atEnd() const
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_ATEND )
+HB_FUNC_STATIC(QDBUSARGUMENT_ATEND)
 {
   auto obj = static_cast<QDBusArgument*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ATEND )
 /*
 QVariant asVariant() const
 */
-HB_FUNC_STATIC( QDBUSARGUMENT_ASVARIANT )
+HB_FUNC_STATIC(QDBUSARGUMENT_ASVARIANT)
 {
   auto obj = static_cast<QDBusArgument*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ASVARIANT )
   }
 }
 
-HB_FUNC_STATIC( QDBUSARGUMENT_NEWFROM )
+HB_FUNC_STATIC(QDBUSARGUMENT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -496,22 +496,22 @@ HB_FUNC_STATIC( QDBUSARGUMENT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDBUSARGUMENT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDBUSARGUMENT_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QDBUSARGUMENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDBUSARGUMENT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDBUSARGUMENT_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QDBUSARGUMENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDBUSARGUMENT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDBUSARGUMENT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDBUSARGUMENT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDBUSARGUMENT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

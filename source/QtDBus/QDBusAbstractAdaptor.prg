@@ -47,7 +47,7 @@ RETURN
 #include <QtDBus/QDBusAbstractAdaptor>
 #endif
 
-HB_FUNC_STATIC( QDBUSABSTRACTADAPTOR_DELETE )
+HB_FUNC_STATIC(QDBUSABSTRACTADAPTOR_DELETE)
 {
   auto obj = qobject_cast<QDBusAbstractAdaptor*>(Qt5xHb::getQObjectPointerFromSelfItem());
 

@@ -63,40 +63,40 @@ RETURN
 /*
 QDBusObjectPath()
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW1 )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_NEW1)
 {
   auto obj = new QDBusObjectPath();
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
-QDBusObjectPath( const char * path )
+QDBusObjectPath(const char * path)
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW2 )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_NEW2)
 {
   auto obj = new QDBusObjectPath(PCONSTCHAR(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
-QDBusObjectPath( QLatin1String path )
+QDBusObjectPath(QLatin1String path)
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW3 )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_NEW3)
 {
   auto obj = new QDBusObjectPath(*PQLATIN1STRING(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
-QDBusObjectPath( const QString & path )
+QDBusObjectPath(const QString & path)
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW4 )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_NEW4)
 {
   auto obj = new QDBusObjectPath(PQSTRING(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
-HB_FUNC( QDBUSOBJECTPATH_NEW )
+HB_FUNC(QDBUSOBJECTPATH_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -120,7 +120,7 @@ HB_FUNC( QDBUSOBJECTPATH_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDBUSOBJECTPATH_DELETE )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_DELETE)
 {
   auto obj = static_cast<QDBusObjectPath*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_DELETE )
 /*
 QString path() const
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_PATH )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_PATH)
 {
   auto obj = static_cast<QDBusObjectPath*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -161,9 +161,9 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_PATH )
 }
 
 /*
-void setPath( const QString & path )
+void setPath(const QString & path)
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_SETPATH )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_SETPATH)
 {
   auto obj = static_cast<QDBusObjectPath*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_SETPATH )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEWFROM )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -216,22 +216,22 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QDBUSOBJECTPATH_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QDBUSOBJECTPATH_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDBUSOBJECTPATH_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDBUSOBJECTPATH_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

@@ -56,23 +56,23 @@ RETURN
 
 #include <QtDBus/QDBusError>
 
-HB_FUNC_STATIC( QDBUSSERVER_NEW )
+HB_FUNC_STATIC(QDBUSSERVER_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QDBusServer( const QString & address, QObject * parent = nullptr )
+    QDBusServer(const QString & address, QObject * parent = nullptr)
     */
-    auto obj = new QDBusServer(PQSTRING(1), OPQOBJECT( 2, nullptr));
+    auto obj = new QDBusServer(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
   else if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QDBusServer( QObject * parent = nullptr )
+    QDBusServer(QObject * parent = nullptr)
     */
-    auto obj = new QDBusServer( OPQOBJECT( 1, nullptr));
+    auto obj = new QDBusServer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   }
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QDBUSSERVER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDBUSSERVER_DELETE )
+HB_FUNC_STATIC(QDBUSSERVER_DELETE)
 {
   auto obj = qobject_cast<QDBusServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QDBUSSERVER_DELETE )
 /*
 bool isConnected() const
 */
-HB_FUNC_STATIC( QDBUSSERVER_ISCONNECTED )
+HB_FUNC_STATIC(QDBUSSERVER_ISCONNECTED)
 {
   auto obj = qobject_cast<QDBusServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QDBUSSERVER_ISCONNECTED )
 /*
 QDBusError lastError() const
 */
-HB_FUNC_STATIC( QDBUSSERVER_LASTERROR )
+HB_FUNC_STATIC(QDBUSSERVER_LASTERROR)
 {
   auto obj = qobject_cast<QDBusServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QDBUSSERVER_LASTERROR )
 /*
 QString address() const
 */
-HB_FUNC_STATIC( QDBUSSERVER_ADDRESS )
+HB_FUNC_STATIC(QDBUSSERVER_ADDRESS)
 {
   auto obj = qobject_cast<QDBusServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -174,9 +174,9 @@ HB_FUNC_STATIC( QDBUSSERVER_ADDRESS )
 }
 
 /*
-void newConnection( const QDBusConnection & connection )
+void newConnection(const QDBusConnection & connection)
 */
-HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
+HB_FUNC_STATIC(QDBUSSERVER_ONNEWCONNECTION)
 {
   auto sender = qobject_cast<QDBusServer*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDBUSSERVER");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QDBUSCONNECTION");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QDBUSCONNECTION");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);

@@ -64,40 +64,40 @@ RETURN
 /*
 QDBusSignature()
 */
-HB_FUNC_STATIC( QDBUSSIGNATURE_NEW1 )
+HB_FUNC_STATIC(QDBUSSIGNATURE_NEW1)
 {
   auto obj = new QDBusSignature();
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
-QDBusSignature( const char * signature )
+QDBusSignature(const char * signature)
 */
-HB_FUNC_STATIC( QDBUSSIGNATURE_NEW2 )
+HB_FUNC_STATIC(QDBUSSIGNATURE_NEW2)
 {
   auto obj = new QDBusSignature(PCONSTCHAR(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
-QDBusSignature( QLatin1String signature )
+QDBusSignature(QLatin1String signature)
 */
-HB_FUNC_STATIC( QDBUSSIGNATURE_NEW3 )
+HB_FUNC_STATIC(QDBUSSIGNATURE_NEW3)
 {
   auto obj = new QDBusSignature(*PQLATIN1STRING(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
-QDBusSignature( const QString & signature )
+QDBusSignature(const QString & signature)
 */
-HB_FUNC_STATIC( QDBUSSIGNATURE_NEW4 )
+HB_FUNC_STATIC(QDBUSSIGNATURE_NEW4)
 {
   auto obj = new QDBusSignature(PQSTRING(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
-HB_FUNC( QDBUSSIGNATURE_NEW )
+HB_FUNC(QDBUSSIGNATURE_NEW)
 {
   if (ISNUMPAR(0))
   {
@@ -121,7 +121,7 @@ HB_FUNC( QDBUSSIGNATURE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDBUSSIGNATURE_DELETE )
+HB_FUNC_STATIC(QDBUSSIGNATURE_DELETE)
 {
   auto obj = static_cast<QDBusSignature*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_DELETE )
 /*
 QString signature() const
 */
-HB_FUNC_STATIC( QDBUSSIGNATURE_SIGNATURE )
+HB_FUNC_STATIC(QDBUSSIGNATURE_SIGNATURE)
 {
   auto obj = static_cast<QDBusSignature*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -162,9 +162,9 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_SIGNATURE )
 }
 
 /*
-void setSignature( const QString & signature )
+void setSignature(const QString & signature)
 */
-HB_FUNC_STATIC( QDBUSSIGNATURE_SETSIGNATURE )
+HB_FUNC_STATIC(QDBUSSIGNATURE_SETSIGNATURE)
 {
   auto obj = static_cast<QDBusSignature*>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_SETSIGNATURE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QDBUSSIGNATURE_NEWFROM )
+HB_FUNC_STATIC(QDBUSSIGNATURE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
@@ -217,22 +217,22 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDBUSSIGNATURE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDBUSSIGNATURE_NEWFROMOBJECT)
 {
   HB_FUNC_EXEC(QDBUSSIGNATURE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDBUSSIGNATURE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDBUSSIGNATURE_NEWFROMPOINTER)
 {
   HB_FUNC_EXEC(QDBUSSIGNATURE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDBUSSIGNATURE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDBUSSIGNATURE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDBUSSIGNATURE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDBUSSIGNATURE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 

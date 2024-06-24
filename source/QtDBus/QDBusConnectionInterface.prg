@@ -51,9 +51,9 @@ RETURN
 #endif
 
 /*
-void serviceRegistered( const QString & service )
+void serviceRegistered(const QString & service)
 */
-HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED )
+HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED)
 {
   auto sender = qobject_cast<QDBusConnectionInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -101,9 +101,9 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED )
 }
 
 /*
-void serviceUnregistered( const QString & service )
+void serviceUnregistered(const QString & service)
 */
-HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED )
+HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED)
 {
   auto sender = qobject_cast<QDBusConnectionInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -151,9 +151,9 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED )
 }
 
 /*
-void serviceOwnerChanged( const QString & name, const QString & oldOwner, const QString & newOwner )
+void serviceOwnerChanged(const QString & name, const QString & oldOwner, const QString & newOwner)
 */
-HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED )
+HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED)
 {
   auto sender = qobject_cast<QDBusConnectionInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -205,9 +205,9 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED )
 }
 
 /*
-void callWithCallbackFailed( const QDBusError & error, const QDBusMessage & call )
+void callWithCallbackFailed(const QDBusError & error, const QDBusMessage & call)
 */
-HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED )
+HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED)
 {
   auto sender = qobject_cast<QDBusConnectionInterface*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -231,8 +231,8 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED )
           if (cb != nullptr)
           {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDBUSCONNECTIONINTERFACE");
-            auto pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QDBUSERROR");
-            auto pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QDBUSMESSAGE");
+            auto pArg1 = Qt5xHb::Signals_return_object((void *) &arg1, "QDBUSERROR");
+            auto pArg2 = Qt5xHb::Signals_return_object((void *) &arg2, "QDBUSMESSAGE");
             hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
             hb_itemRelease(pSender);
             hb_itemRelease(pArg1);
