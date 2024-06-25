@@ -6,6 +6,8 @@
 
 */
 
+// clang-format off
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -35,6 +37,8 @@ PROCEDURE destroyObject() CLASS HUiLoader
    ENDIF
 RETURN
 
+// clang-format on
+
 #pragma BEGINDUMP
 
 #include "HUiLoader.hpp"
@@ -45,14 +49,14 @@ RETURN
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-/*
-HUiLoader(QObject *parent = nullptr)
-*/
+    /*
+    HUiLoader(QObject *parent = nullptr)
+    */
 HB_FUNC_STATIC(HUILOADER_NEW)
 {
-  if (ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    auto obj = new HUiLoader(OPQOBJECT(1,nullptr));
+    auto obj = new HUiLoader(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -66,7 +70,7 @@ HB_FUNC_STATIC(HUILOADER_NEW)
 */
 HB_FUNC_STATIC(HUILOADER_DELETE)
 {
-  auto obj = (HUiLoader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HUiLoader *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {
@@ -103,7 +107,7 @@ void setCreateActionCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONCB)
 {
-  auto obj = (HUiLoader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HUiLoader *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {
@@ -129,7 +133,7 @@ void setCreateActionGroupCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONGROUPCB)
 {
-  auto obj = (HUiLoader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HUiLoader *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {
@@ -155,7 +159,7 @@ void setCreateLayoutCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HUILOADER_SETCREATELAYOUTCB)
 {
-  auto obj = (HUiLoader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HUiLoader *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {
@@ -181,7 +185,7 @@ void setCreateWidgetCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HUILOADER_SETCREATEWIDGETCB)
 {
-  auto obj = (HUiLoader *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HUiLoader *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {
