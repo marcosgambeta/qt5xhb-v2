@@ -6,6 +6,8 @@
 
 */
 
+// clang-format off
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -30,6 +32,8 @@ PROCEDURE destroyObject() CLASS HHeaderView
    ENDIF
 RETURN
 
+// clang-format on
+
 #pragma BEGINDUMP
 
 #include "HHeaderView.hpp"
@@ -40,14 +44,14 @@ RETURN
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-/*
-HHeaderView(Qt::Orientation orientation, QWidget *parent = nullptr)
-*/
+    /*
+    HHeaderView(Qt::Orientation orientation, QWidget *parent = nullptr)
+    */
 HB_FUNC_STATIC(HHEADERVIEW_NEW)
 {
-  if (ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQWIDGET(2)||HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
-    auto obj = new HHeaderView((Qt::Orientation) hb_parni(1), OPQWIDGET(2,nullptr));
+    auto obj = new HHeaderView((Qt::Orientation)hb_parni(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -58,7 +62,7 @@ HB_FUNC_STATIC(HHEADERVIEW_NEW)
 
 HB_FUNC_STATIC(HHEADERVIEW_DELETE)
 {
-  auto obj = (HHeaderView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HHeaderView *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {
@@ -83,7 +87,7 @@ void setPaintSectionCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HHEADERVIEW_SETPAINTSECTIONCB)
 {
-  auto obj = (HHeaderView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HHeaderView *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {

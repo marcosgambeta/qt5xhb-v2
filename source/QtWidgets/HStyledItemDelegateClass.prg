@@ -6,6 +6,8 @@
 
 */
 
+// clang-format off
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -43,6 +45,8 @@ PROCEDURE destroyObject() CLASS HStyledItemDelegate
    ENDIF
 RETURN
 
+// clang-format on
+
 #pragma BEGINDUMP
 
 #include "HStyledItemDelegate.hpp"
@@ -53,12 +57,12 @@ RETURN
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-/*
-explicit HStyledItemDelegate(QObject *parent = nullptr)
-*/
-void HStyledItemDelegate_new1()
+    /*
+    explicit HStyledItemDelegate(QObject *parent = nullptr)
+    */
+    void HStyledItemDelegate_new1()
 {
-  auto obj = new HStyledItemDelegate(OPQOBJECT(1,nullptr));
+  auto obj = new HStyledItemDelegate(OPQOBJECT(1, nullptr));
   Qt5xHb::returnNewObject(obj, false);
 }
 
@@ -67,7 +71,7 @@ HStyledItemDelegate(PHB_ITEM paintBlock, QObject *parent = nullptr)
 */
 void HStyledItemDelegate_new2()
 {
-  auto obj = new HStyledItemDelegate(PBLOCKORSYMBOL(1), OPQOBJECT(2,nullptr));
+  auto obj = new HStyledItemDelegate(PBLOCKORSYMBOL(1), OPQOBJECT(2, nullptr));
   Qt5xHb::returnNewObject(obj, false);
 }
 
@@ -76,7 +80,7 @@ HStyledItemDelegate(PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent
 */
 void HStyledItemDelegate_new3()
 {
-  auto obj = new HStyledItemDelegate(PBLOCKORSYMBOL(1), PBLOCKORSYMBOL(2), OPQOBJECT(3,nullptr));
+  auto obj = new HStyledItemDelegate(PBLOCKORSYMBOL(1), PBLOCKORSYMBOL(2), OPQOBJECT(3, nullptr));
   Qt5xHb::returnNewObject(obj, false);
 }
 
@@ -88,15 +92,15 @@ void HStyledItemDelegate_new3()
 
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_NEW)
 {
-  if (ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     HStyledItemDelegate_new1();
   }
-  else if (ISBETWEEN(1,2) && (ISQOBJECT(2)||HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     HStyledItemDelegate_new2();
   }
-  else if (ISBETWEEN(2,3) && (ISQOBJECT(3)||HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     HStyledItemDelegate_new3();
   }
@@ -108,7 +112,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_NEW)
 
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DELETE)
 {
-  auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HStyledItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {
@@ -136,7 +140,7 @@ void defaultPaint(QPainter *painter, const QStyleOptionViewItem &option, const Q
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DEFAULTPAINT)
 {
-  auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HStyledItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {
@@ -169,7 +173,7 @@ void setPaintCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETPAINTCB)
 {
-  auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HStyledItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {
@@ -195,7 +199,7 @@ void setSizeHintCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETSIZEHINTCB)
 {
-  auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HStyledItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {
@@ -221,7 +225,7 @@ void setDisplayTextCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB)
 {
-  auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HStyledItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {
@@ -247,7 +251,7 @@ void setCreateEditorCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETCREATEEDITORCB)
 {
-  auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HStyledItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {
@@ -273,7 +277,7 @@ void setEditorDataCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETEDITORDATACB)
 {
-  auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HStyledItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {
@@ -299,7 +303,7 @@ void setModelDataCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETMODELDATACB)
 {
-  auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HStyledItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {
@@ -325,7 +329,7 @@ void setUpdateEditorGeometryCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETUPDATEEDITORGEOMETRYCB)
 {
-  auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HStyledItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {
@@ -351,7 +355,7 @@ void setDestroyEditorCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETDESTROYEDITORCB)
 {
-  auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (HStyledItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != nullptr)
   {
