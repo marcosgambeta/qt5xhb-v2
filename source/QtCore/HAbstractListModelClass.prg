@@ -6,6 +6,8 @@
 
 */
 
+// clang-format off
+
 #include "hbclass.ch"
 
 CLASS HAbstractListModel INHERIT QAbstractListModel
@@ -72,6 +74,8 @@ END CLASS
 CLASS HArrayListModel INHERIT HAbstractListModel
 END CLASS
 
+// clang-format on
+
 #pragma BEGINDUMP
 
 #include "HAbstractListModel.hpp"
@@ -82,9 +86,9 @@ END CLASS
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-/*
-HAbstractListModel(QObject * parent = nullptr)
-*/
+    /*
+    HAbstractListModel(QObject * parent = nullptr)
+    */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -103,7 +107,7 @@ virtual ~HAbstractListModel()
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_DELETE)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -128,7 +132,7 @@ void setRowCountCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETROWCOUNTCB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -158,7 +162,7 @@ void setCB(int role, PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETCB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -184,7 +188,7 @@ void setDisplayRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETDISPLAYROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -210,7 +214,7 @@ void setDecorationRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETDECORATIONROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -236,7 +240,7 @@ void setEditRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETEDITROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -262,7 +266,7 @@ void setToolTipRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETTOOLTIPROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -288,7 +292,7 @@ void setStatusTipRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETSTATUSTIPROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -314,7 +318,7 @@ void setWhatsThisRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETWHATSTHISROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -340,7 +344,7 @@ void setSizeHintRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETSIZEHINTROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -366,7 +370,7 @@ void setFontRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETFONTROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -392,7 +396,7 @@ void setTextAlignmentRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETTEXTALIGNMENTROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -418,7 +422,7 @@ void setBackgroundRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETBACKGROUNDROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -444,7 +448,7 @@ void setForegroundRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETFOREGROUNDROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -470,7 +474,7 @@ void setCheckStateRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETCHECKSTATEROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -496,7 +500,7 @@ void setAcccessibleTextRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETACCESSIBLETEXTROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -522,7 +526,7 @@ void setAcccessibleDescriptionRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETACCESSIBLEDESCRIPTIONROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -552,7 +556,7 @@ void setHorizontalHeaderCB(int role, PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERCB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -578,7 +582,7 @@ void setHorizontalHeaderDisplayRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERDISPLAYROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -604,7 +608,7 @@ void setHorizontalHeaderDecorationRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERDECORATIONROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -630,7 +634,7 @@ void setHorizontalHeaderToolTipRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERTOOLTIPROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -656,7 +660,7 @@ void setHorizontalHeaderSizeHintRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERSIZEHINTROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -682,7 +686,7 @@ void setHorizontalHeaderFontRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERFONTROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -708,7 +712,7 @@ void setHorizontalHeaderTextAlignmentRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERTEXTALIGNMENTROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -734,7 +738,7 @@ void setHorizontalHeaderBackgroundRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERBACKGROUNDROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -760,7 +764,7 @@ void setHorizontalHeaderForegroundRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -790,7 +794,7 @@ void setverticalHeaderCB(int role, PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERCB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -816,7 +820,7 @@ void setVerticalHeaderDisplayRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERDISPLAYROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -842,7 +846,7 @@ void setVerticalHeaderDecorationRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERDECORATIONROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -868,7 +872,7 @@ void setVerticalHeaderToolTipRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERTOOLTIPROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -894,7 +898,7 @@ void setVerticalHeaderSizeHintRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERSIZEHINTROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -920,7 +924,7 @@ void setVerticalHeaderFontRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERFONTROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -946,7 +950,7 @@ void setVerticalHeaderTextAlignmentRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERTEXTALIGNMENTROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -972,7 +976,7 @@ void setVerticalHeaderBackgroundRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERBACKGROUNDROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -998,7 +1002,7 @@ void setVerticalHeaderForegroundRoleCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERFOREGROUNDROLECB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -1024,7 +1028,7 @@ void setFlagsCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETFLAGSCB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -1050,7 +1054,7 @@ void setSetDataCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETSETDATACB)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -1088,7 +1092,7 @@ void reloadData()
 */
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_RELOADDATA)
 {
-  auto obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {

@@ -6,6 +6,8 @@
 
 */
 
+// clang-format off
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -37,6 +39,8 @@ PROCEDURE destroyObject() CLASS HAbstractTableModelV2
    ENDIF
 RETURN
 
+// clang-format on
+
 #pragma BEGINDUMP
 
 #include "HAbstractTableModelV2.hpp"
@@ -47,9 +51,9 @@ RETURN
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-/*
-HAbstractTableModelV2(QObject * parent = nullptr)
-*/
+    /*
+    HAbstractTableModelV2(QObject * parent = nullptr)
+    */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -68,7 +72,7 @@ virtual ~HAbstractTableModelV2()
 */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_DELETE)
 {
-  auto obj = qobject_cast<HAbstractTableModelV2*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractTableModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -89,7 +93,7 @@ void setRowCountCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETROWCOUNTCB)
 {
-  auto obj = qobject_cast<HAbstractTableModelV2*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractTableModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -115,7 +119,7 @@ void setColumnCountCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETCOLUMNCOUNTCB)
 {
-  auto obj = qobject_cast<HAbstractTableModelV2*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractTableModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -141,7 +145,7 @@ void setDataCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETDATACB)
 {
-  auto obj = qobject_cast<HAbstractTableModelV2*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractTableModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -167,7 +171,7 @@ void setHeaderDataCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETHEADERDATACB)
 {
-  auto obj = qobject_cast<HAbstractTableModelV2*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractTableModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -193,7 +197,7 @@ void setFlagsCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETFLAGSCB)
 {
-  auto obj = qobject_cast<HAbstractTableModelV2*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractTableModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -219,7 +223,7 @@ void setSetDataCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETSETDATACB)
 {
-  auto obj = qobject_cast<HAbstractTableModelV2*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractTableModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -269,7 +273,7 @@ void reloadData()
 */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_RELOADDATA)
 {
-  auto obj = qobject_cast<HAbstractTableModelV2*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HAbstractTableModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {

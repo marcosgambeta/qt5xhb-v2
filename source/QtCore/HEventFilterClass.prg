@@ -6,6 +6,8 @@
 
 */
 
+// clang-format off
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -28,6 +30,8 @@ PROCEDURE destroyObject() CLASS HEventFilter
    ENDIF
 RETURN
 
+// clang-format on
+
 #pragma BEGINDUMP
 
 #include "HEventFilter.hpp"
@@ -38,9 +42,9 @@ RETURN
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-/*
-HEventFilter(QObject *parent = nullptr)
-*/
+    /*
+    HEventFilter(QObject *parent = nullptr)
+    */
 HB_FUNC_STATIC(HEVENTFILTER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -59,7 +63,7 @@ HB_FUNC_STATIC(HEVENTFILTER_NEW)
 */
 HB_FUNC_STATIC(HEVENTFILTER_DELETE)
 {
-  auto obj = qobject_cast<HEventFilter*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HEventFilter *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
@@ -80,7 +84,7 @@ void setEventFilterCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HEVENTFILTER_SETEVENTFILTERCB)
 {
-  auto obj = qobject_cast<HEventFilter*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  auto obj = qobject_cast<HEventFilter *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr)
   {
