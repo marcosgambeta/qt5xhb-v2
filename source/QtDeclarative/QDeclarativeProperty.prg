@@ -95,19 +95,8 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEW)
     /*
     QDeclarativeProperty(const QDeclarativeProperty & other)
     */
-    HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEW)
-    {
-      if (ISNUMPAR(1) && ISQDECLARATIVEPROPERTY(1))
-      {
-        auto obj = new QDeclarativeProperty(*PQDECLARATIVEPROPERTY(1));
-        Qt5xHb::returnNewObject(obj, true);
-      }
-      else
-      {
-        hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
-      }
-    }
-
+    auto obj = new QDeclarativeProperty(*PQDECLARATIVEPROPERTY(1));
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQOBJECT(1))
   {
