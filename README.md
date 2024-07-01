@@ -26,7 +26,7 @@ https://github.com/marcosgambeta/qt5xhb-v2/issues
 
 ## To contact the developer
 
-Send you message to: marcosgambeta AT outlook DOT com
+Send your message to: marcosgambeta AT outlook DOT com
 
 ## More info and extra content
 
