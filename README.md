@@ -11,9 +11,18 @@ C++11 or upper
 
 1. Install the Qt Framework 5 of your choice.
 
-2. Download and compile the [x]Harbour of your choice: Harbour 3.2.0dev, Harbour 3.4.0dev (fork) or xHarbour.
+2. Download and compile the [x]Harbour of your choice: Harbour 3.2.0dev, Harbour 3.4.0dev (fork of Viktor Szakats), xHarbour or Harbour++.
+
+https://github.com/harbour/core  
+https://github.com/vszakats/hb  
+https://github.com/xHarbour-org/xharbour  
+https://github.com/marcosgambeta/harbourpp-v1  
 
 3. Download, configure and compile the Qt5xHb v2. 
+
+Open a issue if you have problems with the compilation:
+
+https://github.com/marcosgambeta/qt5xhb-v2/issues  
 
 ## To contact the developer
 
