@@ -57,4 +57,4 @@ public:
   PHB_ITEM returnQObject(QObject *ptr, const char *classname);
 };
 
-#endif /* EVENTS_H */
+#endif // EVENTS_H
