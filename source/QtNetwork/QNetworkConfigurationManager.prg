@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("configurationAdded(QNetworkConfiguration)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -318,6 +318,10 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -337,7 +341,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("configurationChanged(QNetworkConfiguration)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -366,6 +370,10 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -385,7 +393,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("configurationRemoved(QNetworkConfiguration)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -414,6 +422,10 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -433,7 +445,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("onlineStateChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -461,6 +473,10 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -480,7 +496,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("updateCompleted()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -505,6 +521,10 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
