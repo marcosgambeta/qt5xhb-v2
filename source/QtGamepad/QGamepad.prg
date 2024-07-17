@@ -838,7 +838,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONAXISLEFTXCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisLeftXChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -866,6 +866,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONAXISLEFTXCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -889,7 +893,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONAXISLEFTYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisLeftYChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -917,6 +921,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONAXISLEFTYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -940,7 +948,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONAXISRIGHTXCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisRightXChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -968,6 +976,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONAXISRIGHTXCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -991,7 +1003,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONAXISRIGHTYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisRightYChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1019,6 +1031,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONAXISRIGHTYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1042,7 +1058,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONACHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonAChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1069,6 +1085,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONACHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1092,7 +1112,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONBCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonBChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1119,6 +1139,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONBCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1142,7 +1166,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONCENTERCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonCenterChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1170,6 +1194,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONCENTERCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1193,7 +1221,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONDOWNCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonDownChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1220,6 +1248,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONDOWNCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1243,7 +1275,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONGUIDECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonGuideChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1271,6 +1303,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONGUIDECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1294,7 +1330,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONL1CHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonL1Changed(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1321,6 +1357,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONL1CHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1344,7 +1384,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONL2CHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonL2Changed(double)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1371,6 +1411,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONL2CHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1394,7 +1438,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONL3CHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonL3Changed(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1421,6 +1465,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONL3CHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1444,7 +1492,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONLEFTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonLeftChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1471,6 +1519,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONLEFTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1494,7 +1546,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONR1CHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonR1Changed(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1521,6 +1573,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONR1CHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1544,7 +1600,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONR2CHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonR2Changed(double)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1571,6 +1627,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONR2CHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1594,7 +1654,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONR3CHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonR3Changed(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1621,6 +1681,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONR3CHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1644,7 +1708,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONRIGHTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonRightChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1672,6 +1736,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONRIGHTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1695,7 +1763,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONSELECTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonSelectChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1723,6 +1791,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONSELECTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1746,7 +1818,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONSTARTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonStartChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1774,6 +1846,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONSTARTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1797,7 +1873,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONUPCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonUpChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1824,6 +1900,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONUPCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1847,7 +1927,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONXCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonXChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1874,6 +1954,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONXCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1897,7 +1981,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonYChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1924,6 +2008,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1947,7 +2035,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONCONNECTEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("connectedChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1974,6 +2062,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONCONNECTEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1997,7 +2089,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONDEVICEIDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("deviceIdChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2024,6 +2116,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONDEVICEIDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2047,7 +2143,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONNAMECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("nameChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2073,6 +2169,10 @@ HB_FUNC_STATIC(QGAMEPAD_ONNAMECHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
