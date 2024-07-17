@@ -1217,7 +1217,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONAPPLICATIONSTATECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("applicationStateChanged(Qt::ApplicationState)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1245,6 +1245,10 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONAPPLICATIONSTATECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1267,7 +1271,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONCOMMITDATAREQUEST)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("commitDataRequest(QSessionManager)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1295,6 +1299,10 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONCOMMITDATAREQUEST)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1314,7 +1322,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFOCUSOBJECTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("focusObjectChanged(QObject*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1342,6 +1350,10 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFOCUSOBJECTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1361,7 +1373,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFOCUSWINDOWCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("focusWindowChanged(QWindow*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1389,6 +1401,10 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFOCUSWINDOWCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1409,7 +1425,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFONTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("fontChanged(QFont)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1437,6 +1453,10 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFONTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1459,7 +1479,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFONTDATABASECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("fontDatabaseChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1484,6 +1504,10 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFONTDATABASECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1503,7 +1527,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONLASTWINDOWCLOSED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("lastWindowClosed()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1528,6 +1552,10 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONLASTWINDOWCLOSED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1548,7 +1576,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONLAYOUTDIRECTIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("layoutDirectionChanged(Qt::LayoutDirection)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1576,6 +1604,10 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONLAYOUTDIRECTIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1599,7 +1631,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONPALETTECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("paletteChanged(QPalette)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1627,6 +1659,10 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONPALETTECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1650,7 +1686,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONPRIMARYSCREENCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("primaryScreenChanged(QScreen*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1678,6 +1714,10 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONPRIMARYSCREENCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1700,7 +1740,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSAVESTATEREQUEST)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("saveStateRequest(QSessionManager)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1728,6 +1768,10 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSAVESTATEREQUEST)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1747,7 +1791,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSCREENADDED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("screenAdded(QScreen*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1775,6 +1819,10 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSCREENADDED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1795,7 +1843,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSCREENREMOVED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("screenRemoved(QScreen*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1822,6 +1870,10 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSCREENREMOVED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

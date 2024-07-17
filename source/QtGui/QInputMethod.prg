@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONANIMATINGCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("animatingChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -494,6 +494,10 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONANIMATINGCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -513,7 +517,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONCURSORRECTANGLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("cursorRectangleChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -538,6 +542,10 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONCURSORRECTANGLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -557,7 +565,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONINPUTDIRECTIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("inputDirectionChanged(Qt::LayoutDirection)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -585,6 +593,10 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONINPUTDIRECTIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -604,7 +616,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("keyboardRectangleChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -630,6 +642,10 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -649,7 +665,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONLOCALECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("localeChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -674,6 +690,10 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONLOCALECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -693,7 +713,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONVISIBLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("visibleChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -717,6 +737,10 @@ HB_FUNC_STATIC(QINPUTMETHOD_ONVISIBLECHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
