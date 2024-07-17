@@ -998,7 +998,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("cachePathChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1024,6 +1024,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1047,7 +1051,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("httpAcceptLanguageChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1073,6 +1077,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1096,7 +1104,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("httpCacheMaximumSizeChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1122,6 +1130,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1145,7 +1157,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("httpCacheTypeChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1171,6 +1183,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1194,7 +1210,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("httpUserAgentChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1220,6 +1236,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1243,7 +1263,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("offTheRecordChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1269,6 +1289,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1292,7 +1316,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("persistentCookiesPolicyChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1318,6 +1342,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1341,7 +1369,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("persistentStoragePathChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1367,6 +1395,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1390,7 +1422,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("spellCheckEnabledChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1416,6 +1448,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1439,7 +1475,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("spellCheckLanguagesChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1465,6 +1501,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1488,7 +1528,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("storageNameChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1513,6 +1553,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

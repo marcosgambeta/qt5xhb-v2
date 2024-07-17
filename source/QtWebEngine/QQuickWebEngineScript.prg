@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED)
         sender->metaObject()->indexOfSignal("injectionPointChanged(QQuickWebEngineScript::InjectionPoint)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -510,6 +510,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -533,7 +537,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONNAMECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("nameChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -561,6 +565,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONNAMECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -584,7 +592,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("runOnSubframesChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -612,6 +620,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -635,7 +647,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sourceCodeChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -663,6 +675,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -686,7 +702,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sourceUrlChanged(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -714,6 +730,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -737,7 +757,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("worldIdChanged(QQuickWebEngineScript::ScriptWorldId)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -765,6 +785,10 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
