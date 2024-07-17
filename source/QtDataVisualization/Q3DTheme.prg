@@ -1456,7 +1456,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("ambientLightStrengthChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1484,6 +1484,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1507,7 +1511,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONBACKGROUNDCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("backgroundColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1535,6 +1539,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONBACKGROUNDCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1558,7 +1566,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONBACKGROUNDENABLEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("backgroundEnabledChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1586,6 +1594,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONBACKGROUNDENABLEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1609,7 +1621,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONBASECOLORSCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("baseColorsChanged(QList<QColor>)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1658,6 +1670,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONBASECOLORSCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1681,7 +1697,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONBASEGRADIENTSCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("baseGradientsChanged(QList<QLinearGradient>)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1730,6 +1746,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONBASEGRADIENTSCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1753,7 +1773,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONCOLORSTYLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("colorStyleChanged(Q3DTheme::ColorStyle)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1781,6 +1801,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONCOLORSTYLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1804,7 +1828,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONFONTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("fontChanged(QFont)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1832,6 +1856,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONFONTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1855,7 +1883,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONGRIDENABLEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("gridEnabledChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1883,6 +1911,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONGRIDENABLEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1906,7 +1938,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONGRIDLINECOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("gridLineColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1934,6 +1966,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONGRIDLINECOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1957,7 +1993,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("highlightLightStrengthChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1985,6 +2021,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2008,7 +2048,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelBackgroundColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2036,6 +2076,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2059,7 +2103,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelBackgroundEnabledChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2087,6 +2131,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2110,7 +2158,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONLABELBORDERENABLEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelBorderEnabledChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2138,6 +2186,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONLABELBORDERENABLEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2161,7 +2213,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONLABELTEXTCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelTextColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2189,6 +2241,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONLABELTEXTCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2212,7 +2268,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONLIGHTCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("lightColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2240,6 +2296,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONLIGHTCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2263,7 +2323,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONLIGHTSTRENGTHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("lightStrengthChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2291,6 +2351,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONLIGHTSTRENGTHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2314,7 +2378,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("multiHighlightColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2342,6 +2406,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2365,7 +2433,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("multiHighlightGradientChanged(QLinearGradient)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2393,6 +2461,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2416,7 +2488,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("singleHighlightColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2444,6 +2516,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2467,7 +2543,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("singleHighlightGradientChanged(QLinearGradient)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2495,6 +2571,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2518,7 +2598,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONTYPECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("typeChanged(Q3DTheme::Theme)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2546,6 +2626,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONTYPECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2569,7 +2653,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONWINDOWCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("windowColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2596,6 +2680,10 @@ HB_FUNC_STATIC(Q3DTHEME_ONWINDOWCOLORCHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

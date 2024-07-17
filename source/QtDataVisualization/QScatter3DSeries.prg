@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ONDATAPROXYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("dataProxyChanged(QScatterDataProxy*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -344,6 +344,10 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ONDATAPROXYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -367,7 +371,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ONITEMSIZECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemSizeChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -395,6 +399,10 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ONITEMSIZECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -418,7 +426,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ONSELECTEDITEMCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectedItemChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -445,6 +453,10 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ONSELECTEDITEMCHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

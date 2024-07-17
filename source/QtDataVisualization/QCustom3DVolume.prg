@@ -1170,7 +1170,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("alphaMultiplierChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1198,6 +1198,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1221,7 +1225,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONCOLORTABLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("colorTableChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1246,6 +1250,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONCOLORTABLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1269,7 +1277,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("drawSliceFramesChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1297,6 +1305,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1320,7 +1332,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("drawSlicesChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1348,6 +1360,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1371,7 +1387,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("preserveOpacityChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1399,6 +1415,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1422,7 +1442,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliceFrameColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1450,6 +1470,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1473,7 +1497,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliceFrameGapsChanged(QVector3D)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1501,6 +1525,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1524,7 +1552,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliceFrameThicknessesChanged(QVector3D)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1552,6 +1580,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1575,7 +1607,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliceFrameWidthsChanged(QVector3D)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1603,6 +1635,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1626,7 +1662,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliceIndexXChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1654,6 +1690,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1677,7 +1717,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliceIndexYChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1705,6 +1745,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1728,7 +1772,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliceIndexZChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1756,6 +1800,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1779,7 +1827,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textureDepthChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1807,6 +1855,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1830,7 +1882,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textureFormatChanged(QImage::Format)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1858,6 +1910,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1881,7 +1937,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textureHeightChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1909,6 +1965,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1932,7 +1992,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textureWidthChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1960,6 +2020,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1983,7 +2047,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("useHighDefShaderChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2010,6 +2074,10 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

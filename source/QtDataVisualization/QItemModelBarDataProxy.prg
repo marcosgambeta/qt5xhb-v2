@@ -1359,7 +1359,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("autoColumnCategoriesChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1387,6 +1387,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1410,7 +1414,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("autoRowCategoriesChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1438,6 +1442,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1461,7 +1469,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("columnCategoriesChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1487,6 +1495,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1510,7 +1522,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("columnRoleChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1538,6 +1550,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1561,7 +1577,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("columnRolePatternChanged(QRegExp)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1589,6 +1605,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1612,7 +1632,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("columnRoleReplaceChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1640,6 +1660,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1663,7 +1687,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemModelChanged(QAbstractItemModel*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1693,6 +1717,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1717,7 +1745,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED)
         sender->metaObject()->indexOfSignal("multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1746,6 +1774,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1769,7 +1801,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rotationRoleChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1797,6 +1829,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1820,7 +1856,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rotationRolePatternChanged(QRegExp)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1849,6 +1885,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1872,7 +1912,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rotationRoleReplaceChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1901,6 +1941,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1924,7 +1968,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowCategoriesChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1950,6 +1994,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1973,7 +2021,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowRoleChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2001,6 +2049,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2024,7 +2076,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowRolePatternChanged(QRegExp)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2052,6 +2104,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2075,7 +2131,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowRoleReplaceChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2103,6 +2159,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2126,7 +2186,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("useModelCategoriesChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2154,6 +2214,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2177,7 +2241,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("valueRoleChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2205,6 +2269,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2228,7 +2296,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("valueRolePatternChanged(QRegExp)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2256,6 +2324,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2279,7 +2351,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("valueRoleReplaceChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2306,6 +2378,10 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

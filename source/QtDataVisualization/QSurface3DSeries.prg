@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONDATAPROXYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("dataProxyChanged(QSurfaceDataProxy*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -548,6 +548,10 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONDATAPROXYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -571,7 +575,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONDRAWMODECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("drawModeChanged(QSurface3DSeries::DrawFlags)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -599,6 +603,10 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONDRAWMODECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -622,7 +630,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("flatShadingEnabledChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -650,6 +658,10 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -673,7 +685,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("flatShadingSupportedChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -701,6 +713,10 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -724,7 +740,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectedPointChanged(QPoint)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -752,6 +768,10 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -775,7 +795,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONTEXTURECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textureChanged(QImage)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -803,6 +823,10 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONTEXTURECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -826,7 +850,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONTEXTUREFILECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textureFileChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -853,6 +877,10 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONTEXTUREFILECHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

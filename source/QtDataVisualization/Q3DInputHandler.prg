@@ -355,7 +355,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rotationEnabledChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -383,6 +383,10 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -406,7 +410,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectionEnabledChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -434,6 +438,10 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -457,7 +465,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("zoomAtTargetEnabledChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -485,6 +493,10 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -508,7 +520,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("zoomEnabledChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -535,6 +547,10 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

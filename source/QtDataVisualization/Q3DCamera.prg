@@ -684,7 +684,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONCAMERAPRESETCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("cameraPresetChanged(Q3DCamera::CameraPreset)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -712,6 +712,10 @@ HB_FUNC_STATIC(Q3DCAMERA_ONCAMERAPRESETCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -735,7 +739,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONMAXZOOMLEVELCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("maxZoomLevelChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -763,6 +767,10 @@ HB_FUNC_STATIC(Q3DCAMERA_ONMAXZOOMLEVELCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -786,7 +794,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONMINZOOMLEVELCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("minZoomLevelChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -814,6 +822,10 @@ HB_FUNC_STATIC(Q3DCAMERA_ONMINZOOMLEVELCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -837,7 +849,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONTARGETCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("targetChanged(QVector3D)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -865,6 +877,10 @@ HB_FUNC_STATIC(Q3DCAMERA_ONTARGETCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -888,7 +904,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONWRAPXROTATIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("wrapXRotationChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -916,6 +932,10 @@ HB_FUNC_STATIC(Q3DCAMERA_ONWRAPXROTATIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -939,7 +959,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONWRAPYROTATIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("wrapYRotationChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -967,6 +987,10 @@ HB_FUNC_STATIC(Q3DCAMERA_ONWRAPYROTATIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -990,7 +1014,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONXROTATIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("xRotationChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1018,6 +1042,10 @@ HB_FUNC_STATIC(Q3DCAMERA_ONXROTATIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1041,7 +1069,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONYROTATIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("yRotationChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1069,6 +1097,10 @@ HB_FUNC_STATIC(Q3DCAMERA_ONYROTATIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1092,7 +1124,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONZOOMLEVELCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("zoomLevelChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1119,6 +1151,10 @@ HB_FUNC_STATIC(Q3DCAMERA_ONZOOMLEVELCHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
