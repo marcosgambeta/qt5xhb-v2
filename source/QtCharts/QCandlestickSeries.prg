@@ -980,7 +980,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONBODYOUTLINEVISIBILITYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("bodyOutlineVisibilityChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1006,6 +1006,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONBODYOUTLINEVISIBILITYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1029,7 +1033,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONBODYWIDTHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("bodyWidthChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1054,6 +1058,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONBODYWIDTHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1077,7 +1085,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONBRUSHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("brushChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1102,6 +1110,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONBRUSHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1125,7 +1137,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("candlestickSetsAdded(QList<QCandlestickSet*>)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1175,6 +1187,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1198,7 +1214,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("candlestickSetsRemoved(QList<QCandlestickSet*>)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1248,6 +1264,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1271,7 +1291,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCAPSVISIBILITYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("capsVisibilityChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1297,6 +1317,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCAPSVISIBILITYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1320,7 +1344,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCAPSWIDTHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("capsWidthChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1345,6 +1369,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCAPSWIDTHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1368,7 +1396,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCLICKED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QCandlestickSet*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1396,6 +1424,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCLICKED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1419,7 +1451,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCOUNTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("countChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1444,6 +1476,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCOUNTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1467,7 +1503,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONDECREASINGCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("decreasingColorChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1493,6 +1529,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONDECREASINGCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1516,7 +1556,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONDOUBLECLICKED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("doubleClicked(QCandlestickSet*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1544,6 +1584,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONDOUBLECLICKED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1567,7 +1611,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONHOVERED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("hovered(bool,QCandlestickSet*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1597,6 +1641,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONHOVERED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1620,7 +1668,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONINCREASINGCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("increasingColorChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1646,6 +1694,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONINCREASINGCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1669,7 +1721,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONMAXIMUMCOLUMNWIDTHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("maximumColumnWidthChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1695,6 +1747,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONMAXIMUMCOLUMNWIDTHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1718,7 +1774,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONMINIMUMCOLUMNWIDTHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("minimumColumnWidthChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1744,6 +1800,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONMINIMUMCOLUMNWIDTHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1767,7 +1827,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONPENCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("penChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1792,6 +1852,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONPENCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1815,7 +1879,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONPRESSED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pressed(QCandlestickSet*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1843,6 +1907,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONPRESSED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1866,7 +1934,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONRELEASED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("released(QCandlestickSet*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1893,6 +1961,10 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONRELEASED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

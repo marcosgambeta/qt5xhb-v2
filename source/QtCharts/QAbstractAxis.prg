@@ -1762,7 +1762,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1790,6 +1790,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1813,7 +1817,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONGRIDLINECOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("gridLineColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1841,6 +1845,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONGRIDLINECOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1864,7 +1872,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONGRIDLINEPENCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("gridLinePenChanged(QPen)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1892,6 +1900,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONGRIDLINEPENCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1915,7 +1927,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONGRIDVISIBLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("gridVisibleChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1943,6 +1955,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONGRIDVISIBLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1966,7 +1982,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSANGLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsAngleChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1994,6 +2010,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSANGLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2017,7 +2037,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSBRUSHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsBrushChanged(QBrush)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2045,6 +2065,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSBRUSHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2068,7 +2092,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2096,6 +2120,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2119,7 +2147,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSFONTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsFontChanged(QFont)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2147,6 +2175,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSFONTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2170,7 +2202,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSVISIBLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsVisibleChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2198,6 +2230,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSVISIBLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2221,7 +2257,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLINEPENCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("linePenChanged(QPen)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2249,6 +2285,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLINEPENCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2272,7 +2312,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLINEVISIBLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("lineVisibleChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2300,6 +2340,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLINEVISIBLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2323,7 +2367,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONMINORGRIDLINECOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("minorGridLineColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2351,6 +2395,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONMINORGRIDLINECOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2374,7 +2422,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONMINORGRIDLINEPENCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("minorGridLinePenChanged(QPen)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2402,6 +2450,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONMINORGRIDLINEPENCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2425,7 +2477,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONMINORGRIDVISIBLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("minorGridVisibleChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2453,6 +2505,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONMINORGRIDVISIBLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2476,7 +2532,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONREVERSECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("reverseChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2504,6 +2560,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONREVERSECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2527,7 +2587,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESBORDERCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("shadesBorderColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2555,6 +2615,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESBORDERCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2578,7 +2642,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESBRUSHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("shadesBrushChanged(QBrush)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2606,6 +2670,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESBRUSHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2629,7 +2697,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("shadesColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2657,6 +2725,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESCOLORCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2680,7 +2752,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESPENCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("shadesPenChanged(QPen)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2708,6 +2780,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESPENCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2731,7 +2807,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESVISIBLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("shadesVisibleChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2759,6 +2835,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESVISIBLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2782,7 +2862,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLEBRUSHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("titleBrushChanged(QBrush)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2810,6 +2890,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLEBRUSHCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2833,7 +2917,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLEFONTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("titleFontChanged(QFont)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2861,6 +2945,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLEFONTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2884,7 +2972,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLETEXTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("titleTextChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2912,6 +3000,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLETEXTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2935,7 +3027,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLEVISIBLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("titleVisibleChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2963,6 +3055,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLEVISIBLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2986,7 +3082,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONVISIBLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("visibleChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -3013,6 +3109,10 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONVISIBLECHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_ONCOLUMNCOUNTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("columnCountChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -461,6 +461,10 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_ONCOLUMNCOUNTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -484,7 +488,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_ONFIRSTCOLUMNCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("firstColumnChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -509,6 +513,10 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_ONFIRSTCOLUMNCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -532,7 +540,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_ONLABELSROWCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsRowChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -557,6 +565,10 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_ONLABELSROWCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -580,7 +592,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_ONMODELREPLACED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("modelReplaced()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -605,6 +617,10 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_ONMODELREPLACED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -628,7 +644,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_ONSERIESREPLACED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("seriesReplaced()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -653,6 +669,10 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_ONSERIESREPLACED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -676,7 +696,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_ONVALUESROWCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("valuesRowChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -700,6 +720,10 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_ONVALUESROWCHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

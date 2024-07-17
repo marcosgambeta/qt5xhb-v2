@@ -551,7 +551,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_ONCATEGORIESCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("categoriesChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -576,6 +576,10 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_ONCATEGORIESCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -599,7 +603,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_ONCOUNTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("countChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -624,6 +628,10 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_ONCOUNTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -647,7 +655,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_ONMAXCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("maxChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -675,6 +683,10 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_ONMAXCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -698,7 +710,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_ONMINCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("minChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -726,6 +738,10 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_ONMINCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -749,7 +765,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_ONRANGECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rangeChanged(QString,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -779,6 +795,10 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_ONRANGECHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
