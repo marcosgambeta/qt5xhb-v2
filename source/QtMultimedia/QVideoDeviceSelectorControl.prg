@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("devicesChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -264,6 +264,10 @@ HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -283,7 +287,7 @@ HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectedDeviceChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -312,6 +316,10 @@ HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -331,7 +339,7 @@ HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectedDeviceChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -359,6 +367,10 @@ HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
