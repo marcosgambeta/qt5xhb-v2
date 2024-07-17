@@ -3999,7 +3999,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONENABLEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("enabledChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -4024,6 +4024,10 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONENABLEDCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -4043,7 +4047,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONOPACITYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("opacityChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -4068,6 +4072,10 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONOPACITYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -4087,7 +4095,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONPARENTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("parentChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -4112,6 +4120,10 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONPARENTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -4131,7 +4143,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONROTATIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rotationChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -4156,6 +4168,10 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONROTATIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -4175,7 +4191,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONSCALECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("scaleChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -4200,6 +4216,10 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONSCALECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -4219,7 +4239,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONVISIBLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("visibleChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -4244,6 +4264,10 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONVISIBLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -4263,7 +4287,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONXCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("xChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -4288,6 +4312,10 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONXCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -4307,7 +4335,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("yChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -4332,6 +4360,10 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -4351,7 +4383,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONZCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("zChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -4375,6 +4407,10 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ONZCHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

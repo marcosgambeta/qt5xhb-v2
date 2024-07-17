@@ -1852,7 +1852,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONCURRENTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1880,6 +1880,10 @@ HB_FUNC_STATIC(QFILEDIALOG_ONCURRENTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1899,7 +1903,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONDIRECTORYENTERED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("directoryEntered(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1927,6 +1931,10 @@ HB_FUNC_STATIC(QFILEDIALOG_ONDIRECTORYENTERED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1946,7 +1954,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONFILESELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("fileSelected(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1974,6 +1982,10 @@ HB_FUNC_STATIC(QFILEDIALOG_ONFILESELECTED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1993,7 +2005,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONFILESSELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("filesSelected(QStringList)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2027,6 +2039,10 @@ HB_FUNC_STATIC(QFILEDIALOG_ONFILESSELECTED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2046,7 +2062,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONFILTERSELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("filterSelected(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2074,6 +2090,10 @@ HB_FUNC_STATIC(QFILEDIALOG_ONFILTERSELECTED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2093,7 +2113,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONURLSELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("urlSelected(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2121,6 +2141,10 @@ HB_FUNC_STATIC(QFILEDIALOG_ONURLSELECTED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2140,7 +2164,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONURLSSELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("urlsSelected(QList<QUrl>)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2189,6 +2213,10 @@ HB_FUNC_STATIC(QFILEDIALOG_ONURLSSELECTED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2208,7 +2236,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONCURRENTURLCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentUrlChanged(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2236,6 +2264,10 @@ HB_FUNC_STATIC(QFILEDIALOG_ONCURRENTURLCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2255,7 +2287,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONDIRECTORYURLENTERED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("directoryUrlEntered(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2282,6 +2314,10 @@ HB_FUNC_STATIC(QFILEDIALOG_ONDIRECTORYURLENTERED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

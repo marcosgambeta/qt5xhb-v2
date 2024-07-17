@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_ONALLOWEDAREASCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("allowedAreasChanged(Qt::DockWidgetAreas)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -458,6 +458,10 @@ HB_FUNC_STATIC(QDOCKWIDGET_ONALLOWEDAREASCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -477,7 +481,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_ONDOCKLOCATIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("dockLocationChanged(Qt::DockWidgetArea)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -505,6 +509,10 @@ HB_FUNC_STATIC(QDOCKWIDGET_ONDOCKLOCATIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -524,7 +532,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_ONFEATURESCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("featuresChanged(QDockWidget::DockWidgetFeatures)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -552,6 +560,10 @@ HB_FUNC_STATIC(QDOCKWIDGET_ONFEATURESCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -571,7 +583,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_ONTOPLEVELCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("topLevelChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -599,6 +611,10 @@ HB_FUNC_STATIC(QDOCKWIDGET_ONTOPLEVELCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -618,7 +634,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_ONVISIBILITYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("visibilityChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -645,6 +661,10 @@ HB_FUNC_STATIC(QDOCKWIDGET_ONVISIBILITYCHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

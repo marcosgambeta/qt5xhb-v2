@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("opacityChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -233,6 +233,10 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -252,7 +256,7 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("opacityMaskChanged(QBrush)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -279,6 +283,10 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

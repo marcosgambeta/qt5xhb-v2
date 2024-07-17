@@ -1370,7 +1370,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONDOUBLEVALUECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("doubleValueChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1398,6 +1398,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONDOUBLEVALUECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1417,7 +1421,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONDOUBLEVALUESELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("doubleValueSelected(double)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1445,6 +1449,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONDOUBLEVALUESELECTED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1464,7 +1472,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONINTVALUECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("intValueChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1492,6 +1500,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONINTVALUECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1511,7 +1523,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONINTVALUESELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("intValueSelected(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1539,6 +1551,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONINTVALUESELECTED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1558,7 +1574,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONTEXTVALUECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textValueChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1586,6 +1602,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONTEXTVALUECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1605,7 +1625,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONTEXTVALUESELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textValueSelected(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1632,6 +1652,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONTEXTVALUESELECTED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

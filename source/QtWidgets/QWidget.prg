@@ -6723,7 +6723,7 @@ HB_FUNC_STATIC(QWIDGET_ONWINDOWTITLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("windowTitleChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -6751,6 +6751,10 @@ HB_FUNC_STATIC(QWIDGET_ONWINDOWTITLECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -6774,7 +6778,7 @@ HB_FUNC_STATIC(QWIDGET_ONWINDOWICONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("windowIconChanged(QIcon)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -6802,6 +6806,10 @@ HB_FUNC_STATIC(QWIDGET_ONWINDOWICONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -6824,7 +6832,7 @@ HB_FUNC_STATIC(QWIDGET_ONWINDOWICONTEXTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("windowIconTextChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -6852,6 +6860,10 @@ HB_FUNC_STATIC(QWIDGET_ONWINDOWICONTEXTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -6871,7 +6883,7 @@ HB_FUNC_STATIC(QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("customContextMenuRequested(QPoint)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -6898,6 +6910,10 @@ HB_FUNC_STATIC(QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

@@ -1631,7 +1631,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONBLOCKCOUNTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("blockCountChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1659,6 +1659,10 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONBLOCKCOUNTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1678,7 +1682,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONCOPYAVAILABLE)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("copyAvailable(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1706,6 +1710,10 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONCOPYAVAILABLE)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1725,7 +1733,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONCURSORPOSITIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("cursorPositionChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1751,6 +1759,10 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONCURSORPOSITIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1770,7 +1782,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONMODIFICATIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("modificationChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1798,6 +1810,10 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONMODIFICATIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1817,7 +1833,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONREDOAVAILABLE)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("redoAvailable(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1845,6 +1861,10 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONREDOAVAILABLE)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1864,7 +1884,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONSELECTIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectionChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1889,6 +1909,10 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONSELECTIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1908,7 +1932,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONTEXTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1933,6 +1957,10 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONTEXTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1952,7 +1980,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONUNDOAVAILABLE)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("undoAvailable(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1980,6 +2008,10 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONUNDOAVAILABLE)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1999,7 +2031,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONUPDATEREQUEST)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("updateRequest(QRect,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2028,6 +2060,10 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ONUPDATEREQUEST)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

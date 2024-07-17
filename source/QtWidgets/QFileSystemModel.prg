@@ -1261,7 +1261,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ONDIRECTORYLOADED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("directoryLoaded(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1289,6 +1289,10 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ONDIRECTORYLOADED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1308,7 +1312,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ONFILERENAMED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("fileRenamed(QString,QString,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1341,6 +1345,10 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ONFILERENAMED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1360,7 +1368,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ONROOTPATHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rootPathChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1387,6 +1395,10 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ONROOTPATHCHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

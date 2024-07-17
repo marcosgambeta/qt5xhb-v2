@@ -1787,7 +1787,7 @@ HB_FUNC_STATIC(QHEADERVIEW_ONGEOMETRIESCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("geometriesChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1812,6 +1812,10 @@ HB_FUNC_STATIC(QHEADERVIEW_ONGEOMETRIESCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1831,7 +1835,7 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONCLICKED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sectionClicked(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1858,6 +1862,10 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONCLICKED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1877,7 +1885,7 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONCOUNTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sectionCountChanged(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1907,6 +1915,10 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONCOUNTCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1926,7 +1938,7 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONDOUBLECLICKED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sectionDoubleClicked(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1954,6 +1966,10 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONDOUBLECLICKED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1973,7 +1989,7 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONENTERED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sectionEntered(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2000,6 +2016,10 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONENTERED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2019,7 +2039,7 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sectionHandleDoubleClicked(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2047,6 +2067,10 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2066,7 +2090,7 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONMOVED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sectionMoved(int,int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2098,6 +2122,10 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONMOVED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2117,7 +2145,7 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONPRESSED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sectionPressed(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2144,6 +2172,10 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONPRESSED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2163,7 +2195,7 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONRESIZED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sectionResized(int,int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2195,6 +2227,10 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONRESIZED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -2214,7 +2250,7 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSORTINDICATORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sortIndicatorChanged(int,Qt::SortOrder)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2243,6 +2279,10 @@ HB_FUNC_STATIC(QHEADERVIEW_ONSORTINDICATORCHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
