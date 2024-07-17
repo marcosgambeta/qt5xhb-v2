@@ -839,7 +839,7 @@ HB_FUNC_STATIC(QIODEVICE_ONABOUTTOCLOSE)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToClose()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -864,6 +864,10 @@ HB_FUNC_STATIC(QIODEVICE_ONABOUTTOCLOSE)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -883,7 +887,7 @@ HB_FUNC_STATIC(QIODEVICE_ONBYTESWRITTEN)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("bytesWritten(qint64)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -910,6 +914,10 @@ HB_FUNC_STATIC(QIODEVICE_ONBYTESWRITTEN)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -929,7 +937,7 @@ HB_FUNC_STATIC(QIODEVICE_ONREADCHANNELFINISHED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("readChannelFinished()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -954,6 +962,10 @@ HB_FUNC_STATIC(QIODEVICE_ONREADCHANNELFINISHED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -973,7 +985,7 @@ HB_FUNC_STATIC(QIODEVICE_ONREADYREAD)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("readyRead()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -997,6 +1009,10 @@ HB_FUNC_STATIC(QIODEVICE_ONREADYREAD)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 

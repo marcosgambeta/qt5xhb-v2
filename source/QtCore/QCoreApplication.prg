@@ -922,7 +922,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONABOUTTOQUIT)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToQuit()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -947,6 +947,10 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONABOUTTOQUIT)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -966,7 +970,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONAPPLICATIONNAMECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("applicationNameChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -992,6 +996,10 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONAPPLICATIONNAMECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1011,7 +1019,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONAPPLICATIONVERSIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("applicationVersionChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1037,6 +1045,10 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONAPPLICATIONVERSIONCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1056,7 +1068,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONORGANIZATIONDOMAINCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("organizationDomainChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1082,6 +1094,10 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONORGANIZATIONDOMAINCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1101,7 +1117,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONORGANIZATIONNAMECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("organizationNameChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1126,6 +1142,10 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONORGANIZATIONNAMECHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
