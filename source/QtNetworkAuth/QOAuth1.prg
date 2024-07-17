@@ -505,7 +505,7 @@ HB_FUNC_STATIC(QOAUTH1_ONCLIENTSHAREDSECRETCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("clientSharedSecretChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -533,6 +533,10 @@ HB_FUNC_STATIC(QOAUTH1_ONCLIENTSHAREDSECRETCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -556,7 +560,7 @@ HB_FUNC_STATIC(QOAUTH1_ONSIGNATUREMETHODCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("signatureMethodChanged(QOAuth1::SignatureMethod)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -584,6 +588,10 @@ HB_FUNC_STATIC(QOAUTH1_ONSIGNATUREMETHODCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -607,7 +615,7 @@ HB_FUNC_STATIC(QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("temporaryCredentialsUrlChanged(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -635,6 +643,10 @@ HB_FUNC_STATIC(QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -658,7 +670,7 @@ HB_FUNC_STATIC(QOAUTH1_ONTOKENCREDENTIALSURLCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("tokenCredentialsUrlChanged(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -686,6 +698,10 @@ HB_FUNC_STATIC(QOAUTH1_ONTOKENCREDENTIALSURLCHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -709,7 +725,7 @@ HB_FUNC_STATIC(QOAUTH1_ONTOKENSECRETCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("tokenSecretChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -736,6 +752,10 @@ HB_FUNC_STATIC(QOAUTH1_ONTOKENSECRETCHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
