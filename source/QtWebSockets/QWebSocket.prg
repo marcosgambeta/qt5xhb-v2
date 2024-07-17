@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONABOUTTOCLOSE)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToClose()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1126,6 +1126,10 @@ HB_FUNC_STATIC(QWEBSOCKET_ONABOUTTOCLOSE)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1149,7 +1153,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONCONNECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("connected()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1174,6 +1178,10 @@ HB_FUNC_STATIC(QWEBSOCKET_ONCONNECTED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1197,7 +1205,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONDISCONNECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("disconnected()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1222,6 +1230,10 @@ HB_FUNC_STATIC(QWEBSOCKET_ONDISCONNECTED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1245,7 +1257,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONSTATECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QAbstractSocket::SocketState)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1273,6 +1285,10 @@ HB_FUNC_STATIC(QWEBSOCKET_ONSTATECHANGED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1297,7 +1313,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED)
         sender->metaObject()->indexOfSignal("proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1328,6 +1344,10 @@ HB_FUNC_STATIC(QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1351,7 +1371,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONREADCHANNELFINISHED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("readChannelFinished()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1376,6 +1396,10 @@ HB_FUNC_STATIC(QWEBSOCKET_ONREADCHANNELFINISHED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1399,7 +1423,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONTEXTFRAMERECEIVED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textFrameReceived(QString,bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1429,6 +1453,10 @@ HB_FUNC_STATIC(QWEBSOCKET_ONTEXTFRAMERECEIVED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1452,7 +1480,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONBINARYFRAMERECEIVED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("binaryFrameReceived(QByteArray,bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1482,6 +1510,10 @@ HB_FUNC_STATIC(QWEBSOCKET_ONBINARYFRAMERECEIVED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1505,7 +1537,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONTEXTMESSAGERECEIVED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textMessageReceived(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1533,6 +1565,10 @@ HB_FUNC_STATIC(QWEBSOCKET_ONTEXTMESSAGERECEIVED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1556,7 +1592,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONBINARYMESSAGERECEIVED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("binaryMessageReceived(QByteArray)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1584,6 +1620,10 @@ HB_FUNC_STATIC(QWEBSOCKET_ONBINARYMESSAGERECEIVED)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1607,7 +1647,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONERROR)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QAbstractSocket::SocketError)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1635,6 +1675,10 @@ HB_FUNC_STATIC(QWEBSOCKET_ONERROR)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1658,7 +1702,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONPONG)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pong(quint64,QByteArray)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1688,6 +1732,10 @@ HB_FUNC_STATIC(QWEBSOCKET_ONPONG)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1711,7 +1759,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONBYTESWRITTEN)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("bytesWritten(qint64)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1738,6 +1786,10 @@ HB_FUNC_STATIC(QWEBSOCKET_ONBYTESWRITTEN)
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
     }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
   }
 
   hb_retl(result);
@@ -1761,7 +1813,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONSSLERRORS)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sslErrors(QList<QSslError>)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1)
+    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1809,6 +1861,10 @@ HB_FUNC_STATIC(QWEBSOCKET_ONSSLERRORS)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
+    }
+    else
+    {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
