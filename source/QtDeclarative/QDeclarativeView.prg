@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_NEW)
   else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QDeclarativeView(const QUrl & source, QWidget * parent = nullptr)
+    QDeclarativeView(const QUrl &source, QWidget * parent = nullptr)
     */
     auto obj = new QDeclarativeView(*PQURL(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_SETRESIZEMODE)
 }
 
 /*
-void setSource(const QUrl & url)
+void setSource(const QUrl &url)
 */
 HB_FUNC_STATIC(QDECLARATIVEVIEW_SETSOURCE)
 {
