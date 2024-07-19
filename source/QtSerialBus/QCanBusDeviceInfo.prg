@@ -67,7 +67,7 @@ RETURN
 #endif
 
     /*
-    QCanBusDeviceInfo(const QCanBusDeviceInfo & other)
+    QCanBusDeviceInfo(const QCanBusDeviceInfo &other)
     */
 HB_FUNC_STATIC(QCANBUSDEVICEINFO_NEW)
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_DELETE)
 }
 
 /*
-void swap(QCanBusDeviceInfo & other) Q_DECL_NOTHROW
+void swap(QCanBusDeviceInfo &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QCANBUSDEVICEINFO_SWAP)
 {

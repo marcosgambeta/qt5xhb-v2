@@ -60,7 +60,7 @@ RETURN
 #endif
 
     /*
-    virtual QCanBusDevice * createDevice(const QString & interfaceName, QString * errorMessage) const = 0
+    virtual QCanBusDevice * createDevice(const QString &interfaceName, QString * errorMessage) const = 0
     */
 HB_FUNC_STATIC(QCANBUSFACTORY_CREATEDEVICE)
 {
