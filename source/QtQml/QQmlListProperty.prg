@@ -55,7 +55,7 @@ RETURN
 #endif
 
     /*
-    QQmlListProperty(QObject * object, QList<T*> & list)
+    QQmlListProperty(QObject * object, QList<T*> &list)
     */
     /*
     QQmlListProperty(QObject * object, void * data, AppendFunction append, CountFunction count = 0, AtFunction at = 0,

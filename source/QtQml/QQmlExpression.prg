@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_NEW)
   else if (ISBETWEEN(3, 4) && ISQQMLCONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
-    QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr)
+    QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString &expression, QObject * parent = nullptr)
     */
     auto obj = new QQmlExpression(PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_NEW)
            (ISQOBJECT(3) || HB_ISNIL(3)) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
-    QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject *
+    QQmlExpression(const QQmlScriptString &script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject *
     parent = nullptr)
     */
     auto obj = new QQmlExpression(*PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT(2, nullptr), OPQOBJECT(3, nullptr),
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SCOPEOBJECT)
 }
 
 /*
-void setExpression(const QString & expression)
+void setExpression(const QString &expression)
 */
 HB_FUNC_STATIC(QQMLEXPRESSION_SETEXPRESSION)
 {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETNOTIFYONVALUECHANGED)
 }
 
 /*
-void setSourceLocation(const QString & url, int line, int column = 0)
+void setSourceLocation(const QString &url, int line, int column = 0)
 */
 HB_FUNC_STATIC(QQMLEXPRESSION_SETSOURCELOCATION)
 {
