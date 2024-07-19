@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_RESETCONFIGURATION)
 }
 
 /*
-void setSettingsFile(const QString & file)
+void setSettingsFile(const QString &file)
 */
 HB_FUNC_STATIC(QGAMEPADMANAGER_SETSETTINGSFILE)
 {
