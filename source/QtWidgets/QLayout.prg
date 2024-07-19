@@ -504,7 +504,7 @@ void QLayout_setContentsMargins1()
 }
 
 /*
-void setContentsMargins(const QMargins & margins)
+void setContentsMargins(const QMargins &margins)
 */
 void QLayout_setContentsMargins2()
 {
@@ -912,7 +912,7 @@ HB_FUNC_STATIC(QLAYOUT_MINIMUMSIZE)
 }
 
 /*
-virtual void setGeometry(const QRect & r)
+virtual void setGeometry(const QRect &r)
 */
 HB_FUNC_STATIC(QLAYOUT_SETGEOMETRY)
 {
@@ -938,7 +938,7 @@ HB_FUNC_STATIC(QLAYOUT_SETGEOMETRY)
 }
 
 /*
-static QSize closestAcceptableSize(const QWidget * widget, const QSize & size)
+static QSize closestAcceptableSize(const QWidget * widget, const QSize &size)
 */
 HB_FUNC_STATIC(QLAYOUT_CLOSESTACCEPTABLESIZE)
 {

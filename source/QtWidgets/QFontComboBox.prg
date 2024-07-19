@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SIZEHINT)
 }
 
 /*
-void setCurrentFont(const QFont & font)
+void setCurrentFont(const QFont &font)
 */
 HB_FUNC_STATIC(QFONTCOMBOBOX_SETCURRENTFONT)
 {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SETCURRENTFONT)
 }
 
 /*
-void currentFontChanged(const QFont & font)
+void currentFontChanged(const QFont &font)
 */
 HB_FUNC_STATIC(QFONTCOMBOBOX_ONCURRENTFONTCHANGED)
 {

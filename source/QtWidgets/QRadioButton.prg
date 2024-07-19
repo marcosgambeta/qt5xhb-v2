@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QRADIOBUTTON_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QRadioButton(const QString & text, QWidget * parent = nullptr)
+    QRadioButton(const QString &text, QWidget * parent = nullptr)
     */
     auto obj = new QRadioButton(PQSTRING(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);

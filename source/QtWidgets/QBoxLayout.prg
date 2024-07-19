@@ -833,7 +833,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_MINIMUMSIZE)
 }
 
 /*
-virtual void setGeometry(const QRect & r)
+virtual void setGeometry(const QRect &r)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_SETGEOMETRY)
 {

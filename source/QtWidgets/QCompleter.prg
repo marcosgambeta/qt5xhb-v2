@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QCOMPLETER_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QCompleter(const QStringList & list, QObject * parent = nullptr)
+    QCompleter(const QStringList &list, QObject * parent = nullptr)
     */
     auto obj = new QCompleter(PQSTRINGLIST(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QCOMPLETER_MODELSORTING)
 }
 
 /*
-virtual QString pathFromIndex(const QModelIndex & index) const
+virtual QString pathFromIndex(const QModelIndex &index) const
 */
 HB_FUNC_STATIC(QCOMPLETER_PATHFROMINDEX)
 {
@@ -771,7 +771,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETWIDGET)
 }
 
 /*
-virtual QStringList splitPath(const QString & path) const
+virtual QStringList splitPath(const QString &path) const
 */
 HB_FUNC_STATIC(QCOMPLETER_SPLITPATH)
 {
@@ -844,7 +844,7 @@ HB_FUNC_STATIC(QCOMPLETER_WRAPAROUND)
 }
 
 /*
-void complete(const QRect & rect = QRect())
+void complete(const QRect &rect = QRect())
 */
 HB_FUNC_STATIC(QCOMPLETER_COMPLETE)
 {
@@ -870,7 +870,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETE)
 }
 
 /*
-void setCompletionPrefix(const QString & prefix)
+void setCompletionPrefix(const QString &prefix)
 */
 HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONPREFIX)
 {
@@ -976,7 +976,7 @@ HB_FUNC_STATIC(QCOMPLETER_FILTERMODE)
 }
 
 /*
-void activated(const QString & text)
+void activated(const QString &text)
 */
 HB_FUNC_STATIC(QCOMPLETER_ONACTIVATED1)
 {
@@ -1027,7 +1027,7 @@ HB_FUNC_STATIC(QCOMPLETER_ONACTIVATED1)
 }
 
 /*
-void activated(const QModelIndex & index)
+void activated(const QModelIndex &index)
 */
 HB_FUNC_STATIC(QCOMPLETER_ONACTIVATED2)
 {
@@ -1078,7 +1078,7 @@ HB_FUNC_STATIC(QCOMPLETER_ONACTIVATED2)
 }
 
 /*
-void highlighted(const QString & text)
+void highlighted(const QString &text)
 */
 HB_FUNC_STATIC(QCOMPLETER_ONHIGHLIGHTED1)
 {
@@ -1129,7 +1129,7 @@ HB_FUNC_STATIC(QCOMPLETER_ONHIGHLIGHTED1)
 }
 
 /*
-void highlighted(const QModelIndex & index)
+void highlighted(const QModelIndex &index)
 */
 HB_FUNC_STATIC(QCOMPLETER_ONHIGHLIGHTED2)
 {

@@ -654,7 +654,7 @@ HB_FUNC_STATIC(QWIDGET_ACCESSIBLEDESCRIPTION)
 }
 
 /*
-void setAccessibleDescription(const QString & description)
+void setAccessibleDescription(const QString &description)
 */
 HB_FUNC_STATIC(QWIDGET_SETACCESSIBLEDESCRIPTION)
 {
@@ -708,7 +708,7 @@ HB_FUNC_STATIC(QWIDGET_ACCESSIBLENAME)
 }
 
 /*
-void setAccessibleName(const QString & name)
+void setAccessibleName(const QString &name)
 */
 HB_FUNC_STATIC(QWIDGET_SETACCESSIBLENAME)
 {
@@ -1078,7 +1078,7 @@ HB_FUNC_STATIC(QWIDGET_CHILDAT)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QWidget * childAt(const QPoint & p) const
+    QWidget * childAt(const QPoint &p) const
     */
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1530,7 +1530,7 @@ HB_FUNC_STATIC(QWIDGET_FOCUSWIDGET)
 }
 
 /*
-const QFont & font() const
+const QFont &font() const
 */
 HB_FUNC_STATIC(QWIDGET_FONT)
 {
@@ -1838,7 +1838,7 @@ HB_FUNC_STATIC(QWIDGET_GRABMOUSE)
   else if (ISNUMPAR(1) && ISQCURSOR(1))
   {
     /*
-    void grabMouse(const QCursor & cursor)
+    void grabMouse(const QCursor &cursor)
     */
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1857,7 +1857,7 @@ HB_FUNC_STATIC(QWIDGET_GRABMOUSE)
 }
 
 /*
-int grabShortcut(const QKeySequence & key, Qt::ShortcutContext context = Qt::WindowShortcut)
+int grabShortcut(const QKeySequence &key, Qt::ShortcutContext context = Qt::WindowShortcut)
 */
 HB_FUNC_STATIC(QWIDGET_GRABSHORTCUT)
 {
@@ -2718,7 +2718,7 @@ HB_FUNC_STATIC(QWIDGET_LOCALE)
 }
 
 /*
-void setLocale(const QLocale & locale)
+void setLocale(const QLocale &locale)
 */
 HB_FUNC_STATIC(QWIDGET_SETLOCALE)
 {
@@ -2770,7 +2770,7 @@ HB_FUNC_STATIC(QWIDGET_UNSETLOCALE)
 }
 
 /*
-QPoint mapFrom(QWidget * parent, const QPoint & pos) const
+QPoint mapFrom(QWidget * parent, const QPoint &pos) const
 */
 HB_FUNC_STATIC(QWIDGET_MAPFROM)
 {
@@ -2795,7 +2795,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROM)
 }
 
 /*
-QPoint mapFromGlobal(const QPoint & pos) const
+QPoint mapFromGlobal(const QPoint &pos) const
 */
 HB_FUNC_STATIC(QWIDGET_MAPFROMGLOBAL)
 {
@@ -2820,7 +2820,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROMGLOBAL)
 }
 
 /*
-QPoint mapFromParent(const QPoint & pos) const
+QPoint mapFromParent(const QPoint &pos) const
 */
 HB_FUNC_STATIC(QWIDGET_MAPFROMPARENT)
 {
@@ -2845,7 +2845,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROMPARENT)
 }
 
 /*
-QPoint mapTo(QWidget * parent, const QPoint & pos) const
+QPoint mapTo(QWidget * parent, const QPoint &pos) const
 */
 HB_FUNC_STATIC(QWIDGET_MAPTO)
 {
@@ -2870,7 +2870,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTO)
 }
 
 /*
-QPoint mapToGlobal(const QPoint & pos) const
+QPoint mapToGlobal(const QPoint &pos) const
 */
 HB_FUNC_STATIC(QWIDGET_MAPTOGLOBAL)
 {
@@ -2895,7 +2895,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTOGLOBAL)
 }
 
 /*
-QPoint mapToParent(const QPoint & pos) const
+QPoint mapToParent(const QPoint &pos) const
 */
 HB_FUNC_STATIC(QWIDGET_MAPTOPARENT)
 {
@@ -2949,7 +2949,7 @@ HB_FUNC_STATIC(QWIDGET_SETMASK)
   if (ISNUMPAR(1) && ISQBITMAP(1))
   {
     /*
-    void setMask(const QBitmap & bitmap)
+    void setMask(const QBitmap &bitmap)
     */
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -2963,7 +2963,7 @@ HB_FUNC_STATIC(QWIDGET_SETMASK)
   else if (ISNUMPAR(1) && ISQREGION(1))
   {
     /*
-    void setMask(const QRegion & region)
+    void setMask(const QRegion &region)
     */
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -3368,7 +3368,7 @@ HB_FUNC_STATIC(QWIDGET_OVERRIDEWINDOWFLAGS)
 }
 
 /*
-const QPalette & palette() const
+const QPalette &palette() const
 */
 HB_FUNC_STATIC(QWIDGET_PALETTE)
 {
@@ -3607,7 +3607,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
       (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    void render(QPaintDevice * target, const QPoint & targetOffset = QPoint(), const QRegion & sourceRegion = QRegion(),
+    void render(QPaintDevice * target, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion = QRegion(),
     QWidget::RenderFlags renderFlags = QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren))
     */
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -3627,7 +3627,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    void render(QPainter * painter, const QPoint & targetOffset = QPoint(), const QRegion & sourceRegion = QRegion(),
+    void render(QPainter * painter, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion = QRegion(),
     QWidget::RenderFlags renderFlags = QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren))
     */
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -3668,7 +3668,7 @@ HB_FUNC_STATIC(QWIDGET_REPAINT)
   else if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    void repaint(const QRect & rect)
+    void repaint(const QRect &rect)
     */
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -3682,7 +3682,7 @@ HB_FUNC_STATIC(QWIDGET_REPAINT)
   else if (ISNUMPAR(1) && ISQREGION(1))
   {
     /*
-    void repaint(const QRegion & rgn)
+    void repaint(const QRegion &rgn)
     */
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -3750,7 +3750,7 @@ HB_FUNC_STATIC(QWIDGET_RESIZE)
 }
 
 /*
-bool restoreGeometry(const QByteArray & geometry)
+bool restoreGeometry(const QByteArray &geometry)
 */
 HB_FUNC_STATIC(QWIDGET_RESTOREGEOMETRY)
 {
@@ -3817,7 +3817,7 @@ HB_FUNC_STATIC(QWIDGET_SCROLL)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECT(3))
   {
     /*
-    void scroll(int dx, int dy, const QRect & r)
+    void scroll(int dx, int dy, const QRect &r)
     */
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -3879,7 +3879,7 @@ HB_FUNC_STATIC(QWIDGET_SETCONTENTSMARGINS)
   else if (ISNUMPAR(1) && ISQMARGINS(1))
   {
     /*
-    void setContentsMargins(const QMargins & margins)
+    void setContentsMargins(const QMargins &margins)
     */
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -3955,7 +3955,7 @@ HB_FUNC_STATIC(QWIDGET_SETFIXEDSIZE)
   if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
-    void setFixedSize(const QSize & s)
+    void setFixedSize(const QSize &s)
     */
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -4075,7 +4075,7 @@ HB_FUNC_STATIC(QWIDGET_SETFOCUSPROXY)
 }
 
 /*
-const QRect & geometry() const
+const QRect &geometry() const
 */
 HB_FUNC_STATIC(QWIDGET_GEOMETRY)
 {
@@ -4606,7 +4606,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWMODALITY)
 }
 
 /*
-void setWindowRole(const QString & role)
+void setWindowRole(const QString &role)
 */
 HB_FUNC_STATIC(QWIDGET_SETWINDOWROLE)
 {
@@ -4865,7 +4865,7 @@ HB_FUNC_STATIC(QWIDGET_STYLESHEET)
 }
 
 /*
-void setStyleSheet(const QString & styleSheet)
+void setStyleSheet(const QString &styleSheet)
 */
 HB_FUNC_STATIC(QWIDGET_SETSTYLESHEET)
 {
@@ -5041,7 +5041,7 @@ HB_FUNC_STATIC(QWIDGET_UPDATE)
   else if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    void update(const QRect & rect)
+    void update(const QRect &rect)
     */
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -5055,7 +5055,7 @@ HB_FUNC_STATIC(QWIDGET_UPDATE)
   else if (ISNUMPAR(1) && ISQREGION(1))
   {
     /*
-    void update(const QRegion & rgn)
+    void update(const QRegion &rgn)
     */
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -5363,7 +5363,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWFILEPATH)
 }
 
 /*
-void setWindowFilePath(const QString & filePath)
+void setWindowFilePath(const QString &filePath)
 */
 HB_FUNC_STATIC(QWIDGET_SETWINDOWFILEPATH)
 {
@@ -5464,7 +5464,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWICON)
 }
 
 /*
-void setWindowIcon(const QIcon & icon)
+void setWindowIcon(const QIcon &icon)
 */
 HB_FUNC_STATIC(QWIDGET_SETWINDOWICON)
 {
@@ -6709,7 +6709,7 @@ HB_FUNC_STATIC(QWIDGET_CREATEWINDOWCONTAINER)
 }
 
 /*
-void windowTitleChanged(const QString & title)
+void windowTitleChanged(const QString &title)
 */
 HB_FUNC_STATIC(QWIDGET_ONWINDOWTITLECHANGED)
 {
@@ -6764,7 +6764,7 @@ HB_FUNC_STATIC(QWIDGET_ONWINDOWTITLECHANGED)
 }
 
 /*
-void windowIconChanged(const QIcon & icon)
+void windowIconChanged(const QIcon &icon)
 */
 HB_FUNC_STATIC(QWIDGET_ONWINDOWICONCHANGED)
 {
@@ -6819,7 +6819,7 @@ HB_FUNC_STATIC(QWIDGET_ONWINDOWICONCHANGED)
 }
 
 /*
-void windowIconTextChanged(const QString & iconText)
+void windowIconTextChanged(const QString &iconText)
 */
 HB_FUNC_STATIC(QWIDGET_ONWINDOWICONTEXTCHANGED)
 {
@@ -6870,7 +6870,7 @@ HB_FUNC_STATIC(QWIDGET_ONWINDOWICONTEXTCHANGED)
 }
 
 /*
-void customContextMenuRequested(const QPoint & pos)
+void customContextMenuRequested(const QPoint &pos)
 */
 HB_FUNC_STATIC(QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED)
 {

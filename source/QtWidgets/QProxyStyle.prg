@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QProxyStyle(const QString & key)
+    QProxyStyle(const QString &key)
     */
     auto obj = new QProxyStyle(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, false);
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWCOMPLEXCONTROL)
 }
 
 /*
-void drawItemText(QPainter * painter, const QRect & rect, int flags, const QPalette & pal, bool enabled, const QString &
+void drawItemText(QPainter * painter, const QRect &rect, int flags, const QPalette &pal, bool enabled, const QString &
 text, QPalette::ColorRole textRole = QPalette::NoRole) const
 */
 HB_FUNC_STATIC(QPROXYSTYLE_DRAWITEMTEXT)
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWITEMTEXT)
 }
 
 /*
-virtual void drawItemPixmap(QPainter * painter, const QRect & rect, int alignment, const QPixmap & pixmap) const
+virtual void drawItemPixmap(QPainter * painter, const QRect &rect, int alignment, const QPixmap &pixmap) const
 */
 HB_FUNC_STATIC(QPROXYSTYLE_DRAWITEMPIXMAP)
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWITEMPIXMAP)
 }
 
 /*
-QSize sizeFromContents(QStyle::ContentsType type, const QStyleOption * option, const QSize & size, const QWidget *
+QSize sizeFromContents(QStyle::ContentsType type, const QStyleOption * option, const QSize &size, const QWidget *
 widget) const
 */
 HB_FUNC_STATIC(QPROXYSTYLE_SIZEFROMCONTENTS)
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_SUBCONTROLRECT)
 }
 
 /*
-QRect itemTextRect(const QFontMetrics & fm, const QRect & r, int flags, bool enabled, const QString & text) const
+QRect itemTextRect(const QFontMetrics &fm, const QRect &r, int flags, bool enabled, const QString &text) const
 */
 HB_FUNC_STATIC(QPROXYSTYLE_ITEMTEXTRECT)
 {
@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_ITEMTEXTRECT)
 }
 
 /*
-QRect itemPixmapRect(const QRect & r, int flags, const QPixmap & pixmap) const
+QRect itemPixmapRect(const QRect &r, int flags, const QPixmap &pixmap) const
 */
 HB_FUNC_STATIC(QPROXYSTYLE_ITEMPIXMAPRECT)
 {
@@ -442,7 +442,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_ITEMPIXMAPRECT)
 
 /*
 QStyle::SubControl hitTestComplexControl(QStyle::ComplexControl control, const QStyleOptionComplex * option, const
-QPoint & pos, const QWidget * widget = nullptr) const
+QPoint &pos, const QWidget * widget = nullptr) const
 */
 HB_FUNC_STATIC(QPROXYSTYLE_HITTESTCOMPLEXCONTROL)
 {
@@ -607,7 +607,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_STANDARDPIXMAP)
 }
 
 /*
-QPixmap generatedIconPixmap(QIcon::Mode iconMode, const QPixmap & pixmap, const QStyleOption * opt) const
+QPixmap generatedIconPixmap(QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption * opt) const
 */
 HB_FUNC_STATIC(QPROXYSTYLE_GENERATEDICONPIXMAP)
 {
@@ -676,7 +676,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_POLISH)
   else if (ISNUMPAR(1) && ISQPALETTE(1))
   {
     /*
-    void polish(QPalette & pal)
+    void polish(QPalette &pal)
     */
     auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 

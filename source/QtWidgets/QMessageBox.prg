@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_NEW)
            (ISQWIDGET(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)))
   {
     /*
-    QMessageBox(QMessageBox::Icon icon, const QString & title, const QString & text, QMessageBox::StandardButtons
+    QMessageBox(QMessageBox::Icon icon, const QString &title, const QString &text, QMessageBox::StandardButtons
     buttons = QMessageBox::NoButton, QWidget * parent = nullptr, Qt::WindowFlags f = Qt::Dialog |
     Qt::MSWindowsFixedSizeDialogHint)
     */
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ADDBUTTON)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    QPushButton * addButton(const QString & text, QMessageBox::ButtonRole role)
+    QPushButton * addButton(const QString &text, QMessageBox::ButtonRole role)
     */
     auto obj = qobject_cast<QMessageBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_DETAILEDTEXT)
 }
 
 /*
-void setDetailedText (const QString & text)
+void setDetailedText (const QString &text)
 */
 HB_FUNC_STATIC(QMESSAGEBOX_SETDETAILEDTEXT)
 {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ICONPIXMAP)
 }
 
 /*
-void setIconPixmap(const QPixmap & pixmap)
+void setIconPixmap(const QPixmap &pixmap)
 */
 HB_FUNC_STATIC(QMESSAGEBOX_SETICONPIXMAP)
 {
@@ -550,7 +550,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_INFORMATIVETEXT)
 }
 
 /*
-void setInformativeText(const QString & text)
+void setInformativeText(const QString &text)
 */
 HB_FUNC_STATIC(QMESSAGEBOX_SETINFORMATIVETEXT)
 {
@@ -726,7 +726,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETWINDOWMODALITY)
 }
 
 /*
-void setWindowTitle(const QString & title)
+void setWindowTitle(const QString &title)
 */
 HB_FUNC_STATIC(QMESSAGEBOX_SETWINDOWTITLE)
 {
@@ -850,7 +850,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_TEXT)
 }
 
 /*
-void setText(const QString & text)
+void setText(const QString &text)
 */
 HB_FUNC_STATIC(QMESSAGEBOX_SETTEXT)
 {
@@ -978,7 +978,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_EXEC)
 }
 
 /*
-static void about(QWidget * parent, const QString & title, const QString & text)
+static void about(QWidget * parent, const QString &title, const QString &text)
 */
 HB_FUNC_STATIC(QMESSAGEBOX_ABOUT)
 {
@@ -999,7 +999,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ABOUT)
 }
 
 /*
-static void aboutQt(QWidget * parent, const QString & title = QString())
+static void aboutQt(QWidget * parent, const QString &title = QString())
 */
 HB_FUNC_STATIC(QMESSAGEBOX_ABOUTQT)
 {
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ABOUTQT)
 }
 
 /*
-static QMessageBox::StandardButton critical(QWidget * parent, const QString & title, const QString & text,
+static QMessageBox::StandardButton critical(QWidget * parent, const QString &title, const QString &text,
 QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton =
 QMessageBox::NoButton)
 */
@@ -1046,7 +1046,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_CRITICAL)
 }
 
 /*
-static QMessageBox::StandardButton information(QWidget * parent, const QString & title, const QString & text,
+static QMessageBox::StandardButton information(QWidget * parent, const QString &title, const QString &text,
 QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton =
 QMessageBox::NoButton)
 */
@@ -1072,7 +1072,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_INFORMATION)
 }
 
 /*
-static QMessageBox::StandardButton question(QWidget * parent, const QString & title, const QString & text,
+static QMessageBox::StandardButton question(QWidget * parent, const QString &title, const QString &text,
 QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton =
 QMessageBox::NoButton)
 */
@@ -1098,7 +1098,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_QUESTION)
 }
 
 /*
-static QMessageBox::StandardButton warning(QWidget * parent, const QString & title, const QString & text,
+static QMessageBox::StandardButton warning(QWidget * parent, const QString &title, const QString &text,
 QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton =
 QMessageBox::NoButton)
 */
@@ -1269,7 +1269,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTONTEXT)
 }
 
 /*
-void setButtonText(int button, const QString & text)
+void setButtonText(int button, const QString &text)
 */
 HB_FUNC_STATIC(QMESSAGEBOX_SETBUTTONTEXT)
 {

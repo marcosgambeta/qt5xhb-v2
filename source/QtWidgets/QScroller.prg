@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QSCROLLER_FINALPOSITION)
 }
 
 /*
-bool handleInput(QScroller::Input input, const QPointF & position, qint64 timestamp = 0)
+bool handleInput(QScroller::Input input, const QPointF &position, qint64 timestamp = 0)
 */
 HB_FUNC_STATIC(QSCROLLER_HANDLEINPUT)
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QSCROLLER_SETSNAPPOSITIONSX)
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void setSnapPositionsX(const QList<qreal> & positions)
+    void setSnapPositionsX(const QList<qreal> &positions)
     */
     auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QSCROLLER_SETSNAPPOSITIONSY)
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void setSnapPositionsY(const QList<qreal> & positions)
+    void setSnapPositionsY(const QList<qreal> &positions)
     */
     auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QSCROLLER_ENSUREVISIBLE)
   if (ISNUMPAR(3) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin)
+    void ensureVisible(const QRectF &rect, qreal xmargin, qreal ymargin)
     */
     auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -380,7 +380,7 @@ HB_FUNC_STATIC(QSCROLLER_ENSUREVISIBLE)
   else if (ISNUMPAR(4) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime)
+    void ensureVisible(const QRectF &rect, qreal xmargin, qreal ymargin, int scrollTime)
     */
     auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -428,7 +428,7 @@ HB_FUNC_STATIC(QSCROLLER_SCROLLTO)
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    void scrollTo(const QPointF & pos)
+    void scrollTo(const QPointF &pos)
     */
     auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -442,7 +442,7 @@ HB_FUNC_STATIC(QSCROLLER_SCROLLTO)
   else if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2))
   {
     /*
-    void scrollTo(const QPointF & pos, int scrollTime)
+    void scrollTo(const QPointF &pos, int scrollTime)
     */
     auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -460,7 +460,7 @@ HB_FUNC_STATIC(QSCROLLER_SCROLLTO)
 }
 
 /*
-void setScrollerProperties(const QScrollerProperties & prop)
+void setScrollerProperties(const QScrollerProperties &prop)
 */
 HB_FUNC_STATIC(QSCROLLER_SETSCROLLERPROPERTIES)
 {
@@ -634,7 +634,7 @@ HB_FUNC_STATIC(QSCROLLER_UNGRABGESTURE)
 }
 
 /*
-void scrollerPropertiesChanged(const QScrollerProperties & newProperties)
+void scrollerPropertiesChanged(const QScrollerProperties &newProperties)
 */
 HB_FUNC_STATIC(QSCROLLER_ONSCROLLERPROPERTIESCHANGED)
 {

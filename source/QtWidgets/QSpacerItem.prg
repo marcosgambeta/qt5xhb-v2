@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QSPACERITEM_MINIMUMSIZE)
 }
 
 /*
-virtual void setGeometry(const QRect & r)
+virtual void setGeometry(const QRect &r)
 */
 HB_FUNC_STATIC(QSPACERITEM_SETGEOMETRY)
 {

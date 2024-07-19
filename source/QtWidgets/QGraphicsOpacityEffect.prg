@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_SETOPACITY)
 }
 
 /*
-void setOpacityMask(const QBrush & mask)
+void setOpacityMask(const QBrush &mask)
 */
 HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_SETOPACITYMASK)
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED)
 }
 
 /*
-void opacityMaskChanged(const QBrush & mask)
+void opacityMaskChanged(const QBrush &mask)
 */
 HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED)
 {

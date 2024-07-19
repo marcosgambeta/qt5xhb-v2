@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_NEW)
   else if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QColorDialog(const QColor & initial, QWidget * parent = nullptr)
+    QColorDialog(const QColor &initial, QWidget * parent = nullptr)
     */
     auto obj = new QColorDialog(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)),
                                 OPQWIDGET(2, nullptr));
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_CURRENTCOLOR)
 }
 
 /*
-void setCurrentColor(const QColor & color)
+void setCurrentColor(const QColor &color)
 */
 HB_FUNC_STATIC(QCOLORDIALOG_SETCURRENTCOLOR)
 {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_CUSTOMCOUNT)
 }
 
 /*
-static QColor getColor(const QColor & initial = Qt::white, QWidget * parent = nullptr, const QString & title =
+static QColor getColor(const QColor &initial = Qt::white, QWidget * parent = nullptr, const QString &title =
 QString(), QColorDialog::ColorDialogOptions options = 0)
 */
 HB_FUNC_STATIC(QCOLORDIALOG_GETCOLOR)
@@ -479,7 +479,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SETSTANDARDCOLOR)
 }
 
 /*
-void colorSelected(const QColor & color)
+void colorSelected(const QColor &color)
 */
 HB_FUNC_STATIC(QCOLORDIALOG_ONCOLORSELECTED)
 {
@@ -530,7 +530,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_ONCOLORSELECTED)
 }
 
 /*
-void currentColorChanged(const QColor & color)
+void currentColorChanged(const QColor &color)
 */
 HB_FUNC_STATIC(QCOLORDIALOG_ONCURRENTCOLORCHANGED)
 {

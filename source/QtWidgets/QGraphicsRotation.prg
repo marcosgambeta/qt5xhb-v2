@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
   if (ISNUMPAR(1) && HB_ISOBJECT(1))
   {
     /*
-    void setAxis(const QVector3D & axis)
+    void setAxis(const QVector3D &axis)
     */
     auto obj = qobject_cast<QGraphicsRotation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
 }
 
 /*
-void setOrigin(const QVector3D & point)
+void setOrigin(const QVector3D &point)
 */
 HB_FUNC_STATIC(QGRAPHICSROTATION_SETORIGIN)
 {

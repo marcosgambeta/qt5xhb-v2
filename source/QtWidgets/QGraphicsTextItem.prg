@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsTextItem(const QString & text, QGraphicsItem * parent = nullptr)
+    QGraphicsTextItem(const QString &text, QGraphicsItem * parent = nullptr)
     */
     auto obj =
         new QGraphicsTextItem(PQSTRING(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(2)));
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_OPENEXTERNALLINKS)
 }
 
 /*
-void setDefaultTextColor(const QColor & col)
+void setDefaultTextColor(const QColor &col)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR)
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETDOCUMENT)
 }
 
 /*
-void setFont(const QFont & font)
+void setFont(const QFont &font)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETFONT)
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETFONT)
 }
 
 /*
-void setHtml(const QString & text)
+void setHtml(const QString &text)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETHTML)
 {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS)
 }
 
 /*
-void setPlainText(const QString & text)
+void setPlainText(const QString &text)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETPLAINTEXT)
 {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS)
 }
 
 /*
-void setTextCursor(const QTextCursor & cursor)
+void setTextCursor(const QTextCursor &cursor)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTEXTCURSOR)
 {
@@ -688,7 +688,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_BOUNDINGRECT)
 }
 
 /*
-virtual bool contains(const QPointF & point) const
+virtual bool contains(const QPointF &point) const
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_CONTAINS)
 {
@@ -836,7 +836,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TYPE)
 }
 
 /*
-void linkActivated(const QString & link)
+void linkActivated(const QString &link)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_ONLINKACTIVATED)
 {
@@ -887,7 +887,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_ONLINKACTIVATED)
 }
 
 /*
-void linkHovered(const QString & link)
+void linkHovered(const QString &link)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_ONLINKHOVERED)
 {

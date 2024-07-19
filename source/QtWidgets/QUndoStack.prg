@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QUNDOSTACK_DELETE)
 }
 
 /*
-void beginMacro(const QString & text)
+void beginMacro(const QString &text)
 */
 HB_FUNC_STATIC(QUNDOSTACK_BEGINMACRO)
 {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QUNDOSTACK_COUNT)
 }
 
 /*
-QAction * createRedoAction(QObject * parent, const QString & prefix = QString()) const
+QAction * createRedoAction(QObject * parent, const QString &prefix = QString()) const
 */
 HB_FUNC_STATIC(QUNDOSTACK_CREATEREDOACTION)
 {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QUNDOSTACK_CREATEREDOACTION)
 }
 
 /*
-QAction * createUndoAction(QObject * parent, const QString & prefix = QString()) const
+QAction * createUndoAction(QObject * parent, const QString &prefix = QString()) const
 */
 HB_FUNC_STATIC(QUNDOSTACK_CREATEUNDOACTION)
 {
@@ -917,7 +917,7 @@ HB_FUNC_STATIC(QUNDOSTACK_ONINDEXCHANGED)
 }
 
 /*
-void redoTextChanged(const QString & redoText)
+void redoTextChanged(const QString &redoText)
 */
 HB_FUNC_STATIC(QUNDOSTACK_ONREDOTEXTCHANGED)
 {
@@ -968,7 +968,7 @@ HB_FUNC_STATIC(QUNDOSTACK_ONREDOTEXTCHANGED)
 }
 
 /*
-void undoTextChanged(const QString & undoText)
+void undoTextChanged(const QString &undoText)
 */
 HB_FUNC_STATIC(QUNDOSTACK_ONUNDOTEXTCHANGED)
 {

@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QMENU_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QMenu(const QString & title, QWidget * parent = nullptr)
+    QMenu(const QString &title, QWidget * parent = nullptr)
     */
     auto obj = new QMenu(PQSTRING(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QMENU_DELETE)
 }
 
 /*
-QAction * actionAt(const QPoint & pt) const
+QAction * actionAt(const QPoint &pt) const
 */
 HB_FUNC_STATIC(QMENU_ACTIONAT)
 {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QAction * addAction(const QString & text)
+    QAction * addAction(const QString &text)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
   else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2))
   {
     /*
-    QAction * addAction(const QIcon & icon, const QString & text)
+    QAction * addAction(const QIcon &icon, const QString &text)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
   else if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (ISQKEYSEQUENCE(4) || HB_ISNIL(4)))
   {
     /*
-    QAction * addAction(const QString & text, const QObject * receiver, const char * member, const QKeySequence &
+    QAction * addAction(const QString &text, const QObject * receiver, const char * member, const QKeySequence &
     shortcut = 0)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -283,8 +283,8 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
            (ISQKEYSEQUENCE(5) || HB_ISNIL(5)))
   {
     /*
-    QAction * addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const
-    QKeySequence & shortcut = 0)
+    QAction * addAction(const QIcon &icon, const QString &text, const QObject * receiver, const char * member, const
+    QKeySequence &shortcut = 0)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QMENU_ADDMENU)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QMenu * addMenu(const QString & title)
+    QMenu * addMenu(const QString &title)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QMENU_ADDMENU)
   else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2))
   {
     /*
-    QMenu * addMenu(const QIcon & icon, const QString & title)
+    QMenu * addMenu(const QIcon &icon, const QString &title)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -484,7 +484,7 @@ HB_FUNC_STATIC(QMENU_EXEC)
   else if (ISBETWEEN(1, 2) && ISQPOINT(1) && (ISQACTION(2) || HB_ISNIL(2)))
   {
     /*
-    QAction * exec(const QPoint & pos, QAction * at = nullptr)
+    QAction * exec(const QPoint &pos, QAction * at = nullptr)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -498,7 +498,7 @@ HB_FUNC_STATIC(QMENU_EXEC)
            (ISQWIDGET(4) || HB_ISNIL(4)))
   {
     /*
-    static QAction * exec(QList<QAction*> actions, const QPoint & pos, QAction * at = 0, QWidget * parent = 0)
+    static QAction * exec(QList<QAction*> actions, const QPoint &pos, QAction * at = 0, QWidget * parent = 0)
     */
 
     QList<QAction *> par1;
@@ -569,7 +569,7 @@ HB_FUNC_STATIC(QMENU_ICON)
 }
 
 /*
-void setIcon(const QIcon & icon)
+void setIcon(const QIcon &icon)
 */
 HB_FUNC_STATIC(QMENU_SETICON)
 {
@@ -768,7 +768,7 @@ HB_FUNC_STATIC(QMENU_MENUACTION)
 }
 
 /*
-void popup(const QPoint & pos, QAction * at = nullptr)
+void popup(const QPoint &pos, QAction * at = nullptr)
 */
 HB_FUNC_STATIC(QMENU_POPUP)
 {
@@ -868,7 +868,7 @@ HB_FUNC_STATIC(QMENU_TITLE)
 }
 
 /*
-void setTitle(const QString & title)
+void setTitle(const QString &title)
 */
 HB_FUNC_STATIC(QMENU_SETTITLE)
 {
@@ -950,7 +950,7 @@ HB_FUNC_STATIC(QMENU_ADDSECTION)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QAction * addSection(const QString & text)
+    QAction * addSection(const QString &text)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -965,7 +965,7 @@ HB_FUNC_STATIC(QMENU_ADDSECTION)
   else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2))
   {
     /*
-    QAction * addSection(const QIcon & icon, const QString & text)
+    QAction * addSection(const QIcon &icon, const QString &text)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -991,7 +991,7 @@ HB_FUNC_STATIC(QMENU_INSERTSECTION)
   if (ISNUMPAR(2) && ISQACTION(1) && HB_ISCHAR(2))
   {
     /*
-    QAction * insertSection(QAction * before, const QString & text)
+    QAction * insertSection(QAction * before, const QString &text)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1006,7 +1006,7 @@ HB_FUNC_STATIC(QMENU_INSERTSECTION)
   else if (ISNUMPAR(3) && ISQACTION(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3))
   {
     /*
-    QAction * insertSection(QAction * before, const QIcon & icon, const QString & text)
+    QAction * insertSection(QAction * before, const QIcon &icon, const QString &text)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());

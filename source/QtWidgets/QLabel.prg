@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QLABEL_NEW)
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QLabel(const QString & text, QWidget * parent = nullptr, Qt::WindowFlags f = 0)
+    QLabel(const QString &text, QWidget * parent = nullptr, Qt::WindowFlags f = 0)
     */
     auto obj = new QLabel(PQSTRING(1), OPQWIDGET(2, nullptr),
                           HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(3)));
@@ -935,7 +935,7 @@ HB_FUNC_STATIC(QLABEL_SETNUM)
 }
 
 /*
-void setPicture(const QPicture & picture)
+void setPicture(const QPicture &picture)
 */
 HB_FUNC_STATIC(QLABEL_SETPICTURE)
 {
@@ -1013,7 +1013,7 @@ HB_FUNC_STATIC(QLABEL_SETTEXT)
 }
 
 /*
-void linkActivated(const QString & link)
+void linkActivated(const QString &link)
 */
 HB_FUNC_STATIC(QLABEL_ONLINKACTIVATED)
 {
@@ -1064,7 +1064,7 @@ HB_FUNC_STATIC(QLABEL_ONLINKACTIVATED)
 }
 
 /*
-void linkHovered(const QString & link)
+void linkHovered(const QString &link)
 */
 HB_FUNC_STATIC(QLABEL_ONLINKHOVERED)
 {

@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QMENUBAR_ADDACTION)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QAction * addAction(const QString & text)
+    QAction * addAction(const QString &text)
     */
     auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QMENUBAR_ADDACTION)
   else if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3))
   {
     /*
-    QAction * addAction(const QString & text, const QObject * receiver, const char * member)
+    QAction * addAction(const QString &text, const QObject * receiver, const char * member)
     */
     auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QMENUBAR_ADDMENU)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QMenu * addMenu(const QString & title)
+    QMenu * addMenu(const QString &title)
     */
     auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QMENUBAR_ADDMENU)
   else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2))
   {
     /*
-    QMenu * addMenu(const QIcon & icon, const QString & title)
+    QMenu * addMenu(const QIcon &icon, const QString &title)
     */
     auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 

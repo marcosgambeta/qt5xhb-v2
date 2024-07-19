@@ -175,7 +175,7 @@ RETURN
 #include <QtWidgets/QStyle>
 
     /*
-    QApplication(int & argc, char ** argv)
+    QApplication(int &argc, char ** argv)
     */
 HB_FUNC_STATIC(QAPPLICATION_NEW)
 {
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QAPPLICATION_CLOSEALLWINDOWS)
 }
 
 /*
-void setStyleSheet(const QString & sheet)
+void setStyleSheet(const QString &sheet)
 */
 HB_FUNC_STATIC(QAPPLICATION_SETSTYLESHEET)
 {
@@ -548,7 +548,7 @@ HB_FUNC_STATIC(QAPPLICATION_BEEP)
 }
 
 /*
-static void changeOverrideCursor(const QCursor & cursor)
+static void changeOverrideCursor(const QCursor &cursor)
 */
 HB_FUNC_STATIC(QAPPLICATION_CHANGEOVERRIDECURSOR)
 {
@@ -1172,7 +1172,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETEFFECTENABLED)
 }
 
 /*
-static void setFont(const QFont & font, const char * className = nullptr)
+static void setFont(const QFont &font, const char * className = nullptr)
 */
 HB_FUNC_STATIC(QAPPLICATION_SETFONT)
 {
@@ -1256,7 +1256,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETLAYOUTDIRECTION)
 }
 
 /*
-static void setOverrideCursor(const QCursor & cursor)
+static void setOverrideCursor(const QCursor &cursor)
 */
 HB_FUNC_STATIC(QAPPLICATION_SETOVERRIDECURSOR)
 {
@@ -1277,7 +1277,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETOVERRIDECURSOR)
 }
 
 /*
-static void setPalette(const QPalette & palette, const char * className = nullptr)
+static void setPalette(const QPalette &palette, const char * className = nullptr)
 */
 HB_FUNC_STATIC(QAPPLICATION_SETPALETTE)
 {
@@ -1375,7 +1375,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETSTYLE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QStyle * setStyle(const QString & style)
+    static QStyle * setStyle(const QString &style)
     */
 
     auto ptr = QApplication::setStyle(PQSTRING(1));
@@ -1409,7 +1409,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETWHEELSCROLLLINES)
 }
 
 /*
-static void setWindowIcon(const QIcon & icon)
+static void setWindowIcon(const QIcon &icon)
 */
 HB_FUNC_STATIC(QAPPLICATION_SETWINDOWICON)
 {
@@ -1492,7 +1492,7 @@ HB_FUNC_STATIC(QAPPLICATION_TOPLEVELAT)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    static QWidget * topLevelAt(const QPoint & point)
+    static QWidget * topLevelAt(const QPoint &point)
     */
 
     auto ptr = QApplication::topLevelAt(*PQPOINT(1));
@@ -1579,7 +1579,7 @@ HB_FUNC_STATIC(QAPPLICATION_WIDGETAT)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    static QWidget * widgetAt(const QPoint & point)
+    static QWidget * widgetAt(const QPoint &point)
     */
 
     auto ptr = QApplication::widgetAt(*PQPOINT(1));

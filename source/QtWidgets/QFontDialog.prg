@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QFONTDIALOG_NEW)
   else if (ISBETWEEN(1, 2) && ISQFONT(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QFontDialog(const QFont & initial, QWidget * parent = nullptr)
+    QFontDialog(const QFont &initial, QWidget * parent = nullptr)
     */
     auto obj = new QFontDialog(*PQFONT(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QFONTDIALOG_CURRENTFONT)
 }
 
 /*
-void setCurrentFont(const QFont & font)
+void setCurrentFont(const QFont &font)
 */
 HB_FUNC_STATIC(QFONTDIALOG_SETCURRENTFONT)
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
            (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    static QFont getFont(bool * ok, const QFont & initial, QWidget * parent = nullptr, const QString & title =
+    static QFont getFont(bool * ok, const QFont &initial, QWidget * parent = nullptr, const QString &title =
     QString(), QFontDialog::FontDialogOptions options = 0)
     */
 
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
 }
 
 /*
-void currentFontChanged(const QFont & font)
+void currentFontChanged(const QFont &font)
 */
 HB_FUNC_STATIC(QFONTDIALOG_ONCURRENTFONTCHANGED)
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QFONTDIALOG_ONCURRENTFONTCHANGED)
 }
 
 /*
-void fontSelected(const QFont & font)
+void fontSelected(const QFont &font)
 */
 HB_FUNC_STATIC(QFONTDIALOG_ONFONTSELECTED)
 {

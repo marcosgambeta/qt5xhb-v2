@@ -408,7 +408,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETOPENLINKS)
 }
 
 /*
-void setSearchPaths(const QStringList & paths)
+void setSearchPaths(const QStringList &paths)
 */
 HB_FUNC_STATIC(QTEXTBROWSER_SETSEARCHPATHS)
 {
@@ -459,7 +459,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SOURCE)
 }
 
 /*
-virtual QVariant loadResource(int type, const QUrl & name)
+virtual QVariant loadResource(int type, const QUrl &name)
 */
 HB_FUNC_STATIC(QTEXTBROWSER_LOADRESOURCE)
 {
@@ -588,7 +588,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_RELOAD)
 }
 
 /*
-virtual void setSource(const QUrl & name)
+virtual void setSource(const QUrl &name)
 */
 HB_FUNC_STATIC(QTEXTBROWSER_SETSOURCE)
 {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETSOURCE)
 }
 
 /*
-void anchorClicked(const QUrl & link)
+void anchorClicked(const QUrl &link)
 */
 HB_FUNC_STATIC(QTEXTBROWSER_ONANCHORCLICKED)
 {
@@ -767,7 +767,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_ONFORWARDAVAILABLE)
 }
 
 /*
-void highlighted(const QUrl & link)
+void highlighted(const QUrl &link)
 */
 HB_FUNC_STATIC(QTEXTBROWSER_ONHIGHLIGHTED1)
 {
@@ -818,7 +818,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_ONHIGHLIGHTED1)
 }
 
 /*
-void highlighted(const QString & link)
+void highlighted(const QString &link)
 */
 HB_FUNC_STATIC(QTEXTBROWSER_ONHIGHLIGHTED2)
 {
@@ -917,7 +917,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_ONHISTORYCHANGED)
 }
 
 /*
-void sourceChanged(const QUrl & src)
+void sourceChanged(const QUrl &src)
 */
 HB_FUNC_STATIC(QTEXTBROWSER_ONSOURCECHANGED)
 {

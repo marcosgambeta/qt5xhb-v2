@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QToolBar * addToolBar(const QString & title)
+    QToolBar * addToolBar(const QString &title)
     */
     auto obj = qobject_cast<QMainWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -679,7 +679,7 @@ HB_FUNC_STATIC(QMAINWINDOW_RESTOREDOCKWIDGET)
 }
 
 /*
-bool restoreState(const QByteArray & state, int version = 0)
+bool restoreState(const QByteArray &state, int version = 0)
 */
 HB_FUNC_STATIC(QMAINWINDOW_RESTORESTATE)
 {
@@ -832,7 +832,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETDOCUMENTMODE)
 }
 
 /*
-void setIconSize(const QSize & iconSize)
+void setIconSize(const QSize &iconSize)
 */
 HB_FUNC_STATIC(QMAINWINDOW_SETICONSIZE)
 {
@@ -1291,7 +1291,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TAKECENTRALWIDGET)
 }
 
 /*
-void iconSizeChanged(const QSize & iconSize)
+void iconSizeChanged(const QSize &iconSize)
 */
 HB_FUNC_STATIC(QMAINWINDOW_ONICONSIZECHANGED)
 {

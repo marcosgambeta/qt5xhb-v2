@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QSTATUSBAR_CLEARMESSAGE)
 }
 
 /*
-void showMessage(const QString & message, int timeout = 0)
+void showMessage(const QString &message, int timeout = 0)
 */
 HB_FUNC_STATIC(QSTATUSBAR_SHOWMESSAGE)
 {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QSTATUSBAR_SHOWMESSAGE)
 }
 
 /*
-void messageChanged(const QString & message)
+void messageChanged(const QString &message)
 */
 HB_FUNC_STATIC(QSTATUSBAR_ONMESSAGECHANGED)
 {

@@ -68,7 +68,7 @@ RETURN
 #include <QtGui/QWindow>
 
     /*
-    QAccessibleWidget(QWidget * o, QAccessible::Role r = QAccessible::Client, const QString & name = QString())
+    QAccessibleWidget(QWidget * o, QAccessible::Role r = QAccessible::Client, const QString &name = QString())
     */
 HB_FUNC_STATIC(QACCESSIBLEWIDGET_NEW)
 {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_ACTIONNAMES)
 }
 
 /*
-void doAction(const QString & actionName)
+void doAction(const QString &actionName)
 */
 HB_FUNC_STATIC(QACCESSIBLEWIDGET_DOACTION)
 {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_DOACTION)
 }
 
 /*
-QStringList keyBindingsForAction(const QString & actionName) const
+QStringList keyBindingsForAction(const QString &actionName) const
 */
 HB_FUNC_STATIC(QACCESSIBLEWIDGET_KEYBINDINGSFORACTION)
 {

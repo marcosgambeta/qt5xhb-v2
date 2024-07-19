@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ADDBUTTON)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    QPushButton * addButton(const QString & text, QDialogButtonBox::ButtonRole role)
+    QPushButton * addButton(const QString &text, QDialogButtonBox::ButtonRole role)
     */
     auto obj = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 

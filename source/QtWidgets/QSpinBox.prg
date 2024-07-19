@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QSPINBOX_PREFIX)
 }
 
 /*
-void setPrefix(const QString & prefix)
+void setPrefix(const QString &prefix)
 */
 HB_FUNC_STATIC(QSPINBOX_SETPREFIX)
 {
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QSPINBOX_SUFFIX)
 }
 
 /*
-void setSuffix(const QString & suffix)
+void setSuffix(const QString &suffix)
 */
 HB_FUNC_STATIC(QSPINBOX_SETSUFFIX)
 {
@@ -553,7 +553,7 @@ HB_FUNC_STATIC(QSPINBOX_ONVALUECHANGED1)
 }
 
 /*
-void valueChanged(const QString & text)
+void valueChanged(const QString &text)
 */
 HB_FUNC_STATIC(QSPINBOX_ONVALUECHANGED2)
 {

@@ -499,7 +499,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETFLOW)
 }
 
 /*
-void setGridSize(const QSize & size)
+void setGridSize(const QSize &size)
 */
 HB_FUNC_STATIC(QLISTVIEW_SETGRIDSIZE)
 {
@@ -907,7 +907,7 @@ HB_FUNC_STATIC(QLISTVIEW_WORDWRAP)
 }
 
 /*
-virtual QModelIndex indexAt(const QPoint & p) const
+virtual QModelIndex indexAt(const QPoint &p) const
 */
 HB_FUNC_STATIC(QLISTVIEW_INDEXAT)
 {
@@ -932,7 +932,7 @@ HB_FUNC_STATIC(QLISTVIEW_INDEXAT)
 }
 
 /*
-virtual void scrollTo(const QModelIndex & index, QListView::ScrollHint hint = QListView::EnsureVisible)
+virtual void scrollTo(const QModelIndex &index, QListView::ScrollHint hint = QListView::EnsureVisible)
 */
 HB_FUNC_STATIC(QLISTVIEW_SCROLLTO)
 {
@@ -959,7 +959,7 @@ HB_FUNC_STATIC(QLISTVIEW_SCROLLTO)
 }
 
 /*
-virtual QRect visualRect(const QModelIndex & index) const
+virtual QRect visualRect(const QModelIndex &index) const
 */
 HB_FUNC_STATIC(QLISTVIEW_VISUALRECT)
 {
@@ -984,7 +984,7 @@ HB_FUNC_STATIC(QLISTVIEW_VISUALRECT)
 }
 
 /*
-void indexesMoved(const QModelIndexList & indexes)
+void indexesMoved(const QModelIndexList &indexes)
 */
 HB_FUNC_STATIC(QLISTVIEW_ONINDEXESMOVED)
 {
