@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_NEW)
   else if (ISBETWEEN(1, 2) && ISQBLUETOOTHADDRESS(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QBluetoothLocalDevice(const QBluetoothAddress & address, QObject * parent = nullptr)
+    QBluetoothLocalDevice(const QBluetoothAddress &address, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QBluetoothLocalDevice(*PQBLUETOOTHADDRESS(1), OPQOBJECT(2, nullptr));
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ISVALID)
 }
 
 /*
-void requestPairing(const QBluetoothAddress & address, QBluetoothLocalDevice::Pairing pairing)
+void requestPairing(const QBluetoothAddress &address, QBluetoothLocalDevice::Pairing pairing)
 */
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_REQUESTPAIRING)
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_REQUESTPAIRING)
 }
 
 /*
-QBluetoothLocalDevice::Pairing pairingStatus(const QBluetoothAddress & address) const
+QBluetoothLocalDevice::Pairing pairingStatus(const QBluetoothAddress &address) const
 */
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_PAIRINGSTATUS)
 {
@@ -465,7 +465,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONHOSTMODESTATECHANGED)
 }
 
 /*
-void pairingFinished(const QBluetoothAddress & address, QBluetoothLocalDevice::Pairing pairing)
+void pairingFinished(const QBluetoothAddress &address, QBluetoothLocalDevice::Pairing pairing)
 */
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGFINISHED)
 {
@@ -524,7 +524,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGFINISHED)
 }
 
 /*
-void pairingDisplayPinCode(const QBluetoothAddress & address, QString pin)
+void pairingDisplayPinCode(const QBluetoothAddress &address, QString pin)
 */
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYPINCODE)
 {
@@ -582,7 +582,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYPINCODE)
 }
 
 /*
-void pairingDisplayConfirmation(const QBluetoothAddress & address, QString pin)
+void pairingDisplayConfirmation(const QBluetoothAddress &address, QString pin)
 */
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYCONFIRMATION)
 {
