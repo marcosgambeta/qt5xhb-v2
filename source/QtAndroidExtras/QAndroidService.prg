@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QANDROIDSERVICE_NEW)
 }
 
 /*
-QAndroidService(int &argc, char **argv, const std::function<QAndroidBinder*(const QAndroidIntent &intent)> & binder)
+QAndroidService(int &argc, char **argv, const std::function<QAndroidBinder*(const QAndroidIntent &intent)> &binder)
 */
 
 /*
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QANDROIDSERVICE_DELETE)
 }
 
 /*
-virtual QAndroidBinder * onBind(const QAndroidIntent & intent)
+virtual QAndroidBinder * onBind(const QAndroidIntent &intent)
 */
 HB_FUNC_STATIC(QANDROIDSERVICE_ONBIND)
 {

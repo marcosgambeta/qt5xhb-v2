@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_NEW)
   else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1))
   {
     /*
-    QAndroidServiceConnection(const QAndroidJniObject & serviceConnection)
+    QAndroidServiceConnection(const QAndroidJniObject &serviceConnection)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QAndroidServiceConnection(*PQANDROIDJNIOBJECT(1));
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_DELETE)
 }
 
 /*
-virtual void onServiceConnected(const QString & name, const QAndroidBinder & serviceBinder) = 0
+virtual void onServiceConnected(const QString &name, const QAndroidBinder &serviceBinder) = 0
 */
 HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_ONSERVICECONNECTED)
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_ONSERVICECONNECTED)
 }
 
 /*
-virtual void onServiceDisconnected(const QString & name) = 0
+virtual void onServiceDisconnected(const QString &name) = 0
 */
 HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_ONSERVICEDISCONNECTED)
 {
