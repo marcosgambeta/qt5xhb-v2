@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QAREASERIES_COLOR)
 }
 
 /*
-void setColor(const QColor & color)
+void setColor(const QColor &color)
 */
 HB_FUNC_STATIC(QAREASERIES_SETCOLOR)
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QAREASERIES_BORDERCOLOR)
 }
 
 /*
-void setBorderColor(const QColor & color)
+void setBorderColor(const QColor &color)
 */
 HB_FUNC_STATIC(QAREASERIES_SETBORDERCOLOR)
 {
@@ -342,7 +342,7 @@ HB_FUNC_STATIC(QAREASERIES_POINTLABELSFORMAT)
 }
 
 /*
-void setPointLabelsFormat(const QString & format)
+void setPointLabelsFormat(const QString &format)
 */
 HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSFORMAT)
 {
@@ -451,7 +451,7 @@ HB_FUNC_STATIC(QAREASERIES_POINTLABELSFONT)
 }
 
 /*
-void setPointLabelsFont(const QFont & font)
+void setPointLabelsFont(const QFont &font)
 */
 HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSFONT)
 {
@@ -506,7 +506,7 @@ HB_FUNC_STATIC(QAREASERIES_POINTLABELSCOLOR)
 }
 
 /*
-void setPointLabelsColor(const QColor & color)
+void setPointLabelsColor(const QColor &color)
 */
 HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSCOLOR)
 {
@@ -670,7 +670,7 @@ HB_FUNC_STATIC(QAREASERIES_SETLOWERSERIES)
 }
 
 /*
-void setPen(const QPen & pen)
+void setPen(const QPen &pen)
 */
 HB_FUNC_STATIC(QAREASERIES_SETPEN)
 {
@@ -725,7 +725,7 @@ HB_FUNC_STATIC(QAREASERIES_PEN)
 }
 
 /*
-void setBrush(const QBrush & brush)
+void setBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC(QAREASERIES_SETBRUSH)
 {
@@ -889,7 +889,7 @@ HB_FUNC_STATIC(QAREASERIES_ONBORDERCOLORCHANGED)
 }
 
 /*
-void clicked(const QPointF & point)
+void clicked(const QPointF &point)
 */
 HB_FUNC_STATIC(QAREASERIES_ONCLICKED)
 {
@@ -998,7 +998,7 @@ HB_FUNC_STATIC(QAREASERIES_ONCOLORCHANGED)
 }
 
 /*
-void doubleClicked(const QPointF & point)
+void doubleClicked(const QPointF &point)
 */
 HB_FUNC_STATIC(QAREASERIES_ONDOUBLECLICKED)
 {
@@ -1053,7 +1053,7 @@ HB_FUNC_STATIC(QAREASERIES_ONDOUBLECLICKED)
 }
 
 /*
-void hovered(const QPointF & point, bool state)
+void hovered(const QPointF &point, bool state)
 */
 HB_FUNC_STATIC(QAREASERIES_ONHOVERED)
 {
@@ -1165,7 +1165,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED)
 }
 
 /*
-void pointLabelsColorChanged(const QColor & color)
+void pointLabelsColorChanged(const QColor &color)
 */
 HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSCOLORCHANGED)
 {
@@ -1220,7 +1220,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSCOLORCHANGED)
 }
 
 /*
-void pointLabelsFontChanged(const QFont & font)
+void pointLabelsFontChanged(const QFont &font)
 */
 HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSFONTCHANGED)
 {
@@ -1275,7 +1275,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSFONTCHANGED)
 }
 
 /*
-void pointLabelsFormatChanged(const QString & format)
+void pointLabelsFormatChanged(const QString &format)
 */
 HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSFORMATCHANGED)
 {
@@ -1385,7 +1385,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED)
 }
 
 /*
-void pressed(const QPointF & point)
+void pressed(const QPointF &point)
 */
 HB_FUNC_STATIC(QAREASERIES_ONPRESSED)
 {
@@ -1440,7 +1440,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPRESSED)
 }
 
 /*
-void released(const QPointF & point)
+void released(const QPointF &point)
 */
 HB_FUNC_STATIC(QAREASERIES_ONRELEASED)
 {

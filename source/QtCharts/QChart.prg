@@ -550,7 +550,7 @@ HB_FUNC_STATIC(QCHART_ANIMATIONEASINGCURVE)
 }
 
 /*
-void setAnimationEasingCurve(const QEasingCurve & curve)
+void setAnimationEasingCurve(const QEasingCurve &curve)
 */
 HB_FUNC_STATIC(QCHART_SETANIMATIONEASINGCURVE)
 {
@@ -605,7 +605,7 @@ HB_FUNC_STATIC(QCHART_MARGINS)
 }
 
 /*
-void setMargins(const QMargins & margins)
+void setMargins(const QMargins &margins)
 */
 HB_FUNC_STATIC(QCHART_SETMARGINS)
 {
@@ -795,7 +795,7 @@ HB_FUNC_STATIC(QCHART_LOCALE)
 }
 
 /*
-void setLocale(const QLocale & locale)
+void setLocale(const QLocale &locale)
 */
 HB_FUNC_STATIC(QCHART_SETLOCALE)
 {
@@ -1228,7 +1228,7 @@ HB_FUNC_STATIC(QCHART_CREATEDEFAULTAXES)
 }
 
 /*
-void setTitle(const QString & title)
+void setTitle(const QString &title)
 */
 HB_FUNC_STATIC(QCHART_SETTITLE)
 {
@@ -1256,7 +1256,7 @@ HB_FUNC_STATIC(QCHART_SETTITLE)
 }
 
 /*
-void setTitleFont(const QFont & font)
+void setTitleFont(const QFont &font)
 */
 HB_FUNC_STATIC(QCHART_SETTITLEFONT)
 {
@@ -1311,7 +1311,7 @@ HB_FUNC_STATIC(QCHART_TITLEFONT)
 }
 
 /*
-void setTitleBrush(const QBrush & brush)
+void setTitleBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC(QCHART_SETTITLEBRUSH)
 {
@@ -1366,7 +1366,7 @@ HB_FUNC_STATIC(QCHART_TITLEBRUSH)
 }
 
 /*
-void setBackgroundBrush(const QBrush & brush)
+void setBackgroundBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC(QCHART_SETBACKGROUNDBRUSH)
 {
@@ -1421,7 +1421,7 @@ HB_FUNC_STATIC(QCHART_BACKGROUNDBRUSH)
 }
 
 /*
-void setBackgroundPen(const QPen & pen)
+void setBackgroundPen(const QPen &pen)
 */
 HB_FUNC_STATIC(QCHART_SETBACKGROUNDPEN)
 {
@@ -1496,7 +1496,7 @@ HB_FUNC_STATIC(QCHART_ZOOMIN)
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    void zoomIn(const QRectF & rect)
+    void zoomIn(const QRectF &rect)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QChart *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1681,7 +1681,7 @@ HB_FUNC_STATIC(QCHART_LEGEND)
 }
 
 /*
-void setPlotAreaBackgroundBrush(const QBrush & brush)
+void setPlotAreaBackgroundBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC(QCHART_SETPLOTAREABACKGROUNDBRUSH)
 {
@@ -1736,7 +1736,7 @@ HB_FUNC_STATIC(QCHART_PLOTAREABACKGROUNDBRUSH)
 }
 
 /*
-void setPlotAreaBackgroundPen(const QPen & pen)
+void setPlotAreaBackgroundPen(const QPen &pen)
 */
 HB_FUNC_STATIC(QCHART_SETPLOTAREABACKGROUNDPEN)
 {
@@ -1791,7 +1791,7 @@ HB_FUNC_STATIC(QCHART_PLOTAREABACKGROUNDPEN)
 }
 
 /*
-QPointF mapToValue(const QPointF & position, QAbstractSeries * series = nullptr)
+QPointF mapToValue(const QPointF &position, QAbstractSeries * series = nullptr)
 */
 HB_FUNC_STATIC(QCHART_MAPTOVALUE)
 {
@@ -1818,7 +1818,7 @@ HB_FUNC_STATIC(QCHART_MAPTOVALUE)
 }
 
 /*
-QPointF mapToPosition(const QPointF & value, QAbstractSeries * series = nullptr)
+QPointF mapToPosition(const QPointF &value, QAbstractSeries * series = nullptr)
 */
 HB_FUNC_STATIC(QCHART_MAPTOPOSITION)
 {
@@ -1845,7 +1845,7 @@ HB_FUNC_STATIC(QCHART_MAPTOPOSITION)
 }
 
 /*
-void plotAreaChanged(const QRectF & plotArea)
+void plotAreaChanged(const QRectF &plotArea)
 */
 HB_FUNC_STATIC(QCHART_ONPLOTAREACHANGED)
 {

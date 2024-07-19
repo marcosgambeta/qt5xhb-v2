@@ -530,7 +530,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_INCREASINGCOLOR)
 }
 
 /*
-void setIncreasingColor(const QColor & increasingColor)
+void setIncreasingColor(const QColor &increasingColor)
 */
 HB_FUNC_STATIC(QCANDLESTICKSERIES_SETINCREASINGCOLOR)
 {
@@ -585,7 +585,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_DECREASINGCOLOR)
 }
 
 /*
-void setDecreasingColor(const QColor & decreasingColor)
+void setDecreasingColor(const QColor &decreasingColor)
 */
 HB_FUNC_STATIC(QCANDLESTICKSERIES_SETDECREASINGCOLOR)
 {
@@ -640,7 +640,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_BRUSH)
 }
 
 /*
-void setBrush(const QBrush & brush)
+void setBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC(QCANDLESTICKSERIES_SETBRUSH)
 {
@@ -695,7 +695,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_PEN)
 }
 
 /*
-void setPen(const QPen & pen)
+void setPen(const QPen &pen)
 */
 HB_FUNC_STATIC(QCANDLESTICKSERIES_SETPEN)
 {
@@ -741,7 +741,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_APPEND)
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    bool append(const QList<QCandlestickSet*> & sets)
+    bool append(const QList<QCandlestickSet*> &sets)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     auto obj = qobject_cast<QCandlestickSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -785,7 +785,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_REMOVE)
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    bool remove(const QList<QCandlestickSet*> & sets)
+    bool remove(const QList<QCandlestickSet*> &sets)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     auto obj = qobject_cast<QCandlestickSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1123,7 +1123,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONBRUSHCHANGED)
 }
 
 /*
-void candlestickSetsAdded(const QList<QCandlestickSet*> & sets)
+void candlestickSetsAdded(const QList<QCandlestickSet*> &sets)
 */
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED)
 {
@@ -1200,7 +1200,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED)
 }
 
 /*
-void candlestickSetsRemoved(const QList<QCandlestickSet*> & sets)
+void candlestickSetsRemoved(const QList<QCandlestickSet*> &sets)
 */
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED)
 {

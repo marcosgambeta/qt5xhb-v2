@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LINEPEN)
 }
 
 /*
-void setLinePen(const QPen & pen)
+void setLinePen(const QPen &pen)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_SETLINEPEN)
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_GRIDLINEPEN)
 }
 
 /*
-void setGridLinePen(const QPen & pen)
+void setGridLinePen(const QPen &pen)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_SETGRIDLINEPEN)
 {
@@ -573,7 +573,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_MINORGRIDLINEPEN)
 }
 
 /*
-void setMinorGridLinePen(const QPen & pen)
+void setMinorGridLinePen(const QPen &pen)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_SETMINORGRIDLINEPEN)
 {
@@ -628,7 +628,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_GRIDLINECOLOR)
 }
 
 /*
-void setGridLineColor(const QColor & color)
+void setGridLineColor(const QColor &color)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_SETGRIDLINECOLOR)
 {
@@ -683,7 +683,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_MINORGRIDLINECOLOR)
 }
 
 /*
-void setMinorGridLineColor(const QColor & color)
+void setMinorGridLineColor(const QColor &color)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_SETMINORGRIDLINECOLOR)
 {
@@ -792,7 +792,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSBRUSH)
 }
 
 /*
-void setLabelsBrush(const QBrush & brush)
+void setLabelsBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSBRUSH)
 {
@@ -847,7 +847,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSFONT)
 }
 
 /*
-void setLabelsFont(const QFont & font)
+void setLabelsFont(const QFont &font)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSFONT)
 {
@@ -1065,7 +1065,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_TITLEBRUSH)
 }
 
 /*
-void setTitleBrush(const QBrush & brush)
+void setTitleBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_SETTITLEBRUSH)
 {
@@ -1120,7 +1120,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_TITLEFONT)
 }
 
 /*
-void setTitleFont(const QFont & font)
+void setTitleFont(const QFont &font)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_SETTITLEFONT)
 {
@@ -1174,7 +1174,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_TITLETEXT)
 }
 
 /*
-void setTitleText(const QString & title)
+void setTitleText(const QString &title)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_SETTITLETEXT)
 {
@@ -1283,7 +1283,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESPEN)
 }
 
 /*
-void setShadesPen(const QPen & pen)
+void setShadesPen(const QPen &pen)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESPEN)
 {
@@ -1338,7 +1338,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESBRUSH)
 }
 
 /*
-void setShadesBrush(const QBrush & brush)
+void setShadesBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESBRUSH)
 {
@@ -1664,7 +1664,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_HIDE)
 }
 
 /*
-void setMin(const QVariant & min)
+void setMin(const QVariant &min)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_SETMIN)
 {
@@ -1692,7 +1692,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETMIN)
 }
 
 /*
-void setMax(const QVariant & max)
+void setMax(const QVariant &max)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_SETMAX)
 {
@@ -1720,7 +1720,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETMAX)
 }
 
 /*
-void setRange(const QVariant & min, const QVariant & max)
+void setRange(const QVariant &min, const QVariant &max)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_SETRANGE)
 {
@@ -1803,7 +1803,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONCOLORCHANGED)
 }
 
 /*
-void gridLineColorChanged(const QColor & color)
+void gridLineColorChanged(const QColor &color)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_ONGRIDLINECOLORCHANGED)
 {
@@ -1858,7 +1858,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONGRIDLINECOLORCHANGED)
 }
 
 /*
-void gridLinePenChanged(const QPen & pen)
+void gridLinePenChanged(const QPen &pen)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_ONGRIDLINEPENCHANGED)
 {
@@ -2023,7 +2023,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSANGLECHANGED)
 }
 
 /*
-void labelsBrushChanged(const QBrush & brush)
+void labelsBrushChanged(const QBrush &brush)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSBRUSHCHANGED)
 {
@@ -2133,7 +2133,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSCOLORCHANGED)
 }
 
 /*
-void labelsFontChanged(const QFont & pen)
+void labelsFontChanged(const QFont &pen)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSFONTCHANGED)
 {
@@ -2243,7 +2243,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSVISIBLECHANGED)
 }
 
 /*
-void linePenChanged(const QPen & pen)
+void linePenChanged(const QPen &pen)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_ONLINEPENCHANGED)
 {
@@ -2353,7 +2353,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLINEVISIBLECHANGED)
 }
 
 /*
-void minorGridLineColorChanged(const QColor & color)
+void minorGridLineColorChanged(const QColor &color)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_ONMINORGRIDLINECOLORCHANGED)
 {
@@ -2408,7 +2408,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONMINORGRIDLINECOLORCHANGED)
 }
 
 /*
-void minorGridLinePenChanged(const QPen & pen)
+void minorGridLinePenChanged(const QPen &pen)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_ONMINORGRIDLINEPENCHANGED)
 {
@@ -2628,7 +2628,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESBORDERCOLORCHANGED)
 }
 
 /*
-void shadesBrushChanged(const QBrush & brush)
+void shadesBrushChanged(const QBrush &brush)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESBRUSHCHANGED)
 {
@@ -2738,7 +2738,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESCOLORCHANGED)
 }
 
 /*
-void shadesPenChanged(const QPen & pen)
+void shadesPenChanged(const QPen &pen)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESPENCHANGED)
 {
@@ -2848,7 +2848,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESVISIBLECHANGED)
 }
 
 /*
-void titleBrushChanged(const QBrush & brush)
+void titleBrushChanged(const QBrush &brush)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLEBRUSHCHANGED)
 {
@@ -2903,7 +2903,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLEBRUSHCHANGED)
 }
 
 /*
-void titleFontChanged(const QFont & font)
+void titleFontChanged(const QFont &font)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLEFONTCHANGED)
 {
@@ -2958,7 +2958,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLEFONTCHANGED)
 }
 
 /*
-void titleTextChanged(const QString & title)
+void titleTextChanged(const QString &title)
 */
 HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLETEXTCHANGED)
 {

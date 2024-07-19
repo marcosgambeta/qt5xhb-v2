@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QBOXSET_PEN)
 }
 
 /*
-void setPen(const QPen & pen)
+void setPen(const QPen &pen)
 */
 HB_FUNC_STATIC(QBOXSET_SETPEN)
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QBOXSET_BRUSH)
 }
 
 /*
-void setBrush(const QBrush & brush)
+void setBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC(QBOXSET_SETBRUSH)
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QBOXSET_APPEND)
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void append(const QList<qreal> & values)
+    void append(const QList<qreal> &values)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QBoxSet *>(Qt5xHb::getQObjectPointerFromSelfItem());

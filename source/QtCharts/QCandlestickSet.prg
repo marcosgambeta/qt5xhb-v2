@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_BRUSH)
 }
 
 /*
-void setBrush(const QBrush & brush)
+void setBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC(QCANDLESTICKSET_SETBRUSH)
 {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_PEN)
 }
 
 /*
-void setPen(const QPen & pen)
+void setPen(const QPen &pen)
 */
 HB_FUNC_STATIC(QCANDLESTICKSET_SETPEN)
 {
