@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QTEXTLIST_REMOVE)
 }
 
 /*
-void add(const QTextBlock & block)
+void add(const QTextBlock &block)
 */
 HB_FUNC_STATIC(QTEXTLIST_ADD)
 {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QTEXTLIST_ADD)
 }
 
 /*
-void setFormat(const QTextListFormat & format)
+void setFormat(const QTextListFormat &format)
 */
 HB_FUNC_STATIC(QTEXTLIST_SETFORMAT)
 {

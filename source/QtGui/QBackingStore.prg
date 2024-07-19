@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_DELETE)
 }
 
 /*
-void beginPaint(const QRegion & region)
+void beginPaint(const QRegion &region)
 */
 HB_FUNC_STATIC(QBACKINGSTORE_BEGINPAINT)
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_ENDPAINT)
 }
 
 /*
-void flush(const QRegion & region, QWindow * win = nullptr, const QPoint & offset = QPoint())
+void flush(const QRegion &region, QWindow * win = nullptr, const QPoint &offset = QPoint())
 */
 HB_FUNC_STATIC(QBACKINGSTORE_FLUSH)
 {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_PAINTDEVICE)
 }
 
 /*
-void resize(const QSize & size)
+void resize(const QSize &size)
 */
 HB_FUNC_STATIC(QBACKINGSTORE_RESIZE)
 {
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_RESIZE)
 }
 
 /*
-bool scroll(const QRegion & area, int dx, int dy)
+bool scroll(const QRegion &area, int dx, int dy)
 */
 HB_FUNC_STATIC(QBACKINGSTORE_SCROLL)
 {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_SCROLL)
 }
 
 /*
-void setStaticContents(const QRegion & region)
+void setStaticContents(const QRegion &region)
 */
 HB_FUNC_STATIC(QBACKINGSTORE_SETSTATICCONTENTS)
 {

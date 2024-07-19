@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_ISVALID)
 }
 
 /*
-void setFont(const QFont & font)
+void setFont(const QFont &font)
 */
 HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONT)
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONT)
 }
 
 /*
-void setFontFamily(const QString & family)
+void setFontFamily(const QString &family)
 */
 HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTFAMILY)
 {
@@ -766,7 +766,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_FONTSTRIKEOUT)
 }
 
 /*
-void setUnderlineColor(const QColor & color)
+void setUnderlineColor(const QColor &color)
 */
 HB_FUNC_STATIC(QTEXTCHARFORMAT_SETUNDERLINECOLOR)
 {
@@ -1219,7 +1219,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_VERTICALALIGNMENT)
 }
 
 /*
-void setTextOutline(const QPen & pen)
+void setTextOutline(const QPen &pen)
 */
 HB_FUNC_STATIC(QTEXTCHARFORMAT_SETTEXTOUTLINE)
 {
@@ -1270,7 +1270,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_TEXTOUTLINE)
 }
 
 /*
-void setToolTip(const QString & tip)
+void setToolTip(const QString &tip)
 */
 HB_FUNC_STATIC(QTEXTCHARFORMAT_SETTOOLTIP)
 {
@@ -1370,7 +1370,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_ISANCHOR)
 }
 
 /*
-void setAnchorHref(const QString & value)
+void setAnchorHref(const QString &value)
 */
 HB_FUNC_STATIC(QTEXTCHARFORMAT_SETANCHORHREF)
 {
@@ -1420,7 +1420,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_ANCHORHREF)
 }
 
 /*
-void setAnchorName(const QString & name)
+void setAnchorName(const QString &name)
 */
 HB_FUNC_STATIC(QTEXTCHARFORMAT_SETANCHORNAME)
 {
@@ -1470,7 +1470,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_ANCHORNAME)
 }
 
 /*
-void setAnchorNames(const QStringList & names)
+void setAnchorNames(const QStringList &names)
 */
 HB_FUNC_STATIC(QTEXTCHARFORMAT_SETANCHORNAMES)
 {

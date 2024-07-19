@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    void setManagerProperty(const QString & name, const QString & value)
+    void setManagerProperty(const QString &name, const QString &value)
     */
     auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
     /*
-    void setManagerProperty(const QString & name, const QStringList & value)
+    void setManagerProperty(const QString &name, const QStringList &value)
     */
     auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 

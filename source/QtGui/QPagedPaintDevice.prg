@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QPAGEDPAINTDEVICE_PAGESIZEMM)
 }
 
 /*
-virtual void setPageSizeMM(const QSizeF & size)
+virtual void setPageSizeMM(const QSizeF &size)
 */
 HB_FUNC_STATIC(QPAGEDPAINTDEVICE_SETPAGESIZEMM)
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QPAGEDPAINTDEVICE_PAGELAYOUT)
 }
 
 /*
-bool setPageLayout(const QPageLayout & pageLayout)
+bool setPageLayout(const QPageLayout &pageLayout)
 */
 HB_FUNC_STATIC(QPAGEDPAINTDEVICE_SETPAGELAYOUT)
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QPAGEDPAINTDEVICE_SETPAGEMARGINS)
   if (ISNUMPAR(1) && ISQMARGINSF(1))
   {
     /*
-    bool setPageMargins(const QMarginsF & margins)
+    bool setPageMargins(const QMarginsF &margins)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPagedPaintDevice *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QPAGEDPAINTDEVICE_SETPAGEMARGINS)
   else if (ISNUMPAR(2) && ISQMARGINSF(1) && HB_ISNUM(2))
   {
     /*
-    bool setPageMargins(const QMarginsF & margins, QPageLayout::Unit units)
+    bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPagedPaintDevice *>(Qt5xHb::itemGetPtrStackSelfItem());

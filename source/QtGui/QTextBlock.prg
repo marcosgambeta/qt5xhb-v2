@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_NEW)
   else if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
   {
     /*
-    QTextBlock(const QTextBlock & o)
+    QTextBlock(const QTextBlock &o)
     */
     auto obj = new QTextBlock(*PQTEXTBLOCK(1));
     Qt5xHb::returnNewObject(obj, true);

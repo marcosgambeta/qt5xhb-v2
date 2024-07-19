@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QFONTMETRICS_NEW)
   if (ISNUMPAR(1) && ISQFONT(1))
   {
     /*
-    QFontMetrics(const QFont & font)
+    QFontMetrics(const QFont &font)
     */
     auto obj = new QFontMetrics(*PQFONT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QFONTMETRICS_NEW)
   else if (ISNUMPAR(2) && ISQFONT(1) && HB_ISOBJECT(2))
   {
     /*
-    QFontMetrics(const QFont & font, QPaintDevice * paintdevice)
+    QFontMetrics(const QFont &font, QPaintDevice * paintdevice)
     */
     auto obj = new QFontMetrics(*PQFONT(1), PQPAINTDEVICE(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QFONTMETRICS_NEW)
   else if (ISNUMPAR(1) && ISQFONTMETRICS(1))
   {
     /*
-    QFontMetrics(const QFontMetrics & fm)
+    QFontMetrics(const QFontMetrics &fm)
     */
     auto obj = new QFontMetrics(*PQFONTMETRICS(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QFONTMETRICS_BOUNDINGRECT)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QRect boundingRect(const QString & text) const
+    QRect boundingRect(const QString &text) const
     */
     auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QFONTMETRICS_BOUNDINGRECT)
            (HB_ISNUM(7) || HB_ISNIL(7)) && (HB_ISARRAY(8) || HB_ISNIL(8)))
   {
     /*
-    QRect boundingRect(int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int *
+    QRect boundingRect(int x, int y, int width, int height, int flags, const QString &text, int tabStops = 0, int *
     tabArray = nullptr) const
     */
     auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QFONTMETRICS_BOUNDINGRECT)
            (HB_ISARRAY(5) || HB_ISNIL(5)))
   {
     /*
-    QRect boundingRect(const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr)
+    QRect boundingRect(const QRect &rect, int flags, const QString &text, int tabStops = 0, int * tabArray = nullptr)
     const
     */
     auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QFONTMETRICS_DESCENT)
 }
 
 /*
-QString elidedText(const QString & text, Qt::TextElideMode mode, int width, int flags = 0) const
+QString elidedText(const QString &text, Qt::TextElideMode mode, int width, int flags = 0) const
 */
 HB_FUNC_STATIC(QFONTMETRICS_ELIDEDTEXT)
 {
@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QFONTMETRICS_OVERLINEPOS)
 }
 
 /*
-QSize size(int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr) const
+QSize size(int flags, const QString &text, int tabStops = 0, int * tabArray = nullptr) const
 */
 HB_FUNC_STATIC(QFONTMETRICS_SIZE)
 {
@@ -558,7 +558,7 @@ HB_FUNC_STATIC(QFONTMETRICS_STRIKEOUTPOS)
 }
 
 /*
-QRect tightBoundingRect(const QString & text) const
+QRect tightBoundingRect(const QString &text) const
 */
 HB_FUNC_STATIC(QFONTMETRICS_TIGHTBOUNDINGRECT)
 {
@@ -611,7 +611,7 @@ HB_FUNC_STATIC(QFONTMETRICS_WIDTH)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    int width(const QString & text, int len = -1) const
+    int width(const QString &text, int len = -1) const
     */
     auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
 

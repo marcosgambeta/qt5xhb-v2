@@ -723,7 +723,7 @@ HB_FUNC_STATIC(QSCREEN_ANGLEBETWEEN)
 }
 
 /*
-QTransform transformBetween(Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect & target) const
+QTransform transformBetween(Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect &target) const
 */
 HB_FUNC_STATIC(QSCREEN_TRANSFORMBETWEEN)
 {
@@ -749,7 +749,7 @@ HB_FUNC_STATIC(QSCREEN_TRANSFORMBETWEEN)
 }
 
 /*
-QRect mapBetween(Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect & rect) const
+QRect mapBetween(Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect &rect) const
 */
 HB_FUNC_STATIC(QSCREEN_MAPBETWEEN)
 {
@@ -873,7 +873,7 @@ HB_FUNC_STATIC(QSCREEN_REFRESHRATE)
 }
 
 /*
-void geometryChanged(const QRect & geometry)
+void geometryChanged(const QRect &geometry)
 */
 HB_FUNC_STATIC(QSCREEN_ONGEOMETRYCHANGED)
 {
@@ -924,7 +924,7 @@ HB_FUNC_STATIC(QSCREEN_ONGEOMETRYCHANGED)
 }
 
 /*
-void physicalSizeChanged(const QSizeF & size)
+void physicalSizeChanged(const QSizeF &size)
 */
 HB_FUNC_STATIC(QSCREEN_ONPHYSICALSIZECHANGED)
 {
@@ -1077,7 +1077,7 @@ HB_FUNC_STATIC(QSCREEN_ONLOGICALDOTSPERINCHCHANGED)
 }
 
 /*
-void virtualGeometryChanged(const QRect & rect)
+void virtualGeometryChanged(const QRect &rect)
 */
 HB_FUNC_STATIC(QSCREEN_ONVIRTUALGEOMETRYCHANGED)
 {

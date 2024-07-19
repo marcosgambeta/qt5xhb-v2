@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QCLIPBOARD_PIXMAP)
 }
 
 /*
-void setImage(const QImage & image, QClipboard::Mode mode = QClipboard::Clipboard)
+void setImage(const QImage &image, QClipboard::Mode mode = QClipboard::Clipboard)
 */
 HB_FUNC_STATIC(QCLIPBOARD_SETIMAGE)
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETMIMEDATA)
 }
 
 /*
-void setPixmap(const QPixmap & pixmap, QClipboard::Mode mode = QClipboard::Clipboard)
+void setPixmap(const QPixmap &pixmap, QClipboard::Mode mode = QClipboard::Clipboard)
 */
 HB_FUNC_STATIC(QCLIPBOARD_SETPIXMAP)
 {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETPIXMAP)
 }
 
 /*
-void setText(const QString & text, QClipboard::Mode mode = QClipboard::Clipboard)
+void setText(const QString &text, QClipboard::Mode mode = QClipboard::Clipboard)
 */
 HB_FUNC_STATIC(QCLIPBOARD_SETTEXT)
 {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QCLIPBOARD_TEXT)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QString text(QString & subtype, QClipboard::Mode mode = QClipboard::Clipboard) const
+    QString text(QString &subtype, QClipboard::Mode mode = QClipboard::Clipboard) const
     */
     auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
 

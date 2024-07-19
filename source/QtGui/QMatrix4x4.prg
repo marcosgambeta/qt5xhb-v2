@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QMATRIX4X4_NEW)
   else if (ISNUMPAR(1) && ISQTRANSFORM(1))
   {
     /*
-    QMatrix4x4(const QTransform & transform)
+    QMatrix4x4(const QTransform &transform)
     */
     auto obj = new QMatrix4x4(*PQTRANSFORM(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QMATRIX4X4_NEW)
   else if (ISNUMPAR(1) && ISQMATRIX(1))
   {
     /*
-    QMatrix4x4(const QMatrix & matrix)
+    QMatrix4x4(const QMatrix &matrix)
     */
     auto obj = new QMatrix4x4(*PQMATRIX(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -474,7 +474,7 @@ HB_FUNC_STATIC(QMATRIX4X4_SCALE)
   {
 #ifndef QT_NO_VECTOR3D
     /*
-    void scale(const QVector3D & vector)
+    void scale(const QVector3D &vector)
     */
     auto obj = static_cast<QMatrix4x4 *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -541,7 +541,7 @@ HB_FUNC_STATIC(QMATRIX4X4_TRANSLATE)
   {
 #ifndef QT_NO_VECTOR3D
     /*
-    void translate(const QVector3D & vector)
+    void translate(const QVector3D &vector)
     */
     auto obj = static_cast<QMatrix4x4 *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -594,7 +594,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ROTATE)
   {
 #ifndef QT_NO_VECTOR3D
     /*
-    void rotate(float angle, const QVector3D & vector)
+    void rotate(float angle, const QVector3D &vector)
     */
     auto obj = static_cast<QMatrix4x4 *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -625,7 +625,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ROTATE)
   {
 #ifndef QT_NO_QUATERNION
     /*
-    void rotate(const QQuaternion & quaternion)
+    void rotate(const QQuaternion &quaternion)
     */
     auto obj = static_cast<QMatrix4x4 *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -649,7 +649,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ORTHO)
   if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    void ortho(const QRect & rect)
+    void ortho(const QRect &rect)
     */
     auto obj = static_cast<QMatrix4x4 *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -663,7 +663,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ORTHO)
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    void ortho(const QRectF & rect)
+    void ortho(const QRectF &rect)
     */
     auto obj = static_cast<QMatrix4x4 *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -779,7 +779,7 @@ HB_FUNC_STATIC(QMATRIX4X4_VIEWPORT)
   if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    void viewport(const QRectF & rect)
+    void viewport(const QRectF &rect)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QMatrix4x4 *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -905,7 +905,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAP)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QPoint map(const QPoint & point) const
+    QPoint map(const QPoint &point) const
     */
     auto obj = static_cast<QMatrix4x4 *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -918,7 +918,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAP)
   else if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QPointF map(const QPointF & point) const
+    QPointF map(const QPointF &point) const
     */
     auto obj = static_cast<QMatrix4x4 *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -932,7 +932,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAP)
   {
 #ifndef QT_NO_VECTOR3D
     /*
-    QVector3D map(const QVector3D & point) const
+    QVector3D map(const QVector3D &point) const
     */
     auto obj = static_cast<QMatrix4x4 *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -948,7 +948,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAP)
   {
 #ifndef QT_NO_VECTOR4D
     /*
-    QVector4D map(const QVector4D & point) const
+    QVector4D map(const QVector4D &point) const
     */
     auto obj = static_cast<QMatrix4x4 *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -998,7 +998,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAPRECT)
   if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    QRect mapRect(const QRect & rect) const
+    QRect mapRect(const QRect &rect) const
     */
     auto obj = static_cast<QMatrix4x4 *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1011,7 +1011,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAPRECT)
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    QRectF mapRect(const QRectF & rect) const
+    QRectF mapRect(const QRectF &rect) const
     */
     auto obj = static_cast<QMatrix4x4 *>(Qt5xHb::itemGetPtrStackSelfItem());
 

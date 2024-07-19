@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_NEW)
   else if (ISBETWEEN(1, 2) && ISQREGULAREXPRESSION(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QRegularExpressionValidator(const QRegularExpression & re, QObject * parent = nullptr)
+    QRegularExpressionValidator(const QRegularExpression &re, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = new QRegularExpressionValidator(*PQREGULAREXPRESSION(1), OPQOBJECT(2, nullptr));
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION)
 }
 
 /*
-void setRegularExpression(const QRegularExpression & re)
+void setRegularExpression(const QRegularExpression &re)
 */
 HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION)
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION)
 }
 
 /*
-void regularExpressionChanged(const QRegularExpression & re)
+void regularExpressionChanged(const QRegularExpression &re)
 */
 HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED)
 {

@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QCOLORSPACE_NEW)
   else if (ISBETWEEN(5, 6) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && HB_ISNUM(5) && (HB_ISNUM(6) || HB_ISNIL(6)))
   {
   /*
-  QColorSpace(const QPointF & whitePoint, const QPointF & redPoint, const QPointF & greenPoint, const QPointF &
+  QColorSpace(const QPointF &whitePoint, const QPointF &redPoint, const QPointF &greenPoint, const QPointF &
   bluePoint, QColorSpace::TransferFunction fun, float gamma = 0.0f)
   */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QCOLORSPACE_NEW)
   else if (ISNUMPAR(1) && ISQCOLORSPACE(1))
   {
   /*
-  QColorSpace(const QColorSpace & colorSpace)
+  QColorSpace(const QColorSpace &colorSpace)
   */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
     auto obj = new QColorSpace(*PQCOLORSPACE(1));
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QCOLORSPACE_DELETE)
 }
 
 /*
-void swap(QColorSpace & colorSpace) noexcept
+void swap(QColorSpace &colorSpace) noexcept
 */
 HB_FUNC_STATIC(QCOLORSPACE_SWAP)
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QCOLORSPACE_SETPRIMARIES)
   else if (ISNUMPAR(4) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4))
   {
     /*
-    void setPrimaries(const QPointF & whitePoint, const QPointF & redPoint, const QPointF & greenPoint, const QPointF &
+    void setPrimaries(const QPointF &whitePoint, const QPointF &redPoint, const QPointF &greenPoint, const QPointF &
     bluePoint)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -396,7 +396,7 @@ HB_FUNC_STATIC(QCOLORSPACE_ISVALID)
 }
 
 /*
-static QColorSpace fromIccProfile(const QByteArray & iccProfile)
+static QColorSpace fromIccProfile(const QByteArray &iccProfile)
 */
 HB_FUNC_STATIC(QCOLORSPACE_FROMICCPROFILE)
 {

@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QMATRIX_NEW)
   else if (ISNUMPAR(1) && ISQMATRIX(1))
   {
     /*
-    QMatrix(const QMatrix & matrix)
+    QMatrix(const QMatrix &matrix)
     */
     auto obj = new QMatrix(*PQMATRIX(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QMATRIX_MAP)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QPoint map(const QPoint & p) const
+    QPoint map(const QPoint &p) const
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QMATRIX_MAP)
   else if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QPointF map(const QPointF & p) const
+    QPointF map(const QPointF &p) const
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QMATRIX_MAP)
   else if (ISNUMPAR(1) && ISQLINE(1))
   {
     /*
-    QLine map(const QLine & l) const
+    QLine map(const QLine &l) const
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -426,7 +426,7 @@ HB_FUNC_STATIC(QMATRIX_MAP)
   else if (ISNUMPAR(1) && ISQLINEF(1))
   {
     /*
-    QLineF map(const QLineF & l) const
+    QLineF map(const QLineF &l) const
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -439,7 +439,7 @@ HB_FUNC_STATIC(QMATRIX_MAP)
   else if (ISNUMPAR(1) && ISQPOLYGON(1))
   {
     /*
-    QPolygon map(const QPolygon & a) const
+    QPolygon map(const QPolygon &a) const
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QMATRIX_MAP)
   else if (ISNUMPAR(1) && ISQPOLYGONF(1))
   {
     /*
-    QPolygonF map(const QPolygonF & a) const
+    QPolygonF map(const QPolygonF &a) const
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -465,7 +465,7 @@ HB_FUNC_STATIC(QMATRIX_MAP)
   else if (ISNUMPAR(1) && ISQREGION(1))
   {
     /*
-    QRegion map(const QRegion & r) const
+    QRegion map(const QRegion &r) const
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -478,7 +478,7 @@ HB_FUNC_STATIC(QMATRIX_MAP)
   else if (ISNUMPAR(1) && ISQPAINTERPATH(1))
   {
     /*
-    QPainterPath map(const QPainterPath & p) const
+    QPainterPath map(const QPainterPath &p) const
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QMATRIX_MAPRECT)
 }
 
 /*
-QPolygon mapToPolygon(const QRect & r) const
+QPolygon mapToPolygon(const QRect &r) const
 */
 HB_FUNC_STATIC(QMATRIX_MAPTOPOLYGON)
 {
@@ -604,7 +604,7 @@ HB_FUNC_STATIC(QMATRIX_ISIDENTITY)
 }
 
 /*
-QMatrix & translate(qreal dx, qreal dy)
+QMatrix &translate(qreal dx, qreal dy)
 */
 HB_FUNC_STATIC(QMATRIX_TRANSLATE)
 {
@@ -629,7 +629,7 @@ HB_FUNC_STATIC(QMATRIX_TRANSLATE)
 }
 
 /*
-QMatrix & scale(qreal sx, qreal sy)
+QMatrix &scale(qreal sx, qreal sy)
 */
 HB_FUNC_STATIC(QMATRIX_SCALE)
 {
@@ -654,7 +654,7 @@ HB_FUNC_STATIC(QMATRIX_SCALE)
 }
 
 /*
-QMatrix & shear(qreal sh, qreal sv)
+QMatrix &shear(qreal sh, qreal sv)
 */
 HB_FUNC_STATIC(QMATRIX_SHEAR)
 {
@@ -679,7 +679,7 @@ HB_FUNC_STATIC(QMATRIX_SHEAR)
 }
 
 /*
-QMatrix & rotate(qreal a)
+QMatrix &rotate(qreal a)
 */
 HB_FUNC_STATIC(QMATRIX_ROTATE)
 {

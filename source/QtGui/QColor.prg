@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QCOLOR_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QColor(const QString & name)
+    QColor(const QString &name)
     */
     auto obj = new QColor(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QCOLOR_NEW)
   else if (ISNUMPAR(1) && ISQCOLOR(1))
   {
     /*
-    QColor(const QColor & color)
+    QColor(const QColor &color)
     */
     auto obj = new QColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
     Qt5xHb::returnNewObject(obj, true);
@@ -1662,7 +1662,7 @@ HB_FUNC_STATIC(QCOLOR_SETHSVF)
 }
 
 /*
-void setNamedColor(const QString & name)
+void setNamedColor(const QString &name)
 */
 HB_FUNC_STATIC(QCOLOR_SETNAMEDCOLOR)
 {
@@ -2253,7 +2253,7 @@ HB_FUNC_STATIC(QCOLOR_FROMRGBA)
 }
 
 /*
-static bool isValidColor(const QString & name)
+static bool isValidColor(const QString &name)
 */
 HB_FUNC_STATIC(QCOLOR_ISVALIDCOLOR)
 {

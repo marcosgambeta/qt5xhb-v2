@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QBITMAP_NEW)
   else if (ISNUMPAR(1) && ISQPIXMAP(1))
   {
     /*
-    QBitmap(const QPixmap & pixmap)
+    QBitmap(const QPixmap &pixmap)
     */
     auto obj = new QBitmap(*PQPIXMAP(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QBITMAP_NEW)
   else if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
-    QBitmap(const QSize & size)
+    QBitmap(const QSize &size)
     */
     auto obj = new QBitmap(*PQSIZE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QBITMAP_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    QBitmap(const QString & fileName, const char * format = nullptr)
+    QBitmap(const QString &fileName, const char * format = nullptr)
     */
     auto obj = new QBitmap(PQSTRING(1), OPCONSTCHAR(2, nullptr));
     Qt5xHb::returnNewObject(obj, true);
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QBITMAP_CLEAR)
 }
 
 /*
-QBitmap transformed(const QTransform & matrix) const
+QBitmap transformed(const QTransform &matrix) const
 */
 HB_FUNC_STATIC(QBITMAP_TRANSFORMED)
 {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QBITMAP_TRANSFORMED)
 }
 
 /*
-static QBitmap fromData(const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB)
+static QBitmap fromData(const QSize &size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB)
 */
 HB_FUNC_STATIC(QBITMAP_FROMDATA)
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QBITMAP_FROMDATA)
 }
 
 /*
-static QBitmap fromImage(const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor)
+static QBitmap fromImage(const QImage &image, Qt::ImageConversionFlags flags = Qt::AutoColor)
 */
 HB_FUNC_STATIC(QBITMAP_FROMIMAGE)
 {

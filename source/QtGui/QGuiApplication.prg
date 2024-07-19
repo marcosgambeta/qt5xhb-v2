@@ -171,7 +171,7 @@ RETURN
 #include <QtGui/QWindow>
 
     /*
-    QGuiApplication(int & argc, char ** argv)
+    QGuiApplication(int &argc, char ** argv)
     */
 HB_FUNC_STATIC(QGUIAPPLICATION_NEW)
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_APPLICATIONDISPLAYNAME)
 }
 
 /*
-static void changeOverrideCursor(const QCursor & cursor)
+static void changeOverrideCursor(const QCursor &cursor)
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_CHANGEOVERRIDECURSOR)
 {
@@ -741,7 +741,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SCREENS)
 }
 
 /*
-static void setApplicationDisplayName(const QString & name)
+static void setApplicationDisplayName(const QString &name)
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME)
 {
@@ -783,7 +783,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETDESKTOPSETTINGSAWARE)
 }
 
 /*
-static void setFont(const QFont & font)
+static void setFont(const QFont &font)
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_SETFONT)
 {
@@ -825,7 +825,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETLAYOUTDIRECTION)
 }
 
 /*
-static void setOverrideCursor(const QCursor & cursor)
+static void setOverrideCursor(const QCursor &cursor)
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_SETOVERRIDECURSOR)
 {
@@ -846,7 +846,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETOVERRIDECURSOR)
 }
 
 /*
-static void setPalette(const QPalette & pal)
+static void setPalette(const QPalette &pal)
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_SETPALETTE)
 {
@@ -908,7 +908,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_STYLEHINTS)
 }
 
 /*
-static QWindow * topLevelAt(const QPoint & pos)
+static QWindow * topLevelAt(const QPoint &pos)
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_TOPLEVELAT)
 {
@@ -1057,7 +1057,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ISSAVINGSESSION)
 }
 
 /*
-static QScreen * screenAt(const QPoint & point)
+static QScreen * screenAt(const QPoint &point)
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_SCREENAT)
 {
@@ -1175,7 +1175,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_DESKTOPFILENAME)
 }
 
 /*
-void setDesktopFileName(const QString & name)
+void setDesktopFileName(const QString &name)
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_SETDESKTOPFILENAME)
 {
@@ -1258,7 +1258,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONAPPLICATIONSTATECHANGED)
 }
 
 /*
-void commitDataRequest(QSessionManager & manager)
+void commitDataRequest(QSessionManager &manager)
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_ONCOMMITDATAREQUEST)
 {
@@ -1411,7 +1411,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFOCUSWINDOWCHANGED)
 }
 
 /*
-void fontChanged(const QFont & font)
+void fontChanged(const QFont &font)
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_ONFONTCHANGED)
 {
@@ -1617,7 +1617,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONLAYOUTDIRECTIONCHANGED)
 }
 
 /*
-void paletteChanged(const QPalette & palette)
+void paletteChanged(const QPalette &palette)
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_ONPALETTECHANGED)
 {
@@ -1727,7 +1727,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONPRIMARYSCREENCHANGED)
 }
 
 /*
-void saveStateRequest(QSessionManager & manager)
+void saveStateRequest(QSessionManager &manager)
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_ONSAVESTATEREQUEST)
 {

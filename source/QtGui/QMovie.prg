@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QMOVIE_NEW)
   else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && ISOPTQBYTEARRAY(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QMovie(QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = nullptr)
+    QMovie(QIODevice * device, const QByteArray &format = QByteArray(), QObject * parent = nullptr)
     */
     auto obj = new QMovie(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(2)),
                           OPQOBJECT(3, nullptr));
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QMOVIE_NEW)
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISOPTQBYTEARRAY(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QMovie(const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = nullptr)
+    QMovie(const QString &fileName, const QByteArray &format = QByteArray(), QObject * parent = nullptr)
     */
     auto obj = new QMovie(PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(2)),
                           OPQOBJECT(3, nullptr));
@@ -514,7 +514,7 @@ HB_FUNC_STATIC(QMOVIE_SCALEDSIZE)
 }
 
 /*
-void setBackgroundColor(const QColor & color)
+void setBackgroundColor(const QColor &color)
 */
 HB_FUNC_STATIC(QMOVIE_SETBACKGROUNDCOLOR)
 {
@@ -592,7 +592,7 @@ HB_FUNC_STATIC(QMOVIE_SETDEVICE)
 }
 
 /*
-void setFileName(const QString & fileName)
+void setFileName(const QString &fileName)
 */
 HB_FUNC_STATIC(QMOVIE_SETFILENAME)
 {
@@ -618,7 +618,7 @@ HB_FUNC_STATIC(QMOVIE_SETFILENAME)
 }
 
 /*
-void setFormat(const QByteArray & format)
+void setFormat(const QByteArray &format)
 */
 HB_FUNC_STATIC(QMOVIE_SETFORMAT)
 {
@@ -644,7 +644,7 @@ HB_FUNC_STATIC(QMOVIE_SETFORMAT)
 }
 
 /*
-void setScaledSize(const QSize & size)
+void setScaledSize(const QSize &size)
 */
 HB_FUNC_STATIC(QMOVIE_SETSCALEDSIZE)
 {
@@ -995,7 +995,7 @@ HB_FUNC_STATIC(QMOVIE_ONFRAMECHANGED)
 }
 
 /*
-void resized(const QSize & size)
+void resized(const QSize &size)
 */
 HB_FUNC_STATIC(QMOVIE_ONRESIZED)
 {
@@ -1144,7 +1144,7 @@ HB_FUNC_STATIC(QMOVIE_ONSTATECHANGED)
 }
 
 /*
-void updated(const QRect & rect)
+void updated(const QRect &rect)
 */
 HB_FUNC_STATIC(QMOVIE_ONUPDATED)
 {

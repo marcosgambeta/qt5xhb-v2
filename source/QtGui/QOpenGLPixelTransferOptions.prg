@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QOPENGLPIXELTRANSFEROPTIONS_DELETE)
 }
 
 /*
-void swap(QOpenGLPixelTransferOptions & other)
+void swap(QOpenGLPixelTransferOptions &other)
 */
 HB_FUNC_STATIC(QOPENGLPIXELTRANSFEROPTIONS_SWAP)
 {

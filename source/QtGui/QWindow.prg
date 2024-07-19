@@ -1313,7 +1313,7 @@ HB_FUNC_STATIC(QWINDOW_ISTOPLEVEL)
 }
 
 /*
-QPoint mapFromGlobal(const QPoint & pos) const
+QPoint mapFromGlobal(const QPoint &pos) const
 */
 HB_FUNC_STATIC(QWINDOW_MAPFROMGLOBAL)
 {
@@ -1338,7 +1338,7 @@ HB_FUNC_STATIC(QWINDOW_MAPFROMGLOBAL)
 }
 
 /*
-QPoint mapToGlobal(const QPoint & pos) const
+QPoint mapToGlobal(const QPoint &pos) const
 */
 HB_FUNC_STATIC(QWINDOW_MAPTOGLOBAL)
 {
@@ -1478,7 +1478,7 @@ HB_FUNC_STATIC(QWINDOW_RESIZE)
   if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
-    void resize(const QSize & newSize)
+    void resize(const QSize &newSize)
     */
     auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1535,7 +1535,7 @@ HB_FUNC_STATIC(QWINDOW_SCREEN)
 }
 
 /*
-void setBaseSize(const QSize & size)
+void setBaseSize(const QSize &size)
 */
 HB_FUNC_STATIC(QWINDOW_SETBASESIZE)
 {
@@ -1589,7 +1589,7 @@ HB_FUNC_STATIC(QWINDOW_SETCURSOR)
 }
 
 /*
-void setFormat(const QSurfaceFormat & format)
+void setFormat(const QSurfaceFormat &format)
 */
 HB_FUNC_STATIC(QWINDOW_SETFORMAT)
 {
@@ -1633,7 +1633,7 @@ HB_FUNC_STATIC(QWINDOW_SETGEOMETRY)
   else if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    void setGeometry(const QRect & rect)
+    void setGeometry(const QRect &rect)
     */
     auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1675,7 +1675,7 @@ HB_FUNC_STATIC(QWINDOW_SETKEYBOARDGRABENABLED)
 }
 
 /*
-void setMaximumSize(const QSize & size)
+void setMaximumSize(const QSize &size)
 */
 HB_FUNC_STATIC(QWINDOW_SETMAXIMUMSIZE)
 {
@@ -1701,7 +1701,7 @@ HB_FUNC_STATIC(QWINDOW_SETMAXIMUMSIZE)
 }
 
 /*
-void setMinimumSize(const QSize & size)
+void setMinimumSize(const QSize &size)
 */
 HB_FUNC_STATIC(QWINDOW_SETMINIMUMSIZE)
 {
@@ -1803,7 +1803,7 @@ HB_FUNC_STATIC(QWINDOW_SETSCREEN)
 }
 
 /*
-void setSizeIncrement(const QSize & size)
+void setSizeIncrement(const QSize &size)
 */
 HB_FUNC_STATIC(QWINDOW_SETSIZEINCREMENT)
 {
@@ -2318,7 +2318,7 @@ HB_FUNC_STATIC(QWINDOW_SETPOSITION)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    void setPosition(const QPoint & pt)
+    void setPosition(const QPoint &pt)
     */
     auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -2454,7 +2454,7 @@ HB_FUNC_STATIC(QWINDOW_TYPE)
 }
 
 /*
-void setMask(const QRegion & region)
+void setMask(const QRegion &region)
 */
 HB_FUNC_STATIC(QWINDOW_SETMASK)
 {
@@ -2634,7 +2634,7 @@ HB_FUNC_STATIC(QWINDOW_FRAMEPOSITION)
 }
 
 /*
-void setFramePosition(const QPoint & point)
+void setFramePosition(const QPoint &point)
 */
 HB_FUNC_STATIC(QWINDOW_SETFRAMEPOSITION)
 {
@@ -2660,7 +2660,7 @@ HB_FUNC_STATIC(QWINDOW_SETFRAMEPOSITION)
 }
 
 /*
-void setFilePath(const QString & filePath)
+void setFilePath(const QString &filePath)
 */
 HB_FUNC_STATIC(QWINDOW_SETFILEPATH)
 {
@@ -2710,7 +2710,7 @@ HB_FUNC_STATIC(QWINDOW_FILEPATH)
 }
 
 /*
-void setIcon(const QIcon & icon)
+void setIcon(const QIcon &icon)
 */
 HB_FUNC_STATIC(QWINDOW_SETICON)
 {
@@ -3633,7 +3633,7 @@ HB_FUNC_STATIC(QWINDOW_ONWINDOWSTATECHANGED)
 }
 
 /*
-void windowTitleChanged(const QString & title)
+void windowTitleChanged(const QString &title)
 */
 HB_FUNC_STATIC(QWINDOW_ONWINDOWTITLECHANGED)
 {
