@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETRECT)
   if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    void setRect(const QRectF & r)
+    void setRect(const QRectF &r)
     */
     auto obj = static_cast<QSGSimpleTextureNode *>(Qt5xHb::itemGetPtrStackSelfItem());
 

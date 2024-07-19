@@ -600,7 +600,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETRENDERTARGET)
 }
 
 /*
-void update(const QRect & rect = QRect())
+void update(const QRect &rect = QRect())
 */
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_UPDATE)
 {
