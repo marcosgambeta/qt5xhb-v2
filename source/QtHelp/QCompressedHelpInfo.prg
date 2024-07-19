@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_NEW)
   else if (ISNUMPAR(1) && ISQCOMPRESSEDHELPINFO(1))
   {
     /*
-    QCompressedHelpInfo(const QCompressedHelpInfo & other)
+    QCompressedHelpInfo(const QCompressedHelpInfo &other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
     auto obj = new QCompressedHelpInfo(*PQCOMPRESSEDHELPINFO(1));
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_DELETE)
 }
 
 /*
-void swap(QCompressedHelpInfo & other) Q_DECL_NOTHROW
+void swap(QCompressedHelpInfo &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_SWAP)
 {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_VERSION)
 }
 
 /*
-static QCompressedHelpInfo fromCompressedHelpFile(const QString & documentationFileName)
+static QCompressedHelpInfo fromCompressedHelpFile(const QString &documentationFileName)
 */
 HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_FROMCOMPRESSEDHELPFILE)
 {

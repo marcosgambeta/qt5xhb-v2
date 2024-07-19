@@ -63,7 +63,7 @@ RETURN
 #include <QtHelp/QHelpSearchEngine>
 
     /*
-    QHelpEngine(const QString & collectionFile, QObject * parent = nullptr)
+    QHelpEngine(const QString &collectionFile, QObject * parent = nullptr)
     */
 HB_FUNC_STATIC(QHELPENGINE_NEW)
 {

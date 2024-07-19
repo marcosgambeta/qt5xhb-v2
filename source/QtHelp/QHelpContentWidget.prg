@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QHELPCONTENTWIDGET_DELETE)
 }
 
 /*
-QModelIndex indexOf(const QUrl & link)
+QModelIndex indexOf(const QUrl &link)
 */
 HB_FUNC_STATIC(QHELPCONTENTWIDGET_INDEXOF)
 {
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QHELPCONTENTWIDGET_INDEXOF)
 }
 
 /*
-void linkActivated(const QUrl & link)
+void linkActivated(const QUrl &link)
 */
 HB_FUNC_STATIC(QHELPCONTENTWIDGET_ONLINKACTIVATED)
 {

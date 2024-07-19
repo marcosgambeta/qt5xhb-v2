@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
 }
 
 /*
-void filterIndices(const QString & filter, const QString & wildcard = QString())
+void filterIndices(const QString &filter, const QString &wildcard = QString())
 */
 HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
 {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
 }
 
 /*
-void linkActivated(const QUrl & link, const QString & keyword)
+void linkActivated(const QUrl &link, const QString &keyword)
 */
 HB_FUNC_STATIC(QHELPINDEXWIDGET_ONLINKACTIVATED)
 {
