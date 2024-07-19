@@ -111,7 +111,7 @@ RETURN
 #endif
 
     /*
-    QSensor(const QByteArray & type, QObject * parent = nullptr)
+    QSensor(const QByteArray &type, QObject * parent = nullptr)
     */
 HB_FUNC_STATIC(QSENSOR_NEW)
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QSENSOR_IDENTIFIER)
 }
 
 /*
-void setIdentifier(const QByteArray & identifier)
+void setIdentifier(const QByteArray &identifier)
 */
 HB_FUNC_STATIC(QSENSOR_SETIDENTIFIER)
 {
@@ -1220,7 +1220,7 @@ HB_FUNC_STATIC(QSENSOR_SENSORTYPES)
 }
 
 /*
-static QList<QByteArray> sensorsForType(const QByteArray & type)
+static QList<QByteArray> sensorsForType(const QByteArray &type)
 */
 HB_FUNC_STATIC(QSENSOR_SENSORSFORTYPE)
 {
@@ -1267,7 +1267,7 @@ HB_FUNC_STATIC(QSENSOR_SENSORSFORTYPE)
 }
 
 /*
-static QByteArray defaultSensorForType(const QByteArray & type)
+static QByteArray defaultSensorForType(const QByteArray &type)
 */
 HB_FUNC_STATIC(QSENSOR_DEFAULTSENSORFORTYPE)
 {
