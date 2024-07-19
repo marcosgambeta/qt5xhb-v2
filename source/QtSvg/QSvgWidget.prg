@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QSVGWIDGET_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QSvgWidget(const QString & file, QWidget * parent = nullptr)
+    QSvgWidget(const QString &file, QWidget * parent = nullptr)
     */
     auto obj = new QSvgWidget(PQSTRING(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QSVGWIDGET_LOAD)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void load(const QString & file)
+    void load(const QString &file)
     */
     auto obj = qobject_cast<QSvgWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QSVGWIDGET_LOAD)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    void load(const QByteArray & contents)
+    void load(const QByteArray &contents)
     */
     auto obj = qobject_cast<QSvgWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
