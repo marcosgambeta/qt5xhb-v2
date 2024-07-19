@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_NEW6)
 }
 
 /*
-QScriptValue(const QString & value)
+QScriptValue(const QString &value)
 */
 HB_FUNC_STATIC(QSCRIPTVALUE_NEW8)
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_NEW8)
 }
 
 /*
-QScriptValue(const QLatin1String & value)
+QScriptValue(const QLatin1String &value)
 */
 HB_FUNC_STATIC(QSCRIPTVALUE_NEW9)
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_NEW)
   else if (ISNUMPAR(1) && ISQSCRIPTVALUE(1))
   {
     /*
-    QScriptValue(const QScriptValue & other)
+    QScriptValue(const QScriptValue &other)
     */
     auto obj = new QScriptValue(*PQSCRIPTVALUE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_DELETE)
 }
 
 /*
-QScriptValue call(const QScriptValue & thisObject, const QScriptValue & arguments)
+QScriptValue call(const QScriptValue &thisObject, const QScriptValue &arguments)
 */
 HB_FUNC_STATIC(QSCRIPTVALUE_CALL)
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_CALL)
 }
 
 /*
-QScriptValue construct(const QScriptValue & arguments)
+QScriptValue construct(const QScriptValue &arguments)
 */
 HB_FUNC_STATIC(QSCRIPTVALUE_CONSTRUCT)
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ENGINE)
 }
 
 /*
-bool equals(const QScriptValue & other) const
+bool equals(const QScriptValue &other) const
 */
 HB_FUNC_STATIC(QSCRIPTVALUE_EQUALS)
 {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_EQUALS)
 }
 
 /*
-bool instanceOf(const QScriptValue & other) const
+bool instanceOf(const QScriptValue &other) const
 */
 HB_FUNC_STATIC(QSCRIPTVALUE_INSTANCEOF)
 {
@@ -730,7 +730,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_ISVARIANT)
 }
 
 /*
-bool lessThan(const QScriptValue & other) const
+bool lessThan(const QScriptValue &other) const
 */
 HB_FUNC_STATIC(QSCRIPTVALUE_LESSTHAN)
 {
@@ -804,7 +804,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_SCRIPTCLASS)
 }
 
 /*
-void setData(const QScriptValue & data)
+void setData(const QScriptValue &data)
 */
 HB_FUNC_STATIC(QSCRIPTVALUE_SETDATA)
 {
@@ -830,7 +830,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_SETDATA)
 }
 
 /*
-void setPrototype(const QScriptValue & prototype)
+void setPrototype(const QScriptValue &prototype)
 */
 HB_FUNC_STATIC(QSCRIPTVALUE_SETPROTOTYPE)
 {
@@ -882,7 +882,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_SETSCRIPTCLASS)
 }
 
 /*
-bool strictlyEquals(const QScriptValue & other) const
+bool strictlyEquals(const QScriptValue &other) const
 */
 HB_FUNC_STATIC(QSCRIPTVALUE_STRICTLYEQUALS)
 {
