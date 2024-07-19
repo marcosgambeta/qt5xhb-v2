@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QWEBPAGE_VIEWPORTSIZE)
 }
 
 /*
-void setViewportSize(const QSize & size) const
+void setViewportSize(const QSize &size) const
 */
 HB_FUNC_STATIC(QWEBPAGE_SETVIEWPORTSIZE)
 {
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QWEBPAGE_PREFERREDCONTENTSSIZE)
 }
 
 /*
-void setPreferredContentsSize(const QSize & size) const
+void setPreferredContentsSize(const QSize &size) const
 */
 HB_FUNC_STATIC(QWEBPAGE_SETPREFERREDCONTENTSSIZE)
 {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC(QWEBPAGE_PALETTE)
 }
 
 /*
-void setPalette(const QPalette & palette)
+void setPalette(const QPalette &palette)
 */
 HB_FUNC_STATIC(QWEBPAGE_SETPALETTE)
 {
@@ -734,7 +734,7 @@ virtual bool extension (Extension extension, const ExtensionOption * option = nu
 nullptr)
 */
 /*
-bool findText(const QString & subString, QWebPage::FindFlags options = 0)
+bool findText(const QString &subString, QWebPage::FindFlags options = 0)
 */
 HB_FUNC_STATIC(QWEBPAGE_FINDTEXT)
 {
@@ -783,7 +783,7 @@ HB_FUNC_STATIC(QWEBPAGE_FOCUSNEXTPREVCHILD)
 }
 
 /*
-QWebFrame * frameAt(const QPoint & pos) const
+QWebFrame * frameAt(const QPoint &pos) const
 */
 HB_FUNC_STATIC(QWEBPAGE_FRAMEAT)
 {
@@ -1142,7 +1142,7 @@ HB_FUNC_STATIC(QWEBPAGE_UNDOSTACK)
 }
 
 /*
-void updatePositionDependentActions(const QPoint & pos)
+void updatePositionDependentActions(const QPoint &pos)
 */
 HB_FUNC_STATIC(QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS)
 {
@@ -1244,7 +1244,7 @@ HB_FUNC_STATIC(QWEBPAGE_SHOULDINTERRUPTJAVASCRIPT)
 ViewportAttributes viewportAttributesForSize(const QSize& availableSize) const
 */
 /*
-void setActualVisibleContentRect(const QRect & rect) const
+void setActualVisibleContentRect(const QRect &rect) const
 */
 HB_FUNC_STATIC(QWEBPAGE_SETACTUALVISIBLECONTENTRECT)
 {
@@ -1321,7 +1321,7 @@ HB_FUNC_STATIC(QWEBPAGE_SUPPORTEDCONTENTTYPES)
 }
 
 /*
-bool supportsContentType(const QString & mimeType) const
+bool supportsContentType(const QString &mimeType) const
 */
 HB_FUNC_STATIC(QWEBPAGE_SUPPORTSCONTENTTYPE)
 {
@@ -1507,7 +1507,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONDATABASEQUOTAEXCEEDED)
 }
 
 /*
-void downloadRequested(const QNetworkRequest & request)
+void downloadRequested(const QNetworkRequest &request)
 */
 HB_FUNC_STATIC(QWEBPAGE_ONDOWNLOADREQUESTED)
 {
@@ -1717,7 +1717,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONFRAMECREATED)
 }
 
 /*
-void geometryChangeRequested(const QRect & geom)
+void geometryChangeRequested(const QRect &geom)
 */
 HB_FUNC_STATIC(QWEBPAGE_ONGEOMETRYCHANGEREQUESTED)
 {
@@ -1768,7 +1768,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONGEOMETRYCHANGEREQUESTED)
 }
 
 /*
-void linkClicked(const QUrl & url)
+void linkClicked(const QUrl &url)
 */
 HB_FUNC_STATIC(QWEBPAGE_ONLINKCLICKED)
 {
@@ -1819,7 +1819,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONLINKCLICKED)
 }
 
 /*
-void linkHovered(const QString & link, const QString & title, const QString & textContent)
+void linkHovered(const QString &link, const QString &title, const QString &textContent)
 */
 HB_FUNC_STATIC(QWEBPAGE_ONLINKHOVERED)
 {
@@ -2173,7 +2173,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONPRINTREQUESTED)
 }
 
 /*
-void repaintRequested(const QRect & dirtyRect)
+void repaintRequested(const QRect &dirtyRect)
 */
 HB_FUNC_STATIC(QWEBPAGE_ONREPAINTREQUESTED)
 {
@@ -2329,7 +2329,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONSAVEFRAMESTATEREQUESTED)
 }
 
 /*
-void scrollRequested(int dx, int dy, const QRect & rectToScroll)
+void scrollRequested(int dx, int dy, const QRect &rectToScroll)
 */
 HB_FUNC_STATIC(QWEBPAGE_ONSCROLLREQUESTED)
 {
@@ -2432,7 +2432,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONSELECTIONCHANGED)
 }
 
 /*
-void statusBarMessage(const QString & text)
+void statusBarMessage(const QString &text)
 */
 HB_FUNC_STATIC(QWEBPAGE_ONSTATUSBARMESSAGE)
 {
