@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_MEDIA)
 }
 
 /*
-void setMedia(const QMediaContent & media, QIODevice * stream = nullptr)
+void setMedia(const QMediaContent &media, QIODevice * stream = nullptr)
 */
 HB_FUNC_STATIC(QMEDIAPLAYER_SETMEDIA)
 {
@@ -892,7 +892,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_PLAY)
 }
 
 /*
-void setNetworkConfigurations(const QList<QNetworkConfiguration> & configurations)
+void setNetworkConfigurations(const QList<QNetworkConfiguration> &configurations)
 */
 HB_FUNC_STATIC(QMEDIAPLAYER_SETNETWORKCONFIGURATIONS)
 {
@@ -978,7 +978,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_STOP)
 }
 
 /*
-static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const QStringList & codecs = QStringList(),
+static QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QStringList &codecs = QStringList(),
 QMediaPlayer::Flags flags = QMediaPlayer::Flags())
 */
 HB_FUNC_STATIC(QMEDIAPLAYER_HASSUPPORT)
@@ -1214,7 +1214,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_ONBUFFERSTATUSCHANGED)
 }
 
 /*
-void currentMediaChanged(const QMediaContent & media)
+void currentMediaChanged(const QMediaContent &media)
 */
 HB_FUNC_STATIC(QMEDIAPLAYER_ONCURRENTMEDIACHANGED)
 {
@@ -1367,7 +1367,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_ONERROR)
 }
 
 /*
-void mediaChanged(const QMediaContent & media)
+void mediaChanged(const QMediaContent &media)
 */
 HB_FUNC_STATIC(QMEDIAPLAYER_ONMEDIACHANGED)
 {
@@ -1519,7 +1519,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_ONMUTEDCHANGED)
 }
 
 /*
-void networkConfigurationChanged(const QNetworkConfiguration & configuration)
+void networkConfigurationChanged(const QNetworkConfiguration &configuration)
 */
 HB_FUNC_STATIC(QMEDIAPLAYER_ONNETWORKCONFIGURATIONCHANGED)
 {

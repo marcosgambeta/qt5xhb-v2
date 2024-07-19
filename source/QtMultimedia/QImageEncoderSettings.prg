@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_NEW)
   else if (ISNUMPAR(1) && ISQIMAGEENCODERSETTINGS(1))
   {
     /*
-    QImageEncoderSettings(const QImageEncoderSettings & other)
+    QImageEncoderSettings(const QImageEncoderSettings &other)
     */
     auto obj = new QImageEncoderSettings(*PQIMAGEENCODERSETTINGS(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -295,7 +295,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_SETQUALITY)
 }
 
 /*
-QVariant encodingOption(const QString & option) const
+QVariant encodingOption(const QString &option) const
 */
 HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_ENCODINGOPTION)
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_ENCODINGOPTION)
 }
 
 /*
-void setEncodingOption(const QString & option, const QVariant & value)
+void setEncodingOption(const QString &option, const QVariant &value)
 */
 HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_SETENCODINGOPTION)
 {

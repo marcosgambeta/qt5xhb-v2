@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_NEW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
     /*
-    QMediaServiceProviderHint(const QString & mimeType, const QStringList & codecs)
+    QMediaServiceProviderHint(const QString &mimeType, const QStringList &codecs)
     */
     auto obj = new QMediaServiceProviderHint(PQSTRING(1), PQSTRINGLIST(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_NEW)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QMediaServiceProviderHint(const QByteArray & device)
+    QMediaServiceProviderHint(const QByteArray &device)
     */
     auto obj = new QMediaServiceProviderHint(*PQBYTEARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_NEW)
   else if (ISNUMPAR(1) && ISQMEDIASERVICEPROVIDERHINT(1))
   {
     /*
-    QMediaServiceProviderHint(const QMediaServiceProviderHint & other)
+    QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
     */
     auto obj = new QMediaServiceProviderHint(*PQMEDIASERVICEPROVIDERHINT(1));
     Qt5xHb::returnNewObject(obj, true);

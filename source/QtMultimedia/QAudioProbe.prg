@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QAUDIOPROBE_SETSOURCE)
 }
 
 /*
-void audioBufferProbed(const QAudioBuffer & buffer)
+void audioBufferProbed(const QAudioBuffer &buffer)
 */
 HB_FUNC_STATIC(QAUDIOPROBE_ONAUDIOBUFFERPROBED)
 {

@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_NEW)
   if (ISBETWEEN(0, 2) && (ISQAUDIOFORMAT(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QAudioInput(const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr)
+    QAudioInput(const QAudioFormat &format = QAudioFormat(), QObject * parent = nullptr)
     */
     auto obj = new QAudioInput(HB_ISNIL(1) ? QAudioFormat() : *static_cast<QAudioFormat *>(Qt5xHb::itemGetPtr(1)),
                                OPQOBJECT(2, nullptr));
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_NEW)
            (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QAudioInput(const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format = QAudioFormat(), QObject * parent
+    QAudioInput(const QAudioDeviceInfo &audioDeviceInfo, const QAudioFormat &format = QAudioFormat(), QObject * parent
     = nullptr)
     */
     auto obj = new QAudioInput(*PQAUDIODEVICEINFO(1),

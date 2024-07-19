@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION)
 }
 
 /*
-virtual void setConfigurations(const QList<QNetworkConfiguration> & configurations) = 0
+virtual void setConfigurations(const QList<QNetworkConfiguration> &configurations) = 0
 */
 HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS)
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS)
 }
 
 /*
-void configurationChanged(const QNetworkConfiguration & configuration)
+void configurationChanged(const QNetworkConfiguration &configuration)
 */
 HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED)
 {

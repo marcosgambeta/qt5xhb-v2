@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_DELETE)
 }
 
 /*
-void audioBufferProbed(const QAudioBuffer & buffer)
+void audioBufferProbed(const QAudioBuffer &buffer)
 */
 HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED)
 {

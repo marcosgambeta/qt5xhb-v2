@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ADDMEDIA)
   if (ISNUMPAR(1) && ISQMEDIACONTENT(1))
   {
     /*
-    bool addMedia(const QMediaContent & content)
+    bool addMedia(const QMediaContent &content)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ADDMEDIA)
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    bool addMedia(const QList<QMediaContent> & items)
+    bool addMedia(const QList<QMediaContent> &items)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_INSERTMEDIA)
   if (ISNUMPAR(1) && ISQMEDIACONTENT(1))
   {
     /*
-    bool insertMedia(int pos, const QMediaContent & content)
+    bool insertMedia(int pos, const QMediaContent &content)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_INSERTMEDIA)
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    bool insertMedia(int pos, const QList<QMediaContent> & items)
+    bool insertMedia(int pos, const QList<QMediaContent> &items)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_LOAD)
   if (ISBETWEEN(1, 2) && ISQNETWORKREQUEST(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    void load(const QNetworkRequest & request, const char * format = nullptr)
+    void load(const QNetworkRequest &request, const char * format = nullptr)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -466,7 +466,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_LOAD)
   else if (ISBETWEEN(1, 2) && ISQURL(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    void load(const QUrl & location, const char * format = nullptr)
+    void load(const QUrl &location, const char * format = nullptr)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -631,7 +631,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_SAVE)
   if (ISBETWEEN(1, 2) && ISQURL(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    bool save(const QUrl & location, const char * format = nullptr)
+    bool save(const QUrl &location, const char * format = nullptr)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -839,7 +839,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED)
 }
 
 /*
-void currentMediaChanged(const QMediaContent & content)
+void currentMediaChanged(const QMediaContent &content)
 */
 HB_FUNC_STATIC(QMEDIAPLAYLIST_ONCURRENTMEDIACHANGED)
 {

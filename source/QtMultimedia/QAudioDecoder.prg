@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SOURCEFILENAME)
 }
 
 /*
-void setSourceFilename(const QString & fileName)
+void setSourceFilename(const QString &fileName)
 */
 HB_FUNC_STATIC(QAUDIODECODER_SETSOURCEFILENAME)
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QAUDIODECODER_AUDIOFORMAT)
 }
 
 /*
-void setAudioFormat(const QAudioFormat & format)
+void setAudioFormat(const QAudioFormat &format)
 */
 HB_FUNC_STATIC(QAUDIODECODER_SETAUDIOFORMAT)
 {
@@ -488,7 +488,7 @@ HB_FUNC_STATIC(QAUDIODECODER_STOP)
 }
 
 /*
-static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const QStringList & codecs = QStringList())
+static QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QStringList &codecs = QStringList())
 */
 HB_FUNC_STATIC(QAUDIODECODER_HASSUPPORT)
 {
@@ -763,7 +763,7 @@ HB_FUNC_STATIC(QAUDIODECODER_ONFINISHED)
 }
 
 /*
-void formatChanged(const QAudioFormat & format)
+void formatChanged(const QAudioFormat &format)
 */
 HB_FUNC_STATIC(QAUDIODECODER_ONFORMATCHANGED)
 {

@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDFORMATSINTERFACE_DELETE)
 }
 
 /*
-virtual QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const QStringList & codecs) const = 0
+virtual QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QStringList &codecs) const = 0
 */
 HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDFORMATSINTERFACE_HASSUPPORT)
 {

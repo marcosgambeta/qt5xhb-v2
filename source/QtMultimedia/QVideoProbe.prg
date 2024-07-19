@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QVIDEOPROBE_ONFLUSH)
 }
 
 /*
-void videoFrameProbed(const QVideoFrame & frame)
+void videoFrameProbed(const QVideoFrame &frame)
 */
 HB_FUNC_STATIC(QVIDEOPROBE_ONVIDEOFRAMEPROBED)
 {

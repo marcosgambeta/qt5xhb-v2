@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ISMETADATAAVAILABLE)
 }
 
 /*
-QVariant metaData(const QString & key) const
+QVariant metaData(const QString &key) const
 */
 HB_FUNC_STATIC(QMEDIAOBJECT_METADATA)
 {
@@ -540,7 +540,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ONMETADATACHANGED1)
 }
 
 /*
-void metaDataChanged(const QString & key, const QVariant & value)
+void metaDataChanged(const QString &key, const QVariant &value)
 */
 HB_FUNC_STATIC(QMEDIAOBJECT_ONMETADATACHANGED2)
 {

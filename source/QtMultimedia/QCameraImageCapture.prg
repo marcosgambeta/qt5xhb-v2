@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ERRORSTRING)
 }
 
 /*
-QString imageCodecDescription(const QString & codecName) const
+QString imageCodecDescription(const QString &codecName) const
 */
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_IMAGECODECDESCRIPTION)
 {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SETCAPTUREDESTINATION)
 }
 
 /*
-void setEncodingSettings(const QImageEncoderSettings & settings)
+void setEncodingSettings(const QImageEncoderSettings &settings)
 */
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SETENCODINGSETTINGS)
 {
@@ -518,7 +518,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SUPPORTEDIMAGECODECS)
 }
 
 /*
-QList<QSize> supportedResolutions(const QImageEncoderSettings & settings = QImageEncoderSettings(), bool * continuous =
+QList<QSize> supportedResolutions(const QImageEncoderSettings &settings = QImageEncoderSettings(), bool * continuous =
 nullptr) const
 */
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS)
@@ -598,7 +598,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_CANCELCAPTURE)
 }
 
 /*
-int capture(const QString & location = QString())
+int capture(const QString &location = QString())
 */
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_CAPTURE)
 {
@@ -727,7 +727,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONCAPTUREDESTINATIONCHANGED)
 }
 
 /*
-void error(int id, QCameraImageCapture::Error error, const QString & errorString)
+void error(int id, QCameraImageCapture::Error error, const QString &errorString)
 */
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONERROR)
 {
@@ -783,7 +783,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONERROR)
 }
 
 /*
-void imageAvailable(int id, const QVideoFrame & buffer)
+void imageAvailable(int id, const QVideoFrame &buffer)
 */
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGEAVAILABLE)
 {
@@ -837,7 +837,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGEAVAILABLE)
 }
 
 /*
-void imageCaptured(int id, const QImage & preview)
+void imageCaptured(int id, const QImage &preview)
 */
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGECAPTURED)
 {
@@ -941,7 +941,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGEEXPOSED)
 }
 
 /*
-void imageMetadataAvailable(int id, const QString & key, const QVariant & value)
+void imageMetadataAvailable(int id, const QString &key, const QVariant &value)
 */
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGEMETADATAAVAILABLE)
 {
@@ -997,7 +997,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGEMETADATAAVAILABLE)
 }
 
 /*
-void imageSaved(int id, const QString & fileName)
+void imageSaved(int id, const QString &fileName)
 */
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGESAVED)
 {

@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_SETCROSSFADETIME)
 }
 
 /*
-virtual void setNextMedia(const QMediaContent & media) = 0
+virtual void setNextMedia(const QMediaContent &media) = 0
 */
 HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_SETNEXTMEDIA)
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_ONCROSSFADETIMECHANGED)
 }
 
 /*
-void nextMediaChanged(const QMediaContent & media)
+void nextMediaChanged(const QMediaContent &media)
 */
 HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_ONNEXTMEDIACHANGED)
 {

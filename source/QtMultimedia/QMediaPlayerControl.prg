@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_POSITION)
 }
 
 /*
-virtual void setMedia(const QMediaContent & media, QIODevice * stream) = 0
+virtual void setMedia(const QMediaContent &media, QIODevice * stream) = 0
 */
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETMEDIA)
 {
@@ -707,7 +707,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONAUDIOAVAILABLECHANGED)
 }
 
 /*
-void availablePlaybackRangesChanged(const QMediaTimeRange & ranges)
+void availablePlaybackRangesChanged(const QMediaTimeRange &ranges)
 */
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONAVAILABLEPLAYBACKRANGESCHANGED)
 {
@@ -861,7 +861,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONDURATIONCHANGED)
 }
 
 /*
-void error(int error, const QString & errorString)
+void error(int error, const QString &errorString)
 */
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONERROR)
 {
@@ -914,7 +914,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONERROR)
 }
 
 /*
-void mediaChanged(const QMediaContent & content)
+void mediaChanged(const QMediaContent &content)
 */
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONMEDIACHANGED)
 {

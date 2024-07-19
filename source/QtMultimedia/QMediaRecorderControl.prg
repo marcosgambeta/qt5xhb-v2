@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_OUTPUTLOCATION)
 }
 
 /*
-virtual bool setOutputLocation(const QUrl & location) = 0
+virtual bool setOutputLocation(const QUrl &location) = 0
 */
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETOUTPUTLOCATION)
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETVOLUME)
 }
 
 /*
-void actualLocationChanged(const QUrl & location)
+void actualLocationChanged(const QUrl &location)
 */
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONACTUALLOCATIONCHANGED)
 {
@@ -466,7 +466,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONDURATIONCHANGED)
 }
 
 /*
-void error(int error, const QString & errorString)
+void error(int error, const QString &errorString)
 */
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONERROR)
 {

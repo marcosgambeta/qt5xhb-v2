@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_ONCAPTUREMODECHANGED)
 }
 
 /*
-void error(int error, const QString & errorString)
+void error(int error, const QString &errorString)
 */
 HB_FUNC_STATIC(QCAMERACONTROL_ONERROR)
 {
