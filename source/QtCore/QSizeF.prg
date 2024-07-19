@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QSIZEF_NEW)
   else if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
-    QSizeF(const QSize & sz)
+    QSizeF(const QSize &sz)
     */
     auto obj = new QSizeF(*PQSIZE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QSIZEF_SCALE)
   else if (ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2))
   {
     /*
-    void scale(const QSizeF & s, Qt::AspectRatioMode mode)
+    void scale(const QSizeF &s, Qt::AspectRatioMode mode)
     */
     auto obj = static_cast<QSizeF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QSIZEF_SCALED)
   else if (ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2))
   {
     /*
-    QSizeF scaled(const QSizeF & s, Qt::AspectRatioMode mode) const
+    QSizeF scaled(const QSizeF &s, Qt::AspectRatioMode mode) const
     */
     auto obj = static_cast<QSizeF *>(Qt5xHb::itemGetPtrStackSelfItem());
 

@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGEXP)
   if (ISNUMPAR(1) && ISQREGEXP(1))
   {
     /*
-    void setFilterRegExp(const QRegExp & regExp)
+    void setFilterRegExp(const QRegExp &regExp)
     */
     auto obj = qobject_cast<QSortFilterProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGEXP)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void setFilterRegExp(const QString & pattern)
+    void setFilterRegExp(const QString &pattern)
     */
     auto obj = qobject_cast<QSortFilterProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGULAREXPRESSION)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void setFilterRegularExpression(const QString & pattern)
+    void setFilterRegularExpression(const QString &pattern)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
 #if QT_CONFIG(regularexpression)
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGULAREXPRESSION)
   else if (ISNUMPAR(1) && ISQREGULAREXPRESSION(1))
   {
     /*
-    void setFilterRegularExpression(const QRegularExpression & regularExpression)
+    void setFilterRegularExpression(const QRegularExpression &regularExpression)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
 #if QT_CONFIG(regularexpression)
@@ -718,7 +718,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSOURCEMODEL)
 }
 
 /*
-QModelIndex mapToSource(const QModelIndex & proxyIndex) const
+QModelIndex mapToSource(const QModelIndex &proxyIndex) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPTOSOURCE)
 {
@@ -743,7 +743,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPTOSOURCE)
 }
 
 /*
-QModelIndex mapFromSource(const QModelIndex & sourceIndex) const
+QModelIndex mapFromSource(const QModelIndex &sourceIndex) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPFROMSOURCE)
 {
@@ -768,7 +768,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPFROMSOURCE)
 }
 
 /*
-QItemSelection mapSelectionToSource(const QItemSelection & proxySelection) const
+QItemSelection mapSelectionToSource(const QItemSelection &proxySelection) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPSELECTIONTOSOURCE)
 {
@@ -793,7 +793,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPSELECTIONTOSOURCE)
 }
 
 /*
-QItemSelection mapSelectionFromSource(const QItemSelection & sourceSelection) const
+QItemSelection mapSelectionFromSource(const QItemSelection &sourceSelection) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPSELECTIONFROMSOURCE)
 {
@@ -866,7 +866,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTORDER)
 }
 
 /*
-void setFilterWildcard(const QString & pattern)
+void setFilterWildcard(const QString &pattern)
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERWILDCARD)
 {
@@ -892,7 +892,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERWILDCARD)
 }
 
 /*
-void setFilterFixedString(const QString & pattern)
+void setFilterFixedString(const QString &pattern)
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING)
 {
@@ -987,7 +987,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_PARENT)
   else if (ISNUMPAR(1) && ISQMODELINDEX(1))
   {
     /*
-    QModelIndex parent(const QModelIndex & child) const
+    QModelIndex parent(const QModelIndex &child) const
     */
     auto obj = qobject_cast<QSortFilterProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -1004,7 +1004,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_PARENT)
 }
 
 /*
-QModelIndex index(int row, int column, const QModelIndex & parent = QModelIndex()) const
+QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INDEX)
 {
@@ -1030,7 +1030,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INDEX)
 }
 
 /*
-QModelIndex sibling(int row, int column, const QModelIndex & idx) const
+QModelIndex sibling(int row, int column, const QModelIndex &idx) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SIBLING)
 {
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SIBLING)
 }
 
 /*
-int rowCount(const QModelIndex & parent = QModelIndex()) const
+int rowCount(const QModelIndex &parent = QModelIndex()) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_ROWCOUNT)
 {
@@ -1079,7 +1079,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_ROWCOUNT)
 }
 
 /*
-int columnCount(const QModelIndex & parent = QModelIndex()) const
+int columnCount(const QModelIndex &parent = QModelIndex()) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_COLUMNCOUNT)
 {
@@ -1103,7 +1103,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_COLUMNCOUNT)
 }
 
 /*
-bool hasChildren(const QModelIndex & parent = QModelIndex()) const
+bool hasChildren(const QModelIndex &parent = QModelIndex()) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_HASCHILDREN)
 {
@@ -1127,7 +1127,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_HASCHILDREN)
 }
 
 /*
-QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const
+QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DATA)
 {
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DATA)
 }
 
 /*
-bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole)
+bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETDATA)
 {
@@ -1202,7 +1202,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_HEADERDATA)
 }
 
 /*
-bool setHeaderData(int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole)
+bool setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role = Qt::EditRole)
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETHEADERDATA)
 {
@@ -1227,7 +1227,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETHEADERDATA)
 }
 
 /*
-QMimeData * mimeData(const QModelIndexList & indexes) const
+QMimeData * mimeData(const QModelIndexList &indexes) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MIMEDATA)
 {
@@ -1260,7 +1260,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MIMEDATA)
 }
 
 /*
-bool dropMimeData(const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent)
+bool dropMimeData(const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DROPMIMEDATA)
 {
@@ -1285,7 +1285,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DROPMIMEDATA)
 }
 
 /*
-bool insertRows(int row, int count, const QModelIndex & parent = QModelIndex())
+bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex())
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INSERTROWS)
 {
@@ -1310,7 +1310,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INSERTROWS)
 }
 
 /*
-bool insertColumns(int column, int count, const QModelIndex & parent = QModelIndex())
+bool insertColumns(int column, int count, const QModelIndex &parent = QModelIndex())
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INSERTCOLUMNS)
 {
@@ -1335,7 +1335,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INSERTCOLUMNS)
 }
 
 /*
-bool removeRows(int row, int count, const QModelIndex & parent = QModelIndex())
+bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex())
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_REMOVEROWS)
 {
@@ -1360,7 +1360,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_REMOVEROWS)
 }
 
 /*
-bool removeColumns(int column, int count, const QModelIndex & parent = QModelIndex())
+bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex())
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_REMOVECOLUMNS)
 {
@@ -1385,7 +1385,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_REMOVECOLUMNS)
 }
 
 /*
-void fetchMore(const QModelIndex & parent)
+void fetchMore(const QModelIndex &parent)
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FETCHMORE)
 {
@@ -1411,7 +1411,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FETCHMORE)
 }
 
 /*
-bool canFetchMore(const QModelIndex & parent) const
+bool canFetchMore(const QModelIndex &parent) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_CANFETCHMORE)
 {
@@ -1435,7 +1435,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_CANFETCHMORE)
 }
 
 /*
-Qt::ItemFlags flags(const QModelIndex & index) const
+Qt::ItemFlags flags(const QModelIndex &index) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FLAGS)
 {
@@ -1459,7 +1459,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FLAGS)
 }
 
 /*
-QModelIndex buddy(const QModelIndex & index) const
+QModelIndex buddy(const QModelIndex &index) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_BUDDY)
 {
@@ -1484,7 +1484,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_BUDDY)
 }
 
 /*
-QModelIndexList match(const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags =
+QModelIndexList match(const QModelIndex &start, int role, const QVariant &value, int hits = 1, Qt::MatchFlags flags =
 Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap)) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MATCH)
@@ -1539,7 +1539,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MATCH)
 }
 
 /*
-QSize span(const QModelIndex & index) const
+QSize span(const QModelIndex &index) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SPAN)
 {

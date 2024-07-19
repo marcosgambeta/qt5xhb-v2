@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QDATE_DAYSINYEAR)
 }
 
 /*
-int daysTo(const QDate & d) const
+int daysTo(const QDate &d) const
 */
 HB_FUNC_STATIC(QDATE_DAYSTO)
 {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC(QDATE_TOSTRING)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QString toString(const QString & format) const
+    QString toString(const QString &format) const
     */
     auto obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -596,7 +596,7 @@ HB_FUNC_STATIC(QDATE_FROMSTRING)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    static QDate fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
+    static QDate fromString(const QString &string, Qt::DateFormat format = Qt::TextDate)
     */
 
     auto ptr = new QDate(QDate::fromString(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::DateFormat>(Qt::TextDate)
@@ -606,7 +606,7 @@ HB_FUNC_STATIC(QDATE_FROMSTRING)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    static QDate fromString(const QString & string, const QString & format)
+    static QDate fromString(const QString &string, const QString &format)
     */
 
     auto ptr = new QDate(QDate::fromString(PQSTRING(1), PQSTRING(2)));

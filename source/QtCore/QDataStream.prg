@@ -488,7 +488,7 @@ HB_FUNC_STATIC(QDATASTREAM_READRAWDATA)
 }
 
 /*
-QDataStream & writeBytes(const char *, uint len)
+QDataStream &writeBytes(const char *, uint len)
 */
 HB_FUNC_STATIC(QDATASTREAM_WRITEBYTES)
 {

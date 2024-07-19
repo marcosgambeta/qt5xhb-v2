@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QDEBUG_NEW)
   else if (ISNUMPAR(1) && ISQDEBUG(1))
   {
     /*
-    QDebug(const QDebug & o)
+    QDebug(const QDebug &o)
     */
     auto obj = new QDebug(*PQDEBUG(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QDEBUG_DELETE)
 }
 
 /*
-void swap(QDebug & other)
+void swap(QDebug &other)
 */
 HB_FUNC_STATIC(QDEBUG_SWAP)
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QDEBUG_SWAP)
 }
 
 /*
-QDebug & space()
+QDebug &space()
 */
 HB_FUNC_STATIC(QDEBUG_SPACE)
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QDEBUG_SPACE)
 }
 
 /*
-QDebug & nospace()
+QDebug &nospace()
 */
 HB_FUNC_STATIC(QDEBUG_NOSPACE)
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QDEBUG_NOSPACE)
 }
 
 /*
-QDebug & maybeSpace()
+QDebug &maybeSpace()
 */
 HB_FUNC_STATIC(QDEBUG_MAYBESPACE)
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QDEBUG_SETAUTOINSERTSPACES)
 }
 
 /*
-QDebug & maybeQuote(char c = '"')
+QDebug &maybeQuote(char c = '"')
 */
 HB_FUNC_STATIC(QDEBUG_MAYBEQUOTE)
 {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QDEBUG_MAYBEQUOTE)
 }
 
 /*
-QDebug & noquote()
+QDebug &noquote()
 */
 HB_FUNC_STATIC(QDEBUG_NOQUOTE)
 {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QDEBUG_NOQUOTE)
 }
 
 /*
-QDebug & quote()
+QDebug &quote()
 */
 HB_FUNC_STATIC(QDEBUG_QUOTE)
 {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QDEBUG_QUOTE)
 }
 
 /*
-QDebug & resetFormat()
+QDebug &resetFormat()
 */
 HB_FUNC_STATIC(QDEBUG_RESETFORMAT)
 {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QDEBUG_VERBOSITY)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QDebug & verbosity(int verbosityLevel)
+    QDebug &verbosity(int verbosityLevel)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
     auto obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());

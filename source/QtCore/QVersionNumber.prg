@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_ISNULL)
 }
 
 /*
-bool isPrefixOf(const QVersionNumber & other) const
+bool isPrefixOf(const QVersionNumber &other) const
 */
 HB_FUNC_STATIC(QVERSIONNUMBER_ISPREFIXOF)
 {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_TOSTRING)
 }
 
 /*
-static QVersionNumber commonPrefix(const QVersionNumber & v1, const QVersionNumber & v2)
+static QVersionNumber commonPrefix(const QVersionNumber &v1, const QVersionNumber &v2)
 */
 HB_FUNC_STATIC(QVERSIONNUMBER_COMMONPREFIX)
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_COMMONPREFIX)
 }
 
 /*
-static int compare(const QVersionNumber & v1, const QVersionNumber & v2)
+static int compare(const QVersionNumber &v1, const QVersionNumber &v2)
 */
 HB_FUNC_STATIC(QVERSIONNUMBER_COMPARE)
 {
@@ -478,7 +478,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_COMPARE)
 }
 
 /*
-static QVersionNumber fromString(const QString & string, int * suffixIndex = nullptr)
+static QVersionNumber fromString(const QString &string, int * suffixIndex = nullptr)
 */
 HB_FUNC_STATIC(QVERSIONNUMBER_FROMSTRING)
 {

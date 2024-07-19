@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QFILEINFO_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QFileInfo(const QString & file)
+    QFileInfo(const QString &file)
     */
     auto obj = new QFileInfo(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QFILEINFO_NEW)
   else if (ISNUMPAR(1) && ISQFILE(1))
   {
     /*
-    QFileInfo(const QFile & file)
+    QFileInfo(const QFile &file)
     */
     auto obj = new QFileInfo(*PQFILE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QFILEINFO_NEW)
   else if (ISNUMPAR(2) && ISQDIR(1) && HB_ISCHAR(2))
   {
     /*
-    QFileInfo(const QDir & dir, const QString & file)
+    QFileInfo(const QDir &dir, const QString &file)
     */
     auto obj = new QFileInfo(*PQDIR(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QFILEINFO_NEW)
   else if (ISNUMPAR(1) && ISQFILEINFO(1))
   {
     /*
-    QFileInfo(const QFileInfo & fileinfo)
+    QFileInfo(const QFileInfo &fileinfo)
     */
     auto obj = new QFileInfo(*PQFILEINFO(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QFILEINFO_EXISTS)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static bool exists(const QString & file)
+    static bool exists(const QString &file)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 
@@ -1130,7 +1130,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void setFile(const QString & file)
+    void setFile(const QString &file)
     */
     auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1144,7 +1144,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
   else if (ISNUMPAR(1) && ISQFILE(1))
   {
     /*
-    void setFile(const QFile & file)
+    void setFile(const QFile &file)
     */
     auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1158,7 +1158,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
   else if (ISNUMPAR(2) && ISQDIR(1) && HB_ISCHAR(2))
   {
     /*
-    void setFile(const QDir & dir, const QString & file)
+    void setFile(const QDir &dir, const QString &file)
     */
     auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -1224,7 +1224,7 @@ HB_FUNC_STATIC(QFILEINFO_SUFFIX)
 }
 
 /*
-void swap(QFileInfo & other)
+void swap(QFileInfo &other)
 */
 HB_FUNC_STATIC(QFILEINFO_SWAP)
 {

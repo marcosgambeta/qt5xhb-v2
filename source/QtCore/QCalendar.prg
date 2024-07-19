@@ -572,7 +572,7 @@ HB_FUNC_STATIC(QCALENDAR_DAYOFWEEK)
 }
 
 /*
-QString weekDayName(const QLocale & locale, int day, QLocale::FormatType format = QLocale::LongFormat) const
+QString weekDayName(const QLocale &locale, int day, QLocale::FormatType format = QLocale::LongFormat) const
 */
 HB_FUNC_STATIC(QCALENDAR_WEEKDAYNAME)
 {
@@ -600,7 +600,7 @@ HB_FUNC_STATIC(QCALENDAR_WEEKDAYNAME)
 }
 
 /*
-QString standaloneWeekDayName(const QLocale & locale, int day, QLocale::FormatType format=QLocale::LongFormat) const
+QString standaloneWeekDayName(const QLocale &locale, int day, QLocale::FormatType format=QLocale::LongFormat) const
 */
 HB_FUNC_STATIC(QCALENDAR_STANDALONEWEEKDAYNAME)
 {

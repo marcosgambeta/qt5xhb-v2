@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QJSONVALUE_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QJsonValue(const QString & s)
+    QJsonValue(const QString &s)
     */
     auto obj = new QJsonValue(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QJSONVALUE_NEW)
   else if (ISNUMPAR(1) && ISQJSONARRAY(1))
   {
     /*
-    QJsonValue(const QJsonArray & a)
+    QJsonValue(const QJsonArray &a)
     */
     auto obj = new QJsonValue(*PQJSONARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QJSONVALUE_NEW)
   else if (ISNUMPAR(1) && ISQJSONOBJECT(1))
   {
     /*
-    QJsonValue(const QJsonObject & o)
+    QJsonValue(const QJsonObject &o)
     */
     auto obj = new QJsonValue(*PQJSONOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QJSONVALUE_NEW)
   else if (ISNUMPAR(1) && ISQJSONVALUE(1))
   {
     /*
-    QJsonValue(const QJsonValue & other)
+    QJsonValue(const QJsonValue &other)
     */
     auto obj = new QJsonValue(*PQJSONVALUE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOARRAY)
   if (ISNUMPAR(1) && ISQJSONARRAY(1))
   {
     /*
-    QJsonArray toArray(const QJsonArray & defaultValue) const
+    QJsonArray toArray(const QJsonArray &defaultValue) const
     */
     auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOOBJECT)
   if (ISNUMPAR(1) && ISQJSONOBJECT(1))
   {
     /*
-    QJsonObject toObject(const QJsonObject & defaultValue) const
+    QJsonObject toObject(const QJsonObject &defaultValue) const
     */
     auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -466,7 +466,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOOBJECT)
 }
 
 /*
-QString toString(const QString & defaultValue = QString()) const
+QString toString(const QString &defaultValue = QString()) const
 */
 HB_FUNC_STATIC(QJSONVALUE_TOSTRING)
 {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC(QJSONVALUE_TYPE)
 }
 
 /*
-static QJsonValue fromVariant(const QVariant & variant)
+static QJsonValue fromVariant(const QVariant &variant)
 */
 HB_FUNC_STATIC(QJSONVALUE_FROMVARIANT)
 {

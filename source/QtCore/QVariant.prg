@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QVARIANT_NEW14)
 }
 
 /*
-QVariant(const QString & string)
+QVariant(const QString &string)
 */
 HB_FUNC_STATIC(QVARIANT_NEW17)
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QVARIANT_NEW17)
 }
 
 /*
-QVariant(const QStringList & stringlist)
+QVariant(const QStringList &stringlist)
 */
 HB_FUNC_STATIC(QVARIANT_NEW19)
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QVARIANT_NEW19)
 }
 
 /*
-QVariant(const QList<QVariant> & list)
+QVariant(const QList<QVariant> &list)
 */
 HB_FUNC_STATIC(QVARIANT_NEW24)
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     if (ISQVARIANT(1))
     {
       /*
-      QVariant(const QVariant & other)
+      QVariant(const QVariant &other)
       */
       auto obj = new QVariant(*PQVARIANT(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -308,7 +308,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQDATASTREAM(1))
     {
       /*
-      QVariant(QDataStream & s)
+      QVariant(QDataStream &s)
       */
       QDataStream *par1 = (QDataStream *)Qt5xHb::itemGetPtr(1);
       auto obj = new QVariant(*par1);
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQBYTEARRAY(1))
     {
       /*
-      QVariant(const QByteArray & bytearray)
+      QVariant(const QByteArray &bytearray)
       */
       auto obj = new QVariant(*PQBYTEARRAY(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQBITARRAY(1))
     {
       /*
-      QVariant(const QBitArray & bitarray)
+      QVariant(const QBitArray &bitarray)
       */
       auto obj = new QVariant(*PQBITARRAY(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -350,7 +350,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQDATE(1))
     {
       /*
-      QVariant(const QDate & date)
+      QVariant(const QDate &date)
       */
       auto obj = new QVariant(*PQDATE(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQTIME(1))
     {
       /*
-      QVariant(const QTime & time)
+      QVariant(const QTime &time)
       */
       auto obj = new QVariant(*PQTIME(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQDATETIME(1))
     {
       /*
-      QVariant(const QDateTime & datetime)
+      QVariant(const QDateTime &datetime)
       */
       auto obj = new QVariant(*PQDATETIME(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQSIZE(1))
     {
       /*
-      QVariant(const QSize & size)
+      QVariant(const QSize &size)
       */
       auto obj = new QVariant(*PQSIZE(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -385,7 +385,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQSIZEF(1))
     {
       /*
-      QVariant(const QSizeF & size)
+      QVariant(const QSizeF &size)
       */
       auto obj = new QVariant(*PQSIZEF(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQPOINT(1))
     {
       /*
-      QVariant(const QPoint & pt)
+      QVariant(const QPoint &pt)
       */
       auto obj = new QVariant(*PQPOINT(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQPOINTF(1))
     {
       /*
-      QVariant(const QPointF & pt)
+      QVariant(const QPointF &pt)
       */
       auto obj = new QVariant(*PQPOINTF(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQLINE(1))
     {
       /*
-      QVariant(const QLine & line)
+      QVariant(const QLine &line)
       */
       auto obj = new QVariant(*PQLINE(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -425,7 +425,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQLINEF(1))
     {
       /*
-      QVariant(const QLineF & line)
+      QVariant(const QLineF &line)
       */
       auto obj = new QVariant(*PQLINEF(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQRECT(1))
     {
       /*
-      QVariant(const QRect & rect)
+      QVariant(const QRect &rect)
       */
       auto obj = new QVariant(*PQRECT(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -445,7 +445,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQRECTF(1))
     {
       /*
-      QVariant(const QRectF & rect)
+      QVariant(const QRectF &rect)
       */
       auto obj = new QVariant(*PQRECTF(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -454,7 +454,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQLOCALE(1))
     {
       /*
-      QVariant(const QLocale & locale)
+      QVariant(const QLocale &locale)
       */
       auto obj = new QVariant(*PQLOCALE(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -463,7 +463,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQREGEXP(1))
     {
       /*
-      QVariant(const QRegExp & regExp)
+      QVariant(const QRegExp &regExp)
       */
       auto obj = new QVariant(*PQREGEXP(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -473,7 +473,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQREGULAREXPRESSION(1))
     {
       /*
-      QVariant(const QRegularExpression & re)
+      QVariant(const QRegularExpression &re)
       */
       auto obj = new QVariant(*PQREGULAREXPRESSION(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQURL(1))
     {
       /*
-      QVariant(const QUrl & url)
+      QVariant(const QUrl &url)
       */
       auto obj = new QVariant(*PQURL(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -490,7 +490,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQEASINGCURVE(1))
     {
       /*
-      QVariant(const QEasingCurve & easing)
+      QVariant(const QEasingCurve &easing)
       */
       auto obj = new QVariant(*PQEASINGCURVE(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -498,7 +498,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQUUID(1))
     {
       /*
-      QVariant(const QUuid & uuid)
+      QVariant(const QUuid &uuid)
       */
       auto obj = new QVariant(*PQUUID(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -506,7 +506,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQMODELINDEX(1))
     {
       /*
-      QVariant(const QModelIndex & modelIndex)
+      QVariant(const QModelIndex &modelIndex)
       */
       auto obj = new QVariant(*PQMODELINDEX(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -514,7 +514,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQJSONVALUE(1))
     {
       /*
-      QVariant(const QJsonValue & jsonValue)
+      QVariant(const QJsonValue &jsonValue)
       */
       auto obj = new QVariant(*PQJSONVALUE(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -522,7 +522,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQJSONOBJECT(1))
     {
       /*
-      QVariant(const QJsonObject & jsonObject)
+      QVariant(const QJsonObject &jsonObject)
       */
       auto obj = new QVariant(*PQJSONOBJECT(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -530,7 +530,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQJSONARRAY(1))
     {
       /*
-      QVariant(const QJsonArray & jsonArray)
+      QVariant(const QJsonArray &jsonArray)
       */
       auto obj = new QVariant(*PQJSONARRAY(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -538,7 +538,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     else if (ISQJSONDOCUMENT(1))
     {
       /*
-      QVariant(const QJsonDocument & jsonDocument)
+      QVariant(const QJsonDocument &jsonDocument)
       */
       auto obj = new QVariant(*PQJSONDOCUMENT(1));
       Qt5xHb::returnNewObject(obj, true);
@@ -626,7 +626,7 @@ HB_FUNC_STATIC(QVARIANT_DELETE)
 }
 
 /*
-void swap(QVariant & other)
+void swap(QVariant &other)
 */
 HB_FUNC_STATIC(QVARIANT_SWAP)
 {

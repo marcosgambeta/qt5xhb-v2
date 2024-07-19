@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QTIMEZONE_NEW)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QTimeZone(const QByteArray & ianaId)
+    QTimeZone(const QByteArray &ianaId)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QTimeZone(*PQBYTEARRAY(1));
@@ -118,8 +118,8 @@ HB_FUNC_STATIC(QTIMEZONE_NEW)
            (HB_ISNUM(5) || HB_ISNIL(5)) && (HB_ISCHAR(6) || HB_ISNIL(6)))
   {
     /*
-    QTimeZone(const QByteArray & zoneId, int offsetSeconds, const QString & name, const QString & abbreviation,
-    QLocale::Country country = QLocale::AnyCountry, const QString & comment = QString())
+    QTimeZone(const QByteArray &zoneId, int offsetSeconds, const QString &name, const QString &abbreviation,
+    QLocale::Country country = QLocale::AnyCountry, const QString &comment = QString())
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QTimeZone(*PQBYTEARRAY(1), PINT(2), PQSTRING(3), PQSTRING(4),
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QTIMEZONE_NEW)
   else if (ISNUMPAR(1) && ISQTIMEZONE(1))
   {
     /*
-    QTimeZone(const QTimeZone & other)
+    QTimeZone(const QTimeZone &other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QTimeZone(*PQTIMEZONE(1));
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QTIMEZONE_DELETE)
 }
 
 /*
-void swap(QTimeZone & other)
+void swap(QTimeZone &other)
 */
 HB_FUNC_STATIC(QTIMEZONE_SWAP)
 {
@@ -301,8 +301,8 @@ HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
   if (ISBETWEEN(1, 3) && ISQDATETIME(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQLOCALE(3) || HB_ISNIL(3)))
   {
     /*
-    QString displayName(const QDateTime & atDateTime, QTimeZone::NameType nameType = QTimeZone::DefaultName, const
-    QLocale & locale = QLocale()) const
+    QString displayName(const QDateTime &atDateTime, QTimeZone::NameType nameType = QTimeZone::DefaultName, const
+    QLocale &locale = QLocale()) const
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
   {
     /*
     QString displayName(QTimeZone::TimeType timeType, QTimeZone::NameType nameType = QTimeZone::DefaultName, const
-    QLocale & locale = QLocale()) const
+    QLocale &locale = QLocale()) const
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
 }
 
 /*
-QString abbreviation(const QDateTime & atDateTime) const
+QString abbreviation(const QDateTime &atDateTime) const
 */
 HB_FUNC_STATIC(QTIMEZONE_ABBREVIATION)
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QTIMEZONE_ABBREVIATION)
 }
 
 /*
-int offsetFromUtc(const QDateTime & atDateTime) const
+int offsetFromUtc(const QDateTime &atDateTime) const
 */
 HB_FUNC_STATIC(QTIMEZONE_OFFSETFROMUTC)
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC(QTIMEZONE_OFFSETFROMUTC)
 }
 
 /*
-int standardTimeOffset(const QDateTime & atDateTime) const
+int standardTimeOffset(const QDateTime &atDateTime) const
 */
 HB_FUNC_STATIC(QTIMEZONE_STANDARDTIMEOFFSET)
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QTIMEZONE_STANDARDTIMEOFFSET)
 }
 
 /*
-int daylightTimeOffset(const QDateTime & atDateTime) const
+int daylightTimeOffset(const QDateTime &atDateTime) const
 */
 HB_FUNC_STATIC(QTIMEZONE_DAYLIGHTTIMEOFFSET)
 {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC(QTIMEZONE_HASDAYLIGHTTIME)
 }
 
 /*
-bool isDaylightTime(const QDateTime & atDateTime) const
+bool isDaylightTime(const QDateTime &atDateTime) const
 */
 HB_FUNC_STATIC(QTIMEZONE_ISDAYLIGHTTIME)
 {
@@ -545,7 +545,7 @@ HB_FUNC_STATIC(QTIMEZONE_SYSTEMTIMEZONEID)
 }
 
 /*
-static bool isTimeZoneIdAvailable(const QByteArray & ianaId)
+static bool isTimeZoneIdAvailable(const QByteArray &ianaId)
 */
 HB_FUNC_STATIC(QTIMEZONE_ISTIMEZONEIDAVAILABLE)
 {
@@ -727,7 +727,7 @@ HB_FUNC_STATIC(QTIMEZONE_AVAILABLETIMEZONEIDS)
 }
 
 /*
-static QByteArray ianaIdToWindowsId(const QByteArray & ianaId)
+static QByteArray ianaIdToWindowsId(const QByteArray &ianaId)
 */
 HB_FUNC_STATIC(QTIMEZONE_IANAIDTOWINDOWSID)
 {
@@ -753,7 +753,7 @@ HB_FUNC_STATIC(QTIMEZONE_WINDOWSIDTODEFAULTIANAID)
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    static QByteArray windowsIdToDefaultIanaId(const QByteArray & windowsId)
+    static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 
@@ -764,7 +764,7 @@ HB_FUNC_STATIC(QTIMEZONE_WINDOWSIDTODEFAULTIANAID)
   else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2))
   {
     /*
-    static QByteArray windowsIdToDefaultIanaId(const QByteArray & windowsId, QLocale::Country country)
+    static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId, QLocale::Country country)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 
@@ -784,7 +784,7 @@ HB_FUNC_STATIC(QTIMEZONE_WINDOWSIDTOIANAIDS)
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    static QList<QByteArray> windowsIdToIanaIds(const QByteArray & windowsId)
+    static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 
@@ -820,7 +820,7 @@ HB_FUNC_STATIC(QTIMEZONE_WINDOWSIDTOIANAIDS)
   else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2))
   {
     /*
-    static QList<QByteArray> windowsIdToIanaIds(const QByteArray & windowsId, QLocale::Country country)
+    static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId, QLocale::Country country)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 

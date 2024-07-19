@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QStringMatcher(const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+    QStringMatcher(const QString &pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive)
     */
     auto obj = new QStringMatcher(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::CaseSensitivity>(Qt::CaseSensitive)
                                                            : static_cast<Qt::CaseSensitivity>(hb_parni(2)));
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_NEW)
   else if (ISNUMPAR(1) && ISQSTRINGMATCHER(1))
   {
     /*
-    QStringMatcher(const QStringMatcher & other)
+    QStringMatcher(const QStringMatcher &other)
     */
     auto obj = new QStringMatcher(*PQSTRINGMATCHER(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_DELETE)
 }
 
 /*
-void setPattern(const QString & pattern)
+void setPattern(const QString &pattern)
 */
 HB_FUNC_STATIC(QSTRINGMATCHER_SETPATTERN)
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_INDEXIN)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    int indexIn(const QString & str, int from = 0) const
+    int indexIn(const QString &str, int from = 0) const
     */
     auto obj = static_cast<QStringMatcher *>(Qt5xHb::itemGetPtrStackSelfItem());
 

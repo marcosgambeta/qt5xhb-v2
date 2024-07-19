@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QFILEDEVICE_FILETIME)
 }
 
 /*
-bool setFileTime(const QDateTime & newDate, QFileDevice::FileTime fileTime)
+bool setFileTime(const QDateTime &newDate, QFileDevice::FileTime fileTime)
 */
 HB_FUNC_STATIC(QFILEDEVICE_SETFILETIME)
 {

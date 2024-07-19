@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QTemporaryFile(const QString & templateName)
+    QTemporaryFile(const QString &templateName)
     */
     auto obj = new QTemporaryFile(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, false);
@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_NEW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
   {
     /*
-    QTemporaryFile(const QString & templateName, QObject * parent)
+    QTemporaryFile(const QString &templateName, QObject * parent)
     */
     auto obj = new QTemporaryFile(PQSTRING(1), PQOBJECT(2));
     Qt5xHb::returnNewObject(obj, false);
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_SETAUTOREMOVE)
 }
 
 /*
-void setFileTemplate(const QString & name)
+void setFileTemplate(const QString &name)
 */
 HB_FUNC_STATIC(QTEMPORARYFILE_SETFILETEMPLATE)
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_CREATENATIVEFILE)
   if (ISNUMPAR(1) && ISQFILE(1))
   {
     /*
-    static QTemporaryFile * createNativeFile(QFile & file)
+    static QTemporaryFile * createNativeFile(QFile &file)
     */
 
     auto ptr = QTemporaryFile::createNativeFile(*PQFILE(1));
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_CREATENATIVEFILE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QTemporaryFile * createNativeFile(const QString & fileName)
+    static QTemporaryFile * createNativeFile(const QString &fileName)
     */
 
     auto ptr = QTemporaryFile::createNativeFile(PQSTRING(1));

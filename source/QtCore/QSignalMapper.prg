@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
   else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
   {
     /*
-    void setMapping(QObject * sender, const QString & text)
+    void setMapping(QObject * sender, const QString &text)
     */
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QObject * mapping(const QString & text) const
+    QObject * mapping(const QString &text) const
     */
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED1)
 }
 
 /*
-void mapped(const QString & arg)
+void mapped(const QString &arg)
 */
 HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED2)
 {
@@ -598,7 +598,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDOBJECT)
 }
 
 /*
-void mappedString(const QString & text)
+void mappedString(const QString &text)
 */
 HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDSTRING)
 {

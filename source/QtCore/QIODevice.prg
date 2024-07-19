@@ -810,7 +810,7 @@ HB_FUNC_STATIC(QIODEVICE_WRITE)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    qint64 write(const QByteArray & byteArray)
+    qint64 write(const QByteArray &byteArray)
     */
     auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 

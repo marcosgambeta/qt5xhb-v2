@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QOBJECT_BLOCKSIGNALS)
 }
 
 /*
-const QObjectList & children() const
+const QObjectList &children() const
 */
 HB_FUNC_STATIC(QOBJECT_CHILDREN)
 {
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QOBJECT_EVENTFILTER)
 }
 
 /*
-T findChild(const QString & name = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
+T findChild(const QString &name = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 */
 HB_FUNC_STATIC(QOBJECT_FINDCHILD)
 {
@@ -898,7 +898,7 @@ HB_FUNC_STATIC(QOBJECT_OBJECTNAME)
 }
 
 /*
-void setObjectName(const QString & name)
+void setObjectName(const QString &name)
 */
 HB_FUNC_STATIC(QOBJECT_SETOBJECTNAME)
 {
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC(QOBJECT_PROPERTY)
 }
 
 /*
-bool setProperty (const char * name, const QVariant & value)
+bool setProperty (const char * name, const QVariant &value)
 */
 HB_FUNC_STATIC(QOBJECT_SETPROPERTY)
 {
@@ -2266,7 +2266,7 @@ HB_FUNC_STATIC(QOBJECT_ONDESTROYED)
 }
 
 /*
-void objectNameChanged(const QString & objectName)
+void objectNameChanged(const QString &objectName)
 */
 HB_FUNC_STATIC(QOBJECT_ONOBJECTNAMECHANGED)
 {

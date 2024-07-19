@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QTIME_MSEC)
 }
 
 /*
-int msecsTo(const QTime & t) const
+int msecsTo(const QTime &t) const
 */
 HB_FUNC_STATIC(QTIME_MSECSTO)
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QTIME_SECOND)
 }
 
 /*
-int secsTo(const QTime & t) const
+int secsTo(const QTime &t) const
 */
 HB_FUNC_STATIC(QTIME_SECSTO)
 {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QTIME_TOSTRING)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QString toString(const QString & format) const
+    QString toString(const QString &format) const
     */
     auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -515,7 +515,7 @@ HB_FUNC_STATIC(QTIME_FROMSTRING)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    static QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
+    static QTime fromString(const QString &string, Qt::DateFormat format = Qt::TextDate)
     */
 
     auto ptr = new QTime(QTime::fromString(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::DateFormat>(Qt::TextDate)
@@ -525,7 +525,7 @@ HB_FUNC_STATIC(QTIME_FROMSTRING)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    static QTime fromString(const QString & string, const QString & format)
+    static QTime fromString(const QString &string, const QString &format)
     */
 
     auto ptr = new QTime(QTime::fromString(PQSTRING(1), PQSTRING(2)));
