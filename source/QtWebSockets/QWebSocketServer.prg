@@ -92,7 +92,7 @@ RETURN
 #include <QtWebSockets/QWebSocketCorsAuthenticator>
 
     /*
-    QWebSocketServer(const QString & serverName, QWebSocketServer::SslMode secureMode, QObject * parent = nullptr)
+    QWebSocketServer(const QString &serverName, QWebSocketServer::SslMode secureMode, QObject * parent = nullptr)
     */
 HB_FUNC_STATIC(QWEBSOCKETSERVER_NEW)
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_DELETE)
 }
 
 /*
-bool listen(const QHostAddress & address = QHostAddress::Any, quint16 port = 0)
+bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
 */
 HB_FUNC_STATIC(QWEBSOCKETSERVER_LISTEN)
 {
@@ -584,7 +584,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SERVERNAME)
 }
 
 /*
-void setServerName(const QString & serverName)
+void setServerName(const QString &serverName)
 */
 HB_FUNC_STATIC(QWEBSOCKETSERVER_SETSERVERNAME)
 {
@@ -639,7 +639,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_PROXY)
 }
 
 /*
-void setProxy(const QNetworkProxy & networkProxy)
+void setProxy(const QNetworkProxy &networkProxy)
 */
 HB_FUNC_STATIC(QWEBSOCKETSERVER_SETPROXY)
 {
@@ -667,7 +667,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SETPROXY)
 }
 
 /*
-void setSslConfiguration(const QSslConfiguration & sslConfiguration)
+void setSslConfiguration(const QSslConfiguration &sslConfiguration)
 */
 HB_FUNC_STATIC(QWEBSOCKETSERVER_SETSSLCONFIGURATION)
 {
@@ -976,7 +976,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_ONNEWCONNECTION)
 }
 
 /*
-void peerVerifyError(const QSslError & error)
+void peerVerifyError(const QSslError &error)
 */
 HB_FUNC_STATIC(QWEBSOCKETSERVER_ONPEERVERIFYERROR)
 {
@@ -1031,7 +1031,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_ONPEERVERIFYERROR)
 }
 
 /*
-void sslErrors(const QList<QSslError> & errors)
+void sslErrors(const QList<QSslError> &errors)
 */
 HB_FUNC_STATIC(QWEBSOCKETSERVER_ONSSLERRORS)
 {

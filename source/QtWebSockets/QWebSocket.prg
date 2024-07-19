@@ -110,7 +110,7 @@ RETURN
 #include <QtWebSockets/QMaskGenerator>
 
     /*
-    QWebSocket(const QString & origin = QString(), QWebSocketProtocol::Version version =
+    QWebSocket(const QString &origin = QString(), QWebSocketProtocol::Version version =
     QWebSocketProtocol::VersionLatest, QObject * parent = nullptr)
     */
 HB_FUNC_STATIC(QWEBSOCKET_NEW)
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QWEBSOCKET_PROXY)
 }
 
 /*
-void setProxy(const QNetworkProxy & networkProxy)
+void setProxy(const QNetworkProxy &networkProxy)
 */
 HB_FUNC_STATIC(QWEBSOCKET_SETPROXY)
 {
@@ -845,7 +845,7 @@ HB_FUNC_STATIC(QWEBSOCKET_CLOSEREASON)
 }
 
 /*
-qint64 sendTextMessage(const QString & message)
+qint64 sendTextMessage(const QString &message)
 */
 HB_FUNC_STATIC(QWEBSOCKET_SENDTEXTMESSAGE)
 {
@@ -871,7 +871,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SENDTEXTMESSAGE)
 }
 
 /*
-qint64 sendBinaryMessage(const QByteArray & data)
+qint64 sendBinaryMessage(const QByteArray &data)
 */
 HB_FUNC_STATIC(QWEBSOCKET_SENDBINARYMESSAGE)
 {
@@ -901,7 +901,7 @@ HB_FUNC_STATIC(QWEBSOCKET_IGNORESSLERRORS)
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void ignoreSslErrors(const QList<QSslError> & errors)
+    void ignoreSslErrors(const QList<QSslError> &errors)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = qobject_cast<QWebSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -972,7 +972,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SSLCONFIGURATION)
 }
 
 /*
-void setSslConfiguration(const QSslConfiguration & sslConfiguration)
+void setSslConfiguration(const QSslConfiguration &sslConfiguration)
 */
 HB_FUNC_STATIC(QWEBSOCKET_SETSSLCONFIGURATION)
 {
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SETSSLCONFIGURATION)
 }
 
 /*
-void close(QWebSocketProtocol::CloseCode closeCode = QWebSocketProtocol::CloseCodeNormal, const QString & reason =
+void close(QWebSocketProtocol::CloseCode closeCode = QWebSocketProtocol::CloseCodeNormal, const QString &reason =
 QString())
 */
 HB_FUNC_STATIC(QWEBSOCKET_CLOSE)
@@ -1031,7 +1031,7 @@ HB_FUNC_STATIC(QWEBSOCKET_CLOSE)
 }
 
 /*
-void open(const QUrl & url)
+void open(const QUrl &url)
 */
 HB_FUNC_STATIC(QWEBSOCKET_OPEN)
 {
@@ -1059,7 +1059,7 @@ HB_FUNC_STATIC(QWEBSOCKET_OPEN)
 }
 
 /*
-void ping(const QByteArray & payload = QByteArray())
+void ping(const QByteArray &payload = QByteArray())
 */
 HB_FUNC_STATIC(QWEBSOCKET_PING)
 {
@@ -1298,7 +1298,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONSTATECHANGED)
 }
 
 /*
-void proxyAuthenticationRequired(const QNetworkProxy & proxy, QAuthenticator * pAuthenticator)
+void proxyAuthenticationRequired(const QNetworkProxy &proxy, QAuthenticator * pAuthenticator)
 */
 HB_FUNC_STATIC(QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED)
 {
@@ -1409,7 +1409,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONREADCHANNELFINISHED)
 }
 
 /*
-void textFrameReceived(const QString & frame, bool isLastFrame)
+void textFrameReceived(const QString &frame, bool isLastFrame)
 */
 HB_FUNC_STATIC(QWEBSOCKET_ONTEXTFRAMERECEIVED)
 {
@@ -1466,7 +1466,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONTEXTFRAMERECEIVED)
 }
 
 /*
-void binaryFrameReceived(const QByteArray & frame, bool isLastFrame)
+void binaryFrameReceived(const QByteArray &frame, bool isLastFrame)
 */
 HB_FUNC_STATIC(QWEBSOCKET_ONBINARYFRAMERECEIVED)
 {
@@ -1523,7 +1523,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONBINARYFRAMERECEIVED)
 }
 
 /*
-void textMessageReceived(const QString & message)
+void textMessageReceived(const QString &message)
 */
 HB_FUNC_STATIC(QWEBSOCKET_ONTEXTMESSAGERECEIVED)
 {
@@ -1578,7 +1578,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONTEXTMESSAGERECEIVED)
 }
 
 /*
-void binaryMessageReceived(const QByteArray & message)
+void binaryMessageReceived(const QByteArray &message)
 */
 HB_FUNC_STATIC(QWEBSOCKET_ONBINARYMESSAGERECEIVED)
 {
@@ -1688,7 +1688,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONERROR)
 }
 
 /*
-void pong(quint64 elapsedTime, const QByteArray & payload)
+void pong(quint64 elapsedTime, const QByteArray &payload)
 */
 HB_FUNC_STATIC(QWEBSOCKET_ONPONG)
 {
@@ -1799,7 +1799,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ONBYTESWRITTEN)
 }
 
 /*
-void sslErrors(const QList<QSslError> & errors)
+void sslErrors(const QList<QSslError> &errors)
 */
 HB_FUNC_STATIC(QWEBSOCKET_ONSSLERRORS)
 {
