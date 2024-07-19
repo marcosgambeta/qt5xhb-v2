@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_NEW)
   else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QQuickWidget(const QUrl & source, QWidget * parent = nullptr)
+    QQuickWidget(const QUrl &source, QWidget * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QQuickWidget(*PQURL(1), OPQWIDGET(2, nullptr));
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_INITIALSIZE)
 }
 
 /*
-void setContent(const QUrl & url, QQmlComponent * component, QObject * item)
+void setContent(const QUrl &url, QQmlComponent * component, QObject * item)
 */
 HB_FUNC_STATIC(QQUICKWIDGET_SETCONTENT)
 {
@@ -519,7 +519,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_FORMAT)
 }
 
 /*
-void setFormat(const QSurfaceFormat & format)
+void setFormat(const QSurfaceFormat &format)
 */
 HB_FUNC_STATIC(QQUICKWIDGET_SETFORMAT)
 {
@@ -602,7 +602,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_ONSTATUSCHANGED)
 }
 
 /*
-void sceneGraphError(QQuickWindow::SceneGraphError error, const QString & message)
+void sceneGraphError(QQuickWindow::SceneGraphError error, const QString &message)
 */
 HB_FUNC_STATIC(QQUICKWIDGET_ONSCENEGRAPHERROR)
 {
