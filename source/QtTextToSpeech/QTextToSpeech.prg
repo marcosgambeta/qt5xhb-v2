@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QTextToSpeech(const QString & engine, QObject * parent = nullptr)
+    QTextToSpeech(const QString &engine, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QTextToSpeech(PQSTRING(1), OPQOBJECT(2, nullptr));
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_LOCALE)
 }
 
 /*
-void setLocale(const QLocale & locale)
+void setLocale(const QLocale &locale)
 */
 HB_FUNC_STATIC(QTEXTTOSPEECH_SETLOCALE)
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_VOICE)
 }
 
 /*
-void setVoice(const QVoice & voice)
+void setVoice(const QVoice &voice)
 */
 HB_FUNC_STATIC(QTEXTTOSPEECH_SETVOICE)
 {
@@ -535,7 +535,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_AVAILABLEENGINES)
 }
 
 /*
-void say(const QString & text)
+void say(const QString &text)
 */
 HB_FUNC_STATIC(QTEXTTOSPEECH_SAY)
 {
@@ -647,7 +647,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_RESUME)
 }
 
 /*
-void localeChanged(const QLocale & locale)
+void localeChanged(const QLocale &locale)
 */
 HB_FUNC_STATIC(QTEXTTOSPEECH_ONLOCALECHANGED)
 {
@@ -867,7 +867,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONSTATECHANGED)
 }
 
 /*
-void voiceChanged(const QVoice & voice)
+void voiceChanged(const QVoice &voice)
 */
 HB_FUNC_STATIC(QTEXTTOSPEECH_ONVOICECHANGED)
 {
