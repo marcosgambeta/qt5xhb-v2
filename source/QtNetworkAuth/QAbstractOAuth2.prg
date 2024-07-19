@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_SCOPE)
 }
 
 /*
-void setScope(const QString & scope)
+void setScope(const QString &scope)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH2_SETSCOPE)
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_USERAGENT)
 }
 
 /*
-void setUserAgent(const QString & userAgent)
+void setUserAgent(const QString &userAgent)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH2_SETUSERAGENT)
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_CLIENTIDENTIFIERSHAREDKEY)
 }
 
 /*
-void setClientIdentifierSharedKey(const QString & clientIdentifierSharedKey)
+void setClientIdentifierSharedKey(const QString &clientIdentifierSharedKey)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH2_SETCLIENTIDENTIFIERSHAREDKEY)
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_STATE)
 }
 
 /*
-void setState(const QString & state)
+void setState(const QString &state)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH2_SETSTATE)
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_REFRESHTOKEN)
 }
 
 /*
-void setRefreshToken(const QString & refreshToken)
+void setRefreshToken(const QString &refreshToken)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH2_SETREFRESHTOKEN)
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_SETREFRESHTOKEN)
 }
 
 /*
-void clientIdentifierSharedKeyChanged(const QString & clientIdentifierSharedKey)
+void clientIdentifierSharedKeyChanged(const QString &clientIdentifierSharedKey)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED)
 {
@@ -474,7 +474,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED)
 }
 
 /*
-void error(const QString & error, const QString & errorDescription, const QUrl & uri)
+void error(const QString &error, const QString &errorDescription, const QUrl &uri)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH2_ONERROR)
 {
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_ONERROR)
 }
 
 /*
-void expirationAtChanged(const QDateTime & expiration)
+void expirationAtChanged(const QDateTime &expiration)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED)
 {
@@ -589,7 +589,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED)
 }
 
 /*
-void responseTypeChanged(const QString & responseType)
+void responseTypeChanged(const QString &responseType)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH2_ONRESPONSETYPECHANGED)
 {
@@ -644,7 +644,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_ONRESPONSETYPECHANGED)
 }
 
 /*
-void scopeChanged(const QString & scope)
+void scopeChanged(const QString &scope)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH2_ONSCOPECHANGED)
 {
@@ -699,7 +699,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_ONSCOPECHANGED)
 }
 
 /*
-void stateChanged(const QString & state)
+void stateChanged(const QString &state)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH2_ONSTATECHANGED)
 {
@@ -754,7 +754,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_ONSTATECHANGED)
 }
 
 /*
-void userAgentChanged(const QString & userAgent)
+void userAgentChanged(const QString &userAgent)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH2_ONUSERAGENTCHANGED)
 {

@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_CLIENTIDENTIFIER)
 }
 
 /*
-void setClientIdentifier(const QString & clientIdentifier)
+void setClientIdentifier(const QString &clientIdentifier)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH_SETCLIENTIDENTIFIER)
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_TOKEN)
 }
 
 /*
-void setToken(const QString & token)
+void setToken(const QString &token)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH_SETTOKEN)
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_AUTHORIZATIONURL)
 }
 
 /*
-void setAuthorizationUrl(const QUrl & url)
+void setAuthorizationUrl(const QUrl &url)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH_SETAUTHORIZATIONURL)
 {
@@ -488,7 +488,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_GRANT)
 }
 
 /*
-void clientIdentifierChanged(const QString & clientIdentifier)
+void clientIdentifierChanged(const QString &clientIdentifier)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED)
 {
@@ -543,7 +543,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED)
 }
 
 /*
-void tokenChanged(const QString & token)
+void tokenChanged(const QString &token)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH_ONTOKENCHANGED)
 {
@@ -653,7 +653,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONSTATUSCHANGED)
 }
 
 /*
-void authorizationUrlChanged(const QUrl & url)
+void authorizationUrlChanged(const QUrl &url)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED)
 {
@@ -818,7 +818,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONREQUESTFAILED)
 }
 
 /*
-void authorizeWithBrowser(const QUrl & url)
+void authorizeWithBrowser(const QUrl &url)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER)
 {
@@ -980,7 +980,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONFINISHED)
 }
 
 /*
-void replyDataReceived(const QByteArray & data)
+void replyDataReceived(const QByteArray &data)
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH_ONREPLYDATARECEIVED)
 {
