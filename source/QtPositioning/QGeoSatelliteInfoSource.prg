@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_CREATEDEFAULTSOURCE)
 }
 
 /*
-static QGeoSatelliteInfoSource * createSource(const QString & sourceName, QObject * parent)
+static QGeoSatelliteInfoSource * createSource(const QString &sourceName, QObject * parent)
 */
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_CREATESOURCE)
 {
@@ -371,7 +371,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_AVAILABLESOURCES)
 }
 
 /*
-void satellitesInViewUpdated(const QList<QGeoSatelliteInfo> & satellites)
+void satellitesInViewUpdated(const QList<QGeoSatelliteInfo> &satellites)
 */
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED)
 {
@@ -448,7 +448,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED)
 }
 
 /*
-void satellitesInUseUpdated(const QList<QGeoSatelliteInfo> & satellites)
+void satellitesInUseUpdated(const QList<QGeoSatelliteInfo> &satellites)
 */
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED)
 {

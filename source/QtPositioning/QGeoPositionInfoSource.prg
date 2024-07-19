@@ -439,7 +439,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_CREATEDEFAULTSOURCE)
 }
 
 /*
-static QGeoPositionInfoSource * createSource(const QString & sourceName, QObject * parent)
+static QGeoPositionInfoSource * createSource(const QString &sourceName, QObject * parent)
 */
 HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_CREATESOURCE)
 {
@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_AVAILABLESOURCES)
 }
 
 /*
-void positionUpdated(const QGeoPositionInfo & update)
+void positionUpdated(const QGeoPositionInfo &update)
 */
 HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_ONPOSITIONUPDATED)
 {

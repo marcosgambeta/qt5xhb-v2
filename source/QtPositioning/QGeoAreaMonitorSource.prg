@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SUPPORTEDAREAMONITORFEATURES)
 }
 
 /*
-virtual bool startMonitoring(const QGeoAreaMonitorInfo & monitor) = 0
+virtual bool startMonitoring(const QGeoAreaMonitorInfo &monitor) = 0
 */
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_STARTMONITORING)
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_STARTMONITORING)
 }
 
 /*
-virtual bool stopMonitoring(const QGeoAreaMonitorInfo & monitor) = 0
+virtual bool stopMonitoring(const QGeoAreaMonitorInfo &monitor) = 0
 */
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_STOPMONITORING)
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_STOPMONITORING)
 }
 
 /*
-virtual bool requestUpdate(const QGeoAreaMonitorInfo & monitor, const char * signal) = 0
+virtual bool requestUpdate(const QGeoAreaMonitorInfo &monitor, const char * signal) = 0
 */
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_REQUESTUPDATE)
 {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ACTIVEMONITORS)
   else if (ISNUMPAR(1) && ISQGEOSHAPE(1))
   {
     /*
-    virtual QList<QGeoAreaMonitorInfo> activeMonitors(const QGeoShape & lookupArea) const = 0
+    virtual QList<QGeoAreaMonitorInfo> activeMonitors(const QGeoShape &lookupArea) const = 0
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_CREATEDEFAULTSOURCE)
 }
 
 /*
-static QGeoAreaMonitorSource * createSource(const QString & sourceName, QObject * parent)
+static QGeoAreaMonitorSource * createSource(const QString &sourceName, QObject * parent)
 */
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_CREATESOURCE)
 {
@@ -455,7 +455,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_AVAILABLESOURCES)
 }
 
 /*
-void areaEntered(const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update)
+void areaEntered(const QGeoAreaMonitorInfo &monitor, const QGeoPositionInfo &update)
 */
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAENTERED)
 {
@@ -513,7 +513,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAENTERED)
 }
 
 /*
-void areaExited(const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update)
+void areaExited(const QGeoAreaMonitorInfo &monitor, const QGeoPositionInfo &update)
 */
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAEXITED)
 {
@@ -571,7 +571,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAEXITED)
 }
 
 /*
-void monitorExpired(const QGeoAreaMonitorInfo & monitor)
+void monitorExpired(const QGeoAreaMonitorInfo &monitor)
 */
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONMONITOREXPIRED)
 {
