@@ -51,7 +51,7 @@ RETURN
 #endif
 
     /*
-    void serviceRegistered(const QString & service)
+    void serviceRegistered(const QString &service)
     */
 HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED)
 {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED)
 }
 
 /*
-void serviceUnregistered(const QString & service)
+void serviceUnregistered(const QString &service)
 */
 HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED)
 {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED)
 }
 
 /*
-void serviceOwnerChanged(const QString & name, const QString & oldOwner, const QString & newOwner)
+void serviceOwnerChanged(const QString &name, const QString &oldOwner, const QString &newOwner)
 */
 HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED)
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED)
 }
 
 /*
-void callWithCallbackFailed(const QDBusError & error, const QDBusMessage & call)
+void callWithCallbackFailed(const QDBusError &error, const QDBusMessage &call)
 */
 HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED)
 {

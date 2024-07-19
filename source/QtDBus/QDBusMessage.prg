@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_NEW)
   else if (ISNUMPAR(1) && ISQDBUSMESSAGE(1))
   {
     /*
-    QDBusMessage(const QDBusMessage & other)
+    QDBusMessage(const QDBusMessage &other)
     */
     auto obj = new QDBusMessage(*PQDBUSMESSAGE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEREPLY)
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    QDBusMessage createReply(const QList<QVariant> & arguments = QList<QVariant>()) const
+    QDBusMessage createReply(const QList<QVariant> &arguments = QList<QVariant>()) const
     */
     auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEREPLY)
   else if (ISNUMPAR(1) && ISQVARIANT(1))
   {
     /*
-    QDBusMessage createReply(const QVariant & argument) const
+    QDBusMessage createReply(const QVariant &argument) const
     */
     auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERRORREPLY)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    QDBusMessage createErrorReply(const QString name, const QString & msg) const
+    QDBusMessage createErrorReply(const QString name, const QString &msg) const
     */
     auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERRORREPLY)
   else if (ISNUMPAR(1) && ISQDBUSERROR(1))
   {
     /*
-    QDBusMessage createErrorReply(const QDBusError & err) const
+    QDBusMessage createErrorReply(const QDBusError &err) const
     */
     auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERRORREPLY)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
   {
     /*
-    QDBusMessage createErrorReply(QDBusError::ErrorType type, const QString & msg) const
+    QDBusMessage createErrorReply(QDBusError::ErrorType type, const QString &msg) const
     */
     auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -527,7 +527,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_AUTOSTARTSERVICE)
 }
 
 /*
-void setArguments(const QList<QVariant> & arguments)
+void setArguments(const QList<QVariant> &arguments)
 */
 HB_FUNC_STATIC(QDBUSMESSAGE_SETARGUMENTS)
 {
@@ -585,7 +585,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ARGUMENTS)
 }
 
 /*
-static QDBusMessage createSignal(const QString & path, const QString & interface, const QString & name)
+static QDBusMessage createSignal(const QString &path, const QString &interface, const QString &name)
 */
 HB_FUNC_STATIC(QDBUSMESSAGE_CREATESIGNAL)
 {
@@ -605,8 +605,8 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATESIGNAL)
 }
 
 /*
-static QDBusMessage createMethodCall(const QString & destination, const QString & path, const QString & interface, const
-QString & method)
+static QDBusMessage createMethodCall(const QString &destination, const QString &path, const QString &interface, const
+QString &method)
 */
 HB_FUNC_STATIC(QDBUSMESSAGE_CREATEMETHODCALL)
 {
@@ -630,7 +630,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERROR)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    static QDBusMessage createError(const QString & name, const QString & msg)
+    static QDBusMessage createError(const QString &name, const QString &msg)
     */
 
     auto ptr = new QDBusMessage(QDBusMessage::createError(PQSTRING(1), PQSTRING(2)));
@@ -639,7 +639,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERROR)
   else if (ISNUMPAR(1) && ISQDBUSERROR(1))
   {
     /*
-    static QDBusMessage createError(const QDBusError & err)
+    static QDBusMessage createError(const QDBusError &err)
     */
 
     auto ptr = new QDBusMessage(QDBusMessage::createError(*PQDBUSERROR(1)));
@@ -648,7 +648,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERROR)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
   {
     /*
-    static QDBusMessage createError(QDBusError::ErrorType type, const QString & msg)
+    static QDBusMessage createError(QDBusError::ErrorType type, const QString &msg)
     */
 
     auto ptr =
