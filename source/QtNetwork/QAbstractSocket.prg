@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_BIND)
   if (ISBETWEEN(1, 3) && ISQHOSTADDRESS(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    bool bind(const QHostAddress & address, quint16 port = 0, QAbstractSocket::BindMode mode =
+    bool bind(const QHostAddress &address, quint16 port = 0, QAbstractSocket::BindMode mode =
     QAbstractSocket::DefaultForPlatform)
     */
     auto obj = qobject_cast<QAbstractSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
   if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    virtual void connectToHost(const QString & hostName, quint16 port, QIODevice::OpenMode mode = QIODevice::ReadWrite,
+    virtual void connectToHost(const QString &hostName, quint16 port, QIODevice::OpenMode mode = QIODevice::ReadWrite,
     QAbstractSocket::NetworkLayerProtocol protocol = QAbstractSocket::AnyIPProtocol)
     */
     auto obj = qobject_cast<QAbstractSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
   else if (ISBETWEEN(2, 3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    virtual void connectToHost(const QHostAddress & address, quint16 port, QIODevice::OpenMode mode =
+    virtual void connectToHost(const QHostAddress &address, quint16 port, QIODevice::OpenMode mode =
     QIODevice::ReadWrite)
     */
     auto obj = qobject_cast<QAbstractSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -667,7 +667,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SETSOCKETDESCRIPTOR)
 }
 
 /*
-virtual void setSocketOption(QAbstractSocket::SocketOption option, const QVariant & value)
+virtual void setSocketOption(QAbstractSocket::SocketOption option, const QVariant &value)
 */
 HB_FUNC_STATIC(QABSTRACTSOCKET_SETSOCKETOPTION)
 {
@@ -984,7 +984,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_WAITFORDISCONNECTED)
 }
 
 /*
-void setProxy(const QNetworkProxy & networkProxy)
+void setProxy(const QNetworkProxy &networkProxy)
 */
 HB_FUNC_STATIC(QABSTRACTSOCKET_SETPROXY)
 {
@@ -1230,7 +1230,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_ONHOSTFOUND)
 }
 
 /*
-void proxyAuthenticationRequired(const QNetworkProxy & proxy, QAuthenticator * authenticator)
+void proxyAuthenticationRequired(const QNetworkProxy &proxy, QAuthenticator * authenticator)
 */
 HB_FUNC_STATIC(QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED)
 {

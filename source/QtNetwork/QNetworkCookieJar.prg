@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_DELETE)
 }
 
 /*
-virtual QList<QNetworkCookie> cookiesForUrl(const QUrl & url) const
+virtual QList<QNetworkCookie> cookiesForUrl(const QUrl &url) const
 */
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_COOKIESFORURL)
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_COOKIESFORURL)
 }
 
 /*
-virtual bool setCookiesFromUrl(const QList<QNetworkCookie> & cookieList, const QUrl & url)
+virtual bool setCookiesFromUrl(const QList<QNetworkCookie> &cookieList, const QUrl &url)
 */
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_SETCOOKIESFROMURL)
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_SETCOOKIESFROMURL)
 }
 
 /*
-virtual bool insertCookie(const QNetworkCookie & cookie)
+virtual bool insertCookie(const QNetworkCookie &cookie)
 */
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_INSERTCOOKIE)
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_INSERTCOOKIE)
 }
 
 /*
-virtual bool updateCookie(const QNetworkCookie & cookie)
+virtual bool updateCookie(const QNetworkCookie &cookie)
 */
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_UPDATECOOKIE)
 {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_UPDATECOOKIE)
 }
 
 /*
-virtual bool deleteCookie(const QNetworkCookie & cookie)
+virtual bool deleteCookie(const QNetworkCookie &cookie)
 */
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_DELETECOOKIE)
 {

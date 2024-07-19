@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QLOCALSERVER_LISTEN)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    bool listen(const QString & name)
+    bool listen(const QString &name)
     */
     auto obj = qobject_cast<QLocalServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QLOCALSERVER_FULLSERVERNAME)
 }
 
 /*
-static bool removeServer(const QString & name)
+static bool removeServer(const QString &name)
 */
 HB_FUNC_STATIC(QLOCALSERVER_REMOVESERVER)
 {

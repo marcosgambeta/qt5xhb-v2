@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CAPABILITIES)
 }
 
 /*
-QNetworkConfiguration configurationFromIdentifier(const QString & identifier) const
+QNetworkConfiguration configurationFromIdentifier(const QString &identifier) const
 */
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER)
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS)
 }
 
 /*
-void configurationAdded(const QNetworkConfiguration & config)
+void configurationAdded(const QNetworkConfiguration &config)
 */
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED)
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED)
 }
 
 /*
-void configurationChanged(const QNetworkConfiguration & config)
+void configurationChanged(const QNetworkConfiguration &config)
 */
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED)
 {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED)
 }
 
 /*
-void configurationRemoved(const QNetworkConfiguration & config)
+void configurationRemoved(const QNetworkConfiguration &config)
 */
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED)
 {

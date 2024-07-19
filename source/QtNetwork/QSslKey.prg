@@ -79,8 +79,8 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
            (HB_ISNUM(4) || HB_ISNIL(4)) && ISOPTQBYTEARRAY(5))
   {
     /*
-    QSslKey(const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem,
-    QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray())
+    QSslKey(const QByteArray &encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem,
+    QSsl::KeyType type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray())
     */
     auto obj = new QSslKey(
         *PQBYTEARRAY(1), static_cast<QSsl::KeyAlgorithm>(hb_parni(2)),
@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
   {
     /*
     QSslKey(QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType
-    type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray())
+    type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray())
     */
     auto obj = new QSslKey(
         PQIODEVICE(1), static_cast<QSsl::KeyAlgorithm>(hb_parni(2)),
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
   else if (ISNUMPAR(1) && ISQSSLKEY(1))
   {
     /*
-    QSslKey(const QSslKey & other)
+    QSslKey(const QSslKey &other)
     */
     auto obj = new QSslKey(*PQSSLKEY(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QSSLKEY_LENGTH)
 }
 
 /*
-QByteArray toDer(const QByteArray & passPhrase = QByteArray()) const
+QByteArray toDer(const QByteArray &passPhrase = QByteArray()) const
 */
 HB_FUNC_STATIC(QSSLKEY_TODER)
 {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QSSLKEY_TODER)
 }
 
 /*
-QByteArray toPem(const QByteArray & passPhrase = QByteArray()) const
+QByteArray toPem(const QByteArray &passPhrase = QByteArray()) const
 */
 HB_FUNC_STATIC(QSSLKEY_TOPEM)
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QSSLKEY_TYPE)
 }
 
 /*
-void swap(QSslKey & other) Q_DECL_NOTHROW
+void swap(QSslKey &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QSSLKEY_SWAP)
 {

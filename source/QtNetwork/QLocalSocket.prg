@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    void connectToServer(const QString & name, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
+    void connectToServer(const QString &name, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
     */
     auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_DISCONNECTFROMSERVER)
 }
 
 /*
-void setServerName(const QString & name)
+void setServerName(const QString &name)
 */
 HB_FUNC_STATIC(QLOCALSOCKET_SETSERVERNAME)
 {

@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QUDPSOCKET_JOINMULTICASTGROUP)
   if (ISNUMPAR(1) && ISQHOSTADDRESS(1))
   {
     /*
-    bool joinMulticastGroup(const QHostAddress & groupAddress)
+    bool joinMulticastGroup(const QHostAddress &groupAddress)
     */
     auto obj = qobject_cast<QUdpSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QUDPSOCKET_JOINMULTICASTGROUP)
   else if (ISNUMPAR(2) && ISQHOSTADDRESS(1) && ISQNETWORKINTERFACE(2))
   {
     /*
-    bool joinMulticastGroup(const QHostAddress & groupAddress, const QNetworkInterface & iface)
+    bool joinMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterface &iface)
     */
     auto obj = qobject_cast<QUdpSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QUDPSOCKET_LEAVEMULTICASTGROUP)
   if (ISNUMPAR(1) && ISQHOSTADDRESS(1))
   {
     /*
-    bool leaveMulticastGroup(const QHostAddress & groupAddress)
+    bool leaveMulticastGroup(const QHostAddress &groupAddress)
     */
     auto obj = qobject_cast<QUdpSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QUDPSOCKET_LEAVEMULTICASTGROUP)
   else if (ISNUMPAR(2) && ISQHOSTADDRESS(1) && ISQNETWORKINTERFACE(2))
   {
     /*
-    bool leaveMulticastGroup(const QHostAddress & groupAddress, const QNetworkInterface & iface)
+    bool leaveMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterface &iface)
     */
     auto obj = qobject_cast<QUdpSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QUDPSOCKET_MULTICASTINTERFACE)
 }
 
 /*
-void setMulticastInterface(const QNetworkInterface & iface)
+void setMulticastInterface(const QNetworkInterface &iface)
 */
 HB_FUNC_STATIC(QUDPSOCKET_SETMULTICASTINTERFACE)
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QUDPSOCKET_WRITEDATAGRAM)
   if (ISNUMPAR(1) && ISQNETWORKDATAGRAM(1))
   {
     /*
-    qint64 writeDatagram(const QNetworkDatagram & datagram)
+    qint64 writeDatagram(const QNetworkDatagram &datagram)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     auto obj = qobject_cast<QUdpSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -313,7 +313,7 @@ HB_FUNC_STATIC(QUDPSOCKET_WRITEDATAGRAM)
   else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && ISQHOSTADDRESS(3) && HB_ISNUM(4))
   {
     /*
-    qint64 writeDatagram(const char * data, qint64 len, const QHostAddress & host, quint16 port)
+    qint64 writeDatagram(const char * data, qint64 len, const QHostAddress &host, quint16 port)
     */
     auto obj = qobject_cast<QUdpSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QUDPSOCKET_WRITEDATAGRAM)
   else if (ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQHOSTADDRESS(2) && HB_ISNUM(3))
   {
     /*
-    qint64 writeDatagram(const QByteArray & datagram, const QHostAddress & host, quint16 port)
+    qint64 writeDatagram(const QByteArray &datagram, const QHostAddress &host, quint16 port)
     */
     auto obj = qobject_cast<QUdpSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 

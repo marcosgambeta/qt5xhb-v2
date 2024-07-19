@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_NEW)
   else if (ISNUMPAR(1) && ISQSSLCONFIGURATION(1))
   {
     /*
-    QSslConfiguration(const QSslConfiguration & other)
+    QSslConfiguration(const QSslConfiguration &other)
     */
     auto obj = new QSslConfiguration(*PQSSLCONFIGURATION(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_DELETE)
 }
 
 /*
-void swap(QSslConfiguration & other) Q_DECL_NOTHROW
+void swap(QSslConfiguration &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QSSLCONFIGURATION_SWAP)
 {
@@ -396,7 +396,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_LOCALCERTIFICATECHAIN)
 }
 
 /*
-void setLocalCertificateChain(const QList<QSslCertificate> & localChain)
+void setLocalCertificateChain(const QList<QSslCertificate> &localChain)
 */
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETLOCALCERTIFICATECHAIN)
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_LOCALCERTIFICATE)
 }
 
 /*
-void setLocalCertificate(const QSslCertificate & certificate)
+void setLocalCertificate(const QSslCertificate &certificate)
 */
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETLOCALCERTIFICATE)
 {
@@ -634,7 +634,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PRIVATEKEY)
 }
 
 /*
-void setPrivateKey(const QSslKey & key)
+void setPrivateKey(const QSslKey &key)
 */
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETPRIVATEKEY)
 {
@@ -710,7 +710,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_CIPHERS)
 }
 
 /*
-void setCiphers(const QList<QSslCipher> & ciphers)
+void setCiphers(const QList<QSslCipher> &ciphers)
 */
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETCIPHERS)
 {
@@ -841,7 +841,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_CACERTIFICATES)
 }
 
 /*
-void setCaCertificates(const QList<QSslCertificate> & certificates)
+void setCaCertificates(const QList<QSslCertificate> &certificates)
 */
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETCACERTIFICATES)
 {
@@ -999,7 +999,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SESSIONTICKET)
 }
 
 /*
-void setSessionTicket(const QByteArray & sessionTicket)
+void setSessionTicket(const QByteArray &sessionTicket)
 */
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETSESSIONTICKET)
 {
@@ -1116,7 +1116,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PRESHAREDKEYIDENTITYHINT)
 }
 
 /*
-void setPreSharedKeyIdentityHint(const QByteArray & hint)
+void setPreSharedKeyIdentityHint(const QByteArray &hint)
 */
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETPRESHAREDKEYIDENTITYHINT)
 {
@@ -1170,7 +1170,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_DEFAULTCONFIGURATION)
 }
 
 /*
-static void setDefaultConfiguration(const QSslConfiguration & configuration)
+static void setDefaultConfiguration(const QSslConfiguration &configuration)
 */
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETDEFAULTCONFIGURATION)
 {
