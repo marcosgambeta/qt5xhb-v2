@@ -572,7 +572,7 @@ QVirtualKeyboardInputContextPrivate *priv() const
 QList<QInputMethodEvent::Attribute> preeditTextAttributes() const
 */
 /*
-Q_INVOKABLE void sendKeyClick(int key, const QString & text, int modifiers = 0)
+Q_INVOKABLE void sendKeyClick(int key, const QString &text, int modifiers = 0)
 */
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SENDKEYCLICK)
 {
@@ -616,7 +616,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT)
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    Q_INVOKABLE void commit(const QString & text, int replaceFrom = 0, int replaceLength = 0)
+    Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int replaceLength = 0)
     */
     auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -660,7 +660,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_CLEAR)
 }
 
 /*
-Q_INVOKABLE void setSelectionOnFocusObject(const QPointF & anchorPos, const QPointF & cursorPos)
+Q_INVOKABLE void setSelectionOnFocusObject(const QPointF &anchorPos, const QPointF &cursorPos)
 */
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SETSELECTIONONFOCUSOBJECT)
 {

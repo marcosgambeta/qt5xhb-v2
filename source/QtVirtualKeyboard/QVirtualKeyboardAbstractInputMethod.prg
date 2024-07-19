@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_INPUTENGINE)
 }
 
 /*
-virtual QList<QVirtualKeyboardInputEngine::InputMode> inputModes(const QString & locale) = 0
+virtual QList<QVirtualKeyboardInputEngine::InputMode> inputModes(const QString &locale) = 0
 */
 HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_INPUTMODES)
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_INPUTMODES)
 }
 
 /*
-virtual bool setInputMode(const QString & locale, QVirtualKeyboardInputEngine::InputMode inputMode) = 0
+virtual bool setInputMode(const QString &locale, QVirtualKeyboardInputEngine::InputMode inputMode) = 0
 */
 HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SETINPUTMODE)
 {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SETTEXTCASE)
 }
 
 /*
-virtual bool keyEvent(Qt::Key key, const QString & text, Qt::KeyboardModifiers modifiers) = 0
+virtual bool keyEvent(Qt::Key key, const QString &text, Qt::KeyboardModifiers modifiers) = 0
 */
 HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_KEYEVENT)
 {
