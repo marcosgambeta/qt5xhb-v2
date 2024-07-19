@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_NEW)
   if (ISBETWEEN(1, 3) && ISQSIZE(1) && (ISQGLFORMAT(2) || HB_ISNIL(2)) && (ISQGLWIDGET(3) || HB_ISNIL(3)))
   {
     /*
-    QGLPixelBuffer(const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget =
+    QGLPixelBuffer(const QSize &size, const QGLFormat &format = QGLFormat::defaultFormat(), QGLWidget * shareWidget =
     nullptr)
     */
     auto obj = new QGLPixelBuffer(
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_NEW)
            (ISQGLWIDGET(4) || HB_ISNIL(4)))
   {
     /*
-    QGLPixelBuffer(int width, int height, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget
+    QGLPixelBuffer(int width, int height, const QGLFormat &format = QGLFormat::defaultFormat(), QGLWidget * shareWidget
     = nullptr)
     */
     auto obj = new QGLPixelBuffer(
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_BINDTEXTURE)
   if (ISBETWEEN(1, 2) && ISQIMAGE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    GLuint bindTexture(const QImage & image, GLenum target = GL_TEXTURE_2D)
+    GLuint bindTexture(const QImage &image, GLenum target = GL_TEXTURE_2D)
     */
     auto obj = static_cast<QGLPixelBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_BINDTEXTURE)
   else if (ISBETWEEN(1, 2) && ISQPIXMAP(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    GLuint bindTexture(const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D)
+    GLuint bindTexture(const QPixmap &pixmap, GLenum target = GL_TEXTURE_2D)
     */
     auto obj = static_cast<QGLPixelBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_BINDTEXTURE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    GLuint bindTexture(const QString & fileName)
+    GLuint bindTexture(const QString &fileName)
     */
     auto obj = static_cast<QGLPixelBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_DRAWTEXTURE)
   if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    void drawTexture(const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
+    void drawTexture(const QRectF &target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
     */
     auto obj = static_cast<QGLPixelBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_DRAWTEXTURE)
   else if (ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    void drawTexture(const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
+    void drawTexture(const QPointF &point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
     */
     auto obj = static_cast<QGLPixelBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
 

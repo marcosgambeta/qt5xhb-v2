@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QGLWIDGET_NEW)
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    QGLWidget(const QGLFormat & format, QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr,
+    QGLWidget(const QGLFormat &format, QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr,
     Qt::WindowFlags f = 0)
     */
     auto obj = new QGLWidget(*PQGLFORMAT(1), OPQWIDGET(2, nullptr), OPQGLWIDGET(3, nullptr),
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
   if (ISBETWEEN(1, 3) && ISQIMAGE(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    GLuint bindTexture(const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
+    GLuint bindTexture(const QImage &image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
   else if (ISBETWEEN(1, 3) && ISQPIXMAP(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    GLuint bindTexture(const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
+    GLuint bindTexture(const QPixmap &pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
   else if (ISBETWEEN(3, 4) && ISQIMAGE(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    GLuint bindTexture(const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options)
+    GLuint bindTexture(const QImage &image, GLenum target, GLint format, QGLContext::BindOptions options)
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
   else if (ISBETWEEN(3, 4) && ISQPIXMAP(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    GLuint bindTexture(const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options)
+    GLuint bindTexture(const QPixmap &pixmap, GLenum target, GLint format, QGLContext::BindOptions options)
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    GLuint bindTexture(const QString & fileName)
+    GLuint bindTexture(const QString &fileName)
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
 }
 
 /*
-const QGLColormap & colormap() const
+const QGLColormap &colormap() const
 */
 HB_FUNC_STATIC(QGLWIDGET_COLORMAP)
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QGLWIDGET_DRAWTEXTURE)
   if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    void drawTexture(const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
+    void drawTexture(const QRectF &target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QGLWIDGET_DRAWTEXTURE)
   else if (ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    void drawTexture(const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
+    void drawTexture(const QPointF &point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -541,7 +541,7 @@ HB_FUNC_STATIC(QGLWIDGET_OVERLAYCONTEXT)
 }
 
 /*
-void qglClearColor(const QColor & c) const
+void qglClearColor(const QColor &c) const
 */
 HB_FUNC_STATIC(QGLWIDGET_QGLCLEARCOLOR)
 {
@@ -567,7 +567,7 @@ HB_FUNC_STATIC(QGLWIDGET_QGLCLEARCOLOR)
 }
 
 /*
-void qglColor(const QColor & c) const
+void qglColor(const QColor &c) const
 */
 HB_FUNC_STATIC(QGLWIDGET_QGLCOLOR)
 {
@@ -622,7 +622,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
   if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (ISQFONT(4) || HB_ISNIL(4)))
   {
     /*
-    void renderText(int x, int y, const QString & str, const QFont & font = QFont())
+    void renderText(int x, int y, const QString &str, const QFont &font = QFont())
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -637,7 +637,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
   else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISCHAR(4) && (ISQFONT(5) || HB_ISNIL(5)))
   {
     /*
-    void renderText(double x, double y, double z, const QString & str, const QFont & font = QFont())
+    void renderText(double x, double y, double z, const QString &str, const QFont &font = QFont())
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -656,7 +656,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
 }
 
 /*
-void setColormap(const QGLColormap & cmap)
+void setColormap(const QGLColormap &cmap)
 */
 HB_FUNC_STATIC(QGLWIDGET_SETCOLORMAP)
 {
@@ -786,7 +786,7 @@ HB_FUNC_STATIC(QGLWIDGET_UPDATEOVERLAYGL)
 }
 
 /*
-static QImage convertToGLFormat(const QImage & img)
+static QImage convertToGLFormat(const QImage &img)
 */
 HB_FUNC_STATIC(QGLWIDGET_CONVERTTOGLFORMAT)
 {
