@@ -187,7 +187,7 @@ HB_FUNC_STATIC(Q3DSCENE_PRIMARYSUBVIEWPORT)
 }
 
 /*
-void setPrimarySubViewport(const QRect & primarySubViewport)
+void setPrimarySubViewport(const QRect &primarySubViewport)
 */
 HB_FUNC_STATIC(Q3DSCENE_SETPRIMARYSUBVIEWPORT)
 {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(Q3DSCENE_SECONDARYSUBVIEWPORT)
 }
 
 /*
-void setSecondarySubViewport(const QRect & secondarySubViewport)
+void setSecondarySubViewport(const QRect &secondarySubViewport)
 */
 HB_FUNC_STATIC(Q3DSCENE_SETSECONDARYSUBVIEWPORT)
 {
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(Q3DSCENE_SELECTIONQUERYPOSITION)
 }
 
 /*
-void setSelectionQueryPosition(const QPoint & point)
+void setSelectionQueryPosition(const QPoint &point)
 */
 HB_FUNC_STATIC(Q3DSCENE_SETSELECTIONQUERYPOSITION)
 {
@@ -624,7 +624,7 @@ HB_FUNC_STATIC(Q3DSCENE_GRAPHPOSITIONQUERY)
 }
 
 /*
-void setGraphPositionQuery(const QPoint & point)
+void setGraphPositionQuery(const QPoint &point)
 */
 HB_FUNC_STATIC(Q3DSCENE_SETGRAPHPOSITIONQUERY)
 {
@@ -652,7 +652,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETGRAPHPOSITIONQUERY)
 }
 
 /*
-bool isPointInPrimarySubView(const QPoint & point)
+bool isPointInPrimarySubView(const QPoint &point)
 */
 HB_FUNC_STATIC(Q3DSCENE_ISPOINTINPRIMARYSUBVIEW)
 {
@@ -678,7 +678,7 @@ HB_FUNC_STATIC(Q3DSCENE_ISPOINTINPRIMARYSUBVIEW)
 }
 
 /*
-bool isPointInSecondarySubView(const QPoint & point)
+bool isPointInSecondarySubView(const QPoint &point)
 */
 HB_FUNC_STATIC(Q3DSCENE_ISPOINTINSECONDARYSUBVIEW)
 {
@@ -891,7 +891,7 @@ HB_FUNC_STATIC(Q3DSCENE_ONDEVICEPIXELRATIOCHANGED)
 }
 
 /*
-void graphPositionQueryChanged(const QPoint & position)
+void graphPositionQueryChanged(const QPoint &position)
 */
 HB_FUNC_STATIC(Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED)
 {
@@ -946,7 +946,7 @@ HB_FUNC_STATIC(Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED)
 }
 
 /*
-void primarySubViewportChanged(const QRect & subViewport)
+void primarySubViewportChanged(const QRect &subViewport)
 */
 HB_FUNC_STATIC(Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED)
 {
@@ -1056,7 +1056,7 @@ HB_FUNC_STATIC(Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED)
 }
 
 /*
-void secondarySubViewportChanged(const QRect & subViewport)
+void secondarySubViewportChanged(const QRect &subViewport)
 */
 HB_FUNC_STATIC(Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED)
 {
@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC(Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED)
 }
 
 /*
-void selectionQueryPositionChanged(const QPoint & position)
+void selectionQueryPositionChanged(const QPoint &position)
 */
 HB_FUNC_STATIC(Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED)
 {
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC(Q3DSCENE_ONSLICINGACTIVECHANGED)
 }
 
 /*
-void viewportChanged(const QRect & viewport)
+void viewportChanged(const QRect &viewport)
 */
 HB_FUNC_STATIC(Q3DSCENE_ONVIEWPORTCHANGED)
 {

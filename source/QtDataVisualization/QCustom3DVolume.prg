@@ -760,7 +760,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEFRAMECOLOR)
 }
 
 /*
-void setSliceFrameColor(const QColor & color)
+void setSliceFrameColor(const QColor &color)
 */
 HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEFRAMECOLOR)
 {
@@ -815,7 +815,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEFRAMEWIDTHS)
 }
 
 /*
-void setSliceFrameWidths(const QVector3D & values)
+void setSliceFrameWidths(const QVector3D &values)
 */
 HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEFRAMEWIDTHS)
 {
@@ -870,7 +870,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEFRAMEGAPS)
 }
 
 /*
-void setSliceFrameGaps(const QVector3D & values)
+void setSliceFrameGaps(const QVector3D &values)
 */
 HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEFRAMEGAPS)
 {
@@ -925,7 +925,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEFRAMETHICKNESSES)
 }
 
 /*
-void setSliceFrameThicknesses(const QVector3D & values)
+void setSliceFrameThicknesses(const QVector3D &values)
 */
 HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEFRAMETHICKNESSES)
 {
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSUBTEXTUREDATA)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQIMAGE(3))
   {
     /*
-    void setSubTextureData(Qt::Axis axis, int index, const QImage & image)
+    void setSubTextureData(Qt::Axis axis, int index, const QImage &image)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QCustom3DVolume *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1428,7 +1428,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED)
 }
 
 /*
-void sliceFrameColorChanged(const QColor & color)
+void sliceFrameColorChanged(const QColor &color)
 */
 HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED)
 {
@@ -1483,7 +1483,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED)
 }
 
 /*
-void sliceFrameGapsChanged(const QVector3D & values)
+void sliceFrameGapsChanged(const QVector3D &values)
 */
 HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED)
 {
@@ -1538,7 +1538,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED)
 }
 
 /*
-void sliceFrameThicknessesChanged(const QVector3D & values)
+void sliceFrameThicknessesChanged(const QVector3D &values)
 */
 HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED)
 {
@@ -1593,7 +1593,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED)
 }
 
 /*
-void sliceFrameWidthsChanged(const QVector3D & values)
+void sliceFrameWidthsChanged(const QVector3D &values)
 */
 HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED)
 {

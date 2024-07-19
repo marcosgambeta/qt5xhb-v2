@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QBARDATAITEM_NEW)
   else if (ISNUMPAR(1) && ISQBARDATAITEM(1))
   {
     /*
-    QBarDataItem(const QBarDataItem & other)
+    QBarDataItem(const QBarDataItem &other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QBarDataItem(*PQBARDATAITEM(1));

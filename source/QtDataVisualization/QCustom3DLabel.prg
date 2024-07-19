@@ -94,8 +94,8 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_NEW)
            (ISQOBJECT(6) || HB_ISNIL(6)))
   {
     /*
-    QCustom3DLabel(const QString & text, const QFont & font, const QVector3D & position, const QVector3D & scaling,
-    const QQuaternion & rotation, QObject * parent = nullptr)
+    QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling,
+    const QQuaternion &rotation, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QCustom3DLabel(PQSTRING(1), *PQFONT(2), *PQVECTOR3D(3), *PQVECTOR3D(4), *PQQUATERNION(5),
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXT)
 }
 
 /*
-void setText(const QString & text)
+void setText(const QString &text)
 */
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXT)
 {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_FONT)
 }
 
 /*
-void setFont(const QFont & font)
+void setFont(const QFont &font)
 */
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFONT)
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXTCOLOR)
 }
 
 /*
-void setTextColor(const QColor & color)
+void setTextColor(const QColor &color)
 */
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXTCOLOR)
 {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_BACKGROUNDCOLOR)
 }
 
 /*
-void setBackgroundColor(const QColor & color)
+void setBackgroundColor(const QColor &color)
 */
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDCOLOR)
 {
@@ -514,7 +514,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFACINGCAMERA)
 }
 
 /*
-void backgroundColorChanged(const QColor & color)
+void backgroundColorChanged(const QColor &color)
 */
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED)
 {
@@ -734,7 +734,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONFACINGCAMERACHANGED)
 }
 
 /*
-void fontChanged(const QFont & font)
+void fontChanged(const QFont &font)
 */
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONFONTCHANGED)
 {
@@ -789,7 +789,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONFONTCHANGED)
 }
 
 /*
-void textChanged(const QString & text)
+void textChanged(const QString &text)
 */
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONTEXTCHANGED)
 {
@@ -844,7 +844,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONTEXTCHANGED)
 }
 
 /*
-void textColorChanged(const QColor & color)
+void textColorChanged(const QColor &color)
 */
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONTEXTCOLORCHANGED)
 {

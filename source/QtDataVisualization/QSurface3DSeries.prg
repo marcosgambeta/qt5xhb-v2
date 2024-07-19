@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SELECTEDPOINT)
 }
 
 /*
-void setSelectedPoint(const QPoint & position)
+void setSelectedPoint(const QPoint &position)
 */
 HB_FUNC_STATIC(QSURFACE3DSERIES_SETSELECTEDPOINT)
 {
@@ -402,7 +402,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_TEXTURE)
 }
 
 /*
-void setTexture(const QImage & texture)
+void setTexture(const QImage &texture)
 */
 HB_FUNC_STATIC(QSURFACE3DSERIES_SETTEXTURE)
 {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_TEXTUREFILE)
 }
 
 /*
-void setTextureFile(const QString & filename)
+void setTextureFile(const QString &filename)
 */
 HB_FUNC_STATIC(QSURFACE3DSERIES_SETTEXTUREFILE)
 {
@@ -726,7 +726,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED)
 }
 
 /*
-void selectedPointChanged(const QPoint & position)
+void selectedPointChanged(const QPoint &position)
 */
 HB_FUNC_STATIC(QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED)
 {
@@ -781,7 +781,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED)
 }
 
 /*
-void textureChanged(const QImage & image)
+void textureChanged(const QImage &image)
 */
 HB_FUNC_STATIC(QSURFACE3DSERIES_ONTEXTURECHANGED)
 {
@@ -836,7 +836,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONTEXTURECHANGED)
 }
 
 /*
-void textureFileChanged(const QString & filename)
+void textureFileChanged(const QString &filename)
 */
 HB_FUNC_STATIC(QSURFACE3DSERIES_ONTEXTUREFILECHANGED)
 {

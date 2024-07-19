@@ -282,7 +282,7 @@ HB_FUNC_STATIC(Q3DTHEME_BASECOLORS)
 }
 
 /*
-void setBaseColors(const QList<QColor> & colors)
+void setBaseColors(const QList<QColor> &colors)
 */
 HB_FUNC_STATIC(Q3DTHEME_SETBASECOLORS)
 {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(Q3DTHEME_BACKGROUNDCOLOR)
 }
 
 /*
-void setBackgroundColor(const QColor & color)
+void setBackgroundColor(const QColor &color)
 */
 HB_FUNC_STATIC(Q3DTHEME_SETBACKGROUNDCOLOR)
 {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC(Q3DTHEME_WINDOWCOLOR)
 }
 
 /*
-void setWindowColor(const QColor & color)
+void setWindowColor(const QColor &color)
 */
 HB_FUNC_STATIC(Q3DTHEME_SETWINDOWCOLOR)
 {
@@ -454,7 +454,7 @@ HB_FUNC_STATIC(Q3DTHEME_LABELTEXTCOLOR)
 }
 
 /*
-void setLabelTextColor(const QColor & color)
+void setLabelTextColor(const QColor &color)
 */
 HB_FUNC_STATIC(Q3DTHEME_SETLABELTEXTCOLOR)
 {
@@ -509,7 +509,7 @@ HB_FUNC_STATIC(Q3DTHEME_LABELBACKGROUNDCOLOR)
 }
 
 /*
-void setLabelBackgroundColor(const QColor & color)
+void setLabelBackgroundColor(const QColor &color)
 */
 HB_FUNC_STATIC(Q3DTHEME_SETLABELBACKGROUNDCOLOR)
 {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC(Q3DTHEME_GRIDLINECOLOR)
 }
 
 /*
-void setGridLineColor(const QColor & color)
+void setGridLineColor(const QColor &color)
 */
 HB_FUNC_STATIC(Q3DTHEME_SETGRIDLINECOLOR)
 {
@@ -619,7 +619,7 @@ HB_FUNC_STATIC(Q3DTHEME_SINGLEHIGHLIGHTCOLOR)
 }
 
 /*
-void setSingleHighlightColor(const QColor & color)
+void setSingleHighlightColor(const QColor &color)
 */
 HB_FUNC_STATIC(Q3DTHEME_SETSINGLEHIGHLIGHTCOLOR)
 {
@@ -674,7 +674,7 @@ HB_FUNC_STATIC(Q3DTHEME_MULTIHIGHLIGHTCOLOR)
 }
 
 /*
-void setMultiHighlightColor(const QColor & color)
+void setMultiHighlightColor(const QColor &color)
 */
 HB_FUNC_STATIC(Q3DTHEME_SETMULTIHIGHLIGHTCOLOR)
 {
@@ -729,7 +729,7 @@ HB_FUNC_STATIC(Q3DTHEME_LIGHTCOLOR)
 }
 
 /*
-void setLightColor(const QColor & color)
+void setLightColor(const QColor &color)
 */
 HB_FUNC_STATIC(Q3DTHEME_SETLIGHTCOLOR)
 {
@@ -809,7 +809,7 @@ HB_FUNC_STATIC(Q3DTHEME_BASEGRADIENTS)
 }
 
 /*
-void setBaseGradients(const QList<QLinearGradient> & gradients)
+void setBaseGradients(const QList<QLinearGradient> &gradients)
 */
 HB_FUNC_STATIC(Q3DTHEME_SETBASEGRADIENTS)
 {
@@ -872,7 +872,7 @@ HB_FUNC_STATIC(Q3DTHEME_SINGLEHIGHLIGHTGRADIENT)
 }
 
 /*
-void setSingleHighlightGradient(const QLinearGradient & gradient)
+void setSingleHighlightGradient(const QLinearGradient &gradient)
 */
 HB_FUNC_STATIC(Q3DTHEME_SETSINGLEHIGHLIGHTGRADIENT)
 {
@@ -927,7 +927,7 @@ HB_FUNC_STATIC(Q3DTHEME_MULTIHIGHLIGHTGRADIENT)
 }
 
 /*
-void setMultiHighlightGradient(const QLinearGradient & gradient)
+void setMultiHighlightGradient(const QLinearGradient &gradient)
 */
 HB_FUNC_STATIC(Q3DTHEME_SETMULTIHIGHLIGHTGRADIENT)
 {
@@ -1198,7 +1198,7 @@ HB_FUNC_STATIC(Q3DTHEME_FONT)
 }
 
 /*
-void setFont(const QFont & font)
+void setFont(const QFont &font)
 */
 HB_FUNC_STATIC(Q3DTHEME_SETFONT)
 {
@@ -1497,7 +1497,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED)
 }
 
 /*
-void backgroundColorChanged(const QColor & color)
+void backgroundColorChanged(const QColor &color)
 */
 HB_FUNC_STATIC(Q3DTHEME_ONBACKGROUNDCOLORCHANGED)
 {
@@ -1607,7 +1607,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONBACKGROUNDENABLEDCHANGED)
 }
 
 /*
-void baseColorsChanged(const QList<QColor> & colors)
+void baseColorsChanged(const QList<QColor> &colors)
 */
 HB_FUNC_STATIC(Q3DTHEME_ONBASECOLORSCHANGED)
 {
@@ -1683,7 +1683,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONBASECOLORSCHANGED)
 }
 
 /*
-void baseGradientsChanged(const QList<QLinearGradient> & gradients)
+void baseGradientsChanged(const QList<QLinearGradient> &gradients)
 */
 HB_FUNC_STATIC(Q3DTHEME_ONBASEGRADIENTSCHANGED)
 {
@@ -1814,7 +1814,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONCOLORSTYLECHANGED)
 }
 
 /*
-void fontChanged(const QFont & font)
+void fontChanged(const QFont &font)
 */
 HB_FUNC_STATIC(Q3DTHEME_ONFONTCHANGED)
 {
@@ -1924,7 +1924,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONGRIDENABLEDCHANGED)
 }
 
 /*
-void gridLineColorChanged(const QColor & color)
+void gridLineColorChanged(const QColor &color)
 */
 HB_FUNC_STATIC(Q3DTHEME_ONGRIDLINECOLORCHANGED)
 {
@@ -2034,7 +2034,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED)
 }
 
 /*
-void labelBackgroundColorChanged(const QColor & color)
+void labelBackgroundColorChanged(const QColor &color)
 */
 HB_FUNC_STATIC(Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED)
 {
@@ -2199,7 +2199,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONLABELBORDERENABLEDCHANGED)
 }
 
 /*
-void labelTextColorChanged(const QColor & color)
+void labelTextColorChanged(const QColor &color)
 */
 HB_FUNC_STATIC(Q3DTHEME_ONLABELTEXTCOLORCHANGED)
 {
@@ -2254,7 +2254,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONLABELTEXTCOLORCHANGED)
 }
 
 /*
-void lightColorChanged(const QColor & color)
+void lightColorChanged(const QColor &color)
 */
 HB_FUNC_STATIC(Q3DTHEME_ONLIGHTCOLORCHANGED)
 {
@@ -2364,7 +2364,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONLIGHTSTRENGTHCHANGED)
 }
 
 /*
-void multiHighlightColorChanged(const QColor & color)
+void multiHighlightColorChanged(const QColor &color)
 */
 HB_FUNC_STATIC(Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED)
 {
@@ -2419,7 +2419,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED)
 }
 
 /*
-void multiHighlightGradientChanged(const QLinearGradient & gradient)
+void multiHighlightGradientChanged(const QLinearGradient &gradient)
 */
 HB_FUNC_STATIC(Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED)
 {
@@ -2474,7 +2474,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED)
 }
 
 /*
-void singleHighlightColorChanged(const QColor & color)
+void singleHighlightColorChanged(const QColor &color)
 */
 HB_FUNC_STATIC(Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED)
 {
@@ -2529,7 +2529,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED)
 }
 
 /*
-void singleHighlightGradientChanged(const QLinearGradient & gradient)
+void singleHighlightGradientChanged(const QLinearGradient &gradient)
 */
 HB_FUNC_STATIC(Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED)
 {
@@ -2639,7 +2639,7 @@ HB_FUNC_STATIC(Q3DTHEME_ONTYPECHANGED)
 }
 
 /*
-void windowColorChanged(const QColor & color)
+void windowColorChanged(const QColor &color)
 */
 HB_FUNC_STATIC(Q3DTHEME_ONWINDOWCOLORCHANGED)
 {

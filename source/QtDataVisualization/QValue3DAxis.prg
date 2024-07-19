@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_LABELFORMAT)
 }
 
 /*
-void setLabelFormat(const QString & format)
+void setLabelFormat(const QString &format)
 */
 HB_FUNC_STATIC(QVALUE3DAXIS_SETLABELFORMAT)
 {
@@ -439,7 +439,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONFORMATTERCHANGED)
 }
 
 /*
-void labelFormatChanged(const QString & format)
+void labelFormatChanged(const QString &format)
 */
 HB_FUNC_STATIC(QVALUE3DAXIS_ONLABELFORMATCHANGED)
 {

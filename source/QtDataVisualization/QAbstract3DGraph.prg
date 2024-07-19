@@ -971,7 +971,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_LOCALE)
 }
 
 /*
-void setLocale(const QLocale & locale)
+void setLocale(const QLocale &locale)
 */
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETLOCALE)
 {
@@ -1426,7 +1426,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEM)
 }
 
 /*
-void removeCustomItemAt(const QVector3D & position)
+void removeCustomItemAt(const QVector3D &position)
 */
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEMAT)
 {
@@ -1637,7 +1637,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDCUSTOMITEM)
 }
 
 /*
-QImage renderToImage(int msaaSamples = 0, const QSize & imageSize = QSize())
+QImage renderToImage(int msaaSamples = 0, const QSize &imageSize = QSize())
 */
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_RENDERTOIMAGE)
 {
@@ -1967,7 +1967,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED)
 }
 
 /*
-void localeChanged(const QLocale & locale)
+void localeChanged(const QLocale &locale)
 */
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONLOCALECHANGED)
 {
@@ -2299,7 +2299,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONPOLARCHANGED)
 }
 
 /*
-void queriedGraphPositionChanged(const QVector3D & data)
+void queriedGraphPositionChanged(const QVector3D &data)
 */
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED)
 {

@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_NEW)
   else if (ISNUMPAR(1) && ISQVECTOR3D(1))
   {
     /*
-    QScatterDataItem(const QVector3D & position)
+    QScatterDataItem(const QVector3D &position)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QScatterDataItem(*PQVECTOR3D(1));
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_NEW)
   else if (ISNUMPAR(2) && ISQVECTOR3D(1) && ISQQUATERNION(2))
   {
     /*
-    QScatterDataItem(const QVector3D & position, const QQuaternion & rotation)
+    QScatterDataItem(const QVector3D &position, const QQuaternion &rotation)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QScatterDataItem(*PQVECTOR3D(1), *PQQUATERNION(2));
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_NEW)
   else if (ISNUMPAR(1) && ISQSCATTERDATAITEM(1))
   {
     /*
-    QScatterDataItem(const QScatterDataItem & other)
+    QScatterDataItem(const QScatterDataItem &other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QScatterDataItem(*PQSCATTERDATAITEM(1));
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_DELETE)
 }
 
 /*
-void setPosition(const QVector3D & pos)
+void setPosition(const QVector3D &pos)
 */
 HB_FUNC_STATIC(QSCATTERDATAITEM_SETPOSITION)
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_POSITION)
 }
 
 /*
-void setRotation(const QQuaternion & rot)
+void setRotation(const QQuaternion &rot)
 */
 HB_FUNC_STATIC(QSCATTERDATAITEM_SETROTATION)
 {

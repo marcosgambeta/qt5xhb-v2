@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_SELECTEDBAR)
 }
 
 /*
-void setSelectedBar(const QPoint & position)
+void setSelectedBar(const QPoint &position)
 */
 HB_FUNC_STATIC(QBAR3DSERIES_SETSELECTEDBAR)
 {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_ONDATAPROXYCHANGED)
 }
 
 /*
-void selectedBarChanged(const QPoint & position)
+void selectedBarChanged(const QPoint &position)
 */
 HB_FUNC_STATIC(QBAR3DSERIES_ONSELECTEDBARCHANGED)
 {

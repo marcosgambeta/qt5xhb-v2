@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTPOSITION)
 }
 
 /*
-void setInputPosition(const QPoint & position)
+void setInputPosition(const QPoint &position)
 */
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION)
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED)
 }
 
 /*
-void positionChanged(const QPoint & position)
+void positionChanged(const QPoint &position)
 */
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED)
 {

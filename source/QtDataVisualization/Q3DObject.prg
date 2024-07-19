@@ -160,7 +160,7 @@ HB_FUNC_STATIC(Q3DOBJECT_POSITION)
 }
 
 /*
-void setPosition(const QVector3D & position)
+void setPosition(const QVector3D &position)
 */
 HB_FUNC_STATIC(Q3DOBJECT_SETPOSITION)
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(Q3DOBJECT_SETPOSITION)
 }
 
 /*
-virtual void copyValuesFrom(const Q3DObject & source)
+virtual void copyValuesFrom(const Q3DObject &source)
 */
 HB_FUNC_STATIC(Q3DOBJECT_COPYVALUESFROM)
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(Q3DOBJECT_COPYVALUESFROM)
 }
 
 /*
-void positionChanged(const QVector3D & position)
+void positionChanged(const QVector3D &position)
 */
 HB_FUNC_STATIC(Q3DOBJECT_ONPOSITIONCHANGED)
 {

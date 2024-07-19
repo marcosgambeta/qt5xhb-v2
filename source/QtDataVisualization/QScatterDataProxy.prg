@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ITEMAT)
 void resetArray(QScatterDataArray *newArray)
 */
 /*
-void setItem(int index, const QScatterDataItem & item)
+void setItem(int index, const QScatterDataItem &item)
 */
 HB_FUNC_STATIC(QSCATTERDATAPROXY_SETITEM)
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_SETITEM)
 void setItems(int index, const QScatterDataArray &items)
 */
 /*
-int addItem(const QScatterDataItem & item)
+int addItem(const QScatterDataItem &item)
 */
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ADDITEM)
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ADDITEM)
 int addItems(const QScatterDataArray &items)
 */
 /*
-void insertItem(int index, const QScatterDataItem & item)
+void insertItem(int index, const QScatterDataItem &item)
 */
 HB_FUNC_STATIC(QSCATTERDATAPROXY_INSERTITEM)
 {

@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_NEW)
   else if (ISBETWEEN(1, 2) && ISQIMAGE(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QHeightMapSurfaceDataProxy(const QImage & image, QObject * parent = nullptr)
+    QHeightMapSurfaceDataProxy(const QImage &image, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QHeightMapSurfaceDataProxy(*PQIMAGE(1), OPQOBJECT(2, nullptr));
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QHeightMapSurfaceDataProxy(const QString & filename, QObject * parent = nullptr)
+    QHeightMapSurfaceDataProxy(const QString &filename, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QHeightMapSurfaceDataProxy(PQSTRING(1), OPQOBJECT(2, nullptr));
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAP)
 }
 
 /*
-void setHeightMap(const QImage & image)
+void setHeightMap(const QImage &image)
 */
 HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAP)
 {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAPFILE)
 }
 
 /*
-void setHeightMapFile(const QString & filename)
+void setHeightMapFile(const QString &filename)
 */
 HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAPFILE)
 {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETVALUERANGES)
 }
 
 /*
-void heightMapChanged(const QImage & image)
+void heightMapChanged(const QImage &image)
 */
 HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED)
 {
@@ -545,7 +545,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED)
 }
 
 /*
-void heightMapFileChanged(const QString & filename)
+void heightMapFileChanged(const QString &filename)
 */
 HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPFILECHANGED)
 {

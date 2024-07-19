@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QCATEGORY3DAXIS_LABELS)
 }
 
 /*
-void setLabels(const QStringList & labels)
+void setLabels(const QStringList &labels)
 */
 HB_FUNC_STATIC(QCATEGORY3DAXIS_SETLABELS)
 {

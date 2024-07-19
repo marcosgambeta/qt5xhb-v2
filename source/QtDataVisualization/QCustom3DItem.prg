@@ -102,8 +102,8 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_NEW)
            (ISQOBJECT(6) || HB_ISNIL(6)))
   {
     /*
-    QCustom3DItem(const QString & meshFile, const QVector3D & position, const QVector3D & scaling, const QQuaternion &
-    rotation, const QImage & texture, QObject * parent = nullptr)
+    QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &
+    rotation, const QImage &texture, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QCustom3DItem(PQSTRING(1), *PQVECTOR3D(2), *PQVECTOR3D(3), *PQQUATERNION(4), *PQIMAGE(5),
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_MESHFILE)
 }
 
 /*
-void setMeshFile(const QString & meshFile)
+void setMeshFile(const QString &meshFile)
 */
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETMESHFILE)
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_TEXTUREFILE)
 }
 
 /*
-void setTextureFile(const QString & textureFile)
+void setTextureFile(const QString &textureFile)
 */
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETTEXTUREFILE)
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_POSITION)
 }
 
 /*
-void setPosition(const QVector3D & position)
+void setPosition(const QVector3D &position)
 */
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETPOSITION)
 {
@@ -385,7 +385,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SCALING)
 }
 
 /*
-void setScaling(const QVector3D & scaling)
+void setScaling(const QVector3D &scaling)
 */
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETSCALING)
 {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ROTATION)
 }
 
 /*
-void setRotation(const QQuaternion & rotation)
+void setRotation(const QQuaternion &rotation)
 */
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETROTATION)
 {
@@ -630,7 +630,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETSCALINGABSOLUTE)
 }
 
 /*
-Q_INVOKABLE void setRotationAxisAndAngle(const QVector3D & axis, float angle)
+Q_INVOKABLE void setRotationAxisAndAngle(const QVector3D &axis, float angle)
 */
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETROTATIONAXISANDANGLE)
 {
@@ -658,7 +658,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETROTATIONAXISANDANGLE)
 }
 
 /*
-void setTextureImage(const QImage & textureImage)
+void setTextureImage(const QImage &textureImage)
 */
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETTEXTUREIMAGE)
 {
@@ -686,7 +686,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETTEXTUREIMAGE)
 }
 
 /*
-void meshFileChanged(const QString & meshFile)
+void meshFileChanged(const QString &meshFile)
 */
 HB_FUNC_STATIC(QCUSTOM3DITEM_ONMESHFILECHANGED)
 {
@@ -796,7 +796,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONPOSITIONABSOLUTECHANGED)
 }
 
 /*
-void positionChanged(const QVector3D & position)
+void positionChanged(const QVector3D &position)
 */
 HB_FUNC_STATIC(QCUSTOM3DITEM_ONPOSITIONCHANGED)
 {
@@ -851,7 +851,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONPOSITIONCHANGED)
 }
 
 /*
-void rotationChanged(const QQuaternion & rotation)
+void rotationChanged(const QQuaternion &rotation)
 */
 HB_FUNC_STATIC(QCUSTOM3DITEM_ONROTATIONCHANGED)
 {
@@ -961,7 +961,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONSCALINGABSOLUTECHANGED)
 }
 
 /*
-void scalingChanged(const QVector3D & scaling)
+void scalingChanged(const QVector3D &scaling)
 */
 HB_FUNC_STATIC(QCUSTOM3DITEM_ONSCALINGCHANGED)
 {
@@ -1071,7 +1071,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONSHADOWCASTINGCHANGED)
 }
 
 /*
-void textureFileChanged(const QString & textureFile)
+void textureFileChanged(const QString &textureFile)
 */
 HB_FUNC_STATIC(QCUSTOM3DITEM_ONTEXTUREFILECHANGED)
 {

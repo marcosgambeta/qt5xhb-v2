@@ -123,8 +123,8 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_NEW)
            (ISQOBJECT(5) || HB_ISNIL(5)))
   {
     /*
-    QItemModelScatterDataProxy(QAbstractItemModel * itemModel, const QString & xPosRole, const QString & yPosRole, const
-    QString & zPosRole, QObject * parent = nullptr)
+    QItemModelScatterDataProxy(QAbstractItemModel * itemModel, const QString &xPosRole, const QString &yPosRole, const
+    QString &zPosRole, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QItemModelScatterDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4),
@@ -136,8 +136,8 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_NEW)
            (ISQOBJECT(6) || HB_ISNIL(6)))
   {
     /*
-    QItemModelScatterDataProxy(QAbstractItemModel * itemModel, const QString & xPosRole, const QString & yPosRole, const
-    QString & zPosRole, const QString & rotationRole, QObject * parent = nullptr)
+    QItemModelScatterDataProxy(QAbstractItemModel * itemModel, const QString &xPosRole, const QString &yPosRole, const
+    QString &zPosRole, const QString &rotationRole, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QItemModelScatterDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4),
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_XPOSROLE)
 }
 
 /*
-void setXPosRole(const QString & role)
+void setXPosRole(const QString &role)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETXPOSROLE)
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_YPOSROLE)
 }
 
 /*
-void setYPosRole(const QString & role)
+void setYPosRole(const QString &role)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETYPOSROLE)
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ZPOSROLE)
 }
 
 /*
-void setZPosRole(const QString & role)
+void setZPosRole(const QString &role)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETZPOSROLE)
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ROTATIONROLE)
 }
 
 /*
-void setRotationRole(const QString & role)
+void setRotationRole(const QString &role)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETROTATIONROLE)
 {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_XPOSROLEPATTERN)
 }
 
 /*
-void setXPosRolePattern(const QRegExp & pattern)
+void setXPosRolePattern(const QRegExp &pattern)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETXPOSROLEPATTERN)
 {
@@ -528,7 +528,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_YPOSROLEPATTERN)
 }
 
 /*
-void setYPosRolePattern(const QRegExp & pattern)
+void setYPosRolePattern(const QRegExp &pattern)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETYPOSROLEPATTERN)
 {
@@ -583,7 +583,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ZPOSROLEPATTERN)
 }
 
 /*
-void setZPosRolePattern(const QRegExp & pattern)
+void setZPosRolePattern(const QRegExp &pattern)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETZPOSROLEPATTERN)
 {
@@ -638,7 +638,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ROTATIONROLEPATTERN)
 }
 
 /*
-void setRotationRolePattern(const QRegExp & pattern)
+void setRotationRolePattern(const QRegExp &pattern)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEPATTERN)
 {
@@ -692,7 +692,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_XPOSROLEREPLACE)
 }
 
 /*
-void setXPosRoleReplace(const QString & replace)
+void setXPosRoleReplace(const QString &replace)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETXPOSROLEREPLACE)
 {
@@ -746,7 +746,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_YPOSROLEREPLACE)
 }
 
 /*
-void setYPosRoleReplace(const QString & replace)
+void setYPosRoleReplace(const QString &replace)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETYPOSROLEREPLACE)
 {
@@ -800,7 +800,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ZPOSROLEREPLACE)
 }
 
 /*
-void setZPosRoleReplace(const QString & replace)
+void setZPosRoleReplace(const QString &replace)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETZPOSROLEREPLACE)
 {
@@ -854,7 +854,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ROTATIONROLEREPLACE)
 }
 
 /*
-void setRotationRoleReplace(const QString & replace)
+void setRotationRoleReplace(const QString &replace)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEREPLACE)
 {
@@ -882,7 +882,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEREPLACE)
 }
 
 /*
-void remap(const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, const QString & rotationRole)
+void remap(const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QString &rotationRole)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_REMAP)
 {
@@ -967,7 +967,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONITEMMODELCHANGED)
 }
 
 /*
-void rotationRoleChanged(const QString & role)
+void rotationRoleChanged(const QString &role)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLECHANGED)
 {
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLECHANGED)
 }
 
 /*
-void rotationRolePatternChanged(const QRegExp & pattern)
+void rotationRolePatternChanged(const QRegExp &pattern)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED)
 {
@@ -1078,7 +1078,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED)
 }
 
 /*
-void rotationRoleReplaceChanged(const QString & replace)
+void rotationRoleReplaceChanged(const QString &replace)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEREPLACECHANGED)
 {
@@ -1134,7 +1134,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEREPLACECHANGED)
 }
 
 /*
-void xPosRoleChanged(const QString & role)
+void xPosRoleChanged(const QString &role)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLECHANGED)
 {
@@ -1189,7 +1189,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLECHANGED)
 }
 
 /*
-void xPosRolePatternChanged(const QRegExp & pattern)
+void xPosRolePatternChanged(const QRegExp &pattern)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED)
 {
@@ -1245,7 +1245,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED)
 }
 
 /*
-void xPosRoleReplaceChanged(const QString & replace)
+void xPosRoleReplaceChanged(const QString &replace)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLEREPLACECHANGED)
 {
@@ -1301,7 +1301,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLEREPLACECHANGED)
 }
 
 /*
-void yPosRoleChanged(const QString & role)
+void yPosRoleChanged(const QString &role)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLECHANGED)
 {
@@ -1356,7 +1356,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLECHANGED)
 }
 
 /*
-void yPosRolePatternChanged(const QRegExp & pattern)
+void yPosRolePatternChanged(const QRegExp &pattern)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED)
 {
@@ -1412,7 +1412,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED)
 }
 
 /*
-void yPosRoleReplaceChanged(const QString & replace)
+void yPosRoleReplaceChanged(const QString &replace)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLEREPLACECHANGED)
 {
@@ -1468,7 +1468,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLEREPLACECHANGED)
 }
 
 /*
-void zPosRoleChanged(const QString & role)
+void zPosRoleChanged(const QString &role)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLECHANGED)
 {
@@ -1523,7 +1523,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLECHANGED)
 }
 
 /*
-void zPosRolePatternChanged(const QRegExp & pattern)
+void zPosRolePatternChanged(const QRegExp &pattern)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED)
 {
@@ -1579,7 +1579,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED)
 }
 
 /*
-void zPosRoleReplaceChanged(const QString & replace)
+void zPosRoleReplaceChanged(const QString &replace)
 */
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLEREPLACECHANGED)
 {
