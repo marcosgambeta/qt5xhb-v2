@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_NEW)
   if (ISBETWEEN(0, 2) && (ISQURL(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QWebEngineHttpRequest(const QUrl & url = QUrl(), QWebEngineHttpRequest::Method = QWebEngineHttpRequest::Get)
+    QWebEngineHttpRequest(const QUrl &url = QUrl(), QWebEngineHttpRequest::Method = QWebEngineHttpRequest::Get)
     */
     auto obj =
         new QWebEngineHttpRequest(HB_ISNIL(1) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(1)),
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_NEW)
   elseif(ISNUMPAR(1) && ISQWEBENGINEHTTPREQUEST(1))
   {
     /*
-    QWebEngineHttpRequest(const QWebEngineHttpRequest & other)
+    QWebEngineHttpRequest(const QWebEngineHttpRequest &other)
     */
     auto obj = new QWebEngineHttpRequest(*PQWEBENGINEHTTPREQUEST(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_DELETE)
 }
 
 /*
-void swap(QWebEngineHttpRequest & other)
+void swap(QWebEngineHttpRequest &other)
 */
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SWAP)
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_URL)
 }
 
 /*
-void setUrl(const QUrl & url)
+void setUrl(const QUrl &url)
 */
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETURL)
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_POSTDATA)
 }
 
 /*
-void setPostData(const QByteArray & postData)
+void setPostData(const QByteArray &postData)
 */
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETPOSTDATA)
 {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETPOSTDATA)
 }
 
 /*
-bool hasHeader(const QByteArray & headerName) const
+bool hasHeader(const QByteArray &headerName) const
 */
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_HASHEADER)
 {
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_HEADERS)
 }
 
 /*
-QByteArray header(const QByteArray & headerName) const
+QByteArray header(const QByteArray &headerName) const
 */
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_HEADER)
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_HEADER)
 }
 
 /*
-void setHeader(const QByteArray & headerName, const QByteArray & value)
+void setHeader(const QByteArray &headerName, const QByteArray &value)
 */
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETHEADER)
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETHEADER)
 }
 
 /*
-void unsetHeader(const QByteArray & headerName)
+void unsetHeader(const QByteArray &headerName)
 */
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_UNSETHEADER)
 {

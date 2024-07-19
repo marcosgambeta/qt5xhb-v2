@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REQUESTMETHOD)
 }
 
 /*
-void reply(const QByteArray & contentType, QIODevice * device)
+void reply(const QByteArray &contentType, QIODevice * device)
 */
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REPLY)
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_FAIL)
 }
 
 /*
-void redirect(const QUrl & url)
+void redirect(const QUrl &url)
 */
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REDIRECT)
 {

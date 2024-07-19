@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_BLOCK)
 }
 
 /*
-void redirect(const QUrl & url)
+void redirect(const QUrl &url)
 */
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_REDIRECT)
 {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_REDIRECT)
 }
 
 /*
-void setHttpHeader(const QByteArray & name, const QByteArray & value)
+void setHttpHeader(const QByteArray &name, const QByteArray &value)
 */
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_SETHTTPHEADER)
 {
