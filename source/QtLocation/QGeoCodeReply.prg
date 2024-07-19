@@ -68,7 +68,7 @@ RETURN
 #include <QtPositioning/QGeoShape>
 
     /*
-    QGeoCodeReply(QGeoCodeReply::Error error, const QString & errorString, QObject * parent = nullptr)
+    QGeoCodeReply(QGeoCodeReply::Error error, const QString &errorString, QObject * parent = nullptr)
     */
 HB_FUNC_STATIC(QGEOCODEREPLY_NEW)
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_ONFINISHED)
 }
 
 /*
-void error(QGeoCodeReply::Error error, const QString & errorString = QString())
+void error(QGeoCodeReply::Error error, const QString &errorString = QString())
 */
 HB_FUNC_STATIC(QGEOCODEREPLY_ONERROR)
 {

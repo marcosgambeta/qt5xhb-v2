@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QPLACEREPLY_ONFINISHED)
 }
 
 /*
-void error(QPlaceReply::Error error, const QString & errorString = QString())
+void error(QPlaceReply::Error error, const QString &errorString = QString())
 */
 HB_FUNC_STATIC(QPLACEREPLY_ONERROR)
 {

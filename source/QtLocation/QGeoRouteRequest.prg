@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_NEW)
   if (ISBETWEEN(0, 1) && (HB_ISARRAY(1) || HB_ISNIL(1)))
   {
     /*
-    QGeoRouteRequest(const QList<QGeoCoordinate> & waypoints = QList<QGeoCoordinate>())
+    QGeoRouteRequest(const QList<QGeoCoordinate> &waypoints = QList<QGeoCoordinate>())
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QList<QGeoCoordinate> par1;
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_NEW)
   else if (ISNUMPAR(2) && ISQGEOCOORDINATE(1) && ISQGEOCOORDINATE(2))
   {
     /*
-    QGeoRouteRequest(const QGeoCoordinate & origin, const QGeoCoordinate & destination)
+    QGeoRouteRequest(const QGeoCoordinate &origin, const QGeoCoordinate &destination)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QGeoRouteRequest(*PQGEOCOORDINATE(1), *PQGEOCOORDINATE(2));
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_NEW)
   else if (ISNUMPAR(1) && ISQGEOROUTEREQUEST(1))
   {
     /*
-    QGeoRouteRequest(const QGeoRouteRequest & other)
+    QGeoRouteRequest(const QGeoRouteRequest &other)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QGeoRouteRequest(*PQGEOROUTEREQUEST(1));
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_DELETE)
 }
 
 /*
-void setWaypoints(const QList<QGeoCoordinate> & waypoints)
+void setWaypoints(const QList<QGeoCoordinate> &waypoints)
 */
 HB_FUNC_STATIC(QGEOROUTEREQUEST_SETWAYPOINTS)
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_WAYPOINTS)
 }
 
 /*
-void setExcludeAreas(const QList<QGeoRectangle> & areas)
+void setExcludeAreas(const QList<QGeoRectangle> &areas)
 */
 HB_FUNC_STATIC(QGEOROUTEREQUEST_SETEXCLUDEAREAS)
 {

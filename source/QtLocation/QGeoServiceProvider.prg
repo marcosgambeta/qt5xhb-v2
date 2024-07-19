@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_ERRORSTRING)
 }
 
 /*
-void setLocale(const QLocale & locale)
+void setLocale(const QLocale &locale)
 */
 HB_FUNC_STATIC(QGEOSERVICEPROVIDER_SETLOCALE)
 {

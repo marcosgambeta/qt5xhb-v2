@@ -64,7 +64,7 @@ RETURN
 #endif
 
     /*
-    QGeoRouteReply(QGeoRouteReply::Error error, const QString & errorString, QObject * parent = nullptr)
+    QGeoRouteReply(QGeoRouteReply::Error error, const QString &errorString, QObject * parent = nullptr)
     */
 HB_FUNC_STATIC(QGEOROUTEREPLY_NEW)
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QGEOROUTEREPLY_ONFINISHED)
 }
 
 /*
-void error(QGeoRouteReply::Error error, const QString & errorString = QString())
+void error(QGeoRouteReply::Error error, const QString &errorString = QString())
 */
 HB_FUNC_STATIC(QGEOROUTEREPLY_ONERROR)
 {
