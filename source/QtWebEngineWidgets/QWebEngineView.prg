@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETPAGE)
 }
 
 /*
-void load(const QUrl & url)
+void load(const QUrl &url)
 */
 HB_FUNC_STATIC(QWEBENGINEVIEW_LOAD)
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_LOAD)
 }
 
 /*
-void setHtml(const QString & html, const QUrl & baseUrl = QUrl())
+void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
 */
 HB_FUNC_STATIC(QWEBENGINEVIEW_SETHTML)
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETHTML)
 }
 
 /*
-void setContent(const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl())
+void setContent(const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl())
 */
 HB_FUNC_STATIC(QWEBENGINEVIEW_SETCONTENT)
 {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_URL)
 }
 
 /*
-void setUrl(const QUrl & url)
+void setUrl(const QUrl &url)
 */
 HB_FUNC_STATIC(QWEBENGINEVIEW_SETURL)
 {
@@ -865,7 +865,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_ONLOADFINISHED)
 }
 
 /*
-void titleChanged(const QString & title)
+void titleChanged(const QString &title)
 */
 HB_FUNC_STATIC(QWEBENGINEVIEW_ONTITLECHANGED)
 {
@@ -972,7 +972,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_ONSELECTIONCHANGED)
 }
 
 /*
-void urlChanged(const QUrl & url)
+void urlChanged(const QUrl &url)
 */
 HB_FUNC_STATIC(QWEBENGINEVIEW_ONURLCHANGED)
 {
@@ -1027,7 +1027,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_ONURLCHANGED)
 }
 
 /*
-void iconUrlChanged(const QUrl & url)
+void iconUrlChanged(const QUrl &url)
 */
 HB_FUNC_STATIC(QWEBENGINEVIEW_ONICONURLCHANGED)
 {

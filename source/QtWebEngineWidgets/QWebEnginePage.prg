@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU)
 }
 
 /*
-void setFeaturePermission(const QUrl & securityOrigin, QWebEnginePage::Feature feature, QWebEnginePage::PermissionPolicy
+void setFeaturePermission(const QUrl &securityOrigin, QWebEnginePage::Feature feature, QWebEnginePage::PermissionPolicy
 policy)
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETFEATUREPERMISSION)
@@ -409,7 +409,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETFEATUREPERMISSION)
 }
 
 /*
-void load(const QUrl & url)
+void load(const QUrl &url)
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_LOAD)
 {
@@ -437,7 +437,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_LOAD)
 }
 
 /*
-void setHtml(const QString & html, const QUrl & baseUrl = QUrl())
+void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETHTML)
 {
@@ -465,7 +465,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETHTML)
 }
 
 /*
-void setContent(const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl())
+void setContent(const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl())
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETCONTENT)
 {
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_URL)
 }
 
 /*
-void setUrl(const QUrl & url)
+void setUrl(const QUrl &url)
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETURL)
 {
@@ -683,7 +683,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETZOOMFACTOR)
 }
 
 /*
-void runJavaScript(const QString & scriptSource)
+void runJavaScript(const QString &scriptSource)
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_RUNJAVASCRIPT)
 {
@@ -899,7 +899,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONLOADFINISHED)
 }
 
 /*
-void linkHovered(const QString & url)
+void linkHovered(const QString &url)
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONLINKHOVERED)
 {
@@ -1006,7 +1006,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONSELECTIONCHANGED)
 }
 
 /*
-void geometryChangeRequested(const QRect & geom)
+void geometryChangeRequested(const QRect &geom)
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED)
 {
@@ -1113,7 +1113,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED)
 }
 
 /*
-void featurePermissionRequested(const QUrl & securityOrigin, QWebEnginePage::Feature feature)
+void featurePermissionRequested(const QUrl &securityOrigin, QWebEnginePage::Feature feature)
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED)
 {
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED)
 }
 
 /*
-void featurePermissionRequestCanceled(const QUrl & securityOrigin, QWebEnginePage::Feature feature)
+void featurePermissionRequestCanceled(const QUrl &securityOrigin, QWebEnginePage::Feature feature)
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED)
 {
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED)
 }
 
 /*
-void authenticationRequired(const QUrl & requestUrl, QAuthenticator * authenticator)
+void authenticationRequired(const QUrl &requestUrl, QAuthenticator * authenticator)
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED)
 {
@@ -1287,7 +1287,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED)
 }
 
 /*
-void proxyAuthenticationRequired(const QUrl & requestUrl, QAuthenticator * authenticator, const QString & proxyHost)
+void proxyAuthenticationRequired(const QUrl &requestUrl, QAuthenticator * authenticator, const QString &proxyHost)
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED)
 {
@@ -1348,7 +1348,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED)
 }
 
 /*
-void titleChanged(const QString & title)
+void titleChanged(const QString &title)
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONTITLECHANGED)
 {
@@ -1403,7 +1403,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONTITLECHANGED)
 }
 
 /*
-void urlChanged(const QUrl & url)
+void urlChanged(const QUrl &url)
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONURLCHANGED)
 {
@@ -1458,7 +1458,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONURLCHANGED)
 }
 
 /*
-void iconUrlChanged(const QUrl & url)
+void iconUrlChanged(const QUrl &url)
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONICONURLCHANGED)
 {
