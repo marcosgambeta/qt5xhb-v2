@@ -6,7 +6,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main()
+FUNCTION Main()
 
    LOCAL oApp
    LOCAL aCameras
@@ -40,4 +40,4 @@ PROCEDURE Main()
    oVideoWidget:delete()
    oApp:delete()
 
-RETURN
+RETURN NIL

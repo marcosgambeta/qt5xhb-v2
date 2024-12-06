@@ -9,7 +9,7 @@
 #define NUMR_ROWS 100
 #define NUMR_COLS 10
 
-PROCEDURE Main()
+FUNCTION Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -65,4 +65,4 @@ PROCEDURE Main()
 
    oApp:delete()
 
-RETURN
+RETURN NIL

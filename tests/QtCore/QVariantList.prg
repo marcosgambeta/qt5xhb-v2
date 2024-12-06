@@ -6,7 +6,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main()
+FUNCTION Main()
 
    LOCAL oVariant
    LOCAL aVariantList
@@ -22,4 +22,4 @@ PROCEDURE Main()
       ? aVariantList[n]:toString()
    NEXT n
 
-RETURN
+RETURN NIL

@@ -6,7 +6,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main()
+FUNCTION Main()
 
    LOCAL oFile
    LOCAL oStream
@@ -32,4 +32,4 @@ PROCEDURE Main()
 
    oFile:delete()
 
-RETURN
+RETURN NIL

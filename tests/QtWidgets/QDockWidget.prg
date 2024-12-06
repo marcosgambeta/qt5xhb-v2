@@ -6,7 +6,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main()
+FUNCTION Main()
 
    lOCAL oApp
    LOCAL oMainWindow
@@ -26,4 +26,4 @@ PROCEDURE Main()
 
    oApp:delete()
 
-RETURN
+RETURN NIL
