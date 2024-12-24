@@ -15,8 +15,8 @@
 
 #include "qt5xhb.ch"
 
-STATIC oApp
-STATIC oMainWindow
+STATIC s_oApp
+STATIC s_oMainWindow
 
 /*
   a função principal (main) cria um objeto da classe QApplication,
@@ -25,17 +25,17 @@ STATIC oMainWindow
 
 PROCEDURE Main()
 
-   oApp := QApplication():new()
+   s_oApp := QApplication():new()
 
-   oMainWindow := MainWindow():new()
+   s_oMainWindow := MainWindow():new()
 
-   oMainWindow:show()
+   s_oMainWindow:show()
 
-   oApp:exec()
+   s_oApp:exec()
 
-   oMainWindow:delete()
+   s_oMainWindow:delete()
 
-   oApp:delete()
+   s_oApp:delete()
 
 RETURN
 
@@ -168,7 +168,7 @@ METHOD createMenuBar() CLASS MainWindow
 
    ::oActionAboutQt := ::oMenu3:AddAction("&Qt Framework")
    ::oActionAboutQt:setStatusTip("Exibe informações sobre o Qt Framework")
-   ::oActionAboutQt:onTriggered({||oApp:aboutQt()})
+   ::oActionAboutQt:onTriggered({||s_oApp:aboutQt()})
 
    ::oActionAboutQt5xHb := ::oMenu3:AddAction("&Qt5xHb")
    ::oActionAboutQt5xHb:setStatusTip("Exibe a versão do Qt5xHb")
