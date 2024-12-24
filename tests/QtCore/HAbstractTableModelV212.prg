@@ -6,7 +6,7 @@
 
 #include "qt5xhb.ch"
 
-STATIC aDados
+STATIC s_aDados
 
 FUNCTION Main()
 
@@ -23,11 +23,11 @@ FUNCTION Main()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(800, 600)
 
-   aDados := array(100, 100)
+   s_aDados := array(100, 100)
 
    FOR nRow := 0 TO 99
       FOR nColumn := 0 TO 99
-         aDados[nRow + 1, nColumn + 1] := alltrim(str(nRow)) + "," + alltrim(str(nColumn))
+         s_aDados[nRow + 1, nColumn + 1] := alltrim(str(nRow)) + "," + alltrim(str(nColumn))
       NEXT nColumn
    NEXT nRow
 
@@ -80,10 +80,10 @@ METHOD new(...) CLASS myModel
 RETURN self
 
 METHOD rowCount() CLASS myModel
-RETURN len(aDados)
+RETURN len(s_aDados)
 
 METHOD columnCount() CLASS myModel
-RETURN len(aDados[1])
+RETURN len(s_aDados[1])
 
 METHOD data(oIndex, nRole) CLASS myModel
 
@@ -94,9 +94,9 @@ METHOD data(oIndex, nRole) CLASS myModel
    IF oIndex:isValid()
 
       IF nRole == Qt_DisplayRole
-         oVariant := QVariant():new(aDados[nRow + 1, nColumn + 1])
+         oVariant := QVariant():new(s_aDados[nRow + 1, nColumn + 1])
       ELSEIF nRole == Qt_EditRole
-         oVariant := QVariant():new(aDados[nRow + 1, nColumn + 1])
+         oVariant := QVariant():new(s_aDados[nRow + 1, nColumn + 1])
       ENDIF
 
    ENDIF
@@ -137,7 +137,7 @@ METHOD setData(oIndex, oVariant, nRole) CLASS myModel
          cValue := oVariant:toString()
 
          IF !empty(cValue)
-            aDados[nRow + 1, nColumn + 1] := oVariant:toString()
+            s_aDados[nRow + 1, nColumn + 1] := oVariant:toString()
             lSuccess := .T.
          ENDIF
 

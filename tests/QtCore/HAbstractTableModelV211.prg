@@ -6,7 +6,7 @@
 
 #include "qt5xhb.ch"
 
-STATIC aEstados
+STATIC s_aEstados
 
 FUNCTION Main()
 
@@ -21,34 +21,34 @@ FUNCTION Main()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(800, 600)
 
-   aEstados := {}
-   aadd(aEstados, {"..\images\estados\acre.png"            , "Acre"               })
-   aadd(aEstados, {"..\images\estados\alagoas.png"         , "Alagoas"            })
-   aadd(aEstados, {"..\images\estados\amapa.png"           , "Amapá"              })
-   aadd(aEstados, {"..\images\estados\amazonas.png"        , "Amazonas"           })
-   aadd(aEstados, {"..\images\estados\bahia.png"           , "Bahia"              })
-   aadd(aEstados, {"..\images\estados\ceara.png"           , "Ceará"              })
-   aadd(aEstados, {"..\images\estados\distritofederal.png" , "Distrito Federal"   })
-   aadd(aEstados, {"..\images\estados\espiritosanto.png"   , "Espírito Santo"     })
-   aadd(aEstados, {"..\images\estados\goias.png"           , "Goiás"              })
-   aadd(aEstados, {"..\images\estados\maranhao.png"        , "Maranhão"           })
-   aadd(aEstados, {"..\images\estados\matogrosso.png"      , "Mato Grosso"        })
-   aadd(aEstados, {"..\images\estados\matogrossodosul.png" , "Mato Grosso do Sul" })
-   aadd(aEstados, {"..\images\estados\minasgerais.png"     , "Minas Gerais"       })
-   aadd(aEstados, {"..\images\estados\para.png"            , "Pará"               })
-   aadd(aEstados, {"..\images\estados\paraiba.png"         , "Paraíba"            })
-   aadd(aEstados, {"..\images\estados\parana.png"          , "Paraná"             })
-   aadd(aEstados, {"..\images\estados\pernambuco.png"      , "Pernambuco"         })
-   aadd(aEstados, {"..\images\estados\piaui.png"           , "Piauí"              })
-   aadd(aEstados, {"..\images\estados\riodejaneiro.png"    , "Rio de Janeiro"     })
-   aadd(aEstados, {"..\images\estados\riograndedonorte.png", "Rio Grande do Norte"})
-   aadd(aEstados, {"..\images\estados\riograndedosul.png"  , "Rio Grande do Sul"  })
-   aadd(aEstados, {"..\images\estados\rondonia.png"        , "Rondônia"           })
-   aadd(aEstados, {"..\images\estados\roraima.png"         , "Roraima"            })
-   aadd(aEstados, {"..\images\estados\santacatarina.png"   , "Santa Catarina"     })
-   aadd(aEstados, {"..\images\estados\saopaulo.png"        , "São Paulo"          })
-   aadd(aEstados, {"..\images\estados\sergipe.png"         , "Sergipe"            })
-   aadd(aEstados, {"..\images\estados\tocantins.png"       , "Tocantins"          })
+   s_aEstados := {}
+   aadd(s_aEstados, {"..\images\estados\acre.png"            , "Acre"               })
+   aadd(s_aEstados, {"..\images\estados\alagoas.png"         , "Alagoas"            })
+   aadd(s_aEstados, {"..\images\estados\amapa.png"           , "Amapá"              })
+   aadd(s_aEstados, {"..\images\estados\amazonas.png"        , "Amazonas"           })
+   aadd(s_aEstados, {"..\images\estados\bahia.png"           , "Bahia"              })
+   aadd(s_aEstados, {"..\images\estados\ceara.png"           , "Ceará"              })
+   aadd(s_aEstados, {"..\images\estados\distritofederal.png" , "Distrito Federal"   })
+   aadd(s_aEstados, {"..\images\estados\espiritosanto.png"   , "Espírito Santo"     })
+   aadd(s_aEstados, {"..\images\estados\goias.png"           , "Goiás"              })
+   aadd(s_aEstados, {"..\images\estados\maranhao.png"        , "Maranhão"           })
+   aadd(s_aEstados, {"..\images\estados\matogrosso.png"      , "Mato Grosso"        })
+   aadd(s_aEstados, {"..\images\estados\matogrossodosul.png" , "Mato Grosso do Sul" })
+   aadd(s_aEstados, {"..\images\estados\minasgerais.png"     , "Minas Gerais"       })
+   aadd(s_aEstados, {"..\images\estados\para.png"            , "Pará"               })
+   aadd(s_aEstados, {"..\images\estados\paraiba.png"         , "Paraíba"            })
+   aadd(s_aEstados, {"..\images\estados\parana.png"          , "Paraná"             })
+   aadd(s_aEstados, {"..\images\estados\pernambuco.png"      , "Pernambuco"         })
+   aadd(s_aEstados, {"..\images\estados\piaui.png"           , "Piauí"              })
+   aadd(s_aEstados, {"..\images\estados\riodejaneiro.png"    , "Rio de Janeiro"     })
+   aadd(s_aEstados, {"..\images\estados\riograndedonorte.png", "Rio Grande do Norte"})
+   aadd(s_aEstados, {"..\images\estados\riograndedosul.png"  , "Rio Grande do Sul"  })
+   aadd(s_aEstados, {"..\images\estados\rondonia.png"        , "Rondônia"           })
+   aadd(s_aEstados, {"..\images\estados\roraima.png"         , "Roraima"            })
+   aadd(s_aEstados, {"..\images\estados\santacatarina.png"   , "Santa Catarina"     })
+   aadd(s_aEstados, {"..\images\estados\saopaulo.png"        , "São Paulo"          })
+   aadd(s_aEstados, {"..\images\estados\sergipe.png"         , "Sergipe"            })
+   aadd(s_aEstados, {"..\images\estados\tocantins.png"       , "Tocantins"          })
 
    oModel := myModel():new()
 
@@ -95,7 +95,7 @@ METHOD new(...) CLASS myModel
 RETURN self
 
 METHOD rowCount() CLASS myModel
-RETURN len(aEstados)
+RETURN len(s_aEstados)
 
 METHOD columnCount() CLASS myModel
 RETURN 2 // coluna 1=imagem coluna 2=nome
@@ -109,9 +109,9 @@ METHOD data(oIndex, nRole) CLASS myModel
    IF oIndex:isValid()
 
       IF nRole == Qt_DisplayRole .AND. nColumn == 1
-         oVariant := QVariant():new(aEstados[nRow + 1, 2])
+         oVariant := QVariant():new(s_aEstados[nRow + 1, 2])
       ELSEIF nRole == Qt_DecorationRole .AND. nColumn == 0
-         oVariant := QVariant():new(QPixmap():new(aEstados[nRow + 1, 1]):toVariant())
+         oVariant := QVariant():new(QPixmap():new(s_aEstados[nRow + 1, 1]):toVariant())
       ELSEIF nRole == Qt_SizeHintRole .AND. nColumn == 0
          oVariant := QVariant():new(QSize():new(150, 107))
       ENDIF

@@ -6,7 +6,7 @@
 
 #include "qt5xhb.ch"
 
-STATIC aColorsNames
+STATIC s_aColorsNames
 
 FUNCTION Main()
 
@@ -17,7 +17,7 @@ FUNCTION Main()
 
    oApp := QApplication():new()
 
-   aColorsNames := QColor():colorNames()
+   s_aColorsNames := QColor():colorNames()
 
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Tabela de cores")
@@ -68,7 +68,7 @@ METHOD new(...) CLASS myModel
 RETURN self
 
 METHOD rowCount() CLASS myModel
-RETURN len(aColorsNames)
+RETURN len(s_aColorsNames)
 
 METHOD columnCount() CLASS myModel
 RETURN 2
@@ -84,7 +84,7 @@ METHOD data (pIndex, nRole) CLASS myModel
 
       IF nRole == Qt_DisplayRole
          IF nColumn == 0
-            oVariant := QVariant():new(aColorsNames[nRow + 1])
+            oVariant := QVariant():new(s_aColorsNames[nRow + 1])
          ENDIF
       ELSEIF nRole == Qt_FontRole
          IF nColumn == 0
@@ -92,7 +92,7 @@ METHOD data (pIndex, nRole) CLASS myModel
          ENDIF
       ELSEIF nRole == Qt_BackgroundRole
          IF nColumn == 1
-            oVariant := QColor():new(aColorsNames[nRow + 1]):toVariant()
+            oVariant := QColor():new(s_aColorsNames[nRow + 1]):toVariant()
          ENDIF
       ENDIF
 
