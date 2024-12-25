@@ -20,14 +20,22 @@ FUNCTION Main()
    oWindow:resize(800, 600)
 
    oModel := HAbstractTableModel():new()
-   oModel:setRowCountCB({||100}) // total de linhas
-   oModel:setColumnCountCB({||10}) // total de colunas
-   oModel:setCB(Qt_DisplayRole, {|nRow,nCol|"Célula " + alltrim(str(nRow)) + "," + alltrim(str(nCol))}) // conteúdo da célula
-   oModel:setCB(Qt_ToolTipRole, {|nRow,nCol|"Esta é a célula " + alltrim(str(nRow)) + "," + alltrim(str(nCol))}) // tooltip da célula
-   oModel:setHorizontalHeaderCB(Qt_DisplayRole, {|nCol|"Coluna " + strzero(nCol, 2)}) // títulos das colunas
-   oModel:setHorizontalHeaderCB(Qt_ToolTipRole, {|nCol|"Esta é a coluna " + strzero(nCol, 2)}) // tooltips das colunas
-   oModel:setVerticalHeaderCB(Qt_DisplayRole, {|nRow|"Linha " + alltrim(str(nRow))}) // títulos das linhas
-   oModel:setVerticalHeaderCB(Qt_ToolTipRole, {|nRow|"Esta é a linha " + alltrim(str(nRow))}) // tooltips das linhas
+   // total de linhas
+   oModel:setRowCountCB({||100})
+   // total de colunas
+   oModel:setColumnCountCB({||10})
+   // conteúdo da célula
+   oModel:setCB(Qt_DisplayRole, {|nRow, nCol|"Célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nCol))})
+   // tooltip da célula
+   oModel:setCB(Qt_ToolTipRole, {|nRow, nCol|"Esta é a célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nCol))})
+   // títulos das colunas
+   oModel:setHorizontalHeaderCB(Qt_DisplayRole, {|nCol|"Coluna " + StrZero(nCol, 2)})
+   // tooltips das colunas
+   oModel:setHorizontalHeaderCB(Qt_ToolTipRole, {|nCol|"Esta é a coluna " + StrZero(nCol, 2)})
+   // títulos das linhas
+   oModel:setVerticalHeaderCB(Qt_DisplayRole, {|nRow|"Linha " + AllTrim(Str(nRow))})
+   // tooltips das linhas
+   oModel:setVerticalHeaderCB(Qt_ToolTipRole, {|nRow|"Esta é a linha " + AllTrim(Str(nRow))})
 
    oView := QTableView():new(oWindow)
    oView:move(10, 10)

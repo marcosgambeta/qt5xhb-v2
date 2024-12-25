@@ -93,14 +93,14 @@ FUNCTION Main()
 
    // cria um objeto da classe TextDelegate para uso na coluna 1
    oTextDelegate := TextDelegate():new(oView)
-   oTextDelegate:onCloseEditor({|oSender,oEditor,nHint|qout("oTextDelegate - closeEditor - " + alltrim(str(nHint)))})
-   oTextDelegate:onCommitData({|oSender,oEditor|qout("oTextDelegate - commitData")})
+   oTextDelegate:onCloseEditor({|oSender, oEditor, nHint|QOut("oTextDelegate - closeEditor - " + AllTrim(Str(nHint)))})
+   oTextDelegate:onCommitData({|oSender, oEditor|QOut("oTextDelegate - commitData")})
    oView:setItemDelegateForColumn(1, oTextDelegate)
 
    // cria um objeto da classe ValueDelegate para uso na coluna 2
    oValueDelegate := ValueDelegate():new(oView)
-   oValueDelegate:onCloseEditor({|oSender,oEditor,nHint|qout("oValueDelegate - closeEditor - " + alltrim(str(nHint)))})
-   oValueDelegate:onCommitData({|oSender,oEditor|qout("oValueDelegate - commitData")})
+   oValueDelegate:onCloseEditor({|oSender, oEditor, nHint|QOut("oValueDelegate - closeEditor - " + AllTrim(Str(nHint)))})
+   oValueDelegate:onCommitData({|oSender, oEditor|QOut("oValueDelegate - commitData")})
    oView:setItemDelegateForColumn(2, oValueDelegate)
 
    oWindow:show()
@@ -153,7 +153,7 @@ METHOD createEditor(oParent, oOption, oIndex) CLASS TextDelegate
    LOCAL oEditor
 
    oEditor := QLineEdit():new(oParent)
-   oEditor:onDestroyed({||qout("oEditor (QLineEdit): destroyed")})
+   oEditor:onDestroyed({||QOut("oEditor (QLineEdit): destroyed")})
 
 RETURN oEditor
 
@@ -250,7 +250,7 @@ METHOD createEditor(oParent, oOption, oIndex) CLASS ValueDelegate
    oEditor:setSingleStep(0.01)
    oEditor:setMinimum(-99999999.99)
    oEditor:setMaximum(999999999.99)
-   oEditor:onDestroyed({||qout("oEditor (QDoubleSpinBox): destroyed")})
+   oEditor:onDestroyed({||QOut("oEditor (QDoubleSpinBox): destroyed")})
 
 RETURN oEditor
 

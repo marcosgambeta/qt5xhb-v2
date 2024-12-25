@@ -16,9 +16,9 @@ FUNCTION Main()
 
    aVariantList := oVariant:toList()
 
-   ? len(aVariantList)
+   ? Len(aVariantList)
 
-   FOR n := 1 TO len(aVariantList)
+   FOR n := 1 TO Len(aVariantList)
       ? aVariantList[n]:toString()
    NEXT n
 

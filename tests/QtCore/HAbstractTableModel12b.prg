@@ -19,10 +19,10 @@ FUNCTION Main()
    LOCAL nCol
    LOCAL aData
 
-   aData := array(NUMR_ROWS, 10)
+   aData := Array(NUMR_ROWS, 10)
    FOR nRow := 1 TO NUMR_ROWS
       FOR nCol := 1 TO NUMR_COLS
-         aData[nRow, nCol] := "Célula " + alltrim(str(nRow)) + "," + alltrim(str(nCol))
+         aData[nRow, nCol] := "Célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nCol))
       NEXT nCol
    NEXT nRow
 
@@ -33,12 +33,18 @@ FUNCTION Main()
    oWindow:resize(800, 600)
 
    oModel := HAbstractTableModel():new()
-   oModel:setRowCountCB({||NUMR_ROWS}) // total de linhas
-   oModel:setColumnCountCB({||NUMR_COLS}) // total de colunas
-   oModel:setCB(Qt_DisplayRole, {|nRow,nCol|aData[nRow + 1, nCol + 1]}) // conteúdo da célula
-   oModel:setCB(Qt_EditRole, {|nRow,nCol|aData[nRow + 1, nCol + 1]}) // conteúdo para edição da célula
-   oModel:setFlagsCB({||Qt_ItemIsSelectable + Qt_ItemIsEditable + Qt_ItemIsEnabled}) // flags
-   oModel:setSetDataCB({|nRow,nCol,oVariant|aData[nRow + 1, nCol + 1] := oVariant:toString(),.T.}) // grava conteúdo da célula se não for vazio
+   // total de linhas
+   oModel:setRowCountCB({||NUMR_ROWS})
+   // total de colunas
+   oModel:setColumnCountCB({||NUMR_COLS})
+   // conteúdo da célula
+   oModel:setCB(Qt_DisplayRole, {|nRow, nCol|aData[nRow + 1, nCol + 1]})
+   // conteúdo para edição da célula
+   oModel:setCB(Qt_EditRole, {|nRow, nCol|aData[nRow + 1, nCol + 1]})
+   // flags
+   oModel:setFlagsCB({||Qt_ItemIsSelectable + Qt_ItemIsEditable + Qt_ItemIsEnabled})
+   // grava conteúdo da célula se não for vazio
+   oModel:setSetDataCB({|nRow, nCol, oVariant|aData[nRow + 1, nCol + 1] := oVariant:toString(), .T.})
 
    oView := QTableView():new(oWindow)
    oView:move(10, 10)

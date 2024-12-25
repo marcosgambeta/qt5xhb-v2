@@ -12,7 +12,7 @@ FUNCTION Main()
    LOCAL oDB
    LOCAl oModel
    LOCAL oView
-   LOCAL lFileExist := file("qtsqldemo.db")
+   LOCAL lFileExist := File("qtsqldemo.db")
 
    oApp := QApplication():new()
 

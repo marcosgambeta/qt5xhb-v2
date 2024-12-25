@@ -24,9 +24,9 @@ FUNCTION Main()
          :cText     := "Clique aqui"
          :nX        := 20
          :nY        := 20
-         :bClicked  := {||qout("clicked")}
-         :bPressed  := {||qout("pressed")}
-         :bReleased := {||qout("released")}
+         :bClicked  := {||QOut("clicked")}
+         :bPressed  := {||QOut("pressed")}
+         :bReleased := {||QOut("released")}
       ENDWITH
 
       :lVisible := .T.

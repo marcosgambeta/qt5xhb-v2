@@ -23,11 +23,11 @@ FUNCTION Main()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(800, 600)
 
-   s_aDados := array(100, 100)
+   s_aDados := Array(100, 100)
 
    FOR nRow := 0 TO 99
       FOR nColumn := 0 TO 99
-         s_aDados[nRow + 1, nColumn + 1] := alltrim(str(nRow)) + "," + alltrim(str(nColumn))
+         s_aDados[nRow + 1, nColumn + 1] := AllTrim(Str(nRow)) + "," + AllTrim(Str(nColumn))
       NEXT nColumn
    NEXT nRow
 
@@ -80,10 +80,10 @@ METHOD new(...) CLASS myModel
 RETURN self
 
 METHOD rowCount() CLASS myModel
-RETURN len(s_aDados)
+RETURN Len(s_aDados)
 
 METHOD columnCount() CLASS myModel
-RETURN len(s_aDados[1])
+RETURN Len(s_aDados[1])
 
 METHOD data(oIndex, nRole) CLASS myModel
 
@@ -108,9 +108,9 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
    LOCAL oVariant := QVariant():new()
 
    IF nOrientation == Qt_Horizontal .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Coluna " + alltrim(str(nSection)))
+      oVariant := QVariant():new("Coluna " + AllTrim(Str(nSection)))
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Linha " + alltrim(str(nSection)))
+      oVariant := QVariant():new("Linha " + AllTrim(Str(nSection)))
    ENDIF
 
 RETURN oVariant
@@ -136,7 +136,7 @@ METHOD setData(oIndex, oVariant, nRole) CLASS myModel
 
          cValue := oVariant:toString()
 
-         IF !empty(cValue)
+         IF !Empty(cValue)
             s_aDados[nRow + 1, nColumn + 1] := oVariant:toString()
             lSuccess := .T.
          ENDIF

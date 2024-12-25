@@ -19,10 +19,10 @@ FUNCTION Main()
    LOCAL nCol
    LOCAL aData
 
-   aData := array(NUMR_ROWS, 10)
+   aData := Array(NUMR_ROWS, 10)
    FOR nRow := 1 TO NUMR_ROWS
       FOR nCol := 1 TO NUMR_COLS
-         aData[nRow, nCol] := {"Célula " + alltrim(str(nRow)) + "," + alltrim(str(nCol)), Qt_Checked}
+         aData[nRow, nCol] := {"Célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nCol)), Qt_Checked}
       NEXT nCol
    NEXT nRow
 
@@ -33,13 +33,19 @@ FUNCTION Main()
    oWindow:resize(800, 600)
 
    oModel := HAbstractTableModel():new()
-   oModel:setRowCountCB({||NUMR_ROWS}) // total de linhas
-   oModel:setColumnCountCB({||NUMR_COLS}) // total de colunas
-   oModel:setDisplayRoleCB({|nRow,nCol|aData[nRow + 1, nCol + 1][1]}) // conteúdo da célula
-   oModel:setEditRoleCB({|nRow,nCol|aData[nRow + 1, nCol + 1][1]}) // conteúdo para edição da célula
-   oModel:setCheckStateRoleCB({|nRow,nCol|aData[nRow + 1, nCol + 1][2]}) // checked/unchecked
-   oModel:setFlagsCB({||Qt_ItemIsSelectable + Qt_ItemIsEditable + Qt_ItemIsEnabled + Qt_ItemIsUserCheckable}) // flags
-   oModel:setSetDataCB({|nRow,nCol,oVariant,nRole|
+   // total de linhas
+   oModel:setRowCountCB({||NUMR_ROWS})
+   // total de colunas
+   oModel:setColumnCountCB({||NUMR_COLS})
+   // conteúdo da célula
+   oModel:setDisplayRoleCB({|nRow, nCol|aData[nRow + 1, nCol + 1][1]})
+   // conteúdo para edição da célula
+   oModel:setEditRoleCB({|nRow, nCol|aData[nRow + 1, nCol + 1][1]})
+   // checked/unchecked
+   oModel:setCheckStateRoleCB({|nRow, nCol|aData[nRow + 1, nCol + 1][2]})
+   // flags
+   oModel:setFlagsCB({||Qt_ItemIsSelectable + Qt_ItemIsEditable + Qt_ItemIsEnabled + Qt_ItemIsUserCheckable})
+   oModel:setSetDataCB({|nRow, nCol, oVariant, nRole|
       IF nRole == Qt_EditRole
          aData[nRow + 1, nCol + 1, 1] := oVariant:toString()
          RETURN .T.

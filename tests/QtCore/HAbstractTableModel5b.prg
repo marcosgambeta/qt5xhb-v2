@@ -20,11 +20,16 @@ FUNCTION Main()
    oWindow:resize(800, 600)
 
    oModel := HAbstractTableModel():new()
-   oModel:setRowCountCB({||1000000}) // total de linhas
-   oModel:setColumnCountCB({||10000}) // total de colunas
-   oModel:setCB(Qt_DisplayRole, {|nRow,nCol|"Célula " + alltrim(str(nRow)) + "," + alltrim(str(nCol))}) // conteúdo da célula
-   oModel:setHorizontalHeaderCB(Qt_DisplayRole, {|nCol|"Coluna " + strzero(nCol, 5)}) // títulos das colunas
-   oModel:setVerticalHeaderCB(Qt_DisplayRole, {|nRow|"Linha " + alltrim(str(nRow))}) // títulos das linhas
+   // total de linhas
+   oModel:setRowCountCB({||1000000})
+   // total de colunas
+   oModel:setColumnCountCB({||10000})
+   // conteúdo da célula
+   oModel:setCB(Qt_DisplayRole, {|nRow, nCol|"Célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nCol))})
+   // títulos das colunas
+   oModel:setHorizontalHeaderCB(Qt_DisplayRole, {|nCol|"Coluna " + StrZero(nCol, 5)})
+   // títulos das linhas
+   oModel:setVerticalHeaderCB(Qt_DisplayRole, {|nRow|"Linha " + AllTrim(Str(nRow))})
 
    oView := QTableView():new(oWindow)
    oView:move(10, 10)

@@ -28,18 +28,18 @@ FUNCTION Main()
          :cText     := "PushButton 1"
          :nX        := 20
          :nY        := 20
-         :bClicked  := {||qout("clicked-1")}
-         :bPressed  := {||qout("pressed-1")}
-         :bReleased := {||qout("released-1")}
+         :bClicked  := {||QOut("clicked-1")}
+         :bPressed  := {||QOut("pressed-1")}
+         :bReleased := {||QOut("released-1")}
       ENDWITH
 
       WITH OBJECT oButton2 := QPushButton():new(oWindow)
          :cText     := "PushButton 2"
          :nX        := 20
          :nY        := 70
-         :bClicked  := {||qout("clicked-2")}
-         :bPressed  := {||qout("pressed-2")}
-         :bReleased := {||qout("released-2")}
+         :bClicked  := {||QOut("clicked-2")}
+         :bPressed  := {||QOut("pressed-2")}
+         :bReleased := {||QOut("released-2")}
       ENDWITH
 
       :lVisible := .T.

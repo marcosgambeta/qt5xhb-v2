@@ -17,9 +17,9 @@ FUNCTION Main()
    LOCAL nRow
    LOCAL aData
 
-   aData := array(NUMR_ROWS)
+   aData := Array(NUMR_ROWS)
    FOR nRow := 1 TO NUMR_ROWS
-      aData[nRow] := {"Linha " + alltrim(str(nRow)), Qt_Checked}
+      aData[nRow] := {"Linha " + AllTrim(Str(nRow)), Qt_Checked}
    NEXT nRow
 
    oApp := QApplication():new()
@@ -29,12 +29,17 @@ FUNCTION Main()
    oWindow:resize(800, 600)
 
    oModel := HAbstractListModel():new()
-   oModel:setRowCountCB({||NUMR_ROWS}) // total de linhas
-   oModel:setCB(Qt_DisplayRole, {|nRow|aData[nRow + 1][1]}) // conteúdo da linha
-   oModel:setCB(Qt_EditRole, {|nRow|aData[nRow + 1][1]}) // conteúdo para edição da linha
-   oModel:setCB(Qt_CheckStateRole, {|nRow|aData[nRow + 1][2]}) // checked/unchecked
-   oModel:setFlagsCB({||Qt_ItemIsSelectable + Qt_ItemIsEditable + Qt_ItemIsEnabled + Qt_ItemIsUserCheckable}) // flags
-   oModel:setSetDataCB({|nRow,oVariant,nRole|
+   // total de linhas
+   oModel:setRowCountCB({||NUMR_ROWS})
+   // conteúdo da linha
+   oModel:setCB(Qt_DisplayRole, {|nRow|aData[nRow + 1][1]})
+   // conteúdo para edição da linha
+   oModel:setCB(Qt_EditRole, {|nRow|aData[nRow + 1][1]})
+   // checked/unchecked
+   oModel:setCB(Qt_CheckStateRole, {|nRow|aData[nRow + 1][2]})
+   // flags
+   oModel:setFlagsCB({||Qt_ItemIsSelectable + Qt_ItemIsEditable + Qt_ItemIsEnabled + Qt_ItemIsUserCheckable})
+   oModel:setSetDataCB({|nRow, oVariant, nRole|
       IF nRole == Qt_EditRole
          aData[nRow + 1, 1] := oVariant:toString()
          RETURN .T.
