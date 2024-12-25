@@ -4,14 +4,12 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-  Baseado no exemplo "Extension" do Qt Framework
-*/
+// Baseado no exemplo "Extension" do Qt Framework
 
 #include "qt5xhb.ch"
 #include "hbclass.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oDialog
@@ -44,11 +42,11 @@ CLASS FindDialog INHERIT QDialog
    DATA oMoreButton              // objeto da classe QPushButton
    DATA oExtension               // objeto da classe QWidget
 
-   METHOD new (oParent)
+   METHOD new(oParent)
 
 END CLASS
 
-METHOD new (oParent) CLASS FindDialog
+METHOD new(oParent) CLASS FindDialog
 
    LOCAL oExtensionLayout
    LOCAL oTopLeftLayout
@@ -82,7 +80,7 @@ METHOD new (oParent) CLASS FindDialog
    ::oButtonBox:addButton(::oFindButton, QDialogButtonBox_ActionRole)
    ::oButtonBox:addButton(::oMoreButton, QDialogButtonBox_ActionRole)
 
-   ::oMoreButton:onToggled({|pWidget,lValue|HB_SYMBOL_UNUSED(pWidget),::oExtension:setVisible(lValue)})
+   ::oMoreButton:onToggled({|pWidget, lValue|HB_SYMBOL_UNUSED(pWidget), ::oExtension:setVisible(lValue)})
 
    oExtensionLayout := QVBoxLayout():new()
    oExtensionLayout:addWidget(::oWholeWordsCheckBox)

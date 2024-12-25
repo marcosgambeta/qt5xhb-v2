@@ -4,13 +4,11 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-  Cálculo da diferença entre duas datas
-*/
+// Cálculo da diferença entre duas datas
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -52,7 +50,7 @@ PROCEDURE Main ()
    // define a ação executada pelo botão quando clicado:
    // chamar a função CalculaDiferenca, passandos os objetos oCalendar1 e
    // oCalendar2 como parâmetros
-   oButton:onClicked( {||CalculaDiferenca(oCalendar1,oCalendar2)} )
+   oButton:onClicked({||CalculaDiferenca(oCalendar1, oCalendar2)})
 
    // deixa a janela visível, incluindo seu conte£do
    oWindow:show()
@@ -68,13 +66,11 @@ PROCEDURE Main ()
 
 RETURN
 
-/*
-  A função CalculaDiferenca obtém as datas dos calendários
-  e mostra a diferença entre as duas, usando uma janela de
-  mensagem.
-*/
+// A função CalculaDiferenca obtém as datas dos calendários
+// e mostra a diferença entre as duas, usando uma janela de
+// mensagem.
 
-STATIC FUNCTION CalculaDiferenca (oCalendar1, oCalendar2)
+STATIC FUNCTION CalculaDiferenca(oCalendar1, oCalendar2)
 
    LOCAL oMessageBox
    LOCAL oData1
@@ -97,7 +93,7 @@ STATIC FUNCTION CalculaDiferenca (oCalendar1, oCalendar2)
    oMessageBox:setWindowTitle("Diferença entre as datas")
 
    // define o texto da janela de mensagem
-   oMessageBox:setInformativeText("A diferença entre as datas é de "+AllTrim(Str(nDias))+" dia(s)")
+   oMessageBox:setInformativeText("A diferença entre as datas é de " + AllTrim(Str(nDias)) + " dia(s)")
 
    // mostra a janela de mensagem
    oMessageBox:exec()

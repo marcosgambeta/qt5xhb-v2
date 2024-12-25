@@ -4,12 +4,8 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-
-  Exemplo de uso de leiautes
-  Baseado no exemplo "Basic Layouts" do Qt Framework
-
-*/
+// Exemplo de uso de leiautes
+// Baseado no exemplo "Basic Layouts" do Qt Framework
 
 #include "qt5xhb.ch"
 #include "hbclass.ch"
@@ -44,9 +40,9 @@ CLASS Dialog INHERIT QDialog
    DATA oFormGroupBox                      // QGroupBox
    DATA oSmallEditor                       // QTextEdit
    DATA oBigEditor                         // QTextEdit
-   DATA aLabels INIT array(NumGridRows)    // QLabel
-   DATA aLineEdits INIT array(NumGridRows) // QLineEdit
-   DATA aButtons INIT array(NumButtons)    // QPushButton
+   DATA aLabels INIT Array(NumGridRows)    // QLabel
+   DATA aLineEdits INIT Array(NumGridRows) // QLineEdit
+   DATA aButtons INIT Array(NumButtons)    // QPushButton
    DATA oButtonBox                         // QDialogButtonBox
    DATA oFileMenu                          // QMenu
    DATA oExitAction                        // QAction
@@ -113,7 +109,7 @@ METHOD createHorizontalGroupBox() CLASS Dialog
    oLayout := QHBoxLayout():new()
 
    FOR nIndex := 1 TO NumButtons
-      ::aButtons[nIndex] := QPushButton():new("Button "+alltrim(str(nIndex)))
+      ::aButtons[nIndex] := QPushButton():new("Button " + AllTrim(Str(nIndex)))
       oLayout:addWidget(::aButtons[nIndex])
    NEXT nIndex
 
@@ -130,7 +126,7 @@ METHOD createGridGroupBox() CLASS Dialog
    oLayout := QGridLayout():new()
 
    FOR nIndex := 1 TO NumGridRows
-      ::aLabels[nIndex] := QLabel():new("Line "+alltrim(str(nIndex))+":")
+      ::aLabels[nIndex] := QLabel():new("Line " + AllTrim(Str(nIndex)) + ":")
       ::aLineEdits[nIndex] := QLineEdit():new()
       oLayout:addWidget(::aLabels[nIndex], nIndex, 0)
       oLayout:addWidget(::aLineEdits[nIndex], nIndex, 1)

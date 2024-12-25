@@ -4,19 +4,17 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-  Baseado no exemplo "Standard Dialogs" do Qt Framework
-*/
+// Baseado no exemplo "Standard Dialogs" do Qt Framework
 
 #include "qt5xhb.ch"
 #include "hbclass.ch"
 
-#define MESSAGE "<p>Message boxes have a caption, a text, "+;
-                "and any number of buttons, each with standard or custom texts."+;
-                "<p>Click a button to close the message box. Pressing the Esc button "+;
+#define MESSAGE "<p>Message boxes have a caption, a text, " +                            ;
+                "and any number of buttons, each with standard or custom texts." +       ;
+                "<p>Click a button to close the message box. Pressing the Esc button " + ;
                 "will activate the detected escape button (if any)."
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oDialog
@@ -75,28 +73,28 @@ CLASS Dialog INHERIT QWidget
 
    DATA cOpenFilesPath INIT ""
 
-   METHOD new (oParent)
-   METHOD setInteger ()
-   METHOD setDouble ()
-   METHOD setItem ()
-   METHOD setText ()
-   METHOD setColor ()
-   METHOD setFont ()
-   METHOD setExistingDirectory ()
-   METHOD setOpenFileName ()
-   METHOD setOpenFileNames ()
-   METHOD setSaveFileName ()
-   METHOD criticalMessage ()
-   METHOD informationMessage ()
-   METHOD questionMessage ()
-   METHOD warningMessage ()
-   METHOD errorMessage ()
+   METHOD new(oParent)
+   METHOD setInteger()
+   METHOD setDouble()
+   METHOD setItem()
+   METHOD setText()
+   METHOD setColor()
+   METHOD setFont()
+   METHOD setExistingDirectory()
+   METHOD setOpenFileName()
+   METHOD setOpenFileNames()
+   METHOD setSaveFileName()
+   METHOD criticalMessage()
+   METHOD informationMessage()
+   METHOD questionMessage()
+   METHOD warningMessage()
+   METHOD errorMessage()
 
-   METHOD delete ()
+   METHOD delete()
 
 END CLASS
 
-METHOD new (oParent) CLASS Dialog
+METHOD new(oParent) CLASS Dialog
 
    LOCAL nFrameStyle
    LOCAL oLayout
@@ -227,7 +225,7 @@ METHOD new (oParent) CLASS Dialog
 
 RETURN SELF
 
-METHOD setInteger () CLASS Dialog
+METHOD setInteger() CLASS Dialog
 
    LOCAL lOk := .F.
    LOCAL nValue
@@ -235,12 +233,12 @@ METHOD setInteger () CLASS Dialog
    nValue := QInputDialog():getInt(SELF, "QInputDialog::getInteger()", "Percentage:", 25, 0, 100, 1, @lOk)
 
    IF lOk
-      ::oIntegerLabel:setText(alltrim(str(nValue)))
+      ::oIntegerLabel:setText(AllTrim(Str(nValue)))
    ENDIF
 
 RETURN NIL
 
-METHOD setDouble () CLASS Dialog
+METHOD setDouble() CLASS Dialog
 
    LOCAL lOk := .F.
    LOCAL nValue
@@ -248,39 +246,39 @@ METHOD setDouble () CLASS Dialog
    nValue := QInputDialog():getDouble(SELF, "QInputDialog::getDouble()", "Amount:", 37.56, -10000, 10000, 2, @lOk)
 
    IF lOk
-      ::oDoubleLabel:setText(alltrim(str(nValue)))
+      ::oDoubleLabel:setText(AllTrim(Str(nValue)))
    ENDIF
 
 RETURN NIL
 
-METHOD setItem () CLASS Dialog
+METHOD setItem() CLASS Dialog
 
-   LOCAL aItems := {"Spring","Summer","Fall","Winter"}
+   LOCAL aItems := {"Spring", "Summer", "Fall", "Winter"}
    LOCAL lOk := .F.
    LOCAL cItem
 
    cItem := QInputDialog():getItem(SELF, "QInputDialog::getItem()", "Season:", aItems, 0, .F., @lOk)
 
-   IF lOk .AND. !empty(cItem)
+   IF lOk .AND. !Empty(cItem)
       ::oItemLabel:setText(cItem)
    ENDIF
 
 RETURN NIL
 
-METHOD setText () CLASS Dialog
+METHOD setText() CLASS Dialog
 
    LOCAL lOk := .F.
    LOCAL cText
 
    cText := QInputDialog():getText(SELF, "QInputDialog::getText()", "User name:", QLineEdit_Normal, QDir():home():dirName(), @lOk)
 
-   IF lOk .AND. !empty(cText)
+   IF lOk .AND. !Empty(cText)
       ::oTextLabel:setText(cText)
    ENDIF
 
 RETURN NIL
 
-METHOD setColor () CLASS Dialog
+METHOD setColor() CLASS Dialog
 
    LOCAL oColor
 
@@ -298,7 +296,7 @@ METHOD setColor () CLASS Dialog
 
 RETURN NIL
 
-METHOD setFont () CLASS Dialog
+METHOD setFont() CLASS Dialog
 
    LOCAL lOk := .F.
    LOCAL oFont
@@ -312,7 +310,7 @@ METHOD setFont () CLASS Dialog
 
 RETURN NIL
 
-METHOD setExistingDirectory () CLASS Dialog
+METHOD setExistingDirectory() CLASS Dialog
 
    LOCAL nOptions := QFileDialog_DontResolveSymlinks + QFileDialog_ShowDirsOnly
    LOCAl cDirectory
@@ -323,13 +321,13 @@ METHOD setExistingDirectory () CLASS Dialog
 
    cDirectory := QFileDialog():getExistingDirectory(SELF, "QFileDialog::getExistingDirectory()", ::oDirectoryLabel:text(), nOptions)
 
-   IF !empty(cDirectory)
+   IF !Empty(cDirectory)
       ::oDirectoryLabel:setText(cDirectory)
    ENDIF
 
 RETURN NIL
 
-METHOD setOpenFileName () CLASS Dialog
+METHOD setOpenFileName() CLASS Dialog
 
    LOCAL nOptions := 0
    LOCAL cSelectedFilter := ""
@@ -341,13 +339,13 @@ METHOD setOpenFileName () CLASS Dialog
 
    cFileName := QFileDialog():getOpenFileName(SELF, "QFileDialog::getOpenFileName()", ::oOpenFileNameLabel:text(), "All Files (*);;Text Files (*.txt)", @cSelectedFilter, nOptions)
 
-   IF !empty(cFileName)
+   IF !Empty(cFileName)
       ::oOpenFileNameLabel:setText(cFileName)
    ENDIF
 
 RETURN NIL
 
-METHOD setOpenFileNames () CLASS Dialog
+METHOD setOpenFileNames() CLASS Dialog
 
    LOCAL nOptions := 0
    LOCAL cSelectedFilter := ""
@@ -359,20 +357,20 @@ METHOD setOpenFileNames () CLASS Dialog
 
    aFiles := QFileDialog():getOpenFileNames(SELF, "QFileDialog::getOpenFileNames()", ::cOpenFilesPath, "All Files (*);;Text Files (*.txt)", @cSelectedFilter, nOptions)
 
-   IF len(afiles) > 0
+   IF Len(afiles) > 0
       ::cOpenFilesPath := aFiles[1]
-      ::oOpenFileNamesLabel:setText("["+join(aFiles,", ")+"]")
+      ::oOpenFileNamesLabel:setText("[" + Join(aFiles, ", ") + "]")
    ENDIF
 
 RETURN NIL
 
-STATIC FUNCTION Join (aItens, cDelim)
+STATIC FUNCTION Join(aItens, cDelim)
 
    LOCAL nIndex
    LOCAL cRet := ""
 
-   FOR nIndex := 1 TO len(aItens)
-      IF empty(cRet)
+   FOR nIndex := 1 TO Len(aItens)
+      IF Empty(cRet)
          cRet += aItens[nIndex]
       ELSE
          cRet += cDelim + aItens[nIndex]
@@ -381,7 +379,7 @@ STATIC FUNCTION Join (aItens, cDelim)
 
 RETURN cRet
 
-METHOD setSaveFileName () CLASS Dialog
+METHOD setSaveFileName() CLASS Dialog
 
    LOCAL nOptions := 0
    LOCAL cSelectedFilter := ""
@@ -393,13 +391,13 @@ METHOD setSaveFileName () CLASS Dialog
 
    cFileName := QFileDialog():getSaveFileName(SELF, "QFileDialog::getSaveFileName()", ::oSaveFileNameLabel:text(), "All Files (*);;Text Files (*.txt)", @cSelectedFilter, nOptions)
 
-   IF !empty(cFileName)
+   IF !Empty(cFileName)
       ::oSaveFileNameLabel:setText(cFileName)
    ENDIF
 
 RETURN NIL
 
-METHOD criticalMessage () CLASS Dialog
+METHOD criticalMessage() CLASS Dialog
 
    LOCAL nReply
 
@@ -415,7 +413,7 @@ METHOD criticalMessage () CLASS Dialog
 
 RETURN NIL
 
-METHOD informationMessage () CLASS Dialog
+METHOD informationMessage() CLASS Dialog
 
    LOCAL nReply
 
@@ -429,7 +427,7 @@ METHOD informationMessage () CLASS Dialog
 
 RETURN NIL
 
-METHOD questionMessage () CLASS Dialog
+METHOD questionMessage() CLASS Dialog
 
    LOCAL nReply
 
@@ -445,7 +443,7 @@ METHOD questionMessage () CLASS Dialog
 
 RETURN NIL
 
-METHOD warningMessage () CLASS Dialog
+METHOD warningMessage() CLASS Dialog
 
    LOCAL oMsgBox
 
@@ -461,21 +459,21 @@ METHOD warningMessage () CLASS Dialog
 
 RETURN NIL
 
-METHOD errorMessage () CLASS Dialog
+METHOD errorMessage() CLASS Dialog
 
-   ::oErrorMessageDialog:showMessage(;
-            "This dialog shows and remembers error messages. "+;
-            "If the checkbox is checked (as it is by default), "+;
-            "the shown message will be shown again, "+;
-            "but if the user unchecks the box the message "+;
-            "will not appear again if QErrorMessage::showMessage() "+;
-            "is called with the same message.")
+   ::oErrorMessageDialog:showMessage(                            ;
+      "This dialog shows and remembers error messages. " +       ;
+      "If the checkbox is checked (as it is by default), " +     ;
+      "the shown message will be shown again, " +                ;
+      "but if the user unchecks the box the message " +          ;
+      "will not appear again if QErrorMessage::showMessage() " + ;
+      "is called with the same message.")
 
    ::oErrorLabel:setText("If the box is unchecked, the message won't appear again.")
 
 RETURN NIL
 
-METHOD delete () CLASS Dialog
+METHOD delete() CLASS Dialog
 
    // destrói objeto
    ::super:delete()

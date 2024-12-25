@@ -7,7 +7,7 @@
 #include "qt5xhb.ch"
 #include "hbclass.ch"
 
-PROCEDURE Main (cFileName)
+PROCEDURE Main(cFileName)
 
    LOCAL oApp
    LOCAL oTabDialog
@@ -34,11 +34,11 @@ RETURN
 
 CLASS GeneralTab INHERIT QWidget
 
-   METHOD new (oFileInfo, oParent)
+   METHOD new(oFileInfo, oParent)
 
 END CLASS
 
-METHOD new (oFileInfo, oParent) CLASS GeneralTab
+METHOD new(oFileInfo, oParent) CLASS GeneralTab
 
    LOCAL oFileNameLabel
    LOCAL oFileNameEdit
@@ -55,7 +55,7 @@ METHOD new (oFileInfo, oParent) CLASS GeneralTab
 
    ::super:new(oParent)
 
-   oFileNameLabel :=  QLabel():new("File Name:")
+   oFileNameLabel := QLabel():new("File Name:")
    oFileNameEdit := QLineEdit():new(oFileInfo:fileName())
 
    oPathLabel := QLabel():new("Path:")
@@ -63,8 +63,8 @@ METHOD new (oFileInfo, oParent) CLASS GeneralTab
    oPathValueLabel:setFrameStyle(QFrame_Panel + QFrame_Sunken)
 
    oSizeLabel := QLabel():new("Size:")
-   nSize := oFileInfo:size()/1024
-   oSizeValueLabel := QLabel():new(alltrim(str(nSize))+" K")
+   nSize := oFileInfo:size() / 1024
+   oSizeValueLabel := QLabel():new(AllTrim(Str(nSize)) + " K")
    oSizeValueLabel:setFrameStyle(QFrame_Panel + QFrame_Sunken)
 
    oLastReadLabel := QLabel():new("Last Read:")
@@ -95,11 +95,11 @@ RETURN SELF
 
 CLASS PermissionsTab INHERIT QWidget
 
-   METHOD new (oFileInfo, oParent)
+   METHOD new(oFileInfo, oParent)
 
 END CLASS
 
-METHOD new (oFileInfo, oParent) CLASS PermissionsTab
+METHOD new(oFileInfo, oParent) CLASS PermissionsTab
 
    LOCAL oPermissionsGroup
    LOCAL oReadable
@@ -168,11 +168,11 @@ RETURN SELF
 
 CLASS ApplicationsTab INHERIT QWidget
 
-   METHOD new (oFileInfo, oParent)
+   METHOD new(oFileInfo, oParent)
 
 END CLASS
 
-METHOD new (oFileInfo, oParent) CLASS ApplicationsTab
+METHOD new(oFileInfo, oParent) CLASS ApplicationsTab
 
    LOCAL oTopLabel
    LOCAL oApplicationsListBox
@@ -189,16 +189,16 @@ METHOD new (oFileInfo, oParent) CLASS ApplicationsTab
    aApplications := {}
 
    FOR n := 1 TO 30
-      aadd(aApplications,"Application "+alltrim(str(n)))
+      AAdd(aApplications, "Application " + AllTrim(Str(n)))
    NEXT n
    oApplicationsListBox:insertItems(0, aApplications)
 
    oAlwaysCheckBox := NIL
 
-   IF empty(oFileInfo:suffix())
+   IF Empty(oFileInfo:suffix())
       oAlwaysCheckBox := QCheckBox():new("Always use this application to open this type of file")
    ELSE
-      oAlwaysCheckBox := QCheckBox():new("Always use this application to open files with the extension '"+oFileInfo:suffix()+"'")
+      oAlwaysCheckBox := QCheckBox():new("Always use this application to open files with the extension '" + oFileInfo:suffix() + "'")
    ENDIF
 
    oLayout := QVBoxLayout():new()
@@ -216,11 +216,11 @@ CLASS TabDialog INHERIT QDialog
    DATA oTabWidget // objeto da classe QTabWidget
    DATA oButtonBox // objeto da classe QDialogButtonBox
 
-   METHOD new (cFileName, oParent)
+   METHOD new(cFileName, oParent)
 
 END CLASS
 
-METHOD new (cFileName, oParent) CLASS TabDialog
+METHOD new(cFileName, oParent) CLASS TabDialog
 
    LOCAL oFileInfo
    LOCAL oMainLayout

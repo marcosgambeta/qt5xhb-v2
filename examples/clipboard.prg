@@ -6,7 +6,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -40,7 +40,7 @@ PROCEDURE Main ()
    oPushButtonPaste:onClicked({||oLineEdit2:setText(oClipboard:text())})
 
    // avisa se o dados no clipboard foram modificados
-   oClipboard:onDataChanged({||qout("os dados no clipboard foram alterados"),qout("conteudo atual="+oClipboard:text())})
+   oClipboard:onDataChanged({||QOut("os dados no clipboard foram alterados"), QOut("conteudo atual=" + oClipboard:text())})
 
    oWindow:show()
 

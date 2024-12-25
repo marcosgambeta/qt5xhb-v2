@@ -4,24 +4,18 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-  Exemplo de criação da janela principal de uma aplicação
-*/
+// Exemplo de criação da janela principal de uma aplicação
 
-/*
-  ATENÇÂO: por causa de diferenças entre Harbour e xHarbour, este exemplo
-  contém linhas de programação específicas, conforme o projeto utilizado.
-*/
+// ATENÇÂO: por causa de diferenças entre Harbour e xHarbour, este exemplo
+// contém linhas de programação específicas, conforme o projeto utilizado.
 
 #include "qt5xhb.ch"
 
 STATIC s_oApp
 STATIC s_oMainWindow
 
-/*
-  a função principal (main) cria um objeto da classe QApplication,
-  um objeto da classe MainWindow e inicia o loop de eventos
-*/
+// a função principal (main) cria um objeto da classe QApplication,
+// um objeto da classe MainWindow e inicia o loop de eventos
 
 PROCEDURE Main()
 
@@ -39,15 +33,13 @@ PROCEDURE Main()
 
 RETURN
 
-/*
-  a classe MainWindow é uma classe derivada da classe QMainWindow, com métodos para:
-  . definir as propriedades da janela
-  . criar a barra de menus e as ações
-  . criar a barra de ferramentas
-  . criar a barra de status
-  . confirmar se o usuário quer realmente sair do programa
-  . exibir mensagens
-*/
+// a classe MainWindow é uma classe derivada da classe QMainWindow, com métodos para:
+// . definir as propriedades da janela
+// . criar a barra de menus e as ações
+// . criar a barra de ferramentas
+// . criar a barra de status
+// . confirmar se o usuário quer realmente sair do programa
+// . exibir mensagens
 
 #include "hbclass.ch"
 
@@ -77,15 +69,13 @@ CLASS MainWindow INHERIT QMainWindow
    METHOD createToolBar()
    METHOD createStatusBar()
    METHOD defineEvents()
-   METHOD closeMainWindow( oSender, oCloseEvent )
-   METHOD showMessage( cText )
+   METHOD closeMainWindow(oSender, oCloseEvent)
+   METHOD showMessage(cText)
 
 END CLASS
 
-/*
- o método 'new' executa o método 'new' da classe QMainWindow
- e configura a janela principal
-*/
+// o método 'new' executa o método 'new' da classe QMainWindow
+// e configura a janela principal
 
 METHOD new() CLASS MainWindow
 
@@ -103,22 +93,18 @@ METHOD new() CLASS MainWindow
 
 RETURN self
 
-/*
-  o método 'defineProperties' define as propriedades
-  'title' e 'size' da janela principal
-*/
+// o método 'defineProperties' define as propriedades
+// 'title' e 'size' da janela principal
 
 METHOD defineProperties() CLASS MainWindow
 
    ::setWindowTitle("Exemplo de criação da janela principal")
-   ::resize(800,600)
+   ::resize(800, 600)
 
 RETURN self
 
-/*
-  o método 'createMenuBar' cria os menus da janela principal
-  e configura a ação que cada item do menu irá executar
-*/
+// o método 'createMenuBar' cria os menus da janela principal
+// e configura a ação que cada item do menu irá executar
 
 METHOD createMenuBar() CLASS MainWindow
 
@@ -126,29 +112,29 @@ METHOD createMenuBar() CLASS MainWindow
 
    ::oMenu1 := ::oMenuBar:addMenu("&Arquivo")
 
-   ::oActionNew := ::oMenu1:AddAction(QIcon():new("images\new.png"),"&Novo")
+   ::oActionNew := ::oMenu1:AddAction(QIcon():new("images\new.png"), "&Novo")
    ::oActionNew:setStatusTip("Executa a opção NOVO")
-   ::oActionNew:onTriggered({||::showMessage("Arquivo/Novo")} )
+   ::oActionNew:onTriggered({||::showMessage("Arquivo/Novo")})
 
-   ::oActionOpen := ::oMenu1:AddAction(QIcon():new("images\open.png"),"&Abrir")
+   ::oActionOpen := ::oMenu1:AddAction(QIcon():new("images\open.png"), "&Abrir")
    ::oActionOpen:setStatusTip("Executa a opção ABRIR")
    ::oActionOpen:onTriggered({||::showMessage("Arquivo/Abrir")})
 
-   ::oActionSave := ::oMenu1:AddAction(QIcon():new("images\save.png"),"&Salvar")
+   ::oActionSave := ::oMenu1:AddAction(QIcon():new("images\save.png"), "&Salvar")
    ::oActionSave:setStatusTip("Executa a opção SALVAR")
    ::oActionSave:onTriggered({||::showMessage("Arquivo/Salvar")})
 
    ::oMenu2 := ::oMenuBar:AddMenu("&Editar")
 
-   ::oActionCut := ::oMenu2:AddAction(QIcon():New("images\cut.png"),"&Recortar")
+   ::oActionCut := ::oMenu2:AddAction(QIcon():New("images\cut.png"), "&Recortar")
    ::oActionCut:setStatusTip("Executa a opção RECORTAR")
    ::oActionCut:onTriggered({||::showMessage("Editar/Recortar")})
 
-   ::oActionCopy := ::oMenu2:AddAction(QIcon():new("images\copy.png"),"&Copiar")
+   ::oActionCopy := ::oMenu2:AddAction(QIcon():new("images\copy.png"), "&Copiar")
    ::oActionCopy:setStatusTip("Executa a opção COPIAR")
    ::oActionCopy:onTriggered({||::showMessage("Editar/Copiar")})
 
-   ::oActionPaste := ::oMenu2:AddAction(QIcon():New("images\paste.png"),"C&olar")
+   ::oActionPaste := ::oMenu2:AddAction(QIcon():New("images\paste.png"), "C&olar")
    ::oActionPaste:setStatusTip("Executa a opção COLAR")
    ::oActionPaste:onTriggered({||::showMessage("Editar/Colar")})
 
@@ -176,10 +162,8 @@ METHOD createMenuBar() CLASS MainWindow
 
 RETURN self
 
-/*
-  o método 'createToolBar' cria a barra de ferramentas da janela principal
-  e configura a ação que cada botão irá executar
-*/
+// o método 'createToolBar' cria a barra de ferramentas da janela principal
+// e configura a ação que cada botão irá executar
 
 METHOD createToolBar() CLASS MainWindow
 
@@ -197,9 +181,7 @@ METHOD createToolBar() CLASS MainWindow
 
 RETURN self
 
-/*
-  o método 'createStatusBar' cria a barra de status
-*/
+// o método 'createStatusBar' cria a barra de status
 
 METHOD createStatusBar() CLASS MainWindow
 
@@ -207,34 +189,30 @@ METHOD createStatusBar() CLASS MainWindow
 
 RETURN self
 
-/*
- o método 'defineEvent' define os eventos que serão processados
-*/
+// o método 'defineEvent' define os eventos que serão processados
 
 METHOD defineEvents() CLASS MainWindow
 
-   ::onCloseEvent({|oSender,oEvent|::CloseMainWindow(oSender,oEvent)})
+   ::onCloseEvent({|oSender, oEvent|::CloseMainWindow(oSender, oEvent)})
 
 RETURN self
 
-/*
- o método 'closeMainWindow' confirma, com o usuário, se quer
- realmente sair do programa
-*/
+// o método 'closeMainWindow' confirma, com o usuário, se quer
+// realmente sair do programa
 
-METHOD closeMainWindow( oSender, oCloseEvent ) CLASS MainWindow
+METHOD closeMainWindow(oSender, oCloseEvent) CLASS MainWindow
 
    LOCAL oMB
    LOCAL nRet
 
    HB_SYMBOL_UNUSED(oSender)
 
-   oMB := QMessageBox():new(QMessageBox_Question,;
-                            "Atenção",;
-                            "Quer realmente sair do programa ?",;
-                            QMessageBox_Yes+QMessageBox_No,;
-                            self,;
-                            Qt_Dialog+Qt_MSWindowsFixedSizeDialogHint)
+   oMB := QMessageBox():new(QMessageBox_Question,                        ;
+                            "Atenção",                                   ;
+                            "Quer realmente sair do programa ?",         ;
+                            QMessageBox_Yes+QMessageBox_No,              ;
+                            self,                                        ;
+                            Qt_Dialog + Qt_MSWindowsFixedSizeDialogHint)
 
    nRet := oMB:exec()
 
@@ -250,16 +228,14 @@ METHOD closeMainWindow( oSender, oCloseEvent ) CLASS MainWindow
 
 RETURN .T.
 
-/*
-  o método 'showMessage' exibe uma janela com uma mensagem,
-  usando a classe QMessageBox
-*/
+// o método 'showMessage' exibe uma janela com uma mensagem,
+// usando a classe QMessageBox
 
-METHOD showMessage( cText ) CLASS MainWindow
+METHOD showMessage(cText) CLASS MainWindow
 
    LOCAL oMB
 
-   oMB := QMessageBox():new(QMessageBox_Information,"Informação",cText,QMessageBox_Ok,self)
+   oMB := QMessageBox():new(QMessageBox_Information, "Informação", cText, QMessageBox_Ok, self)
 
    oMB:exec()
 
