@@ -4,10 +4,8 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-  ATENÇÂO: por causa de diferenças entre Harbour e xHarbour, este exemplo
-  contém linhas de programação específicas, conforme o projeto utilizado.
-*/
+// ATENÇÂO: por causa de diferenças entre Harbour e xHarbour, este exemplo
+// contém linhas de programação específicas, conforme o projeto utilizado.
 
 #include "qt5xhb.ch"
 

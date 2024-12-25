@@ -117,9 +117,7 @@ RETURN NIL
 
 #include "hbclass.ch"
 
-/*
-  Class TextDelegate
-*/
+// Class TextDelegate
 
 CLASS TextDelegate INHERIT HStyledItemDelegate
 
@@ -183,9 +181,7 @@ METHOD destroyEditor(oEditor, oIndex) CLASS TextDelegate
 
 RETURN NIL
 
-/*
-  Class ValueDelegate
-*/
+// Class ValueDelegate
 
 CLASS ValueDelegate INHERIT HStyledItemDelegate
 
