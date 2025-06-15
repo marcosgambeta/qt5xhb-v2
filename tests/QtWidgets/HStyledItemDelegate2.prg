@@ -115,7 +115,7 @@ FUNCTION Main()
 
 RETURN NIL
 
-#include "hbclass.ch"
+#include <hbclass.ch>
 
 // Class TextDelegate
 
