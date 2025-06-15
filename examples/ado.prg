@@ -118,7 +118,7 @@ STATIC FUNCTION CriarBancoDeDados()
 
 RETURN NIL
 
-#include "hbclass.ch"
+#include <hbclass.ch>
 
 // A classe AdoTableModel deriva da classe HAbstractTableModel,
 // sendo que não adiciona nenhum recurso extra. O desenvolvedor
