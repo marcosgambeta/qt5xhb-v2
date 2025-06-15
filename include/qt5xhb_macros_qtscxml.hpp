@@ -51,4 +51,4 @@
 #define OPQSCXMLSTATICSCXMLSERVICEFACTORY(n, v)             HB_ISNIL(n) ? v : static_cast<QScxmlStaticScxmlServiceFactory*>(Qt5xHb::itemGetPtr(n))
 #define OPQSCXMLTABLEDATA(n, v)                             HB_ISNIL(n) ? v : static_cast<QScxmlTableData*>(Qt5xHb::itemGetPtr(n))
 
-#endif // QT5XHB_MACROS_QTSCXML_H */
+#endif // QT5XHB_MACROS_QTSCXML_H
