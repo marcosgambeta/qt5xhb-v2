@@ -31,7 +31,13 @@ https://github.com/marcosgambeta/qt5xhb-v2/issues
 
 ### To contact the developer
 
-Send your message to: marcosgambeta AT outlook DOT com
+Send your message using one of the options below:
+
+E-mail:  
+marcosgambeta@outlook.com
+
+Telegram:  
+https://t.me/marcosgambeta
 
 ### More info and extra content
 
@@ -67,7 +73,13 @@ https://github.com/marcosgambeta/qt5xhb-v1/issues
 
 ### Contato com o desenvolvedor
 
-Envie sua mensagem para: marcosgambeta AT outlook DOT com
+Envie sua mensagem usando uma das opções abaixo:
+
+E-mail:  
+marcosgambeta@outlook.com
+
+Telegram:  
+https://t.me/marcosgambeta
 
 ### Informações e conteúdo extra
 
