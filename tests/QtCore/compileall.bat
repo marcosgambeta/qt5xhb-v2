@@ -6,11 +6,16 @@ rem
 rem Batch to compile all tests
 rem
 
-hbmk2 HAbstractListModel1     %1 %2 %3 ..\..\qt5xhb.hbc
-hbmk2 HAbstractListModel2     %1 %2 %3 ..\..\qt5xhb.hbc
-hbmk2 HAbstractListModel3     %1 %2 %3 ..\..\qt5xhb.hbc
-hbmk2 HAbstractListModel4     %1 %2 %3 ..\..\qt5xhb.hbc
-hbmk2 HAbstractListModel5     %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractListModel1a    %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractListModel1b    %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractListModel2a    %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractListModel2b    %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractListModel3a    %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractListModel3b    %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractListModel4a    %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractListModel4b    %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractListModel5a    %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HAbstractListModel5b    %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 HAbstractListModelV21   %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 HAbstractListModelV22   %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 HAbstractListModelV23   %1 %2 %3 ..\..\qt5xhb.hbc
