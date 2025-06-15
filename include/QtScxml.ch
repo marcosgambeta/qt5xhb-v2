@@ -11,4 +11,4 @@
 
 #include "QScxmlEvent.ch"
 
-#endif /* QTSCXML_CH */
+#endif // QTSCXML_CH

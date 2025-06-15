@@ -27,4 +27,4 @@ REQUEST QXmlSchemaValidator
 REQUEST QXmlSerializer
 REQUEST QtXmlPatterns_Version
 
-#endif /* QTXMLPATTERNSREQUESTS_CH */
+#endif // QTXMLPATTERNSREQUESTS_CH

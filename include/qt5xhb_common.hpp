@@ -29,4 +29,4 @@
 #define hb_objGetClass(x) HB_OBJ_CLASS(x)
 #endif
 
-#endif /* QT5XHB_COMMON_H */
+#endif // QT5XHB_COMMON_H */

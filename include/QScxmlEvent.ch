@@ -16,4 +16,4 @@ enum QScxmlEvent::EventType
 #define QScxmlEvent_InternalEvent                                    1
 #define QScxmlEvent_ExternalEvent                                    2
 
-#endif /* QSCXMLEVENT_CH */
+#endif // QSCXMLEVENT_CH

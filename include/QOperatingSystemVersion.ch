@@ -20,4 +20,4 @@ enum QOperatingSystemVersion::OSType
 #define QOperatingSystemVersion_OSTypeWatchOS                        5
 #define QOperatingSystemVersion_OSTypeAndroid                        6
 
-#endif /* QOPERATINGSYSTEMVERSION_CH */
+#endif // QOPERATINGSYSTEMVERSION_CH

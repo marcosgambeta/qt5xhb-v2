@@ -15,4 +15,4 @@
 #include "QPrinter.ch"
 #include "QPrintPreviewWidget.ch"
 
-#endif /* QTPRINTSUPPORT_CH */
+#endif // QTPRINTSUPPORT_CH

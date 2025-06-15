@@ -93,4 +93,4 @@ REQUEST QVideoSurfaceFormat
 REQUEST QVideoWindowControl
 REQUEST QtMultimedia_Version
 
-#endif /* QTMULTIMEDIAREQUESTS_CH */
+#endif // QTMULTIMEDIAREQUESTS_CH

@@ -16,4 +16,4 @@ enum QDebug::VerbosityLevel
 #define QDebug_DefaultVerbosity                                      2
 #define QDebug_MaximumVerbosity                                      7
 
-#endif /* QDEBUG_CH */
+#endif // QDEBUG_CH

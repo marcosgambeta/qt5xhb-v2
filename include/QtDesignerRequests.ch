@@ -31,4 +31,4 @@ REQUEST QExtensionManager
 REQUEST QFormBuilder
 REQUEST QtDesigner_Version
 
-#endif /* QTDESIGNERREQUESTS_CH */
+#endif // QTDESIGNERREQUESTS_CH

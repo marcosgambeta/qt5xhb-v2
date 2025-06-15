@@ -15,4 +15,4 @@ REQUEST QSvgRenderer
 REQUEST QSvgWidget
 REQUEST QtSvg_Version
 
-#endif /* QTSVGREQUESTS_CH */
+#endif // QTSVGREQUESTS_CH

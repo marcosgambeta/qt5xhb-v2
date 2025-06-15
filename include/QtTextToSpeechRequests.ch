@@ -14,4 +14,4 @@ REQUEST QTextToSpeechEngine
 REQUEST QTextToSpeechPlugin
 REQUEST QtTextToSpeech_Version
 
-#endif /* QTTEXTTOSPEECHREQUESTS_CH */
+#endif // QTTEXTTOSPEECHREQUESTS_CH

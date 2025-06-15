@@ -99,4 +99,4 @@
 #include "QWidget.ch"
 #include "QWizard.ch"
 
-#endif /* QTWIDGETS_CH */
+#endif // QTWIDGETS_CH

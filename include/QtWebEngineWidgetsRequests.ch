@@ -17,4 +17,4 @@ REQUEST QWebEngineSettings
 REQUEST QWebEngineView
 REQUEST QtWebEngineWidgets_Version
 
-#endif /* QTWEBENGINEWIDGETSREQUESTS_CH */
+#endif // QTWEBENGINEWIDGETSREQUESTS_CH

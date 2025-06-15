@@ -23,4 +23,4 @@ REQUEST QHelpSearchQueryWidget
 REQUEST QHelpSearchResultWidget
 REQUEST QtHelp_Version
 
-#endif /* QTHELPREQUESTS_CH */
+#endif // QTHELPREQUESTS_CH

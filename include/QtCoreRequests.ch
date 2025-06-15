@@ -166,4 +166,4 @@ REQUEST QXmlStreamReader
 REQUEST QXmlStreamWriter
 REQUEST QtCore_Version
 
-#endif /* QTCOREREQUESTS_CH */
+#endif // QTCOREREQUESTS_CH

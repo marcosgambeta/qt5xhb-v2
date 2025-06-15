@@ -21,4 +21,4 @@ REQUEST QAndroidServiceConnection
 REQUEST QtAndroid
 REQUEST QtAndroidExtras_Version
 
-#endif /* QTANDROIDEXTRASREQUESTS_CH */
+#endif // QTANDROIDEXTRASREQUESTS_CH

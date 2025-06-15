@@ -19,4 +19,4 @@ REQUEST QPrintPreviewDialog
 REQUEST QPrintPreviewWidget
 REQUEST QtPrintSupport_Version
 
-#endif /* QTPRINTSUPPORTREQUESTS_CH */
+#endif // QTPRINTSUPPORTREQUESTS_CH

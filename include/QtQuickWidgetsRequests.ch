@@ -12,4 +12,4 @@
 REQUEST QQuickWidget
 REQUEST QtQuickWidgets_Version
 
-#endif /* QTQUICKWIDGETSREQUESTS_CH */
+#endif // QTQUICKWIDGETSREQUESTS_CH

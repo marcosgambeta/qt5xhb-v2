@@ -25,4 +25,4 @@ REQUEST QModbusTcpClient
 REQUEST QModbusTcpServer
 REQUEST QtSerialBus_Version
 
-#endif /* QTSERIALBUSREQUESTS_CH */
+#endif // QTSERIALBUSREQUESTS_CH

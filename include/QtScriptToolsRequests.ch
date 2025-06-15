@@ -12,4 +12,4 @@
 REQUEST QScriptEngineDebugger
 REQUEST QtScriptTools_Version
 
-#endif /* QTSCRIPTTOOLSREQUESTS_CH */
+#endif // QTSCRIPTTOOLSREQUESTS_CH

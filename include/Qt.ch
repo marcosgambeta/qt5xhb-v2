@@ -1564,4 +1564,4 @@ enum Qt::ChecksumType
 #define Qt_ChecksumIso3309                                           0
 #define Qt_ChecksumItuV41                                            1
 
-#endif /* QT_CH */
+#endif // QT_CH

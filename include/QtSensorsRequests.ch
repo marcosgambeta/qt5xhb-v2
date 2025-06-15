@@ -71,4 +71,4 @@ REQUEST QTiltReading
 REQUEST QTiltSensor
 REQUEST QtSensors_Version
 
-#endif /* QTSENSORSREQUESTS_CH */
+#endif // QTSENSORSREQUESTS_CH

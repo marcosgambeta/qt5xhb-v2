@@ -24,4 +24,4 @@ REQUEST QBluetoothTransferRequest
 REQUEST QBluetoothUuid
 REQUEST QtBluetooth_Version
 
-#endif /* QTBLUETOOTHREQUESTS_CH */
+#endif // QTBLUETOOTHREQUESTS_CH

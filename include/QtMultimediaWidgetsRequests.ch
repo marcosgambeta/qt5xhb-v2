@@ -15,4 +15,4 @@ REQUEST QVideoWidget
 REQUEST QVideoWidgetControl
 REQUEST QtMultimediaWidgets_Version
 
-#endif /* QTMULTIMEDIAWIDGETSREQUESTS_CH */
+#endif // QTMULTIMEDIAWIDGETSREQUESTS_CH

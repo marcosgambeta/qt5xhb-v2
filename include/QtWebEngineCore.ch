@@ -13,4 +13,4 @@
 #include "QWebEngineUrlRequestInfo.ch"
 #include "QWebEngineUrlRequestJob.ch"
 
-#endif /* QTWEBENGINECORE_CH */
+#endif // QTWEBENGINECORE_CH

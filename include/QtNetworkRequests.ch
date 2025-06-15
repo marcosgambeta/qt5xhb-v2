@@ -50,4 +50,4 @@ REQUEST QTcpSocket
 REQUEST QUdpSocket
 REQUEST QtNetwork_Version
 
-#endif /* QTNETWORKREQUESTS_CH */
+#endif // QTNETWORKREQUESTS_CH

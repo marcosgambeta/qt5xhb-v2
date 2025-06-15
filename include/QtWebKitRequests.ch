@@ -20,4 +20,4 @@ REQUEST QWebSecurityOrigin
 REQUEST QWebSettings
 REQUEST QtWebKit_Version
 
-#endif /* QTWEBKITREQUESTS_CH */
+#endif // QTWEBKITREQUESTS_CH

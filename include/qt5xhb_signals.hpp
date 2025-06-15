@@ -40,4 +40,4 @@ namespace Qt5xHb
   QMetaObject::Connection Signals_get_connection( QObject * s, int signal );
 }
 
-#endif /* SIGNALS_H */
+#endif // SIGNALS_H */

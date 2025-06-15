@@ -25,4 +25,4 @@ enum QWindow::Visibility
 #define QWindow_Maximized                                            4
 #define QWindow_FullScreen                                           5
 
-#endif /* QWINDOW_CH */
+#endif // QWINDOW_CH

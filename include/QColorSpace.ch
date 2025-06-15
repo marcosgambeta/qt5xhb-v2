@@ -30,4 +30,4 @@ enum class QColorSpace::TransferFunction
 #define QColorSpace_Linear                                           1
 #define QColorSpace_Gamma                                            2
 
-#endif /* QCOLORSPACE_CH */
+#endif // QCOLORSPACE_CH

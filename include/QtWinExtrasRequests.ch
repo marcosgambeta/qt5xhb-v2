@@ -22,4 +22,4 @@ REQUEST QWinThumbnailToolBar
 REQUEST QWinThumbnailToolButton
 REQUEST QtWinExtras_Version
 
-#endif /* QTWINEXTRASREQUESTS_CH */
+#endif // QTWINEXTRASREQUESTS_CH

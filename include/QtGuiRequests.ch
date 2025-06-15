@@ -192,4 +192,4 @@ REQUEST QWindow
 REQUEST QWindowStateChangeEvent
 REQUEST QtGui_Version
 
-#endif /* QTGUIREQUESTS_CH */
+#endif // QTGUIREQUESTS_CH

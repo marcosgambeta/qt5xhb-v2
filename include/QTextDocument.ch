@@ -47,4 +47,4 @@ flags QTextDocument::MarkdownFeatures
 #define QTextDocument_MarkdownDialectCommonMark                      0
 #define QTextDocument_MarkdownDialectGitHub                          hb_bitor(hb_bitor(hb_bitor(hb_bitor(hb_bitor(0x0004,0x0008),0x0400),0x0100),0x0200),0x0800)
 
-#endif /* QTEXTDOCUMENT_CH */
+#endif // QTEXTDOCUMENT_CH

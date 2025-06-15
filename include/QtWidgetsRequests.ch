@@ -214,4 +214,4 @@ REQUEST QWizard
 REQUEST QWizardPage
 REQUEST QtWidgets_Version
 
-#endif /* QTWIDGETSREQUESTS_CH */
+#endif // QTWIDGETSREQUESTS_CH

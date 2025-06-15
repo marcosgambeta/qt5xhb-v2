@@ -24,4 +24,4 @@ REQUEST QScriptValue
 REQUEST QScriptValueIterator
 REQUEST QtScript_Version
 
-#endif /* QTSCRIPTREQUESTS_CH */
+#endif // QTSCRIPTREQUESTS_CH

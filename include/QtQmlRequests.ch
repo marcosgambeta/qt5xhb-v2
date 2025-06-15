@@ -31,4 +31,4 @@ REQUEST QQmlPropertyValueSource
 REQUEST QQmlScriptString
 REQUEST QtQml_Version
 
-#endif /* QTQMLREQUESTS_CH */
+#endif // QTQMLREQUESTS_CH

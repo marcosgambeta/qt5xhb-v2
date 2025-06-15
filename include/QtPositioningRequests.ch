@@ -25,4 +25,4 @@ REQUEST QGeoShape
 REQUEST QNmeaPositionInfoSource
 REQUEST QtPositioning_Version
 
-#endif /* QTPOSITIONINGREQUESTS_CH */
+#endif // QTPOSITIONINGREQUESTS_CH

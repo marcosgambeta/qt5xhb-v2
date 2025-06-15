@@ -13,4 +13,4 @@ REQUEST QSerialPort
 REQUEST QSerialPortInfo
 REQUEST QtSerialPort_Version
 
-#endif /* QTSERIALPORTREQUESTS_CH */
+#endif // QTSERIALPORTREQUESTS_CH

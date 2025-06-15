@@ -43,4 +43,4 @@ enum QCryptographicHash::Algorithm
 #endif
 #endif
 
-#endif /* QCRYPTOGRAPHICHASH_CH */
+#endif // QCRYPTOGRAPHICHASH_CH

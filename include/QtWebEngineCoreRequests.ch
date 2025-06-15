@@ -17,4 +17,4 @@ REQUEST QWebEngineUrlRequestJob
 REQUEST QWebEngineUrlSchemeHandler
 REQUEST QtWebEngineCore_Version
 
-#endif /* QTWEBENGINECOREREQUESTS_CH */
+#endif // QTWEBENGINECOREREQUESTS_CH

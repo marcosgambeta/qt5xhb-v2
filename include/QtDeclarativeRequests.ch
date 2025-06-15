@@ -27,4 +27,4 @@ REQUEST QDeclarativeScriptString
 REQUEST QDeclarativeView
 REQUEST QtDeclarative_Version
 
-#endif /* QTDECLARATIVEREQUESTS_CH */
+#endif // QTDECLARATIVEREQUESTS_CH

@@ -24,4 +24,4 @@ REQUEST QScxmlStaticScxmlServiceFactory
 REQUEST QScxmlTableData
 REQUEST QtScxml_Version
 
-#endif /* QTSCXMLREQUESTS_CH */
+#endif // QTSCXMLREQUESTS_CH

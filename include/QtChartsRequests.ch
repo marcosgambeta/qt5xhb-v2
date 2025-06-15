@@ -63,4 +63,4 @@ REQUEST QXYModelMapper
 REQUEST QXYSeries
 REQUEST QtCharts_Version
 
-#endif /* QTCHARTSREQUESTS_CH */
+#endif // QTCHARTSREQUESTS_CH

@@ -50,4 +50,4 @@ REQUEST QPlaceSupplier
 REQUEST QPlaceUser
 REQUEST QtLocation_Version
 
-#endif /* QTLOCATIONREQUESTS_CH */
+#endif // QTLOCATIONREQUESTS_CH

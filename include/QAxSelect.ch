@@ -16,4 +16,4 @@ enum QAxSelect::SandboxingLevel
 #define QAxSelect_SandboxingProcess                                  1
 #define QAxSelect_SandboxingLowIntegrity                             2
 
-#endif /* QAXSELECT_CH */
+#endif // QAXSELECT_CH

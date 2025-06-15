@@ -20,4 +20,4 @@ enum QCalendar::System
 #define QCalendar_Last                                               11
 #define QCalendar_User                                               -1
 
-#endif /* QCALENDAR_CH */
+#endif // QCALENDAR_CH
