@@ -9,9 +9,7 @@
 #ifndef QOPERATINGSYSTEMVERSION_CH
 #define QOPERATINGSYSTEMVERSION_CH
 
-/*
-enum QOperatingSystemVersion::OSType
-*/
+// enum QOperatingSystemVersion::OSType
 #define QOperatingSystemVersion_OSType Unknown                       0
 #define QOperatingSystemVersion_OSTypeWindows                        1
 #define QOperatingSystemVersion_OSTypeMacOS                          2
