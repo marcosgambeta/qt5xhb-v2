@@ -4,9 +4,7 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-enum QFileIconProvider::IconType
-*/
+// enum QFileIconProvider::IconType
 #define QFileIconProvider_Computer                                   0
 #define QFileIconProvider_Desktop                                    1
 #define QFileIconProvider_Trashcan                                   2

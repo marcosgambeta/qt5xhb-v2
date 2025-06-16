@@ -9,9 +9,7 @@
 #ifndef QDEBUG_CH
 #define QDEBUG_CH
 
-/*
-enum QDebug::VerbosityLevel
-*/
+// enum QDebug::VerbosityLevel
 #define QDebug_MinimumVerbosity                                      0
 #define QDebug_DefaultVerbosity                                      2
 #define QDebug_MaximumVerbosity                                      7

@@ -4,9 +4,7 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-enum QFileSystemModel::Roles
-*/
+// enum QFileSystemModel::Roles
 #define QFileSystemModel_FileIconRole                                Qt_DecorationRole
 #define QFileSystemModel_FilePathRole                                Qt_UserRole + 1
 #define QFileSystemModel_FileNameRole                                Qt_UserRole + 2

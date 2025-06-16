@@ -9,24 +9,18 @@
 #ifndef QCOLORSPACE_CH
 #define QCOLORSPACE_CH
 
-/*
-enum QColorSpace::NamedColorSpace
-*/
+// enum QColorSpace::NamedColorSpace
 #define QColorSpace_SRgb                                             1
 #define QColorSpace_SRgbLinear                                       2
 #define QColorSpace_AdobeRgb                                         3
 #define QColorSpace_DisplayP3                                        4
 #define QColorSpace_ProPhotoRgb                                      5
 
-/*
-enum class QColorSpace::Primaries
-*/
+// enum class QColorSpace::Primaries
 #define QColorSpace_Custom                                           0
 #define QColorSpace_DciP3D65                                         3
 
-/*
-enum class QColorSpace::TransferFunction
-*/
+// enum class QColorSpace::TransferFunction
 #define QColorSpace_Linear                                           1
 #define QColorSpace_Gamma                                            2
 

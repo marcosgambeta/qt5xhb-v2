@@ -9,9 +9,7 @@
 #ifndef QAXSELECT_CH
 #define QAXSELECT_CH
 
-/*
-enum QAxSelect::SandboxingLevel
-*/
+// enum QAxSelect::SandboxingLevel
 #define QAxSelect_SandboxingNone                                     0
 #define QAxSelect_SandboxingProcess                                  1
 #define QAxSelect_SandboxingLowIntegrity                             2

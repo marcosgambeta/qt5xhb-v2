@@ -9,9 +9,7 @@
 #ifndef QCALENDAR_CH
 #define QCALENDAR_CH
 
-/*
-enum QCalendar::System
-*/
+// enum QCalendar::System
 #define QCalendar_Gregorian                                          0
 #define QCalendar_Julian                                             8
 #define QCalendar_Milankovic                                         9

@@ -9,9 +9,7 @@
 #ifndef QCRYPTOGRAPHICHASH_CH
 #define QCRYPTOGRAPHICHASH_CH
 
-/*
-enum QCryptographicHash::Algorithm
-*/
+// enum QCryptographicHash::Algorithm
 #ifndef QT_CRYPTOGRAPHICHASH_ONLY_SHA1
 #define QCryptographicHash_Md4                                       0
 #define QCryptographicHash_Md5                                       1
