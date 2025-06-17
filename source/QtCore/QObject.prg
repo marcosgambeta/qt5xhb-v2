@@ -287,7 +287,7 @@ RETURN
 #include <QtCore/QVariant>
 #include <QtWidgets/QWidget>
 
-    void _qtxhb_processOnEventMethod(QEvent::Type event);
+void _qtxhb_processOnEventMethod(QEvent::Type event);
 
 // Q_INVOKABLE QObject(QObject * parent = nullptr)
 HB_FUNC_STATIC(QOBJECT_NEW)
