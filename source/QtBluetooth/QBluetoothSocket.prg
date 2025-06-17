@@ -288,14 +288,14 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CANREADLINE)
 
 HB_FUNC_STATIC(QBLUETOOTHSOCKET_CONNECTTOSERVICE)
 {
+  auto obj = qobject_cast<QBluetoothSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   if (ISBETWEEN(1, 2) && ISQBLUETOOTHSERVICEINFO(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
     void connectToService(const QBluetoothServiceInfo &service, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = qobject_cast<QBluetoothSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->connectToService(*PQBLUETOOTHSERVICEINFO(1), HB_ISNIL(2)
@@ -313,8 +313,6 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CONNECTTOSERVICE)
     QIODevice::ReadWrite)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = qobject_cast<QBluetoothSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->connectToService(*PQBLUETOOTHADDRESS(1), *PQBLUETOOTHUUID(2),
@@ -332,8 +330,6 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CONNECTTOSERVICE)
     QIODevice::ReadWrite)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = qobject_cast<QBluetoothSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->connectToService(*PQBLUETOOTHADDRESS(1), PQUINT16(2),

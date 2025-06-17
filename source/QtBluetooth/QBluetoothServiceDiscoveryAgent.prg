@@ -251,14 +251,14 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_DISCOVEREDSERVICES)
 
 HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_SETUUIDFILTER)
 {
+  auto obj = qobject_cast<QBluetoothServiceDiscoveryAgent *>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
     void setUuidFilter(const QList<QBluetoothUuid> &uuids)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = qobject_cast<QBluetoothServiceDiscoveryAgent *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       QList<QBluetoothUuid> par1;
@@ -281,8 +281,6 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_SETUUIDFILTER)
     void setUuidFilter(const QBluetoothUuid &uuid)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = qobject_cast<QBluetoothServiceDiscoveryAgent *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->setUuidFilter(*PQBLUETOOTHUUID(1));
