@@ -510,14 +510,14 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSCLIPPING)
 
 HB_FUNC_STATIC(QXYSERIES_APPEND)
 {
+  auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void append(qreal x, qreal y)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->append(PQREAL(1), PQREAL(2));
@@ -532,8 +532,6 @@ HB_FUNC_STATIC(QXYSERIES_APPEND)
     void append(const QPointF &point)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->append(*PQPOINTF(1));
@@ -548,8 +546,6 @@ HB_FUNC_STATIC(QXYSERIES_APPEND)
     void append(const QList<QPointF> &points)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       QList<QPointF> par1;
@@ -573,14 +569,14 @@ HB_FUNC_STATIC(QXYSERIES_APPEND)
 
 HB_FUNC_STATIC(QXYSERIES_REPLACE)
 {
+  auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
     void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->replace(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
@@ -595,8 +591,6 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
     void replace(const QPointF &oldPoint, const QPointF &newPoint)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->replace(*PQPOINTF(1), *PQPOINTF(2));
@@ -611,8 +605,6 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
     void replace(int index, qreal newX, qreal newY)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->replace(PINT(1), PQREAL(2), PQREAL(3));
@@ -627,8 +619,6 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
     void replace(int index, const QPointF &newPoint)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->replace(PINT(1), *PQPOINTF(2));
@@ -643,8 +633,6 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
     void replace(QList<QPointF> points)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       QList<QPointF> par1;
@@ -666,8 +654,6 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
     void replace(QVector<QPointF> points)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       QVector<QPointF> par1;
@@ -691,14 +677,14 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
 
 HB_FUNC_STATIC(QXYSERIES_REMOVE)
 {
+  auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void remove(qreal x, qreal y)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->remove(PQREAL(1), PQREAL(2));
@@ -713,8 +699,6 @@ HB_FUNC_STATIC(QXYSERIES_REMOVE)
     void remove(const QPointF &point)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->remove(*PQPOINTF(1));
@@ -729,8 +713,6 @@ HB_FUNC_STATIC(QXYSERIES_REMOVE)
     void remove(int index)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->remove(PINT(1));

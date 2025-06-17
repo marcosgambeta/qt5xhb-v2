@@ -724,14 +724,14 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_SETPEN)
 
 HB_FUNC_STATIC(QCANDLESTICKSERIES_APPEND)
 {
+  auto obj = qobject_cast<QCandlestickSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   if (ISNUMPAR(1) && ISQCANDLESTICKSET(1))
   {
     /*
     bool append(QCandlestickSet * set)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-    auto obj = qobject_cast<QCandlestickSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       RBOOL(obj->append(PQCANDLESTICKSET(1)));
@@ -744,8 +744,6 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_APPEND)
     bool append(const QList<QCandlestickSet*> &sets)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-    auto obj = qobject_cast<QCandlestickSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       QList<QCandlestickSet *> par1;
@@ -768,14 +766,14 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_APPEND)
 
 HB_FUNC_STATIC(QCANDLESTICKSERIES_REMOVE)
 {
+  auto obj = qobject_cast<QCandlestickSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   if (ISNUMPAR(1) && ISQCANDLESTICKSET(1))
   {
     /*
     bool remove(QCandlestickSet * set)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-    auto obj = qobject_cast<QCandlestickSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       RBOOL(obj->remove(PQCANDLESTICKSET(1)));
@@ -788,8 +786,6 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_REMOVE)
     bool remove(const QList<QCandlestickSet*> &sets)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-    auto obj = qobject_cast<QCandlestickSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       QList<QCandlestickSet *> par1;

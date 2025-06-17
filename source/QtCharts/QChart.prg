@@ -1477,14 +1477,14 @@ HB_FUNC_STATIC(QCHART_BACKGROUNDPEN)
 
 HB_FUNC_STATIC(QCHART_ZOOMIN)
 {
+  auto obj = qobject_cast<QChart *>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   if (ISNUMPAR(0))
   {
     /*
     void zoomIn()
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QChart *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->zoomIn();
@@ -1499,8 +1499,6 @@ HB_FUNC_STATIC(QCHART_ZOOMIN)
     void zoomIn(const QRectF &rect)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QChart *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->zoomIn(*PQRECTF(1));

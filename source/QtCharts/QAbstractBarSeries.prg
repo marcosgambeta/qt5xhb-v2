@@ -407,14 +407,14 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_SETLABELSPOSITION)
 
 HB_FUNC_STATIC(QABSTRACTBARSERIES_APPEND)
 {
+  auto obj = qobject_cast<QAbstractBarSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   if (ISNUMPAR(1) && ISQBARSET(1))
   {
     /*
     bool append(QBarSet * set)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QAbstractBarSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       RBOOL(obj->append(PQBARSET(1)));
@@ -427,8 +427,6 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_APPEND)
     bool append(QList<QBarSet*> sets)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QAbstractBarSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       QList<QBarSet *> par1;

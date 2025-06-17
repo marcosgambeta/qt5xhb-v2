@@ -580,14 +580,14 @@ HB_FUNC_STATIC(QBARSET_SETLABELCOLOR)
 
 HB_FUNC_STATIC(QBARSET_APPEND)
 {
+  auto obj = qobject_cast<QBarSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     void append(const qreal value)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QBarSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->append(PQREAL(1));
@@ -602,8 +602,6 @@ HB_FUNC_STATIC(QBARSET_APPEND)
     void append(const QList<qreal> &values)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QBarSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       QList<qreal> par1;

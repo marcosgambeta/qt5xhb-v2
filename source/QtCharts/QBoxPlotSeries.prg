@@ -373,14 +373,14 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_SETPEN)
 
 HB_FUNC_STATIC(QBOXPLOTSERIES_APPEND)
 {
+  auto obj = qobject_cast<QBoxPlotSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   if (ISNUMPAR(1) && ISQBOXSET(1))
   {
     /*
     bool append(QBoxSet * box)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QBoxPlotSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       RBOOL(obj->append(PQBOXSET(1)));
@@ -393,8 +393,6 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_APPEND)
     bool append(QList<QBoxSet*> boxes)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QBoxPlotSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       QList<QBoxSet *> par1;

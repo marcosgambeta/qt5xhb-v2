@@ -332,14 +332,14 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_TYPE)
 
 HB_FUNC_STATIC(QBARCATEGORYAXIS_APPEND)
 {
+  auto obj = qobject_cast<QBarCategoryAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
     void append(const QStringList &categories)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QBarCategoryAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->append(PQSTRINGLIST(1));
@@ -354,8 +354,6 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_APPEND)
     void append(const QString &category)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = qobject_cast<QBarCategoryAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       obj->append(PQSTRING(1));
