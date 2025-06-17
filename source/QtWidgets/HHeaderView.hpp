@@ -29,4 +29,4 @@ public:
   void setPaintSectionCB(PHB_ITEM block);
 };
 
-#endif /* HHEADERVIEW_H */
+#endif // HHEADERVIEW_H
