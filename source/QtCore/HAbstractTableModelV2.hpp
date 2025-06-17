@@ -46,4 +46,4 @@ public:
   void reloadData();
 };
 
-#endif /* HABSTRACTTABLEMODELV2_H */
+#endif // HABSTRACTTABLEMODELV2_H

@@ -173,4 +173,4 @@ public:
   bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
 };
 
-#endif /* HABSTRACTLISTMODEL_H */
+#endif // HABSTRACTLISTMODEL_H

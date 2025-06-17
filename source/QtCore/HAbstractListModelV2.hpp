@@ -43,4 +43,4 @@ public:
   void reloadData();
 };
 
-#endif /* HABSTRACTLISTMODELV2_H */
+#endif // HABSTRACTLISTMODELV2_H

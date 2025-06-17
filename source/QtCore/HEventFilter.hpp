@@ -35,4 +35,4 @@ public:
   PHB_ITEM returnQObject(QObject *ptr, const char *classname);
 };
 
-#endif /* HEVENTFILTER_H */
+#endif // HEVENTFILTER_H
