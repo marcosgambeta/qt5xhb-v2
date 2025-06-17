@@ -9,9 +9,7 @@
 #ifndef QSCXMLEVENT_CH
 #define QSCXMLEVENT_CH
 
-/*
-enum QScxmlEvent::EventType
-*/
+// enum QScxmlEvent::EventType
 #define QScxmlEvent_PlatformEvent                                    0
 #define QScxmlEvent_InternalEvent                                    1
 #define QScxmlEvent_ExternalEvent                                    2
