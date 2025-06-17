@@ -297,6 +297,8 @@ HB_FUNC_STATIC(QAXOBJECT_DISABLEMETAOBJECT)
 
 HB_FUNC_STATIC(QAXOBJECT_DYNAMICCALL)
 {
+  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && (ISQVARIANT(2) || HB_ISNIL(2)) && (ISQVARIANT(3) || HB_ISNIL(3)) &&
       (ISQVARIANT(4) || HB_ISNIL(4)) && (ISQVARIANT(5) || HB_ISNIL(5)) && (ISQVARIANT(6) || HB_ISNIL(6)) &&
       (ISQVARIANT(7) || HB_ISNIL(7)) && (ISQVARIANT(8) || HB_ISNIL(8)) && (ISQVARIANT(9) || HB_ISNIL(9)))
@@ -306,8 +308,6 @@ HB_FUNC_STATIC(QAXOBJECT_DYNAMICCALL)
     const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
     QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
     */
-    auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       auto ptr = new QVariant(
@@ -327,8 +327,6 @@ HB_FUNC_STATIC(QAXOBJECT_DYNAMICCALL)
     /*
     QVariant dynamicCall(const char * function, QList<QVariant> &vars)
     */
-    auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       auto ptr = new QVariant(obj->dynamicCall(PCONSTCHAR(1), PQVARIANTLIST(2)));
@@ -415,6 +413,8 @@ HB_FUNC_STATIC(QAXOBJECT_PROPERTYWRITABLE)
 
 HB_FUNC_STATIC(QAXOBJECT_QUERYSUBOBJECT)
 {
+  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+
   if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && (ISQVARIANT(2) || HB_ISNIL(2)) && (ISQVARIANT(3) || HB_ISNIL(3)) &&
       (ISQVARIANT(4) || HB_ISNIL(4)) && (ISQVARIANT(5) || HB_ISNIL(5)) && (ISQVARIANT(6) || HB_ISNIL(6)) &&
       (ISQVARIANT(7) || HB_ISNIL(7)) && (ISQVARIANT(8) || HB_ISNIL(8)) && (ISQVARIANT(9) || HB_ISNIL(9)))
@@ -425,8 +425,6 @@ HB_FUNC_STATIC(QAXOBJECT_QUERYSUBOBJECT)
     QVariant(), const QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 =
     QVariant())
     */
-    auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       auto ptr =
@@ -446,8 +444,6 @@ HB_FUNC_STATIC(QAXOBJECT_QUERYSUBOBJECT)
     /*
     QAxObject * querySubObject(const char * name, QList<QVariant> &vars)
     */
-    auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
     if (obj != nullptr)
     {
       auto ptr = obj->querySubObject(PCONSTCHAR(1), PQVARIANTLIST(2));
