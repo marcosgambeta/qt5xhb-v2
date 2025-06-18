@@ -62,9 +62,7 @@ RETURN
 
 #include <QtCore/QStringList>
 
-    /*
-    QAxScriptManager(QObject * parent = nullptr)
-    */
+// QAxScriptManager(QObject * parent = nullptr)
 HB_FUNC_STATIC(QAXSCRIPTMANAGER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -78,9 +76,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_NEW)
   }
 }
 
-/*
-virtual ~QAxScriptManager() override
-*/
+// virtual ~QAxScriptManager() override
 HB_FUNC_STATIC(QAXSCRIPTMANAGER_DELETE)
 {
   auto obj = qobject_cast<QAxScriptManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -105,9 +101,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_ADDOBJECT)
 
   if (ISNUMPAR(1) && ISQAXBASE(1))
   {
-    /*
-    void addObject(QAxBase * object)
-    */
+    // void addObject(QAxBase * object)
     if (obj != nullptr)
     {
       obj->addObject(PQAXBASE(1));
@@ -117,9 +111,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_ADDOBJECT)
   }
   else if (ISNUMPAR(1) && ISQOBJECT(1))
   {
-    /*
-    void addObject(QObject * object)
-    */
+    // void addObject(QObject * object)
     if (obj != nullptr)
     {
       obj->addObject(PQOBJECT(1));
@@ -162,9 +154,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_CALL)
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
-    /*
-    QVariant call(const QString &function, QList<QVariant> &arguments)
-    */
+    // QVariant call(const QString &function, QList<QVariant> &arguments)
     if (obj != nullptr)
     {
       auto ptr = new QVariant(obj->call(PQSTRING(1), PQVARIANTLIST(2)));
@@ -177,9 +167,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_CALL)
   }
 }
 
-/*
-QStringList functions(QAxScript::FunctionFlags flags = QAxScript::FunctionNames) const
-*/
+// QStringList functions(QAxScript::FunctionFlags flags = QAxScript::FunctionNames) const
 HB_FUNC_STATIC(QAXSCRIPTMANAGER_FUNCTIONS)
 {
   auto obj = qobject_cast<QAxScriptManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -208,9 +196,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_LOAD)
 
   if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
   {
-    /*
-    QAxScript * load(const QString &code, const QString &name, const QString &language)
-    */
+    // QAxScript * load(const QString &code, const QString &name, const QString &language)
     if (obj != nullptr)
     {
       auto ptr = obj->load(PQSTRING(1), PQSTRING(2), PQSTRING(3));
@@ -219,9 +205,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_LOAD)
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
-    /*
-    QAxScript * load(const QString &file, const QString &name)
-    */
+    // QAxScript * load(const QString &file, const QString &name)
     if (obj != nullptr)
     {
       auto ptr = obj->load(PQSTRING(1), PQSTRING(2));
@@ -234,9 +218,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_LOAD)
   }
 }
 
-/*
-QAxScript * script(const QString &name) const
-*/
+// QAxScript * script(const QString &name) const
 HB_FUNC_STATIC(QAXSCRIPTMANAGER_SCRIPT)
 {
   auto obj = qobject_cast<QAxScriptManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -259,9 +241,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_SCRIPT)
   }
 }
 
-/*
-QStringList scriptNames() const
-*/
+// QStringList scriptNames() const
 HB_FUNC_STATIC(QAXSCRIPTMANAGER_SCRIPTNAMES)
 {
   auto obj = qobject_cast<QAxScriptManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -283,9 +263,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_SCRIPTNAMES)
   }
 }
 
-/*
-static bool registerEngine(const QString &name, const QString &extension, const QString &code = QString())
-*/
+// static bool registerEngine(const QString &name, const QString &extension, const QString &code = QString())
 HB_FUNC_STATIC(QAXSCRIPTMANAGER_REGISTERENGINE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,9 +280,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_REGISTERENGINE)
 #endif
 }
 
-/*
-static QString scriptFileFilter()
-*/
+// static QString scriptFileFilter()
 HB_FUNC_STATIC(QAXSCRIPTMANAGER_SCRIPTFILEFILTER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,9 +297,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_SCRIPTFILEFILTER)
 #endif
 }
 
-/*
-void error(QAxScript * script, int code, const QString &description, int sourcePosition, const QString &sourceText)
-*/
+// void error(QAxScript * script, int code, const QString &description, int sourcePosition, const QString &sourceText)
 HB_FUNC_STATIC(QAXSCRIPTMANAGER_ONERROR)
 {
   auto sender = qobject_cast<QAxScriptManager *>(Qt5xHb::getQObjectPointerFromSelfItem());

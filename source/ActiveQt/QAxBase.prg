@@ -91,9 +91,7 @@ HB_FUNC_STATIC(QAXBASE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant asVariant() const
-*/
+// QVariant asVariant() const
 HB_FUNC_STATIC(QAXBASE_ASVARIANT)
 {
   auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -116,9 +114,7 @@ HB_FUNC_STATIC(QAXBASE_ASVARIANT)
   }
 }
 
-/*
-virtual void clear()
-*/
+// virtual void clear()
 HB_FUNC_STATIC(QAXBASE_CLEAR)
 {
   auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -142,9 +138,7 @@ HB_FUNC_STATIC(QAXBASE_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString control() const
-*/
+// QString control() const
 HB_FUNC_STATIC(QAXBASE_CONTROL)
 {
   auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -166,9 +160,7 @@ HB_FUNC_STATIC(QAXBASE_CONTROL)
   }
 }
 
-/*
-void disableClassInfo()
-*/
+// void disableClassInfo()
 HB_FUNC_STATIC(QAXBASE_DISABLECLASSINFO)
 {
   auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -192,9 +184,7 @@ HB_FUNC_STATIC(QAXBASE_DISABLECLASSINFO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void disableEventSink()
-*/
+// void disableEventSink()
 HB_FUNC_STATIC(QAXBASE_DISABLEEVENTSINK)
 {
   auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -218,9 +208,7 @@ HB_FUNC_STATIC(QAXBASE_DISABLEEVENTSINK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void disableMetaObject()
-*/
+// void disableMetaObject()
 HB_FUNC_STATIC(QAXBASE_DISABLEMETAOBJECT)
 {
   auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -273,9 +261,7 @@ HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
-    /*
-    QVariant dynamicCall(const char * function, QList<QVariant> &vars)
-    */
+    // QVariant dynamicCall(const char * function, QList<QVariant> &vars)
     auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr)
@@ -290,9 +276,7 @@ HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
   }
 }
 
-/*
-QString generateDocumentation()
-*/
+// QString generateDocumentation()
 HB_FUNC_STATIC(QAXBASE_GENERATEDOCUMENTATION)
 {
   auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -314,9 +298,7 @@ HB_FUNC_STATIC(QAXBASE_GENERATEDOCUMENTATION)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QAXBASE_ISNULL)
 {
   auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -338,9 +320,7 @@ HB_FUNC_STATIC(QAXBASE_ISNULL)
   }
 }
 
-/*
-virtual bool propertyWritable(const char * prop) const
-*/
+// virtual bool propertyWritable(const char * prop) const
 HB_FUNC_STATIC(QAXBASE_PROPERTYWRITABLE)
 {
   auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -392,9 +372,7 @@ HB_FUNC_STATIC(QAXBASE_QUERYSUBOBJECT)
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
-    /*
-    QAxObject * querySubObject(const char * name, QList<QVariant> &vars)
-    */
+    // QAxObject * querySubObject(const char * name, QList<QVariant> &vars)
     auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr)
@@ -409,9 +387,7 @@ HB_FUNC_STATIC(QAXBASE_QUERYSUBOBJECT)
   }
 }
 
-/*
-bool setControl(const QString &)
-*/
+// bool setControl(const QString &)
 HB_FUNC_STATIC(QAXBASE_SETCONTROL)
 {
   auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -433,9 +409,7 @@ HB_FUNC_STATIC(QAXBASE_SETCONTROL)
   }
 }
 
-/*
-virtual void setPropertyWritable(const char * prop, bool ok)
-*/
+// virtual void setPropertyWritable(const char * prop, bool ok)
 HB_FUNC_STATIC(QAXBASE_SETPROPERTYWRITABLE)
 {
   auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -459,9 +433,7 @@ HB_FUNC_STATIC(QAXBASE_SETPROPERTYWRITABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringList verbs() const
-*/
+// QStringList verbs() const
 HB_FUNC_STATIC(QAXBASE_VERBS)
 {
   auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -483,9 +455,7 @@ HB_FUNC_STATIC(QAXBASE_VERBS)
   }
 }
 
-/*
-unsigned long classContext() const
-*/
+// unsigned long classContext() const
 HB_FUNC_STATIC(QAXBASE_CLASSCONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -509,9 +479,7 @@ HB_FUNC_STATIC(QAXBASE_CLASSCONTEXT)
 #endif
 }
 
-/*
-void setClassContext(unsigned long classContext)
-*/
+// void setClassContext(unsigned long classContext)
 HB_FUNC_STATIC(QAXBASE_SETCLASSCONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
