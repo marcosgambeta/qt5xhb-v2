@@ -60,10 +60,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QAndroidJniExceptionCleaner(QAndroidJniExceptionCleaner::OutputMode outputMode =
-    QAndroidJniExceptionCleaner::OutputMode::Silent)
-    */
+// QAndroidJniExceptionCleaner(QAndroidJniExceptionCleaner::OutputMode outputMode = QAndroidJniExceptionCleaner::OutputMode::Silent)
 HB_FUNC_STATIC(QANDROIDJNIEXCEPTIONCLEANER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -82,9 +79,7 @@ HB_FUNC_STATIC(QANDROIDJNIEXCEPTIONCLEANER_NEW)
 #endif
 }
 
-/*
-~QAndroidJniExceptionCleaner()
-*/
+// ~QAndroidJniExceptionCleaner()
 HB_FUNC_STATIC(QANDROIDJNIEXCEPTIONCLEANER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -103,9 +98,7 @@ HB_FUNC_STATIC(QANDROIDJNIEXCEPTIONCLEANER_DELETE)
 #endif
 }
 
-/*
-void clean()
-*/
+// void clean()
 HB_FUNC_STATIC(QANDROIDJNIEXCEPTIONCLEANER_CLEAN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))

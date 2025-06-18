@@ -54,9 +54,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QAndroidService(int &argc, char **argv)
-    */
+// QAndroidService(int &argc, char **argv)
 HB_FUNC_STATIC(QANDROIDSERVICE_NEW)
 {
   int argc;
@@ -67,13 +65,9 @@ HB_FUNC_STATIC(QANDROIDSERVICE_NEW)
   Qt5xHb::returnNewObject(obj, false);
 }
 
-/*
-QAndroidService(int &argc, char **argv, const std::function<QAndroidBinder*(const QAndroidIntent &intent)> &binder)
-*/
+// QAndroidService(int &argc, char **argv, const std::function<QAndroidBinder*(const QAndroidIntent &intent)> &binder)
 
-/*
-virtual ~QAndroidService()
-*/
+// virtual ~QAndroidService()
 HB_FUNC_STATIC(QANDROIDSERVICE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -94,9 +88,7 @@ HB_FUNC_STATIC(QANDROIDSERVICE_DELETE)
 #endif
 }
 
-/*
-virtual QAndroidBinder * onBind(const QAndroidIntent &intent)
-*/
+// virtual QAndroidBinder * onBind(const QAndroidIntent &intent)
 HB_FUNC_STATIC(QANDROIDSERVICE_ONBIND)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))

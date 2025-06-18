@@ -68,9 +68,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    static QAndroidJniObject androidActivity()
-    */
+// static QAndroidJniObject androidActivity()
 HB_FUNC_STATIC(QTANDROID_ANDROIDACTIVITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDACTIVITY)
 #endif
 }
 
-/*
-static int androidSdkVersion()
-*/
+// static int androidSdkVersion()
 HB_FUNC_STATIC(QTANDROID_ANDROIDSDKVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -111,10 +107,7 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDSDKVERSION)
 #endif
 }
 
-/*
-static void startIntentSender(const QAndroidJniObject &intentSender, int receiverRequestCode,
-QAndroidActivityResultReceiver * resultReceiver = nullptr)
-*/
+// static void startIntentSender(const QAndroidJniObject &intentSender, int receiverRequestCode, QAndroidActivityResultReceiver * resultReceiver = nullptr)
 HB_FUNC_STATIC(QTANDROID_STARTINTENTSENDER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -137,10 +130,7 @@ HB_FUNC_STATIC(QTANDROID_STARTINTENTSENDER)
 #endif
 }
 
-/*
-static void startActivity(const QAndroidJniObject &intent, int receiverRequestCode, QAndroidActivityResultReceiver *
-resultReceiver = nullptr)
-*/
+// static void startActivity(const QAndroidJniObject &intent, int receiverRequestCode, QAndroidActivityResultReceiver * resultReceiver = nullptr)
 HB_FUNC_STATIC(QTANDROID_STARTACTIVITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -163,9 +153,7 @@ HB_FUNC_STATIC(QTANDROID_STARTACTIVITY)
 #endif
 }
 
-/*
-static QAndroidJniObject androidService()
-*/
+// static QAndroidJniObject androidService()
 HB_FUNC_STATIC(QTANDROID_ANDROIDSERVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -185,9 +173,7 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDSERVICE)
 #endif
 }
 
-/*
-static QAndroidJniObject androidContext()
-*/
+// static QAndroidJniObject androidContext()
 HB_FUNC_STATIC(QTANDROID_ANDROIDCONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -207,10 +193,7 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDCONTEXT)
 #endif
 }
 
-/*
-static bool bindService(const QAndroidIntent &serviceIntent, const QAndroidServiceConnection &serviceConnection,
-QtAndroid::BindFlags flags = QtAndroid::BindFlag::None)
-*/
+// static bool bindService(const QAndroidIntent &serviceIntent, const QAndroidServiceConnection &serviceConnection, QtAndroid::BindFlags flags = QtAndroid::BindFlag::None)
 HB_FUNC_STATIC(QTANDROID_BINDSERVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -231,20 +214,14 @@ HB_FUNC_STATIC(QTANDROID_BINDSERVICE)
 #endif
 }
 
-/*
-static void runOnAndroidThread(const Runnable &runnable)
-*/
-/*
-static void runOnAndroidThreadSync(const Runnable &runnable, int timeoutMs = INT_MAX)
-*/
+// static void runOnAndroidThread(const Runnable &runnable)
+// static void runOnAndroidThreadSync(const Runnable &runnable, int timeoutMs = INT_MAX)
 
 HB_FUNC_STATIC(QTANDROID_HIDESPLASHSCREEN)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    static void hideSplashScreen()
-    */
+    // static void hideSplashScreen()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 
     QtAndroid::hideSplashScreen();
@@ -254,9 +231,7 @@ HB_FUNC_STATIC(QTANDROID_HIDESPLASHSCREEN)
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    static void hideSplashScreen(int duration)
-    */
+    // static void hideSplashScreen(int duration)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 
     QtAndroid::hideSplashScreen(PINT(1));
@@ -270,15 +245,9 @@ HB_FUNC_STATIC(QTANDROID_HIDESPLASHSCREEN)
   }
 }
 
-/*
-static void requestPermissions(const QStringList &permissions, const PermissionResultCallback &callbackFunc)
-*/
-/*
-static PermissionResultMap requestPermissionsSync(const QStringList &permissions, int timeoutMs = INT_MAX)
-*/
-/*
-static QtAndroid::PermissionResult checkPermission(const QString &permission)
-*/
+// static void requestPermissions(const QStringList &permissions, const PermissionResultCallback &callbackFunc)
+// static PermissionResultMap requestPermissionsSync(const QStringList &permissions, int timeoutMs = INT_MAX)
+// static QtAndroid::PermissionResult checkPermission(const QString &permission)
 HB_FUNC_STATIC(QTANDROID_CHECKPERMISSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -297,9 +266,7 @@ HB_FUNC_STATIC(QTANDROID_CHECKPERMISSION)
 #endif
 }
 
-/*
-static bool shouldShowRequestPermissionRationale(const QString &permission)
-*/
+// static bool shouldShowRequestPermissionRationale(const QString &permission)
 HB_FUNC_STATIC(QTANDROID_SHOULDSHOWREQUESTPERMISSIONRATIONALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))

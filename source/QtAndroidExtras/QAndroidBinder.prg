@@ -67,9 +67,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QAndroidBinder()
-    */
+    // QAndroidBinder()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QAndroidBinder();
     Qt5xHb::returnNewObject(obj, true);
@@ -77,9 +75,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_NEW)
   }
   else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1))
   {
-    /*
-    QAndroidBinder(const QAndroidJniObject &binder)
-    */
+    // QAndroidBinder(const QAndroidJniObject &binder)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QAndroidBinder(*PQANDROIDJNIOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -91,9 +87,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_NEW)
   }
 }
 
-/*
-virtual ~QAndroidBinder()
-*/
+// virtual ~QAndroidBinder()
 HB_FUNC_STATIC(QANDROIDBINDER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -112,10 +106,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_DELETE)
 #endif
 }
 
-/*
-virtual bool onTransact(int code, const QAndroidParcel &data, const QAndroidParcel &reply, QAndroidBinder::CallType
-flags)
-*/
+// virtual bool onTransact(int code, const QAndroidParcel &data, const QAndroidParcel &reply, QAndroidBinder::CallType flags)
 HB_FUNC_STATIC(QANDROIDBINDER_ONTRANSACT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -140,10 +131,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_ONTRANSACT)
 #endif
 }
 
-/*
-bool transact(int code, const QAndroidParcel &data, QAndroidParcel * reply = nullptr, QAndroidBinder::CallType flags =
-CallType::Normal) const
-*/
+// bool transact(int code, const QAndroidParcel &data, QAndroidParcel * reply = nullptr, QAndroidBinder::CallType flags = CallType::Normal) const
 HB_FUNC_STATIC(QANDROIDBINDER_TRANSACT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -171,9 +159,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_TRANSACT)
 #endif
 }
 
-/*
-QAndroidJniObject handle() const
-*/
+// QAndroidJniObject handle() const
 HB_FUNC_STATIC(QANDROIDBINDER_HANDLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))

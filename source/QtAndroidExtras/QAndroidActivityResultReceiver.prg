@@ -59,13 +59,9 @@ RETURN
 #endif
 #endif
 
-    /*
-    QAndroidActivityResultReceiver()
-    */
+// QAndroidActivityResultReceiver()
 
-    /*
-    virtual ~QAndroidActivityResultReceiver()
-    */
+// virtual ~QAndroidActivityResultReceiver()
 HB_FUNC_STATIC(QANDROIDACTIVITYRESULTRECEIVER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -84,9 +80,7 @@ HB_FUNC_STATIC(QANDROIDACTIVITYRESULTRECEIVER_DELETE)
 #endif
 }
 
-/*
-virtual void handleActivityResult(int receiverRequestCode, int resultCode, const QAndroidJniObject &data) = 0
-*/
+// virtual void handleActivityResult(int receiverRequestCode, int resultCode, const QAndroidJniObject &data) = 0
 HB_FUNC_STATIC(QANDROIDACTIVITYRESULTRECEIVER_HANDLEACTIVITYRESULT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))

@@ -76,9 +76,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QAndroidParcel()
-    */
+    // QAndroidParcel()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QAndroidParcel();
     Qt5xHb::returnNewObject(obj, true);
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_NEW)
   }
   else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1))
   {
-    /*
-    QAndroidParcel(const QAndroidJniObject &parcel)
-    */
+    // QAndroidParcel(const QAndroidJniObject &parcel)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QAndroidParcel(*PQANDROIDJNIOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -100,9 +96,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_NEW)
   }
 }
 
-/*
-virtual ~QAndroidParcel()
-*/
+// virtual ~QAndroidParcel()
 HB_FUNC_STATIC(QANDROIDPARCEL_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -121,9 +115,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_DELETE)
 #endif
 }
 
-/*
-void writeData(const QByteArray &data) const
-*/
+// void writeData(const QByteArray &data) const
 HB_FUNC_STATIC(QANDROIDPARCEL_WRITEDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -149,9 +141,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEDATA)
 #endif
 }
 
-/*
-void writeVariant(const QVariant &value) const
-*/
+// void writeVariant(const QVariant &value) const
 HB_FUNC_STATIC(QANDROIDPARCEL_WRITEVARIANT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -177,9 +167,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEVARIANT)
 #endif
 }
 
-/*
-void writeBinder(const QAndroidBinder &binder) const
-*/
+// void writeBinder(const QAndroidBinder &binder) const
 HB_FUNC_STATIC(QANDROIDPARCEL_WRITEBINDER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -205,9 +193,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEBINDER)
 #endif
 }
 
-/*
-void writeFileDescriptor(int fd) const
-*/
+// void writeFileDescriptor(int fd) const
 HB_FUNC_STATIC(QANDROIDPARCEL_WRITEFILEDESCRIPTOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -233,9 +219,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEFILEDESCRIPTOR)
 #endif
 }
 
-/*
-QByteArray readData() const
-*/
+// QByteArray readData() const
 HB_FUNC_STATIC(QANDROIDPARCEL_READDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -260,9 +244,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READDATA)
 #endif
 }
 
-/*
-QVariant readVariant() const
-*/
+// QVariant readVariant() const
 HB_FUNC_STATIC(QANDROIDPARCEL_READVARIANT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -287,9 +269,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READVARIANT)
 #endif
 }
 
-/*
-QAndroidBinder readBinder() const
-*/
+// QAndroidBinder readBinder() const
 HB_FUNC_STATIC(QANDROIDPARCEL_READBINDER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -314,9 +294,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READBINDER)
 #endif
 }
 
-/*
-int readFileDescriptor() const
-*/
+// int readFileDescriptor() const
 HB_FUNC_STATIC(QANDROIDPARCEL_READFILEDESCRIPTOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -340,9 +318,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READFILEDESCRIPTOR)
 #endif
 }
 
-/*
-QAndroidJniObject handle() const
-*/
+// QAndroidJniObject handle() const
 HB_FUNC_STATIC(QANDROIDPARCEL_HANDLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))

@@ -61,9 +61,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QAndroidJniEnvironment()
-    */
+// QAndroidJniEnvironment()
 HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -79,9 +77,7 @@ HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_NEW)
 #endif
 }
 
-/*
-~QAndroidJniEnvironment()
-*/
+// ~QAndroidJniEnvironment()
 HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -100,9 +96,7 @@ HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_DELETE)
 #endif
 }
 
-/*
-static JavaVM * javaVM()
-*/
+// static JavaVM * javaVM()
 HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_JAVAVM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -121,9 +115,7 @@ HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_JAVAVM)
 #endif
 }
 
-/*
-jclass findClass(const char * className)
-*/
+// jclass findClass(const char * className)
 HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_FINDCLASS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
