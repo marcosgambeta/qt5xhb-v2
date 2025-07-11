@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONHOSTMODESTATECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("hostModeStateChanged(QBluetoothLocalDevice::HostMode)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -446,7 +446,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONHOSTMODESTATECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -480,7 +480,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGFINISHED)
         sender->metaObject()->indexOfSignal("pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -505,7 +505,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGFINISHED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -538,7 +538,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYPINCODE)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pairingDisplayPinCode(QBluetoothAddress,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -563,7 +563,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYPINCODE)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -596,7 +596,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYCONFIRMATION)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pairingDisplayConfirmation(QBluetoothAddress,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -621,7 +621,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYCONFIRMATION)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -654,7 +654,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONERROR)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QBluetoothLocalDevice::Error)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -676,7 +676,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONERROR)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

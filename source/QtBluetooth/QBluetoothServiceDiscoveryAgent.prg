@@ -501,7 +501,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_ONSERVICEDISCOVERED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("serviceDiscovered(QBluetoothServiceInfo)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -525,7 +525,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_ONSERVICEDISCOVERED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -558,7 +558,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_ONFINISHED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -578,7 +578,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_ONFINISHED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -611,7 +611,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_ONCANCELED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("canceled()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_ONCANCELED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -664,7 +664,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_ONERROR)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QBluetoothServiceDiscoveryAgent::Error)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -687,7 +687,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_ONERROR)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
