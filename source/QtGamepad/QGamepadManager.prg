@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONCONNECTEDGAMEPADSCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("connectedGamepadsChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONCONNECTEDGAMEPADSCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADCONNECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("gamepadConnected(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADCONNECTED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADDISCONNECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("gamepadDisconnected(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADDISCONNECTED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADAXISEVENT)
         sender->metaObject()->indexOfSignal("gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -510,7 +510,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADAXISEVENT)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -544,7 +544,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT)
         sender->metaObject()->indexOfSignal("gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -571,7 +571,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -605,7 +605,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT)
         sender->metaObject()->indexOfSignal("gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -629,7 +629,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -662,7 +662,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONBUTTONCONFIGURED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonConfigured(int,QGamepadManager::GamepadButton)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -686,7 +686,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONBUTTONCONFIGURED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -719,7 +719,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONAXISCONFIGURED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisConfigured(int,QGamepadManager::GamepadAxis)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -743,7 +743,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONAXISCONFIGURED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -776,7 +776,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONCONFIGURATIONCANCELED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("configurationCanceled(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -798,7 +798,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ONCONFIGURATIONCANCELED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

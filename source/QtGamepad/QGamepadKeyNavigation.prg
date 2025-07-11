@@ -1172,7 +1172,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONACTIVECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activeChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1194,7 +1194,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONACTIVECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1227,7 +1227,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONGAMEPADCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("gamepadChanged(QGamepad*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1249,7 +1249,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONGAMEPADCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1282,7 +1282,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONUPKEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("upKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1304,7 +1304,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONUPKEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1337,7 +1337,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONDOWNKEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("downKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1359,7 +1359,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONDOWNKEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1392,7 +1392,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONLEFTKEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("leftKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1414,7 +1414,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONLEFTKEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1447,7 +1447,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONRIGHTKEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rightKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1469,7 +1469,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONRIGHTKEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1502,7 +1502,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONAKEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonAKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1524,7 +1524,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONAKEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1557,7 +1557,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONBKEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonBKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1579,7 +1579,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONBKEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1612,7 +1612,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONXKEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonXKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1634,7 +1634,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONXKEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1667,7 +1667,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONYKEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonYKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1689,7 +1689,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONYKEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1722,7 +1722,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONSELECTKEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonSelectKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1744,7 +1744,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONSELECTKEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1777,7 +1777,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONSTARTKEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonStartKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1799,7 +1799,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONSTARTKEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1832,7 +1832,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONGUIDEKEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonGuideKeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1854,7 +1854,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONGUIDEKEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1887,7 +1887,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONL1KEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonL1KeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1909,7 +1909,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONL1KEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1942,7 +1942,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONR1KEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonR1KeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1964,7 +1964,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONR1KEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1997,7 +1997,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONL2KEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonL2KeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2019,7 +2019,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONL2KEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2052,7 +2052,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONR2KEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonR2KeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2074,7 +2074,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONR2KEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2107,7 +2107,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONL3KEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonL3KeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2129,7 +2129,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONL3KEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2162,7 +2162,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONR3KEYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonR3KeyChanged(Qt::Key)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2184,7 +2184,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ONBUTTONR3KEYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
