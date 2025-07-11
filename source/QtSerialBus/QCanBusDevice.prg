@@ -576,7 +576,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ONERROROCCURRED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("errorOccurred(QCanBusDevice::CanBusError)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -598,7 +598,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ONERROROCCURRED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -631,7 +631,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ONFRAMESRECEIVED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("framesReceived()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -650,7 +650,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ONFRAMESRECEIVED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -683,7 +683,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ONFRAMESWRITTEN)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("framesWritten(qint64)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -705,7 +705,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ONFRAMESWRITTEN)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -738,7 +738,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ONSTATECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QCanBusDevice::CanBusDeviceState)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -760,7 +760,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ONSTATECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
