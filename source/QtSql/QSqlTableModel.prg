@@ -927,7 +927,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREDELETE)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("beforeDelete(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -948,7 +948,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREDELETE)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -977,7 +977,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREINSERT)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("beforeInsert(QSqlRecord)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -999,7 +999,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREINSERT)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1028,7 +1028,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREUPDATE)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("beforeUpdate(int,QSqlRecord)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1052,7 +1052,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREUPDATE)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1081,7 +1081,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONPRIMEINSERT)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("primeInsert(int,QSqlRecord)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1105,7 +1105,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONPRIMEINSERT)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
