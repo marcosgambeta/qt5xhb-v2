@@ -661,7 +661,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONLOCALECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("localeChanged(QLocale)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -683,7 +683,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONLOCALECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -716,7 +716,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONPITCHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pitchChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -738,7 +738,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONPITCHCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -771,7 +771,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONRATECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rateChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -793,7 +793,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONRATECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -826,7 +826,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONSTATECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QTextToSpeech::State)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -848,7 +848,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONSTATECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -881,7 +881,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONVOICECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("voiceChanged(QVoice)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -903,7 +903,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONVOICECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -936,7 +936,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONVOLUMECHANGED1)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("volumeChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -958,7 +958,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONVOLUMECHANGED1)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -991,7 +991,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONVOLUMECHANGED2)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("volumeChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1013,7 +1013,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONVOLUMECHANGED2)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
