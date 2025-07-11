@@ -283,9 +283,9 @@ METHOD setColor() CLASS Dialog
    LOCAL oColor
 
    IF ::oNative:isChecked()
-      oColor := QColorDialog():getColor("green", SELF)
+      oColor := QColorDialog():getColor(QColor():new("green"), SELF)
    ELSE
-      oColor := QColorDialog():getColor("green", SELF, "Select Color", QColorDialog_DontUseNativeDialog)
+      oColor := QColorDialog():getColor(QColor():new("green"), SELF, "Select Color", QColorDialog_DontUseNativeDialog)
    ENDIF
 
    IF oColor:isValid()
