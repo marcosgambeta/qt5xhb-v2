@@ -385,7 +385,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("satellitesInViewUpdated(QList<QGeoSatelliteInfo>)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -429,7 +429,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("satellitesInUseUpdated(QList<QGeoSatelliteInfo>)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -506,7 +506,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -539,7 +539,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONREQUESTTIMEOUT)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("requestTimeout()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -559,7 +559,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONREQUESTTIMEOUT)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -592,7 +592,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONERROR)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QGeoSatelliteInfoSource::Error)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONERROR)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
