@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONDIRECTORYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("directoryChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONDIRECTORYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONFILECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("fileChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONFILECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

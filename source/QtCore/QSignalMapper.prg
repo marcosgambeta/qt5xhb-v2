@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED1)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mapped(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED1)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED2)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mapped(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -371,7 +371,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED2)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED3)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mapped(QWidget*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED3)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -451,7 +451,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED4)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mapped(QObject*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED4)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -503,7 +503,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDINT)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mappedInt(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -524,7 +524,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDINT)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -557,7 +557,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDOBJECT)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mappedObject(QObject*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -579,7 +579,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDOBJECT)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -612,7 +612,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDSTRING)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mappedString(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -634,7 +634,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDSTRING)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -667,7 +667,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDWIDGET)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mappedWidget(QWidget*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -689,7 +689,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDWIDGET)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

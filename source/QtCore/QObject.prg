@@ -1114,12 +1114,12 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALL)
 
   if (obj != nullptr)
   {
-    if (hb_pcount() == 0)
+    if (ISNUMPAR(0))
     {
       Qt5xHb::Events_disconnect_all_events(obj, false);
       Qt5xHb::Signals_disconnect_all_signals(obj, false);
     }
-    else if (hb_pcount() == 1 && HB_ISLOG(1))
+    else if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       Qt5xHb::Events_disconnect_all_events(obj, PBOOL(1));
       Qt5xHb::Signals_disconnect_all_signals(obj, PBOOL(1));
@@ -1139,11 +1139,11 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALLEVENTS)
 
   if (obj != nullptr)
   {
-    if (hb_pcount() == 0)
+    if (ISNUMPAR(0))
     {
       Qt5xHb::Events_disconnect_all_events(obj, false);
     }
-    else if (hb_pcount() == 1 && HB_ISLOG(1))
+    else if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       Qt5xHb::Events_disconnect_all_events(obj, PBOOL(1));
     }
@@ -1162,11 +1162,11 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALLSIGNALS)
 
   if (obj != nullptr)
   {
-    if (hb_pcount() == 0)
+    if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnect_all_signals(obj, false);
     }
-    else if (hb_pcount() == 1 && HB_ISLOG(1))
+    else if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       Qt5xHb::Signals_disconnect_all_signals(obj, PBOOL(1));
     }
@@ -1183,7 +1183,7 @@ void _qtxhb_processOnEventMethod(QEvent::Type event)
 {
   auto obj = qobject_cast<QObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (hb_pcount() == 1 && hb_param(1, HB_IT_BLOCK | HB_IT_SYMBOL))
+  if (ISNUMPAR(1) && hb_param(1, HB_IT_BLOCK | HB_IT_SYMBOL))
   {
     auto item = hb_itemNew(hb_param(1, HB_IT_BLOCK | HB_IT_SYMBOL));
 
@@ -1196,7 +1196,7 @@ void _qtxhb_processOnEventMethod(QEvent::Type event)
       hb_retl(0);
     }
   }
-  else if (hb_pcount() == 0)
+  else if (ISNUMPAR(0))
   {
     hb_retl(Qt5xHb::Events_disconnect_event(obj, event));
   }
@@ -2162,7 +2162,7 @@ HB_FUNC_STATIC(QOBJECT_ONDESTROYED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("destroyed(QObject*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2184,7 +2184,7 @@ HB_FUNC_STATIC(QOBJECT_ONDESTROYED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2211,7 +2211,7 @@ HB_FUNC_STATIC(QOBJECT_ONOBJECTNAMECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("objectNameChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2233,7 +2233,7 @@ HB_FUNC_STATIC(QOBJECT_ONOBJECTNAMECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2252,7 +2252,7 @@ HB_FUNC_STATIC(QOBJECT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
+  if (ISNUMPAR(1) && HB_ISOBJECT(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -2261,7 +2261,7 @@ HB_FUNC_STATIC(QOBJECT_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
+  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
   {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -2297,7 +2297,7 @@ HB_FUNC_STATIC(QOBJECT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
+  if (ISNUMPAR(1) && HB_ISLOG(1))
   {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
