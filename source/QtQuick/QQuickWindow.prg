@@ -757,7 +757,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONAFTERRENDERING)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("afterRendering()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -776,7 +776,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONAFTERRENDERING)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -805,7 +805,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONBEFORERENDERING)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("beforeRendering()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -824,7 +824,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONBEFORERENDERING)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -853,7 +853,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONBEFORESYNCHRONIZING)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("beforeSynchronizing()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -872,7 +872,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONBEFORESYNCHRONIZING)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -901,7 +901,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -923,7 +923,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONCOLORCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -952,7 +952,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONFRAMESWAPPED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("frameSwapped()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -971,7 +971,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONFRAMESWAPPED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONSCENEGRAPHINITIALIZED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sceneGraphInitialized()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1019,7 +1019,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONSCENEGRAPHINITIALIZED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1048,7 +1048,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONSCENEGRAPHINVALIDATED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sceneGraphInvalidated()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1067,7 +1067,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ONSCENEGRAPHINVALIDATED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
