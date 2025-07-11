@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QINAPPSTORE_ONPRODUCTREGISTERED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("productRegistered(QInAppProduct*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QINAPPSTORE_ONPRODUCTREGISTERED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QINAPPSTORE_ONPRODUCTUNKNOWN)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("productUnknown(QInAppProduct::ProductType,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QINAPPSTORE_ONPRODUCTUNKNOWN)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QINAPPSTORE_ONTRANSACTIONREADY)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("transactionReady(QInAppTransaction*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QINAPPSTORE_ONTRANSACTIONREADY)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
