@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ONCUSTOMFOCUSPOINTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("customFocusPointChanged(QPointF)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -369,7 +369,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ONCUSTOMFOCUSPOINTCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ONFOCUSMODECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("focusModeChanged(QCameraFocus::FocusModes)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ONFOCUSMODECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ONFOCUSPOINTMODECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("focusPointModeChanged(QCameraFocus::FocusPointMode)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -472,7 +472,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ONFOCUSPOINTMODECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -501,7 +501,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("focusZonesChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -521,7 +521,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

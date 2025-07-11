@@ -853,7 +853,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONAPERTURECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("apertureChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -875,7 +875,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONAPERTURECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -904,7 +904,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONAPERTURERANGECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("apertureRangeChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -924,7 +924,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONAPERTURERANGECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -953,7 +953,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("exposureCompensationChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -975,7 +975,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1004,7 +1004,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONFLASHREADY)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("flashReady(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1025,7 +1025,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONFLASHREADY)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("isoSensitivityChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1105,7 +1105,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("shutterSpeedChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1127,7 +1127,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1156,7 +1156,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("shutterSpeedRangeChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1176,7 +1176,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

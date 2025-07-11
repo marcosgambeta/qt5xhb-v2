@@ -801,7 +801,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentIndexChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -823,7 +823,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -852,7 +852,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONCURRENTMEDIACHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentMediaChanged(QMediaContent)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -874,7 +874,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONCURRENTMEDIACHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -903,7 +903,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONLOADFAILED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("loadFailed()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -922,7 +922,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONLOADFAILED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -951,7 +951,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONLOADED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("loaded()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -970,7 +970,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONLOADED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -999,7 +999,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONMEDIAABOUTTOBEINSERTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mediaAboutToBeInserted(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1023,7 +1023,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONMEDIAABOUTTOBEINSERTED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1052,7 +1052,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONMEDIAABOUTTOBEREMOVED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mediaAboutToBeRemoved(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONMEDIAABOUTTOBEREMOVED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1105,7 +1105,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONMEDIACHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mediaChanged(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1129,7 +1129,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONMEDIACHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1158,7 +1158,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONMEDIAINSERTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mediaInserted(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1182,7 +1182,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONMEDIAINSERTED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1211,7 +1211,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONMEDIAREMOVED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("mediaRemoved(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1235,7 +1235,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONMEDIAREMOVED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1264,7 +1264,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("playbackModeChanged(QMediaPlaylist::PlaybackMode)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1286,7 +1286,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
