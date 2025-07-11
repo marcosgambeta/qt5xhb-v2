@@ -886,7 +886,7 @@ HB_FUNC_STATIC(QSCREEN_ONGEOMETRYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("geometryChanged(QRect)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -908,7 +908,7 @@ HB_FUNC_STATIC(QSCREEN_ONGEOMETRYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -937,7 +937,7 @@ HB_FUNC_STATIC(QSCREEN_ONPHYSICALSIZECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("physicalSizeChanged(QSizeF)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -959,7 +959,7 @@ HB_FUNC_STATIC(QSCREEN_ONPHYSICALSIZECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -988,7 +988,7 @@ HB_FUNC_STATIC(QSCREEN_ONPHYSICALDOTSPERINCHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("physicalDotsPerInchChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1010,7 +1010,7 @@ HB_FUNC_STATIC(QSCREEN_ONPHYSICALDOTSPERINCHCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC(QSCREEN_ONLOGICALDOTSPERINCHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("logicalDotsPerInchChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC(QSCREEN_ONLOGICALDOTSPERINCHCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1090,7 +1090,7 @@ HB_FUNC_STATIC(QSCREEN_ONVIRTUALGEOMETRYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("virtualGeometryChanged(QRect)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1112,7 +1112,7 @@ HB_FUNC_STATIC(QSCREEN_ONVIRTUALGEOMETRYCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1141,7 +1141,7 @@ HB_FUNC_STATIC(QSCREEN_ONPRIMARYORIENTATIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("primaryOrientationChanged(Qt::ScreenOrientation)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1163,7 +1163,7 @@ HB_FUNC_STATIC(QSCREEN_ONPRIMARYORIENTATIONCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1192,7 +1192,7 @@ HB_FUNC_STATIC(QSCREEN_ONORIENTATIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("orientationChanged(Qt::ScreenOrientation)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1214,7 +1214,7 @@ HB_FUNC_STATIC(QSCREEN_ONORIENTATIONCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1243,7 +1243,7 @@ HB_FUNC_STATIC(QSCREEN_ONREFRESHRATECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("refreshRateChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1265,7 +1265,7 @@ HB_FUNC_STATIC(QSCREEN_ONREFRESHRATECHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

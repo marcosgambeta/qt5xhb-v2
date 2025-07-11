@@ -2024,7 +2024,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONCONTENTSCHANGE)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("contentsChange(int,int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2050,7 +2050,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONCONTENTSCHANGE)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2079,7 +2079,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONCONTENTSCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("contentsChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2098,7 +2098,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONCONTENTSCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2127,7 +2127,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONUNDOAVAILABLE)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("undoAvailable(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2149,7 +2149,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONUNDOAVAILABLE)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2178,7 +2178,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONREDOAVAILABLE)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("redoAvailable(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2200,7 +2200,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONREDOAVAILABLE)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2229,7 +2229,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONUNDOCOMMANDADDED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("undoCommandAdded()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2248,7 +2248,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONUNDOCOMMANDADDED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2277,7 +2277,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONMODIFICATIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("modificationChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2299,7 +2299,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONMODIFICATIONCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2328,7 +2328,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("cursorPositionChanged(QTextCursor)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2350,7 +2350,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2379,7 +2379,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("blockCountChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2401,7 +2401,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2430,7 +2430,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("documentLayoutChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2449,7 +2449,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
