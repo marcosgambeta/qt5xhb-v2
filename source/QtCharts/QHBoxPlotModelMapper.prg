@@ -438,7 +438,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONCOLUMNCOUNTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("columnCountChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONCOLUMNCOUNTCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -491,7 +491,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONFIRSTBOXSETROWCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("firstBoxSetRowChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -511,7 +511,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONFIRSTBOXSETROWCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -544,7 +544,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONFIRSTCOLUMNCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("firstColumnChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONFIRSTCOLUMNCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -597,7 +597,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONLASTBOXSETROWCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("lastBoxSetRowChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -617,7 +617,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONLASTBOXSETROWCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -650,7 +650,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONMODELREPLACED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("modelReplaced()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -669,7 +669,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONMODELREPLACED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -702,7 +702,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONSERIESREPLACED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("seriesReplaced()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -721,7 +721,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONSERIESREPLACED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
