@@ -277,7 +277,7 @@ RETURN SELF
 
 // Classe QueryPage - página 3
 
-CLASS QueryPage
+CLASS QueryPage INHERIT QWidget
 
    METHOD new(oParent, nFlags)
 
