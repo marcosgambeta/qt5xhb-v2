@@ -1852,7 +1852,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONCURRENTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1874,7 +1874,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONCURRENTCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1903,7 +1903,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONDIRECTORYENTERED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("directoryEntered(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1925,7 +1925,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONDIRECTORYENTERED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -1954,7 +1954,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONFILESELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("fileSelected(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1976,7 +1976,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONFILESELECTED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2005,7 +2005,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONFILESSELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("filesSelected(QStringList)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2033,7 +2033,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONFILESSELECTED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2062,7 +2062,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONFILTERSELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("filterSelected(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2084,7 +2084,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONFILTERSELECTED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2113,7 +2113,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONURLSELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("urlSelected(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2135,7 +2135,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONURLSELECTED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2164,7 +2164,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONURLSSELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("urlsSelected(QList<QUrl>)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2207,7 +2207,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONURLSSELECTED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2236,7 +2236,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONCURRENTURLCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentUrlChanged(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2258,7 +2258,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONCURRENTURLCHANGED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -2287,7 +2287,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONDIRECTORYURLENTERED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("directoryUrlEntered(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -2309,7 +2309,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ONDIRECTORYURLENTERED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

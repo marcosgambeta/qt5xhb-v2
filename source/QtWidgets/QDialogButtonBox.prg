@@ -459,7 +459,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONACCEPTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("accepted()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -478,7 +478,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONACCEPTED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONCLICKED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QAbstractButton*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONCLICKED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -558,7 +558,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONHELPREQUESTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("helpRequested()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -577,7 +577,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONHELPREQUESTED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -606,7 +606,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONREJECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rejected()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -625,7 +625,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONREJECTED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));

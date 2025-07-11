@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONCLICKED1)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonClicked(QAbstractButton*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONCLICKED1)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONCLICKED2)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonClicked(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -478,7 +478,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONCLICKED2)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONPRESSED1)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonPressed(QAbstractButton*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONPRESSED1)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -558,7 +558,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONPRESSED2)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonPressed(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -580,7 +580,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONPRESSED2)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -609,7 +609,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONRELEASED1)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonReleased(QAbstractButton*)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONRELEASED1)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -660,7 +660,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONRELEASED2)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonReleased(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -682,7 +682,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONRELEASED2)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -712,7 +712,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONTOGGLED1)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonToggled(QAbstractButton*,bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -736,7 +736,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONTOGGLED1)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -769,7 +769,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONTOGGLED2)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonToggled(int,bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -793,7 +793,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONTOGGLED2)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -826,7 +826,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONIDCLICKED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("idClicked(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -847,7 +847,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONIDCLICKED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -880,7 +880,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONIDPRESSED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("idPressed(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -901,7 +901,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONIDPRESSED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -934,7 +934,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONIDRELEASED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("idReleased(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -955,7 +955,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONIDRELEASED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -988,7 +988,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONIDTOGGLED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("idToggled(int,bool)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONIDTOGGLED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
