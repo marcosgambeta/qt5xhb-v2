@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_ONINDEXINGFINISHED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("indexingFinished()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_ONINDEXINGFINISHED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -399,7 +399,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_ONINDEXINGSTARTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("indexingStarted()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_ONINDEXINGSTARTED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_ONSEARCHINGFINISHED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("searchingFinished(int)");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_ONSEARCHINGFINISHED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
@@ -498,7 +498,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_ONSEARCHINGSTARTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("searchingStarted()");
     auto indexOfCodeBlock = -1;
 
-    if (hb_pcount() == 1 && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
       {
@@ -517,7 +517,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_ONSEARCHINGSTARTED)
         result = true;
       }
     }
-    else if (hb_pcount() == 0)
+    else if (ISNUMPAR(0))
     {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
