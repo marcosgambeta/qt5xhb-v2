@@ -991,7 +991,7 @@ static QSqlDatabase database(const QString &connectionName = QLatin1String(QSqlD
 HB_FUNC_STATIC(QSQLDATABASE_DATABASE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISLOG(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && ISLOGORNIL(2))
   {
 #endif
     auto ptr = new QSqlDatabase(
