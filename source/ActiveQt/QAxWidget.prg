@@ -75,21 +75,21 @@ RETURN
 
 HB_FUNC_STATIC(QAXWIDGET_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
   {
     // QAxWidget(QWidget * parent = nullptr, Qt::WindowFlags f = 0)
     auto obj = new QAxWidget(OPQWIDGET(1, nullptr),
                              HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
   {
     // QAxWidget(const QString &c, QWidget * parent = nullptr, Qt::WindowFlags f = 0)
     auto obj = new QAxWidget(PQSTRING(1), OPQWIDGET(2, nullptr),
                              HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 3) && HB_ISPOINTER(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(1, 3) && HB_ISPOINTER(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
   {
     // QAxWidget(IUnknown * iface, QWidget * parent = nullptr, Qt::WindowFlags f = 0)
     auto obj = new QAxWidget(static_cast<IUnknown *>(hb_parptr(1)), OPQWIDGET(2, nullptr),
