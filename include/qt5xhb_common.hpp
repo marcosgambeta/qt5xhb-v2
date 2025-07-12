@@ -24,6 +24,8 @@
 #define ISOPTOBJECT(n) (HB_ISOBJECT(n)||HB_ISNIL(n))
 #define ISOPTARRAY(n) (HB_ISARRAY(n)||HB_ISNIL(n))
 
+#define ISNUMORNIL(n) (HB_ISNUM(n)||HB_ISNIL(n))
+
 // TOCHECK: for xHarbour compatibility
 #ifdef __XHARBOUR__
 #define hb_objGetClass(x) HB_OBJ_CLASS(x)
