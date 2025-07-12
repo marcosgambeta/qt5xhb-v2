@@ -905,7 +905,7 @@ HB_FUNC_STATIC(QVARIANT_TOINT)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       bool par1;
@@ -931,7 +931,7 @@ HB_FUNC_STATIC(QVARIANT_TOUINT)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       bool par1;
@@ -957,7 +957,7 @@ HB_FUNC_STATIC(QVARIANT_TOLONGLONG)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       bool par1;
@@ -983,7 +983,7 @@ HB_FUNC_STATIC(QVARIANT_TOULONGLONG)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       bool par1;
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC(QVARIANT_TODOUBLE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       bool par1;
@@ -1059,7 +1059,7 @@ HB_FUNC_STATIC(QVARIANT_TOFLOAT)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       bool par1;
@@ -1085,7 +1085,7 @@ HB_FUNC_STATIC(QVARIANT_TOREAL)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       bool par1;
