@@ -1647,7 +1647,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RENDERTOIMAGE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (ISQSIZE(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && (ISQSIZE(2) || HB_ISNIL(2)))
     {
 #endif
       auto ptr = new QImage(
