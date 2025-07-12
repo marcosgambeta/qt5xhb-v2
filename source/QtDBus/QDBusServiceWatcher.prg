@@ -73,7 +73,7 @@ RETURN
     auto obj = new QDBusServiceWatcher(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && ISQDBUSCONNECTION(2) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
+  else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && ISQDBUSCONNECTION(2) && ISNUMORNIL(3) &&
            (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
