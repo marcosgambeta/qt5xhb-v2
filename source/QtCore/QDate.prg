@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QDATE_TOSTRING)
       RQSTRING(obj->toString(PQSTRING(1)));
     }
   }
-  else if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  else if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     /*
     QString toString(Qt::DateFormat format = Qt::TextDate) const
@@ -511,7 +511,7 @@ HB_FUNC_STATIC(QDATE_WEEKNUMBER)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       int par1;
@@ -593,7 +593,7 @@ HB_FUNC_STATIC(QDATE_FROMJULIANDAY)
 
 HB_FUNC_STATIC(QDATE_FROMSTRING)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
   {
     /*
     static QDate fromString(const QString &string, Qt::DateFormat format = Qt::TextDate)

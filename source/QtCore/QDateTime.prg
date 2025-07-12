@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QDATETIME_NEW)
     auto obj = new QDateTime(*PQDATE(1));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(2, 3) && ISQDATE(1) && ISQTIME(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQDATE(1) && ISQTIME(2) && ISNUMORNIL(3))
   {
     /*
     QDateTime(const QDate &date, const QTime &time, Qt::TimeSpec spec = Qt::LocalTime)
@@ -657,7 +657,7 @@ HB_FUNC_STATIC(QDATETIME_TOSTRING)
       RQSTRING(obj->toString(PQSTRING(1)));
     }
   }
-  else if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  else if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     /*
     QString toString(Qt::DateFormat format = Qt::TextDate) const
@@ -831,7 +831,7 @@ HB_FUNC_STATIC(QDATETIME_FROMMSECSSINCEEPOCH)
 
 HB_FUNC_STATIC(QDATETIME_FROMSTRING)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
   {
     /*
     static QDateTime fromString(const QString &string, Qt::DateFormat format = Qt::TextDate)

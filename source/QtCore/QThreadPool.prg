@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QTHREADPOOL_START)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQRUNNABLE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQRUNNABLE(1) && ISNUMORNIL(2))
     {
 #endif
       obj->start(PQRUNNABLE(1), OPINT(2, 0));
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QTHREADPOOL_WAITFORDONE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RBOOL(obj->waitForDone(OPINT(1, -1)));

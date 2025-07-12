@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_DATA)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       auto ptr = new QVariant(obj->data(OPINT(1, Qt::DisplayRole)));

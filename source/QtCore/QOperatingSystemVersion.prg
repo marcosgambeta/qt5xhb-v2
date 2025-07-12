@@ -74,7 +74,7 @@ RETURN
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4))
   {
     auto obj = new QOperatingSystemVersion(static_cast<QOperatingSystemVersion::OSType>(hb_parni(1)), PINT(2),
                                            OPINT(3, -1), OPINT(4, -1));

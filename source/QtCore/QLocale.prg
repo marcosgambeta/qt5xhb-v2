@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QLOCALE_NEW)
     auto obj = new QLocale(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
   {
     /*
     QLocale(QLocale::Language language, QLocale::Country country = QLocale::AnyCountry)
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QLOCALE_CURRENCYSYMBOL)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RQSTRING(obj->currencySymbol(HB_ISNIL(1) ? static_cast<QLocale::CurrencySymbolFormat>(QLocale::CurrencySymbol)
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QLOCALE_DATEFORMAT)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RQSTRING(obj->dateFormat(HB_ISNIL(1) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
@@ -356,7 +356,7 @@ HB_FUNC_STATIC(QLOCALE_DATETIMEFORMAT)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RQSTRING(obj->dateTimeFormat(HB_ISNIL(1) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QLOCALE_DAYNAME)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       RQSTRING(obj->dayName(PINT(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
@@ -553,7 +553,7 @@ HB_FUNC_STATIC(QLOCALE_MONTHNAME)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       RQSTRING(obj->monthName(PINT(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
@@ -773,7 +773,7 @@ HB_FUNC_STATIC(QLOCALE_QUOTESTRING)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
     {
 #endif
       RQSTRING(obj->quoteString(PQSTRING(1), HB_ISNIL(2)
@@ -849,7 +849,7 @@ HB_FUNC_STATIC(QLOCALE_STANDALONEDAYNAME)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       RQSTRING(obj->standaloneDayName(PINT(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
@@ -874,7 +874,7 @@ HB_FUNC_STATIC(QLOCALE_STANDALONEMONTHNAME)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       RQSTRING(obj->standaloneMonthName(PINT(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
@@ -923,7 +923,7 @@ HB_FUNC_STATIC(QLOCALE_TIMEFORMAT)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RQSTRING(obj->timeFormat(HB_ISNIL(1) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
@@ -1136,7 +1136,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING)
 
 HB_FUNC_STATIC(QLOCALE_TODATE)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
   {
     /*
     QDate toDate(const QString &string, QLocale::FormatType format = QLocale::LongFormat) const
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC(QLOCALE_TODATE)
 
 HB_FUNC_STATIC(QLOCALE_TODATETIME)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
   {
     /*
     QDateTime toDateTime(const QString &string, QLocale::FormatType format = QLocale::LongFormat) const
@@ -1339,7 +1339,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING3)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQDATE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQDATE(1) && ISNUMORNIL(2))
     {
 #endif
       RQSTRING(obj->toString(*PQDATE(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
@@ -1388,7 +1388,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING5)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQTIME(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQTIME(1) && ISNUMORNIL(2))
     {
 #endif
       RQSTRING(obj->toString(*PQTIME(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
@@ -1413,7 +1413,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING6)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQDATETIME(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQDATETIME(1) && ISNUMORNIL(2))
     {
 #endif
       RQSTRING(obj->toString(*PQDATETIME(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
@@ -1558,7 +1558,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING12)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
     {
 #endif
       RQSTRING(obj->toString(PFLOAT(1), OPCHAR(2, 'g'), OPINT(3, 6)));
@@ -1606,7 +1606,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING14)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
     {
 #endif
       RQSTRING(obj->toString(PDOUBLE(1), OPCHAR(2, 'g'), OPINT(3, 6)));
@@ -1630,7 +1630,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING)
   {
     HB_FUNC_EXEC(QLOCALE_TOSTRING2);
   }
-  else if (ISBETWEEN(1, 2) && ISQDATE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQDATE(1) && ISNUMORNIL(2))
   {
     HB_FUNC_EXEC(QLOCALE_TOSTRING3);
   }
@@ -1638,11 +1638,11 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING)
   {
     HB_FUNC_EXEC(QLOCALE_TOSTRING4);
   }
-  else if (ISBETWEEN(1, 2) && ISQTIME(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQTIME(1) && ISNUMORNIL(2))
   {
     HB_FUNC_EXEC(QLOCALE_TOSTRING5);
   }
-  else if (ISBETWEEN(1, 2) && ISQDATETIME(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQDATETIME(1) && ISNUMORNIL(2))
   {
     HB_FUNC_EXEC(QLOCALE_TOSTRING6);
   }
@@ -1658,7 +1658,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING)
 
 HB_FUNC_STATIC(QLOCALE_TOTIME)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
   {
     /*
     QTime toTime(const QString &string, QLocale::FormatType format = QLocale::LongFormat) const

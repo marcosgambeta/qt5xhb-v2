@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_INDEX)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
 #endif
       auto ptr = new QModelIndex(obj->index(

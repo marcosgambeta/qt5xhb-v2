@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QTHREAD_EXIT)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       obj->exit(OPINT(1, 0));
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QTHREAD_START)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       obj->start(HB_ISNIL(1) ? static_cast<QThread::Priority>(QThread::InheritPriority)
