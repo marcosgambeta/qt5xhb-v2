@@ -25,6 +25,7 @@
 #define ISOPTARRAY(n) (HB_ISARRAY(n)||HB_ISNIL(n))
 
 #define ISNUMORNIL(n) (HB_ISNUM(n)||HB_ISNIL(n))
+#define ISLOGORNIL(n) (HB_ISLOG(n)||HB_ISNIL(n))
 
 // TOCHECK: for xHarbour compatibility
 #ifdef __XHARBOUR__
