@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_LISTEN)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (ISQHOSTADDRESS(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(0, 2) && (ISQHOSTADDRESS(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
     {
 #endif
       RBOOL(obj->listen(HB_ISNIL(1) ? QHostAddress::Any : *static_cast<QHostAddress *>(Qt5xHb::itemGetPtr(1)),
