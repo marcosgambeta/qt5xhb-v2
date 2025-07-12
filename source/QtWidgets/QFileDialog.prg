@@ -1204,7 +1204,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETOPTION)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2))
     {
 #endif
       obj->setOption(static_cast<QFileDialog::Option>(hb_parni(1)), OPBOOL(2, true));
