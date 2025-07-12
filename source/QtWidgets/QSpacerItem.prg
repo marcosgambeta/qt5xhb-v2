@@ -63,7 +63,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSPACERITEM_NEW)
 {
-  if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4))
   {
     auto obj = new QSpacerItem(PINT(1), PINT(2),
                                HB_ISNIL(3) ? static_cast<QSizePolicy::Policy>(QSizePolicy::Minimum)
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QSPACERITEM_CHANGESIZE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
+    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4))
     {
 #endif
       obj->changeSize(PINT(1), PINT(2),

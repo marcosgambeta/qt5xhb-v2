@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_GRABGESTURE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       obj->grabGesture(static_cast<Qt::GestureType>(hb_parni(1)),
@@ -583,7 +583,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_COLLIDESWITHITEM)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && ISNUMORNIL(2))
     {
 #endif
       RBOOL(obj->collidesWithItem(PQGRAPHICSITEM(1), HB_ISNIL(2)
@@ -609,7 +609,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_COLLIDESWITHPATH)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && ISNUMORNIL(2))
     {
 #endif
       RBOOL(obj->collidesWithPath(*PQPAINTERPATH(1), HB_ISNIL(2)
@@ -775,7 +775,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_EFFECTIVEOPACITY)
 
 HB_FUNC_STATIC(QGRAPHICSOBJECT_ENSUREVISIBLE)
 {
-  if (ISBETWEEN(0, 3) && (ISQRECTF(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(0, 3) && (ISQRECTF(1) || HB_ISNIL(1)) && ISNUMORNIL(2) && ISNUMORNIL(3))
   {
     /*
     void ensureVisible(const QRectF &rect = QRectF(), int xmargin = 50, int ymargin = 50)
@@ -790,8 +790,8 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_ENSUREVISIBLE)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)) &&
-      (HB_ISNUM(6) || HB_ISNIL(6)))
+  if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5) &&
+      ISNUMORNIL(6))
   {
     /*
     void ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50)
@@ -3042,7 +3042,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_SETFOCUS)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       obj->setFocus(HB_ISNIL(1) ? static_cast<Qt::FocusReason>(Qt::OtherFocusReason)

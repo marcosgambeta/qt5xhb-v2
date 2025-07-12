@@ -112,7 +112,7 @@ RETURN
     */
 HB_FUNC_STATIC(QMAINWINDOW_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
   {
     auto obj = new QMainWindow(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
                                                                   : static_cast<Qt::WindowFlags>(hb_parni(2)));
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBARBREAK)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       obj->addToolBarBreak(HB_ISNIL(1) ? static_cast<Qt::ToolBarArea>(Qt::TopToolBarArea)
@@ -688,7 +688,7 @@ HB_FUNC_STATIC(QMAINWINDOW_RESTORESTATE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2))
     {
 #endif
       RBOOL(obj->restoreState(*PQBYTEARRAY(1), OPINT(2, 0)));
@@ -712,7 +712,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SAVESTATE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       auto ptr = new QByteArray(obj->saveState(OPINT(1, 0)));

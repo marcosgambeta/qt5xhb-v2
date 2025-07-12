@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QMDIAREA_ADDSUBWINDOW)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2))
     {
 #endif
       auto ptr = obj->addSubWindow(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
@@ -488,7 +488,7 @@ HB_FUNC_STATIC(QMDIAREA_SUBWINDOWLIST)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       auto list = obj->subWindowList(HB_ISNIL(1) ? static_cast<QMdiArea::WindowOrder>(QMdiArea::CreationOrder)

@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC(QSPLASHSCREEN_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQPIXMAP(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && (ISQPIXMAP(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
   {
     /*
     QSplashScreen(const QPixmap &pixmap = QPixmap(), Qt::WindowFlags f = 0)
@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_NEW)
                           HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 3) && ISQWIDGET(1) && (ISQPIXMAP(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(1, 3) && ISQWIDGET(1) && (ISQPIXMAP(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
   {
     /*
     QSplashScreen(QWidget * parent, const QPixmap &pixmap = QPixmap(), Qt::WindowFlags f = 0)
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_SHOWMESSAGE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQCOLOR(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && (ISQCOLOR(3) || HB_ISNIL(3)))
     {
 #endif
       obj->showMessage(PQSTRING(1), OPINT(2, Qt::AlignLeft),

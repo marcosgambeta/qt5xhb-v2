@@ -623,7 +623,7 @@ HB_FUNC_STATIC(QMENUBAR_CORNERWIDGET)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       auto ptr = obj->cornerWidget(HB_ISNIL(1) ? static_cast<Qt::Corner>(Qt::TopRightCorner)
@@ -649,7 +649,7 @@ HB_FUNC_STATIC(QMENUBAR_SETCORNERWIDGET)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2))
     {
 #endif
       obj->setCornerWidget(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::Corner>(Qt::TopRightCorner)

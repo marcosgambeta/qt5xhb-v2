@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORBACKWARD)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISLOG(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISLOG(1) && ISNUMORNIL(2))
     {
 #endif
       obj->cursorBackward(PBOOL(1), OPINT(2, 1));
@@ -365,7 +365,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORFORWARD)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISLOG(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISLOG(1) && ISNUMORNIL(2))
     {
 #endif
       obj->cursorForward(PBOOL(1), OPINT(2, 1));

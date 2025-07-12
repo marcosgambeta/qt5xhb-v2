@@ -94,7 +94,7 @@ RETURN
 
 HB_FUNC_STATIC(QLABEL_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
   {
     /*
     QLabel(QWidget * parent = nullptr, Qt::WindowFlags f = 0)
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QLABEL_NEW)
                           HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
   {
     /*
     QLabel(const QString &text, QWidget * parent = nullptr, Qt::WindowFlags f = 0)
