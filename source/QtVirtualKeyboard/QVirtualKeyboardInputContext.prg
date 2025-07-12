@@ -581,7 +581,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SENDKEYCLICK)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3))
     {
 #endif
       obj->sendKeyClick(PINT(1), PQSTRING(2), OPINT(3, 0));
@@ -613,7 +613,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
   {
     /*
     Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int replaceLength = 0)
