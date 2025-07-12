@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QCOLORSPACE_NEW)
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
-  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3))
+  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3)
   {
   /*
   QColorSpace(QColorSpace::Primaries primaries, QColorSpace::TransferFunction fun, float gamma = 0.0f)
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QCOLORSPACE_NEW)
 #endif
 
   }
-  else if (ISBETWEEN(5, 6) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && HB_ISNUM(5) && (HB_ISNUM(6) || HB_ISNIL(6)))
+  else if (ISBETWEEN(5, 6) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && HB_ISNUM(5) && ISNUMORNIL(6))
   {
   /*
   QColorSpace(const QPointF &whitePoint, const QPointF &redPoint, const QPointF &greenPoint, const QPointF &
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QCOLORSPACE_SETTRANSFERFUNCTION)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       obj->setTransferFunction(static_cast<QColorSpace::TransferFunction>(hb_parni(1)), OPFLOAT(2, 0.0f));
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QCOLORSPACE_WITHTRANSFERFUNCTION)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       auto ptr = new QColorSpace(

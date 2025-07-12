@@ -57,7 +57,7 @@ RETURN
 HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
 {
   if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
-      (HB_ISNUM(6) || HB_ISNIL(6)))
+      ISNUMORNIL(6))
   {
     auto obj = new QDragMoveEvent(
         *PQPOINT(1), static_cast<Qt::DropActions>(hb_parni(2)), PQMIMEDATA(3),

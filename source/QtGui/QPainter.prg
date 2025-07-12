@@ -768,7 +768,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWELLIPSE)
 
 HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 {
-  if (ISBETWEEN(3, 4) && ISQRECTF(1) && ISQIMAGE(2) && ISQRECTF(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  if (ISBETWEEN(3, 4) && ISQRECTF(1) && ISQIMAGE(2) && ISQRECTF(3) && ISNUMORNIL(4))
   {
     /*
     void drawImage(const QRectF &target, const QImage &image, const QRectF &source, Qt::ImageConversionFlags flags =
@@ -785,7 +785,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(3, 4) && ISQRECT(1) && ISQIMAGE(2) && ISQRECT(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && ISQRECT(1) && ISQIMAGE(2) && ISQRECT(3) && ISNUMORNIL(4))
   {
     /*
     void drawImage(const QRect &target, const QImage &image, const QRect &source, Qt::ImageConversionFlags flags =
@@ -830,7 +830,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(3, 4) && ISQPOINTF(1) && ISQIMAGE(2) && ISQRECTF(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && ISQPOINTF(1) && ISQIMAGE(2) && ISQRECTF(3) && ISNUMORNIL(4))
   {
     /*
     void drawImage(const QPointF &point, const QImage &image, const QRectF &source, Qt::ImageConversionFlags flags =
@@ -847,7 +847,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(3, 4) && ISQPOINT(1) && ISQIMAGE(2) && ISQRECT(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && ISQPOINT(1) && ISQIMAGE(2) && ISQRECT(3) && ISNUMORNIL(4))
   {
     /*
     void drawImage(const QPoint &point, const QImage &image, const QRect &source, Qt::ImageConversionFlags flags =
@@ -892,9 +892,9 @@ HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(3, 8) && HB_ISNUM(1) && HB_ISNUM(2) && ISQIMAGE(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
-           (HB_ISNUM(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)) && (HB_ISNUM(7) || HB_ISNIL(7)) &&
-           (HB_ISNUM(8) || HB_ISNIL(8)))
+  else if (ISBETWEEN(3, 8) && HB_ISNUM(1) && HB_ISNUM(2) && ISQIMAGE(3) && ISNUMORNIL(4) &&
+           ISNUMORNIL(5) && ISNUMORNIL(6) && ISNUMORNIL(7) &&
+           ISNUMORNIL(8))
   {
     /*
     void drawImage(int x, int y, const QImage &image, int sx = 0, int sy = 0, int sw = -1, int sh = -1,
@@ -1373,7 +1373,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWPOINTS)
 
 HB_FUNC_STATIC(QPAINTER_DRAWPOLYGON)
 {
-  if (ISBETWEEN(1, 2) && ISQPOLYGONF(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQPOLYGONF(1) && ISNUMORNIL(2))
   {
     /*
     void drawPolygon(const QPolygonF &points, Qt::FillRule fillRule = Qt::OddEvenFill)
@@ -1388,7 +1388,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWPOLYGON)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(1, 2) && ISQPOLYGON(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQPOLYGON(1) && ISNUMORNIL(2))
   {
     /*
     void drawPolygon(const QPolygon &points, Qt::FillRule fillRule = Qt::OddEvenFill)
@@ -1497,7 +1497,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWRECT)
 
 HB_FUNC_STATIC(QPAINTER_DRAWROUNDEDRECT)
 {
-  if (ISBETWEEN(3, 4) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  if (ISBETWEEN(3, 4) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4))
   {
     /*
     void drawRoundedRect(const QRectF &rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize)
@@ -1513,7 +1513,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWROUNDEDRECT)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(3, 4) && ISQRECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && ISQRECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4))
   {
     /*
     void drawRoundedRect(const QRect &rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize)
@@ -1530,7 +1530,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWROUNDEDRECT)
     hb_itemReturn(hb_stackSelfItem());
   }
   else if (ISBETWEEN(6, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
-           (HB_ISNUM(7) || HB_ISNIL(7)))
+           ISNUMORNIL(7))
   {
     /*
     void drawRoundedRect(int x, int y, int w, int h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize)
@@ -1746,7 +1746,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTILEDPIXMAP)
     hb_itemReturn(hb_stackSelfItem());
   }
   else if (ISBETWEEN(5, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQPIXMAP(5) &&
-           (HB_ISNUM(6) || HB_ISNIL(6)) && (HB_ISNUM(7) || HB_ISNIL(7)))
+           ISNUMORNIL(6) && ISNUMORNIL(7))
   {
     /*
     void drawTiledPixmap(int x, int y, int width, int height, const QPixmap &pixmap, int sx = 0, int sy = 0)
@@ -2640,7 +2640,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPPATH)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && ISNUMORNIL(2))
     {
 #endif
       obj->setClipPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip)
@@ -2659,7 +2659,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPPATH)
 
 HB_FUNC_STATIC(QPAINTER_SETCLIPRECT)
 {
-  if (ISBETWEEN(1, 2) && ISQRECTF(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQRECTF(1) && ISNUMORNIL(2))
   {
     /*
     void setClipRect(const QRectF &rectangle, Qt::ClipOperation operation = Qt::ReplaceClip)
@@ -2674,7 +2674,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPRECT)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)))
+  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5))
   {
     /*
     void setClipRect(int x, int y, int width, int height, Qt::ClipOperation operation = Qt::ReplaceClip)
@@ -2690,7 +2690,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPRECT)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(1, 2) && ISQRECT(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQRECT(1) && ISNUMORNIL(2))
   {
     /*
     void setClipRect(const QRect &rectangle, Qt::ClipOperation operation = Qt::ReplaceClip)
@@ -2721,7 +2721,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPREGION)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQREGION(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQREGION(1) && ISNUMORNIL(2))
     {
 #endif
       obj->setClipRegion(*PQREGION(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip)

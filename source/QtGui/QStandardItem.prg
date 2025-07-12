@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_NEW)
                                  PQSTRING(2));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
   {
     /*
     QStandardItem(int rows, int columns = 1)
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_DATA)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       auto ptr = new QVariant(obj->data(OPINT(1, Qt::UserRole + 1)));
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETDATA)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQVARIANT(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQVARIANT(1) && ISNUMORNIL(2))
     {
 #endif
       obj->setData(*PQVARIANT(1), OPINT(2, Qt::UserRole + 1));
@@ -1558,7 +1558,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_CHILD)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       auto ptr = obj->child(PINT(1), OPINT(2, 0));
@@ -1983,7 +1983,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_TAKECHILD)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       auto ptr = obj->takeChild(PINT(1), OPINT(2, 0));
@@ -2102,7 +2102,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SORTCHILDREN)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       obj->sortChildren(PINT(1), HB_ISNIL(2) ? static_cast<Qt::SortOrder>(Qt::AscendingOrder)

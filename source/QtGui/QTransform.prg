@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QTRANSFORM_NEW)
     Qt5xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(8, 9) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
-           HB_ISNUM(7) && HB_ISNUM(8) && (HB_ISNUM(9) || HB_ISNIL(9)))
+           HB_ISNUM(7) && HB_ISNUM(8) && ISNUMORNIL(9))
   {
     /*
     QTransform(qreal h11, qreal h12, qreal h13,qreal h21, qreal h22, qreal h23,qreal h31, qreal h32, qreal h33 = 1.0)
@@ -850,7 +850,7 @@ HB_FUNC_STATIC(QTRANSFORM_ROTATE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       auto ptr =
@@ -876,7 +876,7 @@ HB_FUNC_STATIC(QTRANSFORM_ROTATERADIANS)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       auto ptr = &obj->rotateRadians(PQREAL(1), HB_ISNIL(2) ? static_cast<Qt::Axis>(Qt::ZAxis)

@@ -54,7 +54,7 @@ RETURN
     */
 HB_FUNC_STATIC(QFOCUSEVENT_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
   {
     auto obj = new QFocusEvent(static_cast<QEvent::Type>(hb_parni(1)),
                                HB_ISNIL(2) ? static_cast<Qt::FocusReason>(Qt::OtherFocusReason)
