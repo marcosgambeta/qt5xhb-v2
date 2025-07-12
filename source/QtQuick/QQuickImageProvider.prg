@@ -59,7 +59,7 @@ RETURN
     */
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
   {
     auto obj = new QQuickImageProvider(static_cast<QQmlImageProviderBase::ImageType>(hb_parni(1)),
                                        HB_ISNIL(2) ? static_cast<QQmlImageProviderBase::Flags>(0)
