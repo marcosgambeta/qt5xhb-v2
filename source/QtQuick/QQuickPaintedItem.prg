@@ -531,7 +531,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETPERFORMANCEHINT)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2))
     {
 #endif
       obj->setPerformanceHint(static_cast<QQuickPaintedItem::PerformanceHint>(hb_parni(1)), OPBOOL(2, true));

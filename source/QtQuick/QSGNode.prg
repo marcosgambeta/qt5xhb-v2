@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QSGNODE_SETFLAG)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2))
     {
 #endif
       obj->setFlag(static_cast<QSGNode::Flag>(hb_parni(1)), OPBOOL(2, true));
@@ -573,7 +573,7 @@ HB_FUNC_STATIC(QSGNODE_SETFLAGS)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2))
     {
 #endif
       obj->setFlags(static_cast<QSGNode::Flags>(hb_parni(1)), OPBOOL(2, true));
