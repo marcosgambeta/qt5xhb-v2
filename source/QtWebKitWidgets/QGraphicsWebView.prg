@@ -473,7 +473,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_FINDTEXT)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
     {
 #endif
       RBOOL(obj->findText(PQSTRING(1), HB_ISNIL(2) ? static_cast<QWebPage::FindFlags>(0)
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_LOAD)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && ISOPTQBYTEARRAY(3))
+  else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && ISNUMORNIL(2) && ISOPTQBYTEARRAY(3))
   {
     /*
     void load(const QNetworkRequest &request, QNetworkAccessManager::Operation operation =
