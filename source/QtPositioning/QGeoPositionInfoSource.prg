@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_LASTKNOWNPOSITION)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       auto ptr = new QGeoPositionInfo(obj->lastKnownPosition(OPBOOL(1, false)));
