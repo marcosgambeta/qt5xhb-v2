@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETVISIBLE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       obj->setVisible(OPBOOL(1, true));
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLINEVISIBLE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       obj->setLineVisible(OPBOOL(1, true));
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETGRIDLINEVISIBLE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       obj->setGridLineVisible(OPBOOL(1, true));
@@ -528,7 +528,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETMINORGRIDLINEVISIBLE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       obj->setMinorGridLineVisible(OPBOOL(1, true));
@@ -747,7 +747,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSVISIBLE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       obj->setLabelsVisible(OPBOOL(1, true));
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETTITLEVISIBLE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       obj->setTitleVisible(OPBOOL(1, true));
@@ -1238,7 +1238,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESVISIBLE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       obj->setShadesVisible(OPBOOL(1, true));
@@ -1564,7 +1564,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETREVERSE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       obj->setReverse(OPBOOL(1, true));

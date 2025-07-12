@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSVISIBLE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       obj->setPointLabelsVisible(OPBOOL(1, true));
@@ -570,7 +570,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSCLIPPING)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       obj->setPointLabelsClipping(OPBOOL(1, true));
@@ -790,7 +790,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTSVISIBLE)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
 #endif
       obj->setPointsVisible(OPBOOL(1, true));
