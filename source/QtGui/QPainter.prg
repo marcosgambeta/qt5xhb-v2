@@ -2928,7 +2928,7 @@ HB_FUNC_STATIC(QPAINTER_SETRENDERHINT)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2))
     {
 #endif
       obj->setRenderHint(static_cast<QPainter::RenderHint>(hb_parni(1)), OPBOOL(2, true));
@@ -2954,7 +2954,7 @@ HB_FUNC_STATIC(QPAINTER_SETRENDERHINTS)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2))
     {
 #endif
       obj->setRenderHints(static_cast<QPainter::RenderHints>(hb_parni(1)), OPBOOL(2, true));
@@ -2980,7 +2980,7 @@ HB_FUNC_STATIC(QPAINTER_SETTRANSFORM)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQTRANSFORM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQTRANSFORM(1) && ISLOGORNIL(2))
     {
 #endif
       obj->setTransform(*PQTRANSFORM(1), OPBOOL(2, false));
@@ -3130,7 +3130,7 @@ HB_FUNC_STATIC(QPAINTER_SETWORLDTRANSFORM)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQTRANSFORM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQTRANSFORM(1) && ISLOGORNIL(2))
     {
 #endif
       obj->setWorldTransform(*PQTRANSFORM(1), OPBOOL(2, false));
