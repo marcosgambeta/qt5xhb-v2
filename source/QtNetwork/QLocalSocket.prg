@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_DELETE)
 
 HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     /*
     void connectToServer(QIODevice::OpenMode openMode = QIODevice::ReadWrite)
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
   {
     /*
     void connectToServer(const QString &name, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_OPEN)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RBOOL(obj->open(HB_ISNIL(1) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
@@ -558,7 +558,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SETSOCKETDESCRIPTOR)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
     {
 #endif
       RBOOL(obj->setSocketDescriptor(PQINTPTR(1),
@@ -635,7 +635,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORBYTESWRITTEN)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RBOOL(obj->waitForBytesWritten(OPINT(1, 30000)));
@@ -659,7 +659,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORCONNECTED)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RBOOL(obj->waitForConnected(OPINT(1, 30000)));
@@ -683,7 +683,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORDISCONNECTED)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RBOOL(obj->waitForDisconnected(OPINT(1, 30000)));
@@ -707,7 +707,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORREADYREAD)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RBOOL(obj->waitForReadyRead(OPINT(1, 30000)));

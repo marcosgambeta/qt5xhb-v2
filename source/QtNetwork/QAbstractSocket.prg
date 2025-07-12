@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SETPAUSEMODE)
 
 HB_FUNC_STATIC(QABSTRACTSOCKET_BIND)
 {
-  if (ISBETWEEN(1, 3) && ISQHOSTADDRESS(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(1, 3) && ISQHOSTADDRESS(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
   {
     /*
     bool bind(const QHostAddress &address, quint16 port = 0, QAbstractSocket::BindMode mode =
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_BIND)
                                   : static_cast<QAbstractSocket::BindMode>(hb_parni(3))));
     }
   }
-  else if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2))
   {
     /*
     bool bind(quint16 port = 0, QAbstractSocket::BindMode mode = QAbstractSocket::DefaultForPlatform)
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_BIND)
 
 HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
 {
-  if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4))
   {
     /*
     virtual void connectToHost(const QString &hostName, quint16 port, QIODevice::OpenMode mode = QIODevice::ReadWrite,
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(2, 3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && ISNUMORNIL(3))
   {
     /*
     virtual void connectToHost(const QHostAddress &address, quint16 port, QIODevice::OpenMode mode =
@@ -647,7 +647,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SETSOCKETDESCRIPTOR)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
     {
 #endif
       RBOOL(obj->setSocketDescriptor(PQINTPTR(1),
@@ -897,7 +897,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_WAITFORCONNECTED)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RBOOL(obj->waitForConnected(OPINT(1, 30000)));
@@ -921,7 +921,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_WAITFORREADYREAD)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RBOOL(obj->waitForReadyRead(OPINT(1, 30000)));
@@ -945,7 +945,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_WAITFORBYTESWRITTEN)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RBOOL(obj->waitForBytesWritten(OPINT(1, 30000)));
@@ -969,7 +969,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_WAITFORDISCONNECTED)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RBOOL(obj->waitForDisconnected(OPINT(1, 30000)));
