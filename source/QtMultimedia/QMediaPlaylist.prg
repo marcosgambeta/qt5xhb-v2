@@ -556,7 +556,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_NEXTINDEX)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RINT(obj->nextIndex(OPINT(1, 1)));
@@ -580,7 +580,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_PREVIOUSINDEX)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RINT(obj->previousIndex(OPINT(1, 1)));
