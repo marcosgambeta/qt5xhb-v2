@@ -948,7 +948,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING1)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2))
     {
 #endif
       RQSTRING(obj->toCurrencyString(PQLONGLONG(1), OPQSTRING(2, QString())));
@@ -972,7 +972,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING2)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2))
     {
 #endif
       RQSTRING(obj->toCurrencyString(PSHORT(1), OPQSTRING(2, QString())));
@@ -996,7 +996,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING3)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2))
     {
 #endif
       RQSTRING(obj->toCurrencyString(PUSHORT(1), OPQSTRING(2, QString())));
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING4)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2))
     {
 #endif
       RQSTRING(obj->toCurrencyString(PINT(1), OPQSTRING(2, QString())));
@@ -1044,7 +1044,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING5)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2))
     {
 #endif
       RQSTRING(obj->toCurrencyString(PUINT(1), OPQSTRING(2, QString())));
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING6)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2))
     {
 #endif
       RQSTRING(obj->toCurrencyString(PFLOAT(1), OPQSTRING(2, QString())));
@@ -1092,7 +1092,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING7)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2))
     {
 #endif
       RQSTRING(obj->toCurrencyString(PQULONGLONG(1), OPQSTRING(2, QString())));
@@ -1116,7 +1116,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING8)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2))
     {
 #endif
       RQSTRING(obj->toCurrencyString(PDOUBLE(1), OPQSTRING(2, QString())));
