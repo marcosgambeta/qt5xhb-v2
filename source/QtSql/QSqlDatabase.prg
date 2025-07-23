@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QSQLDATABASE_SETCONNECTOPTIONS)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISCHARORNIL(1))
     {
 #endif
       obj->setConnectOptions(OPQSTRING(1, QString()));
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QSQLDATABASE_EXEC)
   if (obj != nullptr)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISCHARORNIL(1))
     {
 #endif
       auto ptr = new QSqlQuery(obj->exec(OPQSTRING(1, QString())));
@@ -898,7 +898,7 @@ HB_FUNC_STATIC(QSQLDATABASE_SETUSERNAME)
 
 HB_FUNC_STATIC(QSQLDATABASE_ADDDATABASE)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
   {
     /*
     static QSqlDatabase addDatabase(const QString &type, const QString &connectionName =
@@ -909,7 +909,7 @@ HB_FUNC_STATIC(QSQLDATABASE_ADDDATABASE)
         QSqlDatabase::addDatabase(PQSTRING(1), OPQSTRING(2, QLatin1String(QSqlDatabase::defaultConnection))));
     Qt5xHb::createReturnClass(ptr, "QSQLDATABASE", true);
   }
-  else if (ISBETWEEN(1, 2) && ISQSQLDRIVER(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQSQLDRIVER(1) && ISCHARORNIL(2))
   {
     /*
     static QSqlDatabase addDatabase(QSqlDriver * driver, const QString &connectionName =
@@ -971,7 +971,7 @@ static bool contains(const QString &connectionName = QLatin1String(QSqlDatabase:
 HB_FUNC_STATIC(QSQLDATABASE_CONTAINS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISCHARORNIL(1))
   {
 #endif
     RBOOL(QSqlDatabase::contains(OPQSTRING(1, QLatin1String(QSqlDatabase::defaultConnection))));
@@ -991,7 +991,7 @@ static QSqlDatabase database(const QString &connectionName = QLatin1String(QSqlD
 HB_FUNC_STATIC(QSQLDATABASE_DATABASE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && ISLOGORNIL(2))
+  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISLOGORNIL(2))
   {
 #endif
     auto ptr = new QSqlDatabase(
