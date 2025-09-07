@@ -80,8 +80,7 @@ HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_DELETE)
 {
   auto obj = static_cast<QDeclarativeImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -99,8 +98,7 @@ HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_IMAGETYPE)
 {
   auto obj = static_cast<QDeclarativeImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -123,8 +121,7 @@ HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE)
 {
   auto obj = static_cast<QDeclarativeImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3))
     {
@@ -148,8 +145,7 @@ HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_REQUESTPIXMAP)
 {
   auto obj = static_cast<QDeclarativeImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3))
     {

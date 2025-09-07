@@ -79,8 +79,7 @@ HB_FUNC_STATIC(QSCROLLER_FINALPOSITION)
 {
   auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -104,8 +103,7 @@ HB_FUNC_STATIC(QSCROLLER_HANDLEINPUT)
 {
   auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQPOINTF(2) && ISNUMORNIL(3))
     {
@@ -128,8 +126,7 @@ HB_FUNC_STATIC(QSCROLLER_PIXELPERMETER)
 {
   auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -153,8 +150,7 @@ HB_FUNC_STATIC(QSCROLLER_SCROLLERPROPERTIES)
 {
   auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -268,8 +264,7 @@ HB_FUNC_STATIC(QSCROLLER_STATE)
 {
   auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -292,8 +287,7 @@ HB_FUNC_STATIC(QSCROLLER_STOP)
 {
   auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -318,8 +312,7 @@ HB_FUNC_STATIC(QSCROLLER_TARGET)
 {
   auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -343,8 +336,7 @@ HB_FUNC_STATIC(QSCROLLER_VELOCITY)
 {
   auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -404,8 +396,7 @@ HB_FUNC_STATIC(QSCROLLER_RESENDPREPAREEVENT)
 {
   auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -466,8 +457,7 @@ HB_FUNC_STATIC(QSCROLLER_SETSCROLLERPROPERTIES)
 {
   auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSCROLLERPROPERTIES(1))
     {
@@ -614,8 +604,7 @@ HB_FUNC_STATIC(QSCROLLER_UNGRABGESTURE)
 {
   auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQOBJECT(1))
     {

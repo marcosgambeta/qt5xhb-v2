@@ -69,8 +69,7 @@ HB_FUNC_STATIC(QAPPLICATIONSTATECHANGEEVENT_APPLICATIONSTATE)
 {
   auto obj = static_cast<QApplicationStateChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

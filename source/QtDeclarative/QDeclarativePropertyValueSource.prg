@@ -58,8 +58,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYVALUESOURCE_DELETE)
 {
   auto obj = static_cast<QDeclarativePropertyValueSource *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);

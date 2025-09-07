@@ -71,8 +71,7 @@ HB_FUNC_STATIC(QWIDGETITEMV2_DELETE)
 {
   auto obj = static_cast<QWidgetItemV2 *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -90,8 +89,7 @@ HB_FUNC_STATIC(QWIDGETITEMV2_SIZEHINT)
 {
   auto obj = static_cast<QWidgetItemV2 *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -115,8 +113,7 @@ HB_FUNC_STATIC(QWIDGETITEMV2_MINIMUMSIZE)
 {
   auto obj = static_cast<QWidgetItemV2 *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -140,8 +137,7 @@ HB_FUNC_STATIC(QWIDGETITEMV2_MAXIMUMSIZE)
 {
   auto obj = static_cast<QWidgetItemV2 *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -165,8 +161,7 @@ HB_FUNC_STATIC(QWIDGETITEMV2_HEIGHTFORWIDTH)
 {
   auto obj = static_cast<QWidgetItemV2 *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

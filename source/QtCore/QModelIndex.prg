@@ -96,8 +96,7 @@ HB_FUNC_STATIC(QMODELINDEX_DELETE)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -115,8 +114,7 @@ HB_FUNC_STATIC(QMODELINDEX_CHILD)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -140,8 +138,7 @@ HB_FUNC_STATIC(QMODELINDEX_COLUMN)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -164,8 +161,7 @@ HB_FUNC_STATIC(QMODELINDEX_DATA)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -189,8 +185,7 @@ HB_FUNC_STATIC(QMODELINDEX_FLAGS)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -213,8 +208,7 @@ HB_FUNC_STATIC(QMODELINDEX_INTERNALID)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -237,8 +231,7 @@ HB_FUNC_STATIC(QMODELINDEX_INTERNALPOINTER)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -261,8 +254,7 @@ HB_FUNC_STATIC(QMODELINDEX_ISVALID)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -285,8 +277,7 @@ HB_FUNC_STATIC(QMODELINDEX_MODEL)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -310,8 +301,7 @@ HB_FUNC_STATIC(QMODELINDEX_PARENT)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -335,8 +325,7 @@ HB_FUNC_STATIC(QMODELINDEX_ROW)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -359,8 +348,7 @@ HB_FUNC_STATIC(QMODELINDEX_SIBLING)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {

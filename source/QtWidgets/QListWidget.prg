@@ -108,8 +108,7 @@ HB_FUNC_STATIC(QLISTWIDGET_DELETE)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -165,8 +164,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ADDITEMS)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -191,8 +189,7 @@ HB_FUNC_STATIC(QLISTWIDGET_CLOSEPERSISTENTEDITOR)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
     {
@@ -217,8 +214,7 @@ HB_FUNC_STATIC(QLISTWIDGET_COUNT)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -241,8 +237,7 @@ HB_FUNC_STATIC(QLISTWIDGET_CURRENTITEM)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -266,8 +261,7 @@ HB_FUNC_STATIC(QLISTWIDGET_CURRENTROW)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -290,8 +284,7 @@ HB_FUNC_STATIC(QLISTWIDGET_EDITITEM)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
     {
@@ -352,8 +345,7 @@ HB_FUNC_STATIC(QLISTWIDGET_INSERTITEMS)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2))
     {
@@ -378,8 +370,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ISSORTINGENABLED)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -402,8 +393,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ITEM)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -461,8 +451,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ITEMWIDGET)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
     {
@@ -486,8 +475,7 @@ HB_FUNC_STATIC(QLISTWIDGET_OPENPERSISTENTEDITOR)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
     {
@@ -512,8 +500,7 @@ HB_FUNC_STATIC(QLISTWIDGET_REMOVEITEMWIDGET)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
     {
@@ -538,8 +525,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ROW)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
     {
@@ -634,8 +620,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETITEMWIDGET)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQLISTWIDGETITEM(1) && ISQWIDGET(2))
     {
@@ -660,8 +645,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETSORTINGENABLED)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -686,8 +670,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SORTITEMS)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -713,8 +696,7 @@ HB_FUNC_STATIC(QLISTWIDGET_TAKEITEM)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -738,8 +720,7 @@ HB_FUNC_STATIC(QLISTWIDGET_VISUALITEMRECT)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
     {
@@ -763,8 +744,7 @@ HB_FUNC_STATIC(QLISTWIDGET_DROPEVENT)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQDROPEVENT(1))
     {
@@ -789,8 +769,7 @@ HB_FUNC_STATIC(QLISTWIDGET_CLEAR)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -815,8 +794,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SCROLLTOITEM)
 {
   auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQLISTWIDGETITEM(1) && ISNUMORNIL(2))
     {

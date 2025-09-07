@@ -151,8 +151,7 @@ HB_FUNC_STATIC(QVECTOR3D_DELETE)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -170,8 +169,7 @@ HB_FUNC_STATIC(QVECTOR3D_ISNULL)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -194,8 +192,7 @@ HB_FUNC_STATIC(QVECTOR3D_X)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -218,8 +215,7 @@ HB_FUNC_STATIC(QVECTOR3D_Y)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -242,8 +238,7 @@ HB_FUNC_STATIC(QVECTOR3D_Z)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -266,8 +261,7 @@ HB_FUNC_STATIC(QVECTOR3D_SETX)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -292,8 +286,7 @@ HB_FUNC_STATIC(QVECTOR3D_SETY)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -318,8 +311,7 @@ HB_FUNC_STATIC(QVECTOR3D_SETZ)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -344,8 +336,7 @@ HB_FUNC_STATIC(QVECTOR3D_LENGTH)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -368,8 +359,7 @@ HB_FUNC_STATIC(QVECTOR3D_LENGTHSQUARED)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -392,8 +382,7 @@ HB_FUNC_STATIC(QVECTOR3D_NORMALIZED)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -417,8 +406,7 @@ HB_FUNC_STATIC(QVECTOR3D_NORMALIZE)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -443,8 +431,7 @@ HB_FUNC_STATIC(QVECTOR3D_DISTANCETOPOINT)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
@@ -499,8 +486,7 @@ HB_FUNC_STATIC(QVECTOR3D_DISTANCETOLINE)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2))
     {
@@ -523,8 +509,7 @@ HB_FUNC_STATIC(QVECTOR3D_TOVECTOR2D)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -548,8 +533,7 @@ HB_FUNC_STATIC(QVECTOR3D_TOVECTOR4D)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -573,8 +557,7 @@ HB_FUNC_STATIC(QVECTOR3D_TOPOINT)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -598,8 +581,7 @@ HB_FUNC_STATIC(QVECTOR3D_TOPOINTF)
 {
   auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

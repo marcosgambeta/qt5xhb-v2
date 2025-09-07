@@ -96,8 +96,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DELETE)
 {
   auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -183,8 +182,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DELETETEXTURE)
 {
   auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -209,8 +207,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DEVICE)
 {
   auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -234,8 +231,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DONECURRENT)
 {
   auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -296,8 +292,7 @@ HB_FUNC_STATIC(QGLCONTEXT_FORMAT)
 {
   auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -321,8 +316,7 @@ HB_FUNC_STATIC(QGLCONTEXT_ISSHARING)
 {
   auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -345,8 +339,7 @@ HB_FUNC_STATIC(QGLCONTEXT_ISVALID)
 {
   auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -369,8 +362,7 @@ HB_FUNC_STATIC(QGLCONTEXT_MAKECURRENT)
 {
   auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -395,8 +387,7 @@ HB_FUNC_STATIC(QGLCONTEXT_OVERLAYTRANSPARENTCOLOR)
 {
   auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -420,8 +411,7 @@ HB_FUNC_STATIC(QGLCONTEXT_REQUESTEDFORMAT)
 {
   auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -445,8 +435,7 @@ HB_FUNC_STATIC(QGLCONTEXT_RESET)
 {
   auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -471,8 +460,7 @@ HB_FUNC_STATIC(QGLCONTEXT_SETFORMAT)
 {
   auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGLFORMAT(1))
     {
@@ -497,8 +485,7 @@ HB_FUNC_STATIC(QGLCONTEXT_SWAPBUFFERS)
 {
   auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

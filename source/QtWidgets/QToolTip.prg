@@ -68,8 +68,7 @@ HB_FUNC_STATIC(QTOOLTIP_DELETE)
 {
   auto obj = static_cast<QToolTip *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -87,8 +86,7 @@ HB_FUNC_STATIC(QTOOLTIP_FONT)
 {
   auto obj = static_cast<QToolTip *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -112,8 +110,7 @@ HB_FUNC_STATIC(QTOOLTIP_HIDETEXT)
 {
   auto obj = static_cast<QToolTip *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -138,8 +135,7 @@ HB_FUNC_STATIC(QTOOLTIP_ISVISIBLE)
 {
   auto obj = static_cast<QToolTip *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -162,8 +158,7 @@ HB_FUNC_STATIC(QTOOLTIP_PALETTE)
 {
   auto obj = static_cast<QToolTip *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -187,8 +182,7 @@ HB_FUNC_STATIC(QTOOLTIP_SETFONT)
 {
   auto obj = static_cast<QToolTip *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFONT(1))
     {
@@ -213,8 +207,7 @@ HB_FUNC_STATIC(QTOOLTIP_SETPALETTE)
 {
   auto obj = static_cast<QToolTip *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPALETTE(1))
     {
@@ -275,8 +268,7 @@ HB_FUNC_STATIC(QTOOLTIP_TEXT)
 {
   auto obj = static_cast<QToolTip *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

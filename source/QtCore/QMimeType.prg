@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QMIMETYPE_DELETE)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -119,8 +118,7 @@ HB_FUNC_STATIC(QMIMETYPE_SWAP)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMIMETYPE(1))
     {
@@ -145,8 +143,7 @@ HB_FUNC_STATIC(QMIMETYPE_ISVALID)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -169,8 +166,7 @@ HB_FUNC_STATIC(QMIMETYPE_ISDEFAULT)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -193,8 +189,7 @@ HB_FUNC_STATIC(QMIMETYPE_NAME)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -217,8 +212,7 @@ HB_FUNC_STATIC(QMIMETYPE_COMMENT)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -241,8 +235,7 @@ HB_FUNC_STATIC(QMIMETYPE_GENERICICONNAME)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -265,8 +258,7 @@ HB_FUNC_STATIC(QMIMETYPE_ICONNAME)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -289,8 +281,7 @@ HB_FUNC_STATIC(QMIMETYPE_GLOBPATTERNS)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -313,8 +304,7 @@ HB_FUNC_STATIC(QMIMETYPE_PARENTMIMETYPES)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -337,8 +327,7 @@ HB_FUNC_STATIC(QMIMETYPE_ALLANCESTORS)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -361,8 +350,7 @@ HB_FUNC_STATIC(QMIMETYPE_ALIASES)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -385,8 +373,7 @@ HB_FUNC_STATIC(QMIMETYPE_SUFFIXES)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -409,8 +396,7 @@ HB_FUNC_STATIC(QMIMETYPE_PREFERREDSUFFIX)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -433,8 +419,7 @@ HB_FUNC_STATIC(QMIMETYPE_INHERITS)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -457,8 +442,7 @@ HB_FUNC_STATIC(QMIMETYPE_FILTERSTRING)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

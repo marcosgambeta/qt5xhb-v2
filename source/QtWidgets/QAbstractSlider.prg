@@ -141,8 +141,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_DELETE)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -162,8 +161,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_MAXIMUM)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -186,8 +184,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETMAXIMUM)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -212,8 +209,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_MINIMUM)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -236,8 +232,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETMINIMUM)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -262,8 +257,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_ORIENTATION)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -286,8 +280,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETORIENTATION)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -312,8 +305,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_PAGESTEP)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -336,8 +328,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETPAGESTEP)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -362,8 +353,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_INVERTEDAPPEARANCE)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -386,8 +376,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETINVERTEDAPPEARANCE)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -412,8 +401,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_INVERTEDCONTROLS)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -436,8 +424,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETINVERTEDCONTROLS)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -462,8 +449,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETRANGE)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -488,8 +474,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_ISSLIDERDOWN)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -512,8 +497,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETSLIDERDOWN)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -538,8 +522,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SINGLESTEP)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -562,8 +545,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETSINGLESTEP)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -588,8 +570,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SLIDERPOSITION)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -612,8 +593,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETSLIDERPOSITION)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -638,8 +618,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_TRIGGERACTION)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -664,8 +643,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_VALUE)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -688,8 +666,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETVALUE)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -714,8 +691,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_HASTRACKING)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -738,8 +714,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETTRACKING)
 {
   auto obj = qobject_cast<QAbstractSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {

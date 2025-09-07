@@ -188,8 +188,7 @@ HB_FUNC_STATIC(QLOCALE_DELETE)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -207,8 +206,7 @@ HB_FUNC_STATIC(QLOCALE_AMTEXT)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -231,8 +229,7 @@ HB_FUNC_STATIC(QLOCALE_BCP47NAME)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -255,8 +252,7 @@ HB_FUNC_STATIC(QLOCALE_COUNTRY)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -279,8 +275,7 @@ HB_FUNC_STATIC(QLOCALE_CREATESEPARATEDLIST)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -303,8 +298,7 @@ HB_FUNC_STATIC(QLOCALE_CURRENCYSYMBOL)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -328,8 +322,7 @@ HB_FUNC_STATIC(QLOCALE_DATEFORMAT)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -353,8 +346,7 @@ HB_FUNC_STATIC(QLOCALE_DATETIMEFORMAT)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -378,8 +370,7 @@ HB_FUNC_STATIC(QLOCALE_DAYNAME)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
@@ -403,8 +394,7 @@ HB_FUNC_STATIC(QLOCALE_DECIMALPOINT)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -428,8 +418,7 @@ HB_FUNC_STATIC(QLOCALE_EXPONENTIAL)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -453,8 +442,7 @@ HB_FUNC_STATIC(QLOCALE_FIRSTDAYOFWEEK)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -477,8 +465,7 @@ HB_FUNC_STATIC(QLOCALE_GROUPSEPARATOR)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -502,8 +489,7 @@ HB_FUNC_STATIC(QLOCALE_LANGUAGE)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -526,8 +512,7 @@ HB_FUNC_STATIC(QLOCALE_MEASUREMENTSYSTEM)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -550,8 +535,7 @@ HB_FUNC_STATIC(QLOCALE_MONTHNAME)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
@@ -575,8 +559,7 @@ HB_FUNC_STATIC(QLOCALE_NAME)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -599,8 +582,7 @@ HB_FUNC_STATIC(QLOCALE_NATIVECOUNTRYNAME)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -623,8 +605,7 @@ HB_FUNC_STATIC(QLOCALE_NATIVELANGUAGENAME)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -647,8 +628,7 @@ HB_FUNC_STATIC(QLOCALE_NEGATIVESIGN)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -672,8 +652,7 @@ HB_FUNC_STATIC(QLOCALE_NUMBEROPTIONS)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -696,8 +675,7 @@ HB_FUNC_STATIC(QLOCALE_PERCENT)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -721,8 +699,7 @@ HB_FUNC_STATIC(QLOCALE_PMTEXT)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -745,8 +722,7 @@ HB_FUNC_STATIC(QLOCALE_POSITIVESIGN)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -770,8 +746,7 @@ HB_FUNC_STATIC(QLOCALE_QUOTESTRING)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
     {
@@ -796,8 +771,7 @@ HB_FUNC_STATIC(QLOCALE_SCRIPT)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -820,8 +794,7 @@ HB_FUNC_STATIC(QLOCALE_SETNUMBEROPTIONS)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -846,8 +819,7 @@ HB_FUNC_STATIC(QLOCALE_STANDALONEDAYNAME)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
@@ -871,8 +843,7 @@ HB_FUNC_STATIC(QLOCALE_STANDALONEMONTHNAME)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
@@ -896,8 +867,7 @@ HB_FUNC_STATIC(QLOCALE_TEXTDIRECTION)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -920,8 +890,7 @@ HB_FUNC_STATIC(QLOCALE_TIMEFORMAT)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -945,8 +914,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING1)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2))
     {
@@ -969,8 +937,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING2)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2))
     {
@@ -993,8 +960,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING3)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2))
     {
@@ -1017,8 +983,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING4)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2))
     {
@@ -1041,8 +1006,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING5)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2))
     {
@@ -1065,8 +1029,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING6)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2))
     {
@@ -1089,8 +1052,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING7)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2))
     {
@@ -1113,8 +1075,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING8)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2))
     {
@@ -1212,8 +1173,7 @@ HB_FUNC_STATIC(QLOCALE_TODOUBLE)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISLOGORNIL(2))
     {
@@ -1238,8 +1198,7 @@ HB_FUNC_STATIC(QLOCALE_TOFLOAT)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISLOGORNIL(2))
     {
@@ -1264,8 +1223,7 @@ HB_FUNC_STATIC(QLOCALE_TOLOWER)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1288,8 +1246,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING1)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1312,8 +1269,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING2)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQDATE(1) && HB_ISCHAR(2))
     {
@@ -1336,8 +1292,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING3)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQDATE(1) && ISNUMORNIL(2))
     {
@@ -1361,8 +1316,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING4)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQTIME(1) && HB_ISCHAR(2))
     {
@@ -1385,8 +1339,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING5)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQTIME(1) && ISNUMORNIL(2))
     {
@@ -1410,8 +1363,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING6)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQDATETIME(1) && ISNUMORNIL(2))
     {
@@ -1435,8 +1387,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING7)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQDATETIME(1) && HB_ISCHAR(2))
     {
@@ -1459,8 +1410,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING8)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1483,8 +1433,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING9)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1507,8 +1456,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING10)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1531,8 +1479,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING11)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1555,8 +1502,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING12)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
     {
@@ -1579,8 +1525,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING13)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1603,8 +1548,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING14)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
     {
@@ -1698,8 +1642,7 @@ HB_FUNC_STATIC(QLOCALE_TOUPPER)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1722,8 +1665,7 @@ HB_FUNC_STATIC(QLOCALE_UILANGUAGES)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1746,8 +1688,7 @@ HB_FUNC_STATIC(QLOCALE_WEEKDAYS)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1778,8 +1719,7 @@ HB_FUNC_STATIC(QLOCALE_ZERODIGIT)
 {
   auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

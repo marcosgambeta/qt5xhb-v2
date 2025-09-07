@@ -166,8 +166,7 @@ HB_FUNC_STATIC(QIMAGE_DELETE)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -185,8 +184,7 @@ HB_FUNC_STATIC(QIMAGE_ALLGRAY)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -209,8 +207,7 @@ HB_FUNC_STATIC(QIMAGE_BITPLANECOUNT)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -233,8 +230,7 @@ HB_FUNC_STATIC(QIMAGE_BYTECOUNT)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -257,8 +253,7 @@ HB_FUNC_STATIC(QIMAGE_BYTESPERLINE)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -281,8 +276,7 @@ HB_FUNC_STATIC(QIMAGE_CACHEKEY)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -305,8 +299,7 @@ HB_FUNC_STATIC(QIMAGE_COLOR)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -329,8 +322,7 @@ HB_FUNC_STATIC(QIMAGE_COLORCOUNT)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -353,8 +345,7 @@ HB_FUNC_STATIC(QIMAGE_COLORTABLE)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -467,8 +458,7 @@ HB_FUNC_STATIC(QIMAGE_CREATEALPHAMASK)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -493,8 +483,7 @@ HB_FUNC_STATIC(QIMAGE_CREATEHEURISTICMASK)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
     {
@@ -518,8 +507,7 @@ HB_FUNC_STATIC(QIMAGE_CREATEMASKFROMCOLOR)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
@@ -544,8 +532,7 @@ HB_FUNC_STATIC(QIMAGE_DEPTH)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -568,8 +555,7 @@ HB_FUNC_STATIC(QIMAGE_DOTSPERMETERX)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -592,8 +578,7 @@ HB_FUNC_STATIC(QIMAGE_DOTSPERMETERY)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -666,8 +651,7 @@ HB_FUNC_STATIC(QIMAGE_FORMAT)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -690,8 +674,7 @@ HB_FUNC_STATIC(QIMAGE_HASALPHACHANNEL)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -714,8 +697,7 @@ HB_FUNC_STATIC(QIMAGE_HEIGHT)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -738,8 +720,7 @@ HB_FUNC_STATIC(QIMAGE_INVERTPIXELS)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -765,8 +746,7 @@ HB_FUNC_STATIC(QIMAGE_ISGRAYSCALE)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -789,8 +769,7 @@ HB_FUNC_STATIC(QIMAGE_ISNULL)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -877,8 +856,7 @@ HB_FUNC_STATIC(QIMAGE_MIRRORED)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && ISLOGORNIL(1) && ISLOGORNIL(2))
     {
@@ -902,8 +880,7 @@ HB_FUNC_STATIC(QIMAGE_OFFSET)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -991,8 +968,7 @@ HB_FUNC_STATIC(QIMAGE_RECT)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1016,8 +992,7 @@ HB_FUNC_STATIC(QIMAGE_RGBSWAPPED)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1118,8 +1093,7 @@ HB_FUNC_STATIC(QIMAGE_SCALEDTOHEIGHT)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
@@ -1145,8 +1119,7 @@ HB_FUNC_STATIC(QIMAGE_SCALEDTOWIDTH)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
@@ -1183,8 +1156,7 @@ HB_FUNC_STATIC(QIMAGE_SETCOLOR)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -1209,8 +1181,7 @@ HB_FUNC_STATIC(QIMAGE_SETCOLORCOUNT)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1235,8 +1206,7 @@ HB_FUNC_STATIC(QIMAGE_SETDOTSPERMETERX)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1261,8 +1231,7 @@ HB_FUNC_STATIC(QIMAGE_SETDOTSPERMETERY)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1287,8 +1256,7 @@ HB_FUNC_STATIC(QIMAGE_SETOFFSET)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
@@ -1349,8 +1317,7 @@ HB_FUNC_STATIC(QIMAGE_SETTEXT)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -1375,8 +1342,7 @@ HB_FUNC_STATIC(QIMAGE_SIZE)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1400,8 +1366,7 @@ HB_FUNC_STATIC(QIMAGE_SWAP)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQIMAGE(1))
     {
@@ -1426,8 +1391,7 @@ HB_FUNC_STATIC(QIMAGE_TEXT)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISCHARORNIL(1))
     {
@@ -1450,8 +1414,7 @@ HB_FUNC_STATIC(QIMAGE_TEXTKEYS)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1544,8 +1507,7 @@ HB_FUNC_STATIC(QIMAGE_WIDTH)
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1659,8 +1621,7 @@ HB_FUNC_STATIC(QIMAGE_REINTERPRETASFORMAT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1727,8 +1688,7 @@ HB_FUNC_STATIC(QIMAGE_CONVERTTO)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
@@ -1756,8 +1716,7 @@ void QImage_toVariant1()
 {
   auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     QVariant *variant = new QVariant();
     variant->setValue<QImage>(*obj);
     Qt5xHb::createReturnClass(variant, "QVARIANT", true);

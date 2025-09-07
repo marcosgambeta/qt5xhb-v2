@@ -57,8 +57,7 @@ HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_DELETE)
 {
   auto obj = qobject_cast<QDesignerActionEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -78,8 +77,7 @@ HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_CORE)
 {
   auto obj = qobject_cast<QDesignerActionEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -103,8 +101,7 @@ HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION)
 {
   auto obj = qobject_cast<QDesignerActionEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQACTION(1))
     {
@@ -129,8 +126,7 @@ HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_SETFORMWINDOW)
 {
   auto obj = qobject_cast<QDesignerActionEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1))
     {

@@ -92,8 +92,7 @@ HB_FUNC_STATIC(QTABLETEVENT_DELETE)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -111,8 +110,7 @@ HB_FUNC_STATIC(QTABLETEVENT_DEVICE)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -135,8 +133,7 @@ HB_FUNC_STATIC(QTABLETEVENT_GLOBALPOS)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -160,8 +157,7 @@ HB_FUNC_STATIC(QTABLETEVENT_GLOBALPOSF)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -185,8 +181,7 @@ HB_FUNC_STATIC(QTABLETEVENT_GLOBALX)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -209,8 +204,7 @@ HB_FUNC_STATIC(QTABLETEVENT_GLOBALY)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -233,8 +227,7 @@ HB_FUNC_STATIC(QTABLETEVENT_HIRESGLOBALX)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -257,8 +250,7 @@ HB_FUNC_STATIC(QTABLETEVENT_HIRESGLOBALY)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -281,8 +273,7 @@ HB_FUNC_STATIC(QTABLETEVENT_POINTERTYPE)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -305,8 +296,7 @@ HB_FUNC_STATIC(QTABLETEVENT_POS)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -330,8 +320,7 @@ HB_FUNC_STATIC(QTABLETEVENT_POSF)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -355,8 +344,7 @@ HB_FUNC_STATIC(QTABLETEVENT_PRESSURE)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -379,8 +367,7 @@ HB_FUNC_STATIC(QTABLETEVENT_ROTATION)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -403,8 +390,7 @@ HB_FUNC_STATIC(QTABLETEVENT_TANGENTIALPRESSURE)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -427,8 +413,7 @@ HB_FUNC_STATIC(QTABLETEVENT_UNIQUEID)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -451,8 +436,7 @@ HB_FUNC_STATIC(QTABLETEVENT_X)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -475,8 +459,7 @@ HB_FUNC_STATIC(QTABLETEVENT_XTILT)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -499,8 +482,7 @@ HB_FUNC_STATIC(QTABLETEVENT_Y)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -523,8 +505,7 @@ HB_FUNC_STATIC(QTABLETEVENT_YTILT)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -547,8 +528,7 @@ HB_FUNC_STATIC(QTABLETEVENT_Z)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

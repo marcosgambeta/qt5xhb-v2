@@ -80,8 +80,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_DELETE)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -101,8 +100,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_SHADERTYPE)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -125,8 +123,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_COMPILESOURCECODE1)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -149,8 +146,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_COMPILESOURCECODE2)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -173,8 +169,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_COMPILESOURCECODE3)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -217,8 +212,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_COMPILESOURCEFILE)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -241,8 +235,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_SOURCECODE)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -266,8 +259,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_ISCOMPILED)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -290,8 +282,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_LOG)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -314,8 +305,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_SHADERID)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

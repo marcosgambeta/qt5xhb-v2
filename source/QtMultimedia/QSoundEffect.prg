@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_DELETE)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -120,8 +119,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SOURCE)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -145,8 +143,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SETSOURCE)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1))
     {
@@ -171,8 +168,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_LOOPCOUNT)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -195,8 +191,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SETLOOPCOUNT)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -221,8 +216,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_LOOPSREMAINING)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -245,8 +239,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_VOLUME)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -269,8 +262,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SETVOLUME)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -295,8 +287,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ISMUTED)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -319,8 +310,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SETMUTED)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -345,8 +335,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ISPLAYING)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -369,8 +358,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_STATUS)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -393,8 +381,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_CATEGORY)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -417,8 +404,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SETCATEGORY)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -443,8 +429,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ISLOADED)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -467,8 +452,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_PLAY)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -493,8 +477,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_STOP)
 {
   auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

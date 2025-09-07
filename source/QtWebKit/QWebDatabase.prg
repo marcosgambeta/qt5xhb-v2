@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QWEBDATABASE_DELETE)
 {
   auto obj = static_cast<QWebDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -105,8 +104,7 @@ HB_FUNC_STATIC(QWEBDATABASE_DISPLAYNAME)
 {
   auto obj = static_cast<QWebDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -129,8 +127,7 @@ HB_FUNC_STATIC(QWEBDATABASE_EXPECTEDSIZE)
 {
   auto obj = static_cast<QWebDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -153,8 +150,7 @@ HB_FUNC_STATIC(QWEBDATABASE_FILENAME)
 {
   auto obj = static_cast<QWebDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -177,8 +173,7 @@ HB_FUNC_STATIC(QWEBDATABASE_NAME)
 {
   auto obj = static_cast<QWebDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -201,8 +196,7 @@ HB_FUNC_STATIC(QWEBDATABASE_ORIGIN)
 {
   auto obj = static_cast<QWebDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -226,8 +220,7 @@ HB_FUNC_STATIC(QWEBDATABASE_SIZE)
 {
   auto obj = static_cast<QWebDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

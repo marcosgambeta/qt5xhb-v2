@@ -78,8 +78,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_DELETE)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -97,8 +96,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_MEASUREMENTSYSTEM)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -121,8 +119,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_TIMEFORMAT)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -146,8 +143,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_DATETIMEFORMAT)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -171,8 +167,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_LANGUAGELOCALE)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -196,8 +191,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_REGIONLOCALE)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -221,8 +215,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_INSTALLSOCKETNOTIFIERS)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -247,8 +240,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READLANGUAGELOCALE)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -273,8 +265,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READREGIONLOCALE)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -299,8 +290,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READMEASUREMENTSYSTEM)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -325,8 +315,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READHOURFORMAT)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

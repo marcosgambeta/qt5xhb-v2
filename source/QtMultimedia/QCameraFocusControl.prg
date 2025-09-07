@@ -70,8 +70,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_DELETE)
 {
   auto obj = qobject_cast<QCameraFocusControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -91,8 +90,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_CUSTOMFOCUSPOINT)
 {
   auto obj = qobject_cast<QCameraFocusControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -116,8 +114,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_FOCUSMODE)
 {
   auto obj = qobject_cast<QCameraFocusControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -140,8 +137,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_FOCUSPOINTMODE)
 {
   auto obj = qobject_cast<QCameraFocusControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -164,8 +160,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_FOCUSZONES)
 {
   auto obj = qobject_cast<QCameraFocusControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -214,8 +209,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ISFOCUSMODESUPPORTED)
 {
   auto obj = qobject_cast<QCameraFocusControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -238,8 +232,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ISFOCUSPOINTMODESUPPORTED)
 {
   auto obj = qobject_cast<QCameraFocusControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -262,8 +255,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_SETCUSTOMFOCUSPOINT)
 {
   auto obj = qobject_cast<QCameraFocusControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
@@ -288,8 +280,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_SETFOCUSMODE)
 {
   auto obj = qobject_cast<QCameraFocusControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -314,8 +305,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_SETFOCUSPOINTMODE)
 {
   auto obj = qobject_cast<QCameraFocusControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

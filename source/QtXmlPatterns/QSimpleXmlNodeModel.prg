@@ -61,8 +61,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_DELETE)
 {
   auto obj = static_cast<QSimpleXmlNodeModel *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -80,8 +79,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_NAMEPOOL)
 {
   auto obj = static_cast<QSimpleXmlNodeModel *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -105,8 +103,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_BASEURI)
 {
   auto obj = static_cast<QSimpleXmlNodeModel *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
@@ -130,8 +127,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_ELEMENTBYID)
 {
   auto obj = static_cast<QSimpleXmlNodeModel *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNAME(1))
     {
@@ -155,8 +151,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS)
 {
   auto obj = static_cast<QSimpleXmlNodeModel *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
@@ -205,8 +200,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_NODESBYIDREF)
 {
   auto obj = static_cast<QSimpleXmlNodeModel *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNAME(1))
     {
@@ -255,8 +249,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_STRINGVALUE)
 {
   auto obj = static_cast<QSimpleXmlNodeModel *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {

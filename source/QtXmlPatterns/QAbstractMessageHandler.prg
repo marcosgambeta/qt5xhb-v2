@@ -52,8 +52,7 @@ HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_DELETE)
 {
   auto obj = qobject_cast<QAbstractMessageHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -74,8 +73,7 @@ HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_MESSAGE)
 {
   auto obj = qobject_cast<QAbstractMessageHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQURL(3) || HB_ISNIL(3)) &&
         (ISQSOURCELOCATION(4) || HB_ISNIL(4)))

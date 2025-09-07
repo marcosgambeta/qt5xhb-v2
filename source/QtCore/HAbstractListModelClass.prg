@@ -107,8 +107,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_DELETE)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETROWCOUNTCB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -162,8 +160,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETCB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISBLOCK(2) || HB_ISSYMBOL(2)))
     {
@@ -188,8 +185,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETDISPLAYROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -214,8 +210,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETDECORATIONROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -240,8 +235,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETEDITROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -266,8 +260,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETTOOLTIPROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -292,8 +285,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETSTATUSTIPROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -318,8 +310,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETWHATSTHISROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -344,8 +335,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETSIZEHINTROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -370,8 +360,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETFONTROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -396,8 +385,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETTEXTALIGNMENTROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -422,8 +410,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETBACKGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -448,8 +435,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETFOREGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -474,8 +460,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETCHECKSTATEROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -500,8 +485,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETACCESSIBLETEXTROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -526,8 +510,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETACCESSIBLEDESCRIPTIONROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -556,8 +539,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERCB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISBLOCK(2) || HB_ISSYMBOL(2)))
     {
@@ -582,8 +564,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERDISPLAYROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -608,8 +589,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERDECORATIONROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -634,8 +614,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERTOOLTIPROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -660,8 +639,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERSIZEHINTROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -686,8 +664,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERFONTROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -712,8 +689,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERTEXTALIGNMENTROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -738,8 +714,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERBACKGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -764,8 +739,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -794,8 +768,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERCB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISBLOCK(2) || HB_ISSYMBOL(2)))
     {
@@ -820,8 +793,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERDISPLAYROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -846,8 +818,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERDECORATIONROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -872,8 +843,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERTOOLTIPROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -898,8 +868,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERSIZEHINTROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -924,8 +893,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERFONTROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -950,8 +918,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERTEXTALIGNMENTROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -976,8 +943,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERBACKGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -1002,8 +968,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERFOREGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -1028,8 +993,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETFLAGSCB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -1054,8 +1018,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETSETDATACB)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -1092,8 +1055,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_RELOADDATA)
 {
   auto obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -161,8 +161,7 @@ HB_FUNC_STATIC(QFILEDIALOG_DELETE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -182,8 +181,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ACCEPTMODE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -206,8 +204,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETACCEPTMODE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -232,8 +229,7 @@ HB_FUNC_STATIC(QFILEDIALOG_CONFIRMOVERWRITE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -256,8 +252,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETCONFIRMOVERWRITE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -282,8 +277,7 @@ HB_FUNC_STATIC(QFILEDIALOG_DEFAULTSUFFIX)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -306,8 +300,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETDEFAULTSUFFIX)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -332,8 +325,7 @@ HB_FUNC_STATIC(QFILEDIALOG_FILEMODE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -356,8 +348,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETFILEMODE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -382,8 +373,7 @@ HB_FUNC_STATIC(QFILEDIALOG_FILTER)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -406,8 +396,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETFILTER)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -432,8 +421,7 @@ HB_FUNC_STATIC(QFILEDIALOG_HISTORY)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -456,8 +444,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETHISTORY)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -482,8 +469,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ICONPROVIDER)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -507,8 +493,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETICONPROVIDER)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFILEICONPROVIDER(1))
     {
@@ -533,8 +518,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ISNAMEFILTERDETAILSVISIBLE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -557,8 +541,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETNAMEFILTERDETAILSVISIBLE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -583,8 +566,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ISREADONLY)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -607,8 +589,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETREADONLY)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -633,8 +614,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ITEMDELEGATE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -658,8 +638,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETITEMDELEGATE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTITEMDELEGATE(1))
     {
@@ -684,8 +663,7 @@ HB_FUNC_STATIC(QFILEDIALOG_LABELTEXT)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -708,8 +686,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETLABELTEXT)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
@@ -734,8 +711,7 @@ HB_FUNC_STATIC(QFILEDIALOG_NAMEFILTERS)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -758,8 +734,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETNAMEFILTERS)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -784,8 +759,7 @@ HB_FUNC_STATIC(QFILEDIALOG_OPEN)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
     {
@@ -810,8 +784,7 @@ HB_FUNC_STATIC(QFILEDIALOG_OPTIONS)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -834,8 +807,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETOPTIONS)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -861,8 +833,7 @@ HB_FUNC_STATIC(QFILEDIALOG_PROXYMODEL)
 #ifndef QT_NO_PROXYMODEL
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -888,8 +859,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETPROXYMODEL)
 #ifndef QT_NO_PROXYMODEL
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTPROXYMODEL(1))
     {
@@ -915,8 +885,7 @@ HB_FUNC_STATIC(QFILEDIALOG_RESOLVESYMLINKS)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -939,8 +908,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETRESOLVESYMLINKS)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -965,8 +933,7 @@ HB_FUNC_STATIC(QFILEDIALOG_RESTORESTATE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -989,8 +956,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SAVESTATE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1014,8 +980,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SELECTFILE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1040,8 +1005,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SELECTNAMEFILTER)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1066,8 +1030,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SELECTEDFILES)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1090,8 +1053,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SELECTEDNAMEFILTER)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1114,8 +1076,7 @@ HB_FUNC_STATIC(QFILEDIALOG_DIRECTORY)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1175,8 +1136,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETNAMEFILTER)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1201,8 +1161,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETOPTION)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2))
     {
@@ -1227,8 +1186,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SIDEBARURLS)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1277,8 +1235,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETSIDEBARURLS)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -1310,8 +1267,7 @@ HB_FUNC_STATIC(QFILEDIALOG_TESTOPTION)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1334,8 +1290,7 @@ HB_FUNC_STATIC(QFILEDIALOG_VIEWMODE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1358,8 +1313,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETVIEWMODE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1384,8 +1338,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETVISIBLE)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1410,8 +1363,7 @@ HB_FUNC_STATIC(QFILEDIALOG_DIRECTORYURL)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1435,8 +1387,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETDIRECTORYURL)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1))
     {
@@ -1461,8 +1412,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SELECTURL)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1))
     {
@@ -1487,8 +1437,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SELECTEDURLS)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1537,8 +1486,7 @@ HB_FUNC_STATIC(QFILEDIALOG_MIMETYPEFILTERS)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1561,8 +1509,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETMIMETYPEFILTERS)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -1587,8 +1534,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SELECTMIMETYPEFILTER)
 {
   auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {

@@ -85,8 +85,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_DELETE)
 {
   auto obj = static_cast<QDBusContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -104,8 +103,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_CALLEDFROMDBUS)
 {
   auto obj = static_cast<QDBusContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -128,8 +126,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_CONNECTION)
 {
   auto obj = static_cast<QDBusContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -153,8 +150,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_MESSAGE)
 {
   auto obj = static_cast<QDBusContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -178,8 +174,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_ISDELAYEDREPLY)
 {
   auto obj = static_cast<QDBusContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -202,8 +197,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_SETDELAYEDREPLY)
 {
   auto obj = static_cast<QDBusContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {

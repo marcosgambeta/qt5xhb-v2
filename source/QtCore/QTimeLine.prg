@@ -101,8 +101,7 @@ HB_FUNC_STATIC(QTIMELINE_DELETE)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -122,8 +121,7 @@ HB_FUNC_STATIC(QTIMELINE_CURRENTFRAME)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -146,8 +144,7 @@ HB_FUNC_STATIC(QTIMELINE_CURRENTTIME)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -170,8 +167,7 @@ HB_FUNC_STATIC(QTIMELINE_CURRENTVALUE)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -194,8 +190,7 @@ HB_FUNC_STATIC(QTIMELINE_CURVESHAPE)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -218,8 +213,7 @@ HB_FUNC_STATIC(QTIMELINE_DIRECTION)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -242,8 +236,7 @@ HB_FUNC_STATIC(QTIMELINE_DURATION)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -266,8 +259,7 @@ HB_FUNC_STATIC(QTIMELINE_ENDFRAME)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -290,8 +282,7 @@ HB_FUNC_STATIC(QTIMELINE_FRAMEFORTIME)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -314,8 +305,7 @@ HB_FUNC_STATIC(QTIMELINE_LOOPCOUNT)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -338,8 +328,7 @@ HB_FUNC_STATIC(QTIMELINE_SETCURVESHAPE)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -364,8 +353,7 @@ HB_FUNC_STATIC(QTIMELINE_SETDIRECTION)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -390,8 +378,7 @@ HB_FUNC_STATIC(QTIMELINE_SETDURATION)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -416,8 +403,7 @@ HB_FUNC_STATIC(QTIMELINE_SETEASINGCURVE)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQEASINGCURVE(1))
     {
@@ -442,8 +428,7 @@ HB_FUNC_STATIC(QTIMELINE_SETENDFRAME)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -468,8 +453,7 @@ HB_FUNC_STATIC(QTIMELINE_SETFRAMERANGE)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -494,8 +478,7 @@ HB_FUNC_STATIC(QTIMELINE_SETLOOPCOUNT)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -520,8 +503,7 @@ HB_FUNC_STATIC(QTIMELINE_SETSTARTFRAME)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -546,8 +528,7 @@ HB_FUNC_STATIC(QTIMELINE_SETUPDATEINTERVAL)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -572,8 +553,7 @@ HB_FUNC_STATIC(QTIMELINE_STARTFRAME)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -596,8 +576,7 @@ HB_FUNC_STATIC(QTIMELINE_STATE)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -620,8 +599,7 @@ HB_FUNC_STATIC(QTIMELINE_UPDATEINTERVAL)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -644,8 +622,7 @@ HB_FUNC_STATIC(QTIMELINE_VALUEFORTIME)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -668,8 +645,7 @@ HB_FUNC_STATIC(QTIMELINE_RESUME)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -694,8 +670,7 @@ HB_FUNC_STATIC(QTIMELINE_SETCURRENTTIME)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -720,8 +695,7 @@ HB_FUNC_STATIC(QTIMELINE_SETPAUSED)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -746,8 +720,7 @@ HB_FUNC_STATIC(QTIMELINE_START)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -772,8 +745,7 @@ HB_FUNC_STATIC(QTIMELINE_STOP)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -798,8 +770,7 @@ HB_FUNC_STATIC(QTIMELINE_TOGGLEDIRECTION)
 {
   auto obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

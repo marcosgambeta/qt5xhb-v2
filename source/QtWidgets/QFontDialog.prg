@@ -90,8 +90,7 @@ HB_FUNC_STATIC(QFONTDIALOG_DELETE)
 {
   auto obj = qobject_cast<QFontDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -111,8 +110,7 @@ HB_FUNC_STATIC(QFONTDIALOG_CURRENTFONT)
 {
   auto obj = qobject_cast<QFontDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -136,8 +134,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETCURRENTFONT)
 {
   auto obj = qobject_cast<QFontDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFONT(1))
     {
@@ -162,8 +159,7 @@ HB_FUNC_STATIC(QFONTDIALOG_OPEN)
 {
   auto obj = qobject_cast<QFontDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
     {
@@ -188,8 +184,7 @@ HB_FUNC_STATIC(QFONTDIALOG_OPTIONS)
 {
   auto obj = qobject_cast<QFontDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -212,8 +207,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETOPTIONS)
 {
   auto obj = qobject_cast<QFontDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -238,8 +232,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SELECTEDFONT)
 {
   auto obj = qobject_cast<QFontDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -263,8 +256,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETOPTION)
 {
   auto obj = qobject_cast<QFontDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2))
     {
@@ -289,8 +281,7 @@ HB_FUNC_STATIC(QFONTDIALOG_TESTOPTION)
 {
   auto obj = qobject_cast<QFontDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -313,8 +304,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETVISIBLE)
 {
   auto obj = qobject_cast<QFontDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {

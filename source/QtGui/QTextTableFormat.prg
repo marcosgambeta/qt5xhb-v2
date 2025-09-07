@@ -81,8 +81,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_DELETE)
 {
   auto obj = static_cast<QTextTableFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -100,8 +99,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_ISVALID)
 {
   auto obj = static_cast<QTextTableFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -124,8 +122,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_COLUMNS)
 {
   auto obj = static_cast<QTextTableFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -148,8 +145,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCOLUMNS)
 {
   auto obj = static_cast<QTextTableFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -174,8 +170,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS)
 {
   auto obj = static_cast<QTextTableFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -208,8 +203,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS)
 {
   auto obj = static_cast<QTextTableFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -258,8 +252,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_CLEARCOLUMNWIDTHCONSTRAINTS)
 {
   auto obj = static_cast<QTextTableFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -284,8 +277,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_CELLSPACING)
 {
   auto obj = static_cast<QTextTableFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -308,8 +300,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCELLSPACING)
 {
   auto obj = static_cast<QTextTableFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -334,8 +325,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_CELLPADDING)
 {
   auto obj = static_cast<QTextTableFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -358,8 +348,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCELLPADDING)
 {
   auto obj = static_cast<QTextTableFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -384,8 +373,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETALIGNMENT)
 {
   auto obj = static_cast<QTextTableFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -410,8 +398,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_ALIGNMENT)
 {
   auto obj = static_cast<QTextTableFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -434,8 +421,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETHEADERROWCOUNT)
 {
   auto obj = static_cast<QTextTableFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -460,8 +446,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_HEADERROWCOUNT)
 {
   auto obj = static_cast<QTextTableFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

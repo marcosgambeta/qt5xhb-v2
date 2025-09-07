@@ -119,8 +119,7 @@ HB_FUNC_STATIC(QDIRITERATOR_DELETE)
 {
   auto obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -138,8 +137,7 @@ HB_FUNC_STATIC(QDIRITERATOR_FILEINFO)
 {
   auto obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -163,8 +161,7 @@ HB_FUNC_STATIC(QDIRITERATOR_FILENAME)
 {
   auto obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -187,8 +184,7 @@ HB_FUNC_STATIC(QDIRITERATOR_FILEPATH)
 {
   auto obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -211,8 +207,7 @@ HB_FUNC_STATIC(QDIRITERATOR_HASNEXT)
 {
   auto obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -235,8 +230,7 @@ HB_FUNC_STATIC(QDIRITERATOR_NEXT)
 {
   auto obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -259,8 +253,7 @@ HB_FUNC_STATIC(QDIRITERATOR_PATH)
 {
   auto obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

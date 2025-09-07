@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_DELETE)
 {
   auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -155,8 +154,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_ACTIVEGESTURES)
 {
   auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -202,8 +200,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_CANCELEDGESTURES)
 {
   auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -249,8 +246,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_GESTURE)
 {
   auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -274,8 +270,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_GESTURES)
 {
   auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -415,8 +410,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_MAPTOGRAPHICSSCENE)
 {
   auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
@@ -490,8 +484,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_WIDGET)
 {
   auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

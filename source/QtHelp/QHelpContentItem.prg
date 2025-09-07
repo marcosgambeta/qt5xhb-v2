@@ -68,8 +68,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_DELETE)
 {
   auto obj = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -87,8 +86,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_CHILD)
 {
   auto obj = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -112,8 +110,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_CHILDCOUNT)
 {
   auto obj = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -136,8 +133,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_CHILDPOSITION)
 {
   auto obj = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQHELPCONTENTITEM(1))
     {
@@ -160,8 +156,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_PARENT)
 {
   auto obj = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -185,8 +180,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_ROW)
 {
   auto obj = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -209,8 +203,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_TITLE)
 {
   auto obj = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -233,8 +226,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_URL)
 {
   auto obj = static_cast<QHelpContentItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

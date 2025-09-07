@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_DELETE)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -112,8 +111,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_CONTENTSRECT)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -137,8 +135,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSIZEF(2) || HB_ISNIL(2)))
     {
@@ -164,8 +161,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_GEOMETRY)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -189,8 +185,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
     {
@@ -223,8 +218,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_GRAPHICSITEM)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -248,8 +242,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_ISLAYOUT)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -272,8 +265,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_MAXIMUMHEIGHT)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -296,8 +288,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_MAXIMUMSIZE)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -321,8 +312,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_MAXIMUMWIDTH)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -345,8 +335,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_MINIMUMHEIGHT)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -369,8 +358,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_MINIMUMSIZE)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -394,8 +382,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_MINIMUMWIDTH)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -418,8 +405,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_OWNEDBYLAYOUT)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -442,8 +428,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_PARENTLAYOUTITEM)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -467,8 +452,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_PREFERREDHEIGHT)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -491,8 +475,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_PREFERREDSIZE)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -516,8 +499,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_PREFERREDWIDTH)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -540,8 +522,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETGEOMETRY)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
@@ -566,8 +547,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMAXIMUMHEIGHT)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -628,8 +608,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMAXIMUMWIDTH)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -654,8 +633,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMINIMUMHEIGHT)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -716,8 +694,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMINIMUMWIDTH)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -742,8 +719,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETPARENTLAYOUTITEM)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1))
     {
@@ -768,8 +744,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETPREFERREDHEIGHT)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -830,8 +805,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETPREFERREDWIDTH)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -895,8 +869,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SIZEPOLICY)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -920,8 +893,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_UPDATEGEOMETRY)
 {
   auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

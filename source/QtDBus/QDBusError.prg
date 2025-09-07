@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QDBUSERROR_DELETE)
 {
   auto obj = static_cast<QDBusError *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -123,8 +122,7 @@ HB_FUNC_STATIC(QDBUSERROR_TYPE)
 {
   auto obj = static_cast<QDBusError *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -147,8 +145,7 @@ HB_FUNC_STATIC(QDBUSERROR_NAME)
 {
   auto obj = static_cast<QDBusError *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -171,8 +168,7 @@ HB_FUNC_STATIC(QDBUSERROR_MESSAGE)
 {
   auto obj = static_cast<QDBusError *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -195,8 +191,7 @@ HB_FUNC_STATIC(QDBUSERROR_ISVALID)
 {
   auto obj = static_cast<QDBusError *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

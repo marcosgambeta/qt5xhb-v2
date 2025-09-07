@@ -78,8 +78,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_DELETE)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -97,8 +96,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_CELLAT)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -122,8 +120,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_CAPTION)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -147,8 +144,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_COLUMNDESCRIPTION)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -171,8 +167,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_COLUMNCOUNT)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -195,8 +190,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_ROWCOUNT)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -219,8 +213,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDCELLCOUNT)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -243,8 +236,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNCOUNT)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -267,8 +259,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDROWCOUNT)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -291,8 +282,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_ROWDESCRIPTION)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -315,8 +305,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDCELLS)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -362,8 +351,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNS)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -387,8 +375,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDROWS)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -412,8 +399,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SUMMARY)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -437,8 +423,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_ISCOLUMNSELECTED)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -461,8 +446,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_ISROWSELECTED)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -485,8 +469,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTROW)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -509,8 +492,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTCOLUMN)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -533,8 +515,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_UNSELECTROW)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -557,8 +538,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_UNSELECTCOLUMN)
 {
   auto obj = static_cast<QAccessibleTableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

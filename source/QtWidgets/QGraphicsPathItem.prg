@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_DELETE)
 {
   auto obj = static_cast<QGraphicsPathItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -105,8 +104,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_PATH)
 {
   auto obj = static_cast<QGraphicsPathItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -130,8 +128,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_SETPATH)
 {
   auto obj = static_cast<QGraphicsPathItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAINTERPATH(1))
     {
@@ -156,8 +153,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_BOUNDINGRECT)
 {
   auto obj = static_cast<QGraphicsPathItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -181,8 +177,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_CONTAINS)
 {
   auto obj = static_cast<QGraphicsPathItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
@@ -205,8 +200,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_ISOBSCUREDBY)
 {
   auto obj = static_cast<QGraphicsPathItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
@@ -229,8 +223,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_OPAQUEAREA)
 {
   auto obj = static_cast<QGraphicsPathItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -254,8 +247,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_PAINT)
 {
   auto obj = static_cast<QGraphicsPathItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
     {
@@ -280,8 +272,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_SHAPE)
 {
   auto obj = static_cast<QGraphicsPathItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -305,8 +296,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_TYPE)
 {
   auto obj = static_cast<QGraphicsPathItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

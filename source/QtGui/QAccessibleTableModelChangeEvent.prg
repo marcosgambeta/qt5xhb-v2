@@ -77,8 +77,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_DELETE)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -96,8 +95,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETMODELCHANGETYPE)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -122,8 +120,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_MODELCHANGETYPE)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -146,8 +143,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTROW)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -172,8 +168,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTCOLUMN)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -198,8 +193,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTROW)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -224,8 +218,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTCOLUMN)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -250,8 +243,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTROW)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -274,8 +266,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTCOLUMN)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -298,8 +289,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_LASTROW)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -322,8 +312,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_LASTCOLUMN)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

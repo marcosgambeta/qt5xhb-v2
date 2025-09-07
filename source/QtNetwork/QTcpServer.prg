@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QTCPSERVER_DELETE)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -119,8 +118,7 @@ HB_FUNC_STATIC(QTCPSERVER_LISTEN)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && (ISQHOSTADDRESS(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
     {
@@ -144,8 +142,7 @@ HB_FUNC_STATIC(QTCPSERVER_CLOSE)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -170,8 +167,7 @@ HB_FUNC_STATIC(QTCPSERVER_ISLISTENING)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -194,8 +190,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETMAXPENDINGCONNECTIONS)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -220,8 +215,7 @@ HB_FUNC_STATIC(QTCPSERVER_MAXPENDINGCONNECTIONS)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -244,8 +238,7 @@ HB_FUNC_STATIC(QTCPSERVER_SERVERPORT)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -268,8 +261,7 @@ HB_FUNC_STATIC(QTCPSERVER_SERVERADDRESS)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -293,8 +285,7 @@ HB_FUNC_STATIC(QTCPSERVER_SOCKETDESCRIPTOR)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -317,8 +308,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETSOCKETDESCRIPTOR)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -341,8 +331,7 @@ HB_FUNC_STATIC(QTCPSERVER_WAITFORNEWCONNECTION)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISLOGORNIL(2))
     {
@@ -367,8 +356,7 @@ HB_FUNC_STATIC(QTCPSERVER_HASPENDINGCONNECTIONS)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -391,8 +379,7 @@ HB_FUNC_STATIC(QTCPSERVER_NEXTPENDINGCONNECTION)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -416,8 +403,7 @@ HB_FUNC_STATIC(QTCPSERVER_SERVERERROR)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -440,8 +426,7 @@ HB_FUNC_STATIC(QTCPSERVER_ERRORSTRING)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -464,8 +449,7 @@ HB_FUNC_STATIC(QTCPSERVER_PAUSEACCEPTING)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -490,8 +474,7 @@ HB_FUNC_STATIC(QTCPSERVER_RESUMEACCEPTING)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -516,8 +499,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETPROXY)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQNETWORKPROXY(1))
     {
@@ -542,8 +524,7 @@ HB_FUNC_STATIC(QTCPSERVER_PROXY)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

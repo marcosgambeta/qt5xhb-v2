@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_DELETE)
 {
   auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -120,8 +119,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_AUTOREMOVE)
 {
   auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -144,8 +142,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_FILETEMPLATE)
 {
   auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -168,8 +165,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_OPEN)
 {
   auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -192,8 +188,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_SETAUTOREMOVE)
 {
   auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -218,8 +213,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_SETFILETEMPLATE)
 {
   auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -244,8 +238,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_FILENAME)
 {
   auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

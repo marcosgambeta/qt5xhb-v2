@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QSQLFIELD_DELETE)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -130,8 +129,7 @@ HB_FUNC_STATIC(QSQLFIELD_CLEAR)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -156,8 +154,7 @@ HB_FUNC_STATIC(QSQLFIELD_DEFAULTVALUE)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -181,8 +178,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETDEFAULTVALUE)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
@@ -207,8 +203,7 @@ HB_FUNC_STATIC(QSQLFIELD_ISAUTOVALUE)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -231,8 +226,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETAUTOVALUE)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -257,8 +251,7 @@ HB_FUNC_STATIC(QSQLFIELD_ISGENERATED)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -281,8 +274,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETGENERATED)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -307,8 +299,7 @@ HB_FUNC_STATIC(QSQLFIELD_ISNULL)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -331,8 +322,7 @@ HB_FUNC_STATIC(QSQLFIELD_ISREADONLY)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -355,8 +345,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREADONLY)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -381,8 +370,7 @@ HB_FUNC_STATIC(QSQLFIELD_ISVALID)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -405,8 +393,7 @@ HB_FUNC_STATIC(QSQLFIELD_LENGTH)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -429,8 +416,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETLENGTH)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -455,8 +441,7 @@ HB_FUNC_STATIC(QSQLFIELD_NAME)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -479,8 +464,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETNAME)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -505,8 +489,7 @@ HB_FUNC_STATIC(QSQLFIELD_PRECISION)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -529,8 +512,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETPRECISION)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -555,8 +537,7 @@ HB_FUNC_STATIC(QSQLFIELD_REQUIREDSTATUS)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -579,8 +560,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREQUIREDSTATUS)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -605,8 +585,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREQUIRED)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -631,8 +610,7 @@ HB_FUNC_STATIC(QSQLFIELD_TYPE)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -655,8 +633,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETTYPE)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -681,8 +658,7 @@ HB_FUNC_STATIC(QSQLFIELD_VALUE)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -706,8 +682,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETVALUE)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
@@ -732,8 +707,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETSQLTYPE)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -758,8 +732,7 @@ HB_FUNC_STATIC(QSQLFIELD_TYPEID)
 {
   auto obj = static_cast<QSqlField *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

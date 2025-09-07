@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QAUDIODECODER_DELETE)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -121,8 +120,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SOURCEFILENAME)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -145,8 +143,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SETSOURCEFILENAME)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -171,8 +168,7 @@ HB_FUNC_STATIC(QAUDIODECODER_STATE)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -195,8 +191,7 @@ HB_FUNC_STATIC(QAUDIODECODER_ERRORSTRING)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -219,8 +214,7 @@ HB_FUNC_STATIC(QAUDIODECODER_BUFFERAVAILABLE)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -243,8 +237,7 @@ HB_FUNC_STATIC(QAUDIODECODER_AUDIOFORMAT)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -268,8 +261,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SETAUDIOFORMAT)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQAUDIOFORMAT(1))
     {
@@ -294,8 +286,7 @@ HB_FUNC_STATIC(QAUDIODECODER_DURATION)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -318,8 +309,7 @@ HB_FUNC_STATIC(QAUDIODECODER_ERROR)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -342,8 +332,7 @@ HB_FUNC_STATIC(QAUDIODECODER_POSITION)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -366,8 +355,7 @@ HB_FUNC_STATIC(QAUDIODECODER_READ)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -391,8 +379,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SOURCEDEVICE)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -416,8 +403,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SETSOURCEDEVICE)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQIODEVICE(1))
     {
@@ -442,8 +428,7 @@ HB_FUNC_STATIC(QAUDIODECODER_START)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -468,8 +453,7 @@ HB_FUNC_STATIC(QAUDIODECODER_STOP)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

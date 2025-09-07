@@ -76,8 +76,7 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_DELETE)
 {
   auto obj = qobject_cast<QGraphicsOpacityEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -97,8 +96,7 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_OPACITY)
 {
   auto obj = qobject_cast<QGraphicsOpacityEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -121,8 +119,7 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_OPACITYMASK)
 {
   auto obj = qobject_cast<QGraphicsOpacityEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -146,8 +143,7 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_SETOPACITY)
 {
   auto obj = qobject_cast<QGraphicsOpacityEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -172,8 +168,7 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_SETOPACITYMASK)
 {
   auto obj = qobject_cast<QGraphicsOpacityEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {

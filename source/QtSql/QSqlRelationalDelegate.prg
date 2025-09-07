@@ -71,8 +71,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_DELETE)
 {
   auto obj = static_cast<QSqlRelationalDelegate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -92,8 +91,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_CREATEEDITOR)
 {
   auto obj = static_cast<QSqlRelationalDelegate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3))
     {
@@ -117,8 +115,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_SETMODELDATA)
 {
   auto obj = static_cast<QSqlRelationalDelegate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQWIDGET(1) && ISQABSTRACTITEMMODEL(2) && ISQMODELINDEX(3))
     {

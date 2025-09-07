@@ -127,8 +127,7 @@ HB_FUNC_STATIC(QLINEF_DELETE)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -146,8 +145,7 @@ HB_FUNC_STATIC(QLINEF_P1)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -171,8 +169,7 @@ HB_FUNC_STATIC(QLINEF_P2)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -196,8 +193,7 @@ HB_FUNC_STATIC(QLINEF_X1)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -220,8 +216,7 @@ HB_FUNC_STATIC(QLINEF_X2)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -244,8 +239,7 @@ HB_FUNC_STATIC(QLINEF_Y1)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -268,8 +262,7 @@ HB_FUNC_STATIC(QLINEF_Y2)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -292,8 +285,7 @@ HB_FUNC_STATIC(QLINEF_ANGLE)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -316,8 +308,7 @@ HB_FUNC_STATIC(QLINEF_ANGLETO)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQLINEF(1))
     {
@@ -340,8 +331,7 @@ HB_FUNC_STATIC(QLINEF_DX)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -364,8 +354,7 @@ HB_FUNC_STATIC(QLINEF_DY)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -388,8 +377,7 @@ HB_FUNC_STATIC(QLINEF_INTERSECT)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQLINEF(1) && ISQPOINTF(2))
     {
@@ -412,8 +400,7 @@ HB_FUNC_STATIC(QLINEF_ISNULL)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -436,8 +423,7 @@ HB_FUNC_STATIC(QLINEF_LENGTH)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -460,8 +446,7 @@ HB_FUNC_STATIC(QLINEF_NORMALVECTOR)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -485,8 +470,7 @@ HB_FUNC_STATIC(QLINEF_POINTAT)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -510,8 +494,7 @@ HB_FUNC_STATIC(QLINEF_SETP1)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
@@ -536,8 +519,7 @@ HB_FUNC_STATIC(QLINEF_SETP2)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
@@ -562,8 +544,7 @@ HB_FUNC_STATIC(QLINEF_SETANGLE)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -588,8 +569,7 @@ HB_FUNC_STATIC(QLINEF_SETLENGTH)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -614,8 +594,7 @@ HB_FUNC_STATIC(QLINEF_SETLINE)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
     {
@@ -640,8 +619,7 @@ HB_FUNC_STATIC(QLINEF_SETPOINTS)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2))
     {
@@ -666,8 +644,7 @@ HB_FUNC_STATIC(QLINEF_TOLINE)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -761,8 +738,7 @@ HB_FUNC_STATIC(QLINEF_UNITVECTOR)
 {
   auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

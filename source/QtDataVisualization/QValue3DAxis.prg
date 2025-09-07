@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -120,8 +119,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SEGMENTCOUNT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -146,8 +144,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETSEGMENTCOUNT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -174,8 +171,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SUBSEGMENTCOUNT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -200,8 +196,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETSUBSEGMENTCOUNT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -228,8 +223,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_LABELFORMAT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -254,8 +248,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETLABELFORMAT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -282,8 +275,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_FORMATTER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -309,8 +301,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETFORMATTER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVALUE3DAXISFORMATTER(1))
     {
@@ -337,8 +328,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_REVERSED)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -363,8 +353,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETREVERSED)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {

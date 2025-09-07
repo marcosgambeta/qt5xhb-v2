@@ -95,8 +95,7 @@ HB_FUNC_STATIC(QUNDOGROUP_DELETE)
 {
   auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -116,8 +115,7 @@ HB_FUNC_STATIC(QUNDOGROUP_ACTIVESTACK)
 {
   auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -141,8 +139,7 @@ HB_FUNC_STATIC(QUNDOGROUP_ADDSTACK)
 {
   auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQUNDOSTACK(1))
     {
@@ -167,8 +164,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CANREDO)
 {
   auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -191,8 +187,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CANUNDO)
 {
   auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -215,8 +210,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEREDOACTION)
 {
   auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQOBJECT(1) && ISCHARORNIL(2))
     {
@@ -240,8 +234,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEUNDOACTION)
 {
   auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQOBJECT(1) && ISCHARORNIL(2))
     {
@@ -265,8 +258,7 @@ HB_FUNC_STATIC(QUNDOGROUP_ISCLEAN)
 {
   auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -289,8 +281,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REDOTEXT)
 {
   auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -313,8 +304,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REMOVESTACK)
 {
   auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQUNDOSTACK(1))
     {
@@ -339,8 +329,7 @@ HB_FUNC_STATIC(QUNDOGROUP_STACKS)
 {
   auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -386,8 +375,7 @@ HB_FUNC_STATIC(QUNDOGROUP_UNDOTEXT)
 {
   auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -410,8 +398,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REDO)
 {
   auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -436,8 +423,7 @@ HB_FUNC_STATIC(QUNDOGROUP_SETACTIVESTACK)
 {
   auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQUNDOSTACK(1))
     {
@@ -462,8 +448,7 @@ HB_FUNC_STATIC(QUNDOGROUP_UNDO)
 {
   auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

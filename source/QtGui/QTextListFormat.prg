@@ -75,8 +75,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_DELETE)
 {
   auto obj = static_cast<QTextListFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -94,8 +93,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_ISVALID)
 {
   auto obj = static_cast<QTextListFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -118,8 +116,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_SETSTYLE)
 {
   auto obj = static_cast<QTextListFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -144,8 +141,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_STYLE)
 {
   auto obj = static_cast<QTextListFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -168,8 +164,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_SETINDENT)
 {
   auto obj = static_cast<QTextListFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -194,8 +189,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_INDENT)
 {
   auto obj = static_cast<QTextListFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -218,8 +212,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_SETNUMBERPREFIX)
 {
   auto obj = static_cast<QTextListFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -244,8 +237,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_NUMBERPREFIX)
 {
   auto obj = static_cast<QTextListFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -268,8 +260,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_SETNUMBERSUFFIX)
 {
   auto obj = static_cast<QTextListFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -294,8 +285,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_NUMBERSUFFIX)
 {
   auto obj = static_cast<QTextListFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

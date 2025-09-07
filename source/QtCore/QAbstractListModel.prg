@@ -54,8 +54,7 @@ HB_FUNC_STATIC(QABSTRACTLISTMODEL_DELETE)
 {
   auto obj = qobject_cast<QAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -76,8 +75,7 @@ HB_FUNC_STATIC(QABSTRACTLISTMODEL_DROPMIMEDATA)
 {
   auto obj = qobject_cast<QAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5))
     {
@@ -101,8 +99,7 @@ HB_FUNC_STATIC(QABSTRACTLISTMODEL_INDEX)
 {
   auto obj = qobject_cast<QAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {

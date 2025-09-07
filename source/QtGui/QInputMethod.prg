@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_CURSORRECTANGLE)
 {
   auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -107,8 +106,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_INPUTDIRECTION)
 {
   auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -131,8 +129,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_INPUTITEMTRANSFORM)
 {
   auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -156,8 +153,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ISANIMATING)
 {
   auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -180,8 +176,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ISVISIBLE)
 {
   auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -204,8 +199,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_KEYBOARDRECTANGLE)
 {
   auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -229,8 +223,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_LOCALE)
 {
   auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -254,8 +247,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_SETINPUTITEMTRANSFORM)
 {
   auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTRANSFORM(1))
     {
@@ -280,8 +272,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_SETVISIBLE)
 {
   auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -306,8 +297,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_COMMIT)
 {
   auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -332,8 +322,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_HIDE)
 {
   auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -358,8 +347,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_INVOKEACTION)
 {
   auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -384,8 +372,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_RESET)
 {
   auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -410,8 +397,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_SHOW)
 {
   auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -436,8 +422,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_UPDATE)
 {
   auto obj = qobject_cast<QInputMethod *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

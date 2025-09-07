@@ -120,8 +120,7 @@ HB_FUNC_STATIC(QFILE_DELETE)
 {
   auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -169,8 +168,7 @@ HB_FUNC_STATIC(QFILE_ERROR)
 {
   auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -221,8 +219,7 @@ HB_FUNC_STATIC(QFILE_FILENAME)
 {
   auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -245,8 +242,7 @@ HB_FUNC_STATIC(QFILE_FLUSH)
 {
   auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -269,8 +265,7 @@ HB_FUNC_STATIC(QFILE_HANDLE)
 {
   auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -481,8 +476,7 @@ HB_FUNC_STATIC(QFILE_SETFILENAME)
 {
   auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -563,8 +557,7 @@ HB_FUNC_STATIC(QFILE_UNMAP)
 {
   auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -587,8 +580,7 @@ HB_FUNC_STATIC(QFILE_UNSETERROR)
 {
   auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -613,8 +605,7 @@ HB_FUNC_STATIC(QFILE_ATEND)
 {
   auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -637,8 +628,7 @@ HB_FUNC_STATIC(QFILE_CLOSE)
 {
   auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -663,8 +653,7 @@ HB_FUNC_STATIC(QFILE_ISSEQUENTIAL)
 {
   auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -687,8 +676,7 @@ HB_FUNC_STATIC(QFILE_POS)
 {
   auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -711,8 +699,7 @@ HB_FUNC_STATIC(QFILE_SEEK)
 {
   auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -735,8 +722,7 @@ HB_FUNC_STATIC(QFILE_SIZE)
 {
   auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

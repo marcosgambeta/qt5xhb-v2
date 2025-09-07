@@ -85,8 +85,7 @@ HB_FUNC_STATIC(QTEXTDECODER_DELETE)
 {
   auto obj = static_cast<QTextDecoder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -140,8 +139,7 @@ HB_FUNC_STATIC(QTEXTDECODER_HASFAILURE)
 {
   auto obj = static_cast<QTextDecoder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

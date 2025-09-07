@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   auto obj = qobject_cast<QBluetoothServiceDiscoveryAgent *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -127,8 +126,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_ISACTIVE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   auto obj = qobject_cast<QBluetoothServiceDiscoveryAgent *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -153,8 +151,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_ERROR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   auto obj = qobject_cast<QBluetoothServiceDiscoveryAgent *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -179,8 +176,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_ERRORSTRING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   auto obj = qobject_cast<QBluetoothServiceDiscoveryAgent *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -205,8 +201,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_DISCOVEREDSERVICES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   auto obj = qobject_cast<QBluetoothServiceDiscoveryAgent *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -303,8 +298,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_UUIDFILTER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   auto obj = qobject_cast<QBluetoothServiceDiscoveryAgent *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -355,8 +349,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_SETREMOTEADDRESS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   auto obj = qobject_cast<QBluetoothServiceDiscoveryAgent *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBLUETOOTHADDRESS(1))
     {
@@ -381,8 +374,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_REMOTEADDRESS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   auto obj = qobject_cast<QBluetoothServiceDiscoveryAgent *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -408,8 +400,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_START)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   auto obj = qobject_cast<QBluetoothServiceDiscoveryAgent *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -438,8 +429,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_STOP)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   auto obj = qobject_cast<QBluetoothServiceDiscoveryAgent *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -466,8 +456,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_CLEAR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   auto obj = qobject_cast<QBluetoothServiceDiscoveryAgent *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

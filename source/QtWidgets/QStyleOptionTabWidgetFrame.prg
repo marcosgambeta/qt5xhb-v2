@@ -94,8 +94,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_LINEWIDTH)
 {
   auto obj = static_cast<QStyleOptionTabWidgetFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(0))
     {
       RINT(obj->lineWidth);
@@ -111,8 +110,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SETLINEWIDTH)
 {
   auto obj = static_cast<QStyleOptionTabWidgetFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->lineWidth = PINT(1);
@@ -133,8 +131,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_MIDLINEWIDTH)
 {
   auto obj = static_cast<QStyleOptionTabWidgetFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(0))
     {
       RINT(obj->midLineWidth);
@@ -150,8 +147,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SETMIDLINEWIDTH)
 {
   auto obj = static_cast<QStyleOptionTabWidgetFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->midLineWidth = PINT(1);
@@ -172,8 +168,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SHAPE)
 {
   auto obj = static_cast<QStyleOptionTabWidgetFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->shape);
@@ -189,8 +184,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SETSHAPE)
 {
   auto obj = static_cast<QStyleOptionTabWidgetFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->shape = static_cast<QTabBar::Shape>(hb_parni(1));
@@ -211,8 +205,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_TABBARSIZE)
 {
   auto obj = static_cast<QStyleOptionTabWidgetFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(0))
     {
       auto ptr = new QSize(obj->tabBarSize);
@@ -229,8 +222,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SETTABBARSIZE)
 {
   auto obj = static_cast<QStyleOptionTabWidgetFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
       obj->tabBarSize = *PQSIZE(1);
@@ -251,8 +243,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_RIGHTCORNERWIDGETSIZE)
 {
   auto obj = static_cast<QStyleOptionTabWidgetFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(0))
     {
       auto ptr = new QSize(obj->rightCornerWidgetSize);
@@ -269,8 +260,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SETRIGHTCORNERWIDGETSIZE)
 {
   auto obj = static_cast<QStyleOptionTabWidgetFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
       obj->rightCornerWidgetSize = *PQSIZE(1);
@@ -291,8 +281,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_LEFTCORNERWIDGETSIZE)
 {
   auto obj = static_cast<QStyleOptionTabWidgetFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(0))
     {
       auto ptr = new QSize(obj->leftCornerWidgetSize);
@@ -309,8 +298,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SETLEFTCORNERWIDGETSIZE)
 {
   auto obj = static_cast<QStyleOptionTabWidgetFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
       obj->leftCornerWidgetSize = *PQSIZE(1);
@@ -331,8 +319,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_TABBARRECT)
 {
   auto obj = static_cast<QStyleOptionTabWidgetFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(0))
     {
       auto ptr = new QRect(obj->tabBarRect);
@@ -349,8 +336,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SETTABBARRECT)
 {
   auto obj = static_cast<QStyleOptionTabWidgetFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(1) && ISQRECT(1))
     {
       obj->tabBarRect = *PQRECT(1);
@@ -371,8 +357,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SELECTEDTABRECT)
 {
   auto obj = static_cast<QStyleOptionTabWidgetFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(0))
     {
       auto ptr = new QRect(obj->selectedTabRect);
@@ -389,8 +374,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SETSELECTEDTABRECT)
 {
   auto obj = static_cast<QStyleOptionTabWidgetFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(1) && ISQRECT(1))
     {
       obj->selectedTabRect = *PQRECT(1);

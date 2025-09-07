@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QSPINBOX_DELETE)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QSPINBOX_CLEANTEXT)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -132,8 +130,7 @@ HB_FUNC_STATIC(QSPINBOX_MAXIMUM)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -156,8 +153,7 @@ HB_FUNC_STATIC(QSPINBOX_SETMAXIMUM)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -182,8 +178,7 @@ HB_FUNC_STATIC(QSPINBOX_MINIMUM)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -206,8 +201,7 @@ HB_FUNC_STATIC(QSPINBOX_SETMINIMUM)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -232,8 +226,7 @@ HB_FUNC_STATIC(QSPINBOX_PREFIX)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -256,8 +249,7 @@ HB_FUNC_STATIC(QSPINBOX_SETPREFIX)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -282,8 +274,7 @@ HB_FUNC_STATIC(QSPINBOX_SETRANGE)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -308,8 +299,7 @@ HB_FUNC_STATIC(QSPINBOX_SINGLESTEP)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -332,8 +322,7 @@ HB_FUNC_STATIC(QSPINBOX_SETSINGLESTEP)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -358,8 +347,7 @@ HB_FUNC_STATIC(QSPINBOX_SUFFIX)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -382,8 +370,7 @@ HB_FUNC_STATIC(QSPINBOX_SETSUFFIX)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -408,8 +395,7 @@ HB_FUNC_STATIC(QSPINBOX_VALUE)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -432,8 +418,7 @@ HB_FUNC_STATIC(QSPINBOX_SETVALUE)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -458,8 +443,7 @@ HB_FUNC_STATIC(QSPINBOX_DISPLAYINTEGERBASE)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -482,8 +466,7 @@ HB_FUNC_STATIC(QSPINBOX_SETDISPLAYINTEGERBASE)
 {
   auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

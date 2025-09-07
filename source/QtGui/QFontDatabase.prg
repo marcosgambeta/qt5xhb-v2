@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QFONTDATABASE_DELETE)
 {
   auto obj = static_cast<QFontDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -119,8 +118,7 @@ HB_FUNC_STATIC(QFONTDATABASE_BOLD)
 {
   auto obj = static_cast<QFontDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -143,8 +141,7 @@ HB_FUNC_STATIC(QFONTDATABASE_FAMILIES)
 {
   auto obj = static_cast<QFontDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -168,8 +165,7 @@ HB_FUNC_STATIC(QFONTDATABASE_FONT)
 {
   auto obj = static_cast<QFontDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3))
     {
@@ -193,8 +189,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ISBITMAPSCALABLE)
 {
   auto obj = static_cast<QFontDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
     {
@@ -217,8 +212,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ISFIXEDPITCH)
 {
   auto obj = static_cast<QFontDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
     {
@@ -241,8 +235,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ISSCALABLE)
 {
   auto obj = static_cast<QFontDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
     {
@@ -265,8 +258,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ISSMOOTHLYSCALABLE)
 {
   auto obj = static_cast<QFontDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
     {
@@ -289,8 +281,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ITALIC)
 {
   auto obj = static_cast<QFontDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -313,8 +304,7 @@ HB_FUNC_STATIC(QFONTDATABASE_POINTSIZES)
 {
   auto obj = static_cast<QFontDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
     {
@@ -338,8 +328,7 @@ HB_FUNC_STATIC(QFONTDATABASE_SMOOTHSIZES)
 {
   auto obj = static_cast<QFontDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -395,8 +384,7 @@ HB_FUNC_STATIC(QFONTDATABASE_STYLES)
 {
   auto obj = static_cast<QFontDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -419,8 +407,7 @@ HB_FUNC_STATIC(QFONTDATABASE_WEIGHT)
 {
   auto obj = static_cast<QFontDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {

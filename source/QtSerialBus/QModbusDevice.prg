@@ -67,8 +67,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   auto obj = qobject_cast<QModbusDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -96,8 +95,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_CONNECTDEVICE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   auto obj = qobject_cast<QModbusDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -122,8 +120,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_DISCONNECTDEVICE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   auto obj = qobject_cast<QModbusDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -150,8 +147,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_STATE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   auto obj = qobject_cast<QModbusDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -176,8 +172,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_ERROR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   auto obj = qobject_cast<QModbusDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -202,8 +197,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_ERRORSTRING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   auto obj = qobject_cast<QModbusDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

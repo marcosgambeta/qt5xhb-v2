@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QTEXTTABLE_DELETE)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -110,8 +109,7 @@ HB_FUNC_STATIC(QTEXTTABLE_RESIZE)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -136,8 +134,7 @@ HB_FUNC_STATIC(QTEXTTABLE_INSERTROWS)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -162,8 +159,7 @@ HB_FUNC_STATIC(QTEXTTABLE_INSERTCOLUMNS)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -188,8 +184,7 @@ HB_FUNC_STATIC(QTEXTTABLE_APPENDROWS)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -214,8 +209,7 @@ HB_FUNC_STATIC(QTEXTTABLE_APPENDCOLUMNS)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -240,8 +234,7 @@ HB_FUNC_STATIC(QTEXTTABLE_REMOVEROWS)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -266,8 +259,7 @@ HB_FUNC_STATIC(QTEXTTABLE_REMOVECOLUMNS)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -328,8 +320,7 @@ HB_FUNC_STATIC(QTEXTTABLE_SPLITCELL)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
     {
@@ -354,8 +345,7 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWS)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -378,8 +368,7 @@ HB_FUNC_STATIC(QTEXTTABLE_COLUMNS)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -449,8 +438,7 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWSTART)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
     {
@@ -474,8 +462,7 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWEND)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
     {
@@ -499,8 +486,7 @@ HB_FUNC_STATIC(QTEXTTABLE_SETFORMAT)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTTABLEFORMAT(1))
     {
@@ -525,8 +511,7 @@ HB_FUNC_STATIC(QTEXTTABLE_FORMAT)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

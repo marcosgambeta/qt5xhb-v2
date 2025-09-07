@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_DELETE)
 {
   auto obj = static_cast<QTextFragment *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -112,8 +111,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_ISVALID)
 {
   auto obj = static_cast<QTextFragment *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -136,8 +134,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_POSITION)
 {
   auto obj = static_cast<QTextFragment *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -160,8 +157,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_LENGTH)
 {
   auto obj = static_cast<QTextFragment *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -184,8 +180,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_CONTAINS)
 {
   auto obj = static_cast<QTextFragment *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -208,8 +203,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_CHARFORMAT)
 {
   auto obj = static_cast<QTextFragment *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -233,8 +227,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_CHARFORMATINDEX)
 {
   auto obj = static_cast<QTextFragment *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -257,8 +250,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_TEXT)
 {
   auto obj = static_cast<QTextFragment *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -281,8 +273,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_GLYPHRUNS)
 {
   auto obj = static_cast<QTextFragment *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2))
     {

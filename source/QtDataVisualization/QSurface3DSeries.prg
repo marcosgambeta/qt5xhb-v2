@@ -115,8 +115,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QSurface3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -138,8 +137,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_DATAPROXY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QSurface3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -165,8 +163,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SETDATAPROXY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QSurface3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSURFACEDATAPROXY(1))
     {
@@ -193,8 +190,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SELECTEDPOINT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QSurface3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -220,8 +216,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SETSELECTEDPOINT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QSurface3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
@@ -248,8 +243,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ISFLATSHADINGENABLED)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QSurface3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -274,8 +268,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SETFLATSHADINGENABLED)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QSurface3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -302,8 +295,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ISFLATSHADINGSUPPORTED)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QSurface3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -328,8 +320,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_DRAWMODE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QSurface3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -354,8 +345,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SETDRAWMODE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QSurface3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -382,8 +372,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_TEXTURE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QSurface3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -409,8 +398,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SETTEXTURE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QSurface3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQIMAGE(1))
     {
@@ -437,8 +425,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_TEXTUREFILE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QSurface3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -463,8 +450,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SETTEXTUREFILE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QSurface3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {

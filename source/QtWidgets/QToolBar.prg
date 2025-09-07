@@ -114,8 +114,7 @@ HB_FUNC_STATIC(QTOOLBAR_DELETE)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -245,8 +244,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDSEPARATOR)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -270,8 +268,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDWIDGET)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
@@ -295,8 +292,7 @@ HB_FUNC_STATIC(QTOOLBAR_ALLOWEDAREAS)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -319,8 +315,7 @@ HB_FUNC_STATIC(QTOOLBAR_CLEAR)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -345,8 +340,7 @@ HB_FUNC_STATIC(QTOOLBAR_ICONSIZE)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -370,8 +364,7 @@ HB_FUNC_STATIC(QTOOLBAR_INSERTSEPARATOR)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQACTION(1))
     {
@@ -395,8 +388,7 @@ HB_FUNC_STATIC(QTOOLBAR_INSERTWIDGET)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQACTION(1) && ISQWIDGET(2))
     {
@@ -420,8 +412,7 @@ HB_FUNC_STATIC(QTOOLBAR_ISAREAALLOWED)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -444,8 +435,7 @@ HB_FUNC_STATIC(QTOOLBAR_ISFLOATABLE)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -468,8 +458,7 @@ HB_FUNC_STATIC(QTOOLBAR_ISFLOATING)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -492,8 +481,7 @@ HB_FUNC_STATIC(QTOOLBAR_ISMOVABLE)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -516,8 +504,7 @@ HB_FUNC_STATIC(QTOOLBAR_ORIENTATION)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -540,8 +527,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETALLOWEDAREAS)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -566,8 +552,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETFLOATABLE)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -592,8 +577,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETMOVABLE)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -618,8 +602,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETORIENTATION)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -644,8 +627,7 @@ HB_FUNC_STATIC(QTOOLBAR_TOGGLEVIEWACTION)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -669,8 +651,7 @@ HB_FUNC_STATIC(QTOOLBAR_TOOLBUTTONSTYLE)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -693,8 +674,7 @@ HB_FUNC_STATIC(QTOOLBAR_WIDGETFORACTION)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQACTION(1))
     {
@@ -718,8 +698,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETICONSIZE)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
@@ -744,8 +723,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETTOOLBUTTONSTYLE)
 {
   auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

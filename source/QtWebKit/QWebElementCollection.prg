@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_DELETE)
 {
   auto obj = static_cast<QWebElementCollection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -117,8 +116,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_APPEND)
 {
   auto obj = static_cast<QWebElementCollection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWEBELEMENTCOLLECTION(1))
     {
@@ -143,8 +141,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_AT)
 {
   auto obj = static_cast<QWebElementCollection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -168,8 +165,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_COUNT)
 {
   auto obj = static_cast<QWebElementCollection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -192,8 +188,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_FIRST)
 {
   auto obj = static_cast<QWebElementCollection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -217,8 +212,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_LAST)
 {
   auto obj = static_cast<QWebElementCollection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -242,8 +236,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_TOLIST)
 {
   auto obj = static_cast<QWebElementCollection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

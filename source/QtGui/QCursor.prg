@@ -121,8 +121,7 @@ HB_FUNC_STATIC(QCURSOR_DELETE)
 {
   auto obj = static_cast<QCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -140,8 +139,7 @@ HB_FUNC_STATIC(QCURSOR_BITMAP)
 {
   auto obj = static_cast<QCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -165,8 +163,7 @@ HB_FUNC_STATIC(QCURSOR_HOTSPOT)
 {
   auto obj = static_cast<QCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -190,8 +187,7 @@ HB_FUNC_STATIC(QCURSOR_MASK)
 {
   auto obj = static_cast<QCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -215,8 +211,7 @@ HB_FUNC_STATIC(QCURSOR_PIXMAP)
 {
   auto obj = static_cast<QCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -240,8 +235,7 @@ HB_FUNC_STATIC(QCURSOR_SETSHAPE)
 {
   auto obj = static_cast<QCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -266,8 +260,7 @@ HB_FUNC_STATIC(QCURSOR_SHAPE)
 {
   auto obj = static_cast<QCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

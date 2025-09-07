@@ -84,8 +84,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -107,8 +106,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_AVAILABLELOCALES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -159,8 +157,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_AVAILABLEVOICES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -211,8 +208,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SAY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -239,8 +235,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_STOP)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -267,8 +262,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_PAUSE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -295,8 +289,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_RESUME)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -323,8 +316,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_RATE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -349,8 +341,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETRATE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -375,8 +366,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_PITCH)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -401,8 +391,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETPITCH)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -427,8 +416,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_LOCALE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -454,8 +442,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETLOCALE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQLOCALE(1))
     {
@@ -480,8 +467,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_VOLUME)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -506,8 +492,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETVOLUME)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -532,8 +517,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_VOICE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -559,8 +543,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETVOICE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVOICE(1))
     {
@@ -585,8 +568,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_STATE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QTextToSpeechEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

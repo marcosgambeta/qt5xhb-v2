@@ -116,8 +116,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -137,8 +136,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETPOSITION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
@@ -165,8 +163,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_POSITION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -192,8 +189,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETX)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -220,8 +216,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -248,8 +243,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETZ)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -276,8 +270,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_X)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -302,8 +295,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_Y)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -328,8 +320,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_Z)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

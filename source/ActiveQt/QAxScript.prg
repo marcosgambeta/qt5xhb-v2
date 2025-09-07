@@ -83,8 +83,7 @@ HB_FUNC_STATIC(QAXSCRIPT_DELETE)
 {
   auto obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -146,8 +145,7 @@ HB_FUNC_STATIC(QAXSCRIPT_FUNCTIONS)
 {
   auto obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -169,8 +167,7 @@ HB_FUNC_STATIC(QAXSCRIPT_LOAD)
 {
   auto obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
     {
@@ -191,8 +188,7 @@ HB_FUNC_STATIC(QAXSCRIPT_SCRIPTCODE)
 {
   auto obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -213,8 +209,7 @@ HB_FUNC_STATIC(QAXSCRIPT_SCRIPTENGINE)
 {
   auto obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -236,8 +231,7 @@ HB_FUNC_STATIC(QAXSCRIPT_SCRIPTNAME)
 {
   auto obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

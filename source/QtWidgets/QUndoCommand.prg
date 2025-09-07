@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_DELETE)
 {
   auto obj = static_cast<QUndoCommand *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -112,8 +111,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_ACTIONTEXT)
 {
   auto obj = static_cast<QUndoCommand *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -136,8 +134,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_CHILD)
 {
   auto obj = static_cast<QUndoCommand *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -161,8 +158,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_CHILDCOUNT)
 {
   auto obj = static_cast<QUndoCommand *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -185,8 +181,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_ID)
 {
   auto obj = static_cast<QUndoCommand *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -209,8 +204,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_MERGEWITH)
 {
   auto obj = static_cast<QUndoCommand *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQUNDOCOMMAND(1))
     {
@@ -233,8 +227,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_REDO)
 {
   auto obj = static_cast<QUndoCommand *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -259,8 +252,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_SETTEXT)
 {
   auto obj = static_cast<QUndoCommand *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -285,8 +277,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_TEXT)
 {
   auto obj = static_cast<QUndoCommand *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -309,8 +300,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_UNDO)
 {
   auto obj = static_cast<QUndoCommand *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

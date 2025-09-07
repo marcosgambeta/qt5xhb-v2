@@ -80,8 +80,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_DELETE)
 {
   auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -101,8 +100,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_AUDIOFORMAT)
 {
   auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -126,8 +124,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_BUFFERAVAILABLE)
 {
   auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -150,8 +147,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_DURATION)
 {
   auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -174,8 +170,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_POSITION)
 {
   auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -198,8 +193,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_READ)
 {
   auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -223,8 +217,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SETAUDIOFORMAT)
 {
   auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQAUDIOFORMAT(1))
     {
@@ -249,8 +242,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SOURCEDEVICE)
 {
   auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -274,8 +266,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SETSOURCEDEVICE)
 {
   auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQIODEVICE(1))
     {
@@ -300,8 +291,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SETSOURCEFILENAME)
 {
   auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -326,8 +316,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SOURCEFILENAME)
 {
   auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -350,8 +339,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_START)
 {
   auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -376,8 +364,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_STATE)
 {
   auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -400,8 +387,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_STOP)
 {
   auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

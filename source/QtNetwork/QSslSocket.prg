@@ -156,8 +156,7 @@ HB_FUNC_STATIC(QSSLSOCKET_DELETE)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -177,8 +176,7 @@ HB_FUNC_STATIC(QSSLSOCKET_RESUME)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -253,8 +251,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETSOCKETDESCRIPTOR)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
     {
@@ -283,8 +280,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CONNECTTOHOST)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4))
     {
@@ -314,8 +310,7 @@ HB_FUNC_STATIC(QSSLSOCKET_DISCONNECTFROMHOST)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -340,8 +335,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETSOCKETOPTION)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
@@ -366,8 +360,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SOCKETOPTION)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -391,8 +384,7 @@ HB_FUNC_STATIC(QSSLSOCKET_MODE)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -415,8 +407,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ISENCRYPTED)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -439,8 +430,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PROTOCOL)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -463,8 +453,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPROTOCOL)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -489,8 +478,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERVERIFYMODE)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -513,8 +501,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPEERVERIFYMODE)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -539,8 +526,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERVERIFYDEPTH)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -563,8 +549,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPEERVERIFYDEPTH)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -589,8 +574,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERVERIFYNAME)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -613,8 +597,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPEERVERIFYNAME)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -639,8 +622,7 @@ HB_FUNC_STATIC(QSSLSOCKET_BYTESAVAILABLE)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -663,8 +645,7 @@ HB_FUNC_STATIC(QSSLSOCKET_BYTESTOWRITE)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -687,8 +668,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CANREADLINE)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -711,8 +691,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CLOSE)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -737,8 +716,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ATEND)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -761,8 +739,7 @@ HB_FUNC_STATIC(QSSLSOCKET_FLUSH)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -785,8 +762,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ABORT)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -811,8 +787,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETREADBUFFERSIZE)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -837,8 +812,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ENCRYPTEDBYTESAVAILABLE)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -861,8 +835,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ENCRYPTEDBYTESTOWRITE)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -885,8 +858,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SSLCONFIGURATION)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -910,8 +882,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETSSLCONFIGURATION)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSSLCONFIGURATION(1))
     {
@@ -937,8 +908,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETLOCALCERTIFICATECHAIN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -973,8 +943,7 @@ HB_FUNC_STATIC(QSSLSOCKET_LOCALCERTIFICATECHAIN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1061,8 +1030,7 @@ HB_FUNC_STATIC(QSSLSOCKET_LOCALCERTIFICATE)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1086,8 +1054,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERCERTIFICATE)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1111,8 +1078,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERCERTIFICATECHAIN)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1161,8 +1127,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SESSIONCIPHER)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1187,8 +1152,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SESSIONPROTOCOL)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1254,8 +1218,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PRIVATEKEY)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1279,8 +1242,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CIPHERS)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1539,8 +1501,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDCACERTIFICATE)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSSLCERTIFICATE(1))
     {
@@ -1565,8 +1526,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETCACERTIFICATES)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -1599,8 +1559,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CACERTIFICATES)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1828,8 +1787,7 @@ HB_FUNC_STATIC(QSSLSOCKET_WAITFORCONNECTED)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -1852,8 +1810,7 @@ HB_FUNC_STATIC(QSSLSOCKET_WAITFORENCRYPTED)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -1876,8 +1833,7 @@ HB_FUNC_STATIC(QSSLSOCKET_WAITFORREADYREAD)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -1900,8 +1856,7 @@ HB_FUNC_STATIC(QSSLSOCKET_WAITFORBYTESWRITTEN)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -1924,8 +1879,7 @@ HB_FUNC_STATIC(QSSLSOCKET_WAITFORDISCONNECTED)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -1948,8 +1902,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SSLERRORS)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2141,8 +2094,7 @@ HB_FUNC_STATIC(QSSLSOCKET_STARTCLIENTENCRYPTION)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2167,8 +2119,7 @@ HB_FUNC_STATIC(QSSLSOCKET_STARTSERVERENCRYPTION)
 {
   auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

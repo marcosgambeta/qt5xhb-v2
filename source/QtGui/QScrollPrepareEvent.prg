@@ -76,8 +76,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_DELETE)
 {
   auto obj = static_cast<QScrollPrepareEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -95,8 +94,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_STARTPOS)
 {
   auto obj = static_cast<QScrollPrepareEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -120,8 +118,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_VIEWPORTSIZE)
 {
   auto obj = static_cast<QScrollPrepareEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -145,8 +142,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_CONTENTPOSRANGE)
 {
   auto obj = static_cast<QScrollPrepareEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -170,8 +166,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_CONTENTPOS)
 {
   auto obj = static_cast<QScrollPrepareEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -195,8 +190,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_SETVIEWPORTSIZE)
 {
   auto obj = static_cast<QScrollPrepareEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSIZEF(1))
     {
@@ -221,8 +215,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_SETCONTENTPOSRANGE)
 {
   auto obj = static_cast<QScrollPrepareEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
@@ -247,8 +240,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_SETCONTENTPOS)
 {
   auto obj = static_cast<QScrollPrepareEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {

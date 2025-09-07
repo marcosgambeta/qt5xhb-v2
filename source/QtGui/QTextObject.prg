@@ -61,8 +61,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_FORMAT)
 {
   auto obj = qobject_cast<QTextObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -86,8 +85,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_FORMATINDEX)
 {
   auto obj = qobject_cast<QTextObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -110,8 +108,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_DOCUMENT)
 {
   auto obj = qobject_cast<QTextObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -135,8 +132,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_OBJECTINDEX)
 {
   auto obj = qobject_cast<QTextObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

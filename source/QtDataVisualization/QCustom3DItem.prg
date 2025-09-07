@@ -125,8 +125,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -148,8 +147,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_MESHFILE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -174,8 +172,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETMESHFILE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -202,8 +199,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_TEXTUREFILE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -228,8 +224,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETTEXTUREFILE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -256,8 +251,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_POSITION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -283,8 +277,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETPOSITION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
@@ -311,8 +304,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ISPOSITIONABSOLUTE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -337,8 +329,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETPOSITIONABSOLUTE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -365,8 +356,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SCALING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -392,8 +382,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETSCALING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
@@ -420,8 +409,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ROTATION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -447,8 +435,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETROTATION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQQUATERNION(1))
     {
@@ -475,8 +462,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ISVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -501,8 +487,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -529,8 +514,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ISSHADOWCASTING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -555,8 +539,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETSHADOWCASTING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -583,8 +566,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ISSCALINGABSOLUTE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -609,8 +591,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETSCALINGABSOLUTE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -637,8 +618,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETROTATIONAXISANDANGLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2))
     {
@@ -665,8 +645,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETTEXTUREIMAGE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQIMAGE(1))
     {

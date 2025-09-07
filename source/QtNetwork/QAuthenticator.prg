@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_DELETE)
 {
   auto obj = static_cast<QAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -116,8 +115,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_USER)
 {
   auto obj = static_cast<QAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -140,8 +138,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_SETUSER)
 {
   auto obj = static_cast<QAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -166,8 +163,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_PASSWORD)
 {
   auto obj = static_cast<QAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -190,8 +186,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_SETPASSWORD)
 {
   auto obj = static_cast<QAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -216,8 +211,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_REALM)
 {
   auto obj = static_cast<QAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -241,8 +235,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_SETREALM)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   auto obj = static_cast<QAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -268,8 +261,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_OPTION)
 {
   auto obj = static_cast<QAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -293,8 +285,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_SETOPTION)
 {
   auto obj = static_cast<QAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
     {
@@ -319,8 +310,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_ISNULL)
 {
   auto obj = static_cast<QAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -343,8 +333,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_DETACH)
 {
   auto obj = static_cast<QAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

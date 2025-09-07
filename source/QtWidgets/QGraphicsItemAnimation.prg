@@ -96,8 +96,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_DELETE)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -117,8 +116,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_CLEAR)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -143,8 +141,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_HORIZONTALSCALEAT)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -167,8 +164,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_HORIZONTALSHEARAT)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -191,8 +187,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_ITEM)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -216,8 +211,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_MATRIXAT)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -241,8 +235,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_POSAT)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -266,8 +259,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_ROTATIONAT)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -290,8 +282,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETITEM)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
@@ -316,8 +307,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETPOSAT)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINTF(2))
     {
@@ -342,8 +332,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETROTATIONAT)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -368,8 +357,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSCALEAT)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
@@ -394,8 +382,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSHEARAT)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
@@ -420,8 +407,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETTIMELINE)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTIMELINE(1))
     {
@@ -446,8 +432,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETTRANSLATIONAT)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
@@ -472,8 +457,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_TIMELINE)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -497,8 +481,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_VERTICALSCALEAT)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -521,8 +504,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_VERTICALSHEARAT)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -545,8 +527,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_XTRANSLATIONAT)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -569,8 +550,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_YTRANSLATIONAT)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -593,8 +573,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSTEP)
 {
   auto obj = qobject_cast<QGraphicsItemAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

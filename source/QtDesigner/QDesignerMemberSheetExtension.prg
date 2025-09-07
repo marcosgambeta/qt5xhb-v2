@@ -73,8 +73,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_DELETE)
 {
   auto obj = static_cast<QDesignerMemberSheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -92,8 +91,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_COUNT)
 {
   auto obj = static_cast<QDesignerMemberSheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -116,8 +114,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS)
 {
   auto obj = static_cast<QDesignerMemberSheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -140,8 +137,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_INDEXOF)
 {
   auto obj = static_cast<QDesignerMemberSheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -164,8 +160,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET)
 {
   auto obj = static_cast<QDesignerMemberSheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -188,8 +183,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL)
 {
   auto obj = static_cast<QDesignerMemberSheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -212,8 +206,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISSLOT)
 {
   auto obj = static_cast<QDesignerMemberSheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -236,8 +229,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE)
 {
   auto obj = static_cast<QDesignerMemberSheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -260,8 +252,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP)
 {
   auto obj = static_cast<QDesignerMemberSheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -284,8 +275,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME)
 {
   auto obj = static_cast<QDesignerMemberSheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -308,8 +298,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES)
 {
   auto obj = static_cast<QDesignerMemberSheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -358,8 +347,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES)
 {
   auto obj = static_cast<QDesignerMemberSheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -408,8 +396,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP)
 {
   auto obj = static_cast<QDesignerMemberSheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
@@ -434,8 +421,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE)
 {
   auto obj = static_cast<QDesignerMemberSheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
@@ -460,8 +446,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE)
 {
   auto obj = static_cast<QDesignerMemberSheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

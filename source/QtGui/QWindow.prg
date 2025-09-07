@@ -213,8 +213,7 @@ HB_FUNC_STATIC(QWINDOW_DELETE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -234,8 +233,7 @@ HB_FUNC_STATIC(QWINDOW_TITLE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -258,8 +256,7 @@ HB_FUNC_STATIC(QWINDOW_SETTITLE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -284,8 +281,7 @@ HB_FUNC_STATIC(QWINDOW_MODALITY)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -308,8 +304,7 @@ HB_FUNC_STATIC(QWINDOW_SETMODALITY)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -334,8 +329,7 @@ HB_FUNC_STATIC(QWINDOW_FLAGS)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -358,8 +352,7 @@ HB_FUNC_STATIC(QWINDOW_SETFLAGS)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -384,8 +377,7 @@ HB_FUNC_STATIC(QWINDOW_X)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -408,8 +400,7 @@ HB_FUNC_STATIC(QWINDOW_SETX)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -434,8 +425,7 @@ HB_FUNC_STATIC(QWINDOW_Y)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -458,8 +448,7 @@ HB_FUNC_STATIC(QWINDOW_SETY)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -484,8 +473,7 @@ HB_FUNC_STATIC(QWINDOW_WIDTH)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -508,8 +496,7 @@ HB_FUNC_STATIC(QWINDOW_SETWIDTH)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -534,8 +521,7 @@ HB_FUNC_STATIC(QWINDOW_HEIGHT)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -558,8 +544,7 @@ HB_FUNC_STATIC(QWINDOW_SETHEIGHT)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -584,8 +569,7 @@ HB_FUNC_STATIC(QWINDOW_MINIMUMWIDTH)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -608,8 +592,7 @@ HB_FUNC_STATIC(QWINDOW_SETMINIMUMWIDTH)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -634,8 +617,7 @@ HB_FUNC_STATIC(QWINDOW_MINIMUMHEIGHT)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -658,8 +640,7 @@ HB_FUNC_STATIC(QWINDOW_SETMINIMUMHEIGHT)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -684,8 +665,7 @@ HB_FUNC_STATIC(QWINDOW_MAXIMUMWIDTH)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -708,8 +688,7 @@ HB_FUNC_STATIC(QWINDOW_SETMAXIMUMWIDTH)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -734,8 +713,7 @@ HB_FUNC_STATIC(QWINDOW_MAXIMUMHEIGHT)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -758,8 +736,7 @@ HB_FUNC_STATIC(QWINDOW_SETMAXIMUMHEIGHT)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -784,8 +761,7 @@ HB_FUNC_STATIC(QWINDOW_ISVISIBLE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -808,8 +784,7 @@ HB_FUNC_STATIC(QWINDOW_SETVISIBLE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -835,8 +810,7 @@ HB_FUNC_STATIC(QWINDOW_ISACTIVE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -861,8 +835,7 @@ HB_FUNC_STATIC(QWINDOW_VISIBILITY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -887,8 +860,7 @@ HB_FUNC_STATIC(QWINDOW_SETVISIBILITY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -914,8 +886,7 @@ HB_FUNC_STATIC(QWINDOW_CONTENTORIENTATION)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -938,8 +909,7 @@ HB_FUNC_STATIC(QWINDOW_REPORTCONTENTORIENTATIONCHANGE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -965,8 +935,7 @@ HB_FUNC_STATIC(QWINDOW_OPACITY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -991,8 +960,7 @@ HB_FUNC_STATIC(QWINDOW_SETOPACITY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1018,8 +986,7 @@ HB_FUNC_STATIC(QWINDOW_BASESIZE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1043,8 +1010,7 @@ HB_FUNC_STATIC(QWINDOW_CREATE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1070,8 +1036,7 @@ HB_FUNC_STATIC(QWINDOW_CURSOR)
 #ifndef QT_NO_CURSOR
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1096,8 +1061,7 @@ HB_FUNC_STATIC(QWINDOW_DESTROY)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1122,8 +1086,7 @@ HB_FUNC_STATIC(QWINDOW_FOCUSOBJECT)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1147,8 +1110,7 @@ HB_FUNC_STATIC(QWINDOW_FRAMEGEOMETRY)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1172,8 +1134,7 @@ HB_FUNC_STATIC(QWINDOW_FRAMEMARGINS)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1197,8 +1158,7 @@ HB_FUNC_STATIC(QWINDOW_GEOMETRY)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1222,8 +1182,7 @@ HB_FUNC_STATIC(QWINDOW_ISANCESTOROF)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQWINDOW(1) && ISNUMORNIL(2))
     {
@@ -1247,8 +1206,7 @@ HB_FUNC_STATIC(QWINDOW_ISEXPOSED)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1271,8 +1229,7 @@ HB_FUNC_STATIC(QWINDOW_ISMODAL)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1295,8 +1252,7 @@ HB_FUNC_STATIC(QWINDOW_ISTOPLEVEL)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1319,8 +1275,7 @@ HB_FUNC_STATIC(QWINDOW_MAPFROMGLOBAL)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
@@ -1344,8 +1299,7 @@ HB_FUNC_STATIC(QWINDOW_MAPTOGLOBAL)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
@@ -1369,8 +1323,7 @@ HB_FUNC_STATIC(QWINDOW_MAXIMUMSIZE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1394,8 +1347,7 @@ HB_FUNC_STATIC(QWINDOW_MINIMUMSIZE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1455,8 +1407,7 @@ HB_FUNC_STATIC(QWINDOW_REQUESTEDFORMAT)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1516,8 +1467,7 @@ HB_FUNC_STATIC(QWINDOW_SCREEN)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1541,8 +1491,7 @@ HB_FUNC_STATIC(QWINDOW_SETBASESIZE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
@@ -1568,8 +1517,7 @@ HB_FUNC_STATIC(QWINDOW_SETCURSOR)
 #ifndef QT_NO_CURSOR
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQCURSOR(1))
     {
@@ -1595,8 +1543,7 @@ HB_FUNC_STATIC(QWINDOW_SETFORMAT)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSURFACEFORMAT(1))
     {
@@ -1657,8 +1604,7 @@ HB_FUNC_STATIC(QWINDOW_SETKEYBOARDGRABENABLED)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1681,8 +1627,7 @@ HB_FUNC_STATIC(QWINDOW_SETMAXIMUMSIZE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
@@ -1707,8 +1652,7 @@ HB_FUNC_STATIC(QWINDOW_SETMINIMUMSIZE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
@@ -1733,8 +1677,7 @@ HB_FUNC_STATIC(QWINDOW_SETMOUSEGRABENABLED)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1757,8 +1700,7 @@ HB_FUNC_STATIC(QWINDOW_SETPARENT)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWINDOW(1))
     {
@@ -1783,8 +1725,7 @@ HB_FUNC_STATIC(QWINDOW_SETSCREEN)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSCREEN(1))
     {
@@ -1809,8 +1750,7 @@ HB_FUNC_STATIC(QWINDOW_SETSIZEINCREMENT)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
@@ -1835,8 +1775,7 @@ HB_FUNC_STATIC(QWINDOW_SETSURFACETYPE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1861,8 +1800,7 @@ HB_FUNC_STATIC(QWINDOW_SETTRANSIENTPARENT)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWINDOW(1))
     {
@@ -1887,8 +1825,7 @@ HB_FUNC_STATIC(QWINDOW_SIZEINCREMENT)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1912,8 +1849,7 @@ HB_FUNC_STATIC(QWINDOW_TRANSIENTPARENT)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1938,8 +1874,7 @@ HB_FUNC_STATIC(QWINDOW_UNSETCURSOR)
 #ifndef QT_NO_CURSOR
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1965,8 +1900,7 @@ HB_FUNC_STATIC(QWINDOW_WINDOWSTATE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1989,8 +1923,7 @@ HB_FUNC_STATIC(QWINDOW_FORMAT)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2014,8 +1947,7 @@ HB_FUNC_STATIC(QWINDOW_SIZE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2039,8 +1971,7 @@ HB_FUNC_STATIC(QWINDOW_SURFACETYPE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2063,8 +1994,7 @@ HB_FUNC_STATIC(QWINDOW_CLOSE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2087,8 +2017,7 @@ HB_FUNC_STATIC(QWINDOW_HIDE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2113,8 +2042,7 @@ HB_FUNC_STATIC(QWINDOW_LOWER)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2139,8 +2067,7 @@ HB_FUNC_STATIC(QWINDOW_RAISE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2165,8 +2092,7 @@ HB_FUNC_STATIC(QWINDOW_SHOW)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2191,8 +2117,7 @@ HB_FUNC_STATIC(QWINDOW_SHOWFULLSCREEN)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2217,8 +2142,7 @@ HB_FUNC_STATIC(QWINDOW_SHOWMAXIMIZED)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2243,8 +2167,7 @@ HB_FUNC_STATIC(QWINDOW_SHOWMINIMIZED)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2269,8 +2192,7 @@ HB_FUNC_STATIC(QWINDOW_SHOWNORMAL)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2295,8 +2217,7 @@ HB_FUNC_STATIC(QWINDOW_POSITION)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2357,8 +2278,7 @@ HB_FUNC_STATIC(QWINDOW_REQUESTUPDATE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2384,8 +2304,7 @@ HB_FUNC_STATIC(QWINDOW_WINID)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2409,8 +2328,7 @@ HB_FUNC_STATIC(QWINDOW_SETFLAG)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2))
     {
@@ -2436,8 +2354,7 @@ HB_FUNC_STATIC(QWINDOW_TYPE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2460,8 +2377,7 @@ HB_FUNC_STATIC(QWINDOW_SETMASK)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQREGION(1))
     {
@@ -2486,8 +2402,7 @@ HB_FUNC_STATIC(QWINDOW_MASK)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2511,8 +2426,7 @@ HB_FUNC_STATIC(QWINDOW_DEVICEPIXELRATIO)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2536,8 +2450,7 @@ HB_FUNC_STATIC(QWINDOW_WINDOWSTATES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2561,8 +2474,7 @@ HB_FUNC_STATIC(QWINDOW_SETWINDOWSTATE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -2588,8 +2500,7 @@ HB_FUNC_STATIC(QWINDOW_SETWINDOWSTATES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -2615,8 +2526,7 @@ HB_FUNC_STATIC(QWINDOW_FRAMEPOSITION)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2640,8 +2550,7 @@ HB_FUNC_STATIC(QWINDOW_SETFRAMEPOSITION)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
@@ -2666,8 +2575,7 @@ HB_FUNC_STATIC(QWINDOW_SETFILEPATH)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -2692,8 +2600,7 @@ HB_FUNC_STATIC(QWINDOW_FILEPATH)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2716,8 +2623,7 @@ HB_FUNC_STATIC(QWINDOW_SETICON)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1)))
     {
@@ -2742,8 +2648,7 @@ HB_FUNC_STATIC(QWINDOW_ICON)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2767,8 +2672,7 @@ HB_FUNC_STATIC(QWINDOW_ACCESSIBLEROOT)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2818,8 +2722,7 @@ HB_FUNC_STATIC(QWINDOW_REQUESTACTIVATE)
 {
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2845,8 +2748,7 @@ HB_FUNC_STATIC(QWINDOW_ALERT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

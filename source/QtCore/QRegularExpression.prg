@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_DELETE)
 {
   auto obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -129,8 +128,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_CAPTURECOUNT)
 {
   auto obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -153,8 +151,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_ERRORSTRING)
 {
   auto obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -179,8 +176,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_GLOBALMATCH)
 {
   auto obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
         ISNUMORNIL(4))
@@ -210,8 +206,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_ISVALID)
 {
   auto obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -236,8 +231,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_MATCH)
 {
   auto obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
         ISNUMORNIL(4))
@@ -267,8 +261,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_PATTERN)
 {
   auto obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -291,8 +284,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_PATTERNERROROFFSET)
 {
   auto obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -315,8 +307,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_PATTERNOPTIONS)
 {
   auto obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -339,8 +330,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_SETPATTERN)
 {
   auto obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -365,8 +355,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_SETPATTERNOPTIONS)
 {
   auto obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -391,8 +380,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_SWAP)
 {
   auto obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQREGULAREXPRESSION(1))
     {

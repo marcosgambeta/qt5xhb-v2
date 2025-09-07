@@ -112,8 +112,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_DELETE)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -135,8 +134,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETROWCOUNTCB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -161,8 +159,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETCOLUMNCOUNTCB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -189,8 +186,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETCB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISBLOCK(2) || HB_ISSYMBOL(2)))
     {
@@ -215,8 +211,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETDISPLAYROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -241,8 +236,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETDECORATIONROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -267,8 +261,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETEDITROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -293,8 +286,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETTOOLTIPROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -319,8 +311,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETSTATUSTIPROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -345,8 +336,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETWHATSTHISROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -371,8 +361,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETSIZEHINTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -397,8 +386,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETFONTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -423,8 +411,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETTEXTALIGNMENTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -449,8 +436,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETBACKGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -475,8 +461,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETFOREGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -501,8 +486,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETCHECKSTATEROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -527,8 +511,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETACCESSIBLETEXTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -553,8 +536,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETACCESSIBLEDESCRIPTIONROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -581,8 +563,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERCB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISBLOCK(2) || HB_ISSYMBOL(2)))
     {
@@ -607,8 +588,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERDISPLAYROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -633,8 +613,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERDECORATIONROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -659,8 +638,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERTOOLTIPROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -685,8 +663,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERSIZEHINTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -711,8 +688,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFONTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -737,8 +713,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERTEXTALIGNMENTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -763,8 +738,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERBACKGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -789,8 +763,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -817,8 +790,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERCB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISBLOCK(2) || HB_ISSYMBOL(2)))
     {
@@ -843,8 +815,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERDISPLAYROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -869,8 +840,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERDECORATIONROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -895,8 +865,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERTOOLTIPROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -921,8 +890,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERSIZEHINTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -947,8 +915,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERFONTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -973,8 +940,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERTEXTALIGNMENTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -999,8 +965,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERBACKGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -1025,8 +990,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERFOREGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -1051,8 +1015,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETFLAGSCB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -1077,8 +1040,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETSETDATACB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -1127,8 +1089,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_RELOADDATA)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

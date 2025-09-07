@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_DELETE)
 {
   auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_BOOLEANLITERAL)
 {
   auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -134,8 +132,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISEMPTY)
 {
   auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -158,8 +155,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISNULLLITERAL)
 {
   auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -182,8 +178,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL)
 {
   auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -206,8 +201,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_NUMBERLITERAL)
 {
   auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -232,8 +226,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_STRINGLITERAL)
 {
   auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

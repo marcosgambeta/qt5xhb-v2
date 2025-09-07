@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -127,8 +126,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_ADDSOURCEMODEL)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
     {
@@ -155,8 +153,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_REMOVESOURCEMODEL)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
     {
@@ -183,8 +180,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MAPFROMSOURCE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -210,8 +206,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MAPTOSOURCE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -237,8 +232,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_DATA)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2))
     {
@@ -264,8 +258,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_SETDATA)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISNUMORNIL(3))
     {
@@ -290,8 +283,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_FLAGS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -316,8 +308,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_INDEX)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
@@ -344,8 +335,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_PARENT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -371,8 +361,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_ROWCOUNT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
@@ -397,8 +386,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_HEADERDATA)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3))
     {
@@ -425,8 +413,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_COLUMNCOUNT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
@@ -451,8 +438,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MIMETYPES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -477,8 +463,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MIMEDATA)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -513,8 +498,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_CANDROPMIMEDATA)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5))
     {
@@ -541,8 +525,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_DROPMIMEDATA)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5))
     {
@@ -568,8 +551,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_SOURCEMODELS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -617,8 +599,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_SPAN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
   auto obj = qobject_cast<QConcatenateTablesProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {

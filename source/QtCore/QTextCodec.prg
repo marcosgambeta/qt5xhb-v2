@@ -143,8 +143,7 @@ HB_FUNC_STATIC(QTEXTCODEC_FROMUNICODE)
 {
   auto obj = static_cast<QTextCodec *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -168,8 +167,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEDECODER)
 {
   auto obj = static_cast<QTextCodec *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -194,8 +192,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEENCODER)
 {
   auto obj = static_cast<QTextCodec *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -220,8 +217,7 @@ HB_FUNC_STATIC(QTEXTCODEC_NAME)
 {
   auto obj = static_cast<QTextCodec *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -245,8 +241,7 @@ HB_FUNC_STATIC(QTEXTCODEC_ALIASES)
 {
   auto obj = static_cast<QTextCodec *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -295,8 +290,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MIBENUM)
 {
   auto obj = static_cast<QTextCodec *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -91,8 +91,7 @@ HB_FUNC_STATIC(QHTTPPART_DELETE)
 {
   auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -110,8 +109,7 @@ HB_FUNC_STATIC(QHTTPPART_SETBODY)
 {
   auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -136,8 +134,7 @@ HB_FUNC_STATIC(QHTTPPART_SETBODYDEVICE)
 {
   auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQIODEVICE(1))
     {
@@ -162,8 +159,7 @@ HB_FUNC_STATIC(QHTTPPART_SETHEADER)
 {
   auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
@@ -188,8 +184,7 @@ HB_FUNC_STATIC(QHTTPPART_SETRAWHEADER)
 {
   auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2))
     {
@@ -214,8 +209,7 @@ HB_FUNC_STATIC(QHTTPPART_SWAP)
 {
   auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQHTTPPART(1))
     {

@@ -141,8 +141,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_DELETE)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -205,8 +204,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ENDTIME)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -229,8 +227,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_FIELDTYPE)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -253,8 +250,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_HANDLE)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -278,8 +274,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_HANDLETYPE)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -302,8 +297,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_HEIGHT)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -326,8 +320,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ISMAPPED)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -350,8 +343,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ISREADABLE)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -374,8 +366,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ISVALID)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -398,8 +389,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ISWRITABLE)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -422,8 +412,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_MAP)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -446,8 +435,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_MAPMODE)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -470,8 +458,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_MAPPEDBYTES)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -494,8 +481,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_PIXELFORMAT)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -518,8 +504,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETENDTIME)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -544,8 +529,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETFIELDTYPE)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -570,8 +554,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETSTARTTIME)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -596,8 +579,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SIZE)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -621,8 +603,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_STARTTIME)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -645,8 +626,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_UNMAP)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -671,8 +651,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_WIDTH)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -695,8 +674,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_PLANECOUNT)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -719,8 +697,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_METADATA)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -744,8 +721,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETMETADATA)
 {
   auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
     {

@@ -190,8 +190,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_HASNOTIFYSIGNAL)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -214,8 +213,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_INDEX)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -238,8 +236,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISDESIGNABLE)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -262,8 +259,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISPROPERTY)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -286,8 +282,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISRESETTABLE)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -310,8 +305,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISSIGNALPROPERTY)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -334,8 +328,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISVALID)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -358,8 +351,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISWRITABLE)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -382,8 +374,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_METHOD)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -407,8 +398,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NAME)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -431,8 +421,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEEDSNOTIFYSIGNAL)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -455,8 +444,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_OBJECT)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -480,8 +468,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTY)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -505,8 +492,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTYTYPE)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -529,8 +515,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTYTYPECATEGORY)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -553,8 +538,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTYTYPENAME)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -577,8 +561,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_RESET)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -601,8 +584,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_TYPE)
 {
   auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

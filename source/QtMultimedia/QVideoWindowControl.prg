@@ -81,8 +81,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_DELETE)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -102,8 +101,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_DISPLAYRECT)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -127,8 +125,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETDISPLAYRECT)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQRECT(1))
     {
@@ -153,8 +150,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ISFULLSCREEN)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -177,8 +173,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETFULLSCREEN)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -203,8 +198,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_REPAINT)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -229,8 +223,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_NATIVESIZE)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -254,8 +247,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ASPECTRATIOMODE)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -278,8 +270,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETASPECTRATIOMODE)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -304,8 +295,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_BRIGHTNESS)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -328,8 +318,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETBRIGHTNESS)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -354,8 +343,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_CONTRAST)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -378,8 +366,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETCONTRAST)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -404,8 +391,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_HUE)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -428,8 +414,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETHUE)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -454,8 +439,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SATURATION)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -478,8 +462,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETSATURATION)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -504,8 +487,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_WINID)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -528,8 +510,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETWINID)
 {
   auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISPOINTER(1))
     {

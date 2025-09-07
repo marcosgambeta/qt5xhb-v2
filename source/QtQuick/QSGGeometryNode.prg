@@ -71,8 +71,7 @@ HB_FUNC_STATIC(QSGGEOMETRYNODE_DELETE)
 {
   auto obj = static_cast<QSGGeometryNode *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -90,8 +89,7 @@ HB_FUNC_STATIC(QSGGEOMETRYNODE_MATERIAL)
 {
   auto obj = static_cast<QSGGeometryNode *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -115,8 +113,7 @@ HB_FUNC_STATIC(QSGGEOMETRYNODE_OPAQUEMATERIAL)
 {
   auto obj = static_cast<QSGGeometryNode *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -140,8 +137,7 @@ HB_FUNC_STATIC(QSGGEOMETRYNODE_SETMATERIAL)
 {
   auto obj = static_cast<QSGGeometryNode *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSGMATERIAL(1))
     {
@@ -166,8 +162,7 @@ HB_FUNC_STATIC(QSGGEOMETRYNODE_SETOPAQUEMATERIAL)
 {
   auto obj = static_cast<QSGGeometryNode *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSGMATERIAL(1))
     {

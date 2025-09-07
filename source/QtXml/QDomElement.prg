@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QDOMELEMENT_DELETE)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -129,8 +128,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTE)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
     {
@@ -153,8 +151,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENS)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3))
     {
@@ -177,8 +174,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENODE)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -202,8 +198,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENODENS)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -227,8 +222,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTES)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -252,8 +246,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ELEMENTSBYTAGNAME)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -277,8 +270,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ELEMENTSBYTAGNAMENS)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -302,8 +294,7 @@ HB_FUNC_STATIC(QDOMELEMENT_HASATTRIBUTE)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -326,8 +317,7 @@ HB_FUNC_STATIC(QDOMELEMENT_HASATTRIBUTENS)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -350,8 +340,7 @@ HB_FUNC_STATIC(QDOMELEMENT_NODETYPE)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -374,8 +363,7 @@ HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTE)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -400,8 +388,7 @@ HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTENS)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -426,8 +413,7 @@ HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTENODE)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQDOMATTR(1))
     {
@@ -451,8 +437,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE1)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -477,8 +462,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE2)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
@@ -503,8 +487,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE3)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
@@ -529,8 +512,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE4)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
@@ -555,8 +537,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE5)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
@@ -581,8 +562,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE6)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
@@ -607,8 +587,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE7)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
@@ -649,8 +628,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS1)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
     {
@@ -675,8 +653,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS2)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3))
     {
@@ -701,8 +678,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS3)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3))
     {
@@ -727,8 +703,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS4)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3))
     {
@@ -753,8 +728,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS5)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3))
     {
@@ -779,8 +753,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS6)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3))
     {
@@ -821,8 +794,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENODE)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQDOMATTR(1))
     {
@@ -846,8 +818,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENODENS)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQDOMATTR(1))
     {
@@ -871,8 +842,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETTAGNAME)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -897,8 +867,7 @@ HB_FUNC_STATIC(QDOMELEMENT_TAGNAME)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -921,8 +890,7 @@ HB_FUNC_STATIC(QDOMELEMENT_TEXT)
 {
   auto obj = static_cast<QDomElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

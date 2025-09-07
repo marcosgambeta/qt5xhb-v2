@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_DELETE)
 {
   auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -101,8 +100,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_ENTITIES)
 {
   auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -126,8 +124,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_INTERNALSUBSET)
 {
   auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -150,8 +147,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NAME)
 {
   auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -174,8 +170,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NODETYPE)
 {
   auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -198,8 +193,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NOTATIONS)
 {
   auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -223,8 +217,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_PUBLICID)
 {
   auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -247,8 +240,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_SYSTEMID)
 {
   auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

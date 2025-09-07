@@ -60,8 +60,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_CREATEINDEX)
 {
   auto obj = qobject_cast<QHelpIndexModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -86,8 +85,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_FILTER)
 {
   auto obj = qobject_cast<QHelpIndexModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
     {
@@ -111,8 +109,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_ISCREATINGINDEX)
 {
   auto obj = qobject_cast<QHelpIndexModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

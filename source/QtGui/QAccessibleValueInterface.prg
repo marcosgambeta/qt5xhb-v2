@@ -64,8 +64,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_DELETE)
 {
   auto obj = static_cast<QAccessibleValueInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -83,8 +82,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_CURRENTVALUE)
 {
   auto obj = static_cast<QAccessibleValueInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -108,8 +106,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_SETCURRENTVALUE)
 {
   auto obj = static_cast<QAccessibleValueInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
@@ -134,8 +131,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_MAXIMUMVALUE)
 {
   auto obj = static_cast<QAccessibleValueInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -159,8 +155,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_MINIMUMVALUE)
 {
   auto obj = static_cast<QAccessibleValueInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -184,8 +179,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_MINIMUMSTEPSIZE)
 {
   auto obj = static_cast<QAccessibleValueInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

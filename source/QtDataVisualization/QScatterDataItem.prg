@@ -129,8 +129,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -150,8 +149,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETPOSITION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
@@ -178,8 +176,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_POSITION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -205,8 +202,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETROTATION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQQUATERNION(1))
     {
@@ -233,8 +229,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_ROTATION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -260,8 +255,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETX)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -288,8 +282,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -316,8 +309,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETZ)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -344,8 +336,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_X)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -370,8 +361,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_Y)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -396,8 +386,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_Z)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   auto obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

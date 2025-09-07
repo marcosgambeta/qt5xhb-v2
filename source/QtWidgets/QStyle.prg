@@ -83,8 +83,7 @@ HB_FUNC_STATIC(QSTYLE_DELETE)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -105,8 +104,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWCOMPLEXCONTROL)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPAINTER(3) && (ISQWIDGET(4) || HB_ISNIL(4)))
     {
@@ -133,8 +131,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWCONTROL)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4) || HB_ISNIL(4)))
     {
@@ -160,8 +157,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWITEMPIXMAP)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPIXMAP(4))
     {
@@ -187,8 +183,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWITEMTEXT)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(6, 7) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPALETTE(4) && HB_ISLOG(5) && HB_ISCHAR(6) &&
         ISNUMORNIL(7))
@@ -217,8 +212,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWPRIMITIVE)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4) || HB_ISNIL(4)))
     {
@@ -244,8 +238,7 @@ HB_FUNC_STATIC(QSTYLE_GENERATEDICONPIXMAP)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPIXMAP(2) && ISQSTYLEOPTION(3))
     {
@@ -271,8 +264,7 @@ HB_FUNC_STATIC(QSTYLE_HITTESTCOMPLEXCONTROL)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPOINT(3) && (ISQWIDGET(4) || HB_ISNIL(4)))
     {
@@ -296,8 +288,7 @@ HB_FUNC_STATIC(QSTYLE_ITEMPIXMAPRECT)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQRECT(1) && HB_ISNUM(2) && ISQPIXMAP(3))
     {
@@ -322,8 +313,7 @@ HB_FUNC_STATIC(QSTYLE_ITEMTEXTRECT)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(5) && ISQFONTMETRICS(1) && ISQRECT(2) && HB_ISNUM(3) && HB_ISLOG(4) && HB_ISCHAR(5))
     {
@@ -348,8 +338,7 @@ HB_FUNC_STATIC(QSTYLE_LAYOUTSPACING)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQSTYLEOPTION(4) || HB_ISNIL(4)) &&
         (ISQWIDGET(5) || HB_ISNIL(5)))
@@ -377,8 +366,7 @@ HB_FUNC_STATIC(QSTYLE_PIXELMETRIC)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3)))
     {
@@ -453,8 +441,7 @@ HB_FUNC_STATIC(QSTYLE_PROXY)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -479,8 +466,7 @@ HB_FUNC_STATIC(QSTYLE_SIZEFROMCONTENTS)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQSIZE(3) && (ISQWIDGET(4) || HB_ISNIL(4)))
     {
@@ -506,8 +492,7 @@ HB_FUNC_STATIC(QSTYLE_STANDARDICON)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3)))
     {
@@ -533,8 +518,7 @@ HB_FUNC_STATIC(QSTYLE_STANDARDPALETTE)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -559,8 +543,7 @@ HB_FUNC_STATIC(QSTYLE_STYLEHINT)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3)) &&
         (ISQSTYLEHINTRETURN(4) || HB_ISNIL(4)))
@@ -588,8 +571,7 @@ HB_FUNC_STATIC(QSTYLE_SUBCONTROLRECT)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && HB_ISNUM(3) && (ISQWIDGET(4) || HB_ISNIL(4)))
     {
@@ -616,8 +598,7 @@ HB_FUNC_STATIC(QSTYLE_SUBELEMENTRECT)
 {
   auto obj = qobject_cast<QStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
     {

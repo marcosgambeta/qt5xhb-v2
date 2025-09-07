@@ -77,8 +77,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_DELETE)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -96,8 +95,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_ALLOCATE)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
@@ -122,8 +120,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_ATTRIBUTECOUNT)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -146,8 +143,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_DRAWINGMODE)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -170,8 +166,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXCOUNT)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -194,8 +189,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXDATAPATTERN)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -218,8 +212,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXTYPE)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -242,8 +235,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_LINEWIDTH)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -266,8 +258,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_MARKINDEXDATADIRTY)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -292,8 +283,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_MARKVERTEXDATADIRTY)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -318,8 +308,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETDRAWINGMODE)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -344,8 +333,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETINDEXDATAPATTERN)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -370,8 +358,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETLINEWIDTH)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -396,8 +383,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETVERTEXDATAPATTERN)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -422,8 +408,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SIZEOFINDEX)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -446,8 +431,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SIZEOFVERTEX)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -470,8 +454,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_VERTEXCOUNT)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -494,8 +477,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_VERTEXDATAPATTERN)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

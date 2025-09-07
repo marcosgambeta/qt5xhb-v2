@@ -66,8 +66,7 @@ HB_FUNC_STATIC(QHOVEREVENT_DELETE)
 {
   auto obj = static_cast<QHoverEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);

@@ -70,8 +70,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_DELETE)
 {
   auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -89,8 +88,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ATOMICVALUE)
 {
   auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
@@ -115,8 +113,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ATTRIBUTE)
 {
   auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQSTRINGREF(2))
     {
@@ -141,8 +138,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_CHARACTERS)
 {
   auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSTRINGREF(1))
     {
@@ -167,8 +163,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_COMMENT)
 {
   auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -193,8 +188,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ENDDOCUMENT)
 {
   auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -219,8 +213,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ENDELEMENT)
 {
   auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -245,8 +238,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ENDOFSEQUENCE)
 {
   auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -271,8 +263,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_NAMESPACEBINDING)
 {
   auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNAME(1))
     {
@@ -297,8 +288,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION)
 {
   auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQXMLNAME(1) && HB_ISCHAR(2))
     {
@@ -323,8 +313,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_STARTDOCUMENT)
 {
   auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -349,8 +338,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_STARTELEMENT)
 {
   auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNAME(1))
     {
@@ -375,8 +363,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_STARTOFSEQUENCE)
 {
   auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

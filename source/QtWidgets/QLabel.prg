@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QLABEL_DELETE)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -143,8 +142,7 @@ HB_FUNC_STATIC(QLABEL_ALIGNMENT)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -167,8 +165,7 @@ HB_FUNC_STATIC(QLABEL_BUDDY)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -192,8 +189,7 @@ HB_FUNC_STATIC(QLABEL_HASSCALEDCONTENTS)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -216,8 +212,7 @@ HB_FUNC_STATIC(QLABEL_HASSELECTEDTEXT)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -240,8 +235,7 @@ HB_FUNC_STATIC(QLABEL_INDENT)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -264,8 +258,7 @@ HB_FUNC_STATIC(QLABEL_MARGIN)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -288,8 +281,7 @@ HB_FUNC_STATIC(QLABEL_MOVIE)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -313,8 +305,7 @@ HB_FUNC_STATIC(QLABEL_OPENEXTERNALLINKS)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -337,8 +328,7 @@ HB_FUNC_STATIC(QLABEL_PICTURE)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -362,8 +352,7 @@ HB_FUNC_STATIC(QLABEL_PIXMAP)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -387,8 +376,7 @@ HB_FUNC_STATIC(QLABEL_SELECTEDTEXT)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -411,8 +399,7 @@ HB_FUNC_STATIC(QLABEL_SETALIGNMENT)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -437,8 +424,7 @@ HB_FUNC_STATIC(QLABEL_SETBUDDY)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
@@ -463,8 +449,7 @@ HB_FUNC_STATIC(QLABEL_SETINDENT)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -489,8 +474,7 @@ HB_FUNC_STATIC(QLABEL_SETMARGIN)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -515,8 +499,7 @@ HB_FUNC_STATIC(QLABEL_SETOPENEXTERNALLINKS)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -541,8 +524,7 @@ HB_FUNC_STATIC(QLABEL_SETSCALEDCONTENTS)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -567,8 +549,7 @@ HB_FUNC_STATIC(QLABEL_SETSELECTION)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -593,8 +574,7 @@ HB_FUNC_STATIC(QLABEL_SETTEXTFORMAT)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -619,8 +599,7 @@ HB_FUNC_STATIC(QLABEL_SETTEXTINTERACTIONFLAGS)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -645,8 +624,7 @@ HB_FUNC_STATIC(QLABEL_SETWORDWRAP)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -671,8 +649,7 @@ HB_FUNC_STATIC(QLABEL_TEXT)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -695,8 +672,7 @@ HB_FUNC_STATIC(QLABEL_TEXTFORMAT)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -719,8 +695,7 @@ HB_FUNC_STATIC(QLABEL_TEXTINTERACTIONFLAGS)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -743,8 +718,7 @@ HB_FUNC_STATIC(QLABEL_WORDWRAP)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -767,8 +741,7 @@ HB_FUNC_STATIC(QLABEL_HEIGHTFORWIDTH)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -791,8 +764,7 @@ HB_FUNC_STATIC(QLABEL_MINIMUMSIZEHINT)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -816,8 +788,7 @@ HB_FUNC_STATIC(QLABEL_SIZEHINT)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -841,8 +812,7 @@ HB_FUNC_STATIC(QLABEL_CLEAR)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -867,8 +837,7 @@ HB_FUNC_STATIC(QLABEL_SETMOVIE)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMOVIE(1))
     {
@@ -941,8 +910,7 @@ HB_FUNC_STATIC(QLABEL_SETPICTURE)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPICTURE(1))
     {
@@ -967,8 +935,7 @@ HB_FUNC_STATIC(QLABEL_SETPIXMAP)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPIXMAP(1))
     {
@@ -993,8 +960,7 @@ HB_FUNC_STATIC(QLABEL_SETTEXT)
 {
   auto obj = qobject_cast<QLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {

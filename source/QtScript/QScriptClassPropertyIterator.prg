@@ -72,8 +72,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_DELETE)
 {
   auto obj = static_cast<QScriptClassPropertyIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -91,8 +90,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_FLAGS)
 {
   auto obj = static_cast<QScriptClassPropertyIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -115,8 +113,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_HASNEXT)
 {
   auto obj = static_cast<QScriptClassPropertyIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -139,8 +136,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_HASPREVIOUS)
 {
   auto obj = static_cast<QScriptClassPropertyIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -163,8 +159,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_ID)
 {
   auto obj = static_cast<QScriptClassPropertyIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -187,8 +182,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_NAME)
 {
   auto obj = static_cast<QScriptClassPropertyIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -212,8 +206,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_NEXT)
 {
   auto obj = static_cast<QScriptClassPropertyIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -238,8 +231,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_OBJECT)
 {
   auto obj = static_cast<QScriptClassPropertyIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -263,8 +255,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_PREVIOUS)
 {
   auto obj = static_cast<QScriptClassPropertyIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -289,8 +280,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_TOBACK)
 {
   auto obj = static_cast<QScriptClassPropertyIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -315,8 +305,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_TOFRONT)
 {
   auto obj = static_cast<QScriptClassPropertyIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

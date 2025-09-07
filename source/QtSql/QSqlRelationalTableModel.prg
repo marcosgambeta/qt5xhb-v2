@@ -83,8 +83,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DELETE)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -104,8 +103,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATION)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -129,8 +127,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATIONMODEL)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -154,8 +151,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETRELATION)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSQLRELATION(2))
     {
@@ -180,8 +176,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_CLEAR)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -206,8 +201,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DATA)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2))
     {
@@ -231,8 +225,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
@@ -256,8 +249,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SELECT)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -280,8 +272,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETDATA)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISNUMORNIL(3))
     {
@@ -304,8 +295,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETTABLE)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -330,8 +320,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REVERTROW)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -356,8 +345,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETJOINMODE)
 {
   auto obj = qobject_cast<QSqlRelationalTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

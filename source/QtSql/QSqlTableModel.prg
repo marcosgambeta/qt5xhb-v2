@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_DELETE)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_DATABASE)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -157,8 +155,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_EDITSTRATEGY)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -181,8 +178,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETEDITSTRATEGY)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -207,8 +203,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_FIELDINDEX)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -231,8 +226,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_FILTER)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -255,8 +249,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETFILTER)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -281,8 +274,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTRECORD)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSQLRECORD(2))
     {
@@ -337,8 +329,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_PRIMARYKEY)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -362,8 +353,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERTROW)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -388,8 +378,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SELECT)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -412,8 +401,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETRECORD)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSQLRECORD(2))
     {
@@ -436,8 +424,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SORT)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -462,8 +449,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETSORT)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -488,8 +474,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETTABLE)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -514,8 +499,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_TABLENAME)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -538,8 +522,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_CLEAR)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -564,8 +547,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_DATA)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2))
     {
@@ -589,8 +571,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETDATA)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISNUMORNIL(3))
     {
@@ -613,8 +594,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_FLAGS)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -637,8 +617,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_HEADERDATA)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3))
     {
@@ -663,8 +642,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTROWS)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
@@ -688,8 +666,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REMOVECOLUMNS)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
@@ -713,8 +690,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REMOVEROWS)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
@@ -738,8 +714,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ROWCOUNT)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
@@ -762,8 +737,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERT)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -788,8 +762,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERTALL)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -814,8 +787,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SUBMIT)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -838,8 +810,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SUBMITALL)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -896,8 +867,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SELECTROW)
 {
   auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

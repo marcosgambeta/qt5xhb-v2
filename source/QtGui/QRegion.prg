@@ -132,8 +132,7 @@ HB_FUNC_STATIC(QREGION_DELETE)
 {
   auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -151,8 +150,7 @@ HB_FUNC_STATIC(QREGION_SWAP)
 {
   auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQREGION(1))
     {
@@ -177,8 +175,7 @@ HB_FUNC_STATIC(QREGION_ISEMPTY)
 {
   auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -201,8 +198,7 @@ HB_FUNC_STATIC(QREGION_ISNULL)
 {
   auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -361,8 +357,7 @@ HB_FUNC_STATIC(QREGION_SUBTRACTED)
 {
   auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQREGION(1))
     {
@@ -386,8 +381,7 @@ HB_FUNC_STATIC(QREGION_XORED)
 {
   auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQREGION(1))
     {
@@ -443,8 +437,7 @@ HB_FUNC_STATIC(QREGION_BOUNDINGRECT)
 {
   auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -468,8 +461,7 @@ HB_FUNC_STATIC(QREGION_RECTCOUNT)
 {
   auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

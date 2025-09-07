@@ -83,8 +83,7 @@ HB_FUNC_STATIC(QTHREADPOOL_DELETE)
 {
   auto obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -104,8 +103,7 @@ HB_FUNC_STATIC(QTHREADPOOL_START)
 {
   auto obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQRUNNABLE(1) && ISNUMORNIL(2))
     {
@@ -133,8 +131,7 @@ HB_FUNC_STATIC(QTHREADPOOL_TRYSTART)
 {
   auto obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQRUNNABLE(1))
     {
@@ -160,8 +157,7 @@ HB_FUNC_STATIC(QTHREADPOOL_EXPIRYTIMEOUT)
 {
   auto obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -184,8 +180,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETEXPIRYTIMEOUT)
 {
   auto obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -210,8 +205,7 @@ HB_FUNC_STATIC(QTHREADPOOL_MAXTHREADCOUNT)
 {
   auto obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -234,8 +228,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETMAXTHREADCOUNT)
 {
   auto obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -260,8 +253,7 @@ HB_FUNC_STATIC(QTHREADPOOL_ACTIVETHREADCOUNT)
 {
   auto obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -284,8 +276,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RESERVETHREAD)
 {
   auto obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -310,8 +301,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RELEASETHREAD)
 {
   auto obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -336,8 +326,7 @@ HB_FUNC_STATIC(QTHREADPOOL_WAITFORDONE)
 {
   auto obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -361,8 +350,7 @@ HB_FUNC_STATIC(QTHREADPOOL_CLEAR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   auto obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -409,8 +397,7 @@ HB_FUNC_STATIC(QTHREADPOOL_TRYTAKE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   auto obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQRUNNABLE(1))
     {
@@ -435,8 +422,7 @@ HB_FUNC_STATIC(QTHREADPOOL_STACKSIZE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -461,8 +447,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETSTACKSIZE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   auto obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QSQLRELATION_DELETE)
 {
   auto obj = static_cast<QSqlRelation *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -106,8 +105,7 @@ HB_FUNC_STATIC(QSQLRELATION_DISPLAYCOLUMN)
 {
   auto obj = static_cast<QSqlRelation *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -130,8 +128,7 @@ HB_FUNC_STATIC(QSQLRELATION_INDEXCOLUMN)
 {
   auto obj = static_cast<QSqlRelation *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -154,8 +151,7 @@ HB_FUNC_STATIC(QSQLRELATION_ISVALID)
 {
   auto obj = static_cast<QSqlRelation *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -178,8 +174,7 @@ HB_FUNC_STATIC(QSQLRELATION_TABLENAME)
 {
   auto obj = static_cast<QSqlRelation *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

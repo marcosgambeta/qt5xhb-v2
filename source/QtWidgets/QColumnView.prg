@@ -96,8 +96,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_DELETE)
 {
   auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -117,8 +116,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_COLUMNWIDTHS)
 {
   auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -142,8 +140,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_PREVIEWWIDGET)
 {
   auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -167,8 +164,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_RESIZEGRIPSVISIBLE)
 {
   auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -191,8 +187,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETCOLUMNWIDTHS)
 {
   auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -226,8 +221,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETPREVIEWWIDGET)
 {
   auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
@@ -252,8 +246,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE)
 {
   auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -278,8 +271,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_INDEXAT)
 {
   auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
@@ -303,8 +295,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SCROLLTO)
 {
   auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2))
     {
@@ -330,8 +321,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SELECTALL)
 {
   auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -356,8 +346,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETMODEL)
 {
   auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
     {
@@ -382,8 +371,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETROOTINDEX)
 {
   auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -408,8 +396,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETSELECTIONMODEL)
 {
   auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQITEMSELECTIONMODEL(1))
     {
@@ -434,8 +421,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SIZEHINT)
 {
   auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -459,8 +445,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_VISUALRECT)
 {
   auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {

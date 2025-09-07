@@ -96,8 +96,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_DELETE)
 {
   auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -115,8 +114,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_APPEND)
 {
   auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQOBJECT(1))
     {
@@ -139,8 +137,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_AT)
 {
   auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -164,8 +161,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CANAPPEND)
 {
   auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -188,8 +184,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CANAT)
 {
   auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -212,8 +207,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CANCLEAR)
 {
   auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -236,8 +230,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CANCOUNT)
 {
   auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -260,8 +253,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CLEAR)
 {
   auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -284,8 +276,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_COUNT)
 {
   auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -308,8 +299,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_ISVALID)
 {
   auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -332,8 +322,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_LISTELEMENTTYPE)
 {
   auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -357,8 +346,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_OBJECT)
 {
   auto obj = static_cast<QQmlListReference *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

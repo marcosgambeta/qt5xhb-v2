@@ -145,8 +145,7 @@ HB_FUNC_STATIC(QGLFORMAT_DELETE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -164,8 +163,7 @@ HB_FUNC_STATIC(QGLFORMAT_ACCUM)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -188,8 +186,7 @@ HB_FUNC_STATIC(QGLFORMAT_ACCUMBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -212,8 +209,7 @@ HB_FUNC_STATIC(QGLFORMAT_ALPHA)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -236,8 +232,7 @@ HB_FUNC_STATIC(QGLFORMAT_ALPHABUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -260,8 +255,7 @@ HB_FUNC_STATIC(QGLFORMAT_BLUEBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -284,8 +278,7 @@ HB_FUNC_STATIC(QGLFORMAT_DEPTH)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -308,8 +301,7 @@ HB_FUNC_STATIC(QGLFORMAT_DEPTHBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -332,8 +324,7 @@ HB_FUNC_STATIC(QGLFORMAT_DIRECTRENDERING)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -356,8 +347,7 @@ HB_FUNC_STATIC(QGLFORMAT_DOUBLEBUFFER)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -380,8 +370,7 @@ HB_FUNC_STATIC(QGLFORMAT_GREENBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -404,8 +393,7 @@ HB_FUNC_STATIC(QGLFORMAT_HASOVERLAY)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -428,8 +416,7 @@ HB_FUNC_STATIC(QGLFORMAT_MAJORVERSION)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -452,8 +439,7 @@ HB_FUNC_STATIC(QGLFORMAT_MINORVERSION)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -476,8 +462,7 @@ HB_FUNC_STATIC(QGLFORMAT_PLANE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -500,8 +485,7 @@ HB_FUNC_STATIC(QGLFORMAT_PROFILE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -524,8 +508,7 @@ HB_FUNC_STATIC(QGLFORMAT_REDBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -548,8 +531,7 @@ HB_FUNC_STATIC(QGLFORMAT_RGBA)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -572,8 +554,7 @@ HB_FUNC_STATIC(QGLFORMAT_SAMPLEBUFFERS)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -596,8 +577,7 @@ HB_FUNC_STATIC(QGLFORMAT_SAMPLES)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -620,8 +600,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETACCUM)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -646,8 +625,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETACCUMBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -672,8 +650,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETALPHA)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -698,8 +675,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETALPHABUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -724,8 +700,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETBLUEBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -750,8 +725,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEPTH)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -776,8 +750,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEPTHBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -802,8 +775,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDIRECTRENDERING)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -828,8 +800,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDOUBLEBUFFER)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -854,8 +825,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETGREENBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -880,8 +850,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETOPTION)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -906,8 +875,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETOVERLAY)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -932,8 +900,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETPLANE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -958,8 +925,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETPROFILE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -984,8 +950,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETREDBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1010,8 +975,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETRGBA)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1036,8 +1000,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSAMPLEBUFFERS)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1062,8 +1025,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSAMPLES)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1088,8 +1050,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTENCIL)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1114,8 +1075,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTENCILBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1140,8 +1100,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTEREO)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1166,8 +1125,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSWAPINTERVAL)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1192,8 +1150,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETVERSION)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -1218,8 +1175,7 @@ HB_FUNC_STATIC(QGLFORMAT_STENCIL)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1242,8 +1198,7 @@ HB_FUNC_STATIC(QGLFORMAT_STENCILBUFFERSIZE)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1266,8 +1221,7 @@ HB_FUNC_STATIC(QGLFORMAT_STEREO)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1290,8 +1244,7 @@ HB_FUNC_STATIC(QGLFORMAT_SWAPINTERVAL)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1314,8 +1267,7 @@ HB_FUNC_STATIC(QGLFORMAT_TESTOPTION)
 {
   auto obj = static_cast<QGLFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

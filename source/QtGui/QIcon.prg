@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QICON_DELETE)
 {
   auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -141,8 +140,7 @@ HB_FUNC_STATIC(QICON_ACTUALSIZE)
 {
   auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQSIZE(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
     {
@@ -169,8 +167,7 @@ HB_FUNC_STATIC(QICON_ADDFILE)
 {
   auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && (ISQSIZE(2) || HB_ISNIL(2)) && ISNUMORNIL(3) &&
         ISNUMORNIL(4))
@@ -198,8 +195,7 @@ HB_FUNC_STATIC(QICON_ADDPIXMAP)
 {
   auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQPIXMAP(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
     {
@@ -226,8 +222,7 @@ HB_FUNC_STATIC(QICON_AVAILABLESIZES)
 {
   auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2))
     {
@@ -278,8 +273,7 @@ HB_FUNC_STATIC(QICON_CACHEKEY)
 {
   auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -302,8 +296,7 @@ HB_FUNC_STATIC(QICON_ISNULL)
 {
   auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -326,8 +319,7 @@ HB_FUNC_STATIC(QICON_NAME)
 {
   auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -615,8 +607,7 @@ void QIcon_toVariant1()
 {
   auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     QVariant *variant = new QVariant();
     variant->setValue<QIcon>(*obj);
     Qt5xHb::createReturnClass(variant, "QVARIANT", true);

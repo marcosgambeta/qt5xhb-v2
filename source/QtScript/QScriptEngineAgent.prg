@@ -91,8 +91,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_DELETE)
 {
   auto obj = static_cast<QScriptEngineAgent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -110,8 +109,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_CONTEXTPOP)
 {
   auto obj = static_cast<QScriptEngineAgent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -136,8 +134,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_CONTEXTPUSH)
 {
   auto obj = static_cast<QScriptEngineAgent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -162,8 +159,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_ENGINE)
 {
   auto obj = static_cast<QScriptEngineAgent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -187,8 +183,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXCEPTIONCATCH)
 {
   auto obj = static_cast<QScriptEngineAgent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSCRIPTVALUE(2))
     {
@@ -213,8 +208,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXCEPTIONTHROW)
 {
   auto obj = static_cast<QScriptEngineAgent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && ISQSCRIPTVALUE(2) && HB_ISLOG(3))
     {
@@ -239,8 +233,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXTENSION)
 {
   auto obj = static_cast<QScriptEngineAgent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQVARIANT(2) || HB_ISNIL(2)))
     {
@@ -266,8 +259,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_FUNCTIONENTRY)
 {
   auto obj = static_cast<QScriptEngineAgent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -292,8 +284,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_FUNCTIONEXIT)
 {
   auto obj = static_cast<QScriptEngineAgent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSCRIPTVALUE(2))
     {
@@ -318,8 +309,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_POSITIONCHANGE)
 {
   auto obj = static_cast<QScriptEngineAgent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
@@ -344,8 +334,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_SCRIPTLOAD)
 {
   auto obj = static_cast<QScriptEngineAgent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISNUM(4))
     {
@@ -370,8 +359,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_SCRIPTUNLOAD)
 {
   auto obj = static_cast<QScriptEngineAgent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -396,8 +384,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_SUPPORTSEXTENSION)
 {
   auto obj = static_cast<QScriptEngineAgent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

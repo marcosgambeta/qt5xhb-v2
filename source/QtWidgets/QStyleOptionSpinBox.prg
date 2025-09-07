@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS)
 {
   auto obj = static_cast<QStyleOptionSpinBox *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->buttonSymbols);
@@ -99,8 +98,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETBUTTONSYMBOLS)
 {
   auto obj = static_cast<QStyleOptionSpinBox *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->buttonSymbols = static_cast<QAbstractSpinBox::ButtonSymbols>(hb_parni(1));
@@ -121,8 +119,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_STEPENABLED)
 {
   auto obj = static_cast<QStyleOptionSpinBox *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->stepEnabled);
@@ -138,8 +135,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETSTEPENABLED)
 {
   auto obj = static_cast<QStyleOptionSpinBox *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->stepEnabled = static_cast<QAbstractSpinBox::StepEnabled>(hb_parni(1));
@@ -160,8 +156,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_FRAME)
 {
   auto obj = static_cast<QStyleOptionSpinBox *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(0))
     {
       RBOOL(obj->frame);
@@ -177,8 +172,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETFRAME)
 {
   auto obj = static_cast<QStyleOptionSpinBox *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->frame = PBOOL(1);

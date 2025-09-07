@@ -69,8 +69,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_DELETE)
 {
   auto obj = static_cast<QAudioSystemFactoryInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -88,8 +87,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_AVAILABLEDEVICES)
 {
   auto obj = static_cast<QAudioSystemFactoryInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -138,8 +136,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_CREATEINPUT)
 {
   auto obj = static_cast<QAudioSystemFactoryInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -163,8 +160,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_CREATEOUTPUT)
 {
   auto obj = static_cast<QAudioSystemFactoryInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -188,8 +184,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_CREATEDEVICEINFO)
 {
   auto obj = static_cast<QAudioSystemFactoryInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2))
     {

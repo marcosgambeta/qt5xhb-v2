@@ -180,8 +180,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_DELETE)
 {
   auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -199,8 +198,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_LOCALPORT)
 {
   auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -223,8 +221,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_PEERHOSTNAME)
 {
   auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -247,8 +244,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_PEERPORT)
 {
   auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -271,8 +267,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_PROTOCOLTAG)
 {
   auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -295,8 +290,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_QUERYTYPE)
 {
   auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -319,8 +313,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETLOCALPORT)
 {
   auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -345,8 +338,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPEERHOSTNAME)
 {
   auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -371,8 +363,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPEERPORT)
 {
   auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -397,8 +388,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPROTOCOLTAG)
 {
   auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -423,8 +413,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETQUERYTYPE)
 {
   auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -449,8 +438,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETURL)
 {
   auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1))
     {
@@ -475,8 +463,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_URL)
 {
   auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -500,8 +487,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SWAP)
 {
   auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQNETWORKPROXYQUERY(1))
     {
@@ -526,8 +512,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NETWORKCONFIGURATION)
 {
   auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -551,8 +536,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETNETWORKCONFIGURATION)
 {
   auto obj = static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1))
     {

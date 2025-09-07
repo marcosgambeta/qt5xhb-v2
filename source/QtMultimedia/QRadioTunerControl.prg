@@ -91,8 +91,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_DELETE)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -112,8 +111,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_STATE)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -136,8 +134,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_BAND)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -160,8 +157,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_SETBAND)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -186,8 +182,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_ISBANDSUPPORTED)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -210,8 +205,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_FREQUENCY)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -234,8 +228,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_FREQUENCYSTEP)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -258,8 +251,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_SETFREQUENCY)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -284,8 +276,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_ISSTEREO)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -308,8 +299,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_STEREOMODE)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -332,8 +322,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_SETSTEREOMODE)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -358,8 +347,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_SIGNALSTRENGTH)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -382,8 +370,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_VOLUME)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -406,8 +393,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_SETVOLUME)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -432,8 +418,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_ISMUTED)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -456,8 +441,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_SETMUTED)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -482,8 +466,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_ISSEARCHING)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -506,8 +489,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_ISANTENNACONNECTED)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -530,8 +512,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_SEARCHFORWARD)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -556,8 +537,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_SEARCHBACKWARD)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -582,8 +562,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_SEARCHALLSTATIONS)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -609,8 +588,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_CANCELSEARCH)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -635,8 +613,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_START)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -661,8 +638,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_STOP)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -687,8 +663,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_ERROR)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -711,8 +686,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_ERRORSTRING)
 {
   auto obj = qobject_cast<QRadioTunerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_DELETE)
 {
   auto obj = qobject_cast<QDoubleValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -107,8 +106,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_BOTTOM)
 {
   auto obj = qobject_cast<QDoubleValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -131,8 +129,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_DECIMALS)
 {
   auto obj = qobject_cast<QDoubleValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -155,8 +152,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_NOTATION)
 {
   auto obj = qobject_cast<QDoubleValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -179,8 +175,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETBOTTOM)
 {
   auto obj = qobject_cast<QDoubleValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -205,8 +200,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETDECIMALS)
 {
   auto obj = qobject_cast<QDoubleValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -231,8 +225,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETNOTATION)
 {
   auto obj = qobject_cast<QDoubleValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -257,8 +250,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETRANGE)
 {
   auto obj = qobject_cast<QDoubleValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3))
     {
@@ -283,8 +275,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETTOP)
 {
   auto obj = qobject_cast<QDoubleValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -309,8 +300,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_TOP)
 {
   auto obj = qobject_cast<QDoubleValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -333,8 +323,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_VALIDATE)
 {
   auto obj = qobject_cast<QDoubleValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {

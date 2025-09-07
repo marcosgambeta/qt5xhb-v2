@@ -63,8 +63,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_DELETE)
 {
   auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -82,8 +81,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTON)
 {
   auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -106,8 +104,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS)
 {
   auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -131,8 +128,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS)
 {
   auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -156,8 +152,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS)
 {
   auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -181,8 +176,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTONS)
 {
   auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -205,8 +199,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_LASTPOS)
 {
   auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -230,8 +223,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_LASTSCENEPOS)
 {
   auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -255,8 +247,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_LASTSCREENPOS)
 {
   auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -280,8 +271,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_MODIFIERS)
 {
   auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -304,8 +294,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_POS)
 {
   auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -329,8 +318,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_SCENEPOS)
 {
   auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -354,8 +342,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_SCREENPOS)
 {
   auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

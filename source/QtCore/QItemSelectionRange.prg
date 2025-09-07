@@ -118,8 +118,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_DELETE)
 {
   auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -137,8 +136,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_TOP)
 {
   auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -161,8 +159,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_LEFT)
 {
   auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -185,8 +182,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_BOTTOM)
 {
   auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -209,8 +205,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_RIGHT)
 {
   auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -233,8 +228,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_WIDTH)
 {
   auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -257,8 +251,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_HEIGHT)
 {
   auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -281,8 +274,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_TOPLEFT)
 {
   auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -306,8 +298,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_BOTTOMRIGHT)
 {
   auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -331,8 +322,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_PARENT)
 {
   auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -356,8 +346,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_MODEL)
 {
   auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -413,8 +402,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTS)
 {
   auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1))
     {
@@ -437,8 +425,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTED)
 {
   auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1))
     {
@@ -462,8 +449,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_ISVALID)
 {
   auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -486,8 +472,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_ISEMPTY)
 {
   auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -510,8 +495,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INDEXES)
 {
   auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -80,8 +80,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_DELETE)
 {
   auto obj = static_cast<QSignalTransition *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -99,8 +98,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_SENDEROBJECT)
 {
   auto obj = static_cast<QSignalTransition *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -124,8 +122,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_SETSENDEROBJECT)
 {
   auto obj = static_cast<QSignalTransition *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQOBJECT(1))
     {
@@ -150,8 +147,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_SIGNAL)
 {
   auto obj = static_cast<QSignalTransition *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -175,8 +171,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_SETSIGNAL)
 {
   auto obj = static_cast<QSignalTransition *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {

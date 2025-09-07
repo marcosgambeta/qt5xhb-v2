@@ -79,8 +79,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_DELETE)
 {
   auto obj = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -98,8 +97,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_NAME)
 {
   auto obj = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -122,8 +120,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_VALUE)
 {
   auto obj = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -146,8 +143,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_ENCLOSINGMETAOBJECT)
 {
   auto obj = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

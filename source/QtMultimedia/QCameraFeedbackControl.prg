@@ -59,8 +59,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_DELETE)
 {
   auto obj = qobject_cast<QCameraFeedbackControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -80,8 +79,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKENABLED)
 {
   auto obj = qobject_cast<QCameraFeedbackControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -104,8 +102,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKLOCKED)
 {
   auto obj = qobject_cast<QCameraFeedbackControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -128,8 +125,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_RESETEVENTFEEDBACK)
 {
   auto obj = qobject_cast<QCameraFeedbackControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -154,8 +150,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED)
 {
   auto obj = qobject_cast<QCameraFeedbackControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
@@ -178,8 +173,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKSOUND)
 {
   auto obj = qobject_cast<QCameraFeedbackControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {

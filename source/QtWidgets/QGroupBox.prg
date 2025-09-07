@@ -91,8 +91,7 @@ HB_FUNC_STATIC(QGROUPBOX_DELETE)
 {
   auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -112,8 +111,7 @@ HB_FUNC_STATIC(QGROUPBOX_ALIGNMENT)
 {
   auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -136,8 +134,7 @@ HB_FUNC_STATIC(QGROUPBOX_ISCHECKABLE)
 {
   auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -160,8 +157,7 @@ HB_FUNC_STATIC(QGROUPBOX_ISCHECKED)
 {
   auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -184,8 +180,7 @@ HB_FUNC_STATIC(QGROUPBOX_ISFLAT)
 {
   auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -208,8 +203,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETALIGNMENT)
 {
   auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -234,8 +228,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETCHECKABLE)
 {
   auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -260,8 +253,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETFLAT)
 {
   auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -286,8 +278,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETTITLE)
 {
   auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -312,8 +303,7 @@ HB_FUNC_STATIC(QGROUPBOX_TITLE)
 {
   auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -336,8 +326,7 @@ HB_FUNC_STATIC(QGROUPBOX_MINIMUMSIZEHINT)
 {
   auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -361,8 +350,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETCHECKED)
 {
   auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {

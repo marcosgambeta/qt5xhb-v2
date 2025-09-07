@@ -76,8 +76,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_DELETE)
 {
   auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -95,8 +94,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_FLAGS)
 {
   auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -119,8 +117,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_IMAGETYPE)
 {
   auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -143,8 +140,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTIMAGE)
 {
   auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3))
     {
@@ -168,8 +164,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTPIXMAP)
 {
   auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3))
     {
@@ -193,8 +188,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTTEXTURE)
 {
   auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3))
     {

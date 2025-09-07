@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QGLYPHRUN_DELETE)
 {
   auto obj = static_cast<QGlyphRun *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -112,8 +111,7 @@ HB_FUNC_STATIC(QGLYPHRUN_CLEAR)
 {
   auto obj = static_cast<QGlyphRun *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -138,8 +136,7 @@ HB_FUNC_STATIC(QGLYPHRUN_OVERLINE)
 {
   auto obj = static_cast<QGlyphRun *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -162,8 +159,7 @@ HB_FUNC_STATIC(QGLYPHRUN_RAWFONT)
 {
   auto obj = static_cast<QGlyphRun *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -187,8 +183,7 @@ HB_FUNC_STATIC(QGLYPHRUN_SETOVERLINE)
 {
   auto obj = static_cast<QGlyphRun *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -213,8 +208,7 @@ HB_FUNC_STATIC(QGLYPHRUN_SETRAWFONT)
 {
   auto obj = static_cast<QGlyphRun *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQRAWFONT(1))
     {
@@ -239,8 +233,7 @@ HB_FUNC_STATIC(QGLYPHRUN_SETSTRIKEOUT)
 {
   auto obj = static_cast<QGlyphRun *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -265,8 +258,7 @@ HB_FUNC_STATIC(QGLYPHRUN_SETUNDERLINE)
 {
   auto obj = static_cast<QGlyphRun *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -291,8 +283,7 @@ HB_FUNC_STATIC(QGLYPHRUN_STRIKEOUT)
 {
   auto obj = static_cast<QGlyphRun *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -315,8 +306,7 @@ HB_FUNC_STATIC(QGLYPHRUN_UNDERLINE)
 {
   auto obj = static_cast<QGlyphRun *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

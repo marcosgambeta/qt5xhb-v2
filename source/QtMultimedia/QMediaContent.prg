@@ -147,8 +147,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_DELETE)
 {
   auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -166,8 +165,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_CANONICALREQUEST)
 {
   auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -191,8 +189,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_CANONICALRESOURCE)
 {
   auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -216,8 +213,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_CANONICALURL)
 {
   auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -241,8 +237,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_ISNULL)
 {
   auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -265,8 +260,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_PLAYLIST)
 {
   auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -290,8 +284,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_RESOURCES)
 {
   auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

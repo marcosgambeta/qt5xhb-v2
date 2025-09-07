@@ -95,8 +95,7 @@ HB_FUNC_STATIC(QMETAMETHOD_DELETE)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -114,8 +113,7 @@ HB_FUNC_STATIC(QMETAMETHOD_TYPENAME)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -138,8 +136,7 @@ HB_FUNC_STATIC(QMETAMETHOD_PARAMETERTYPES)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -188,8 +185,7 @@ HB_FUNC_STATIC(QMETAMETHOD_PARAMETERNAMES)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -238,8 +234,7 @@ HB_FUNC_STATIC(QMETAMETHOD_TAG)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -262,8 +257,7 @@ HB_FUNC_STATIC(QMETAMETHOD_ACCESS)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -286,8 +280,7 @@ HB_FUNC_STATIC(QMETAMETHOD_METHODTYPE)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -310,8 +303,7 @@ HB_FUNC_STATIC(QMETAMETHOD_ATTRIBUTES)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -334,8 +326,7 @@ HB_FUNC_STATIC(QMETAMETHOD_METHODINDEX)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -358,8 +349,7 @@ HB_FUNC_STATIC(QMETAMETHOD_REVISION)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -382,8 +372,7 @@ HB_FUNC_STATIC(QMETAMETHOD_ENCLOSINGMETAOBJECT)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -471,8 +460,7 @@ HB_FUNC_STATIC(QMETAMETHOD_METHODSIGNATURE)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -496,8 +484,7 @@ HB_FUNC_STATIC(QMETAMETHOD_NAME)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -521,8 +508,7 @@ HB_FUNC_STATIC(QMETAMETHOD_RETURNTYPE)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -545,8 +531,7 @@ HB_FUNC_STATIC(QMETAMETHOD_PARAMETERCOUNT)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -569,8 +554,7 @@ HB_FUNC_STATIC(QMETAMETHOD_PARAMETERTYPE)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -593,8 +577,7 @@ HB_FUNC_STATIC(QMETAMETHOD_GETPARAMETERTYPES)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -621,8 +604,7 @@ HB_FUNC_STATIC(QMETAMETHOD_ISVALID)
 {
   auto obj = static_cast<QMetaMethod *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_DELETE)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -216,8 +215,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_FIELDGROWTHPOLICY)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -240,8 +238,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_FORMALIGNMENT)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -264,8 +261,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_HORIZONTALSPACING)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -414,8 +410,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_LABELALIGNMENT)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -472,8 +467,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ROWCOUNT)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -496,8 +490,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ROWWRAPPOLICY)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -520,8 +513,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETFIELDGROWTHPOLICY)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -546,8 +538,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETFORMALIGNMENT)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -572,8 +563,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETHORIZONTALSPACING)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -598,8 +588,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETITEM)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQLAYOUTITEM(3))
     {
@@ -624,8 +613,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETLABELALIGNMENT)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -650,8 +638,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETLAYOUT)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQLAYOUT(3))
     {
@@ -676,8 +663,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETROWWRAPPOLICY)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -702,8 +688,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETSPACING)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -728,8 +713,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETVERTICALSPACING)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -754,8 +738,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETWIDGET)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQWIDGET(3))
     {
@@ -780,8 +763,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SPACING)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -804,8 +786,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_VERTICALSPACING)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -828,8 +809,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDITEM)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQLAYOUTITEM(1))
     {
@@ -854,8 +834,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_COUNT)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -878,8 +857,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_EXPANDINGDIRECTIONS)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -902,8 +880,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_HASHEIGHTFORWIDTH)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -926,8 +903,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_HEIGHTFORWIDTH)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -950,8 +926,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INVALIDATE)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -976,8 +951,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_MINIMUMSIZE)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1001,8 +975,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETGEOMETRY)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQRECT(1))
     {
@@ -1027,8 +1000,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SIZEHINT)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1052,8 +1024,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_TAKEAT)
 {
   auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

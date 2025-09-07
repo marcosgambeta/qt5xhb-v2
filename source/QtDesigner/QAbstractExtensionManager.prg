@@ -62,8 +62,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_DELETE)
 {
   auto obj = static_cast<QAbstractExtensionManager *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -81,8 +80,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_EXTENSION)
 {
   auto obj = static_cast<QAbstractExtensionManager *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
     {
@@ -106,8 +104,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS)
 {
   auto obj = static_cast<QAbstractExtensionManager *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQABSTRACTEXTENSIONFACTORY(1) && HB_ISCHAR(2))
     {
@@ -132,8 +129,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS)
 {
   auto obj = static_cast<QAbstractExtensionManager *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQABSTRACTEXTENSIONFACTORY(1) && HB_ISCHAR(2))
     {

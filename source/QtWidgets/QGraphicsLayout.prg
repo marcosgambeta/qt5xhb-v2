@@ -62,8 +62,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_DELETE)
 {
   auto obj = static_cast<QGraphicsLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -81,8 +80,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_ACTIVATE)
 {
   auto obj = static_cast<QGraphicsLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -107,8 +105,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_COUNT)
 {
   auto obj = static_cast<QGraphicsLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -131,8 +128,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_INVALIDATE)
 {
   auto obj = static_cast<QGraphicsLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -157,8 +153,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_ISACTIVATED)
 {
   auto obj = static_cast<QGraphicsLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -181,8 +176,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_ITEMAT)
 {
   auto obj = static_cast<QGraphicsLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -206,8 +200,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_REMOVEAT)
 {
   auto obj = static_cast<QGraphicsLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -232,8 +225,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_SETCONTENTSMARGINS)
 {
   auto obj = static_cast<QGraphicsLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
     {
@@ -258,8 +250,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_WIDGETEVENT)
 {
   auto obj = static_cast<QGraphicsLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQEVENT(1))
     {
@@ -284,8 +275,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_GETCONTENTSMARGINS)
 {
   auto obj = static_cast<QGraphicsLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
     {
@@ -318,8 +308,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_UPDATEGEOMETRY)
 {
   auto obj = static_cast<QGraphicsLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

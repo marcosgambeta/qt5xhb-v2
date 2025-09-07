@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_DELETE)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -113,8 +112,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ATTRIBUTEDECL)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISCHAR(5))
     {
@@ -137,8 +135,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_CHARACTERS)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -161,8 +158,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_COMMENT)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -185,8 +181,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDCDATA)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -209,8 +204,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDDTD)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -233,8 +227,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDDOCUMENT)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -257,8 +250,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDELEMENT)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
     {
@@ -281,8 +273,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDENTITY)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -305,8 +296,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDPREFIXMAPPING)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -329,8 +319,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ERROR)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1))
     {
@@ -353,8 +342,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ERRORSTRING)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -377,8 +365,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_EXTERNALENTITYDECL)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
     {
@@ -401,8 +388,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_FATALERROR)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1))
     {
@@ -425,8 +411,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_IGNORABLEWHITESPACE)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -449,8 +434,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_INTERNALENTITYDECL)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -473,8 +457,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_NOTATIONDECL)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
     {
@@ -497,8 +480,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_PROCESSINGINSTRUCTION)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -521,8 +503,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_SETDOCUMENTLOCATOR)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLLOCATOR(1))
     {
@@ -547,8 +528,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_SKIPPEDENTITY)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -571,8 +551,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTCDATA)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -595,8 +574,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTDTD)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
     {
@@ -619,8 +597,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTDOCUMENT)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -644,8 +621,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTELEMENT)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISQXMLATTRIBUTES(4))
     {
@@ -668,8 +644,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTENTITY)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -692,8 +667,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTPREFIXMAPPING)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -717,8 +691,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_UNPARSEDENTITYDECL)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4))
     {
@@ -741,8 +714,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_WARNING)
 {
   auto obj = static_cast<QXmlDefaultHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1))
     {

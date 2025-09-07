@@ -54,8 +54,7 @@ HB_FUNC_STATIC(QSGDYNAMICTEXTURE_UPDATETEXTURE)
 {
   auto obj = qobject_cast<QSGDynamicTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

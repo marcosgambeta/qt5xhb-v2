@@ -66,8 +66,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_DELETE)
 {
   auto obj = static_cast<QGestureRecognizer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -85,8 +84,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_CREATE)
 {
   auto obj = static_cast<QGestureRecognizer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQOBJECT(1))
     {
@@ -110,8 +108,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_RECOGNIZE)
 {
   auto obj = static_cast<QGestureRecognizer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQGESTURE(1) && ISQOBJECT(2) && ISQEVENT(3))
     {
@@ -134,8 +131,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_RESET)
 {
   auto obj = static_cast<QGestureRecognizer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGESTURE(1))
     {

@@ -85,8 +85,7 @@ HB_FUNC_STATIC(QIODEVICE_DELETE)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -106,8 +105,7 @@ HB_FUNC_STATIC(QIODEVICE_ATEND)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -130,8 +128,7 @@ HB_FUNC_STATIC(QIODEVICE_BYTESAVAILABLE)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -154,8 +151,7 @@ HB_FUNC_STATIC(QIODEVICE_BYTESTOWRITE)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -178,8 +174,7 @@ HB_FUNC_STATIC(QIODEVICE_CANREADLINE)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -202,8 +197,7 @@ HB_FUNC_STATIC(QIODEVICE_CLOSE)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -228,8 +222,7 @@ HB_FUNC_STATIC(QIODEVICE_ERRORSTRING)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -252,8 +245,7 @@ HB_FUNC_STATIC(QIODEVICE_GETCHAR)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -276,8 +268,7 @@ HB_FUNC_STATIC(QIODEVICE_ISOPEN)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -300,8 +291,7 @@ HB_FUNC_STATIC(QIODEVICE_ISREADABLE)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -324,8 +314,7 @@ HB_FUNC_STATIC(QIODEVICE_ISSEQUENTIAL)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -348,8 +337,7 @@ HB_FUNC_STATIC(QIODEVICE_ISTEXTMODEENABLED)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -372,8 +360,7 @@ HB_FUNC_STATIC(QIODEVICE_ISWRITABLE)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -396,8 +383,7 @@ HB_FUNC_STATIC(QIODEVICE_OPEN)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -420,8 +406,7 @@ HB_FUNC_STATIC(QIODEVICE_OPENMODE)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -477,8 +462,7 @@ HB_FUNC_STATIC(QIODEVICE_POS)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -501,8 +485,7 @@ HB_FUNC_STATIC(QIODEVICE_PUTCHAR)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISNUM(1) || HB_ISCHAR(1)))
     {
@@ -558,8 +541,7 @@ HB_FUNC_STATIC(QIODEVICE_READALL)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -616,8 +598,7 @@ HB_FUNC_STATIC(QIODEVICE_RESET)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -640,8 +621,7 @@ HB_FUNC_STATIC(QIODEVICE_SEEK)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -664,8 +644,7 @@ HB_FUNC_STATIC(QIODEVICE_SETTEXTMODEENABLED)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -690,8 +669,7 @@ HB_FUNC_STATIC(QIODEVICE_SIZE)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -714,8 +692,7 @@ HB_FUNC_STATIC(QIODEVICE_UNGETCHAR)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISNUM(1) || HB_ISCHAR(1)))
     {
@@ -740,8 +717,7 @@ HB_FUNC_STATIC(QIODEVICE_WAITFORBYTESWRITTEN)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -764,8 +740,7 @@ HB_FUNC_STATIC(QIODEVICE_WAITFORREADYREAD)
 {
   auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

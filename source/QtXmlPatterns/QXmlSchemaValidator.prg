@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_DELETE)
 {
   auto obj = static_cast<QXmlSchemaValidator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -122,8 +121,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_MESSAGEHANDLER)
 {
   auto obj = static_cast<QXmlSchemaValidator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -147,8 +145,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NAMEPOOL)
 {
   auto obj = static_cast<QXmlSchemaValidator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -172,8 +169,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER)
 {
   auto obj = static_cast<QXmlSchemaValidator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -197,8 +193,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SCHEMA)
 {
   auto obj = static_cast<QXmlSchemaValidator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -222,8 +217,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETMESSAGEHANDLER)
 {
   auto obj = static_cast<QXmlSchemaValidator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTMESSAGEHANDLER(1))
     {
@@ -248,8 +242,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETNETWORKACCESSMANAGER)
 {
   auto obj = static_cast<QXmlSchemaValidator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQNETWORKACCESSMANAGER(1))
     {
@@ -274,8 +267,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETSCHEMA)
 {
   auto obj = static_cast<QXmlSchemaValidator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLSCHEMA(1))
     {
@@ -300,8 +292,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETURIRESOLVER)
 {
   auto obj = static_cast<QXmlSchemaValidator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTURIRESOLVER(1))
     {
@@ -326,8 +317,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_URIRESOLVER)
 {
   auto obj = static_cast<QXmlSchemaValidator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

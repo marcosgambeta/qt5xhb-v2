@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_DELETE)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -122,8 +121,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_CONTROLTYPE)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -146,8 +144,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_EXPANDINGDIRECTIONS)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -170,8 +167,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HASHEIGHTFORWIDTH)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -194,8 +190,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HASWIDTHFORHEIGHT)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -218,8 +213,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HORIZONTALPOLICY)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -242,8 +236,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HORIZONTALSTRETCH)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -266,8 +259,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETCONTROLTYPE)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -292,8 +284,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETHEIGHTFORWIDTH)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -318,8 +309,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALPOLICY)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -344,8 +334,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALSTRETCH)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -370,8 +359,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALPOLICY)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -396,8 +384,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALSTRETCH)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -422,8 +409,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETWIDTHFORHEIGHT)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -448,8 +434,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_TRANSPOSE)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -474,8 +459,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_VERTICALPOLICY)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -498,8 +482,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_VERTICALSTRETCH)
 {
   auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

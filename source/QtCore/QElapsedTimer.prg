@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_DELETE)
 {
   auto obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -106,8 +105,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_ELAPSED)
 {
   auto obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -130,8 +128,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_HASEXPIRED)
 {
   auto obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -154,8 +151,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_INVALIDATE)
 {
   auto obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -180,8 +176,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_ISVALID)
 {
   auto obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -204,8 +199,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_MSECSSINCEREFERENCE)
 {
   auto obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -228,8 +222,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_MSECSTO)
 {
   auto obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQELAPSEDTIMER(1))
     {
@@ -252,8 +245,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_NSECSELAPSED)
 {
   auto obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -276,8 +268,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_RESTART)
 {
   auto obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -300,8 +291,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_SECSTO)
 {
   auto obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQELAPSEDTIMER(1))
     {
@@ -324,8 +314,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_START)
 {
   auto obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

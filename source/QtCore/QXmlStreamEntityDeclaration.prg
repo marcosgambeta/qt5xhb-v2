@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_DELETE)
 {
   auto obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NAME)
 {
   auto obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -133,8 +131,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NOTATIONNAME)
 {
   auto obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -158,8 +155,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_PUBLICID)
 {
   auto obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -183,8 +179,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_SYSTEMID)
 {
   auto obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -208,8 +203,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_VALUE)
 {
   auto obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

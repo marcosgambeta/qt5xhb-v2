@@ -121,8 +121,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_DELETE)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -142,8 +141,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ERROR)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -166,8 +164,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ERRORSTRING)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -190,8 +187,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NAME)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -214,8 +210,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SETNAME)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -240,8 +235,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_TYPE)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -264,8 +258,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SETTYPE)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -291,8 +284,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NAMESERVER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -318,8 +310,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SETNAMESERVER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQHOSTADDRESS(1))
     {
@@ -345,8 +336,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ISFINISHED)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -369,8 +359,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_CANONICALNAMERECORDS)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -419,8 +408,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_HOSTADDRESSRECORDS)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -469,8 +457,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_MAILEXCHANGERECORDS)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -519,8 +506,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NAMESERVERRECORDS)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -569,8 +555,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_POINTERRECORDS)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -619,8 +604,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SERVICERECORDS)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -669,8 +653,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_TEXTRECORDS)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -719,8 +702,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ABORT)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -745,8 +727,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_LOOKUP)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

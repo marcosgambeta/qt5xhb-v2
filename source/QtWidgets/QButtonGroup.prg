@@ -94,8 +94,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_DELETE)
 {
   auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -151,8 +150,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_BUTTON)
 {
   auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -176,8 +174,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_BUTTONS)
 {
   auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -223,8 +220,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDBUTTON)
 {
   auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -248,8 +244,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDID)
 {
   auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -272,8 +267,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_EXCLUSIVE)
 {
   auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -296,8 +290,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ID)
 {
   auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
     {
@@ -320,8 +313,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_REMOVEBUTTON)
 {
   auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
     {
@@ -346,8 +338,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_SETEXCLUSIVE)
 {
   auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -372,8 +363,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_SETID)
 {
   auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2))
     {

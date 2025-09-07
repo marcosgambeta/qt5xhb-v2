@@ -64,8 +64,7 @@ HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DELETE)
 {
   auto obj = qobject_cast<QVideoDeviceSelectorControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -85,8 +84,7 @@ HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DEFAULTDEVICE)
 {
   auto obj = qobject_cast<QVideoDeviceSelectorControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -109,8 +107,7 @@ HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DEVICECOUNT)
 {
   auto obj = qobject_cast<QVideoDeviceSelectorControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -133,8 +130,7 @@ HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DEVICEDESCRIPTION)
 {
   auto obj = qobject_cast<QVideoDeviceSelectorControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -157,8 +153,7 @@ HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DEVICENAME)
 {
   auto obj = qobject_cast<QVideoDeviceSelectorControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -181,8 +176,7 @@ HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_SELECTEDDEVICE)
 {
   auto obj = qobject_cast<QVideoDeviceSelectorControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -205,8 +199,7 @@ HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_SETSELECTEDDEVICE)
 {
   auto obj = qobject_cast<QVideoDeviceSelectorControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

@@ -69,8 +69,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_DELETE)
 {
   auto obj = static_cast<QGraphicsSceneResizeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -88,8 +87,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_NEWSIZE)
 {
   auto obj = static_cast<QGraphicsSceneResizeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -113,8 +111,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_OLDSIZE)
 {
   auto obj = static_cast<QGraphicsSceneResizeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -69,8 +69,7 @@ HB_FUNC_STATIC(QDRAGENTEREVENT_DELETE)
 {
   auto obj = static_cast<QDragEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);

@@ -68,8 +68,7 @@ HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_DELETE)
 {
   auto obj = static_cast<QWindowStateChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -87,8 +86,7 @@ HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_OLDSTATE)
 {
   auto obj = static_cast<QWindowStateChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -111,8 +109,7 @@ HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_ISOVERRIDE)
 {
   auto obj = static_cast<QWindowStateChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

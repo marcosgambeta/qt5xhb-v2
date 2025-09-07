@@ -79,8 +79,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_DELETE)
 {
   auto obj = static_cast<QStyleOptionComplex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -98,8 +97,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SUBCONTROLS)
 {
   auto obj = static_cast<QStyleOptionComplex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->subControls);
@@ -115,8 +113,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS)
 {
   auto obj = static_cast<QStyleOptionComplex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->subControls = static_cast<QStyle::SubControls>(hb_parni(1));
@@ -137,8 +134,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS)
 {
   auto obj = static_cast<QStyleOptionComplex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->activeSubControls);
@@ -154,8 +150,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS)
 {
   auto obj = static_cast<QStyleOptionComplex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->activeSubControls = static_cast<QStyle::SubControls>(hb_parni(1));

@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QHELPENGINE_DELETE)
 {
   auto obj = qobject_cast<QHelpEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -103,8 +102,7 @@ HB_FUNC_STATIC(QHELPENGINE_CONTENTMODEL)
 {
   auto obj = qobject_cast<QHelpEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -128,8 +126,7 @@ HB_FUNC_STATIC(QHELPENGINE_CONTENTWIDGET)
 {
   auto obj = qobject_cast<QHelpEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -153,8 +150,7 @@ HB_FUNC_STATIC(QHELPENGINE_INDEXMODEL)
 {
   auto obj = qobject_cast<QHelpEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -178,8 +174,7 @@ HB_FUNC_STATIC(QHELPENGINE_INDEXWIDGET)
 {
   auto obj = qobject_cast<QHelpEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -203,8 +198,7 @@ HB_FUNC_STATIC(QHELPENGINE_SEARCHENGINE)
 {
   auto obj = qobject_cast<QHelpEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

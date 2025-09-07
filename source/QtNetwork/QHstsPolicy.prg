@@ -119,8 +119,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   auto obj = static_cast<QHstsPolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -140,8 +139,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SWAP)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   auto obj = static_cast<QHstsPolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQHSTSPOLICY(1))
     {
@@ -168,8 +166,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SETHOST)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   auto obj = static_cast<QHstsPolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
     {
@@ -197,8 +194,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_HOST)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   auto obj = static_cast<QHstsPolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -224,8 +220,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SETEXPIRY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   auto obj = static_cast<QHstsPolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQDATETIME(1))
     {
@@ -252,8 +247,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_EXPIRY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   auto obj = static_cast<QHstsPolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -279,8 +273,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SETINCLUDESSUBDOMAINS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   auto obj = static_cast<QHstsPolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -307,8 +300,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_INCLUDESSUBDOMAINS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   auto obj = static_cast<QHstsPolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -333,8 +325,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_ISEXPIRED)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   auto obj = static_cast<QHstsPolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

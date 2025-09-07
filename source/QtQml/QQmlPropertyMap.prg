@@ -79,8 +79,7 @@ HB_FUNC_STATIC(QQMLPROPERTYMAP_DELETE)
 {
   auto obj = qobject_cast<QQmlPropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -100,8 +99,7 @@ HB_FUNC_STATIC(QQMLPROPERTYMAP_CLEAR)
 {
   auto obj = qobject_cast<QQmlPropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -126,8 +124,7 @@ HB_FUNC_STATIC(QQMLPROPERTYMAP_CONTAINS)
 {
   auto obj = qobject_cast<QQmlPropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -150,8 +147,7 @@ HB_FUNC_STATIC(QQMLPROPERTYMAP_COUNT)
 {
   auto obj = qobject_cast<QQmlPropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -174,8 +170,7 @@ HB_FUNC_STATIC(QQMLPROPERTYMAP_INSERT)
 {
   auto obj = qobject_cast<QQmlPropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
     {
@@ -200,8 +195,7 @@ HB_FUNC_STATIC(QQMLPROPERTYMAP_ISEMPTY)
 {
   auto obj = qobject_cast<QQmlPropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -224,8 +218,7 @@ HB_FUNC_STATIC(QQMLPROPERTYMAP_KEYS)
 {
   auto obj = qobject_cast<QQmlPropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -248,8 +241,7 @@ HB_FUNC_STATIC(QQMLPROPERTYMAP_SIZE)
 {
   auto obj = qobject_cast<QQmlPropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -272,8 +264,7 @@ HB_FUNC_STATIC(QQMLPROPERTYMAP_VALUE)
 {
   auto obj = qobject_cast<QQmlPropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {

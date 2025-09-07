@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QBITARRAY_DELETE)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -123,8 +122,7 @@ HB_FUNC_STATIC(QBITARRAY_AT)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -147,8 +145,7 @@ HB_FUNC_STATIC(QBITARRAY_CLEAR)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -173,8 +170,7 @@ HB_FUNC_STATIC(QBITARRAY_CLEARBIT)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -265,8 +261,7 @@ HB_FUNC_STATIC(QBITARRAY_ISEMPTY)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -289,8 +284,7 @@ HB_FUNC_STATIC(QBITARRAY_ISNULL)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -313,8 +307,7 @@ HB_FUNC_STATIC(QBITARRAY_RESIZE)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -375,8 +368,7 @@ HB_FUNC_STATIC(QBITARRAY_SIZE)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -399,8 +391,7 @@ HB_FUNC_STATIC(QBITARRAY_TESTBIT)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -423,8 +414,7 @@ HB_FUNC_STATIC(QBITARRAY_TOGGLEBIT)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -447,8 +437,7 @@ HB_FUNC_STATIC(QBITARRAY_TRUNCATE)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

@@ -69,8 +69,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_DELETE)
 {
   auto obj = static_cast<QScriptable *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -88,8 +87,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_ARGUMENT)
 {
   auto obj = static_cast<QScriptable *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -113,8 +111,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_ARGUMENTCOUNT)
 {
   auto obj = static_cast<QScriptable *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -137,8 +134,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_CONTEXT)
 {
   auto obj = static_cast<QScriptable *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -162,8 +158,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_ENGINE)
 {
   auto obj = static_cast<QScriptable *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -187,8 +182,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_THISOBJECT)
 {
   auto obj = static_cast<QScriptable *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

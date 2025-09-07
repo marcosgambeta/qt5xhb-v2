@@ -81,8 +81,7 @@ HB_FUNC_STATIC(QSCROLLAREA_DELETE)
 {
   auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -102,8 +101,7 @@ HB_FUNC_STATIC(QSCROLLAREA_ALIGNMENT)
 {
   auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -126,8 +124,7 @@ HB_FUNC_STATIC(QSCROLLAREA_ENSUREVISIBLE)
 {
   auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4))
     {
@@ -152,8 +149,7 @@ HB_FUNC_STATIC(QSCROLLAREA_ENSUREWIDGETVISIBLE)
 {
   auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQWIDGET(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
     {
@@ -178,8 +174,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETALIGNMENT)
 {
   auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -204,8 +199,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETWIDGET)
 {
   auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
@@ -230,8 +224,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETWIDGETRESIZABLE)
 {
   auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -256,8 +249,7 @@ HB_FUNC_STATIC(QSCROLLAREA_TAKEWIDGET)
 {
   auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -281,8 +273,7 @@ HB_FUNC_STATIC(QSCROLLAREA_WIDGET)
 {
   auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -306,8 +297,7 @@ HB_FUNC_STATIC(QSCROLLAREA_WIDGETRESIZABLE)
 {
   auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -330,8 +320,7 @@ HB_FUNC_STATIC(QSCROLLAREA_FOCUSNEXTPREVCHILD)
 {
   auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -354,8 +343,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SIZEHINT)
 {
   auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

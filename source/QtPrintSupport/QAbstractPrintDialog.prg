@@ -67,8 +67,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_DELETE)
 {
   auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -88,8 +87,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_EXEC)
 {
   auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -112,8 +110,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_FROMPAGE)
 {
   auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -136,8 +133,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_MAXPAGE)
 {
   auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -160,8 +156,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_MINPAGE)
 {
   auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -184,8 +179,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_PRINTRANGE)
 {
   auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -208,8 +202,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_PRINTER)
 {
   auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -233,8 +226,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETFROMTO)
 {
   auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -259,8 +251,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETMINMAX)
 {
   auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -285,8 +276,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETOPTIONTABS)
 {
   auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -318,8 +308,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETPRINTRANGE)
 {
   auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -344,8 +333,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_TOPAGE)
 {
   auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -368,8 +356,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_ADDENABLEDOPTION)
 {
   auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -394,8 +381,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETENABLEDOPTIONS)
 {
   auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -420,8 +406,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_ENABLEDOPTIONS)
 {
   auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -444,8 +429,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_ISOPTIONENABLED)
 {
   auto obj = qobject_cast<QAbstractPrintDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

@@ -163,8 +163,7 @@ HB_FUNC_STATIC(QLINEEDIT_DELETE)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -184,8 +183,7 @@ HB_FUNC_STATIC(QLINEEDIT_ALIGNMENT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -208,8 +206,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETALIGNMENT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -234,8 +231,7 @@ HB_FUNC_STATIC(QLINEEDIT_BACKSPACE)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -260,8 +256,7 @@ HB_FUNC_STATIC(QLINEEDIT_COMPLETER)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -285,8 +280,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETCOMPLETER)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQCOMPLETER(1))
     {
@@ -311,8 +305,7 @@ HB_FUNC_STATIC(QLINEEDIT_CREATESTANDARDCONTEXTMENU)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -336,8 +329,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORBACKWARD)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISLOG(1) && ISNUMORNIL(2))
     {
@@ -362,8 +354,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORFORWARD)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISLOG(1) && ISNUMORNIL(2))
     {
@@ -388,8 +379,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORPOSITION)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -412,8 +402,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETCURSORPOSITION)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -438,8 +427,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORPOSITIONAT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
@@ -462,8 +450,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORWORDBACKWARD)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -488,8 +475,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORWORDFORWARD)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -514,8 +500,7 @@ HB_FUNC_STATIC(QLINEEDIT_DEL)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -540,8 +525,7 @@ HB_FUNC_STATIC(QLINEEDIT_DESELECT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -566,8 +550,7 @@ HB_FUNC_STATIC(QLINEEDIT_DISPLAYTEXT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -590,8 +573,7 @@ HB_FUNC_STATIC(QLINEEDIT_DRAGENABLED)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -614,8 +596,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETDRAGENABLED)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -640,8 +621,7 @@ HB_FUNC_STATIC(QLINEEDIT_ECHOMODE)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -664,8 +644,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETECHOMODE)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -690,8 +669,7 @@ HB_FUNC_STATIC(QLINEEDIT_END)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -716,8 +694,7 @@ HB_FUNC_STATIC(QLINEEDIT_GETTEXTMARGINS)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
     {
@@ -750,8 +727,7 @@ HB_FUNC_STATIC(QLINEEDIT_HASACCEPTABLEINPUT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -774,8 +750,7 @@ HB_FUNC_STATIC(QLINEEDIT_HASSELECTEDTEXT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -798,8 +773,7 @@ HB_FUNC_STATIC(QLINEEDIT_HOME)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -824,8 +798,7 @@ HB_FUNC_STATIC(QLINEEDIT_INPUTMASK)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -848,8 +821,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETINPUTMASK)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -874,8 +846,7 @@ HB_FUNC_STATIC(QLINEEDIT_INSERT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -900,8 +871,7 @@ HB_FUNC_STATIC(QLINEEDIT_ISMODIFIED)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -924,8 +894,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETMODIFIED)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -950,8 +919,7 @@ HB_FUNC_STATIC(QLINEEDIT_ISREADONLY)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -974,8 +942,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETREADONLY)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1000,8 +967,7 @@ HB_FUNC_STATIC(QLINEEDIT_ISREDOAVAILABLE)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1024,8 +990,7 @@ HB_FUNC_STATIC(QLINEEDIT_ISUNDOAVAILABLE)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1048,8 +1013,7 @@ HB_FUNC_STATIC(QLINEEDIT_MAXLENGTH)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1072,8 +1036,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETMAXLENGTH)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1098,8 +1061,7 @@ HB_FUNC_STATIC(QLINEEDIT_PLACEHOLDERTEXT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1122,8 +1084,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETPLACEHOLDERTEXT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1148,8 +1109,7 @@ HB_FUNC_STATIC(QLINEEDIT_MINIMUMSIZEHINT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1173,8 +1133,7 @@ HB_FUNC_STATIC(QLINEEDIT_SELECTEDTEXT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1197,8 +1156,7 @@ HB_FUNC_STATIC(QLINEEDIT_SELECTIONSTART)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1221,8 +1179,7 @@ HB_FUNC_STATIC(QLINEEDIT_HASFRAME)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1245,8 +1202,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETFRAME)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1271,8 +1227,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETSELECTION)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -1333,8 +1288,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETVALIDATOR)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (ISQVALIDATOR(1) || HB_ISNIL(1)))
     {
@@ -1359,8 +1313,7 @@ HB_FUNC_STATIC(QLINEEDIT_VALIDATOR)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1384,8 +1337,7 @@ HB_FUNC_STATIC(QLINEEDIT_SIZEHINT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1409,8 +1361,7 @@ HB_FUNC_STATIC(QLINEEDIT_TEXT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1433,8 +1384,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1459,8 +1409,7 @@ HB_FUNC_STATIC(QLINEEDIT_TEXTMARGINS)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1484,8 +1433,7 @@ HB_FUNC_STATIC(QLINEEDIT_EVENT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQEVENT(1))
     {
@@ -1508,8 +1456,7 @@ HB_FUNC_STATIC(QLINEEDIT_INPUTMETHODQUERY)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1533,8 +1480,7 @@ HB_FUNC_STATIC(QLINEEDIT_COPY)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1559,8 +1505,7 @@ HB_FUNC_STATIC(QLINEEDIT_CUT)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1585,8 +1530,7 @@ HB_FUNC_STATIC(QLINEEDIT_PASTE)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1611,8 +1555,7 @@ HB_FUNC_STATIC(QLINEEDIT_REDO)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1637,8 +1580,7 @@ HB_FUNC_STATIC(QLINEEDIT_SELECTALL)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1663,8 +1605,7 @@ HB_FUNC_STATIC(QLINEEDIT_UNDO)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1689,8 +1630,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETCURSORMOVESTYLE)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1715,8 +1655,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORMOVESTYLE)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1739,8 +1678,7 @@ HB_FUNC_STATIC(QLINEEDIT_CLEAR)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1801,8 +1739,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETCLEARBUTTONENABLED)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1827,8 +1764,7 @@ HB_FUNC_STATIC(QLINEEDIT_ISCLEARBUTTONENABLED)
 {
   auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

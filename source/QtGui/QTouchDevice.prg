@@ -81,8 +81,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_DELETE)
 {
   auto obj = static_cast<QTouchDevice *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -100,8 +99,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_NAME)
 {
   auto obj = static_cast<QTouchDevice *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -124,8 +122,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_TYPE)
 {
   auto obj = static_cast<QTouchDevice *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -148,8 +145,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_CAPABILITIES)
 {
   auto obj = static_cast<QTouchDevice *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -172,8 +168,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_SETNAME)
 {
   auto obj = static_cast<QTouchDevice *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -198,8 +193,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_SETTYPE)
 {
   auto obj = static_cast<QTouchDevice *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -224,8 +218,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_SETCAPABILITIES)
 {
   auto obj = static_cast<QTouchDevice *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

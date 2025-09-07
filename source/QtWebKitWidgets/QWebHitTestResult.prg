@@ -113,8 +113,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_DELETE)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ALTERNATETEXT)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -156,8 +154,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_BOUNDINGRECT)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -181,8 +178,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ELEMENT)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -206,8 +202,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -231,8 +226,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_FRAME)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -256,8 +250,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_IMAGEURL)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -281,8 +274,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ISCONTENTEDITABLE)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -305,8 +297,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ISCONTENTSELECTED)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -329,8 +320,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ISNULL)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -353,8 +343,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKELEMENT)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -378,8 +367,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTARGETFRAME)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -403,8 +391,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTEXT)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -427,8 +414,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTITLE)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -452,8 +438,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKURL)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -477,8 +462,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_PIXMAP)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -502,8 +486,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_POS)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -527,8 +510,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_TITLE)
 {
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -552,8 +534,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTITLESTRING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -578,8 +559,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_MEDIAURL)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   auto obj = static_cast<QWebHitTestResult *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

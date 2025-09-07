@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_DELETE)
 {
   auto obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -121,8 +120,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_ENGINE)
 {
   auto obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -146,8 +144,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_ERRORS)
 {
   auto obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -196,8 +193,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_INITIALSIZE)
 {
   auto obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -221,8 +217,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_RESIZEMODE)
 {
   auto obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -245,8 +240,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_ROOTCONTEXT)
 {
   auto obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -270,8 +264,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_ROOTOBJECT)
 {
   auto obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -295,8 +288,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_SETRESIZEMODE)
 {
   auto obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -321,8 +313,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_SETSOURCE)
 {
   auto obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1))
     {
@@ -347,8 +338,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_SOURCE)
 {
   auto obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -372,8 +362,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_STATUS)
 {
   auto obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

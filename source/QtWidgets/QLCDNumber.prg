@@ -96,8 +96,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DELETE)
 {
   auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -164,8 +163,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DIGITCOUNT)
 {
   auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -188,8 +186,7 @@ HB_FUNC_STATIC(QLCDNUMBER_INTVALUE)
 {
   auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -212,8 +209,7 @@ HB_FUNC_STATIC(QLCDNUMBER_MODE)
 {
   auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -236,8 +232,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SEGMENTSTYLE)
 {
   auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -260,8 +255,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETDIGITCOUNT)
 {
   auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -286,8 +280,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETMODE)
 {
   auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -312,8 +305,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETSEGMENTSTYLE)
 {
   auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -338,8 +330,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SMALLDECIMALPOINT)
 {
   auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -362,8 +353,7 @@ HB_FUNC_STATIC(QLCDNUMBER_VALUE)
 {
   auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -386,8 +376,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SIZEHINT)
 {
   auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -483,8 +472,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETBINMODE)
 {
   auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -509,8 +497,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETDECMODE)
 {
   auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -535,8 +522,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETHEXMODE)
 {
   auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -561,8 +547,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETOCTMODE)
 {
   auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -587,8 +572,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETSMALLDECIMALPOINT)
 {
   auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {

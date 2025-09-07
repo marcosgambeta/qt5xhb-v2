@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_ISVALID)
 {
   auto obj = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -117,8 +116,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_WINDOW)
 {
   auto obj = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -142,8 +140,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_CHILDCOUNT)
 {
   auto obj = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -166,8 +163,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_INDEXOFCHILD)
 {
   auto obj = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQACCESSIBLEINTERFACE(1))
     {
@@ -190,8 +186,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_FOCUSCHILD)
 {
   auto obj = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -215,8 +210,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_RECT)
 {
   auto obj = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -240,8 +234,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_PARENT)
 {
   auto obj = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -265,8 +258,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_CHILD)
 {
   auto obj = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -290,8 +282,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_TEXT)
 {
   auto obj = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -314,8 +305,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_ROLE)
 {
   auto obj = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -338,8 +328,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_FOREGROUNDCOLOR)
 {
   auto obj = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -363,8 +352,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_BACKGROUNDCOLOR)
 {
   auto obj = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -388,8 +376,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_INTERFACE_CAST)
 {
   auto obj = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -412,8 +399,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_ACTIONNAMES)
 {
   auto obj = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -436,8 +422,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_DOACTION)
 {
   auto obj = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -462,8 +447,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_KEYBINDINGSFORACTION)
 {
   auto obj = static_cast<QAccessibleWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {

@@ -60,8 +60,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_DELETE)
 {
   auto obj = static_cast<QQuickTextureFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -81,8 +80,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_CREATETEXTURE)
 {
   auto obj = static_cast<QQuickTextureFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQQUICKWINDOW(1))
     {
@@ -106,8 +104,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_IMAGE)
 {
   auto obj = static_cast<QQuickTextureFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -131,8 +128,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT)
 {
   auto obj = static_cast<QQuickTextureFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -155,8 +151,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_TEXTURESIZE)
 {
   auto obj = static_cast<QQuickTextureFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

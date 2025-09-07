@@ -107,8 +107,7 @@ HB_FUNC_STATIC(QMDIAREA_DELETE)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -128,8 +127,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVATIONORDER)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -152,8 +150,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVESUBWINDOW)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -177,8 +174,7 @@ HB_FUNC_STATIC(QMDIAREA_ADDSUBWINDOW)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2))
     {
@@ -203,8 +199,7 @@ HB_FUNC_STATIC(QMDIAREA_BACKGROUND)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -228,8 +223,7 @@ HB_FUNC_STATIC(QMDIAREA_CURRENTSUBWINDOW)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -253,8 +247,7 @@ HB_FUNC_STATIC(QMDIAREA_DOCUMENTMODE)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -277,8 +270,7 @@ HB_FUNC_STATIC(QMDIAREA_REMOVESUBWINDOW)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
@@ -303,8 +295,7 @@ HB_FUNC_STATIC(QMDIAREA_SETACTIVATIONORDER)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -329,8 +320,7 @@ HB_FUNC_STATIC(QMDIAREA_SETBACKGROUND)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
@@ -355,8 +345,7 @@ HB_FUNC_STATIC(QMDIAREA_SETDOCUMENTMODE)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -381,8 +370,7 @@ HB_FUNC_STATIC(QMDIAREA_SETOPTION)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2))
     {
@@ -407,8 +395,7 @@ HB_FUNC_STATIC(QMDIAREA_SETTABPOSITION)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -433,8 +420,7 @@ HB_FUNC_STATIC(QMDIAREA_SETTABSHAPE)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -459,8 +445,7 @@ HB_FUNC_STATIC(QMDIAREA_SETVIEWMODE)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -485,8 +470,7 @@ HB_FUNC_STATIC(QMDIAREA_SUBWINDOWLIST)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -533,8 +517,7 @@ HB_FUNC_STATIC(QMDIAREA_TABPOSITION)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -557,8 +540,7 @@ HB_FUNC_STATIC(QMDIAREA_TABSHAPE)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -581,8 +563,7 @@ HB_FUNC_STATIC(QMDIAREA_TESTOPTION)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -605,8 +586,7 @@ HB_FUNC_STATIC(QMDIAREA_VIEWMODE)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -629,8 +609,7 @@ HB_FUNC_STATIC(QMDIAREA_MINIMUMSIZEHINT)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -654,8 +633,7 @@ HB_FUNC_STATIC(QMDIAREA_SIZEHINT)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -679,8 +657,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVATENEXTSUBWINDOW)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -705,8 +682,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVATEPREVIOUSSUBWINDOW)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -731,8 +707,7 @@ HB_FUNC_STATIC(QMDIAREA_CASCADESUBWINDOWS)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -757,8 +732,7 @@ HB_FUNC_STATIC(QMDIAREA_CLOSEACTIVESUBWINDOW)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -783,8 +757,7 @@ HB_FUNC_STATIC(QMDIAREA_CLOSEALLSUBWINDOWS)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -809,8 +782,7 @@ HB_FUNC_STATIC(QMDIAREA_SETACTIVESUBWINDOW)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMDISUBWINDOW(1))
     {
@@ -835,8 +807,7 @@ HB_FUNC_STATIC(QMDIAREA_TILESUBWINDOWS)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -861,8 +832,7 @@ HB_FUNC_STATIC(QMDIAREA_TABSCLOSABLE)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -885,8 +855,7 @@ HB_FUNC_STATIC(QMDIAREA_SETTABSCLOSABLE)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -911,8 +880,7 @@ HB_FUNC_STATIC(QMDIAREA_TABSMOVABLE)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -935,8 +903,7 @@ HB_FUNC_STATIC(QMDIAREA_SETTABSMOVABLE)
 {
   auto obj = qobject_cast<QMdiArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {

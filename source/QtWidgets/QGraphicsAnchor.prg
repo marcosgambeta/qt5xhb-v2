@@ -56,8 +56,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_DELETE)
 {
   auto obj = qobject_cast<QGraphicsAnchor *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -77,8 +76,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSIZEPOLICY)
 {
   auto obj = qobject_cast<QGraphicsAnchor *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -103,8 +101,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSPACING)
 {
   auto obj = qobject_cast<QGraphicsAnchor *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -129,8 +126,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SIZEPOLICY)
 {
   auto obj = qobject_cast<QGraphicsAnchor *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -153,8 +149,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SPACING)
 {
   auto obj = qobject_cast<QGraphicsAnchor *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -177,8 +172,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_UNSETSPACING)
 {
   auto obj = qobject_cast<QGraphicsAnchor *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

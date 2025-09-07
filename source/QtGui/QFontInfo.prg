@@ -96,8 +96,7 @@ HB_FUNC_STATIC(QFONTINFO_DELETE)
 {
   auto obj = static_cast<QFontInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -115,8 +114,7 @@ HB_FUNC_STATIC(QFONTINFO_BOLD)
 {
   auto obj = static_cast<QFontInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -139,8 +137,7 @@ HB_FUNC_STATIC(QFONTINFO_EXACTMATCH)
 {
   auto obj = static_cast<QFontInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -163,8 +160,7 @@ HB_FUNC_STATIC(QFONTINFO_FAMILY)
 {
   auto obj = static_cast<QFontInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -187,8 +183,7 @@ HB_FUNC_STATIC(QFONTINFO_FIXEDPITCH)
 {
   auto obj = static_cast<QFontInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -211,8 +206,7 @@ HB_FUNC_STATIC(QFONTINFO_ITALIC)
 {
   auto obj = static_cast<QFontInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -235,8 +229,7 @@ HB_FUNC_STATIC(QFONTINFO_PIXELSIZE)
 {
   auto obj = static_cast<QFontInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -259,8 +252,7 @@ HB_FUNC_STATIC(QFONTINFO_POINTSIZE)
 {
   auto obj = static_cast<QFontInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -283,8 +275,7 @@ HB_FUNC_STATIC(QFONTINFO_POINTSIZEF)
 {
   auto obj = static_cast<QFontInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -307,8 +298,7 @@ HB_FUNC_STATIC(QFONTINFO_RAWMODE)
 {
   auto obj = static_cast<QFontInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -331,8 +321,7 @@ HB_FUNC_STATIC(QFONTINFO_STYLE)
 {
   auto obj = static_cast<QFontInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -355,8 +344,7 @@ HB_FUNC_STATIC(QFONTINFO_STYLEHINT)
 {
   auto obj = static_cast<QFontInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -379,8 +367,7 @@ HB_FUNC_STATIC(QFONTINFO_STYLENAME)
 {
   auto obj = static_cast<QFontInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -403,8 +390,7 @@ HB_FUNC_STATIC(QFONTINFO_WEIGHT)
 {
   auto obj = static_cast<QFontInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

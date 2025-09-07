@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_DELETE)
 {
   auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -116,8 +115,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_CONTAINS)
 {
   auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -140,8 +138,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_END)
 {
   auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -164,8 +161,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_ISNORMAL)
 {
   auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -188,8 +184,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_NORMALIZED)
 {
   auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -213,8 +208,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_START)
 {
   auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -237,8 +231,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_TRANSLATED)
 {
   auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

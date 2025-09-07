@@ -72,8 +72,7 @@ HB_FUNC_STATIC(QFORMBUILDER_DELETE)
 {
   auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -91,8 +90,7 @@ HB_FUNC_STATIC(QFORMBUILDER_ADDPLUGINPATH)
 {
   auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -117,8 +115,7 @@ HB_FUNC_STATIC(QFORMBUILDER_CLEARPLUGINPATHS)
 {
   auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -143,8 +140,7 @@ HB_FUNC_STATIC(QFORMBUILDER_CUSTOMWIDGETS)
 {
   auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -190,8 +186,7 @@ HB_FUNC_STATIC(QFORMBUILDER_PLUGINPATHS)
 {
   auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -214,8 +209,7 @@ HB_FUNC_STATIC(QFORMBUILDER_SETPLUGINPATH)
 {
   auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {

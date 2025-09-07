@@ -118,8 +118,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_DELETE)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -139,8 +138,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_ADJUSTSIZE)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -165,8 +163,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -190,8 +187,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_DOCUMENT)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -215,8 +211,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_FONT)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -240,8 +235,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_OPENEXTERNALLINKS)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -264,8 +258,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
@@ -290,8 +283,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETDOCUMENT)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
     {
@@ -316,8 +308,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETFONT)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFONT(1))
     {
@@ -342,8 +333,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETHTML)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -368,8 +358,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -394,8 +383,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETPLAINTEXT)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -420,8 +408,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -446,8 +433,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTEXTCURSOR)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
     {
@@ -472,8 +458,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -498,8 +483,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTEXTWIDTH)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -524,8 +508,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TABCHANGESFOCUS)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -548,8 +531,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TEXTCURSOR)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -573,8 +555,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -597,8 +578,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TEXTWIDTH)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -621,8 +601,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TOHTML)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -645,8 +624,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TOPLAINTEXT)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -669,8 +647,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_BOUNDINGRECT)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -694,8 +671,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_CONTAINS)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
@@ -718,8 +694,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_ISOBSCUREDBY)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
@@ -742,8 +717,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_OPAQUEAREA)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -767,8 +741,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_PAINT)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3))
     {
@@ -793,8 +766,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SHAPE)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -818,8 +790,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TYPE)
 {
   auto obj = qobject_cast<QGraphicsTextItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

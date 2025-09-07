@@ -105,8 +105,7 @@ HB_FUNC_STATIC(QATOMICINT_DELETE)
 {
   auto obj = static_cast<QAtomicInt *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     delete obj;
     obj = nullptr;
     auto ptr = hb_itemPutPtr(nullptr, nullptr);
@@ -124,8 +123,7 @@ HB_FUNC_STATIC(QATOMICINT_DEREF)
 {
   auto obj = static_cast<QAtomicInt *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -148,8 +146,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDADDACQUIRE)
 {
   auto obj = static_cast<QAtomicInt *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -172,8 +169,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDADDORDERED)
 {
   auto obj = static_cast<QAtomicInt *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -196,8 +192,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDADDRELAXED)
 {
   auto obj = static_cast<QAtomicInt *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -220,8 +215,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDADDRELEASE)
 {
   auto obj = static_cast<QAtomicInt *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -244,8 +238,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDSTOREACQUIRE)
 {
   auto obj = static_cast<QAtomicInt *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -268,8 +261,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDSTOREORDERED)
 {
   auto obj = static_cast<QAtomicInt *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -292,8 +284,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDSTORERELAXED)
 {
   auto obj = static_cast<QAtomicInt *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -316,8 +307,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDSTORERELEASE)
 {
   auto obj = static_cast<QAtomicInt *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -340,8 +330,7 @@ HB_FUNC_STATIC(QATOMICINT_REF)
 {
   auto obj = static_cast<QAtomicInt *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -364,8 +353,7 @@ HB_FUNC_STATIC(QATOMICINT_TESTANDSETACQUIRE)
 {
   auto obj = static_cast<QAtomicInt *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -388,8 +376,7 @@ HB_FUNC_STATIC(QATOMICINT_TESTANDSETORDERED)
 {
   auto obj = static_cast<QAtomicInt *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -412,8 +399,7 @@ HB_FUNC_STATIC(QATOMICINT_TESTANDSETRELAXED)
 {
   auto obj = static_cast<QAtomicInt *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -436,8 +422,7 @@ HB_FUNC_STATIC(QATOMICINT_TESTANDSETRELEASE)
 {
   auto obj = static_cast<QAtomicInt *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {

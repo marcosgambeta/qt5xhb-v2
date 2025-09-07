@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QSQLDRIVER_DELETE)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -110,8 +109,7 @@ HB_FUNC_STATIC(QSQLDRIVER_BEGINTRANSACTION)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -134,8 +132,7 @@ HB_FUNC_STATIC(QSQLDRIVER_CLOSE)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -160,8 +157,7 @@ HB_FUNC_STATIC(QSQLDRIVER_COMMITTRANSACTION)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -184,8 +180,7 @@ HB_FUNC_STATIC(QSQLDRIVER_CREATERESULT)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -209,8 +204,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ESCAPEIDENTIFIER)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
@@ -233,8 +227,7 @@ HB_FUNC_STATIC(QSQLDRIVER_FORMATVALUE)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQSQLFIELD(1) && ISLOGORNIL(2))
     {
@@ -257,8 +250,7 @@ HB_FUNC_STATIC(QSQLDRIVER_HANDLE)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -282,8 +274,7 @@ HB_FUNC_STATIC(QSQLDRIVER_HASFEATURE)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -306,8 +297,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ISIDENTIFIERESCAPED)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
@@ -330,8 +320,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ISOPEN)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -354,8 +343,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ISOPENERROR)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -378,8 +366,7 @@ HB_FUNC_STATIC(QSQLDRIVER_LASTERROR)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -403,8 +390,7 @@ HB_FUNC_STATIC(QSQLDRIVER_NUMERICALPRECISIONPOLICY)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -428,8 +414,7 @@ HB_FUNC_STATIC(QSQLDRIVER_OPEN)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 6) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISCHARORNIL(3) &&
         ISCHARORNIL(4) && ISNUMORNIL(5) && ISCHARORNIL(6))
@@ -454,8 +439,7 @@ HB_FUNC_STATIC(QSQLDRIVER_PRIMARYINDEX)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -479,8 +463,7 @@ HB_FUNC_STATIC(QSQLDRIVER_RECORD)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -504,8 +487,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ROLLBACKTRANSACTION)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -528,8 +510,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SETNUMERICALPRECISIONPOLICY)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -555,8 +536,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SQLSTATEMENT)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQSQLRECORD(3) && HB_ISLOG(4))
     {
@@ -580,8 +560,7 @@ HB_FUNC_STATIC(QSQLDRIVER_STRIPDELIMITERS)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
@@ -604,8 +583,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SUBSCRIBETONOTIFICATION)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -628,8 +606,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -652,8 +629,7 @@ HB_FUNC_STATIC(QSQLDRIVER_TABLES)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -676,8 +652,7 @@ HB_FUNC_STATIC(QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -700,8 +675,7 @@ HB_FUNC_STATIC(QSQLDRIVER_CANCELQUERY)
 {
   auto obj = qobject_cast<QSqlDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

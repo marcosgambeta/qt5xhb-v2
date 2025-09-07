@@ -59,8 +59,7 @@ HB_FUNC_STATIC(QPANGESTURE_DELETE)
 {
   auto obj = qobject_cast<QPanGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -80,8 +79,7 @@ HB_FUNC_STATIC(QPANGESTURE_ACCELERATION)
 {
   auto obj = qobject_cast<QPanGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -104,8 +102,7 @@ HB_FUNC_STATIC(QPANGESTURE_DELTA)
 {
   auto obj = qobject_cast<QPanGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -129,8 +126,7 @@ HB_FUNC_STATIC(QPANGESTURE_LASTOFFSET)
 {
   auto obj = qobject_cast<QPanGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -154,8 +150,7 @@ HB_FUNC_STATIC(QPANGESTURE_OFFSET)
 {
   auto obj = qobject_cast<QPanGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -179,8 +174,7 @@ HB_FUNC_STATIC(QPANGESTURE_SETACCELERATION)
 {
   auto obj = qobject_cast<QPanGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -205,8 +199,7 @@ HB_FUNC_STATIC(QPANGESTURE_SETLASTOFFSET)
 {
   auto obj = qobject_cast<QPanGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
@@ -231,8 +224,7 @@ HB_FUNC_STATIC(QPANGESTURE_SETOFFSET)
 {
   auto obj = qobject_cast<QPanGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != nullptr)
-  {
+  if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
