@@ -76,8 +76,7 @@ RETURN
 
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QItemSelectionRange()
     */

@@ -84,8 +84,7 @@ RETURN
 
 HB_FUNC_STATIC(QCALENDAR_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QCalendar()
     */
@@ -574,8 +573,7 @@ HB_FUNC_STATIC(QCALENDAR_AVAILABLECALENDARS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRINGLIST(QCalendar::availableCalendars());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

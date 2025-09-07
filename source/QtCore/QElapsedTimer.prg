@@ -72,8 +72,7 @@ RETURN
     */
 HB_FUNC_STATIC(QELAPSEDTIMER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     auto obj = new QElapsedTimer();
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -316,8 +315,7 @@ static QElapsedTimer::ClockType clockType()
 HB_FUNC_STATIC(QELAPSEDTIMER_CLOCKTYPE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RENUM(QElapsedTimer::clockType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -333,8 +331,7 @@ static bool isMonotonic()
 HB_FUNC_STATIC(QELAPSEDTIMER_ISMONOTONIC)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QElapsedTimer::isMonotonic());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -82,8 +82,7 @@ RETURN
 
 HB_FUNC_STATIC(QPRINTERINFO_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPrinterInfo()
     */
@@ -223,8 +222,7 @@ static QList<QPrinterInfo> availablePrinters()
 HB_FUNC_STATIC(QPRINTERINFO_AVAILABLEPRINTERS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QPrinterInfo::availablePrinters();
     auto pDynSym = hb_dynsymFindName("QPRINTERINFO");
@@ -264,8 +262,7 @@ static QPrinterInfo defaultPrinter()
 HB_FUNC_STATIC(QPRINTERINFO_DEFAULTPRINTER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QPrinterInfo(QPrinterInfo::defaultPrinter());
     Qt5xHb::createReturnClass(ptr, "QPRINTERINFO", true);
@@ -560,8 +557,7 @@ HB_FUNC_STATIC(QPRINTERINFO_AVAILABLEPRINTERNAMES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRINGLIST(QPrinterInfo::availablePrinterNames());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -579,8 +575,7 @@ HB_FUNC_STATIC(QPRINTERINFO_DEFAULTPRINTERNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QPrinterInfo::defaultPrinterName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

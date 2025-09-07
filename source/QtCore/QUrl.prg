@@ -102,8 +102,7 @@ RETURN
 
 HB_FUNC_STATIC(QURL_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QUrl()
     */
@@ -451,8 +450,7 @@ HB_FUNC_STATIC(QURL_PATH)
 
 HB_FUNC_STATIC(QURL_PORT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     int port() const
     */

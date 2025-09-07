@@ -60,8 +60,7 @@ RETURN
 
 HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QXmlStreamNamespaceDeclaration()
     */

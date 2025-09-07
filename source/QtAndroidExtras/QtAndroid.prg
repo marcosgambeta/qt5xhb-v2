@@ -73,8 +73,7 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDACTIVITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QAndroidJniObject(QtAndroid::androidActivity());
     Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
@@ -91,8 +90,7 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDSDKVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RINT(QtAndroid::androidSdkVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,8 +148,7 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDSERVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QAndroidJniObject(QtAndroid::androidService());
     Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
@@ -168,8 +165,7 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDCONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QAndroidJniObject(QtAndroid::androidContext());
     Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
@@ -205,8 +201,7 @@ HB_FUNC_STATIC(QTANDROID_BINDSERVICE)
 
 HB_FUNC_STATIC(QTANDROID_HIDESPLASHSCREEN)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // static void hideSplashScreen()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 

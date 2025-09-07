@@ -192,8 +192,7 @@ static QString applicationDirPath()
 HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONDIRPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QCoreApplication::applicationDirPath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,8 +208,7 @@ static QString applicationFilePath()
 HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONFILEPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QCoreApplication::applicationFilePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,8 +224,7 @@ static QString applicationName()
 HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QCoreApplication::applicationName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,8 +240,7 @@ static qint64 applicationPid()
 HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONPID)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQINT64(QCoreApplication::applicationPid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,8 +256,7 @@ static QString applicationVersion()
 HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONVERSION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QCoreApplication::applicationVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,8 +272,7 @@ static QStringList arguments()
 HB_FUNC_STATIC(QCOREAPPLICATION_ARGUMENTS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRINGLIST(QCoreApplication::arguments());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,8 +288,7 @@ static bool closingDown()
 HB_FUNC_STATIC(QCOREAPPLICATION_CLOSINGDOWN)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QCoreApplication::closingDown());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,8 +304,7 @@ static int exec()
 HB_FUNC_STATIC(QCOREAPPLICATION_EXEC)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RINT(QCoreApplication::exec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,8 +339,7 @@ static void flush()
 HB_FUNC_STATIC(QCOREAPPLICATION_FLUSH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QCoreApplication::flush();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,8 +357,7 @@ static bool hasPendingEvents()
 HB_FUNC_STATIC(QCOREAPPLICATION_HASPENDINGEVENTS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QCoreApplication::hasPendingEvents());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -402,8 +392,7 @@ static QCoreApplication * instance()
 HB_FUNC_STATIC(QCOREAPPLICATION_INSTANCE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QCoreApplication::instance();
     Qt5xHb::createReturnQObjectClass(ptr, "QCOREAPPLICATION");
@@ -420,8 +409,7 @@ static QStringList libraryPaths()
 HB_FUNC_STATIC(QCOREAPPLICATION_LIBRARYPATHS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRINGLIST(QCoreApplication::libraryPaths());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -437,8 +425,7 @@ static QString organizationDomain()
 HB_FUNC_STATIC(QCOREAPPLICATION_ORGANIZATIONDOMAIN)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QCoreApplication::organizationDomain());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -454,8 +441,7 @@ static QString organizationName()
 HB_FUNC_STATIC(QCOREAPPLICATION_ORGANIZATIONNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QCoreApplication::organizationName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -745,8 +731,7 @@ static bool startingUp()
 HB_FUNC_STATIC(QCOREAPPLICATION_STARTINGUP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QCoreApplication::startingUp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -798,8 +783,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ISSETUIDALLOWED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QCoreApplication::isSetuidAllowed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

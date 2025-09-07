@@ -1338,8 +1338,7 @@ HB_FUNC_STATIC(QCHART_ZOOMIN)
 {
   auto obj = qobject_cast<QChart *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     void zoomIn()
     */

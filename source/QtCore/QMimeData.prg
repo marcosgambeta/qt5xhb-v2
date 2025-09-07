@@ -80,8 +80,7 @@ RETURN
     */
 HB_FUNC_STATIC(QMIMEDATA_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     auto obj = new QMimeData();
     Qt5xHb::returnNewObject(obj, false);
   } else {

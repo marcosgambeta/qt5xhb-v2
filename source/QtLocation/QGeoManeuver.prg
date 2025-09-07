@@ -77,8 +77,7 @@ RETURN
 
 HB_FUNC_STATIC(QGEOMANEUVER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QGeoManeuver()
     */

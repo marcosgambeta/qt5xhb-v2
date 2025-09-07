@@ -83,8 +83,7 @@ RETURN
 
 HB_FUNC_STATIC(QPICTUREIO_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPictureIO()
     */
@@ -596,8 +595,7 @@ static QList<QByteArray> inputFormats()
 HB_FUNC_STATIC(QPICTUREIO_INPUTFORMATS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QPictureIO::inputFormats();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
@@ -637,8 +635,7 @@ static QList<QByteArray> outputFormats()
 HB_FUNC_STATIC(QPICTUREIO_OUTPUTFORMATS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QPictureIO::outputFormats();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");

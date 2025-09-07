@@ -67,8 +67,7 @@ RETURN
 
 HB_FUNC_STATIC(QUUID_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QUuid()
     */

@@ -95,8 +95,7 @@ RETURN
 
 HB_FUNC_STATIC(QPAGELAYOUT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPageLayout()
     */
@@ -492,8 +491,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETBOTTOMMARGIN)
 
 HB_FUNC_STATIC(QPAGELAYOUT_MARGINS)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QMarginsF margins() const
     */
@@ -647,8 +645,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MAXIMUMMARGINS)
 
 HB_FUNC_STATIC(QPAGELAYOUT_FULLRECT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QRectF fullRect() const
     */
@@ -729,8 +726,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_FULLRECTPIXELS)
 
 HB_FUNC_STATIC(QPAGELAYOUT_PAINTRECT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QRectF paintRect() const
     */

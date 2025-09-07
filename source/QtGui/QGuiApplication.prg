@@ -227,8 +227,7 @@ static QWindowList allWindows()
 HB_FUNC_STATIC(QGUIAPPLICATION_ALLWINDOWS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QGuiApplication::allWindows();
     auto pDynSym = hb_dynsymFindName("QWINDOW");
@@ -265,8 +264,7 @@ static QString applicationDisplayName()
 HB_FUNC_STATIC(QGUIAPPLICATION_APPLICATIONDISPLAYNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QGuiApplication::applicationDisplayName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,8 +299,7 @@ static QClipboard * clipboard()
 HB_FUNC_STATIC(QGUIAPPLICATION_CLIPBOARD)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QGuiApplication::clipboard();
     Qt5xHb::createReturnQObjectClass(ptr, "QCLIPBOARD");
@@ -319,8 +316,7 @@ static bool desktopSettingsAware()
 HB_FUNC_STATIC(QGUIAPPLICATION_DESKTOPSETTINGSAWARE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QGuiApplication::desktopSettingsAware());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,8 +332,7 @@ static int exec()
 HB_FUNC_STATIC(QGUIAPPLICATION_EXEC)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RINT(QGuiApplication::exec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,8 +348,7 @@ static QObject * focusObject()
 HB_FUNC_STATIC(QGUIAPPLICATION_FOCUSOBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QGuiApplication::focusObject();
     Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -371,8 +365,7 @@ static QWindow * focusWindow()
 HB_FUNC_STATIC(QGUIAPPLICATION_FOCUSWINDOW)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QGuiApplication::focusWindow();
     Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
@@ -389,8 +382,7 @@ static QFont font()
 HB_FUNC_STATIC(QGUIAPPLICATION_FONT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QFont(QGuiApplication::font());
     Qt5xHb::createReturnClass(ptr, "QFONT", true);
@@ -407,8 +399,7 @@ static QInputMethod * inputMethod()
 HB_FUNC_STATIC(QGUIAPPLICATION_INPUTMETHOD)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QGuiApplication::inputMethod();
     Qt5xHb::createReturnQObjectClass(ptr, "QINPUTMETHOD");
@@ -425,8 +416,7 @@ static bool isLeftToRight()
 HB_FUNC_STATIC(QGUIAPPLICATION_ISLEFTTORIGHT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QGuiApplication::isLeftToRight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -442,8 +432,7 @@ static bool isRightToLeft()
 HB_FUNC_STATIC(QGUIAPPLICATION_ISRIGHTTOLEFT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QGuiApplication::isRightToLeft());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -459,8 +448,7 @@ static Qt::KeyboardModifiers keyboardModifiers()
 HB_FUNC_STATIC(QGUIAPPLICATION_KEYBOARDMODIFIERS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RENUM(QGuiApplication::keyboardModifiers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -476,8 +464,7 @@ static Qt::LayoutDirection layoutDirection()
 HB_FUNC_STATIC(QGUIAPPLICATION_LAYOUTDIRECTION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RENUM(QGuiApplication::layoutDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -493,8 +480,7 @@ static QWindow * modalWindow()
 HB_FUNC_STATIC(QGUIAPPLICATION_MODALWINDOW)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QGuiApplication::modalWindow();
     Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
@@ -511,8 +497,7 @@ static Qt::MouseButtons mouseButtons()
 HB_FUNC_STATIC(QGUIAPPLICATION_MOUSEBUTTONS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RENUM(QGuiApplication::mouseButtons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -528,8 +513,7 @@ static QCursor * overrideCursor()
 HB_FUNC_STATIC(QGUIAPPLICATION_OVERRIDECURSOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QGuiApplication::overrideCursor();
     Qt5xHb::createReturnClass(ptr, "QCURSOR", false);
@@ -546,8 +530,7 @@ static QPalette palette()
 HB_FUNC_STATIC(QGUIAPPLICATION_PALETTE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QPalette(QGuiApplication::palette());
     Qt5xHb::createReturnClass(ptr, "QPALETTE", true);
@@ -564,8 +547,7 @@ static QString platformName()
 HB_FUNC_STATIC(QGUIAPPLICATION_PLATFORMNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QGuiApplication::platformName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -581,8 +563,7 @@ static QScreen * primaryScreen()
 HB_FUNC_STATIC(QGUIAPPLICATION_PRIMARYSCREEN)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QGuiApplication::primaryScreen();
     Qt5xHb::createReturnQObjectClass(ptr, "QSCREEN");
@@ -599,8 +580,7 @@ static Qt::KeyboardModifiers queryKeyboardModifiers()
 HB_FUNC_STATIC(QGUIAPPLICATION_QUERYKEYBOARDMODIFIERS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RENUM(QGuiApplication::queryKeyboardModifiers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -616,8 +596,7 @@ static bool quitOnLastWindowClosed()
 HB_FUNC_STATIC(QGUIAPPLICATION_QUITONLASTWINDOWCLOSED)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QGuiApplication::quitOnLastWindowClosed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -633,8 +612,7 @@ static void restoreOverrideCursor()
 HB_FUNC_STATIC(QGUIAPPLICATION_RESTOREOVERRIDECURSOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QGuiApplication::restoreOverrideCursor();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -652,8 +630,7 @@ static QList<QScreen*> screens()
 HB_FUNC_STATIC(QGUIAPPLICATION_SCREENS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QGuiApplication::screens();
     auto pDynSym = hb_dynsymFindName("QSCREEN");
@@ -823,8 +800,7 @@ static QStyleHints * styleHints()
 HB_FUNC_STATIC(QGUIAPPLICATION_STYLEHINTS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QGuiApplication::styleHints();
     Qt5xHb::createReturnQObjectClass(ptr, "QSTYLEHINTS");
@@ -859,8 +835,7 @@ static QWindowList topLevelWindows()
 HB_FUNC_STATIC(QGUIAPPLICATION_TOPLEVELWINDOWS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QGuiApplication::topLevelWindows();
     auto pDynSym = hb_dynsymFindName("QWINDOW");
@@ -898,8 +873,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_APPLICATIONSTATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RENUM(QGuiApplication::applicationState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -917,8 +891,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_HIGHDPISCALEFACTORROUNDINGPOLICY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RENUM(QGuiApplication::highDpiScaleFactorRoundingPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -936,8 +909,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ISFALLBACKSESSIONMANAGEMENTENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QGuiApplication::isFallbackSessionManagementEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1039,8 +1011,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SYNC)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QGuiApplication::sync();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

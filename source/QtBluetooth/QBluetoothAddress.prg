@@ -65,8 +65,7 @@ RETURN
 
 HB_FUNC_STATIC(QBLUETOOTHADDRESS_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QBluetoothAddress()
     */

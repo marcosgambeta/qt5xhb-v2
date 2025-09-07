@@ -85,8 +85,7 @@ RETURN
     */
 HB_FUNC_STATIC(QFONTDATABASE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     auto obj = new QFontDatabase();
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -450,8 +449,7 @@ static bool removeAllApplicationFonts()
 HB_FUNC_STATIC(QFONTDATABASE_REMOVEALLAPPLICATIONFONTS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QFontDatabase::removeAllApplicationFonts());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -484,8 +482,7 @@ static QList<int> standardSizes()
 HB_FUNC_STATIC(QFONTDATABASE_STANDARDSIZES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QFontDatabase::standardSizes();
     Qt5xHb::convert_qlist_int_to_array(list);
@@ -502,8 +499,7 @@ static bool supportsThreadedFontRendering()
 HB_FUNC_STATIC(QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QFontDatabase::supportsThreadedFontRendering());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

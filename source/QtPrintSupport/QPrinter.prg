@@ -885,8 +885,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGEORDER)
 
 HB_FUNC_STATIC(QPRINTER_PAGERECT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QRect pageRect() const
     */
@@ -915,8 +914,7 @@ HB_FUNC_STATIC(QPRINTER_PAGERECT)
 
 HB_FUNC_STATIC(QPRINTER_PAPERRECT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QRect paperRect() const
     */
@@ -945,8 +943,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERRECT)
 
 HB_FUNC_STATIC(QPRINTER_PAPERSIZE)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPrinter::PaperSize paperSize() const
     */

@@ -129,8 +129,7 @@ RETURN
 
 HB_FUNC_STATIC(QTEXTCURSOR_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QTextCursor()
     */
@@ -1092,8 +1091,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_ATEND)
 
 HB_FUNC_STATIC(QTEXTCURSOR_INSERTBLOCK)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     void insertBlock()
     */

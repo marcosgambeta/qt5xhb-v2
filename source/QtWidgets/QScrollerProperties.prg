@@ -62,8 +62,7 @@ RETURN
 
 HB_FUNC_STATIC(QSCROLLERPROPERTIES_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QScrollerProperties()
     */

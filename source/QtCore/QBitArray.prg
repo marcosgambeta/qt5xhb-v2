@@ -70,8 +70,7 @@ RETURN
 
 HB_FUNC_STATIC(QBITARRAY_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QBitArray()
     */
@@ -182,8 +181,7 @@ HB_FUNC_STATIC(QBITARRAY_CLEARBIT)
 
 HB_FUNC_STATIC(QBITARRAY_COUNT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     int count() const
     */

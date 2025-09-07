@@ -75,8 +75,7 @@ RETURN
 
 HB_FUNC_STATIC(QQMLEXPRESSION_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QQmlExpression()
     */

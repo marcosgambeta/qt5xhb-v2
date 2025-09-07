@@ -334,8 +334,7 @@ static QList<QByteArray> availableCodecs()
 HB_FUNC_STATIC(QTEXTCODEC_AVAILABLECODECS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QTextCodec::availableCodecs();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
@@ -375,8 +374,7 @@ static QList<int> availableMibs()
 HB_FUNC_STATIC(QTEXTCODEC_AVAILABLEMIBS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QTextCodec::availableMibs();
     Qt5xHb::convert_qlist_int_to_array(list);
@@ -393,8 +391,7 @@ static QTextCodec * codecForLocale()
 HB_FUNC_STATIC(QTEXTCODEC_CODECFORLOCALE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QTextCodec::codecForLocale();
     Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);

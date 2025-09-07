@@ -99,8 +99,7 @@ RETURN
 
 HB_FUNC_STATIC(QPIXMAP_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPixmap()
     */
@@ -983,8 +982,7 @@ static int defaultDepth()
 HB_FUNC_STATIC(QPIXMAP_DEFAULTDEPTH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RINT(QPixmap::defaultDepth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1133,8 +1131,7 @@ void QPixmap_toVariant2()
 
 HB_FUNC_STATIC(QPIXMAP_TOVARIANT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QPixmap_toVariant1();
   }
   else if (ISNUMPAR(1) && ISQPIXMAP(1))

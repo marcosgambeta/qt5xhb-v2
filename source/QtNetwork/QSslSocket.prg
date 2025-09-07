@@ -1269,8 +1269,7 @@ static QList<QSslCipher> defaultCiphers()
 HB_FUNC_STATIC(QSSLSOCKET_DEFAULTCIPHERS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QSslSocket::defaultCiphers();
     auto pDynSym = hb_dynsymFindName("QSSLCIPHER");
@@ -1310,8 +1309,7 @@ static QList<QSslCipher> supportedCiphers()
 HB_FUNC_STATIC(QSSLSOCKET_SUPPORTEDCIPHERS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QSslSocket::supportedCiphers();
     auto pDynSym = hb_dynsymFindName("QSSLCIPHER");
@@ -1578,8 +1576,7 @@ static QList<QSslCertificate> defaultCaCertificates()
 HB_FUNC_STATIC(QSSLSOCKET_DEFAULTCACERTIFICATES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QSslSocket::defaultCaCertificates();
     auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
@@ -1619,8 +1616,7 @@ static QList<QSslCertificate> systemCaCertificates()
 HB_FUNC_STATIC(QSSLSOCKET_SYSTEMCACERTIFICATES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QSslSocket::systemCaCertificates();
     auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
@@ -1812,8 +1808,7 @@ static bool supportsSsl()
 HB_FUNC_STATIC(QSSLSOCKET_SUPPORTSSSL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QSslSocket::supportsSsl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1829,8 +1824,7 @@ static long sslLibraryVersionNumber()
 HB_FUNC_STATIC(QSSLSOCKET_SSLLIBRARYVERSIONNUMBER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RLONG(QSslSocket::sslLibraryVersionNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1846,8 +1840,7 @@ static QString sslLibraryVersionString()
 HB_FUNC_STATIC(QSSLSOCKET_SSLLIBRARYVERSIONSTRING)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QSslSocket::sslLibraryVersionString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1864,8 +1857,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SSLLIBRARYBUILDVERSIONNUMBER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RLONG(QSslSocket::sslLibraryBuildVersionNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1883,8 +1875,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SSLLIBRARYBUILDVERSIONSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QSslSocket::sslLibraryBuildVersionString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

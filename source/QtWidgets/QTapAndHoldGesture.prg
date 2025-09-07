@@ -139,8 +139,7 @@ static int timeout()
 HB_FUNC_STATIC(QTAPANDHOLDGESTURE_TIMEOUT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RINT(QTapAndHoldGesture::timeout());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

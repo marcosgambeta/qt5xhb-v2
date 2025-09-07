@@ -268,8 +268,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_INVALIDSELECTIONPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QPoint(QBar3DSeries::invalidSelectionPosition());
     Qt5xHb::createReturnClass(ptr, "QPOINT", true);

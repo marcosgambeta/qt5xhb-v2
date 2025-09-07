@@ -113,8 +113,7 @@ RETURN
 
 HB_FUNC_STATIC(QTEXTFORMAT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QTextFormat()
     */

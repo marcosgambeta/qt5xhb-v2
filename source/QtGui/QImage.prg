@@ -116,8 +116,7 @@ RETURN
 
 HB_FUNC_STATIC(QIMAGE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QImage()
     */
@@ -1598,8 +1597,7 @@ void QImage_toVariant2()
 
 HB_FUNC_STATIC(QIMAGE_TOVARIANT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QImage_toVariant1();
   }
   else if (ISNUMPAR(1) && ISQIMAGE(1))

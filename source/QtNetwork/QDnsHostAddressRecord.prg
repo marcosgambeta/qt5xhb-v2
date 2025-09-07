@@ -64,8 +64,7 @@ RETURN
 
 HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDnsHostAddressRecord()
     */

@@ -70,8 +70,7 @@ RETURN
     */
 HB_FUNC_STATIC(QXMLATTRIBUTES_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     auto obj = new QXmlAttributes();
     Qt5xHb::returnNewObject(obj, true);
   } else {

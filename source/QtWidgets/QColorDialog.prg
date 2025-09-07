@@ -154,8 +154,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SETCURRENTCOLOR)
 
 HB_FUNC_STATIC(QCOLORDIALOG_OPEN)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #ifdef Q_NO_USING_KEYWORD
     /*
     void open()
@@ -363,8 +362,7 @@ static int customCount()
 HB_FUNC_STATIC(QCOLORDIALOG_CUSTOMCOUNT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RINT(QColorDialog::customCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

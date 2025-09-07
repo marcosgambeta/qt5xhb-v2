@@ -53,8 +53,7 @@ RETURN
 
 HB_FUNC_STATIC(QINPUTMETHODEVENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QInputMethodEvent()
     */

@@ -102,8 +102,7 @@ static void enterWhatsThisMode()
 HB_FUNC_STATIC(QWHATSTHIS_ENTERWHATSTHISMODE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QWhatsThis::enterWhatsThisMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,8 +120,7 @@ static void hideText()
 HB_FUNC_STATIC(QWHATSTHIS_HIDETEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QWhatsThis::hideText();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,8 +138,7 @@ static bool inWhatsThisMode()
 HB_FUNC_STATIC(QWHATSTHIS_INWHATSTHISMODE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QWhatsThis::inWhatsThisMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,8 +154,7 @@ static void leaveWhatsThisMode()
 HB_FUNC_STATIC(QWHATSTHIS_LEAVEWHATSTHISMODE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QWhatsThis::leaveWhatsThisMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

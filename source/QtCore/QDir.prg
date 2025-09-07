@@ -1015,8 +1015,7 @@ static QDir current()
 HB_FUNC_STATIC(QDIR_CURRENT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QDir(QDir::current());
     Qt5xHb::createReturnClass(ptr, "QDIR", true);
@@ -1033,8 +1032,7 @@ static QString currentPath()
 HB_FUNC_STATIC(QDIR_CURRENTPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QDir::currentPath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1050,8 +1048,7 @@ static QFileInfoList drives()
 HB_FUNC_STATIC(QDIR_DRIVES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QDir::drives();
     auto pDynSym = hb_dynsymFindName("QFILEINFO");
@@ -1108,8 +1105,7 @@ static QDir home()
 HB_FUNC_STATIC(QDIR_HOME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QDir(QDir::home());
     Qt5xHb::createReturnClass(ptr, "QDIR", true);
@@ -1126,8 +1122,7 @@ static QString homePath()
 HB_FUNC_STATIC(QDIR_HOMEPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QDir::homePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1199,8 +1194,7 @@ static QDir root()
 HB_FUNC_STATIC(QDIR_ROOT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QDir(QDir::root());
     Qt5xHb::createReturnClass(ptr, "QDIR", true);
@@ -1217,8 +1211,7 @@ static QString rootPath()
 HB_FUNC_STATIC(QDIR_ROOTPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QDir::rootPath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1251,8 +1244,7 @@ static QChar separator()
 HB_FUNC_STATIC(QDIR_SEPARATOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QChar(QDir::separator());
     Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -1305,8 +1297,7 @@ static QDir temp()
 HB_FUNC_STATIC(QDIR_TEMP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QDir(QDir::temp());
     Qt5xHb::createReturnClass(ptr, "QDIR", true);
@@ -1323,8 +1314,7 @@ static QString tempPath()
 HB_FUNC_STATIC(QDIR_TEMPPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QDir::tempPath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

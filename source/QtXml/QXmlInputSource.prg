@@ -63,8 +63,7 @@ RETURN
 
 HB_FUNC_STATIC(QXMLINPUTSOURCE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QXmlInputSource()
     */

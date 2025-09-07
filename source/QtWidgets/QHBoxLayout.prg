@@ -50,8 +50,7 @@ RETURN
 
 HB_FUNC_STATIC(QHBOXLAYOUT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QHBoxLayout()
     */

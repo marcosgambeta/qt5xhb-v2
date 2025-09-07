@@ -74,8 +74,7 @@ RETURN
 
 HB_FUNC_STATIC(QANDROIDPARCEL_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QAndroidParcel()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QAndroidParcel();

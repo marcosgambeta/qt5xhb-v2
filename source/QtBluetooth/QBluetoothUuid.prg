@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QBLUETOOTHUUID_NEW5)
 
 HB_FUNC_STATIC(QBLUETOOTHUUID_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QBluetoothUuid()
     */

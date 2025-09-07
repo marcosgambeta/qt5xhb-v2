@@ -111,8 +111,7 @@ RETURN
 
 HB_FUNC_STATIC(QGLFORMAT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QGLFormat()
     */
@@ -1193,8 +1192,7 @@ static QGLFormat defaultFormat()
 HB_FUNC_STATIC(QGLFORMAT_DEFAULTFORMAT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QGLFormat(QGLFormat::defaultFormat());
     Qt5xHb::createReturnClass(ptr, "QGLFORMAT", true);
@@ -1211,8 +1209,7 @@ static QGLFormat defaultOverlayFormat()
 HB_FUNC_STATIC(QGLFORMAT_DEFAULTOVERLAYFORMAT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QGLFormat(QGLFormat::defaultOverlayFormat());
     Qt5xHb::createReturnClass(ptr, "QGLFORMAT", true);
@@ -1229,8 +1226,7 @@ static bool hasOpenGL()
 HB_FUNC_STATIC(QGLFORMAT_HASOPENGL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QGLFormat::hasOpenGL());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1246,8 +1242,7 @@ static bool hasOpenGLOverlays()
 HB_FUNC_STATIC(QGLFORMAT_HASOPENGLOVERLAYS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QGLFormat::hasOpenGLOverlays());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1263,8 +1258,7 @@ static QGLFormat::OpenGLVersionFlags openGLVersionFlags()
 HB_FUNC_STATIC(QGLFORMAT_OPENGLVERSIONFLAGS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RENUM(QGLFormat::openGLVersionFlags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

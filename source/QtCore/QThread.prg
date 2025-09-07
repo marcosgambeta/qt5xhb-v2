@@ -399,8 +399,7 @@ static QThread * currentThread()
 HB_FUNC_STATIC(QTHREAD_CURRENTTHREAD)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QThread::currentThread();
     Qt5xHb::createReturnQObjectClass(ptr, "QTHREAD");
@@ -417,8 +416,7 @@ static int idealThreadCount()
 HB_FUNC_STATIC(QTHREAD_IDEALTHREADCOUNT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RINT(QThread::idealThreadCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -491,8 +489,7 @@ static void yieldCurrentThread()
 HB_FUNC_STATIC(QTHREAD_YIELDCURRENTTHREAD)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QThread::yieldCurrentThread();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

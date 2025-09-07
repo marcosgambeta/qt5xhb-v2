@@ -1579,8 +1579,7 @@ HB_FUNC_STATIC(QWIDGET_GRABKEYBOARD)
 
 HB_FUNC_STATIC(QWIDGET_GRABMOUSE)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // void grabMouse()
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -5426,8 +5425,7 @@ HB_FUNC_STATIC(QWIDGET_FIND)
 HB_FUNC_STATIC(QWIDGET_KEYBOARDGRABBER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QWidget::keyboardGrabber();
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -5442,8 +5440,7 @@ HB_FUNC_STATIC(QWIDGET_KEYBOARDGRABBER)
 HB_FUNC_STATIC(QWIDGET_MOUSEGRABBER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QWidget::mouseGrabber();
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");

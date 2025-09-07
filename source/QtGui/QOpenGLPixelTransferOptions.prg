@@ -74,8 +74,7 @@ RETURN
 
 HB_FUNC_STATIC(QOPENGLPIXELTRANSFEROPTIONS_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QOpenGLPixelTransferOptions()
     */

@@ -232,8 +232,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
 
 HB_FUNC_STATIC(QSIGNALMAPPER_MAP)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     void map()
     */

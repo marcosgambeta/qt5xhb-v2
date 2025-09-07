@@ -65,8 +65,7 @@ RETURN
 
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDomImplementation()
     */
@@ -192,8 +191,7 @@ static QDomImplementation::InvalidDataPolicy invalidDataPolicy()
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_INVALIDDATAPOLICY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RENUM(QDomImplementation::invalidDataPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

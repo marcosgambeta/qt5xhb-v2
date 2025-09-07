@@ -70,8 +70,7 @@ RETURN
 
 HB_FUNC_STATIC(QCURSOR_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QCursor()
     */
@@ -268,8 +267,7 @@ static QPoint pos()
 HB_FUNC_STATIC(QCURSOR_POS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QPoint(QCursor::pos());
     Qt5xHb::createReturnClass(ptr, "QPOINT", true);

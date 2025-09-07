@@ -71,8 +71,7 @@ RETURN
 
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QNetworkCacheMetaData()
     */

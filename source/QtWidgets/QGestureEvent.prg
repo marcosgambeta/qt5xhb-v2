@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_DELETE)
 
 HB_FUNC_STATIC(QGESTUREEVENT_ACCEPT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     void accept()
     */
@@ -296,8 +295,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_GESTURES)
 
 HB_FUNC_STATIC(QGESTUREEVENT_IGNORE)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     void ignore()
     */
@@ -341,8 +339,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_IGNORE)
 
 HB_FUNC_STATIC(QGESTUREEVENT_ISACCEPTED)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     bool isAccepted() const
     */

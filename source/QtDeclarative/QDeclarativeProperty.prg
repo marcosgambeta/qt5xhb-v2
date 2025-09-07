@@ -81,8 +81,7 @@ RETURN
 
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDeclarativeProperty()
     */
@@ -560,8 +559,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_TYPE)
 
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_READ)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QVariant read() const
     */

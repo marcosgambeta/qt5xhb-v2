@@ -85,8 +85,7 @@ RETURN
 
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPlaceSearchRequest()
     */

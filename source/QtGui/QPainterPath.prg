@@ -102,8 +102,7 @@ RETURN
 
 HB_FUNC_STATIC(QPAINTERPATH_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPainterPath()
     */

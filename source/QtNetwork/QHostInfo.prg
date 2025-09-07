@@ -451,8 +451,7 @@ static QString localHostName()
 HB_FUNC_STATIC(QHOSTINFO_LOCALHOSTNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QHostInfo::localHostName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -468,8 +467,7 @@ static QString localDomainName()
 HB_FUNC_STATIC(QHOSTINFO_LOCALDOMAINNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QHostInfo::localDomainName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

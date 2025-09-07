@@ -118,8 +118,7 @@ static QWebHistoryInterface * defaultInterface()
 HB_FUNC_STATIC(QWEBHISTORYINTERFACE_DEFAULTINTERFACE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QWebHistoryInterface::defaultInterface();
     Qt5xHb::createReturnQObjectClass(ptr, "QWEBHISTORYINTERFACE");

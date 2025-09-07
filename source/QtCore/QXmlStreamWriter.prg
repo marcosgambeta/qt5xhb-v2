@@ -85,8 +85,7 @@ RETURN
 
 HB_FUNC_STATIC(QXMLSTREAMWRITER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QXmlStreamWriter()
     */

@@ -312,8 +312,7 @@ static bool instantInvalidatePropagation()
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_INSTANTINVALIDATEPROPAGATION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QGraphicsLayout::instantInvalidatePropagation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

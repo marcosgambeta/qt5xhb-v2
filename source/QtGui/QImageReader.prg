@@ -104,8 +104,7 @@ RETURN
 
 HB_FUNC_STATIC(QIMAGEREADER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QImageReader()
     */
@@ -534,8 +533,7 @@ HB_FUNC_STATIC(QIMAGEREADER_QUALITY)
 
 HB_FUNC_STATIC(QIMAGEREADER_READ)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QImage read()
     */
@@ -943,8 +941,7 @@ HB_FUNC_STATIC(QIMAGEREADER_TEXTKEYS)
 
 HB_FUNC_STATIC(QIMAGEREADER_IMAGEFORMAT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QImage::Format imageFormat() const
     */
@@ -982,8 +979,7 @@ static QList<QByteArray> supportedImageFormats()
 HB_FUNC_STATIC(QIMAGEREADER_SUPPORTEDIMAGEFORMATS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QImageReader::supportedImageFormats();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");

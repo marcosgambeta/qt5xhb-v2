@@ -1062,8 +1062,7 @@ static QStringList systemEnvironment()
 HB_FUNC_STATIC(QPROCESS_SYSTEMENVIRONMENT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRINGLIST(QProcess::systemEnvironment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1309,8 +1308,7 @@ HB_FUNC_STATIC(QPROCESS_NULLDEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QProcess::nullDevice());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

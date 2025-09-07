@@ -72,8 +72,7 @@ RETURN
 
 HB_FUNC_STATIC(QAUDIODEVICEINFO_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QAudioDeviceInfo()
     */
@@ -409,8 +408,7 @@ static QAudioDeviceInfo defaultInputDevice()
 HB_FUNC_STATIC(QAUDIODEVICEINFO_DEFAULTINPUTDEVICE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QAudioDeviceInfo(QAudioDeviceInfo::defaultInputDevice());
     Qt5xHb::createReturnClass(ptr, "QAUDIODEVICEINFO", true);
@@ -427,8 +425,7 @@ static QAudioDeviceInfo defaultOutputDevice()
 HB_FUNC_STATIC(QAUDIODEVICEINFO_DEFAULTOUTPUTDEVICE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QAudioDeviceInfo(QAudioDeviceInfo::defaultOutputDevice());
     Qt5xHb::createReturnClass(ptr, "QAUDIODEVICEINFO", true);

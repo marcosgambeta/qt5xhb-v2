@@ -76,8 +76,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_GLOBALSETTINGS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QWebEngineSettings::globalSettings();
     Qt5xHb::createReturnClass(ptr, "QWEBENGINESETTINGS", false);

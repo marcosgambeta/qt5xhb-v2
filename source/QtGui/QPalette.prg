@@ -91,8 +91,7 @@ RETURN
 
 HB_FUNC_STATIC(QPALETTE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPalette()
     */

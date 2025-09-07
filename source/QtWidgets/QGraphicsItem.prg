@@ -1059,8 +1059,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_ISENABLED)
 
 HB_FUNC_STATIC(QGRAPHICSITEM_ISOBSCURED)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     bool isObscured() const
     */

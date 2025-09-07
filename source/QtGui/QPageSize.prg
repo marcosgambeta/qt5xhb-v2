@@ -83,8 +83,7 @@ RETURN
 
 HB_FUNC_STATIC(QPAGESIZE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPageSize()
     */
@@ -234,8 +233,7 @@ HB_FUNC_STATIC(QPAGESIZE_ISVALID)
 
 HB_FUNC_STATIC(QPAGESIZE_KEY)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QString key() const
     */
@@ -263,8 +261,7 @@ HB_FUNC_STATIC(QPAGESIZE_KEY)
 
 HB_FUNC_STATIC(QPAGESIZE_NAME)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QString name() const
     */
@@ -292,8 +289,7 @@ HB_FUNC_STATIC(QPAGESIZE_NAME)
 
 HB_FUNC_STATIC(QPAGESIZE_ID)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPageSize::PageSizeId id() const
     */
@@ -346,8 +342,7 @@ HB_FUNC_STATIC(QPAGESIZE_ID)
 
 HB_FUNC_STATIC(QPAGESIZE_WINDOWSID)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     int windowsId() const
     */
@@ -375,8 +370,7 @@ HB_FUNC_STATIC(QPAGESIZE_WINDOWSID)
 
 HB_FUNC_STATIC(QPAGESIZE_DEFINITIONSIZE)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QSizeF definitionSize() const
     */
@@ -406,8 +400,7 @@ HB_FUNC_STATIC(QPAGESIZE_DEFINITIONSIZE)
 
 HB_FUNC_STATIC(QPAGESIZE_DEFINITIONUNITS)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPageSize::Unit definitionUnits() const
     */
@@ -467,8 +460,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZE)
 
 HB_FUNC_STATIC(QPAGESIZE_SIZEPOINTS)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QSize sizePoints() const
     */

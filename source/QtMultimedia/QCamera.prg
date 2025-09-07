@@ -241,8 +241,7 @@ HB_FUNC_STATIC(QCAMERA_SETCAPTUREMODE)
 
 HB_FUNC_STATIC(QCAMERA_LOCKSTATUS)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QCamera::LockStatus lockStatus() const
     */
@@ -508,8 +507,7 @@ HB_FUNC_STATIC(QCAMERA_LOAD)
 
 HB_FUNC_STATIC(QCAMERA_SEARCHANDLOCK)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     void searchAndLock()
     */
@@ -609,8 +607,7 @@ HB_FUNC_STATIC(QCAMERA_UNLOAD)
 
 HB_FUNC_STATIC(QCAMERA_UNLOCK)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     void unlock()
     */
@@ -854,8 +851,7 @@ static QList<QByteArray> availableDevices()
 HB_FUNC_STATIC(QCAMERA_AVAILABLEDEVICES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QCamera::availableDevices();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");

@@ -80,8 +80,7 @@ RETURN
 
 HB_FUNC_STATIC(QVECTOR2D_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QVector2D()
     */

@@ -73,8 +73,7 @@ RETURN
 
 HB_FUNC_STATIC(QREGULAREXPRESSION_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QRegularExpression()
     */

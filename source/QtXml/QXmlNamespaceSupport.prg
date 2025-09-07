@@ -69,8 +69,7 @@ RETURN
     */
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     auto obj = new QXmlNamespaceSupport();
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -139,8 +138,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PREFIX)
 
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PREFIXES)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QStringList prefixes() const
     */

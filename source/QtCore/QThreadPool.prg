@@ -351,8 +351,7 @@ static QThreadPool * globalInstance()
 HB_FUNC_STATIC(QTHREADPOOL_GLOBALINSTANCE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QThreadPool::globalInstance();
     Qt5xHb::createReturnQObjectClass(ptr, "QTHREADPOOL");

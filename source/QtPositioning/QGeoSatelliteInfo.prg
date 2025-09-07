@@ -71,8 +71,7 @@ RETURN
 
 HB_FUNC_STATIC(QGEOSATELLITEINFO_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QGeoSatelliteInfo()
     */

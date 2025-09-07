@@ -102,8 +102,7 @@ RETURN
 
 HB_FUNC_STATIC(QSSLCONFIGURATION_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QSslConfiguration()
     */
@@ -687,8 +686,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SUPPORTEDCIPHERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QSslConfiguration::supportedCiphers();
     auto pDynSym = hb_dynsymFindName("QSSLCIPHER");
@@ -808,8 +806,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SYSTEMCACERTIFICATES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QSslConfiguration::systemCaCertificates();
     auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
@@ -1054,8 +1051,7 @@ static QSslConfiguration defaultConfiguration()
 HB_FUNC_STATIC(QSSLCONFIGURATION_DEFAULTCONFIGURATION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QSslConfiguration(QSslConfiguration::defaultConfiguration());
     Qt5xHb::createReturnClass(ptr, "QSSLCONFIGURATION", true);

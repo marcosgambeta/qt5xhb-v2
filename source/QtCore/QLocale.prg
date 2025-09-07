@@ -135,8 +135,7 @@ RETURN
 
 HB_FUNC_STATIC(QLOCALE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QLocale()
     */
@@ -1608,8 +1607,7 @@ static QLocale c()
 HB_FUNC_STATIC(QLOCALE_C)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QLocale(QLocale::c());
     Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
@@ -1739,8 +1737,7 @@ static QLocale system()
 HB_FUNC_STATIC(QLOCALE_SYSTEM)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QLocale(QLocale::system());
     Qt5xHb::createReturnClass(ptr, "QLOCALE", true);

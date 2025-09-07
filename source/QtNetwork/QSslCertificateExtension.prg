@@ -64,8 +64,7 @@ RETURN
 
 HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QSslCertificateExtension()
     */

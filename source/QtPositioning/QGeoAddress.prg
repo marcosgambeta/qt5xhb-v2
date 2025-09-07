@@ -84,8 +84,7 @@ RETURN
 
 HB_FUNC_STATIC(QGEOADDRESS_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QGeoAddress()
     */

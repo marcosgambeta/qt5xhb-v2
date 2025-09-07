@@ -226,8 +226,7 @@ static QLoggingCategory * defaultCategory()
 HB_FUNC_STATIC(QLOGGINGCATEGORY_DEFAULTCATEGORY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QLoggingCategory::defaultCategory();
     Qt5xHb::createReturnClass(ptr, "QLOGGINGCATEGORY", false);

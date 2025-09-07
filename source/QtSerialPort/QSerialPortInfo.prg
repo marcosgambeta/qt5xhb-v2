@@ -78,8 +78,7 @@ RETURN
 HB_FUNC_STATIC(QSERIALPORTINFO_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QSerialPortInfo()
     */
@@ -425,8 +424,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_STANDARDBAUDRATES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QSerialPortInfo::standardBaudRates();
     Qt5xHb::convert_qlist_qint32_to_array(list);
@@ -445,8 +443,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_AVAILABLEPORTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QSerialPortInfo::availablePorts();
     auto pDynSym = hb_dynsymFindName("QSERIALPORTINFO");

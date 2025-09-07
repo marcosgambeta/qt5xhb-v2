@@ -96,8 +96,7 @@ RETURN
 
 HB_FUNC_STATIC(QMATRIX4X4_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QMatrix4x4()
     */
@@ -789,8 +788,7 @@ HB_FUNC_STATIC(QMATRIX4X4_TOAFFINE)
 
 HB_FUNC_STATIC(QMATRIX4X4_TOTRANSFORM)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QTransform toTransform() const
     */

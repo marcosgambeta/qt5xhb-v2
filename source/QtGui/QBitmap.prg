@@ -56,8 +56,7 @@ RETURN
 
 HB_FUNC_STATIC(QBITMAP_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QBitmap()
     */
@@ -230,8 +229,7 @@ void QBitmap_toVariant2()
 
 HB_FUNC_STATIC(QBITMAP_TOVARIANT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QBitmap_toVariant1();
   }
   else if (ISNUMPAR(1) && ISQBITMAP(1))

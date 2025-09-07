@@ -92,8 +92,7 @@ RETURN
 
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QBluetoothServiceInfo()
     */

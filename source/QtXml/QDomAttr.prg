@@ -55,8 +55,7 @@ RETURN
 
 HB_FUNC_STATIC(QDOMATTR_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDomAttr()
     */

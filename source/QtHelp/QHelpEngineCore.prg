@@ -328,8 +328,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILEDATA)
 
 HB_FUNC_STATIC(QHELPENGINECORE_FILTERATTRIBUTES)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QStringList filterAttributes() const
     */

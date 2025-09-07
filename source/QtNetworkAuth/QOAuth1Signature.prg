@@ -464,8 +464,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_RSASHA1)
 
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_PLAINTEXT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QByteArray plainText() const
     */

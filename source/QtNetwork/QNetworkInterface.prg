@@ -73,8 +73,7 @@ RETURN
 
 HB_FUNC_STATIC(QNETWORKINTERFACE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QNetworkInterface()
     */
@@ -290,8 +289,7 @@ static QList<QHostAddress> allAddresses()
 HB_FUNC_STATIC(QNETWORKINTERFACE_ALLADDRESSES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QNetworkInterface::allAddresses();
     auto pDynSym = hb_dynsymFindName("QHOSTADDRESS");
@@ -331,8 +329,7 @@ static QList<QNetworkInterface> allInterfaces()
 HB_FUNC_STATIC(QNETWORKINTERFACE_ALLINTERFACES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QNetworkInterface::allInterfaces();
     auto pDynSym = hb_dynsymFindName("QNETWORKINTERFACE");

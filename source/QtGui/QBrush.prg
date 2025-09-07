@@ -81,8 +81,7 @@ RETURN
 
 HB_FUNC_STATIC(QBRUSH_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QBrush()
     */
@@ -560,8 +559,7 @@ void QBrush_toVariant2()
 
 HB_FUNC_STATIC(QBRUSH_TOVARIANT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QBrush_toVariant1();
   }
   else if (ISNUMPAR(1) && ISQBRUSH(1))

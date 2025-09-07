@@ -65,8 +65,7 @@ RETURN
 
 HB_FUNC_STATIC(QSOURCELOCATION_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QSourceLocation()
     */

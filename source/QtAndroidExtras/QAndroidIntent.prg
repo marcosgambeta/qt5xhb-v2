@@ -68,8 +68,7 @@ RETURN
 
 HB_FUNC_STATIC(QANDROIDINTENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QAndroidIntent()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QAndroidIntent();

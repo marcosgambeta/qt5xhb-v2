@@ -79,8 +79,7 @@ RETURN
 
 HB_FUNC_STATIC(QSTORAGEINFO_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QStorageInfo()
     */
@@ -500,8 +499,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_MOUNTEDVOLUMES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QStorageInfo::mountedVolumes();
     auto pDynSym = hb_dynsymFindName("QSTORAGEINFO");
@@ -543,8 +541,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ROOT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QStorageInfo(QStorageInfo::root());
     Qt5xHb::createReturnClass(ptr, "QSTORAGEINFO", true);

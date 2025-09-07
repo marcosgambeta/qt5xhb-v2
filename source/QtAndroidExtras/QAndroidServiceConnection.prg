@@ -65,8 +65,7 @@ RETURN
 
 HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QAndroidServiceConnection()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QAndroidServiceConnection();

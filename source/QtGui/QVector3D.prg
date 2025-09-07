@@ -85,8 +85,7 @@ RETURN
 
 HB_FUNC_STATIC(QVECTOR3D_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QVector3D()
     */

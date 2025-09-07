@@ -368,8 +368,7 @@ HB_FUNC_STATIC(QDEBUG_SETVERBOSITY)
 
 HB_FUNC_STATIC(QDEBUG_VERBOSITY)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     int verbosity() const
     */

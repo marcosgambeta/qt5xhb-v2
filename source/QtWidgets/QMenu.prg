@@ -429,8 +429,7 @@ HB_FUNC_STATIC(QMENU_SETDEFAULTACTION)
 
 HB_FUNC_STATIC(QMENU_EXEC)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QAction * exec()
     */

@@ -644,8 +644,7 @@ HB_FUNC_STATIC(Q3DSCENE_INVALIDSELECTIONPOINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QPoint(Q3DScene::invalidSelectionPoint());
     Qt5xHb::createReturnClass(ptr, "QPOINT", true);

@@ -119,8 +119,7 @@ RETURN
 
 HB_FUNC_STATIC(QFONT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QFont()
     */
@@ -1386,8 +1385,7 @@ static QStringList substitutions()
 HB_FUNC_STATIC(QFONT_SUBSTITUTIONS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRINGLIST(QFont::substitutions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1427,8 +1425,7 @@ void QFont_toVariant2()
 
 HB_FUNC_STATIC(QFONT_TOVARIANT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QFont_toVariant1();
   }
   else if (ISNUMPAR(1) && ISQFONT(1))

@@ -875,8 +875,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_DEFAULTPROFILE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QQuickWebEngineProfile::defaultProfile();
     Qt5xHb::createReturnQObjectClass(ptr, "QQUICKWEBENGINEPROFILE");

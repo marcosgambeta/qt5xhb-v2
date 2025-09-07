@@ -75,8 +75,7 @@ RETURN
 
 HB_FUNC_STATIC(QSCATTERDATAITEM_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QScatterDataItem()
     */

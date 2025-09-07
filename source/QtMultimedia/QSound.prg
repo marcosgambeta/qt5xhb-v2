@@ -221,8 +221,7 @@ HB_FUNC_STATIC(QSOUND_STOP)
 
 HB_FUNC_STATIC(QSOUND_PLAY)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     void play()
     */

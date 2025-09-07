@@ -87,8 +87,7 @@ static int cacheLimit()
 HB_FUNC_STATIC(QPIXMAPCACHE_CACHELIMIT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RINT(QPixmapCache::cacheLimit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,8 +232,7 @@ static void clear()
 HB_FUNC_STATIC(QPIXMAPCACHE_CLEAR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QPixmapCache::clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

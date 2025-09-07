@@ -433,8 +433,7 @@ static void clearIconDatabase()
 HB_FUNC_STATIC(QWEBSETTINGS_CLEARICONDATABASE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QWebSettings::clearIconDatabase();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -452,8 +451,7 @@ static void clearMemoryCaches()
 HB_FUNC_STATIC(QWEBSETTINGS_CLEARMEMORYCACHES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QWebSettings::clearMemoryCaches();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -490,8 +488,7 @@ static QWebSettings * globalSettings()
 HB_FUNC_STATIC(QWEBSETTINGS_GLOBALSETTINGS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QWebSettings::globalSettings();
     Qt5xHb::createReturnClass(ptr, "QWEBSETTINGS", false);
@@ -508,8 +505,7 @@ static QString iconDatabasePath()
 HB_FUNC_STATIC(QWEBSETTINGS_ICONDATABASEPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QWebSettings::iconDatabasePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -543,8 +539,7 @@ static int maximumPagesInCache()
 HB_FUNC_STATIC(QWEBSETTINGS_MAXIMUMPAGESINCACHE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RINT(QWebSettings::maximumPagesInCache());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -560,8 +555,7 @@ static qint64 offlineStorageDefaultQuota()
 HB_FUNC_STATIC(QWEBSETTINGS_OFFLINESTORAGEDEFAULTQUOTA)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQINT64(QWebSettings::offlineStorageDefaultQuota());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -577,8 +571,7 @@ static QString offlineStoragePath()
 HB_FUNC_STATIC(QWEBSETTINGS_OFFLINESTORAGEPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QWebSettings::offlineStoragePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -594,8 +587,7 @@ static QString offlineWebApplicationCachePath()
 HB_FUNC_STATIC(QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QWebSettings::offlineWebApplicationCachePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -611,8 +603,7 @@ static qint64 offlineWebApplicationCacheQuota()
 HB_FUNC_STATIC(QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEQUOTA)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQINT64(QWebSettings::offlineWebApplicationCacheQuota());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

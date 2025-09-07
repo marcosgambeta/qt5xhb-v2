@@ -489,8 +489,7 @@ static const QGLContext * currentContext()
 HB_FUNC_STATIC(QGLCONTEXT_CURRENTCONTEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QGLContext::currentContext();
     Qt5xHb::createReturnClass(ptr, "QGLCONTEXT", false);
@@ -526,8 +525,7 @@ static int textureCacheLimit()
 HB_FUNC_STATIC(QGLCONTEXT_TEXTURECACHELIMIT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RINT(QGLContext::textureCacheLimit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

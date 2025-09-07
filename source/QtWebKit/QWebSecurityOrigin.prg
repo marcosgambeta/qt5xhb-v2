@@ -299,8 +299,7 @@ static QList<QWebSecurityOrigin> allOrigins()
 HB_FUNC_STATIC(QWEBSECURITYORIGIN_ALLORIGINS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QWebSecurityOrigin::allOrigins();
     auto pDynSym = hb_dynsymFindName("QWEBSECURITYORIGIN");
@@ -340,8 +339,7 @@ static QStringList localSchemes()
 HB_FUNC_STATIC(QWEBSECURITYORIGIN_LOCALSCHEMES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRINGLIST(QWebSecurityOrigin::localSchemes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

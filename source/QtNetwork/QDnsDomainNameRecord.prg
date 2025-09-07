@@ -61,8 +61,7 @@ RETURN
 
 HB_FUNC_STATIC(QDNSDOMAINNAMERECORD_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDnsDomainNameRecord()
     */

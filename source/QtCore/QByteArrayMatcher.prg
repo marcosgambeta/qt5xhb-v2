@@ -61,8 +61,7 @@ RETURN
 
 HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QByteArrayMatcher()
     */

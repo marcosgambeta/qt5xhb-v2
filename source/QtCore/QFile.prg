@@ -78,8 +78,7 @@ RETURN
 
 HB_FUNC_STATIC(QFILE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QFile()
     */
@@ -179,8 +178,7 @@ HB_FUNC_STATIC(QFILE_ERROR)
 
 HB_FUNC_STATIC(QFILE_EXISTS)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     bool exists() const
     */
@@ -335,8 +333,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
 
 HB_FUNC_STATIC(QFILE_PERMISSIONS)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QFile::Permissions permissions() const
     */
@@ -360,8 +357,7 @@ HB_FUNC_STATIC(QFILE_PERMISSIONS)
 
 HB_FUNC_STATIC(QFILE_REMOVE)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     bool remove()
     */
@@ -483,8 +479,7 @@ HB_FUNC_STATIC(QFILE_SETPERMISSIONS)
 
 HB_FUNC_STATIC(QFILE_SYMLINKTARGET)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QString symLinkTarget() const
     */
@@ -720,8 +715,7 @@ HB_FUNC_STATIC(QFILE_ENCODENAME)
 
 HB_FUNC_STATIC(QFILE_READLINK)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QString readLink() const
     */
@@ -745,8 +739,7 @@ HB_FUNC_STATIC(QFILE_READLINK)
 
 HB_FUNC_STATIC(QFILE_MOVETOTRASH)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     bool moveToTrash()
     */

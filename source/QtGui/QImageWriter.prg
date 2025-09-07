@@ -79,8 +79,7 @@ RETURN
 
 HB_FUNC_STATIC(QIMAGEWRITER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QImageWriter()
     */
@@ -523,8 +522,7 @@ static QList<QByteArray> supportedImageFormats()
 HB_FUNC_STATIC(QIMAGEWRITER_SUPPORTEDIMAGEFORMATS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QImageWriter::supportedImageFormats();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");

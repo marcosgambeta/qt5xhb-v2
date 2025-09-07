@@ -74,8 +74,7 @@ RETURN
 
 HB_FUNC_STATIC(QTIME_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QTime()
     */
@@ -219,8 +218,7 @@ HB_FUNC_STATIC(QTIME_ISNULL)
 
 HB_FUNC_STATIC(QTIME_ISVALID)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     bool isValid() const
     */
@@ -447,8 +445,7 @@ static QTime currentTime()
 HB_FUNC_STATIC(QTIME_CURRENTTIME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QTime(QTime::currentTime());
     Qt5xHb::createReturnClass(ptr, "QTIME", true);

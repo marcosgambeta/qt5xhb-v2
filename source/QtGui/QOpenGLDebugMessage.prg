@@ -65,8 +65,7 @@ RETURN
 
 HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QOpenGLDebugMessage()
     */

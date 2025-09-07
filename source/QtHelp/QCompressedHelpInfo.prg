@@ -69,8 +69,7 @@ RETURN
 
 HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QCompressedHelpInfo()
     */

@@ -69,8 +69,7 @@ RETURN
 
 HB_FUNC_STATIC(QMEDIACONTENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QMediaContent()
     */

@@ -50,8 +50,7 @@ RETURN
 
 HB_FUNC_STATIC(QDOMTEXT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDomText()
     */

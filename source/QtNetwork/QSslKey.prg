@@ -67,8 +67,7 @@ RETURN
 
 HB_FUNC_STATIC(QSSLKEY_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QSslKey()
     */

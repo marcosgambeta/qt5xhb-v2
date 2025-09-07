@@ -70,8 +70,7 @@ RETURN
 
 HB_FUNC_STATIC(QPOLYGON_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPolygon()
     */

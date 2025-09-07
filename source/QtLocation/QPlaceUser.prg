@@ -65,8 +65,7 @@ RETURN
 
 HB_FUNC_STATIC(QPLACEUSER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPlaceUser()
     */

@@ -63,8 +63,7 @@ RETURN
 // QAxBindable()
 HB_FUNC_STATIC(QAXBINDABLE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     auto obj = new QAxBindable();
     Qt5xHb::returnNewObject(obj, false);
   } else {

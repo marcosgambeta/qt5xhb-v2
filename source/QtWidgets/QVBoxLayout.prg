@@ -50,8 +50,7 @@ RETURN
 
 HB_FUNC_STATIC(QVBOXLAYOUT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QVBoxLayout()
     */

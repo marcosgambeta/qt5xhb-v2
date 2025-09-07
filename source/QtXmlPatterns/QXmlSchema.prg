@@ -76,8 +76,7 @@ RETURN
 
 HB_FUNC_STATIC(QXMLSCHEMA_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QXmlSchema()
     */

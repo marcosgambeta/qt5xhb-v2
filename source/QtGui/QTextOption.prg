@@ -73,8 +73,7 @@ RETURN
 
 HB_FUNC_STATIC(QTEXTOPTION_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QTextOption()
     */

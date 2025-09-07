@@ -80,8 +80,7 @@ RETURN
 
 HB_FUNC_STATIC(QNETWORKDATAGRAM_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QNetworkDatagram()
     */

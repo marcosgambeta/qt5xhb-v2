@@ -531,8 +531,7 @@ static bool bindDefault()
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_BINDDEFAULT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QOpenGLFramebufferObject::bindDefault());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -548,8 +547,7 @@ static bool hasOpenGLFramebufferObjects()
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFEROBJECTS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QOpenGLFramebufferObject::hasOpenGLFramebufferObjects());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -565,8 +563,7 @@ static bool hasOpenGLFramebufferBlit()
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFERBLIT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QOpenGLFramebufferObject::hasOpenGLFramebufferBlit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

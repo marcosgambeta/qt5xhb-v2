@@ -73,8 +73,7 @@ RETURN
 
 HB_FUNC_STATIC(QPAINTERPATHSTROKER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPainterPathStroker()
     */

@@ -72,8 +72,7 @@ RETURN
 
 HB_FUNC_STATIC(QCOLORSPACE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QColorSpace()
     */

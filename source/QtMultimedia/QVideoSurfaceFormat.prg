@@ -84,8 +84,7 @@ RETURN
 
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QVideoSurfaceFormat()
     */

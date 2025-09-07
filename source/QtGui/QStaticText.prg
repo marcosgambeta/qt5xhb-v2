@@ -72,8 +72,7 @@ RETURN
 
 HB_FUNC_STATIC(QSTATICTEXT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QStaticText()
     */

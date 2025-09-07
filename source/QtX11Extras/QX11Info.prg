@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QX11INFO_ISPLATFORMX11)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QX11Info::isPlatformX11());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,8 +172,7 @@ HB_FUNC_STATIC(QX11INFO_APPSCREEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RINT(QX11Info::appScreen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,8 +190,7 @@ HB_FUNC_STATIC(QX11INFO_APPTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RUNSIGNEDLONG(QX11Info::appTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,8 +208,7 @@ HB_FUNC_STATIC(QX11INFO_APPUSERTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RUNSIGNEDLONG(QX11Info::appUserTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,8 +268,7 @@ HB_FUNC_STATIC(QX11INFO_GETTIMESTAMP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RUNSIGNEDLONG(QX11Info::getTimestamp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,8 +286,7 @@ HB_FUNC_STATIC(QX11INFO_DISPLAY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     hb_retptr(static_cast<Display *>(QX11Info::display()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,8 +304,7 @@ HB_FUNC_STATIC(QX11INFO_CONNECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     hb_retptr(static_cast<xcb_connection_t *>(QX11Info::connection()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,8 +322,7 @@ HB_FUNC_STATIC(QX11INFO_NEXTSTARTUPID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QByteArray(QX11Info::nextStartupId());
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);

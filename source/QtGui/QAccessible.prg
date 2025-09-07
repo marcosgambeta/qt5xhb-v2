@@ -95,8 +95,7 @@ static bool isActive()
 HB_FUNC_STATIC(QACCESSIBLE_ISACTIVE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QAccessible::isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,8 +130,7 @@ static void cleanup()
 HB_FUNC_STATIC(QACCESSIBLE_CLEANUP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QAccessible::cleanup();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -99,8 +99,7 @@ RETURN
 
 HB_FUNC_STATIC(QTEXTLAYOUT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QTextLayout()
     */

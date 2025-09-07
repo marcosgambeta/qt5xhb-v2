@@ -68,8 +68,7 @@ RETURN
 
 HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QTextBoundaryFinder()
     */

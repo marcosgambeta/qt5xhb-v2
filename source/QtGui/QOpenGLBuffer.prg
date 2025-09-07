@@ -63,8 +63,7 @@ RETURN
 
 HB_FUNC_STATIC(QOPENGLBUFFER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QOpenGLBuffer()
     */
@@ -289,8 +288,7 @@ HB_FUNC_STATIC(QOPENGLBUFFER_READ)
 
 HB_FUNC_STATIC(QOPENGLBUFFER_RELEASE)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     void release()
     */

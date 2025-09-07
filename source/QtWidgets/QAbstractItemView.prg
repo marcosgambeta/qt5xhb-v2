@@ -802,8 +802,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXAT)
 
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATE)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QAbstractItemDelegate * itemDelegate() const
     */

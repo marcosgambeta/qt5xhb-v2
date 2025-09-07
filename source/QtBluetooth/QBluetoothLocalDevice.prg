@@ -338,8 +338,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ALLDEVICES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QBluetoothLocalDevice::allDevices();
     auto pDynSym = hb_dynsymFindName("QBLUETOOTHHOSTINFO");

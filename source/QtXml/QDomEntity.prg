@@ -52,8 +52,7 @@ RETURN
 
 HB_FUNC_STATIC(QDOMENTITY_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDomEntity()
     */

@@ -66,8 +66,7 @@ RETURN
 
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QStyleOptionHeader()
     */

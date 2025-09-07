@@ -244,8 +244,7 @@ HB_FUNC_STATIC(QCAMERAINFO_DEFAULTCAMERA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QCameraInfo(QCameraInfo::defaultCamera());
     Qt5xHb::createReturnClass(ptr, "QCAMERAINFO", true);

@@ -70,8 +70,7 @@ RETURN
 
 HB_FUNC_STATIC(QANDROIDJNIOBJECT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QAndroidJniObject()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QAndroidJniObject();

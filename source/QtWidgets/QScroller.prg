@@ -445,8 +445,7 @@ static QList<QScroller*> activeScrollers()
 HB_FUNC_STATIC(QSCROLLER_ACTIVESCROLLERS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QScroller::activeScrollers();
     auto pDynSym = hb_dynsymFindName("QSCROLLER");

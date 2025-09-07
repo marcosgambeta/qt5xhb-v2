@@ -72,8 +72,7 @@ RETURN
 
 HB_FUNC_STATIC(QPLACESUPPLIER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPlaceSupplier()
     */

@@ -70,8 +70,7 @@ RETURN
 
 HB_FUNC_STATIC(QMODELINDEX_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QModelIndex()
     */

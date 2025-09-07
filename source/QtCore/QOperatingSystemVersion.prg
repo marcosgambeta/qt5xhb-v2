@@ -109,8 +109,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_CURRENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QOperatingSystemVersion(QOperatingSystemVersion::current());
     Qt5xHb::createReturnClass(ptr, "QOPERATINGSYSTEMVERSION", true);
@@ -129,8 +128,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_CURRENTTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RENUM(QOperatingSystemVersion::currentType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

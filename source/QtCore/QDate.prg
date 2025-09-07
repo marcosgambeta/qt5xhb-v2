@@ -83,8 +83,7 @@ RETURN
 
 HB_FUNC_STATIC(QDATE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDate()
     */
@@ -502,8 +501,7 @@ static QDate currentDate()
 HB_FUNC_STATIC(QDATE_CURRENTDATE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QDate(QDate::currentDate());
     Qt5xHb::createReturnClass(ptr, "QDATE", true);
@@ -576,8 +574,7 @@ HB_FUNC_STATIC(QDATE_ISLEAPYEAR)
 
 HB_FUNC_STATIC(QDATE_ISVALID)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     bool isValid() const
     */

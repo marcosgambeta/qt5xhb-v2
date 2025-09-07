@@ -276,8 +276,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTRECORD)
 
 HB_FUNC(QSQLTABLEMODEL_ISDIRTY)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     bool isDirty() const
     */
@@ -766,8 +765,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SUBMITALL)
 
 HB_FUNC(QSQLTABLEMODEL_RECORD)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QSqlRecord record() const
     */

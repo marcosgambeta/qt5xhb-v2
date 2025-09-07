@@ -108,8 +108,7 @@ RETURN
 
 HB_FUNC_STATIC(QSQLDATABASE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QSqlDatabase()
     */
@@ -536,8 +535,7 @@ HB_FUNC_STATIC(QSQLDATABASE_SETNUMERICALPRECISIONPOLICY)
 
 HB_FUNC_STATIC(QSQLDATABASE_OPEN)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     bool open()
     */
@@ -854,8 +852,7 @@ static QStringList connectionNames()
 HB_FUNC_STATIC(QSQLDATABASE_CONNECTIONNAMES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRINGLIST(QSqlDatabase::connectionNames());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -908,8 +905,7 @@ static QStringList drivers()
 HB_FUNC_STATIC(QSQLDATABASE_DRIVERS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRINGLIST(QSqlDatabase::drivers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

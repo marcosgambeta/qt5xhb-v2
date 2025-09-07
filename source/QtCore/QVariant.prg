@@ -286,8 +286,7 @@ HB_FUNC_STATIC(QVARIANT_NEW24)
 
 HB_FUNC_STATIC(QVARIANT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QVariant()
     */

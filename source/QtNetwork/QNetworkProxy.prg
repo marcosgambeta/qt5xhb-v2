@@ -82,8 +82,7 @@ RETURN
 
 HB_FUNC_STATIC(QNETWORKPROXY_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QNetworkProxy()
     */
@@ -462,8 +461,7 @@ static QNetworkProxy applicationProxy()
 HB_FUNC_STATIC(QNETWORKPROXY_APPLICATIONPROXY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QNetworkProxy(QNetworkProxy::applicationProxy());
     Qt5xHb::createReturnClass(ptr, "QNETWORKPROXY", true);

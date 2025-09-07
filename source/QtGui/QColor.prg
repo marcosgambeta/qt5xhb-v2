@@ -172,8 +172,7 @@ HB_FUNC_STATIC(QCOLOR_NEW7)
 
 HB_FUNC_STATIC(QCOLOR_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QColor()
     */
@@ -1839,8 +1838,7 @@ static QStringList colorNames()
 HB_FUNC_STATIC(QCOLOR_COLORNAMES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRINGLIST(QColor::colorNames());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -2183,8 +2181,7 @@ void QColor_toVariant2()
 
 HB_FUNC_STATIC(QCOLOR_TOVARIANT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QColor_toVariant1();
   }
   else if (ISNUMPAR(1) && ISQCOLOR(1))

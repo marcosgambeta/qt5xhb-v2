@@ -58,8 +58,7 @@ RETURN
 
 HB_FUNC_STATIC(QPLACEEDITORIAL_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPlaceEditorial()
     */

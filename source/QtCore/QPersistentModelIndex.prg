@@ -72,8 +72,7 @@ RETURN
 
 HB_FUNC_STATIC(QPERSISTENTMODELINDEX_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPersistentModelIndex()
     */

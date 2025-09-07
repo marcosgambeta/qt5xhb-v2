@@ -66,8 +66,7 @@ RETURN
     */
 HB_FUNC_STATIC(QXMLRESULTITEMS_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     auto obj = new QXmlResultItems();
     Qt5xHb::returnNewObject(obj, true);
   } else {

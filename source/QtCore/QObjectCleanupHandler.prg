@@ -58,8 +58,7 @@ RETURN
     */
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     auto obj = new QObjectCleanupHandler();
     Qt5xHb::returnNewObject(obj, false);
   } else {

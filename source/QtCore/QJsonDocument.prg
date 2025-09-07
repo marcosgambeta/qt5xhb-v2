@@ -81,8 +81,7 @@ RETURN
 
 HB_FUNC_STATIC(QJSONDOCUMENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QJsonDocument()
     */

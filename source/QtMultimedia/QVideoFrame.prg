@@ -87,8 +87,7 @@ RETURN
 
 HB_FUNC_STATIC(QVIDEOFRAME_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QVideoFrame()
     */
@@ -165,8 +164,7 @@ const uchar *bits(int plane) const
 
 HB_FUNC_STATIC(QVIDEOFRAME_BYTESPERLINE)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     int bytesPerLine() const
     */

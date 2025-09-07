@@ -167,8 +167,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_NEW10)
 
 HB_FUNC_STATIC(QSCRIPTVALUE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QScriptValue()
     */

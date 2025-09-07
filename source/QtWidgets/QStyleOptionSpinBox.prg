@@ -53,8 +53,7 @@ RETURN
 
 HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QStyleOptionSpinBox()
     */

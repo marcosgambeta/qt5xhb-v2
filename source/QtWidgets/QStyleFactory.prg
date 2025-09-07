@@ -98,8 +98,7 @@ static QStringList keys()
 HB_FUNC_STATIC(QSTYLEFACTORY_KEYS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRINGLIST(QStyleFactory::keys());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -95,8 +95,7 @@ RETURN
 
 HB_FUNC_STATIC(QSCRIPTENGINE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QScriptEngine()
     */
@@ -495,8 +494,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWDATE)
 
 HB_FUNC_STATIC(QSCRIPTENGINE_NEWOBJECT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QScriptValue newObject()
     */

@@ -110,8 +110,7 @@ RETURN
 
 HB_FUNC_STATIC(QFILEINFO_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QFileInfo()
     */
@@ -426,8 +425,7 @@ HB_FUNC_STATIC(QFILEINFO_DIR)
 
 HB_FUNC_STATIC(QFILEINFO_EXISTS)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     bool exists() const
     */

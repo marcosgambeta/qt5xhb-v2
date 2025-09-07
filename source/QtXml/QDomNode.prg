@@ -134,8 +134,7 @@ RETURN
 
 HB_FUNC_STATIC(QDOMNODE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDomNode()
     */

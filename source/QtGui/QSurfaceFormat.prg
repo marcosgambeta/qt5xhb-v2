@@ -86,8 +86,7 @@ RETURN
 
 HB_FUNC_STATIC(QSURFACEFORMAT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QSurfaceFormat()
     */

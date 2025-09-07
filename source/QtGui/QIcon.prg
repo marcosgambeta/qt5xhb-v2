@@ -80,8 +80,7 @@ RETURN
 
 HB_FUNC_STATIC(QICON_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QIcon()
     */
@@ -491,8 +490,7 @@ static QString themeName()
 HB_FUNC_STATIC(QICON_THEMENAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QIcon::themeName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -508,8 +506,7 @@ static QStringList themeSearchPaths()
 HB_FUNC_STATIC(QICON_THEMESEARCHPATHS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRINGLIST(QIcon::themeSearchPaths());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -526,8 +523,7 @@ HB_FUNC_STATIC(QICON_FALLBACKTHEMENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QIcon::fallbackThemeName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -589,8 +585,7 @@ void QIcon_toVariant2()
 
 HB_FUNC_STATIC(QICON_TOVARIANT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QIcon_toVariant1();
   }
   else if (ISNUMPAR(1) && ISQICON(1))

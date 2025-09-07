@@ -155,8 +155,7 @@ RETURN
 
 HB_FUNC_STATIC(QPAINTER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPainter()
     */

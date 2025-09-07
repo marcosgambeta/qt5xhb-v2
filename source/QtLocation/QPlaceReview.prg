@@ -71,8 +71,7 @@ RETURN
 HB_FUNC_STATIC(QPLACEREVIEW_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     auto obj = new QPlaceReview();
     Qt5xHb::returnNewObject(obj, true);
   } else {

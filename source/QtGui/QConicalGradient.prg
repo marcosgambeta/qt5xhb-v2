@@ -53,8 +53,7 @@ RETURN
 
 HB_FUNC_STATIC(QCONICALGRADIENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QConicalGradient()
     */

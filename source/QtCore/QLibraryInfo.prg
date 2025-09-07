@@ -81,8 +81,7 @@ static QString licensee()
 HB_FUNC_STATIC(QLIBRARYINFO_LICENSEE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QLibraryInfo::licensee());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -98,8 +97,7 @@ static QString licensedProducts()
 HB_FUNC_STATIC(QLIBRARYINFO_LICENSEDPRODUCTS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QLibraryInfo::licensedProducts());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,8 +113,7 @@ static QDate buildDate()
 HB_FUNC_STATIC(QLIBRARYINFO_BUILDDATE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QDate(QLibraryInfo::buildDate());
     Qt5xHb::createReturnClass(ptr, "QDATE", true);
@@ -133,8 +130,7 @@ static bool isDebugBuild()
 HB_FUNC_STATIC(QLIBRARYINFO_ISDEBUGBUILD)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QLibraryInfo::isDebugBuild());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

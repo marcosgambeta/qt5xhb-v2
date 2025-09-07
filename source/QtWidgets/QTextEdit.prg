@@ -294,8 +294,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CANPASTE)
 
 HB_FUNC_STATIC(QTEXTEDIT_CREATESTANDARDCONTEXTMENU)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QMenu * createStandardContextMenu()
     */

@@ -67,8 +67,7 @@ RETURN
 
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QStyleOptionToolButton()
     */

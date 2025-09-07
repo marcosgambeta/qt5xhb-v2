@@ -89,8 +89,7 @@ RETURN
 
 HB_FUNC_STATIC(QDATETIME_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDateTime()
     */
@@ -680,8 +679,7 @@ static QDateTime currentDateTime()
 HB_FUNC_STATIC(QDATETIME_CURRENTDATETIME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QDateTime(QDateTime::currentDateTime());
     Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -698,8 +696,7 @@ static QDateTime currentDateTimeUtc()
 HB_FUNC_STATIC(QDATETIME_CURRENTDATETIMEUTC)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QDateTime(QDateTime::currentDateTimeUtc());
     Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -716,8 +713,7 @@ static qint64 currentMSecsSinceEpoch()
 HB_FUNC_STATIC(QDATETIME_CURRENTMSECSSINCEEPOCH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQINT64(QDateTime::currentMSecsSinceEpoch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

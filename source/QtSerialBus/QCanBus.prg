@@ -63,8 +63,7 @@ HB_FUNC_STATIC(QCANBUS_INSTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QCanBus::instance();
     Qt5xHb::createReturnQObjectClass(ptr, "QCANBUS");

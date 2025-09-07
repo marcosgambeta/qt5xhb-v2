@@ -668,8 +668,7 @@ static QByteArray localMachineId()
 HB_FUNC_STATIC(QDBUSCONNECTION_LOCALMACHINEID)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QByteArray(QDBusConnection::localMachineId());
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -686,8 +685,7 @@ static QDBusConnection sessionBus()
 HB_FUNC_STATIC(QDBUSCONNECTION_SESSIONBUS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QDBusConnection(QDBusConnection::sessionBus());
     Qt5xHb::createReturnClass(ptr, "QDBUSCONNECTION", true);
@@ -704,8 +702,7 @@ static QDBusConnection systemBus()
 HB_FUNC_STATIC(QDBUSCONNECTION_SYSTEMBUS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QDBusConnection(QDBusConnection::systemBus());
     Qt5xHb::createReturnClass(ptr, "QDBUSCONNECTION", true);
@@ -722,8 +719,7 @@ static QDBusConnection sender()
 HB_FUNC_STATIC(QDBUSCONNECTION_SENDER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QDBusConnection(QDBusConnection::sender());
     Qt5xHb::createReturnClass(ptr, "QDBUSCONNECTION", true);

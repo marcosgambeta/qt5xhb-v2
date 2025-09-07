@@ -90,8 +90,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_NEW9)
 
 HB_FUNC_STATIC(QHOSTADDRESS_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QHostAddress()
     */
@@ -218,8 +217,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_PROTOCOL)
 
 HB_FUNC_STATIC(QHOSTADDRESS_TOIPV4ADDRESS)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     quint32 toIPv4Address() const
     */

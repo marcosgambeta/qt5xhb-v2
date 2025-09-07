@@ -68,8 +68,7 @@ RETURN
 
 HB_FUNC_STATIC(QPLACERATINGS_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPlaceRatings()
     */

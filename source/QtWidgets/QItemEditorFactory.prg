@@ -67,8 +67,7 @@ RETURN
     */
 HB_FUNC_STATIC(QITEMEDITORFACTORY_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     auto obj = new QItemEditorFactory();
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -164,8 +163,7 @@ static const QItemEditorFactory * defaultFactory()
 HB_FUNC_STATIC(QITEMEDITORFACTORY_DEFAULTFACTORY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = QItemEditorFactory::defaultFactory();
     Qt5xHb::createReturnClass(ptr, "QITEMEDITORFACTORY", false);

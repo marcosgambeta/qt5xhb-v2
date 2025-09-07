@@ -56,8 +56,7 @@ RETURN
 
 HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QStyleOptionGraphicsItem()
     */

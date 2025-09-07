@@ -74,8 +74,7 @@ RETURN
 
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QVideoEncoderSettings()
     */

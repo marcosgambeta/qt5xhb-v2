@@ -82,8 +82,7 @@ RETURN
 
 HB_FUNC_STATIC(QDOMDOCUMENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDomDocument()
     */

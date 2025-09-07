@@ -82,8 +82,7 @@ RETURN
 
 HB_FUNC_STATIC(QQMLPROPERTY_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QQmlProperty()
     */
@@ -534,8 +533,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_PROPERTYTYPENAME)
 
 HB_FUNC_STATIC(QQMLPROPERTY_READ)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QVariant read() const
     */

@@ -76,8 +76,7 @@ RETURN
 
 HB_FUNC_STATIC(QURLQUERY_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QUrlQuery()
     */
@@ -448,8 +447,7 @@ static QChar defaultQueryPairDelimiter()
 HB_FUNC_STATIC(QURLQUERY_DEFAULTQUERYPAIRDELIMITER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QChar(QUrlQuery::defaultQueryPairDelimiter());
     Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -466,8 +464,7 @@ static QChar defaultQueryValueDelimiter()
 HB_FUNC_STATIC(QURLQUERY_DEFAULTQUERYVALUEDELIMITER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QChar(QUrlQuery::defaultQueryValueDelimiter());
     Qt5xHb::createReturnClass(ptr, "QCHAR", true);

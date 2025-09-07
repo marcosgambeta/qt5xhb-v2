@@ -54,8 +54,7 @@ RETURN
     */
 HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     auto obj = new QGraphicsSceneResizeEvent();
     Qt5xHb::returnNewObject(obj, false);
   } else {

@@ -61,8 +61,7 @@ RETURN
 
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QXmlStreamNotationDeclaration()
     */

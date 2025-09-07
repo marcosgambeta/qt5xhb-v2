@@ -74,8 +74,7 @@ RETURN
 
 HB_FUNC_STATIC(QMIMETYPE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QMimeType()
     */

@@ -84,8 +84,7 @@ RETURN
 
 HB_FUNC_STATIC(QTIMEZONE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QTimeZone()
     */
@@ -486,8 +485,7 @@ HB_FUNC_STATIC(QTIMEZONE_SYSTEMTIMEZONEID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto ptr = new QByteArray(QTimeZone::systemTimeZoneId());
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -525,8 +523,7 @@ HB_FUNC_STATIC(QTIMEZONE_AVAILABLETIMEZONEIDS1)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     auto list = QTimeZone::availableTimeZoneIds();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
@@ -649,8 +646,7 @@ HB_FUNC_STATIC(QTIMEZONE_AVAILABLETIMEZONEIDS3)
 
 HB_FUNC_STATIC(QTIMEZONE_AVAILABLETIMEZONEIDS)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     HB_FUNC_EXEC(QTIMEZONE_AVAILABLETIMEZONEIDS1);
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))

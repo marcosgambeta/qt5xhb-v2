@@ -64,8 +64,7 @@ RETURN
 
     HB_FUNC(QDBUSUNIXFILEDESCRIPTOR_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDBusUnixFileDescriptor()
     */
@@ -245,8 +244,7 @@ static bool isSupported()
 HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_ISSUPPORTED)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QDBusUnixFileDescriptor::isSupported());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

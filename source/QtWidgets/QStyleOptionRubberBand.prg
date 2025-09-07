@@ -51,8 +51,7 @@ RETURN
 
 HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QStyleOptionRubberBand()
     */

@@ -59,8 +59,7 @@ RETURN
 
 HB_FUNC_STATIC(QPLACEIMAGE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPlaceImage()
     */

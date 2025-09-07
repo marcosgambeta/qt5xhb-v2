@@ -72,8 +72,7 @@ RETURN
 
 HB_FUNC_STATIC(QGLBUFFER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QGLBuffer()
     */
@@ -298,8 +297,7 @@ HB_FUNC_STATIC(QGLBUFFER_READ)
 
 HB_FUNC_STATIC(QGLBUFFER_RELEASE)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     void release()
     */

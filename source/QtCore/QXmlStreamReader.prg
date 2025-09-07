@@ -115,8 +115,7 @@ RETURN
 
 HB_FUNC_STATIC(QXMLSTREAMREADER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QXmlStreamReader()
     */
