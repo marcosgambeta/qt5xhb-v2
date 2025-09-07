@@ -129,9 +129,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
     */
     auto obj = new QSettings(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -703,9 +701,7 @@ HB_FUNC_STATIC(QSETTINGS_SETINICODEC)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -819,9 +815,7 @@ HB_FUNC_STATIC(QSETTINGS_DEFAULTFORMAT)
 #endif
     RENUM(QSettings::defaultFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -838,9 +832,7 @@ HB_FUNC_STATIC(QSETTINGS_SETDEFAULTFORMAT)
 #endif
     QSettings::setDefaultFormat(static_cast<QSettings::Format>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -860,9 +852,7 @@ HB_FUNC_STATIC(QSETTINGS_SETPATH)
     QSettings::setPath(static_cast<QSettings::Format>(hb_parni(1)), static_cast<QSettings::Scope>(hb_parni(2)),
                        PQSTRING(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

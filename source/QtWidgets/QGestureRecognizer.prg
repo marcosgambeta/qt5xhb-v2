@@ -160,9 +160,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_REGISTERRECOGNIZER)
 #endif
     RENUM(QGestureRecognizer::registerRecognizer(PQGESTURERECOGNIZER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -179,9 +177,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_UNREGISTERRECOGNIZER)
 #endif
     QGestureRecognizer::unregisterRecognizer(static_cast<Qt::GestureType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -210,9 +206,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -243,9 +237,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

@@ -94,9 +94,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_NEW)
   {
     auto obj = new QMediaPlaylist(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -272,9 +270,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ADDMEDIA)
       }
       RBOOL(obj->addMedia(par1));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -379,9 +375,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_INSERTMEDIA)
       }
       RBOOL(obj->insertMedia(PINT(1), par2));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -472,9 +466,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_LOAD)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -595,9 +587,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_REMOVEMEDIA)
     if (obj != nullptr) {
       RBOOL(obj->removeMedia(PINT(1), PINT(2)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -625,9 +615,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_SAVE)
     if (obj != nullptr) {
       RBOOL(obj->save(PQIODEVICE(1), PCONSTCHAR(2)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

@@ -100,9 +100,7 @@ HB_FUNC_STATIC(QSVGRENDERER_NEW)
     */
     auto obj = new QSvgRenderer(PQXMLSTREAMREADER(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -340,9 +338,7 @@ HB_FUNC_STATIC(QSVGRENDERER_SETVIEWBOX)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -429,9 +425,7 @@ HB_FUNC_STATIC(QSVGRENDERER_LOAD)
     if (obj != nullptr) {
       RBOOL(obj->load(PQXMLSTREAMREADER(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -476,9 +470,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

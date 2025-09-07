@@ -141,9 +141,7 @@ HB_FUNC_STATIC(QCHART_NEW)
                           HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(Qt::WindowFlags())
                                       : static_cast<Qt::WindowFlags>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1457,9 +1455,7 @@ HB_FUNC_STATIC(QCHART_ZOOMIN)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

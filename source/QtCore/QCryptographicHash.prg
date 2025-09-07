@@ -70,9 +70,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_NEW)
   {
     auto obj = new QCryptographicHash(static_cast<QCryptographicHash::Algorithm>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -155,9 +153,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_ADDDATA)
     if (obj != nullptr) {
       RBOOL(obj->addData(PQIODEVICE(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -199,9 +195,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_HASH)
         QCryptographicHash::hash(*PQBYTEARRAY(1), static_cast<QCryptographicHash::Algorithm>(hb_parni(2))));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -219,9 +213,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_HASHLENGTH)
 #endif
     RINT(QCryptographicHash::hashLength(static_cast<QCryptographicHash::Algorithm>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -249,9 +241,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -282,9 +272,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

@@ -132,9 +132,7 @@ HB_FUNC_STATIC(QSQLQUERY_NEW)
     */
     auto obj = new QSqlQuery(*PQSQLQUERY(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -232,9 +230,7 @@ HB_FUNC_STATIC(QSQLQUERY_BINDVALUE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -264,9 +260,7 @@ HB_FUNC_STATIC(QSQLQUERY_BOUNDVALUE)
       auto ptr = new QVariant(obj->boundValue(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -343,9 +337,7 @@ HB_FUNC_STATIC(QSQLQUERY_EXEC)
     if (obj != nullptr) {
       RBOOL(obj->exec());
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -541,9 +533,7 @@ HB_FUNC_STATIC(QSQLQUERY_ISNULL)
       RBOOL(obj->isNull(PQSTRING(1)));
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -970,9 +960,7 @@ HB_FUNC_STATIC(QSQLQUERY_VALUE)
       auto ptr = new QVariant(obj->value(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -998,9 +986,7 @@ HB_FUNC_STATIC(QSQLQUERY_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -1031,9 +1017,7 @@ HB_FUNC_STATIC(QSQLQUERY_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

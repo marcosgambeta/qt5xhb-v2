@@ -117,9 +117,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_NEW)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     HB_FUNC_EXEC(QHOSTADDRESS_NEW9);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -194,9 +192,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
     if (obj != nullptr) {
       RBOOL(obj->setAddress(PQSTRING(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -251,9 +247,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_TOIPV4ADDRESS)
       hb_storl(par1, 1);
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -496,9 +490,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -529,9 +521,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

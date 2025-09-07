@@ -323,9 +323,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALL)
                                      HB_ISNIL(10) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(10))));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -403,9 +401,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK)
       }
       RBOOL(obj->callWithCallback(PQSTRING(1), par2, PQOBJECT(3), PCONSTCHAR(4)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

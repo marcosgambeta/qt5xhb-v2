@@ -160,9 +160,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_NEW)
     */
     auto obj = new QTextDocument(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -693,9 +691,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
                                                        : static_cast<QTextDocument::FindFlags>(hb_parni(3))));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1811,9 +1807,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_UNDO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1845,9 +1839,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_REDO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

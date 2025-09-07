@@ -73,9 +73,7 @@ HB_FUNC_STATIC(QDROPEVENT_NEW)
                        static_cast<Qt::MouseButtons>(hb_parni(4)), static_cast<Qt::KeyboardModifiers>(hb_parni(5)),
                        HB_ISNIL(6) ? static_cast<QEvent::Type>(QEvent::Drop) : static_cast<QEvent::Type>(hb_parni(6)));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

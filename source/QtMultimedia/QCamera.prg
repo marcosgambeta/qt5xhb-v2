@@ -128,9 +128,7 @@ HB_FUNC_STATIC(QCAMERA_NEW)
     auto obj = new QCamera(static_cast<QCamera::Position>(hb_parni(1)), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -272,9 +270,7 @@ HB_FUNC_STATIC(QCAMERA_LOCKSTATUS)
     if (obj != nullptr) {
       RENUM(obj->lockStatus(static_cast<QCamera::LockType>(hb_parni(1))));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -483,9 +479,7 @@ HB_FUNC_STATIC(QCAMERA_SETVIEWFINDER)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -565,9 +559,7 @@ HB_FUNC_STATIC(QCAMERA_SEARCHANDLOCK)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -674,9 +666,7 @@ HB_FUNC_STATIC(QCAMERA_UNLOCK)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -939,9 +929,7 @@ HB_FUNC_STATIC(QCAMERA_AVAILABLEDEVICES)
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -958,9 +946,7 @@ HB_FUNC_STATIC(QCAMERA_DEVICEDESCRIPTION)
 #endif
     RQSTRING(QCamera::deviceDescription(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

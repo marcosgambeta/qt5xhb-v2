@@ -74,9 +74,7 @@ HB_FUNC_STATIC(QPICTURE_NEW)
     */
     auto obj = new QPicture(*PQPICTURE(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -189,9 +187,7 @@ HB_FUNC_STATIC(QPICTURE_LOAD)
     if (obj != nullptr) {
       RBOOL(obj->load(PQIODEVICE(1), OPCONSTCHAR(2, nullptr)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -242,9 +238,7 @@ HB_FUNC_STATIC(QPICTURE_SAVE)
     if (obj != nullptr) {
       RBOOL(obj->save(PQIODEVICE(1), OPCONSTCHAR(2, nullptr)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

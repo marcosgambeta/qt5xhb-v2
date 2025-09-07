@@ -68,9 +68,7 @@ HB_FUNC_STATIC(QKEYEVENT_NEW)
         new QKeyEvent(static_cast<QEvent::Type>(hb_parni(1)), PINT(2), static_cast<Qt::KeyboardModifiers>(hb_parni(3)),
                       OPQSTRING(4, QString()), OPBOOL(5, false), OPUSHORT(6, 1));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

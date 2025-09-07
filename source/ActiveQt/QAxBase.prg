@@ -260,9 +260,7 @@ HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
       auto ptr = new QVariant(obj->dynamicCall(PCONSTCHAR(1), PQVARIANTLIST(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -366,9 +364,7 @@ HB_FUNC_STATIC(QAXBASE_QUERYSUBOBJECT)
       auto ptr = obj->querySubObject(PCONSTCHAR(1), PQVARIANTLIST(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -507,9 +503,7 @@ HB_FUNC_STATIC(QAXBASE_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -540,9 +534,7 @@ HB_FUNC_STATIC(QAXBASE_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

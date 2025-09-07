@@ -125,9 +125,7 @@ HB_FUNC_STATIC(QPAINTERPATH_NEW)
     */
     auto obj = new QPainterPath(*PQPAINTERPATH(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -190,9 +188,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDELLIPSE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -274,9 +270,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDRECT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -339,9 +333,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDROUNDEDRECT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -373,9 +365,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDTEXT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -430,9 +420,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ARCMOVETO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -464,9 +452,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ARCTO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -579,9 +565,7 @@ HB_FUNC_STATIC(QPAINTERPATH_CONTAINS)
     if (obj != nullptr) {
       RBOOL(obj->contains(*PQPAINTERPATH(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -637,9 +621,7 @@ HB_FUNC_STATIC(QPAINTERPATH_CUBICTO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -761,9 +743,7 @@ HB_FUNC_STATIC(QPAINTERPATH_INTERSECTS)
     if (obj != nullptr) {
       RBOOL(obj->intersects(*PQPAINTERPATH(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -841,9 +821,7 @@ HB_FUNC_STATIC(QPAINTERPATH_LINETO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -875,9 +853,7 @@ HB_FUNC_STATIC(QPAINTERPATH_MOVETO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -956,9 +932,7 @@ HB_FUNC_STATIC(QPAINTERPATH_QUADTO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1135,9 +1109,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TOFILLPOLYGON)
           new QPolygonF(obj->toFillPolygon(HB_ISNIL(1) ? QMatrix() : *static_cast<QMatrix *>(Qt5xHb::itemGetPtr(1))));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1193,9 +1165,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TRANSLATE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1225,9 +1195,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TRANSLATED)
       auto ptr = new QPainterPath(obj->translated(*PQPOINTF(1)));
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1356,9 +1324,7 @@ HB_FUNC_STATIC(QPAINTERPATH_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -1389,9 +1355,7 @@ HB_FUNC_STATIC(QPAINTERPATH_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

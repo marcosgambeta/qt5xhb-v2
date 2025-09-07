@@ -106,9 +106,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_NEW)
   {
     auto obj = new QAbstractSocket(static_cast<QAbstractSocket::SocketType>(hb_parni(1)), PQOBJECT(2));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -234,9 +232,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_BIND)
                                            ? static_cast<QAbstractSocket::BindMode>(QAbstractSocket::DefaultForPlatform)
                                            : static_cast<QAbstractSocket::BindMode>(hb_parni(2))));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -277,9 +273,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

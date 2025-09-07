@@ -169,9 +169,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_NEW)
     */
     auto obj = new QGraphicsScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQOBJECT(5, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -271,9 +269,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDELLIPSE)
                                  HB_ISNIL(6) ? QBrush() : *static_cast<QBrush *>(Qt5xHb::itemGetPtr(6)));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSELLIPSEITEM", false);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -329,9 +325,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDLINE)
                               HB_ISNIL(5) ? QPen() : *static_cast<QPen *>(Qt5xHb::itemGetPtr(5)));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLINEITEM", false);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -440,9 +434,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDRECT)
                               HB_ISNIL(6) ? QBrush() : *static_cast<QBrush *>(Qt5xHb::itemGetPtr(6)));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSRECTITEM", false);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -822,9 +814,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_INVALIDATE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -900,9 +890,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMAT)
       auto ptr = obj->itemAt(PQREAL(1), PQREAL(2), *PQTRANSFORM(3));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1407,9 +1395,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETSCENERECT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1441,9 +1427,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETSELECTIONAREA)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1597,9 +1581,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_UPDATE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

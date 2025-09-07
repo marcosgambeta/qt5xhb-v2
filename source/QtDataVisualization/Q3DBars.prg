@@ -107,9 +107,7 @@ HB_FUNC_STATIC(Q3DBARS_NEW)
     auto obj = new Q3DBars(HB_ISNIL(1) ? nullptr : static_cast<QSurfaceFormat *>(Qt5xHb::itemGetPtr(1)),
                            OPQWINDOW(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

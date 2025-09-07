@@ -79,9 +79,7 @@ HB_FUNC_STATIC(QFONTDIALOG_NEW)
     */
     auto obj = new QFontDialog(*PQFONT(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -349,9 +347,7 @@ HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
                                                           : static_cast<QFontDialog::FontDialogOptions>(hb_parni(5))));
     Qt5xHb::createReturnClass(ptr, "QFONT", true);
     hb_storl(par1, 1);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

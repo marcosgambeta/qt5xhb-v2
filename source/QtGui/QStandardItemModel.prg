@@ -123,9 +123,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_NEW)
     */
     auto obj = new QStandardItemModel(PINT(1), PINT(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -215,9 +213,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_APPENDROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -378,9 +374,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_INSERTCOLUMN)
       RBOOL(
           obj->insertColumn(PINT(1), HB_ISNIL(2) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(2))));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -431,9 +425,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_INSERTROW)
     if (obj != nullptr) {
       RBOOL(obj->insertRow(PINT(1), HB_ISNIL(2) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(2))));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -584,9 +576,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_PARENT)
       auto ptr = obj->parent();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -975,9 +965,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SETITEM)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

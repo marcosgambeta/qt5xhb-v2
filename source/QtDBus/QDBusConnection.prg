@@ -109,9 +109,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_NEW)
     */
     auto obj = new QDBusConnection(*PQDBUSCONNECTION(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -295,9 +293,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CALLWITHCALLBACK)
     if (obj != nullptr) {
       RBOOL(obj->callWithCallback(*PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), OPINT(4, -1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -393,9 +389,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECT)
       RBOOL(obj->connect(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), PQOBJECT(7),
                          PCONSTCHAR(8)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -441,9 +435,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECT)
       RBOOL(obj->disconnect(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6),
                             PQOBJECT(7), PCONSTCHAR(8)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -639,9 +631,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECTTOBUS)
 
     auto ptr = new QDBusConnection(QDBusConnection::connectToBus(PQSTRING(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QDBUSCONNECTION", true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -658,9 +648,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECTTOPEER)
     auto ptr = new QDBusConnection(QDBusConnection::connectToPeer(PQSTRING(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QDBUSCONNECTION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -677,9 +665,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECTFROMBUS)
 #endif
     QDBusConnection::disconnectFromBus(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -698,9 +684,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECTFROMPEER)
 #endif
     QDBusConnection::disconnectFromPeer(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -720,9 +704,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_LOCALMACHINEID)
     auto ptr = new QByteArray(QDBusConnection::localMachineId());
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -740,9 +722,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_SESSIONBUS)
     auto ptr = new QDBusConnection(QDBusConnection::sessionBus());
     Qt5xHb::createReturnClass(ptr, "QDBUSCONNECTION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -760,9 +740,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_SYSTEMBUS)
     auto ptr = new QDBusConnection(QDBusConnection::systemBus());
     Qt5xHb::createReturnClass(ptr, "QDBUSCONNECTION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -780,9 +758,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_SENDER)
     auto ptr = new QDBusConnection(QDBusConnection::sender());
     Qt5xHb::createReturnClass(ptr, "QDBUSCONNECTION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -809,9 +785,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -842,9 +816,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

@@ -119,9 +119,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_NEW)
     auto obj = new QGLFramebufferObject(*PQSIZE(1), static_cast<QGLFramebufferObject::Attachment>(hb_parni(2)),
                                         OPGLENUM(3, GL_TEXTURE_2D), OPGLENUM(4, GL_RGBA8));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -214,9 +212,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_DRAWTEXTURE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -446,9 +442,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER)
     QGLFramebufferObject::blitFramebuffer(PQGLFRAMEBUFFEROBJECT(1), *PQRECT(2), PQGLFRAMEBUFFEROBJECT(3), *PQRECT(4),
                                           OPGLBITFIELD(5, GL_COLOR_BUFFER_BIT), OPGLENUM(6, GL_NEAREST));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -467,9 +461,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFERBLIT)
 #endif
     RBOOL(QGLFramebufferObject::hasOpenGLFramebufferBlit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -486,9 +478,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFEROBJECTS)
 #endif
     RBOOL(QGLFramebufferObject::hasOpenGLFramebufferObjects());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

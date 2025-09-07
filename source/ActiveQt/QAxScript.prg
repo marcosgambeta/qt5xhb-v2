@@ -72,9 +72,7 @@ HB_FUNC_STATIC(QAXSCRIPT_NEW)
   {
     auto obj = new QAxScript(PQSTRING(1), PQAXSCRIPTMANAGER(2));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -131,9 +129,7 @@ HB_FUNC_STATIC(QAXSCRIPT_CALL)
       auto ptr = new QVariant(obj->call(PQSTRING(1), PQVARIANTLIST(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

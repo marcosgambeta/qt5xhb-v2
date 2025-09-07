@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QSTATE_NEW)
     */
     auto obj = new QState(static_cast<QState::ChildMode>(hb_parni(1)), OPQSTATE(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -145,9 +143,7 @@ HB_FUNC_STATIC(QSTATE_ADDTRANSITION)
       auto ptr = obj->addTransition(PQABSTRACTSTATE(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTTRANSITION");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

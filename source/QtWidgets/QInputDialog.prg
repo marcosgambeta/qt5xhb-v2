@@ -114,9 +114,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_NEW)
     auto obj = new QInputDialog(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
                                                                    : static_cast<Qt::WindowFlags>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1193,9 +1191,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETDOUBLE)
         OPINT(7, 1), &par8, HB_ISNIL(9) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(9))));
     hb_storl(par8, 8);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1219,9 +1215,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETINT)
         &par8, HB_ISNIL(9) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(9))));
     hb_storl(par8, 8);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1247,9 +1241,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETITEM)
         HB_ISNIL(9) ? static_cast<Qt::InputMethodHints>(Qt::ImhNone) : static_cast<Qt::InputMethodHints>(hb_parni(9))));
     hb_storl(par7, 7);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1278,9 +1270,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETTEXT)
         HB_ISNIL(8) ? static_cast<Qt::InputMethodHints>(Qt::ImhNone) : static_cast<Qt::InputMethodHints>(hb_parni(8))));
     hb_storl(par6, 6);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1304,9 +1294,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETMULTILINETEXT)
         HB_ISNIL(7) ? static_cast<Qt::InputMethodHints>(Qt::ImhNone) : static_cast<Qt::InputMethodHints>(hb_parni(7))));
     hb_storl(par5, 5);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

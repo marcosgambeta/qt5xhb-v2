@@ -109,9 +109,7 @@ HB_FUNC_STATIC(QMENU_NEW)
     */
     auto obj = new QMenu(PQSTRING(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -299,9 +297,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -344,9 +340,7 @@ HB_FUNC_STATIC(QMENU_ADDMENU)
           obj->addMenu(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2));
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -491,9 +485,7 @@ HB_FUNC_STATIC(QMENU_EXEC)
     }
     auto ptr = QMenu::exec(par1, *PQPOINT(2), OPQACTION(3, 0), OPQWIDGET(4, 0));
     Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -939,9 +931,7 @@ HB_FUNC_STATIC(QMENU_ADDSECTION)
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -978,9 +968,7 @@ HB_FUNC_STATIC(QMENU_INSERTSECTION)
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

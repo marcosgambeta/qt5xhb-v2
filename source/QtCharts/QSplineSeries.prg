@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QSPLINESERIES_NEW)
   {
     auto obj = new QSplineSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

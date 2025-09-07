@@ -99,9 +99,7 @@ HB_FUNC_STATIC(QDOMELEMENT_NEW)
     */
     auto obj = new QDomElement(*PQDOMELEMENT(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -614,9 +612,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     HB_FUNC_EXEC(QDOMELEMENT_SETATTRIBUTE2);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -780,9 +776,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS)
   else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3))
   {
     HB_FUNC_EXEC(QDOMELEMENT_SETATTRIBUTENS2);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

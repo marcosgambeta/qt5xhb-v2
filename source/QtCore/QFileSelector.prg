@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QFILESELECTOR_NEW)
   {
     auto obj = new QFileSelector(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -112,9 +110,7 @@ HB_FUNC_STATIC(QFILESELECTOR_SELECT)
       auto ptr = new QUrl(obj->select(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

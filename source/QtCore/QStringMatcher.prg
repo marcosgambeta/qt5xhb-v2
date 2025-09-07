@@ -96,9 +96,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_NEW)
     */
     auto obj = new QStringMatcher(*PQSTRINGMATCHER(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -191,9 +189,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_INDEXIN)
     if (obj != nullptr) {
       RINT(obj->indexIn(PQCHAR(1), PINT(2), OPINT(3, 0)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -265,9 +261,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -298,9 +292,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

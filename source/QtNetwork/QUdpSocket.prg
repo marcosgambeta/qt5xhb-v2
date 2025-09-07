@@ -72,9 +72,7 @@ HB_FUNC_STATIC(QUDPSOCKET_NEW)
   {
     auto obj = new QUdpSocket(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -122,9 +120,7 @@ HB_FUNC_STATIC(QUDPSOCKET_JOINMULTICASTGROUP)
     if (obj != nullptr) {
       RBOOL(obj->joinMulticastGroup(*PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -152,9 +148,7 @@ HB_FUNC_STATIC(QUDPSOCKET_LEAVEMULTICASTGROUP)
     if (obj != nullptr) {
       RBOOL(obj->leaveMulticastGroup(*PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -320,9 +314,7 @@ HB_FUNC_STATIC(QUDPSOCKET_WRITEDATAGRAM)
     if (obj != nullptr) {
       RQINT64(obj->writeDatagram(*PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NEW)
     */
     auto obj = new QDomDocumentType(*PQDOMDOCUMENTTYPE(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

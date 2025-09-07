@@ -95,9 +95,7 @@ HB_FUNC_STATIC(QBITMAP_NEW)
     */
     auto obj = new QBitmap(PQSTRING(1), OPCONSTCHAR(2, nullptr));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -180,9 +178,7 @@ HB_FUNC_STATIC(QBITMAP_FROMDATA)
                                                          : static_cast<QImage::Format>(hb_parni(3))));
     Qt5xHb::createReturnClass(ptr, "QBITMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -202,9 +198,7 @@ HB_FUNC_STATIC(QBITMAP_FROMIMAGE)
                                                                 : static_cast<Qt::ImageConversionFlags>(hb_parni(2))));
     Qt5xHb::createReturnClass(ptr, "QBITMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -247,9 +241,7 @@ HB_FUNC_STATIC(QBITMAP_TOVARIANT)
   else if (ISNUMPAR(1) && ISQBITMAP(1))
   {
     QBitmap_toVariant2();
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -264,9 +256,7 @@ HB_FUNC_STATIC(QBITMAP_FROMVARIANT)
     QVariant *variant = (QVariant *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
     QBitmap *bitmap = new QBitmap(variant->value<QBitmap>());
     Qt5xHb::createReturnClass(bitmap, "QBITMAP", true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

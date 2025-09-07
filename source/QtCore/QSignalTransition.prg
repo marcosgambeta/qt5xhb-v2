@@ -69,9 +69,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_NEW)
     */
     auto obj = new QSignalTransition(PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3, nullptr));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

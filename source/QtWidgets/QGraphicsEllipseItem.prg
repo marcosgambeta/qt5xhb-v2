@@ -89,9 +89,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_NEW)
     auto obj = new QGraphicsEllipseItem(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
                                         HB_ISNIL(5) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(5)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -162,9 +160,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SETRECT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

@@ -82,9 +82,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_NEW)
   {
     auto obj = new QXmlDefaultHandler();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

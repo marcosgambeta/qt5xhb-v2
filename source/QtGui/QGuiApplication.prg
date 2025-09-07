@@ -257,9 +257,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ALLWINDOWS)
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -276,9 +274,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_APPLICATIONDISPLAYNAME)
 #endif
     RQSTRING(QGuiApplication::applicationDisplayName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -295,9 +291,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_CHANGEOVERRIDECURSOR)
 #endif
     QGuiApplication::changeOverrideCursor(*PQCURSOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -317,9 +311,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_CLIPBOARD)
     auto ptr = QGuiApplication::clipboard();
     Qt5xHb::createReturnQObjectClass(ptr, "QCLIPBOARD");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -336,9 +328,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_DESKTOPSETTINGSAWARE)
 #endif
     RBOOL(QGuiApplication::desktopSettingsAware());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -355,9 +345,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_EXEC)
 #endif
     RINT(QGuiApplication::exec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -375,9 +363,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_FOCUSOBJECT)
     auto ptr = QGuiApplication::focusObject();
     Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -395,9 +381,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_FOCUSWINDOW)
     auto ptr = QGuiApplication::focusWindow();
     Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -415,9 +399,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_FONT)
     auto ptr = new QFont(QGuiApplication::font());
     Qt5xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -435,9 +417,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_INPUTMETHOD)
     auto ptr = QGuiApplication::inputMethod();
     Qt5xHb::createReturnQObjectClass(ptr, "QINPUTMETHOD");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -454,9 +434,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ISLEFTTORIGHT)
 #endif
     RBOOL(QGuiApplication::isLeftToRight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -473,9 +451,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ISRIGHTTOLEFT)
 #endif
     RBOOL(QGuiApplication::isRightToLeft());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -492,9 +468,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_KEYBOARDMODIFIERS)
 #endif
     RENUM(QGuiApplication::keyboardModifiers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -511,9 +485,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_LAYOUTDIRECTION)
 #endif
     RENUM(QGuiApplication::layoutDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -531,9 +503,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_MODALWINDOW)
     auto ptr = QGuiApplication::modalWindow();
     Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -550,9 +520,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_MOUSEBUTTONS)
 #endif
     RENUM(QGuiApplication::mouseButtons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -570,9 +538,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_OVERRIDECURSOR)
     auto ptr = QGuiApplication::overrideCursor();
     Qt5xHb::createReturnClass(ptr, "QCURSOR", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -590,9 +556,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_PALETTE)
     auto ptr = new QPalette(QGuiApplication::palette());
     Qt5xHb::createReturnClass(ptr, "QPALETTE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -609,9 +573,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_PLATFORMNAME)
 #endif
     RQSTRING(QGuiApplication::platformName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -629,9 +591,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_PRIMARYSCREEN)
     auto ptr = QGuiApplication::primaryScreen();
     Qt5xHb::createReturnQObjectClass(ptr, "QSCREEN");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -648,9 +608,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_QUERYKEYBOARDMODIFIERS)
 #endif
     RENUM(QGuiApplication::queryKeyboardModifiers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -667,9 +625,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_QUITONLASTWINDOWCLOSED)
 #endif
     RBOOL(QGuiApplication::quitOnLastWindowClosed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -686,9 +642,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_RESTOREOVERRIDECURSOR)
 #endif
     QGuiApplication::restoreOverrideCursor();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -730,9 +684,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SCREENS)
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -749,9 +701,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME)
 #endif
     QGuiApplication::setApplicationDisplayName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -770,9 +720,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETDESKTOPSETTINGSAWARE)
 #endif
     QGuiApplication::setDesktopSettingsAware(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -791,9 +739,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETFONT)
 #endif
     QGuiApplication::setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -812,9 +758,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETLAYOUTDIRECTION)
 #endif
     QGuiApplication::setLayoutDirection(static_cast<Qt::LayoutDirection>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -833,9 +777,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETOVERRIDECURSOR)
 #endif
     QGuiApplication::setOverrideCursor(*PQCURSOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -854,9 +796,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETPALETTE)
 #endif
     QGuiApplication::setPalette(*PQPALETTE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -875,9 +815,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETQUITONLASTWINDOWCLOSED)
 #endif
     QGuiApplication::setQuitOnLastWindowClosed(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -897,9 +835,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_STYLEHINTS)
     auto ptr = QGuiApplication::styleHints();
     Qt5xHb::createReturnQObjectClass(ptr, "QSTYLEHINTS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -917,9 +853,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_TOPLEVELAT)
     auto ptr = QGuiApplication::topLevelAt(*PQPOINT(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -959,9 +893,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_TOPLEVELWINDOWS)
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -979,9 +911,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_APPLICATIONSTATE)
 #endif
     RENUM(QGuiApplication::applicationState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1000,9 +930,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_HIGHDPISCALEFACTORROUNDINGPOLICY)
 #endif
     RENUM(QGuiApplication::highDpiScaleFactorRoundingPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1021,9 +949,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ISFALLBACKSESSIONMANAGEMENTENABLED)
 #endif
     RBOOL(QGuiApplication::isFallbackSessionManagementEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1066,9 +992,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SCREENAT)
     auto ptr = QGuiApplication::screenAt(*PQPOINT(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QSCREEN");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1087,9 +1011,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETFALLBACKSESSIONMANAGEMENTENABLED)
 #endif
     QGuiApplication::setFallbackSessionManagementEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1111,9 +1033,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETHIGHDPISCALEFACTORROUNDINGPOLICY)
     QGuiApplication::setHighDpiScaleFactorRoundingPolicy(
         static_cast<Qt::HighDpiScaleFactorRoundingPolicy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1134,9 +1054,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SYNC)
 #endif
     QGuiApplication::sync();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

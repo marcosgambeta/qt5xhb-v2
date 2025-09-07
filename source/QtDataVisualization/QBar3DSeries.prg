@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_NEW)
     auto obj = new QBar3DSeries(PQBARDATAPROXY(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -288,9 +286,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_INVALIDSELECTIONPOSITION)
     auto ptr = new QPoint(QBar3DSeries::invalidSelectionPosition());
     Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

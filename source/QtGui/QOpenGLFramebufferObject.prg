@@ -227,9 +227,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOPENGLFRAMEBUFFEROBJECTFORMAT(3))
   {
     HB_FUNC_EXEC(QOPENGLFRAMEBUFFEROBJECT_NEW8);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -564,9 +562,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_BINDDEFAULT)
 #endif
     RBOOL(QOpenGLFramebufferObject::bindDefault());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -583,9 +579,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFEROBJECTS)
 #endif
     RBOOL(QOpenGLFramebufferObject::hasOpenGLFramebufferObjects());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -602,9 +596,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFERBLIT)
 #endif
     RBOOL(QOpenGLFramebufferObject::hasOpenGLFramebufferBlit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -638,9 +630,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER)
                                               OPGLBITFIELD(3, GL_COLOR_BUFFER_BIT), OPGLENUM(4, GL_NEAREST));
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -666,9 +656,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -699,9 +687,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

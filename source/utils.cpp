@@ -34,9 +34,7 @@ void createReturnClass(void *ptr, const char *classname)
     hb_itemRelease(pItem);
     hb_itemReturn(pObject);
     hb_itemRelease(pObject);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -60,9 +58,7 @@ void createReturnClass(const void *ptr, const char *classname)
     hb_itemRelease(pItem);
     hb_itemReturn(pObject);
     hb_itemRelease(pObject);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -89,9 +85,7 @@ void createReturnClass(void *ptr, const char *classname, bool destroy)
     hb_itemRelease(pDestroy);
     hb_itemReturn(pObject);
     hb_itemRelease(pObject);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -118,9 +112,7 @@ void createReturnClass(const void *ptr, const char *classname, bool destroy)
     hb_itemRelease(pDestroy);
     hb_itemReturn(pObject);
     hb_itemRelease(pObject);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -391,9 +383,7 @@ void createReturnQObjectClass(QObject *ptr, const char *classname)
     hb_itemRelease(pItem);
     hb_itemReturn(pObject);
     hb_itemRelease(pObject);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -427,9 +417,7 @@ void createReturnQObjectClass(const QObject *ptr, const char *classname)
     hb_itemRelease(pItem);
     hb_itemReturn(pObject);
     hb_itemRelease(pObject);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -463,9 +451,7 @@ void createReturnQWidgetClass(QWidget *ptr, const char *classname)
     hb_itemRelease(pItem);
     hb_itemReturn(pObject);
     hb_itemRelease(pObject);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -499,9 +485,7 @@ void createReturnQWidgetClass(const QWidget *ptr, const char *classname)
     hb_itemRelease(pItem);
     hb_itemReturn(pObject);
     hb_itemRelease(pObject);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -609,9 +593,7 @@ void convert_qvariantlist_to_array(const QVariantList &list)
       hb_arrayAddForward(pArray, pObject);
       hb_itemRelease(pObject);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QVARIANT", HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -642,9 +624,7 @@ PHB_ITEM returnQModelIndexObject(void *ptr)
     auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -675,9 +655,7 @@ PHB_ITEM returnQVariantObject(void *ptr)
     auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QVARIANT", HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -708,9 +686,7 @@ PHB_ITEM returnQPainterObject(void *ptr)
     auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QPAINTER", HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -741,9 +717,7 @@ PHB_ITEM returnQStyleOptionViewItemObject(void *ptr)
     auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSTYLEOPTIONVIEWITEM", HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -774,9 +748,7 @@ PHB_ITEM returnQLocaleObject(void *ptr)
     auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QLOCALE", HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -812,9 +784,7 @@ PHB_ITEM returnQWidgetObject(QWidget *ptr)
     auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QWIDGET", HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -850,9 +820,7 @@ PHB_ITEM returnQObjectObject(QObject *ptr)
     auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QOBJECT", HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -883,9 +851,7 @@ PHB_ITEM returnQRectObject(void *ptr)
     auto pItem = hb_itemPutPtr(nullptr, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QRECT", HB_ERR_ARGS_BASEPARAMS);
   }
 

@@ -419,9 +419,7 @@ HB_FUNC_STATIC(QCLIPBOARD_TEXT)
                                            : static_cast<QClipboard::Mode>(hb_parni(2))));
       hb_storc(QSTRINGTOSTRING(par1), 1);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

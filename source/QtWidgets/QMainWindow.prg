@@ -117,9 +117,7 @@ HB_FUNC_STATIC(QMAINWINDOW_NEW)
     auto obj = new QMainWindow(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
                                                                   : static_cast<Qt::WindowFlags>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -169,9 +167,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDDOCKWIDGET)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -215,9 +211,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
       auto ptr = obj->addToolBar(PQSTRING(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QTOOLBAR");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

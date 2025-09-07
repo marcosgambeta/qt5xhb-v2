@@ -142,9 +142,7 @@ int HAbstractTableModelV2::rowCount(const QModelIndex &parent) const
     {
       return (int)hb_itemGetNI(hb_vmEvalBlockV(m_rowCountBlock, 0));
     }
-  }
-  else
-  {
+  } else {
     return 0;
   }
 }
@@ -161,9 +159,7 @@ int HAbstractTableModelV2::columnCount(const QModelIndex &parent) const
     {
       return (int)hb_itemGetNI(hb_vmEvalBlockV(m_columnCountBlock, 0));
     }
-  }
-  else
-  {
+  } else {
     return 0;
   }
 }
@@ -191,9 +187,7 @@ QVariant HAbstractTableModelV2::data(const QModelIndex &index, int role) const
     hb_itemRelease(pRet);
 
     return data;
-  }
-  else
-  {
+  } else {
     return data;
   }
 }
@@ -222,9 +216,7 @@ QVariant HAbstractTableModelV2::headerData(int section, Qt::Orientation orientat
     hb_itemRelease(pRet);
 
     return data;
-  }
-  else
-  {
+  } else {
     return data;
   }
 }
@@ -249,9 +241,7 @@ Qt::ItemFlags HAbstractTableModelV2::flags(const QModelIndex &index) const
     hb_itemRelease(pRet);
 
     return flags;
-  }
-  else
-  {
+  } else {
     return flags;
   }
 }
@@ -281,9 +271,7 @@ bool HAbstractTableModelV2::setData(const QModelIndex &index, const QVariant &va
     hb_itemRelease(pRet);
 
     return success;
-  }
-  else
-  {
+  } else {
     return success;
   }
 }

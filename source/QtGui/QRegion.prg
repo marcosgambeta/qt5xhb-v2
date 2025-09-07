@@ -121,9 +121,7 @@ HB_FUNC_STATIC(QREGION_NEW)
     */
     auto obj = new QRegion(*PQBITMAP(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -237,9 +235,7 @@ HB_FUNC_STATIC(QREGION_CONTAINS)
     if (obj != nullptr) {
       RBOOL(obj->contains(*PQRECT(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -271,9 +267,7 @@ HB_FUNC_STATIC(QREGION_TRANSLATE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -303,9 +297,7 @@ HB_FUNC_STATIC(QREGION_TRANSLATED)
       auto ptr = new QRegion(obj->translated(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -335,9 +327,7 @@ HB_FUNC_STATIC(QREGION_UNITED)
       auto ptr = new QRegion(obj->united(*PQRECT(1)));
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -413,9 +403,7 @@ HB_FUNC_STATIC(QREGION_INTERSECTS)
     if (obj != nullptr) {
       RBOOL(obj->intersects(*PQRECT(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -488,9 +476,7 @@ HB_FUNC_STATIC(QREGION_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -521,9 +507,7 @@ HB_FUNC_STATIC(QREGION_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

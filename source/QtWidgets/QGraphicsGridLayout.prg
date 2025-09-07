@@ -101,9 +101,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_NEW)
     auto obj =
         new QGraphicsGridLayout(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtr(1)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -154,9 +152,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ADDITEM)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -393,9 +389,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ITEMAT)
       auto ptr = obj->itemAt(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

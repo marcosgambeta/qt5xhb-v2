@@ -59,9 +59,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_NEW)
   {
     auto obj = new QErrorMessage(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -110,9 +108,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -129,9 +125,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_QTHANDLER)
     auto ptr = QErrorMessage::qtHandler();
     Qt5xHb::createReturnQWidgetClass(ptr, "QERRORMESSAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

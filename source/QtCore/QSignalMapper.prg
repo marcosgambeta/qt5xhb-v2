@@ -73,9 +73,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_NEW)
   {
     auto obj = new QSignalMapper(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -150,9 +148,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -231,9 +227,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
       auto ptr = obj->mapping(PQOBJECT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -265,9 +259,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAP)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

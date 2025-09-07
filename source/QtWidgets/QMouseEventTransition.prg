@@ -75,9 +75,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_NEW)
     auto obj = new QMouseEventTransition(PQOBJECT(1), static_cast<QEvent::Type>(hb_parni(2)),
                                          static_cast<Qt::MouseButton>(hb_parni(3)), OPQSTATE(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

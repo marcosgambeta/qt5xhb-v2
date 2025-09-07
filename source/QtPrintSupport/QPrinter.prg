@@ -144,9 +144,7 @@ HB_FUNC_STATIC(QPRINTER_NEW)
         new QPrinter(*PQPRINTERINFO(1), HB_ISNIL(2) ? static_cast<QPrinter::PrinterMode>(QPrinter::ScreenResolution)
                                                     : static_cast<QPrinter::PrinterMode>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -704,9 +702,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGEMARGINS)
       RBOOL(obj->setPageMargins(*PQMARGINSF(1), static_cast<QPageLayout::Unit>(hb_parni(2))));
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -974,9 +970,7 @@ HB_FUNC_STATIC(QPRINTER_PAGERECT)
       auto ptr = new QRectF(obj->pageRect(static_cast<QPrinter::Unit>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1006,9 +1000,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERRECT)
       auto ptr = new QRectF(obj->paperRect(static_cast<QPrinter::Unit>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1037,9 +1029,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERSIZE)
       auto ptr = new QSizeF(obj->paperSize(static_cast<QPrinter::Unit>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1408,9 +1398,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSIZE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1694,9 +1682,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGESIZE)
       RBOOL(obj->setPageSize(*PQPAGESIZE(1)));
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

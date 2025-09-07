@@ -78,9 +78,7 @@ HB_FUNC_STATIC(QTEXTTABLE_NEW)
   {
     auto obj = new QTextTable(PQTEXTDOCUMENT(1));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -304,9 +302,7 @@ HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -419,9 +415,7 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
       auto ptr = new QTextTableCell(obj->cellAt(*PQTEXTCURSOR(1)));
       Qt5xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

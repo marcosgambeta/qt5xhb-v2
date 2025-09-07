@@ -103,9 +103,7 @@ HB_FUNC_STATIC(QTOOLBAR_NEW)
     */
     auto obj = new QToolBar(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -152,9 +150,7 @@ HB_FUNC_STATIC(QTOOLBAR_ACTIONAT)
       auto ptr = obj->actionAt(*PQPOINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -223,9 +219,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
                                 PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

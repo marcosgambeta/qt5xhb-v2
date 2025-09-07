@@ -58,9 +58,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_NEW)
   {
     auto obj = new QAccessibleValueChangeEvent(PQOBJECT(1), *PQVARIANT(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

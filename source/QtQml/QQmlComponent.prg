@@ -114,9 +114,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_NEW)
     auto obj = new QQmlComponent(PQQMLENGINE(1), *PQURL(2), static_cast<QQmlComponent::CompilationMode>(hb_parni(3)),
                                  OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -214,9 +212,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_CREATE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -434,9 +430,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_LOADURL)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

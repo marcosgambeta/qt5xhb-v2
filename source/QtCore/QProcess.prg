@@ -118,9 +118,7 @@ HB_FUNC_STATIC(QPROCESS_NEW)
   {
     auto obj = new QProcess(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -727,9 +725,7 @@ HB_FUNC_STATIC(QPROCESS_START)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1079,9 +1075,7 @@ HB_FUNC_STATIC(QPROCESS_EXECUTE)
     */
 
     RINT(QProcess::execute(PQSTRING(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1129,9 +1123,7 @@ HB_FUNC_STATIC(QPROCESS_STARTDETACHED)
       hb_stornll(par1, 1);
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1147,9 +1139,7 @@ HB_FUNC_STATIC(QPROCESS_SYSTEMENVIRONMENT)
 #endif
     RQSTRINGLIST(QProcess::systemEnvironment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1416,9 +1406,7 @@ HB_FUNC_STATIC(QPROCESS_NULLDEVICE)
 #endif
     RQSTRING(QProcess::nullDevice());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

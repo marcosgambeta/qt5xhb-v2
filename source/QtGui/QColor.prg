@@ -207,9 +207,7 @@ HB_FUNC_STATIC(QCOLOR_NEW)
     */
     auto obj = new QColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1707,9 +1705,7 @@ HB_FUNC_STATIC(QCOLOR_SETRGB)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1986,9 +1982,7 @@ HB_FUNC_STATIC(QCOLOR_COLORNAMES)
 #endif
     RQSTRINGLIST(QColor::colorNames());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2006,9 +2000,7 @@ HB_FUNC_STATIC(QCOLOR_FROMCMYK)
     auto ptr = new QColor(QColor::fromCmyk(PINT(1), PINT(2), PINT(3), PINT(4), OPINT(5, 255)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2026,9 +2018,7 @@ HB_FUNC_STATIC(QCOLOR_FROMCMYKF)
     auto ptr = new QColor(QColor::fromCmykF(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5, 1.0)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2046,9 +2036,7 @@ HB_FUNC_STATIC(QCOLOR_FROMHSL)
     auto ptr = new QColor(QColor::fromHsl(PINT(1), PINT(2), PINT(3), OPINT(4, 255)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2066,9 +2054,7 @@ HB_FUNC_STATIC(QCOLOR_FROMHSLF)
     auto ptr = new QColor(QColor::fromHslF(PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4, 1.0)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2086,9 +2072,7 @@ HB_FUNC_STATIC(QCOLOR_FROMHSV)
     auto ptr = new QColor(QColor::fromHsv(PINT(1), PINT(2), PINT(3), OPINT(4, 255)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2106,9 +2090,7 @@ HB_FUNC_STATIC(QCOLOR_FROMHSVF)
     auto ptr = new QColor(QColor::fromHsvF(PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4, 1.0)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2133,9 +2115,7 @@ HB_FUNC_STATIC(QCOLOR_FROMRGB)
 
     auto ptr = new QColor(QColor::fromRgb(PINT(1), PINT(2), PINT(3), OPINT(4, 255)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2152,9 +2132,7 @@ HB_FUNC_STATIC(QCOLOR_FROMRGBF)
     auto ptr = new QColor(QColor::fromRgbF(PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4, 1.0)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2172,9 +2150,7 @@ HB_FUNC_STATIC(QCOLOR_FROMRGBA)
     auto ptr = new QColor(QColor::fromRgba(PQRGB(1)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2191,9 +2167,7 @@ HB_FUNC_STATIC(QCOLOR_ISVALIDCOLOR)
 #endif
     RBOOL(QColor::isValidColor(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2207,9 +2181,7 @@ HB_FUNC(QALPHA)
   if (HB_ISNUM(1))
   {
     RINT(qAlpha((QRgb)hb_parni(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2222,9 +2194,7 @@ HB_FUNC(QBLUE)
   if (HB_ISNUM(1))
   {
     RINT(qBlue((QRgb)hb_parni(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2237,9 +2207,7 @@ HB_FUNC(QGRAY1)
   if (HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     RINT(qGray(hb_parni(1), hb_parni(2), hb_parni(3)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2252,9 +2220,7 @@ HB_FUNC(QGRAY2)
   if (HB_ISNUM(1))
   {
     RINT(qGray((QRgb)hb_parni(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2268,9 +2234,7 @@ HB_FUNC(QGRAY)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     HB_FUNC_EXEC(QGRAY2);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2283,9 +2247,7 @@ HB_FUNC(QGREEN)
   if (HB_ISNUM(1))
   {
     RINT(qGreen((QRgb)hb_parni(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2298,9 +2260,7 @@ HB_FUNC(QRED)
   if (HB_ISNUM(1))
   {
     RINT(qRed((QRgb)hb_parni(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2313,9 +2273,7 @@ HB_FUNC(QRGB)
   if (HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     hb_retni(qRgb(hb_parni(1), hb_parni(2), hb_parni(3)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2328,9 +2286,7 @@ HB_FUNC(QRGBA)
   if (HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     hb_retni(qRgba(hb_parni(1), hb_parni(2), hb_parni(3), hb_parni(4)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2372,9 +2328,7 @@ HB_FUNC_STATIC(QCOLOR_TOVARIANT)
   else if (ISNUMPAR(1) && ISQCOLOR(1))
   {
     QColor_toVariant2();
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2389,9 +2343,7 @@ HB_FUNC_STATIC(QCOLOR_FROMVARIANT)
     QVariant *variant = (QVariant *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
     QColor *color = new QColor(variant->value<QColor>());
     Qt5xHb::createReturnClass(color, "QCOLOR", true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2417,9 +2369,7 @@ HB_FUNC_STATIC(QCOLOR_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -2450,9 +2400,7 @@ HB_FUNC_STATIC(QCOLOR_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

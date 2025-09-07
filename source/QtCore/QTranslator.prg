@@ -60,9 +60,7 @@ HB_FUNC_STATIC(QTRANSLATOR_NEW)
   {
     auto obj = new QTranslator(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -146,9 +144,7 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
     if (obj != nullptr) {
       RBOOL(obj->load(PCONSTUCHAR(1), PINT(2), OPQSTRING(3, QString())));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

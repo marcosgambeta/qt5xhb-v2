@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_NEW)
   {
     auto obj = new QGraphicsItemGroup(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(1)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

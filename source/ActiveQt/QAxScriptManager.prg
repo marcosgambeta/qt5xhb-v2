@@ -69,9 +69,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_NEW)
   {
     auto obj = new QAxScriptManager(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -115,9 +113,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_ADDOBJECT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -155,9 +151,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_CALL)
       auto ptr = new QVariant(obj->call(PQSTRING(1), PQVARIANTLIST(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -203,9 +197,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_LOAD)
       auto ptr = obj->load(PQSTRING(1), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QAXSCRIPT");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -262,9 +254,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_REGISTERENGINE)
 #endif
     RBOOL(QAxScriptManager::registerEngine(PQSTRING(1), PQSTRING(2), OPQSTRING(3, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -279,9 +269,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_SCRIPTFILEFILTER)
 #endif
     RQSTRING(QAxScriptManager::scriptFileFilter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

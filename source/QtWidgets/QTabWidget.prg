@@ -114,9 +114,7 @@ HB_FUNC_STATIC(QTABWIDGET_NEW)
   {
     auto obj = new QTabWidget(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -162,9 +160,7 @@ HB_FUNC_STATIC(QTABWIDGET_ADDTAB)
       RINT(obj->addTab(PQWIDGET(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(2)) : QIcon(hb_parc(2)),
                        PQSTRING(3)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -558,9 +554,7 @@ HB_FUNC_STATIC(QTABWIDGET_INSERTTAB)
                           HB_ISOBJECT(3) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(3)) : QIcon(hb_parc(3)),
                           PQSTRING(4)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

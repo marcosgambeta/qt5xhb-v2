@@ -78,9 +78,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_NEW)
         new QSplashScreen(PQWIDGET(1), HB_ISNIL(2) ? QPixmap() : *static_cast<QPixmap *>(Qt5xHb::itemGetPtr(2)),
                           HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

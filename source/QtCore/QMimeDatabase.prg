@@ -73,9 +73,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_NEW)
   {
     auto obj = new QMimeDatabase();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -150,9 +148,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILE)
                                       : static_cast<QMimeDatabase::MatchMode>(hb_parni(2))));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -231,9 +227,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORDATA)
       auto ptr = new QMimeType(obj->mimeTypeForData(PQIODEVICE(1)));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -287,9 +281,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA)
       auto ptr = new QMimeType(obj->mimeTypeForFileNameAndData(PQSTRING(1), *PQBYTEARRAY(2)));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -387,9 +379,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -420,9 +410,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

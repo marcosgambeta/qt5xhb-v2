@@ -89,9 +89,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_NEW)
     auto obj = new QQmlApplicationEngine(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -194,9 +192,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

@@ -148,9 +148,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_NEW)
                                  : static_cast<QOpenGLTexture::MipMapGeneration>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -307,9 +305,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BIND)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -347,9 +343,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_RELEASE)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -381,9 +375,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISBOUND)
       RBOOL(obj->isBound(PUINT(1)));
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1016,9 +1008,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_GENERATEMIPMAPS)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1059,9 +1049,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETSWIZZLEMASK)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1359,9 +1347,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETWRAPMODE)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1516,9 +1502,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR)
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     HB_FUNC_EXEC(QOPENGLTEXTURE_SETBORDERCOLOR4);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1645,9 +1629,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     HB_FUNC_EXEC(QOPENGLTEXTURE_BORDERCOLOR3);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1856,9 +1838,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BOUNDTEXTUREID)
 
     RGLUINT(QOpenGLTexture::boundTextureId(PUINT(1), static_cast<QOpenGLTexture::BindingTarget>(hb_parni(2))));
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1875,9 +1855,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_HASFEATURE)
 #endif
     RBOOL(QOpenGLTexture::hasFeature(static_cast<QOpenGLTexture::Feature>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1905,9 +1883,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -1938,9 +1914,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

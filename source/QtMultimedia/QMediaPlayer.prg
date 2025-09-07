@@ -116,9 +116,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_NEW)
     auto obj = new QMediaPlayer(OPQOBJECT(1, nullptr), HB_ISNIL(2) ? static_cast<QMediaPlayer::Flags>(0)
                                                                    : static_cast<QMediaPlayer::Flags>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -779,9 +777,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETVIDEOOUTPUT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -956,9 +952,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_HASSUPPORT)
                                    HB_ISNIL(3) ? static_cast<QMediaPlayer::Flags>(QMediaPlayer::Flags())
                                                : static_cast<QMediaPlayer::Flags>(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -976,9 +970,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SUPPORTEDMIMETYPES)
     RQSTRINGLIST(QMediaPlayer::supportedMimeTypes(HB_ISNIL(1) ? static_cast<QMediaPlayer::Flags>(QMediaPlayer::Flags())
                                                               : static_cast<QMediaPlayer::Flags>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

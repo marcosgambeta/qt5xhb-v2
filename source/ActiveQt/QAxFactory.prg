@@ -423,9 +423,7 @@ HB_FUNC_STATIC(QAXFACTORY_ISSERVER)
 #endif
     RBOOL(QAxFactory::isServer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -440,9 +438,7 @@ HB_FUNC_STATIC(QAXFACTORY_REGISTERACTIVEOBJECT)
 #endif
     RBOOL(QAxFactory::registerActiveObject(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -457,9 +453,7 @@ HB_FUNC_STATIC(QAXFACTORY_SERVERDIRPATH)
 #endif
     RQSTRING(QAxFactory::serverDirPath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -474,9 +468,7 @@ HB_FUNC_STATIC(QAXFACTORY_SERVERFILEPATH)
 #endif
     RQSTRING(QAxFactory::serverFilePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -492,9 +484,7 @@ HB_FUNC_STATIC(QAXFACTORY_STARTSERVER)
     RBOOL(QAxFactory::startServer(HB_ISNIL(1) ? static_cast<QAxFactory::ServerType>(QAxFactory::MultipleInstances)
                                               : static_cast<QAxFactory::ServerType>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -509,9 +499,7 @@ HB_FUNC_STATIC(QAXFACTORY_STOPSERVER)
 #endif
     RBOOL(QAxFactory::stopServer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

@@ -79,9 +79,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_NEW)
   {
     auto obj = new QSqlQueryModel(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -203,9 +201,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_SETQUERY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -235,9 +231,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_RECORD)
       auto ptr = new QSqlRecord(obj->record());
       Qt5xHb::createReturnClass(ptr, "QSQLRECORD", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

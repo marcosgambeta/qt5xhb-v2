@@ -133,9 +133,7 @@ HB_FUNC_STATIC(QURL_NEW)
     */
     auto obj = new QUrl(PQSTRING(1), static_cast<QUrl::ParsingMode>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -502,9 +500,7 @@ HB_FUNC_STATIC(QURL_PORT)
     if (obj != nullptr) {
       RINT(obj->port(PINT(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -758,9 +754,7 @@ HB_FUNC_STATIC(QURL_SETURL)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -992,9 +986,7 @@ HB_FUNC_STATIC(QURL_FROMACE)
 #endif
     RQSTRING(QUrl::fromAce(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1019,9 +1011,7 @@ HB_FUNC_STATIC(QURL_FROMENCODED)
 
     auto ptr = new QUrl(QUrl::fromEncoded(*PQBYTEARRAY(1), static_cast<QUrl::ParsingMode>(hb_parni(2))));
     Qt5xHb::createReturnClass(ptr, "QURL", true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1038,9 +1028,7 @@ HB_FUNC_STATIC(QURL_FROMLOCALFILE)
     auto ptr = new QUrl(QUrl::fromLocalFile(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1057,9 +1045,7 @@ HB_FUNC_STATIC(QURL_FROMPERCENTENCODING)
 #endif
     RQSTRING(QUrl::fromPercentEncoding(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1077,9 +1063,7 @@ HB_FUNC_STATIC(QURL_FROMUSERINPUT)
     auto ptr = new QUrl(QUrl::fromUserInput(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1096,9 +1080,7 @@ HB_FUNC_STATIC(QURL_SETIDNWHITELIST)
 #endif
     QUrl::setIdnWhitelist(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1118,9 +1100,7 @@ HB_FUNC_STATIC(QURL_TOACE)
     auto ptr = new QByteArray(QUrl::toAce(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1141,9 +1121,7 @@ HB_FUNC_STATIC(QURL_TOPERCENTENCODING)
         HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(3))));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1170,9 +1148,7 @@ HB_FUNC_STATIC(QURL_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -1203,9 +1179,7 @@ HB_FUNC_STATIC(QURL_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

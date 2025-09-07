@@ -416,9 +416,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_CREATEDEFAULTSOURCE)
     auto ptr = QGeoPositionInfoSource::createDefaultSource(PQOBJECT(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QGEOPOSITIONINFOSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -438,9 +436,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_CREATESOURCE)
     auto ptr = QGeoPositionInfoSource::createSource(PQSTRING(1), PQOBJECT(2));
     Qt5xHb::createReturnQObjectClass(ptr, "QGEOPOSITIONINFOSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -459,9 +455,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_AVAILABLESOURCES)
 #endif
     RQSTRINGLIST(QGeoPositionInfoSource::availableSources());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

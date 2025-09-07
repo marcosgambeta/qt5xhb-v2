@@ -68,9 +68,7 @@ HB_FUNC_STATIC(Q3DLIGHT_NEW)
   {
     auto obj = new Q3DLight(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

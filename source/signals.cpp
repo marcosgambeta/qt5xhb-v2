@@ -195,9 +195,7 @@ void Signals::disconnectAllSignals(QObject *obj, bool children)
         m_list4->replace(i, connection);
       }
     }
-  }
-  else
-  {
+  } else {
     // obtém a lista de filhos, netos, bisnetos, etc...
     auto objectList = obj->findChildren<QObject *>();
 
@@ -287,9 +285,7 @@ PHB_ITEM Signals::returnObject(void *ptr, const char *classname)
     hb_itemPutPtr(pItem, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -322,9 +318,7 @@ PHB_ITEM Signals::returnQObject(QObject *ptr, const char *classname)
     hb_itemPutPtr(pItem, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 

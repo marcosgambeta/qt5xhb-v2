@@ -107,9 +107,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_NEW)
     auto obj = new QCandlestickSet(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5, 0.0), OPQOBJECT(6, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

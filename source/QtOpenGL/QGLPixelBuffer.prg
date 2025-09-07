@@ -89,9 +89,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_NEW)
         PINT(1), PINT(2), HB_ISNIL(3) ? QGLFormat::defaultFormat() : *static_cast<QGLFormat *>(Qt5xHb::itemGetPtr(3)),
         OPQGLWIDGET(4, nullptr));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -145,9 +143,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_BINDTEXTURE)
     if (obj != nullptr) {
       RGLUINT(obj->bindTexture(PQSTRING(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -250,9 +246,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_DRAWTEXTURE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

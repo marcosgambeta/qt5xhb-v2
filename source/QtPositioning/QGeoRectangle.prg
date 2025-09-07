@@ -121,9 +121,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_NEW)
     auto obj = new QGeoRectangle(*PQGEOSHAPE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -541,9 +539,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_CONTAINS)
       RBOOL(obj->contains(*PQGEORECTANGLE(1)));
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

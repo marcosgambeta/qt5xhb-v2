@@ -86,9 +86,7 @@ HB_FUNC_STATIC(QAUDIODECODER_NEW)
   {
     auto obj = new QAudioDecoder(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -482,9 +480,7 @@ HB_FUNC_STATIC(QAUDIODECODER_HASSUPPORT)
 #endif
     RENUM(QAudioDecoder::hasSupport(PQSTRING(1), OPQSTRINGLIST(2, QStringList())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

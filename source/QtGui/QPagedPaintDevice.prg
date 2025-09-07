@@ -297,9 +297,7 @@ HB_FUNC_STATIC(QPAGEDPAINTDEVICE_SETPAGEMARGINS)
       RBOOL(obj->setPageMargins(*PQMARGINSF(1), static_cast<QPageLayout::Unit>(hb_parni(2))));
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

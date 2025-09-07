@@ -464,9 +464,7 @@ HB_FUNC_STATIC(QLAYOUT_SETALIGNMENT)
   else if (ISNUMPAR(2) && ISQLAYOUT(1) && HB_ISNUM(2))
   {
     QLayout_setAlignment3();
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -508,9 +506,7 @@ HB_FUNC_STATIC(QLAYOUT_SETCONTENTSMARGINS)
   else if (ISNUMPAR(1) && ISQMARGINS(1))
   {
     QLayout_setContentsMargins2();
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -914,9 +910,7 @@ HB_FUNC_STATIC(QLAYOUT_CLOSESTACCEPTABLESIZE)
     auto ptr = new QSize(QLayout::closestAcceptableSize(PQWIDGET(1), *PQSIZE(2)));
     Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

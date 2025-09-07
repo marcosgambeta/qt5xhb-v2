@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QDBUSINTERFACE_NEW)
                                               : *static_cast<QDBusConnection *>(Qt5xHb::itemGetPtr(4)),
                                   OPQOBJECT(5, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

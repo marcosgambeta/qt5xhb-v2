@@ -89,9 +89,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_NEW)
   {
     auto obj = new QCommandLineParser();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -355,9 +353,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_PROCESS)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -439,9 +435,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_ISSET)
       RBOOL(obj->isSet(*PQCOMMANDLINEOPTION(1)));
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -473,9 +467,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_VALUE)
       RQSTRING(obj->value(*PQCOMMANDLINEOPTION(1)));
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -507,9 +499,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_VALUES)
       RQSTRINGLIST(obj->values(*PQCOMMANDLINEOPTION(1)));
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -662,9 +652,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -695,9 +683,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

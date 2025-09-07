@@ -95,9 +95,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_NEW)
     */
     auto obj = new QDBusMessage(*PQDBUSMESSAGE(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -153,9 +151,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEREPLY)
       auto ptr = new QDBusMessage(obj->createReply(*PQVARIANT(1)));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -197,9 +193,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERRORREPLY)
       auto ptr = new QDBusMessage(obj->createErrorReply(static_cast<QDBusError::ErrorType>(hb_parni(1)), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -575,9 +569,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATESIGNAL)
     auto ptr = new QDBusMessage(QDBusMessage::createSignal(PQSTRING(1), PQSTRING(2), PQSTRING(3)));
     Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -596,9 +588,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEMETHODCALL)
     auto ptr = new QDBusMessage(QDBusMessage::createMethodCall(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4)));
     Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -633,9 +623,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERROR)
     auto ptr =
         new QDBusMessage(QDBusMessage::createError(static_cast<QDBusError::ErrorType>(hb_parni(1)), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -713,9 +701,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -746,9 +732,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

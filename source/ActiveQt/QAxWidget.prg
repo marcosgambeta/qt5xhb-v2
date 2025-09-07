@@ -95,9 +95,7 @@ HB_FUNC_STATIC(QAXWIDGET_NEW)
     auto obj = new QAxWidget(static_cast<IUnknown *>(hb_parptr(1)), OPQWIDGET(2, nullptr),
                              HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -376,9 +374,7 @@ HB_FUNC_STATIC(QAXWIDGET_DYNAMICCALL)
       auto ptr = new QVariant(obj->dynamicCall(PCONSTCHAR(1), PQVARIANTLIST(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -480,9 +476,7 @@ HB_FUNC_STATIC(QAXWIDGET_QUERYSUBOBJECT)
       auto ptr = obj->querySubObject(PCONSTCHAR(1), PQVARIANTLIST(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

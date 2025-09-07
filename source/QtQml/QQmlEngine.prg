@@ -97,9 +97,7 @@ HB_FUNC_STATIC(QQMLENGINE_NEW)
   {
     auto obj = new QQmlEngine(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -720,9 +718,7 @@ HB_FUNC_STATIC(QQMLENGINE_CONTEXTFOROBJECT)
     auto ptr = QQmlEngine::contextForObject(PQOBJECT(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -739,9 +735,7 @@ HB_FUNC_STATIC(QQMLENGINE_OBJECTOWNERSHIP)
 #endif
     RENUM(QQmlEngine::objectOwnership(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -758,9 +752,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETCONTEXTFOROBJECT)
 #endif
     QQmlEngine::setContextForObject(PQOBJECT(1), PQQMLCONTEXT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -779,9 +771,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETOBJECTOWNERSHIP)
 #endif
     QQmlEngine::setObjectOwnership(PQOBJECT(1), static_cast<QQmlEngine::ObjectOwnership>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

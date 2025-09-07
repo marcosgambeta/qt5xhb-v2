@@ -72,9 +72,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_NEW)
     auto obj = new QSqlRelationalTableModel(
         OPQOBJECT(1, nullptr), HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase *>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

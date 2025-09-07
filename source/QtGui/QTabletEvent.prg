@@ -81,9 +81,7 @@ HB_FUNC_STATIC(QTABLETEVENT_NEW)
                                 PQREAL(6), PINT(7), PINT(8), PQREAL(9), PQREAL(10), PINT(11),
                                 static_cast<Qt::KeyboardModifiers>(hb_parni(12)), PQINT64(13));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

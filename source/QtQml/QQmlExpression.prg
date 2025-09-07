@@ -101,9 +101,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_NEW)
     auto obj = new QQmlExpression(*PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT(2, nullptr), OPQOBJECT(3, nullptr),
                                   OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

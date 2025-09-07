@@ -123,9 +123,7 @@ HB_FUNC_STATIC(QSQLDATABASE_NEW)
     */
     auto obj = new QSqlDatabase(*PQSQLDATABASE(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -595,9 +593,7 @@ HB_FUNC_STATIC(QSQLDATABASE_OPEN)
     if (obj != nullptr) {
       RBOOL(obj->open(PQSTRING(1), PQSTRING(2)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -887,9 +883,7 @@ HB_FUNC_STATIC(QSQLDATABASE_ADDDATABASE)
     auto ptr = new QSqlDatabase(
         QSqlDatabase::addDatabase(PQSQLDRIVER(1), OPQSTRING(2, QLatin1String(QSqlDatabase::defaultConnection))));
     Qt5xHb::createReturnClass(ptr, "QSQLDATABASE", true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -906,9 +900,7 @@ HB_FUNC_STATIC(QSQLDATABASE_CLONEDATABASE)
     auto ptr = new QSqlDatabase(QSqlDatabase::cloneDatabase(*PQSQLDATABASE(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QSQLDATABASE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -925,9 +917,7 @@ HB_FUNC_STATIC(QSQLDATABASE_CONNECTIONNAMES)
 #endif
     RQSTRINGLIST(QSqlDatabase::connectionNames());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -944,9 +934,7 @@ HB_FUNC_STATIC(QSQLDATABASE_CONTAINS)
 #endif
     RBOOL(QSqlDatabase::contains(OPQSTRING(1, QLatin1String(QSqlDatabase::defaultConnection))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -966,9 +954,7 @@ HB_FUNC_STATIC(QSQLDATABASE_DATABASE)
         QSqlDatabase::database(OPQSTRING(1, QLatin1String(QSqlDatabase::defaultConnection)), OPBOOL(2, true)));
     Qt5xHb::createReturnClass(ptr, "QSQLDATABASE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -985,9 +971,7 @@ HB_FUNC_STATIC(QSQLDATABASE_DRIVERS)
 #endif
     RQSTRINGLIST(QSqlDatabase::drivers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1004,9 +988,7 @@ HB_FUNC_STATIC(QSQLDATABASE_ISDRIVERAVAILABLE)
 #endif
     RBOOL(QSqlDatabase::isDriverAvailable(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1023,9 +1005,7 @@ HB_FUNC_STATIC(QSQLDATABASE_REGISTERSQLDRIVER)
 #endif
     QSqlDatabase::registerSqlDriver(PQSTRING(1), PQSQLDRIVERCREATORBASE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1044,9 +1024,7 @@ HB_FUNC_STATIC(QSQLDATABASE_REMOVEDATABASE)
 #endif
     QSqlDatabase::removeDatabase(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1075,9 +1053,7 @@ HB_FUNC_STATIC(QSQLDATABASE_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -1108,9 +1084,7 @@ HB_FUNC_STATIC(QSQLDATABASE_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

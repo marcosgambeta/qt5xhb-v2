@@ -75,9 +75,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_NEW)
     }
     auto obj = new QGestureEvent(par1);
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -137,9 +135,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_ACCEPT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -346,9 +342,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_IGNORE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -387,9 +381,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_ISACCEPTED)
     if (obj != nullptr) {
       RBOOL(obj->isAccepted(static_cast<Qt::GestureType>(hb_parni(1))));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -458,9 +450,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_SETACCEPTED)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

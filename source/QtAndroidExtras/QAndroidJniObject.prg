@@ -101,9 +101,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_NEW)
     auto obj = new QAndroidJniObject(PINT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -179,9 +177,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETOBJECTFIELD)
       Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -261,9 +257,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_CALLSTATICOBJECTMETHOD)
     auto ptr = new QAndroidJniObject(QAndroidJniObject::callStaticObjectMethod((jclass)hb_parptr(1), PCONSTCHAR(2)));
     Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -279,9 +273,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_FROMLOCALREF)
     auto ptr = new QAndroidJniObject(QAndroidJniObject::fromLocalRef(PINT(1)));
     Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -299,9 +291,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_FROMSTRING)
     auto ptr = new QAndroidJniObject(QAndroidJniObject::fromString(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -402,9 +392,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD)
 #endif
 #endif
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -419,9 +407,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_ISCLASSAVAILABLE)
 #endif
     RBOOL(QAndroidJniObject::isClassAvailable(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -454,9 +440,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -487,9 +471,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

@@ -109,9 +109,7 @@ HB_FUNC_STATIC(QFILE_NEW)
     */
     auto obj = new QFile(PQSTRING(1), PQOBJECT(2));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -153,9 +151,7 @@ HB_FUNC_STATIC(QFILE_COPY)
     */
 
     RBOOL(QFile::copy(PQSTRING(1), PQSTRING(2)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -203,9 +199,7 @@ HB_FUNC_STATIC(QFILE_EXISTS)
     */
 
     RBOOL(QFile::exists(PQSTRING(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -299,9 +293,7 @@ HB_FUNC_STATIC(QFILE_LINK)
     */
 
     RBOOL(QFile::link(PQSTRING(1), PQSTRING(2)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -344,9 +336,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
                       HB_ISNIL(3) ? static_cast<QFile::FileHandleFlags>(QFile::DontCloseHandle)
                                   : static_cast<QFile::FileHandleFlags>(hb_parni(3))));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -371,9 +361,7 @@ HB_FUNC_STATIC(QFILE_PERMISSIONS)
     */
 
     RENUM(QFile::permissions(PQSTRING(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -398,9 +386,7 @@ HB_FUNC_STATIC(QFILE_REMOVE)
     */
 
     RBOOL(QFile::remove(PQSTRING(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -425,9 +411,7 @@ HB_FUNC_STATIC(QFILE_RENAME)
     */
 
     RBOOL(QFile::rename(PQSTRING(1), PQSTRING(2)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -452,9 +436,7 @@ HB_FUNC_STATIC(QFILE_RESIZE)
     */
 
     RBOOL(QFile::resize(PQSTRING(1), PQINT64(2)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -504,9 +486,7 @@ HB_FUNC_STATIC(QFILE_SETPERMISSIONS)
     */
 
     RBOOL(QFile::setPermissions(PQSTRING(1), static_cast<QFile::Permissions>(hb_parni(2))));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -531,9 +511,7 @@ HB_FUNC_STATIC(QFILE_SYMLINKTARGET)
     */
 
     RQSTRING(QFile::symLinkTarget(PQSTRING(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -743,9 +721,7 @@ HB_FUNC_STATIC(QFILE_DECODENAME)
     */
 
     RQSTRING(QFile::decodeName(PCONSTCHAR(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -762,9 +738,7 @@ HB_FUNC_STATIC(QFILE_ENCODENAME)
     auto ptr = new QByteArray(QFile::encodeName(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -790,9 +764,7 @@ HB_FUNC_STATIC(QFILE_READLINK)
     */
 
     RQSTRING(QFile::readLink(PQSTRING(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -821,9 +793,7 @@ HB_FUNC_STATIC(QFILE_MOVETOTRASH)
 
     RBOOL(QFile::moveToTrash(PQSTRING(1), nullptr));
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

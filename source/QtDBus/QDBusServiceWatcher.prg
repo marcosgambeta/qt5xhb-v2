@@ -86,9 +86,7 @@ RETURN
                     : static_cast<QDBusServiceWatcher::WatchMode>(hb_parni(3)),
         OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

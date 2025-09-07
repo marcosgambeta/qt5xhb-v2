@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_NEW)
     */
     auto obj = new QTemporaryFile(PQSTRING(1), PQOBJECT(2));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -273,9 +271,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_CREATENATIVEFILE)
 
     auto ptr = QTemporaryFile::createNativeFile(PQSTRING(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QTEMPORARYFILE");
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

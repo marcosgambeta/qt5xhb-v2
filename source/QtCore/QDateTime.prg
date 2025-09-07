@@ -122,9 +122,7 @@ HB_FUNC_STATIC(QDATETIME_NEW)
     */
     auto obj = new QDateTime(*PQDATETIME(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -646,9 +644,7 @@ HB_FUNC_STATIC(QDATETIME_TOSTRING)
       RQSTRING(obj->toString(HB_ISNIL(1) ? static_cast<Qt::DateFormat>(Qt::TextDate)
                                          : static_cast<Qt::DateFormat>(hb_parni(1))));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -736,9 +732,7 @@ HB_FUNC_STATIC(QDATETIME_CURRENTDATETIME)
     auto ptr = new QDateTime(QDateTime::currentDateTime());
     Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -756,9 +750,7 @@ HB_FUNC_STATIC(QDATETIME_CURRENTDATETIMEUTC)
     auto ptr = new QDateTime(QDateTime::currentDateTimeUtc());
     Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -775,9 +767,7 @@ HB_FUNC_STATIC(QDATETIME_CURRENTMSECSSINCEEPOCH)
 #endif
     RQINT64(QDateTime::currentMSecsSinceEpoch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -795,9 +785,7 @@ HB_FUNC_STATIC(QDATETIME_FROMMSECSSINCEEPOCH)
     auto ptr = new QDateTime(QDateTime::fromMSecsSinceEpoch(PQINT64(1)));
     Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -824,9 +812,7 @@ HB_FUNC_STATIC(QDATETIME_FROMSTRING)
 
     auto ptr = new QDateTime(QDateTime::fromString(PQSTRING(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -843,9 +829,7 @@ HB_FUNC_STATIC(QDATETIME_FROMTIME_T)
     auto ptr = new QDateTime(QDateTime::fromTime_t(PUINT(1)));
     Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -872,9 +856,7 @@ HB_FUNC_STATIC(QDATETIME_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -905,9 +887,7 @@ HB_FUNC_STATIC(QDATETIME_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

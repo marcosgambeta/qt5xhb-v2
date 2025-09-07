@@ -69,9 +69,7 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_NEW)
   {
     auto obj = new QSensorGestureManager(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -184,9 +182,7 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER)
     auto ptr = QSensorGestureManager::sensorGestureRecognizer(PQSTRING(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QSENSORGESTURERECOGNIZER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

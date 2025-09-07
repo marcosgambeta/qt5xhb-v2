@@ -296,9 +296,7 @@ HB_FUNC_STATIC(QOBJECT_NEW)
   {
     auto obj = new QObject(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -653,9 +651,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
       hb_itemReturnRelease(pArray);
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1070,9 +1066,7 @@ HB_FUNC_STATIC(QOBJECT_TR)
 #endif
     RQSTRING(QObject::tr(PCONSTCHAR(1), OPCONSTCHAR(2, nullptr), OPINT(3, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1166,9 +1160,7 @@ void _qtxhb_processOnEventMethod(QEvent::Type event)
   else if (ISNUMPAR(0))
   {
     hb_retl(Qt5xHb::Events_disconnect_event(obj, event));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2234,9 +2226,7 @@ HB_FUNC_STATIC(QOBJECT_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -2267,9 +2257,7 @@ HB_FUNC_STATIC(QOBJECT_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

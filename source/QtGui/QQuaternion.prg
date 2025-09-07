@@ -112,9 +112,7 @@ HB_FUNC_STATIC(QQUATERNION_NEW)
     */
     auto obj = new QQuaternion(*PQVECTOR4D(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -231,9 +229,7 @@ HB_FUNC_STATIC(QQUATERNION_SETVECTOR)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -616,9 +612,7 @@ HB_FUNC_STATIC(QQUATERNION_FROMAXISANDANGLE)
 
     auto ptr = new QQuaternion(QQuaternion::fromAxisAndAngle(PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4)));
     Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -635,9 +629,7 @@ HB_FUNC_STATIC(QQUATERNION_SLERP)
     auto ptr = new QQuaternion(QQuaternion::slerp(*PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3)));
     Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -655,9 +647,7 @@ HB_FUNC_STATIC(QQUATERNION_NLERP)
     auto ptr = new QQuaternion(QQuaternion::nlerp(*PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3)));
     Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -684,9 +674,7 @@ HB_FUNC_STATIC(QQUATERNION_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -717,9 +705,7 @@ HB_FUNC_STATIC(QQUATERNION_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

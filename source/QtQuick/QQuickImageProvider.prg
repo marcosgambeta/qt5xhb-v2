@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_NEW)
                                        HB_ISNIL(2) ? static_cast<QQmlImageProviderBase::Flags>(0)
                                                    : static_cast<QQmlImageProviderBase::Flags>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

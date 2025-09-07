@@ -57,9 +57,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINSERTEVENT_NEW)
   {
     auto obj = new QAccessibleTextInsertEvent(PQOBJECT(1), PINT(2), PQSTRING(3));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

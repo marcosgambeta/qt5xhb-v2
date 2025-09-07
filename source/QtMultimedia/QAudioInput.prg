@@ -93,9 +93,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_NEW)
                                HB_ISNIL(2) ? QAudioFormat() : *static_cast<QAudioFormat *>(Qt5xHb::itemGetPtr(2)),
                                OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -431,9 +429,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_START)
       auto ptr = obj->start();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

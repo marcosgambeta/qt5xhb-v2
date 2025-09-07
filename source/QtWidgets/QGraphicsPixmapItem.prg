@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_NEW)
     auto obj = new QGraphicsPixmapItem(*PQPIXMAP(1),
                                        HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -180,9 +178,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_SETOFFSET)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

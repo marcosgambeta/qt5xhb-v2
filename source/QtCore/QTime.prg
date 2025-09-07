@@ -90,9 +90,7 @@ HB_FUNC_STATIC(QTIME_NEW)
     */
     auto obj = new QTime(PINT(1), PINT(2), OPINT(3, 0), OPINT(4, 0));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -249,9 +247,7 @@ HB_FUNC_STATIC(QTIME_ISVALID)
     */
 
     RBOOL(QTime::isValid(PINT(1), PINT(2), PINT(3), OPINT(4, 0)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -466,9 +462,7 @@ HB_FUNC_STATIC(QTIME_TOSTRING)
       RQSTRING(obj->toString(HB_ISNIL(1) ? static_cast<Qt::DateFormat>(Qt::TextDate)
                                          : static_cast<Qt::DateFormat>(hb_parni(1))));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -485,9 +479,7 @@ HB_FUNC_STATIC(QTIME_CURRENTTIME)
     auto ptr = new QTime(QTime::currentTime());
     Qt5xHb::createReturnClass(ptr, "QTIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -513,9 +505,7 @@ HB_FUNC_STATIC(QTIME_FROMSTRING)
 
     auto ptr = new QTime(QTime::fromString(PQSTRING(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QTIME", true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -541,9 +531,7 @@ HB_FUNC_STATIC(QTIME_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -574,9 +562,7 @@ HB_FUNC_STATIC(QTIME_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

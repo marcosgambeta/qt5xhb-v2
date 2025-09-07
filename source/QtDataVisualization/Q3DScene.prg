@@ -101,9 +101,7 @@ HB_FUNC_STATIC(Q3DSCENE_NEW)
   {
     auto obj = new Q3DScene(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -694,9 +692,7 @@ HB_FUNC_STATIC(Q3DSCENE_INVALIDSELECTIONPOINT)
     auto ptr = new QPoint(Q3DScene::invalidSelectionPoint());
     Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

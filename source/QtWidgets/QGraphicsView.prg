@@ -136,9 +136,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_NEW)
     */
     auto obj = new QGraphicsView(PQGRAPHICSSCENE(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -270,9 +268,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_CENTERON)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -341,9 +337,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -392,9 +386,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -494,9 +486,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ITEMAT)
       auto ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -574,9 +564,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
       auto ptr = new QPolygon(obj->mapFromScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -654,9 +642,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
       auto ptr = new QPolygonF(obj->mapToScene(PINT(1), PINT(2), PINT(3), PINT(4)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1357,9 +1343,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETSCENERECT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

@@ -158,9 +158,7 @@ HB_FUNC_STATIC(QTRANSFORM_NEW)
     */
     auto obj = new QTransform(*PQTRANSFORM(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1018,9 +1016,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1074,9 +1070,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAPRECT)
       auto ptr = new QRectF(obj->mapRect(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1116,9 +1110,7 @@ HB_FUNC_STATIC(QTRANSFORM_SQUARETOQUAD)
 #endif
     RBOOL(QTransform::squareToQuad(*PQPOLYGONF(1), *PQTRANSFORM(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1135,9 +1127,7 @@ HB_FUNC_STATIC(QTRANSFORM_QUADTOSQUARE)
 #endif
     RBOOL(QTransform::quadToSquare(*PQPOLYGONF(1), *PQTRANSFORM(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1154,9 +1144,7 @@ HB_FUNC_STATIC(QTRANSFORM_QUADTOQUAD)
 #endif
     RBOOL(QTransform::quadToQuad(*PQPOLYGONF(1), *PQPOLYGONF(2), *PQTRANSFORM(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1174,9 +1162,7 @@ HB_FUNC_STATIC(QTRANSFORM_FROMTRANSLATE)
     auto ptr = new QTransform(QTransform::fromTranslate(PQREAL(1), PQREAL(2)));
     Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1194,9 +1180,7 @@ HB_FUNC_STATIC(QTRANSFORM_FROMSCALE)
     auto ptr = new QTransform(QTransform::fromScale(PQREAL(1), PQREAL(2)));
     Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1223,9 +1207,7 @@ HB_FUNC_STATIC(QTRANSFORM_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -1256,9 +1238,7 @@ HB_FUNC_STATIC(QTRANSFORM_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

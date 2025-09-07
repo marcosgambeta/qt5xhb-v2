@@ -33,9 +33,7 @@ void HHeaderView::paintSection(QPainter *painter, const QRect &rect, int logical
     hb_itemRelease(pPainter);
     hb_itemRelease(pRect);
     hb_itemRelease(pLogicalIndex);
-  }
-  else
-  {
+  } else {
     QHeaderView::paintSection(painter, rect, logicalIndex);
   }
 }

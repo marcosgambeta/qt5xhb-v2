@@ -75,9 +75,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_NEW)
     */
     auto obj = new QDoubleValidator(PDOUBLE(1), PDOUBLE(2), PINT(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

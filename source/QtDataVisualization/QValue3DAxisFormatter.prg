@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QVALUE3DAXISFORMATTER_NEW)
   {
     auto obj = new QValue3DAxisFormatter(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

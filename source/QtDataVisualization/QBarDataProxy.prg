@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_NEW)
   {
     auto obj = new QBarDataProxy(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -310,9 +308,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ITEMAT)
       Qt5xHb::createReturnClass(ptr, "QBARDATAITEM", false);
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -348,9 +344,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_SETITEM)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

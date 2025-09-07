@@ -78,9 +78,7 @@ HB_FUNC_STATIC(QLOCALSERVER_NEW)
   {
     auto obj = new QLocalServer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -270,9 +268,7 @@ HB_FUNC_STATIC(QLOCALSERVER_LISTEN)
     if (obj != nullptr) {
       RBOOL(obj->listen(PQINTPTR(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -381,9 +377,7 @@ HB_FUNC_STATIC(QLOCALSERVER_REMOVESERVER)
 #endif
     RBOOL(QLocalServer::removeServer(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

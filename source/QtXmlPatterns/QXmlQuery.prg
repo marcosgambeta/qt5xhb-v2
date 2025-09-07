@@ -113,9 +113,7 @@ HB_FUNC_STATIC(QXMLQUERY_NEW)
     auto obj = new QXmlQuery(static_cast<QXmlQuery::QueryLanguage>(hb_parni(1)),
                              HB_ISNIL(2) ? QXmlNamePool() : *static_cast<QXmlNamePool *>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -214,9 +212,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -257,9 +253,7 @@ HB_FUNC_STATIC(QXMLQUERY_EVALUATETO)
     if (obj != nullptr) {
       RBOOL(obj->evaluateTo(PQIODEVICE(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -453,9 +447,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETFOCUS)
     if (obj != nullptr) {
       RBOOL(obj->setFocus(PQSTRING(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -487,9 +479,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETINITIALTEMPLATENAME)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -584,9 +574,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -661,9 +649,7 @@ HB_FUNC_STATIC(QXMLQUERY_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -694,9 +680,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

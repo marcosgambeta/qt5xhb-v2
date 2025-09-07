@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_NEW)
     auto obj = new QScatter3DSeries(PQSCATTERDATAPROXY(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -285,9 +283,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_INVALIDSELECTIONINDEX)
 #endif
     RINT(QScatter3DSeries::invalidSelectionIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

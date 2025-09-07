@@ -59,9 +59,7 @@ HB_FUNC_STATIC(QSHORTCUTEVENT_NEW)
   {
     auto obj = new QShortcutEvent(*PQKEYSEQUENCE(1), PINT(2), OPBOOL(3, false));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

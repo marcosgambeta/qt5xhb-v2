@@ -294,9 +294,7 @@ void Events::disconnectAllEvents(QObject *obj, bool children)
     {
       obj->removeEventFilter(this);
     }
-  }
-  else
-  {
+  } else {
     // obtém a lista de filhos, netos, bisnetos, etc...
     auto objectList = obj->findChildren<QObject *>();
 
@@ -394,9 +392,7 @@ PHB_ITEM Events::returnQEvent(QEvent *event, const char *classname)
     auto pItem = hb_itemPutPtr(nullptr, event);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -432,9 +428,7 @@ PHB_ITEM Events::returnQObject(QObject *object, const char *classname)
     auto pItem = hb_itemPutPtr(nullptr, object);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 

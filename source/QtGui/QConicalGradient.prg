@@ -76,9 +76,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_NEW)
     */
     auto obj = new QConicalGradient(PQREAL(1), PQREAL(2), PQREAL(3));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -197,9 +195,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_SETCENTER)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

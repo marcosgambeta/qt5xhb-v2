@@ -79,9 +79,7 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDACTIVITY)
     auto ptr = new QAndroidJniObject(QtAndroid::androidActivity());
     Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -98,9 +96,7 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDSDKVERSION)
 #endif
     RINT(QtAndroid::androidSdkVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -119,9 +115,7 @@ HB_FUNC_STATIC(QTANDROID_STARTINTENTSENDER)
                                  HB_ISNIL(3) ? nullptr
                                              : static_cast<QAndroidActivityResultReceiver *>(Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -142,9 +136,7 @@ HB_FUNC_STATIC(QTANDROID_STARTACTIVITY)
                              HB_ISNIL(3) ? nullptr
                                          : static_cast<QAndroidActivityResultReceiver *>(Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -164,9 +156,7 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDSERVICE)
     auto ptr = new QAndroidJniObject(QtAndroid::androidService());
     Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -184,9 +174,7 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDCONTEXT)
     auto ptr = new QAndroidJniObject(QtAndroid::androidContext());
     Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -205,9 +193,7 @@ HB_FUNC_STATIC(QTANDROID_BINDSERVICE)
                                  HB_ISNIL(3) ? static_cast<QtAndroid::BindFlags>(QtAndroid::BindFlag::None)
                                              : static_cast<QtAndroid::BindFlags>(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -238,9 +224,7 @@ HB_FUNC_STATIC(QTANDROID_HIDESPLASHSCREEN)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -257,9 +241,7 @@ HB_FUNC_STATIC(QTANDROID_CHECKPERMISSION)
 #endif
     RENUM(QtAndroid::checkPermission(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -276,9 +258,7 @@ HB_FUNC_STATIC(QTANDROID_SHOULDSHOWREQUESTPERMISSIONRATIONALE)
 #endif
     RBOOL(QtAndroid::shouldShowRequestPermissionRationale(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -306,9 +286,7 @@ HB_FUNC_STATIC(QTANDROID_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -339,9 +317,7 @@ HB_FUNC_STATIC(QTANDROID_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

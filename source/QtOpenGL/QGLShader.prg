@@ -76,9 +76,7 @@ HB_FUNC_STATIC(QGLSHADER_NEW)
     */
     auto obj = new QGLShader(static_cast<QGLShader::ShaderType>(hb_parni(1)), PQGLCONTEXT(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -178,9 +176,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     HB_FUNC_EXEC(QGLSHADER_COMPILESOURCECODE3);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

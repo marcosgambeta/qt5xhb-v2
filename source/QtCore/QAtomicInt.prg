@@ -94,9 +94,7 @@ HB_FUNC_STATIC(QATOMICINT_NEW)
     */
     auto obj = new QAtomicInt(*PQATOMICINT(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -449,9 +447,7 @@ HB_FUNC_STATIC(QATOMICINT_ISFETCHANDADDNATIVE)
 #endif
     RBOOL(QAtomicInt::isFetchAndAddNative());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -468,9 +464,7 @@ HB_FUNC_STATIC(QATOMICINT_ISFETCHANDADDWAITFREE)
 #endif
     RBOOL(QAtomicInt::isFetchAndAddWaitFree());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -487,9 +481,7 @@ HB_FUNC_STATIC(QATOMICINT_ISFETCHANDSTORENATIVE)
 #endif
     RBOOL(QAtomicInt::isFetchAndStoreNative());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -506,9 +498,7 @@ HB_FUNC_STATIC(QATOMICINT_ISFETCHANDSTOREWAITFREE)
 #endif
     RBOOL(QAtomicInt::isFetchAndStoreWaitFree());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -525,9 +515,7 @@ HB_FUNC_STATIC(QATOMICINT_ISREFERENCECOUNTINGNATIVE)
 #endif
     RBOOL(QAtomicInt::isReferenceCountingNative());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -544,9 +532,7 @@ HB_FUNC_STATIC(QATOMICINT_ISREFERENCECOUNTINGWAITFREE)
 #endif
     RBOOL(QAtomicInt::isReferenceCountingWaitFree());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -563,9 +549,7 @@ HB_FUNC_STATIC(QATOMICINT_ISTESTANDSETNATIVE)
 #endif
     RBOOL(QAtomicInt::isTestAndSetNative());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -582,9 +566,7 @@ HB_FUNC_STATIC(QATOMICINT_ISTESTANDSETWAITFREE)
 #endif
     RBOOL(QAtomicInt::isTestAndSetWaitFree());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -611,9 +593,7 @@ HB_FUNC_STATIC(QATOMICINT_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -644,9 +624,7 @@ HB_FUNC_STATIC(QATOMICINT_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

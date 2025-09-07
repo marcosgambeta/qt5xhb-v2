@@ -110,9 +110,7 @@ HB_FUNC_STATIC(QGLWIDGET_NEW)
     auto obj = new QGLWidget(*PQGLFORMAT(1), OPQWIDGET(2, nullptr), OPQGLWIDGET(3, nullptr),
                              HB_ISNIL(4) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -190,9 +188,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
     if (obj != nullptr) {
       RGLUINT(obj->bindTexture(PQSTRING(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -345,9 +341,7 @@ HB_FUNC_STATIC(QGLWIDGET_DRAWTEXTURE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -623,9 +617,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -767,9 +759,7 @@ HB_FUNC_STATIC(QGLWIDGET_CONVERTTOGLFORMAT)
     auto ptr = new QImage(QGLWidget::convertToGLFormat(*PQIMAGE(1)));
     Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

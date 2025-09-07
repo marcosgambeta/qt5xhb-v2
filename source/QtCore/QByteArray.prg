@@ -210,9 +210,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NEW)
     */
     auto obj = new QByteArray(*PQBYTEARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -399,9 +397,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     HB_FUNC_EXEC(QBYTEARRAY_APPEND6);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -559,9 +555,7 @@ HB_FUNC_STATIC(QBYTEARRAY_CONTAINS)
     if (obj != nullptr) {
       RBOOL(obj->contains(PCHAR(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -611,9 +605,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COUNT)
     if (obj != nullptr) {
       RINT(obj->count());
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -680,9 +672,7 @@ HB_FUNC_STATIC(QBYTEARRAY_ENDSWITH)
     if (obj != nullptr) {
       RBOOL(obj->endsWith(PCHAR(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -820,9 +810,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INDEXOF)
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
   {
     HB_FUNC_EXEC(QBYTEARRAY_INDEXOF4);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -964,9 +952,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     HB_FUNC_EXEC(QBYTEARRAY_INSERT5);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1126,9 +1112,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF)
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
   {
     HB_FUNC_EXEC(QBYTEARRAY_LASTINDEXOF4);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1277,9 +1261,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND)
       auto ptr = &obj->prepend(PCHAR(1));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1324,9 +1306,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_BACK)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1371,9 +1351,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_FRONT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1819,9 +1797,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     HB_FUNC_EXEC(QBYTEARRAY_REPLACE14);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2121,9 +2097,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM)
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
   {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM1);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2307,9 +2281,7 @@ HB_FUNC_STATIC(QBYTEARRAY_STARTSWITH)
     if (obj != nullptr) {
       RBOOL(obj->startsWith(PCHAR(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2759,9 +2731,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMBASE64)
         new QByteArray(QByteArray::fromBase64(*PQBYTEARRAY(1), static_cast<QByteArray::Base64Options>(hb_parni(2))));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2778,9 +2748,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMHEX)
     auto ptr = new QByteArray(QByteArray::fromHex(*PQBYTEARRAY(1)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2798,9 +2766,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMPERCENTENCODING)
     auto ptr = new QByteArray(QByteArray::fromPercentEncoding(*PQBYTEARRAY(1), OPCHAR(2, '%')));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2818,9 +2784,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMRAWDATA)
     auto ptr = new QByteArray(QByteArray::fromRawData(PCONSTCHAR(1), PINT(2)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2838,9 +2802,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER1)
     auto ptr = new QByteArray(QByteArray::number(PINT(1), OPINT(2, 10)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2858,9 +2820,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER2)
     auto ptr = new QByteArray(QByteArray::number(PUINT(1), OPINT(2, 10)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2878,9 +2838,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER3)
     auto ptr = new QByteArray(QByteArray::number(PQLONGLONG(1), OPINT(2, 10)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2898,9 +2856,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER4)
     auto ptr = new QByteArray(QByteArray::number(PQULONGLONG(1), OPINT(2, 10)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2918,9 +2874,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER5)
     auto ptr = new QByteArray(QByteArray::number(PDOUBLE(1), OPCHAR(2, 'g'), OPINT(3, 6)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2948,9 +2902,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER)
            ISNUMORNIL(3))
   {
     HB_FUNC_EXEC(QBYTEARRAY_NUMBER5);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -3039,9 +2991,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COMPARE)
                                                      : static_cast<Qt::CaseSensitivity>(hb_parni(2))));
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -3117,9 +3067,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NEWFROM)
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -3150,9 +3098,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETSELFDESTRUCTION)
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

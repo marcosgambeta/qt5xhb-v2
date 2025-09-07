@@ -97,9 +97,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_NEW)
                                                 : static_cast<Qt::Orientation>(hb_parni(2)),
                                     OPQWIDGET(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -159,9 +157,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ADDBUTTON)
       auto ptr = obj->addButton(static_cast<QDialogButtonBox::StandardButton>(hb_parni(1)));
       Qt5xHb::createReturnQWidgetClass(ptr, "QPUSHBUTTON");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
