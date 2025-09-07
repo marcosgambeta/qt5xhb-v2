@@ -266,8 +266,7 @@ HB_FUNC_STATIC(QPAINTENGINE_END)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->end());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,8 +307,7 @@ HB_FUNC_STATIC(QPAINTENGINE_ISACTIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,8 +327,7 @@ HB_FUNC_STATIC(QPAINTENGINE_PAINTDEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->paintDevice();
       Qt5xHb::createReturnClass(ptr, "QPAINTDEVICE", false);
@@ -351,8 +348,7 @@ HB_FUNC_STATIC(QPAINTENGINE_PAINTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->painter();
       Qt5xHb::createReturnClass(ptr, "QPAINTER", false);
@@ -396,8 +392,7 @@ HB_FUNC_STATIC(QPAINTENGINE_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

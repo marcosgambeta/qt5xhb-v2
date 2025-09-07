@@ -94,8 +94,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_CONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->context();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
@@ -116,8 +115,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCOPEOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->scopeObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -138,8 +136,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCRIPT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->script());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

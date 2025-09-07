@@ -164,8 +164,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_CATEGORIESLABELS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->categoriesLabels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,8 +186,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,8 +208,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_LABELSPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->labelsPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,8 +255,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

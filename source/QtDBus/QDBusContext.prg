@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_CALLEDFROMDBUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->calledFromDBus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,8 +122,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_CONNECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDBusConnection(obj->connection());
       Qt5xHb::createReturnClass(ptr, "QDBUSCONNECTION", true);
@@ -145,8 +143,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_MESSAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->message();
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", false);
@@ -167,8 +164,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_ISDELAYEDREPLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDelayedReply());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

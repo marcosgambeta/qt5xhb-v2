@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QAXBINDABLE_CREATEAGGREGATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->createAggregate();
       Qt5xHb::createReturnClass(ptr, "QAXAGGREGATED", false);

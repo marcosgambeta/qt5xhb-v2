@@ -205,8 +205,7 @@ HB_FUNC_STATIC(QLOCALE_AMTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->amText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,8 +225,7 @@ HB_FUNC_STATIC(QLOCALE_BCP47NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->bcp47Name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,8 +245,7 @@ HB_FUNC_STATIC(QLOCALE_COUNTRY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->country());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,8 +374,7 @@ HB_FUNC_STATIC(QLOCALE_DECIMALPOINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QChar(obj->decimalPoint());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -399,8 +395,7 @@ HB_FUNC_STATIC(QLOCALE_EXPONENTIAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QChar(obj->exponential());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -421,8 +416,7 @@ HB_FUNC_STATIC(QLOCALE_FIRSTDAYOFWEEK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->firstDayOfWeek());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -442,8 +436,7 @@ HB_FUNC_STATIC(QLOCALE_GROUPSEPARATOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QChar(obj->groupSeparator());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -464,8 +457,7 @@ HB_FUNC_STATIC(QLOCALE_LANGUAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->language());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -485,8 +477,7 @@ HB_FUNC_STATIC(QLOCALE_MEASUREMENTSYSTEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->measurementSystem());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -528,8 +519,7 @@ HB_FUNC_STATIC(QLOCALE_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -549,8 +539,7 @@ HB_FUNC_STATIC(QLOCALE_NATIVECOUNTRYNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->nativeCountryName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -570,8 +559,7 @@ HB_FUNC_STATIC(QLOCALE_NATIVELANGUAGENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->nativeLanguageName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -591,8 +579,7 @@ HB_FUNC_STATIC(QLOCALE_NEGATIVESIGN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QChar(obj->negativeSign());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -613,8 +600,7 @@ HB_FUNC_STATIC(QLOCALE_NUMBEROPTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->numberOptions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -634,8 +620,7 @@ HB_FUNC_STATIC(QLOCALE_PERCENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QChar(obj->percent());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -656,8 +641,7 @@ HB_FUNC_STATIC(QLOCALE_PMTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->pmText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -677,8 +661,7 @@ HB_FUNC_STATIC(QLOCALE_POSITIVESIGN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QChar(obj->positiveSign());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -722,8 +705,7 @@ HB_FUNC_STATIC(QLOCALE_SCRIPT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->script());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -810,8 +792,7 @@ HB_FUNC_STATIC(QLOCALE_TEXTDIRECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->textDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1538,8 +1519,7 @@ HB_FUNC_STATIC(QLOCALE_UILANGUAGES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->uiLanguages());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1559,8 +1539,7 @@ HB_FUNC_STATIC(QLOCALE_WEEKDAYS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->weekdays();
       auto pArray = hb_itemArrayNew(0);
@@ -1588,8 +1567,7 @@ HB_FUNC_STATIC(QLOCALE_ZERODIGIT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QChar(obj->zeroDigit());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);

@@ -160,8 +160,7 @@ HB_FUNC_STATIC(QSETTINGS_ALLKEYS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->allKeys());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,8 +180,7 @@ HB_FUNC_STATIC(QSETTINGS_APPLICATIONNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->applicationName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +267,7 @@ HB_FUNC_STATIC(QSETTINGS_CHILDGROUPS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->childGroups());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -290,8 +287,7 @@ HB_FUNC_STATIC(QSETTINGS_CHILDKEYS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->childKeys());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,8 +307,7 @@ HB_FUNC_STATIC(QSETTINGS_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -355,8 +350,7 @@ HB_FUNC_STATIC(QSETTINGS_ENDARRAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->endArray();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -378,8 +372,7 @@ HB_FUNC_STATIC(QSETTINGS_ENDGROUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->endGroup();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -401,8 +394,7 @@ HB_FUNC_STATIC(QSETTINGS_FALLBACKSENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->fallbacksEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -422,8 +414,7 @@ HB_FUNC_STATIC(QSETTINGS_FILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -443,8 +434,7 @@ HB_FUNC_STATIC(QSETTINGS_FORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->format());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -464,8 +454,7 @@ HB_FUNC_STATIC(QSETTINGS_GROUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->group());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -485,8 +474,7 @@ HB_FUNC_STATIC(QSETTINGS_INICODEC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->iniCodec();
       Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
@@ -507,8 +495,7 @@ HB_FUNC_STATIC(QSETTINGS_ISWRITABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isWritable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -528,8 +515,7 @@ HB_FUNC_STATIC(QSETTINGS_ORGANIZATIONNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->organizationName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -572,8 +558,7 @@ HB_FUNC_STATIC(QSETTINGS_SCOPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->scope());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -694,8 +679,7 @@ HB_FUNC_STATIC(QSETTINGS_STATUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -715,8 +699,7 @@ HB_FUNC_STATIC(QSETTINGS_SYNC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->sync();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

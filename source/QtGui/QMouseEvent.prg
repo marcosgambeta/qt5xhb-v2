@@ -120,8 +120,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_BUTTON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->button());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,8 +140,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_BUTTONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->buttons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,8 +160,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_GLOBALX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->globalX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,8 +180,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_GLOBALY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->globalY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,8 +200,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_LOCALPOS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->localPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
@@ -226,8 +221,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_SCREENPOS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->screenPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
@@ -248,8 +242,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_WINDOWPOS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->windowPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
@@ -270,8 +263,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_X)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,8 +283,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_Y)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

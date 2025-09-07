@@ -109,8 +109,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,8 +178,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ISVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +225,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_OPACITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->opacity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,8 +272,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_USEOPENGL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->useOpenGL());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,8 +319,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_CHART)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->chart();
       Qt5xHb::createReturnQObjectClass(ptr, "QCHART");
@@ -394,8 +388,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ATTACHEDAXES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->attachedAxes();
       auto pDynSym = hb_dynsymFindName("QABSTRACTAXIS");
@@ -440,8 +433,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SHOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->show();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -465,8 +457,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_HIDE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->hide();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

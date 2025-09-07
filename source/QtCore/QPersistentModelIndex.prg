@@ -146,8 +146,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_ROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->row());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +166,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_COLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->column());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,8 +186,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_INTERNALPOINTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retptr(static_cast<void *>(obj->internalPointer()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,8 +206,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_INTERNALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINTPTR(obj->internalId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,8 +226,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_PARENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QModelIndex(obj->parent());
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
@@ -318,8 +313,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_FLAGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,8 +333,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_MODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
@@ -361,8 +354,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

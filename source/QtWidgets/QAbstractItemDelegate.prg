@@ -312,8 +312,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_PAINTINGROLES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->paintingRoles();
       auto pArray = hb_itemArrayNew(0);

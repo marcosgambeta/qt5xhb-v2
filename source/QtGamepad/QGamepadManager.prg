@@ -79,8 +79,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_CONNECTEDGAMEPADS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->connectedGamepads();
       Qt5xHb::convert_qlist_int_to_array(list);

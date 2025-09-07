@@ -140,8 +140,7 @@ HB_FUNC_STATIC(QTREEWIDGET_COLUMNCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->columnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +183,7 @@ HB_FUNC_STATIC(QTREEWIDGET_TOPLEVELITEMCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->topLevelItemCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,8 +249,7 @@ HB_FUNC_STATIC(QTREEWIDGET_CURRENTCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,8 +269,7 @@ HB_FUNC_STATIC(QTREEWIDGET_CURRENTITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->currentItem();
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
@@ -317,8 +313,7 @@ HB_FUNC_STATIC(QTREEWIDGET_HEADERITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->headerItem();
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
@@ -383,8 +378,7 @@ HB_FUNC_STATIC(QTREEWIDGET_INVISIBLEROOTITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->invisibleRootItem();
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
@@ -728,8 +722,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SORTCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sortColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -861,8 +854,7 @@ HB_FUNC_STATIC(QTREEWIDGET_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

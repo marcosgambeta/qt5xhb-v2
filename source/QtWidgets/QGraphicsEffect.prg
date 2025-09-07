@@ -81,8 +81,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->boundingRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -125,8 +124,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_ISENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,8 +167,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_UPDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->update();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

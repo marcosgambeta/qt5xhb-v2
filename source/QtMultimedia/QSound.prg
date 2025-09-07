@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QSOUND_LOOPS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->loops());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,8 +118,7 @@ HB_FUNC_STATIC(QSOUND_LOOPSREMAINING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->loopsRemaining());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +161,7 @@ HB_FUNC_STATIC(QSOUND_FILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +181,7 @@ HB_FUNC_STATIC(QSOUND_ISFINISHED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFinished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,8 +201,7 @@ HB_FUNC_STATIC(QSOUND_STOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

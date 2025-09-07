@@ -109,8 +109,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_UPDATEMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->updateMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,8 +156,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_DEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->device();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
@@ -230,8 +228,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_SUPPORTEDPOSITIONINGMETHODS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedPositioningMethods());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,8 +250,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_MINIMUMUPDATEINTERVAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->minimumUpdateInterval());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,8 +272,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,8 +294,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_STARTUPDATES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->startUpdates();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,8 +318,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_STOPUPDATES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stopUpdates();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QBUFFER_BUFFER1)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->buffer();
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QBUFFER_BUFFER2)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->buffer();
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
@@ -159,8 +157,7 @@ HB_FUNC_STATIC(QBUFFER_DATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->data();
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
@@ -236,8 +233,7 @@ HB_FUNC_STATIC(QBUFFER_ATEND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->atEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,8 +253,7 @@ HB_FUNC_STATIC(QBUFFER_CANREADLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canReadLine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,8 +273,7 @@ HB_FUNC_STATIC(QBUFFER_CLOSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -322,8 +316,7 @@ HB_FUNC_STATIC(QBUFFER_POS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->pos());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -364,8 +357,7 @@ HB_FUNC_STATIC(QBUFFER_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

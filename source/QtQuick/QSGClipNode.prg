@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QSGCLIPNODE_CLIPRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->clipRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -110,8 +109,7 @@ HB_FUNC_STATIC(QSGCLIPNODE_ISRECTANGULAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isRectangular());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

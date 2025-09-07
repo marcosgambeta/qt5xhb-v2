@@ -106,8 +106,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_BUTTON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->button());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,8 +126,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_HITTESTPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPainterPath(obj->hitTestPath());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
@@ -149,8 +147,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_MODIFIERMASK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->modifierMask());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -184,8 +184,7 @@ HB_FUNC_STATIC(QMENU_ACTIVEACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->activeAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -346,8 +345,7 @@ HB_FUNC_STATIC(QMENU_ADDSEPARATOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->addSeparator();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -368,8 +366,7 @@ HB_FUNC_STATIC(QMENU_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -391,8 +388,7 @@ HB_FUNC_STATIC(QMENU_DEFAULTACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->defaultAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -482,8 +478,7 @@ HB_FUNC_STATIC(QMENU_HIDETEAROFFMENU)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->hideTearOffMenu();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -505,8 +500,7 @@ HB_FUNC_STATIC(QMENU_ICON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
@@ -594,8 +588,7 @@ HB_FUNC_STATIC(QMENU_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -615,8 +608,7 @@ HB_FUNC_STATIC(QMENU_ISTEAROFFENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isTearOffEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -659,8 +651,7 @@ HB_FUNC_STATIC(QMENU_ISTEAROFFMENUVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isTearOffMenuVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -680,8 +671,7 @@ HB_FUNC_STATIC(QMENU_MENUACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->menuAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -725,8 +715,7 @@ HB_FUNC_STATIC(QMENU_SEPARATORSCOLLAPSIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->separatorsCollapsible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -769,8 +758,7 @@ HB_FUNC_STATIC(QMENU_TITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -813,8 +801,7 @@ HB_FUNC_STATIC(QMENU_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -836,8 +823,7 @@ HB_FUNC_STATIC(QMENU_WCEMENU)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retptr(static_cast<HMENU>(obj->wceMenu()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -957,8 +943,7 @@ HB_FUNC_STATIC(QMENU_SETASDOCKMENU)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->setAsDockMenu();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -983,8 +968,7 @@ HB_FUNC_STATIC(QMENU_TOOLTIPSVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->toolTipsVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1032,8 +1016,7 @@ HB_FUNC_STATIC(QMENU_TONSMENU)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retptr(static_cast<NSMenu *>(obj->toNSMenu()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

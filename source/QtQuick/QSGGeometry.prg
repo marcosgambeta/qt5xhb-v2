@@ -120,8 +120,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_ATTRIBUTECOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->attributeCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,8 +140,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_DRAWINGMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLENUM(obj->drawingMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,8 +160,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->indexCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,8 +180,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXDATAPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->indexDataPattern());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,8 +200,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->indexType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,8 +220,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_LINEWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->lineWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,8 +240,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_MARKINDEXDATADIRTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->markIndexDataDirty();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +262,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_MARKVERTEXDATADIRTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->markVertexDataDirty();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -384,8 +376,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SIZEOFINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sizeOfIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -405,8 +396,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SIZEOFVERTEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sizeOfVertex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -426,8 +416,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_VERTEXCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->vertexCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -447,8 +436,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_VERTEXDATAPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->vertexDataPattern());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

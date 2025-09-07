@@ -137,8 +137,7 @@ HB_FUNC_STATIC(QPIESERIES_HORIZONTALPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->horizontalPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,8 +184,7 @@ HB_FUNC_STATIC(QPIESERIES_VERTICALPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->verticalPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,8 +231,7 @@ HB_FUNC_STATIC(QPIESERIES_PIESIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->pieSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,8 +278,7 @@ HB_FUNC_STATIC(QPIESERIES_PIESTARTANGLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->pieStartAngle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,8 +325,7 @@ HB_FUNC_STATIC(QPIESERIES_PIEENDANGLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->pieEndAngle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,8 +372,7 @@ HB_FUNC_STATIC(QPIESERIES_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -400,8 +394,7 @@ HB_FUNC_STATIC(QPIESERIES_SUM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->sum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -423,8 +416,7 @@ HB_FUNC_STATIC(QPIESERIES_HOLESIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->holeSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -471,8 +463,7 @@ HB_FUNC_STATIC(QPIESERIES_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -613,8 +604,7 @@ HB_FUNC_STATIC(QPIESERIES_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -638,8 +628,7 @@ HB_FUNC_STATIC(QPIESERIES_SLICES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->slices();
       auto pDynSym = hb_dynsymFindName("QPIESLICE");
@@ -684,8 +673,7 @@ HB_FUNC_STATIC(QPIESERIES_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

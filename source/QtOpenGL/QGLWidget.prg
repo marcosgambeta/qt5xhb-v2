@@ -202,8 +202,7 @@ HB_FUNC_STATIC(QGLWIDGET_COLORMAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->colormap();
       Qt5xHb::createReturnClass(ptr, "QGLCOLORMAP", false);
@@ -224,8 +223,7 @@ HB_FUNC_STATIC(QGLWIDGET_CONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->context();
       Qt5xHb::createReturnClass(ptr, "QGLCONTEXT", false);
@@ -269,8 +267,7 @@ HB_FUNC_STATIC(QGLWIDGET_DONECURRENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->doneCurrent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,8 +289,7 @@ HB_FUNC_STATIC(QGLWIDGET_DOUBLEBUFFER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->doubleBuffer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,8 +341,7 @@ HB_FUNC_STATIC(QGLWIDGET_FORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGLFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QGLFORMAT", true);
@@ -389,8 +384,7 @@ HB_FUNC_STATIC(QGLWIDGET_ISSHARING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSharing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -410,8 +404,7 @@ HB_FUNC_STATIC(QGLWIDGET_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -431,8 +424,7 @@ HB_FUNC_STATIC(QGLWIDGET_MAKECURRENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->makeCurrent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -454,8 +446,7 @@ HB_FUNC_STATIC(QGLWIDGET_MAKEOVERLAYCURRENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->makeOverlayCurrent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -477,8 +468,7 @@ HB_FUNC_STATIC(QGLWIDGET_OVERLAYCONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->overlayContext();
       Qt5xHb::createReturnClass(ptr, "QGLCONTEXT", false);
@@ -647,8 +637,7 @@ HB_FUNC_STATIC(QGLWIDGET_SWAPBUFFERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->swapBuffers();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -670,8 +659,7 @@ HB_FUNC_STATIC(QGLWIDGET_UPDATEGL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->updateGL();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -693,8 +681,7 @@ HB_FUNC_STATIC(QGLWIDGET_UPDATEOVERLAYGL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->updateOverlayGL();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

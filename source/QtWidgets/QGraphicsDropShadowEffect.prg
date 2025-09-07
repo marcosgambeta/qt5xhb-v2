@@ -106,8 +106,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_BLURRADIUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->blurRadius());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,8 +126,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_COLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->color());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -149,8 +147,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_OFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->offset());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -171,8 +168,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_XOFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->xOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,8 +188,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_YOFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->yOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

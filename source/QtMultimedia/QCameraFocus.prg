@@ -78,8 +78,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_FOCUSMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->focusMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,8 +121,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_FOCUSPOINTMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->focusPointMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,8 +164,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_CUSTOMFOCUSPOINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->customFocusPoint());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -211,8 +208,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_FOCUSZONES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->focusZones();
       auto pDynSym = hb_dynsymFindName("QCAMERAFOCUSZONE");
@@ -258,8 +254,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_OPTICALZOOM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->opticalZoom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,8 +274,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_DIGITALZOOM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->digitalZoom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,8 +294,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_ISAVAILABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -363,8 +356,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_MAXIMUMDIGITALZOOM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->maximumDigitalZoom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -384,8 +376,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_MAXIMUMOPTICALZOOM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->maximumOpticalZoom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

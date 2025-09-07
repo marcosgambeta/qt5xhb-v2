@@ -259,8 +259,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ISAFFINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAffine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,8 +280,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ISIDENTITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isIdentity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,8 +300,7 @@ HB_FUNC_STATIC(QMATRIX4X4_SETTOIDENTITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->setToIdentity();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,8 +345,7 @@ HB_FUNC_STATIC(QMATRIX4X4_DETERMINANT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->determinant());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -393,8 +389,7 @@ HB_FUNC_STATIC(QMATRIX4X4_TRANSPOSED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QMatrix4x4(obj->transposed());
       Qt5xHb::createReturnClass(ptr, "QMATRIX4X4", true);
@@ -415,8 +410,7 @@ HB_FUNC_STATIC(QMATRIX4X4_NORMALMATRIX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QMatrix3x3(obj->normalMatrix());
       Qt5xHb::createReturnClass(ptr, "QMATRIX3X3", true);
@@ -750,8 +744,7 @@ HB_FUNC_STATIC(QMATRIX4X4_FLIPCOORDINATES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->flipCoordinates();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -773,8 +766,7 @@ HB_FUNC_STATIC(QMATRIX4X4_TOAFFINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QMatrix(obj->toAffine());
       Qt5xHb::createReturnClass(ptr, "QMATRIX", true);
@@ -938,8 +930,7 @@ HB_FUNC_STATIC(QMATRIX4X4_OPTIMIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->optimize();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

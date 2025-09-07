@@ -208,8 +208,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COLUMNCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->columnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -334,8 +333,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_HORIZONTALSPACING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->horizontalSpacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -429,8 +427,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ROWCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->rowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -969,8 +966,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_VERTICALSPACING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->verticalSpacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -990,8 +986,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1011,8 +1006,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_INVALIDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->invalidate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

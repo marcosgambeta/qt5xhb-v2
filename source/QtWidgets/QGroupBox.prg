@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QGROUPBOX_ALIGNMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QGROUPBOX_ISCHECKABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCheckable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,8 +151,7 @@ HB_FUNC_STATIC(QGROUPBOX_ISCHECKED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isChecked());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +171,7 @@ HB_FUNC_STATIC(QGROUPBOX_ISFLAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFlat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -287,8 +283,7 @@ HB_FUNC_STATIC(QGROUPBOX_TITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,8 +303,7 @@ HB_FUNC_STATIC(QGROUPBOX_MINIMUMSIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);

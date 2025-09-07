@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,8 +153,7 @@ HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_TIMETOLIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT32(obj->timeToLive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,8 +173,7 @@ HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_VALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QHostAddress(obj->value());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);

@@ -136,8 +136,7 @@ HB_FUNC_STATIC(QUILOADER_AVAILABLELAYOUTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->availableLayouts());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,8 +156,7 @@ HB_FUNC_STATIC(QUILOADER_AVAILABLEWIDGETS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->availableWidgets());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,8 +176,7 @@ HB_FUNC_STATIC(QUILOADER_CLEARPLUGINPATHS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearPluginPaths();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,8 +286,7 @@ HB_FUNC_STATIC(QUILOADER_ISLANGUAGECHANGEENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLanguageChangeEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -332,8 +328,7 @@ HB_FUNC_STATIC(QUILOADER_PLUGINPATHS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->pluginPaths());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -399,8 +394,7 @@ HB_FUNC_STATIC(QUILOADER_WORKINGDIRECTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDir(obj->workingDirectory());
       Qt5xHb::createReturnClass(ptr, "QDIR", true);

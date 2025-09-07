@@ -130,8 +130,7 @@ HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_DELETESESSIONCOOKIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->deleteSessionCookies();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,8 +152,7 @@ HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_DELETEALLCOOKIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->deleteAllCookies();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,8 +174,7 @@ HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_LOADALLCOOKIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->loadAllCookies();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

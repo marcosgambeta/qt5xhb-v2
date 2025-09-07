@@ -81,8 +81,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_BRUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->brush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -126,8 +125,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_PEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPen(obj->pen());
       Qt5xHb::createReturnClass(ptr, "QPEN", true);
@@ -192,8 +190,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPainterPath(obj->opaqueArea());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);

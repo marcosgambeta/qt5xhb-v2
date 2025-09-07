@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ACTIVETIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT64(obj->activeTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,8 +142,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_BYTESRECEIVED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT64(obj->bytesReceived());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,8 +162,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_BYTESWRITTEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT64(obj->bytesWritten());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,8 +182,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_CONFIGURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QNetworkConfiguration(obj->configuration());
       Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
@@ -207,8 +203,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +223,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,8 +243,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_INTERFACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QNetworkInterface(obj->interface());
       Qt5xHb::createReturnClass(ptr, "QNETWORKINTERFACE", true);
@@ -271,8 +264,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ISOPEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isOpen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -337,8 +329,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_STATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -379,8 +370,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ACCEPT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->accept();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -402,8 +392,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_CLOSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -425,8 +414,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_IGNORE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->ignore();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -448,8 +436,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_MIGRATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->migrate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -471,8 +458,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_OPEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->open();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -494,8 +480,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_REJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reject();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -517,8 +502,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_STOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -540,8 +524,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_USAGEPOLICIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->usagePolicies());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -152,8 +152,7 @@ HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_ACCESSTOKENURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->accessTokenUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -201,8 +200,7 @@ HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_GRANT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->grant();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,8 +224,7 @@ HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_REFRESHACCESSTOKEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->refreshAccessToken();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

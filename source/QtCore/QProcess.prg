@@ -172,8 +172,7 @@ HB_FUNC_STATIC(QPROCESS_CLOSEWRITECHANNEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->closeWriteChannel();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,8 +194,7 @@ HB_FUNC_STATIC(QPROCESS_ENVIRONMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->environment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +214,7 @@ HB_FUNC_STATIC(QPROCESS_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -237,8 +234,7 @@ HB_FUNC_STATIC(QPROCESS_EXITCODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->exitCode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,8 +254,7 @@ HB_FUNC_STATIC(QPROCESS_EXITSTATUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->exitStatus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,8 +275,7 @@ HB_FUNC_STATIC(QPROCESS_NATIVEARGUMENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->nativeArguments());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,8 +296,7 @@ HB_FUNC_STATIC(QPROCESS_PROCESSCHANNELMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->processChannelMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,8 +316,7 @@ HB_FUNC_STATIC(QPROCESS_PROCESSENVIRONMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QProcessEnvironment(obj->processEnvironment());
       Qt5xHb::createReturnClass(ptr, "QPROCESSENVIRONMENT", true);
@@ -345,8 +337,7 @@ HB_FUNC_STATIC(QPROCESS_READALLSTANDARDERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->readAllStandardError());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -367,8 +358,7 @@ HB_FUNC_STATIC(QPROCESS_READALLSTANDARDOUTPUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->readAllStandardOutput());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -389,8 +379,7 @@ HB_FUNC_STATIC(QPROCESS_READCHANNEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->readChannel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -695,8 +684,7 @@ HB_FUNC_STATIC(QPROCESS_STATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -758,8 +746,7 @@ HB_FUNC_STATIC(QPROCESS_WORKINGDIRECTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->workingDirectory());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -779,8 +766,7 @@ HB_FUNC_STATIC(QPROCESS_ATEND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->atEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -800,8 +786,7 @@ HB_FUNC_STATIC(QPROCESS_BYTESAVAILABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->bytesAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -821,8 +806,7 @@ HB_FUNC_STATIC(QPROCESS_BYTESTOWRITE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->bytesToWrite());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -842,8 +826,7 @@ HB_FUNC_STATIC(QPROCESS_CANREADLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canReadLine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -863,8 +846,7 @@ HB_FUNC_STATIC(QPROCESS_CLOSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -886,8 +868,7 @@ HB_FUNC_STATIC(QPROCESS_ISSEQUENTIAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSequential());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -949,8 +930,7 @@ HB_FUNC_STATIC(QPROCESS_KILL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->kill();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -972,8 +952,7 @@ HB_FUNC_STATIC(QPROCESS_TERMINATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->terminate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1103,8 +1082,7 @@ HB_FUNC_STATIC(QPROCESS_PROGRAM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->program());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1149,8 +1127,7 @@ HB_FUNC_STATIC(QPROCESS_ARGUMENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->arguments());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1195,8 +1172,7 @@ HB_FUNC_STATIC(QPROCESS_READCHANNELMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->readChannelMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1240,8 +1216,7 @@ HB_FUNC_STATIC(QPROCESS_INPUTCHANNELMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->inputChannelMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1288,8 +1263,7 @@ HB_FUNC_STATIC(QPROCESS_PROCESSID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->processId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

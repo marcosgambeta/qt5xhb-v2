@@ -344,8 +344,7 @@ HB_FUNC_STATIC(QOBJECT_CHILDREN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->children();
       auto pDynSym = hb_dynsymFindName("QOBJECT");
@@ -386,8 +385,7 @@ HB_FUNC_STATIC(QOBJECT_DUMPOBJECTINFO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->dumpObjectInfo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -407,8 +405,7 @@ HB_FUNC_STATIC(QOBJECT_DUMPOBJECTTREE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->dumpObjectTree();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -429,8 +426,7 @@ HB_FUNC_STATIC(QOBJECT_DYNAMICPROPERTYNAMES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->dynamicPropertyNames();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
@@ -687,8 +683,7 @@ HB_FUNC_STATIC(QOBJECT_ISWIDGETTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isWidgetType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -706,8 +701,7 @@ HB_FUNC_STATIC(QOBJECT_ISWINDOWTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isWindowType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -746,8 +740,7 @@ HB_FUNC_STATIC(QOBJECT_METAOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->metaObject();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
@@ -787,8 +780,7 @@ HB_FUNC_STATIC(QOBJECT_OBJECTNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->objectName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -827,8 +819,7 @@ HB_FUNC_STATIC(QOBJECT_PARENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->parent();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -932,8 +923,7 @@ HB_FUNC_STATIC(QOBJECT_SIGNALSBLOCKED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->signalsBlocked());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -971,8 +961,7 @@ HB_FUNC_STATIC(QOBJECT_THREAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->thread();
       Qt5xHb::createReturnQObjectClass(ptr, "QTHREAD");
@@ -991,8 +980,7 @@ HB_FUNC_STATIC(QOBJECT_DELETELATER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->deleteLater();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1025,8 +1013,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALL)
   auto obj = qobject_cast<QObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       Qt5xHb::Events_disconnect_all_events(obj, false);
       Qt5xHb::Signals_disconnect_all_signals(obj, false);
     }
@@ -1047,8 +1034,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALLEVENTS)
   auto obj = qobject_cast<QObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       Qt5xHb::Events_disconnect_all_events(obj, false);
     }
     else if (ISNUMPAR(1) && HB_ISLOG(1))
@@ -1067,8 +1053,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALLSIGNALS)
   auto obj = qobject_cast<QObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnect_all_signals(obj, false);
     }
     else if (ISNUMPAR(1) && HB_ISLOG(1))

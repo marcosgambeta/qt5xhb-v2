@@ -253,8 +253,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_COLUMNCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->columnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,8 +346,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_HORIZONTALSPACING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->horizontalSpacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -390,8 +388,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ORIGINCORNER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->originCorner());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,8 +408,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ROWCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->rowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -658,8 +654,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SPACING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->spacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -679,8 +674,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_VERTICALSPACING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->verticalSpacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -700,8 +694,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -721,8 +714,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_EXPANDINGDIRECTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->expandingDirections());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -742,8 +734,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_HASHEIGHTFORWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasHeightForWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -784,8 +775,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_INVALIDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->invalidate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -829,8 +819,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_MAXIMUMSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->maximumSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -872,8 +861,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_MINIMUMSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->minimumSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -917,8 +905,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);

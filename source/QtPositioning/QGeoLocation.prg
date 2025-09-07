@@ -125,8 +125,7 @@ HB_FUNC_STATIC(QGEOLOCATION_ADDRESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGeoAddress(obj->address());
       Qt5xHb::createReturnClass(ptr, "QGEOADDRESS", true);
@@ -174,8 +173,7 @@ HB_FUNC_STATIC(QGEOLOCATION_COORDINATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGeoCoordinate(obj->coordinate());
       Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
@@ -223,8 +221,7 @@ HB_FUNC_STATIC(QGEOLOCATION_BOUNDINGBOX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGeoRectangle(obj->boundingBox());
       Qt5xHb::createReturnClass(ptr, "QGEORECTANGLE", true);
@@ -272,8 +269,7 @@ HB_FUNC_STATIC(QGEOLOCATION_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

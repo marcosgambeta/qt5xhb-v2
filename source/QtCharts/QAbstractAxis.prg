@@ -173,8 +173,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,8 +220,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISLINEVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLineVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +267,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LINEPEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPen(obj->linePen());
       Qt5xHb::createReturnClass(ptr, "QPEN", true);
@@ -318,8 +315,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LINEPENCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->linePenColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -367,8 +363,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISGRIDLINEVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isGridLineVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,8 +410,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_GRIDLINEPEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPen(obj->gridLinePen());
       Qt5xHb::createReturnClass(ptr, "QPEN", true);
@@ -464,8 +458,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISMINORGRIDLINEVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isMinorGridLineVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -512,8 +505,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_MINORGRIDLINEPEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPen(obj->minorGridLinePen());
       Qt5xHb::createReturnClass(ptr, "QPEN", true);
@@ -561,8 +553,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_GRIDLINECOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->gridLineColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -610,8 +601,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_MINORGRIDLINECOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->minorGridLineColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -659,8 +649,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->labelsVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -707,8 +696,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSBRUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->labelsBrush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -756,8 +744,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSFONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QFont(obj->labelsFont());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
@@ -805,8 +792,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSANGLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->labelsAngle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -853,8 +839,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->labelsColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -902,8 +887,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISTITLEVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isTitleVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -950,8 +934,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_TITLEBRUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->titleBrush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -999,8 +982,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_TITLEFONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QFont(obj->titleFont());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
@@ -1048,8 +1030,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_TITLETEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->titleText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1096,8 +1077,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->shadesVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1144,8 +1124,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESPEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPen(obj->shadesPen());
       Qt5xHb::createReturnClass(ptr, "QPEN", true);
@@ -1193,8 +1172,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESBRUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->shadesBrush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -1242,8 +1220,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->shadesColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -1291,8 +1268,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESBORDERCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->shadesBorderColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -1340,8 +1316,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1363,8 +1338,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ALIGNMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1386,8 +1360,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISREVERSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReverse());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1434,8 +1407,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1457,8 +1429,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->show();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1482,8 +1453,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_HIDE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->hide();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

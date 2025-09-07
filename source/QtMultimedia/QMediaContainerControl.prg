@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_CONTAINERFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->containerFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,8 +146,7 @@ HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_SUPPORTEDCONTAINERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->supportedContainers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

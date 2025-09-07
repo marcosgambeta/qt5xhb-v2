@@ -107,8 +107,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_DATETIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDateTime(obj->dateTime());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -156,8 +155,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_TEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,8 +202,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_LANGUAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->language());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -252,8 +249,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_RATING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->rating());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,8 +296,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_REVIEWID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->reviewId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,8 +343,7 @@ HB_FUNC_STATIC(QPLACEREVIEW_TITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

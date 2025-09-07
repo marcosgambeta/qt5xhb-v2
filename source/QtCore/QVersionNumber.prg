@@ -146,8 +146,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_ISNORMALIZED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNormalized());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,8 +168,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,8 +213,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_MAJORVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->majorVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -238,8 +235,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_MICROVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->microVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,8 +257,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_MINORVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->minorVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,8 +279,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_NORMALIZED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVersionNumber(obj->normalized());
       Qt5xHb::createReturnClass(ptr, "QVERSIONNUMBER", true);
@@ -331,8 +325,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_SEGMENTCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->segmentCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,8 +347,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_SEGMENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->segments();
       auto pArray = hb_itemArrayNew(0);
@@ -385,8 +377,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_TOSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->toString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

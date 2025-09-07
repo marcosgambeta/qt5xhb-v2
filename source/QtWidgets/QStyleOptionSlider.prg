@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_ORIENTATION)
   auto obj = static_cast<QStyleOptionSlider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->orientation);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -131,8 +130,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_MINIMUM)
   auto obj = static_cast<QStyleOptionSlider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->minimum);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -164,8 +162,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_MAXIMUM)
   auto obj = static_cast<QStyleOptionSlider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->maximum);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -197,8 +194,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_TICKPOSITION)
   auto obj = static_cast<QStyleOptionSlider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->tickPosition);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -230,8 +226,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_TICKINTERVAL)
   auto obj = static_cast<QStyleOptionSlider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->tickInterval);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -263,8 +258,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_UPSIDEDOWN)
   auto obj = static_cast<QStyleOptionSlider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->upsideDown);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -296,8 +290,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SLIDERPOSITION)
   auto obj = static_cast<QStyleOptionSlider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->sliderPosition);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -329,8 +322,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SLIDERVALUE)
   auto obj = static_cast<QStyleOptionSlider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->sliderValue);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -362,8 +354,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SINGLESTEP)
   auto obj = static_cast<QStyleOptionSlider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->singleStep);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -395,8 +386,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_PAGESTEP)
   auto obj = static_cast<QStyleOptionSlider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->pageStep);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -428,8 +418,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_NOTCHTARGET)
   auto obj = static_cast<QStyleOptionSlider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RQREAL(obj->notchTarget);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -461,8 +450,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_DIALWRAPPING)
   auto obj = static_cast<QStyleOptionSlider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->dialWrapping);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

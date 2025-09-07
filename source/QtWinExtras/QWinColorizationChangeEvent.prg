@@ -95,8 +95,7 @@ HB_FUNC_STATIC(QWINCOLORIZATIONCHANGEEVENT_COLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQRGB(obj->color());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,8 +117,7 @@ HB_FUNC_STATIC(QWINCOLORIZATIONCHANGEEVENT_OPAQUEBLEND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->opaqueBlend());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

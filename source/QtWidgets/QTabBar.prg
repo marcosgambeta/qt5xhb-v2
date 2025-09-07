@@ -180,8 +180,7 @@ HB_FUNC_STATIC(QTABBAR_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,8 +200,7 @@ HB_FUNC_STATIC(QTABBAR_CURRENTINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,8 +220,7 @@ HB_FUNC_STATIC(QTABBAR_DOCUMENTMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->documentMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,8 +240,7 @@ HB_FUNC_STATIC(QTABBAR_DRAWBASE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->drawBase());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,8 +260,7 @@ HB_FUNC_STATIC(QTABBAR_ELIDEMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->elideMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,8 +280,7 @@ HB_FUNC_STATIC(QTABBAR_EXPANDING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->expanding());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,8 +300,7 @@ HB_FUNC_STATIC(QTABBAR_ICONSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->iconSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -357,8 +350,7 @@ HB_FUNC_STATIC(QTABBAR_ISMOVABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isMovable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -445,8 +437,7 @@ HB_FUNC_STATIC(QTABBAR_SELECTIONBEHAVIORONREMOVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->selectionBehaviorOnRemove());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -881,8 +872,7 @@ HB_FUNC_STATIC(QTABBAR_SHAPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->shape());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1096,8 +1086,7 @@ HB_FUNC_STATIC(QTABBAR_TABSCLOSABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->tabsClosable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1117,8 +1106,7 @@ HB_FUNC_STATIC(QTABBAR_USESSCROLLBUTTONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->usesScrollButtons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1138,8 +1126,7 @@ HB_FUNC_STATIC(QTABBAR_MINIMUMSIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -1160,8 +1147,7 @@ HB_FUNC_STATIC(QTABBAR_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -1206,8 +1192,7 @@ HB_FUNC_STATIC(QTABBAR_AUTOHIDE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoHide());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1254,8 +1239,7 @@ HB_FUNC_STATIC(QTABBAR_CHANGECURRENTONDRAG)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->changeCurrentOnDrag());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

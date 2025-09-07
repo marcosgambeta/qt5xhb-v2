@@ -134,8 +134,7 @@ HB_FUNC_STATIC(QPICTUREIO_PICTURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->picture();
       Qt5xHb::createReturnClass(ptr, "QPICTURE", false);
@@ -156,8 +155,7 @@ HB_FUNC_STATIC(QPICTUREIO_STATUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +175,7 @@ HB_FUNC_STATIC(QPICTUREIO_FORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retc(static_cast<const char *>(obj->format()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,8 +195,7 @@ HB_FUNC_STATIC(QPICTUREIO_IODEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->ioDevice();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
@@ -220,8 +216,7 @@ HB_FUNC_STATIC(QPICTUREIO_FILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,8 +236,7 @@ HB_FUNC_STATIC(QPICTUREIO_QUALITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->quality());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,8 +256,7 @@ HB_FUNC_STATIC(QPICTUREIO_DESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->description());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,8 +276,7 @@ HB_FUNC_STATIC(QPICTUREIO_PARAMETERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retc(static_cast<const char *>(obj->parameters()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,8 +296,7 @@ HB_FUNC_STATIC(QPICTUREIO_GAMMA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->gamma());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -532,8 +523,7 @@ HB_FUNC_STATIC(QPICTUREIO_READ)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->read());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -553,8 +543,7 @@ HB_FUNC_STATIC(QPICTUREIO_WRITE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->write());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

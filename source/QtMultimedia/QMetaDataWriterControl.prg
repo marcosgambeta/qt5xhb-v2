@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ISWRITABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isWritable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ISMETADATAAVAILABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isMetaDataAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +172,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_AVAILABLEMETADATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->availableMetaData());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_INQUIRYTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->inquiryType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +169,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ISACTIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,8 +191,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +213,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +235,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_DISCOVEREDDEVICES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->discoveredDevices();
       auto pDynSym = hb_dynsymFindName("QBLUETOOTHDEVICEINFO");
@@ -288,8 +283,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_START)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->start();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -313,8 +307,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_STOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

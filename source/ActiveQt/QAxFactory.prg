@@ -95,8 +95,7 @@ HB_FUNC_STATIC(QAXFACTORY_APPID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUuid(obj->appID());
       Qt5xHb::createReturnClass(ptr, "QUUID", true);
@@ -194,8 +193,7 @@ HB_FUNC_STATIC(QAXFACTORY_FEATURELIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->featureList());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -252,8 +250,7 @@ HB_FUNC_STATIC(QAXFACTORY_ISSERVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isService());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,8 +328,7 @@ HB_FUNC_STATIC(QAXFACTORY_TYPELIBID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUuid(obj->typeLibID());
       Qt5xHb::createReturnClass(ptr, "QUUID", true);

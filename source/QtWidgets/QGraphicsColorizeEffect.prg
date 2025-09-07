@@ -96,8 +96,7 @@ HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_COLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->color());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -118,8 +117,7 @@ HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_STRENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->strength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

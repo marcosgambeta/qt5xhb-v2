@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_CURRENTLOOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentLoop());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,8 +118,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_CURRENTLOOPTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentLoopTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,8 +138,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_CURRENTTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +181,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_DIRECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->direction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +224,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_DURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->duration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,8 +244,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_GROUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->group();
       Qt5xHb::createReturnQObjectClass(ptr, "QANIMATIONGROUP");
@@ -271,8 +265,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_LOOPCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->loopCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,8 +308,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_STATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,8 +328,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_TOTALDURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->totalDuration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -357,8 +348,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_PAUSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->pause();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -380,8 +370,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_RESUME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->resume();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -450,8 +439,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_STOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

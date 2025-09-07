@@ -116,8 +116,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,8 +180,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_ITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->item();
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
@@ -429,8 +427,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_TIMELINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->timeLine();
       Qt5xHb::createReturnQObjectClass(ptr, "QTIMELINE");

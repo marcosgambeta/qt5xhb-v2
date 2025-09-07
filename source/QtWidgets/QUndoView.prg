@@ -118,8 +118,7 @@ HB_FUNC_STATIC(QUNDOVIEW_CLEANICON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QIcon(obj->cleanIcon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
@@ -140,8 +139,7 @@ HB_FUNC_STATIC(QUNDOVIEW_EMPTYLABEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->emptyLabel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,8 +159,7 @@ HB_FUNC_STATIC(QUNDOVIEW_GROUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->group();
       Qt5xHb::createReturnQObjectClass(ptr, "QUNDOGROUP");
@@ -229,8 +226,7 @@ HB_FUNC_STATIC(QUNDOVIEW_STACK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->stack();
       Qt5xHb::createReturnQObjectClass(ptr, "QUNDOSTACK");

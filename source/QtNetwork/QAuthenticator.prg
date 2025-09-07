@@ -114,8 +114,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_USER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->user());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,8 +157,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_PASSWORD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->password());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,8 +200,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_REALM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->realm());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,8 +290,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -314,8 +310,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_DETACH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->detach();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

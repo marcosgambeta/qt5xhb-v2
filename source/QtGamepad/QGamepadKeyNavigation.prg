@@ -138,8 +138,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_ACTIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->active());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,8 +185,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_GAMEPAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->gamepad();
       Qt5xHb::createReturnQObjectClass(ptr, "QGAMEPAD");
@@ -235,8 +233,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_UPKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->upKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,8 +280,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_DOWNKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->downKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,8 +327,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_LEFTKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->leftKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -379,8 +374,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_RIGHTKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->rightKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -427,8 +421,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_BUTTONAKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->buttonAKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -475,8 +468,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_BUTTONBKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->buttonBKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -523,8 +515,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_BUTTONXKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->buttonXKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -571,8 +562,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_BUTTONYKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->buttonYKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -619,8 +609,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_BUTTONSELECTKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->buttonSelectKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -667,8 +656,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_BUTTONSTARTKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->buttonStartKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -715,8 +703,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_BUTTONGUIDEKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->buttonGuideKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -763,8 +750,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_BUTTONL1KEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->buttonL1Key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -811,8 +797,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_BUTTONR1KEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->buttonR1Key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -859,8 +844,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_BUTTONL2KEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->buttonL2Key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -907,8 +891,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_BUTTONR2KEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->buttonR2Key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -955,8 +938,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_BUTTONL3KEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->buttonL3Key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1003,8 +985,7 @@ HB_FUNC_STATIC(QGAMEPADKEYNAVIGATION_BUTTONR3KEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->buttonR3Key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

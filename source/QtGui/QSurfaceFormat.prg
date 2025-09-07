@@ -160,8 +160,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_DEPTHBUFFERSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->depthBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,8 +203,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_STENCILBUFFERSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->stencilBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +246,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_REDBUFFERSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->redBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,8 +289,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_GREENBUFFERSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->greenBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,8 +332,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_BLUEBUFFERSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->blueBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -380,8 +375,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_ALPHABUFFERSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->alphaBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -424,8 +418,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SAMPLES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->samples());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -468,8 +461,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SWAPBEHAVIOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->swapBehavior());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -489,8 +481,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_HASALPHA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasAlpha());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -533,8 +524,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_PROFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->profile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -577,8 +567,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_RENDERABLETYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->renderableType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -621,8 +610,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_MAJORVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->majorVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -665,8 +653,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_MINORVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->minorVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -686,8 +673,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_STEREO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->stereo());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

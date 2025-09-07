@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_COLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->color();
       Qt5xHb::createReturnClass(ptr, "QCOLOR", false);

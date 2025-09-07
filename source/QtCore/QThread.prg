@@ -113,8 +113,7 @@ HB_FUNC_STATIC(QTHREAD_EVENTDISPATCHER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->eventDispatcher();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTEVENTDISPATCHER");
@@ -158,8 +157,7 @@ HB_FUNC_STATIC(QTHREAD_ISFINISHED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFinished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,8 +177,7 @@ HB_FUNC_STATIC(QTHREAD_ISRUNNING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isRunning());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,8 +197,7 @@ HB_FUNC_STATIC(QTHREAD_PRIORITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->priority());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -290,8 +286,7 @@ HB_FUNC_STATIC(QTHREAD_STACKSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RUINT(obj->stackSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -332,8 +327,7 @@ HB_FUNC_STATIC(QTHREAD_QUIT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->quit();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -379,8 +373,7 @@ HB_FUNC_STATIC(QTHREAD_TERMINATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->terminate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

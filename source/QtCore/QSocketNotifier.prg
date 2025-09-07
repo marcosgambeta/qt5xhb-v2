@@ -92,8 +92,7 @@ HB_FUNC_STATIC(QSOCKETNOTIFIER_SOCKET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINTPTR(obj->socket());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,8 +112,7 @@ HB_FUNC_STATIC(QSOCKETNOTIFIER_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,8 +132,7 @@ HB_FUNC_STATIC(QSOCKETNOTIFIER_ISENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

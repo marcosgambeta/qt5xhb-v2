@@ -196,8 +196,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ACCEPTRICHTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->acceptRichText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,8 +216,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ALIGNMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,8 +257,7 @@ HB_FUNC_STATIC(QTEXTEDIT_AUTOFORMATTING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->autoFormatting());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,8 +277,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CANPASTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canPaste());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,8 +325,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CURRENTCHARFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTextCharFormat(obj->currentCharFormat());
       Qt5xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
@@ -351,8 +346,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CURRENTFONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QFont(obj->currentFont());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
@@ -425,8 +419,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CURSORWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->cursorWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -446,8 +439,7 @@ HB_FUNC_STATIC(QTEXTEDIT_DOCUMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->document();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
@@ -468,8 +460,7 @@ HB_FUNC_STATIC(QTEXTEDIT_DOCUMENTTITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->documentTitle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -489,8 +480,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ENSURECURSORVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->ensureCursorVisible();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -534,8 +524,7 @@ HB_FUNC_STATIC(QTEXTEDIT_FONTFAMILY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->fontFamily());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -555,8 +544,7 @@ HB_FUNC_STATIC(QTEXTEDIT_FONTITALIC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->fontItalic());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -576,8 +564,7 @@ HB_FUNC_STATIC(QTEXTEDIT_FONTPOINTSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->fontPointSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -597,8 +584,7 @@ HB_FUNC_STATIC(QTEXTEDIT_FONTUNDERLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->fontUnderline());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -618,8 +604,7 @@ HB_FUNC_STATIC(QTEXTEDIT_FONTWEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->fontWeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -639,8 +624,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ISREADONLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReadOnly());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -660,8 +644,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ISUNDOREDOENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isUndoRedoEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -681,8 +664,7 @@ HB_FUNC_STATIC(QTEXTEDIT_LINEWRAPCOLUMNORWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->lineWrapColumnOrWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -702,8 +684,7 @@ HB_FUNC_STATIC(QTEXTEDIT_LINEWRAPMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->lineWrapMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -793,8 +774,7 @@ HB_FUNC_STATIC(QTEXTEDIT_OVERWRITEMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->overwriteMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1205,8 +1185,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TABCHANGESFOCUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->tabChangesFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1226,8 +1205,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TABSTOPWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->tabStopWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1247,8 +1225,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TEXTBACKGROUNDCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->textBackgroundColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -1269,8 +1246,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TEXTCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->textColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -1291,8 +1267,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TEXTCURSOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTextCursor(obj->textCursor());
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
@@ -1313,8 +1288,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TEXTINTERACTIONFLAGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->textInteractionFlags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1334,8 +1308,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TOHTML)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->toHtml());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1355,8 +1328,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TOPLAINTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->toPlainText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1376,8 +1348,7 @@ HB_FUNC_STATIC(QTEXTEDIT_WORDWRAPMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->wordWrapMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1420,8 +1391,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1443,8 +1413,7 @@ HB_FUNC_STATIC(QTEXTEDIT_COPY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->copy();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1466,8 +1435,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->cut();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1535,8 +1503,7 @@ HB_FUNC_STATIC(QTEXTEDIT_PASTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->paste();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1558,8 +1525,7 @@ HB_FUNC_STATIC(QTEXTEDIT_REDO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->redo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1604,8 +1570,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SELECTALL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->selectAll();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1903,8 +1868,7 @@ HB_FUNC_STATIC(QTEXTEDIT_UNDO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->undo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

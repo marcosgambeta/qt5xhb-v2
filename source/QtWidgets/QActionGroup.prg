@@ -145,8 +145,7 @@ HB_FUNC_STATIC(QACTIONGROUP_CHECKEDACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->checkedAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -167,8 +166,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ISENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,8 +186,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ISEXCLUSIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isExclusive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,8 +206,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ISVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

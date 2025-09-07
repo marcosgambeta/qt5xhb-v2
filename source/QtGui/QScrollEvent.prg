@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QSCROLLEVENT_CONTENTPOS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->contentPos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -110,8 +109,7 @@ HB_FUNC_STATIC(QSCROLLEVENT_OVERSHOOTDISTANCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->overshootDistance());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -132,8 +130,7 @@ HB_FUNC_STATIC(QSCROLLEVENT_SCROLLSTATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->scrollState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

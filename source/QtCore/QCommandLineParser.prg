@@ -169,8 +169,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_ADDVERSIONOPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QCommandLineOption(obj->addVersionOption());
       Qt5xHb::createReturnClass(ptr, "QCOMMANDLINEOPTION", true);
@@ -193,8 +192,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_ADDHELPOPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QCommandLineOption(obj->addHelpOption());
       Qt5xHb::createReturnClass(ptr, "QCOMMANDLINEOPTION", true);
@@ -242,8 +240,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_APPLICATIONDESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->applicationDescription());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -290,8 +287,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_CLEARPOSITIONALARGUMENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearPositionalArguments();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -374,8 +370,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_ERRORTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -493,8 +488,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_POSITIONALARGUMENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->positionalArguments());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -516,8 +510,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_OPTIONNAMES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->optionNames());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -539,8 +532,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_UNKNOWNOPTIONNAMES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->unknownOptionNames());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -587,8 +579,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_HELPTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->helpText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

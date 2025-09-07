@@ -83,8 +83,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REQUESTURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->requestUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -105,8 +104,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REQUESTMETHOD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->requestMethod());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);

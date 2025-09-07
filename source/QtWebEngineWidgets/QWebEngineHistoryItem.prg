@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_ORIGINALURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->originalUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -134,8 +133,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_URL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -158,8 +156,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_TITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,8 +178,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_LASTVISITED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDateTime(obj->lastVisited());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -205,8 +201,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_ICONURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->iconUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -229,8 +224,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

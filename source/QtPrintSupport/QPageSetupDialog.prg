@@ -125,8 +125,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_PRINTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->printer();
       Qt5xHb::createReturnClass(ptr, "QPRINTER", false);
@@ -170,8 +169,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_EXEC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->exec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

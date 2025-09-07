@@ -171,8 +171,7 @@ HB_FUNC_STATIC(QSEMAPHORE_AVAILABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->available());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

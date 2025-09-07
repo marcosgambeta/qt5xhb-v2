@@ -252,8 +252,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,8 +410,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SPACING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->spacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -453,8 +451,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -474,8 +471,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_INVALIDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->invalidate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

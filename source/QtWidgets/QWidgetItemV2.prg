@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QWIDGETITEMV2_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -111,8 +110,7 @@ HB_FUNC_STATIC(QWIDGETITEMV2_MINIMUMSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->minimumSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -133,8 +131,7 @@ HB_FUNC_STATIC(QWIDGETITEMV2_MAXIMUMSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->maximumSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);

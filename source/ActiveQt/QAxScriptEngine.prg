@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QAXSCRIPTENGINE_HASINTROSPECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasIntrospection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,8 +129,7 @@ HB_FUNC_STATIC(QAXSCRIPTENGINE_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,8 +147,7 @@ HB_FUNC_STATIC(QAXSCRIPTENGINE_SCRIPTLANGUAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->scriptLanguage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,8 +186,7 @@ HB_FUNC_STATIC(QAXSCRIPTENGINE_STATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

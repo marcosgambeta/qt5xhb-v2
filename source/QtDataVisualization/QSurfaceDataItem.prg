@@ -160,8 +160,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_POSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVector3D(obj->position());
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
@@ -259,8 +258,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_X)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -282,8 +280,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_Y)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,8 +302,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_Z)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->z());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

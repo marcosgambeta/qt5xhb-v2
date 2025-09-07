@@ -153,8 +153,7 @@ HB_FUNC_STATIC(QPEN_BRUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->brush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -175,8 +174,7 @@ HB_FUNC_STATIC(QPEN_CAPSTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->capStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,8 +194,7 @@ HB_FUNC_STATIC(QPEN_COLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->color());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -218,8 +215,7 @@ HB_FUNC_STATIC(QPEN_DASHOFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->dashOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +235,7 @@ HB_FUNC_STATIC(QPEN_ISCOSMETIC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCosmetic());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,8 +255,7 @@ HB_FUNC_STATIC(QPEN_ISSOLID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSolid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,8 +275,7 @@ HB_FUNC_STATIC(QPEN_JOINSTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->joinStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,8 +295,7 @@ HB_FUNC_STATIC(QPEN_MITERLIMIT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->miterLimit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -553,8 +545,7 @@ HB_FUNC_STATIC(QPEN_STYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->style());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -574,8 +565,7 @@ HB_FUNC_STATIC(QPEN_WIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -595,8 +585,7 @@ HB_FUNC_STATIC(QPEN_WIDTHF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->widthF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

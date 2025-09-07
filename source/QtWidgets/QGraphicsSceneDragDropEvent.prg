@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_ACCEPTPROPOSEDACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->acceptProposedAction();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,8 +109,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_BUTTONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->buttons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,8 +129,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->dropAction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +149,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->mimeData();
       Qt5xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
@@ -174,8 +170,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_MODIFIERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->modifiers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,8 +190,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_POS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->pos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -217,8 +211,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_POSSIBLEACTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->possibleActions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -238,8 +231,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_PROPOSEDACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->proposedAction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,8 +251,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->scenePos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -281,8 +272,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->screenPos());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -326,8 +316,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->source();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");

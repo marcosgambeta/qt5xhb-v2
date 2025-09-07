@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QSVGWIDGET_RENDERER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->renderer();
       Qt5xHb::createReturnQObjectClass(ptr, "QSVGRENDERER");
@@ -125,8 +124,7 @@ HB_FUNC_STATIC(QSVGWIDGET_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);

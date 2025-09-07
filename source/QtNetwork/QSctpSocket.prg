@@ -113,8 +113,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_CLOSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,8 +139,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_DISCONNECTFROMHOST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->disconnectFromHost();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +192,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_MAXIMUMCHANNELCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->maximumChannelCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,8 +216,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_ISINDATAGRAMMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isInDatagramMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,8 +240,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_READDATAGRAM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QNetworkDatagram(obj->readDatagram());
       Qt5xHb::createReturnClass(ptr, "QNETWORKDATAGRAM", true);

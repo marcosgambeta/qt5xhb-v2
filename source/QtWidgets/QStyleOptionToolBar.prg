@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_POSITIONOFLINE)
   auto obj = static_cast<QStyleOptionToolBar *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->positionOfLine);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -119,8 +118,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_POSITIONWITHINLINE)
   auto obj = static_cast<QStyleOptionToolBar *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->positionWithinLine);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -152,8 +150,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_TOOLBARAREA)
   auto obj = static_cast<QStyleOptionToolBar *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->toolBarArea);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -185,8 +182,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_FEATURES)
   auto obj = static_cast<QStyleOptionToolBar *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->features);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -218,8 +214,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_LINEWIDTH)
   auto obj = static_cast<QStyleOptionToolBar *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->lineWidth);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -251,8 +246,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_MIDLINEWIDTH)
   auto obj = static_cast<QStyleOptionToolBar *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->midLineWidth);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

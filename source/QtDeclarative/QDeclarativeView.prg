@@ -120,8 +120,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_ENGINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVEENGINE");
@@ -142,8 +141,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_ERRORS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->errors();
       auto pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
@@ -189,8 +187,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_INITIALSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->initialSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -211,8 +208,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_RESIZEMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->resizeMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,8 +228,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_ROOTCONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->rootContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
@@ -254,8 +249,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_ROOTOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->rootObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSOBJECT");
@@ -322,8 +316,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_SOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->source());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -344,8 +337,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_STATUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

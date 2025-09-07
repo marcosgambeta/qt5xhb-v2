@@ -174,8 +174,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,8 +195,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,8 +216,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_ISBLACKLISTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isBlacklisted());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,8 +237,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_ISSELFSIGNED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSelfSigned());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,8 +258,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,8 +280,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_VERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->version());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -307,8 +301,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_SERIALNUMBER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->serialNumber());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -409,8 +402,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_SUBJECTINFOATTRIBUTES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->subjectInfoAttributes();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
@@ -456,8 +448,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_ISSUERINFOATTRIBUTES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->issuerInfoAttributes();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
@@ -509,8 +500,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_EFFECTIVEDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDateTime(obj->effectiveDate());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -531,8 +521,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_EXPIRYDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDateTime(obj->expiryDate());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -553,8 +542,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_PUBLICKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSslKey(obj->publicKey());
       Qt5xHb::createReturnClass(ptr, "QSSLKEY", true);
@@ -575,8 +563,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_EXTENSIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->extensions();
       auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATEEXTENSION");
@@ -622,8 +609,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_TOPEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->toPem());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -644,8 +630,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_TODER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->toDer());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -666,8 +651,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_TOTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->toText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -872,8 +856,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_HANDLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retptr(static_cast<Qt::HANDLE>(obj->handle()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

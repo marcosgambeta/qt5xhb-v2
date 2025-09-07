@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_MEDIAOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->mediaObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QMEDIAOBJECT");
@@ -126,8 +125,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_ASPECTRATIOMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->aspectRatioMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +168,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_OFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->offset());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -215,8 +212,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSizeF(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
@@ -260,8 +256,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_NATIVESIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSizeF(obj->nativeSize());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
@@ -282,8 +277,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_BOUNDINGRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->boundingRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);

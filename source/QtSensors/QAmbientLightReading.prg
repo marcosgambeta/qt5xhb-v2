@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QAMBIENTLIGHTREADING_LIGHTLEVEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->lightLevel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

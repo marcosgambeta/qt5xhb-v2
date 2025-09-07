@@ -119,8 +119,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->source());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -164,8 +163,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_LOOPCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->loopCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,8 +206,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_LOOPSREMAINING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->loopsRemaining());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,8 +226,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_VOLUME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->volume());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,8 +269,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ISMUTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isMuted());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -317,8 +312,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ISPLAYING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isPlaying());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -338,8 +332,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_STATUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -359,8 +352,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_CATEGORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->category());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -403,8 +395,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ISLOADED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLoaded());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -424,8 +415,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_PLAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->play();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -447,8 +437,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_STOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

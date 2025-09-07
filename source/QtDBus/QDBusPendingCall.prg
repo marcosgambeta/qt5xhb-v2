@@ -128,8 +128,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ISFINISHED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFinished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,8 +150,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_WAITFORFINISHED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->waitForFinished();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,8 +174,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ISERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,8 +196,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,8 +218,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDBusError(obj->error());
       Qt5xHb::createReturnClass(ptr, "QDBUSERROR", true);
@@ -246,8 +241,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_REPLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDBusMessage(obj->reply());
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);

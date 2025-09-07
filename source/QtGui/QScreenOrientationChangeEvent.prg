@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QSCREENORIENTATIONCHANGEEVENT_SCREEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->screen();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCREEN");
@@ -111,8 +110,7 @@ HB_FUNC_STATIC(QSCREENORIENTATIONCHANGEEVENT_ORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

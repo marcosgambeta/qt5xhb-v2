@@ -120,8 +120,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_DESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->description());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,8 +163,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_ISFLAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFlat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

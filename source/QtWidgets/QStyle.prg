@@ -416,8 +416,7 @@ HB_FUNC_STATIC(QSTYLE_PROXY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->proxy();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
@@ -487,8 +486,7 @@ HB_FUNC_STATIC(QSTYLE_STANDARDPALETTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPalette(obj->standardPalette());
       Qt5xHb::createReturnClass(ptr, "QPALETTE", true);

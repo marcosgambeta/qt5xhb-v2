@@ -115,8 +115,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_ISSHADED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isShaded());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,8 +135,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_KEYBOARDPAGESTEP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->keyboardPageStep());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,8 +155,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_KEYBOARDSINGLESTEP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->keyboardSingleStep());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,8 +175,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_MDIAREA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->mdiArea();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMDIAREA");
@@ -315,8 +311,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SYSTEMMENU)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->systemMenu();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
@@ -358,8 +353,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_WIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->widget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -380,8 +374,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_MINIMUMSIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -402,8 +395,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -424,8 +416,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SHOWSHADED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->showShaded();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -447,8 +438,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SHOWSYSTEMMENU)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->showSystemMenu();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

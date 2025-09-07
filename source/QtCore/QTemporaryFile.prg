@@ -118,8 +118,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_AUTOREMOVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoRemove());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,8 +138,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_FILETEMPLATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->fileTemplate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,8 +158,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_OPEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->open());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,8 +224,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_FILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

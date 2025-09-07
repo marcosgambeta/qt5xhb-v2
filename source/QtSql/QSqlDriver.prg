@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QSQLDRIVER_BEGINTRANSACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->beginTransaction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QSQLDRIVER_CLOSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,8 +153,7 @@ HB_FUNC_STATIC(QSQLDRIVER_COMMITTRANSACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->commitTransaction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,8 +173,7 @@ HB_FUNC_STATIC(QSQLDRIVER_CREATERESULT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->createResult();
       Qt5xHb::createReturnClass(ptr, "QSQLRESULT", false);
@@ -240,8 +236,7 @@ HB_FUNC_STATIC(QSQLDRIVER_HANDLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVariant(obj->handle());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -304,8 +299,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ISOPEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isOpen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -325,8 +319,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ISOPENERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isOpenError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -346,8 +339,7 @@ HB_FUNC_STATIC(QSQLDRIVER_LASTERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSqlError(obj->lastError());
       Qt5xHb::createReturnClass(ptr, "QSQLERROR", true);
@@ -368,8 +360,7 @@ HB_FUNC_STATIC(QSQLDRIVER_NUMERICALPRECISIONPOLICY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->numericalPrecisionPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -457,8 +448,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ROLLBACKTRANSACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->rollbackTransaction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -566,8 +556,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->subscribedToNotifications());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -629,8 +618,7 @@ HB_FUNC_STATIC(QSQLDRIVER_CANCELQUERY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->cancelQuery());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

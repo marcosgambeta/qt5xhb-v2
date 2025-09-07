@@ -114,8 +114,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,8 +134,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_CODEC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->codec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,8 +177,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_RESOLUTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->resolution());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -233,8 +230,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_QUALITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->quality());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

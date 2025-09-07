@@ -80,8 +80,7 @@ HB_FUNC_STATIC(QXMLLOCATOR_COLUMNNUMBER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->columnNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -101,8 +100,7 @@ HB_FUNC_STATIC(QXMLLOCATOR_LINENUMBER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->lineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

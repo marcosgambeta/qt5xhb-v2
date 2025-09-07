@@ -96,8 +96,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_COMMITSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->commitString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,8 +116,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_PREEDITSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->preeditString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,8 +136,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTLENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->replacementLength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,8 +156,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTSTART)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->replacementStart());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

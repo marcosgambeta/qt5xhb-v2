@@ -125,8 +125,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_CURRENTPAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentPage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,8 +145,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +165,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_PAGECOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->pageCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,8 +185,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_VIEWMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->viewMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,8 +205,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMFACTOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->zoomFactor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,8 +225,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->zoomMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -274,8 +268,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_FITINVIEW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->fitInView();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,8 +290,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_FITTOWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->fitToWidth();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,8 +312,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_PRINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->print();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -343,8 +334,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETALLPAGESVIEWMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->setAllPagesViewMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -389,8 +379,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETFACINGPAGESVIEWMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->setFacingPagesViewMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -412,8 +401,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETLANDSCAPEORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->setLandscapeOrientation();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -458,8 +446,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETPORTRAITORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->setPortraitOrientation();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -481,8 +468,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETSINGLEPAGEVIEWMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->setSinglePageViewMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -573,8 +559,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_UPDATEPREVIEW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->updatePreview();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

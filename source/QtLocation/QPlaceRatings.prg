@@ -118,8 +118,7 @@ HB_FUNC_STATIC(QPLACERATINGS_AVERAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->average());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,8 +165,7 @@ HB_FUNC_STATIC(QPLACERATINGS_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,8 +212,7 @@ HB_FUNC_STATIC(QPLACERATINGS_MAXIMUM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->maximum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,8 +259,7 @@ HB_FUNC_STATIC(QPLACERATINGS_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

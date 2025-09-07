@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_MANAGERNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->managerName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,8 +144,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_MANAGERVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->managerVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -360,8 +358,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_INITIALIZECATEGORIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->initializeCategories();
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEREPLY");
@@ -503,8 +500,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_LOCALES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->locales();
       auto pDynSym = hb_dynsymFindName("QLOCALE");

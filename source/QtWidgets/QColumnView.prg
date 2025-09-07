@@ -116,8 +116,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_COLUMNWIDTHS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->columnWidths();
       Qt5xHb::convert_qlist_int_to_array(list);
@@ -138,8 +137,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_PREVIEWWIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->previewWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -160,8 +158,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_RESIZEGRIPSVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->resizeGripsVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,8 +302,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SELECTALL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->selectAll();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -397,8 +393,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);

@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QVALUEAXIS_TICKCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->tickCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +169,7 @@ HB_FUNC_STATIC(QVALUEAXIS_MIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->min());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,8 +216,7 @@ HB_FUNC_STATIC(QVALUEAXIS_MAX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->max());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,8 +263,7 @@ HB_FUNC_STATIC(QVALUEAXIS_LABELFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->labelFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -314,8 +310,7 @@ HB_FUNC_STATIC(QVALUEAXIS_MINORTICKCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->minorTickCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -362,8 +357,7 @@ HB_FUNC_STATIC(QVALUEAXIS_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -410,8 +404,7 @@ HB_FUNC_STATIC(QVALUEAXIS_APPLYNICENUMBERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->applyNiceNumbers();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

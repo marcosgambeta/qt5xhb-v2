@@ -136,8 +136,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTSVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->pointsVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +183,7 @@ HB_FUNC_STATIC(QXYSERIES_COLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->color());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -233,8 +231,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->pointLabelsFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,8 +278,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->pointLabelsVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,8 +325,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSFONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QFont(obj->pointLabelsFont());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
@@ -378,8 +373,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->pointLabelsColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -427,8 +421,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSCLIPPING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->pointLabelsClipping());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -726,8 +719,7 @@ HB_FUNC_STATIC(QXYSERIES_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -751,8 +743,7 @@ HB_FUNC_STATIC(QXYSERIES_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -774,8 +765,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->points();
       auto pDynSym = hb_dynsymFindName("QPOINTF");
@@ -823,8 +813,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTSVECTOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->pointsVector();
       auto pDynSym = hb_dynsymFindName("QPOINTF");
@@ -921,8 +910,7 @@ HB_FUNC_STATIC(QXYSERIES_PEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPen(obj->pen());
       Qt5xHb::createReturnClass(ptr, "QPEN", true);
@@ -970,8 +958,7 @@ HB_FUNC_STATIC(QXYSERIES_BRUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->brush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);

@@ -91,8 +91,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_FILTERING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->filtering());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,8 +111,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_RECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->rect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -212,8 +210,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_TEXTURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->texture();
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");

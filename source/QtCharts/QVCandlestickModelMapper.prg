@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QVCANDLESTICKMODELMAPPER_TIMESTAMPROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->timestampRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +151,7 @@ HB_FUNC_STATIC(QVCANDLESTICKMODELMAPPER_OPENROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->openRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,8 +198,7 @@ HB_FUNC_STATIC(QVCANDLESTICKMODELMAPPER_HIGHROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->highRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +245,7 @@ HB_FUNC_STATIC(QVCANDLESTICKMODELMAPPER_LOWROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->lowRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -296,8 +292,7 @@ HB_FUNC_STATIC(QVCANDLESTICKMODELMAPPER_CLOSEROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->closeRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -344,8 +339,7 @@ HB_FUNC_STATIC(QVCANDLESTICKMODELMAPPER_FIRSTSETCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->firstSetColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -392,8 +386,7 @@ HB_FUNC_STATIC(QVCANDLESTICKMODELMAPPER_LASTSETCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->lastSetColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -440,8 +433,7 @@ HB_FUNC_STATIC(QVCANDLESTICKMODELMAPPER_ORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

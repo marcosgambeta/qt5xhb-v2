@@ -152,8 +152,7 @@ HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_SHADERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->shaders();
       auto pDynSym = hb_dynsymFindName("QOPENGLSHADER");
@@ -298,8 +297,7 @@ HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_REMOVEALLSHADERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->removeAllShaders();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,8 +319,7 @@ HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_LINK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->link());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,8 +339,7 @@ HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_ISLINKED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLinked());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -363,8 +359,7 @@ HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_LOG)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->log());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -384,8 +379,7 @@ HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_BIND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->bind());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -405,8 +399,7 @@ HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_RELEASE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->release();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -428,8 +421,7 @@ HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_PROGRAMID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLUINT(obj->programId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -449,8 +441,7 @@ HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_MAXGEOMETRYOUTPUTVERTICES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->maxGeometryOutputVertices());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -493,8 +484,7 @@ HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_PATCHVERTEXCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->patchVertexCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

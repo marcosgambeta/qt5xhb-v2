@@ -106,8 +106,7 @@ HB_FUNC_STATIC(QSGMATERIAL_CREATESHADER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->createShader();
       Qt5xHb::createReturnClass(ptr, "QSGMATERIALSHADER", false);
@@ -128,8 +127,7 @@ HB_FUNC_STATIC(QSGMATERIAL_FLAGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,8 +170,7 @@ HB_FUNC_STATIC(QSGMATERIAL_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->type();
       Qt5xHb::createReturnClass(ptr, "QSGMATERIALTYPE", false);

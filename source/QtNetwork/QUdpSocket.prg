@@ -162,8 +162,7 @@ HB_FUNC_STATIC(QUDPSOCKET_MULTICASTINTERFACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QNetworkInterface(obj->multicastInterface());
       Qt5xHb::createReturnClass(ptr, "QNETWORKINTERFACE", true);
@@ -207,8 +206,7 @@ HB_FUNC_STATIC(QUDPSOCKET_HASPENDINGDATAGRAMS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasPendingDatagrams());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +226,7 @@ HB_FUNC_STATIC(QUDPSOCKET_PENDINGDATAGRAMSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->pendingDatagramSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

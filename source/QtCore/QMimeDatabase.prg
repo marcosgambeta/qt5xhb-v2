@@ -309,8 +309,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_ALLMIMETYPES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->allMimeTypes();
       auto pDynSym = hb_dynsymFindName("QMIMETYPE");

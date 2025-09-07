@@ -153,8 +153,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_QUIT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->quit();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -242,8 +242,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ATEND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->atEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,8 +262,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ATTRIBUTES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QXmlStreamAttributes(obj->attributes());
       Qt5xHb::createReturnClass(ptr, "QXMLSTREAMATTRIBUTES", true);
@@ -285,8 +283,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_CHARACTEROFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->characterOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,8 +303,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,8 +325,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_COLUMNNUMBER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->columnNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -350,8 +345,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->device();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
@@ -372,8 +366,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DOCUMENTENCODING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->documentEncoding());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -394,8 +387,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DOCUMENTVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->documentVersion());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -416,8 +408,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DTDNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->dtdName());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -438,8 +429,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DTDPUBLICID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->dtdPublicId());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -460,8 +450,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DTDSYSTEMID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->dtdSystemId());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -482,8 +471,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ENTITYDECLARATIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->entityDeclarations();
       auto pDynSym = hb_dynsymFindName("QXMLSTREAMENTITYECLARATION");
@@ -529,8 +517,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ENTITYRESOLVER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->entityResolver();
       Qt5xHb::createReturnClass(ptr, "QXMLSTREAMENTITYRESOLVER", false);
@@ -551,8 +538,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -572,8 +558,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -593,8 +578,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_HASERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -614,8 +598,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISCDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCDATA());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -635,8 +618,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISCHARACTERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCharacters());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -656,8 +638,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISCOMMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isComment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -677,8 +658,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISDTD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDTD());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -698,8 +678,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISENDDOCUMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEndDocument());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -719,8 +698,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISENDELEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEndElement());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -740,8 +718,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISENTITYREFERENCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEntityReference());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -761,8 +738,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISPROCESSINGINSTRUCTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isProcessingInstruction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -782,8 +758,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISSTANDALONEDOCUMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isStandaloneDocument());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -803,8 +778,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISSTARTDOCUMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isStartDocument());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -824,8 +798,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISSTARTELEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isStartElement());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -845,8 +818,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISWHITESPACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isWhitespace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -866,8 +838,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_LINENUMBER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->lineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -887,8 +858,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->name());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -909,8 +879,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAMESPACEDECLARATIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->namespaceDeclarations();
       auto pDynSym = hb_dynsymFindName("QXMLSTREAMNAMESPACEDECLARATION");
@@ -956,8 +925,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAMESPACEPROCESSING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->namespaceProcessing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -977,8 +945,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAMESPACEURI)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->namespaceUri());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -999,8 +966,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NOTATIONDECLARATIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->notationDeclarations();
       auto pDynSym = hb_dynsymFindName("QXMLSTREAMNOTATIONECLARATION");
@@ -1046,8 +1012,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_PREFIX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->prefix());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -1068,8 +1033,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_PROCESSINGINSTRUCTIONDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->processingInstructionData());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -1090,8 +1054,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_PROCESSINGINSTRUCTIONTARGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->processingInstructionTarget());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -1112,8 +1075,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_QUALIFIEDNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->qualifiedName());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -1182,8 +1144,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_READNEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->readNext());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1203,8 +1164,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_READNEXTSTARTELEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->readNextStartElement());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1293,8 +1253,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SKIPCURRENTELEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->skipCurrentElement();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1316,8 +1275,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_TEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->text());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -1338,8 +1296,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_TOKENSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->tokenString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1359,8 +1316,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_TOKENTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->tokenType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

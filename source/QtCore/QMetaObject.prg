@@ -139,8 +139,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CLASSINFOCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->classInfoCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,8 +159,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CLASSINFOOFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->classInfoOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,8 +179,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CLASSNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retc(static_cast<const char *>(obj->className()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,8 +221,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CONSTRUCTORCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->constructorCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,8 +263,7 @@ HB_FUNC_STATIC(QMETAOBJECT_ENUMERATORCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->enumeratorCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,8 +283,7 @@ HB_FUNC_STATIC(QMETAOBJECT_ENUMERATOROFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->enumeratorOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -478,8 +472,7 @@ HB_FUNC_STATIC(QMETAOBJECT_METHODCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->methodCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -499,8 +492,7 @@ HB_FUNC_STATIC(QMETAOBJECT_METHODOFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->methodOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -549,8 +541,7 @@ HB_FUNC_STATIC(QMETAOBJECT_PROPERTYCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->propertyCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -570,8 +561,7 @@ HB_FUNC_STATIC(QMETAOBJECT_PROPERTYOFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->propertyOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -591,8 +581,7 @@ HB_FUNC_STATIC(QMETAOBJECT_SUPERCLASS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->superClass();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
@@ -613,8 +602,7 @@ HB_FUNC_STATIC(QMETAOBJECT_USERPROPERTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QMetaProperty(obj->userProperty());
       Qt5xHb::createReturnClass(ptr, "QMETAPROPERTY", true);

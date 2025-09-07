@@ -108,8 +108,7 @@ HB_FUNC_STATIC(QDNSMAILEXCHANGERECORD_EXCHANGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->exchange());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,8 +128,7 @@ HB_FUNC_STATIC(QDNSMAILEXCHANGERECORD_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,8 +148,7 @@ HB_FUNC_STATIC(QDNSMAILEXCHANGERECORD_PREFERENCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT16(obj->preference());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +191,7 @@ HB_FUNC_STATIC(QDNSMAILEXCHANGERECORD_TIMETOLIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT32(obj->timeToLive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

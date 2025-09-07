@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QSQLRELATION_DISPLAYCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->displayColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,8 +124,7 @@ HB_FUNC_STATIC(QSQLRELATION_INDEXCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->indexColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,8 +144,7 @@ HB_FUNC_STATIC(QSQLRELATION_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +164,7 @@ HB_FUNC_STATIC(QSQLRELATION_TABLENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->tableName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

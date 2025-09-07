@@ -119,8 +119,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_CONTEXTMENU)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->contextMenu();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
@@ -141,8 +140,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_GEOMETRY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->geometry());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -163,8 +161,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_ICON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
@@ -185,8 +182,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_ISVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,8 +298,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_TOOLTIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->toolTip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,8 +318,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_HIDE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->hide();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -369,8 +363,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->show();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

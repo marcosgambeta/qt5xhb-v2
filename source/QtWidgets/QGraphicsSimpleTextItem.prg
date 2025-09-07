@@ -109,8 +109,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_FONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QFont(obj->font());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
@@ -177,8 +176,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_TEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,8 +196,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->boundingRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -262,8 +259,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPainterPath(obj->opaqueArea());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
@@ -307,8 +303,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_SHAPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPainterPath(obj->shape());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
@@ -329,8 +324,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

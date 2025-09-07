@@ -81,8 +81,7 @@ HB_FUNC_STATIC(QPAGEDPAINTDEVICE_NEWPAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->newPage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -102,8 +101,7 @@ HB_FUNC_STATIC(QPAGEDPAINTDEVICE_PAGESIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->pageSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,8 +146,7 @@ HB_FUNC_STATIC(QPAGEDPAINTDEVICE_PAGESIZEMM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSizeF(obj->pageSizeMM());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
@@ -194,8 +191,7 @@ HB_FUNC_STATIC(QPAGEDPAINTDEVICE_PAGELAYOUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPageLayout(obj->pageLayout());
       Qt5xHb::createReturnClass(ptr, "QPAGELAYOUT", true);

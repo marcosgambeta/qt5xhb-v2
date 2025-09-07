@@ -92,8 +92,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_CUSTOMFOCUSPOINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->customFocusPoint());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -114,8 +113,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_FOCUSMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->focusMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,8 +133,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_FOCUSPOINTMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->focusPointMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,8 +153,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_FOCUSZONES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->focusZones();
       auto pDynSym = hb_dynsymFindName("QCAMERAFOCUSZONE");

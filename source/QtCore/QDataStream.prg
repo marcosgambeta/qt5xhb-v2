@@ -138,8 +138,7 @@ HB_FUNC_STATIC(QDATASTREAM_DEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->device();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
@@ -183,8 +182,7 @@ HB_FUNC_STATIC(QDATASTREAM_UNSETDEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->unsetDevice();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,8 +204,7 @@ HB_FUNC_STATIC(QDATASTREAM_ATEND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->atEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,8 +224,7 @@ HB_FUNC_STATIC(QDATASTREAM_STATUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -271,8 +267,7 @@ HB_FUNC_STATIC(QDATASTREAM_RESETSTATUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->resetStatus();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,8 +289,7 @@ HB_FUNC_STATIC(QDATASTREAM_FLOATINGPOINTPRECISION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->floatingPointPrecision());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -338,8 +332,7 @@ HB_FUNC_STATIC(QDATASTREAM_BYTEORDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->byteOrder());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -382,8 +375,7 @@ HB_FUNC_STATIC(QDATASTREAM_VERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->version());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -515,8 +507,7 @@ HB_FUNC_STATIC(QDATASTREAM_ABORTTRANSACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->abortTransaction();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -540,8 +531,7 @@ HB_FUNC_STATIC(QDATASTREAM_COMMITTRANSACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->commitTransaction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -563,8 +553,7 @@ HB_FUNC_STATIC(QDATASTREAM_ROLLBACKTRANSACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->rollbackTransaction();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -588,8 +577,7 @@ HB_FUNC_STATIC(QDATASTREAM_STARTTRANSACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->startTransaction();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

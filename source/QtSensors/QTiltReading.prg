@@ -84,8 +84,7 @@ HB_FUNC_STATIC(QTILTREADING_YROTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->yRotation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QTILTREADING_XROTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->xRotation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

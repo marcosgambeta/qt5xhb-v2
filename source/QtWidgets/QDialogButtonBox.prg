@@ -214,8 +214,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_CENTERBUTTONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->centerButtons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,8 +234,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,8 +256,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -392,8 +389,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_STANDARDBUTTONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->standardButtons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

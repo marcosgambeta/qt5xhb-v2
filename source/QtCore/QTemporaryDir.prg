@@ -105,8 +105,7 @@ HB_FUNC_STATIC(QTEMPORARYDIR_AUTOREMOVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoRemove());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,8 +125,7 @@ HB_FUNC_STATIC(QTEMPORARYDIR_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,8 +145,7 @@ HB_FUNC_STATIC(QTEMPORARYDIR_PATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->path());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,8 +165,7 @@ HB_FUNC_STATIC(QTEMPORARYDIR_REMOVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->remove());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

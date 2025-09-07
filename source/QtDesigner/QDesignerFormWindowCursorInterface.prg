@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->current();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -115,8 +114,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_FORMWINDOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->formWindow();
       Qt5xHb::createReturnQWidgetClass(ptr, "QDESIGNERFORMWINDOWINTERFACE");
@@ -137,8 +135,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_HASSELECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasSelection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,8 +201,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_POSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->position());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,8 +243,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGETCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->selectedWidgetCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -316,8 +311,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGETCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->widgetCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

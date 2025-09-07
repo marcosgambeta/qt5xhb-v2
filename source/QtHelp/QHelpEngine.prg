@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QHELPENGINE_CONTENTMODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->contentModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QHELPCONTENTMODEL");
@@ -124,8 +123,7 @@ HB_FUNC_STATIC(QHELPENGINE_CONTENTWIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->contentWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QHELPCONTENTWIDGET");
@@ -146,8 +144,7 @@ HB_FUNC_STATIC(QHELPENGINE_INDEXMODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->indexModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QHELPINDEXMODEL");
@@ -168,8 +165,7 @@ HB_FUNC_STATIC(QHELPENGINE_INDEXWIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->indexWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QHELPINDEXWIDGET");
@@ -190,8 +186,7 @@ HB_FUNC_STATIC(QHELPENGINE_SEARCHENGINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->searchEngine();
       Qt5xHb::createReturnQObjectClass(ptr, "QHELPSEARCHENGINE");

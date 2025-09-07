@@ -135,8 +135,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_END)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->end());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,8 +155,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_ISNORMAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNormal());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +175,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_NORMALIZED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QMediaTimeInterval(obj->normalized());
       Qt5xHb::createReturnClass(ptr, "QMEDIATIMEINTERVAL", true);
@@ -199,8 +196,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_START)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->start());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

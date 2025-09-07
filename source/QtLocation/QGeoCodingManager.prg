@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_MANAGERNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->managerName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,8 +115,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_MANAGERVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->managerVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,8 +225,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_LOCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QLocale(obj->locale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);

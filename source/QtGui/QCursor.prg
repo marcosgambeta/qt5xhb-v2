@@ -138,8 +138,7 @@ HB_FUNC_STATIC(QCURSOR_BITMAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->bitmap();
       Qt5xHb::createReturnClass(ptr, "QBITMAP", false);
@@ -160,8 +159,7 @@ HB_FUNC_STATIC(QCURSOR_HOTSPOT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->hotSpot());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -182,8 +180,7 @@ HB_FUNC_STATIC(QCURSOR_MASK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->mask();
       Qt5xHb::createReturnClass(ptr, "QBITMAP", false);
@@ -204,8 +201,7 @@ HB_FUNC_STATIC(QCURSOR_PIXMAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPixmap(obj->pixmap());
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
@@ -249,8 +245,7 @@ HB_FUNC_STATIC(QCURSOR_SHAPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->shape());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

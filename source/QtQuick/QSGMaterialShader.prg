@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QSGMATERIALSHADER_ACTIVATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->activate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,8 +104,7 @@ HB_FUNC_STATIC(QSGMATERIALSHADER_DEACTIVATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->deactivate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,8 +126,7 @@ HB_FUNC_STATIC(QSGMATERIALSHADER_PROGRAM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->program();
       Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLSHADERPROGRAM");

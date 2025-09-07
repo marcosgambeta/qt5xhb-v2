@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QTIMER_INTERVAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->interval());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,8 +119,7 @@ HB_FUNC_STATIC(QTIMER_ISACTIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,8 +139,7 @@ HB_FUNC_STATIC(QTIMER_ISSINGLESHOT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSingleShot());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,8 +205,7 @@ HB_FUNC_STATIC(QTIMER_TIMERID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->timerId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,8 +257,7 @@ HB_FUNC_STATIC(QTIMER_STOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

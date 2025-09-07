@@ -153,8 +153,7 @@ HB_FUNC_STATIC(QTREEVIEW_ALLCOLUMNSSHOWFOCUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->allColumnsShowFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +173,7 @@ HB_FUNC_STATIC(QTREEVIEW_AUTOEXPANDDELAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->autoExpandDelay());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,8 +256,7 @@ HB_FUNC_STATIC(QTREEVIEW_EXPANDSONDOUBLECLICK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->expandsOnDoubleClick());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,8 +276,7 @@ HB_FUNC_STATIC(QTREEVIEW_HEADER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->header();
       Qt5xHb::createReturnQWidgetClass(ptr, "QHEADERVIEW");
@@ -301,8 +297,7 @@ HB_FUNC_STATIC(QTREEVIEW_INDENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->indentation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,8 +361,7 @@ HB_FUNC_STATIC(QTREEVIEW_ISANIMATED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAnimated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -450,8 +444,7 @@ HB_FUNC_STATIC(QTREEVIEW_ISHEADERHIDDEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isHeaderHidden());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -492,8 +485,7 @@ HB_FUNC_STATIC(QTREEVIEW_ISSORTINGENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSortingEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -513,8 +505,7 @@ HB_FUNC_STATIC(QTREEVIEW_ITEMSEXPANDABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->itemsExpandable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -534,8 +525,7 @@ HB_FUNC_STATIC(QTREEVIEW_ROOTISDECORATED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->rootIsDecorated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -969,8 +959,7 @@ HB_FUNC_STATIC(QTREEVIEW_UNIFORMROWHEIGHTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->uniformRowHeights());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -990,8 +979,7 @@ HB_FUNC_STATIC(QTREEVIEW_WORDWRAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->wordWrap());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1079,8 +1067,7 @@ HB_FUNC_STATIC(QTREEVIEW_RESET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1126,8 +1113,7 @@ HB_FUNC_STATIC(QTREEVIEW_SELECTALL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->selectAll();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1263,8 +1249,7 @@ HB_FUNC_STATIC(QTREEVIEW_COLLAPSEALL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->collapseAll();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1309,8 +1294,7 @@ HB_FUNC_STATIC(QTREEVIEW_EXPANDALL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->expandAll();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

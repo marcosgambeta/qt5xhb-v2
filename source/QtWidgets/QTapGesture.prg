@@ -76,8 +76,7 @@ HB_FUNC_STATIC(QTAPGESTURE_POSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->position());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);

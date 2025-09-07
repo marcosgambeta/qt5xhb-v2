@@ -134,8 +134,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,8 +156,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_BOXOUTLINEVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->boxOutlineVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,8 +203,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_BOXWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->boxWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,8 +250,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_BRUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->brush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -302,8 +298,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_PEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPen(obj->pen());
       Qt5xHb::createReturnClass(ptr, "QPEN", true);
@@ -457,8 +452,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_BOXSETS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->boxSets();
       auto pDynSym = hb_dynsymFindName("QBOXSET");
@@ -503,8 +497,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -528,8 +521,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

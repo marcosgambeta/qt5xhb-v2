@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QGLYPHRUN_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,8 +132,7 @@ HB_FUNC_STATIC(QGLYPHRUN_OVERLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->overline());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,8 +152,7 @@ HB_FUNC_STATIC(QGLYPHRUN_RAWFONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRawFont(obj->rawFont());
       Qt5xHb::createReturnClass(ptr, "QRAWFONT", true);
@@ -268,8 +265,7 @@ HB_FUNC_STATIC(QGLYPHRUN_STRIKEOUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->strikeOut());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,8 +285,7 @@ HB_FUNC_STATIC(QGLYPHRUN_UNDERLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->underline());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

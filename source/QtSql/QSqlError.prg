@@ -128,8 +128,7 @@ HB_FUNC_STATIC(QSQLERROR_DATABASETEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->databaseText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,8 +171,7 @@ HB_FUNC_STATIC(QSQLERROR_DRIVERTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->driverText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +214,7 @@ HB_FUNC_STATIC(QSQLERROR_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -237,8 +234,7 @@ HB_FUNC_STATIC(QSQLERROR_NUMBER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->number());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,8 +277,7 @@ HB_FUNC_STATIC(QSQLERROR_TEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,8 +297,7 @@ HB_FUNC_STATIC(QSQLERROR_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,8 +341,7 @@ HB_FUNC_STATIC(QSQLERROR_NATIVEERRORCODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->nativeErrorCode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

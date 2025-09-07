@@ -216,8 +216,7 @@ HB_FUNC_STATIC(QCHAR_CATEGORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->category());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -237,8 +236,7 @@ HB_FUNC_STATIC(QCHAR_CELL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retni(obj->cell());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,8 +256,7 @@ HB_FUNC_STATIC(QCHAR_COMBININGCLASS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retni(obj->combiningClass());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,8 +276,7 @@ HB_FUNC_STATIC(QCHAR_DECOMPOSITIONTAG)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->decompositionTag());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,8 +296,7 @@ HB_FUNC_STATIC(QCHAR_DIGITVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->digitValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,8 +316,7 @@ HB_FUNC_STATIC(QCHAR_DIRECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->direction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,8 +336,7 @@ HB_FUNC_STATIC(QCHAR_HASMIRRORED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasMirrored());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -363,8 +356,7 @@ HB_FUNC_STATIC(QCHAR_ISDIGIT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDigit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -384,8 +376,7 @@ HB_FUNC_STATIC(QCHAR_ISHIGHSURROGATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isHighSurrogate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -405,8 +396,7 @@ HB_FUNC_STATIC(QCHAR_ISLETTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLetter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -426,8 +416,7 @@ HB_FUNC_STATIC(QCHAR_ISLETTERORNUMBER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLetterOrNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -447,8 +436,7 @@ HB_FUNC_STATIC(QCHAR_ISLOWSURROGATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLowSurrogate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -468,8 +456,7 @@ HB_FUNC_STATIC(QCHAR_ISLOWER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLower());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -489,8 +476,7 @@ HB_FUNC_STATIC(QCHAR_ISMARK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isMark());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -510,8 +496,7 @@ HB_FUNC_STATIC(QCHAR_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -531,8 +516,7 @@ HB_FUNC_STATIC(QCHAR_ISNUMBER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -552,8 +536,7 @@ HB_FUNC_STATIC(QCHAR_ISPRINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isPrint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -573,8 +556,7 @@ HB_FUNC_STATIC(QCHAR_ISPUNCT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isPunct());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -594,8 +576,7 @@ HB_FUNC_STATIC(QCHAR_ISSPACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSpace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -615,8 +596,7 @@ HB_FUNC_STATIC(QCHAR_ISSYMBOL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSymbol());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -636,8 +616,7 @@ HB_FUNC_STATIC(QCHAR_ISTITLECASE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isTitleCase());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -657,8 +636,7 @@ HB_FUNC_STATIC(QCHAR_ISUPPER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isUpper());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -678,8 +656,7 @@ HB_FUNC_STATIC(QCHAR_JOINING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->joining());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -699,8 +676,7 @@ HB_FUNC_STATIC(QCHAR_MIRROREDCHAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QChar(obj->mirroredChar());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -721,8 +697,7 @@ HB_FUNC_STATIC(QCHAR_ROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retni(obj->row());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -742,8 +717,7 @@ HB_FUNC_STATIC(QCHAR_TOCASEFOLDED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QChar(obj->toCaseFolded());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -764,8 +738,7 @@ HB_FUNC_STATIC(QCHAR_TOLATIN1)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retni(obj->toLatin1());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -785,8 +758,7 @@ HB_FUNC_STATIC(QCHAR_TOLOWER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QChar(obj->toLower());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -807,8 +779,7 @@ HB_FUNC_STATIC(QCHAR_TOTITLECASE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QChar(obj->toTitleCase());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -829,8 +800,7 @@ HB_FUNC_STATIC(QCHAR_TOUPPER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QChar(obj->toUpper());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -851,8 +821,7 @@ HB_FUNC_STATIC(QCHAR_UNICODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RUSHORT(obj->unicode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -872,8 +841,7 @@ HB_FUNC_STATIC(QCHAR_UNICODEVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->unicodeVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

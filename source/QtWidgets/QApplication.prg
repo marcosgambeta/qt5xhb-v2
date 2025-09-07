@@ -213,8 +213,7 @@ HB_FUNC_STATIC(QAPPLICATION_ISSESSIONRESTORED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSessionRestored());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,8 +233,7 @@ HB_FUNC_STATIC(QAPPLICATION_SESSIONID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->sessionId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,8 +253,7 @@ HB_FUNC_STATIC(QAPPLICATION_SESSIONKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->sessionKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,8 +273,7 @@ HB_FUNC_STATIC(QAPPLICATION_STYLESHEET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->styleSheet());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -318,8 +314,7 @@ HB_FUNC_STATIC(QAPPLICATION_ABOUTQT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->aboutQt();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -341,8 +336,7 @@ HB_FUNC_STATIC(QAPPLICATION_CLOSEALLWINDOWS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->closeAllWindows();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

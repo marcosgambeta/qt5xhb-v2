@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTSELECTIONEVENT_SELECTIONSTART)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->selectionStart());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,8 +130,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTSELECTIONEVENT_SELECTIONEND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->selectionEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

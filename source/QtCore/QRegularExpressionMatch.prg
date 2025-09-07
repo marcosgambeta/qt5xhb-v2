@@ -251,8 +251,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_CAPTUREDTEXTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->capturedTexts());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,8 +271,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_HASMATCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasMatch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,8 +291,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_HASPARTIALMATCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasPartialMatch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -314,8 +311,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,8 +331,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_LASTCAPTUREDINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->lastCapturedIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -356,8 +351,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_MATCHOPTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->matchOptions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,8 +371,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_MATCHTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->matchType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -398,8 +391,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_REGULAREXPRESSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegularExpression(obj->regularExpression());
       Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSION", true);

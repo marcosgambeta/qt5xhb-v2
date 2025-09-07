@@ -128,8 +128,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_ISVIRTUALDESKTOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isVirtualDesktop());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,8 +148,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_PRIMARYSCREEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->primaryScreen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,8 +190,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->screenCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

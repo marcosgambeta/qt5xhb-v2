@@ -201,8 +201,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_DONECURRENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->doneCurrent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -254,8 +253,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_FORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGLFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QGLFORMAT", true);
@@ -276,8 +274,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_GENERATEDYNAMICTEXTURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLUINT(obj->generateDynamicTexture());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,8 +294,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -318,8 +314,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_MAKECURRENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->makeCurrent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,8 +334,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_RELEASEFROMDYNAMICTEXTURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->releaseFromDynamicTexture();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -362,8 +356,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -384,8 +377,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_TOIMAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QImage(obj->toImage());
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
@@ -429,8 +421,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_PAINTENGINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->paintEngine();
       Qt5xHb::createReturnClass(ptr, "QPAINTENGINE", false);
@@ -451,8 +442,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_HASOPENGLPBUFFERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasOpenGLPbuffers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

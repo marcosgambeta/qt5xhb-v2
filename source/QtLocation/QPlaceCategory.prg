@@ -123,8 +123,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_CATEGORYID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->categoryId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,8 +170,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,8 +217,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_VISIBILITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->visibility());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,8 +264,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_ICON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPlaceIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QPLACEICON", true);
@@ -316,8 +312,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QAMBIENTTEMPERATUREREADING_TEMPERATURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->temperature());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

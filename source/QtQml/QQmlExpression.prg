@@ -131,8 +131,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_CLEARERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearError();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,8 +153,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_COLUMNNUMBER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->columnNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,8 +173,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_CONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->context();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
@@ -197,8 +194,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_ENGINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLENGINE");
@@ -219,8 +215,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QQmlError(obj->error());
       Qt5xHb::createReturnClass(ptr, "QQMLERROR", true);
@@ -265,8 +260,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_EXPRESSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->expression());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -286,8 +280,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_HASERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -307,8 +300,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_LINENUMBER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->lineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -328,8 +320,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_NOTIFYONVALUECHANGED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->notifyOnValueChanged());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -349,8 +340,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SCOPEOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->scopeObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -440,8 +430,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SOURCEFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->sourceFile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

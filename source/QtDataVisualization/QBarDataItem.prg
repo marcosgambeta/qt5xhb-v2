@@ -165,8 +165,7 @@ HB_FUNC_STATIC(QBARDATAITEM_VALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,8 +212,7 @@ HB_FUNC_STATIC(QBARDATAITEM_ROTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->rotation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

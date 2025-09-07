@@ -106,8 +106,7 @@ HB_FUNC_STATIC(QXMLNODEMODELINDEX_ADDITIONALDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->additionalData());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,8 +126,7 @@ HB_FUNC_STATIC(QXMLNODEMODELINDEX_DATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->data());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,8 +146,7 @@ HB_FUNC_STATIC(QXMLNODEMODELINDEX_INTERNALPOINTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retptr(static_cast<void *>(obj->internalPointer()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,8 +166,7 @@ HB_FUNC_STATIC(QXMLNODEMODELINDEX_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,8 +186,7 @@ HB_FUNC_STATIC(QXMLNODEMODELINDEX_MODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->model();
       Qt5xHb::createReturnClass(ptr, "QABSTRACTXMLNODEMODEL", false);

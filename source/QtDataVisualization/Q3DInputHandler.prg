@@ -115,8 +115,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ISROTATIONENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isRotationEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +162,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ISZOOMENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isZoomEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,8 +209,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ISSELECTIONENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSelectionEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,8 +256,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ISZOOMATTARGETENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isZoomAtTargetEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

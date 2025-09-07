@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_CAPSTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->capStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,8 +164,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_CURVETHRESHOLD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->curveThreshold());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,8 +184,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_DASHOFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->dashOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,8 +204,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_DASHPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->dashPattern();
       auto pArray = hb_itemArrayNew(0);
@@ -236,8 +232,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_JOINSTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->joinStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,8 +252,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_MITERLIMIT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->miterLimit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -457,8 +451,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_WIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -131,8 +131,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_ARROWTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->arrowType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +151,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_AUTORAISE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoRaise());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,8 +171,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_DEFAULTACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->defaultAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -196,8 +193,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_MENU)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->menu();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
@@ -220,8 +216,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_POPUPMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->popupMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -338,8 +333,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_TOOLBUTTONSTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->toolButtonStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -359,8 +353,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_MINIMUMSIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -381,8 +374,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -450,8 +442,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SHOWMENU)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->showMenu();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -929,8 +929,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ISSAVINGSESSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSavingSession());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1034,8 +1033,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_DESKTOPFILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->desktopFileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

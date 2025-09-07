@@ -239,8 +239,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ITEMMODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->itemModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
@@ -288,8 +287,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->rowRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,8 +334,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->columnRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -384,8 +381,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_VALUEROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->valueRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -432,8 +428,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROTATIONROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->rotationRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -480,8 +475,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWCATEGORIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->rowCategories());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -528,8 +522,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNCATEGORIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->columnCategories());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -576,8 +569,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_USEMODELCATEGORIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->useModelCategories());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -624,8 +616,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_AUTOROWCATEGORIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoRowCategories());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -672,8 +663,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_AUTOCOLUMNCATEGORIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoColumnCategories());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -720,8 +710,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWROLEPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegExp(obj->rowRolePattern());
       Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
@@ -769,8 +758,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNROLEPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegExp(obj->columnRolePattern());
       Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
@@ -818,8 +806,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_VALUEROLEPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegExp(obj->valueRolePattern());
       Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
@@ -867,8 +854,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROTATIONROLEPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegExp(obj->rotationRolePattern());
       Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
@@ -916,8 +902,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWROLEREPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->rowRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -964,8 +949,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNROLEREPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->columnRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1012,8 +996,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_VALUEROLEREPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->valueRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1060,8 +1043,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROTATIONROLEREPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->rotationRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1108,8 +1090,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_MULTIMATCHBEHAVIOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->multiMatchBehavior());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

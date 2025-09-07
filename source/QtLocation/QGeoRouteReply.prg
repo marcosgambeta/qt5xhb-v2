@@ -108,8 +108,7 @@ HB_FUNC_STATIC(QGEOROUTEREPLY_ISFINISHED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFinished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,8 +130,7 @@ HB_FUNC_STATIC(QGEOROUTEREPLY_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,8 +152,7 @@ HB_FUNC_STATIC(QGEOROUTEREPLY_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +174,7 @@ HB_FUNC_STATIC(QGEOROUTEREPLY_REQUEST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGeoRouteRequest(obj->request());
       Qt5xHb::createReturnClass(ptr, "QGEOROUTEREQUEST", true);
@@ -201,8 +197,7 @@ HB_FUNC_STATIC(QGEOROUTEREPLY_ROUTES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->routes();
       auto pDynSym = hb_dynsymFindName("QGEOROUTE");
@@ -250,8 +245,7 @@ HB_FUNC_STATIC(QGEOROUTEREPLY_ABORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->abort();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

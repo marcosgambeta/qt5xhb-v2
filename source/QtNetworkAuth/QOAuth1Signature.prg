@@ -149,8 +149,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_URL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -248,8 +247,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_KEYS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->keys();
       auto pArray = hb_itemArrayNew(0);
@@ -328,8 +326,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_CLIENTSHAREDKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->clientSharedKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -376,8 +373,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_TOKENSECRET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->tokenSecret());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -424,8 +420,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_HMACSHA1)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->hmacSha1());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -448,8 +443,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_RSASHA1)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->rsaSha1());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);

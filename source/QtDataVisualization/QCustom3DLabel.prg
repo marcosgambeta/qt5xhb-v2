@@ -139,8 +139,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,8 +186,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_FONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QFont(obj->font());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
@@ -236,8 +234,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXTCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->textColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -285,8 +282,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_BACKGROUNDCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->backgroundColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -334,8 +330,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBORDERENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isBorderEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -382,8 +377,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBACKGROUNDENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isBackgroundEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -430,8 +424,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ISFACINGCAMERA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFacingCamera());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

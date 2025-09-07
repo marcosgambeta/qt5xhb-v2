@@ -188,8 +188,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,8 +231,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_EARLIESTTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->earliestTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,8 +251,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_INTERVALS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->intervals();
       auto pDynSym = hb_dynsymFindName("QMEDIATIMEINTERVAL");
@@ -300,8 +297,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_ISCONTINUOUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isContinuous());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,8 +317,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,8 +337,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_LATESTTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->latestTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

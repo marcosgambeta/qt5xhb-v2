@@ -128,8 +128,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_AUTOCLOSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoClose());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,8 +171,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_AUTORESET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoReset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +214,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_LABELTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->labelText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,8 +257,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_MAXIMUM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->maximum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,8 +300,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_MINIMUM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->minimum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,8 +343,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_MINIMUMDURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->minimumDuration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -484,8 +478,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_VALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -528,8 +521,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_WASCANCELED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->wasCanceled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -549,8 +541,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -571,8 +562,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_CANCEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->cancel();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -594,8 +584,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_RESET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

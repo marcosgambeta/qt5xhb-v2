@@ -114,8 +114,7 @@ HB_FUNC_STATIC(QFOCUSFRAME_WIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->widget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");

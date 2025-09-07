@@ -101,8 +101,7 @@ HB_FUNC_STATIC(QSCROLLAREA_ALIGNMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -237,8 +236,7 @@ HB_FUNC_STATIC(QSCROLLAREA_TAKEWIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->takeWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -259,8 +257,7 @@ HB_FUNC_STATIC(QSCROLLAREA_WIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->widget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -281,8 +278,7 @@ HB_FUNC_STATIC(QSCROLLAREA_WIDGETRESIZABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->widgetResizable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,8 +319,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);

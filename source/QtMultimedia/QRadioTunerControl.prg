@@ -113,8 +113,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_STATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,8 +133,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_BAND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->band());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,8 +197,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_FREQUENCY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->frequency());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,8 +261,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_ISSTEREO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isStereo());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,8 +281,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_STEREOMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->stereoMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,8 +324,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_SIGNALSTRENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->signalStrength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -350,8 +344,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_VOLUME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->volume());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -394,8 +387,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_ISMUTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isMuted());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -438,8 +430,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_ISSEARCHING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSearching());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -459,8 +450,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_ISANTENNACONNECTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAntennaConnected());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -480,8 +470,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_SEARCHFORWARD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->searchForward();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -503,8 +492,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_SEARCHBACKWARD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->searchBackward();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -550,8 +538,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_CANCELSEARCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->cancelSearch();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -573,8 +560,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_START)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->start();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -596,8 +582,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_STOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -619,8 +604,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -640,8 +624,7 @@ HB_FUNC_STATIC(QRADIOTUNERCONTROL_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

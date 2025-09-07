@@ -254,8 +254,7 @@ HB_FUNC_STATIC(QWIZARD_CURRENTID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,8 +274,7 @@ HB_FUNC_STATIC(QWIZARD_CURRENTPAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->currentPage();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIZARDPAGE");
@@ -340,8 +338,7 @@ HB_FUNC_STATIC(QWIZARD_NEXTID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->nextId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -361,8 +358,7 @@ HB_FUNC_STATIC(QWIZARD_OPTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->options());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -427,8 +423,7 @@ HB_FUNC_STATIC(QWIZARD_PAGEIDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->pageIds();
       Qt5xHb::convert_qlist_int_to_array(list);
@@ -662,8 +657,7 @@ HB_FUNC_STATIC(QWIZARD_SIDEWIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->sideWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -684,8 +678,7 @@ HB_FUNC_STATIC(QWIZARD_STARTID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->startId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -728,8 +721,7 @@ HB_FUNC_STATIC(QWIZARD_SUBTITLEFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->subTitleFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -793,8 +785,7 @@ HB_FUNC_STATIC(QWIZARD_TITLEFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->titleFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -837,8 +828,7 @@ HB_FUNC_STATIC(QWIZARD_VALIDATECURRENTPAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->validateCurrentPage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -858,8 +848,7 @@ HB_FUNC_STATIC(QWIZARD_VISITEDPAGES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->visitedPages();
       Qt5xHb::convert_qlist_int_to_array(list);
@@ -880,8 +869,7 @@ HB_FUNC_STATIC(QWIZARD_WIZARDSTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->wizardStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -947,8 +935,7 @@ HB_FUNC_STATIC(QWIZARD_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -969,8 +956,7 @@ HB_FUNC_STATIC(QWIZARD_BACK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->back();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -992,8 +978,7 @@ HB_FUNC_STATIC(QWIZARD_NEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->next();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1015,8 +1000,7 @@ HB_FUNC_STATIC(QWIZARD_RESTART)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->restart();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

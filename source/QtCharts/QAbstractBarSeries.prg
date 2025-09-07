@@ -118,8 +118,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_BARWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->barWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,8 +165,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,8 +187,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_ISLABELSVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLabelsVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -237,8 +234,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_LABELSFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->labelsFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,8 +281,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_LABELSANGLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->labelsAngle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -333,8 +328,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_LABELSPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->labelsPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -487,8 +481,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_BARSETS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->barSets();
       auto pDynSym = hb_dynsymFindName("QBARSET");
@@ -533,8 +526,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

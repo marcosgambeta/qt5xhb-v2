@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SECTION)
   auto obj = static_cast<QStyleOptionHeader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->section);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -126,8 +125,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_TEXT)
   auto obj = static_cast<QStyleOptionHeader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RQSTRING(obj->text);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -159,8 +157,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_TEXTALIGNMENT)
   auto obj = static_cast<QStyleOptionHeader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->textAlignment);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -192,8 +189,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_ICON)
   auto obj = static_cast<QStyleOptionHeader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       auto ptr = new QIcon(obj->icon);
       Qt5xHb::createReturnClass(ptr, "QICON", true);
     } else {
@@ -226,8 +222,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_ICONALIGNMENT)
   auto obj = static_cast<QStyleOptionHeader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->iconAlignment);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -259,8 +254,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_POSITION)
   auto obj = static_cast<QStyleOptionHeader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->position);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -292,8 +286,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SELECTEDPOSITION)
   auto obj = static_cast<QStyleOptionHeader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->selectedPosition);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -325,8 +318,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SORTINDICATOR)
   auto obj = static_cast<QStyleOptionHeader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->sortIndicator);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -358,8 +350,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_ORIENTATION)
   auto obj = static_cast<QStyleOptionHeader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->orientation);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

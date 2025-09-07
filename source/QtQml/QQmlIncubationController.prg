@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_ENGINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLENGINE");
@@ -169,8 +168,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_INCUBATINGOBJECTCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->incubatingObjectCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

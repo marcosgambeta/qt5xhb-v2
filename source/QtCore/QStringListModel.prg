@@ -114,8 +114,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_STRINGLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->stringList());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,8 +309,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SUPPORTEDDROPACTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedDropActions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

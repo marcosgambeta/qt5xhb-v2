@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_CACHESIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->cacheSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,8 +241,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

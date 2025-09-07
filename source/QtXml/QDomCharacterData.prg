@@ -123,8 +123,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_DATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->data());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,8 +189,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_LENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RUINT(obj->length());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,8 +209,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_NODETYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->nodeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

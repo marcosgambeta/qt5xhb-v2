@@ -109,8 +109,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_URL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -158,8 +157,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_IMAGEID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->imageId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,8 +204,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_MIMETYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->mimeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURHINTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->blurHints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,8 +117,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURRADIUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->blurRadius());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

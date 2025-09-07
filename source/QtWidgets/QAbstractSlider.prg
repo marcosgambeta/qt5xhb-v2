@@ -163,8 +163,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_MAXIMUM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->maximum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,8 +206,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_MINIMUM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->minimum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,8 +249,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_ORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -295,8 +292,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_PAGESTEP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->pageStep());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,8 +335,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_INVERTEDAPPEARANCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->invertedAppearance());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,8 +378,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_INVERTEDCONTROLS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->invertedControls());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -450,8 +444,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_ISSLIDERDOWN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSliderDown());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -494,8 +487,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SINGLESTEP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->singleStep());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -538,8 +530,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SLIDERPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sliderPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -605,8 +596,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_VALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -649,8 +639,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_HASTRACKING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasTracking());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

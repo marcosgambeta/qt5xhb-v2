@@ -133,8 +133,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ACTIVEFOCUSITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->activeFocusItem();
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
@@ -155,8 +154,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_CLEARBEFORERENDERING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->clearBeforeRendering());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,8 +174,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_COLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->color());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -198,8 +195,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_CONTENTITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->contentItem();
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
@@ -268,8 +264,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_GRABWINDOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QImage(obj->grabWindow());
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
@@ -290,8 +285,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_INCUBATIONCONTROLLER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->incubationController();
       Qt5xHb::createReturnClass(ptr, "QQMLINCUBATIONCONTROLLER", false);
@@ -312,8 +306,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ISPERSISTENTOPENGLCONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isPersistentOpenGLContext());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -333,8 +326,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ISPERSISTENTSCENEGRAPH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isPersistentSceneGraph());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,8 +346,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_MOUSEGRABBERITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->mouseGrabberItem();
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
@@ -376,8 +367,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_OPENGLCONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->openglContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXT");
@@ -398,8 +388,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_RENDERTARGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->renderTarget();
       Qt5xHb::createReturnClass(ptr, "QOPENGLFRAMEBUFFEROBJECT", false);
@@ -420,8 +409,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_RENDERTARGETID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RUINT(obj->renderTargetId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -441,8 +429,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_RENDERTARGETSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->renderTargetSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -608,8 +595,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ACCESSIBLEROOT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->accessibleRoot();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
@@ -630,8 +616,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_RELEASERESOURCES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->releaseResources();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -653,8 +638,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_UPDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->update();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

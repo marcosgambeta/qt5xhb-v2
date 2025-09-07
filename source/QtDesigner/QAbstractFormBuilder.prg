@@ -166,8 +166,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_WORKINGDIRECTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDir(obj->workingDirectory());
       Qt5xHb::createReturnClass(ptr, "QDIR", true);

@@ -126,8 +126,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ROWCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->rowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,8 +148,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ROWLABELS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->rowLabels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,8 +195,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_COLUMNLABELS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->columnLabels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,8 +242,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_SERIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QBAR3DSERIES");

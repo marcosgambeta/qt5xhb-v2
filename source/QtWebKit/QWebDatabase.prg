@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QWEBDATABASE_DISPLAYNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->displayName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,8 +124,7 @@ HB_FUNC_STATIC(QWEBDATABASE_EXPECTEDSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->expectedSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,8 +144,7 @@ HB_FUNC_STATIC(QWEBDATABASE_FILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +164,7 @@ HB_FUNC_STATIC(QWEBDATABASE_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,8 +184,7 @@ HB_FUNC_STATIC(QWEBDATABASE_ORIGIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QWebSecurityOrigin(obj->origin());
       Qt5xHb::createReturnClass(ptr, "QWEBSECURITYORIGIN", true);
@@ -210,8 +205,7 @@ HB_FUNC_STATIC(QWEBDATABASE_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

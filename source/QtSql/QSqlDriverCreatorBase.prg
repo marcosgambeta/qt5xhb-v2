@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QSQLDRIVERCREATORBASE_CREATEOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->createObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QSQLDRIVER");

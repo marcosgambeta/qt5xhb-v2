@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QJSENGINE_COLLECTGARBAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->collectGarbage();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,8 +146,7 @@ HB_FUNC_STATIC(QJSENGINE_GLOBALOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QJSValue(obj->globalObject());
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
@@ -191,8 +189,7 @@ HB_FUNC_STATIC(QJSENGINE_NEWOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QJSValue(obj->newObject());
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);

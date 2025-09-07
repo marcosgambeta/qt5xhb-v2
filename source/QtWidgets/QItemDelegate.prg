@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QITEMDELEGATE_HASCLIPPING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasClipping());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,8 +113,7 @@ HB_FUNC_STATIC(QITEMDELEGATE_ITEMEDITORFACTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->itemEditorFactory();
       Qt5xHb::createReturnClass(ptr, "QITEMEDITORFACTORY", false);

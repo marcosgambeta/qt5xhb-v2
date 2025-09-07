@@ -95,8 +95,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_MEASUREMENTSYSTEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RUINT(obj->measurementSystem());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,8 +159,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_LANGUAGELOCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QLocale(obj->languageLocale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
@@ -182,8 +180,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_REGIONLOCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QLocale(obj->regionLocale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
@@ -204,8 +201,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_INSTALLSOCKETNOTIFIERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->installSocketNotifiers();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,8 +223,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READLANGUAGELOCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->readLanguageLocale();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,8 +245,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READREGIONLOCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->readRegionLocale();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,8 +267,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READMEASUREMENTSYSTEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->readMeasurementSystem();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -296,8 +289,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READHOURFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->readHourFormat();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

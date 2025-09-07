@@ -123,8 +123,7 @@ HB_FUNC_STATIC(QSIZEF_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,8 +143,7 @@ HB_FUNC_STATIC(QSIZEF_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,8 +163,7 @@ HB_FUNC_STATIC(QSIZEF_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,8 +183,7 @@ HB_FUNC_STATIC(QSIZEF_WIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,8 +203,7 @@ HB_FUNC_STATIC(QSIZEF_HEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -274,8 +269,7 @@ HB_FUNC_STATIC(QSIZEF_TRANSPOSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->transpose();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,8 +291,7 @@ HB_FUNC_STATIC(QSIZEF_TRANSPOSED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSizeF(obj->transposed());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
@@ -425,8 +418,7 @@ HB_FUNC_STATIC(QSIZEF_TOSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->toSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);

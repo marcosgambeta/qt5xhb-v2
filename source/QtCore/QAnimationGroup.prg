@@ -127,8 +127,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_ANIMATIONCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->animationCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,8 +147,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

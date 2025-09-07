@@ -109,8 +109,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_BASELINEOFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->baselineOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +151,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_CHILDRENRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->childrenRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -174,8 +172,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_CLIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->clip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,8 +192,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_FORCEACTIVEFOCUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->forceActiveFocus();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,8 +214,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_IMPLICITHEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->implicitHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +234,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_IMPLICITWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->implicitWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,8 +254,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_KEEPMOUSEGRAB)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->keepMouseGrab());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -325,8 +318,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_PARENTITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->parentItem();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVEITEM");
@@ -485,8 +477,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SMOOTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->smooth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -506,8 +497,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_TRANSFORMORIGIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->transformOrigin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

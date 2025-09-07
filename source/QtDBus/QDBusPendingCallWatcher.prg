@@ -92,8 +92,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALLWATCHER_ISFINISHED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFinished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,8 +112,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALLWATCHER_WAITFORFINISHED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->waitForFinished();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

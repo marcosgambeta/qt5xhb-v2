@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_CORE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->core();
       Qt5xHb::createReturnQObjectClass(ptr, "QDESIGNERFORMEDITORINTERFACE");
@@ -109,8 +108,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->currentPropertyName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,8 +128,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReadOnly());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,8 +148,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_OBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->object();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");

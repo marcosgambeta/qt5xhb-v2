@@ -101,8 +101,7 @@ HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_INTERFRAMEDELAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->interFrameDelay());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

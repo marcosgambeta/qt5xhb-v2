@@ -109,8 +109,7 @@ HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,8 +129,7 @@ HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_CURRENTINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -107,8 +107,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,8 +127,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_FILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,8 +147,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_INSTANCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->instance();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -171,8 +168,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_ISLOADED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLoaded());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,8 +188,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_LOAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->load());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,8 +208,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_LOADHINTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->loadHints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,8 +274,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_UNLOAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->unload());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,8 +294,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_STATICINSTANCES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->staticInstances();
       auto pDynSym = hb_dynsymFindName("QOBJECT");

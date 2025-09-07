@@ -128,8 +128,7 @@ HB_FUNC_STATIC(QWHEELEVENT_PIXELDELTA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->pixelDelta());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -150,8 +149,7 @@ HB_FUNC_STATIC(QWHEELEVENT_ANGLEDELTA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->angleDelta());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -172,8 +170,7 @@ HB_FUNC_STATIC(QWHEELEVENT_DELTA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->delta());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,8 +190,7 @@ HB_FUNC_STATIC(QWHEELEVENT_ORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,8 +210,7 @@ HB_FUNC_STATIC(QWHEELEVENT_POS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->pos());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -236,8 +231,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALPOS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->globalPos());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -258,8 +252,7 @@ HB_FUNC_STATIC(QWHEELEVENT_X)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,8 +272,7 @@ HB_FUNC_STATIC(QWHEELEVENT_Y)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,8 +292,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->globalX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,8 +312,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->globalY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,8 +332,7 @@ HB_FUNC_STATIC(QWHEELEVENT_POSF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->posF();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
@@ -364,8 +353,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALPOSF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->globalPosF();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
@@ -386,8 +374,7 @@ HB_FUNC_STATIC(QWHEELEVENT_BUTTONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->buttons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

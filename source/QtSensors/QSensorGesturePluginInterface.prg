@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QSENSORGESTUREPLUGININTERFACE_CREATERECOGNIZERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->createRecognizers();
       auto pDynSym = hb_dynsymFindName("QSENSORGESTURERECOGNIZER");
@@ -135,8 +134,7 @@ HB_FUNC_STATIC(QSENSORGESTUREPLUGININTERFACE_SUPPORTEDIDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->supportedIds());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,8 +156,7 @@ HB_FUNC_STATIC(QSENSORGESTUREPLUGININTERFACE_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

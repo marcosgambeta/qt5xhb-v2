@@ -124,8 +124,7 @@ HB_FUNC_STATIC(QAXWIDGET_CREATEAGGREGATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->createAggregate();
       Qt5xHb::createReturnClass(ptr, "QAXAGGREGATED", false);
@@ -163,8 +162,7 @@ HB_FUNC_STATIC(QAXWIDGET_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +182,7 @@ HB_FUNC_STATIC(QAXWIDGET_MINIMUMSIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -204,8 +201,7 @@ HB_FUNC_STATIC(QAXWIDGET_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -226,8 +222,7 @@ HB_FUNC_STATIC(QAXWIDGET_ASVARIANT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVariant(obj->asVariant());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -246,8 +241,7 @@ HB_FUNC_STATIC(QAXWIDGET_CONTROL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->control());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,8 +259,7 @@ HB_FUNC_STATIC(QAXWIDGET_DISABLECLASSINFO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->disableClassInfo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -286,8 +279,7 @@ HB_FUNC_STATIC(QAXWIDGET_DISABLEEVENTSINK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->disableEventSink();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -307,8 +299,7 @@ HB_FUNC_STATIC(QAXWIDGET_DISABLEMETAOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->disableMetaObject();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,8 +357,7 @@ HB_FUNC_STATIC(QAXWIDGET_GENERATEDOCUMENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->generateDocumentation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -385,8 +375,7 @@ HB_FUNC_STATIC(QAXWIDGET_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -502,8 +491,7 @@ HB_FUNC_STATIC(QAXWIDGET_VERBS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->verbs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -174,8 +174,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_PORTNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->portName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,8 +196,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_SYSTEMLOCATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->systemLocation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,8 +218,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_DESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->description());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,8 +240,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_MANUFACTURER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->manufacturer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,8 +262,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_VENDORIDENTIFIER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT16(obj->vendorIdentifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,8 +284,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_PRODUCTIDENTIFIER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT16(obj->productIdentifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -312,8 +306,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_HASVENDORIDENTIFIER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasVendorIdentifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,8 +328,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_HASPRODUCTIDENTIFIER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasProductIdentifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -358,8 +350,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -381,8 +372,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_ISBUSY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isBusy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,8 +394,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

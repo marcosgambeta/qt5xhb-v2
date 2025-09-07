@@ -80,8 +80,7 @@ HB_FUNC_STATIC(QABSTRACTUNDOITEM_UNDO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->undo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,8 +102,7 @@ HB_FUNC_STATIC(QABSTRACTUNDOITEM_REDO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->redo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,8 +136,7 @@ HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_TOPPADDING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->topPadding());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,8 +179,7 @@ HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_BOTTOMPADDING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->bottomPadding());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,8 +222,7 @@ HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_LEFTPADDING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->leftPadding());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +265,7 @@ HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_RIGHTPADDING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->rightPadding());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -85,8 +85,7 @@ HB_FUNC_STATIC(QPRINTENGINE_ABORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->abort());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,8 +126,7 @@ HB_FUNC_STATIC(QPRINTENGINE_NEWPAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->newPage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,8 +146,7 @@ HB_FUNC_STATIC(QPRINTENGINE_PRINTERSTATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->printerState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

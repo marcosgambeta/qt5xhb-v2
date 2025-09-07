@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QRUNNABLE_RUN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->run();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,8 +110,7 @@ HB_FUNC_STATIC(QRUNNABLE_AUTODELETE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoDelete());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

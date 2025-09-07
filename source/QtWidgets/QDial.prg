@@ -117,8 +117,7 @@ HB_FUNC_STATIC(QDIAL_NOTCHSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->notchSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,8 +137,7 @@ HB_FUNC_STATIC(QDIAL_NOTCHTARGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->notchTarget());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,8 +157,7 @@ HB_FUNC_STATIC(QDIAL_NOTCHESVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->notchesVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,8 +200,7 @@ HB_FUNC_STATIC(QDIAL_WRAPPING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->wrapping());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,8 +220,7 @@ HB_FUNC_STATIC(QDIAL_MINIMUMSIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -246,8 +241,7 @@ HB_FUNC_STATIC(QDIAL_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);

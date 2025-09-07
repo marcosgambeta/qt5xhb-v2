@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QFOCUSEVENT_GOTFOCUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->gotFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,8 +109,7 @@ HB_FUNC_STATIC(QFOCUSEVENT_LOSTFOCUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->lostFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,8 +129,7 @@ HB_FUNC_STATIC(QFOCUSEVENT_REASON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->reason());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -129,8 +129,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_CALLBACK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->callback());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +151,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->callbackPath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,8 +198,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->callbackText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +245,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_PORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT16(obj->port());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -295,8 +291,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_CLOSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,8 +315,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_ISLISTENING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isListening());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

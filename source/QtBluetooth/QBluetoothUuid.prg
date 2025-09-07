@@ -189,8 +189,7 @@ HB_FUNC_STATIC(QBLUETOOTHUUID_MINIMUMSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->minimumSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

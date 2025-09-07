@@ -229,8 +229,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDomDocumentFragment(obj->createDocumentFragment());
       Qt5xHb::createReturnClass(ptr, "QDOMDOCUMENTFRAGMENT", true);
@@ -361,8 +360,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_DOCTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDomDocumentType(obj->doctype());
       Qt5xHb::createReturnClass(ptr, "QDOMDOCUMENTTYPE", true);
@@ -383,8 +381,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_DOCUMENTELEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDomElement(obj->documentElement());
       Qt5xHb::createReturnClass(ptr, "QDOMELEMENT", true);
@@ -471,8 +468,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_IMPLEMENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDomImplementation(obj->implementation());
       Qt5xHb::createReturnClass(ptr, "QDOMIMPLEMENTATION", true);
@@ -515,8 +511,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_NODETYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->nodeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

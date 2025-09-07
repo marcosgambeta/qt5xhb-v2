@@ -112,8 +112,7 @@ HB_FUNC_STATIC(QLOCALSERVER_SOCKETOPTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->socketOptions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,8 +155,7 @@ HB_FUNC_STATIC(QLOCALSERVER_CLOSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,8 +177,7 @@ HB_FUNC_STATIC(QLOCALSERVER_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,8 +197,7 @@ HB_FUNC_STATIC(QLOCALSERVER_HASPENDINGCONNECTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasPendingConnections());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,8 +217,7 @@ HB_FUNC_STATIC(QLOCALSERVER_ISLISTENING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isListening());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,8 +265,7 @@ HB_FUNC_STATIC(QLOCALSERVER_MAXPENDINGCONNECTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->maxPendingConnections());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,8 +285,7 @@ HB_FUNC_STATIC(QLOCALSERVER_NEXTPENDINGCONNECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->nextPendingConnection();
       Qt5xHb::createReturnQObjectClass(ptr, "QLOCALSOCKET");
@@ -313,8 +306,7 @@ HB_FUNC_STATIC(QLOCALSERVER_SERVERNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->serverName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -334,8 +326,7 @@ HB_FUNC_STATIC(QLOCALSERVER_FULLSERVERNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->fullServerName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -372,8 +363,7 @@ HB_FUNC_STATIC(QLOCALSERVER_SERVERERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->serverError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -440,8 +430,7 @@ HB_FUNC_STATIC(QLOCALSERVER_SOCKETDESCRIPTOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINTPTR(obj->socketDescriptor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

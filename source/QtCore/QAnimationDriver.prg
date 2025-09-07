@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_ADVANCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->advance();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,8 +120,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_INSTALL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->install();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,8 +142,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_UNINSTALL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->uninstall();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +164,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_ISRUNNING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isRunning());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,8 +184,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_ELAPSED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->elapsed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,8 +227,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_STARTTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->startTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

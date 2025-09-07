@@ -119,8 +119,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ADDRESSENTRIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->addressEntries();
       auto pDynSym = hb_dynsymFindName("QNETWORKADDRESSENTRY");
@@ -166,8 +165,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_FLAGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,8 +185,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_HARDWAREADDRESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->hardwareAddress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,8 +205,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_HUMANREADABLENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->humanReadableName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,8 +225,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_INDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->index());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,8 +245,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -271,8 +265,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

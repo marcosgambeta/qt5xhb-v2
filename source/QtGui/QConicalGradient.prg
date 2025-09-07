@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_ANGLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->angle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,8 +124,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_CENTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->center());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);

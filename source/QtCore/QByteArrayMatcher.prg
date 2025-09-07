@@ -148,8 +148,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_PATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->pattern());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);

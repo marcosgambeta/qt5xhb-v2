@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QALTIMETERREADING_ALTITUDE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->altitude());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

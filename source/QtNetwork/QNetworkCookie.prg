@@ -129,8 +129,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_DOMAIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->domain());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,8 +149,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_EXPIRATIONDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDateTime(obj->expirationDate());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -172,8 +170,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_ISHTTPONLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isHttpOnly());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,8 +190,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_ISSECURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSecure());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,8 +210,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_ISSESSIONCOOKIE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSessionCookie());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,8 +230,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->name());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -257,8 +251,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_PATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->path());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -462,8 +455,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_VALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->value());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);

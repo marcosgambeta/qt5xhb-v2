@@ -113,8 +113,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_BROADCAST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QHostAddress(obj->broadcast());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
@@ -135,8 +134,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_IP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QHostAddress(obj->ip());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
@@ -157,8 +155,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_NETMASK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QHostAddress(obj->netmask());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
@@ -179,8 +176,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_PREFIXLENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->prefixLength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

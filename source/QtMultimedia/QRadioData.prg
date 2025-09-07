@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QRADIODATA_STATIONID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->stationId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QRADIODATA_PROGRAMTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->programType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,8 +151,7 @@ HB_FUNC_STATIC(QRADIODATA_PROGRAMTYPENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->programTypeName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +171,7 @@ HB_FUNC_STATIC(QRADIODATA_STATIONNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->stationName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,8 +191,7 @@ HB_FUNC_STATIC(QRADIODATA_RADIOTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->radioText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +211,7 @@ HB_FUNC_STATIC(QRADIODATA_ISALTERNATIVEFREQUENCIESENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAlternativeFrequenciesEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,8 +254,7 @@ HB_FUNC_STATIC(QRADIODATA_AVAILABILITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->availability());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,8 +274,7 @@ HB_FUNC_STATIC(QRADIODATA_MEDIAOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->mediaObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QMEDIAOBJECT");
@@ -303,8 +295,7 @@ HB_FUNC_STATIC(QRADIODATA_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,8 +315,7 @@ HB_FUNC_STATIC(QRADIODATA_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -114,8 +114,7 @@ HB_FUNC_STATIC(QTABLEWIDGETSELECTIONRANGE_BOTTOMROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->bottomRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,8 +134,7 @@ HB_FUNC_STATIC(QTABLEWIDGETSELECTIONRANGE_COLUMNCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->columnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,8 +154,7 @@ HB_FUNC_STATIC(QTABLEWIDGETSELECTIONRANGE_LEFTCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->leftColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +174,7 @@ HB_FUNC_STATIC(QTABLEWIDGETSELECTIONRANGE_RIGHTCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->rightColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,8 +194,7 @@ HB_FUNC_STATIC(QTABLEWIDGETSELECTIONRANGE_ROWCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->rowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,8 +214,7 @@ HB_FUNC_STATIC(QTABLEWIDGETSELECTIONRANGE_TOPROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->topRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

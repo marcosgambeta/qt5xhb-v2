@@ -105,8 +105,7 @@ HB_FUNC_STATIC(QFRAME_FRAMERECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->frameRect());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -127,8 +126,7 @@ HB_FUNC_STATIC(QFRAME_FRAMESHADOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->frameShadow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,8 +146,7 @@ HB_FUNC_STATIC(QFRAME_FRAMESHAPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->frameShape());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,8 +166,7 @@ HB_FUNC_STATIC(QFRAME_FRAMESTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->frameStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,8 +186,7 @@ HB_FUNC_STATIC(QFRAME_FRAMEWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->frameWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,8 +206,7 @@ HB_FUNC_STATIC(QFRAME_LINEWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->lineWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,8 +226,7 @@ HB_FUNC_STATIC(QFRAME_MIDLINEWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->midLineWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -391,8 +384,7 @@ HB_FUNC_STATIC(QFRAME_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);

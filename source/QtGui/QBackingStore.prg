@@ -131,8 +131,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_ENDPAINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->endPaint();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,8 +177,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_HASSTATICCONTENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasStaticContents());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,8 +197,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_PAINTDEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->paintDevice();
       Qt5xHb::createReturnClass(ptr, "QPAINTDEVICE", false);
@@ -288,8 +285,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -310,8 +306,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_STATICCONTENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegion(obj->staticContents());
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
@@ -332,8 +327,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_WINDOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->window();
       Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");

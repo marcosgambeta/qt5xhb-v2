@@ -260,8 +260,7 @@ HB_FUNC_STATIC(QDATETIME_DATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDate(obj->date());
       Qt5xHb::createReturnClass(ptr, "QDATE", true);
@@ -303,8 +302,7 @@ HB_FUNC_STATIC(QDATETIME_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,8 +322,7 @@ HB_FUNC_STATIC(QDATETIME_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -502,8 +499,7 @@ HB_FUNC_STATIC(QDATETIME_TIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTime(obj->time());
       Qt5xHb::createReturnClass(ptr, "QTIME", true);
@@ -524,8 +520,7 @@ HB_FUNC_STATIC(QDATETIME_TIMESPEC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->timeSpec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -545,8 +540,7 @@ HB_FUNC_STATIC(QDATETIME_TOLOCALTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDateTime(obj->toLocalTime());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -567,8 +561,7 @@ HB_FUNC_STATIC(QDATETIME_TOMSECSSINCEEPOCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->toMSecsSinceEpoch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -639,8 +632,7 @@ HB_FUNC_STATIC(QDATETIME_TOTIME_T)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RUINT(obj->toTime_t());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -660,8 +652,7 @@ HB_FUNC_STATIC(QDATETIME_TOUTC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDateTime(obj->toUTC());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);

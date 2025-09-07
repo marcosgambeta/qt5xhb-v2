@@ -159,8 +159,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DIGITCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->digitCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,8 +179,7 @@ HB_FUNC_STATIC(QLCDNUMBER_INTVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->intValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,8 +199,7 @@ HB_FUNC_STATIC(QLCDNUMBER_MODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->mode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,8 +219,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SEGMENTSTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->segmentStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -312,8 +308,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SMALLDECIMALPOINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->smallDecimalPoint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -333,8 +328,7 @@ HB_FUNC_STATIC(QLCDNUMBER_VALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,8 +348,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -444,8 +437,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETBINMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->setBinMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -467,8 +459,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETDECMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->setDecMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -490,8 +481,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETHEXMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->setHexMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -513,8 +503,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETOCTMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->setOctMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

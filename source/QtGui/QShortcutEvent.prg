@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QSHORTCUTEVENT_KEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->key();
       Qt5xHb::createReturnClass(ptr, "QKEYSEQUENCE", false);
@@ -110,8 +109,7 @@ HB_FUNC_STATIC(QSHORTCUTEVENT_SHORTCUTID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->shortcutId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,8 +129,7 @@ HB_FUNC_STATIC(QSHORTCUTEVENT_ISAMBIGUOUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAmbiguous());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

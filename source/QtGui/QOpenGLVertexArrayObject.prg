@@ -94,8 +94,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_CREATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->create());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,8 +114,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_DESTROY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->destroy();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,8 +136,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_ISCREATED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCreated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,8 +156,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_OBJECTID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLUINT(obj->objectId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,8 +176,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_BIND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->bind();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,8 +198,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_RELEASE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->release();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

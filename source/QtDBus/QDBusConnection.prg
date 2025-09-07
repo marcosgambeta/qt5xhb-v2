@@ -138,8 +138,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_ISCONNECTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isConnected());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,8 +158,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_BASESERVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->baseService());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,8 +178,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_LASTERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDBusError(obj->lastError());
       Qt5xHb::createReturnClass(ptr, "QDBUSERROR", true);
@@ -202,8 +199,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,8 +219,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECTIONCAPABILITIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->connectionCapabilities());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -547,8 +542,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_INTERFACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->interface();
       Qt5xHb::createReturnQObjectClass(ptr, "QDBUSCONNECTIONINTERFACE");
@@ -569,8 +563,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_INTERNALPOINTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retptr(static_cast<void *>(obj->internalPointer()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

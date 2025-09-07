@@ -112,8 +112,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_ISFINISHED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFinished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,8 +134,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,8 +156,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,8 +178,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_VIEWPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGeoShape(obj->viewport());
       Qt5xHb::createReturnClass(ptr, "QGEOSHAPE", true);
@@ -205,8 +201,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_LOCATIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->locations();
       auto pDynSym = hb_dynsymFindName("QGEOLOCATION");
@@ -254,8 +249,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_LIMIT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->limit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,8 +271,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_OFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->offset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,8 +293,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_ABORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->abort();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

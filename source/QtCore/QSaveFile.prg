@@ -126,8 +126,7 @@ HB_FUNC_STATIC(QSAVEFILE_FILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,8 +196,7 @@ HB_FUNC_STATIC(QSAVEFILE_COMMIT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->commit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,8 +218,7 @@ HB_FUNC_STATIC(QSAVEFILE_CANCELWRITING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->cancelWriting();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,8 +267,7 @@ HB_FUNC_STATIC(QSAVEFILE_DIRECTWRITEFALLBACK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->directWriteFallback());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

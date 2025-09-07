@@ -115,8 +115,7 @@ HB_FUNC_STATIC(QUNDOGROUP_ACTIVESTACK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->activeStack();
       Qt5xHb::createReturnQObjectClass(ptr, "QUNDOSTACK");
@@ -160,8 +159,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CANREDO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canRedo());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,8 +179,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CANUNDO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canUndo());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,8 +243,7 @@ HB_FUNC_STATIC(QUNDOGROUP_ISCLEAN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isClean());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,8 +263,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REDOTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->redoText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,8 +306,7 @@ HB_FUNC_STATIC(QUNDOGROUP_STACKS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->stacks();
       auto pDynSym = hb_dynsymFindName("QUNDOSTACK");
@@ -355,8 +349,7 @@ HB_FUNC_STATIC(QUNDOGROUP_UNDOTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->undoText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -376,8 +369,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REDO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->redo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -422,8 +414,7 @@ HB_FUNC_STATIC(QUNDOGROUP_UNDO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->undo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

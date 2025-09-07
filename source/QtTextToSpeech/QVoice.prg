@@ -119,8 +119,7 @@ HB_FUNC_STATIC(QVOICE_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,8 +141,7 @@ HB_FUNC_STATIC(QVOICE_GENDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->gender());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,8 +163,7 @@ HB_FUNC_STATIC(QVOICE_AGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->age());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

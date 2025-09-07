@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_EDITABLE)
   auto obj = static_cast<QStyleOptionComboBox *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->editable);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -122,8 +121,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_POPUPRECT)
   auto obj = static_cast<QStyleOptionComboBox *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       auto ptr = new QRect(obj->popupRect);
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     } else {
@@ -156,8 +154,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_FRAME)
   auto obj = static_cast<QStyleOptionComboBox *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->frame);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -189,8 +186,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_CURRENTTEXT)
   auto obj = static_cast<QStyleOptionComboBox *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RQSTRING(obj->currentText);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -222,8 +218,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_CURRENTICON)
   auto obj = static_cast<QStyleOptionComboBox *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       auto ptr = new QIcon(obj->currentIcon);
       Qt5xHb::createReturnClass(ptr, "QICON", true);
     } else {
@@ -256,8 +251,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_ICONSIZE)
   auto obj = static_cast<QStyleOptionComboBox *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       auto ptr = new QSize(obj->iconSize);
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
     } else {

@@ -124,8 +124,7 @@ HB_FUNC_STATIC(QFILESELECTOR_EXTRASELECTORS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->extraSelectors());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,8 +167,7 @@ HB_FUNC_STATIC(QFILESELECTOR_ALLSELECTORS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->allSelectors());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

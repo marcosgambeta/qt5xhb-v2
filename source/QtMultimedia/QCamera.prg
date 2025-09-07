@@ -162,8 +162,7 @@ HB_FUNC_STATIC(QCAMERA_STATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,8 +182,7 @@ HB_FUNC_STATIC(QCAMERA_STATUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,8 +202,7 @@ HB_FUNC_STATIC(QCAMERA_CAPTUREMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->captureMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,8 +272,7 @@ HB_FUNC_STATIC(QCAMERA_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -296,8 +292,7 @@ HB_FUNC_STATIC(QCAMERA_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -317,8 +312,7 @@ HB_FUNC_STATIC(QCAMERA_EXPOSURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->exposure();
       Qt5xHb::createReturnQObjectClass(ptr, "QCAMERAEXPOSURE");
@@ -339,8 +333,7 @@ HB_FUNC_STATIC(QCAMERA_FOCUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->focus();
       Qt5xHb::createReturnQObjectClass(ptr, "QCAMERAFOCUS");
@@ -361,8 +354,7 @@ HB_FUNC_STATIC(QCAMERA_IMAGEPROCESSING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->imageProcessing();
       Qt5xHb::createReturnQObjectClass(ptr, "QCAMERAIMAGEPROCESSING");
@@ -404,8 +396,7 @@ HB_FUNC_STATIC(QCAMERA_REQUESTEDLOCKS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->requestedLocks());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -470,8 +461,7 @@ HB_FUNC_STATIC(QCAMERA_SUPPORTEDLOCKS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedLocks());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -491,8 +481,7 @@ HB_FUNC_STATIC(QCAMERA_LOAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->load();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -545,8 +534,7 @@ HB_FUNC_STATIC(QCAMERA_START)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->start();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -568,8 +556,7 @@ HB_FUNC_STATIC(QCAMERA_STOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -591,8 +578,7 @@ HB_FUNC_STATIC(QCAMERA_UNLOAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->unload();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -645,8 +631,7 @@ HB_FUNC_STATIC(QCAMERA_AVAILABILITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->availability());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -667,8 +652,7 @@ HB_FUNC_STATIC(QCAMERA_VIEWFINDERSETTINGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QCameraViewfinderSettings(obj->viewfinderSettings());
       Qt5xHb::createReturnClass(ptr, "QCAMERAVIEWFINDERSETTINGS", true);

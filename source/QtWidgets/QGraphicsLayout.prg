@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_ACTIVATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->activate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,8 +104,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,8 +124,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_INVALIDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->invalidate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,8 +146,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_ISACTIVATED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isActivated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,8 +288,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_UPDATEGEOMETRY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->updateGeometry();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

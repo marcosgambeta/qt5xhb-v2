@@ -84,8 +84,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_ACTIVEOUTPUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->activeOutput());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,8 +104,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_AVAILABLEOUTPUTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->availableOutputs();
       auto pArray = hb_itemArrayNew(0);
@@ -134,8 +132,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_DEFAULTOUTPUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->defaultOutput());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

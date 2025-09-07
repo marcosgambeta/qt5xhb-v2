@@ -152,8 +152,7 @@ HB_FUNC_STATIC(QGAMEPAD_DEVICEID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->deviceId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,8 +199,7 @@ HB_FUNC_STATIC(QGAMEPAD_ISCONNECTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isConnected());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,8 +221,7 @@ HB_FUNC_STATIC(QGAMEPAD_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,8 +243,7 @@ HB_FUNC_STATIC(QGAMEPAD_AXISLEFTX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->axisLeftX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +265,7 @@ HB_FUNC_STATIC(QGAMEPAD_AXISLEFTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->axisLeftY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,8 +287,7 @@ HB_FUNC_STATIC(QGAMEPAD_AXISRIGHTX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->axisRightX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,8 +309,7 @@ HB_FUNC_STATIC(QGAMEPAD_AXISRIGHTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->axisRightY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -338,8 +331,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->buttonA());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -361,8 +353,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONB)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->buttonB());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -384,8 +375,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->buttonX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -407,8 +397,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->buttonY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -430,8 +419,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONL1)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->buttonL1());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -453,8 +441,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONR1)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->buttonR1());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -476,8 +463,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONL2)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->buttonL2());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -499,8 +485,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONR2)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->buttonR2());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -522,8 +507,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONSELECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->buttonSelect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -545,8 +529,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONSTART)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->buttonStart());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -568,8 +551,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONL3)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->buttonL3());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -591,8 +573,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONR3)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->buttonR3());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -614,8 +595,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->buttonUp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -637,8 +617,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONDOWN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->buttonDown());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -660,8 +639,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONLEFT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->buttonLeft());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -683,8 +661,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONRIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->buttonRight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -706,8 +683,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONCENTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->buttonCenter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -729,8 +705,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONGUIDE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->buttonGuide());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

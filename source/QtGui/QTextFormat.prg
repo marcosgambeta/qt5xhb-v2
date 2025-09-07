@@ -210,8 +210,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,8 +230,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -252,8 +250,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_OBJECTINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->objectIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -621,8 +618,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_PROPERTYCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->propertyCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -665,8 +661,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_OBJECTTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->objectType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -686,8 +681,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_ISCHARFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCharFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -707,8 +701,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_ISBLOCKFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isBlockFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -728,8 +721,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_ISLISTFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isListFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -749,8 +741,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_ISFRAMEFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFrameFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -770,8 +761,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_ISIMAGEFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isImageFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -791,8 +781,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_ISTABLEFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isTableFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -812,8 +801,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_ISTABLECELLFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isTableCellFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -833,8 +821,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOBLOCKFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTextBlockFormat(obj->toBlockFormat());
       Qt5xHb::createReturnClass(ptr, "QTEXTBLOCKFORMAT", true);
@@ -855,8 +842,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOCHARFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTextCharFormat(obj->toCharFormat());
       Qt5xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
@@ -877,8 +863,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOLISTFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTextListFormat(obj->toListFormat());
       Qt5xHb::createReturnClass(ptr, "QTEXTLISTFORMAT", true);
@@ -899,8 +884,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOTABLEFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTextTableFormat(obj->toTableFormat());
       Qt5xHb::createReturnClass(ptr, "QTEXTTABLEFORMAT", true);
@@ -921,8 +905,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOFRAMEFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTextFrameFormat(obj->toFrameFormat());
       Qt5xHb::createReturnClass(ptr, "QTEXTFRAMEFORMAT", true);
@@ -943,8 +926,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOIMAGEFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTextImageFormat(obj->toImageFormat());
       Qt5xHb::createReturnClass(ptr, "QTEXTIMAGEFORMAT", true);
@@ -965,8 +947,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOTABLECELLFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTextTableCellFormat(obj->toTableCellFormat());
       Qt5xHb::createReturnClass(ptr, "QTEXTTABLECELLFORMAT", true);
@@ -1010,8 +991,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_LAYOUTDIRECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->layoutDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1054,8 +1034,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_BACKGROUND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->background());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -1076,8 +1055,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_CLEARBACKGROUND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearBackground();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1122,8 +1100,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_FOREGROUND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->foreground());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -1144,8 +1121,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_CLEARFOREGROUND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearForeground();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

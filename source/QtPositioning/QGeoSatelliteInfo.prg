@@ -146,8 +146,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SATELLITESYSTEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->satelliteSystem());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +193,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SATELLITEIDENTIFIER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->satelliteIdentifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,8 +240,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SIGNALSTRENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->signalStrength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

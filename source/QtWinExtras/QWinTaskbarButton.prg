@@ -112,8 +112,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_WINDOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->window();
       Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
@@ -161,8 +160,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_OVERLAYICON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QIcon(obj->overlayIcon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
@@ -210,8 +208,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_CLEAROVERLAYICON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearOverlayIcon();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,8 +232,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_OVERLAYACCESSIBLEDESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->overlayAccessibleDescription());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,8 +279,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_PROGRESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->progress();
       Qt5xHb::createReturnQObjectClass(ptr, "QWINTASKBARPROGRESS");

@@ -181,8 +181,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ITEMMODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->itemModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
@@ -230,8 +229,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_XPOSROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->xPosRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,8 +276,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_YPOSROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->yPosRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,8 +323,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ZPOSROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->zPosRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -374,8 +370,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ROTATIONROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->rotationRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -422,8 +417,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_XPOSROLEPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegExp(obj->xPosRolePattern());
       Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
@@ -471,8 +465,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_YPOSROLEPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegExp(obj->yPosRolePattern());
       Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
@@ -520,8 +513,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ZPOSROLEPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegExp(obj->zPosRolePattern());
       Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
@@ -569,8 +561,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ROTATIONROLEPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegExp(obj->rotationRolePattern());
       Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
@@ -618,8 +609,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_XPOSROLEREPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->xPosRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -666,8 +656,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_YPOSROLEREPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->yPosRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -714,8 +703,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ZPOSROLEREPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->zPosRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -762,8 +750,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ROTATIONROLEREPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->rotationRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

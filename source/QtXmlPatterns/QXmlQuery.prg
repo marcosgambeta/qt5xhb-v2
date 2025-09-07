@@ -266,8 +266,7 @@ HB_FUNC_STATIC(QXMLQUERY_INITIALTEMPLATENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QXmlName(obj->initialTemplateName());
       Qt5xHb::createReturnClass(ptr, "QXMLNAME", true);
@@ -288,8 +287,7 @@ HB_FUNC_STATIC(QXMLQUERY_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -309,8 +307,7 @@ HB_FUNC_STATIC(QXMLQUERY_MESSAGEHANDLER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->messageHandler();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTMESSAGEHANDLER");
@@ -331,8 +328,7 @@ HB_FUNC_STATIC(QXMLQUERY_NAMEPOOL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QXmlNamePool(obj->namePool());
       Qt5xHb::createReturnClass(ptr, "QXMLNAMEPOOL", true);
@@ -353,8 +349,7 @@ HB_FUNC_STATIC(QXMLQUERY_NETWORKACCESSMANAGER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->networkAccessManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
@@ -375,8 +370,7 @@ HB_FUNC_STATIC(QXMLQUERY_QUERYLANGUAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->queryLanguage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -594,8 +588,7 @@ HB_FUNC_STATIC(QXMLQUERY_URIRESOLVER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->uriResolver();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTURIRESOLVER");

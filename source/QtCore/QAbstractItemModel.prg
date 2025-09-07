@@ -511,8 +511,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_MIMETYPES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->mimeTypes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -773,8 +772,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedDragActions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -794,8 +792,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedDropActions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -815,8 +812,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REVERT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->revert();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -838,8 +834,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUBMIT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->submit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -112,8 +112,7 @@ HB_FUNC_STATIC(QMETAMETHOD_TYPENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retc(static_cast<const char *>(obj->typeName()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,8 +132,7 @@ HB_FUNC_STATIC(QMETAMETHOD_PARAMETERTYPES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->parameterTypes();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
@@ -180,8 +178,7 @@ HB_FUNC_STATIC(QMETAMETHOD_PARAMETERNAMES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->parameterNames();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
@@ -227,8 +224,7 @@ HB_FUNC_STATIC(QMETAMETHOD_TAG)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retc(static_cast<const char *>(obj->tag()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +244,7 @@ HB_FUNC_STATIC(QMETAMETHOD_ACCESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->access());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +264,7 @@ HB_FUNC_STATIC(QMETAMETHOD_METHODTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->methodType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -290,8 +284,7 @@ HB_FUNC_STATIC(QMETAMETHOD_ATTRIBUTES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->attributes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,8 +304,7 @@ HB_FUNC_STATIC(QMETAMETHOD_METHODINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->methodIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -332,8 +324,7 @@ HB_FUNC_STATIC(QMETAMETHOD_REVISION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->revision());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,8 +344,7 @@ HB_FUNC_STATIC(QMETAMETHOD_ENCLOSINGMETAOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->enclosingMetaObject();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
@@ -439,8 +429,7 @@ HB_FUNC_STATIC(QMETAMETHOD_METHODSIGNATURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->methodSignature());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -461,8 +450,7 @@ HB_FUNC_STATIC(QMETAMETHOD_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->name());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -483,8 +471,7 @@ HB_FUNC_STATIC(QMETAMETHOD_RETURNTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->returnType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -504,8 +491,7 @@ HB_FUNC_STATIC(QMETAMETHOD_PARAMETERCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->parameterCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -571,8 +557,7 @@ HB_FUNC_STATIC(QMETAMETHOD_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

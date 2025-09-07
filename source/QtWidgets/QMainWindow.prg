@@ -249,8 +249,7 @@ HB_FUNC_STATIC(QMAINWINDOW_CENTRALWIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->centralWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -292,8 +291,7 @@ HB_FUNC_STATIC(QMAINWINDOW_CREATEPOPUPMENU)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->createPopupMenu();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
@@ -314,8 +312,7 @@ HB_FUNC_STATIC(QMAINWINDOW_DOCKOPTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->dockOptions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -356,8 +353,7 @@ HB_FUNC_STATIC(QMAINWINDOW_DOCUMENTMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->documentMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,8 +373,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ICONSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->iconSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -445,8 +440,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ISANIMATED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAnimated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -466,8 +460,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ISDOCKNESTINGENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDockNestingEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -487,8 +480,7 @@ HB_FUNC_STATIC(QMAINWINDOW_MENUBAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->menuBar();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENUBAR");
@@ -509,8 +501,7 @@ HB_FUNC_STATIC(QMAINWINDOW_MENUWIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->menuWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -941,8 +932,7 @@ HB_FUNC_STATIC(QMAINWINDOW_STATUSBAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->statusBar();
       Qt5xHb::createReturnQWidgetClass(ptr, "QSTATUSBAR");
@@ -984,8 +974,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TABSHAPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->tabShape());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1070,8 +1059,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TOOLBUTTONSTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->toolButtonStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1138,8 +1126,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TAKECENTRALWIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->takeCentralWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");

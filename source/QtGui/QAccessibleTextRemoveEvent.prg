@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTREMOVEEVENT_TEXTREMOVED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->textRemoved());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,8 +106,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTREMOVEEVENT_CHANGEPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->changePosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

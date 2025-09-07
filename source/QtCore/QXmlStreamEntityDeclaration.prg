@@ -106,8 +106,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->name());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -128,8 +127,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NOTATIONNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->notationName());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -150,8 +148,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_PUBLICID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->publicId());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -172,8 +169,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_SYSTEMID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->systemId());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -194,8 +190,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_VALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->value());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);

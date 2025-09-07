@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QANDROIDJNIEXCEPTIONCLEANER_CLEAN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clean();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

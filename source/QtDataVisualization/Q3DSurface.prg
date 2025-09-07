@@ -126,8 +126,7 @@ HB_FUNC_STATIC(Q3DSURFACE_AXISX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->axisX();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
@@ -175,8 +174,7 @@ HB_FUNC_STATIC(Q3DSURFACE_AXISY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->axisY();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
@@ -224,8 +222,7 @@ HB_FUNC_STATIC(Q3DSURFACE_AXISZ)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->axisZ();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
@@ -273,8 +270,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SELECTEDSERIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->selectedSeries();
       Qt5xHb::createReturnQObjectClass(ptr, "QSURFACE3DSERIES");
@@ -297,8 +293,7 @@ HB_FUNC_STATIC(Q3DSURFACE_FLIPHORIZONTALGRID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->flipHorizontalGrid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -395,8 +390,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SERIESLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->seriesList();
       auto pDynSym = hb_dynsymFindName("QSURFACE3DSERIES");
@@ -491,8 +485,7 @@ HB_FUNC_STATIC(Q3DSURFACE_AXES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->axes();
       auto pDynSym = hb_dynsymFindName("QVALUE3DAXIS");

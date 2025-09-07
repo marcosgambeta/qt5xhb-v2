@@ -134,8 +134,7 @@ HB_FUNC_STATIC(QGEOADDRESS_TEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,8 +181,7 @@ HB_FUNC_STATIC(QGEOADDRESS_COUNTRY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->country());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,8 +228,7 @@ HB_FUNC_STATIC(QGEOADDRESS_COUNTRYCODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->countryCode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,8 +275,7 @@ HB_FUNC_STATIC(QGEOADDRESS_STATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,8 +322,7 @@ HB_FUNC_STATIC(QGEOADDRESS_COUNTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->county());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -374,8 +369,7 @@ HB_FUNC_STATIC(QGEOADDRESS_CITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->city());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -422,8 +416,7 @@ HB_FUNC_STATIC(QGEOADDRESS_DISTRICT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->district());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -470,8 +463,7 @@ HB_FUNC_STATIC(QGEOADDRESS_POSTALCODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->postalCode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -518,8 +510,7 @@ HB_FUNC_STATIC(QGEOADDRESS_STREET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->street());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -566,8 +557,7 @@ HB_FUNC_STATIC(QGEOADDRESS_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -589,8 +579,7 @@ HB_FUNC_STATIC(QGEOADDRESS_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -614,8 +603,7 @@ HB_FUNC_STATIC(QGEOADDRESS_ISTEXTGENERATED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isTextGenerated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

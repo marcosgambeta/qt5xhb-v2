@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_ISACTIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,8 +125,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_VALIDIDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->validIds());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,8 +147,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_INVALIDIDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->invalidIds());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,8 +169,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_GESTURESIGNALS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->gestureSignals());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,8 +191,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_STARTDETECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->startDetection();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,8 +215,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_STOPDETECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stopDetection();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -146,8 +146,7 @@ HB_FUNC_STATIC(QHOSTINFO_HOSTNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->hostName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,8 +189,7 @@ HB_FUNC_STATIC(QHOSTINFO_ADDRESSES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->addresses();
       auto pDynSym = hb_dynsymFindName("QHOSTADDRESS");
@@ -268,8 +266,7 @@ HB_FUNC_STATIC(QHOSTINFO_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -312,8 +309,7 @@ HB_FUNC_STATIC(QHOSTINFO_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -379,8 +375,7 @@ HB_FUNC_STATIC(QHOSTINFO_LOOKUPID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->lookupId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_CROSSFADETIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->crossfadeTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,8 +106,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_ISCROSSFADESUPPORTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCrossfadeSupported());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,8 +126,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_NEXTMEDIA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QMediaContent(obj->nextMedia());
       Qt5xHb::createReturnClass(ptr, "QMEDIACONTENT", true);

@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_CONVERTORNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->convertorName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

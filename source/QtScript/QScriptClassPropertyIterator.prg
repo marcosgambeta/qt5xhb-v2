@@ -92,8 +92,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_FLAGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,8 +112,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_HASNEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasNext());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,8 +132,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_HASPREVIOUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasPrevious());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,8 +152,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_ID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RUINT(obj->id());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,8 +172,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QScriptString(obj->name());
       Qt5xHb::createReturnClass(ptr, "QSCRIPTSTRING", true);
@@ -198,8 +193,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_NEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->next();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,8 +215,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_OBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QScriptValue(obj->object());
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
@@ -243,8 +236,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_PREVIOUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->previous();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,8 +258,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_TOBACK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->toBack();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,8 +280,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_TOFRONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->toFront();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

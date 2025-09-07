@@ -161,8 +161,7 @@ HB_FUNC_STATIC(QURL_AUTHORITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->authority());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,8 +181,7 @@ HB_FUNC_STATIC(QURL_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,8 +203,7 @@ HB_FUNC_STATIC(QURL_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,8 +223,7 @@ HB_FUNC_STATIC(QURL_FRAGMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->fragment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,8 +243,7 @@ HB_FUNC_STATIC(QURL_HASFRAGMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasFragment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,8 +263,7 @@ HB_FUNC_STATIC(QURL_HASQUERY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasQuery());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,8 +283,7 @@ HB_FUNC_STATIC(QURL_HOST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->host());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,8 +303,7 @@ HB_FUNC_STATIC(QURL_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,8 +323,7 @@ HB_FUNC_STATIC(QURL_ISLOCALFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLocalFile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,8 +364,7 @@ HB_FUNC_STATIC(QURL_ISRELATIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isRelative());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -394,8 +384,7 @@ HB_FUNC_STATIC(QURL_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,8 +404,7 @@ HB_FUNC_STATIC(QURL_PASSWORD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->password());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -436,8 +424,7 @@ HB_FUNC_STATIC(QURL_PATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->path());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -506,8 +493,7 @@ HB_FUNC_STATIC(QURL_SCHEME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->scheme());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -812,8 +798,7 @@ HB_FUNC_STATIC(QURL_TOLOCALFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->toLocalFile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -855,8 +840,7 @@ HB_FUNC_STATIC(QURL_TOPLEVELDOMAIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->topLevelDomain());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -876,8 +860,7 @@ HB_FUNC_STATIC(QURL_USERINFO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->userInfo());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -897,8 +880,7 @@ HB_FUNC_STATIC(QURL_USERNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->userName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QTABLETEVENT_DEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->device());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,8 +130,7 @@ HB_FUNC_STATIC(QTABLETEVENT_GLOBALPOS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->globalPos());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -153,8 +151,7 @@ HB_FUNC_STATIC(QTABLETEVENT_GLOBALPOSF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->globalPosF();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
@@ -175,8 +172,7 @@ HB_FUNC_STATIC(QTABLETEVENT_GLOBALX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->globalX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,8 +192,7 @@ HB_FUNC_STATIC(QTABLETEVENT_GLOBALY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->globalY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,8 +212,7 @@ HB_FUNC_STATIC(QTABLETEVENT_HIRESGLOBALX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->hiResGlobalX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -238,8 +232,7 @@ HB_FUNC_STATIC(QTABLETEVENT_HIRESGLOBALY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->hiResGlobalY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,8 +252,7 @@ HB_FUNC_STATIC(QTABLETEVENT_POINTERTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->pointerType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,8 +272,7 @@ HB_FUNC_STATIC(QTABLETEVENT_POS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->pos());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -302,8 +293,7 @@ HB_FUNC_STATIC(QTABLETEVENT_POSF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->posF();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
@@ -324,8 +314,7 @@ HB_FUNC_STATIC(QTABLETEVENT_PRESSURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->pressure());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,8 +334,7 @@ HB_FUNC_STATIC(QTABLETEVENT_ROTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->rotation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,8 +354,7 @@ HB_FUNC_STATIC(QTABLETEVENT_TANGENTIALPRESSURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->tangentialPressure());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -387,8 +374,7 @@ HB_FUNC_STATIC(QTABLETEVENT_UNIQUEID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->uniqueId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -408,8 +394,7 @@ HB_FUNC_STATIC(QTABLETEVENT_X)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -429,8 +414,7 @@ HB_FUNC_STATIC(QTABLETEVENT_XTILT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->xTilt());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -450,8 +434,7 @@ HB_FUNC_STATIC(QTABLETEVENT_Y)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -471,8 +454,7 @@ HB_FUNC_STATIC(QTABLETEVENT_YTILT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->yTilt());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -492,8 +474,7 @@ HB_FUNC_STATIC(QTABLETEVENT_Z)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->z());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

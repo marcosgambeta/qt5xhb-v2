@@ -108,8 +108,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_BOTTOM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->bottom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,8 +153,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_LOCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QLocale(obj->locale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
@@ -268,8 +266,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_TOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->top());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

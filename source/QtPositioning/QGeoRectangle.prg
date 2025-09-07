@@ -177,8 +177,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_TOPLEFT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGeoCoordinate(obj->topLeft());
       Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
@@ -226,8 +225,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_TOPRIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGeoCoordinate(obj->topRight());
       Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
@@ -275,8 +273,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_BOTTOMLEFT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGeoCoordinate(obj->bottomLeft());
       Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
@@ -324,8 +321,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_BOTTOMRIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGeoCoordinate(obj->bottomRight());
       Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
@@ -373,8 +369,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_CENTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGeoCoordinate(obj->center());
       Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
@@ -422,8 +417,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_WIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -470,8 +464,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_HEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -152,8 +152,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,8 +174,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_RESOLUTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->resolution());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -235,8 +233,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_MINIMUMFRAMERATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->minimumFrameRate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,8 +280,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_MAXIMUMFRAMERATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->maximumFrameRate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,8 +327,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_PIXELFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->pixelFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -379,8 +374,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_PIXELASPECTRATIO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->pixelAspectRatio());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);

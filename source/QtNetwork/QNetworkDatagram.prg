@@ -171,8 +171,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,8 +195,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,8 +217,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,8 +239,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_INTERFACEINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RUINT(obj->interfaceIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -290,8 +286,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SENDERADDRESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QHostAddress(obj->senderAddress());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
@@ -314,8 +309,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_DESTINATIONADDRESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QHostAddress(obj->destinationAddress());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
@@ -338,8 +332,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SENDERPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->senderPort());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -361,8 +354,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_DESTINATIONPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->destinationPort());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -434,8 +426,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_HOPLIMIT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->hopLimit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -482,8 +473,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_DATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->data());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);

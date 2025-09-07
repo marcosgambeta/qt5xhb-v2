@@ -124,8 +124,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_POSITIONINFOSOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->positionInfoSource();
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOPOSITIONINFOSOURCE");
@@ -148,8 +147,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SOURCENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->sourceName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,8 +169,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +191,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SUPPORTEDAREAMONITORFEATURES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedAreaMonitorFeatures());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

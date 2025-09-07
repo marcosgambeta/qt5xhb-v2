@@ -167,8 +167,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_COMPLETECREATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->completeCreate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,8 +221,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_CREATIONCONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->creationContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
@@ -244,8 +242,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_ISERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,8 +262,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_ISLOADING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLoading());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -286,8 +282,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -307,8 +302,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_ISREADY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReady());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -328,8 +322,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_PROGRESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->progress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -349,8 +342,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_STATUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -370,8 +362,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_URL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);

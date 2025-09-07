@@ -108,8 +108,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHEDIRECTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->cacheDirectory());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +151,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_MAXIMUMCACHESIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->maximumCacheSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,8 +194,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHESIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->cacheSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -372,8 +369,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

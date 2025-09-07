@@ -143,8 +143,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_AUTOSAVEFILTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoSaveFilter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,8 +163,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_COLLECTIONFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->collectionFile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,8 +204,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CURRENTFILTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->currentFilter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,8 +224,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMFILTERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->customFilters());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,8 +288,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -405,8 +400,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_REGISTEREDDOCUMENTATIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->registeredDocumentations());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -558,8 +552,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETUPDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->setupData());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

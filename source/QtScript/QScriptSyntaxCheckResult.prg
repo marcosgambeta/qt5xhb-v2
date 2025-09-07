@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->errorColumnNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,8 +117,7 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->errorLineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,8 +137,7 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorMessage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,8 +157,7 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_STATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

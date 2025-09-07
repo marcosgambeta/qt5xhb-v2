@@ -159,8 +159,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERREGEXP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegExp(obj->filterRegExp());
       Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
@@ -215,8 +214,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERREGULAREXPRESSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegularExpression(obj->filterRegularExpression());
       Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSION", true);
@@ -279,8 +277,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERKEYCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->filterKeyColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,8 +320,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DYNAMICSORTFILTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->dynamicSortFilter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -367,8 +363,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERCASESENSITIVITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->filterCaseSensitivity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,8 +406,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTCASESENSITIVITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->sortCaseSensitivity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -455,8 +449,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_ISSORTLOCALEAWARE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSortLocaleAware());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -499,8 +492,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sortRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -543,8 +535,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->filterRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -588,8 +579,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_ISRECURSIVEFILTERINGENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isRecursiveFilteringEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -746,8 +736,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sortColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -767,8 +756,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTORDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->sortOrder());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -834,8 +822,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -857,8 +844,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INVALIDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->invalidate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1430,8 +1416,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MIMETYPES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->mimeTypes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1451,8 +1436,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SUPPORTEDDROPACTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedDropActions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

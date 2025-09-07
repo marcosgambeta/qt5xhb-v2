@@ -185,8 +185,7 @@ HB_FUNC_STATIC(QWEBPAGE_ISMODIFIED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isModified());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,8 +205,7 @@ HB_FUNC_STATIC(QWEBPAGE_SELECTEDTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->selectedText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,8 +225,7 @@ HB_FUNC_STATIC(QWEBPAGE_SELECTEDHTML)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->selectedHtml());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +245,7 @@ HB_FUNC_STATIC(QWEBPAGE_HASSELECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasSelection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +265,7 @@ HB_FUNC_STATIC(QWEBPAGE_VIEWPORTSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->viewportSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -314,8 +309,7 @@ HB_FUNC_STATIC(QWEBPAGE_PREFERREDCONTENTSSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->preferredContentsSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -359,8 +353,7 @@ HB_FUNC_STATIC(QWEBPAGE_FORWARDUNSUPPORTEDCONTENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->forwardUnsupportedContent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -403,8 +396,7 @@ HB_FUNC_STATIC(QWEBPAGE_LINKDELEGATIONPOLICY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->linkDelegationPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -447,8 +439,7 @@ HB_FUNC_STATIC(QWEBPAGE_PALETTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPalette(obj->palette());
       Qt5xHb::createReturnClass(ptr, "QPALETTE", true);
@@ -492,8 +483,7 @@ HB_FUNC_STATIC(QWEBPAGE_ISCONTENTEDITABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isContentEditable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -536,8 +526,7 @@ HB_FUNC_STATIC(QWEBPAGE_VISIBILITYSTATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->visibilityState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -604,8 +593,7 @@ HB_FUNC_STATIC(QWEBPAGE_BYTESRECEIVED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT64(obj->bytesReceived());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -625,8 +613,7 @@ HB_FUNC_STATIC(QWEBPAGE_CREATESTANDARDCONTEXTMENU)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->createStandardContextMenu();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
@@ -647,8 +634,7 @@ HB_FUNC_STATIC(QWEBPAGE_CURRENTFRAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->currentFrame();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
@@ -738,8 +724,7 @@ HB_FUNC_STATIC(QWEBPAGE_HISTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->history();
       Qt5xHb::createReturnClass(ptr, "QWEBHISTORY", false);
@@ -782,8 +767,7 @@ HB_FUNC_STATIC(QWEBPAGE_MAINFRAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->mainFrame();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
@@ -804,8 +788,7 @@ HB_FUNC_STATIC(QWEBPAGE_NETWORKACCESSMANAGER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->networkAccessManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
@@ -826,8 +809,7 @@ HB_FUNC_STATIC(QWEBPAGE_PLUGINFACTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->pluginFactory();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBPLUGINFACTORY");
@@ -917,8 +899,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETTINGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->settings();
       Qt5xHb::createReturnClass(ptr, "QWEBSETTINGS", false);
@@ -965,8 +946,7 @@ HB_FUNC_STATIC(QWEBPAGE_TOTALBYTES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT64(obj->totalBytes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1010,8 +990,7 @@ HB_FUNC_STATIC(QWEBPAGE_UNDOSTACK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->undoStack();
       Qt5xHb::createReturnQObjectClass(ptr, "QUNDOSTACK");
@@ -1056,8 +1035,7 @@ HB_FUNC_STATIC(QWEBPAGE_VIEW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->view();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -1099,8 +1077,7 @@ HB_FUNC_STATIC(QWEBPAGE_SHOULDINTERRUPTJAVASCRIPT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->shouldInterruptJavaScript());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1170,8 +1147,7 @@ HB_FUNC_STATIC(QWEBPAGE_SUPPORTEDCONTENTTYPES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->supportedContentTypes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

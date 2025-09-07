@@ -162,8 +162,7 @@ HB_FUNC_STATIC(QGLFORMAT_ACCUM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->accum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,8 +182,7 @@ HB_FUNC_STATIC(QGLFORMAT_ACCUMBUFFERSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->accumBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,8 +202,7 @@ HB_FUNC_STATIC(QGLFORMAT_ALPHA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->alpha());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,8 +222,7 @@ HB_FUNC_STATIC(QGLFORMAT_ALPHABUFFERSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->alphaBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,8 +242,7 @@ HB_FUNC_STATIC(QGLFORMAT_BLUEBUFFERSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->blueBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,8 +262,7 @@ HB_FUNC_STATIC(QGLFORMAT_DEPTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->depth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,8 +282,7 @@ HB_FUNC_STATIC(QGLFORMAT_DEPTHBUFFERSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->depthBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -309,8 +302,7 @@ HB_FUNC_STATIC(QGLFORMAT_DIRECTRENDERING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->directRendering());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -330,8 +322,7 @@ HB_FUNC_STATIC(QGLFORMAT_DOUBLEBUFFER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->doubleBuffer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -351,8 +342,7 @@ HB_FUNC_STATIC(QGLFORMAT_GREENBUFFERSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->greenBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -372,8 +362,7 @@ HB_FUNC_STATIC(QGLFORMAT_HASOVERLAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasOverlay());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -393,8 +382,7 @@ HB_FUNC_STATIC(QGLFORMAT_MAJORVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->majorVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -414,8 +402,7 @@ HB_FUNC_STATIC(QGLFORMAT_MINORVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->minorVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -435,8 +422,7 @@ HB_FUNC_STATIC(QGLFORMAT_PLANE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->plane());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -456,8 +442,7 @@ HB_FUNC_STATIC(QGLFORMAT_PROFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->profile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -477,8 +462,7 @@ HB_FUNC_STATIC(QGLFORMAT_REDBUFFERSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->redBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -498,8 +482,7 @@ HB_FUNC_STATIC(QGLFORMAT_RGBA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->rgba());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -519,8 +502,7 @@ HB_FUNC_STATIC(QGLFORMAT_SAMPLEBUFFERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->sampleBuffers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -540,8 +522,7 @@ HB_FUNC_STATIC(QGLFORMAT_SAMPLES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->samples());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1090,8 +1071,7 @@ HB_FUNC_STATIC(QGLFORMAT_STENCIL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->stencil());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1111,8 +1091,7 @@ HB_FUNC_STATIC(QGLFORMAT_STENCILBUFFERSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->stencilBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1132,8 +1111,7 @@ HB_FUNC_STATIC(QGLFORMAT_STEREO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->stereo());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1153,8 +1131,7 @@ HB_FUNC_STATIC(QGLFORMAT_SWAPINTERVAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->swapInterval());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -123,8 +123,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_ROOTOBJECTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->rootObjects();
       auto pDynSym = hb_dynsymFindName("QOBJECT");

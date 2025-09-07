@@ -131,8 +131,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_SOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->source());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +151,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,8 +171,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_SEVERITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->severity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +191,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_ID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLUINT(obj->id());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,8 +211,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_MESSAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->message());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -149,8 +149,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_DIRECTORIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->directories());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +169,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_FILES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->files());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

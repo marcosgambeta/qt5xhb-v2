@@ -983,8 +983,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODEL_RELOADDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reloadData();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

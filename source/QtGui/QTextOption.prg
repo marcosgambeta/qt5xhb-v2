@@ -147,8 +147,7 @@ HB_FUNC_STATIC(QTEXTOPTION_ALIGNMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,8 +190,7 @@ HB_FUNC_STATIC(QTEXTOPTION_TEXTDIRECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->textDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,8 +233,7 @@ HB_FUNC_STATIC(QTEXTOPTION_WRAPMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->wrapMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,8 +276,7 @@ HB_FUNC_STATIC(QTEXTOPTION_FLAGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,8 +319,7 @@ HB_FUNC_STATIC(QTEXTOPTION_TABSTOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->tabStop());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -376,8 +371,7 @@ HB_FUNC_STATIC(QTEXTOPTION_TABARRAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->tabArray();
       Qt5xHb::convert_qlist_qreal_to_array(list);
@@ -421,8 +415,7 @@ HB_FUNC_STATIC(QTEXTOPTION_USEDESIGNMETRICS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->useDesignMetrics());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

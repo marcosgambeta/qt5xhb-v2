@@ -197,8 +197,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_ORIGINATINGOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->originatingObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -219,8 +218,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_PRIORITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->priority());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,8 +260,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_RAWHEADERLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->rawHeaderList();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
@@ -470,8 +467,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SSLCONFIGURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSslConfiguration(obj->sslConfiguration());
       Qt5xHb::createReturnClass(ptr, "QSSLCONFIGURATION", true);
@@ -492,8 +488,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_URL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -538,8 +533,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_MAXIMUMREDIRECTSALLOWED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->maximumRedirectsAllowed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

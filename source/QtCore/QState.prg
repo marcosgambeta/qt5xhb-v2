@@ -180,8 +180,7 @@ HB_FUNC_STATIC(QSTATE_CHILDMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->childMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,8 +200,7 @@ HB_FUNC_STATIC(QSTATE_ERRORSTATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->errorState();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
@@ -223,8 +221,7 @@ HB_FUNC_STATIC(QSTATE_INITIALSTATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->initialState();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
@@ -337,8 +334,7 @@ HB_FUNC_STATIC(QSTATE_TRANSITIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->transitions();
       auto pDynSym = hb_dynsymFindName("QABSTRACTTRANSITION");

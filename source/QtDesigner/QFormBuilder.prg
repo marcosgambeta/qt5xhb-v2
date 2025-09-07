@@ -112,8 +112,7 @@ HB_FUNC_STATIC(QFORMBUILDER_CLEARPLUGINPATHS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearPluginPaths();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,8 +134,7 @@ HB_FUNC_STATIC(QFORMBUILDER_CUSTOMWIDGETS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->customWidgets();
       auto pDynSym = hb_dynsymFindName("QDESIGNERCUSTOMWIDGETINTERFACE");
@@ -179,8 +177,7 @@ HB_FUNC_STATIC(QFORMBUILDER_PLUGINPATHS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->pluginPaths());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

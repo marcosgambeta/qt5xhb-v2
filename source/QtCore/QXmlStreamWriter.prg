@@ -136,8 +136,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_AUTOFORMATTING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoFormatting());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,8 +156,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_AUTOFORMATTINGINDENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->autoFormattingIndent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,8 +176,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_CODEC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->codec();
       Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
@@ -200,8 +197,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_DEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->device();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
@@ -222,8 +218,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_HASERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -582,8 +577,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_WRITEENDDOCUMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->writeEndDocument();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -605,8 +599,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_WRITEENDELEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->writeEndElement();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

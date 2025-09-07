@@ -134,8 +134,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ISSHIFTACTIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isShiftActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,8 +154,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ISCAPSLOCKACTIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCapsLockActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,8 +174,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ISUPPERCASE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isUppercase());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,8 +194,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->anchorPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,8 +214,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_CURSORPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->cursorPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +234,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_INPUTMETHODHINTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->inputMethodHints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,8 +254,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_PREEDITTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->preeditText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,8 +274,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SURROUNDINGTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->surroundingText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,8 +294,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SELECTEDTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->selectedText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,8 +314,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORRECTANGLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->anchorRectangle());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -345,8 +335,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_CURSORRECTANGLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->cursorRectangle());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -367,8 +356,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ISANIMATING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAnimating());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,8 +399,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_LOCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->locale());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -432,8 +419,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_INPUTENGINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->inputEngine();
       Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDINPUTENGINE");
@@ -454,8 +440,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ISSELECTIONCONTROLVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSelectionControlVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -475,8 +460,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORRECTINTERSECTSCLIPRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->anchorRectIntersectsClipRect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -496,8 +480,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_CURSORRECTINTERSECTSCLIPRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->cursorRectIntersectsClipRect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -577,8 +560,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

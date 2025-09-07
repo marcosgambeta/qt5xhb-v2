@@ -106,8 +106,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_DATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->data());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,8 +126,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_FETCHDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->fetchData();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,8 +148,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_NEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QChar(obj->next());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -172,8 +169,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_RESET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

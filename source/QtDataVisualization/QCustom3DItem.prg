@@ -147,8 +147,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_MESHFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->meshFile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,8 +194,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_TEXTUREFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->textureFile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,8 +241,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_POSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVector3D(obj->position());
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
@@ -292,8 +289,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ISPOSITIONABSOLUTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isPositionAbsolute());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -340,8 +336,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SCALING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVector3D(obj->scaling());
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
@@ -389,8 +384,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ROTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QQuaternion(obj->rotation());
       Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
@@ -438,8 +432,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ISVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -486,8 +479,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ISSHADOWCASTING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isShadowCasting());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -534,8 +526,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ISSCALINGABSOLUTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isScalingAbsolute());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

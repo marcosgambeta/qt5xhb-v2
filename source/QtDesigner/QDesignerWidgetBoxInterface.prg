@@ -77,8 +77,7 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_FILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -98,8 +97,7 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_LOAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->load());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,8 +117,7 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_SAVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->save());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

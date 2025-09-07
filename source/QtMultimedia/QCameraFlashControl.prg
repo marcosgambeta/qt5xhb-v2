@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QCAMERAFLASHCONTROL_FLASHMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->flashMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,8 +123,7 @@ HB_FUNC_STATIC(QCAMERAFLASHCONTROL_ISFLASHREADY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFlashReady());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

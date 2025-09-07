@@ -121,8 +121,7 @@ HB_FUNC_STATIC(QTIMELINE_CURRENTFRAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentFrame());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,8 +141,7 @@ HB_FUNC_STATIC(QTIMELINE_CURRENTTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +161,7 @@ HB_FUNC_STATIC(QTIMELINE_CURRENTVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->currentValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +181,7 @@ HB_FUNC_STATIC(QTIMELINE_CURVESHAPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->curveShape());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,8 +201,7 @@ HB_FUNC_STATIC(QTIMELINE_DIRECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->direction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,8 +221,7 @@ HB_FUNC_STATIC(QTIMELINE_DURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->duration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,8 +241,7 @@ HB_FUNC_STATIC(QTIMELINE_ENDFRAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->endFrame());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,8 +282,7 @@ HB_FUNC_STATIC(QTIMELINE_LOOPCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->loopCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -517,8 +509,7 @@ HB_FUNC_STATIC(QTIMELINE_STARTFRAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->startFrame());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -538,8 +529,7 @@ HB_FUNC_STATIC(QTIMELINE_STATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -559,8 +549,7 @@ HB_FUNC_STATIC(QTIMELINE_UPDATEINTERVAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->updateInterval());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -601,8 +590,7 @@ HB_FUNC_STATIC(QTIMELINE_RESUME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->resume();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -670,8 +658,7 @@ HB_FUNC_STATIC(QTIMELINE_START)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->start();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -693,8 +680,7 @@ HB_FUNC_STATIC(QTIMELINE_STOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -716,8 +702,7 @@ HB_FUNC_STATIC(QTIMELINE_TOGGLEDIRECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->toggleDirection();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

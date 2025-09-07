@@ -227,8 +227,7 @@ HB_FUNC_STATIC(QRECTF_BOTTOM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->bottom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +247,7 @@ HB_FUNC_STATIC(QRECTF_BOTTOMLEFT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->bottomLeft());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -270,8 +268,7 @@ HB_FUNC_STATIC(QRECTF_BOTTOMRIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->bottomRight());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -292,8 +289,7 @@ HB_FUNC_STATIC(QRECTF_CENTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->center());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -415,8 +411,7 @@ HB_FUNC_STATIC(QRECTF_HEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -479,8 +474,7 @@ HB_FUNC_STATIC(QRECTF_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -500,8 +494,7 @@ HB_FUNC_STATIC(QRECTF_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -521,8 +514,7 @@ HB_FUNC_STATIC(QRECTF_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -542,8 +534,7 @@ HB_FUNC_STATIC(QRECTF_LEFT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->left());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -802,8 +793,7 @@ HB_FUNC_STATIC(QRECTF_NORMALIZED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->normalized());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -824,8 +814,7 @@ HB_FUNC_STATIC(QRECTF_RIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->right());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1190,8 +1179,7 @@ HB_FUNC_STATIC(QRECTF_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSizeF(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
@@ -1212,8 +1200,7 @@ HB_FUNC_STATIC(QRECTF_TOALIGNEDRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->toAlignedRect());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -1234,8 +1221,7 @@ HB_FUNC_STATIC(QRECTF_TORECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->toRect());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -1256,8 +1242,7 @@ HB_FUNC_STATIC(QRECTF_TOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->top());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1277,8 +1262,7 @@ HB_FUNC_STATIC(QRECTF_TOPLEFT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->topLeft());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -1299,8 +1283,7 @@ HB_FUNC_STATIC(QRECTF_TOPRIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->topRight());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -1405,8 +1388,7 @@ HB_FUNC_STATIC(QRECTF_WIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1426,8 +1408,7 @@ HB_FUNC_STATIC(QRECTF_X)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1447,8 +1428,7 @@ HB_FUNC_STATIC(QRECTF_Y)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

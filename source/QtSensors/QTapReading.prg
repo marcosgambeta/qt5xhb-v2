@@ -83,8 +83,7 @@ HB_FUNC_STATIC(QTAPREADING_TAPDIRECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->tapDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,8 +130,7 @@ HB_FUNC_STATIC(QTAPREADING_ISDOUBLETAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDoubleTap());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

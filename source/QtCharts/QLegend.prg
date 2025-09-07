@@ -128,8 +128,7 @@ HB_FUNC_STATIC(QLEGEND_ALIGNMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,8 +150,7 @@ HB_FUNC_STATIC(QLEGEND_ISBACKGROUNDVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isBackgroundVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,8 +197,7 @@ HB_FUNC_STATIC(QLEGEND_COLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->color());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -248,8 +245,7 @@ HB_FUNC_STATIC(QLEGEND_BORDERCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->borderColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -297,8 +293,7 @@ HB_FUNC_STATIC(QLEGEND_FONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QFont(obj->font());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
@@ -346,8 +341,7 @@ HB_FUNC_STATIC(QLEGEND_LABELCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->labelColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -395,8 +389,7 @@ HB_FUNC_STATIC(QLEGEND_REVERSEMARKERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->reverseMarkers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -443,8 +436,7 @@ HB_FUNC_STATIC(QLEGEND_SHOWTOOLTIPS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->showToolTips());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -491,8 +483,7 @@ HB_FUNC_STATIC(QLEGEND_MARKERSHAPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->markerShape());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -589,8 +580,7 @@ HB_FUNC_STATIC(QLEGEND_BRUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->brush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -638,8 +628,7 @@ HB_FUNC_STATIC(QLEGEND_PEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPen(obj->pen());
       Qt5xHb::createReturnClass(ptr, "QPEN", true);
@@ -687,8 +676,7 @@ HB_FUNC_STATIC(QLEGEND_LABELBRUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->labelBrush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -736,8 +724,7 @@ HB_FUNC_STATIC(QLEGEND_DETACHFROMCHART)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->detachFromChart();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -761,8 +748,7 @@ HB_FUNC_STATIC(QLEGEND_ATTACHTOCHART)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->attachToChart();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -786,8 +772,7 @@ HB_FUNC_STATIC(QLEGEND_ISATTACHEDTOCHART)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAttachedToChart());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

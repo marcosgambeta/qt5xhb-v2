@@ -140,8 +140,7 @@ HB_FUNC_STATIC(QMIMETYPE_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,8 +160,7 @@ HB_FUNC_STATIC(QMIMETYPE_ISDEFAULT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDefault());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,8 +180,7 @@ HB_FUNC_STATIC(QMIMETYPE_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,8 +200,7 @@ HB_FUNC_STATIC(QMIMETYPE_COMMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->comment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,8 +220,7 @@ HB_FUNC_STATIC(QMIMETYPE_GENERICICONNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->genericIconName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,8 +240,7 @@ HB_FUNC_STATIC(QMIMETYPE_ICONNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->iconName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,8 +260,7 @@ HB_FUNC_STATIC(QMIMETYPE_GLOBPATTERNS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->globPatterns());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -287,8 +280,7 @@ HB_FUNC_STATIC(QMIMETYPE_PARENTMIMETYPES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->parentMimeTypes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,8 +300,7 @@ HB_FUNC_STATIC(QMIMETYPE_ALLANCESTORS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->allAncestors());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,8 +320,7 @@ HB_FUNC_STATIC(QMIMETYPE_ALIASES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->aliases());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -350,8 +340,7 @@ HB_FUNC_STATIC(QMIMETYPE_SUFFIXES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->suffixes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -371,8 +360,7 @@ HB_FUNC_STATIC(QMIMETYPE_PREFERREDSUFFIX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->preferredSuffix());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -413,8 +401,7 @@ HB_FUNC_STATIC(QMIMETYPE_FILTERSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->filterString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

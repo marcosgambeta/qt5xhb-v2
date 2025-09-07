@@ -146,8 +146,7 @@ HB_FUNC_STATIC(QWEBVIEW_TITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +166,7 @@ HB_FUNC_STATIC(QWEBVIEW_URL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -212,8 +210,7 @@ HB_FUNC_STATIC(QWEBVIEW_ICON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
@@ -234,8 +231,7 @@ HB_FUNC_STATIC(QWEBVIEW_SELECTEDTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->selectedText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,8 +251,7 @@ HB_FUNC_STATIC(QWEBVIEW_SELECTEDHTML)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->selectedHtml());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,8 +271,7 @@ HB_FUNC_STATIC(QWEBVIEW_HASSELECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasSelection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,8 +291,7 @@ HB_FUNC_STATIC(QWEBVIEW_ISMODIFIED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isModified());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -318,8 +311,7 @@ HB_FUNC_STATIC(QWEBVIEW_TEXTSIZEMULTIPLIER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->textSizeMultiplier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -362,8 +354,7 @@ HB_FUNC_STATIC(QWEBVIEW_ZOOMFACTOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->zoomFactor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -406,8 +397,7 @@ HB_FUNC_STATIC(QWEBVIEW_RENDERHINTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->renderHints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -472,8 +462,7 @@ HB_FUNC_STATIC(QWEBVIEW_HISTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->history();
       Qt5xHb::createReturnClass(ptr, "QWEBHISTORY", false);
@@ -530,8 +519,7 @@ HB_FUNC_STATIC(QWEBVIEW_PAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->page();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBPAGE");
@@ -669,8 +657,7 @@ HB_FUNC_STATIC(QWEBVIEW_SETTINGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->settings();
       Qt5xHb::createReturnClass(ptr, "QWEBSETTINGS", false);
@@ -714,8 +701,7 @@ HB_FUNC_STATIC(QWEBVIEW_BACK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->back();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -737,8 +723,7 @@ HB_FUNC_STATIC(QWEBVIEW_FORWARD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->forward();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -783,8 +768,7 @@ HB_FUNC_STATIC(QWEBVIEW_RELOAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reload();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -806,8 +790,7 @@ HB_FUNC_STATIC(QWEBVIEW_STOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -851,8 +834,7 @@ HB_FUNC_STATIC(QWEBVIEW_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);

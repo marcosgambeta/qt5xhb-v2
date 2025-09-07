@@ -112,8 +112,7 @@ HB_FUNC_STATIC(QPDFWRITER_TITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,8 +155,7 @@ HB_FUNC_STATIC(QPDFWRITER_CREATOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->creator());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,8 +198,7 @@ HB_FUNC_STATIC(QPDFWRITER_NEWPAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->newPage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,8 +274,7 @@ HB_FUNC_STATIC(QPDFWRITER_RESOLUTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->resolution());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -325,8 +321,7 @@ HB_FUNC_STATIC(QPDFWRITER_PAGELAYOUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPageLayout(obj->pageLayout());
       Qt5xHb::createReturnClass(ptr, "QPAGELAYOUT", true);
@@ -372,8 +367,7 @@ HB_FUNC_STATIC(QPDFWRITER_PDFVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->pdfVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

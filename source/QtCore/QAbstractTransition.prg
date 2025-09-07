@@ -115,8 +115,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_ANIMATIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->animations();
       auto pDynSym = hb_dynsymFindName("QABSTRACTANIMATION");
@@ -159,8 +158,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_MACHINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->machine();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTATEMACHINE");
@@ -258,8 +256,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SOURCESTATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->sourceState();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTATE");
@@ -280,8 +277,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->targetState();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
@@ -302,8 +298,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->targetStates();
       auto pDynSym = hb_dynsymFindName("QABSTRACTSTATE");

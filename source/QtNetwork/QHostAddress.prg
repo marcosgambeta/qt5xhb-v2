@@ -203,8 +203,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_PROTOCOL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->protocol());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,8 +254,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_TOSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->toString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,8 +274,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SCOPEID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->scopeId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,8 +342,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,8 +362,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -410,8 +405,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISLOOPBACK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLoopback());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -432,8 +426,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISMULTICAST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isMulticast());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

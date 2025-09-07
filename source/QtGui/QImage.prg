@@ -183,8 +183,7 @@ HB_FUNC_STATIC(QIMAGE_ALLGRAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->allGray());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,8 +203,7 @@ HB_FUNC_STATIC(QIMAGE_BITPLANECOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->bitPlaneCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,8 +223,7 @@ HB_FUNC_STATIC(QIMAGE_BYTECOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->byteCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,8 +243,7 @@ HB_FUNC_STATIC(QIMAGE_BYTESPERLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->bytesPerLine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,8 +263,7 @@ HB_FUNC_STATIC(QIMAGE_CACHEKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->cacheKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -309,8 +304,7 @@ HB_FUNC_STATIC(QIMAGE_COLORCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->colorCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -330,8 +324,7 @@ HB_FUNC_STATIC(QIMAGE_COLORTABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->colorTable();
       auto pArray = hb_itemArrayNew(0);
@@ -501,8 +494,7 @@ HB_FUNC_STATIC(QIMAGE_DEPTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->depth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -522,8 +514,7 @@ HB_FUNC_STATIC(QIMAGE_DOTSPERMETERX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->dotsPerMeterX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -543,8 +534,7 @@ HB_FUNC_STATIC(QIMAGE_DOTSPERMETERY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->dotsPerMeterY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -609,8 +599,7 @@ HB_FUNC_STATIC(QIMAGE_FORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->format());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -630,8 +619,7 @@ HB_FUNC_STATIC(QIMAGE_HASALPHACHANNEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasAlphaChannel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -651,8 +639,7 @@ HB_FUNC_STATIC(QIMAGE_HEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -696,8 +683,7 @@ HB_FUNC_STATIC(QIMAGE_ISGRAYSCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isGrayscale());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -717,8 +703,7 @@ HB_FUNC_STATIC(QIMAGE_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -816,8 +801,7 @@ HB_FUNC_STATIC(QIMAGE_OFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->offset());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -894,8 +878,7 @@ HB_FUNC_STATIC(QIMAGE_RECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->rect());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -916,8 +899,7 @@ HB_FUNC_STATIC(QIMAGE_RGBSWAPPED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QImage(obj->rgbSwapped());
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
@@ -1236,8 +1218,7 @@ HB_FUNC_STATIC(QIMAGE_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -1302,8 +1283,7 @@ HB_FUNC_STATIC(QIMAGE_TEXTKEYS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->textKeys());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1385,8 +1365,7 @@ HB_FUNC_STATIC(QIMAGE_WIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -188,8 +188,7 @@ HB_FUNC_STATIC(QRUBBERBAND_SHAPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->shape());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

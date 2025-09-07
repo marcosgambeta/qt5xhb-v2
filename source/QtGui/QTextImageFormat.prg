@@ -92,8 +92,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,8 +135,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,8 +178,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_WIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,8 +221,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_HEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,8 +242,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_QUALITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->quality());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

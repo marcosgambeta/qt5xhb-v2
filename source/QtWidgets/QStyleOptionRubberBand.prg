@@ -78,8 +78,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SHAPE)
   auto obj = static_cast<QStyleOptionRubberBand *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->shape);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -111,8 +110,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_OPAQUE)
   auto obj = static_cast<QStyleOptionRubberBand *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->opaque);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

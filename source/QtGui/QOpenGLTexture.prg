@@ -180,8 +180,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_CREATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->create());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,8 +202,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_DESTROY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->destroy();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +226,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISCREATED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCreated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,8 +248,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_TEXTUREID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLUINT(obj->textureId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,8 +400,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_FORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->format());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -452,8 +447,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_WIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -475,8 +469,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_HEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -498,8 +491,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_DEPTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->depth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -546,8 +538,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MIPLEVELS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->mipLevels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -569,8 +560,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MAXIMUMMIPLEVELS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->maximumMipLevels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -617,8 +607,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_LAYERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->layers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -640,8 +629,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_FACES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->faces());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -663,8 +651,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ALLOCATESTORAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->allocateStorage();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -688,8 +675,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISSTORAGEALLOCATED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isStorageAllocated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -738,8 +724,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISTEXTUREVIEW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isTextureView());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -786,8 +771,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MIPBASELEVEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->mipBaseLevel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -834,8 +818,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MIPMAXLEVEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->mipMaxLevel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -907,8 +890,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISAUTOMIPMAPGENERATIONENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAutoMipMapGenerationEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1054,8 +1036,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_DEPTHSTENCILMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->depthStencilMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1102,8 +1083,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MINIFICATIONFILTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->minificationFilter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1150,8 +1130,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MAGNIFICATIONFILTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->magnificationFilter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1224,8 +1203,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MAXIMUMANISOTROPY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->maximumAnisotropy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1429,8 +1407,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR1)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->borderColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -1572,8 +1549,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MINIMUMLEVELOFDETAIL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->minimumLevelOfDetail());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1620,8 +1596,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MAXIMUMLEVELOFDETAIL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->maximumLevelOfDetail());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1693,8 +1668,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_LEVELOFDETAILBIAS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->levelofDetailBias());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -128,8 +128,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_PLAYBACKMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->playbackMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,8 +171,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_CURRENTMEDIA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QMediaContent(obj->currentMedia());
       Qt5xHb::createReturnClass(ptr, "QMEDIACONTENT", true);
@@ -194,8 +192,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_CURRENTINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -274,8 +271,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->clear());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -295,8 +291,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -316,8 +311,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,8 +367,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -394,8 +387,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ISREADONLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReadOnly());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -482,8 +474,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_MEDIACOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->mediaCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -601,8 +592,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_MEDIAOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->mediaObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QMEDIAOBJECT");
@@ -623,8 +613,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_NEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->next();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -646,8 +635,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_PREVIOUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->previous();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -669,8 +657,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_SHUFFLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->shuffle();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

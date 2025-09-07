@@ -144,8 +144,7 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_ORIGIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->origin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +166,7 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_ALLOWED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->allowed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

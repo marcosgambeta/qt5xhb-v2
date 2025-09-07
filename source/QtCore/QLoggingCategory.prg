@@ -145,8 +145,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_ISDEBUGENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDebugEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,8 +165,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_ISWARNINGENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isWarningEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,8 +185,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_ISCRITICALENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCriticalEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,8 +205,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_CATEGORYNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retc(static_cast<const char *>(obj->categoryName()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

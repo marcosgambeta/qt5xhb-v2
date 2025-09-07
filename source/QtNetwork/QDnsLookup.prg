@@ -141,8 +141,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,8 +161,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,8 +181,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,8 +224,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,8 +268,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NAMESERVER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QHostAddress(obj->nameserver());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
@@ -320,8 +315,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ISFINISHED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFinished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -341,8 +335,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_CANONICALNAMERECORDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->canonicalNameRecords();
       auto pDynSym = hb_dynsymFindName("QDNSDOMAINNAMERECORD");
@@ -388,8 +381,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_HOSTADDRESSRECORDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->hostAddressRecords();
       auto pDynSym = hb_dynsymFindName("QDNSHOSTADDRESSRECORD");
@@ -435,8 +427,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_MAILEXCHANGERECORDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->mailExchangeRecords();
       auto pDynSym = hb_dynsymFindName("QDNSMAILEXCHANGERECORD");
@@ -482,8 +473,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NAMESERVERRECORDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->nameServerRecords();
       auto pDynSym = hb_dynsymFindName("QDNSDOMAINNAMERECORD");
@@ -529,8 +519,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_POINTERRECORDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->pointerRecords();
       auto pDynSym = hb_dynsymFindName("QDNSDOMAINNAMERECORD");
@@ -576,8 +565,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SERVICERECORDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->serviceRecords();
       auto pDynSym = hb_dynsymFindName("QDNSSERVICERECORD");
@@ -623,8 +611,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_TEXTRECORDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->textRecords();
       auto pDynSym = hb_dynsymFindName("QDNSTEXTRECORD");
@@ -670,8 +657,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ABORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->abort();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -693,8 +679,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_LOOKUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->lookup();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -139,8 +139,7 @@ HB_FUNC_STATIC(QEVENTLOOP_ISRUNNING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isRunning());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,8 +190,7 @@ HB_FUNC_STATIC(QEVENTLOOP_WAKEUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->wakeUp();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,8 +212,7 @@ HB_FUNC_STATIC(QEVENTLOOP_QUIT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->quit();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

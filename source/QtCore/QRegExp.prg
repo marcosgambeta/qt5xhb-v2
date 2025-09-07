@@ -156,8 +156,7 @@ HB_FUNC_STATIC(QREGEXP_CAPTURECOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->captureCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +176,7 @@ HB_FUNC_STATIC(QREGEXP_CAPTUREDTEXTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->capturedTexts());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,8 +196,7 @@ HB_FUNC_STATIC(QREGEXP_CASESENSITIVITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->caseSensitivity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,8 +216,7 @@ HB_FUNC_STATIC(QREGEXP_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,8 +280,7 @@ HB_FUNC_STATIC(QREGEXP_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,8 +300,7 @@ HB_FUNC_STATIC(QREGEXP_ISMINIMAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isMinimal());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,8 +320,7 @@ HB_FUNC_STATIC(QREGEXP_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -370,8 +363,7 @@ HB_FUNC_STATIC(QREGEXP_MATCHEDLENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->matchedLength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -391,8 +383,7 @@ HB_FUNC_STATIC(QREGEXP_PATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->pattern());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -412,8 +403,7 @@ HB_FUNC_STATIC(QREGEXP_PATTERNSYNTAX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->patternSyntax());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

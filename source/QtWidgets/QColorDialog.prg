@@ -116,8 +116,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_CURRENTCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->currentColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -195,8 +194,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_OPTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->options());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +237,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SELECTEDCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->selectedColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);

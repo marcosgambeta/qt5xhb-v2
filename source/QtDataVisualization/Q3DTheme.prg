@@ -182,8 +182,7 @@ HB_FUNC_STATIC(Q3DTHEME_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,8 +229,7 @@ HB_FUNC_STATIC(Q3DTHEME_BASECOLORS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->baseColors();
       auto pDynSym = hb_dynsymFindName("QCOLOR");
@@ -311,8 +309,7 @@ HB_FUNC_STATIC(Q3DTHEME_BACKGROUNDCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->backgroundColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -360,8 +357,7 @@ HB_FUNC_STATIC(Q3DTHEME_WINDOWCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->windowColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -409,8 +405,7 @@ HB_FUNC_STATIC(Q3DTHEME_LABELTEXTCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->labelTextColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -458,8 +453,7 @@ HB_FUNC_STATIC(Q3DTHEME_LABELBACKGROUNDCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->labelBackgroundColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -507,8 +501,7 @@ HB_FUNC_STATIC(Q3DTHEME_GRIDLINECOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->gridLineColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -556,8 +549,7 @@ HB_FUNC_STATIC(Q3DTHEME_SINGLEHIGHLIGHTCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->singleHighlightColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -605,8 +597,7 @@ HB_FUNC_STATIC(Q3DTHEME_MULTIHIGHLIGHTCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->multiHighlightColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -654,8 +645,7 @@ HB_FUNC_STATIC(Q3DTHEME_LIGHTCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->lightColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -703,8 +693,7 @@ HB_FUNC_STATIC(Q3DTHEME_BASEGRADIENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->baseGradients();
       auto pDynSym = hb_dynsymFindName("QLINEARGRADIENT");
@@ -785,8 +774,7 @@ HB_FUNC_STATIC(Q3DTHEME_SINGLEHIGHLIGHTGRADIENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QLinearGradient(obj->singleHighlightGradient());
       Qt5xHb::createReturnClass(ptr, "QLINEARGRADIENT", true);
@@ -834,8 +822,7 @@ HB_FUNC_STATIC(Q3DTHEME_MULTIHIGHLIGHTGRADIENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QLinearGradient(obj->multiHighlightGradient());
       Qt5xHb::createReturnClass(ptr, "QLINEARGRADIENT", true);
@@ -883,8 +870,7 @@ HB_FUNC_STATIC(Q3DTHEME_LIGHTSTRENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->lightStrength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -931,8 +917,7 @@ HB_FUNC_STATIC(Q3DTHEME_AMBIENTLIGHTSTRENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->ambientLightStrength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -979,8 +964,7 @@ HB_FUNC_STATIC(Q3DTHEME_HIGHLIGHTLIGHTSTRENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->highlightLightStrength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1027,8 +1011,7 @@ HB_FUNC_STATIC(Q3DTHEME_ISLABELBORDERENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLabelBorderEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1075,8 +1058,7 @@ HB_FUNC_STATIC(Q3DTHEME_FONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QFont(obj->font());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
@@ -1124,8 +1106,7 @@ HB_FUNC_STATIC(Q3DTHEME_ISBACKGROUNDENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isBackgroundEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1172,8 +1153,7 @@ HB_FUNC_STATIC(Q3DTHEME_ISGRIDENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isGridEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1220,8 +1200,7 @@ HB_FUNC_STATIC(Q3DTHEME_ISLABELBACKGROUNDENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLabelBackgroundEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1268,8 +1247,7 @@ HB_FUNC_STATIC(Q3DTHEME_COLORSTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->colorStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

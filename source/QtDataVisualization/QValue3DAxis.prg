@@ -119,8 +119,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SEGMENTCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->segmentCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +166,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SUBSEGMENTCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->subSegmentCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,8 +213,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_LABELFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->labelFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,8 +260,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_FORMATTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->formatter();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXISFORMATTER");
@@ -312,8 +308,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_REVERSED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->reversed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

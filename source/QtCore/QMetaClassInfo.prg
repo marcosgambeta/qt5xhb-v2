@@ -96,8 +96,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retc(static_cast<const char *>(obj->name()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,8 +116,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_VALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retc(static_cast<const char *>(obj->value()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,8 +136,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_ENCLOSINGMETAOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->enclosingMetaObject();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);

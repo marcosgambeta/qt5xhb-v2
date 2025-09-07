@@ -211,8 +211,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->readData());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -233,8 +232,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READVARIANT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVariant(obj->readVariant());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -255,8 +253,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READBINDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QAndroidBinder(obj->readBinder());
       Qt5xHb::createReturnClass(ptr, "QANDROIDBINDER", true);
@@ -277,8 +274,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READFILEDESCRIPTOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->readFileDescriptor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -298,8 +294,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_HANDLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QAndroidJniObject(obj->handle());
       Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);

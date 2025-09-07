@@ -414,8 +414,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MIMETYPES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->mimeTypes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -519,8 +518,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_SOURCEMODELS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->sourceModels();
       auto pDynSym = hb_dynsymFindName("QABSTRACTITEMMODEL");

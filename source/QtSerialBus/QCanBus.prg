@@ -85,8 +85,7 @@ HB_FUNC_STATIC(QCANBUS_PLUGINS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->plugins());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -134,8 +134,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,8 +156,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_FRAMETYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->frameType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,8 +203,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_HASEXTENDEDFRAMEFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasExtendedFrameFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,8 +250,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_FRAMEID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT32(obj->frameId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,8 +325,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_PAYLOAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->payload());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -356,8 +351,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,8 +398,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_TOSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->toString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -427,8 +420,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_HASFLEXIBLEDATARATEFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasFlexibleDataRateFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -475,8 +467,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_HASBITRATESWITCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasBitrateSwitch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -523,8 +514,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_HASERRORSTATEINDICATOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasErrorStateIndicator());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -571,8 +561,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_HASLOCALECHO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasLocalEcho());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

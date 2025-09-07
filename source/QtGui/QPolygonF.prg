@@ -236,8 +236,7 @@ HB_FUNC_STATIC(QPOLYGONF_TOPOLYGON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPolygon(obj->toPolygon());
       Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
@@ -258,8 +257,7 @@ HB_FUNC_STATIC(QPOLYGONF_ISCLOSED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isClosed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,8 +277,7 @@ HB_FUNC_STATIC(QPOLYGONF_BOUNDINGRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->boundingRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);

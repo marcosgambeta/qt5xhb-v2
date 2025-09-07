@@ -180,8 +180,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDVIDEOCODECS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->supportedVideoCodecs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,8 +221,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_VIDEOSETTINGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVideoEncoderSettings(obj->videoSettings());
       Qt5xHb::createReturnClass(ptr, "QVIDEOENCODERSETTINGS", true);

@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTVIEW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->inputView());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,8 +144,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->inputPosition());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -194,8 +192,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SCENE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->scene();
       Qt5xHb::createReturnQObjectClass(ptr, "Q3DSCENE");

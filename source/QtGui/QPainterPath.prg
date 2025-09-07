@@ -457,8 +457,7 @@ HB_FUNC_STATIC(QPAINTERPATH_BOUNDINGRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->boundingRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -479,8 +478,7 @@ HB_FUNC_STATIC(QPAINTERPATH_CLOSESUBPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->closeSubpath();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -564,8 +562,7 @@ HB_FUNC_STATIC(QPAINTERPATH_CONTROLPOINTRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->controlPointRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -618,8 +615,7 @@ HB_FUNC_STATIC(QPAINTERPATH_CURRENTPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->currentPosition());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -640,8 +636,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ELEMENTCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->elementCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -661,8 +656,7 @@ HB_FUNC_STATIC(QPAINTERPATH_FILLRULE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->fillRule());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -732,8 +726,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -753,8 +746,7 @@ HB_FUNC_STATIC(QPAINTERPATH_LENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->length());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -959,8 +951,7 @@ HB_FUNC_STATIC(QPAINTERPATH_SIMPLIFIED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPainterPath(obj->simplified());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
@@ -1078,8 +1069,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TOREVERSED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPainterPath(obj->toReversed());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
@@ -1185,8 +1175,7 @@ HB_FUNC_STATIC(QPAINTERPATH_CAPACITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->capacity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1208,8 +1197,7 @@ HB_FUNC_STATIC(QPAINTERPATH_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

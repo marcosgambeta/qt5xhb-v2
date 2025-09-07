@@ -151,8 +151,7 @@ HB_FUNC_STATIC(QCLIPBOARD_OWNSCLIPBOARD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->ownsClipboard());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,8 +171,7 @@ HB_FUNC_STATIC(QCLIPBOARD_OWNSFINDBUFFER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->ownsFindBuffer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,8 +191,7 @@ HB_FUNC_STATIC(QCLIPBOARD_OWNSSELECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->ownsSelection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -333,8 +330,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SUPPORTSFINDBUFFER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->supportsFindBuffer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,8 +350,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SUPPORTSSELECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->supportsSelection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

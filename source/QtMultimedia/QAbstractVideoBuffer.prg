@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_HANDLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVariant(obj->handle());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -115,8 +114,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_HANDLETYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->handleType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,8 +134,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_MAPMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->mapMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,8 +154,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_UNMAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->unmap();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,8 +176,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_RELEASE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->release();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

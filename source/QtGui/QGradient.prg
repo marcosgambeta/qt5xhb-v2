@@ -84,8 +84,7 @@ HB_FUNC_STATIC(QGRADIENT_COORDINATEMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->coordinateMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +173,7 @@ HB_FUNC_STATIC(QGRADIENT_SPREAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->spread());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,8 +193,7 @@ HB_FUNC_STATIC(QGRADIENT_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

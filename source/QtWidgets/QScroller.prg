@@ -81,8 +81,7 @@ HB_FUNC_STATIC(QSCROLLER_FINALPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->finalPosition());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -124,8 +123,7 @@ HB_FUNC_STATIC(QSCROLLER_PIXELPERMETER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->pixelPerMeter());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -146,8 +144,7 @@ HB_FUNC_STATIC(QSCROLLER_SCROLLERPROPERTIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QScrollerProperties(obj->scrollerProperties());
       Qt5xHb::createReturnClass(ptr, "QSCROLLERPROPERTIES", true);
@@ -250,8 +247,7 @@ HB_FUNC_STATIC(QSCROLLER_STATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -271,8 +267,7 @@ HB_FUNC_STATIC(QSCROLLER_STOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,8 +289,7 @@ HB_FUNC_STATIC(QSCROLLER_TARGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->target();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -316,8 +310,7 @@ HB_FUNC_STATIC(QSCROLLER_VELOCITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->velocity());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -370,8 +363,7 @@ HB_FUNC_STATIC(QSCROLLER_RESENDPREPAREEVENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->resendPrepareEvent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

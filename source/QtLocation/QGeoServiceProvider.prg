@@ -117,8 +117,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_ROUTINGFEATURES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->routingFeatures());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,8 +139,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_GEOCODINGFEATURES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->geocodingFeatures());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +161,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_MAPPINGFEATURES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->mappingFeatures());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,8 +183,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_PLACESFEATURES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->placesFeatures());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,8 +205,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_GEOCODINGMANAGER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->geocodingManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODINGMANAGER");
@@ -236,8 +231,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_ROUTINGMANAGER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->routingManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOROUTINGMANAGER");
@@ -260,8 +254,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_PLACEMANAGER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->placeManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEMANAGER");
@@ -284,8 +277,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -307,8 +299,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

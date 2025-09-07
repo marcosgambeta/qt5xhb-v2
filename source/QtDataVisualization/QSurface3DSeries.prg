@@ -137,8 +137,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_DATAPROXY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->dataProxy();
       Qt5xHb::createReturnQObjectClass(ptr, "QSURFACEDATAPROXY");
@@ -186,8 +185,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SELECTEDPOINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->selectedPoint());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -235,8 +233,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ISFLATSHADINGENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFlatShadingEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,8 +280,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ISFLATSHADINGSUPPORTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFlatShadingSupported());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,8 +302,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_DRAWMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->drawMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,8 +349,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_TEXTURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QImage(obj->texture());
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
@@ -403,8 +397,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_TEXTUREFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->textureFile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

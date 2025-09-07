@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QLOCKFILE_LOCK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->lock());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,8 +155,7 @@ HB_FUNC_STATIC(QLOCKFILE_UNLOCK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->unlock();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,8 +204,7 @@ HB_FUNC_STATIC(QLOCKFILE_STALELOCKTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->staleLockTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,8 +226,7 @@ HB_FUNC_STATIC(QLOCKFILE_ISLOCKED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLocked());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,8 +273,7 @@ HB_FUNC_STATIC(QLOCKFILE_REMOVESTALELOCKFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->removeStaleLockFile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

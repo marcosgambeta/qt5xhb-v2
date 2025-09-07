@@ -139,8 +139,7 @@ HB_FUNC_STATIC(Q3DSCENE_VIEWPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->viewport());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -163,8 +162,7 @@ HB_FUNC_STATIC(Q3DSCENE_PRIMARYSUBVIEWPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->primarySubViewport());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -212,8 +210,7 @@ HB_FUNC_STATIC(Q3DSCENE_SECONDARYSUBVIEWPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->secondarySubViewport());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -261,8 +258,7 @@ HB_FUNC_STATIC(Q3DSCENE_SELECTIONQUERYPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->selectionQueryPosition());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -310,8 +306,7 @@ HB_FUNC_STATIC(Q3DSCENE_ISSECONDARYSUBVIEWONTOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSecondarySubviewOnTop());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -358,8 +353,7 @@ HB_FUNC_STATIC(Q3DSCENE_ISSLICINGACTIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSlicingActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -406,8 +400,7 @@ HB_FUNC_STATIC(Q3DSCENE_ACTIVECAMERA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->activeCamera();
       Qt5xHb::createReturnQObjectClass(ptr, "Q3DCAMERA");
@@ -455,8 +448,7 @@ HB_FUNC_STATIC(Q3DSCENE_ACTIVELIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->activeLight();
       Qt5xHb::createReturnQObjectClass(ptr, "Q3DLIGHT");
@@ -504,8 +496,7 @@ HB_FUNC_STATIC(Q3DSCENE_DEVICEPIXELRATIO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->devicePixelRatio());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -552,8 +543,7 @@ HB_FUNC_STATIC(Q3DSCENE_GRAPHPOSITIONQUERY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->graphPositionQuery());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);

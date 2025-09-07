@@ -193,8 +193,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_BASEURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->baseUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -215,8 +214,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_CLEARCOMPONENTCACHE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearComponentCache();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,8 +258,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_IMPORTPATHLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->importPathList());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,8 +278,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_NETWORKACCESSMANAGER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->networkAccessManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
@@ -303,8 +299,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->networkAccessManagerFactory();
       Qt5xHb::createReturnClass(ptr, "QDECLARATIVENETWORKACCESSMANAGERFACTORY", false);
@@ -325,8 +320,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_OFFLINESTORAGEPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->offlineStoragePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -346,8 +340,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->outputWarningsToStandardError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -367,8 +360,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_PLUGINPATHLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->pluginPathList());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,8 +403,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ROOTCONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->rootContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");

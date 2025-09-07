@@ -101,8 +101,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_EVENTSOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->eventSource();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -123,8 +122,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_EVENTTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->eventType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QROTATIONSENSOR_READING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QROTATIONREADING");
@@ -127,8 +126,7 @@ HB_FUNC_STATIC(QROTATIONSENSOR_HASZ)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasZ());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

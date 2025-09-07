@@ -116,8 +116,7 @@ HB_FUNC_STATIC(QPLACEMATCHREQUEST_PLACES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->places();
       auto pDynSym = hb_dynsymFindName("QPLACE");
@@ -230,8 +229,7 @@ HB_FUNC_STATIC(QPLACEMATCHREQUEST_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,8 +111,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_SERVERADDRESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->serverAddress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,8 +133,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_ISFINISHED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFinished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,8 +155,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_RESULT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QModbusDataUnit(obj->result());
       Qt5xHb::createReturnClass(ptr, "QMODBUSDATAUNIT", true);
@@ -182,8 +178,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_RAWRESULT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QModbusResponse(obj->rawResult());
       Qt5xHb::createReturnClass(ptr, "QMODBUSRESPONSE", true);
@@ -206,8 +201,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,8 +223,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

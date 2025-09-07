@@ -119,8 +119,7 @@ HB_FUNC_STATIC(QSCREEN_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,8 +139,7 @@ HB_FUNC_STATIC(QSCREEN_DEPTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->depth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,8 +159,7 @@ HB_FUNC_STATIC(QSCREEN_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -183,8 +180,7 @@ HB_FUNC_STATIC(QSCREEN_GEOMETRY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->geometry());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -205,8 +201,7 @@ HB_FUNC_STATIC(QSCREEN_PHYSICALSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSizeF(obj->physicalSize());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
@@ -227,8 +222,7 @@ HB_FUNC_STATIC(QSCREEN_PHYSICALDOTSPERINCHX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->physicalDotsPerInchX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +242,7 @@ HB_FUNC_STATIC(QSCREEN_PHYSICALDOTSPERINCHY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->physicalDotsPerInchY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +262,7 @@ HB_FUNC_STATIC(QSCREEN_PHYSICALDOTSPERINCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->physicalDotsPerInch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -290,8 +282,7 @@ HB_FUNC_STATIC(QSCREEN_LOGICALDOTSPERINCHX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->logicalDotsPerInchX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,8 +302,7 @@ HB_FUNC_STATIC(QSCREEN_LOGICALDOTSPERINCHY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->logicalDotsPerInchY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -332,8 +322,7 @@ HB_FUNC_STATIC(QSCREEN_LOGICALDOTSPERINCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->logicalDotsPerInch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,8 +342,7 @@ HB_FUNC_STATIC(QSCREEN_DEVICEPIXELRATIO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->devicePixelRatio());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -374,8 +362,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLESIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->availableSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -396,8 +383,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLEGEOMETRY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->availableGeometry());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -418,8 +404,7 @@ HB_FUNC_STATIC(QSCREEN_VIRTUALSIBLINGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->virtualSiblings();
       auto pDynSym = hb_dynsymFindName("QSCREEN");
@@ -462,8 +447,7 @@ HB_FUNC_STATIC(QSCREEN_VIRTUALSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->virtualSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -484,8 +468,7 @@ HB_FUNC_STATIC(QSCREEN_VIRTUALGEOMETRY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->virtualGeometry());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -506,8 +489,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLEVIRTUALSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->availableVirtualSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -528,8 +510,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLEVIRTUALGEOMETRY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->availableVirtualGeometry());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -550,8 +531,7 @@ HB_FUNC_STATIC(QSCREEN_PRIMARYORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->primaryOrientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -571,8 +551,7 @@ HB_FUNC_STATIC(QSCREEN_ORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -592,8 +571,7 @@ HB_FUNC_STATIC(QSCREEN_ORIENTATIONUPDATEMASK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientationUpdateMask());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -769,8 +747,7 @@ HB_FUNC_STATIC(QSCREEN_REFRESHRATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->refreshRate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

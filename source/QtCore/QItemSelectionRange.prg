@@ -135,8 +135,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_TOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->top());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,8 +155,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_LEFT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->left());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +175,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_BOTTOM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->bottom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,8 +195,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_RIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->right());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,8 +215,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_WIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,8 +235,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_HEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,8 +255,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_TOPLEFT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->topLeft();
       Qt5xHb::createReturnClass(ptr, "QPERSISTENTMODELINDEX", false);
@@ -283,8 +276,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_BOTTOMRIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->bottomRight();
       Qt5xHb::createReturnClass(ptr, "QPERSISTENTMODELINDEX", false);
@@ -305,8 +297,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_PARENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QModelIndex(obj->parent());
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
@@ -327,8 +318,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_MODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
@@ -420,8 +410,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -441,8 +430,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -462,8 +450,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INDEXES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->indexes();
       auto pDynSym = hb_dynsymFindName("QMODELINDEX");

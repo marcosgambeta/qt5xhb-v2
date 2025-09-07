@@ -184,8 +184,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_WAYPOINTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->waypoints();
       auto pDynSym = hb_dynsymFindName("QGEOCOORDINATE");
@@ -266,8 +265,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_EXCLUDEAREAS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->excludeAreas();
       auto pDynSym = hb_dynsymFindName("QGEORECTANGLE");
@@ -340,8 +338,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_NUMBERALTERNATIVEROUTES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->numberAlternativeRoutes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -388,8 +385,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_TRAVELMODES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->travelModes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -460,8 +456,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_FEATURETYPES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->featureTypes();
       auto pArray = hb_itemArrayNew(0);
@@ -516,8 +511,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_ROUTEOPTIMIZATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->routeOptimization());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -564,8 +558,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_SEGMENTDETAIL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->segmentDetail());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -612,8 +605,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_MANEUVERDETAIL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->maneuverDetail());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

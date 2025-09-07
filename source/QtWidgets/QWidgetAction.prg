@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QWIDGETACTION_DEFAULTWIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->defaultWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");

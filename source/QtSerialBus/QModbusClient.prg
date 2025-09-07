@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QMODBUSCLIENT_TIMEOUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->timeout());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,8 +125,7 @@ HB_FUNC_STATIC(QMODBUSCLIENT_NUMBEROFRETRIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->numberOfRetries());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

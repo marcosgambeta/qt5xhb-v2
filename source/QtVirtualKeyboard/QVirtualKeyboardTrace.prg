@@ -114,8 +114,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_TRACEID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->traceId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,8 +157,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_CHANNELS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->channels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,8 +200,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_LENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->length());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,8 +220,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_ISFINAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFinal());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,8 +263,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_ISCANCELED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCanceled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,8 +306,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_OPACITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->opacity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

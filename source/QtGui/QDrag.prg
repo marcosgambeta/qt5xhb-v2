@@ -112,8 +112,7 @@ HB_FUNC_STATIC(QDRAG_DEFAULTACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->defaultAction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +183,7 @@ HB_FUNC_STATIC(QDRAG_HOTSPOT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->hotSpot());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -206,8 +204,7 @@ HB_FUNC_STATIC(QDRAG_MIMEDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->mimeData();
       Qt5xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
@@ -228,8 +225,7 @@ HB_FUNC_STATIC(QDRAG_PIXMAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPixmap(obj->pixmap());
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
@@ -342,8 +338,7 @@ HB_FUNC_STATIC(QDRAG_SOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->source();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -364,8 +359,7 @@ HB_FUNC_STATIC(QDRAG_SUPPORTEDACTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedActions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -385,8 +379,7 @@ HB_FUNC_STATIC(QDRAG_TARGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->target();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");

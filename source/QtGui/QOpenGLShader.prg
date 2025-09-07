@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_SHADERTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->shaderType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,8 +222,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_SOURCECODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->sourceCode());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -245,8 +243,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_ISCOMPILED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCompiled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,8 +263,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_LOG)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->log());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -287,8 +283,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_SHADERID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLUINT(obj->shaderId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

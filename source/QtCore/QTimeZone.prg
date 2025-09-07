@@ -194,8 +194,7 @@ HB_FUNC_STATIC(QTIMEZONE_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,8 +216,7 @@ HB_FUNC_STATIC(QTIMEZONE_ID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->id());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -241,8 +239,7 @@ HB_FUNC_STATIC(QTIMEZONE_COUNTRY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->country());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,8 +261,7 @@ HB_FUNC_STATIC(QTIMEZONE_COMMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->comment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -419,8 +415,7 @@ HB_FUNC_STATIC(QTIMEZONE_HASDAYLIGHTTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasDaylightTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -465,8 +460,7 @@ HB_FUNC_STATIC(QTIMEZONE_HASTRANSITIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasTransitions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

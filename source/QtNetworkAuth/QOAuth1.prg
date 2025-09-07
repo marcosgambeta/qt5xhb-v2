@@ -139,8 +139,7 @@ HB_FUNC_STATIC(QOAUTH1_CLIENTSHAREDSECRET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->clientSharedSecret());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,8 +211,7 @@ HB_FUNC_STATIC(QOAUTH1_TOKENSECRET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->tokenSecret());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,8 +283,7 @@ HB_FUNC_STATIC(QOAUTH1_TEMPORARYCREDENTIALSURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->temporaryCredentialsUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -334,8 +331,7 @@ HB_FUNC_STATIC(QOAUTH1_TOKENCREDENTIALSURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->tokenCredentialsUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -408,8 +404,7 @@ HB_FUNC_STATIC(QOAUTH1_GRANT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->grant();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

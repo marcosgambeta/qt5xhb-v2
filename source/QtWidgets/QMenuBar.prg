@@ -121,8 +121,7 @@ HB_FUNC_STATIC(QMENUBAR_ACTIVEACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->activeAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -229,8 +228,7 @@ HB_FUNC_STATIC(QMENUBAR_ADDSEPARATOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->addSeparator();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -251,8 +249,7 @@ HB_FUNC_STATIC(QMENUBAR_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -318,8 +315,7 @@ HB_FUNC_STATIC(QMENUBAR_ISDEFAULTUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDefaultUp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -362,8 +358,7 @@ HB_FUNC_STATIC(QMENUBAR_ISNATIVEMENUBAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNativeMenuBar());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -450,8 +445,7 @@ HB_FUNC_STATIC(QMENUBAR_MINIMUMSIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -472,8 +466,7 @@ HB_FUNC_STATIC(QMENUBAR_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -634,8 +627,7 @@ HB_FUNC_STATIC(QMENUBAR_DEFAULTACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->defaultAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -700,8 +692,7 @@ HB_FUNC_STATIC(QMENUBAR_TONSMENU)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retptr(static_cast<NSMenu *>(obj->toNSMenu()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

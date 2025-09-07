@@ -452,8 +452,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCREATEPROGRAM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLUINT(obj->glCreateProgram());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -939,8 +938,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLRELEASESHADERCOMPILER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->glReleaseShaderCompiler();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1443,8 +1441,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_OPENGLFEATURES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->openGLFeatures());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

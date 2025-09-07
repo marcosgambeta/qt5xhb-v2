@@ -211,8 +211,7 @@ HB_FUNC_STATIC(QICONENGINE_CLONE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->clone();
       Qt5xHb::createReturnClass(ptr, "QICONENGINE", false);
@@ -233,8 +232,7 @@ HB_FUNC_STATIC(QICONENGINE_ICONNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->iconName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -254,8 +252,7 @@ HB_FUNC_STATIC(QICONENGINE_KEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

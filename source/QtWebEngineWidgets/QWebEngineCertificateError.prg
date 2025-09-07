@@ -107,8 +107,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,8 +129,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_URL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -154,8 +152,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_ISOVERRIDABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isOverridable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +174,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_ERRORDESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorDescription());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

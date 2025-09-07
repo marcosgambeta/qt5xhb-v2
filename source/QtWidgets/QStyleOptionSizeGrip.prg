@@ -76,8 +76,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_CORNER)
   auto obj = static_cast<QStyleOptionSizeGrip *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->corner);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

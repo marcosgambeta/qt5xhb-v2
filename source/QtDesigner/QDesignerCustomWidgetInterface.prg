@@ -92,8 +92,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_CODETEMPLATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->codeTemplate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,8 +134,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_DOMXML)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->domXml());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,8 +154,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_GROUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->group());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +174,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_ICON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
@@ -199,8 +195,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_INCLUDEFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->includeFile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,8 +238,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_ISCONTAINER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isContainer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,8 +258,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_ISINITIALIZED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isInitialized());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,8 +278,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,8 +298,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_TOOLTIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->toolTip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -327,8 +318,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_WHATSTHIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->whatsThis());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

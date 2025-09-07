@@ -77,8 +77,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR)
   auto obj = static_cast<QStyleOptionFocusRect *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       auto ptr = new QColor(obj->backgroundColor);
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
     } else {

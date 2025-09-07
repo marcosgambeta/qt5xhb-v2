@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_ARGUMENTCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->argumentCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_CONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->context();
       Qt5xHb::createReturnClass(ptr, "QSCRIPTCONTEXT", false);
@@ -154,8 +152,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_ENGINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCRIPTENGINE");
@@ -176,8 +173,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_THISOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QScriptValue(obj->thisObject());
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);

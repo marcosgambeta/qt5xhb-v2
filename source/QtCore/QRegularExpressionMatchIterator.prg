@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_HASNEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasNext());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,8 +123,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,8 +143,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_MATCHOPTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->matchOptions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,8 +163,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_MATCHTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->matchType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,8 +183,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_NEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegularExpressionMatch(obj->next());
       Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSIONMATCH", true);
@@ -209,8 +204,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_PEEKNEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegularExpressionMatch(obj->peekNext());
       Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSIONMATCH", true);
@@ -231,8 +225,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_REGULAREXPRESSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegularExpression(obj->regularExpression());
       Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSION", true);

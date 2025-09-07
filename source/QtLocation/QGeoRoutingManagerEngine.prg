@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_MANAGERNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->managerName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,8 +121,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_MANAGERVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->managerVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,8 +191,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_SUPPORTEDTRAVELMODES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedTravelModes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +213,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_SUPPORTEDFEATURETYPES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedFeatureTypes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +235,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_SUPPORTEDFEATUREWEIGHTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedFeatureWeights());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,8 +257,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_SUPPORTEDROUTEOPTIMIZATIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedRouteOptimizations());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,8 +279,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_SUPPORTEDSEGMENTDETAILS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedSegmentDetails());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,8 +301,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_SUPPORTEDMANEUVERDETAILS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedManeuverDetails());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -356,8 +348,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_LOCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QLocale(obj->locale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
@@ -405,8 +396,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGERENGINE_MEASUREMENTSYSTEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->measurementSystem());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

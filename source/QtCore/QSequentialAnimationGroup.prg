@@ -120,8 +120,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->currentAnimation();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTANIMATION");
@@ -164,8 +163,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_DURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->duration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

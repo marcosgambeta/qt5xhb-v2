@@ -113,8 +113,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_BASEURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->baseUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -135,8 +134,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_CONTEXTOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->contextObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -179,8 +177,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_ENGINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLENGINE");
@@ -201,8 +198,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,8 +239,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_PARENTCONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->parentContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");

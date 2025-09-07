@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +169,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_SUPPLIERID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->supplierId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,8 +216,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_URL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -267,8 +264,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_ICON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPlaceIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QPLACEICON", true);
@@ -316,8 +312,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

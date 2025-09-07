@@ -205,8 +205,7 @@ HB_FUNC_STATIC(QTEXTCODEC_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->name());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -227,8 +226,7 @@ HB_FUNC_STATIC(QTEXTCODEC_ALIASES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->aliases();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
@@ -274,8 +272,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MIBENUM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->mibEnum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

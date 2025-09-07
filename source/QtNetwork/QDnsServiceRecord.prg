@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,8 +130,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_PORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT16(obj->port());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +150,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_PRIORITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT16(obj->priority());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,8 +193,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_TARGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->target());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,8 +213,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_TIMETOLIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT32(obj->timeToLive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -238,8 +233,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_WEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT16(obj->weight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

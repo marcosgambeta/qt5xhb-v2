@@ -187,8 +187,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISARRAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isArray());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,8 +207,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISBOOL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isBool());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,8 +227,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISDOUBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDouble());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,8 +247,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -271,8 +267,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isObject());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,8 +287,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -313,8 +307,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISUNDEFINED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isUndefined());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -457,8 +450,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOVARIANT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVariant(obj->toVariant());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -479,8 +471,7 @@ HB_FUNC_STATIC(QJSONVALUE_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

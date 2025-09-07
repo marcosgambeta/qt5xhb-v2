@@ -148,8 +148,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_ATTACHMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->attachment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,8 +168,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_BIND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->bind());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,8 +220,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_FORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGLFramebufferObjectFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QGLFRAMEBUFFEROBJECTFORMAT", true);
@@ -244,8 +241,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_HANDLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLUINT(obj->handle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,8 +261,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_ISBOUND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isBound());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -286,8 +281,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -307,8 +301,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_RELEASE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->release());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -328,8 +321,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -350,8 +342,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_TEXTURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLUINT(obj->texture());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -371,8 +362,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_TOIMAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QImage(obj->toImage());
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
@@ -393,8 +383,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_PAINTENGINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->paintEngine();
       Qt5xHb::createReturnClass(ptr, "QPAINTENGINE", false);

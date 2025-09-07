@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QPLACEMATCHREPLY_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,8 +124,7 @@ HB_FUNC_STATIC(QPLACEMATCHREPLY_PLACES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->places();
       auto pDynSym = hb_dynsymFindName("QPLACE");
@@ -174,8 +172,7 @@ HB_FUNC_STATIC(QPLACEMATCHREPLY_REQUEST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPlaceMatchRequest(obj->request());
       Qt5xHb::createReturnClass(ptr, "QPLACEMATCHREQUEST", true);

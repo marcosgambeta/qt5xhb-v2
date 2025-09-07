@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_SEARCHREQUEST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPlaceSearchRequest(obj->searchRequest());
       Qt5xHb::createReturnClass(ptr, "QPLACESEARCHREQUEST", true);

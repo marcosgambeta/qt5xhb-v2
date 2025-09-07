@@ -148,8 +148,7 @@ HB_FUNC_STATIC(QSPLITTER_CHILDRENCOLLAPSIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->childrenCollapsible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,8 +168,7 @@ HB_FUNC_STATIC(QSPLITTER_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +237,7 @@ HB_FUNC_STATIC(QSPLITTER_HANDLEWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->handleWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -325,8 +322,7 @@ HB_FUNC_STATIC(QSPLITTER_OPAQUERESIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->opaqueResize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -346,8 +342,7 @@ HB_FUNC_STATIC(QSPLITTER_ORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -367,8 +362,7 @@ HB_FUNC_STATIC(QSPLITTER_REFRESH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->refresh();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,8 +405,7 @@ HB_FUNC_STATIC(QSPLITTER_SAVESTATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->saveState());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -593,8 +586,7 @@ HB_FUNC_STATIC(QSPLITTER_MINIMUMSIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -615,8 +607,7 @@ HB_FUNC_STATIC(QSPLITTER_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);

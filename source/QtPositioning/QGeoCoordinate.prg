@@ -143,8 +143,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,8 +165,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,8 +212,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_LATITUDE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->latitude());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,8 +259,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_LONGITUDE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->longitude());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,8 +306,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_ALTITUDE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->altitude());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

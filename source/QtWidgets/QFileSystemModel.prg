@@ -233,8 +233,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FILTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->filter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,8 +276,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ICONPROVIDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->iconProvider();
       Qt5xHb::createReturnClass(ptr, "QFILEICONPROVIDER", false);
@@ -374,8 +372,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ISREADONLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReadOnly());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -484,8 +481,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_NAMEFILTERDISABLES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->nameFilterDisables());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -528,8 +524,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_NAMEFILTERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->nameFilters());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -614,8 +609,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_RESOLVESYMLINKS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->resolveSymlinks());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -679,8 +673,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ROOTDIRECTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDir(obj->rootDirectory());
       Qt5xHb::createReturnClass(ptr, "QDIR", true);
@@ -701,8 +694,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ROOTPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->rootPath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1011,8 +1003,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_MIMETYPES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->mimeTypes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1099,8 +1090,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedDropActions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

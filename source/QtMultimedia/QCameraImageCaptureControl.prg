@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->cancelCapture();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,8 +132,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_DRIVEMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->driveMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,8 +152,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReadyForCapture());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

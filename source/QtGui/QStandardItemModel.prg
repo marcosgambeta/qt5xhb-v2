@@ -225,8 +225,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -429,8 +428,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_INVISIBLEROOTITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->invisibleRootItem();
       Qt5xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
@@ -495,8 +493,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_ITEMPROTOTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->itemPrototype();
       Qt5xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
@@ -852,8 +849,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SUPPORTEDDROPACTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedDropActions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1266,8 +1262,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SORTROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sortRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1310,8 +1305,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_MIMETYPES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->mimeTypes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

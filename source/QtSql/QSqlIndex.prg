@@ -131,8 +131,7 @@ HB_FUNC_STATIC(QSQLINDEX_CURSORNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->cursorName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,8 +218,7 @@ HB_FUNC_STATIC(QSQLINDEX_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

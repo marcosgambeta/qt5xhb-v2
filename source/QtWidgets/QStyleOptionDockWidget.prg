@@ -84,8 +84,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_TITLE)
   auto obj = static_cast<QStyleOptionDockWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RQSTRING(obj->title);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -117,8 +116,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_CLOSABLE)
   auto obj = static_cast<QStyleOptionDockWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->closable);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -150,8 +148,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_MOVABLE)
   auto obj = static_cast<QStyleOptionDockWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->movable);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -183,8 +180,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_FLOATABLE)
   auto obj = static_cast<QStyleOptionDockWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->floatable);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -216,8 +212,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_VERTICALTITLEBAR)
   auto obj = static_cast<QStyleOptionDockWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->verticalTitleBar);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

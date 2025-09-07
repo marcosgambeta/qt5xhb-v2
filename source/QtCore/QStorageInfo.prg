@@ -199,8 +199,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ROOTPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->rootPath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,8 +221,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_DEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->device());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -246,8 +244,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_FILESYSTEMTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->fileSystemType());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -270,8 +267,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,8 +289,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_DISPLAYNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->displayName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -316,8 +311,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_BYTESTOTAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->bytesTotal());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,8 +333,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_BYTESFREE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->bytesFree());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -362,8 +355,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_BYTESAVAILABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->bytesAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -385,8 +377,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ISROOT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isRoot());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -408,8 +399,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ISREADONLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReadOnly());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -431,8 +421,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ISREADY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReady());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -454,8 +443,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -477,8 +465,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_REFRESH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->refresh();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

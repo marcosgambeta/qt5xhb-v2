@@ -81,8 +81,7 @@ HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_BUFFERFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->bufferFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,8 +124,7 @@ HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_SUPPORTEDBUFFERFORMATS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->supportedBufferFormats();
       auto pArray = hb_itemArrayNew(0);

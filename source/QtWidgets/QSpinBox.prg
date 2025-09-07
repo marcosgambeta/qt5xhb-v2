@@ -107,8 +107,7 @@ HB_FUNC_STATIC(QSPINBOX_CLEANTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->cleanText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,8 +127,7 @@ HB_FUNC_STATIC(QSPINBOX_MAXIMUM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->maximum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,8 +170,7 @@ HB_FUNC_STATIC(QSPINBOX_MINIMUM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->minimum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +213,7 @@ HB_FUNC_STATIC(QSPINBOX_PREFIX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->prefix());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,8 +279,7 @@ HB_FUNC_STATIC(QSPINBOX_SINGLESTEP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->singleStep());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -327,8 +322,7 @@ HB_FUNC_STATIC(QSPINBOX_SUFFIX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->suffix());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -371,8 +365,7 @@ HB_FUNC_STATIC(QSPINBOX_VALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,8 +408,7 @@ HB_FUNC_STATIC(QSPINBOX_DISPLAYINTEGERBASE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->displayIntegerBase());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

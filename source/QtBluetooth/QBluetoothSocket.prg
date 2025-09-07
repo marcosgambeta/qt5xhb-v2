@@ -133,8 +133,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_ABORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->abort();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,8 +157,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CLOSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,8 +181,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_ISSEQUENTIAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSequential());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,8 +203,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_BYTESAVAILABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->bytesAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,8 +225,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_BYTESTOWRITE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->bytesToWrite());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -252,8 +247,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CANREADLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canReadLine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -330,8 +324,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_DISCONNECTFROMSERVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->disconnectFromService();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -355,8 +348,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_LOCALNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->localName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -378,8 +370,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_LOCALADDRESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBluetoothAddress(obj->localAddress());
       Qt5xHb::createReturnClass(ptr, "QBLUETOOTHADDRESS", true);
@@ -402,8 +393,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_LOCALPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT16(obj->localPort());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -425,8 +415,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_PEERNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->peerName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -448,8 +437,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_PEERADDRESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBluetoothAddress(obj->peerAddress());
       Qt5xHb::createReturnClass(ptr, "QBLUETOOTHADDRESS", true);
@@ -472,8 +460,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_PEERPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT16(obj->peerPort());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -524,8 +511,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_SOCKETDESCRIPTOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->socketDescriptor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -547,8 +533,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_SOCKETTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->socketType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -570,8 +555,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_STATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -593,8 +577,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -616,8 +599,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -146,8 +146,7 @@ HB_FUNC_STATIC(QBARSET_LABEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->label());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +193,7 @@ HB_FUNC_STATIC(QBARSET_PEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPen(obj->pen());
       Qt5xHb::createReturnClass(ptr, "QPEN", true);
@@ -243,8 +241,7 @@ HB_FUNC_STATIC(QBARSET_BRUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->brush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -292,8 +289,7 @@ HB_FUNC_STATIC(QBARSET_LABELBRUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->labelBrush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -341,8 +337,7 @@ HB_FUNC_STATIC(QBARSET_LABELFONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QFont(obj->labelFont());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
@@ -390,8 +385,7 @@ HB_FUNC_STATIC(QBARSET_COLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->color());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -439,8 +433,7 @@ HB_FUNC_STATIC(QBARSET_BORDERCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->borderColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -488,8 +481,7 @@ HB_FUNC_STATIC(QBARSET_LABELCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->labelColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -678,8 +670,7 @@ HB_FUNC_STATIC(QBARSET_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -701,8 +692,7 @@ HB_FUNC_STATIC(QBARSET_SUM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->sum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

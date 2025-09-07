@@ -138,8 +138,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,8 +158,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_FILEDESCRIPTOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->fileDescriptor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,8 +224,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_TAKEFILEDESCRIPTOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->takeFileDescriptor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

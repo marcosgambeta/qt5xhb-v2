@@ -108,8 +108,7 @@ HB_FUNC_STATIC(QMETAENUM_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retc(static_cast<const char *>(obj->name()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,8 +128,7 @@ HB_FUNC_STATIC(QMETAENUM_ISFLAG)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFlag());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,8 +148,7 @@ HB_FUNC_STATIC(QMETAENUM_KEYCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->keyCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,8 +210,7 @@ HB_FUNC_STATIC(QMETAENUM_SCOPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retc(static_cast<const char *>(obj->scope()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -319,8 +315,7 @@ HB_FUNC_STATIC(QMETAENUM_ENCLOSINGMETAOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->enclosingMetaObject();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
@@ -341,8 +336,7 @@ HB_FUNC_STATIC(QMETAENUM_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -363,8 +357,7 @@ HB_FUNC_STATIC(QMETAENUM_ENUMNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retc(static_cast<const char *>(obj->enumName()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -386,8 +379,7 @@ HB_FUNC_STATIC(QMETAENUM_ISSCOPED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isScoped());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

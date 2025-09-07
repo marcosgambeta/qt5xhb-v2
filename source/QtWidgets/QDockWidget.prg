@@ -121,8 +121,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_ALLOWEDAREAS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->allowedAreas());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,8 +141,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_FEATURES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->features());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +182,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_ISFLOATING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFloating());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,8 +317,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_TITLEBARWIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->titleBarWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -342,8 +338,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_TOGGLEVIEWACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->toggleViewAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -364,8 +359,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_WIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->widget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");

@@ -123,8 +123,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_BYTEORDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->byteOrder());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,8 +143,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_CHANNELCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->channelCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,8 +163,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_CODEC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->codec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,8 +183,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,8 +203,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SAMPLERATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sampleRate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +223,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SAMPLESIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sampleSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,8 +243,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SAMPLETYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->sampleType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -534,8 +527,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_BYTESPERFRAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->bytesPerFrame());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

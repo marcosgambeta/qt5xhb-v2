@@ -154,8 +154,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_CENTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGeoCoordinate(obj->center());
       Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
@@ -203,8 +202,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_RADIUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->radius());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -112,8 +112,7 @@ HB_FUNC_STATIC(Q3DOBJECT_PARENTSCENE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->parentScene();
       Qt5xHb::createReturnQObjectClass(ptr, "Q3DSCENE");
@@ -136,8 +135,7 @@ HB_FUNC_STATIC(Q3DOBJECT_POSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVector3D(obj->position());
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);

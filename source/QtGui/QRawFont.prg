@@ -159,8 +159,7 @@ HB_FUNC_STATIC(QRAWFONT_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,8 +202,7 @@ HB_FUNC_STATIC(QRAWFONT_FAMILYNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->familyName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,8 +222,7 @@ HB_FUNC_STATIC(QRAWFONT_STYLENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->styleName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,8 +242,7 @@ HB_FUNC_STATIC(QRAWFONT_STYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->style());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,8 +262,7 @@ HB_FUNC_STATIC(QRAWFONT_WEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->weight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -469,8 +464,7 @@ HB_FUNC_STATIC(QRAWFONT_PIXELSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->pixelSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -490,8 +484,7 @@ HB_FUNC_STATIC(QRAWFONT_HINTINGPREFERENCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->hintingPreference());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -511,8 +504,7 @@ HB_FUNC_STATIC(QRAWFONT_ASCENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->ascent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -532,8 +524,7 @@ HB_FUNC_STATIC(QRAWFONT_DESCENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->descent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -553,8 +544,7 @@ HB_FUNC_STATIC(QRAWFONT_LEADING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->leading());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -574,8 +564,7 @@ HB_FUNC_STATIC(QRAWFONT_XHEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->xHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -595,8 +584,7 @@ HB_FUNC_STATIC(QRAWFONT_AVERAGECHARWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->averageCharWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -616,8 +604,7 @@ HB_FUNC_STATIC(QRAWFONT_MAXCHARWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->maxCharWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -637,8 +624,7 @@ HB_FUNC_STATIC(QRAWFONT_LINETHICKNESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->lineThickness());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -658,8 +644,7 @@ HB_FUNC_STATIC(QRAWFONT_UNDERLINEPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->underlinePosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -679,8 +664,7 @@ HB_FUNC_STATIC(QRAWFONT_UNITSPEREM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->unitsPerEm());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -774,8 +758,7 @@ HB_FUNC_STATIC(QRAWFONT_SUPPORTEDWRITINGSYSTEMS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->supportedWritingSystems();
       auto pArray = hb_itemArrayNew(0);

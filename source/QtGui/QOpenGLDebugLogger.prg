@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_INITIALIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->initialize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,8 +119,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_ISLOGGING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLogging());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,8 +139,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_LOGGINGMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->loggingMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,8 +159,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_MAXIMUMMESSAGELENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->maximumMessageLength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,8 +205,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_POPGROUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->popGroup();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,8 +275,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_STOPLOGGING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stopLogging();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

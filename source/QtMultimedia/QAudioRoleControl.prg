@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QAUDIOROLECONTROL_AUDIOROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->audioRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,8 +135,7 @@ HB_FUNC_STATIC(QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->supportedAudioRoles();
       auto pArray = hb_itemArrayNew(0);

@@ -143,8 +143,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QImage(obj->heightMap());
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
@@ -192,8 +191,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAPFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->heightMapFile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,8 +238,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_MINXVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->minXValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,8 +285,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_MAXXVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->maxXValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,8 +332,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_MINZVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->minZValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -384,8 +379,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_MAXZVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->maxZValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QPICTURE_BOUNDINGRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->boundingRect());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -125,8 +124,7 @@ HB_FUNC_STATIC(QPICTURE_DATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retc(static_cast<const char *>(obj->data()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,8 +144,7 @@ HB_FUNC_STATIC(QPICTURE_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -290,8 +287,7 @@ HB_FUNC_STATIC(QPICTURE_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RUINT(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

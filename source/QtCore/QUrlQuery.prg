@@ -182,8 +182,7 @@ HB_FUNC_STATIC(QURLQUERY_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,8 +225,7 @@ HB_FUNC_STATIC(QURLQUERY_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,8 +290,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERYPAIRDELIMITER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QChar(obj->queryPairDelimiter());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -314,8 +311,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERYVALUEDELIMITER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QChar(obj->queryValueDelimiter());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);

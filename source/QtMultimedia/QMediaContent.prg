@@ -164,8 +164,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_CANONICALREQUEST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QNetworkRequest(obj->canonicalRequest());
       Qt5xHb::createReturnClass(ptr, "QNETWORKREQUEST", true);
@@ -186,8 +185,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_CANONICALRESOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QMediaResource(obj->canonicalResource());
       Qt5xHb::createReturnClass(ptr, "QMEDIARESOURCE", true);
@@ -208,8 +206,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_CANONICALURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->canonicalUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -230,8 +227,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,8 +247,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_PLAYLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->playlist();
       Qt5xHb::createReturnQObjectClass(ptr, "QMEDIAPLAYLIST");
@@ -273,8 +268,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_RESOURCES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->resources();
       auto pDynSym = hb_dynsymFindName("QMEDIARESOURCE");

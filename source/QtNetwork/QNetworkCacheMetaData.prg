@@ -140,8 +140,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,8 +160,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_URL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -212,8 +210,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_LASTMODIFIED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDateTime(obj->lastModified());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -257,8 +254,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_EXPIRATIONDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDateTime(obj->expirationDate());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -302,8 +298,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SAVETODISK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->saveToDisk());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

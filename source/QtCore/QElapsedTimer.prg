@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_ELAPSED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->elapsed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,8 +145,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_INVALIDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->invalidate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,8 +167,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,8 +187,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_MSECSSINCEREFERENCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->msecsSinceReference());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,8 +228,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_NSECSELAPSED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->nsecsElapsed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,8 +248,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_RESTART)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->restart());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -295,8 +289,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_START)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->start();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

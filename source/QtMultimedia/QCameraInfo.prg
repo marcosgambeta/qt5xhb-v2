@@ -132,8 +132,7 @@ HB_FUNC_STATIC(QCAMERAINFO_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,8 +154,7 @@ HB_FUNC_STATIC(QCAMERAINFO_DEVICENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->deviceName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,8 +176,7 @@ HB_FUNC_STATIC(QCAMERAINFO_DESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->description());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,8 +198,7 @@ HB_FUNC_STATIC(QCAMERAINFO_POSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->position());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,8 +220,7 @@ HB_FUNC_STATIC(QCAMERAINFO_ORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

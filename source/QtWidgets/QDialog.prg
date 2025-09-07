@@ -113,8 +113,7 @@ HB_FUNC_STATIC(QDIALOG_ISSIZEGRIPENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSizeGripEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,8 +156,7 @@ HB_FUNC_STATIC(QDIALOG_RESULT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->result());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,8 +222,7 @@ HB_FUNC_STATIC(QDIALOG_MINIMUMSIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -269,8 +266,7 @@ HB_FUNC_STATIC(QDIALOG_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -291,8 +287,7 @@ HB_FUNC_STATIC(QDIALOG_ACCEPT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->accept();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -337,8 +332,7 @@ HB_FUNC_STATIC(QDIALOG_EXEC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->exec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -358,8 +352,7 @@ HB_FUNC_STATIC(QDIALOG_OPEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->open();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -381,8 +374,7 @@ HB_FUNC_STATIC(QDIALOG_REJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reject();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,8 +396,7 @@ HB_FUNC_STATIC(QDIALOG_ORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -448,8 +439,7 @@ HB_FUNC_STATIC(QDIALOG_EXTENSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->extension();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");

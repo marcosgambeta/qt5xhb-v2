@@ -139,8 +139,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->document();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
@@ -161,8 +160,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSizeF(obj->documentSize());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
@@ -248,8 +246,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->pageCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +266,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->paintDevice();
       Qt5xHb::createReturnClass(ptr, "QPAINTDEVICE", false);

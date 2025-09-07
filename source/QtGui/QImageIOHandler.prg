@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_CANREAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canRead());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,8 +122,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_CURRENTIMAGENUMBER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentImageNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,8 +142,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_CURRENTIMAGERECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->currentImageRect());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -166,8 +163,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_DEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->device();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
@@ -188,8 +184,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_FORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->format());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -210,8 +205,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_IMAGECOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->imageCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -252,8 +246,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_JUMPTONEXTIMAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->jumpToNextImage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,8 +266,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_LOOPCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->loopCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,8 +286,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_NEXTIMAGEDELAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->nextImageDelay());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

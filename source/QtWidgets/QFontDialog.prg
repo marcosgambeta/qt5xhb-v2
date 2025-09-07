@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QFONTDIALOG_CURRENTFONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QFont(obj->currentFont());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
@@ -178,8 +177,7 @@ HB_FUNC_STATIC(QFONTDIALOG_OPTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->options());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,8 +220,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SELECTEDFONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QFont(obj->selectedFont());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);

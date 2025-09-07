@@ -147,8 +147,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_TEXTUREWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->textureWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,8 +194,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_TEXTUREHEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->textureHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,8 +241,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_TEXTUREDEPTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->textureDepth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,8 +288,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEINDEXX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sliceIndexX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,8 +335,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEINDEXY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sliceIndexY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -387,8 +382,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEINDEXZ)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sliceIndexZ());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -435,8 +429,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ALPHAMULTIPLIER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->alphaMultiplier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -483,8 +476,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_PRESERVEOPACITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->preserveOpacity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -531,8 +523,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_USEHIGHDEFSHADER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->useHighDefShader());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -579,8 +570,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_DRAWSLICES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->drawSlices());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -627,8 +617,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_DRAWSLICEFRAMES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->drawSliceFrames());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -675,8 +664,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEFRAMECOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->sliceFrameColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -724,8 +712,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEFRAMEWIDTHS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVector3D(obj->sliceFrameWidths());
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
@@ -773,8 +760,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEFRAMEGAPS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVector3D(obj->sliceFrameGaps());
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
@@ -822,8 +808,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEFRAMETHICKNESSES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVector3D(obj->sliceFrameThicknesses());
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
@@ -896,8 +881,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_TEXTUREDATAWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->textureDataWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1005,8 +989,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_TEXTUREFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->textureFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

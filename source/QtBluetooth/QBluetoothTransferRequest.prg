@@ -169,8 +169,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREQUEST_ADDRESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBluetoothAddress(obj->address());
       Qt5xHb::createReturnClass(ptr, "QBLUETOOTHADDRESS", true);

@@ -140,8 +140,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_ARRAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QJsonArray(obj->array());
       Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
@@ -162,8 +161,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_ISARRAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isArray());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,8 +181,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,8 +201,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,8 +221,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_ISOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isObject());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,8 +241,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_OBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QJsonObject(obj->object());
       Qt5xHb::createReturnClass(ptr, "QJSONOBJECT", true);
@@ -337,8 +331,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_TOBINARYDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->toBinaryData());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -359,8 +352,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_TOJSON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->toJson());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -381,8 +373,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_TOVARIANT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVariant(obj->toVariant());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);

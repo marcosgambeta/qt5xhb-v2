@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QREADLOCKER_UNLOCK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->unlock();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,8 +119,7 @@ HB_FUNC_STATIC(QREADLOCKER_RELOCK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->relock();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,8 +141,7 @@ HB_FUNC_STATIC(QREADLOCKER_READWRITELOCK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->readWriteLock();
       Qt5xHb::createReturnClass(ptr, "QREADWRITELOCK", false);

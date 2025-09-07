@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_CALLBACK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->callback());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

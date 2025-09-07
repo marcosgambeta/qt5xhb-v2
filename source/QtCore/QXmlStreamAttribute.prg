@@ -123,8 +123,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_ISDEFAULT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDefault());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,8 +143,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->name());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -166,8 +164,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_NAMESPACEURI)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->namespaceUri());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -188,8 +185,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_PREFIX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->prefix());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -210,8 +206,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_QUALIFIEDNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->qualifiedName());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -232,8 +227,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_VALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->value());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);

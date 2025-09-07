@@ -115,8 +115,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_TITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +162,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->labels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,8 +209,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,8 +231,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,8 +253,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_MIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->min());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,8 +300,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_MAX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->max());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,8 +347,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ISAUTOADJUSTRANGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAutoAdjustRange());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -401,8 +394,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELAUTOROTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->labelAutoRotation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -449,8 +441,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isTitleVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -497,8 +488,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEFIXED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isTitleFixed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

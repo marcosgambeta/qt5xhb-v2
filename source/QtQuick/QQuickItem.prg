@@ -182,8 +182,7 @@ HB_FUNC_STATIC(QQUICKITEM_ACCEPTHOVEREVENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->acceptHoverEvents());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,8 +202,7 @@ HB_FUNC_STATIC(QQUICKITEM_ACCEPTEDMOUSEBUTTONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->acceptedMouseButtons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,8 +222,7 @@ HB_FUNC_STATIC(QQUICKITEM_ANTIALIASING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->antialiasing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,8 +242,7 @@ HB_FUNC_STATIC(QQUICKITEM_BASELINEOFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->baselineOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,8 +284,7 @@ HB_FUNC_STATIC(QQUICKITEM_CHILDRENRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->childrenRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -310,8 +305,7 @@ HB_FUNC_STATIC(QQUICKITEM_CLIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->clip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -352,8 +346,7 @@ HB_FUNC_STATIC(QQUICKITEM_CURSOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QCursor(obj->cursor());
       Qt5xHb::createReturnClass(ptr, "QCURSOR", true);
@@ -374,8 +367,7 @@ HB_FUNC_STATIC(QQUICKITEM_FILTERSCHILDMOUSEEVENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->filtersChildMouseEvents());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -395,8 +387,7 @@ HB_FUNC_STATIC(QQUICKITEM_FLAGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -416,8 +407,7 @@ HB_FUNC_STATIC(QQUICKITEM_FORCEACTIVEFOCUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->forceActiveFocus();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -439,8 +429,7 @@ HB_FUNC_STATIC(QQUICKITEM_GRABMOUSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->grabMouse();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -462,8 +451,7 @@ HB_FUNC_STATIC(QQUICKITEM_HASACTIVEFOCUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasActiveFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -483,8 +471,7 @@ HB_FUNC_STATIC(QQUICKITEM_HASFOCUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -504,8 +491,7 @@ HB_FUNC_STATIC(QQUICKITEM_HEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -525,8 +511,7 @@ HB_FUNC_STATIC(QQUICKITEM_IMPLICITHEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->implicitHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -546,8 +531,7 @@ HB_FUNC_STATIC(QQUICKITEM_IMPLICITWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->implicitWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -589,8 +573,7 @@ HB_FUNC_STATIC(QQUICKITEM_ISENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -610,8 +593,7 @@ HB_FUNC_STATIC(QQUICKITEM_ISFOCUSSCOPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFocusScope());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -631,8 +613,7 @@ HB_FUNC_STATIC(QQUICKITEM_ISTEXTUREPROVIDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isTextureProvider());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -652,8 +633,7 @@ HB_FUNC_STATIC(QQUICKITEM_ISVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -673,8 +653,7 @@ HB_FUNC_STATIC(QQUICKITEM_KEEPMOUSEGRAB)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->keepMouseGrab());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -694,8 +673,7 @@ HB_FUNC_STATIC(QQUICKITEM_KEEPTOUCHGRAB)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->keepTouchGrab());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -891,8 +869,7 @@ HB_FUNC_STATIC(QQUICKITEM_OPACITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->opacity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -912,8 +889,7 @@ HB_FUNC_STATIC(QQUICKITEM_PARENTITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->parentItem();
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
@@ -934,8 +910,7 @@ HB_FUNC_STATIC(QQUICKITEM_POLISH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->polish();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -957,8 +932,7 @@ HB_FUNC_STATIC(QQUICKITEM_RESETHEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->resetHeight();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -980,8 +954,7 @@ HB_FUNC_STATIC(QQUICKITEM_RESETWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->resetWidth();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1003,8 +976,7 @@ HB_FUNC_STATIC(QQUICKITEM_ROTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->rotation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1024,8 +996,7 @@ HB_FUNC_STATIC(QQUICKITEM_SCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->scale());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1045,8 +1016,7 @@ HB_FUNC_STATIC(QQUICKITEM_SCOPEDFOCUSITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->scopedFocusItem();
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
@@ -1711,8 +1681,7 @@ HB_FUNC_STATIC(QQUICKITEM_SMOOTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->smooth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1778,8 +1747,7 @@ HB_FUNC_STATIC(QQUICKITEM_STATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1799,8 +1767,7 @@ HB_FUNC_STATIC(QQUICKITEM_TEXTUREPROVIDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->textureProvider();
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTUREPROVIDER");
@@ -1821,8 +1788,7 @@ HB_FUNC_STATIC(QQUICKITEM_TRANSFORMORIGIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->transformOrigin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1842,8 +1808,7 @@ HB_FUNC_STATIC(QQUICKITEM_UNGRABMOUSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->ungrabMouse();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1865,8 +1830,7 @@ HB_FUNC_STATIC(QQUICKITEM_UNGRABTOUCHPOINTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->ungrabTouchPoints();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1888,8 +1852,7 @@ HB_FUNC_STATIC(QQUICKITEM_UNSETCURSOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->unsetCursor();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1911,8 +1874,7 @@ HB_FUNC_STATIC(QQUICKITEM_WIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1932,8 +1894,7 @@ HB_FUNC_STATIC(QQUICKITEM_WINDOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->window();
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKWINDOW");
@@ -1954,8 +1915,7 @@ HB_FUNC_STATIC(QQUICKITEM_X)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1975,8 +1935,7 @@ HB_FUNC_STATIC(QQUICKITEM_Y)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1996,8 +1955,7 @@ HB_FUNC_STATIC(QQUICKITEM_Z)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->z());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -2017,8 +1975,7 @@ HB_FUNC_STATIC(QQUICKITEM_UPDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->update();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

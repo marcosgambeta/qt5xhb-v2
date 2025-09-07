@@ -146,8 +146,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_FORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->format());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -191,8 +190,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_DEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->device();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
@@ -236,8 +234,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_FILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,8 +305,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_CODEC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->codec();
       Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);

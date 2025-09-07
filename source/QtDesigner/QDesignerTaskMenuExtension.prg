@@ -83,8 +83,7 @@ HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->preferredEditAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -105,8 +104,7 @@ HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_TASKACTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->taskActions();
       auto pDynSym = hb_dynsymFindName("QACTION");

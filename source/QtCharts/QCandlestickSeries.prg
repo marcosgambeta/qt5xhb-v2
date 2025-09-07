@@ -159,8 +159,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,8 +181,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_MAXIMUMCOLUMNWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->maximumColumnWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,8 +228,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_MINIMUMCOLUMNWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->minimumColumnWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,8 +275,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_BODYWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->bodyWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,8 +322,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_BODYOUTLINEVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->bodyOutlineVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -374,8 +369,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_CAPSWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->capsWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -422,8 +416,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_CAPSVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->capsVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -470,8 +463,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_INCREASINGCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->increasingColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -519,8 +511,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_DECREASINGCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->decreasingColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -568,8 +559,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_BRUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->brush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -617,8 +607,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_PEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPen(obj->pen());
       Qt5xHb::createReturnClass(ptr, "QPEN", true);
@@ -788,8 +777,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -813,8 +801,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_SETS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->sets();
       auto pDynSym = hb_dynsymFindName("QCANDLESTICKSET");
@@ -859,8 +846,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

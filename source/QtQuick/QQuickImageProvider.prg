@@ -94,8 +94,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_FLAGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,8 +114,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_IMAGETYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->imageType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

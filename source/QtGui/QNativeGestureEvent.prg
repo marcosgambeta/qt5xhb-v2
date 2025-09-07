@@ -96,8 +96,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_GESTURETYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->gestureType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,8 +116,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_VALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,8 +136,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_POS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->pos());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -160,8 +157,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_GLOBALPOS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->globalPos());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -182,8 +178,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_LOCALPOS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->localPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
@@ -204,8 +199,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_WINDOWPOS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->windowPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
@@ -226,8 +220,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_SCREENPOS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->screenPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);

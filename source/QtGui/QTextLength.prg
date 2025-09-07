@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QTEXTLENGTH_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,8 +144,7 @@ HB_FUNC_STATIC(QTEXTLENGTH_RAWVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->rawValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_IMAGETYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->imageType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

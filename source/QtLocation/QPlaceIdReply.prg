@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QPLACEIDREPLY_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,8 +122,7 @@ HB_FUNC_STATIC(QPLACEIDREPLY_OPERATIONTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->operationType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,8 +144,7 @@ HB_FUNC_STATIC(QPLACEIDREPLY_ID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->id());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

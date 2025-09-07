@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_SAMPLECOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sampleCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,8 +161,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_CREATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->create());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,8 +185,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_DESTROY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->destroy();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,8 +211,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_ISCREATED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCreated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,8 +239,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_RECORDSAMPLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->recordSample());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,8 +263,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_ISRESULTAVAILABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isResultAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,8 +295,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_RESET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

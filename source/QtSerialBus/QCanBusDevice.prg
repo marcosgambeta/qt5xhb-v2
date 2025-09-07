@@ -136,8 +136,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_CONFIGURATIONKEYS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->configurationKeys();
       auto pArray = hb_itemArrayNew(0);
@@ -190,8 +189,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_READFRAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QCanBusFrame(obj->readFrame());
       Qt5xHb::createReturnClass(ptr, "QCANBUSFRAME", true);
@@ -214,8 +212,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_FRAMESAVAILABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->framesAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -237,8 +234,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_FRAMESTOWRITE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->framesToWrite());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,8 +302,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_CONNECTDEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->connectDevice());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,8 +324,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_DISCONNECTDEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->disconnectDevice();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,8 +348,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_STATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,8 +370,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -400,8 +392,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -471,8 +462,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_READALLFRAMES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->readAllFrames();
       auto pDynSym = hb_dynsymFindName("QCANBUSFRAME");

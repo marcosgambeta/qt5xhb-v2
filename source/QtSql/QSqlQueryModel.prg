@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,8 +132,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_LASTERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSqlError(obj->lastError());
       Qt5xHb::createReturnClass(ptr, "QSQLERROR", true);
@@ -155,8 +153,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_QUERY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSqlQuery(obj->query());
       Qt5xHb::createReturnClass(ptr, "QSQLQUERY", true);

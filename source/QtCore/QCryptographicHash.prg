@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_RESET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,8 +164,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_RESULT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->result());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);

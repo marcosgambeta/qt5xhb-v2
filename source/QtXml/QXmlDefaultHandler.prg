@@ -174,8 +174,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDCDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->endCDATA());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,8 +194,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDDTD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->endDTD());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +214,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDDOCUMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->endDocument());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,8 +318,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -512,8 +508,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTCDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->startCDATA());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -554,8 +549,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTDOCUMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->startDocument());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

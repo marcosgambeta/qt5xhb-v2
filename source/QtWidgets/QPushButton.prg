@@ -144,8 +144,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_AUTODEFAULT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoDefault());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,8 +164,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_ISDEFAULT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDefault());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,8 +184,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_ISFLAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFlat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,8 +205,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_MENU)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->menu();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
@@ -326,8 +322,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_SHOWMENU)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->showMenu();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -350,8 +345,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_MINIMUMSIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -372,8 +366,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);

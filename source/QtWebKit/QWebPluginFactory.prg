@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QWEBPLUGINFACTORY_REFRESHPLUGINS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->refreshPlugins();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

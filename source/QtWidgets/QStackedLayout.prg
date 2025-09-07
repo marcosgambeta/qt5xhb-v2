@@ -137,8 +137,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_CURRENTINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,8 +157,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_CURRENTWIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->currentWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -224,8 +222,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_STACKINGMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->stackingMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -235,8 +235,7 @@ HB_FUNC_STATIC(QCOLOR_ALPHA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->alpha());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -256,8 +255,7 @@ HB_FUNC_STATIC(QCOLOR_ALPHAF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->alphaF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,8 +275,7 @@ HB_FUNC_STATIC(QCOLOR_BLACK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->black());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -298,8 +295,7 @@ HB_FUNC_STATIC(QCOLOR_BLACKF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->blackF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -319,8 +315,7 @@ HB_FUNC_STATIC(QCOLOR_BLUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->blue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -340,8 +335,7 @@ HB_FUNC_STATIC(QCOLOR_BLUEF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->blueF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,8 +377,7 @@ HB_FUNC_STATIC(QCOLOR_CYAN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->cyan());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,8 +397,7 @@ HB_FUNC_STATIC(QCOLOR_CYANF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->cyanF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -699,8 +691,7 @@ HB_FUNC_STATIC(QCOLOR_GREEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->green());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -720,8 +711,7 @@ HB_FUNC_STATIC(QCOLOR_GREENF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->greenF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -741,8 +731,7 @@ HB_FUNC_STATIC(QCOLOR_HSLHUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->hslHue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -762,8 +751,7 @@ HB_FUNC_STATIC(QCOLOR_HSLHUEF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->hslHueF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -783,8 +771,7 @@ HB_FUNC_STATIC(QCOLOR_HSLSATURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->hslSaturation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -804,8 +791,7 @@ HB_FUNC_STATIC(QCOLOR_HSLSATURATIONF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->hslSaturationF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -825,8 +811,7 @@ HB_FUNC_STATIC(QCOLOR_HSVHUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->hsvHue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -846,8 +831,7 @@ HB_FUNC_STATIC(QCOLOR_HSVHUEF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->hsvHueF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -867,8 +851,7 @@ HB_FUNC_STATIC(QCOLOR_HSVSATURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->hsvSaturation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -888,8 +871,7 @@ HB_FUNC_STATIC(QCOLOR_HSVSATURATIONF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->hsvSaturationF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -909,8 +891,7 @@ HB_FUNC_STATIC(QCOLOR_HUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->hue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -930,8 +911,7 @@ HB_FUNC_STATIC(QCOLOR_HUEF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->hueF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -951,8 +931,7 @@ HB_FUNC_STATIC(QCOLOR_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -994,8 +973,7 @@ HB_FUNC_STATIC(QCOLOR_LIGHTNESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->lightness());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1015,8 +993,7 @@ HB_FUNC_STATIC(QCOLOR_LIGHTNESSF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->lightnessF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1036,8 +1013,7 @@ HB_FUNC_STATIC(QCOLOR_MAGENTA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->magenta());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1057,8 +1033,7 @@ HB_FUNC_STATIC(QCOLOR_MAGENTAF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->magentaF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1078,8 +1053,7 @@ HB_FUNC_STATIC(QCOLOR_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1099,8 +1073,7 @@ HB_FUNC_STATIC(QCOLOR_RED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->red());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1120,8 +1093,7 @@ HB_FUNC_STATIC(QCOLOR_REDF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->redF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1141,8 +1113,7 @@ HB_FUNC_STATIC(QCOLOR_RGB)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQRGB(obj->rgb());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1162,8 +1133,7 @@ HB_FUNC_STATIC(QCOLOR_RGBA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQRGB(obj->rgba());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1183,8 +1153,7 @@ HB_FUNC_STATIC(QCOLOR_SATURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->saturation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1204,8 +1173,7 @@ HB_FUNC_STATIC(QCOLOR_SATURATIONF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->saturationF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1648,8 +1616,7 @@ HB_FUNC_STATIC(QCOLOR_SPEC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->spec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1669,8 +1636,7 @@ HB_FUNC_STATIC(QCOLOR_TOCMYK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->toCmyk());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -1691,8 +1657,7 @@ HB_FUNC_STATIC(QCOLOR_TOHSL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->toHsl());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -1713,8 +1678,7 @@ HB_FUNC_STATIC(QCOLOR_TOHSV)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->toHsv());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -1735,8 +1699,7 @@ HB_FUNC_STATIC(QCOLOR_TORGB)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->toRgb());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -1757,8 +1720,7 @@ HB_FUNC_STATIC(QCOLOR_VALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1778,8 +1740,7 @@ HB_FUNC_STATIC(QCOLOR_VALUEF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->valueF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1799,8 +1760,7 @@ HB_FUNC_STATIC(QCOLOR_YELLOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->yellow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1820,8 +1780,7 @@ HB_FUNC_STATIC(QCOLOR_YELLOWF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->yellowF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

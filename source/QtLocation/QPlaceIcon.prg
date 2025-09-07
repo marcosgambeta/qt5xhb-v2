@@ -143,8 +143,7 @@ HB_FUNC_STATIC(QPLACEICON_MANAGER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->manager();
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEMANAGER");
@@ -192,8 +191,7 @@ HB_FUNC_STATIC(QPLACEICON_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

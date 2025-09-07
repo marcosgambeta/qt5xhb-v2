@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_DEFAULTTEXTENCODING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->defaultTextEncoding());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,8 +164,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_LOCALSTORAGEPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->localStoragePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -414,8 +412,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_USERSTYLESHEETURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->userStyleSheetUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);

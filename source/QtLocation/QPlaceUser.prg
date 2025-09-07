@@ -115,8 +115,7 @@ HB_FUNC_STATIC(QPLACEUSER_USERID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->userId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +162,7 @@ HB_FUNC_STATIC(QPLACEUSER_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

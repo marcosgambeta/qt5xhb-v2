@@ -85,8 +85,7 @@ HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_HREF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->href());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

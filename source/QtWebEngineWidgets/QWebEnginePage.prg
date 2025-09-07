@@ -143,8 +143,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_HISTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->history();
       Qt5xHb::createReturnClass(ptr, "QWEBENGINEHISTORY", false);
@@ -167,8 +166,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_VIEW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->view();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -216,8 +214,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_HASSELECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasSelection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +236,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SELECTEDTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->selectedText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -334,8 +330,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->createStandardContextMenu();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
@@ -461,8 +456,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_TITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -484,8 +478,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_URL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -533,8 +526,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_REQUESTEDURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->requestedUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -557,8 +549,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ICONURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->iconUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -581,8 +572,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ZOOMFACTOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->zoomFactor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -654,8 +644,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETTINGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->settings();
       Qt5xHb::createReturnClass(ptr, "QWEBENGINESETTINGS", false);

@@ -174,8 +174,7 @@ HB_FUNC_STATIC(QCOLLATOR_LOCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QLocale(obj->locale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
@@ -198,8 +197,7 @@ HB_FUNC_STATIC(QCOLLATOR_CASESENSITIVITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->caseSensitivity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -271,8 +269,7 @@ HB_FUNC_STATIC(QCOLLATOR_NUMERICMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->numericMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -319,8 +316,7 @@ HB_FUNC_STATIC(QCOLLATOR_IGNOREPUNCTUATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->ignorePunctuation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

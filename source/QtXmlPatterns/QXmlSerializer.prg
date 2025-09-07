@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_CODEC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->codec();
       Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
@@ -125,8 +124,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_OUTPUTDEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->outputDevice();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
@@ -262,8 +260,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ENDDOCUMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->endDocument();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,8 +282,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ENDELEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->endElement();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,8 +304,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ENDOFSEQUENCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->endOfSequence();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,8 +372,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_STARTDOCUMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->startDocument();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -423,8 +417,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_STARTOFSEQUENCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->startOfSequence();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

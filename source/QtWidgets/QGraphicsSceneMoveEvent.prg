@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_NEWPOS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->newPos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_OLDPOS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->oldPos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);

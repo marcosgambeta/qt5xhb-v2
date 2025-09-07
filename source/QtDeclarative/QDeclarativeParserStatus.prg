@@ -64,8 +64,7 @@ HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_CLASSBEGIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->classBegin();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -87,8 +86,7 @@ HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_COMPONENTCOMPLETE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->componentComplete();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -169,8 +169,7 @@ HB_FUNC_STATIC(QSTATICTEXT_TEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,8 +212,7 @@ HB_FUNC_STATIC(QSTATICTEXT_TEXTFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->textFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,8 +255,7 @@ HB_FUNC_STATIC(QSTATICTEXT_TEXTWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->textWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,8 +298,7 @@ HB_FUNC_STATIC(QSTATICTEXT_TEXTOPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTextOption(obj->textOption());
       Qt5xHb::createReturnClass(ptr, "QTEXTOPTION", true);
@@ -323,8 +319,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSizeF(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
@@ -392,8 +387,7 @@ HB_FUNC_STATIC(QSTATICTEXT_PERFORMANCEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->performanceHint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

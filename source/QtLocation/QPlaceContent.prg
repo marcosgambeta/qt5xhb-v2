@@ -123,8 +123,7 @@ HB_FUNC_STATIC(QPLACECONTENT_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,8 +145,7 @@ HB_FUNC_STATIC(QPLACECONTENT_SUPPLIER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPlaceSupplier(obj->supplier());
       Qt5xHb::createReturnClass(ptr, "QPLACESUPPLIER", true);
@@ -195,8 +193,7 @@ HB_FUNC_STATIC(QPLACECONTENT_USER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPlaceUser(obj->user());
       Qt5xHb::createReturnClass(ptr, "QPLACEUSER", true);
@@ -244,8 +241,7 @@ HB_FUNC_STATIC(QPLACECONTENT_ATTRIBUTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->attribution());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

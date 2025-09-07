@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QPLACERESULT_DISTANCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->distance());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,8 +146,7 @@ HB_FUNC_STATIC(QPLACERESULT_PLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPlace(obj->place());
       Qt5xHb::createReturnClass(ptr, "QPLACE", true);
@@ -196,8 +194,7 @@ HB_FUNC_STATIC(QPLACERESULT_ISSPONSORED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSponsored());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

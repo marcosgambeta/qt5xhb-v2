@@ -191,8 +191,7 @@ HB_FUNC_STATIC(QPIXMAP_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,8 +211,7 @@ HB_FUNC_STATIC(QPIXMAP_DEVTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->devType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,8 +231,7 @@ HB_FUNC_STATIC(QPIXMAP_WIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -254,8 +251,7 @@ HB_FUNC_STATIC(QPIXMAP_HEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,8 +271,7 @@ HB_FUNC_STATIC(QPIXMAP_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -297,8 +292,7 @@ HB_FUNC_STATIC(QPIXMAP_RECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->rect());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -319,8 +313,7 @@ HB_FUNC_STATIC(QPIXMAP_DEPTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->depth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -385,8 +378,7 @@ HB_FUNC_STATIC(QPIXMAP_MASK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBitmap(obj->mask());
       Qt5xHb::createReturnClass(ptr, "QBITMAP", true);
@@ -430,8 +422,7 @@ HB_FUNC_STATIC(QPIXMAP_DEVICEPIXELRATIO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->devicePixelRatio());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -474,8 +465,7 @@ HB_FUNC_STATIC(QPIXMAP_HASALPHA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasAlpha());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -495,8 +485,7 @@ HB_FUNC_STATIC(QPIXMAP_HASALPHACHANNEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasAlphaChannel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -684,8 +673,7 @@ HB_FUNC_STATIC(QPIXMAP_TOIMAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QImage(obj->toImage());
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
@@ -877,8 +865,7 @@ HB_FUNC_STATIC(QPIXMAP_CACHEKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->cacheKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -898,8 +885,7 @@ HB_FUNC_STATIC(QPIXMAP_ISDETACHED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDetached());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -919,8 +905,7 @@ HB_FUNC_STATIC(QPIXMAP_DETACH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->detach();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -942,8 +927,7 @@ HB_FUNC_STATIC(QPIXMAP_ISQBITMAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isQBitmap());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -963,8 +947,7 @@ HB_FUNC_STATIC(QPIXMAP_PAINTENGINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->paintEngine();
       Qt5xHb::createReturnClass(ptr, "QPAINTENGINE", false);

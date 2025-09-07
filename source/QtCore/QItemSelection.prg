@@ -150,8 +150,7 @@ HB_FUNC_STATIC(QITEMSELECTION_INDEXES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->indexes();
       auto pDynSym = hb_dynsymFindName("QMODELINDEX");

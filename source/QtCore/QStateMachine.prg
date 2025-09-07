@@ -165,8 +165,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,8 +185,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,8 +205,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_CLEARERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearError();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,8 +227,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ISRUNNING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isRunning());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,8 +247,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ISANIMATED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAnimated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -318,8 +313,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_DEFAULTANIMATIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->defaultAnimations();
       auto pDynSym = hb_dynsymFindName("QABSTRACTANIMATION");
@@ -385,8 +379,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_GLOBALRESTOREPOLICY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->globalRestorePolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -516,8 +509,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_START)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->start();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -539,8 +531,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_STOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

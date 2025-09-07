@@ -159,8 +159,7 @@ HB_FUNC_STATIC(QPLACE_CATEGORIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->categories();
       auto pDynSym = hb_dynsymFindName("QPLACECATEGORY");
@@ -266,8 +265,7 @@ HB_FUNC_STATIC(QPLACE_LOCATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGeoLocation(obj->location());
       Qt5xHb::createReturnClass(ptr, "QGEOLOCATION", true);
@@ -315,8 +313,7 @@ HB_FUNC_STATIC(QPLACE_RATINGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPlaceRatings(obj->ratings());
       Qt5xHb::createReturnClass(ptr, "QPLACERATINGS", true);
@@ -364,8 +361,7 @@ HB_FUNC_STATIC(QPLACE_SUPPLIER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPlaceSupplier(obj->supplier());
       Qt5xHb::createReturnClass(ptr, "QPLACESUPPLIER", true);
@@ -413,8 +409,7 @@ HB_FUNC_STATIC(QPLACE_ATTRIBUTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->attribution());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -461,8 +456,7 @@ HB_FUNC_STATIC(QPLACE_ICON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPlaceIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QPLACEICON", true);
@@ -558,8 +552,7 @@ HB_FUNC_STATIC(QPLACE_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -606,8 +599,7 @@ HB_FUNC_STATIC(QPLACE_PLACEID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->placeId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -654,8 +646,7 @@ HB_FUNC_STATIC(QPLACE_PRIMARYPHONE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->primaryPhone());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -677,8 +668,7 @@ HB_FUNC_STATIC(QPLACE_PRIMARYFAX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->primaryFax());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -700,8 +690,7 @@ HB_FUNC_STATIC(QPLACE_PRIMARYEMAIL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->primaryEmail());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -723,8 +712,7 @@ HB_FUNC_STATIC(QPLACE_PRIMARYWEBSITE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->primaryWebsite());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -747,8 +735,7 @@ HB_FUNC_STATIC(QPLACE_DETAILSFETCHED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->detailsFetched());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -795,8 +782,7 @@ HB_FUNC_STATIC(QPLACE_EXTENDEDATTRIBUTETYPES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->extendedAttributeTypes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -892,8 +878,7 @@ HB_FUNC_STATIC(QPLACE_CONTACTTYPES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->contactTypes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1047,8 +1032,7 @@ HB_FUNC_STATIC(QPLACE_VISIBILITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->visibility());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1095,8 +1079,7 @@ HB_FUNC_STATIC(QPLACE_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

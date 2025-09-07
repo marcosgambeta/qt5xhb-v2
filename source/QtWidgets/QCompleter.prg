@@ -156,8 +156,7 @@ HB_FUNC_STATIC(QCOMPLETER_CASESENSITIVITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->caseSensitivity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +176,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->completionColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,8 +196,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->completionCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,8 +216,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->completionMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,8 +236,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONMODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->completionModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
@@ -262,8 +257,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONPREFIX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->completionPrefix());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,8 +277,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->completionRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,8 +297,7 @@ HB_FUNC_STATIC(QCOMPLETER_CURRENTCOMPLETION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->currentCompletion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -325,8 +317,7 @@ HB_FUNC_STATIC(QCOMPLETER_CURRENTINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QModelIndex(obj->currentIndex());
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
@@ -347,8 +338,7 @@ HB_FUNC_STATIC(QCOMPLETER_CURRENTROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,8 +358,7 @@ HB_FUNC_STATIC(QCOMPLETER_MAXVISIBLEITEMS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->maxVisibleItems());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -389,8 +378,7 @@ HB_FUNC_STATIC(QCOMPLETER_MODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
@@ -411,8 +399,7 @@ HB_FUNC_STATIC(QCOMPLETER_MODELSORTING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->modelSorting());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -453,8 +440,7 @@ HB_FUNC_STATIC(QCOMPLETER_POPUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->popup();
       Qt5xHb::createReturnQWidgetClass(ptr, "QABSTRACTITEMVIEW");
@@ -724,8 +710,7 @@ HB_FUNC_STATIC(QCOMPLETER_WIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->widget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -746,8 +731,7 @@ HB_FUNC_STATIC(QCOMPLETER_WRAPAROUND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->wrapAround());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -862,8 +846,7 @@ HB_FUNC_STATIC(QCOMPLETER_FILTERMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->filterMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

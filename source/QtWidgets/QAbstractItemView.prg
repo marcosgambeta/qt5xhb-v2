@@ -233,8 +233,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ALTERNATINGROWCOLORS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->alternatingRowColors());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,8 +276,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_AUTOSCROLLMARGIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->autoScrollMargin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,8 +319,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_CURRENTINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QModelIndex(obj->currentIndex());
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
@@ -366,8 +363,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_DEFAULTDROPACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->defaultDropAction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -410,8 +406,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_DRAGDROPMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->dragDropMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -454,8 +449,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_DRAGDROPOVERWRITEMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->dragDropOverwriteMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -498,8 +492,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_DRAGENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->dragEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -542,8 +535,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_EDITTRIGGERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->editTriggers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -586,8 +578,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_HASAUTOSCROLL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasAutoScroll());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -630,8 +621,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_HORIZONTALSCROLLMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->horizontalScrollMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -674,8 +664,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ICONSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->iconSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -974,8 +963,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_MODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
@@ -1042,8 +1030,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ROOTINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QModelIndex(obj->rootIndex());
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
@@ -1113,8 +1100,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTIONBEHAVIOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->selectionBehavior());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1157,8 +1143,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTIONMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->selectionMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1201,8 +1186,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTIONMODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->selectionModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QITEMSELECTIONMODEL");
@@ -1246,8 +1230,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SHOWDROPINDICATOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->showDropIndicator());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1290,8 +1273,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_TABKEYNAVIGATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->tabKeyNavigation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1334,8 +1316,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_TEXTELIDEMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->textElideMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1378,8 +1359,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_VERTICALSCROLLMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->verticalScrollMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1530,8 +1510,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_CLEARSELECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearSelection();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1576,8 +1555,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_RESET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1599,8 +1577,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SCROLLTOBOTTOM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->scrollToBottom();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1622,8 +1599,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SCROLLTOTOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->scrollToTop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1645,8 +1621,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTALL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->selectAll();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1739,8 +1714,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_DOITEMSLAYOUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->doItemsLayout();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

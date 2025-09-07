@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,8 +120,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_OBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->object();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -166,8 +164,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_CHILD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->child());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,8 +184,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_ACCESSIBLEINTERFACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->accessibleInterface();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);

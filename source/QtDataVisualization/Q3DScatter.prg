@@ -123,8 +123,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXISX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->axisX();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
@@ -172,8 +171,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXISY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->axisY();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
@@ -221,8 +219,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXISZ)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->axisZ();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
@@ -270,8 +267,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SELECTEDSERIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->selectedSeries();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCATTER3DSERIES");
@@ -344,8 +340,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SERIESLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->seriesList();
       auto pDynSym = hb_dynsymFindName("QSCATTER3DSERIES");
@@ -440,8 +435,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->axes();
       auto pDynSym = hb_dynsymFindName("QVALUE3DAXIS");

@@ -153,8 +153,7 @@ HB_FUNC_STATIC(QTHREADPOOL_EXPIRYTIMEOUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->expiryTimeout());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,8 +196,7 @@ HB_FUNC_STATIC(QTHREADPOOL_MAXTHREADCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->maxThreadCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,8 +239,7 @@ HB_FUNC_STATIC(QTHREADPOOL_ACTIVETHREADCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->activeThreadCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,8 +259,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RESERVETHREAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reserveThread();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,8 +281,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RELEASETHREAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->releaseThread();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -330,8 +325,7 @@ HB_FUNC_STATIC(QTHREADPOOL_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -395,8 +389,7 @@ HB_FUNC_STATIC(QTHREADPOOL_STACKSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RUINT(obj->stackSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

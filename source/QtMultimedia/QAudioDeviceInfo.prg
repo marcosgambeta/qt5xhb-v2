@@ -118,8 +118,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_DEVICENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->deviceName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,8 +159,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,8 +201,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_PREFERREDFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QAudioFormat(obj->preferredFormat());
       Qt5xHb::createReturnClass(ptr, "QAUDIOFORMAT", true);
@@ -225,8 +222,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->supportedByteOrders();
       auto pArray = hb_itemArrayNew(0);
@@ -254,8 +250,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->supportedChannelCounts();
       Qt5xHb::convert_qlist_int_to_array(list);
@@ -276,8 +271,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_SUPPORTEDCODECS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->supportedCodecs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,8 +291,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_SUPPORTEDSAMPLERATES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->supportedSampleRates();
       Qt5xHb::convert_qlist_int_to_array(list);
@@ -319,8 +312,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->supportedSampleSizes();
       Qt5xHb::convert_qlist_int_to_array(list);
@@ -341,8 +333,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->supportedSampleTypes();
       auto pArray = hb_itemArrayNew(0);

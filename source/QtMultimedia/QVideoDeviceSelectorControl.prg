@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DEFAULTDEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->defaultDevice());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,8 +106,7 @@ HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DEVICECOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->deviceCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +168,7 @@ HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_SELECTEDDEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->selectedDevice());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

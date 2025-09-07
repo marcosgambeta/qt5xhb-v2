@@ -120,8 +120,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_CONTROLTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->controlType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,8 +140,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_EXPANDINGDIRECTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->expandingDirections());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,8 +160,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HASHEIGHTFORWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasHeightForWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,8 +180,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HASWIDTHFORHEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasWidthForHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,8 +200,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HORIZONTALPOLICY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->horizontalPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,8 +220,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HORIZONTALSTRETCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->horizontalStretch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -407,8 +401,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_TRANSPOSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->transpose();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -430,8 +423,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_VERTICALPOLICY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->verticalPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -451,8 +443,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_VERTICALSTRETCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->verticalStretch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

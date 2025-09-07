@@ -83,8 +83,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_TEXT)
   auto obj = static_cast<QStyleOptionToolBox *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RQSTRING(obj->text);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -116,8 +115,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_ICON)
   auto obj = static_cast<QStyleOptionToolBox *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       auto ptr = new QIcon(obj->icon);
       Qt5xHb::createReturnClass(ptr, "QICON", true);
     } else {
@@ -150,8 +148,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_POSITION)
   auto obj = static_cast<QStyleOptionToolBox *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->position);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -183,8 +180,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SELECTEDPOSITION)
   auto obj = static_cast<QStyleOptionToolBox *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->selectedPosition);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

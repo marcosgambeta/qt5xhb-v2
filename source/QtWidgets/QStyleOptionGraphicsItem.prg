@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT)
   auto obj = static_cast<QStyleOptionGraphicsItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       auto ptr = new QRectF(obj->exposedRect);
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     } else {
@@ -134,8 +133,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_MATRIX)
   auto obj = static_cast<QStyleOptionGraphicsItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       auto ptr = new QMatrix(obj->matrix);
       Qt5xHb::createReturnClass(ptr, "QMATRIX", true);
     } else {
@@ -168,8 +166,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL)
   auto obj = static_cast<QStyleOptionGraphicsItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != nullptr) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RQREAL(obj->levelOfDetail);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

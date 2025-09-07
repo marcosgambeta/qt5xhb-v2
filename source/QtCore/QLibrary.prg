@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QLIBRARY_LOAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->load());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,8 +142,7 @@ HB_FUNC_STATIC(QLIBRARY_UNLOAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->unload());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,8 +162,7 @@ HB_FUNC_STATIC(QLIBRARY_ISLOADED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLoaded());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,8 +205,7 @@ HB_FUNC_STATIC(QLIBRARY_FILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,8 +257,7 @@ HB_FUNC_STATIC(QLIBRARY_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,8 +300,7 @@ HB_FUNC_STATIC(QLIBRARY_LOADHINTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->loadHints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

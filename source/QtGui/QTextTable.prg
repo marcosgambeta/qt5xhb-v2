@@ -325,8 +325,7 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->rows());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -346,8 +345,7 @@ HB_FUNC_STATIC(QTEXTTABLE_COLUMNS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->columns());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -476,8 +474,7 @@ HB_FUNC_STATIC(QTEXTTABLE_FORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTextTableFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QTEXTTABLEFORMAT", true);

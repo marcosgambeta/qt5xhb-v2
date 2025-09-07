@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLECELLINTERFACE_COLUMNEXTENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->columnExtent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLECELLINTERFACE_COLUMNHEADERCELLS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->columnHeaderCells();
       auto pDynSym = hb_dynsymFindName("QACCESSIBLEINTERFACE");
@@ -152,8 +150,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLECELLINTERFACE_COLUMNINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->columnIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,8 +170,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLECELLINTERFACE_ROWEXTENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->rowExtent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +190,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLECELLINTERFACE_ROWHEADERCELLS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->rowHeaderCells();
       auto pDynSym = hb_dynsymFindName("QACCESSIBLEINTERFACE");
@@ -238,8 +233,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLECELLINTERFACE_ROWINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->rowIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,8 +253,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLECELLINTERFACE_ISSELECTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSelected());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,8 +273,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLECELLINTERFACE_TABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->table();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);

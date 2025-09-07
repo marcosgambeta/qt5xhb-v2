@@ -171,8 +171,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,8 +191,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PROTOCOL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->protocol());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -236,8 +234,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PEERVERIFYMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->peerVerifyMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,8 +277,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PEERVERIFYDEPTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->peerVerifyDepth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -325,8 +321,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_LOCALCERTIFICATECHAIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->localCertificateChain();
       auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
@@ -406,8 +401,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_LOCALCERTIFICATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSslCertificate(obj->localCertificate());
       Qt5xHb::createReturnClass(ptr, "QSSLCERTIFICATE", true);
@@ -451,8 +445,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PEERCERTIFICATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSslCertificate(obj->peerCertificate());
       Qt5xHb::createReturnClass(ptr, "QSSLCERTIFICATE", true);
@@ -473,8 +466,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PEERCERTIFICATECHAIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->peerCertificateChain();
       auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
@@ -520,8 +512,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SESSIONCIPHER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSslCipher(obj->sessionCipher());
       Qt5xHb::createReturnClass(ptr, "QSSLCIPHER", true);
@@ -543,8 +534,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SESSIONPROTOCOL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->sessionProtocol());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -565,8 +555,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PRIVATEKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSslKey(obj->privateKey());
       Qt5xHb::createReturnClass(ptr, "QSSLKEY", true);
@@ -610,8 +599,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_CIPHERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->ciphers();
       auto pDynSym = hb_dynsymFindName("QSSLCIPHER");
@@ -730,8 +718,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_CACERTIFICATES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->caCertificates();
       auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
@@ -895,8 +882,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SESSIONTICKET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->sessionTicket());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -944,8 +930,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SESSIONTICKETLIFETIMEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sessionTicketLifeTimeHint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -967,8 +952,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_EPHEMERALSERVERKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSslKey(obj->ephemeralServerKey());
       Qt5xHb::createReturnClass(ptr, "QSSLKEY", true);
@@ -1000,8 +984,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PRESHAREDKEYIDENTITYHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->preSharedKeyIdentityHint());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -1124,8 +1107,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_ALLOWEDNEXTPROTOCOLS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->allowedNextProtocols();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
@@ -1173,8 +1155,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_NEXTNEGOTIATEDPROTOCOL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->nextNegotiatedProtocol());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -1197,8 +1178,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_NEXTPROTOCOLNEGOTIATIONSTATUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->nextProtocolNegotiationStatus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QDROPEVENT_ACCEPTPROPOSEDACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->acceptProposedAction();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,8 +124,7 @@ HB_FUNC_STATIC(QDROPEVENT_DROPACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->dropAction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,8 +144,7 @@ HB_FUNC_STATIC(QDROPEVENT_KEYBOARDMODIFIERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->keyboardModifiers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +164,7 @@ HB_FUNC_STATIC(QDROPEVENT_MIMEDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->mimeData();
       Qt5xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
@@ -189,8 +185,7 @@ HB_FUNC_STATIC(QDROPEVENT_MOUSEBUTTONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->mouseButtons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,8 +205,7 @@ HB_FUNC_STATIC(QDROPEVENT_POSSIBLEACTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->possibleActions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,8 +225,7 @@ HB_FUNC_STATIC(QDROPEVENT_PROPOSEDACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->proposedAction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,8 +268,7 @@ HB_FUNC_STATIC(QDROPEVENT_SOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->source();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");

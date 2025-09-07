@@ -68,8 +68,7 @@ HB_FUNC_STATIC(QSENSORPLUGININTERFACE_REGISTERSENSORS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->registerSensors();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

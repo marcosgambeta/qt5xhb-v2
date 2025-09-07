@@ -206,8 +206,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_SERVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->service());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,8 +226,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_PATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->path());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +246,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_INTERFACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->interface());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +266,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_MEMBER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->member());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -290,8 +286,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ERRORNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,8 +306,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ERRORMESSAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorMessage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -332,8 +326,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,8 +346,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_SIGNATURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->signature());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -374,8 +366,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ISREPLYREQUIRED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReplyRequired());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -418,8 +409,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ISDELAYEDREPLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDelayedReply());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -462,8 +452,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_AUTOSTARTSERVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoStartService());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -514,8 +503,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ARGUMENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       Qt5xHb::convert_qvariantlist_to_array(obj->arguments());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -607,8 +595,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ISINTERACTIVEAUTHORIZATIONALLOWED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isInteractiveAuthorizationAllowed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

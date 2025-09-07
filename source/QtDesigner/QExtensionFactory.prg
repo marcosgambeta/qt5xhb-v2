@@ -94,8 +94,7 @@ HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSIONMANAGER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->extensionManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QEXTENSIONMANAGER");

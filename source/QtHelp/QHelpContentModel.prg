@@ -132,8 +132,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_ISCREATINGCONTENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCreatingContents());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

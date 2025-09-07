@@ -142,8 +142,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_FRAMEHEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->frameHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +162,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_FRAMERATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->frameRate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +182,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_FRAMESIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->frameSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -206,8 +203,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_FRAMEWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->frameWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,8 +223,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_HANDLETYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->handleType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +243,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +263,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_PIXELASPECTRATIO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->pixelAspectRatio());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -291,8 +284,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_PIXELFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->pixelFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -334,8 +326,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_PROPERTYNAMES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->propertyNames();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
@@ -381,8 +372,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SCANLINEDIRECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->scanLineDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -581,8 +571,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -603,8 +592,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_VIEWPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->viewport());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -625,8 +613,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_YCBCRCOLORSPACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->yCbCrColorSpace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

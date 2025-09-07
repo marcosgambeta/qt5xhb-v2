@@ -114,8 +114,7 @@ HB_FUNC_STATIC(QFONTINFO_BOLD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->bold());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,8 +134,7 @@ HB_FUNC_STATIC(QFONTINFO_EXACTMATCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->exactMatch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,8 +154,7 @@ HB_FUNC_STATIC(QFONTINFO_FAMILY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->family());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +174,7 @@ HB_FUNC_STATIC(QFONTINFO_FIXEDPITCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->fixedPitch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,8 +194,7 @@ HB_FUNC_STATIC(QFONTINFO_ITALIC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->italic());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,8 +214,7 @@ HB_FUNC_STATIC(QFONTINFO_PIXELSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->pixelSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,8 +234,7 @@ HB_FUNC_STATIC(QFONTINFO_POINTSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->pointSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,8 +254,7 @@ HB_FUNC_STATIC(QFONTINFO_POINTSIZEF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->pointSizeF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -282,8 +274,7 @@ HB_FUNC_STATIC(QFONTINFO_RAWMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->rawMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,8 +294,7 @@ HB_FUNC_STATIC(QFONTINFO_STYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->style());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,8 +314,7 @@ HB_FUNC_STATIC(QFONTINFO_STYLEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->styleHint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,8 +334,7 @@ HB_FUNC_STATIC(QFONTINFO_STYLENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->styleName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,8 +354,7 @@ HB_FUNC_STATIC(QFONTINFO_WEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->weight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -101,8 +101,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_POPCONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->popContext();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,8 +198,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PUSHCONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->pushContext();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,8 +220,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_RESET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

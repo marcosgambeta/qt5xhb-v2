@@ -162,8 +162,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,8 +205,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_CAPABILITIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->capabilities());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,8 +225,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_ISCACHINGPROXY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCachingProxy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +245,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_ISTRANSPARENTPROXY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isTransparentProxy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,8 +288,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_USER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->user());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,8 +331,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_PASSWORD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->password());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -380,8 +374,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_HOSTNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->hostName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -424,8 +417,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_PORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT16(obj->port());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -547,8 +539,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_RAWHEADERLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->rawHeaderList();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");

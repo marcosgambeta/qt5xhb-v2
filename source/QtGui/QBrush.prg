@@ -217,8 +217,7 @@ HB_FUNC_STATIC(QBRUSH_COLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->color();
       Qt5xHb::createReturnClass(ptr, "QCOLOR", false);
@@ -239,8 +238,7 @@ HB_FUNC_STATIC(QBRUSH_GRADIENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->gradient();
       Qt5xHb::createReturnClass(ptr, "QGRADIENT", false);
@@ -261,8 +259,7 @@ HB_FUNC_STATIC(QBRUSH_ISOPAQUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isOpaque());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -282,8 +279,7 @@ HB_FUNC_STATIC(QBRUSH_MATRIX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->matrix();
       Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
@@ -451,8 +447,7 @@ HB_FUNC_STATIC(QBRUSH_STYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->style());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -472,8 +467,7 @@ HB_FUNC_STATIC(QBRUSH_TEXTURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPixmap(obj->texture());
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
@@ -494,8 +488,7 @@ HB_FUNC_STATIC(QBRUSH_TEXTUREIMAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QImage(obj->textureImage());
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
@@ -516,8 +509,7 @@ HB_FUNC_STATIC(QBRUSH_TRANSFORM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTransform(obj->transform());
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);

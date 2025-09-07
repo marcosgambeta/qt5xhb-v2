@@ -156,8 +156,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CANAPPEND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canAppend());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +176,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CANAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canAt());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,8 +196,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CANCLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canClear());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,8 +216,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CANCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,8 +236,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->clear());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,8 +256,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -282,8 +276,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,8 +296,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_LISTELEMENTTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->listElementType();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
@@ -325,8 +317,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_OBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->object();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");

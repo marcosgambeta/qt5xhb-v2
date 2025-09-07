@@ -131,8 +131,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ANIMATED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->animated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +173,7 @@ HB_FUNC_STATIC(QSVGRENDERER_DEFAULTSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->defaultSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -217,8 +215,7 @@ HB_FUNC_STATIC(QSVGRENDERER_FRAMESPERSECOND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->framesPerSecond());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -238,8 +235,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,8 +332,7 @@ HB_FUNC_STATIC(QSVGRENDERER_VIEWBOX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->viewBox());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -358,8 +353,7 @@ HB_FUNC_STATIC(QSVGRENDERER_VIEWBOXF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->viewBoxF());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);

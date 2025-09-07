@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_ISACTIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,8 +140,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_CREATEFILTERRUNNABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->createFilterRunnable();
       Qt5xHb::createReturnClass(ptr, "QVIDEOFILTERRUNNABLE", false);

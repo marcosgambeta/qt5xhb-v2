@@ -146,8 +146,7 @@ HB_FUNC_STATIC(QSTATUSBAR_CURRENTMESSAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->currentMessage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,8 +208,7 @@ HB_FUNC_STATIC(QSTATUSBAR_ISSIZEGRIPENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSizeGripEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,8 +274,7 @@ HB_FUNC_STATIC(QSTATUSBAR_CLEARMESSAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearMessage();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -120,8 +120,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_CAPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->caption();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
@@ -163,8 +162,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_COLUMNCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->columnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +182,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_ROWCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->rowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,8 +202,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDCELLCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->selectedCellCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,8 +222,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->selectedColumnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,8 +242,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDROWCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->selectedRowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,8 +283,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDCELLS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->selectedCells();
       auto pDynSym = hb_dynsymFindName("QACCESSIBLEINTERFACE");
@@ -333,8 +326,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->selectedColumns();
       Qt5xHb::convert_qlist_int_to_array(list);
@@ -355,8 +347,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDROWS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->selectedRows();
       Qt5xHb::convert_qlist_int_to_array(list);
@@ -377,8 +368,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SUMMARY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->summary();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);

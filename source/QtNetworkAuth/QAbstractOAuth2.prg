@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_SCOPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->scope());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +151,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_USERAGENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->userAgent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,8 +198,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_CLIENTIDENTIFIERSHAREDKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->clientIdentifierSharedKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +245,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_STATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -296,8 +292,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_EXPIRATIONAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDateTime(obj->expirationAt());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -320,8 +315,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_RESPONSETYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->responseType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -343,8 +337,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_REFRESHTOKEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->refreshToken());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

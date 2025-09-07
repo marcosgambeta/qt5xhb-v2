@@ -116,8 +116,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_TOOLTIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->toolTip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,8 +163,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ICON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
@@ -213,8 +211,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ISENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,8 +258,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ISINTERACTIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isInteractive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -309,8 +305,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ISVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -357,8 +352,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_DISMISSONCLICK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->dismissOnClick());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -405,8 +399,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ISFLAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFlat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -453,8 +446,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_CLICK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->click();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

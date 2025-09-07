@@ -180,8 +180,7 @@ HB_FUNC_STATIC(QAXSCRIPT_SCRIPTCODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->scriptCode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,8 +198,7 @@ HB_FUNC_STATIC(QAXSCRIPT_SCRIPTENGINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->scriptEngine();
       Qt5xHb::createReturnQObjectClass(ptr, "QAXSCRIPTENGINE");
@@ -219,8 +217,7 @@ HB_FUNC_STATIC(QAXSCRIPT_SCRIPTNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->scriptName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

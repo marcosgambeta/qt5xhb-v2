@@ -131,8 +131,7 @@ HB_FUNC_STATIC(QSSLCIPHER_AUTHENTICATIONMETHOD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->authenticationMethod());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +151,7 @@ HB_FUNC_STATIC(QSSLCIPHER_ENCRYPTIONMETHOD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->encryptionMethod());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,8 +171,7 @@ HB_FUNC_STATIC(QSSLCIPHER_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +191,7 @@ HB_FUNC_STATIC(QSSLCIPHER_KEYEXCHANGEMETHOD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->keyExchangeMethod());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,8 +211,7 @@ HB_FUNC_STATIC(QSSLCIPHER_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -236,8 +231,7 @@ HB_FUNC_STATIC(QSSLCIPHER_PROTOCOL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->protocol());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,8 +251,7 @@ HB_FUNC_STATIC(QSSLCIPHER_PROTOCOLSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->protocolString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,8 +271,7 @@ HB_FUNC_STATIC(QSSLCIPHER_SUPPORTEDBITS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->supportedBits());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,8 +291,7 @@ HB_FUNC_STATIC(QSSLCIPHER_USEDBITS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->usedBits());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

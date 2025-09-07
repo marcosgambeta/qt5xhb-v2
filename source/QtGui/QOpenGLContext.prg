@@ -115,8 +115,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_CREATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->create());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,8 +135,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_DEFAULTFRAMEBUFFEROBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLUINT(obj->defaultFramebufferObject());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,8 +155,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_DONECURRENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->doneCurrent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,8 +177,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_FORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSurfaceFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QSURFACEFORMAT", true);
@@ -202,8 +198,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_FUNCTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->functions();
       Qt5xHb::createReturnClass(ptr, "QOPENGLFUNCTIONS", false);
@@ -245,8 +240,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -287,8 +281,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SCREEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->screen();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCREEN");
@@ -378,8 +371,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SHARECONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->shareContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXT");
@@ -400,8 +392,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SHAREGROUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->shareGroup();
       Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXTGROUP");
@@ -422,8 +413,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SURFACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->surface();
       Qt5xHb::createReturnClass(ptr, "QSURFACE", false);

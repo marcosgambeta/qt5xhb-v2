@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QHBARMODELMAPPER_SERIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTBARSERIES");
@@ -152,8 +151,7 @@ HB_FUNC_STATIC(QHBARMODELMAPPER_MODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
@@ -201,8 +199,7 @@ HB_FUNC_STATIC(QHBARMODELMAPPER_FIRSTBARSETROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->firstBarSetRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,8 +246,7 @@ HB_FUNC_STATIC(QHBARMODELMAPPER_LASTBARSETROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->lastBarSetRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,8 +293,7 @@ HB_FUNC_STATIC(QHBARMODELMAPPER_FIRSTCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->firstColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,8 +340,7 @@ HB_FUNC_STATIC(QHBARMODELMAPPER_COLUMNCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->columnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

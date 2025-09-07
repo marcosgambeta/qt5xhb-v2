@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_SUGGESTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->suggestions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,8 +121,7 @@ HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

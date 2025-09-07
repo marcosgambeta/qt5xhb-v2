@@ -76,8 +76,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_SHARES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->shares();
       auto pDynSym = hb_dynsymFindName("QOPENGLCONTEXT");

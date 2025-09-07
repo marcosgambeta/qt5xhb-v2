@@ -182,8 +182,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ENDDOCUMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->endDocument();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,8 +204,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ENDELEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->endElement();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +226,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ENDOFSEQUENCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->endOfSequence();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,8 +294,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_STARTDOCUMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->startDocument();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -343,8 +339,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_STARTOFSEQUENCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->startOfSequence();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

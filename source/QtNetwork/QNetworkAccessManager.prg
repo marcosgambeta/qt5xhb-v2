@@ -151,8 +151,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_NETWORKACCESSIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->networkAccessible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,8 +195,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SUPPORTEDSCHEMES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->supportedSchemes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,8 +216,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CLEARACCESSCACHE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearAccessCache();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,8 +239,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CLEARCONNECTIONCACHE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearConnectionCache();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,8 +262,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PROXY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QNetworkProxy(obj->proxy());
       Qt5xHb::createReturnClass(ptr, "QNETWORKPROXY", true);
@@ -311,8 +306,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PROXYFACTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->proxyFactory();
       Qt5xHb::createReturnClass(ptr, "QNETWORKPROXYFACTORY", false);
@@ -356,8 +350,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CACHE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->cache();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTNETWORKCACHE");
@@ -401,8 +394,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_COOKIEJAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->cookieJar();
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKCOOKIEJAR");
@@ -472,8 +464,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ISSTRICTTRANSPORTSECURITYENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isStrictTransportSecurityEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -520,8 +511,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ISSTRICTTRANSPORTSECURITYSTOREENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isStrictTransportSecurityStoreEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -576,8 +566,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_STRICTTRANSPORTSECURITYHOSTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->strictTransportSecurityHosts();
       auto pDynSym = hb_dynsymFindName("QHSTSPOLICY");
@@ -845,8 +834,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CONFIGURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QNetworkConfiguration(obj->configuration());
       Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
@@ -867,8 +855,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ACTIVECONFIGURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QNetworkConfiguration(obj->activeConfiguration());
       Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
@@ -968,8 +955,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_REDIRECTPOLICY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->redirectPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

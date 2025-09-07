@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QAXSELECT_CLSID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->clsid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QAXSELECT_SANDBOXINGLEVEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->sandboxingLevel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

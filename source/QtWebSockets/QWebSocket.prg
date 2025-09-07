@@ -158,8 +158,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ABORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->abort();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,8 +182,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,8 +204,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,8 +226,7 @@ HB_FUNC_STATIC(QWEBSOCKET_FLUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->flush());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -252,8 +248,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,8 +270,7 @@ HB_FUNC_STATIC(QWEBSOCKET_LOCALADDRESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QHostAddress(obj->localAddress());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
@@ -299,8 +293,7 @@ HB_FUNC_STATIC(QWEBSOCKET_LOCALPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT16(obj->localPort());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -322,8 +315,7 @@ HB_FUNC_STATIC(QWEBSOCKET_PAUSEMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->pauseMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,8 +337,7 @@ HB_FUNC_STATIC(QWEBSOCKET_PEERADDRESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QHostAddress(obj->peerAddress());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
@@ -369,8 +360,7 @@ HB_FUNC_STATIC(QWEBSOCKET_PEERNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->peerName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -392,8 +382,7 @@ HB_FUNC_STATIC(QWEBSOCKET_PEERPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT16(obj->peerPort());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,8 +404,7 @@ HB_FUNC_STATIC(QWEBSOCKET_PROXY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QNetworkProxy(obj->proxy());
       Qt5xHb::createReturnClass(ptr, "QNETWORKPROXY", true);
@@ -464,8 +452,7 @@ HB_FUNC_STATIC(QWEBSOCKET_MASKGENERATOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->maskGenerator();
       Qt5xHb::createReturnQObjectClass(ptr, "QMASKGENERATOR");
@@ -513,8 +500,7 @@ HB_FUNC_STATIC(QWEBSOCKET_READBUFFERSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->readBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -561,8 +547,7 @@ HB_FUNC_STATIC(QWEBSOCKET_RESUME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->resume();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -611,8 +596,7 @@ HB_FUNC_STATIC(QWEBSOCKET_STATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -634,8 +618,7 @@ HB_FUNC_STATIC(QWEBSOCKET_VERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->version());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -657,8 +640,7 @@ HB_FUNC_STATIC(QWEBSOCKET_RESOURCENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->resourceName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -680,8 +662,7 @@ HB_FUNC_STATIC(QWEBSOCKET_REQUESTURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->requestUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -704,8 +685,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ORIGIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->origin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -727,8 +707,7 @@ HB_FUNC_STATIC(QWEBSOCKET_CLOSECODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->closeCode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -750,8 +729,7 @@ HB_FUNC_STATIC(QWEBSOCKET_CLOSEREASON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->closeReason());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -863,8 +841,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SSLCONFIGURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSslConfiguration(obj->sslConfiguration());
       Qt5xHb::createReturnClass(ptr, "QSSLCONFIGURATION", true);

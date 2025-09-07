@@ -83,8 +83,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_SUPPORTEDIMAGECODECS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->supportedImageCodecs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +173,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_IMAGESETTINGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QImageEncoderSettings(obj->imageSettings());
       Qt5xHb::createReturnClass(ptr, "QIMAGEENCODERSETTINGS", true);

@@ -144,8 +144,7 @@ HB_FUNC_STATIC(QDEBUG_SPACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->space();
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);
@@ -166,8 +165,7 @@ HB_FUNC_STATIC(QDEBUG_NOSPACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->nospace();
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);
@@ -188,8 +186,7 @@ HB_FUNC_STATIC(QDEBUG_MAYBESPACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->maybeSpace();
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);
@@ -210,8 +207,7 @@ HB_FUNC_STATIC(QDEBUG_AUTOINSERTSPACES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoInsertSpaces());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,8 +275,7 @@ HB_FUNC_STATIC(QDEBUG_NOQUOTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->noquote();
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);
@@ -303,8 +298,7 @@ HB_FUNC_STATIC(QDEBUG_QUOTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->quote();
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);
@@ -327,8 +321,7 @@ HB_FUNC_STATIC(QDEBUG_RESETFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->resetFormat();
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);

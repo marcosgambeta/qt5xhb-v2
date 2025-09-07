@@ -197,8 +197,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_LOCALPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->localPort());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,8 +217,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_PEERHOSTNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->peerHostName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +237,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_PEERPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->peerPort());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,8 +257,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_PROTOCOLTAG)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->protocolTag());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,8 +277,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_QUERYTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->queryType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -440,8 +435,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_URL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -485,8 +479,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NETWORKCONFIGURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QNetworkConfiguration(obj->networkConfiguration());
       Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);

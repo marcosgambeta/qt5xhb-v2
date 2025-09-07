@@ -148,8 +148,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_ACTIVEGESTURES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->activeGestures();
       auto pDynSym = hb_dynsymFindName("QGESTURE");
@@ -192,8 +191,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_CANCELEDGESTURES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->canceledGestures();
       auto pDynSym = hb_dynsymFindName("QGESTURE");
@@ -258,8 +256,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_GESTURES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->gestures();
       auto pDynSym = hb_dynsymFindName("QGESTURE");
@@ -451,8 +448,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_WIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->widget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");

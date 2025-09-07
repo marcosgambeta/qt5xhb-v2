@@ -124,8 +124,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_DATAPROXY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->dataProxy();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCATTERDATAPROXY");
@@ -173,8 +172,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SELECTEDITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->selectedItem());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,8 +219,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ITEMSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->itemSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

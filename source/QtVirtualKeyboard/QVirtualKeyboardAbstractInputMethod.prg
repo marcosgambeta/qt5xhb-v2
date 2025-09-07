@@ -101,8 +101,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_INPUTCONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->inputContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDINPUTCONTEXT");
@@ -123,8 +122,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_INPUTENGINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->inputEngine();
       Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDINPUTENGINE");
@@ -238,8 +236,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SELECTIONLISTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->selectionLists();
       auto pArray = hb_itemArrayNew(0);
@@ -357,8 +354,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_PATTERNRECOGNITIONMODES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->patternRecognitionModes();
       auto pArray = hb_itemArrayNew(0);
@@ -428,8 +424,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_RESET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -451,8 +446,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_UPDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->update();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

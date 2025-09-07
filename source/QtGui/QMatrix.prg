@@ -173,8 +173,7 @@ HB_FUNC_STATIC(QMATRIX_M11)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->m11());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +193,7 @@ HB_FUNC_STATIC(QMATRIX_M12)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->m12());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,8 +213,7 @@ HB_FUNC_STATIC(QMATRIX_M21)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->m21());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -236,8 +233,7 @@ HB_FUNC_STATIC(QMATRIX_M22)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->m22());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,8 +253,7 @@ HB_FUNC_STATIC(QMATRIX_DX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->dx());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,8 +273,7 @@ HB_FUNC_STATIC(QMATRIX_DY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->dy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -515,8 +509,7 @@ HB_FUNC_STATIC(QMATRIX_RESET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -538,8 +531,7 @@ HB_FUNC_STATIC(QMATRIX_ISIDENTITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isIdentity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -647,8 +639,7 @@ HB_FUNC_STATIC(QMATRIX_ISINVERTIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isInvertible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -668,8 +659,7 @@ HB_FUNC_STATIC(QMATRIX_DETERMINANT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->determinant());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

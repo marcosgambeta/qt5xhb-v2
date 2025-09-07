@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ORIGIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVector3D(obj->origin());
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
@@ -218,8 +217,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_XSCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->xScale());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +237,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_YSCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->yScale());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,8 +257,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ZSCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->zScale());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

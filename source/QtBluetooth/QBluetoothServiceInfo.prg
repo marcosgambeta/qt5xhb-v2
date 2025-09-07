@@ -142,8 +142,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,8 +164,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_ISCOMPLETE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isComplete());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,8 +211,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_DEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBluetoothDeviceInfo(obj->device());
       Qt5xHb::createReturnClass(ptr, "QBLUETOOTHDEVICEINFO", true);
@@ -297,8 +294,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_ATTRIBUTES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->attributes();
       Qt5xHb::convert_qlist_quint16_to_array(list);
@@ -394,8 +390,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->serviceName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -442,8 +437,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICEDESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->serviceDescription());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -490,8 +484,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICEPROVIDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->serviceProvider());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -513,8 +506,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SOCKETPROTOCOL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->socketProtocol());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -536,8 +528,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_PROTOCOLSERVICEMULTIPLEXER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->protocolServiceMultiplexer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -559,8 +550,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVERCHANNEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->serverChannel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -607,8 +597,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICEAVAILABILITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINT8(obj->serviceAvailability());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -655,8 +644,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICEUUID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBluetoothUuid(obj->serviceUuid());
       Qt5xHb::createReturnClass(ptr, "QBLUETOOTHUUID", true);
@@ -679,8 +667,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICECLASSUUIDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->serviceClassUuids();
       auto pDynSym = hb_dynsymFindName("QBLUETOOTHUUID");
@@ -728,8 +715,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_ISREGISTERED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isRegistered());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -775,8 +761,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_UNREGISTERSERVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->unregisterService());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

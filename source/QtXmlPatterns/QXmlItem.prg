@@ -125,8 +125,7 @@ HB_FUNC_STATIC(QXMLITEM_ISATOMICVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAtomicValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,8 +145,7 @@ HB_FUNC_STATIC(QXMLITEM_ISNODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +165,7 @@ HB_FUNC_STATIC(QXMLITEM_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,8 +185,7 @@ HB_FUNC_STATIC(QXMLITEM_TOATOMICVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVariant(obj->toAtomicValue());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -210,8 +206,7 @@ HB_FUNC_STATIC(QXMLITEM_TONODEMODELINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QXmlNodeModelIndex(obj->toNodeModelIndex());
       Qt5xHb::createReturnClass(ptr, "QXMLNODEMODELINDEX", true);

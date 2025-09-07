@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGSCONTROL_AUDIOSETTINGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QAudioEncoderSettings(obj->audioSettings());
       Qt5xHb::createReturnClass(ptr, "QAUDIOENCODERSETTINGS", true);
@@ -148,8 +147,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDAUDIOCODECS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->supportedAudioCodecs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

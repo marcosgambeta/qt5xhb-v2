@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QTAPSENSOR_READING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QTAPREADING");
@@ -127,8 +126,7 @@ HB_FUNC_STATIC(QTAPSENSOR_RETURNDOUBLETAPEVENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->returnDoubleTapEvents());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

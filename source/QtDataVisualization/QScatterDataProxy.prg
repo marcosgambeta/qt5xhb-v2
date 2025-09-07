@@ -121,8 +121,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ITEMCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->itemCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,8 +143,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_SERIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCATTER3DSERIES");

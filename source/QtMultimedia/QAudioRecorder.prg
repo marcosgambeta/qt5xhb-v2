@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_AUDIOINPUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->audioInput());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,8 +163,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_AUDIOINPUTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->audioInputs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,8 +183,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_DEFAULTAUDIOINPUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->defaultAudioInput());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -123,8 +123,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_CATEGORIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->categories());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,8 +170,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +192,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_MIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->min());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,8 +239,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_MAX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->max());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -290,8 +286,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -422,8 +417,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

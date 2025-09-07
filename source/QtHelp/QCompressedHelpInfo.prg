@@ -147,8 +147,7 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_NAMESPACENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->namespaceName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +169,7 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_COMPONENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->component());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,8 +191,7 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_VERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVersionNumber(obj->version());
       Qt5xHb::createReturnClass(ptr, "QVERSIONNUMBER", true);

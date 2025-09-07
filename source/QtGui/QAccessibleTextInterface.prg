@@ -119,8 +119,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_SELECTIONCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->selectionCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,8 +208,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_CURSORPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->cursorPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -274,8 +272,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_CHARACTERCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->characterCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

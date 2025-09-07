@@ -160,8 +160,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,8 +180,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_FIRST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QWebElement(obj->first());
       Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", true);
@@ -203,8 +201,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_LAST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QWebElement(obj->last());
       Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", true);
@@ -225,8 +222,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_TOLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->toList();
       auto pDynSym = hb_dynsymFindName("QWEBELEMENT");

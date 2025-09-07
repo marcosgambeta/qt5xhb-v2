@@ -176,8 +176,7 @@ HB_FUNC_STATIC(QSSLSOCKET_RESUME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->resume();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,8 +299,7 @@ HB_FUNC_STATIC(QSSLSOCKET_DISCONNECTFROMHOST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->disconnectFromHost();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,8 +366,7 @@ HB_FUNC_STATIC(QSSLSOCKET_MODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->mode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -389,8 +386,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ISENCRYPTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEncrypted());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -410,8 +406,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PROTOCOL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->protocol());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -454,8 +449,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERVERIFYMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->peerVerifyMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -498,8 +492,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERVERIFYDEPTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->peerVerifyDepth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -542,8 +535,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERVERIFYNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->peerVerifyName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -586,8 +578,7 @@ HB_FUNC_STATIC(QSSLSOCKET_BYTESAVAILABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->bytesAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -607,8 +598,7 @@ HB_FUNC_STATIC(QSSLSOCKET_BYTESTOWRITE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->bytesToWrite());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -628,8 +618,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CANREADLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canReadLine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -649,8 +638,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CLOSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -672,8 +660,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ATEND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->atEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -693,8 +680,7 @@ HB_FUNC_STATIC(QSSLSOCKET_FLUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->flush());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -714,8 +700,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ABORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->abort();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -760,8 +745,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ENCRYPTEDBYTESAVAILABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->encryptedBytesAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -781,8 +765,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ENCRYPTEDBYTESTOWRITE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->encryptedBytesToWrite());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -802,8 +785,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SSLCONFIGURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSslConfiguration(obj->sslConfiguration());
       Qt5xHb::createReturnClass(ptr, "QSSLCONFIGURATION", true);
@@ -881,8 +863,7 @@ HB_FUNC_STATIC(QSSLSOCKET_LOCALCERTIFICATECHAIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->localCertificateChain();
       auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
@@ -962,8 +943,7 @@ HB_FUNC_STATIC(QSSLSOCKET_LOCALCERTIFICATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSslCertificate(obj->localCertificate());
       Qt5xHb::createReturnClass(ptr, "QSSLCERTIFICATE", true);
@@ -984,8 +964,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERCERTIFICATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSslCertificate(obj->peerCertificate());
       Qt5xHb::createReturnClass(ptr, "QSSLCERTIFICATE", true);
@@ -1006,8 +985,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERCERTIFICATECHAIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->peerCertificateChain();
       auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
@@ -1053,8 +1031,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SESSIONCIPHER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSslCipher(obj->sessionCipher());
       Qt5xHb::createReturnClass(ptr, "QSSLCIPHER", true);
@@ -1076,8 +1053,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SESSIONPROTOCOL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->sessionProtocol());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1136,8 +1112,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PRIVATEKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSslKey(obj->privateKey());
       Qt5xHb::createReturnClass(ptr, "QSSLKEY", true);
@@ -1158,8 +1133,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CIPHERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->ciphers();
       auto pDynSym = hb_dynsymFindName("QSSLCIPHER");
@@ -1449,8 +1423,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CACERTIFICATES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->caCertificates();
       auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
@@ -1764,8 +1737,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SSLERRORS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->sslErrors();
       auto pDynSym = hb_dynsymFindName("QSSLERROR");
@@ -1935,8 +1907,7 @@ HB_FUNC_STATIC(QSSLSOCKET_STARTCLIENTENCRYPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->startClientEncryption();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1958,8 +1929,7 @@ HB_FUNC_STATIC(QSSLSOCKET_STARTSERVERENCRYPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->startServerEncryption();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

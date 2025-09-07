@@ -101,8 +101,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_KEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,8 +121,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_MODIFIERMASK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->modifierMask());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

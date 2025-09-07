@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_PROPERTYNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->propertyName());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -170,8 +169,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_TARGETOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->targetObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");

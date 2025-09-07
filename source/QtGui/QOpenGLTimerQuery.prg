@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_CREATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->create());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,8 +134,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_DESTROY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->destroy();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,8 +160,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_ISCREATED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCreated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,8 +184,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_OBJECTID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLUINT(obj->objectId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,8 +208,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_BEGIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->begin();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +234,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_END)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->end();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,8 +260,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_WAITFORTIMESTAMP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLUINT64(obj->waitForTimestamp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,8 +284,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_RECORDTIMESTAMP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->recordTimestamp();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -318,8 +310,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_ISRESULTAVAILABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isResultAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -343,8 +334,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_WAITFORRESULT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLUINT64(obj->waitForResult());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

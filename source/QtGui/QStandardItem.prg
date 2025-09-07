@@ -245,8 +245,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_TEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,8 +288,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_ICON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
@@ -334,8 +332,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_TOOLTIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->toolTip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -378,8 +375,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_STATUSTIP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->statusTip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -422,8 +418,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_WHATSTHIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->whatsThis());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -466,8 +461,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -511,8 +505,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_FONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QFont(obj->font());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
@@ -556,8 +549,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_TEXTALIGNMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->textAlignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -600,8 +592,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_BACKGROUND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->background());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -645,8 +636,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_FOREGROUND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->foreground());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -690,8 +680,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_CHECKSTATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->checkState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -734,8 +723,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_ACCESSIBLETEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->accessibleText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -778,8 +766,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_ACCESSIBLEDESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->accessibleDescription());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -822,8 +809,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_FLAGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -866,8 +852,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_ISENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -910,8 +895,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_ISEDITABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEditable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -954,8 +938,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_ISSELECTABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSelectable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -998,8 +981,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_ISCHECKABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCheckable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1042,8 +1024,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_ISTRISTATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isTristate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1086,8 +1067,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_ISDRAGENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDragEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1130,8 +1110,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_ISDROPENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDropEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1174,8 +1153,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_PARENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->parent();
       Qt5xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
@@ -1196,8 +1174,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_ROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->row());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1217,8 +1194,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_COLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->column());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1238,8 +1214,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_INDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QModelIndex(obj->index());
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
@@ -1260,8 +1235,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_MODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTANDARDITEMMODEL");
@@ -1282,8 +1256,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_ROWCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->rowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1326,8 +1299,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_COLUMNCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->columnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1370,8 +1342,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_HASCHILDREN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasChildren());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1907,8 +1878,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_CLONE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->clone();
       Qt5xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
@@ -1929,8 +1899,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1997,8 +1966,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_CLEARDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearData();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

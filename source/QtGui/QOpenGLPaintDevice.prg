@@ -115,8 +115,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_DEVTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->devType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,8 +135,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_PAINTENGINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->paintEngine();
       Qt5xHb::createReturnClass(ptr, "QPAINTENGINE", false);
@@ -158,8 +156,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_CONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->context();
       Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXT");
@@ -180,8 +177,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -248,8 +244,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_DOTSPERMETERX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->dotsPerMeterX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +264,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_DOTSPERMETERY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->dotsPerMeterY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -359,8 +353,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_PAINTFLIPPED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->paintFlipped());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -380,8 +373,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_ENSUREACTIVETARGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->ensureActiveTarget();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

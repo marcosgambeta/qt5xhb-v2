@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->namespaceUri());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -133,8 +132,7 @@ HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_PREFIX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QStringRef(obj->prefix());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);

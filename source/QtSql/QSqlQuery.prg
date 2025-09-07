@@ -185,8 +185,7 @@ HB_FUNC_STATIC(QSQLQUERY_AT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->at());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,8 +269,7 @@ HB_FUNC_STATIC(QSQLQUERY_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,8 +291,7 @@ HB_FUNC_STATIC(QSQLQUERY_DRIVER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->driver();
       Qt5xHb::createReturnQObjectClass(ptr, "QSQLDRIVER");
@@ -365,8 +362,7 @@ HB_FUNC_STATIC(QSQLQUERY_EXECUTEDQUERY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->executedQuery());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -386,8 +382,7 @@ HB_FUNC_STATIC(QSQLQUERY_FINISH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->finish();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -409,8 +404,7 @@ HB_FUNC_STATIC(QSQLQUERY_FIRST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->first());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -430,8 +424,7 @@ HB_FUNC_STATIC(QSQLQUERY_ISACTIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -451,8 +444,7 @@ HB_FUNC_STATIC(QSQLQUERY_ISFORWARDONLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isForwardOnly());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -525,8 +517,7 @@ HB_FUNC_STATIC(QSQLQUERY_ISSELECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSelect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -546,8 +537,7 @@ HB_FUNC_STATIC(QSQLQUERY_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -567,8 +557,7 @@ HB_FUNC_STATIC(QSQLQUERY_LAST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->last());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -588,8 +577,7 @@ HB_FUNC_STATIC(QSQLQUERY_LASTERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSqlError(obj->lastError());
       Qt5xHb::createReturnClass(ptr, "QSQLERROR", true);
@@ -610,8 +598,7 @@ HB_FUNC_STATIC(QSQLQUERY_LASTINSERTID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVariant(obj->lastInsertId());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -632,8 +619,7 @@ HB_FUNC_STATIC(QSQLQUERY_LASTQUERY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->lastQuery());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -653,8 +639,7 @@ HB_FUNC_STATIC(QSQLQUERY_NEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->next());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -674,8 +659,7 @@ HB_FUNC_STATIC(QSQLQUERY_NEXTRESULT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->nextResult());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -695,8 +679,7 @@ HB_FUNC_STATIC(QSQLQUERY_NUMROWSAFFECTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->numRowsAffected());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -716,8 +699,7 @@ HB_FUNC_STATIC(QSQLQUERY_NUMERICALPRECISIONPOLICY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->numericalPrecisionPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -781,8 +763,7 @@ HB_FUNC_STATIC(QSQLQUERY_PREVIOUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->previous());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -802,8 +783,7 @@ HB_FUNC_STATIC(QSQLQUERY_RECORD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSqlRecord(obj->record());
       Qt5xHb::createReturnClass(ptr, "QSQLRECORD", true);
@@ -824,8 +804,7 @@ HB_FUNC_STATIC(QSQLQUERY_RESULT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->result();
       Qt5xHb::createReturnClass(ptr, "QSQLRESULT", false);
@@ -867,8 +846,7 @@ HB_FUNC_STATIC(QSQLQUERY_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

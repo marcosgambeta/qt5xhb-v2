@@ -108,8 +108,7 @@ HB_FUNC_STATIC(QWEBSECURITYORIGIN_DATABASEQUOTA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->databaseQuota());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,8 +128,7 @@ HB_FUNC_STATIC(QWEBSECURITYORIGIN_DATABASEUSAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->databaseUsage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,8 +148,7 @@ HB_FUNC_STATIC(QWEBSECURITYORIGIN_DATABASES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->databases();
       auto pDynSym = hb_dynsymFindName("QWEBDATABASE");
@@ -197,8 +194,7 @@ HB_FUNC_STATIC(QWEBSECURITYORIGIN_HOST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->host());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,8 +214,7 @@ HB_FUNC_STATIC(QWEBSECURITYORIGIN_PORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->port());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +234,7 @@ HB_FUNC_STATIC(QWEBSECURITYORIGIN_SCHEME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->scheme());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

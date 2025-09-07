@@ -159,8 +159,7 @@ HB_FUNC_STATIC(QGEOROUTE_ROUTEID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->routeId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,8 +206,7 @@ HB_FUNC_STATIC(QGEOROUTE_REQUEST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGeoRouteRequest(obj->request());
       Qt5xHb::createReturnClass(ptr, "QGEOROUTEREQUEST", true);
@@ -256,8 +254,7 @@ HB_FUNC_STATIC(QGEOROUTE_BOUNDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGeoRectangle(obj->bounds());
       Qt5xHb::createReturnClass(ptr, "QGEORECTANGLE", true);
@@ -305,8 +302,7 @@ HB_FUNC_STATIC(QGEOROUTE_FIRSTROUTESEGMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QGeoRouteSegment(obj->firstRouteSegment());
       Qt5xHb::createReturnClass(ptr, "QGEOROUTESEGMENT", true);
@@ -354,8 +350,7 @@ HB_FUNC_STATIC(QGEOROUTE_TRAVELTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->travelTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -402,8 +397,7 @@ HB_FUNC_STATIC(QGEOROUTE_DISTANCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->distance());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -450,8 +444,7 @@ HB_FUNC_STATIC(QGEOROUTE_TRAVELMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->travelMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -506,8 +499,7 @@ HB_FUNC_STATIC(QGEOROUTE_PATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->path();
       auto pDynSym = hb_dynsymFindName("QGEOCOORDINATE");

@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_NOTIFYINTERVAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->notifyInterval());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,8 +141,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_AVAILABILITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->availability());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +161,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_AVAILABLEMETADATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->availableMetaData());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,8 +202,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ISAVAILABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,8 +222,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ISMETADATAAVAILABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isMetaDataAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +264,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_SERVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->service();
       Qt5xHb::createReturnQObjectClass(ptr, "QMEDIASERVICE");

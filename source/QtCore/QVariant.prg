@@ -649,8 +649,7 @@ HB_FUNC_STATIC(QVARIANT_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -670,8 +669,7 @@ HB_FUNC_STATIC(QVARIANT_USERTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->userType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -691,8 +689,7 @@ HB_FUNC_STATIC(QVARIANT_TYPENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retc(static_cast<const char *>(obj->typeName()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -754,8 +751,7 @@ HB_FUNC_STATIC(QVARIANT_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -775,8 +771,7 @@ HB_FUNC_STATIC(QVARIANT_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -796,8 +791,7 @@ HB_FUNC_STATIC(QVARIANT_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -819,8 +813,7 @@ HB_FUNC_STATIC(QVARIANT_DETACH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->detach();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -842,8 +835,7 @@ HB_FUNC_STATIC(QVARIANT_ISDETACHED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDetached());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -955,8 +947,7 @@ HB_FUNC_STATIC(QVARIANT_TOBOOL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->toBool());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1045,8 +1036,7 @@ HB_FUNC_STATIC(QVARIANT_TOBYTEARRAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->toByteArray());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -1067,8 +1057,7 @@ HB_FUNC_STATIC(QVARIANT_TOBITARRAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBitArray(obj->toBitArray());
       Qt5xHb::createReturnClass(ptr, "QBITARRAY", true);
@@ -1089,8 +1078,7 @@ HB_FUNC_STATIC(QVARIANT_TOSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->toString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1110,8 +1098,7 @@ HB_FUNC_STATIC(QVARIANT_TOSTRINGLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->toStringList());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1131,8 +1118,7 @@ HB_FUNC_STATIC(QVARIANT_TOCHAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QChar(obj->toChar());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -1153,8 +1139,7 @@ HB_FUNC_STATIC(QVARIANT_TODATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDate(obj->toDate());
       Qt5xHb::createReturnClass(ptr, "QDATE", true);
@@ -1175,8 +1160,7 @@ HB_FUNC_STATIC(QVARIANT_TOTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTime(obj->toTime());
       Qt5xHb::createReturnClass(ptr, "QTIME", true);
@@ -1197,8 +1181,7 @@ HB_FUNC_STATIC(QVARIANT_TODATETIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDateTime(obj->toDateTime());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -1219,8 +1202,7 @@ HB_FUNC_STATIC(QVARIANT_TOLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       Qt5xHb::convert_qvariantlist_to_array(obj->toList());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1241,8 +1223,7 @@ HB_FUNC_STATIC(QVARIANT_TOPOINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->toPoint());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -1265,8 +1246,7 @@ HB_FUNC_STATIC(QVARIANT_TOPOINTF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->toPointF());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -1289,8 +1269,7 @@ HB_FUNC_STATIC(QVARIANT_TORECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->toRect());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -1313,8 +1292,7 @@ HB_FUNC_STATIC(QVARIANT_TORECTF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->toRectF());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -1337,8 +1315,7 @@ HB_FUNC_STATIC(QVARIANT_TOSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->toSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -1361,8 +1338,7 @@ HB_FUNC_STATIC(QVARIANT_TOSIZEF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSizeF(obj->toSizeF());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
@@ -1385,8 +1361,7 @@ HB_FUNC_STATIC(QVARIANT_TOLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QLine(obj->toLine());
       Qt5xHb::createReturnClass(ptr, "QLINE", true);
@@ -1409,8 +1384,7 @@ HB_FUNC_STATIC(QVARIANT_TOLINEF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QLineF(obj->toLineF());
       Qt5xHb::createReturnClass(ptr, "QLINEF", true);
@@ -1432,8 +1406,7 @@ HB_FUNC_STATIC(QVARIANT_TOLOCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QLocale(obj->toLocale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
@@ -1455,8 +1428,7 @@ HB_FUNC_STATIC(QVARIANT_TOREGEXP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegExp(obj->toRegExp());
       Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
@@ -1479,8 +1451,7 @@ HB_FUNC_STATIC(QVARIANT_TOREGULAREXPRESSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRegularExpression(obj->toRegularExpression());
       Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSION", true);
@@ -1502,8 +1473,7 @@ HB_FUNC_STATIC(QVARIANT_TOURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->toUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -1524,8 +1494,7 @@ HB_FUNC_STATIC(QVARIANT_TOEASINGCURVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QEasingCurve(obj->toEasingCurve());
       Qt5xHb::createReturnClass(ptr, "QEASINGCURVE", true);
@@ -1546,8 +1515,7 @@ HB_FUNC_STATIC(QVARIANT_TOUUID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUuid(obj->toUuid());
       Qt5xHb::createReturnClass(ptr, "QUUID", true);
@@ -1568,8 +1536,7 @@ HB_FUNC_STATIC(QVARIANT_TOMODELINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QModelIndex(obj->toModelIndex());
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
@@ -1590,8 +1557,7 @@ HB_FUNC_STATIC(QVARIANT_TOJSONVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QJsonValue(obj->toJsonValue());
       Qt5xHb::createReturnClass(ptr, "QJSONVALUE", true);
@@ -1612,8 +1578,7 @@ HB_FUNC_STATIC(QVARIANT_TOJSONOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QJsonObject(obj->toJsonObject());
       Qt5xHb::createReturnClass(ptr, "QJSONOBJECT", true);
@@ -1634,8 +1599,7 @@ HB_FUNC_STATIC(QVARIANT_TOJSONARRAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QJsonArray(obj->toJsonArray());
       Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
@@ -1656,8 +1620,7 @@ HB_FUNC_STATIC(QVARIANT_TOJSONDOCUMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QJsonDocument(obj->toJsonDocument());
       Qt5xHb::createReturnClass(ptr, "QJSONDOCUMENT", true);
@@ -1728,8 +1691,7 @@ HB_FUNC_STATIC(QVARIANT_DATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retptr(static_cast<void *>(obj->data()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -128,8 +128,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_BYTECOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->byteCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,8 +154,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_DATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retptr(static_cast<void *>(obj->data()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,8 +174,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_DURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->duration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,8 +194,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_FORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QAudioFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QAUDIOFORMAT", true);
@@ -219,8 +215,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_FRAMECOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->frameCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,8 +235,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,8 +255,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_SAMPLECOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sampleCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -282,8 +275,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_STARTTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->startTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

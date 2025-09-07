@@ -129,8 +129,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISEMPTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,8 +149,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISNULLLITERAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNullLiteral());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,8 +169,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isUndefinedLiteral());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,8 +212,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_STRINGLITERAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->stringLiteral());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

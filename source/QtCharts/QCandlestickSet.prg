@@ -144,8 +144,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_TIMESTAMP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->timestamp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,8 +191,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_OPEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->open());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,8 +238,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_HIGH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->high());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,8 +285,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_LOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->low());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,8 +332,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_CLOSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->close());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -384,8 +379,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_BRUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBrush(obj->brush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -433,8 +427,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_PEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPen(obj->pen());
       Qt5xHb::createReturnClass(ptr, "QPEN", true);

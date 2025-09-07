@@ -197,8 +197,7 @@ HB_FUNC_STATIC(QCOLORSPACE_PRIMARIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->primaries());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,8 +219,7 @@ HB_FUNC_STATIC(QCOLORSPACE_TRANSFERFUNCTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->transferFunction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,8 +241,7 @@ HB_FUNC_STATIC(QCOLORSPACE_GAMMA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->gamma());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,8 +350,7 @@ HB_FUNC_STATIC(QCOLORSPACE_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -396,8 +392,7 @@ HB_FUNC_STATIC(QCOLORSPACE_ICCPROFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->iccProfile());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);

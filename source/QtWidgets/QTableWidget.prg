@@ -223,8 +223,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_COLUMNCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->columnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,8 +243,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_CURRENTCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,8 +263,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_CURRENTITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->currentItem();
       Qt5xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
@@ -287,8 +284,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_CURRENTROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -472,8 +468,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_ROWCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->rowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -963,8 +958,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -986,8 +980,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_CLEARCONTENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearContents();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

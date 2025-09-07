@@ -125,8 +125,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,8 +220,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_HOSTMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->hostMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,8 +242,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_POWERON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->powerOn();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +266,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,8 +288,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ADDRESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBluetoothAddress(obj->address());
       Qt5xHb::createReturnClass(ptr, "QBLUETOOTHADDRESS", true);

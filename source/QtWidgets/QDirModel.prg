@@ -364,8 +364,7 @@ HB_FUNC_STATIC(QDIRMODEL_MIMETYPES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->mimeTypes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -385,8 +384,7 @@ HB_FUNC_STATIC(QDIRMODEL_SUPPORTEDDROPACTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedDropActions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -429,8 +427,7 @@ HB_FUNC_STATIC(QDIRMODEL_ICONPROVIDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->iconProvider();
       Qt5xHb::createReturnClass(ptr, "QFILEICONPROVIDER", false);
@@ -474,8 +471,7 @@ HB_FUNC_STATIC(QDIRMODEL_NAMEFILTERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->nameFilters());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -518,8 +514,7 @@ HB_FUNC_STATIC(QDIRMODEL_FILTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->filter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -562,8 +557,7 @@ HB_FUNC_STATIC(QDIRMODEL_SORTING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->sorting());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -606,8 +600,7 @@ HB_FUNC_STATIC(QDIRMODEL_RESOLVESYMLINKS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->resolveSymlinks());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -650,8 +643,7 @@ HB_FUNC_STATIC(QDIRMODEL_ISREADONLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReadOnly());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -694,8 +686,7 @@ HB_FUNC_STATIC(QDIRMODEL_LAZYCHILDCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->lazyChildCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

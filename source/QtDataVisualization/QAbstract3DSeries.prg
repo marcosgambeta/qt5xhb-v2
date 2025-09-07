@@ -138,8 +138,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,8 +160,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ITEMLABELFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->itemLabelFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,8 +207,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ISVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,8 +254,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MESH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->mesh());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,8 +301,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ISMESHSMOOTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isMeshSmooth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,8 +348,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MESHROTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QQuaternion(obj->meshRotation());
       Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
@@ -402,8 +396,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_USERDEFINEDMESH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->userDefinedMesh());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -450,8 +443,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_COLORSTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->colorStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -498,8 +490,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_BASECOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->baseColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -547,8 +538,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_BASEGRADIENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QLinearGradient(obj->baseGradient());
       Qt5xHb::createReturnClass(ptr, "QLINEARGRADIENT", true);
@@ -596,8 +586,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->singleHighlightColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -645,8 +634,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTGRADIENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QLinearGradient(obj->singleHighlightGradient());
       Qt5xHb::createReturnClass(ptr, "QLINEARGRADIENT", true);
@@ -694,8 +682,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->multiHighlightColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -743,8 +730,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTGRADIENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QLinearGradient(obj->multiHighlightGradient());
       Qt5xHb::createReturnClass(ptr, "QLINEARGRADIENT", true);
@@ -792,8 +778,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -840,8 +825,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ITEMLABEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->itemLabel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -863,8 +847,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ISITEMLABELVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isItemLabelVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

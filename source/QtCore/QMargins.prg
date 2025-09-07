@@ -109,8 +109,7 @@ HB_FUNC_STATIC(QMARGINS_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,8 +129,7 @@ HB_FUNC_STATIC(QMARGINS_LEFT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->left());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,8 +149,7 @@ HB_FUNC_STATIC(QMARGINS_TOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->top());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,8 +169,7 @@ HB_FUNC_STATIC(QMARGINS_RIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->right());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,8 +189,7 @@ HB_FUNC_STATIC(QMARGINS_BOTTOM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->bottom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

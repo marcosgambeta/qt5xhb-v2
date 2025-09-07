@@ -123,8 +123,7 @@ HB_FUNC_STATIC(QATOMICINT_DEREF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->deref());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -312,8 +311,7 @@ HB_FUNC_STATIC(QATOMICINT_REF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->ref());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

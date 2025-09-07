@@ -149,8 +149,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_COMPLETECREATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->completeCreate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +193,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATIONCONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->creationContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
@@ -216,8 +214,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ERRORS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->errors();
       auto pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
@@ -263,8 +260,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,8 +280,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISLOADING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLoading());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,8 +300,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,8 +320,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISREADY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReady());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -370,8 +363,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_PROGRESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->progress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -414,8 +406,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_STATUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -435,8 +426,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_URL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);

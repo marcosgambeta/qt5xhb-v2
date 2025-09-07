@@ -164,8 +164,7 @@ HB_FUNC_STATIC(QEASINGCURVE_AMPLITUDE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->amplitude());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,8 +184,7 @@ HB_FUNC_STATIC(QEASINGCURVE_OVERSHOOT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->overshoot());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,8 +204,7 @@ HB_FUNC_STATIC(QEASINGCURVE_PERIOD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->period());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,8 +339,7 @@ HB_FUNC_STATIC(QEASINGCURVE_TOCUBICSPLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->toCubicSpline();
       auto pDynSym = hb_dynsymFindName("QPOINTF");
@@ -389,8 +385,7 @@ HB_FUNC_STATIC(QEASINGCURVE_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -192,8 +192,7 @@ HB_FUNC_STATIC(QDIR_ABSOLUTEPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->absolutePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,8 +212,7 @@ HB_FUNC_STATIC(QDIR_CANONICALPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->canonicalPath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,8 +253,7 @@ HB_FUNC_STATIC(QDIR_CDUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->cdUp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,8 +273,7 @@ HB_FUNC_STATIC(QDIR_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RUINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,8 +293,7 @@ HB_FUNC_STATIC(QDIR_DIRNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->dirName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -487,8 +482,7 @@ HB_FUNC_STATIC(QDIR_FILTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->filter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -508,8 +502,7 @@ HB_FUNC_STATIC(QDIR_ISABSOLUTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAbsolute());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -529,8 +522,7 @@ HB_FUNC_STATIC(QDIR_ISREADABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReadable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -550,8 +542,7 @@ HB_FUNC_STATIC(QDIR_ISRELATIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isRelative());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -571,8 +562,7 @@ HB_FUNC_STATIC(QDIR_ISROOT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isRoot());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -592,8 +582,7 @@ HB_FUNC_STATIC(QDIR_MAKEABSOLUTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->makeAbsolute());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -655,8 +644,7 @@ HB_FUNC_STATIC(QDIR_NAMEFILTERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->nameFilters());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -676,8 +664,7 @@ HB_FUNC_STATIC(QDIR_PATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->path());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -697,8 +684,7 @@ HB_FUNC_STATIC(QDIR_REFRESH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->refresh();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -762,8 +748,7 @@ HB_FUNC_STATIC(QDIR_REMOVERECURSIVELY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->removeRecursively());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -938,8 +923,7 @@ HB_FUNC_STATIC(QDIR_SORTING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->sorting());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

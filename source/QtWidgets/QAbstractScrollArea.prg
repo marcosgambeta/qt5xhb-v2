@@ -137,8 +137,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->horizontalScrollBarPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,8 +180,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->maximumViewportSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -247,8 +245,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_CORNERWIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->cornerWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -292,8 +289,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->horizontalScrollBar();
       Qt5xHb::createReturnQWidgetClass(ptr, "QSCROLLBAR");
@@ -360,8 +356,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_VERTICALSCROLLBAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->verticalScrollBar();
       Qt5xHb::createReturnQWidgetClass(ptr, "QSCROLLBAR");
@@ -405,8 +400,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->verticalScrollBarPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -449,8 +443,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_VIEWPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->viewport();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -471,8 +464,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_MINIMUMSIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -493,8 +485,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -538,8 +529,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SIZEADJUSTPOLICY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->sizeAdjustPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

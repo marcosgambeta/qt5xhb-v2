@@ -84,8 +84,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_CURSORRECTANGLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->cursorRectangle());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -106,8 +105,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_INPUTDIRECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->inputDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,8 +125,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_INPUTITEMTRANSFORM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTransform(obj->inputItemTransform());
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
@@ -149,8 +146,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ISANIMATING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAnimating());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +166,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ISVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,8 +186,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_KEYBOARDRECTANGLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->keyboardRectangle());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -213,8 +207,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_LOCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QLocale(obj->locale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
@@ -281,8 +274,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_COMMIT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->commit();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,8 +296,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_HIDE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->hide();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -350,8 +341,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_RESET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,8 +363,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_SHOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->show();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

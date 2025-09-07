@@ -124,8 +124,7 @@ HB_FUNC_STATIC(QLINE_P1)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->p1());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -146,8 +145,7 @@ HB_FUNC_STATIC(QLINE_P2)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->p2());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -168,8 +166,7 @@ HB_FUNC_STATIC(QLINE_X1)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->x1());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,8 +186,7 @@ HB_FUNC_STATIC(QLINE_X2)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->x2());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,8 +206,7 @@ HB_FUNC_STATIC(QLINE_Y1)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->y1());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,8 +226,7 @@ HB_FUNC_STATIC(QLINE_Y2)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->y2());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -252,8 +246,7 @@ HB_FUNC_STATIC(QLINE_DX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->dx());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,8 +266,7 @@ HB_FUNC_STATIC(QLINE_DY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->dy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,8 +286,7 @@ HB_FUNC_STATIC(QLINE_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

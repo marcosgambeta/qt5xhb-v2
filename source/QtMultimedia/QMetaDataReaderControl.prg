@@ -84,8 +84,7 @@ HB_FUNC_STATIC(QMETADATAREADERCONTROL_ISMETADATAAVAILABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isMetaDataAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,8 +126,7 @@ HB_FUNC_STATIC(QMETADATAREADERCONTROL_AVAILABLEMETADATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->availableMetaData());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

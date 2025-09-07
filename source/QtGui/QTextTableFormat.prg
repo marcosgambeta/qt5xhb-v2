@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,8 +118,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_COLUMNS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->columns());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +192,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->columnWidthConstraints();
       auto pDynSym = hb_dynsymFindName("QTEXTLENGTH");
@@ -241,8 +238,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_CLEARCOLUMNWIDTHCONSTRAINTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearColumnWidthConstraints();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,8 +260,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_CELLSPACING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->cellSpacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,8 +303,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_CELLPADDING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->cellPadding());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -375,8 +369,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_ALIGNMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -419,8 +412,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_HEADERROWCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->headerRowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

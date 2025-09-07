@@ -238,8 +238,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_EXPIRY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDateTime(obj->expiry());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -287,8 +286,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_INCLUDESSUBDOMAINS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->includesSubDomains());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,8 +308,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_ISEXPIRED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isExpired());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

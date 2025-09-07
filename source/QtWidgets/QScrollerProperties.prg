@@ -173,8 +173,7 @@ HB_FUNC_STATIC(QSCROLLERPROPERTIES_UNSETDEFAULTSCROLLERPROPERTIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->unsetDefaultScrollerProperties();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QVIDEOWIDGET_MEDIAOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->mediaObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QMEDIAOBJECT");
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QVIDEOWIDGET_ISFULLSCREEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFullScreen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,8 +151,7 @@ HB_FUNC_STATIC(QVIDEOWIDGET_ASPECTRATIOMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->aspectRatioMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +171,7 @@ HB_FUNC_STATIC(QVIDEOWIDGET_BRIGHTNESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->brightness());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,8 +191,7 @@ HB_FUNC_STATIC(QVIDEOWIDGET_CONTRAST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->contrast());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +211,7 @@ HB_FUNC_STATIC(QVIDEOWIDGET_HUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->hue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -237,8 +231,7 @@ HB_FUNC_STATIC(QVIDEOWIDGET_SATURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->saturation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,8 +251,7 @@ HB_FUNC_STATIC(QVIDEOWIDGET_SIZEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);

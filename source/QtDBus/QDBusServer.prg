@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QDBUSSERVER_ISCONNECTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isConnected());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,8 +124,7 @@ HB_FUNC_STATIC(QDBUSSERVER_LASTERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDBusError(obj->lastError());
       Qt5xHb::createReturnClass(ptr, "QDBUSERROR", true);
@@ -147,8 +145,7 @@ HB_FUNC_STATIC(QDBUSSERVER_ADDRESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->address());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

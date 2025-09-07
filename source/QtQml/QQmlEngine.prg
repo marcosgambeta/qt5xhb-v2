@@ -218,8 +218,7 @@ HB_FUNC_STATIC(QQMLENGINE_BASEURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->baseUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -240,8 +239,7 @@ HB_FUNC_STATIC(QQMLENGINE_CLEARCOMPONENTCACHE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearComponentCache();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,8 +283,7 @@ HB_FUNC_STATIC(QQMLENGINE_IMPORTPATHLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->importPathList());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -309,8 +306,7 @@ HB_FUNC_STATIC(QQMLENGINE_INCUBATIONCONTROLLER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->incubationController();
       Qt5xHb::createReturnClass(ptr, "QQMLINCUBATIONCONTROLLER", false);
@@ -331,8 +327,7 @@ HB_FUNC_STATIC(QQMLENGINE_NETWORKACCESSMANAGER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->networkAccessManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
@@ -353,8 +348,7 @@ HB_FUNC_STATIC(QQMLENGINE_NETWORKACCESSMANAGERFACTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->networkAccessManagerFactory();
       Qt5xHb::createReturnClass(ptr, "QQMLNETWORKACCESSMANAGERFACTORY", false);
@@ -375,8 +369,7 @@ HB_FUNC_STATIC(QQMLENGINE_OFFLINESTORAGEPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->offlineStoragePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -396,8 +389,7 @@ HB_FUNC_STATIC(QQMLENGINE_OUTPUTWARNINGSTOSTANDARDERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->outputWarningsToStandardError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -417,8 +409,7 @@ HB_FUNC_STATIC(QQMLENGINE_PLUGINPATHLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->pluginPathList());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -461,8 +452,7 @@ HB_FUNC_STATIC(QQMLENGINE_ROOTCONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->rootContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
@@ -644,8 +634,7 @@ HB_FUNC_STATIC(QQMLENGINE_TRIMCOMPONENTCACHE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->trimComponentCache();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

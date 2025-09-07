@@ -218,8 +218,7 @@ HB_FUNC_STATIC(QPAGESIZE_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -553,8 +552,7 @@ HB_FUNC_STATIC(QPAGESIZE_RECTPOINTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->rectPoints());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);

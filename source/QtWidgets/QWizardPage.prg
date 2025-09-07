@@ -152,8 +152,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_CLEANUPPAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->cleanupPage();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,8 +174,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_INITIALIZEPAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->initializePage();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,8 +196,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_ISCOMMITPAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCommitPage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,8 +239,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_ISCOMPLETE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isComplete());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,8 +259,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_ISFINALPAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFinalPage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -307,8 +302,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_NEXTID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->nextId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,8 +367,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SUBTITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->subTitle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -417,8 +410,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_TITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -461,8 +453,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_VALIDATEPAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->validatePage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

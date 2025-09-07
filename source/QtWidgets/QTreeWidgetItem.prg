@@ -343,8 +343,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_CHILDCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->childCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -364,8 +363,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_CHILDINDICATORPOLICY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->childIndicatorPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -385,8 +383,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_CLONE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->clone();
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
@@ -407,8 +404,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_COLUMNCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->columnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -450,8 +446,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_FLAGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -612,8 +607,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_ISDISABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDisabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -633,8 +627,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_ISEXPANDED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isExpanded());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -654,8 +647,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_ISFIRSTCOLUMNSPANNED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFirstColumnSpanned());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -675,8 +667,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_ISHIDDEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isHidden());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -696,8 +687,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_ISSELECTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSelected());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -717,8 +707,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_PARENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->parent();
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
@@ -1310,8 +1299,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_TAKECHILDREN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->takeChildren();
       auto pDynSym = hb_dynsymFindName("QTREEWIDGETITEM");
@@ -1417,8 +1405,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_TREEWIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->treeWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QTREEWIDGET");
@@ -1439,8 +1426,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

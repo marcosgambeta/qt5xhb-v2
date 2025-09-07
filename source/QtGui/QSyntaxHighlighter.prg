@@ -106,8 +106,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DOCUMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->document();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
@@ -128,8 +127,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->rehighlight();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

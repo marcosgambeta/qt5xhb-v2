@@ -119,8 +119,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,8 +139,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,8 +159,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_STRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->string());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,8 +179,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TOSTART)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->toStart();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,8 +201,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TOEND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->toEnd();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +223,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_POSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->position());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,8 +266,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TONEXTBOUNDARY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->toNextBoundary());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,8 +286,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_TOPREVIOUSBOUNDARY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->toPreviousBoundary());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -314,8 +306,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_ISATBOUNDARY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAtBoundary());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,8 +326,7 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_BOUNDARYREASONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->boundaryReasons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

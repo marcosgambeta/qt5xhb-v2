@@ -138,8 +138,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,8 +158,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_POSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->position());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,8 +178,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_LENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->length());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,8 +219,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_LAYOUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->layout();
       Qt5xHb::createReturnClass(ptr, "QTEXTLAYOUT", false);
@@ -244,8 +240,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_CLEARLAYOUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearLayout();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,8 +262,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_BLOCKFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTextBlockFormat(obj->blockFormat());
       Qt5xHb::createReturnClass(ptr, "QTEXTBLOCKFORMAT", true);
@@ -289,8 +283,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_BLOCKFORMATINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->blockFormatIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,8 +303,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_CHARFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTextCharFormat(obj->charFormat());
       Qt5xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
@@ -332,8 +324,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_CHARFORMATINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->charFormatIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,8 +344,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_TEXTDIRECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->textDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -374,8 +364,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_TEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -395,8 +384,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_DOCUMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->document();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
@@ -417,8 +405,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_TEXTLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->textList();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
@@ -439,8 +426,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_USERDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->userData();
       Qt5xHb::createReturnClass(ptr, "QTEXTBLOCKUSERDATA", false);
@@ -484,8 +470,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_USERSTATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->userState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -528,8 +513,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_REVISION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->revision());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -572,8 +556,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_ISVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -616,8 +599,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_BLOCKNUMBER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->blockNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -637,8 +619,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_FIRSTLINENUMBER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->firstLineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -681,8 +662,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_LINECOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->lineCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -702,8 +682,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_NEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTextBlock(obj->next());
       Qt5xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
@@ -724,8 +703,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_PREVIOUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QTextBlock(obj->previous());
       Qt5xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
@@ -746,8 +724,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_FRAGMENTINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->fragmentIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -134,8 +134,7 @@ HB_FUNC_STATIC(QCALENDAR_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,8 +248,7 @@ HB_FUNC_STATIC(QCALENDAR_ISGREGORIAN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isGregorian());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,8 +270,7 @@ HB_FUNC_STATIC(QCALENDAR_ISLUNAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLunar());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -295,8 +292,7 @@ HB_FUNC_STATIC(QCALENDAR_ISLUNISOLAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLuniSolar());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -318,8 +314,7 @@ HB_FUNC_STATIC(QCALENDAR_ISSOLAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSolar());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -341,8 +336,7 @@ HB_FUNC_STATIC(QCALENDAR_ISPROLEPTIC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isProleptic());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -364,8 +358,7 @@ HB_FUNC_STATIC(QCALENDAR_HASYEARZERO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasYearZero());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -387,8 +380,7 @@ HB_FUNC_STATIC(QCALENDAR_MAXIMUMDAYSINMONTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->maximumDaysInMonth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -410,8 +402,7 @@ HB_FUNC_STATIC(QCALENDAR_MINIMUMDAYSINMONTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->minimumDaysInMonth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -433,8 +424,7 @@ HB_FUNC_STATIC(QCALENDAR_MAXIMUMMONTHSINYEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->maximumMonthsInYear());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -456,8 +446,7 @@ HB_FUNC_STATIC(QCALENDAR_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

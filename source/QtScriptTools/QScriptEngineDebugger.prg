@@ -156,8 +156,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoShowStandardWindow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,8 +220,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_DETACH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->detach();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,8 +265,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_STANDARDWINDOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->standardWindow();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMAINWINDOW");
@@ -289,8 +286,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_STATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

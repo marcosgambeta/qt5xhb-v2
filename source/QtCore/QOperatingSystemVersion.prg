@@ -149,8 +149,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_MAJORVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->majorVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,8 +171,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_MINORVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->minorVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,8 +193,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_MICROVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->microVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,8 +215,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_SEGMENTCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->segmentCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,8 +240,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_TYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,8 +262,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_NAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

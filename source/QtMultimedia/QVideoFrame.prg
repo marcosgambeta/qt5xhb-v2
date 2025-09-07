@@ -198,8 +198,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ENDTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->endTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,8 +218,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_FIELDTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->fieldType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,8 +238,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_HANDLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVariant(obj->handle());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -262,8 +259,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_HANDLETYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->handleType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,8 +279,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_HEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,8 +299,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ISMAPPED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isMapped());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -325,8 +319,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ISREADABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReadable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -346,8 +339,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ISVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -367,8 +359,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ISWRITABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isWritable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -409,8 +400,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_MAPMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->mapMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -430,8 +420,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_MAPPEDBYTES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->mappedBytes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -451,8 +440,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_PIXELFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->pixelFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -541,8 +529,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -563,8 +550,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_STARTTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->startTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -584,8 +570,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_UNMAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->unmap();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -607,8 +592,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_WIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -628,8 +612,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_PLANECOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->planeCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

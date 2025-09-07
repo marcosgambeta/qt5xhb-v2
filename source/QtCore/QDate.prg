@@ -192,8 +192,7 @@ HB_FUNC_STATIC(QDATE_DAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->day());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,8 +212,7 @@ HB_FUNC_STATIC(QDATE_DAYOFWEEK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->dayOfWeek());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,8 +232,7 @@ HB_FUNC_STATIC(QDATE_DAYOFYEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->dayOfYear());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,8 +252,7 @@ HB_FUNC_STATIC(QDATE_DAYSINMONTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->daysInMonth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,8 +272,7 @@ HB_FUNC_STATIC(QDATE_DAYSINYEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->daysInYear());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,8 +342,7 @@ HB_FUNC_STATIC(QDATE_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,8 +362,7 @@ HB_FUNC_STATIC(QDATE_MONTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->month());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -410,8 +403,7 @@ HB_FUNC_STATIC(QDATE_TOJULIANDAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->toJulianDay());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -483,8 +475,7 @@ HB_FUNC_STATIC(QDATE_YEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->year());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

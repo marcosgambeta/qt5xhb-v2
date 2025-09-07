@@ -163,8 +163,7 @@ HB_FUNC_STATIC(QOPENGLPIXELTRANSFEROPTIONS_ALIGNMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,8 +206,7 @@ HB_FUNC_STATIC(QOPENGLPIXELTRANSFEROPTIONS_SKIPIMAGES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->skipImages());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,8 +249,7 @@ HB_FUNC_STATIC(QOPENGLPIXELTRANSFEROPTIONS_SKIPROWS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->skipRows());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -295,8 +292,7 @@ HB_FUNC_STATIC(QOPENGLPIXELTRANSFEROPTIONS_SKIPPIXELS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->skipPixels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,8 +335,7 @@ HB_FUNC_STATIC(QOPENGLPIXELTRANSFEROPTIONS_IMAGEHEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->imageHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,8 +378,7 @@ HB_FUNC_STATIC(QOPENGLPIXELTRANSFEROPTIONS_ROWLENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->rowLength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -427,8 +421,7 @@ HB_FUNC_STATIC(QOPENGLPIXELTRANSFEROPTIONS_ISLEASTSIGNIFICANTBITFIRST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLeastSignificantBitFirst());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -471,8 +464,7 @@ HB_FUNC_STATIC(QOPENGLPIXELTRANSFEROPTIONS_ISSWAPBYTESENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSwapBytesEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

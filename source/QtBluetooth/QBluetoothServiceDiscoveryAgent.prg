@@ -126,8 +126,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_ISACTIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,8 +148,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_ERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,8 +170,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_ERRORSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,8 +192,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_DISCOVEREDSERVICES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->discoveredServices();
       auto pDynSym = hb_dynsymFindName("QBLUETOOTHSERVICEINFO");
@@ -286,8 +282,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_UUIDFILTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->uuidFilter();
       auto pDynSym = hb_dynsymFindName("QBLUETOOTHUUID");
@@ -358,8 +353,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_REMOTEADDRESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QBluetoothAddress(obj->remoteAddress());
       Qt5xHb::createReturnClass(ptr, "QBLUETOOTHADDRESS", true);
@@ -409,8 +403,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_STOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -434,8 +427,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

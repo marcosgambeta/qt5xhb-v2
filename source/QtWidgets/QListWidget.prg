@@ -206,8 +206,7 @@ HB_FUNC_STATIC(QLISTWIDGET_COUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,8 +226,7 @@ HB_FUNC_STATIC(QLISTWIDGET_CURRENTITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->currentItem();
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
@@ -249,8 +247,7 @@ HB_FUNC_STATIC(QLISTWIDGET_CURRENTROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,8 +345,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ISSORTINGENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSortingEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -711,8 +707,7 @@ HB_FUNC_STATIC(QLISTWIDGET_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

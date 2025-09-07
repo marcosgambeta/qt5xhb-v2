@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL2_SUPPORTEDVIEWFINDERSETTINGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->supportedViewfinderSettings();
       auto pDynSym = hb_dynsymFindName("QCAMERAVIEWFINDERSETTINGS");
@@ -136,8 +135,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL2_VIEWFINDERSETTINGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QCameraViewfinderSettings(obj->viewfinderSettings());
       Qt5xHb::createReturnClass(ptr, "QCAMERAVIEWFINDERSETTINGS", true);

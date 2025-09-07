@@ -233,8 +233,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDSEPARATOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->addSeparator();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -277,8 +276,7 @@ HB_FUNC_STATIC(QTOOLBAR_ALLOWEDAREAS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->allowedAreas());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -298,8 +296,7 @@ HB_FUNC_STATIC(QTOOLBAR_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,8 +318,7 @@ HB_FUNC_STATIC(QTOOLBAR_ICONSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->iconSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -408,8 +404,7 @@ HB_FUNC_STATIC(QTOOLBAR_ISFLOATABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFloatable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -429,8 +424,7 @@ HB_FUNC_STATIC(QTOOLBAR_ISFLOATING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFloating());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -450,8 +444,7 @@ HB_FUNC_STATIC(QTOOLBAR_ISMOVABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isMovable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -471,8 +464,7 @@ HB_FUNC_STATIC(QTOOLBAR_ORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -584,8 +576,7 @@ HB_FUNC_STATIC(QTOOLBAR_TOGGLEVIEWACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->toggleViewAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -606,8 +597,7 @@ HB_FUNC_STATIC(QTOOLBAR_TOOLBUTTONSTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->toolButtonStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_CURRENTINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QModelIndex(obj->currentIndex());
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
@@ -249,8 +248,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_HASSELECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasSelection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,8 +268,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDINDEXES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->selectedIndexes();
       auto pDynSym = hb_dynsymFindName("QMODELINDEX");
@@ -411,8 +408,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QItemSelection(obj->selection());
       Qt5xHb::createReturnClass(ptr, "QITEMSELECTION", true);
@@ -433,8 +429,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_MODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
@@ -510,8 +505,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -533,8 +527,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_RESET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -556,8 +549,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_CLEARSELECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearSelection();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -579,8 +571,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_CLEARCURRENTINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearCurrentIndex();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

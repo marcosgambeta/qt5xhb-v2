@@ -145,8 +145,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_TITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,8 +165,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ICON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
@@ -188,8 +186,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ZOOMFACTOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->zoomFactor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,8 +229,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_URL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -277,8 +273,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ISMODIFIED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isModified());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -298,8 +293,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RESIZESTOCONTENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->resizesToContents());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,8 +336,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isTiledBackingStoreFrozen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -386,8 +379,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RENDERHINTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->renderHints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -452,8 +444,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_HISTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->history();
       Qt5xHb::createReturnClass(ptr, "QWEBHISTORY", false);
@@ -510,8 +501,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->page();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBPAGE");
@@ -624,8 +614,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETTINGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->settings();
       Qt5xHb::createReturnClass(ptr, "QWEBSETTINGS", false);
@@ -669,8 +658,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_BACK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->back();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -692,8 +680,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_FORWARD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->forward();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -715,8 +702,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RELOAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reload();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -738,8 +724,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_STOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -784,8 +769,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_UPDATEGEOMETRY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->updateGeometry();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

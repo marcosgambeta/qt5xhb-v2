@@ -143,8 +143,7 @@ HB_FUNC_STATIC(QTABLEVIEW_SHOWGRID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->showGrid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,8 +186,7 @@ HB_FUNC_STATIC(QTABLEVIEW_GRIDSTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->gridStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,8 +229,7 @@ HB_FUNC_STATIC(QTABLEVIEW_ISSORTINGENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSortingEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,8 +272,7 @@ HB_FUNC_STATIC(QTABLEVIEW_WORDWRAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->wordWrap());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -319,8 +315,7 @@ HB_FUNC_STATIC(QTABLEVIEW_ISCORNERBUTTONENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCornerButtonEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -435,8 +430,7 @@ HB_FUNC_STATIC(QTABLEVIEW_HORIZONTALHEADER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->horizontalHeader();
       Qt5xHb::createReturnQWidgetClass(ptr, "QHEADERVIEW");
@@ -457,8 +451,7 @@ HB_FUNC_STATIC(QTABLEVIEW_VERTICALHEADER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->verticalHeader();
       Qt5xHb::createReturnQWidgetClass(ptr, "QHEADERVIEW");
@@ -919,8 +912,7 @@ HB_FUNC_STATIC(QTABLEVIEW_CLEARSPANS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearSpans();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1126,8 +1118,7 @@ HB_FUNC_STATIC(QTABLEVIEW_RESIZEROWSTOCONTENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->resizeRowsToContents();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1172,8 +1163,7 @@ HB_FUNC_STATIC(QTABLEVIEW_RESIZECOLUMNSTOCONTENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->resizeColumnsToContents();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

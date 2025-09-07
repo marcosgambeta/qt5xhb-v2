@@ -175,8 +175,7 @@ HB_FUNC_STATIC(QVECTOR4D_ISNULL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,8 +195,7 @@ HB_FUNC_STATIC(QVECTOR4D_X)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,8 +215,7 @@ HB_FUNC_STATIC(QVECTOR4D_Y)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -238,8 +235,7 @@ HB_FUNC_STATIC(QVECTOR4D_Z)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->z());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,8 +255,7 @@ HB_FUNC_STATIC(QVECTOR4D_W)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->w());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -372,8 +367,7 @@ HB_FUNC_STATIC(QVECTOR4D_LENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->length());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -393,8 +387,7 @@ HB_FUNC_STATIC(QVECTOR4D_LENGTHSQUARED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->lengthSquared());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -414,8 +407,7 @@ HB_FUNC_STATIC(QVECTOR4D_NORMALIZED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVector4D(obj->normalized());
       Qt5xHb::createReturnClass(ptr, "QVECTOR4D", true);
@@ -436,8 +428,7 @@ HB_FUNC_STATIC(QVECTOR4D_NORMALIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->normalize();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -459,8 +450,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOVECTOR2D)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVector2D(obj->toVector2D());
       Qt5xHb::createReturnClass(ptr, "QVECTOR2D", true);
@@ -481,8 +471,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOVECTOR2DAFFINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVector2D(obj->toVector2DAffine());
       Qt5xHb::createReturnClass(ptr, "QVECTOR2D", true);
@@ -503,8 +492,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOVECTOR3D)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVector3D(obj->toVector3D());
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
@@ -525,8 +513,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOVECTOR3DAFFINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVector3D(obj->toVector3DAffine());
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
@@ -547,8 +534,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOPOINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->toPoint());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -569,8 +555,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOPOINTF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->toPointF());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);

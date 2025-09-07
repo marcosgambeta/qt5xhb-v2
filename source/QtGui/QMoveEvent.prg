@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QMOVEEVENT_OLDPOS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->oldPos();
       Qt5xHb::createReturnClass(ptr, "QPOINT", false);
@@ -109,8 +108,7 @@ HB_FUNC_STATIC(QMOVEEVENT_POS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = &obj->pos();
       Qt5xHb::createReturnClass(ptr, "QPOINT", false);

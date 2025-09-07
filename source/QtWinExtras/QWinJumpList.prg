@@ -106,8 +106,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_IDENTIFIER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->identifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,8 +153,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_RECENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->recent();
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTCATEGORY", false);
@@ -178,8 +176,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_FREQUENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->frequent();
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTCATEGORY", false);
@@ -202,8 +199,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_TASKS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->tasks();
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTCATEGORY", false);
@@ -226,8 +222,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_CATEGORIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->categories();
       auto pDynSym = hb_dynsymFindName("QWINJUMPLISTCATEGORY");
@@ -293,8 +288,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

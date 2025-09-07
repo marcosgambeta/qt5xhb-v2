@@ -181,8 +181,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ACCEPTMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->acceptMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,8 +224,7 @@ HB_FUNC_STATIC(QFILEDIALOG_CONFIRMOVERWRITE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->confirmOverwrite());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +267,7 @@ HB_FUNC_STATIC(QFILEDIALOG_DEFAULTSUFFIX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->defaultSuffix());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -313,8 +310,7 @@ HB_FUNC_STATIC(QFILEDIALOG_FILEMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->fileMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -357,8 +353,7 @@ HB_FUNC_STATIC(QFILEDIALOG_FILTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->filter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -401,8 +396,7 @@ HB_FUNC_STATIC(QFILEDIALOG_HISTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->history());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -445,8 +439,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ICONPROVIDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->iconProvider();
       Qt5xHb::createReturnClass(ptr, "QFILEICONPROVIDER", false);
@@ -490,8 +483,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ISNAMEFILTERDETAILSVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNameFilterDetailsVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -534,8 +526,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ISREADONLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReadOnly());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -578,8 +569,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ITEMDELEGATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->itemDelegate();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
@@ -667,8 +657,7 @@ HB_FUNC_STATIC(QFILEDIALOG_NAMEFILTERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->nameFilters());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -734,8 +723,7 @@ HB_FUNC_STATIC(QFILEDIALOG_OPTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->options());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -779,8 +767,7 @@ HB_FUNC_STATIC(QFILEDIALOG_PROXYMODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = obj->proxyModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTPROXYMODEL");
@@ -827,8 +814,7 @@ HB_FUNC_STATIC(QFILEDIALOG_RESOLVESYMLINKS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->resolveSymlinks());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -892,8 +878,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SAVESTATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->saveState());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -960,8 +945,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SELECTEDFILES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->selectedFiles());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -981,8 +965,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SELECTEDNAMEFILTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->selectedNameFilter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1002,8 +985,7 @@ HB_FUNC_STATIC(QFILEDIALOG_DIRECTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QDir(obj->directory());
       Qt5xHb::createReturnClass(ptr, "QDIR", true);
@@ -1102,8 +1084,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SIDEBARURLS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->sidebarUrls();
       auto pDynSym = hb_dynsymFindName("QURL");
@@ -1200,8 +1181,7 @@ HB_FUNC_STATIC(QFILEDIALOG_VIEWMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->viewMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1267,8 +1247,7 @@ HB_FUNC_STATIC(QFILEDIALOG_DIRECTORYURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QUrl(obj->directoryUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -1335,8 +1314,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SELECTEDURLS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       auto list = obj->selectedUrls();
       auto pDynSym = hb_dynsymFindName("QURL");
@@ -1382,8 +1360,7 @@ HB_FUNC_STATIC(QFILEDIALOG_MIMETYPEFILTERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->mimeTypeFilters());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
