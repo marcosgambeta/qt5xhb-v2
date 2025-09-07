@@ -86,9 +86,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONFACTORY_EXTENSION)
       auto ptr = obj->extension(PQOBJECT(1), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

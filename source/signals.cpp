@@ -81,9 +81,7 @@ int Signals::connectSignal(QObject *object, int indexOfSignal, PHB_ITEM codebloc
       QMetaObject::Connection connection;
       m_list4->append(connection);
       result = m_list1->size() - 1;
-    }
-    else
-    { // encontrou posicao livre
+    } else { // encontrou posicao livre
       // coloca na posição livre
       m_list1->replace(index, object);
       m_list2->replace(index, indexOfSignal);

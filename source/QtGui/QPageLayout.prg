@@ -151,9 +151,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SWAP)
 #endif
       obj->swap(*PQPAGELAYOUT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -178,9 +176,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_ISEQUIVALENTTO)
 #endif
       RBOOL(obj->isEquivalentTo(*PQPAGELAYOUT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -203,9 +199,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_ISVALID)
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -228,9 +222,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MODE)
 #endif
       RENUM(obj->mode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -253,9 +245,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETMODE)
 #endif
       obj->setMode(static_cast<QPageLayout::Mode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -281,9 +271,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAGESIZE)
       auto ptr = new QPageSize(obj->pageSize());
       Qt5xHb::createReturnClass(ptr, "QPAGESIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -306,9 +294,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_ORIENTATION)
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -331,9 +317,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETORIENTATION)
 #endif
       obj->setOrientation(static_cast<QPageLayout::Orientation>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -358,9 +342,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_UNITS)
 #endif
       RENUM(obj->units());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -383,9 +365,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETUNITS)
 #endif
       obj->setUnits(static_cast<QPageLayout::Unit>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -410,9 +390,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETMARGINS)
 #endif
       RBOOL(obj->setMargins(*PQMARGINSF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -435,9 +413,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETLEFTMARGIN)
 #endif
       RBOOL(obj->setLeftMargin(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -460,9 +436,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETRIGHTMARGIN)
 #endif
       RBOOL(obj->setRightMargin(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -485,9 +459,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETTOPMARGIN)
 #endif
       RBOOL(obj->setTopMargin(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -510,9 +482,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETBOTTOMMARGIN)
 #endif
       RBOOL(obj->setBottomMargin(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -570,9 +540,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MARGINSPOINTS)
       auto ptr = new QMargins(obj->marginsPoints());
       Qt5xHb::createReturnClass(ptr, "QMARGINS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -596,9 +564,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MARGINSPIXELS)
       auto ptr = new QMargins(obj->marginsPixels(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QMARGINS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -621,9 +587,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETMINIMUMMARGINS)
 #endif
       obj->setMinimumMargins(*PQMARGINSF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -649,9 +613,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MINIMUMMARGINS)
       auto ptr = new QMarginsF(obj->minimumMargins());
       Qt5xHb::createReturnClass(ptr, "QMARGINSF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -675,9 +637,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MAXIMUMMARGINS)
       auto ptr = new QMarginsF(obj->maximumMargins());
       Qt5xHb::createReturnClass(ptr, "QMARGINSF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -735,9 +695,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_FULLRECTPOINTS)
       auto ptr = new QRect(obj->fullRectPoints());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -761,9 +719,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_FULLRECTPIXELS)
       auto ptr = new QRect(obj->fullRectPixels(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -821,9 +777,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAINTRECTPOINTS)
       auto ptr = new QRect(obj->paintRectPoints());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -847,9 +801,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAINTRECTPIXELS)
       auto ptr = new QRect(obj->paintRectPixels(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

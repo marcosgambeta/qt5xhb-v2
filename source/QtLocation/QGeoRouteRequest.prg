@@ -164,9 +164,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_SETWAYPOINTS)
       }
       obj->setWaypoints(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -217,9 +215,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_WAYPOINTS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -250,9 +246,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_SETEXCLUDEAREAS)
       }
       obj->setExcludeAreas(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -303,9 +297,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_EXCLUDEAREAS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -328,9 +320,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_SETNUMBERALTERNATIVEROUTES)
 #endif
       obj->setNumberAlternativeRoutes(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -355,9 +345,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_NUMBERALTERNATIVEROUTES)
 #endif
       RINT(obj->numberAlternativeRoutes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -380,9 +368,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_SETTRAVELMODES)
 #endif
       obj->setTravelModes(static_cast<QGeoRouteRequest::TravelModes>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -407,9 +393,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_TRAVELMODES)
 #endif
       RENUM(obj->travelModes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -433,9 +417,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_SETFEATUREWEIGHT)
       obj->setFeatureWeight(static_cast<QGeoRouteRequest::FeatureType>(hb_parni(1)),
                             static_cast<QGeoRouteRequest::FeatureWeight>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -460,9 +442,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_FEATUREWEIGHT)
 #endif
       RENUM(obj->featureWeight(static_cast<QGeoRouteRequest::FeatureType>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -493,9 +473,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_FEATURETYPES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -518,9 +496,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_SETROUTEOPTIMIZATION)
 #endif
       obj->setRouteOptimization(static_cast<QGeoRouteRequest::RouteOptimizations>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -545,9 +521,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_ROUTEOPTIMIZATION)
 #endif
       RENUM(obj->routeOptimization());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -570,9 +544,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_SETSEGMENTDETAIL)
 #endif
       obj->setSegmentDetail(static_cast<QGeoRouteRequest::SegmentDetail>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -597,9 +569,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_SEGMENTDETAIL)
 #endif
       RENUM(obj->segmentDetail());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -622,9 +592,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_SETMANEUVERDETAIL)
 #endif
       obj->setManeuverDetail(static_cast<QGeoRouteRequest::ManeuverDetail>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -649,9 +617,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_MANEUVERDETAIL)
 #endif
       RENUM(obj->maneuverDetail());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

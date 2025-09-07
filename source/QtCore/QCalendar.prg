@@ -140,9 +140,7 @@ HB_FUNC_STATIC(QCALENDAR_ISVALID)
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -165,9 +163,7 @@ HB_FUNC_STATIC(QCALENDAR_DAYSINYEAR)
 #endif
       RINT(obj->daysInYear(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -190,9 +186,7 @@ HB_FUNC_STATIC(QCALENDAR_MONTHSINYEAR)
 #endif
       RINT(obj->monthsInYear(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -215,9 +209,7 @@ HB_FUNC_STATIC(QCALENDAR_ISDATEVALID)
 #endif
       RBOOL(obj->isDateValid(PINT(1), PINT(2), PINT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -240,9 +232,7 @@ HB_FUNC_STATIC(QCALENDAR_ISLEAPYEAR)
 #endif
       RBOOL(obj->isLeapYear(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -265,9 +255,7 @@ HB_FUNC_STATIC(QCALENDAR_ISGREGORIAN)
 #endif
       RBOOL(obj->isGregorian());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -290,9 +278,7 @@ HB_FUNC_STATIC(QCALENDAR_ISLUNAR)
 #endif
       RBOOL(obj->isLunar());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -315,9 +301,7 @@ HB_FUNC_STATIC(QCALENDAR_ISLUNISOLAR)
 #endif
       RBOOL(obj->isLuniSolar());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -340,9 +324,7 @@ HB_FUNC_STATIC(QCALENDAR_ISSOLAR)
 #endif
       RBOOL(obj->isSolar());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -365,9 +347,7 @@ HB_FUNC_STATIC(QCALENDAR_ISPROLEPTIC)
 #endif
       RBOOL(obj->isProleptic());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -390,9 +370,7 @@ HB_FUNC_STATIC(QCALENDAR_HASYEARZERO)
 #endif
       RBOOL(obj->hasYearZero());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -415,9 +393,7 @@ HB_FUNC_STATIC(QCALENDAR_MAXIMUMDAYSINMONTH)
 #endif
       RINT(obj->maximumDaysInMonth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -440,9 +416,7 @@ HB_FUNC_STATIC(QCALENDAR_MINIMUMDAYSINMONTH)
 #endif
       RINT(obj->minimumDaysInMonth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -465,9 +439,7 @@ HB_FUNC_STATIC(QCALENDAR_MAXIMUMMONTHSINYEAR)
 #endif
       RINT(obj->maximumMonthsInYear());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -490,9 +462,7 @@ HB_FUNC_STATIC(QCALENDAR_NAME)
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -516,9 +486,7 @@ HB_FUNC_STATIC(QCALENDAR_DATEFROMPARTS)
       auto ptr = new QDate(obj->dateFromParts(PINT(1), PINT(2), PINT(3)));
       Qt5xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -541,9 +509,7 @@ HB_FUNC_STATIC(QCALENDAR_DAYOFWEEK)
 #endif
       RINT(obj->dayOfWeek(*PQDATE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -568,9 +534,7 @@ HB_FUNC_STATIC(QCALENDAR_WEEKDAYNAME)
                                 HB_ISNIL(3) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
                                             : static_cast<QLocale::FormatType>(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -595,9 +559,7 @@ HB_FUNC_STATIC(QCALENDAR_STANDALONEWEEKDAYNAME)
                                           HB_ISNIL(3) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
                                                       : static_cast<QLocale::FormatType>(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

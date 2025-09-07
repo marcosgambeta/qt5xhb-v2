@@ -93,9 +93,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_NEWPOS)
       auto ptr = new QPointF(obj->newPos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -117,9 +115,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_OLDPOS)
       auto ptr = new QPointF(obj->oldPos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -129,9 +129,7 @@ HB_FUNC_STATIC(QPLACECONTENT_TYPE)
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -155,9 +153,7 @@ HB_FUNC_STATIC(QPLACECONTENT_SUPPLIER)
       auto ptr = new QPlaceSupplier(obj->supplier());
       Qt5xHb::createReturnClass(ptr, "QPLACESUPPLIER", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -180,9 +176,7 @@ HB_FUNC_STATIC(QPLACECONTENT_SETSUPPLIER)
 #endif
       obj->setSupplier(*PQPLACESUPPLIER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -208,9 +202,7 @@ HB_FUNC_STATIC(QPLACECONTENT_USER)
       auto ptr = new QPlaceUser(obj->user());
       Qt5xHb::createReturnClass(ptr, "QPLACEUSER", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -233,9 +225,7 @@ HB_FUNC_STATIC(QPLACECONTENT_SETUSER)
 #endif
       obj->setUser(*PQPLACEUSER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -260,9 +250,7 @@ HB_FUNC_STATIC(QPLACECONTENT_ATTRIBUTION)
 #endif
       RQSTRING(obj->attribution());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -285,9 +273,7 @@ HB_FUNC_STATIC(QPLACECONTENT_SETATTRIBUTION)
 #endif
       obj->setAttribution(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

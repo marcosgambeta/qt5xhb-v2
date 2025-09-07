@@ -108,9 +108,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_TYPE)
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -133,9 +131,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_TOTALCOUNT)
 #endif
       RINT(obj->totalCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -159,9 +155,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_REQUEST)
       auto ptr = new QPlaceContentRequest(obj->request());
       Qt5xHb::createReturnClass(ptr, "QPLACECONTENTREQUEST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -185,9 +179,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_PREVIOUSPAGEREQUEST)
       auto ptr = new QPlaceContentRequest(obj->previousPageRequest());
       Qt5xHb::createReturnClass(ptr, "QPLACECONTENTREQUEST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -211,9 +203,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_NEXTPAGEREQUEST)
       auto ptr = new QPlaceContentRequest(obj->nextPageRequest());
       Qt5xHb::createReturnClass(ptr, "QPLACECONTENTREQUEST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

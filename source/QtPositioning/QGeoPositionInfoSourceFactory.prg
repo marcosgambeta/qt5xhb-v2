@@ -79,9 +79,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCEFACTORY_POSITIONINFOSOURCE)
       auto ptr = obj->positionInfoSource(PQOBJECT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOPOSITIONINFOSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -105,9 +103,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCEFACTORY_SATELLITEINFOSOURCE)
       auto ptr = obj->satelliteInfoSource(PQOBJECT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOSATELLITEINFOSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -131,9 +127,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCEFACTORY_AREAMONITOR)
       auto ptr = obj->areaMonitor(PQOBJECT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOAREAMONITORSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

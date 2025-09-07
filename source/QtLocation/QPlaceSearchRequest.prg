@@ -141,9 +141,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHTERM)
 #endif
       RQSTRING(obj->searchTerm());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -166,9 +164,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHTERM)
 #endif
       obj->setSearchTerm(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -219,9 +215,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_CATEGORIES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -244,9 +238,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETCATEGORY)
 #endif
       obj->setCategory(*PQPLACECATEGORY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -279,9 +271,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETCATEGORIES)
       }
       obj->setCategories(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -307,9 +297,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHAREA)
       auto ptr = new QGeoShape(obj->searchArea());
       Qt5xHb::createReturnClass(ptr, "QGEOSHAPE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -332,9 +320,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHAREA)
 #endif
       obj->setSearchArea(*PQGEOSHAPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -359,9 +345,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_RECOMMENDATIONID)
 #endif
       RQSTRING(obj->recommendationId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -384,9 +368,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETRECOMMENDATIONID)
 #endif
       obj->setRecommendationId(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -412,9 +394,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHCONTEXT)
       auto ptr = new QVariant(obj->searchContext());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -437,9 +417,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHCONTEXT)
 #endif
       obj->setSearchContext(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -464,9 +442,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_VISIBILITYSCOPE)
 #endif
       RENUM(obj->visibilityScope());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -489,9 +465,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETVISIBILITYSCOPE)
 #endif
       obj->setVisibilityScope(static_cast<QLocation::VisibilityScope>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -516,9 +490,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_RELEVANCEHINT)
 #endif
       RENUM(obj->relevanceHint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -541,9 +513,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETRELEVANCEHINT)
 #endif
       obj->setRelevanceHint(static_cast<QPlaceSearchRequest::RelevanceHint>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -568,9 +538,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_LIMIT)
 #endif
       RINT(obj->limit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -593,9 +561,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETLIMIT)
 #endif
       obj->setLimit(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -620,9 +586,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_CLEAR)
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

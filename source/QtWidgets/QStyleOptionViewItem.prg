@@ -117,9 +117,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_DISPLAYALIGNMENT)
     if (ISNUMPAR(0))
     {
       RENUM(obj->displayAlignment);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -133,9 +131,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDISPLAYALIGNMENT)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->displayAlignment = static_cast<Qt::Alignment>(hb_parni(1));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -154,9 +150,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_DECORATIONALIGNMENT)
     if (ISNUMPAR(0))
     {
       RENUM(obj->decorationAlignment);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -170,9 +164,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDECORATIONALIGNMENT)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->decorationAlignment = static_cast<Qt::Alignment>(hb_parni(1));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -191,9 +183,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_TEXTELIDEMODE)
     if (ISNUMPAR(0))
     {
       RENUM(obj->textElideMode);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -207,9 +197,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETTEXTELIDEMODE)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->textElideMode = static_cast<Qt::TextElideMode>(hb_parni(1));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -228,9 +216,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_DECORATIONPOSITION)
     if (ISNUMPAR(0))
     {
       RENUM(obj->decorationPosition);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -244,9 +230,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDECORATIONPOSITION)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->decorationPosition = static_cast<QStyleOptionViewItem::Position>(hb_parni(1));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -266,9 +250,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_DECORATIONSIZE)
     {
       auto ptr = new QSize(obj->decorationSize);
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -282,9 +264,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDECORATIONSIZE)
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
       obj->decorationSize = *PQSIZE(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -304,9 +284,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_FONT)
     {
       auto ptr = new QFont(obj->font);
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -320,9 +298,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETFONT)
     if (ISNUMPAR(1) && ISQFONT(1))
     {
       obj->font = *PQFONT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -341,9 +317,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SHOWDECORATIONSELECTED)
     if (ISNUMPAR(0))
     {
       RBOOL(obj->showDecorationSelected);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -357,9 +331,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETSHOWDECORATIONSELECTED)
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->showDecorationSelected = PBOOL(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -378,9 +350,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_FEATURES)
     if (ISNUMPAR(0))
     {
       RENUM(obj->features);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -394,9 +364,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETFEATURES)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->features = static_cast<QStyleOptionViewItem::ViewItemFeatures>(hb_parni(1));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -416,9 +384,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_LOCALE)
     {
       auto ptr = new QLocale(obj->locale);
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -432,9 +398,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETLOCALE)
     if (ISNUMPAR(1) && ISQLOCALE(1))
     {
       obj->locale = *PQLOCALE(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -454,9 +418,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_WIDGET)
     {
       auto ptr = obj->widget;
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -470,9 +432,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETWIDGET)
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
       obj->widget = PQWIDGET(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -492,9 +452,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_INDEX)
     {
       auto ptr = new QModelIndex(obj->index);
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -508,9 +466,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETINDEX)
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
       obj->index = *PQMODELINDEX(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -529,9 +485,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_CHECKSTATE)
     if (ISNUMPAR(0))
     {
       RENUM(obj->checkState);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -545,9 +499,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETCHECKSTATE)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->checkState = static_cast<Qt::CheckState>(hb_parni(1));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -567,9 +519,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_ICON)
     {
       auto ptr = new QIcon(obj->icon);
       Qt5xHb::createReturnClass(ptr, "QICON", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -583,9 +533,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETICON)
     if (ISNUMPAR(1) && ISQICON(1))
     {
       obj->icon = *PQICON(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -604,9 +552,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_TEXT)
     if (ISNUMPAR(0))
     {
       RQSTRING(obj->text);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -620,9 +566,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETTEXT)
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       obj->text = PQSTRING(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -641,9 +585,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_VIEWITEMPOSITION)
     if (ISNUMPAR(0))
     {
       RENUM(obj->viewItemPosition);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -657,9 +599,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETVIEWITEMPOSITION)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->viewItemPosition = static_cast<QStyleOptionViewItem::ViewItemPosition>(hb_parni(1));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -679,9 +619,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_BACKGROUNDBRUSH)
     {
       auto ptr = new QBrush(obj->backgroundBrush);
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -695,9 +633,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETBACKGROUNDBRUSH)
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
       obj->backgroundBrush = *PQBRUSH(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }

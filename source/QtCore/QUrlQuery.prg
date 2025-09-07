@@ -141,9 +141,7 @@ HB_FUNC_STATIC(QURLQUERY_ADDQUERYITEM)
 #endif
       obj->addQueryItem(PQSTRING(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -169,9 +167,7 @@ HB_FUNC_STATIC(QURLQUERY_ALLQUERYITEMVALUES)
           PQSTRING(1), HB_ISNIL(2) ? static_cast<QUrl::ComponentFormattingOptions>(QUrl::PrettyDecoded)
                                    : static_cast<QUrl::ComponentFormattingOptions>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -192,9 +188,7 @@ HB_FUNC_STATIC(QURLQUERY_CLEAR)
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -217,9 +211,7 @@ HB_FUNC_STATIC(QURLQUERY_HASQUERYITEM)
 #endif
       RBOOL(obj->hasQueryItem(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -240,9 +232,7 @@ HB_FUNC_STATIC(QURLQUERY_ISEMPTY)
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -264,9 +254,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERY)
       RQSTRING(obj->query(HB_ISNIL(1) ? static_cast<QUrl::ComponentFormattingOptions>(QUrl::PrettyDecoded)
                                       : static_cast<QUrl::ComponentFormattingOptions>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -289,9 +277,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERYITEMVALUE)
                                                     ? static_cast<QUrl::ComponentFormattingOptions>(QUrl::PrettyDecoded)
                                                     : static_cast<QUrl::ComponentFormattingOptions>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -313,9 +299,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERYPAIRDELIMITER)
       auto ptr = new QChar(obj->queryPairDelimiter());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -337,9 +321,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERYVALUEDELIMITER)
       auto ptr = new QChar(obj->queryValueDelimiter());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -360,9 +342,7 @@ HB_FUNC_STATIC(QURLQUERY_REMOVEALLQUERYITEMS)
 #endif
       obj->removeAllQueryItems(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -385,9 +365,7 @@ HB_FUNC_STATIC(QURLQUERY_REMOVEQUERYITEM)
 #endif
       obj->removeQueryItem(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -410,9 +388,7 @@ HB_FUNC_STATIC(QURLQUERY_SETQUERY)
 #endif
       obj->setQuery(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -435,9 +411,7 @@ HB_FUNC_STATIC(QURLQUERY_SWAP)
 #endif
       obj->swap(*PQURLQUERY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -461,9 +435,7 @@ HB_FUNC_STATIC(QURLQUERY_TOSTRING)
       RQSTRING(obj->toString(HB_ISNIL(1) ? static_cast<QUrl::ComponentFormattingOptions>(QUrl::PrettyDecoded)
                                          : static_cast<QUrl::ComponentFormattingOptions>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

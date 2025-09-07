@@ -148,9 +148,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_COUNT)
 #endif
       RUINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -171,9 +169,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_ISEMPTY)
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -194,9 +190,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_MATCHES)
 #endif
       RENUM(obj->matches(*PQKEYSEQUENCE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -218,9 +212,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_TOSTRING)
       RQSTRING(obj->toString(HB_ISNIL(1) ? static_cast<QKeySequence::SequenceFormat>(QKeySequence::PortableText)
                                          : static_cast<QKeySequence::SequenceFormat>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -277,9 +269,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_KEYBINDINGS)
         hb_arrayAddForward(pArray, pObject);
         hb_itemRelease(pObject);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QKEYSEQUENCE", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);

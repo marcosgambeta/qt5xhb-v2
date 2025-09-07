@@ -148,9 +148,7 @@ HB_FUNC_STATIC(QICON_ACTUALSIZE)
           HB_ISNIL(3) ? static_cast<QIcon::State>(QIcon::Off) : static_cast<QIcon::State>(hb_parni(3))));
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -175,9 +173,7 @@ HB_FUNC_STATIC(QICON_ADDFILE)
                    HB_ISNIL(3) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(3)),
                    HB_ISNIL(4) ? static_cast<QIcon::State>(QIcon::Off) : static_cast<QIcon::State>(hb_parni(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -202,9 +198,7 @@ HB_FUNC_STATIC(QICON_ADDPIXMAP)
                      HB_ISNIL(2) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(2)),
                      HB_ISNIL(3) ? static_cast<QIcon::State>(QIcon::Off) : static_cast<QIcon::State>(hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -255,9 +249,7 @@ HB_FUNC_STATIC(QICON_AVAILABLESIZES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -278,9 +270,7 @@ HB_FUNC_STATIC(QICON_CACHEKEY)
 #endif
       RQINT64(obj->cacheKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -301,9 +291,7 @@ HB_FUNC_STATIC(QICON_ISNULL)
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -324,9 +312,7 @@ HB_FUNC_STATIC(QICON_NAME)
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

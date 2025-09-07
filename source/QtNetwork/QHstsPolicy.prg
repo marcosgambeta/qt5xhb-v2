@@ -144,9 +144,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SWAP)
 #endif
       obj->swap(*PQHSTSPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -172,9 +170,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SETHOST)
       obj->setHost(PQSTRING(1), HB_ISNIL(2) ? static_cast<QUrl::ParsingMode>(QUrl::DecodedMode)
                                             : static_cast<QUrl::ParsingMode>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -200,9 +196,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_HOST)
       RQSTRING(obj->host(HB_ISNIL(1) ? static_cast<QUrl::ComponentFormattingOptions>(QUrl::FullyDecoded)
                                      : static_cast<QUrl::ComponentFormattingOptions>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -225,9 +219,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SETEXPIRY)
 #endif
       obj->setExpiry(*PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -253,9 +245,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_EXPIRY)
       auto ptr = new QDateTime(obj->expiry());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -278,9 +268,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SETINCLUDESSUBDOMAINS)
 #endif
       obj->setIncludesSubDomains(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -305,9 +293,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_INCLUDESSUBDOMAINS)
 #endif
       RBOOL(obj->includesSubDomains());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -330,9 +316,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_ISEXPIRED)
 #endif
       RBOOL(obj->isExpired());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -185,9 +185,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_CREATE)
 #endif
       RBOOL(obj->create());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -210,9 +208,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_DESTROY)
 #endif
       obj->destroy();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -237,9 +233,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISCREATED)
 #endif
       RBOOL(obj->isCreated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -262,9 +256,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_TEXTUREID)
 #endif
       RGLUINT(obj->textureId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -395,9 +387,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETFORMAT)
 #endif
       obj->setFormat(static_cast<QOpenGLTexture::TextureFormat>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -422,9 +412,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_FORMAT)
 #endif
       RENUM(obj->format());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -447,9 +435,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETSIZE)
 #endif
       obj->setSize(PINT(1), OPINT(2, 1), OPINT(3, 1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -474,9 +460,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_WIDTH)
 #endif
       RINT(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -499,9 +483,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_HEIGHT)
 #endif
       RINT(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -524,9 +506,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_DEPTH)
 #endif
       RINT(obj->depth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -549,9 +529,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMIPLEVELS)
 #endif
       obj->setMipLevels(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -576,9 +554,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MIPLEVELS)
 #endif
       RINT(obj->mipLevels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -601,9 +577,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MAXIMUMMIPLEVELS)
 #endif
       RINT(obj->maximumMipLevels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -626,9 +600,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETLAYERS)
 #endif
       obj->setLayers(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -653,9 +625,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_LAYERS)
 #endif
       RINT(obj->layers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -678,9 +648,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_FACES)
 #endif
       RINT(obj->faces());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -703,9 +671,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ALLOCATESTORAGE)
 #endif
       obj->allocateStorage();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -730,9 +696,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISSTORAGEALLOCATED)
 #endif
       RBOOL(obj->isStorageAllocated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -759,9 +723,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_CREATETEXTUREVIEW)
                                         PINT(5), PINT(6));
       Qt5xHb::createReturnClass(ptr, "QOPENGLTEXTURE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -784,9 +746,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISTEXTUREVIEW)
 #endif
       RBOOL(obj->isTextureView());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -809,9 +769,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMIPBASELEVEL)
 #endif
       obj->setMipBaseLevel(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -836,9 +794,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MIPBASELEVEL)
 #endif
       RINT(obj->mipBaseLevel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -861,9 +817,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMIPMAXLEVEL)
 #endif
       obj->setMipMaxLevel(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -888,9 +842,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MIPMAXLEVEL)
 #endif
       RINT(obj->mipMaxLevel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -913,9 +865,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMIPLEVELRANGE)
 #endif
       obj->setMipLevelRange(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -940,9 +890,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETAUTOMIPMAPGENERATIONENABLED)
 #endif
       obj->setAutoMipMapGenerationEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -967,9 +915,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISAUTOMIPMAPGENERATIONENABLED)
 #endif
       RBOOL(obj->isAutoMipMapGenerationEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1069,9 +1015,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SWIZZLEMASK)
 #endif
       RENUM(obj->swizzleMask(static_cast<QOpenGLTexture::SwizzleComponent>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1094,9 +1038,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETDEPTHSTENCILMODE)
 #endif
       obj->setDepthStencilMode(static_cast<QOpenGLTexture::DepthStencilMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1121,9 +1063,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_DEPTHSTENCILMODE)
 #endif
       RENUM(obj->depthStencilMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1146,9 +1086,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMINIFICATIONFILTER)
 #endif
       obj->setMinificationFilter(static_cast<QOpenGLTexture::Filter>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1173,9 +1111,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MINIFICATIONFILTER)
 #endif
       RENUM(obj->minificationFilter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1198,9 +1134,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMAGNIFICATIONFILTER)
 #endif
       obj->setMagnificationFilter(static_cast<QOpenGLTexture::Filter>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1225,9 +1159,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MAGNIFICATIONFILTER)
 #endif
       RENUM(obj->magnificationFilter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1251,9 +1183,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMINMAGFILTERS)
       obj->setMinMagFilters(static_cast<QOpenGLTexture::Filter>(hb_parni(1)),
                             static_cast<QOpenGLTexture::Filter>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1278,9 +1208,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMAXIMUMANISOTROPY)
 #endif
       obj->setMaximumAnisotropy(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1305,9 +1233,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MAXIMUMANISOTROPY)
 #endif
       RFLOAT(obj->maximumAnisotropy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1367,9 +1293,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_WRAPMODE)
 #endif
       RENUM(obj->wrapMode(static_cast<QOpenGLTexture::CoordinateDirection>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1392,9 +1316,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR1)
 #endif
       obj->setBorderColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1419,9 +1341,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR2)
 #endif
       obj->setBorderColor(PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1446,9 +1366,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR3)
 #endif
       obj->setBorderColor(PINT(1), PINT(2), PINT(3), PINT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1473,9 +1391,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETBORDERCOLOR4)
 #endif
       obj->setBorderColor(PUINT(1), PUINT(2), PUINT(3), PUINT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1523,9 +1439,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR1)
       auto ptr = new QColor(obj->borderColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1550,9 +1464,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR2)
       obj->borderColor(&par1);
       hb_stornd(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1579,9 +1491,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR3)
       obj->borderColor(&par1);
       hb_storni(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1608,9 +1518,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BORDERCOLOR4)
       obj->borderColor(&par1);
       hb_storni(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1649,9 +1557,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMINIMUMLEVELOFDETAIL)
 #endif
       obj->setMinimumLevelOfDetail(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1676,9 +1582,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MINIMUMLEVELOFDETAIL)
 #endif
       RFLOAT(obj->minimumLevelOfDetail());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1701,9 +1605,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMAXIMUMLEVELOFDETAIL)
 #endif
       obj->setMaximumLevelOfDetail(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1728,9 +1630,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_MAXIMUMLEVELOFDETAIL)
 #endif
       RFLOAT(obj->maximumLevelOfDetail());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1753,9 +1653,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETLEVELOFDETAILRANGE)
 #endif
       obj->setLevelOfDetailRange(PFLOAT(1), PFLOAT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1780,9 +1678,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETLEVELOFDETAILBIAS)
 #endif
       obj->setLevelofDetailBias(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1807,9 +1703,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_LEVELOFDETAILBIAS)
 #endif
       RFLOAT(obj->levelofDetailBias());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -92,9 +92,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_CREATE)
       auto ptr = obj->create(PQOBJECT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QGESTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -115,9 +113,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_RECOGNIZE)
 #endif
       RENUM(obj->recognize(PQGESTURE(1), PQOBJECT(2), PQEVENT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -138,9 +134,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_RESET)
 #endif
       obj->reset(PQGESTURE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

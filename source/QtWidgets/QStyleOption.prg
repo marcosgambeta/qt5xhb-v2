@@ -131,9 +131,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_INIT)
 #endif
       obj->init(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -156,9 +154,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_INITFROM)
 #endif
       obj->initFrom(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -178,9 +174,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_VERSION)
     if (ISNUMPAR(0))
     {
       RINT(obj->version);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -194,9 +188,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETVERSION)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->version = PINT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -215,9 +207,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_TYPE)
     if (ISNUMPAR(0))
     {
       RINT(obj->type);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -231,9 +221,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETTYPE)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->type = PINT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -252,9 +240,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_STATE)
     if (ISNUMPAR(0))
     {
       RENUM(obj->state);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -268,9 +254,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETSTATE)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->state = static_cast<QStyle::State>(hb_parni(1));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -289,9 +273,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_DIRECTION)
     if (ISNUMPAR(0))
     {
       RENUM(obj->direction);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -305,9 +287,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETDIRECTION)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->direction = static_cast<Qt::LayoutDirection>(hb_parni(1));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -327,9 +307,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_RECT)
     {
       auto ptr = new QRect(obj->rect);
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -343,9 +321,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETRECT)
     if (ISNUMPAR(1) && ISQRECT(1))
     {
       obj->rect = *PQRECT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -365,9 +341,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_FONTMETRICS)
     {
       auto ptr = new QFontMetrics(obj->fontMetrics);
       Qt5xHb::createReturnClass(ptr, "QFONTMETRICS", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -381,9 +355,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETFONTMETRICS)
     if (ISNUMPAR(1) && ISQFONTMETRICS(1))
     {
       obj->fontMetrics = *PQFONTMETRICS(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -403,9 +375,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_PALETTE)
     {
       auto ptr = new QPalette(obj->palette);
       Qt5xHb::createReturnClass(ptr, "QPALETTE", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -419,9 +389,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETPALETTE)
     if (ISNUMPAR(1) && ISQPALETTE(1))
     {
       obj->palette = *PQPALETTE(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -441,9 +409,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_STYLEOBJECT)
     {
       auto ptr = obj->styleObject;
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -457,9 +423,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETSTYLEOBJECT)
     if (ISNUMPAR(1) && ISQOBJECT(1))
     {
       obj->styleObject = PQOBJECT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }

@@ -112,9 +112,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWCOMPLEXCONTROL)
       obj->drawComplexControl(static_cast<QStyle::ComplexControl>(hb_parni(1)), PQSTYLEOPTIONCOMPLEX(2), PQPAINTER(3),
                               OPQWIDGET(4, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -139,9 +137,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWCONTROL)
       obj->drawControl(static_cast<QStyle::ControlElement>(hb_parni(1)), PQSTYLEOPTION(2), PQPAINTER(3),
                        OPQWIDGET(4, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -164,9 +160,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWITEMPIXMAP)
 #endif
       obj->drawItemPixmap(PQPAINTER(1), *PQRECT(2), PINT(3), *PQPIXMAP(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -193,9 +187,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWITEMTEXT)
                         HB_ISNIL(7) ? static_cast<QPalette::ColorRole>(QPalette::NoRole)
                                     : static_cast<QPalette::ColorRole>(hb_parni(7)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -220,9 +212,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWPRIMITIVE)
       obj->drawPrimitive(static_cast<QStyle::PrimitiveElement>(hb_parni(1)), PQSTYLEOPTION(2), PQPAINTER(3),
                          OPQWIDGET(4, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -247,9 +237,7 @@ HB_FUNC_STATIC(QSTYLE_GENERATEDICONPIXMAP)
           new QPixmap(obj->generatedIconPixmap(static_cast<QIcon::Mode>(hb_parni(1)), *PQPIXMAP(2), PQSTYLEOPTION(3)));
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -272,9 +260,7 @@ HB_FUNC_STATIC(QSTYLE_HITTESTCOMPLEXCONTROL)
       RENUM(obj->hitTestComplexControl(static_cast<QStyle::ComplexControl>(hb_parni(1)), PQSTYLEOPTIONCOMPLEX(2),
                                        *PQPOINT(3), OPQWIDGET(4, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -296,9 +282,7 @@ HB_FUNC_STATIC(QSTYLE_ITEMPIXMAPRECT)
       auto ptr = new QRect(obj->itemPixmapRect(*PQRECT(1), PINT(2), *PQPIXMAP(3)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -321,9 +305,7 @@ HB_FUNC_STATIC(QSTYLE_ITEMTEXTRECT)
       auto ptr = new QRect(obj->itemTextRect(*PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -349,9 +331,7 @@ HB_FUNC_STATIC(QSTYLE_LAYOUTSPACING)
           static_cast<Qt::Orientation>(hb_parni(3)),
           HB_ISNIL(4) ? nullptr : static_cast<QStyleOption *>(Qt5xHb::itemGetPtr(4)), OPQWIDGET(5, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -375,9 +355,7 @@ HB_FUNC_STATIC(QSTYLE_PIXELMETRIC)
                             HB_ISNIL(2) ? nullptr : static_cast<QStyleOption *>(Qt5xHb::itemGetPtr(2)),
                             OPQWIDGET(3, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -444,9 +422,7 @@ HB_FUNC_STATIC(QSTYLE_PROXY)
       auto ptr = obj->proxy();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -470,9 +446,7 @@ HB_FUNC_STATIC(QSTYLE_SIZEFROMCONTENTS)
                                                  *PQSIZE(3), OPQWIDGET(4, nullptr)));
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -497,9 +471,7 @@ HB_FUNC_STATIC(QSTYLE_STANDARDICON)
                                              OPQWIDGET(3, nullptr)));
       Qt5xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -521,9 +493,7 @@ HB_FUNC_STATIC(QSTYLE_STANDARDPALETTE)
       auto ptr = new QPalette(obj->standardPalette());
       Qt5xHb::createReturnClass(ptr, "QPALETTE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -549,9 +519,7 @@ HB_FUNC_STATIC(QSTYLE_STYLEHINT)
                           OPQWIDGET(3, nullptr),
                           HB_ISNIL(4) ? nullptr : static_cast<QStyleHintReturn *>(Qt5xHb::itemGetPtr(4))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -576,9 +544,7 @@ HB_FUNC_STATIC(QSTYLE_SUBCONTROLRECT)
                                         static_cast<QStyle::SubControl>(hb_parni(3)), OPQWIDGET(4, nullptr)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -602,9 +568,7 @@ HB_FUNC_STATIC(QSTYLE_SUBELEMENTRECT)
           obj->subElementRect(static_cast<QStyle::SubElement>(hb_parni(1)), PQSTYLEOPTION(2), OPQWIDGET(3, nullptr)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

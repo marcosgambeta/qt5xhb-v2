@@ -124,9 +124,7 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_SWAP)
 #endif
       obj->swap(*PQWEBSOCKETCORSAUTHENTICATOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -151,9 +149,7 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_ORIGIN)
 #endif
       RQSTRING(obj->origin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -176,9 +172,7 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_ALLOWED)
 #endif
       RBOOL(obj->allowed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -201,9 +195,7 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_SETALLOWED)
 #endif
       obj->setAllowed(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

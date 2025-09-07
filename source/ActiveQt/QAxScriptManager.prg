@@ -169,9 +169,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_FUNCTIONS)
       RQSTRINGLIST(obj->functions(HB_ISNIL(1) ? static_cast<QAxScript::FunctionFlags>(QAxScript::FunctionNames)
                                               : static_cast<QAxScript::FunctionFlags>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -215,9 +213,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_SCRIPT)
       auto ptr = obj->script(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QAXSCRIPT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -236,9 +232,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_SCRIPTNAMES)
 #endif
       RQSTRINGLIST(obj->scriptNames());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -323,9 +317,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_ONERROR)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }

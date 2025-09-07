@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_TITLE)
     if (ISNUMPAR(0))
     {
       RQSTRING(obj->title);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -104,9 +102,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETTITLE)
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       obj->title = PQSTRING(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -125,9 +121,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_CLOSABLE)
     if (ISNUMPAR(0))
     {
       RBOOL(obj->closable);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -141,9 +135,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE)
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->closable = PBOOL(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -162,9 +154,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_MOVABLE)
     if (ISNUMPAR(0))
     {
       RBOOL(obj->movable);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -178,9 +168,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETMOVABLE)
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->movable = PBOOL(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -199,9 +187,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_FLOATABLE)
     if (ISNUMPAR(0))
     {
       RBOOL(obj->floatable);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -215,9 +201,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETFLOATABLE)
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->floatable = PBOOL(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -236,9 +220,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_VERTICALTITLEBAR)
     if (ISNUMPAR(0))
     {
       RBOOL(obj->verticalTitleBar);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -252,9 +234,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETVERTICALTITLEBAR)
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->verticalTitleBar = PBOOL(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }

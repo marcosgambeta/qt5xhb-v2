@@ -123,9 +123,7 @@ HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_FINDCLASS)
 #endif
       hb_retptr(static_cast<jclass>(obj->findClass(PCONSTCHAR(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -134,9 +134,7 @@ QSize HStyledItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QM
     if (hb_clsIsParent(hb_objGetClass(pRet), "QSIZE"))
     {
       size = *((QSize *)hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0)));
-    }
-    else
-    {
+    } else {
       size = QStyledItemDelegate::sizeHint(option, index);
     }
 
@@ -199,9 +197,7 @@ QWidget *HStyledItemDelegate::createEditor(QWidget *parent, const QStyleOptionVi
     if (hb_clsIsParent(hb_objGetClass(pRet), "QWIDGET"))
     {
       widget = (QWidget *)hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
-    }
-    else
-    {
+    } else {
       widget = QStyledItemDelegate::createEditor(parent, option, index);
     }
 

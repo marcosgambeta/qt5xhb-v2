@@ -90,9 +90,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_POSITIONOFLINE)
     if (ISNUMPAR(0))
     {
       RENUM(obj->positionOfLine);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -106,9 +104,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETPOSITIONOFLINE)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->positionOfLine = static_cast<QStyleOptionToolBar::ToolBarPosition>(hb_parni(1));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -127,9 +123,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_POSITIONWITHINLINE)
     if (ISNUMPAR(0))
     {
       RENUM(obj->positionWithinLine);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -143,9 +137,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETPOSITIONWITHINLINE)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->positionWithinLine = static_cast<QStyleOptionToolBar::ToolBarPosition>(hb_parni(1));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -164,9 +156,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_TOOLBARAREA)
     if (ISNUMPAR(0))
     {
       RENUM(obj->toolBarArea);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -180,9 +170,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETTOOLBARAREA)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->toolBarArea = static_cast<Qt::ToolBarArea>(hb_parni(1));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -201,9 +189,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_FEATURES)
     if (ISNUMPAR(0))
     {
       RENUM(obj->features);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -217,9 +203,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETFEATURES)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->features = static_cast<QStyleOptionToolBar::ToolBarFeatures>(hb_parni(1));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -238,9 +222,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_LINEWIDTH)
     if (ISNUMPAR(0))
     {
       RINT(obj->lineWidth);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -254,9 +236,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETLINEWIDTH)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->lineWidth = PINT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -275,9 +255,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_MIDLINEWIDTH)
     if (ISNUMPAR(0))
     {
       RINT(obj->midLineWidth);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -291,9 +269,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETMIDLINEWIDTH)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->midLineWidth = PINT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }

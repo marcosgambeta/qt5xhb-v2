@@ -100,9 +100,7 @@ HB_FUNC_STATIC(QCOLLATORSORTKEY_SWAP)
 #endif
       obj->swap(*PQCOLLATORSORTKEY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -125,9 +123,7 @@ HB_FUNC_STATIC(QCOLLATORSORTKEY_COMPARE)
 #endif
       RINT(obj->compare(*PQCOLLATORSORTKEY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

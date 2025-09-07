@@ -168,9 +168,7 @@ HB_FUNC_STATIC(QMATRIX4X4_COLUMN)
       auto ptr = new QVector4D(obj->column(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QVECTOR4D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -193,9 +191,7 @@ HB_FUNC_STATIC(QMATRIX4X4_SETCOLUMN)
 #endif
       obj->setColumn(PINT(1), *PQVECTOR4D(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -221,9 +217,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ROW)
       auto ptr = new QVector4D(obj->row(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QVECTOR4D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -246,9 +240,7 @@ HB_FUNC_STATIC(QMATRIX4X4_SETROW)
 #endif
       obj->setRow(PINT(1), *PQVECTOR4D(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -273,9 +265,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ISAFFINE)
 #endif
       RBOOL(obj->isAffine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -297,9 +287,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ISIDENTITY)
 #endif
       RBOOL(obj->isIdentity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -320,9 +308,7 @@ HB_FUNC_STATIC(QMATRIX4X4_SETTOIDENTITY)
 #endif
       obj->setToIdentity();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -345,9 +331,7 @@ HB_FUNC_STATIC(QMATRIX4X4_FILL)
 #endif
       obj->fill(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -370,9 +354,7 @@ HB_FUNC_STATIC(QMATRIX4X4_DETERMINANT)
 #endif
       RDOUBLE(obj->determinant());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -396,9 +378,7 @@ HB_FUNC_STATIC(QMATRIX4X4_INVERTED)
       Qt5xHb::createReturnClass(ptr, "QMATRIX4X4", true);
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -420,9 +400,7 @@ HB_FUNC_STATIC(QMATRIX4X4_TRANSPOSED)
       auto ptr = new QMatrix4x4(obj->transposed());
       Qt5xHb::createReturnClass(ptr, "QMATRIX4X4", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -444,9 +422,7 @@ HB_FUNC_STATIC(QMATRIX4X4_NORMALMATRIX)
       auto ptr = new QMatrix3x3(obj->normalMatrix());
       Qt5xHb::createReturnClass(ptr, "QMATRIX3X3", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -672,9 +648,7 @@ HB_FUNC_STATIC(QMATRIX4X4_FRUSTUM)
 #endif
       obj->frustum(PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4), PFLOAT(5), PFLOAT(6));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -697,9 +671,7 @@ HB_FUNC_STATIC(QMATRIX4X4_PERSPECTIVE)
 #endif
       obj->perspective(PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -723,9 +695,7 @@ HB_FUNC_STATIC(QMATRIX4X4_LOOKAT)
 #endif
       obj->lookAt(*PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -786,9 +756,7 @@ HB_FUNC_STATIC(QMATRIX4X4_FLIPCOORDINATES)
 #endif
       obj->flipCoordinates();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -812,9 +780,7 @@ HB_FUNC_STATIC(QMATRIX4X4_TOAFFINE)
       auto ptr = new QMatrix(obj->toAffine());
       Qt5xHb::createReturnClass(ptr, "QMATRIX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -927,9 +893,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAPVECTOR)
       auto ptr = new QVector3D(obj->mapVector(*PQVECTOR3D(1)));
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -981,9 +945,7 @@ HB_FUNC_STATIC(QMATRIX4X4_OPTIMIZE)
 #endif
       obj->optimize();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

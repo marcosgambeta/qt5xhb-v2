@@ -115,9 +115,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_CREATEDOCUMENT)
       auto ptr = new QDomDocument(obj->createDocument(PQSTRING(1), PQSTRING(2), *PQDOMDOCUMENTTYPE(3)));
       Qt5xHb::createReturnClass(ptr, "QDOMDOCUMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -139,9 +137,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE)
       auto ptr = new QDomDocumentType(obj->createDocumentType(PQSTRING(1), PQSTRING(2), PQSTRING(3)));
       Qt5xHb::createReturnClass(ptr, "QDOMDOCUMENTTYPE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -162,9 +158,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_HASFEATURE)
 #endif
       RBOOL(obj->hasFeature(PQSTRING(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -185,9 +179,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_ISNULL)
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

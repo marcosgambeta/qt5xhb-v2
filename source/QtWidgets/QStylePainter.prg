@@ -125,9 +125,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWPRIMITIVE)
 #endif
       obj->drawPrimitive(static_cast<QStyle::PrimitiveElement>(hb_parni(1)), *PQSTYLEOPTION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -150,9 +148,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCONTROL)
 #endif
       obj->drawControl(static_cast<QStyle::ControlElement>(hb_parni(1)), *PQSTYLEOPTION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -175,9 +171,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCOMPLEXCONTROL)
 #endif
       obj->drawComplexControl(static_cast<QStyle::ComplexControl>(hb_parni(1)), *PQSTYLEOPTIONCOMPLEX(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -204,9 +198,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMTEXT)
                         HB_ISNIL(6) ? static_cast<QPalette::ColorRole>(QPalette::NoRole)
                                     : static_cast<QPalette::ColorRole>(hb_parni(6)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -229,9 +221,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMPIXMAP)
 #endif
       obj->drawItemPixmap(*PQRECT(1), PINT(2), *PQPIXMAP(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -255,9 +245,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_STYLE)
       auto ptr = obj->style();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

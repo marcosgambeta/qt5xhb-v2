@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_INTRINSICSIZE)
       auto ptr = new QSizeF(obj->intrinsicSize(PQTEXTDOCUMENT(1), PINT(2), *PQTEXTFORMAT(3)));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -111,9 +109,7 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DRAWOBJECT)
 #endif
       obj->drawObject(PQPAINTER(1), *PQRECTF(2), PQTEXTDOCUMENT(3), PINT(4), *PQTEXTFORMAT(5));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

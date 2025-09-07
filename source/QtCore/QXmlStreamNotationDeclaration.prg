@@ -111,9 +111,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NAME)
       auto ptr = new QStringRef(obj->name());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -135,9 +133,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_PUBLICID)
       auto ptr = new QStringRef(obj->publicId());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -159,9 +155,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_SYSTEMID)
       auto ptr = new QStringRef(obj->systemId());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -330,9 +330,7 @@ HB_FUNC_STATIC(QOBJECT_BLOCKSIGNALS)
 #endif
       RBOOL(obj->blockSignals(PBOOL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -374,9 +372,7 @@ HB_FUNC_STATIC(QOBJECT_CHILDREN)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -395,9 +391,7 @@ HB_FUNC_STATIC(QOBJECT_DUMPOBJECTINFO)
 #endif
       obj->dumpObjectInfo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -418,9 +412,7 @@ HB_FUNC_STATIC(QOBJECT_DUMPOBJECTTREE)
 #endif
       obj->dumpObjectTree();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -468,9 +460,7 @@ HB_FUNC_STATIC(QOBJECT_DYNAMICPROPERTYNAMES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -490,9 +480,7 @@ HB_FUNC_STATIC(QOBJECT_EVENT)
 #endif
       RBOOL(obj->event(PQEVENT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -511,9 +499,7 @@ HB_FUNC_STATIC(QOBJECT_EVENTFILTER)
 #endif
       RBOOL(obj->eventFilter(PQOBJECT(1), PQEVENT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -535,9 +521,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILD)
                                                        : static_cast<Qt::FindChildOptions>(hb_parni(2)));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -668,9 +652,7 @@ HB_FUNC_STATIC(QOBJECT_INHERITS)
 #endif
       RBOOL(obj->inherits(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -689,9 +671,7 @@ HB_FUNC_STATIC(QOBJECT_INSTALLEVENTFILTER)
 #endif
       obj->installEventFilter(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -712,9 +692,7 @@ HB_FUNC_STATIC(QOBJECT_ISWIDGETTYPE)
 #endif
       RBOOL(obj->isWidgetType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -733,9 +711,7 @@ HB_FUNC_STATIC(QOBJECT_ISWINDOWTYPE)
 #endif
       RBOOL(obj->isWindowType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -754,9 +730,7 @@ HB_FUNC_STATIC(QOBJECT_KILLTIMER)
 #endif
       obj->killTimer(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -778,9 +752,7 @@ HB_FUNC_STATIC(QOBJECT_METAOBJECT)
       auto ptr = obj->metaObject();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -799,9 +771,7 @@ HB_FUNC_STATIC(QOBJECT_MOVETOTHREAD)
 #endif
       obj->moveToThread(PQTHREAD(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -822,9 +792,7 @@ HB_FUNC_STATIC(QOBJECT_OBJECTNAME)
 #endif
       RQSTRING(obj->objectName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -843,9 +811,7 @@ HB_FUNC_STATIC(QOBJECT_SETOBJECTNAME)
 #endif
       obj->setObjectName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -867,9 +833,7 @@ HB_FUNC_STATIC(QOBJECT_PARENT)
       auto ptr = obj->parent();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -888,9 +852,7 @@ HB_FUNC_STATIC(QOBJECT_SETPARENT)
 #endif
       obj->setParent(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -913,9 +875,7 @@ HB_FUNC_STATIC(QOBJECT_PROPERTY)
       auto ptr = new QVariant(obj->property(PCONSTCHAR(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -936,9 +896,7 @@ HB_FUNC_STATIC(QOBJECT_SETPROPERTY)
 #endif
       RBOOL(obj->setProperty(PCONSTCHAR(1), *PQVARIANT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -958,9 +916,7 @@ HB_FUNC_STATIC(QOBJECT_REMOVEEVENTFILTER)
 #endif
       obj->removeEventFilter(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -981,9 +937,7 @@ HB_FUNC_STATIC(QOBJECT_SIGNALSBLOCKED)
 #endif
       RBOOL(obj->signalsBlocked());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1003,9 +957,7 @@ HB_FUNC_STATIC(QOBJECT_STARTTIMER)
       RINT(obj->startTimer(PINT(1), HB_ISNIL(2) ? static_cast<Qt::TimerType>(Qt::CoarseTimer)
                                                 : static_cast<Qt::TimerType>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1025,9 +977,7 @@ HB_FUNC_STATIC(QOBJECT_THREAD)
       auto ptr = obj->thread();
       Qt5xHb::createReturnQObjectClass(ptr, "QTHREAD");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1046,9 +996,7 @@ HB_FUNC_STATIC(QOBJECT_DELETELATER)
 #endif
       obj->deleteLater();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1086,9 +1034,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALL)
     {
       Qt5xHb::Events_disconnect_all_events(obj, PBOOL(1));
       Qt5xHb::Signals_disconnect_all_signals(obj, PBOOL(1));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -1108,9 +1054,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALLEVENTS)
     else if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       Qt5xHb::Events_disconnect_all_events(obj, PBOOL(1));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -1130,9 +1074,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALLSIGNALS)
     else if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       Qt5xHb::Signals_disconnect_all_signals(obj, PBOOL(1));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -1151,9 +1093,7 @@ void _qtxhb_processOnEventMethod(QEvent::Type event)
     if (item)
     {
       hb_retl(Qt5xHb::Events_connect_event(obj, event, item));
-    }
-    else
-    {
+    } else {
       hb_retl(0);
     }
   }
@@ -2061,9 +2001,7 @@ HB_FUNC_STATIC(QOBJECT_CONNECT)
       int event = hb_parni(1);
 
       hb_retl(Qt5xHb::Events_disconnect_event(obj, event));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -2099,9 +2037,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECT)
       int event = hb_parni(1);
 
       hb_retl(Qt5xHb::Events_disconnect_event(obj, event));
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -2146,9 +2082,7 @@ HB_FUNC_STATIC(QOBJECT_ONDESTROYED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -2195,9 +2129,7 @@ HB_FUNC_STATIC(QOBJECT_ONOBJECTNAMECHANGED)
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }

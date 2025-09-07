@@ -86,9 +86,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL_ISVIEWFINDERPARAMETERSUPPORTED)
       RBOOL(obj->isViewfinderParameterSupported(
           static_cast<QCameraViewfinderSettingsControl::ViewfinderParameter>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -111,9 +109,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL_SETVIEWFINDERPARAMETER)
       obj->setViewfinderParameter(static_cast<QCameraViewfinderSettingsControl::ViewfinderParameter>(hb_parni(1)),
                                   *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -138,9 +134,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL_VIEWFINDERPARAMETER)
           obj->viewfinderParameter(static_cast<QCameraViewfinderSettingsControl::ViewfinderParameter>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

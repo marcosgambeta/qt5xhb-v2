@@ -91,9 +91,7 @@ HB_FUNC_STATIC(QCANBUS_PLUGINS)
 #endif
       RQSTRINGLIST(obj->plugins());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -142,9 +140,7 @@ HB_FUNC_STATIC(QCANBUS_AVAILABLEDEVICES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -169,9 +165,7 @@ HB_FUNC_STATIC(QCANBUS_CREATEDEVICE)
       auto ptr = obj->createDevice(PQSTRING(1), PQSTRING(2), nullptr);
       Qt5xHb::createReturnQObjectClass(ptr, "QCANBUSDEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_MESSAGE)
                    HB_ISNIL(3) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(3)),
                    HB_ISNIL(4) ? QSourceLocation() : *static_cast<QSourceLocation *>(Qt5xHb::itemGetPtr(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -112,9 +112,7 @@ HB_FUNC_STATIC(QSCROLLERPROPERTIES_SCROLLMETRIC)
       auto ptr = new QVariant(obj->scrollMetric(static_cast<QScrollerProperties::ScrollMetric>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -135,9 +133,7 @@ HB_FUNC_STATIC(QSCROLLERPROPERTIES_SETSCROLLMETRIC)
 #endif
       obj->setScrollMetric(static_cast<QScrollerProperties::ScrollMetric>(hb_parni(1)), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -160,9 +156,7 @@ HB_FUNC_STATIC(QSCROLLERPROPERTIES_SETDEFAULTSCROLLERPROPERTIES)
 #endif
       obj->setDefaultScrollerProperties(*PQSCROLLERPROPERTIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -185,9 +179,7 @@ HB_FUNC_STATIC(QSCROLLERPROPERTIES_UNSETDEFAULTSCROLLERPROPERTIES)
 #endif
       obj->unsetDefaultScrollerProperties();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

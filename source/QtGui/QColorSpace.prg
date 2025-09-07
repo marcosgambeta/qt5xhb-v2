@@ -178,9 +178,7 @@ HB_FUNC_STATIC(QCOLORSPACE_SWAP)
 #endif
       obj->swap(*PQCOLORSPACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -205,9 +203,7 @@ HB_FUNC_STATIC(QCOLORSPACE_PRIMARIES)
 #endif
       RENUM(obj->primaries());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -230,9 +226,7 @@ HB_FUNC_STATIC(QCOLORSPACE_TRANSFERFUNCTION)
 #endif
       RENUM(obj->transferFunction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -255,9 +249,7 @@ HB_FUNC_STATIC(QCOLORSPACE_GAMMA)
 #endif
       RFLOAT(obj->gamma());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -280,9 +272,7 @@ HB_FUNC_STATIC(QCOLORSPACE_SETTRANSFERFUNCTION)
 #endif
       obj->setTransferFunction(static_cast<QColorSpace::TransferFunction>(hb_parni(1)), OPFLOAT(2, 0.0f));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -309,9 +299,7 @@ HB_FUNC_STATIC(QCOLORSPACE_WITHTRANSFERFUNCTION)
           obj->withTransferFunction(static_cast<QColorSpace::TransferFunction>(hb_parni(1)), OPFLOAT(2, 0.0f)));
       Qt5xHb::createReturnClass(ptr, "QCOLORSPACE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -371,9 +359,7 @@ HB_FUNC_STATIC(QCOLORSPACE_ISVALID)
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -417,9 +403,7 @@ HB_FUNC_STATIC(QCOLORSPACE_ICCPROFILE)
       auto ptr = new QByteArray(obj->iccProfile());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

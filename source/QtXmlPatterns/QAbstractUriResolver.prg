@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QABSTRACTURIRESOLVER_RESOLVE)
       auto ptr = new QUrl(obj->resolve(*PQURL(1), *PQURL(2)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

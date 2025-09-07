@@ -104,9 +104,7 @@ HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_SEARCHREQUEST)
       auto ptr = new QPlaceSearchRequest(obj->searchRequest());
       Qt5xHb::createReturnClass(ptr, "QPLACESEARCHREQUEST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -129,9 +127,7 @@ HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_SETSEARCHREQUEST)
 #endif
       obj->setSearchRequest(*PQPLACESEARCHREQUEST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

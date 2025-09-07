@@ -214,9 +214,7 @@ bool Events::connectEvent(QObject *object, int type, PHB_ITEM codeblock)
       m_list1->append(object);
       m_list2->append(static_cast<QEvent::Type>(type));
       m_list3->append(codeblock);
-    }
-    else
-    { // encontrou posicao livre
+    } else { // encontrou posicao livre
       // coloca na posição livre
       m_list1->replace(index, object);
       m_list2->replace(index, static_cast<QEvent::Type>(type));
