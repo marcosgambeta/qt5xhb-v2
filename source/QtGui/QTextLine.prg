@@ -446,8 +446,7 @@ HB_FUNC_STATIC(QTEXTLINE_CURSORTOX)
     */
     auto obj = static_cast<QTextLine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       int par1;
       RQREAL(obj->cursorToX(&par1, HB_ISNIL(2) ? static_cast<QTextLine::Edge>(QTextLine::Leading)
                                                : static_cast<QTextLine::Edge>(hb_parni(2))));
@@ -461,8 +460,7 @@ HB_FUNC_STATIC(QTEXTLINE_CURSORTOX)
     */
     auto obj = static_cast<QTextLine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQREAL(obj->cursorToX(PINT(1), HB_ISNIL(2) ? static_cast<QTextLine::Edge>(QTextLine::Leading)
                                                  : static_cast<QTextLine::Edge>(hb_parni(2))));
     }
@@ -532,8 +530,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETNUMCOLUMNS)
     */
     auto obj = static_cast<QTextLine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setNumColumns(PINT(1));
     }
 
@@ -546,8 +543,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETNUMCOLUMNS)
     */
     auto obj = static_cast<QTextLine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setNumColumns(PINT(1), PQREAL(2));
     }
 

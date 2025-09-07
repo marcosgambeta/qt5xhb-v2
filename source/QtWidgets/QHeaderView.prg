@@ -585,8 +585,7 @@ HB_FUNC_STATIC(QHEADERVIEW_LOGICALINDEXAT)
     */
     auto obj = qobject_cast<QHeaderView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->logicalIndexAt(PINT(1)));
     }
   }
@@ -597,8 +596,7 @@ HB_FUNC_STATIC(QHEADERVIEW_LOGICALINDEXAT)
     */
     auto obj = qobject_cast<QHeaderView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->logicalIndexAt(PINT(1), PINT(2)));
     }
   }
@@ -609,8 +607,7 @@ HB_FUNC_STATIC(QHEADERVIEW_LOGICALINDEXAT)
     */
     auto obj = qobject_cast<QHeaderView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->logicalIndexAt(*PQPOINT(1)));
     }
   }
@@ -1564,8 +1561,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONRESIZEMODE)
     */
     auto obj = qobject_cast<QHeaderView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setSectionResizeMode(static_cast<QHeaderView::ResizeMode>(hb_parni(1)));
     }
 
@@ -1578,8 +1574,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONRESIZEMODE)
     */
     auto obj = qobject_cast<QHeaderView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setSectionResizeMode(PINT(1), static_cast<QHeaderView::ResizeMode>(hb_parni(2)));
     }
 

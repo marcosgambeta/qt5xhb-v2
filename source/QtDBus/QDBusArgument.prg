@@ -167,8 +167,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_BEGINARRAY)
     */
     auto obj = static_cast<QDBusArgument *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->beginArray(PINT(1));
     }
 
@@ -181,8 +180,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_BEGINARRAY)
     */
     auto obj = static_cast<QDBusArgument *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->beginArray();
     }
 
@@ -228,8 +226,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_BEGINMAP)
     */
     auto obj = static_cast<QDBusArgument *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->beginMap(PINT(1), PINT(2));
     }
 
@@ -242,8 +239,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_BEGINMAP)
     */
     auto obj = static_cast<QDBusArgument *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->beginMap();
     }
 

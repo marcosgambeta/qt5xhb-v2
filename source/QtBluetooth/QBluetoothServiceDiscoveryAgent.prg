@@ -254,8 +254,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_SETUUIDFILTER)
     void setUuidFilter(const QList<QBluetoothUuid> &uuids)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QBluetoothUuid> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
@@ -276,8 +275,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_SETUUIDFILTER)
     void setUuidFilter(const QBluetoothUuid &uuid)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setUuidFilter(*PQBLUETOOTHUUID(1));
     }
 

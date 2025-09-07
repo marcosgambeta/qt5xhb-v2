@@ -109,8 +109,7 @@ HB_FUNC_STATIC(QAXSCRIPT_CALL)
     */
     auto obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QVariant(obj->call(PQSTRING(1),
                                         HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2)),
                                         HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)),
@@ -128,8 +127,7 @@ HB_FUNC_STATIC(QAXSCRIPT_CALL)
     // QVariant call(const QString &function, QList<QVariant> &arguments)
     auto obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QVariant(obj->call(PQSTRING(1), PQVARIANTLIST(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
     }

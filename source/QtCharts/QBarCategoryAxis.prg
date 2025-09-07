@@ -331,8 +331,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_APPEND)
     void append(const QStringList &categories)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->append(PQSTRINGLIST(1));
     }
 
@@ -345,8 +344,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_APPEND)
     void append(const QString &category)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->append(PQSTRING(1));
     }
 

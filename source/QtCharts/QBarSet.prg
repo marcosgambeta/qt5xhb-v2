@@ -571,8 +571,7 @@ HB_FUNC_STATIC(QBARSET_APPEND)
     void append(const qreal value)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->append(PQREAL(1));
     }
 
@@ -585,8 +584,7 @@ HB_FUNC_STATIC(QBARSET_APPEND)
     void append(const QList<qreal> &values)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<qreal> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);

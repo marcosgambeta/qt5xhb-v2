@@ -173,8 +173,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = qobject_cast<QQmlApplicationEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->load(*PQURL(1));
     }
 
@@ -189,8 +188,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = qobject_cast<QQmlApplicationEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->load(PQSTRING(1));
     }
 

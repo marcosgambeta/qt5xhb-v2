@@ -178,8 +178,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
     */
     auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setAddress(PQUINT32(1));
     }
 
@@ -192,8 +191,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
     */
     auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->setAddress(PQSTRING(1)));
     }
   }
@@ -235,8 +233,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_TOIPV4ADDRESS)
     */
     auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQUINT32(obj->toIPv4Address());
     }
   }
@@ -248,8 +245,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_TOIPV4ADDRESS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     auto obj = static_cast<QHostAddress *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       bool par1;
       RQUINT32(obj->toIPv4Address(&par1));
       hb_storl(par1, 1);

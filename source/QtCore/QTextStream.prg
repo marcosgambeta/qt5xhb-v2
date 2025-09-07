@@ -162,8 +162,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETCODEC)
     */
     auto obj = static_cast<QTextStream *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setCodec(PQTEXTCODEC(1));
     }
 
@@ -176,8 +175,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETCODEC)
     */
     auto obj = static_cast<QTextStream *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setCodec(PCONSTCHAR(1));
     }
 

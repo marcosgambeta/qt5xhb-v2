@@ -456,8 +456,7 @@ HB_FUNC_STATIC(QVECTOR3D_DISTANCETOPLANE)
     */
     auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RFLOAT(obj->distanceToPlane(*PQVECTOR3D(1), *PQVECTOR3D(2)));
     }
   }
@@ -468,8 +467,7 @@ HB_FUNC_STATIC(QVECTOR3D_DISTANCETOPLANE)
     */
     auto obj = static_cast<QVector3D *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RFLOAT(obj->distanceToPlane(*PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3)));
     }
   }

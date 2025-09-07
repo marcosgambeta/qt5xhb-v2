@@ -340,8 +340,7 @@ HB_FUNC_STATIC(QSIZEF_SCALE)
     */
     auto obj = static_cast<QSizeF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->scale(PQREAL(1), PQREAL(2), static_cast<Qt::AspectRatioMode>(hb_parni(3)));
     }
 
@@ -354,8 +353,7 @@ HB_FUNC_STATIC(QSIZEF_SCALE)
     */
     auto obj = static_cast<QSizeF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->scale(*PQSIZEF(1), static_cast<Qt::AspectRatioMode>(hb_parni(2)));
     }
 
@@ -376,8 +374,7 @@ HB_FUNC_STATIC(QSIZEF_SCALED)
     */
     auto obj = static_cast<QSizeF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QSizeF(obj->scaled(PQREAL(1), PQREAL(2), static_cast<Qt::AspectRatioMode>(hb_parni(3))));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
     }
@@ -389,8 +386,7 @@ HB_FUNC_STATIC(QSIZEF_SCALED)
     */
     auto obj = static_cast<QSizeF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QSizeF(obj->scaled(*PQSIZEF(1), static_cast<Qt::AspectRatioMode>(hb_parni(2))));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
     }

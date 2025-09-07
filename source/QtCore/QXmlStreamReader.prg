@@ -177,8 +177,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
     */
     auto obj = static_cast<QXmlStreamReader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addData(*PQBYTEARRAY(1));
     }
 
@@ -191,8 +190,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
     */
     auto obj = static_cast<QXmlStreamReader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addData(PQSTRING(1));
     }
 
@@ -205,8 +203,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
     */
     auto obj = static_cast<QXmlStreamReader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addData(PCONSTCHAR(1));
     }
 

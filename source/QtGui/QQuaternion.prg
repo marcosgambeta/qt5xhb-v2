@@ -213,8 +213,7 @@ HB_FUNC_STATIC(QQUATERNION_SETVECTOR)
     */
     auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setVector(*PQVECTOR3D(1));
     }
 
@@ -227,8 +226,7 @@ HB_FUNC_STATIC(QQUATERNION_SETVECTOR)
     */
     auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setVector(PFLOAT(1), PFLOAT(2), PFLOAT(3));
     }
 

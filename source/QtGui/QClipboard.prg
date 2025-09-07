@@ -401,8 +401,7 @@ HB_FUNC_STATIC(QCLIPBOARD_TEXT)
     */
     auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->text(HB_ISNIL(1) ? static_cast<QClipboard::Mode>(QClipboard::Clipboard)
                                      : static_cast<QClipboard::Mode>(hb_parni(1))));
     }
@@ -414,8 +413,7 @@ HB_FUNC_STATIC(QCLIPBOARD_TEXT)
     */
     auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QString par1 = hb_parc(1);
       RQSTRING(obj->text(par1, HB_ISNIL(2) ? static_cast<QClipboard::Mode>(QClipboard::Clipboard)
                                            : static_cast<QClipboard::Mode>(hb_parni(2))));

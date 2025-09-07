@@ -126,8 +126,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEREPLY)
     */
     auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QVariant> par1;
       if (HB_ISARRAY(1))
       {
@@ -150,8 +149,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEREPLY)
     */
     auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QDBusMessage(obj->createReply(*PQVARIANT(1)));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
     }
@@ -171,8 +169,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERRORREPLY)
     */
     auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QDBusMessage(obj->createErrorReply(PQSTRING(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
     }
@@ -184,8 +181,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERRORREPLY)
     */
     auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QDBusMessage(obj->createErrorReply(*PQDBUSERROR(1)));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
     }
@@ -197,8 +193,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERRORREPLY)
     */
     auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QDBusMessage(obj->createErrorReply(static_cast<QDBusError::ErrorType>(hb_parni(1)), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
     }

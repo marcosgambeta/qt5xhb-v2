@@ -1010,8 +1010,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSUBTEXTUREDATA)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QCustom3DVolume *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setSubTextureData(static_cast<Qt::Axis>(hb_parni(1)), PINT(2), PCONSTUCHAR(3));
     }
 
@@ -1026,8 +1025,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSUBTEXTUREDATA)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QCustom3DVolume *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setSubTextureData(static_cast<Qt::Axis>(hb_parni(1)), PINT(2), *PQIMAGE(3));
     }
 

@@ -143,8 +143,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQIMAGE(1), OPGLENUM(2, GL_TEXTURE_2D), OPGLINT(3, GL_RGBA)));
     }
   }
@@ -155,8 +154,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQPIXMAP(1), OPGLENUM(2, GL_TEXTURE_2D), OPGLINT(3, GL_RGBA)));
     }
   }
@@ -167,8 +165,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQIMAGE(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>(hb_parni(4))));
     }
   }
@@ -179,8 +176,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQPIXMAP(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>(hb_parni(4))));
     }
   }
@@ -191,8 +187,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RGLUINT(obj->bindTexture(PQSTRING(1)));
     }
   }
@@ -332,8 +327,7 @@ HB_FUNC_STATIC(QGLWIDGET_DRAWTEXTURE)
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->drawTexture(*PQRECTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
     }
 
@@ -346,8 +340,7 @@ HB_FUNC_STATIC(QGLWIDGET_DRAWTEXTURE)
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->drawTexture(*PQPOINTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
     }
 
@@ -610,8 +603,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->renderText(PINT(1), PINT(2), PQSTRING(3),
                       HB_ISNIL(4) ? QFont() : *static_cast<QFont *>(Qt5xHb::itemGetPtr(4)));
     }
@@ -625,8 +617,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
     */
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->renderText(PDOUBLE(1), PDOUBLE(2), PDOUBLE(3), PQSTRING(4),
                       HB_ISNIL(5) ? QFont() : *static_cast<QFont *>(Qt5xHb::itemGetPtr(5)));
     }

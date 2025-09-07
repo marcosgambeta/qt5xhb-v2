@@ -301,8 +301,7 @@ HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->displayName(*PQDATETIME(1),
                                 HB_ISNIL(2) ? static_cast<QTimeZone::NameType>(QTimeZone::DefaultName)
                                             : static_cast<QTimeZone::NameType>(hb_parni(2)),
@@ -319,8 +318,7 @@ HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->displayName(static_cast<QTimeZone::TimeType>(hb_parni(1)),
                                 HB_ISNIL(2) ? static_cast<QTimeZone::NameType>(QTimeZone::DefaultName)
                                             : static_cast<QTimeZone::NameType>(hb_parni(2)),

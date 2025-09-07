@@ -478,8 +478,7 @@ HB_FUNC_STATIC(QTREEWIDGET_ITEMAT)
     */
     auto obj = qobject_cast<QTreeWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->itemAt(*PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
     }
@@ -491,8 +490,7 @@ HB_FUNC_STATIC(QTREEWIDGET_ITEMAT)
     */
     auto obj = qobject_cast<QTreeWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
     }
@@ -610,8 +608,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETCURRENTITEM)
     */
     auto obj = qobject_cast<QTreeWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setCurrentItem(PQTREEWIDGETITEM(1));
     }
 
@@ -624,8 +621,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETCURRENTITEM)
     */
     auto obj = qobject_cast<QTreeWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setCurrentItem(PQTREEWIDGETITEM(1), PINT(2));
     }
 
@@ -638,8 +634,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETCURRENTITEM)
     */
     auto obj = qobject_cast<QTreeWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setCurrentItem(PQTREEWIDGETITEM(1), PINT(2), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(3)));
     }
 

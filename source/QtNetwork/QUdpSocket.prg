@@ -108,8 +108,7 @@ HB_FUNC_STATIC(QUDPSOCKET_JOINMULTICASTGROUP)
     */
     auto obj = qobject_cast<QUdpSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->joinMulticastGroup(*PQHOSTADDRESS(1)));
     }
   }
@@ -120,8 +119,7 @@ HB_FUNC_STATIC(QUDPSOCKET_JOINMULTICASTGROUP)
     */
     auto obj = qobject_cast<QUdpSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->joinMulticastGroup(*PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2)));
     }
   }
@@ -140,8 +138,7 @@ HB_FUNC_STATIC(QUDPSOCKET_LEAVEMULTICASTGROUP)
     */
     auto obj = qobject_cast<QUdpSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->leaveMulticastGroup(*PQHOSTADDRESS(1)));
     }
   }
@@ -152,8 +149,7 @@ HB_FUNC_STATIC(QUDPSOCKET_LEAVEMULTICASTGROUP)
     */
     auto obj = qobject_cast<QUdpSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->leaveMulticastGroup(*PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2)));
     }
   }
@@ -298,8 +294,7 @@ HB_FUNC_STATIC(QUDPSOCKET_WRITEDATAGRAM)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     auto obj = qobject_cast<QUdpSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQINT64(obj->writeDatagram(*PQNETWORKDATAGRAM(1)));
     }
 #endif
@@ -311,8 +306,7 @@ HB_FUNC_STATIC(QUDPSOCKET_WRITEDATAGRAM)
     */
     auto obj = qobject_cast<QUdpSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQINT64(obj->writeDatagram(PCONSTCHAR(1), PQINT64(2), *PQHOSTADDRESS(3), PQUINT16(4)));
     }
   }
@@ -323,8 +317,7 @@ HB_FUNC_STATIC(QUDPSOCKET_WRITEDATAGRAM)
     */
     auto obj = qobject_cast<QUdpSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQINT64(obj->writeDatagram(*PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3)));
     }
   }

@@ -250,8 +250,7 @@ HB_FUNC_STATIC(QPAGESIZE_KEY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPageSize *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->key());
     }
 #endif
@@ -282,8 +281,7 @@ HB_FUNC_STATIC(QPAGESIZE_NAME)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPageSize *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->name());
     }
 #endif
@@ -314,8 +312,7 @@ HB_FUNC_STATIC(QPAGESIZE_ID)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPageSize *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RENUM(obj->id());
     }
 #endif
@@ -371,8 +368,7 @@ HB_FUNC_STATIC(QPAGESIZE_WINDOWSID)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPageSize *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->windowsId());
     }
 #endif
@@ -403,8 +399,7 @@ HB_FUNC_STATIC(QPAGESIZE_DEFINITIONSIZE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPageSize *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QSizeF(obj->definitionSize());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
     }
@@ -437,8 +432,7 @@ HB_FUNC_STATIC(QPAGESIZE_DEFINITIONUNITS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPageSize *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RENUM(obj->definitionUnits());
     }
 #endif
@@ -469,8 +463,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPageSize *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QSizeF(obj->size(static_cast<QPageSize::Unit>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
     }
@@ -504,8 +497,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZEPOINTS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPageSize *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QSize(obj->sizePoints());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
     }
@@ -538,8 +530,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZEPIXELS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPageSize *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QSize(obj->sizePixels(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
     }

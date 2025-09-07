@@ -678,8 +678,7 @@ HB_FUNC_STATIC(QWEBFRAME_LOAD)
     */
     auto obj = qobject_cast<QWebFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->load(*PQURL(1));
     }
 
@@ -693,8 +692,7 @@ HB_FUNC_STATIC(QWEBFRAME_LOAD)
     */
     auto obj = qobject_cast<QWebFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->load(*PQNETWORKREQUEST(1),
                 HB_ISNIL(2) ? static_cast<QNetworkAccessManager::Operation>(QNetworkAccessManager::GetOperation)
                             : static_cast<QNetworkAccessManager::Operation>(hb_parni(2)),
@@ -790,8 +788,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
     */
     auto obj = qobject_cast<QWebFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRegion() : *static_cast<QRegion *>(Qt5xHb::itemGetPtr(2)));
     }
 
@@ -804,8 +801,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
     */
     auto obj = qobject_cast<QWebFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->render(PQPAINTER(1), static_cast<QWebFrame::RenderLayers>(hb_parni(2)),
                   HB_ISNIL(3) ? QRegion() : *static_cast<QRegion *>(Qt5xHb::itemGetPtr(3)));
     }

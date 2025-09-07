@@ -459,8 +459,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETRESOLUTION)
     */
     auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setResolution(*PQSIZE(1));
     }
 
@@ -473,8 +472,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETRESOLUTION)
     */
     auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setResolution(PINT(1), PINT(2));
     }
 

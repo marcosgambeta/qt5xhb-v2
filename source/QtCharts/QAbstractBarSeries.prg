@@ -403,8 +403,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_APPEND)
     bool append(QBarSet * set)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->append(PQBARSET(1)));
     }
 #endif
@@ -415,8 +414,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_APPEND)
     bool append(QList<QBarSet*> sets)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QBarSet *> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);

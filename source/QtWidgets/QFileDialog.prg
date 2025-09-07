@@ -1102,8 +1102,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETDIRECTORY)
     */
     auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setDirectory(PQSTRING(1));
     }
 
@@ -1116,8 +1115,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETDIRECTORY)
     */
     auto obj = qobject_cast<QFileDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setDirectory(*PQDIR(1));
     }
 

@@ -712,8 +712,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
     */
     auto obj = qobject_cast<QNetworkAccessManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->post(*PQNETWORKREQUEST(1), PQIODEVICE(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
@@ -725,8 +724,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
     */
     auto obj = qobject_cast<QNetworkAccessManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->post(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
@@ -738,8 +736,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
     */
     auto obj = qobject_cast<QNetworkAccessManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->post(*PQNETWORKREQUEST(1), PQHTTPMULTIPART(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
@@ -759,8 +756,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
     */
     auto obj = qobject_cast<QNetworkAccessManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->put(*PQNETWORKREQUEST(1), PQIODEVICE(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
@@ -772,8 +768,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
     */
     auto obj = qobject_cast<QNetworkAccessManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->put(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
@@ -785,8 +780,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
     */
     auto obj = qobject_cast<QNetworkAccessManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->put(*PQNETWORKREQUEST(1), PQHTTPMULTIPART(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
@@ -831,8 +825,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
     */
     auto obj = qobject_cast<QNetworkAccessManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->sendCustomRequest(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2), OPQIODEVICE(3, nullptr));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
@@ -845,8 +838,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     auto obj = qobject_cast<QNetworkAccessManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->sendCustomRequest(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2), *PQBYTEARRAY(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
@@ -861,8 +853,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     auto obj = qobject_cast<QNetworkAccessManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->sendCustomRequest(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2), PQHTTPMULTIPART(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }

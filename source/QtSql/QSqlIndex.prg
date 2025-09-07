@@ -101,8 +101,7 @@ HB_FUNC_STATIC(QSQLINDEX_APPEND)
     */
     auto obj = static_cast<QSqlIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->append(*PQSQLFIELD(1));
     }
 
@@ -115,8 +114,7 @@ HB_FUNC_STATIC(QSQLINDEX_APPEND)
     */
     auto obj = static_cast<QSqlIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->append(*PQSQLFIELD(1), PBOOL(2));
     }
 

@@ -134,8 +134,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ADDITEM)
     */
     auto obj = static_cast<QGraphicsGridLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addItem(PQGRAPHICSLAYOUTITEM(1), PINT(2), PINT(3), PINT(4), PINT(5),
                    HB_ISNIL(6) ? static_cast<Qt::Alignment>(0) : static_cast<Qt::Alignment>(hb_parni(6)));
     }
@@ -149,8 +148,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ADDITEM)
     */
     auto obj = static_cast<QGraphicsGridLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addItem(PQGRAPHICSLAYOUTITEM(1), PINT(2), PINT(3),
                    HB_ISNIL(4) ? static_cast<Qt::Alignment>(0) : static_cast<Qt::Alignment>(hb_parni(4)));
     }
@@ -379,8 +377,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ITEMAT)
     */
     auto obj = static_cast<QGraphicsGridLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
     }
@@ -392,8 +389,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ITEMAT)
     */
     auto obj = static_cast<QGraphicsGridLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->itemAt(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
     }

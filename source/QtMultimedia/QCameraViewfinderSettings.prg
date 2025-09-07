@@ -208,8 +208,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETRESOLUTION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     auto obj = static_cast<QCameraViewfinderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setResolution(*PQSIZE(1));
     }
 
@@ -224,8 +223,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETRESOLUTION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     auto obj = static_cast<QCameraViewfinderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setResolution(PINT(1), PINT(2));
     }
 
@@ -430,8 +428,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETPIXELASPECTRATIO)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     auto obj = static_cast<QCameraViewfinderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPixelAspectRatio(*PQSIZE(1));
     }
 
@@ -446,8 +443,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETPIXELASPECTRATIO)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     auto obj = static_cast<QCameraViewfinderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPixelAspectRatio(PINT(1), PINT(2));
     }
 

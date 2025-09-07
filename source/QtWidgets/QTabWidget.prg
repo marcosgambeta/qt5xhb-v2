@@ -147,8 +147,7 @@ HB_FUNC_STATIC(QTABWIDGET_ADDTAB)
     */
     auto obj = qobject_cast<QTabWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->addTab(PQWIDGET(1), PQSTRING(2)));
     }
   }
@@ -159,8 +158,7 @@ HB_FUNC_STATIC(QTABWIDGET_ADDTAB)
     */
     auto obj = qobject_cast<QTabWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->addTab(PQWIDGET(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(2)) : QIcon(hb_parc(2)),
                        PQSTRING(3)));
     }
@@ -544,8 +542,7 @@ HB_FUNC_STATIC(QTABWIDGET_INSERTTAB)
     */
     auto obj = qobject_cast<QTabWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->insertTab(PINT(1), PQWIDGET(2), PQSTRING(3)));
     }
   }
@@ -556,8 +553,7 @@ HB_FUNC_STATIC(QTABWIDGET_INSERTTAB)
     */
     auto obj = qobject_cast<QTabWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->insertTab(PINT(1), PQWIDGET(2),
                           HB_ISOBJECT(3) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(3)) : QIcon(hb_parc(3)),
                           PQSTRING(4)));

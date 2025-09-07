@@ -121,8 +121,7 @@ HB_FUNC_STATIC(QAUDIOPROBE_SETSOURCE)
     */
     auto obj = qobject_cast<QAudioProbe *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->setSource(PQMEDIAOBJECT(1)));
     }
   }
@@ -133,8 +132,7 @@ HB_FUNC_STATIC(QAUDIOPROBE_SETSOURCE)
     */
     auto obj = qobject_cast<QAudioProbe *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->setSource(PQMEDIARECORDER(1)));
     }
   }

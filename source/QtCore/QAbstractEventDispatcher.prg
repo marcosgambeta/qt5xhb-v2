@@ -291,8 +291,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTERTIMER)
     */
     auto obj = qobject_cast<QAbstractEventDispatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->registerTimer(PINT(1), static_cast<Qt::TimerType>(hb_parni(2)), PQOBJECT(3)));
     }
   }
@@ -303,8 +302,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTERTIMER)
     */
     auto obj = qobject_cast<QAbstractEventDispatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->registerTimer(PINT(1), PINT(2), static_cast<Qt::TimerType>(hb_parni(3)), PQOBJECT(4));
     }
 

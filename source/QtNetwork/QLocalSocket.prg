@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
     */
     auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->connectToServer(HB_ISNIL(1) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
                                        : static_cast<QIODevice::OpenMode>(hb_parni(1)));
     }
@@ -137,8 +136,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
     */
     auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->connectToServer(PQSTRING(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
                                                     : static_cast<QIODevice::OpenMode>(hb_parni(2)));
     }

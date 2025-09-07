@@ -1254,8 +1254,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXTMARGINS)
     */
     auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setTextMargins(PINT(1), PINT(2), PINT(3), PINT(4));
     }
 
@@ -1268,8 +1267,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXTMARGINS)
     */
     auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setTextMargins(*PQMARGINS(1));
     }
 
@@ -1705,8 +1703,7 @@ HB_FUNC_STATIC(QLINEEDIT_ADDACTION)
     */
     auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addAction(PQACTION(1), static_cast<QLineEdit::ActionPosition>(hb_parni(2)));
     }
 
@@ -1719,8 +1716,7 @@ HB_FUNC_STATIC(QLINEEDIT_ADDACTION)
     */
     auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addAction(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
                                 static_cast<QLineEdit::ActionPosition>(hb_parni(2)));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");

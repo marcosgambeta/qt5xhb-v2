@@ -245,8 +245,7 @@ HB_FUNC_STATIC(QPALETTE_BRUSH)
     */
     auto obj = static_cast<QPalette *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr =
           &obj->brush(static_cast<QPalette::ColorGroup>(hb_parni(1)), static_cast<QPalette::ColorRole>(hb_parni(2)));
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
@@ -259,8 +258,7 @@ HB_FUNC_STATIC(QPALETTE_BRUSH)
     */
     auto obj = static_cast<QPalette *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = &obj->brush(static_cast<QPalette::ColorRole>(hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
     }
@@ -351,8 +349,7 @@ HB_FUNC_STATIC(QPALETTE_COLOR)
     */
     auto obj = static_cast<QPalette *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr =
           &obj->color(static_cast<QPalette::ColorGroup>(hb_parni(1)), static_cast<QPalette::ColorRole>(hb_parni(2)));
       Qt5xHb::createReturnClass(ptr, "QCOLOR", false);
@@ -365,8 +362,7 @@ HB_FUNC_STATIC(QPALETTE_COLOR)
     */
     auto obj = static_cast<QPalette *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = &obj->color(static_cast<QPalette::ColorRole>(hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QCOLOR", false);
     }
@@ -696,8 +692,7 @@ HB_FUNC_STATIC(QPALETTE_SETBRUSH)
     */
     auto obj = static_cast<QPalette *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setBrush(static_cast<QPalette::ColorRole>(hb_parni(1)), *PQBRUSH(2));
     }
 
@@ -710,8 +705,7 @@ HB_FUNC_STATIC(QPALETTE_SETBRUSH)
     */
     auto obj = static_cast<QPalette *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setBrush(static_cast<QPalette::ColorGroup>(hb_parni(1)), static_cast<QPalette::ColorRole>(hb_parni(2)),
                     *PQBRUSH(3));
     }
@@ -733,8 +727,7 @@ HB_FUNC_STATIC(QPALETTE_SETCOLOR)
     */
     auto obj = static_cast<QPalette *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setColor(static_cast<QPalette::ColorGroup>(hb_parni(1)), static_cast<QPalette::ColorRole>(hb_parni(2)),
                     HB_ISOBJECT(3) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(3)) : QColor(hb_parc(3)));
     }
@@ -748,8 +741,7 @@ HB_FUNC_STATIC(QPALETTE_SETCOLOR)
     */
     auto obj = static_cast<QPalette *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setColor(static_cast<QPalette::ColorRole>(hb_parni(1)),
                     HB_ISOBJECT(2) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
     }

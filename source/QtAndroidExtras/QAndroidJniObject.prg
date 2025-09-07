@@ -162,8 +162,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETOBJECTFIELD)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QAndroidJniObject *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QAndroidJniObject(obj->getObjectField(PCONSTCHAR(1)));
       Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
     }
@@ -175,8 +174,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETOBJECTFIELD)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QAndroidJniObject *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QAndroidJniObject(obj->getObjectField(PCONSTCHAR(1), PCONSTCHAR(2)));
       Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
     }

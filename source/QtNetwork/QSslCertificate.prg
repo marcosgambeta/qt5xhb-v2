@@ -373,8 +373,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_ISSUERINFO)
     */
     auto obj = static_cast<QSslCertificate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRINGLIST(obj->issuerInfo(static_cast<QSslCertificate::SubjectInfo>(hb_parni(1))));
     }
   }
@@ -385,8 +384,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_ISSUERINFO)
     */
     auto obj = static_cast<QSslCertificate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRINGLIST(obj->issuerInfo(*PQBYTEARRAY(1)));
     }
   }
@@ -405,8 +403,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_SUBJECTINFO)
     */
     auto obj = static_cast<QSslCertificate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRINGLIST(obj->subjectInfo(static_cast<QSslCertificate::SubjectInfo>(hb_parni(1))));
     }
   }
@@ -417,8 +414,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_SUBJECTINFO)
     */
     auto obj = static_cast<QSslCertificate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRINGLIST(obj->subjectInfo(*PQBYTEARRAY(1)));
     }
   }

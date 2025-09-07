@@ -109,8 +109,7 @@ HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
     */
     auto obj = static_cast<QTextDecoder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->toUnicode(PCONSTCHAR(1), PINT(2)));
     }
   }
@@ -121,8 +120,7 @@ HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
     */
     auto obj = static_cast<QTextDecoder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->toUnicode(*PQBYTEARRAY(1)));
     }
   }

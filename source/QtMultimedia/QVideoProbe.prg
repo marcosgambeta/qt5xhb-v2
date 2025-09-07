@@ -121,8 +121,7 @@ HB_FUNC_STATIC(QVIDEOPROBE_SETSOURCE)
     */
     auto obj = qobject_cast<QVideoProbe *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->setSource(PQMEDIAOBJECT(1)));
     }
   }
@@ -133,8 +132,7 @@ HB_FUNC_STATIC(QVIDEOPROBE_SETSOURCE)
     */
     auto obj = qobject_cast<QVideoProbe *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->setSource(PQMEDIARECORDER(1)));
     }
   }

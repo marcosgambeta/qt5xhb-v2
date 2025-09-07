@@ -607,8 +607,7 @@ HB_FUNC_STATIC(QJSVALUE_PROPERTY)
     */
     auto obj = static_cast<QJSValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QJSValue(obj->property(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
     }
@@ -620,8 +619,7 @@ HB_FUNC_STATIC(QJSVALUE_PROPERTY)
     */
     auto obj = static_cast<QJSValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QJSValue(obj->property(PQUINT32(1)));
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
     }
@@ -665,8 +663,7 @@ HB_FUNC_STATIC(QJSVALUE_SETPROPERTY)
     */
     auto obj = static_cast<QJSValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setProperty(PQSTRING(1), *PQJSVALUE(2));
     }
 
@@ -679,8 +676,7 @@ HB_FUNC_STATIC(QJSVALUE_SETPROPERTY)
     */
     auto obj = static_cast<QJSValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setProperty(PQUINT32(1), *PQJSVALUE(2));
     }
 

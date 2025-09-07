@@ -113,8 +113,7 @@ HB_FUNC_STATIC(QTOOLBOX_ADDITEM)
     */
     auto obj = qobject_cast<QToolBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->addItem(PQWIDGET(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(2)) : QIcon(hb_parc(2)),
                         PQSTRING(3)));
     }
@@ -126,8 +125,7 @@ HB_FUNC_STATIC(QTOOLBOX_ADDITEM)
     */
     auto obj = qobject_cast<QToolBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->addItem(PQWIDGET(1), PQSTRING(2)));
     }
   }
@@ -239,8 +237,7 @@ HB_FUNC_STATIC(QTOOLBOX_INSERTITEM)
     */
     auto obj = qobject_cast<QToolBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->insertItem(PINT(1), PQWIDGET(2),
                            HB_ISOBJECT(3) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(3)) : QIcon(hb_parc(3)),
                            PQSTRING(4)));
@@ -253,8 +250,7 @@ HB_FUNC_STATIC(QTOOLBOX_INSERTITEM)
     */
     auto obj = qobject_cast<QToolBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->insertItem(PINT(1), PQWIDGET(2), PQSTRING(3)));
     }
   }

@@ -216,8 +216,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_BIND)
     */
     auto obj = qobject_cast<QAbstractSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->bind(*PQHOSTADDRESS(1), OPQUINT16(2, 0),
                       HB_ISNIL(3) ? static_cast<QAbstractSocket::BindMode>(QAbstractSocket::DefaultForPlatform)
                                   : static_cast<QAbstractSocket::BindMode>(hb_parni(3))));
@@ -230,8 +229,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_BIND)
     */
     auto obj = qobject_cast<QAbstractSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->bind(OPQUINT16(1, 0), HB_ISNIL(2)
                                            ? static_cast<QAbstractSocket::BindMode>(QAbstractSocket::DefaultForPlatform)
                                            : static_cast<QAbstractSocket::BindMode>(hb_parni(2))));
@@ -253,8 +251,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
     */
     auto obj = qobject_cast<QAbstractSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->connectToHost(PQSTRING(1), PQUINT16(2),
                          HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
                                      : static_cast<QIODevice::OpenMode>(hb_parni(3)),
@@ -273,8 +270,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
     */
     auto obj = qobject_cast<QAbstractSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->connectToHost(*PQHOSTADDRESS(1), PQUINT16(2),
                          HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
                                      : static_cast<QIODevice::OpenMode>(hb_parni(3)));

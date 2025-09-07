@@ -144,8 +144,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->bindVariable(*PQXMLNAME(1), *PQXMLITEM(2));
     }
 
@@ -158,8 +157,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->bindVariable(*PQXMLNAME(1), PQIODEVICE(2));
     }
 
@@ -172,8 +170,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->bindVariable(*PQXMLNAME(1), *PQXMLQUERY(2));
     }
 
@@ -186,8 +183,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->bindVariable(PQSTRING(1), *PQXMLITEM(2));
     }
 
@@ -200,8 +196,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->bindVariable(PQSTRING(1), PQIODEVICE(2));
     }
 
@@ -214,8 +209,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->bindVariable(PQSTRING(1), *PQXMLQUERY(2));
     }
 
@@ -236,8 +230,7 @@ HB_FUNC_STATIC(QXMLQUERY_EVALUATETO)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->evaluateTo(PQXMLRESULTITEMS(1));
     }
 
@@ -250,8 +243,7 @@ HB_FUNC_STATIC(QXMLQUERY_EVALUATETO)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->evaluateTo(PQABSTRACTXMLRECEIVER(1)));
     }
   }
@@ -262,8 +254,7 @@ HB_FUNC_STATIC(QXMLQUERY_EVALUATETO)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->evaluateTo(PQIODEVICE(1)));
     }
   }
@@ -424,8 +415,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETFOCUS)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setFocus(*PQXMLITEM(1));
     }
 
@@ -438,8 +428,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETFOCUS)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->setFocus(*PQURL(1)));
     }
   }
@@ -450,8 +439,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETFOCUS)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->setFocus(PQIODEVICE(1)));
     }
   }
@@ -462,8 +450,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETFOCUS)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->setFocus(PQSTRING(1)));
     }
   }
@@ -482,8 +469,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETINITIALTEMPLATENAME)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setInitialTemplateName(*PQXMLNAME(1));
     }
 
@@ -496,8 +482,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETINITIALTEMPLATENAME)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setInitialTemplateName(PQSTRING(1));
     }
 
@@ -568,8 +553,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setQuery(PQIODEVICE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2)));
     }
 
@@ -582,8 +566,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setQuery(*PQURL(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2)));
     }
 
@@ -596,8 +579,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
     */
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setQuery(PQSTRING(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2)));
     }
 

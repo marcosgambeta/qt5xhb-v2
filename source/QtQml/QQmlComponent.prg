@@ -196,8 +196,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_CREATE)
     */
     auto obj = qobject_cast<QQmlComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->create(OPQQMLCONTEXT(1, nullptr));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
@@ -210,8 +209,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_CREATE)
     */
     auto obj = qobject_cast<QQmlComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->create(*PQQMLINCUBATOR(1), OPQQMLCONTEXT(2, nullptr), OPQQMLCONTEXT(3, nullptr));
     }
 
@@ -418,8 +416,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_LOADURL)
     */
     auto obj = qobject_cast<QQmlComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->loadUrl(*PQURL(1));
     }
 
@@ -432,8 +429,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_LOADURL)
     */
     auto obj = qobject_cast<QQmlComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->loadUrl(*PQURL(1), static_cast<QQmlComponent::CompilationMode>(hb_parni(2)));
     }
 

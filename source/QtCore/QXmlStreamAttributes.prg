@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_APPEND)
     */
     auto obj = static_cast<QXmlStreamAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->append(PQSTRING(1), PQSTRING(2), PQSTRING(3));
     }
 
@@ -118,8 +117,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_APPEND)
     */
     auto obj = static_cast<QXmlStreamAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->append(*PQXMLSTREAMATTRIBUTE(1));
     }
 
@@ -132,8 +130,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_APPEND)
     */
     auto obj = static_cast<QXmlStreamAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->append(PQSTRING(1), PQSTRING(2));
     }
 
@@ -154,8 +151,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_HASATTRIBUTE)
     */
     auto obj = static_cast<QXmlStreamAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->hasAttribute(PQSTRING(1)));
     }
   }
@@ -166,8 +162,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_HASATTRIBUTE)
     */
     auto obj = static_cast<QXmlStreamAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->hasAttribute(*PQLATIN1STRING(1)));
     }
   }
@@ -178,8 +173,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_HASATTRIBUTE)
     */
     auto obj = static_cast<QXmlStreamAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->hasAttribute(PQSTRING(1), PQSTRING(2)));
     }
   }

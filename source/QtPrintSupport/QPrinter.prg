@@ -686,8 +686,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGEMARGINS)
     */
     auto obj = static_cast<QPrinter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPageMargins(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), static_cast<QPrinter::Unit>(hb_parni(5)));
     }
 
@@ -701,8 +700,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGEMARGINS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPrinter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->setPageMargins(*PQMARGINSF(1), static_cast<QPageLayout::Unit>(hb_parni(2))));
     }
 #endif
@@ -960,8 +958,7 @@ HB_FUNC_STATIC(QPRINTER_PAGERECT)
     */
     auto obj = static_cast<QPrinter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->pageRect());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
@@ -973,8 +970,7 @@ HB_FUNC_STATIC(QPRINTER_PAGERECT)
     */
     auto obj = static_cast<QPrinter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRectF(obj->pageRect(static_cast<QPrinter::Unit>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
@@ -994,8 +990,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERRECT)
     */
     auto obj = static_cast<QPrinter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->paperRect());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
@@ -1007,8 +1002,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERRECT)
     */
     auto obj = static_cast<QPrinter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRectF(obj->paperRect(static_cast<QPrinter::Unit>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
@@ -1028,8 +1022,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERSIZE)
     */
     auto obj = static_cast<QPrinter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RENUM(obj->paperSize());
     }
   }
@@ -1040,8 +1033,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERSIZE)
     */
     auto obj = static_cast<QPrinter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QSizeF(obj->paperSize(static_cast<QPrinter::Unit>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
     }
@@ -1398,8 +1390,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSIZE)
     */
     auto obj = static_cast<QPrinter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPaperSize(static_cast<QPrinter::PaperSize>(hb_parni(1)));
     }
 
@@ -1412,8 +1403,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSIZE)
     */
     auto obj = static_cast<QPrinter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPaperSize(*PQSIZEF(1), static_cast<QPrinter::Unit>(hb_parni(2)));
     }
 
@@ -1686,8 +1676,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGESIZE)
     */
     auto obj = static_cast<QPrinter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPageSize(static_cast<QPrinter::PageSize>(hb_parni(1)));
     }
 
@@ -1701,8 +1690,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGESIZE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPrinter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->setPageSize(*PQPAGESIZE(1)));
     }
 #endif

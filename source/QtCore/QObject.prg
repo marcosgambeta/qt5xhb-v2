@@ -553,8 +553,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
     // QList<T> findChildren(const QString &aName = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
     auto obj = qobject_cast<QObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto list = obj->findChildren<QObject *>(
           OPQSTRING(1, QString()), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions>(Qt::FindChildrenRecursively)
                                                : static_cast<Qt::FindChildOptions>(hb_parni(2)));
@@ -589,8 +588,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
 #ifndef QT_NO_REGEXP
     auto obj = qobject_cast<QObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto list = obj->findChildren<QObject *>(
           *PQREGEXP(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions>(Qt::FindChildrenRecursively)
                                     : static_cast<Qt::FindChildOptions>(hb_parni(2)));
@@ -626,8 +624,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
 #ifndef QT_NO_REGULAREXPRESSION
     auto obj = qobject_cast<QObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto list = obj->findChildren<QObject *>(
           *PQREGULAREXPRESSION(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions>(Qt::FindChildrenRecursively)
                                                : static_cast<Qt::FindChildOptions>(hb_parni(2)));

@@ -168,8 +168,7 @@ HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
     */
     auto obj = qobject_cast<QEventLoop *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->processEvents(HB_ISNIL(1) ? static_cast<QEventLoop::ProcessEventsFlags>(QEventLoop::AllEvents)
                                            : static_cast<QEventLoop::ProcessEventsFlags>(hb_parni(1))));
     }
@@ -181,8 +180,7 @@ HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
     */
     auto obj = qobject_cast<QEventLoop *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->processEvents(static_cast<QEventLoop::ProcessEventsFlags>(hb_parni(1)), PINT(2));
     }
 

@@ -169,8 +169,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_LOAD)
     */
     auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->load(*PQURL(1)));
     }
   }
@@ -181,8 +180,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_LOAD)
     */
     auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->load(PQIODEVICE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2))));
     }
   }
@@ -193,8 +191,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_LOAD)
     */
     auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->load(*PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2))));
     }
   }

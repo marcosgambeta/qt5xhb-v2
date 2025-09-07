@@ -532,8 +532,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MARGINS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPageLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QMarginsF(obj->margins());
       Qt5xHb::createReturnClass(ptr, "QMARGINSF", true);
     }
@@ -547,8 +546,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MARGINS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPageLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QMarginsF(obj->margins(static_cast<QPageLayout::Unit>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QMARGINSF", true);
     }
@@ -701,8 +699,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_FULLRECT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPageLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRectF(obj->fullRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
@@ -716,8 +713,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_FULLRECT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPageLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRectF(obj->fullRect(static_cast<QPageLayout::Unit>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
@@ -791,8 +787,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAINTRECT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPageLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRectF(obj->paintRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
@@ -806,8 +801,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAINTRECT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = static_cast<QPageLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRectF(obj->paintRect(static_cast<QPageLayout::Unit>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }

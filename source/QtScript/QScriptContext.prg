@@ -409,8 +409,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWERROR)
     */
     auto obj = static_cast<QScriptContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QScriptValue(obj->throwError(static_cast<QScriptContext::Error>(hb_parni(1)), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
@@ -422,8 +421,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWERROR)
     */
     auto obj = static_cast<QScriptContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QScriptValue(obj->throwError(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }

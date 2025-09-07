@@ -318,8 +318,7 @@ HB_FUNC_STATIC(QRECT_CONTAINS)
     */
     auto obj = static_cast<QRect *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->contains(*PQPOINT(1), OPBOOL(2, false)));
     }
   }
@@ -330,8 +329,7 @@ HB_FUNC_STATIC(QRECT_CONTAINS)
     */
     auto obj = static_cast<QRect *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->contains(PINT(1), PINT(2), PBOOL(3)));
     }
   }
@@ -342,8 +340,7 @@ HB_FUNC_STATIC(QRECT_CONTAINS)
     */
     auto obj = static_cast<QRect *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->contains(PINT(1), PINT(2)));
     }
   }
@@ -354,8 +351,7 @@ HB_FUNC_STATIC(QRECT_CONTAINS)
     */
     auto obj = static_cast<QRect *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->contains(*PQRECT(1), OPBOOL(2, false)));
     }
   }
@@ -752,8 +748,7 @@ HB_FUNC_STATIC(QRECT_MOVETO)
     */
     auto obj = static_cast<QRect *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->moveTo(PINT(1), PINT(2));
     }
 
@@ -766,8 +761,7 @@ HB_FUNC_STATIC(QRECT_MOVETO)
     */
     auto obj = static_cast<QRect *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->moveTo(*PQPOINT(1));
     }
 
@@ -1380,8 +1374,7 @@ HB_FUNC_STATIC(QRECT_TRANSLATE)
     */
     auto obj = static_cast<QRect *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->translate(PINT(1), PINT(2));
     }
 
@@ -1394,8 +1387,7 @@ HB_FUNC_STATIC(QRECT_TRANSLATE)
     */
     auto obj = static_cast<QRect *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->translate(*PQPOINT(1));
     }
 
@@ -1416,8 +1408,7 @@ HB_FUNC_STATIC(QRECT_TRANSLATED)
     */
     auto obj = static_cast<QRect *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->translated(PINT(1), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
@@ -1429,8 +1420,7 @@ HB_FUNC_STATIC(QRECT_TRANSLATED)
     */
     auto obj = static_cast<QRect *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->translated(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }

@@ -299,8 +299,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETOFFSET)
     */
     auto obj = qobject_cast<QGraphicsDropShadowEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setOffset(*PQPOINTF(1));
     }
 
@@ -313,8 +312,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETOFFSET)
     */
     auto obj = qobject_cast<QGraphicsDropShadowEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setOffset(PQREAL(1), PQREAL(2));
     }
 
@@ -327,8 +325,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETOFFSET)
     */
     auto obj = qobject_cast<QGraphicsDropShadowEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setOffset(PQREAL(1));
     }
 

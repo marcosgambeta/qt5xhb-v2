@@ -574,8 +574,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE)
     */
     auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setMaximumSize(*PQSIZEF(1));
     }
 
@@ -588,8 +587,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE)
     */
     auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setMaximumSize(PQREAL(1), PQREAL(2));
     }
 
@@ -660,8 +658,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE)
     */
     auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setMinimumSize(*PQSIZEF(1));
     }
 
@@ -674,8 +671,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE)
     */
     auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setMinimumSize(PQREAL(1), PQREAL(2));
     }
 
@@ -771,8 +767,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE)
     */
     auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPreferredSize(*PQSIZEF(1));
     }
 
@@ -785,8 +780,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE)
     */
     auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPreferredSize(PQREAL(1), PQREAL(2));
     }
 
@@ -832,8 +826,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETSIZEPOLICY)
     */
     auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setSizePolicy(*PQSIZEPOLICY(1));
     }
 
@@ -847,8 +840,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETSIZEPOLICY)
     */
     auto obj = static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setSizePolicy(static_cast<QSizePolicy::Policy>(hb_parni(1)), static_cast<QSizePolicy::Policy>(hb_parni(2)),
                          HB_ISNIL(3) ? static_cast<QSizePolicy::ControlType>(QSizePolicy::DefaultType)
                                      : static_cast<QSizePolicy::ControlType>(hb_parni(3)));

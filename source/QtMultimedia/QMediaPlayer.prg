@@ -748,8 +748,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETVIDEOOUTPUT)
     */
     auto obj = qobject_cast<QMediaPlayer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setVideoOutput(PQVIDEOWIDGET(1));
     }
 
@@ -762,8 +761,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETVIDEOOUTPUT)
     */
     auto obj = qobject_cast<QMediaPlayer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setVideoOutput(PQGRAPHICSVIDEOITEM(1));
     }
 
@@ -776,8 +774,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETVIDEOOUTPUT)
     */
     auto obj = qobject_cast<QMediaPlayer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setVideoOutput(PQABSTRACTVIDEOSURFACE(1));
     }
 

@@ -436,8 +436,7 @@ HB_FUNC_STATIC(QLINE_TRANSLATE)
     */
     auto obj = static_cast<QLine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->translate(*PQPOINT(1));
     }
 
@@ -450,8 +449,7 @@ HB_FUNC_STATIC(QLINE_TRANSLATE)
     */
     auto obj = static_cast<QLine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->translate(PINT(1), PINT(2));
     }
 
@@ -472,8 +470,7 @@ HB_FUNC_STATIC(QLINE_TRANSLATED)
     */
     auto obj = static_cast<QLine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QLine(obj->translated(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QLINE", true);
     }
@@ -485,8 +482,7 @@ HB_FUNC_STATIC(QLINE_TRANSLATED)
     */
     auto obj = static_cast<QLine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QLine(obj->translated(PINT(1), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QLINE", true);
     }

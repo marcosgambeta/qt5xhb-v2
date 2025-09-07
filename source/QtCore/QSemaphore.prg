@@ -124,8 +124,7 @@ HB_FUNC_STATIC(QSEMAPHORE_TRYACQUIRE)
     */
     auto obj = static_cast<QSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->tryAcquire(OPINT(1, 1)));
     }
   }
@@ -136,8 +135,7 @@ HB_FUNC_STATIC(QSEMAPHORE_TRYACQUIRE)
     */
     auto obj = static_cast<QSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->tryAcquire(PINT(1), PINT(2)));
     }
   }

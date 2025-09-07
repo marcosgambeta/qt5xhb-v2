@@ -581,8 +581,7 @@ HB_FUNC_STATIC(QSQLDATABASE_OPEN)
     */
     auto obj = static_cast<QSqlDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->open());
     }
   }
@@ -593,8 +592,7 @@ HB_FUNC_STATIC(QSQLDATABASE_OPEN)
     */
     auto obj = static_cast<QSqlDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->open(PQSTRING(1), PQSTRING(2)));
     }
   }

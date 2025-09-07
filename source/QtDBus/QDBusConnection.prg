@@ -281,8 +281,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CALLWITHCALLBACK)
     */
     auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->callWithCallback(*PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), PCONSTCHAR(4), OPINT(5, -1)));
     }
   }
@@ -293,8 +292,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CALLWITHCALLBACK)
     */
     auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->callWithCallback(*PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), OPINT(4, -1)));
     }
   }
@@ -365,8 +363,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECT)
     */
     auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->connect(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQOBJECT(5), PCONSTCHAR(6)));
     }
   }
@@ -379,8 +376,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECT)
     */
     auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->connect(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQOBJECT(6), PCONSTCHAR(7)));
     }
   }
@@ -393,8 +389,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECT)
     */
     auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->connect(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6), PQOBJECT(7),
                          PCONSTCHAR(8)));
     }
@@ -415,8 +410,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECT)
     */
     auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->disconnect(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQOBJECT(5), PCONSTCHAR(6)));
     }
   }
@@ -429,8 +423,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECT)
     */
     auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(
           obj->disconnect(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQOBJECT(6), PCONSTCHAR(7)));
     }
@@ -444,8 +437,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECT)
     */
     auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->disconnect(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRING(6),
                             PQOBJECT(7), PCONSTCHAR(8)));
     }

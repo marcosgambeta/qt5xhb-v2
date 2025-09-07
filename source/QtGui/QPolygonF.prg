@@ -179,8 +179,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATE)
     */
     auto obj = static_cast<QPolygonF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->translate(PQREAL(1), PQREAL(2));
     }
 
@@ -193,8 +192,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATE)
     */
     auto obj = static_cast<QPolygonF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->translate(*PQPOINTF(1));
     }
 
@@ -215,8 +213,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATED)
     */
     auto obj = static_cast<QPolygonF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPolygonF(obj->translated(PQREAL(1), PQREAL(2)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
@@ -228,8 +225,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATED)
     */
     auto obj = static_cast<QPolygonF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPolygonF(obj->translated(*PQPOINTF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }

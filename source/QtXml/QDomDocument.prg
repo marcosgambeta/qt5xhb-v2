@@ -577,8 +577,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
     */
     auto obj = static_cast<QDomDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       int par4;
       int par5;
       RBOOL(obj->setContent(*PQBYTEARRAY(1), PBOOL(2), nullptr, &par4, &par5));
@@ -595,8 +594,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
     */
     auto obj = static_cast<QDomDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       int par4;
       int par5;
       RBOOL(obj->setContent(PQSTRING(1), PBOOL(2), nullptr, &par4, &par5));
@@ -613,8 +611,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
     */
     auto obj = static_cast<QDomDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       int par4;
       int par5;
       RBOOL(obj->setContent(PQIODEVICE(1), PBOOL(2), nullptr, &par4, &par5));
@@ -631,8 +628,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
     */
     auto obj = static_cast<QDomDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       int par4;
       int par5;
       RBOOL(obj->setContent(PQXMLINPUTSOURCE(1), PBOOL(2), nullptr, &par4, &par5));
@@ -649,8 +645,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
     */
     auto obj = static_cast<QDomDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       int par3;
       int par4;
       RBOOL(obj->setContent(PQSTRING(1), nullptr, &par3, &par4));
@@ -667,8 +662,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
     */
     auto obj = static_cast<QDomDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       int par3;
       int par4;
       RBOOL(obj->setContent(*PQBYTEARRAY(1), nullptr, &par3, &par4));
@@ -685,8 +679,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
     */
     auto obj = static_cast<QDomDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       int par3;
       int par4;
       RBOOL(obj->setContent(PQIODEVICE(1), nullptr, &par3, &par4));
@@ -703,8 +696,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
     */
     auto obj = static_cast<QDomDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       int par4;
       int par5;
       RBOOL(obj->setContent(PQXMLINPUTSOURCE(1), PQXMLREADER(2), nullptr, &par4, &par5));

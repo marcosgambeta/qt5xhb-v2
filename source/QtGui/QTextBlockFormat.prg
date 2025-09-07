@@ -494,8 +494,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_LINEHEIGHT)
     */
     auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQREAL(obj->lineHeight(PQREAL(1), PQREAL(2)));
     }
   }
@@ -506,8 +505,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_LINEHEIGHT)
     */
     auto obj = static_cast<QTextBlockFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQREAL(obj->lineHeight());
     }
   }

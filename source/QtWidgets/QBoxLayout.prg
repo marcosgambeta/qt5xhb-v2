@@ -498,8 +498,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_SETSTRETCHFACTOR)
     */
     auto obj = qobject_cast<QBoxLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->setStretchFactor(PQWIDGET(1), PINT(2)));
     }
   }
@@ -510,8 +509,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_SETSTRETCHFACTOR)
     */
     auto obj = qobject_cast<QBoxLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->setStretchFactor(PQLAYOUT(1), PINT(2)));
     }
   }

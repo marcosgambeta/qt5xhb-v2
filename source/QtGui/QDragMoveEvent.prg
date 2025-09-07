@@ -95,8 +95,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
     */
     auto obj = static_cast<QDragMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->accept(*PQRECT(1));
     }
 
@@ -109,8 +108,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
     */
     auto obj = static_cast<QDragMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->accept();
     }
 
@@ -155,8 +153,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
     */
     auto obj = static_cast<QDragMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->ignore(*PQRECT(1));
     }
 
@@ -169,8 +166,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
     */
     auto obj = static_cast<QDragMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->ignore();
     }
 

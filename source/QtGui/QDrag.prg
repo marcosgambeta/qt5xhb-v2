@@ -161,8 +161,7 @@ HB_FUNC_STATIC(QDRAG_EXEC)
     */
     auto obj = qobject_cast<QDrag *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RENUM(obj->exec(HB_ISNIL(1) ? static_cast<Qt::DropActions>(Qt::MoveAction)
                                   : static_cast<Qt::DropActions>(hb_parni(1))));
     }
@@ -174,8 +173,7 @@ HB_FUNC_STATIC(QDRAG_EXEC)
     */
     auto obj = qobject_cast<QDrag *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RENUM(obj->exec(static_cast<Qt::DropActions>(hb_parni(1)), static_cast<Qt::DropAction>(hb_parni(2))));
     }
   }

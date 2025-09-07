@@ -381,8 +381,7 @@ HB_FUNC_STATIC(QMATRIX_MAP)
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPoint(obj->map(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
     }
@@ -394,8 +393,7 @@ HB_FUNC_STATIC(QMATRIX_MAP)
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPointF(obj->map(*PQPOINTF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
     }
@@ -407,8 +405,7 @@ HB_FUNC_STATIC(QMATRIX_MAP)
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QLine(obj->map(*PQLINE(1)));
       Qt5xHb::createReturnClass(ptr, "QLINE", true);
     }
@@ -420,8 +417,7 @@ HB_FUNC_STATIC(QMATRIX_MAP)
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QLineF(obj->map(*PQLINEF(1)));
       Qt5xHb::createReturnClass(ptr, "QLINEF", true);
     }
@@ -433,8 +429,7 @@ HB_FUNC_STATIC(QMATRIX_MAP)
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPolygon(obj->map(*PQPOLYGON(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
     }
@@ -446,8 +441,7 @@ HB_FUNC_STATIC(QMATRIX_MAP)
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPolygonF(obj->map(*PQPOLYGONF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
@@ -459,8 +453,7 @@ HB_FUNC_STATIC(QMATRIX_MAP)
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRegion(obj->map(*PQREGION(1)));
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
     }
@@ -472,8 +465,7 @@ HB_FUNC_STATIC(QMATRIX_MAP)
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPainterPath(obj->map(*PQPAINTERPATH(1)));
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
@@ -493,8 +485,7 @@ HB_FUNC_STATIC(QMATRIX_MAPRECT)
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->mapRect(*PQRECT(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
@@ -506,8 +497,7 @@ HB_FUNC_STATIC(QMATRIX_MAPRECT)
     */
     auto obj = static_cast<QMatrix *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRectF(obj->mapRect(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }

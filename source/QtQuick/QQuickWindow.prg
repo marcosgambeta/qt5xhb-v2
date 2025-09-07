@@ -618,8 +618,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETRENDERTARGET)
     */
     auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setRenderTarget(PQOPENGLFRAMEBUFFEROBJECT(1));
     }
 
@@ -632,8 +631,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETRENDERTARGET)
     */
     auto obj = qobject_cast<QQuickWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setRenderTarget(PUINT(1), *PQSIZE(2));
     }
 

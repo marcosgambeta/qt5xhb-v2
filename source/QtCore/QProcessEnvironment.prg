@@ -209,8 +209,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_INSERT)
     */
     auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insert(PQSTRING(1), PQSTRING(2));
     }
 
@@ -223,8 +222,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_INSERT)
     */
     auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insert(*PQPROCESSENVIRONMENT(1));
     }
 

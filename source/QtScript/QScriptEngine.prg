@@ -313,8 +313,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_EVALUATE)
     */
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QScriptValue(obj->evaluate(PQSTRING(1), OPQSTRING(2, QString()), OPINT(3, 1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
@@ -326,8 +325,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_EVALUATE)
     */
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QScriptValue(obj->evaluate(*PQSCRIPTPROGRAM(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
@@ -538,8 +536,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWOBJECT)
     */
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QScriptValue(obj->newObject());
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
@@ -551,8 +548,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWOBJECT)
     */
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QScriptValue(obj->newObject(
           PQSCRIPTCLASS(1), HB_ISNIL(2) ? QScriptValue() : *static_cast<QScriptValue *>(Qt5xHb::itemGetPtr(2))));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
@@ -598,8 +594,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWREGEXP)
     */
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QScriptValue(obj->newRegExp(*PQREGEXP(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
@@ -611,8 +606,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWREGEXP)
     */
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QScriptValue(obj->newRegExp(PQSTRING(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
@@ -632,8 +626,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWVARIANT)
     */
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QScriptValue(obj->newVariant(*PQVARIANT(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
@@ -645,8 +638,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWVARIANT)
     */
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QScriptValue(obj->newVariant(*PQSCRIPTVALUE(1), *PQVARIANT(2)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }

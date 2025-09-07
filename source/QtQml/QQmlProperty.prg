@@ -176,8 +176,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_CONNECTNOTIFYSIGNAL)
     */
     auto obj = static_cast<QQmlProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->connectNotifySignal(PQOBJECT(1), PCONSTCHAR(2)));
     }
   }
@@ -188,8 +187,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_CONNECTNOTIFYSIGNAL)
     */
     auto obj = static_cast<QQmlProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->connectNotifySignal(PQOBJECT(1), PINT(2)));
     }
   }
@@ -579,8 +577,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_READ)
     */
     auto obj = static_cast<QQmlProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QVariant(obj->read());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
     }
@@ -673,8 +670,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_WRITE)
     */
     auto obj = static_cast<QQmlProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->write(*PQVARIANT(1)));
     }
   }

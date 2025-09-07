@@ -372,8 +372,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_CONTAINS)
     */
     auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->contains(*PQMODELINDEX(1)));
     }
   }
@@ -384,8 +383,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_CONTAINS)
     */
     auto obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->contains(PINT(1), PINT(2), *PQMODELINDEX(3)));
     }
   }

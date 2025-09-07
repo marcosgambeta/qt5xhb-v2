@@ -172,8 +172,7 @@ HB_FUNC_STATIC(QPOLYGON_TRANSLATE)
     */
     auto obj = static_cast<QPolygon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->translate(PINT(1), PINT(2));
     }
 
@@ -186,8 +185,7 @@ HB_FUNC_STATIC(QPOLYGON_TRANSLATE)
     */
     auto obj = static_cast<QPolygon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->translate(*PQPOINT(1));
     }
 
@@ -208,8 +206,7 @@ HB_FUNC_STATIC(QPOLYGON_TRANSLATED)
     */
     auto obj = static_cast<QPolygon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPolygon(obj->translated(PINT(1), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
     }
@@ -221,8 +218,7 @@ HB_FUNC_STATIC(QPOLYGON_TRANSLATED)
     */
     auto obj = static_cast<QPolygon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPolygon(obj->translated(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
     }
@@ -266,8 +262,7 @@ HB_FUNC_STATIC(QPOLYGON_POINT)
     */
     auto obj = static_cast<QPolygon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       int par2;
       int par3;
       obj->point(PINT(1), &par2, &par3);
@@ -284,8 +279,7 @@ HB_FUNC_STATIC(QPOLYGON_POINT)
     */
     auto obj = static_cast<QPolygon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPoint(obj->point(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
     }
@@ -305,8 +299,7 @@ HB_FUNC_STATIC(QPOLYGON_SETPOINT)
     */
     auto obj = static_cast<QPolygon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPoint(PINT(1), PINT(2), PINT(3));
     }
 
@@ -319,8 +312,7 @@ HB_FUNC_STATIC(QPOLYGON_SETPOINT)
     */
     auto obj = static_cast<QPolygon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPoint(PINT(1), *PQPOINT(2));
     }
 

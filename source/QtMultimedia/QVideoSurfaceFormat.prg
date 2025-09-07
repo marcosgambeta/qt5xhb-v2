@@ -452,8 +452,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETFRAMESIZE)
     */
     auto obj = static_cast<QVideoSurfaceFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setFrameSize(*PQSIZE(1));
     }
 
@@ -466,8 +465,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETFRAMESIZE)
     */
     auto obj = static_cast<QVideoSurfaceFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setFrameSize(PINT(1), PINT(2));
     }
 
@@ -488,8 +486,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO)
     */
     auto obj = static_cast<QVideoSurfaceFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPixelAspectRatio(*PQSIZE(1));
     }
 
@@ -502,8 +499,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO)
     */
     auto obj = static_cast<QVideoSurfaceFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPixelAspectRatio(PINT(1), PINT(2));
     }
 

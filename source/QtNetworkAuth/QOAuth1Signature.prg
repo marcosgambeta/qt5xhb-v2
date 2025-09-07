@@ -502,8 +502,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_PLAINTEXT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = static_cast<QOAuth1Signature *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QByteArray(obj->plainText());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }

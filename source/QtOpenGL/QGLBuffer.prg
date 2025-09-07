@@ -126,8 +126,7 @@ HB_FUNC_STATIC(QGLBUFFER_ALLOCATE)
     */
     auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->allocate(static_cast<const void *>(hb_parptr(1)), PINT(2));
     }
 
@@ -140,8 +139,7 @@ HB_FUNC_STATIC(QGLBUFFER_ALLOCATE)
     */
     auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->allocate(PINT(1));
     }
 
@@ -325,8 +323,7 @@ HB_FUNC_STATIC(QGLBUFFER_RELEASE)
     */
     auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->release();
     }
 

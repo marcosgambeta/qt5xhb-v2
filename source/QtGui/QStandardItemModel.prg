@@ -189,8 +189,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_APPENDROW)
     */
     auto obj = qobject_cast<QStandardItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QStandardItem *> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
@@ -211,8 +210,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_APPENDROW)
     */
     auto obj = qobject_cast<QStandardItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->appendRow(PQSTANDARDITEM(1));
     }
 
@@ -355,8 +353,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_INSERTCOLUMN)
     */
     auto obj = qobject_cast<QStandardItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QStandardItem *> par2;
       auto aList2 = hb_param(2, HB_IT_ARRAY);
       int nLen2 = hb_arrayLen(aList2);
@@ -377,8 +374,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_INSERTCOLUMN)
     */
     auto obj = qobject_cast<QStandardItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(
           obj->insertColumn(PINT(1), HB_ISNIL(2) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(2))));
     }
@@ -398,8 +394,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_INSERTROW)
     */
     auto obj = qobject_cast<QStandardItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QStandardItem *> par2;
       auto aList2 = hb_param(2, HB_IT_ARRAY);
       int nLen2 = hb_arrayLen(aList2);
@@ -420,8 +415,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_INSERTROW)
     */
     auto obj = qobject_cast<QStandardItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertRow(PINT(1), PQSTANDARDITEM(2));
     }
 
@@ -434,8 +428,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_INSERTROW)
     */
     auto obj = qobject_cast<QStandardItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->insertRow(PINT(1), HB_ISNIL(2) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(2))));
     }
   }
@@ -575,8 +568,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_PARENT)
     */
     auto obj = qobject_cast<QStandardItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QModelIndex(obj->parent(*PQMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
     }
@@ -588,8 +580,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_PARENT)
     */
     auto obj = qobject_cast<QStandardItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->parent();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
@@ -966,8 +957,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SETITEM)
     */
     auto obj = qobject_cast<QStandardItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setItem(PINT(1), PINT(2), PQSTANDARDITEM(3));
     }
 
@@ -980,8 +970,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SETITEM)
     */
     auto obj = qobject_cast<QStandardItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setItem(PINT(1), PQSTANDARDITEM(2));
     }
 

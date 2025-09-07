@@ -116,8 +116,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
     */
     auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addButton(PQABSTRACTBUTTON(1));
     }
 
@@ -130,8 +129,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
     */
     auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addButton(PQABSTRACTBUTTON(1), PINT(2));
     }
 

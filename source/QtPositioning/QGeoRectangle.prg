@@ -524,8 +524,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_CONTAINS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QGeoRectangle *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->contains(*PQGEOCOORDINATE(1)));
     }
 #endif
@@ -538,8 +537,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_CONTAINS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QGeoRectangle *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->contains(*PQGEORECTANGLE(1)));
     }
 #endif

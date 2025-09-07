@@ -286,8 +286,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_ADDCATEGORY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = qobject_cast<QWinJumpList *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addCategory(PQWINJUMPLISTCATEGORY(1));
     }
 

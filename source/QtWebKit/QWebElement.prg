@@ -187,8 +187,7 @@ HB_FUNC_STATIC(QWEBELEMENT_APPENDINSIDE)
     */
     auto obj = static_cast<QWebElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->appendInside(PQSTRING(1));
     }
 
@@ -201,8 +200,7 @@ HB_FUNC_STATIC(QWEBELEMENT_APPENDINSIDE)
     */
     auto obj = static_cast<QWebElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->appendInside(*PQWEBELEMENT(1));
     }
 
@@ -223,8 +221,7 @@ HB_FUNC_STATIC(QWEBELEMENT_APPENDOUTSIDE)
     */
     auto obj = static_cast<QWebElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->appendOutside(PQSTRING(1));
     }
 
@@ -237,8 +234,7 @@ HB_FUNC_STATIC(QWEBELEMENT_APPENDOUTSIDE)
     */
     auto obj = static_cast<QWebElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->appendOutside(*PQWEBELEMENT(1));
     }
 
@@ -399,8 +395,7 @@ HB_FUNC_STATIC(QWEBELEMENT_ENCLOSECONTENTSWITH)
     */
     auto obj = static_cast<QWebElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->encloseContentsWith(*PQWEBELEMENT(1));
     }
 
@@ -413,8 +408,7 @@ HB_FUNC_STATIC(QWEBELEMENT_ENCLOSECONTENTSWITH)
     */
     auto obj = static_cast<QWebElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->encloseContentsWith(PQSTRING(1));
     }
 
@@ -435,8 +429,7 @@ HB_FUNC_STATIC(QWEBELEMENT_ENCLOSEWITH)
     */
     auto obj = static_cast<QWebElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->encloseWith(PQSTRING(1));
     }
 
@@ -449,8 +442,7 @@ HB_FUNC_STATIC(QWEBELEMENT_ENCLOSEWITH)
     */
     auto obj = static_cast<QWebElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->encloseWith(*PQWEBELEMENT(1));
     }
 
@@ -870,8 +862,7 @@ HB_FUNC_STATIC(QWEBELEMENT_PREPENDINSIDE)
     */
     auto obj = static_cast<QWebElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->prependInside(PQSTRING(1));
     }
 
@@ -884,8 +875,7 @@ HB_FUNC_STATIC(QWEBELEMENT_PREPENDINSIDE)
     */
     auto obj = static_cast<QWebElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->prependInside(*PQWEBELEMENT(1));
     }
 
@@ -906,8 +896,7 @@ HB_FUNC_STATIC(QWEBELEMENT_PREPENDOUTSIDE)
     */
     auto obj = static_cast<QWebElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->prependOutside(PQSTRING(1));
     }
 
@@ -920,8 +909,7 @@ HB_FUNC_STATIC(QWEBELEMENT_PREPENDOUTSIDE)
     */
     auto obj = static_cast<QWebElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->prependOutside(*PQWEBELEMENT(1));
     }
 
@@ -1091,8 +1079,7 @@ HB_FUNC_STATIC(QWEBELEMENT_RENDER)
     */
     auto obj = static_cast<QWebElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->render(PQPAINTER(1));
     }
 
@@ -1105,8 +1092,7 @@ HB_FUNC_STATIC(QWEBELEMENT_RENDER)
     */
     auto obj = static_cast<QWebElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->render(PQPAINTER(1), *PQRECT(2));
     }
 
@@ -1127,8 +1113,7 @@ HB_FUNC_STATIC(QWEBELEMENT_REPLACE)
     */
     auto obj = static_cast<QWebElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->replace(PQSTRING(1));
     }
 
@@ -1141,8 +1126,7 @@ HB_FUNC_STATIC(QWEBELEMENT_REPLACE)
     */
     auto obj = static_cast<QWebElement *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->replace(*PQWEBELEMENT(1));
     }
 

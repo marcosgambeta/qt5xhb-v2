@@ -414,8 +414,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_START)
     */
     auto obj = qobject_cast<QAudioInput *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->start(PQIODEVICE(1));
     }
 
@@ -428,8 +427,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_START)
     */
     auto obj = qobject_cast<QAudioInput *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->start();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
     }

@@ -313,8 +313,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CREATESTANDARDCONTEXTMENU)
     */
     auto obj = qobject_cast<QTextEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->createStandardContextMenu();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
@@ -326,8 +325,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CREATESTANDARDCONTEXTMENU)
     */
     auto obj = qobject_cast<QTextEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->createStandardContextMenu(*PQPOINT(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
@@ -418,8 +416,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CURSORRECT)
     */
     auto obj = qobject_cast<QTextEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->cursorRect(*PQTEXTCURSOR(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
@@ -431,8 +428,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CURSORRECT)
     */
     auto obj = qobject_cast<QTextEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->cursorRect());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }

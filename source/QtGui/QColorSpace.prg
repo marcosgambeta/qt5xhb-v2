@@ -331,8 +331,7 @@ HB_FUNC_STATIC(QCOLORSPACE_SETPRIMARIES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
     auto obj = static_cast<QColorSpace *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPrimaries(static_cast<QColorSpace::Primaries>(hb_parni(1)));
     }
 
@@ -348,8 +347,7 @@ HB_FUNC_STATIC(QCOLORSPACE_SETPRIMARIES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
     auto obj = static_cast<QColorSpace *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPrimaries(*PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4));
     }
 

@@ -204,8 +204,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CONNECTTOHOSTENCRYPTED)
     */
     auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->connectToHostEncrypted(
           PQSTRING(1), PQUINT16(2),
           HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
@@ -225,8 +224,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CONNECTTOHOSTENCRYPTED)
     */
     auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->connectToHostEncrypted(
           PQSTRING(1), PQUINT16(2), PQSTRING(3),
           HB_ISNIL(4) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
@@ -995,8 +993,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETLOCALCERTIFICATE)
     */
     auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setLocalCertificate(*PQSSLCERTIFICATE(1));
     }
 
@@ -1009,8 +1006,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETLOCALCERTIFICATE)
     */
     auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setLocalCertificate(PQSTRING(1), HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem)
                                                         : static_cast<QSsl::EncodingFormat>(hb_parni(2)));
     }
@@ -1178,8 +1174,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPRIVATEKEY)
     */
     auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPrivateKey(*PQSSLKEY(1));
     }
 
@@ -1194,8 +1189,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPRIVATEKEY)
     */
     auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPrivateKey(
           PQSTRING(1),
           HB_ISNIL(2) ? static_cast<QSsl::KeyAlgorithm>(QSsl::Rsa) : static_cast<QSsl::KeyAlgorithm>(hb_parni(2)),
@@ -1293,8 +1287,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETCIPHERS)
     */
     auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QSslCipher> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
@@ -1315,8 +1308,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETCIPHERS)
     */
     auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setCiphers(PQSTRING(1));
     }
 
@@ -1457,8 +1449,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDCACERTIFICATES)
     */
     auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->addCaCertificates(PQSTRING(1),
                                    HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem)
                                                : static_cast<QSsl::EncodingFormat>(hb_parni(2)),
@@ -1473,8 +1464,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDCACERTIFICATES)
     */
     auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QSslCertificate> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
@@ -2052,8 +2042,7 @@ HB_FUNC_STATIC(QSSLSOCKET_IGNORESSLERRORS)
     */
     auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QSslError> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
@@ -2074,8 +2063,7 @@ HB_FUNC_STATIC(QSSLSOCKET_IGNORESSLERRORS)
     */
     auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->ignoreSslErrors();
     }
 

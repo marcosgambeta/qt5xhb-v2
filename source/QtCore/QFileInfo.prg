@@ -459,8 +459,7 @@ HB_FUNC_STATIC(QFILEINFO_EXISTS)
     */
     auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->exists());
     }
   }
@@ -1095,8 +1094,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
     */
     auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setFile(PQSTRING(1));
     }
 
@@ -1109,8 +1107,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
     */
     auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setFile(*PQFILE(1));
     }
 
@@ -1123,8 +1120,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
     */
     auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setFile(*PQDIR(1), PQSTRING(2));
     }
 

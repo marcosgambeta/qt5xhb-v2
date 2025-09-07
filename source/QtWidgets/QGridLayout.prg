@@ -164,8 +164,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDLAYOUT)
     */
     auto obj = qobject_cast<QGridLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addLayout(PQLAYOUT(1), PINT(2), PINT(3),
                      HB_ISNIL(4) ? static_cast<Qt::Alignment>(0) : static_cast<Qt::Alignment>(hb_parni(4)));
     }
@@ -180,8 +179,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDLAYOUT)
     */
     auto obj = qobject_cast<QGridLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addLayout(PQLAYOUT(1), PINT(2), PINT(3), PINT(4), PINT(5),
                      HB_ISNIL(6) ? static_cast<Qt::Alignment>(0) : static_cast<Qt::Alignment>(hb_parni(6)));
     }
@@ -203,8 +201,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDWIDGET)
     */
     auto obj = qobject_cast<QGridLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addWidget(PQWIDGET(1), PINT(2), PINT(3),
                      HB_ISNIL(4) ? static_cast<Qt::Alignment>(0) : static_cast<Qt::Alignment>(hb_parni(4)));
     }
@@ -220,8 +217,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDWIDGET)
     */
     auto obj = qobject_cast<QGridLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addWidget(PQWIDGET(1), PINT(2), PINT(3), PINT(4), PINT(5),
                      HB_ISNIL(6) ? static_cast<Qt::Alignment>(0) : static_cast<Qt::Alignment>(hb_parni(6)));
     }

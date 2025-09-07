@@ -206,8 +206,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_SETDATA)
     */
     auto obj = static_cast<QXmlInputSource *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setData(PQSTRING(1));
     }
 
@@ -220,8 +219,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_SETDATA)
     */
     auto obj = static_cast<QXmlInputSource *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setData(*PQBYTEARRAY(1));
     }
 

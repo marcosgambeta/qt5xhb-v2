@@ -224,8 +224,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_SENDERRORREPLY)
     */
     auto obj = static_cast<QDBusContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->sendErrorReply(PQSTRING(1), OPQSTRING(2, QString()));
     }
 
@@ -238,8 +237,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_SENDERRORREPLY)
     */
     auto obj = static_cast<QDBusContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->sendErrorReply(static_cast<QDBusError::ErrorType>(hb_parni(1)), OPQSTRING(2, QString()));
     }
 

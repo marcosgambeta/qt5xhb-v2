@@ -286,8 +286,7 @@ HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
     */
     auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->mergeCells(PINT(1), PINT(2), PINT(3), PINT(4));
     }
 
@@ -300,8 +299,7 @@ HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
     */
     auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->mergeCells(*PQTEXTCURSOR(1));
     }
 
@@ -393,8 +391,7 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
     */
     auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QTextTableCell(obj->cellAt(PINT(1), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
     }
@@ -406,8 +403,7 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
     */
     auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QTextTableCell(obj->cellAt(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
     }
@@ -419,8 +415,7 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
     */
     auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QTextTableCell(obj->cellAt(*PQTEXTCURSOR(1)));
       Qt5xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
     }

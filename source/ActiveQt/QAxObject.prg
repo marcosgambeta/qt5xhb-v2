@@ -280,8 +280,7 @@ HB_FUNC_STATIC(QAXOBJECT_DYNAMICCALL)
     const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
     QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
     */
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QVariant(
           obj->dynamicCall(PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2)),
                            HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)),
@@ -297,8 +296,7 @@ HB_FUNC_STATIC(QAXOBJECT_DYNAMICCALL)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
     // QVariant dynamicCall(const char * function, QList<QVariant> &vars)
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QVariant(obj->dynamicCall(PCONSTCHAR(1), PQVARIANTLIST(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
     }
@@ -386,8 +384,7 @@ HB_FUNC_STATIC(QAXOBJECT_QUERYSUBOBJECT)
     QVariant(), const QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 =
     QVariant())
     */
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr =
           obj->querySubObject(PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2)),
                               HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)),
@@ -403,8 +400,7 @@ HB_FUNC_STATIC(QAXOBJECT_QUERYSUBOBJECT)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
     // QAxObject * querySubObject(const char * name, QList<QVariant> &vars)
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->querySubObject(PCONSTCHAR(1), PQVARIANTLIST(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }

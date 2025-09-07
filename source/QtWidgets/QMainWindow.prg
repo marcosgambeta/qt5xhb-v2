@@ -150,8 +150,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDDOCKWIDGET)
     */
     auto obj = qobject_cast<QMainWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addDockWidget(static_cast<Qt::DockWidgetArea>(hb_parni(1)), PQDOCKWIDGET(2));
     }
 
@@ -164,8 +163,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDDOCKWIDGET)
     */
     auto obj = qobject_cast<QMainWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addDockWidget(static_cast<Qt::DockWidgetArea>(hb_parni(1)), PQDOCKWIDGET(2),
                          static_cast<Qt::Orientation>(hb_parni(3)));
     }
@@ -187,8 +185,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
     */
     auto obj = qobject_cast<QMainWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addToolBar(static_cast<Qt::ToolBarArea>(hb_parni(1)), PQTOOLBAR(2));
     }
 
@@ -201,8 +198,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
     */
     auto obj = qobject_cast<QMainWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addToolBar(PQTOOLBAR(1));
     }
 
@@ -215,8 +211,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
     */
     auto obj = qobject_cast<QMainWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addToolBar(PQSTRING(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QTOOLBAR");
     }

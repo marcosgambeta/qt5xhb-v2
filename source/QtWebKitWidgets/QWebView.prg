@@ -528,8 +528,7 @@ HB_FUNC_STATIC(QWEBVIEW_LOAD)
     */
     auto obj = qobject_cast<QWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->load(*PQURL(1));
     }
 
@@ -543,8 +542,7 @@ HB_FUNC_STATIC(QWEBVIEW_LOAD)
     */
     auto obj = qobject_cast<QWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->load(*PQNETWORKREQUEST(1),
                 HB_ISNIL(2) ? static_cast<QNetworkAccessManager::Operation>(QNetworkAccessManager::GetOperation)
                             : static_cast<QNetworkAccessManager::Operation>(hb_parni(2)),

@@ -340,8 +340,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_INDEX)
     */
     auto obj = qobject_cast<QFileSystemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QModelIndex(obj->index(PQSTRING(1), OPINT(2, 0)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
     }
@@ -353,8 +352,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_INDEX)
     */
     auto obj = qobject_cast<QFileSystemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QModelIndex(obj->index(
           PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);

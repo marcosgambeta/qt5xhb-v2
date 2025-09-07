@@ -645,8 +645,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
     */
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QTextCursor(obj->find(PQSTRING(1), OPINT(2, 0),
                                            HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0)
                                                        : static_cast<QTextDocument::FindFlags>(hb_parni(3))));
@@ -660,8 +659,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
     */
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QTextCursor(obj->find(PQSTRING(1), *PQTEXTCURSOR(2),
                                            HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0)
                                                        : static_cast<QTextDocument::FindFlags>(hb_parni(3))));
@@ -675,8 +673,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
     */
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QTextCursor(obj->find(*PQREGEXP(1), OPINT(2, 0),
                                            HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0)
                                                        : static_cast<QTextDocument::FindFlags>(hb_parni(3))));
@@ -690,8 +687,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
     */
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QTextCursor(obj->find(*PQREGEXP(1), *PQTEXTCURSOR(2),
                                            HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0)
                                                        : static_cast<QTextDocument::FindFlags>(hb_parni(3))));
@@ -1797,8 +1793,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_UNDO)
     */
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->undo(PQTEXTCURSOR(1));
     }
 
@@ -1811,8 +1806,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_UNDO)
     */
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->undo();
     }
 
@@ -1833,8 +1827,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_REDO)
     */
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->redo(PQTEXTCURSOR(1));
     }
 
@@ -1847,8 +1840,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_REDO)
     */
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->redo();
     }
 

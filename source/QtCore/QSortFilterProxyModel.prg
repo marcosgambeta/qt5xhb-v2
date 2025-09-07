@@ -185,8 +185,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGEXP)
     */
     auto obj = qobject_cast<QSortFilterProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setFilterRegExp(*PQREGEXP(1));
     }
 
@@ -199,8 +198,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGEXP)
     */
     auto obj = qobject_cast<QSortFilterProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setFilterRegExp(PQSTRING(1));
     }
 
@@ -251,8 +249,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGULAREXPRESSION)
 #if QT_CONFIG(regularexpression)
     auto obj = qobject_cast<QSortFilterProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setFilterRegularExpression(PQSTRING(1));
     }
 
@@ -269,8 +266,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGULAREXPRESSION)
 #if QT_CONFIG(regularexpression)
     auto obj = qobject_cast<QSortFilterProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setFilterRegularExpression(*PQREGULAREXPRESSION(1));
     }
 
@@ -948,8 +944,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_PARENT)
     */
     auto obj = qobject_cast<QSortFilterProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->parent();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
@@ -961,8 +956,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_PARENT)
     */
     auto obj = qobject_cast<QSortFilterProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QModelIndex(obj->parent(*PQMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
     }

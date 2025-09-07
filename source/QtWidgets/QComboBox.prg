@@ -183,8 +183,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
     */
     auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addItem(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2)));
     }
 
@@ -197,8 +196,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
     */
     auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addItem(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2),
                    HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)));
     }
@@ -484,8 +482,7 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
     */
     auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertItem(PINT(1), PQSTRING(2), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)));
     }
 
@@ -499,8 +496,7 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
     */
     auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertItem(PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(2)) : QIcon(hb_parc(2)),
                       PQSTRING(3), HB_ISNIL(4) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(4)));
     }

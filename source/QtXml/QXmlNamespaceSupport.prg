@@ -152,8 +152,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PREFIXES)
     */
     auto obj = static_cast<QXmlNamespaceSupport *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRINGLIST(obj->prefixes());
     }
   }
@@ -164,8 +163,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PREFIXES)
     */
     auto obj = static_cast<QXmlNamespaceSupport *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRINGLIST(obj->prefixes(PQSTRING(1)));
     }
   }

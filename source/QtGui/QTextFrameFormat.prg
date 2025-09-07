@@ -619,8 +619,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETWIDTH)
     */
     auto obj = static_cast<QTextFrameFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setWidth(PQREAL(1));
     }
 
@@ -633,8 +632,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETWIDTH)
     */
     auto obj = static_cast<QTextFrameFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setWidth(*PQTEXTLENGTH(1));
     }
 
@@ -679,8 +677,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETHEIGHT)
     */
     auto obj = static_cast<QTextFrameFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setHeight(PQREAL(1));
     }
 
@@ -693,8 +690,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETHEIGHT)
     */
     auto obj = static_cast<QTextFrameFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setHeight(*PQTEXTLENGTH(1));
     }
 

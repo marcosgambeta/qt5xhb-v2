@@ -136,8 +136,7 @@ HB_FUNC_STATIC(QTOOLBAR_ACTIONAT)
     */
     auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->actionAt(PINT(1), PINT(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
@@ -149,8 +148,7 @@ HB_FUNC_STATIC(QTOOLBAR_ACTIONAT)
     */
     auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->actionAt(*PQPOINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
@@ -170,8 +168,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
     */
     auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addAction(PQACTION(1));
     }
 
@@ -184,8 +181,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
     */
     auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addAction(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
@@ -197,8 +193,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
     */
     auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addAction(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
                                 PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -211,8 +206,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
     */
     auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addAction(PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
@@ -224,8 +218,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
     */
     auto obj = qobject_cast<QToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addAction(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
                                 PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");

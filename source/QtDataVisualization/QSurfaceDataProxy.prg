@@ -200,8 +200,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ITEMAT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QSURFACEDATAITEM", false);
     }
@@ -215,8 +214,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ITEMAT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->itemAt(*PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QSURFACEDATAITEM", false);
     }
@@ -238,8 +236,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_SETITEM)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setItem(PINT(1), PINT(2), *PQSURFACEDATAITEM(3));
     }
 
@@ -254,8 +251,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_SETITEM)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setItem(*PQPOINT(1), *PQSURFACEDATAITEM(2));
     }
 

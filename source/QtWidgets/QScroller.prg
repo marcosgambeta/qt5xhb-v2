@@ -176,8 +176,7 @@ HB_FUNC_STATIC(QSCROLLER_SETSNAPPOSITIONSX)
     */
     auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<qreal> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
@@ -199,8 +198,7 @@ HB_FUNC_STATIC(QSCROLLER_SETSNAPPOSITIONSX)
     */
     auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setSnapPositionsX(PQREAL(1), PQREAL(2));
     }
 
@@ -221,8 +219,7 @@ HB_FUNC_STATIC(QSCROLLER_SETSNAPPOSITIONSY)
     */
     auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<qreal> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
@@ -244,8 +241,7 @@ HB_FUNC_STATIC(QSCROLLER_SETSNAPPOSITIONSY)
     */
     auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setSnapPositionsY(PQREAL(1), PQREAL(2));
     }
 
@@ -362,8 +358,7 @@ HB_FUNC_STATIC(QSCROLLER_ENSUREVISIBLE)
     */
     auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->ensureVisible(*PQRECTF(1), PQREAL(2), PQREAL(3));
     }
 
@@ -376,8 +371,7 @@ HB_FUNC_STATIC(QSCROLLER_ENSUREVISIBLE)
     */
     auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->ensureVisible(*PQRECTF(1), PQREAL(2), PQREAL(3), PINT(4));
     }
 
@@ -423,8 +417,7 @@ HB_FUNC_STATIC(QSCROLLER_SCROLLTO)
     */
     auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->scrollTo(*PQPOINTF(1));
     }
 
@@ -437,8 +430,7 @@ HB_FUNC_STATIC(QSCROLLER_SCROLLTO)
     */
     auto obj = qobject_cast<QScroller *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->scrollTo(*PQPOINTF(1), PINT(2));
     }
 

@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QFILESELECTOR_SELECT)
     */
     auto obj = qobject_cast<QFileSelector *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->select(PQSTRING(1)));
     }
   }
@@ -109,8 +108,7 @@ HB_FUNC_STATIC(QFILESELECTOR_SELECT)
     */
     auto obj = qobject_cast<QFileSelector *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QUrl(obj->select(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
     }

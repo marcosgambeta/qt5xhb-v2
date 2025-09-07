@@ -239,8 +239,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addAction(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
@@ -252,8 +251,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addAction(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
                                 PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -267,8 +265,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addAction(PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3),
                                 HB_ISNIL(4) ? 0 : *static_cast<QKeySequence *>(Qt5xHb::itemGetPtr(4)));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -283,8 +280,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addAction(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
                                 PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4),
                                 HB_ISNIL(5) ? 0 : *static_cast<QKeySequence *>(Qt5xHb::itemGetPtr(5)));
@@ -298,8 +294,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addAction(PQACTION(1));
     }
 
@@ -320,8 +315,7 @@ HB_FUNC_STATIC(QMENU_ADDMENU)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addMenu(PQMENU(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
@@ -333,8 +327,7 @@ HB_FUNC_STATIC(QMENU_ADDMENU)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addMenu(PQSTRING(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
@@ -346,8 +339,7 @@ HB_FUNC_STATIC(QMENU_ADDMENU)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr =
           obj->addMenu(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2));
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
@@ -466,8 +458,7 @@ HB_FUNC_STATIC(QMENU_EXEC)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->exec();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
@@ -479,8 +470,7 @@ HB_FUNC_STATIC(QMENU_EXEC)
     */
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->exec(*PQPOINT(1), OPQACTION(2, nullptr));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
@@ -929,8 +919,7 @@ HB_FUNC_STATIC(QMENU_ADDSECTION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addSection(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
@@ -944,8 +933,7 @@ HB_FUNC_STATIC(QMENU_ADDSECTION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addSection(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
                                  PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -970,8 +958,7 @@ HB_FUNC_STATIC(QMENU_INSERTSECTION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->insertSection(PQACTION(1), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
@@ -985,8 +972,7 @@ HB_FUNC_STATIC(QMENU_INSERTSECTION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = qobject_cast<QMenu *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->insertSection(
           PQACTION(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(2)) : QIcon(hb_parc(2)), PQSTRING(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");

@@ -239,8 +239,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_CENTERON)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->centerOn(*PQPOINTF(1));
     }
 
@@ -253,8 +252,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_CENTERON)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->centerOn(PQREAL(1), PQREAL(2));
     }
 
@@ -267,8 +265,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_CENTERON)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->centerOn(PQGRAPHICSITEM(1));
     }
 
@@ -312,8 +309,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->ensureVisible(*PQRECTF(1), OPINT(2, 50), OPINT(3, 50));
     }
 
@@ -327,8 +323,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->ensureVisible(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPINT(5, 50), OPINT(6, 50));
     }
 
@@ -341,8 +336,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->ensureVisible(PQGRAPHICSITEM(1), OPINT(2, 50), OPINT(3, 50));
     }
 
@@ -363,8 +357,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->fitInView(*PQRECTF(1), HB_ISNIL(2) ? static_cast<Qt::AspectRatioMode>(Qt::IgnoreAspectRatio)
                                               : static_cast<Qt::AspectRatioMode>(hb_parni(2)));
     }
@@ -378,8 +371,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->fitInView(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
                      HB_ISNIL(5) ? static_cast<Qt::AspectRatioMode>(Qt::IgnoreAspectRatio)
                                  : static_cast<Qt::AspectRatioMode>(hb_parni(5)));
@@ -394,8 +386,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->fitInView(PQGRAPHICSITEM(1), HB_ISNIL(2) ? static_cast<Qt::AspectRatioMode>(Qt::IgnoreAspectRatio)
                                                     : static_cast<Qt::AspectRatioMode>(hb_parni(2)));
     }
@@ -487,8 +478,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ITEMAT)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->itemAt(*PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
     }
@@ -500,8 +490,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ITEMAT)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
     }
@@ -521,8 +510,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPoint(obj->mapFromScene(*PQPOINTF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
     }
@@ -534,8 +522,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPolygon(obj->mapFromScene(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
     }
@@ -547,8 +534,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPolygon(obj->mapFromScene(*PQPOLYGONF(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
     }
@@ -560,8 +546,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPainterPath(obj->mapFromScene(*PQPAINTERPATH(1)));
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
@@ -573,8 +558,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPoint(obj->mapFromScene(PQREAL(1), PQREAL(2)));
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
     }
@@ -586,8 +570,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPolygon(obj->mapFromScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
     }
@@ -607,8 +590,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPointF(obj->mapToScene(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
     }
@@ -620,8 +602,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPolygonF(obj->mapToScene(*PQRECT(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
@@ -633,8 +614,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPolygonF(obj->mapToScene(*PQPOLYGON(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
@@ -646,8 +626,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPainterPath(obj->mapToScene(*PQPAINTERPATH(1)));
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
@@ -659,8 +638,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPointF(obj->mapToScene(PINT(1), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
     }
@@ -672,8 +650,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPolygonF(obj->mapToScene(PINT(1), PINT(2), PINT(3), PINT(4)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
@@ -1362,8 +1339,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETSCENERECT)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setSceneRect(*PQRECTF(1));
     }
 
@@ -1376,8 +1352,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETSCENERECT)
     */
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setSceneRect(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 

@@ -350,8 +350,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOARRAY)
     */
     auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QJsonArray(obj->toArray(*PQJSONARRAY(1)));
       Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
     }
@@ -363,8 +362,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOARRAY)
     */
     auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QJsonArray(obj->toArray());
       Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
     }
@@ -430,8 +428,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOOBJECT)
     */
     auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QJsonObject(obj->toObject(*PQJSONOBJECT(1)));
       Qt5xHb::createReturnClass(ptr, "QJSONOBJECT", true);
     }
@@ -443,8 +440,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOOBJECT)
     */
     auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QJsonObject(obj->toObject());
       Qt5xHb::createReturnClass(ptr, "QJSONOBJECT", true);
     }

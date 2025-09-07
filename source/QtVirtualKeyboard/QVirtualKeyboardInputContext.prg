@@ -586,8 +586,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT)
     */
     auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->commit();
     }
 
@@ -600,8 +599,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT)
     */
     auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->commit(PQSTRING(1), OPINT(2, 0), OPINT(3, 0));
     }
 

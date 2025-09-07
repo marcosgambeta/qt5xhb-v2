@@ -534,8 +534,7 @@ HB_FUNC_STATIC(QBYTEARRAY_CONTAINS)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->contains(*PQBYTEARRAY(1)));
     }
   }
@@ -546,8 +545,7 @@ HB_FUNC_STATIC(QBYTEARRAY_CONTAINS)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->contains(PCONSTCHAR(1)));
     }
   }
@@ -558,8 +556,7 @@ HB_FUNC_STATIC(QBYTEARRAY_CONTAINS)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->contains(PCHAR(1)));
     }
   }
@@ -578,8 +575,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COUNT)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->count(*PQBYTEARRAY(1)));
     }
   }
@@ -590,8 +586,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COUNT)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->count(PCONSTCHAR(1)));
     }
   }
@@ -602,8 +597,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COUNT)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->count(PCHAR(1)));
     }
   }
@@ -614,8 +608,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COUNT)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->count());
     }
   }
@@ -662,8 +655,7 @@ HB_FUNC_STATIC(QBYTEARRAY_ENDSWITH)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->endsWith(*PQBYTEARRAY(1)));
     }
   }
@@ -674,8 +666,7 @@ HB_FUNC_STATIC(QBYTEARRAY_ENDSWITH)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->endsWith(PCONSTCHAR(1)));
     }
   }
@@ -686,8 +677,7 @@ HB_FUNC_STATIC(QBYTEARRAY_ENDSWITH)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->endsWith(PCHAR(1)));
     }
   }
@@ -1247,8 +1237,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = &obj->prepend(*PQBYTEARRAY(1));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
     }
@@ -1260,8 +1249,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = &obj->prepend(PCONSTCHAR(1));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
     }
@@ -1273,8 +1261,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = &obj->prepend(PCONSTCHAR(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
     }
@@ -1286,8 +1273,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = &obj->prepend(PCHAR(1));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
     }
@@ -1307,8 +1293,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_BACK)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->push_back(*PQBYTEARRAY(1));
     }
 
@@ -1321,8 +1306,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_BACK)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->push_back(PCONSTCHAR(1));
     }
 
@@ -1335,8 +1319,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_BACK)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->push_back(PCHAR(1));
     }
 
@@ -1357,8 +1340,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_FRONT)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->push_front(*PQBYTEARRAY(1));
     }
 
@@ -1371,8 +1353,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_FRONT)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->push_front(PCONSTCHAR(1));
     }
 
@@ -1385,8 +1366,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_FRONT)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->push_front(PCHAR(1));
     }
 
@@ -2302,8 +2282,7 @@ HB_FUNC_STATIC(QBYTEARRAY_STARTSWITH)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->startsWith(*PQBYTEARRAY(1)));
     }
   }
@@ -2314,8 +2293,7 @@ HB_FUNC_STATIC(QBYTEARRAY_STARTSWITH)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->startsWith(PCONSTCHAR(1)));
     }
   }
@@ -2326,8 +2304,7 @@ HB_FUNC_STATIC(QBYTEARRAY_STARTSWITH)
     */
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->startsWith(PCHAR(1)));
     }
   }
@@ -3043,8 +3020,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COMPARE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->compare(PCONSTCHAR(1), HB_ISNIL(2) ? static_cast<Qt::CaseSensitivity>(Qt::CaseSensitive)
                                                    : static_cast<Qt::CaseSensitivity>(hb_parni(2))));
     }
@@ -3058,8 +3034,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COMPARE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->compare(*PQBYTEARRAY(1), HB_ISNIL(2) ? static_cast<Qt::CaseSensitivity>(Qt::CaseSensitive)
                                                      : static_cast<Qt::CaseSensitivity>(hb_parni(2))));
     }

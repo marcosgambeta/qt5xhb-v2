@@ -272,8 +272,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_WRITE)
     */
     auto obj = static_cast<QTextDocumentWriter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->write(PQTEXTDOCUMENT(1)));
     }
   }
@@ -284,8 +283,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_WRITE)
     */
     auto obj = static_cast<QTextDocumentWriter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->write(*PQTEXTDOCUMENTFRAGMENT(1)));
     }
   }

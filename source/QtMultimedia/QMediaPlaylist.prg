@@ -250,8 +250,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ADDMEDIA)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->addMedia(*PQMEDIACONTENT(1)));
     }
   }
@@ -262,8 +261,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ADDMEDIA)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QMediaContent> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
@@ -359,8 +357,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_INSERTMEDIA)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->insertMedia(PINT(1), *PQMEDIACONTENT(2)));
     }
   }
@@ -371,8 +368,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_INSERTMEDIA)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QMediaContent> par2;
       auto aList2 = hb_param(2, HB_IT_ARRAY);
       int nLen2 = hb_arrayLen(aList2);
@@ -445,8 +441,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_LOAD)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->load(*PQNETWORKREQUEST(1), OPCONSTCHAR(2, nullptr));
     }
 
@@ -459,8 +454,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_LOAD)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->load(*PQURL(1), OPCONSTCHAR(2, nullptr));
     }
 
@@ -473,8 +467,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_LOAD)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->load(PQIODEVICE(1), OPCONSTCHAR(2, nullptr));
     }
 
@@ -588,8 +581,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_REMOVEMEDIA)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->removeMedia(PINT(1)));
     }
   }
@@ -600,8 +592,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_REMOVEMEDIA)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->removeMedia(PINT(1), PINT(2)));
     }
   }
@@ -620,8 +611,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_SAVE)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->save(*PQURL(1), OPCONSTCHAR(2, nullptr)));
     }
   }
@@ -632,8 +622,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_SAVE)
     */
     auto obj = qobject_cast<QMediaPlaylist *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->save(PQIODEVICE(1), PCONSTCHAR(2)));
     }
   }

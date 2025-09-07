@@ -645,8 +645,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_POLISH)
     */
     auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->polish(PQWIDGET(1));
     }
 
@@ -659,8 +658,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_POLISH)
     */
     auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->polish(*PQPALETTE(1));
     }
 
@@ -673,8 +671,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_POLISH)
     */
     auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->polish(PQAPPLICATION(1));
     }
 
@@ -695,8 +692,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_UNPOLISH)
     */
     auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->unpolish(PQWIDGET(1));
     }
 
@@ -709,8 +705,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_UNPOLISH)
     */
     auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->unpolish(PQAPPLICATION(1));
     }
 

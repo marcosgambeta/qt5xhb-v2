@@ -248,8 +248,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETATTRIBUTE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QBluetoothServiceInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setAttribute(PQUINT16(1), *PQVARIANT(2));
     }
 
@@ -264,8 +263,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETATTRIBUTE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QBluetoothServiceInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setAttribute(PQUINT16(1), *PQBLUETOOTHUUID(2));
     }
 

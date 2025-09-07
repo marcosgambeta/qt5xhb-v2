@@ -685,8 +685,7 @@ HB_FUNC_STATIC(QSETTINGS_SETINICODEC)
     */
     auto obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setIniCodec(PQTEXTCODEC(1));
     }
 
@@ -699,8 +698,7 @@ HB_FUNC_STATIC(QSETTINGS_SETINICODEC)
     */
     auto obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setIniCodec(PCONSTCHAR(1));
     }
 

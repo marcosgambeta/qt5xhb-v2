@@ -302,8 +302,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ACTIVEMONITORS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto list = obj->activeMonitors();
       auto pDynSym = hb_dynsymFindName("QGEOAREAMONITORINFO");
       auto pArray = hb_itemArrayNew(0);
@@ -342,8 +341,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ACTIVEMONITORS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto list = obj->activeMonitors(*PQGEOSHAPE(1));
       auto pDynSym = hb_dynsymFindName("QGEOAREAMONITORINFO");
       auto pArray = hb_itemArrayNew(0);

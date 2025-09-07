@@ -980,8 +980,7 @@ HB_FUNC_STATIC(QWIDGET_SETBASESIZE)
     // void setBaseSize(const QSize &)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setBaseSize(*PQSIZE(1));
     }
 
@@ -992,8 +991,7 @@ HB_FUNC_STATIC(QWIDGET_SETBASESIZE)
     // void setBaseSize(int basew, int baseh)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setBaseSize(PINT(1), PINT(2));
     }
 
@@ -1012,8 +1010,7 @@ HB_FUNC_STATIC(QWIDGET_CHILDAT)
     // QWidget * childAt(int x, int y) const
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->childAt(PINT(1), PINT(2));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
     }
@@ -1023,8 +1020,7 @@ HB_FUNC_STATIC(QWIDGET_CHILDAT)
     // QWidget * childAt(const QPoint &p) const
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->childAt(*PQPOINT(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
     }
@@ -1682,8 +1678,7 @@ HB_FUNC_STATIC(QWIDGET_GRABMOUSE)
     // void grabMouse()
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->grabMouse();
     }
 
@@ -1695,8 +1690,7 @@ HB_FUNC_STATIC(QWIDGET_GRABMOUSE)
     // void grabMouse(const QCursor &cursor)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->grabMouse(*PQCURSOR(1));
     }
 
@@ -2675,8 +2669,7 @@ HB_FUNC_STATIC(QWIDGET_SETMASK)
     // void setMask(const QBitmap &bitmap)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setMask(*PQBITMAP(1));
     }
 
@@ -2687,8 +2680,7 @@ HB_FUNC_STATIC(QWIDGET_SETMASK)
     // void setMask(const QRegion &region)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setMask(*PQREGION(1));
     }
 
@@ -2927,8 +2919,7 @@ HB_FUNC_STATIC(QWIDGET_MOVE)
     // void move(const QPoint &)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->move(*PQPOINT(1));
     }
 
@@ -2939,8 +2930,7 @@ HB_FUNC_STATIC(QWIDGET_MOVE)
     // void move(int x, int y)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->move(PINT(1), PINT(2));
     }
 
@@ -3256,8 +3246,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
     // void render(QPaintDevice * target, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion = QRegion(), QWidget::RenderFlags renderFlags = QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren))
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->render(PQPAINTDEVICE(1), HB_ISNIL(2) ? QPoint() : *static_cast<QPoint *>(Qt5xHb::itemGetPtr(2)),
                   HB_ISNIL(3) ? QRegion() : *static_cast<QRegion *>(Qt5xHb::itemGetPtr(3)),
                   HB_ISNIL(4) ? static_cast<QWidget::RenderFlags>(
@@ -3273,8 +3262,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
     // void render(QPainter * painter, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion = QRegion(), QWidget::RenderFlags renderFlags = QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren))
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->render(PQPAINTER(1), HB_ISNIL(2) ? QPoint() : *static_cast<QPoint *>(Qt5xHb::itemGetPtr(2)),
                   HB_ISNIL(3) ? QRegion() : *static_cast<QRegion *>(Qt5xHb::itemGetPtr(3)),
                   HB_ISNIL(4) ? static_cast<QWidget::RenderFlags>(
@@ -3297,8 +3285,7 @@ HB_FUNC_STATIC(QWIDGET_REPAINT)
     // void repaint(int x, int y, int w, int h)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->repaint(PINT(1), PINT(2), PINT(3), PINT(4));
     }
 
@@ -3309,8 +3296,7 @@ HB_FUNC_STATIC(QWIDGET_REPAINT)
     // void repaint(const QRect &rect)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->repaint(*PQRECT(1));
     }
 
@@ -3321,8 +3307,7 @@ HB_FUNC_STATIC(QWIDGET_REPAINT)
     // void repaint(const QRegion &rgn)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->repaint(*PQREGION(1));
     }
 
@@ -3333,8 +3318,7 @@ HB_FUNC_STATIC(QWIDGET_REPAINT)
     // void repaint()
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->repaint();
     }
 
@@ -3353,8 +3337,7 @@ HB_FUNC_STATIC(QWIDGET_RESIZE)
     // void resize(const QSize &)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->resize(*PQSIZE(1));
     }
 
@@ -3365,8 +3348,7 @@ HB_FUNC_STATIC(QWIDGET_RESIZE)
     // void resize(int w, int h)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->resize(PINT(1), PINT(2));
     }
 
@@ -3428,8 +3410,7 @@ HB_FUNC_STATIC(QWIDGET_SCROLL)
     // void scroll(int dx, int dy)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->scroll(PINT(1), PINT(2));
     }
 
@@ -3440,8 +3421,7 @@ HB_FUNC_STATIC(QWIDGET_SCROLL)
     // void scroll(int dx, int dy, const QRect &r)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->scroll(PINT(1), PINT(2), *PQRECT(3));
     }
 
@@ -3483,8 +3463,7 @@ HB_FUNC_STATIC(QWIDGET_SETCONTENTSMARGINS)
     // void setContentsMargins(int left, int top, int right, int bottom)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setContentsMargins(PINT(1), PINT(2), PINT(3), PINT(4));
     }
 
@@ -3495,8 +3474,7 @@ HB_FUNC_STATIC(QWIDGET_SETCONTENTSMARGINS)
     // void setContentsMargins(const QMargins &margins)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setContentsMargins(*PQMARGINS(1));
     }
 
@@ -3563,8 +3541,7 @@ HB_FUNC_STATIC(QWIDGET_SETFIXEDSIZE)
     // void setFixedSize(const QSize &s)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setFixedSize(*PQSIZE(1));
     }
 
@@ -3575,8 +3552,7 @@ HB_FUNC_STATIC(QWIDGET_SETFIXEDSIZE)
     // void setFixedSize(int w, int h)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setFixedSize(PINT(1), PINT(2));
     }
 
@@ -3618,8 +3594,7 @@ HB_FUNC_STATIC(QWIDGET_SETFOCUS)
     // void setFocus(Qt::FocusReason reason)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setFocus(static_cast<Qt::FocusReason>(hb_parni(1)));
     }
 
@@ -3630,8 +3605,7 @@ HB_FUNC_STATIC(QWIDGET_SETFOCUS)
     // void setFocus()
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setFocus();
     }
 
@@ -3695,8 +3669,7 @@ HB_FUNC_STATIC(QWIDGET_SETGEOMETRY)
     // void setGeometry(const QRect &)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setGeometry(*PQRECT(1));
     }
 
@@ -3707,8 +3680,7 @@ HB_FUNC_STATIC(QWIDGET_SETGEOMETRY)
     // void setGeometry(int x, int y, int w, int h)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setGeometry(PINT(1), PINT(2), PINT(3), PINT(4));
     }
 
@@ -3772,8 +3744,7 @@ HB_FUNC_STATIC(QWIDGET_SETMAXIMUMSIZE)
     // void setMaximumSize(const QSize &)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setMaximumSize(*PQSIZE(1));
     }
 
@@ -3784,8 +3755,7 @@ HB_FUNC_STATIC(QWIDGET_SETMAXIMUMSIZE)
     // void setMaximumSize(int maxw, int maxh)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setMaximumSize(PINT(1), PINT(2));
     }
 
@@ -3826,8 +3796,7 @@ HB_FUNC_STATIC(QWIDGET_SETMINIMUMSIZE)
     // void setMinimumSize(const QSize &)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setMinimumSize(*PQSIZE(1));
     }
 
@@ -3838,8 +3807,7 @@ HB_FUNC_STATIC(QWIDGET_SETMINIMUMSIZE)
     // void setMinimumSize(int minw, int minh)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setMinimumSize(PINT(1), PINT(2));
     }
 
@@ -3858,8 +3826,7 @@ HB_FUNC_STATIC(QWIDGET_SETPARENT)
     // void setParent(QWidget * parent)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setParent(PQWIDGET(1));
     }
 
@@ -3870,8 +3837,7 @@ HB_FUNC_STATIC(QWIDGET_SETPARENT)
     // void setParent(QWidget * parent, Qt::WindowFlags f)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setParent(PQWIDGET(1), static_cast<Qt::WindowFlags>(hb_parni(2)));
     }
 
@@ -3962,8 +3928,7 @@ HB_FUNC_STATIC(QWIDGET_SETSIZEINCREMENT)
     // void setSizeIncrement(const QSize &)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setSizeIncrement(*PQSIZE(1));
     }
 
@@ -3974,8 +3939,7 @@ HB_FUNC_STATIC(QWIDGET_SETSIZEINCREMENT)
     // void setSizeIncrement(int w, int h)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setSizeIncrement(PINT(1), PINT(2));
     }
 
@@ -4016,8 +3980,7 @@ HB_FUNC_STATIC(QWIDGET_SETSIZEPOLICY)
     // void setSizePolicy(QSizePolicy)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setSizePolicy(*PQSIZEPOLICY(1));
     }
 
@@ -4028,8 +3991,7 @@ HB_FUNC_STATIC(QWIDGET_SETSIZEPOLICY)
     // void setSizePolicy(QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setSizePolicy(static_cast<QSizePolicy::Policy>(hb_parni(1)), static_cast<QSizePolicy::Policy>(hb_parni(2)));
     }
 
@@ -4513,8 +4475,7 @@ HB_FUNC_STATIC(QWIDGET_UPDATE)
     // void update(int x, int y, int w, int h)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->update(PINT(1), PINT(2), PINT(3), PINT(4));
     }
 
@@ -4525,8 +4486,7 @@ HB_FUNC_STATIC(QWIDGET_UPDATE)
     // void update(const QRect &rect)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->update(*PQRECT(1));
     }
 
@@ -4537,8 +4497,7 @@ HB_FUNC_STATIC(QWIDGET_UPDATE)
     // void update(const QRegion &rgn)
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->update(*PQREGION(1));
     }
 
@@ -4549,8 +4508,7 @@ HB_FUNC_STATIC(QWIDGET_UPDATE)
     // void update()
     auto obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->update();
     }
 

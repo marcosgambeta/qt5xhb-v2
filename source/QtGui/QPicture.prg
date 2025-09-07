@@ -175,8 +175,7 @@ HB_FUNC_STATIC(QPICTURE_LOAD)
     */
     auto obj = static_cast<QPicture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->load(PQSTRING(1), OPCONSTCHAR(2, nullptr)));
     }
   }
@@ -187,8 +186,7 @@ HB_FUNC_STATIC(QPICTURE_LOAD)
     */
     auto obj = static_cast<QPicture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->load(PQIODEVICE(1), OPCONSTCHAR(2, nullptr)));
     }
   }
@@ -230,8 +228,7 @@ HB_FUNC_STATIC(QPICTURE_SAVE)
     */
     auto obj = static_cast<QPicture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->save(PQSTRING(1), OPCONSTCHAR(2, nullptr)));
     }
   }
@@ -242,8 +239,7 @@ HB_FUNC_STATIC(QPICTURE_SAVE)
     */
     auto obj = static_cast<QPicture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->save(PQIODEVICE(1), OPCONSTCHAR(2, nullptr)));
     }
   }

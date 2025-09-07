@@ -258,8 +258,7 @@ HB_FUNC_STATIC(QCAMERA_LOCKSTATUS)
     */
     auto obj = qobject_cast<QCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RENUM(obj->lockStatus());
     }
   }
@@ -270,8 +269,7 @@ HB_FUNC_STATIC(QCAMERA_LOCKSTATUS)
     */
     auto obj = qobject_cast<QCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RENUM(obj->lockStatus(static_cast<QCamera::LockType>(hb_parni(1))));
     }
   }
@@ -454,8 +452,7 @@ HB_FUNC_STATIC(QCAMERA_SETVIEWFINDER)
     */
     auto obj = qobject_cast<QCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setViewfinder(PQVIDEOWIDGET(1));
     }
 
@@ -468,8 +465,7 @@ HB_FUNC_STATIC(QCAMERA_SETVIEWFINDER)
     */
     auto obj = qobject_cast<QCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setViewfinder(PQGRAPHICSVIDEOITEM(1));
     }
 
@@ -482,8 +478,7 @@ HB_FUNC_STATIC(QCAMERA_SETVIEWFINDER)
     */
     auto obj = qobject_cast<QCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setViewfinder(PQABSTRACTVIDEOSURFACE(1));
     }
 
@@ -552,8 +547,7 @@ HB_FUNC_STATIC(QCAMERA_SEARCHANDLOCK)
     */
     auto obj = qobject_cast<QCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->searchAndLock();
     }
 
@@ -566,8 +560,7 @@ HB_FUNC_STATIC(QCAMERA_SEARCHANDLOCK)
     */
     auto obj = qobject_cast<QCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->searchAndLock(static_cast<QCamera::LockTypes>(hb_parni(1)));
     }
 
@@ -663,8 +656,7 @@ HB_FUNC_STATIC(QCAMERA_UNLOCK)
     */
     auto obj = qobject_cast<QCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->unlock();
     }
 
@@ -677,8 +669,7 @@ HB_FUNC_STATIC(QCAMERA_UNLOCK)
     */
     auto obj = qobject_cast<QCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->unlock(static_cast<QCamera::LockTypes>(hb_parni(1)));
     }
 

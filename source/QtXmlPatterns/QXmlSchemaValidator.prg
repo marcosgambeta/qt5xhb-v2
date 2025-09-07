@@ -343,8 +343,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_VALIDATE)
     */
     auto obj = static_cast<QXmlSchemaValidator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->validate(*PQURL(1)));
     }
   }
@@ -355,8 +354,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_VALIDATE)
     */
     auto obj = static_cast<QXmlSchemaValidator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->validate(PQIODEVICE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2))));
     }
   }
@@ -367,8 +365,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_VALIDATE)
     */
     auto obj = static_cast<QXmlSchemaValidator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->validate(*PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2))));
     }
   }

@@ -690,8 +690,7 @@ HB_FUNC_STATIC(QPROCESS_START)
     */
     auto obj = qobject_cast<QProcess *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->start(PQSTRING(1), PQSTRINGLIST(2),
                  HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
                              : static_cast<QIODevice::OpenMode>(hb_parni(3)));
@@ -706,8 +705,7 @@ HB_FUNC_STATIC(QPROCESS_START)
     */
     auto obj = qobject_cast<QProcess *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->start(PQSTRING(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
                                           : static_cast<QIODevice::OpenMode>(hb_parni(2)));
     }
@@ -722,8 +720,7 @@ HB_FUNC_STATIC(QPROCESS_START)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = qobject_cast<QProcess *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->start(HB_ISNIL(1) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
                              : static_cast<QIODevice::OpenMode>(hb_parni(1)));
     }
@@ -1126,8 +1123,7 @@ HB_FUNC_STATIC(QPROCESS_STARTDETACHED)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = qobject_cast<QProcess *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       qint64 par1;
       RBOOL(obj->startDetached(&par1));
       hb_stornll(par1, 1);

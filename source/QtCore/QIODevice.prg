@@ -431,8 +431,7 @@ HB_FUNC_STATIC(QIODEVICE_PEEK)
     */
     auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQINT64(obj->peek((char *)hb_parc(1), PQINT64(2)));
     }
   }
@@ -443,8 +442,7 @@ HB_FUNC_STATIC(QIODEVICE_PEEK)
     */
     auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QByteArray(obj->peek(PQINT64(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
@@ -510,8 +508,7 @@ HB_FUNC_STATIC(QIODEVICE_READ)
     */
     auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQINT64(obj->read((char *)hb_parc(1), PQINT64(2)));
     }
   }
@@ -522,8 +519,7 @@ HB_FUNC_STATIC(QIODEVICE_READ)
     */
     auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QByteArray(obj->read(PQINT64(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
@@ -567,8 +563,7 @@ HB_FUNC_STATIC(QIODEVICE_READLINE)
     */
     auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQINT64(obj->readLine((char *)hb_parc(1), PQINT64(2)));
     }
   }
@@ -579,8 +574,7 @@ HB_FUNC_STATIC(QIODEVICE_READLINE)
     */
     auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QByteArray(obj->readLine(OPQINT64(1, 0)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
@@ -765,8 +759,7 @@ HB_FUNC_STATIC(QIODEVICE_WRITE)
     */
     auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQINT64(obj->write(PCONSTCHAR(1), PQINT64(2)));
     }
   }
@@ -777,8 +770,7 @@ HB_FUNC_STATIC(QIODEVICE_WRITE)
     */
     auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQINT64(obj->write(PCONSTCHAR(1)));
     }
   }
@@ -789,8 +781,7 @@ HB_FUNC_STATIC(QIODEVICE_WRITE)
     */
     auto obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQINT64(obj->write(*PQBYTEARRAY(1)));
     }
   }

@@ -503,8 +503,7 @@ HB_FUNC_STATIC(QXYSERIES_APPEND)
     void append(qreal x, qreal y)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->append(PQREAL(1), PQREAL(2));
     }
 
@@ -517,8 +516,7 @@ HB_FUNC_STATIC(QXYSERIES_APPEND)
     void append(const QPointF &point)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->append(*PQPOINTF(1));
     }
 
@@ -531,8 +529,7 @@ HB_FUNC_STATIC(QXYSERIES_APPEND)
     void append(const QList<QPointF> &points)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QPointF> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
@@ -562,8 +559,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
     void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->replace(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 
@@ -576,8 +572,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
     void replace(const QPointF &oldPoint, const QPointF &newPoint)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->replace(*PQPOINTF(1), *PQPOINTF(2));
     }
 
@@ -590,8 +585,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
     void replace(int index, qreal newX, qreal newY)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->replace(PINT(1), PQREAL(2), PQREAL(3));
     }
 
@@ -604,8 +598,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
     void replace(int index, const QPointF &newPoint)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->replace(PINT(1), *PQPOINTF(2));
     }
 
@@ -618,8 +611,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
     void replace(QList<QPointF> points)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QPointF> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
@@ -639,8 +631,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
     void replace(QVector<QPointF> points)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QVector<QPointF> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
@@ -670,8 +661,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVE)
     void remove(qreal x, qreal y)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->remove(PQREAL(1), PQREAL(2));
     }
 
@@ -684,8 +674,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVE)
     void remove(const QPointF &point)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->remove(*PQPOINTF(1));
     }
 
@@ -698,8 +687,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVE)
     void remove(int index)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->remove(PINT(1));
     }
 

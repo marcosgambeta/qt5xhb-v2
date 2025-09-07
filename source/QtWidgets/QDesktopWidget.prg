@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
     */
     auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->availableGeometry(OPINT(1, -1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
@@ -99,8 +98,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
     */
     auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->availableGeometry(PQWIDGET(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
@@ -112,8 +110,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
     */
     auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->availableGeometry(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
@@ -226,8 +223,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
     */
     auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->screenGeometry(OPINT(1, -1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
@@ -239,8 +235,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
     */
     auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->screenGeometry(PQWIDGET(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
@@ -252,8 +247,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
     */
     auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->screenGeometry(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
@@ -273,8 +267,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENNUMBER)
     */
     auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->screenNumber(OPQWIDGET(1, nullptr)));
     }
   }
@@ -285,8 +278,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENNUMBER)
     */
     auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->screenNumber(*PQPOINT(1)));
     }
   }

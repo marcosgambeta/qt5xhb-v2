@@ -335,8 +335,7 @@ HB_FUNC_STATIC(QDIR_ENTRYINFOLIST)
     */
     auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto list = obj->entryInfoList(
           PQSTRINGLIST(1),
           HB_ISNIL(2) ? static_cast<QDir::Filters>(QDir::NoFilter) : static_cast<QDir::Filters>(hb_parni(2)),
@@ -376,8 +375,7 @@ HB_FUNC_STATIC(QDIR_ENTRYINFOLIST)
     */
     auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto list = obj->entryInfoList(
           HB_ISNIL(1) ? static_cast<QDir::Filters>(QDir::NoFilter) : static_cast<QDir::Filters>(hb_parni(1)),
           HB_ISNIL(2) ? static_cast<QDir::SortFlags>(QDir::NoSort) : static_cast<QDir::SortFlags>(hb_parni(2)));
@@ -425,8 +423,7 @@ HB_FUNC_STATIC(QDIR_ENTRYLIST)
     */
     auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRINGLIST(obj->entryList(
           PQSTRINGLIST(1),
           HB_ISNIL(2) ? static_cast<QDir::Filters>(QDir::NoFilter) : static_cast<QDir::Filters>(hb_parni(2)),
@@ -440,8 +437,7 @@ HB_FUNC_STATIC(QDIR_ENTRYLIST)
     */
     auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRINGLIST(obj->entryList(
           HB_ISNIL(1) ? static_cast<QDir::Filters>(QDir::NoFilter) : static_cast<QDir::Filters>(hb_parni(1)),
           HB_ISNIL(2) ? static_cast<QDir::SortFlags>(QDir::NoSort) : static_cast<QDir::SortFlags>(hb_parni(2))));
@@ -462,8 +458,7 @@ HB_FUNC_STATIC(QDIR_EXISTS)
     */
     auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->exists(PQSTRING(1)));
     }
   }
@@ -474,8 +469,7 @@ HB_FUNC_STATIC(QDIR_EXISTS)
     */
     auto obj = static_cast<QDir *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->exists());
     }
   }

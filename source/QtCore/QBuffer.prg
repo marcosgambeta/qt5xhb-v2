@@ -214,8 +214,7 @@ HB_FUNC_STATIC(QBUFFER_SETDATA)
     */
     auto obj = qobject_cast<QBuffer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setData(*PQBYTEARRAY(1));
     }
 
@@ -228,8 +227,7 @@ HB_FUNC_STATIC(QBUFFER_SETDATA)
     */
     auto obj = qobject_cast<QBuffer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setData(PCONSTCHAR(1), PINT(2));
     }
 

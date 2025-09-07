@@ -284,8 +284,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALL)
     */
     auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QDBusMessage(
           obj->call(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2)),
                     HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)),
@@ -311,8 +310,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALL)
     */
     auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr =
           new QDBusMessage(obj->call(static_cast<QDBus::CallMode>(hb_parni(1)), PQSTRING(2),
                                      HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)),
@@ -375,8 +373,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK)
     */
     auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QVariant> par2;
       auto aList2 = hb_param(2, HB_IT_ARRAY);
       int nLen2 = hb_arrayLen(aList2);
@@ -395,8 +392,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK)
     */
     auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QVariant> par2;
       auto aList2 = hb_param(2, HB_IT_ARRAY);
       int nLen2 = hb_arrayLen(aList2);

@@ -284,8 +284,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BIND)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->bind();
     }
 
@@ -300,8 +299,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_BIND)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->bind(PUINT(1), HB_ISNIL(2)
                               ? static_cast<QOpenGLTexture::TextureUnitReset>(QOpenGLTexture::DontResetTextureUnit)
                               : static_cast<QOpenGLTexture::TextureUnitReset>(hb_parni(2)));
@@ -326,8 +324,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_RELEASE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->release();
     }
 
@@ -342,8 +339,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_RELEASE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->release(PUINT(1), HB_ISNIL(2)
                                  ? static_cast<QOpenGLTexture::TextureUnitReset>(QOpenGLTexture::DontResetTextureUnit)
                                  : static_cast<QOpenGLTexture::TextureUnitReset>(hb_parni(2)));
@@ -368,8 +364,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISBOUND)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->isBound());
     }
 #endif
@@ -382,8 +377,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_ISBOUND)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->isBound(PUINT(1)));
     }
 #endif
@@ -1001,8 +995,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_GENERATEMIPMAPS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->generateMipMaps();
     }
 
@@ -1017,8 +1010,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_GENERATEMIPMAPS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->generateMipMaps(PINT(1), OPBOOL(2, true));
     }
 
@@ -1041,8 +1033,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETSWIZZLEMASK)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setSwizzleMask(static_cast<QOpenGLTexture::SwizzleComponent>(hb_parni(1)),
                           static_cast<QOpenGLTexture::SwizzleValue>(hb_parni(2)));
     }
@@ -1059,8 +1050,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETSWIZZLEMASK)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setSwizzleMask(static_cast<QOpenGLTexture::SwizzleValue>(hb_parni(1)),
                           static_cast<QOpenGLTexture::SwizzleValue>(hb_parni(2)),
                           static_cast<QOpenGLTexture::SwizzleValue>(hb_parni(3)),
@@ -1347,8 +1337,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETWRAPMODE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setWrapMode(static_cast<QOpenGLTexture::WrapMode>(hb_parni(1)));
     }
 
@@ -1363,8 +1352,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETWRAPMODE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setWrapMode(static_cast<QOpenGLTexture::CoordinateDirection>(hb_parni(1)),
                        static_cast<QOpenGLTexture::WrapMode>(hb_parni(2)));
     }

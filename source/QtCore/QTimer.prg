@@ -243,8 +243,7 @@ HB_FUNC_STATIC(QTIMER_START)
     */
     auto obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->start(PINT(1));
     }
 
@@ -257,8 +256,7 @@ HB_FUNC_STATIC(QTIMER_START)
     */
     auto obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->start();
     }
 

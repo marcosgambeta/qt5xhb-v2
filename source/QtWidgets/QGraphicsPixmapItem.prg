@@ -162,8 +162,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_SETOFFSET)
     */
     auto obj = static_cast<QGraphicsPixmapItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setOffset(*PQPOINTF(1));
     }
 
@@ -176,8 +175,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_SETOFFSET)
     */
     auto obj = static_cast<QGraphicsPixmapItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setOffset(PQREAL(1), PQREAL(2));
     }
 

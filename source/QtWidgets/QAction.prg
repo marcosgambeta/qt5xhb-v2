@@ -1092,8 +1092,7 @@ HB_FUNC_STATIC(QACTION_SETSHORTCUTS)
     */
     auto obj = qobject_cast<QAction *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QKeySequence> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
@@ -1114,8 +1113,7 @@ HB_FUNC_STATIC(QACTION_SETSHORTCUTS)
     */
     auto obj = qobject_cast<QAction *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setShortcuts(static_cast<QKeySequence::StandardKey>(hb_parni(1)));
     }
 

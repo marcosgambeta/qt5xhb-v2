@@ -572,8 +572,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_RESIZE)
     */
     auto obj = qobject_cast<QGraphicsWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->resize(*PQSIZEF(1));
     }
 
@@ -586,8 +585,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_RESIZE)
     */
     auto obj = qobject_cast<QGraphicsWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->resize(PQREAL(1), PQREAL(2));
     }
 
@@ -733,8 +731,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETGEOMETRY)
     */
     auto obj = qobject_cast<QGraphicsWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setGeometry(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 
@@ -747,8 +744,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETGEOMETRY)
     */
     auto obj = qobject_cast<QGraphicsWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setGeometry(*PQRECTF(1));
     }
 

@@ -861,8 +861,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATE)
     */
     auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->itemDelegate();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
     }
@@ -874,8 +873,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATE)
     */
     auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->itemDelegate(*PQMODELINDEX(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
     }
@@ -1799,8 +1797,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
     */
     auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->update(PINT(1), PINT(2), PINT(3), PINT(4));
     }
 
@@ -1813,8 +1810,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
     */
     auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->update(*PQRECT(1));
     }
 
@@ -1827,8 +1823,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
     */
     auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->update(*PQREGION(1));
     }
 
@@ -1841,8 +1836,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
     */
     auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->update();
     }
 
@@ -1855,8 +1849,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
     */
     auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->update(*PQMODELINDEX(1));
     }
 

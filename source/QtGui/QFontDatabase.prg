@@ -354,8 +354,7 @@ HB_FUNC_STATIC(QFONTDATABASE_STYLESTRING)
     */
     auto obj = static_cast<QFontDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->styleString(*PQFONT(1)));
     }
   }
@@ -366,8 +365,7 @@ HB_FUNC_STATIC(QFONTDATABASE_STYLESTRING)
     */
     auto obj = static_cast<QFontDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->styleString(*PQFONTINFO(1)));
     }
   }

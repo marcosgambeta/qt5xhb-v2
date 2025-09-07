@@ -178,8 +178,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_INDEX)
     */
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->index(PQSTRING(1)));
     }
   }
@@ -190,8 +189,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_INDEX)
     */
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->index(*PQLATIN1STRING(1)));
     }
   }
@@ -202,8 +200,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_INDEX)
     */
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->index(PQSTRING(1), PQSTRING(2)));
     }
   }
@@ -291,8 +288,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_TYPE)
     */
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->type(PINT(1)));
     }
   }
@@ -303,8 +299,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_TYPE)
     */
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->type(PQSTRING(1)));
     }
   }
@@ -315,8 +310,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_TYPE)
     */
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->type(PQSTRING(1), PQSTRING(2)));
     }
   }
@@ -358,8 +352,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_VALUE)
     */
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->value(PINT(1)));
     }
   }
@@ -370,8 +363,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_VALUE)
     */
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->value(PQSTRING(1)));
     }
   }
@@ -382,8 +374,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_VALUE)
     */
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->value(*PQLATIN1STRING(1)));
     }
   }
@@ -394,8 +385,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_VALUE)
     */
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->value(PQSTRING(1), PQSTRING(2)));
     }
   }

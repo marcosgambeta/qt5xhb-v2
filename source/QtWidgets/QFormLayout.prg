@@ -125,8 +125,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     */
     auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addRow(PQWIDGET(1), PQWIDGET(2));
     }
 
@@ -139,8 +138,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     */
     auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addRow(PQWIDGET(1), PQLAYOUT(2));
     }
 
@@ -153,8 +151,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     */
     auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addRow(PQSTRING(1), PQWIDGET(2));
     }
 
@@ -167,8 +164,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     */
     auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addRow(PQSTRING(1), PQLAYOUT(2));
     }
 
@@ -181,8 +177,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     */
     auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addRow(PQWIDGET(1));
     }
 
@@ -195,8 +190,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     */
     auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addRow(PQLAYOUT(1));
     }
 
@@ -286,8 +280,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     */
     auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertRow(PINT(1), PQWIDGET(2), PQWIDGET(3));
     }
 
@@ -300,8 +293,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     */
     auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertRow(PINT(1), PQWIDGET(2), PQLAYOUT(3));
     }
 
@@ -314,8 +306,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     */
     auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertRow(PINT(1), PQSTRING(2), PQWIDGET(3));
     }
 
@@ -328,8 +319,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     */
     auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertRow(PINT(1), PQSTRING(2), PQLAYOUT(3));
     }
 
@@ -342,8 +332,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     */
     auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertRow(PINT(1), PQWIDGET(2));
     }
 
@@ -356,8 +345,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     */
     auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertRow(PINT(1), PQLAYOUT(2));
     }
 
@@ -378,8 +366,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ITEMAT)
     */
     auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->itemAt(PINT(1), static_cast<QFormLayout::ItemRole>(hb_parni(2)));
       Qt5xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
     }
@@ -391,8 +378,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ITEMAT)
     */
     auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->itemAt(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
     }
@@ -435,8 +421,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_LABELFORFIELD)
     */
     auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->labelForField(PQWIDGET(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
     }
@@ -448,8 +433,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_LABELFORFIELD)
     */
     auto obj = qobject_cast<QFormLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->labelForField(PQLAYOUT(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
     }

@@ -170,8 +170,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETLINE)
     */
     auto obj = static_cast<QGraphicsLineItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setLine(*PQLINEF(1));
     }
 
@@ -184,8 +183,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETLINE)
     */
     auto obj = static_cast<QGraphicsLineItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setLine(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 

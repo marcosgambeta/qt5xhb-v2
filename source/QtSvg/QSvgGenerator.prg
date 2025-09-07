@@ -348,8 +348,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETVIEWBOX)
     */
     auto obj = static_cast<QSvgGenerator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setViewBox(*PQRECT(1));
     }
 
@@ -362,8 +361,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETVIEWBOX)
     */
     auto obj = static_cast<QSvgGenerator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setViewBox(*PQRECTF(1));
     }
 

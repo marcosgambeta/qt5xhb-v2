@@ -238,8 +238,7 @@ HB_FUNC_STATIC(QTIME_ISVALID)
     */
     auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->isValid());
     }
   }
@@ -452,8 +451,7 @@ HB_FUNC_STATIC(QTIME_TOSTRING)
     */
     auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->toString(PQSTRING(1)));
     }
   }
@@ -464,8 +462,7 @@ HB_FUNC_STATIC(QTIME_TOSTRING)
     */
     auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->toString(HB_ISNIL(1) ? static_cast<Qt::DateFormat>(Qt::TextDate)
                                          : static_cast<Qt::DateFormat>(hb_parni(1))));
     }

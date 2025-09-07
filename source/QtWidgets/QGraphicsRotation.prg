@@ -198,8 +198,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
     */
     auto obj = qobject_cast<QGraphicsRotation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setAxis(*PQVECTOR3D(1));
     }
 
@@ -212,8 +211,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
     */
     auto obj = qobject_cast<QGraphicsRotation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setAxis(static_cast<Qt::Axis>(hb_parni(1)));
     }
 

@@ -289,8 +289,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CONNECTTOSERVICE)
     void connectToService(const QBluetoothServiceInfo &service, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->connectToService(*PQBLUETOOTHSERVICEINFO(1), HB_ISNIL(2)
                                                             ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
                                                             : static_cast<QIODevice::OpenMode>(hb_parni(2)));
@@ -306,8 +305,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CONNECTTOSERVICE)
     QIODevice::ReadWrite)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->connectToService(*PQBLUETOOTHADDRESS(1), *PQBLUETOOTHUUID(2),
                             HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
                                         : static_cast<QIODevice::OpenMode>(hb_parni(3)));
@@ -323,8 +321,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CONNECTTOSERVICE)
     QIODevice::ReadWrite)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->connectToService(*PQBLUETOOTHADDRESS(1), PQUINT16(2),
                             HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
                                         : static_cast<QIODevice::OpenMode>(hb_parni(3)));

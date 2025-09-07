@@ -179,8 +179,7 @@ HB_FUNC_STATIC(QFONTMETRICS_BOUNDINGRECT)
     */
     auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->boundingRect(*PQCHAR(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
@@ -192,8 +191,7 @@ HB_FUNC_STATIC(QFONTMETRICS_BOUNDINGRECT)
     */
     auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->boundingRect(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
@@ -207,8 +205,7 @@ HB_FUNC_STATIC(QFONTMETRICS_BOUNDINGRECT)
     */
     auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       int par8;
       auto ptr =
           new QRect(obj->boundingRect(PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6), OPINT(7, 0), &par8));
@@ -225,8 +222,7 @@ HB_FUNC_STATIC(QFONTMETRICS_BOUNDINGRECT)
     */
     auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       int par5;
       auto ptr = new QRect(obj->boundingRect(*PQRECT(1), PINT(2), PQSTRING(3), OPINT(4, 0), &par5));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -597,8 +593,7 @@ HB_FUNC_STATIC(QFONTMETRICS_WIDTH)
     */
     auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->width(PQSTRING(1), OPINT(2, -1)));
     }
   }
@@ -609,8 +604,7 @@ HB_FUNC_STATIC(QFONTMETRICS_WIDTH)
     */
     auto obj = static_cast<QFontMetrics *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->width(*PQCHAR(1)));
     }
   }

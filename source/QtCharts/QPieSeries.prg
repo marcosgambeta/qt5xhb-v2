@@ -526,8 +526,7 @@ HB_FUNC_STATIC(QPIESERIES_APPEND)
     bool append(QPieSlice * slice)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->append(PQPIESLICE(1)));
     }
 #endif
@@ -538,8 +537,7 @@ HB_FUNC_STATIC(QPIESERIES_APPEND)
     bool append(QList<QPieSlice*> slices)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QPieSlice *> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
@@ -558,8 +556,7 @@ HB_FUNC_STATIC(QPIESERIES_APPEND)
     QPieSlice * append(QString label, qreal value)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->append(PQSTRING(1), PQREAL(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QPIESLICE");
     }

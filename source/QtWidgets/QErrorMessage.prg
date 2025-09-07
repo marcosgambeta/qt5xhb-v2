@@ -92,8 +92,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
     */
     auto obj = qobject_cast<QErrorMessage *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->showMessage(PQSTRING(1));
     }
 
@@ -106,8 +105,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
     */
     auto obj = qobject_cast<QErrorMessage *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->showMessage(PQSTRING(1), PQSTRING(2));
     }
 

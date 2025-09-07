@@ -179,8 +179,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_SETCENTER)
     */
     auto obj = static_cast<QConicalGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setCenter(*PQPOINTF(1));
     }
 
@@ -193,8 +192,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_SETCENTER)
     */
     auto obj = static_cast<QConicalGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setCenter(PQREAL(1), PQREAL(2));
     }
 

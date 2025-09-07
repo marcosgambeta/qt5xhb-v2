@@ -106,8 +106,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
     */
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setMapping(PQOBJECT(1), PINT(2));
     }
 
@@ -120,8 +119,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
     */
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setMapping(PQOBJECT(1), PQSTRING(2));
     }
 
@@ -134,8 +132,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
     */
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setMapping(PQOBJECT(1), PQWIDGET(2));
     }
 
@@ -148,8 +145,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
     */
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setMapping(PQOBJECT(1), PQOBJECT(2));
     }
 
@@ -195,8 +191,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
     */
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->mapping(PINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
@@ -208,8 +203,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
     */
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->mapping(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
@@ -221,8 +215,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
     */
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->mapping(PQWIDGET(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
@@ -234,8 +227,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
     */
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->mapping(PQOBJECT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
@@ -255,8 +247,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAP)
     */
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->map();
     }
 
@@ -269,8 +260,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAP)
     */
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->map(PQOBJECT(1));
     }
 

@@ -488,8 +488,7 @@ HB_FUNC_STATIC(QURL_PORT)
     */
     auto obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->port());
     }
   }
@@ -500,8 +499,7 @@ HB_FUNC_STATIC(QURL_PORT)
     */
     auto obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->port(PINT(1)));
     }
   }
@@ -742,8 +740,7 @@ HB_FUNC_STATIC(QURL_SETURL)
     */
     auto obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setUrl(PQSTRING(1));
     }
 
@@ -756,8 +753,7 @@ HB_FUNC_STATIC(QURL_SETURL)
     */
     auto obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setUrl(PQSTRING(1), static_cast<QUrl::ParsingMode>(hb_parni(2)));
     }
 

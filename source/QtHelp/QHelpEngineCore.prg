@@ -357,8 +357,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILTERATTRIBUTES)
     */
     auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRINGLIST(obj->filterAttributes());
     }
   }
@@ -369,8 +368,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILTERATTRIBUTES)
     */
     auto obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRINGLIST(obj->filterAttributes(PQSTRING(1)));
     }
   }

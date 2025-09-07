@@ -116,8 +116,7 @@ HB_FUNC_STATIC(QSTATE_ADDTRANSITION)
     */
     auto obj = qobject_cast<QState *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addTransition(PQABSTRACTTRANSITION(1));
     }
 
@@ -130,8 +129,7 @@ HB_FUNC_STATIC(QSTATE_ADDTRANSITION)
     */
     auto obj = qobject_cast<QState *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addTransition(PQOBJECT(1), PCONSTCHAR(2), PQABSTRACTSTATE(3));
       Qt5xHb::createReturnClass(ptr, "QSIGNALTRANSITION", false);
     }
@@ -143,8 +141,7 @@ HB_FUNC_STATIC(QSTATE_ADDTRANSITION)
     */
     auto obj = qobject_cast<QState *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addTransition(PQABSTRACTSTATE(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTTRANSITION");
     }

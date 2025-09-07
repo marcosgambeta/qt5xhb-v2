@@ -116,8 +116,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
     */
     auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQIMAGE(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>(hb_parni(4))));
     }
   }
@@ -128,8 +127,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
     */
     auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RGLUINT(obj->bindTexture(PQSTRING(1)));
     }
   }
@@ -140,8 +138,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
     */
     auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQIMAGE(1), OPGLENUM(2, GL_TEXTURE_2D), OPGLINT(3, GL_RGBA)));
     }
   }
@@ -152,8 +149,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
     */
     auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQPIXMAP(1), OPGLENUM(2, GL_TEXTURE_2D), OPGLINT(3, GL_RGBA)));
     }
   }
@@ -164,8 +160,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
     */
     auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQPIXMAP(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>(hb_parni(4))));
     }
   }
@@ -258,8 +253,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DRAWTEXTURE)
     */
     auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->drawTexture(*PQRECTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
     }
 
@@ -272,8 +266,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DRAWTEXTURE)
     */
     auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->drawTexture(*PQPOINTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
     }
 

@@ -342,8 +342,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTEXT)
     */
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertText(PQSTRING(1));
     }
 
@@ -356,8 +355,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTEXT)
     */
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertText(PQSTRING(1), *PQTEXTCHARFORMAT(2));
     }
 
@@ -1183,8 +1181,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTBLOCK)
     */
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertBlock();
     }
 
@@ -1197,8 +1194,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTBLOCK)
     */
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertBlock(*PQTEXTBLOCKFORMAT(1));
     }
 
@@ -1211,8 +1207,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTBLOCK)
     */
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertBlock(*PQTEXTBLOCKFORMAT(1), *PQTEXTCHARFORMAT(2));
     }
 
@@ -1233,8 +1228,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTLIST)
     */
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->insertList(*PQTEXTLISTFORMAT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
     }
@@ -1246,8 +1240,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTLIST)
     */
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->insertList(static_cast<QTextListFormat::Style>(hb_parni(1)));
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
     }
@@ -1267,8 +1260,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_CREATELIST)
     */
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->createList(*PQTEXTLISTFORMAT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
     }
@@ -1280,8 +1272,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_CREATELIST)
     */
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->createList(static_cast<QTextListFormat::Style>(hb_parni(1)));
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
     }
@@ -1325,8 +1316,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTABLE)
     */
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->insertTable(PINT(1), PINT(2), *PQTEXTTABLEFORMAT(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTTABLE");
     }
@@ -1338,8 +1328,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTABLE)
     */
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->insertTable(PINT(1), PINT(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTTABLE");
     }
@@ -1481,8 +1470,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
     */
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertImage(*PQTEXTIMAGEFORMAT(1), static_cast<QTextFrameFormat::Position>(hb_parni(2)));
     }
 
@@ -1495,8 +1483,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
     */
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertImage(*PQTEXTIMAGEFORMAT(1));
     }
 
@@ -1509,8 +1496,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
     */
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertImage(PQSTRING(1));
     }
 
@@ -1523,8 +1509,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
     */
     auto obj = static_cast<QTextCursor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertImage(*PQIMAGE(1), OPQSTRING(2, QString()));
     }
 

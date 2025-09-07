@@ -620,8 +620,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETPROPERTY)
     */
     auto obj = static_cast<QTextFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setProperty(PINT(1), *PQVARIANT(2));
     }
 
@@ -634,8 +633,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETPROPERTY)
     */
     auto obj = static_cast<QTextFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QVector<QTextLength> par2;
       auto aList2 = hb_param(2, HB_IT_ARRAY);
       int nLen2 = hb_arrayLen(aList2);

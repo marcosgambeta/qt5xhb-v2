@@ -118,8 +118,7 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
     */
     auto obj = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->load(PQSTRING(1), OPQSTRING(2, QString()), OPQSTRING(3, QString()), OPQSTRING(4, QString())));
     }
   }
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
     */
     auto obj = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->load(*PQLOCALE(1), PQSTRING(2), OPQSTRING(3, QString()), OPQSTRING(4, QString()),
                       OPQSTRING(5, QString())));
     }
@@ -145,8 +143,7 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
     */
     auto obj = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->load(PCONSTUCHAR(1), PINT(2), OPQSTRING(3, QString())));
     }
   }

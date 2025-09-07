@@ -143,8 +143,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_GEOCODE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = qobject_cast<QGeoCodingManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->geocode(*PQGEOADDRESS(1), *PQGEOSHAPE(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODEREPLY");
     }
@@ -158,8 +157,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_GEOCODE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = qobject_cast<QGeoCodingManagerEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->geocode(PQSTRING(1), PINT(2), PINT(3), *PQGEOSHAPE(4));
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODEREPLY");
     }

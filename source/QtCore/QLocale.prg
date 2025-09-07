@@ -1104,8 +1104,7 @@ HB_FUNC_STATIC(QLOCALE_TODATE)
     */
     auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QDate(obj->toDate(PQSTRING(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
                                                                 : static_cast<QLocale::FormatType>(hb_parni(2))));
       Qt5xHb::createReturnClass(ptr, "QDATE", true);
@@ -1118,8 +1117,7 @@ HB_FUNC_STATIC(QLOCALE_TODATE)
     */
     auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QDate(obj->toDate(PQSTRING(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QDATE", true);
     }
@@ -1139,8 +1137,7 @@ HB_FUNC_STATIC(QLOCALE_TODATETIME)
     */
     auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr =
           new QDateTime(obj->toDateTime(PQSTRING(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
                                                                  : static_cast<QLocale::FormatType>(hb_parni(2))));
@@ -1154,8 +1151,7 @@ HB_FUNC_STATIC(QLOCALE_TODATETIME)
     */
     auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QDateTime(obj->toDateTime(PQSTRING(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
     }
@@ -1609,8 +1605,7 @@ HB_FUNC_STATIC(QLOCALE_TOTIME)
     */
     auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QTime(obj->toTime(PQSTRING(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
                                                                 : static_cast<QLocale::FormatType>(hb_parni(2))));
       Qt5xHb::createReturnClass(ptr, "QTIME", true);
@@ -1623,8 +1618,7 @@ HB_FUNC_STATIC(QLOCALE_TOTIME)
     */
     auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QTime(obj->toTime(PQSTRING(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QTIME", true);
     }

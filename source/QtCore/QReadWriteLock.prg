@@ -126,8 +126,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORREAD)
     */
     auto obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->tryLockForRead());
     }
   }
@@ -138,8 +137,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORREAD)
     */
     auto obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->tryLockForRead(PINT(1)));
     }
   }
@@ -183,8 +181,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORWRITE)
     */
     auto obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->tryLockForWrite());
     }
   }
@@ -195,8 +192,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORWRITE)
     */
     auto obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->tryLockForWrite(PINT(1)));
     }
   }

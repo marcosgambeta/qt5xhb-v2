@@ -125,8 +125,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ADDMAPPING)
     */
     auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addMapping(PQWIDGET(1), PINT(2));
     }
 
@@ -139,8 +138,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ADDMAPPING)
     */
     auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addMapping(PQWIDGET(1), PINT(2), *PQBYTEARRAY(3));
     }
 

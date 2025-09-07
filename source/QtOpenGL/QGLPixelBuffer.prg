@@ -120,8 +120,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_BINDTEXTURE)
     */
     auto obj = static_cast<QGLPixelBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQIMAGE(1), OPGLENUM(2, GL_TEXTURE_2D)));
     }
   }
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_BINDTEXTURE)
     */
     auto obj = static_cast<QGLPixelBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQPIXMAP(1), OPGLENUM(2, GL_TEXTURE_2D)));
     }
   }
@@ -144,8 +142,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_BINDTEXTURE)
     */
     auto obj = static_cast<QGLPixelBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RGLUINT(obj->bindTexture(PQSTRING(1)));
     }
   }
@@ -235,8 +232,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_DRAWTEXTURE)
     */
     auto obj = static_cast<QGLPixelBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->drawTexture(*PQRECTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
     }
 
@@ -249,8 +245,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_DRAWTEXTURE)
     */
     auto obj = static_cast<QGLPixelBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->drawTexture(*PQPOINTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
     }
 

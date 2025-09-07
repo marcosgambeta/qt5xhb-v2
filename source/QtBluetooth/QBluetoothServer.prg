@@ -145,8 +145,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_LISTEN)
     bool listen(const QBluetoothAddress &address = QBluetoothAddress(), quint16 port = 0)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->listen(HB_ISNIL(1) ? QBluetoothAddress() : *static_cast<QBluetoothAddress *>(Qt5xHb::itemGetPtr(1)),
                         OPQUINT16(2, 0)));
     }
@@ -158,8 +157,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_LISTEN)
     QBluetoothServiceInfo listen(const QBluetoothUuid &uuid, const QString &serviceName = QString())
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QBluetoothServiceInfo(obj->listen(*PQBLUETOOTHUUID(1), OPQSTRING(2, QString())));
       Qt5xHb::createReturnClass(ptr, "QBLUETOOTHSERVICEINFO", true);
     }

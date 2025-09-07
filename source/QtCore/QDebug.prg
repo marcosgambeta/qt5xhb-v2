@@ -400,8 +400,7 @@ HB_FUNC_STATIC(QDEBUG_VERBOSITY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     auto obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->verbosity());
     }
 #endif
@@ -414,8 +413,7 @@ HB_FUNC_STATIC(QDEBUG_VERBOSITY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
     auto obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = &obj->verbosity(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QDEBUG", false);
     }

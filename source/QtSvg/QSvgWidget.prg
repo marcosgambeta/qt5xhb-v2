@@ -153,8 +153,7 @@ HB_FUNC_STATIC(QSVGWIDGET_LOAD)
     */
     auto obj = qobject_cast<QSvgWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->load(PQSTRING(1));
     }
 
@@ -167,8 +166,7 @@ HB_FUNC_STATIC(QSVGWIDGET_LOAD)
     */
     auto obj = qobject_cast<QSvgWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->load(*PQBYTEARRAY(1));
     }
 

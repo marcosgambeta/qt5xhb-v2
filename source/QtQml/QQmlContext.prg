@@ -355,8 +355,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_SETCONTEXTPROPERTY)
     */
     auto obj = qobject_cast<QQmlContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setContextProperty(PQSTRING(1), PQOBJECT(2));
     }
 
@@ -369,8 +368,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_SETCONTEXTPROPERTY)
     */
     auto obj = qobject_cast<QQmlContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setContextProperty(PQSTRING(1), *PQVARIANT(2));
     }
 

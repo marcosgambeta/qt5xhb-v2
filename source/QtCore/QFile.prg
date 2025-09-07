@@ -142,8 +142,7 @@ HB_FUNC_STATIC(QFILE_COPY)
     */
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->copy(PQSTRING(1)));
     }
   }
@@ -193,8 +192,7 @@ HB_FUNC_STATIC(QFILE_EXISTS)
     */
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->exists());
     }
   }
@@ -290,8 +288,7 @@ HB_FUNC_STATIC(QFILE_LINK)
     */
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->link(PQSTRING(1)));
     }
   }
@@ -318,8 +315,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
     */
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->open(static_cast<QFile::OpenMode>(hb_parni(1))));
     }
   }
@@ -330,8 +326,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
     */
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->open(static_cast<FILE *>(hb_parptr(1)), static_cast<QFile::OpenMode>(hb_parni(2)),
                       HB_ISNIL(3) ? static_cast<QFile::FileHandleFlags>(QFile::DontCloseHandle)
                                   : static_cast<QFile::FileHandleFlags>(hb_parni(3))));
@@ -344,8 +339,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
     */
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->open(PINT(1), static_cast<QFile::OpenMode>(hb_parni(2)),
                       HB_ISNIL(3) ? static_cast<QFile::FileHandleFlags>(QFile::DontCloseHandle)
                                   : static_cast<QFile::FileHandleFlags>(hb_parni(3))));
@@ -366,8 +360,7 @@ HB_FUNC_STATIC(QFILE_PERMISSIONS)
     */
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RENUM(obj->permissions());
     }
   }
@@ -394,8 +387,7 @@ HB_FUNC_STATIC(QFILE_REMOVE)
     */
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->remove());
     }
   }
@@ -422,8 +414,7 @@ HB_FUNC_STATIC(QFILE_RENAME)
     */
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->rename(PQSTRING(1)));
     }
   }
@@ -450,8 +441,7 @@ HB_FUNC_STATIC(QFILE_RESIZE)
     */
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->resize(PQINT64(1)));
     }
   }
@@ -503,8 +493,7 @@ HB_FUNC_STATIC(QFILE_SETPERMISSIONS)
     */
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->setPermissions(static_cast<QFile::Permissions>(hb_parni(1))));
     }
   }
@@ -531,8 +520,7 @@ HB_FUNC_STATIC(QFILE_SYMLINKTARGET)
     */
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->symLinkTarget());
     }
   }
@@ -791,8 +779,7 @@ HB_FUNC_STATIC(QFILE_READLINK)
     */
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->readLink());
     }
   }
@@ -820,8 +807,7 @@ HB_FUNC_STATIC(QFILE_MOVETOTRASH)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->moveToTrash());
     }
 #endif

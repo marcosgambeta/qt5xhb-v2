@@ -1689,8 +1689,7 @@ HB_FUNC_STATIC(QCOLOR_SETRGB)
     */
     auto obj = static_cast<QColor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setRgb(PINT(1), PINT(2), PINT(3), OPINT(4, 255));
     }
 
@@ -1703,8 +1702,7 @@ HB_FUNC_STATIC(QCOLOR_SETRGB)
     */
     auto obj = static_cast<QColor *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setRgb(PQRGB(1));
     }
 

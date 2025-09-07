@@ -299,8 +299,7 @@ HB_FUNC(QSQLTABLEMODEL_ISDIRTY)
     */
     auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->isDirty());
     }
   }
@@ -311,8 +310,7 @@ HB_FUNC(QSQLTABLEMODEL_ISDIRTY)
     */
     auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->isDirty(*PQMODELINDEX(1)));
     }
   }
@@ -835,8 +833,7 @@ HB_FUNC(QSQLTABLEMODEL_RECORD)
     */
     auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QSqlRecord(obj->record());
       Qt5xHb::createReturnClass(ptr, "QSQLRECORD", true);
     }
@@ -848,8 +845,7 @@ HB_FUNC(QSQLTABLEMODEL_RECORD)
     */
     auto obj = qobject_cast<QSqlTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QSqlRecord(obj->record(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QSQLRECORD", true);
     }

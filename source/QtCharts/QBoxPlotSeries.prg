@@ -371,8 +371,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_APPEND)
     bool append(QBoxSet * box)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->append(PQBOXSET(1)));
     }
 #endif
@@ -383,8 +382,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_APPEND)
     bool append(QList<QBoxSet*> boxes)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QBoxSet *> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);

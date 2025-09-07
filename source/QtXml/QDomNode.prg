@@ -1261,8 +1261,7 @@ HB_FUNC_STATIC(QDOMNODE_SAVE)
     */
     auto obj = static_cast<QDomNode *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->save(*PQTEXTSTREAM(1), PINT(2));
     }
 
@@ -1275,8 +1274,7 @@ HB_FUNC_STATIC(QDOMNODE_SAVE)
     */
     auto obj = static_cast<QDomNode *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->save(*PQTEXTSTREAM(1), PINT(2), static_cast<QDomNode::EncodingPolicy>(hb_parni(3)));
     }
 

@@ -81,8 +81,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CANENCODE)
     */
     auto obj = static_cast<QTextCodec *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->canEncode(*PQCHAR(1)));
     }
   }
@@ -93,8 +92,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CANENCODE)
     */
     auto obj = static_cast<QTextCodec *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->canEncode(PQSTRING(1)));
     }
   }
@@ -113,8 +111,7 @@ HB_FUNC_STATIC(QTEXTCODEC_TOUNICODE)
     */
     auto obj = static_cast<QTextCodec *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->toUnicode(*PQBYTEARRAY(1)));
     }
   }
@@ -125,8 +122,7 @@ HB_FUNC_STATIC(QTEXTCODEC_TOUNICODE)
     */
     auto obj = static_cast<QTextCodec *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->toUnicode(PCONSTCHAR(1)));
     }
   }

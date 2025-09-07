@@ -596,8 +596,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_IGNORESSLERRORS)
     */
     auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       QList<QSslError> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
@@ -618,8 +617,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_IGNORESSLERRORS)
     */
     auto obj = qobject_cast<QNetworkReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->ignoreSslErrors();
     }
 

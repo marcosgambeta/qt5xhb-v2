@@ -361,8 +361,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CURSORRECT)
     */
     auto obj = qobject_cast<QPlainTextEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->cursorRect(*PQTEXTCURSOR(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
@@ -374,8 +373,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CURSORRECT)
     */
     auto obj = qobject_cast<QPlainTextEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QRect(obj->cursorRect());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }

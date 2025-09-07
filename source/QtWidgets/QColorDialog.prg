@@ -168,8 +168,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_OPEN)
     */
     auto obj = qobject_cast<QColorDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->open();
     }
 
@@ -184,8 +183,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_OPEN)
     */
     auto obj = qobject_cast<QColorDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->open(PQOBJECT(1), PCONSTCHAR(2));
     }
 

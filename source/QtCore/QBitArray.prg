@@ -197,8 +197,7 @@ HB_FUNC_STATIC(QBITARRAY_COUNT)
     */
     auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->count());
     }
   }
@@ -209,8 +208,7 @@ HB_FUNC_STATIC(QBITARRAY_COUNT)
     */
     auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->count(PBOOL(1)));
     }
   }
@@ -229,8 +227,7 @@ HB_FUNC_STATIC(QBITARRAY_FILL)
     */
     auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->fill(PBOOL(1), OPINT(2, -1)));
     }
   }
@@ -241,8 +238,7 @@ HB_FUNC_STATIC(QBITARRAY_FILL)
     */
     auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->fill(PBOOL(1), PINT(2), PINT(3));
     }
 
@@ -334,8 +330,7 @@ HB_FUNC_STATIC(QBITARRAY_SETBIT)
     */
     auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setBit(PINT(1));
     }
 
@@ -348,8 +343,7 @@ HB_FUNC_STATIC(QBITARRAY_SETBIT)
     */
     auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setBit(PINT(1), PBOOL(2));
     }
 

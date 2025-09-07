@@ -234,8 +234,7 @@ HB_FUNC_STATIC(QTOOLTIP_SHOWTEXT)
     */
     auto obj = static_cast<QToolTip *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->showText(*PQPOINT(1), PQSTRING(2), PQWIDGET(3), *PQRECT(4));
     }
 
@@ -248,8 +247,7 @@ HB_FUNC_STATIC(QTOOLTIP_SHOWTEXT)
     */
     auto obj = static_cast<QToolTip *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->showText(*PQPOINT(1), PQSTRING(2), OPQWIDGET(3, nullptr));
     }
 

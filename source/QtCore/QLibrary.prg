@@ -241,8 +241,7 @@ HB_FUNC_STATIC(QLIBRARY_SETFILENAMEANDVERSION)
     */
     auto obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setFileNameAndVersion(PQSTRING(1), PINT(2));
     }
 
@@ -255,8 +254,7 @@ HB_FUNC_STATIC(QLIBRARY_SETFILENAMEANDVERSION)
     */
     auto obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setFileNameAndVersion(PQSTRING(1), PQSTRING(2));
     }
 

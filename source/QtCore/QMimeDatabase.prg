@@ -129,8 +129,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILE)
     */
     auto obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QMimeType(obj->mimeTypeForFile(
           PQSTRING(1), HB_ISNIL(2) ? static_cast<QMimeDatabase::MatchMode>(QMimeDatabase::MatchDefault)
                                    : static_cast<QMimeDatabase::MatchMode>(hb_parni(2))));
@@ -145,8 +144,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILE)
     */
     auto obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QMimeType(obj->mimeTypeForFile(
           *PQFILEINFO(1), HB_ISNIL(2) ? static_cast<QMimeDatabase::MatchMode>(QMimeDatabase::MatchDefault)
                                       : static_cast<QMimeDatabase::MatchMode>(hb_parni(2))));
@@ -217,8 +215,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORDATA)
     */
     auto obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QMimeType(obj->mimeTypeForData(*PQBYTEARRAY(1)));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
@@ -230,8 +227,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORDATA)
     */
     auto obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QMimeType(obj->mimeTypeForData(PQIODEVICE(1)));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
@@ -275,8 +271,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA)
     */
     auto obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QMimeType(obj->mimeTypeForFileNameAndData(PQSTRING(1), PQIODEVICE(2)));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
@@ -288,8 +283,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA)
     */
     auto obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QMimeType(obj->mimeTypeForFileNameAndData(PQSTRING(1), *PQBYTEARRAY(2)));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }

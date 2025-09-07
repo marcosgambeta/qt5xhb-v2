@@ -579,8 +579,7 @@ HB_FUNC_STATIC(QIMAGEREADER_READ)
     */
     auto obj = static_cast<QImageReader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QImage(obj->read());
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
     }
@@ -592,8 +591,7 @@ HB_FUNC_STATIC(QIMAGEREADER_READ)
     */
     auto obj = static_cast<QImageReader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->read(PQIMAGE(1)));
     }
   }
@@ -1026,8 +1024,7 @@ HB_FUNC_STATIC(QIMAGEREADER_IMAGEFORMAT)
     */
     auto obj = static_cast<QImageReader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RENUM(obj->imageFormat());
     }
   }

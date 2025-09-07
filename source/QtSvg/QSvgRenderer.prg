@@ -322,8 +322,7 @@ HB_FUNC_STATIC(QSVGRENDERER_SETVIEWBOX)
     */
     auto obj = qobject_cast<QSvgRenderer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setViewBox(*PQRECT(1));
     }
 
@@ -336,8 +335,7 @@ HB_FUNC_STATIC(QSVGRENDERER_SETVIEWBOX)
     */
     auto obj = qobject_cast<QSvgRenderer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setViewBox(*PQRECTF(1));
     }
 
@@ -406,8 +404,7 @@ HB_FUNC_STATIC(QSVGRENDERER_LOAD)
     */
     auto obj = qobject_cast<QSvgRenderer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->load(PQSTRING(1)));
     }
   }
@@ -418,8 +415,7 @@ HB_FUNC_STATIC(QSVGRENDERER_LOAD)
     */
     auto obj = qobject_cast<QSvgRenderer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->load(*PQBYTEARRAY(1)));
     }
   }
@@ -430,8 +426,7 @@ HB_FUNC_STATIC(QSVGRENDERER_LOAD)
     */
     auto obj = qobject_cast<QSvgRenderer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->load(PQXMLSTREAMREADER(1)));
     }
   }
@@ -450,8 +445,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
     */
     auto obj = qobject_cast<QSvgRenderer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->render(PQPAINTER(1));
     }
 
@@ -464,8 +458,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
     */
     auto obj = qobject_cast<QSvgRenderer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->render(PQPAINTER(1), *PQRECTF(2));
     }
 
@@ -478,8 +471,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
     */
     auto obj = qobject_cast<QSvgRenderer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->render(PQPAINTER(1), PQSTRING(2), HB_ISNIL(3) ? QRectF() : *static_cast<QRectF *>(Qt5xHb::itemGetPtr(3)));
     }
 

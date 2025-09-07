@@ -1374,8 +1374,7 @@ HB_FUNC_STATIC(QWINDOW_PARENT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->parent(static_cast<QWindow::AncestorMode>(hb_parni(1)));
       Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
     }
@@ -1388,8 +1387,7 @@ HB_FUNC_STATIC(QWINDOW_PARENT)
     */
     auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->parent();
       Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
     }
@@ -1433,8 +1431,7 @@ HB_FUNC_STATIC(QWINDOW_RESIZE)
     */
     auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->resize(*PQSIZE(1));
     }
 
@@ -1447,8 +1444,7 @@ HB_FUNC_STATIC(QWINDOW_RESIZE)
     */
     auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->resize(PINT(1), PINT(2));
     }
 
@@ -1570,8 +1566,7 @@ HB_FUNC_STATIC(QWINDOW_SETGEOMETRY)
     */
     auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setGeometry(PINT(1), PINT(2), PINT(3), PINT(4));
     }
 
@@ -1584,8 +1579,7 @@ HB_FUNC_STATIC(QWINDOW_SETGEOMETRY)
     */
     auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setGeometry(*PQRECT(1));
     }
 
@@ -2243,8 +2237,7 @@ HB_FUNC_STATIC(QWINDOW_SETPOSITION)
     */
     auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPosition(*PQPOINT(1));
     }
 
@@ -2257,8 +2250,7 @@ HB_FUNC_STATIC(QWINDOW_SETPOSITION)
     */
     auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setPosition(PINT(1), PINT(2));
     }
 

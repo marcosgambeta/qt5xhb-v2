@@ -185,8 +185,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_SETQUERY)
     */
     auto obj = qobject_cast<QSqlQueryModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setQuery(*PQSQLQUERY(1));
     }
 
@@ -199,8 +198,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_SETQUERY)
     */
     auto obj = qobject_cast<QSqlQueryModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setQuery(PQSTRING(1), HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase *>(Qt5xHb::itemGetPtr(2)));
     }
 
@@ -221,8 +219,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_RECORD)
     */
     auto obj = qobject_cast<QSqlQueryModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QSqlRecord(obj->record(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QSQLRECORD", true);
     }
@@ -234,8 +231,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_RECORD)
     */
     auto obj = qobject_cast<QSqlQueryModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QSqlRecord(obj->record());
       Qt5xHb::createReturnClass(ptr, "QSQLRECORD", true);
     }

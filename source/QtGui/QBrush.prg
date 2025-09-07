@@ -315,8 +315,7 @@ HB_FUNC_STATIC(QBRUSH_SETCOLOR)
     */
     auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
     }
 
@@ -329,8 +328,7 @@ HB_FUNC_STATIC(QBRUSH_SETCOLOR)
     */
     auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setColor(static_cast<Qt::GlobalColor>(hb_parni(1)));
     }
 

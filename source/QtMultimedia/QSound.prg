@@ -242,8 +242,7 @@ HB_FUNC_STATIC(QSOUND_PLAY)
     */
     auto obj = qobject_cast<QSound *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->play();
     }
 

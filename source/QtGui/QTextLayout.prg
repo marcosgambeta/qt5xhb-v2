@@ -814,8 +814,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_DRAWCURSOR)
     */
     auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->drawCursor(PQPAINTER(1), *PQPOINTF(2), PINT(3));
     }
 
@@ -828,8 +827,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_DRAWCURSOR)
     */
     auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->drawCursor(PQPAINTER(1), *PQPOINTF(2), PINT(3), PINT(4));
     }
 

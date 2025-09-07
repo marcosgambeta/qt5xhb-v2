@@ -256,8 +256,7 @@ HB_FUNC_STATIC(QLOCALSERVER_LISTEN)
     */
     auto obj = qobject_cast<QLocalServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->listen(PQSTRING(1)));
     }
   }
@@ -268,8 +267,7 @@ HB_FUNC_STATIC(QLOCALSERVER_LISTEN)
     */
     auto obj = qobject_cast<QLocalServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->listen(PQINTPTR(1)));
     }
   }

@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
     */
     auto obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addAction(PQACTION(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
@@ -117,8 +116,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
     */
     auto obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addAction(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
@@ -130,8 +128,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
     */
     auto obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addAction(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
                                 PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");

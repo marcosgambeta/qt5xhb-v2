@@ -174,8 +174,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_BYTESPERLINE)
     */
     auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->bytesPerLine());
     }
   }
@@ -186,8 +185,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_BYTESPERLINE)
     */
     auto obj = static_cast<QVideoFrame *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->bytesPerLine(PINT(1)));
     }
   }

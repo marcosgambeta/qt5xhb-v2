@@ -159,8 +159,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ADDBUTTON)
     */
     auto obj = qobject_cast<QMessageBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addButton(PQABSTRACTBUTTON(1), static_cast<QMessageBox::ButtonRole>(hb_parni(2)));
     }
 
@@ -173,8 +172,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ADDBUTTON)
     */
     auto obj = qobject_cast<QMessageBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addButton(PQSTRING(1), static_cast<QMessageBox::ButtonRole>(hb_parni(2)));
       Qt5xHb::createReturnQWidgetClass(ptr, "QPUSHBUTTON");
     }
@@ -186,8 +184,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ADDBUTTON)
     */
     auto obj = qobject_cast<QMessageBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->addButton(static_cast<QMessageBox::StandardButton>(hb_parni(1)));
       Qt5xHb::createReturnQWidgetClass(ptr, "QPUSHBUTTON");
     }
@@ -619,8 +616,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETDEFAULTBUTTON)
     */
     auto obj = qobject_cast<QMessageBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setDefaultButton(PQPUSHBUTTON(1));
     }
 
@@ -633,8 +629,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETDEFAULTBUTTON)
     */
     auto obj = qobject_cast<QMessageBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setDefaultButton(static_cast<QMessageBox::StandardButton>(hb_parni(1)));
     }
 
@@ -655,8 +650,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETESCAPEBUTTON)
     */
     auto obj = qobject_cast<QMessageBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setEscapeButton(PQABSTRACTBUTTON(1));
     }
 
@@ -669,8 +663,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETESCAPEBUTTON)
     */
     auto obj = qobject_cast<QMessageBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setEscapeButton(static_cast<QMessageBox::StandardButton>(hb_parni(1)));
     }
 

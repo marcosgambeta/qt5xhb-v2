@@ -397,8 +397,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_ITEMAT)
     */
     auto obj = qobject_cast<QTableWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->itemAt(*PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
     }
@@ -410,8 +409,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_ITEMAT)
     */
     auto obj = qobject_cast<QTableWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
     }
@@ -577,8 +575,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCURRENTCELL)
     */
     auto obj = qobject_cast<QTableWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setCurrentCell(PINT(1), PINT(2));
     }
 
@@ -591,8 +588,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCURRENTCELL)
     */
     auto obj = qobject_cast<QTableWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setCurrentCell(PINT(1), PINT(2), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(3)));
     }
 
@@ -613,8 +609,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCURRENTITEM)
     */
     auto obj = qobject_cast<QTableWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setCurrentItem(PQTABLEWIDGETITEM(1));
     }
 
@@ -627,8 +622,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCURRENTITEM)
     */
     auto obj = qobject_cast<QTableWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setCurrentItem(PQTABLEWIDGETITEM(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
     }
 

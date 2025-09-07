@@ -1438,8 +1438,7 @@ HB_FUNC_STATIC(QCHART_ZOOMIN)
     void zoomIn()
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->zoomIn();
     }
 
@@ -1452,8 +1451,7 @@ HB_FUNC_STATIC(QCHART_ZOOMIN)
     void zoomIn(const QRectF &rect)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->zoomIn(*PQRECTF(1));
     }
 

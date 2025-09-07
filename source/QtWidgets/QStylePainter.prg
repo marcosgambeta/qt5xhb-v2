@@ -94,8 +94,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_BEGIN)
     */
     auto obj = static_cast<QStylePainter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->begin(PQWIDGET(1)));
     }
   }
@@ -106,8 +105,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_BEGIN)
     */
     auto obj = static_cast<QStylePainter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->begin(PQPAINTDEVICE(1), PQWIDGET(2)));
     }
   }

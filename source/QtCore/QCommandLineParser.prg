@@ -334,8 +334,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_PROCESS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QCommandLineParser *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->process(PQSTRINGLIST(1));
     }
 
@@ -350,8 +349,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_PROCESS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QCommandLineParser *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->process(*PQCOREAPPLICATION(1));
     }
 
@@ -424,8 +422,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_ISSET)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QCommandLineParser *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->isSet(PQSTRING(1)));
     }
 #endif
@@ -438,8 +435,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_ISSET)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QCommandLineParser *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->isSet(*PQCOMMANDLINEOPTION(1)));
     }
 #endif
@@ -460,8 +456,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_VALUE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QCommandLineParser *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->value(PQSTRING(1)));
     }
 #endif
@@ -474,8 +469,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_VALUE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QCommandLineParser *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRING(obj->value(*PQCOMMANDLINEOPTION(1)));
     }
 #endif
@@ -496,8 +490,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_VALUES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QCommandLineParser *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRINGLIST(obj->values(PQSTRING(1)));
     }
 #endif
@@ -510,8 +503,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_VALUES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QCommandLineParser *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RQSTRINGLIST(obj->values(*PQCOMMANDLINEOPTION(1)));
     }
 #endif

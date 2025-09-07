@@ -118,8 +118,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWELLIPSE)
     */
     auto obj = static_cast<QPaintEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->drawEllipse(*PQRECTF(1));
     }
 
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWELLIPSE)
     */
     auto obj = static_cast<QPaintEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->drawEllipse(*PQRECT(1));
     }
 

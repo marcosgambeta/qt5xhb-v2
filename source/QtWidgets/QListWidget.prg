@@ -130,8 +130,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ADDITEM)
     */
     auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addItem(PQSTRING(1));
     }
 
@@ -144,8 +143,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ADDITEM)
     */
     auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->addItem(PQLISTWIDGETITEM(1));
     }
 
@@ -311,8 +309,7 @@ HB_FUNC_STATIC(QLISTWIDGET_INSERTITEM)
     */
     auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertItem(PINT(1), PQLISTWIDGETITEM(2));
     }
 
@@ -325,8 +322,7 @@ HB_FUNC_STATIC(QLISTWIDGET_INSERTITEM)
     */
     auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->insertItem(PINT(1), PQSTRING(2));
     }
 
@@ -419,8 +415,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ITEMAT)
     */
     auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->itemAt(*PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
     }
@@ -432,8 +427,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ITEMAT)
     */
     auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
     }
@@ -550,8 +544,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTITEM)
     */
     auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setCurrentItem(PQLISTWIDGETITEM(1));
     }
 
@@ -564,8 +557,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTITEM)
     */
     auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setCurrentItem(PQLISTWIDGETITEM(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
     }
 
@@ -586,8 +578,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTROW)
     */
     auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setCurrentRow(PINT(1));
     }
 
@@ -600,8 +591,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTROW)
     */
     auto obj = qobject_cast<QListWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setCurrentRow(PINT(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
     }
 

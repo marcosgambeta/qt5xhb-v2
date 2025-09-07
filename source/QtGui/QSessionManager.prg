@@ -356,8 +356,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
     */
     auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setManagerProperty(PQSTRING(1), PQSTRING(2));
     }
 
@@ -370,8 +369,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
     */
     auto obj = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->setManagerProperty(PQSTRING(1), PQSTRINGLIST(2));
     }
 

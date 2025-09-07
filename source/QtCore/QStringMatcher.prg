@@ -177,8 +177,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_INDEXIN)
     */
     auto obj = static_cast<QStringMatcher *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->indexIn(PQSTRING(1), OPINT(2, 0)));
     }
   }
@@ -189,8 +188,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_INDEXIN)
     */
     auto obj = static_cast<QStringMatcher *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RINT(obj->indexIn(PQCHAR(1), PINT(2), OPINT(3, 0)));
     }
   }

@@ -346,8 +346,7 @@ HB_FUNC_STATIC(QICON_PAINT)
     */
     auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->paint(PQPAINTER(1), *PQRECT(2),
                  HB_ISNIL(3) ? static_cast<Qt::Alignment>(Qt::AlignCenter) : static_cast<Qt::Alignment>(hb_parni(3)),
                  HB_ISNIL(4) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(4)),
@@ -365,8 +364,7 @@ HB_FUNC_STATIC(QICON_PAINT)
     */
     auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->paint(PQPAINTER(1), PINT(2), PINT(3), PINT(4), PINT(5),
                  HB_ISNIL(6) ? static_cast<Qt::Alignment>(Qt::AlignCenter) : static_cast<Qt::Alignment>(hb_parni(6)),
                  HB_ISNIL(7) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(7)),
@@ -390,8 +388,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     */
     auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPixmap(obj->pixmap(
           *PQSIZE(1), HB_ISNIL(2) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(2)),
           HB_ISNIL(3) ? static_cast<QIcon::State>(QIcon::Off) : static_cast<QIcon::State>(hb_parni(3))));
@@ -406,8 +403,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     */
     auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPixmap(
           obj->pixmap(PINT(1), PINT(2),
                       HB_ISNIL(3) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(3)),
@@ -422,8 +418,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     */
     auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       auto ptr = new QPixmap(obj->pixmap(
           PINT(1), HB_ISNIL(2) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(2)),
           HB_ISNIL(3) ? static_cast<QIcon::State>(QIcon::Off) : static_cast<QIcon::State>(hb_parni(3))));

@@ -506,8 +506,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
     */
     auto obj = qobject_cast<QItemSelectionModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->select(*PQMODELINDEX(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
     }
 
@@ -520,8 +519,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
     */
     auto obj = qobject_cast<QItemSelectionModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       obj->select(*PQITEMSELECTION(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
     }
 

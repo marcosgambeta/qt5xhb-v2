@@ -799,8 +799,7 @@ HB_FUNC_STATIC(QRAWFONT_SUPPORTSCHARACTER)
     */
     auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->supportsCharacter(PUINT(1)));
     }
   }
@@ -811,8 +810,7 @@ HB_FUNC_STATIC(QRAWFONT_SUPPORTSCHARACTER)
     */
     auto obj = static_cast<QRawFont *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-    if (obj != nullptr)
-    {
+    if (obj != nullptr) {
       RBOOL(obj->supportsCharacter(*PQCHAR(1)));
     }
   }
