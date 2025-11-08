@@ -72,6 +72,8 @@ RETURN
 #include <QtWidgets/QDialog>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     /*
     QDialog(QWidget * parent = nullptr, Qt::WindowFlags f = 0)
     */
@@ -89,7 +91,7 @@ HB_FUNC_STATIC(QDIALOG_NEW)
 
 HB_FUNC_STATIC(QDIALOG_DELETE)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -109,7 +111,7 @@ bool isSizeGripEnabled() const
 */
 HB_FUNC_STATIC(QDIALOG_ISSIZEGRIPENABLED)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +131,7 @@ void setSizeGripEnabled(bool)
 */
 HB_FUNC_STATIC(QDIALOG_SETSIZEGRIPENABLED)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,7 +154,7 @@ int result() const
 */
 HB_FUNC_STATIC(QDIALOG_RESULT)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,7 +174,7 @@ void setModal(bool modal)
 */
 HB_FUNC_STATIC(QDIALOG_SETMODAL)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +197,7 @@ void setResult(int i)
 */
 HB_FUNC_STATIC(QDIALOG_SETRESULT)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,7 +220,7 @@ QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC(QDIALOG_MINIMUMSIZEHINT)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,7 +241,7 @@ void setVisible(bool visible)
 */
 HB_FUNC_STATIC(QDIALOG_SETVISIBLE)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,7 +264,7 @@ QSize sizeHint() const
 */
 HB_FUNC_STATIC(QDIALOG_SIZEHINT)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,7 +285,7 @@ virtual void accept()
 */
 HB_FUNC_STATIC(QDIALOG_ACCEPT)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,7 +307,7 @@ virtual void done(int r)
 */
 HB_FUNC_STATIC(QDIALOG_DONE)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -328,7 +330,7 @@ virtual int exec()
 */
 HB_FUNC_STATIC(QDIALOG_EXEC)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,7 +350,7 @@ virtual void open()
 */
 HB_FUNC_STATIC(QDIALOG_OPEN)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -370,7 +372,7 @@ virtual void reject()
 */
 HB_FUNC_STATIC(QDIALOG_REJECT)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -392,7 +394,7 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC(QDIALOG_ORIENTATION)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -412,7 +414,7 @@ void setOrientation(Qt::Orientation orientation)
 */
 HB_FUNC_STATIC(QDIALOG_SETORIENTATION)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -435,7 +437,7 @@ QWidget * extension() const
 */
 HB_FUNC_STATIC(QDIALOG_EXTENSION)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -456,7 +458,7 @@ void setExtension(QWidget * extension)
 */
 HB_FUNC_STATIC(QDIALOG_SETEXTENSION)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -479,7 +481,7 @@ void showExtension(bool)
 */
 HB_FUNC_STATIC(QDIALOG_SHOWEXTENSION)
 {
-  auto obj = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -502,7 +504,7 @@ void accepted()
 */
 HB_FUNC_STATIC(QDIALOG_ONACCEPTED)
 {
-  auto sender = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -548,7 +550,7 @@ void finished(int result)
 */
 HB_FUNC_STATIC(QDIALOG_ONFINISHED)
 {
-  auto sender = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -596,7 +598,7 @@ void rejected()
 */
 HB_FUNC_STATIC(QDIALOG_ONREJECTED)
 {
-  auto sender = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
