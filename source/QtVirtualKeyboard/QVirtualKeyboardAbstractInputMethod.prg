@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SELECTIONLISTDATA)
       auto ptr = new QVariant(
           obj->selectionListData(static_cast<QVirtualKeyboardSelectionListModel::Type>(hb_parni(1)), PINT(2),
                                  static_cast<QVirtualKeyboardSelectionListModel::Role>(hb_parni(3))));
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
