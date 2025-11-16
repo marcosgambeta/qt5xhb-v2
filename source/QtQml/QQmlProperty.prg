@@ -525,7 +525,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_READ)
 
     if (obj != nullptr) {
       auto ptr = new QVariant(obj->read());
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
     }
   }
   else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
@@ -535,7 +535,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_READ)
     */
 
     auto ptr = new QVariant(QQmlProperty::read(PQOBJECT(1), PQSTRING(2)));
-    Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   }
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLCONTEXT(3))
   {
@@ -544,7 +544,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_READ)
     */
 
     auto ptr = new QVariant(QQmlProperty::read(PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3)));
-    Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   }
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLENGINE(3))
   {
@@ -553,7 +553,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_READ)
     */
 
     auto ptr = new QVariant(QQmlProperty::read(PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3)));
-    Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
