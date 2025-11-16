@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_CALL)
                                         HB_ISNIL(7) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(7)),
                                         HB_ISNIL(8) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(8)),
                                         HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(9))));
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
     }
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_CALL)
     // QVariant call(const QString &function, QList<QVariant> &arguments)
     if (obj != nullptr) {
       auto ptr = new QVariant(obj->call(PQSTRING(1), PQVARIANTLIST(2)));
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
