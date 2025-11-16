@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMVALUE)
 #endif
       auto ptr = new QVariant(
           obj->customValue(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2))));
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -594,7 +594,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_METADATA)
   {
 #endif
     auto ptr = new QVariant(QHelpEngineCore::metaData(PQSTRING(1), PQSTRING(2)));
-    Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
