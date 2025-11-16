@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_ATTRIBUTE)
     {
 #endif
       auto ptr = new QVariant(obj->attribute(PQUINT16(1)));
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
