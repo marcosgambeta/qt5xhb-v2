@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_CURRENTVALUE)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVariant(obj->currentValue());
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_ENDVALUE)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVariant(obj->endValue());
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_KEYVALUEAT)
     {
 #endif
       auto ptr = new QVariant(obj->keyValueAt(PQREAL(1)));
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_STARTVALUE)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QVariant(obj->startValue());
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
