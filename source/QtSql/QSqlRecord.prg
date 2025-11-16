@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QSQLRECORD_VALUE)
 
     if (obj != nullptr) {
       auto ptr = new QVariant(obj->value(PINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
     }
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
@@ -559,7 +559,7 @@ HB_FUNC_STATIC(QSQLRECORD_VALUE)
 
     if (obj != nullptr) {
       auto ptr = new QVariant(obj->value(PQSTRING(1)));
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

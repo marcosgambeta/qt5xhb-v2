@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DATA)
     {
 #endif
       auto ptr = new QVariant(obj->data(*PQMODELINDEX(1), OPINT(2, Qt::DisplayRole)));
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
