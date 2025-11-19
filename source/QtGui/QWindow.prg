@@ -911,7 +911,7 @@ HB_FUNC_STATIC(QWINDOW_BASESIZE)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->baseSize());
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1209,7 +1209,7 @@ HB_FUNC_STATIC(QWINDOW_MAXIMUMSIZE)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->maximumSize());
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1230,7 +1230,7 @@ HB_FUNC_STATIC(QWINDOW_MINIMUMSIZE)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->minimumSize());
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1663,7 +1663,7 @@ HB_FUNC_STATIC(QWINDOW_SIZEINCREMENT)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->sizeIncrement());
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1770,7 +1770,7 @@ HB_FUNC_STATIC(QWINDOW_SIZE)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QSize(obj->size());
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

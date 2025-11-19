@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZEPOINTS)
 
     if (obj != nullptr) {
       auto ptr = new QSize(obj->sizePoints());
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
     }
 #endif
   }
@@ -480,7 +480,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZEPOINTS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 
     auto ptr = new QSize(QPageSize::sizePoints(static_cast<QPageSize::PageSizeId>(hb_parni(1))));
-    Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+    RQSIZE(ptr);
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -499,7 +499,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZEPIXELS)
 
     if (obj != nullptr) {
       auto ptr = new QSize(obj->sizePixels(PINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
     }
 #endif
   }
@@ -511,7 +511,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZEPIXELS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 
     auto ptr = new QSize(QPageSize::sizePixels(static_cast<QPageSize::PageSizeId>(hb_parni(1)), PINT(2)));
-    Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+    RQSIZE(ptr);
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

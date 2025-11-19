@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QICONENGINE_ACTUALSIZE)
 #endif
       auto ptr = new QSize(
           obj->actualSize(*PQSIZE(1), static_cast<QIcon::Mode>(hb_parni(2)), static_cast<QIcon::State>(hb_parni(3))));
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
