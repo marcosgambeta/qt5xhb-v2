@@ -493,7 +493,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_BASECOLOR)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->baseColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -589,7 +589,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->singleHighlightColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -685,7 +685,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QColor(obj->multiHighlightColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
