@@ -1436,7 +1436,7 @@ HB_FUNC_STATIC(QIMAGE_PIXELCOLOR)
 
     if (obj != nullptr) {
       auto ptr = new QColor(obj->pixelColor(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(ptr);
     }
 #endif
   }
@@ -1450,7 +1450,7 @@ HB_FUNC_STATIC(QIMAGE_PIXELCOLOR)
 
     if (obj != nullptr) {
       auto ptr = new QColor(obj->pixelColor(PINT(1), PINT(2)));
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(ptr);
     }
 #endif
   } else {
