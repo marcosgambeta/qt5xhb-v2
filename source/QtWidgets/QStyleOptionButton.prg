@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_ICON)
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
       auto ptr = new QIcon(obj->icon);
-      Qt5xHb::createReturnClass(ptr, "QICON", true);
+      RQICON(ptr);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
