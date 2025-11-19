@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_FILTER)
     {
 #endif
       auto ptr = new QModelIndex(obj->filter(PQSTRING(1), OPQSTRING(2, QString())));
-      Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
