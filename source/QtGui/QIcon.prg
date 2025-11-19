@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QICON_FROMTHEME)
 #endif
     auto ptr =
         new QIcon(QIcon::fromTheme(PQSTRING(1), HB_ISNIL(2) ? QIcon() : *static_cast<QIcon *>(Qt5xHb::itemGetPtr(2))));
-    Qt5xHb::createReturnClass(ptr, "QICON", true);
+    RQICON(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
