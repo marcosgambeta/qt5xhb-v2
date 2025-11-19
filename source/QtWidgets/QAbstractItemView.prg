@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_CURRENTINDEX)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QModelIndex(obj->currentIndex());
-      Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -780,7 +780,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXAT)
     {
 #endif
       auto ptr = new QModelIndex(obj->indexAt(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ROOTINDEX)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QModelIndex(obj->rootIndex());
-      Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
