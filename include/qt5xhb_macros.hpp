@@ -191,6 +191,7 @@
 #define RQINTPTR(x)                                         hb_retnll(x)
 #define RQUINTPTR(x)                                        hb_retnll(x)
 #define RQVARIANT(p)                                        Qt5xHb::createReturnClass(p, "QVARIANT", true)
+#define RQMODELINDEX(p)                                     Qt5xHb::createReturnClass(p, "QMODELINDEX", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
