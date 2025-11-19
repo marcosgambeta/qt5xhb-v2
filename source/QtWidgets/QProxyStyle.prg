@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_SIZEFROMCONTENTS)
 #endif
       auto ptr = new QSize(obj->sizeFromContents(static_cast<QStyle::ContentsType>(hb_parni(1)), PQSTYLEOPTION(2),
                                                  *PQSIZE(3), PQWIDGET(4)));
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

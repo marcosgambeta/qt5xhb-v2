@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_ICONSIZE)
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
       auto ptr = new QSize(obj->iconSize);
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
