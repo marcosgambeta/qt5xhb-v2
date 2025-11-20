@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_SUBELEMENTRECT)
 #endif
       auto ptr =
           new QRect(obj->subElementRect(static_cast<QStyle::SubElement>(hb_parni(1)), PQSTYLEOPTION(2), PQWIDGET(3)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_SUBCONTROLRECT)
       auto ptr =
           new QRect(obj->subControlRect(static_cast<QStyle::ComplexControl>(hb_parni(1)), PQSTYLEOPTIONCOMPLEX(2),
                                         static_cast<QStyle::SubControl>(hb_parni(3)), PQWIDGET(4)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -369,7 +369,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_ITEMTEXTRECT)
     {
 #endif
       auto ptr = new QRect(obj->itemTextRect(*PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_ITEMPIXMAPRECT)
     {
 #endif
       auto ptr = new QRect(obj->itemPixmapRect(*PQRECT(1), PINT(2), *PQPIXMAP(3)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

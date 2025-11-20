@@ -646,7 +646,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_FULLRECT)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->fullRect());
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
 #endif
   }
@@ -660,7 +660,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_FULLRECT)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->fullRect(static_cast<QPageLayout::Unit>(hb_parni(1))));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
 #endif
   } else {
@@ -681,7 +681,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_FULLRECTPOINTS)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->fullRectPoints());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -705,7 +705,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_FULLRECTPIXELS)
     {
 #endif
       auto ptr = new QRect(obj->fullRectPixels(PINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -726,7 +726,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAINTRECT)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->paintRect());
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
 #endif
   }
@@ -740,7 +740,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAINTRECT)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->paintRect(static_cast<QPageLayout::Unit>(hb_parni(1))));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
 #endif
   } else {
@@ -761,7 +761,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAINTRECTPOINTS)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->paintRectPoints());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -785,7 +785,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAINTRECTPIXELS)
     {
 #endif
       auto ptr = new QRect(obj->paintRectPixels(PINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR)
     {
 #endif
       auto ptr = new QRectF(obj->boundingRectFor(*PQRECTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

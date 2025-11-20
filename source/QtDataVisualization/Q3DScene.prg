@@ -142,7 +142,7 @@ HB_FUNC_STATIC(Q3DSCENE_VIEWPORT)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->viewport());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(Q3DSCENE_PRIMARYSUBVIEWPORT)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->primarySubViewport());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(Q3DSCENE_SECONDARYSUBVIEWPORT)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->secondarySubViewport());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

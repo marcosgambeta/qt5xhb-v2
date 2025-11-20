@@ -902,7 +902,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAPRECT)
 
     if (obj != nullptr) {
       auto ptr = new QRect(obj->mapRect(*PQRECT(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   }
   else if (ISNUMPAR(1) && ISQRECTF(1))
@@ -914,7 +914,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAPRECT)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->mapRect(*PQRECTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

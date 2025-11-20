@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QRECT_ADJUSTED)
     {
 #endif
       auto ptr = new QRect(obj->adjusted(PINT(1), PINT(2), PINT(3), PINT(4)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QRECT_INTERSECTED)
     {
 #endif
       auto ptr = new QRect(obj->intersected(*PQRECT(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -796,7 +796,7 @@ HB_FUNC_STATIC(QRECT_NORMALIZED)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->normalized());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC(QRECT_TRANSLATED)
 
     if (obj != nullptr) {
       auto ptr = new QRect(obj->translated(PINT(1), PINT(2)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   }
   else if (ISNUMPAR(1) && ISQPOINT(1))
@@ -1308,7 +1308,7 @@ HB_FUNC_STATIC(QRECT_TRANSLATED)
 
     if (obj != nullptr) {
       auto ptr = new QRect(obj->translated(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1328,7 +1328,7 @@ HB_FUNC_STATIC(QRECT_UNITED)
     {
 #endif
       auto ptr = new QRect(obj->united(*PQRECT(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

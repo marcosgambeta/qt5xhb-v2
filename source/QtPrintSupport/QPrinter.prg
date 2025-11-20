@@ -876,7 +876,7 @@ HB_FUNC_STATIC(QPRINTER_PAGERECT)
 
     if (obj != nullptr) {
       auto ptr = new QRect(obj->pageRect());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
@@ -888,7 +888,7 @@ HB_FUNC_STATIC(QPRINTER_PAGERECT)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->pageRect(static_cast<QPrinter::Unit>(hb_parni(1))));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -905,7 +905,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERRECT)
 
     if (obj != nullptr) {
       auto ptr = new QRect(obj->paperRect());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
@@ -917,7 +917,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERRECT)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->paperRect(static_cast<QPrinter::Unit>(hb_parni(1))));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

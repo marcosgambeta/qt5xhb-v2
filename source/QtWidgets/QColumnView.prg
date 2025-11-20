@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_VISUALRECT)
     {
 #endif
       auto ptr = new QRect(obj->visualRect(*PQMODELINDEX(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

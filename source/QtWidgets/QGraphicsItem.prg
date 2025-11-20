@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_BOUNDINGRECT)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->boundingRect());
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_CHILDRENBOUNDINGRECT)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->childrenBoundingRect());
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1499,7 +1499,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMITEM)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->mapRectFromItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   }
   else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
@@ -1511,7 +1511,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMITEM)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->mapRectFromItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1529,7 +1529,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMPARENT)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->mapRectFromParent(*PQRECTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   }
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
@@ -1541,7 +1541,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMPARENT)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->mapRectFromParent(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1559,7 +1559,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMSCENE)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->mapRectFromScene(*PQRECTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   }
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
@@ -1571,7 +1571,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMSCENE)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->mapRectFromScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1589,7 +1589,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOITEM)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->mapRectToItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   }
   else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
@@ -1601,7 +1601,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOITEM)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->mapRectToItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1619,7 +1619,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOPARENT)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->mapRectToParent(*PQRECTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   }
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
@@ -1631,7 +1631,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOPARENT)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->mapRectToParent(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1649,7 +1649,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOSCENE)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->mapRectToScene(*PQRECTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   }
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
@@ -1661,7 +1661,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOSCENE)
 
     if (obj != nullptr) {
       auto ptr = new QRectF(obj->mapRectToScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2232,7 +2232,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SCENEBOUNDINGRECT)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRectF(obj->sceneBoundingRect());
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

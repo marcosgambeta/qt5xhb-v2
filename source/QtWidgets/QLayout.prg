@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QLAYOUT_CONTENTSRECT)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->contentsRect());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -686,7 +686,7 @@ HB_FUNC_STATIC(QLAYOUT_GEOMETRY)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->geometry());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

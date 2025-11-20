@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QSCREEN_GEOMETRY)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->geometry());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLEGEOMETRY)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->availableGeometry());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -471,7 +471,7 @@ HB_FUNC_STATIC(QSCREEN_VIRTUALGEOMETRY)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->virtualGeometry());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -513,7 +513,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLEVIRTUALGEOMETRY)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QRect(obj->availableVirtualGeometry());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -664,7 +664,7 @@ HB_FUNC_STATIC(QSCREEN_MAPBETWEEN)
 #endif
       auto ptr = new QRect(obj->mapBetween(static_cast<Qt::ScreenOrientation>(hb_parni(1)),
                                            static_cast<Qt::ScreenOrientation>(hb_parni(2)), *PQRECT(3)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

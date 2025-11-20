@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CURSORRECT)
 
     if (obj != nullptr) {
       auto ptr = new QRect(obj->cursorRect(*PQTEXTCURSOR(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   }
   else if (ISNUMPAR(0))
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CURSORRECT)
 
     if (obj != nullptr) {
       auto ptr = new QRect(obj->cursorRect());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
