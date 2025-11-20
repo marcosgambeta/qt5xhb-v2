@@ -476,7 +476,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_DATA)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QByteArray(obj->data());
-      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
