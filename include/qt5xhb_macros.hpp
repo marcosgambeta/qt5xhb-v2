@@ -196,6 +196,8 @@
 #define RQSIZE(p)                                           Qt5xHb::createReturnClass(p, "QSIZE", true)
 #define RQCOLOR(p)                                          Qt5xHb::createReturnClass(p, "QCOLOR", true)
 #define RQBYTEARRAY(p)                                      Qt5xHb::createReturnClass(p, "QBYTEARRAY", true)
+#define RQPOINT(p)                                          Qt5xHb::createReturnClass(p, "QPOINT", true)
+#define RQPOINTF(p)                                         Qt5xHb::createReturnClass(p, "QPOINTF", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
