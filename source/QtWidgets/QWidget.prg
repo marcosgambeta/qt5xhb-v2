@@ -2303,7 +2303,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROM)
     {
 #endif
       auto ptr = new QPoint(obj->mapFrom(PQWIDGET(1), *PQPOINT(2)));
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2323,7 +2323,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROMGLOBAL)
     {
 #endif
       auto ptr = new QPoint(obj->mapFromGlobal(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2343,7 +2343,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROMPARENT)
     {
 #endif
       auto ptr = new QPoint(obj->mapFromParent(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2363,7 +2363,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTO)
     {
 #endif
       auto ptr = new QPoint(obj->mapTo(PQWIDGET(1), *PQPOINT(2)));
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2383,7 +2383,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTOGLOBAL)
     {
 #endif
       auto ptr = new QPoint(obj->mapToGlobal(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2403,7 +2403,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTOPARENT)
     {
 #endif
       auto ptr = new QPoint(obj->mapToParent(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2644,7 +2644,7 @@ HB_FUNC_STATIC(QWIDGET_POS)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->pos());
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

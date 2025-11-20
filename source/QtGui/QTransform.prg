@@ -813,7 +813,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
 
     if (obj != nullptr) {
       auto ptr = new QPoint(obj->map(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
     }
   }
   else if (ISNUMPAR(1) && ISQPOINTF(1))
@@ -825,7 +825,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
 
     if (obj != nullptr) {
       auto ptr = new QPointF(obj->map(*PQPOINTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
     }
   }
   else if (ISNUMPAR(1) && ISQLINE(1))

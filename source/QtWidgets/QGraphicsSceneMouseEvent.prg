@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS)
     {
 #endif
       auto ptr = new QPointF(obj->buttonDownPos(static_cast<Qt::MouseButton>(hb_parni(1))));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS)
     {
 #endif
       auto ptr = new QPointF(obj->buttonDownScenePos(static_cast<Qt::MouseButton>(hb_parni(1))));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS)
     {
 #endif
       auto ptr = new QPoint(obj->buttonDownScreenPos(static_cast<Qt::MouseButton>(hb_parni(1))));
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_LASTPOS)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->lastPos());
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_LASTSCENEPOS)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->lastScenePos());
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_LASTSCREENPOS)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->lastScreenPos());
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_POS)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->pos());
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_SCENEPOS)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->scenePos());
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_SCREENPOS)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->screenPos());
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

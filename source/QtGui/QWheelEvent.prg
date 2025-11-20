@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QWHEELEVENT_PIXELDELTA)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->pixelDelta());
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QWHEELEVENT_ANGLEDELTA)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->angleDelta());
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QWHEELEVENT_POS)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->pos());
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALPOS)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->globalPos());
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

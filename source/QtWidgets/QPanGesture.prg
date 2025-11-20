@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QPANGESTURE_DELTA)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->delta());
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QPANGESTURE_LASTOFFSET)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->lastOffset());
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QPANGESTURE_OFFSET)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->offset());
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

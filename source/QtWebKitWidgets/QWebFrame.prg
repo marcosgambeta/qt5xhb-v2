@@ -362,7 +362,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLPOSITION)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->scrollPosition());
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -701,7 +701,7 @@ HB_FUNC_STATIC(QWEBFRAME_POS)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPoint(obj->pos());
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

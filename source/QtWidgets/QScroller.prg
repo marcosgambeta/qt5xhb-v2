@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QSCROLLER_FINALPOSITION)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->finalPosition());
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QSCROLLER_PIXELPERMETER)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->pixelPerMeter());
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -313,7 +313,7 @@ HB_FUNC_STATIC(QSCROLLER_VELOCITY)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->velocity());
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

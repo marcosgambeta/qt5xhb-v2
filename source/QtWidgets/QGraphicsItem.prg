@@ -1265,7 +1265,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMITEM)
 
     if (obj != nullptr) {
       auto ptr = new QPointF(obj->mapFromItem(PQGRAPHICSITEM(1), *PQPOINTF(2)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
     }
   }
   else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQRECTF(2))
@@ -1325,7 +1325,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMITEM)
 
     if (obj != nullptr) {
       auto ptr = new QPointF(obj->mapFromItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1343,7 +1343,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMPARENT)
 
     if (obj != nullptr) {
       auto ptr = new QPointF(obj->mapFromParent(*PQPOINTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
     }
   }
   else if (ISNUMPAR(1) && ISQRECTF(1))
@@ -1403,7 +1403,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMPARENT)
 
     if (obj != nullptr) {
       auto ptr = new QPointF(obj->mapFromParent(PQREAL(1), PQREAL(2)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1421,7 +1421,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMSCENE)
 
     if (obj != nullptr) {
       auto ptr = new QPointF(obj->mapFromScene(*PQPOINTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
     }
   }
   else if (ISNUMPAR(1) && ISQRECTF(1))
@@ -1481,7 +1481,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMSCENE)
 
     if (obj != nullptr) {
       auto ptr = new QPointF(obj->mapFromScene(PQREAL(1), PQREAL(2)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1679,7 +1679,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOITEM)
 
     if (obj != nullptr) {
       auto ptr = new QPointF(obj->mapToItem(PQGRAPHICSITEM(1), *PQPOINTF(2)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
     }
   }
   else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQRECTF(2))
@@ -1739,7 +1739,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOITEM)
 
     if (obj != nullptr) {
       auto ptr = new QPointF(obj->mapToItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1757,7 +1757,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOPARENT)
 
     if (obj != nullptr) {
       auto ptr = new QPointF(obj->mapToParent(*PQPOINTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
     }
   }
   else if (ISNUMPAR(1) && ISQRECTF(1))
@@ -1817,7 +1817,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOPARENT)
 
     if (obj != nullptr) {
       auto ptr = new QPointF(obj->mapToParent(PQREAL(1), PQREAL(2)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1835,7 +1835,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOSCENE)
 
     if (obj != nullptr) {
       auto ptr = new QPointF(obj->mapToScene(*PQPOINTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
     }
   }
   else if (ISNUMPAR(1) && ISQRECTF(1))
@@ -1895,7 +1895,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOSCENE)
 
     if (obj != nullptr) {
       auto ptr = new QPointF(obj->mapToScene(PQREAL(1), PQREAL(2)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2105,7 +2105,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_POS)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->pos());
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2253,7 +2253,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SCENEPOS)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->scenePos());
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -3224,7 +3224,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_TRANSFORMORIGINPOINT)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->transformOriginPoint());
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

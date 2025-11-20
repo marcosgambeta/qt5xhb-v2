@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_CENTERPOINT)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->centerPoint());
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_LASTCENTERPOINT)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->lastCenterPoint());
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -494,7 +494,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_STARTCENTERPOINT)
     if (ISNUMPAR(0)) {
 #endif
       auto ptr = new QPointF(obj->startCenterPoint());
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
