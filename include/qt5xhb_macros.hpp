@@ -198,6 +198,8 @@
 #define RQBYTEARRAY(p)                                      Qt5xHb::createReturnClass(p, "QBYTEARRAY", true)
 #define RQPOINT(p)                                          Qt5xHb::createReturnClass(p, "QPOINT", true)
 #define RQPOINTF(p)                                         Qt5xHb::createReturnClass(p, "QPOINTF", true)
+#define RQRECT(p)                                           Qt5xHb::createReturnClass(p, "QRECT", true)
+#define RQRECTF(p)                                          Qt5xHb::createReturnClass(p, "QRECTF", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
