@@ -21,5 +21,7 @@ FUNCTION Main()
    FOR n := 1 TO Len(aVariantList)
       ? aVariantList[n]:toString()
    NEXT n
+   
+   WAIT
 
 RETURN NIL
