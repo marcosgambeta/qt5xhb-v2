@@ -574,8 +574,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_READ)
     if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      auto ptr = new QVariant(obj->read(PQOBJECT(1)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->read(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

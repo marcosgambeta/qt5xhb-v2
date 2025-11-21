@@ -546,8 +546,7 @@ HB_FUNC_STATIC(QSQLRECORD_VALUE)
     auto obj = static_cast<QSqlRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QVariant(obj->value(PINT(1)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->value(PINT(1)));
     }
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
@@ -558,8 +557,7 @@ HB_FUNC_STATIC(QSQLRECORD_VALUE)
     auto obj = static_cast<QSqlRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QVariant(obj->value(PQSTRING(1)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->value(PQSTRING(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

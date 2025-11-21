@@ -121,10 +121,8 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREQUEST_ATTRIBUTE)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQVARIANT(2) || HB_ISNIL(2)))
     {
 #endif
-      auto ptr =
-          new QVariant(obj->attribute(static_cast<QBluetoothTransferRequest::Attribute>(hb_parni(1)),
+      RQVARIANT(obj->attribute(static_cast<QBluetoothTransferRequest::Attribute>(hb_parni(1)),
                                       HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2))));
-      RQVARIANT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

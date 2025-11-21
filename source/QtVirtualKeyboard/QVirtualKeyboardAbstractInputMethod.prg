@@ -289,10 +289,8 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SELECTIONLISTDATA)
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      auto ptr = new QVariant(
-          obj->selectionListData(static_cast<QVirtualKeyboardSelectionListModel::Type>(hb_parni(1)), PINT(2),
+      RQVARIANT(obj->selectionListData(static_cast<QVirtualKeyboardSelectionListModel::Type>(hb_parni(1)), PINT(2),
                                  static_cast<QVirtualKeyboardSelectionListModel::Role>(hb_parni(3))));
-      RQVARIANT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -548,8 +548,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_READ)
     auto obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QVariant(obj->read());
-      RQVARIANT(ptr);
+      RQVARIANT(obj->read());
     }
   }
   else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
@@ -558,8 +557,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_READ)
     static QVariant read(QObject * object, const QString &name)
     */
 
-    auto ptr = new QVariant(QDeclarativeProperty::read(PQOBJECT(1), PQSTRING(2)));
-    RQVARIANT(ptr);
+    RQVARIANT(QDeclarativeProperty::read(PQOBJECT(1), PQSTRING(2)));
   }
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVECONTEXT(3))
   {
@@ -567,8 +565,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_READ)
     static QVariant read(QObject * object, const QString &name, QDeclarativeContext * ctxt)
     */
 
-    auto ptr = new QVariant(QDeclarativeProperty::read(PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3)));
-    RQVARIANT(ptr);
+    RQVARIANT(QDeclarativeProperty::read(PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3)));
   }
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVEENGINE(3))
   {
@@ -576,8 +573,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_READ)
     static QVariant read(QObject * object, const QString &name, QDeclarativeEngine * engine)
     */
 
-    auto ptr = new QVariant(QDeclarativeProperty::read(PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3)));
-    RQVARIANT(ptr);
+    RQVARIANT(QDeclarativeProperty::read(PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

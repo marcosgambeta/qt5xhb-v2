@@ -524,8 +524,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_READ)
     auto obj = static_cast<QQmlProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QVariant(obj->read());
-      RQVARIANT(ptr);
+      RQVARIANT(obj->read());
     }
   }
   else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
@@ -534,8 +533,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_READ)
     static QVariant read(QObject * object, const QString &name)
     */
 
-    auto ptr = new QVariant(QQmlProperty::read(PQOBJECT(1), PQSTRING(2)));
-    RQVARIANT(ptr);
+    RQVARIANT(QQmlProperty::read(PQOBJECT(1), PQSTRING(2)));
   }
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLCONTEXT(3))
   {
@@ -543,8 +541,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_READ)
     static QVariant read(QObject * object, const QString &name, QQmlContext * ctxt)
     */
 
-    auto ptr = new QVariant(QQmlProperty::read(PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3)));
-    RQVARIANT(ptr);
+    RQVARIANT(QQmlProperty::read(PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3)));
   }
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLENGINE(3))
   {
@@ -552,8 +549,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_READ)
     static QVariant read(QObject * object, const QString &name, QQmlEngine * engine)
     */
 
-    auto ptr = new QVariant(QQmlProperty::read(PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3)));
-    RQVARIANT(ptr);
+    RQVARIANT(QQmlProperty::read(PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

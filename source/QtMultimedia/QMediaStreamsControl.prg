@@ -109,8 +109,7 @@ HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_METADATA)
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      auto ptr = new QVariant(obj->metaData(PINT(1), PQSTRING(2)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->metaData(PINT(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

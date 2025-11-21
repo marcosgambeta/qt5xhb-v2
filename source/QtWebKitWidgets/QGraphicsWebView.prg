@@ -817,9 +817,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ITEMCHANGE)
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
 #endif
-      auto ptr =
-          new QVariant(obj->itemChange(static_cast<QGraphicsItem::GraphicsItemChange>(hb_parni(1)), *PQVARIANT(2)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->itemChange(static_cast<QGraphicsItem::GraphicsItemChange>(hb_parni(1)), *PQVARIANT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -883,8 +881,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_INPUTMETHODQUERY)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant(obj->inputMethodQuery(static_cast<Qt::InputMethodQuery>(hb_parni(1))));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->inputMethodQuery(static_cast<Qt::InputMethodQuery>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

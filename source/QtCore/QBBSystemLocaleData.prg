@@ -118,8 +118,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_TIMEFORMAT)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant(obj->timeFormat(static_cast<QLocale::FormatType>(hb_parni(1))));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->timeFormat(static_cast<QLocale::FormatType>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -140,8 +139,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_DATETIMEFORMAT)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant(obj->dateTimeFormat(static_cast<QLocale::FormatType>(hb_parni(1))));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->dateTimeFormat(static_cast<QLocale::FormatType>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

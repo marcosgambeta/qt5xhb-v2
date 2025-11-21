@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_ACTUALVALUE)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant(obj->actualValue(static_cast<QCameraExposureControl::ExposureParameter>(hb_parni(1))));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->actualValue(static_cast<QCameraExposureControl::ExposureParameter>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_REQUESTEDVALUE)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant(obj->requestedValue(static_cast<QCameraExposureControl::ExposureParameter>(hb_parni(1))));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->requestedValue(static_cast<QCameraExposureControl::ExposureParameter>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_CURRENTVALUE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QVariant(obj->currentValue());
-      RQVARIANT(ptr);
+      RQVARIANT(obj->currentValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -131,8 +130,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_ENDVALUE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QVariant(obj->endValue());
-      RQVARIANT(ptr);
+      RQVARIANT(obj->endValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -153,8 +151,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_KEYVALUEAT)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QVariant(obj->keyValueAt(PQREAL(1)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->keyValueAt(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -289,8 +286,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_STARTVALUE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QVariant(obj->startValue());
-      RQVARIANT(ptr);
+      RQVARIANT(obj->startValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

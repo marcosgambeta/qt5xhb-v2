@@ -213,8 +213,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_CONVERTTOMIME)
         par2 << *static_cast<QByteArray *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList2, i2 + 1), "POINTER", 0)));
       }
-      auto ptr = new QVariant(obj->convertToMime(PQSTRING(1), par2, PQSTRING(3)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->convertToMime(PQSTRING(1), par2, PQSTRING(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

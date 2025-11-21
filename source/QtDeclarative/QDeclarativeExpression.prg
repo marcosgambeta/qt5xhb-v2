@@ -209,8 +209,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_EVALUATE)
     {
 #endif
       bool par1;
-      auto ptr = new QVariant(obj->evaluate(&par1));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->evaluate(&par1));
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

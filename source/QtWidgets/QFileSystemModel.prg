@@ -462,8 +462,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_MYCOMPUTER)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
-      auto ptr = new QVariant(obj->myComputer(OPINT(1, Qt::DisplayRole)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->myComputer(OPINT(1, Qt::DisplayRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -823,8 +822,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_DATA)
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2))
     {
 #endif
-      auto ptr = new QVariant(obj->data(*PQMODELINDEX(1), OPINT(2, Qt::DisplayRole)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->data(*PQMODELINDEX(1), OPINT(2, Qt::DisplayRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -953,9 +951,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_HEADERDATA)
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3))
     {
 #endif
-      auto ptr =
-          new QVariant(obj->headerData(PINT(1), static_cast<Qt::Orientation>(hb_parni(2)), OPINT(3, Qt::DisplayRole)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->headerData(PINT(1), static_cast<Qt::Orientation>(hb_parni(2)), OPINT(3, Qt::DisplayRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
