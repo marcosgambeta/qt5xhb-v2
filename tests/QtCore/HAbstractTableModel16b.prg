@@ -25,19 +25,19 @@ FUNCTION Main()
    // total de colunas
    oModel:setColumnCountCB({||10})
    // conteúdo da célula
-   oModel:setCB(Qt_DisplayRole, {|nRow, nCol|"Célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nCol))})
+   oModel:setCB(Qt_DisplayRole, {|nRow, nCol|"Célula " + alltrim(str(nRow)) + "," + alltrim(str(nCol))})
    // tooltip da célula
-   oModel:setCB(Qt_ToolTipRole, {|nRow, nCol|"Esta é a célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nCol))})
+   oModel:setCB(Qt_ToolTipRole, {|nRow, nCol|"Esta é a célula " + alltrim(str(nRow)) + "," + alltrim(str(nCol))})
    // títulos das colunas
-   oModel:setHorizontalHeaderCB(Qt_DisplayRole, {|nCol|"Coluna " + StrZero(nCol, 2)})
+   oModel:setHorizontalHeaderCB(Qt_DisplayRole, {|nCol|"Coluna " + strzero(nCol, 2)})
    // tooltips das colunas
-   oModel:setHorizontalHeaderCB(Qt_ToolTipRole, {|nCol|"Esta é a coluna " + StrZero(nCol, 2)})
+   oModel:setHorizontalHeaderCB(Qt_ToolTipRole, {|nCol|"Esta é a coluna " + strzero(nCol, 2)})
    // sizehints das colunas
    oModel:setHorizontalHeaderCB(Qt_SizeHintRole, {|nCol|QSize():new(60, 60)})
    // títulos das linhas
-   oModel:setVerticalHeaderCB(Qt_DisplayRole, {|nRow|"Linha " + AllTrim(Str(nRow))})
+   oModel:setVerticalHeaderCB(Qt_DisplayRole, {|nRow|"Linha " + alltrim(str(nRow))})
    // tooltips das linhas
-   oModel:setVerticalHeaderCB(Qt_ToolTipRole, {|nRow|"Esta é a linha " + AllTrim(Str(nRow))})
+   oModel:setVerticalHeaderCB(Qt_ToolTipRole, {|nRow|"Esta é a linha " + alltrim(str(nRow))})
    // sizehints das linhas
    oModel:setVerticalHeaderCB(Qt_SizeHintRole, {|nRow|QSize():new(90, 30)})
 

@@ -76,7 +76,7 @@ METHOD data(oIndex, nRole) CLASS myModel
    IF oIndex:isValid()
 
       IF nRole == Qt_DisplayRole
-         oVariant := QVariant():new("Célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nColumn)))
+         oVariant := QVariant():new("Célula " + alltrim(str(nRow)) + "," + alltrim(str(nColumn)))
       ENDIF
 
    ENDIF
@@ -88,7 +88,7 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
    LOCAL oVariant := QVariant():new()
 
    IF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Linha " + AllTrim(Str(nSection)))
+      oVariant := QVariant():new("Linha " + alltrim(str(nSection)))
    ENDIF
 
 RETURN oVariant

@@ -76,11 +76,11 @@ METHOD data(oIndex, nRole) CLASS myModel
    IF oIndex:isValid()
 
       IF nRole == Qt_DisplayRole
-         oVariant := QVariant():new("Célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nColumn)))
+         oVariant := QVariant():new("Célula " + alltrim(str(nRow)) + "," + alltrim(str(nColumn)))
       ELSEIF nRole == Qt_ForegroundRole
-         oVariant := IIf(nColumn / 2 == Int(nColumn / 2), QColor():new("blue"):toVariant(), QColor():new("red"):toVariant())
+         oVariant := iif(nColumn / 2 == int(nColumn / 2), QColor():new("blue"):toVariant(), QColor():new("red"):toVariant())
       ELSEIF nRole == Qt_BackgroundRole
-         oVariant := IIf(nRow / 2 == Int(nRow / 2), QColor():new("cyan"):toVariant(), QColor():new("yellow"):toVariant())
+         oVariant := iif(nRow / 2 == int(nRow / 2), QColor():new("cyan"):toVariant(), QColor():new("yellow"):toVariant())
       ENDIF
 
    ENDIF
@@ -92,9 +92,9 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
    LOCAL oVariant := QVariant():new()
 
    IF nOrientation == Qt_Horizontal .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Coluna " + AllTrim(Str(nSection)))
+      oVariant := QVariant():new("Coluna " + alltrim(str(nSection)))
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Linha " + AllTrim(Str(nSection)))
+      oVariant := QVariant():new("Linha " + alltrim(str(nSection)))
    ENDIF
 
 RETURN oVariant

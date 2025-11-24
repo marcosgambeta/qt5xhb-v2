@@ -21,9 +21,9 @@ FUNCTION Main()
 
    oModel := HAbstractListModel():new()
    oModel:setRowCountCB({||100})
-   oModel:setCB(Qt_DisplayRole, {|nRow|"Linha " + AllTrim(Str(nRow))})
+   oModel:setCB(Qt_DisplayRole, {|nRow|"Linha " + alltrim(str(nRow))})
    // checked/unchecked
-   oModel:setCB(Qt_CheckStateRole, {|nRow|IIf(nRow / 2 == Int(nRow / 2), Qt_Checked, Qt_Unchecked)})
+   oModel:setCB(Qt_CheckStateRole, {|nRow|iif(nRow / 2 == int(nRow / 2), Qt_Checked, Qt_Unchecked)})
 
    oList := QListView():new(oWindow)
    oList:move(10, 10)

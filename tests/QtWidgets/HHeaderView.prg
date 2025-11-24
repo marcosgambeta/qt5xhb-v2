@@ -81,10 +81,10 @@ FUNCTION Main()
    // cria um objeto QHeaderView personalizado
    oHeaderView := HHeaderView():new(Qt_Horizontal)
    oHeaderView:setPaintSectionCB({|oPainter, oRect, nLogicalIndex|
-      oPainter:drawText(oRect, Qt_AlignCenter, Upper(oModel:headerData(nLogicalIndex, Qt_Horizontal, Qt_DisplayRole):toString()))
+      oPainter:drawText(oRect, Qt_AlignCenter, upper(oModel:headerData(nLogicalIndex, Qt_Horizontal, Qt_DisplayRole):toString()))
    })
    oHeaderView:setSectionsClickable(.T.)
-   oHeaderView:onDestroyed({||QOut("oHeaderView-destroyed")})
+   oHeaderView:onDestroyed({||qout("oHeaderView-destroyed")})
 
    // cria um objeto da classe QTableView
    oView := QTableView():new(oWindow)

@@ -25,9 +25,9 @@ FUNCTION Main()
    // total de colunas
    oModel:setColumnCountCB({||10})
    // conteúdo da célula
-   oModel:setDisplayRoleCB({|nRow, nCol|"Célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nCol))})
+   oModel:setDisplayRoleCB({|nRow, nCol|"Célula " + alltrim(str(nRow)) + "," + alltrim(str(nCol))})
    // checked/unchecked
-   oModel:setCheckStateRoleCB({|nRow, nCol|IIf(nCol == 0, Qt_Checked, NIL)})
+   oModel:setCheckStateRoleCB({|nRow, nCol|iif(nCol == 0, Qt_Checked, NIL)})
 
    oView := QTableView():new(oWindow)
    oView:move(10, 10)

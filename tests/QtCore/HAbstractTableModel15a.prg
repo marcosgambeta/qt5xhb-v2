@@ -25,17 +25,17 @@ FUNCTION Main()
    // total de colunas
    oModel:setColumnCountCB({||10})
    // conteúdo da célula
-   oModel:setDisplayRoleCB({|nRow, nCol|"Célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nCol))})
+   oModel:setDisplayRoleCB({|nRow, nCol|"Célula " + alltrim(str(nRow)) + "," + alltrim(str(nCol))})
    // tooltip da célula
-   oModel:setToolTipRoleCB({|nRow, nCol|"Esta é a célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nCol))})
+   oModel:setToolTipRoleCB({|nRow, nCol|"Esta é a célula " + alltrim(str(nRow)) + "," + alltrim(str(nCol))})
    // títulos das colunas
-   oModel:setHorizontalHeaderDisplayRoleCB({|nCol|"Coluna " + StrZero(nCol, 2)})
+   oModel:setHorizontalHeaderDisplayRoleCB({|nCol|"Coluna " + strzero(nCol, 2)})
    // tooltips das colunas
-   oModel:setHorizontalHeaderToolTipRoleCB({|nCol|"Esta é a coluna " + StrZero(nCol, 2)})
+   oModel:setHorizontalHeaderToolTipRoleCB({|nCol|"Esta é a coluna " + strzero(nCol, 2)})
    // títulos das linhas
-   oModel:setVerticalHeaderDisplayRoleCB({|nRow|"Linha " + AllTrim(Str(nRow))})
+   oModel:setVerticalHeaderDisplayRoleCB({|nRow|"Linha " + alltrim(str(nRow))})
    // tooltips das linhas
-   oModel:setVerticalHeaderToolTipRoleCB({|nRow|"Esta é a linha " + AllTrim(Str(nRow))})
+   oModel:setVerticalHeaderToolTipRoleCB({|nRow|"Esta é a linha " + alltrim(str(nRow))})
 
    oView := QTableView():new(oWindow)
    oView:move(10, 10)

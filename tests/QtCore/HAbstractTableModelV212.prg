@@ -27,7 +27,7 @@ FUNCTION Main()
 
    FOR nRow := 0 TO 99
       FOR nColumn := 0 TO 99
-         s_aDados[nRow + 1, nColumn + 1] := AllTrim(Str(nRow)) + "," + AllTrim(Str(nColumn))
+         s_aDados[nRow + 1, nColumn + 1] := alltrim(str(nRow)) + "," + alltrim(str(nColumn))
       NEXT nColumn
    NEXT nRow
 
@@ -80,10 +80,10 @@ METHOD new(...) CLASS myModel
 RETURN self
 
 METHOD rowCount() CLASS myModel
-RETURN Len(s_aDados)
+RETURN len(s_aDados)
 
 METHOD columnCount() CLASS myModel
-RETURN Len(s_aDados[1])
+RETURN len(s_aDados[1])
 
 METHOD data(oIndex, nRole) CLASS myModel
 
@@ -108,9 +108,9 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
    LOCAL oVariant := QVariant():new()
 
    IF nOrientation == Qt_Horizontal .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Coluna " + AllTrim(Str(nSection)))
+      oVariant := QVariant():new("Coluna " + alltrim(str(nSection)))
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Linha " + AllTrim(Str(nSection)))
+      oVariant := QVariant():new("Linha " + alltrim(str(nSection)))
    ENDIF
 
 RETURN oVariant
@@ -136,7 +136,7 @@ METHOD setData(oIndex, oVariant, nRole) CLASS myModel
 
          cValue := oVariant:toString()
 
-         IF !Empty(cValue)
+         IF !empty(cValue)
             s_aDados[nRow + 1, nColumn + 1] := oVariant:toString()
             lSuccess := .T.
          ENDIF

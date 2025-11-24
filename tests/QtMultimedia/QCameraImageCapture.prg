@@ -20,7 +20,7 @@ FUNCTION Main()
 
    aCameras := QCameraInfo():availableCameras()
 
-   IF Len(aCameras) == 0
+   IF len(aCameras) == 0
       ShowMessage("Info", "Camera not found", QWidget())
       oApp:delete()
       QUIT
@@ -40,7 +40,7 @@ FUNCTION Main()
 
    // press 'C' to capture the image (look in the 'Images' folder)
    oShortcut := QShortcut():new(QKeySequence():new("C"), oVideoWidget)
-   oShortcut:onActivated({||IIf(oCapture:isReadyForCapture(), oCapture:capture("capture" + AllTrim(Str(++nCounter))), ShowMessage("Info", "Not ready for capture", oVideoWidget))})
+   oShortcut:onActivated({||iif(oCapture:isReadyForCapture(), oCapture:capture("capture" + alltrim(str(++nCounter))), ShowMessage("Info", "Not ready for capture", oVideoWidget))})
 
    oApp:exec()
 

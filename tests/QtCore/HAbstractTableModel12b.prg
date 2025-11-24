@@ -22,7 +22,7 @@ FUNCTION Main()
    aData := Array(NUMR_ROWS, 10)
    FOR nRow := 1 TO NUMR_ROWS
       FOR nCol := 1 TO NUMR_COLS
-         aData[nRow, nCol] := "Célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nCol))
+         aData[nRow, nCol] := "Célula " + alltrim(str(nRow)) + "," + alltrim(str(nCol))
       NEXT nCol
    NEXT nRow
 

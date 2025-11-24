@@ -19,7 +19,7 @@ FUNCTION Main()
 
    aData := Array(NUMR_ROWS)
    FOR nRow := 1 TO NUMR_ROWS
-      aData[nRow] := {"Linha " + AllTrim(Str(nRow)), Qt_Checked}
+      aData[nRow] := {"Linha " + alltrim(str(nRow)), Qt_Checked}
    NEXT nRow
 
    oApp := QApplication():new()

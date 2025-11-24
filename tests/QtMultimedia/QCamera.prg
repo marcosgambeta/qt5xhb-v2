@@ -18,7 +18,7 @@ FUNCTION Main()
 
    aCameras := QCameraInfo():availableCameras()
 
-   IF Len(aCameras) == 0
+   IF len(aCameras) == 0
       oMB := QMessageBox():new(QMessageBox_Information, "Info", "Camera not found", QMessageBox_Ok, QWidget())
       oMB:exec()
       oMB:delete()

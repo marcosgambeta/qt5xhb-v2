@@ -25,13 +25,13 @@ FUNCTION Main()
    // total de colunas
    oModel:setColumnCountCB({||10000})
    // conteúdo da célula
-   oModel:setDisplayRoleCB({|nRow, nCol|"Célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nCol))})
+   oModel:setDisplayRoleCB({|nRow, nCol|"Célula " + alltrim(str(nRow)) + "," + alltrim(str(nCol))})
    // cor de frente da célula
-   oModel:setForegroundRoleCB({|nRow, nCol|IIf(nCol / 2 == Int(nCol / 2), "blue", "dark green")})
+   oModel:setForegroundRoleCB({|nRow, nCol|iif(nCol / 2 == int(nCol / 2), "blue", "dark green")})
    // títulos das colunas
-   oModel:setHorizontalHeaderDisplayRoleCB({|nCol|"Coluna " + StrZero(nCol, 5)})
+   oModel:setHorizontalHeaderDisplayRoleCB({|nCol|"Coluna " + strzero(nCol, 5)})
    // títulos das linhas
-   oModel:setVerticalHeaderDisplayRoleCB({|nRow|"Linha " + AllTrim(Str(nRow))})
+   oModel:setVerticalHeaderDisplayRoleCB({|nRow|"Linha " + alltrim(str(nRow))})
 
    oView := QTableView():new(oWindow)
    oView:move(10, 10)

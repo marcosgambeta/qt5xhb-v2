@@ -22,7 +22,7 @@ FUNCTION Main()
    oModel := HAbstractListModel():new()
    // total de linhas: 100 mil
    oModel:setRowCountCB({||100000})
-   oModel:setCB(Qt_DisplayRole, {|nRow|"Linha " + AllTrim(Str(nRow))})
+   oModel:setCB(Qt_DisplayRole, {|nRow|"Linha " + alltrim(str(nRow))})
 
    oList := QListView():new(oWindow)
    oList:move(10, 10)
