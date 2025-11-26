@@ -29,22 +29,6 @@ Open a issue if you have problems with the compilation:
 
 https://github.com/marcosgambeta/qt5xhb-v2/issues  
 
-### To contact the developer
-
-Send your message using one of the options below:
-
-E-mail:  
-marcosgambeta@outlook.com
-
-Telegram:  
-https://t.me/marcosgambeta
-
-### More info and extra content
-
-Follow the blog below for more info and extra content:
-
-https://magsoftinfo.com/blog/
-
 ## Portuguese
 
 Bibliotecas de ligação para Harbour++/Harbour/xHarbour e Qt Framework 5.
@@ -70,19 +54,3 @@ https://github.com/marcosgambeta/harbourpp-v1
 Use a seção 'Issues' caso tenha problemas com a compilação:
 
 https://github.com/marcosgambeta/qt5xhb-v1/issues  
-
-### Contato com o desenvolvedor
-
-Envie sua mensagem usando uma das opções abaixo:
-
-E-mail:  
-marcosgambeta@outlook.com
-
-Telegram:  
-https://t.me/marcosgambeta
-
-### Informações e conteúdo extra
-
-Acompanhe o blog abaixo para mais informações e conteúdo extra:
-
-https://magsoftinfo.com/blog/
