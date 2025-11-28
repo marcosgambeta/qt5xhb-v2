@@ -40,14 +40,14 @@ qt5xhb_qtquickwidgets.hbp
 qt5xhb_qtscript.hbp
 qt5xhb_qtscripttools.hbp
 qt5xhb_qtsensors.hbp
-#qt5xhb_qtserialbus.hbp
+qt5xhb_qtserialbus.hbp
 qt5xhb_qtserialport.hbp
 qt5xhb_qtsql.hbp
 qt5xhb_qtsvg.hbp
 #qt5xhb_qttest.hbp
 qt5xhb_qttexttospeech.hbp
 qt5xhb_qtuitools.hbp
-#qt5xhb_qtvirtualkeyboard.hbp
+qt5xhb_qtvirtualkeyboard.hbp
 qt5xhb_qtwebchannel.hbp
 #qt5xhb_qtwebengine.hbp
 #qt5xhb_qtwebenginecore.hbp
@@ -57,7 +57,7 @@ qt5xhb_qtwebchannel.hbp
 qt5xhb_qtwebsockets.hbp
 #qt5xhb_qtwebview.hbp
 qt5xhb_qtwidgets.hbp
-#qt5xhb_qtwinextras.hbp
+qt5xhb_qtwinextras.hbp
 #qt5xhb_qtx11extras.hbp
 qt5xhb_qtxml.hbp
 qt5xhb_qtxmlpatterns.hbp
