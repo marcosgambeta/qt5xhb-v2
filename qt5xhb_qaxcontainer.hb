@@ -14,6 +14,8 @@ FUNCTION hbmk_plugin_qt(hbmk)
    IF empty(cMocExe)
       cMocExe := "moc"
    ENDIF
+   
+   HB_SYMBOL_UNUSED(cMocExe)
 
    SWITCH hbmk["cSTATE"]
 
