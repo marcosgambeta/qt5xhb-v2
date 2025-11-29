@@ -24,11 +24,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtGui\HCodeBlockValidator.hpp")
+      RUNMOC("source/QtGui/HCodeBlockValidator.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtGui\HCodeBlockValidatorMoc.cpp")
+      ferase("source/QtGui/HCodeBlockValidatorMoc.cpp")
 
    ENDSWITCH
 

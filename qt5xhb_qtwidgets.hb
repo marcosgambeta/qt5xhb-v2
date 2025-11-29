@@ -26,11 +26,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtWidgets\HStyledItemDelegate.hpp")
+      RUNMOC("source/QtWidgets/HStyledItemDelegate.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtWidgets\HStyledItemDelegateMoc.cpp")
+      ferase("source/QtWidgets/HStyledItemDelegateMoc.cpp")
 
    ENDSWITCH
 

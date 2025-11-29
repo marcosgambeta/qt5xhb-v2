@@ -24,19 +24,19 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtCore\HAbstractListModel.hpp")
-      RUNMOC("source\QtCore\HAbstractListModelV2.hpp")
-      RUNMOC("source\QtCore\HAbstractTableModel.hpp")
-      RUNMOC("source\QtCore\HAbstractTableModelV2.hpp")
-      RUNMOC("source\QtCore\HEventFilter.hpp")
+      RUNMOC("source/QtCore/HAbstractListModel.hpp")
+      RUNMOC("source/QtCore/HAbstractListModelV2.hpp")
+      RUNMOC("source/QtCore/HAbstractTableModel.hpp")
+      RUNMOC("source/QtCore/HAbstractTableModelV2.hpp")
+      RUNMOC("source/QtCore/HEventFilter.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtCore\HAbstractListModelMoc.cpp")
-      ferase("source\QtCore\HAbstractListModelV2Moc.cpp")
-      ferase("source\QtCore\HAbstractTableModelMoc.cpp")
-      ferase("source\QtCore\HAbstractTableModelV2Moc.cpp")
-      ferase("source\QtCore\HEventFilterMoc.cpp")
+      ferase("source/QtCore/HAbstractListModelMoc.cpp")
+      ferase("source/QtCore/HAbstractListModelV2Moc.cpp")
+      ferase("source/QtCore/HAbstractTableModelMoc.cpp")
+      ferase("source/QtCore/HAbstractTableModelV2Moc.cpp")
+      ferase("source/QtCore/HEventFilterMoc.cpp")
 
    ENDSWITCH
 
