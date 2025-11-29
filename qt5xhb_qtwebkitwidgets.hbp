@@ -35,10 +35,10 @@
 
 -plugin=qt5xhb_qtwebkitwidgets.hb
 
-source\QtWebKitWidgets\QGraphicsWebView.prg
-source\QtWebKitWidgets\QtWebKitWidgetsVersion.cpp
-source\QtWebKitWidgets\QWebFrame.prg
-source\QtWebKitWidgets\QWebHitTestResult.prg
-source\QtWebKitWidgets\QWebInspector.prg
-source\QtWebKitWidgets\QWebPage.prg
-source\QtWebKitWidgets\QWebView.prg
+source/QtWebKitWidgets/QGraphicsWebView.prg
+source/QtWebKitWidgets/QtWebKitWidgetsVersion.cpp
+source/QtWebKitWidgets/QWebFrame.prg
+source/QtWebKitWidgets/QWebHitTestResult.prg
+source/QtWebKitWidgets/QWebInspector.prg
+source/QtWebKitWidgets/QWebPage.prg
+source/QtWebKitWidgets/QWebView.prg

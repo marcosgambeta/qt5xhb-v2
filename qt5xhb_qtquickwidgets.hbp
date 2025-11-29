@@ -35,5 +35,5 @@
 
 -plugin=qt5xhb_qtquickwidgets.hb
 
-source\QtQuickWidgets\QQuickWidget.prg
-source\QtQuickWidgets\QtQuickWidgetsVersion.cpp
+source/QtQuickWidgets/QQuickWidget.prg
+source/QtQuickWidgets/QtQuickWidgetsVersion.cpp

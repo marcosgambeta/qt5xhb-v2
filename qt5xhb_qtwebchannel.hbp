@@ -35,7 +35,7 @@
 
 -plugin=qt5xhb_qtwebchannel.hb
 
-source\QtWebChannel\QQmlWebChannel.prg
-source\QtWebChannel\QtWebChannelVersion.cpp
-source\QtWebChannel\QWebChannel.prg
-source\QtWebChannel\QWebChannelAbstractTransport.prg
+source/QtWebChannel/QQmlWebChannel.prg
+source/QtWebChannel/QtWebChannelVersion.cpp
+source/QtWebChannel/QWebChannel.prg
+source/QtWebChannel/QWebChannelAbstractTransport.prg

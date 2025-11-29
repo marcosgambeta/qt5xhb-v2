@@ -35,8 +35,8 @@
 
 -plugin=qt5xhb_qtwebsockets.hb
 
-source\QtWebSockets\QMaskGenerator.prg
-source\QtWebSockets\QtWebSocketsVersion.cpp
-source\QtWebSockets\QWebSocket.prg
-source\QtWebSockets\QWebSocketCorsAuthenticator.prg
-source\QtWebSockets\QWebSocketServer.prg
+source/QtWebSockets/QMaskGenerator.prg
+source/QtWebSockets/QtWebSocketsVersion.cpp
+source/QtWebSockets/QWebSocket.prg
+source/QtWebSockets/QWebSocketCorsAuthenticator.prg
+source/QtWebSockets/QWebSocketServer.prg

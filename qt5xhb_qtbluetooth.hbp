@@ -35,17 +35,17 @@
 
 -plugin=qt5xhb_qtbluetooth.hb
 
-source\QtBluetooth\QBluetoothAddress.prg
-source\QtBluetooth\QBluetoothDeviceDiscoveryAgent.prg
-source\QtBluetooth\QBluetoothDeviceInfo.prg
-source\QtBluetooth\QBluetoothHostInfo.prg
-source\QtBluetooth\QBluetoothLocalDevice.prg
-source\QtBluetooth\QBluetoothServer.prg
-source\QtBluetooth\QBluetoothServiceDiscoveryAgent.prg
-source\QtBluetooth\QBluetoothServiceInfo.prg
-source\QtBluetooth\QBluetoothSocket.prg
-source\QtBluetooth\QBluetoothTransferManager.prg
-source\QtBluetooth\QBluetoothTransferReply.prg
-source\QtBluetooth\QBluetoothTransferRequest.prg
-source\QtBluetooth\QBluetoothUuid.prg
-source\QtBluetooth\QtBluetoothVersion.cpp
+source/QtBluetooth/QBluetoothAddress.prg
+source/QtBluetooth/QBluetoothDeviceDiscoveryAgent.prg
+source/QtBluetooth/QBluetoothDeviceInfo.prg
+source/QtBluetooth/QBluetoothHostInfo.prg
+source/QtBluetooth/QBluetoothLocalDevice.prg
+source/QtBluetooth/QBluetoothServer.prg
+source/QtBluetooth/QBluetoothServiceDiscoveryAgent.prg
+source/QtBluetooth/QBluetoothServiceInfo.prg
+source/QtBluetooth/QBluetoothSocket.prg
+source/QtBluetooth/QBluetoothTransferManager.prg
+source/QtBluetooth/QBluetoothTransferReply.prg
+source/QtBluetooth/QBluetoothTransferRequest.prg
+source/QtBluetooth/QBluetoothUuid.prg
+source/QtBluetooth/QtBluetoothVersion.cpp

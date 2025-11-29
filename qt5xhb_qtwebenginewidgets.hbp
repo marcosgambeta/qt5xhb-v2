@@ -35,10 +35,10 @@
 
 -plugin=qt5xhb_qtwebenginewidgets.hb
 
-source\QtWebEngineWidgets\QtWebEngineWidgetsVersion.cpp
-source\QtWebEngineWidgets\QWebEngineCertificateError.prg
-source\QtWebEngineWidgets\QWebEngineHistory.prg
-source\QtWebEngineWidgets\QWebEngineHistoryItem.prg
-source\QtWebEngineWidgets\QWebEnginePage.prg
-source\QtWebEngineWidgets\QWebEngineSettings.prg
-source\QtWebEngineWidgets\QWebEngineView.prg
+source/QtWebEngineWidgets/QtWebEngineWidgetsVersion.cpp
+source/QtWebEngineWidgets/QWebEngineCertificateError.prg
+source/QtWebEngineWidgets/QWebEngineHistory.prg
+source/QtWebEngineWidgets/QWebEngineHistoryItem.prg
+source/QtWebEngineWidgets/QWebEnginePage.prg
+source/QtWebEngineWidgets/QWebEngineSettings.prg
+source/QtWebEngineWidgets/QWebEngineView.prg

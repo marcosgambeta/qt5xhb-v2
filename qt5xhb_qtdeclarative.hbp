@@ -35,20 +35,20 @@
 
 -plugin=qt5xhb_qtdeclarative.hb
 
-source\QtDeclarative\QDeclarativeComponent.prg
-source\QtDeclarative\QDeclarativeContext.prg
-source\QtDeclarative\QDeclarativeEngine.prg
-source\QtDeclarative\QDeclarativeError.prg
-source\QtDeclarative\QDeclarativeExpression.prg
-source\QtDeclarative\QDeclarativeExtensionPlugin.prg
-source\QtDeclarative\QDeclarativeImageProvider.prg
-source\QtDeclarative\QDeclarativeItem.prg
-source\QtDeclarative\QDeclarativeListReference.prg
-source\QtDeclarative\QDeclarativeNetworkAccessManagerFactory.prg
-source\QtDeclarative\QDeclarativeParserStatus.prg
-source\QtDeclarative\QDeclarativeProperty.prg
-source\QtDeclarative\QDeclarativePropertyMap.prg
-source\QtDeclarative\QDeclarativePropertyValueSource.prg
-source\QtDeclarative\QDeclarativeScriptString.prg
-source\QtDeclarative\QDeclarativeView.prg
-source\QtDeclarative\QtDeclarativeVersion.cpp
+source/QtDeclarative/QDeclarativeComponent.prg
+source/QtDeclarative/QDeclarativeContext.prg
+source/QtDeclarative/QDeclarativeEngine.prg
+source/QtDeclarative/QDeclarativeError.prg
+source/QtDeclarative/QDeclarativeExpression.prg
+source/QtDeclarative/QDeclarativeExtensionPlugin.prg
+source/QtDeclarative/QDeclarativeImageProvider.prg
+source/QtDeclarative/QDeclarativeItem.prg
+source/QtDeclarative/QDeclarativeListReference.prg
+source/QtDeclarative/QDeclarativeNetworkAccessManagerFactory.prg
+source/QtDeclarative/QDeclarativeParserStatus.prg
+source/QtDeclarative/QDeclarativeProperty.prg
+source/QtDeclarative/QDeclarativePropertyMap.prg
+source/QtDeclarative/QDeclarativePropertyValueSource.prg
+source/QtDeclarative/QDeclarativeScriptString.prg
+source/QtDeclarative/QDeclarativeView.prg
+source/QtDeclarative/QtDeclarativeVersion.cpp

@@ -35,5 +35,5 @@
 
 -plugin=qt5xhb_qtscripttools.hb
 
-source\QtScriptTools\QScriptEngineDebugger.prg
-source\QtScriptTools\QtScriptToolsVersion.cpp
+source/QtScriptTools/QScriptEngineDebugger.prg
+source/QtScriptTools/QtScriptToolsVersion.cpp

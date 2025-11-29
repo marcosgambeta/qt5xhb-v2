@@ -37,10 +37,10 @@
 
 -plugin=qt5xhb_qtvirtualkeyboard.hb
 
-source\QtVirtualKeyboard\QtVirtualKeyboardVersion.cpp
-source\QtVirtualKeyboard\QVirtualKeyboardAbstractInputMethod.prg
-source\QtVirtualKeyboard\QVirtualKeyboardExtensionPlugin.prg
-source\QtVirtualKeyboard\QVirtualKeyboardInputContext.prg
-source\QtVirtualKeyboard\QVirtualKeyboardInputEngine.prg
-source\QtVirtualKeyboard\QVirtualKeyboardSelectionListModel.prg
-source\QtVirtualKeyboard\QVirtualKeyboardTrace.prg
+source/QtVirtualKeyboard/QtVirtualKeyboardVersion.cpp
+source/QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethod.prg
+source/QtVirtualKeyboard/QVirtualKeyboardExtensionPlugin.prg
+source/QtVirtualKeyboard/QVirtualKeyboardInputContext.prg
+source/QtVirtualKeyboard/QVirtualKeyboardInputEngine.prg
+source/QtVirtualKeyboard/QVirtualKeyboardSelectionListModel.prg
+source/QtVirtualKeyboard/QVirtualKeyboardTrace.prg

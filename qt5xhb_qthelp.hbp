@@ -35,15 +35,15 @@
 
 -plugin=qt5xhb_qthelp.hb
 
-source\QtHelp\QHelpContentItem.prg
-source\QtHelp\QHelpContentModel.prg
-source\QtHelp\QHelpContentWidget.prg
-source\QtHelp\QHelpEngine.prg
-source\QtHelp\QHelpEngineCore.prg
-source\QtHelp\QHelpIndexModel.prg
-source\QtHelp\QHelpIndexWidget.prg
-source\QtHelp\QHelpSearchEngine.prg
-source\QtHelp\QHelpSearchQuery.prg
-source\QtHelp\QHelpSearchQueryWidget.prg
-source\QtHelp\QHelpSearchResultWidget.prg
-source\QtHelp\QtHelpVersion.cpp
+source/QtHelp/QHelpContentItem.prg
+source/QtHelp/QHelpContentModel.prg
+source/QtHelp/QHelpContentWidget.prg
+source/QtHelp/QHelpEngine.prg
+source/QtHelp/QHelpEngineCore.prg
+source/QtHelp/QHelpIndexModel.prg
+source/QtHelp/QHelpIndexWidget.prg
+source/QtHelp/QHelpSearchEngine.prg
+source/QtHelp/QHelpSearchQuery.prg
+source/QtHelp/QHelpSearchQueryWidget.prg
+source/QtHelp/QHelpSearchResultWidget.prg
+source/QtHelp/QtHelpVersion.cpp

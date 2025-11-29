@@ -35,8 +35,8 @@
 
 -plugin=qt5xhb_qttexttospeech.hb
 
-source\QtTextToSpeech\QTextToSpeech.prg
-source\QtTextToSpeech\QTextToSpeechEngine.prg
-source\QtTextToSpeech\QTextToSpeechPlugin.prg
-source\QtTextToSpeech\QtTextToSpeechVersion.cpp
-source\QtTextToSpeech\QVoice.prg
+source/QtTextToSpeech/QTextToSpeech.prg
+source/QtTextToSpeech/QTextToSpeechEngine.prg
+source/QtTextToSpeech/QTextToSpeechPlugin.prg
+source/QtTextToSpeech/QtTextToSpeechVersion.cpp
+source/QtTextToSpeech/QVoice.prg

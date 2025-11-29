@@ -35,7 +35,7 @@
 
 -plugin=qt5xhb_qtwebengine.hb
 
-source\QtWebEngine\QQuickWebEngineProfile.prg
-source\QtWebEngine\QQuickWebEngineScript.prg
-source\QtWebEngine\QtWebEngine.prg
-source\QtWebEngine\QtWebEngineVersion.cpp
+source/QtWebEngine/QQuickWebEngineProfile.prg
+source/QtWebEngine/QQuickWebEngineScript.prg
+source/QtWebEngine/QtWebEngine.prg
+source/QtWebEngine/QtWebEngineVersion.cpp

@@ -35,7 +35,7 @@
 
 -plugin=qt5xhb_qtgamepad.hb
 
-source\QtGamepad\QGamepad.prg
-source\QtGamepad\QGamepadKeyNavigation.prg
-source\QtGamepad\QGamepadManager.prg
-source\QtGamepad\QtGamepadVersion.cpp
+source/QtGamepad/QGamepad.prg
+source/QtGamepad/QGamepadKeyNavigation.prg
+source/QtGamepad/QGamepadManager.prg
+source/QtGamepad/QtGamepadVersion.cpp
