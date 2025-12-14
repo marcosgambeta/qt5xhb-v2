@@ -4,8 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef SIGNALS_H
-#define SIGNALS_H
+#ifndef QT5XHB_SIGNALS_HPP
+#define QT5XHB_SIGNALS_HPP
 
 #include <QtCore/QObject>
 #include <QtCore/QMetaObject>
@@ -40,4 +40,4 @@ namespace Qt5xHb
   QMetaObject::Connection Signals_get_connection( QObject * s, int signal );
 }
 
-#endif // SIGNALS_H
+#endif // QT5XHB_SIGNALS_HPP
