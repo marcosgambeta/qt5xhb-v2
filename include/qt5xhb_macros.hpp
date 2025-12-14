@@ -4,8 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef QT5XHB_MACROS_H
-#define QT5XHB_MACROS_H
+#ifndef QT5XHB_MACROS_HPP
+#define QT5XHB_MACROS_HPP
 
 #include "qt5xhb_macros_activeqt.hpp"
 #include "qt5xhb_macros_qtandroidextras.hpp"
@@ -208,4 +208,4 @@
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
 //#define QSTRINGTOSTRING(x)                                  (const char *) x.toUtf8().data()
 
-#endif // QT5XHB_MACROS_H
+#endif // QT5XHB_MACROS_HPP

@@ -4,8 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef QT5XHB_EVENTS_H
-#define QT5XHB_EVENTS_H
+#ifndef QT5XHB_EVENTS_HPP
+#define QT5XHB_EVENTS_HPP
 
 namespace Qt5xHb
 {
@@ -14,4 +14,4 @@ namespace Qt5xHb
   void Events_disconnect_all_events( QObject * obj, bool children );
 }
 
-#endif // QT5XHB_EVENTS_H
+#endif // QT5XHB_EVENTS_HPP
