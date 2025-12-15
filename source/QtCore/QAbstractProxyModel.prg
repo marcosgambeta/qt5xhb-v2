@@ -102,9 +102,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_INDEX)
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
 #endif
-      auto ptr = new QModelIndex(obj->index(
-          PINT(1), OPINT(2, 0), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
-      RQMODELINDEX(ptr);
+      RQMODELINDEX(obj->index(PINT(1), OPINT(2, 0), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

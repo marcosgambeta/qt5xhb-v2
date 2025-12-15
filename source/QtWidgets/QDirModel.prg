@@ -138,9 +138,7 @@ HB_FUNC_STATIC(QDIRMODEL_INDEX)
     auto obj = qobject_cast<QDirModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QModelIndex(obj->index(
-          PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
-      RQMODELINDEX(ptr);
+      RQMODELINDEX(obj->index(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
     }
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
@@ -151,8 +149,7 @@ HB_FUNC_STATIC(QDIRMODEL_INDEX)
     auto obj = qobject_cast<QDirModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QModelIndex(obj->index(PQSTRING(1), OPINT(2, 0)));
-      RQMODELINDEX(ptr);
+      RQMODELINDEX(obj->index(PQSTRING(1), OPINT(2, 0)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -171,8 +168,7 @@ HB_FUNC_STATIC(QDIRMODEL_PARENT)
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      auto ptr = new QModelIndex(obj->parent(*PQMODELINDEX(1)));
-      RQMODELINDEX(ptr);
+      RQMODELINDEX(obj->parent(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -727,8 +723,7 @@ HB_FUNC_STATIC(QDIRMODEL_MKDIR)
     if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISCHAR(2))
     {
 #endif
-      auto ptr = new QModelIndex(obj->mkdir(*PQMODELINDEX(1), PQSTRING(2)));
-      RQMODELINDEX(ptr);
+      RQMODELINDEX(obj->mkdir(*PQMODELINDEX(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

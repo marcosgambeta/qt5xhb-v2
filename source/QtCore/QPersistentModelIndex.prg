@@ -228,8 +228,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_PARENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QModelIndex(obj->parent());
-      RQMODELINDEX(ptr);
+      RQMODELINDEX(obj->parent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -250,8 +249,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_SIBLING)
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      auto ptr = new QModelIndex(obj->sibling(PINT(1), PINT(2)));
-      RQMODELINDEX(ptr);
+      RQMODELINDEX(obj->sibling(PINT(1), PINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -272,8 +270,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_CHILD)
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      auto ptr = new QModelIndex(obj->child(PINT(1), PINT(2)));
-      RQMODELINDEX(ptr);
+      RQMODELINDEX(obj->child(PINT(1), PINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

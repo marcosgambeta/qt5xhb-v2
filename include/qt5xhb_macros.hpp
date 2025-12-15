@@ -192,7 +192,7 @@
 #define RQUINTPTR(x)                                        hb_retnll(x)
 
 #define RQVARIANT(exp)                                      Qt5xHb::createReturnClass(new QVariant(exp), "QVARIANT", true)
-#define RQMODELINDEX(p)                                     Qt5xHb::createReturnClass(p, "QMODELINDEX", true)
+#define RQMODELINDEX(exp)                                   Qt5xHb::createReturnClass(new QModelIndex(exp), "QMODELINDEX", true)
 #define RQICON(p)                                           Qt5xHb::createReturnClass(p, "QICON", true)
 #define RQSIZE(p)                                           Qt5xHb::createReturnClass(p, "QSIZE", true)
 #define RQCOLOR(p)                                          Qt5xHb::createReturnClass(p, "QCOLOR", true)
