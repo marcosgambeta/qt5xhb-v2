@@ -521,8 +521,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_ICONFORURL)
   if (ISNUMPAR(1) && ISQURL(1))
   {
 #endif
-    auto ptr = new QIcon(QWebSettings::iconForUrl(*PQURL(1)));
-    RQICON(ptr);
+    RQICON(QWebSettings::iconForUrl(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

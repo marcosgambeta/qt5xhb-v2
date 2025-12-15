@@ -96,8 +96,7 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
     auto obj = static_cast<QFileIconProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QIcon(obj->icon(static_cast<QFileIconProvider::IconType>(hb_parni(1))));
-      RQICON(ptr);
+      RQICON(obj->icon(static_cast<QFileIconProvider::IconType>(hb_parni(1))));
     }
   }
   else if (ISNUMPAR(1) && ISQFILEINFO(1))
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
     auto obj = static_cast<QFileIconProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QIcon(obj->icon(*PQFILEINFO(1)));
-      RQICON(ptr);
+      RQICON(obj->icon(*PQFILEINFO(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

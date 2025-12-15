@@ -219,8 +219,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_CURRENTICON)
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
-      auto ptr = new QIcon(obj->currentIcon);
-      RQICON(ptr);
+      RQICON(obj->currentIcon);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

@@ -512,10 +512,9 @@ HB_FUNC_STATIC(QPROXYSTYLE_STANDARDICON)
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3)))
     {
 #endif
-      auto ptr = new QIcon(obj->standardIcon(static_cast<QStyle::StandardPixmap>(hb_parni(1)),
+      RQICON(obj->standardIcon(static_cast<QStyle::StandardPixmap>(hb_parni(1)),
                                              HB_ISNIL(2) ? nullptr : static_cast<QStyleOption *>(Qt5xHb::itemGetPtr(2)),
                                              OPQWIDGET(3, nullptr)));
-      RQICON(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
