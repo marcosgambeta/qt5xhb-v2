@@ -317,8 +317,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LINEPENCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->linePenColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->linePenColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -555,8 +554,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_GRIDLINECOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->gridLineColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->gridLineColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -603,8 +601,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_MINORGRIDLINECOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->minorGridLineColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->minorGridLineColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -841,8 +838,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->labelsColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->labelsColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1222,8 +1218,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->shadesColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->shadesColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1270,8 +1265,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESBORDERCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->shadesBorderColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->shadesBorderColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

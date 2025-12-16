@@ -311,8 +311,7 @@ HB_FUNC_STATIC(Q3DTHEME_BACKGROUNDCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->backgroundColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->backgroundColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -359,8 +358,7 @@ HB_FUNC_STATIC(Q3DTHEME_WINDOWCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->windowColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->windowColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -407,8 +405,7 @@ HB_FUNC_STATIC(Q3DTHEME_LABELTEXTCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->labelTextColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->labelTextColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -455,8 +452,7 @@ HB_FUNC_STATIC(Q3DTHEME_LABELBACKGROUNDCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->labelBackgroundColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->labelBackgroundColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -503,8 +499,7 @@ HB_FUNC_STATIC(Q3DTHEME_GRIDLINECOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->gridLineColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->gridLineColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -551,8 +546,7 @@ HB_FUNC_STATIC(Q3DTHEME_SINGLEHIGHLIGHTCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->singleHighlightColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->singleHighlightColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -599,8 +593,7 @@ HB_FUNC_STATIC(Q3DTHEME_MULTIHIGHLIGHTCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->multiHighlightColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->multiHighlightColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -647,8 +640,7 @@ HB_FUNC_STATIC(Q3DTHEME_LIGHTCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->lightColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->lightColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

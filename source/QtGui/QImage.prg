@@ -1434,8 +1434,7 @@ HB_FUNC_STATIC(QIMAGE_PIXELCOLOR)
     auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QColor(obj->pixelColor(*PQPOINT(1)));
-      RQCOLOR(ptr);
+      RQCOLOR(obj->pixelColor(*PQPOINT(1)));
     }
 #endif
   }
@@ -1448,8 +1447,7 @@ HB_FUNC_STATIC(QIMAGE_PIXELCOLOR)
     auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QColor(obj->pixelColor(PINT(1), PINT(2)));
-      RQCOLOR(ptr);
+      RQCOLOR(obj->pixelColor(PINT(1), PINT(2)));
     }
 #endif
   } else {

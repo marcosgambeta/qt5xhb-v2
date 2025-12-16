@@ -184,8 +184,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXTCOLOR)
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
-      auto ptr = new QColor(obj->textColor);
-      RQCOLOR(ptr);
+      RQCOLOR(obj->textColor);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

@@ -206,8 +206,7 @@ HB_FUNC_STATIC(QAREASERIES_COLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->color());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->color());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -254,8 +253,7 @@ HB_FUNC_STATIC(QAREASERIES_BORDERCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->borderColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->borderColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -444,8 +442,7 @@ HB_FUNC_STATIC(QAREASERIES_POINTLABELSCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->pointLabelsColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->pointLabelsColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -305,8 +305,7 @@ HB_FUNC_STATIC(QTWIN_COLORIZATIONCOLOR)
   {
 #endif
     bool par1;
-    auto ptr = new QColor(QtWin::colorizationColor(&par1));
-    RQCOLOR(ptr);
+    RQCOLOR(QtWin::colorizationColor(&par1));
     hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -325,8 +324,7 @@ HB_FUNC_STATIC(QTWIN_REALCOLORIZATIONCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QColor(QtWin::realColorizationColor());
-    RQCOLOR(ptr);
+    RQCOLOR(QtWin::realColorizationColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

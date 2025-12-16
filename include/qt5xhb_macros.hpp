@@ -195,7 +195,7 @@
 #define RQMODELINDEX(exp)                                   Qt5xHb::createReturnClass(new QModelIndex(exp), "QMODELINDEX", true)
 #define RQICON(exp)                                         Qt5xHb::createReturnClass(new QIcon(exp), "QICON", true)
 #define RQSIZE(exp)                                         Qt5xHb::createReturnClass(new QSize(exp), "QSIZE", true)
-#define RQCOLOR(p)                                          Qt5xHb::createReturnClass(p, "QCOLOR", true)
+#define RQCOLOR(exp)                                        Qt5xHb::createReturnClass(new QColor(exp), "QCOLOR", true)
 #define RQBYTEARRAY(p)                                      Qt5xHb::createReturnClass(p, "QBYTEARRAY", true)
 #define RQPOINT(p)                                          Qt5xHb::createReturnClass(p, "QPOINT", true)
 #define RQPOINTF(p)                                         Qt5xHb::createReturnClass(p, "QPOINTF", true)

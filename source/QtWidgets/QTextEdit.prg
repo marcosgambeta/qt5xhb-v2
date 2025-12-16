@@ -1226,8 +1226,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TEXTBACKGROUNDCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->textBackgroundColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->textBackgroundColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1247,8 +1246,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TEXTCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QColor(obj->textColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->textColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

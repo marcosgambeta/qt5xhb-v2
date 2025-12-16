@@ -445,8 +445,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_COLORPROPERTY)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QColor(obj->colorProperty(PINT(1)));
-      RQCOLOR(ptr);
+      RQCOLOR(obj->colorProperty(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
