@@ -142,10 +142,9 @@ HB_FUNC_STATIC(QICON_ACTUALSIZE)
     if (ISBETWEEN(1, 3) && ISQSIZE(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
     {
 #endif
-      auto ptr = new QSize(obj->actualSize(
+      RQSIZE(obj->actualSize(
           *PQSIZE(1), HB_ISNIL(2) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(2)),
           HB_ISNIL(3) ? static_cast<QIcon::State>(QIcon::Off) : static_cast<QIcon::State>(hb_parni(3))));
-      RQSIZE(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

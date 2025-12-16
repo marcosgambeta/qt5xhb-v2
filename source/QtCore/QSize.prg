@@ -114,8 +114,7 @@ HB_FUNC_STATIC(QSIZE_BOUNDEDTO)
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      auto ptr = new QSize(obj->boundedTo(*PQSIZE(1)));
-      RQSIZE(ptr);
+      RQSIZE(obj->boundedTo(*PQSIZE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -136,8 +135,7 @@ HB_FUNC_STATIC(QSIZE_EXPANDEDTO)
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      auto ptr = new QSize(obj->expandedTo(*PQSIZE(1)));
-      RQSIZE(ptr);
+      RQSIZE(obj->expandedTo(*PQSIZE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

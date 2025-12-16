@@ -175,8 +175,7 @@ HB_FUNC_STATIC(QSVGRENDERER_DEFAULTSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QSize(obj->defaultSize());
-      RQSIZE(ptr);
+      RQSIZE(obj->defaultSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

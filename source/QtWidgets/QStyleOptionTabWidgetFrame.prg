@@ -189,8 +189,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_TABBARSIZE)
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
-      auto ptr = new QSize(obj->tabBarSize);
-      RQSIZE(ptr);
+      RQSIZE(obj->tabBarSize);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -222,8 +221,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_RIGHTCORNERWIDGETSIZE)
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
-      auto ptr = new QSize(obj->rightCornerWidgetSize);
-      RQSIZE(ptr);
+      RQSIZE(obj->rightCornerWidgetSize);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -255,8 +253,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_LEFTCORNERWIDGETSIZE)
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
-      auto ptr = new QSize(obj->leftCornerWidgetSize);
-      RQSIZE(ptr);
+      RQSIZE(obj->leftCornerWidgetSize);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

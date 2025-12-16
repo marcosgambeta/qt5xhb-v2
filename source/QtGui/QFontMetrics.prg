@@ -460,8 +460,7 @@ HB_FUNC_STATIC(QFONTMETRICS_SIZE)
     {
 #endif
       int par4;
-      auto ptr = new QSize(obj->size(PINT(1), PQSTRING(2), OPINT(3, 0), &par4));
-      RQSIZE(ptr);
+      RQSIZE(obj->size(PINT(1), PQSTRING(2), OPINT(3, 0), &par4));
       hb_storni(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

@@ -769,8 +769,7 @@ HB_FUNC_STATIC(QLAYOUT_MAXIMUMSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QSize(obj->maximumSize());
-      RQSIZE(ptr);
+      RQSIZE(obj->maximumSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -790,8 +789,7 @@ HB_FUNC_STATIC(QLAYOUT_MINIMUMSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QSize(obj->minimumSize());
-      RQSIZE(ptr);
+      RQSIZE(obj->minimumSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -832,8 +830,7 @@ HB_FUNC_STATIC(QLAYOUT_CLOSESTACCEPTABLESIZE)
   if (ISNUMPAR(2) && ISQWIDGET(1) && ISQSIZE(2))
   {
 #endif
-    auto ptr = new QSize(QLayout::closestAcceptableSize(PQWIDGET(1), *PQSIZE(2)));
-    RQSIZE(ptr);
+    RQSIZE(QLayout::closestAcceptableSize(PQWIDGET(1), *PQSIZE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
