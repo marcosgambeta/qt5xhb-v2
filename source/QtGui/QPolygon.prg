@@ -268,8 +268,7 @@ HB_FUNC_STATIC(QPOLYGON_POINT)
     auto obj = static_cast<QPolygon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPoint(obj->point(PINT(1)));
-      RQPOINT(ptr);
+      RQPOINT(obj->point(PINT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

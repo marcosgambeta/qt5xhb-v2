@@ -144,8 +144,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_CENTER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPointF(obj->center());
-      RQPOINTF(ptr);
+      RQPOINTF(obj->center());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -185,8 +184,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_FOCALPOINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPointF(obj->focalPoint());
-      RQPOINTF(ptr);
+      RQPOINTF(obj->focalPoint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

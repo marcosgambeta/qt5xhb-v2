@@ -384,8 +384,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_MAPTOGRAPHICSSCENE)
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      auto ptr = new QPointF(obj->mapToGraphicsScene(*PQPOINTF(1)));
-      RQPOINTF(ptr);
+      RQPOINTF(obj->mapToGraphicsScene(*PQPOINTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

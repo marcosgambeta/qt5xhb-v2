@@ -812,8 +812,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
     auto obj = static_cast<QTransform *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPoint(obj->map(*PQPOINT(1)));
-      RQPOINT(ptr);
+      RQPOINT(obj->map(*PQPOINT(1)));
     }
   }
   else if (ISNUMPAR(1) && ISQPOINTF(1))
@@ -824,8 +823,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
     auto obj = static_cast<QTransform *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPointF(obj->map(*PQPOINTF(1)));
-      RQPOINTF(ptr);
+      RQPOINTF(obj->map(*PQPOINTF(1)));
     }
   }
   else if (ISNUMPAR(1) && ISQLINE(1))

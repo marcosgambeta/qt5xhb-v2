@@ -695,8 +695,7 @@ HB_FUNC_STATIC(QQUICKITEM_MAPFROMITEM)
     if (ISNUMPAR(2) && ISQQUICKITEM(1) && ISQPOINTF(2))
     {
 #endif
-      auto ptr = new QPointF(obj->mapFromItem(PQQUICKITEM(1), *PQPOINTF(2)));
-      RQPOINTF(ptr);
+      RQPOINTF(obj->mapFromItem(PQQUICKITEM(1), *PQPOINTF(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -717,8 +716,7 @@ HB_FUNC_STATIC(QQUICKITEM_MAPFROMSCENE)
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      auto ptr = new QPointF(obj->mapFromScene(*PQPOINTF(1)));
-      RQPOINTF(ptr);
+      RQPOINTF(obj->mapFromScene(*PQPOINTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -827,8 +825,7 @@ HB_FUNC_STATIC(QQUICKITEM_MAPTOITEM)
     if (ISNUMPAR(2) && ISQQUICKITEM(1) && ISQPOINTF(2))
     {
 #endif
-      auto ptr = new QPointF(obj->mapToItem(PQQUICKITEM(1), *PQPOINTF(2)));
-      RQPOINTF(ptr);
+      RQPOINTF(obj->mapToItem(PQQUICKITEM(1), *PQPOINTF(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -849,8 +846,7 @@ HB_FUNC_STATIC(QQUICKITEM_MAPTOSCENE)
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      auto ptr = new QPointF(obj->mapToScene(*PQPOINTF(1)));
-      RQPOINTF(ptr);
+      RQPOINTF(obj->mapToScene(*PQPOINTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

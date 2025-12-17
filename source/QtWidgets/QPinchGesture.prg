@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_CENTERPOINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPointF(obj->centerPoint());
-      RQPOINTF(ptr);
+      RQPOINTF(obj->centerPoint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -139,8 +138,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_LASTCENTERPOINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPointF(obj->lastCenterPoint());
-      RQPOINTF(ptr);
+      RQPOINTF(obj->lastCenterPoint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -493,8 +491,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_STARTCENTERPOINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPointF(obj->startCenterPoint());
-      RQPOINTF(ptr);
+      RQPOINTF(obj->startCenterPoint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

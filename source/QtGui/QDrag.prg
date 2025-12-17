@@ -185,8 +185,7 @@ HB_FUNC_STATIC(QDRAG_HOTSPOT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPoint(obj->hotSpot());
-      RQPOINT(ptr);
+      RQPOINT(obj->hotSpot());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

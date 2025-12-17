@@ -480,8 +480,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPoint(obj->mapFromScene(*PQPOINTF(1)));
-      RQPOINT(ptr);
+      RQPOINT(obj->mapFromScene(*PQPOINTF(1)));
     }
   }
   else if (ISNUMPAR(1) && ISQRECTF(1))
@@ -528,8 +527,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPoint(obj->mapFromScene(PQREAL(1), PQREAL(2)));
-      RQPOINT(ptr);
+      RQPOINT(obj->mapFromScene(PQREAL(1), PQREAL(2)));
     }
   }
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
@@ -558,8 +556,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPointF(obj->mapToScene(*PQPOINT(1)));
-      RQPOINTF(ptr);
+      RQPOINTF(obj->mapToScene(*PQPOINT(1)));
     }
   }
   else if (ISNUMPAR(1) && ISQRECT(1))
@@ -606,8 +603,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     auto obj = qobject_cast<QGraphicsView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPointF(obj->mapToScene(PINT(1), PINT(2)));
-      RQPOINTF(ptr);
+      RQPOINTF(obj->mapToScene(PINT(1), PINT(2)));
     }
   }
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
