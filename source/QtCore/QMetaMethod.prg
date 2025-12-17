@@ -431,8 +431,7 @@ HB_FUNC_STATIC(QMETAMETHOD_METHODSIGNATURE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QByteArray(obj->methodSignature());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->methodSignature());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -452,8 +451,7 @@ HB_FUNC_STATIC(QMETAMETHOD_NAME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QByteArray(obj->name());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

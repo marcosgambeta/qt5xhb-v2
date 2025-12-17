@@ -1066,8 +1066,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LEFT)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QByteArray(obj->left(PINT(1)));
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->left(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1088,8 +1087,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LEFTJUSTIFIED)
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISCHAR(2) || HB_ISNIL(2)) && ISLOGORNIL(3))
     {
 #endif
-      auto ptr = new QByteArray(obj->leftJustified(PINT(1), OPCHAR(2, ' '), OPBOOL(3, false)));
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->leftJustified(PINT(1), OPCHAR(2, ' '), OPBOOL(3, false)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1130,8 +1128,7 @@ HB_FUNC_STATIC(QBYTEARRAY_MID)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
-      auto ptr = new QByteArray(obj->mid(PINT(1), OPINT(2, -1)));
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->mid(PINT(1), OPINT(2, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1318,8 +1315,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPEATED)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QByteArray(obj->repeated(PINT(1)));
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->repeated(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1756,8 +1752,7 @@ HB_FUNC_STATIC(QBYTEARRAY_RIGHT)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QByteArray(obj->right(PINT(1)));
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->right(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1778,8 +1773,7 @@ HB_FUNC_STATIC(QBYTEARRAY_RIGHTJUSTIFIED)
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISCHAR(2) || HB_ISNIL(2)) && ISLOGORNIL(3))
     {
 #endif
-      auto ptr = new QByteArray(obj->rightJustified(PINT(1), OPCHAR(2, ' '), OPBOOL(3, false)));
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->rightJustified(PINT(1), OPCHAR(2, ' '), OPBOOL(3, false)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2007,8 +2001,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SIMPLIFIED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QByteArray(obj->simplified());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->simplified());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2156,8 +2149,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOBASE64)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QByteArray(obj->toBase64());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->toBase64());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2223,8 +2215,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOHEX)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QByteArray(obj->toHex());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->toHex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2313,8 +2304,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOLOWER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QByteArray(obj->toLower());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->toLower());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2337,10 +2327,9 @@ HB_FUNC_STATIC(QBYTEARRAY_TOPERCENTENCODING)
         (HB_ISNUM(3) || HB_ISCHAR(3) || HB_ISNIL(3)))
     {
 #endif
-      auto ptr = new QByteArray(obj->toPercentEncoding(
+      RQBYTEARRAY(obj->toPercentEncoding(
           HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(1)),
           HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(2)), OPCHAR(3, '%')));
-      RQBYTEARRAY(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2475,8 +2464,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOUPPER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QByteArray(obj->toUpper());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->toUpper());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2496,8 +2484,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TRIMMED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QByteArray(obj->trimmed());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->trimmed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2537,8 +2524,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMBASE64)
     static QByteArray fromBase64(const QByteArray &base64)
     */
 
-    auto ptr = new QByteArray(QByteArray::fromBase64(*PQBYTEARRAY(1)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QByteArray::fromBase64(*PQBYTEARRAY(1)));
   }
   else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2))
   {
@@ -2547,9 +2533,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMBASE64)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 
-    auto ptr =
-        new QByteArray(QByteArray::fromBase64(*PQBYTEARRAY(1), static_cast<QByteArray::Base64Options>(hb_parni(2))));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QByteArray::fromBase64(*PQBYTEARRAY(1), static_cast<QByteArray::Base64Options>(hb_parni(2))));
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2565,8 +2549,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMHEX)
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
 #endif
-    auto ptr = new QByteArray(QByteArray::fromHex(*PQBYTEARRAY(1)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QByteArray::fromHex(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2583,8 +2566,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMPERCENTENCODING)
   if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISCHAR(2) || HB_ISNIL(2)))
   {
 #endif
-    auto ptr = new QByteArray(QByteArray::fromPercentEncoding(*PQBYTEARRAY(1), OPCHAR(2, '%')));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QByteArray::fromPercentEncoding(*PQBYTEARRAY(1), OPCHAR(2, '%')));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2601,8 +2583,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMRAWDATA)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
 #endif
-    auto ptr = new QByteArray(QByteArray::fromRawData(PCONSTCHAR(1), PINT(2)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QByteArray::fromRawData(PCONSTCHAR(1), PINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2619,8 +2600,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER1)
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
   {
 #endif
-    auto ptr = new QByteArray(QByteArray::number(PINT(1), OPINT(2, 10)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QByteArray::number(PINT(1), OPINT(2, 10)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2637,8 +2617,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER2)
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
   {
 #endif
-    auto ptr = new QByteArray(QByteArray::number(PUINT(1), OPINT(2, 10)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QByteArray::number(PUINT(1), OPINT(2, 10)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2655,8 +2634,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER3)
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
   {
 #endif
-    auto ptr = new QByteArray(QByteArray::number(PQLONGLONG(1), OPINT(2, 10)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QByteArray::number(PQLONGLONG(1), OPINT(2, 10)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2673,8 +2651,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER4)
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
   {
 #endif
-    auto ptr = new QByteArray(QByteArray::number(PQULONGLONG(1), OPINT(2, 10)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QByteArray::number(PQULONGLONG(1), OPINT(2, 10)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2691,8 +2668,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER5)
   if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
   {
 #endif
-    auto ptr = new QByteArray(QByteArray::number(PDOUBLE(1), OPCHAR(2, 'g'), OPINT(3, 6)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QByteArray::number(PDOUBLE(1), OPCHAR(2, 'g'), OPINT(3, 6)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2766,8 +2742,7 @@ HB_FUNC_STATIC(QBYTEARRAY_CHOPPED)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QByteArray(obj->chopped(PINT(1)));
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->chopped(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

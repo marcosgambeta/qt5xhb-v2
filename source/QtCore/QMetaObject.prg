@@ -659,8 +659,7 @@ HB_FUNC_STATIC(QMETAOBJECT_NORMALIZEDSIGNATURE)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    auto ptr = new QByteArray(QMetaObject::normalizedSignature(PCONSTCHAR(1)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QMetaObject::normalizedSignature(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -677,8 +676,7 @@ HB_FUNC_STATIC(QMETAOBJECT_NORMALIZEDTYPE)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    auto ptr = new QByteArray(QMetaObject::normalizedType(PCONSTCHAR(1)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QMetaObject::normalizedType(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

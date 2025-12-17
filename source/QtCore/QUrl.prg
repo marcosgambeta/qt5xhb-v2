@@ -778,9 +778,8 @@ HB_FUNC_STATIC(QURL_TOENCODED)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
-      auto ptr = new QByteArray(obj->toEncoded(HB_ISNIL(1) ? static_cast<QUrl::FormattingOptions>(QUrl::None)
+      RQBYTEARRAY(obj->toEncoded(HB_ISNIL(1) ? static_cast<QUrl::FormattingOptions>(QUrl::None)
                                                            : static_cast<QUrl::FormattingOptions>(hb_parni(1))));
-      RQBYTEARRAY(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1013,8 +1012,7 @@ HB_FUNC_STATIC(QURL_TOACE)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    auto ptr = new QByteArray(QUrl::toAce(PQSTRING(1)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QUrl::toAce(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1032,10 +1030,9 @@ HB_FUNC_STATIC(QURL_TOPERCENTENCODING)
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) && (ISQBYTEARRAY(3) || HB_ISNIL(3)))
   {
 #endif
-    auto ptr = new QByteArray(QUrl::toPercentEncoding(
+    RQBYTEARRAY(QUrl::toPercentEncoding(
         PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(2)),
         HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(3))));
-    RQBYTEARRAY(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

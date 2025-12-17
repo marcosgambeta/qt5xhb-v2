@@ -218,8 +218,7 @@ HB_FUNC_STATIC(QTIMEZONE_ID)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QByteArray(obj->id());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->id());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -481,8 +480,7 @@ HB_FUNC_STATIC(QTIMEZONE_SYSTEMTIMEZONEID)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QByteArray(QTimeZone::systemTimeZoneId());
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QTimeZone::systemTimeZoneId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -665,8 +663,7 @@ HB_FUNC_STATIC(QTIMEZONE_IANAIDTOWINDOWSID)
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
 #endif
-    auto ptr = new QByteArray(QTimeZone::ianaIdToWindowsId(*PQBYTEARRAY(1)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QTimeZone::ianaIdToWindowsId(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -684,8 +681,7 @@ HB_FUNC_STATIC(QTIMEZONE_WINDOWSIDTODEFAULTIANAID)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 
-    auto ptr = new QByteArray(QTimeZone::windowsIdToDefaultIanaId(*PQBYTEARRAY(1)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QTimeZone::windowsIdToDefaultIanaId(*PQBYTEARRAY(1)));
 #endif
   }
   else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2))
@@ -695,9 +691,7 @@ HB_FUNC_STATIC(QTIMEZONE_WINDOWSIDTODEFAULTIANAID)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 
-    auto ptr = new QByteArray(
-        QTimeZone::windowsIdToDefaultIanaId(*PQBYTEARRAY(1), static_cast<QLocale::Country>(hb_parni(2))));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QTimeZone::windowsIdToDefaultIanaId(*PQBYTEARRAY(1), static_cast<QLocale::Country>(hb_parni(2))));
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

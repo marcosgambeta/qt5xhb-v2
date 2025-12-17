@@ -562,8 +562,7 @@ HB_FUNC_STATIC(QPICTUREIO_PICTUREFORMAT)
     static QByteArray pictureFormat(const QString &fileName)
     */
 
-    auto ptr = new QByteArray(QPictureIO::pictureFormat(PQSTRING(1)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QPictureIO::pictureFormat(PQSTRING(1)));
   }
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
@@ -571,8 +570,7 @@ HB_FUNC_STATIC(QPICTUREIO_PICTUREFORMAT)
     static QByteArray pictureFormat(QIODevice *)
     */
 
-    auto ptr = new QByteArray(QPictureIO::pictureFormat(PQIODEVICE(1)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QPictureIO::pictureFormat(PQIODEVICE(1)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

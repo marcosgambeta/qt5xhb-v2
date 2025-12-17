@@ -434,8 +434,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_RAWHEADER)
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      auto ptr = new QByteArray(obj->rawHeader(*PQBYTEARRAY(1)));
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->rawHeader(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

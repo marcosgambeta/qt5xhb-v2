@@ -105,8 +105,7 @@ HB_FUNC_STATIC(QTEXTENCODER_FROMUNICODE)
     auto obj = static_cast<QTextEncoder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QByteArray(obj->fromUnicode(PQSTRING(1)));
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->fromUnicode(PQSTRING(1)));
     }
   }
   else if (ISNUMPAR(2) && ISQCHAR(1) && HB_ISNUM(2))
@@ -117,8 +116,7 @@ HB_FUNC_STATIC(QTEXTENCODER_FROMUNICODE)
     auto obj = static_cast<QTextEncoder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QByteArray(obj->fromUnicode(PQCHAR(1), PINT(2)));
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->fromUnicode(PQCHAR(1), PINT(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

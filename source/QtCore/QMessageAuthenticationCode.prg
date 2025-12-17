@@ -191,8 +191,7 @@ HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_RESULT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QByteArray(obj->result());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->result());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -210,9 +209,8 @@ HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_HASH)
   if (ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) && HB_ISNUM(3))
   {
 #endif
-    auto ptr = new QByteArray(QMessageAuthenticationCode::hash(
+    RQBYTEARRAY(QMessageAuthenticationCode::hash(
         *PQBYTEARRAY(1), *PQBYTEARRAY(2), static_cast<QCryptographicHash::Algorithm>(hb_parni(3))));
-    RQBYTEARRAY(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
