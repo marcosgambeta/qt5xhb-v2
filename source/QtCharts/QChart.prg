@@ -1205,8 +1205,7 @@ HB_FUNC_STATIC(QCHART_TITLEBRUSH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QBrush(obj->titleBrush());
-      RQBRUSH(ptr);
+      RQBRUSH(obj->titleBrush());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1253,8 +1252,7 @@ HB_FUNC_STATIC(QCHART_BACKGROUNDBRUSH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QBrush(obj->backgroundBrush());
-      RQBRUSH(ptr);
+      RQBRUSH(obj->backgroundBrush());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1524,8 +1522,7 @@ HB_FUNC_STATIC(QCHART_PLOTAREABACKGROUNDBRUSH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QBrush(obj->plotAreaBackgroundBrush());
-      RQBRUSH(ptr);
+      RQBRUSH(obj->plotAreaBackgroundBrush());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -166,8 +166,7 @@ HB_FUNC_STATIC(QLEGENDMARKER_LABELBRUSH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QBrush(obj->labelBrush());
-      RQBRUSH(ptr);
+      RQBRUSH(obj->labelBrush());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -309,8 +308,7 @@ HB_FUNC_STATIC(QLEGENDMARKER_BRUSH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QBrush(obj->brush());
-      RQBRUSH(ptr);
+      RQBRUSH(obj->brush());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
