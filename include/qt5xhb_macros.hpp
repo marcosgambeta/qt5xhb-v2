@@ -191,6 +191,7 @@
 #define RQINTPTR(x)                                         hb_retnll(x)
 #define RQUINTPTR(x)                                        hb_retnll(x)
 
+#if 0
 #define RQVARIANT(exp)                                      Qt5xHb::createReturnClass(new QVariant(exp), "QVARIANT", true)
 #define RQMODELINDEX(exp)                                   Qt5xHb::createReturnClass(new QModelIndex(exp), "QMODELINDEX", true)
 #define RQICON(exp)                                         Qt5xHb::createReturnClass(new QIcon(exp), "QICON", true)
@@ -203,6 +204,7 @@
 #define RQRECTF(exp)                                        Qt5xHb::createReturnClass(new QRectF(exp), "QRECTF", true)
 #define RQPEN(exp)                                          Qt5xHb::createReturnClass(new QPen(exp), "QPEN", true)
 #define RQBRUSH(exp)                                        Qt5xHb::createReturnClass(new QBrush(exp), "QBRUSH", true)
+#endif
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
