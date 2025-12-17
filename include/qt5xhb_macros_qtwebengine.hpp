@@ -13,12 +13,23 @@
 #define ISQQUICKWEBENGINESCRIPT(n)                          Qt5xHb::isObjectDerivedFrom(n, "QQuickWebEngineScript")
 #define ISQTWEBENGINE(n)                                    Qt5xHb::isObjectDerivedFrom(n, "QtWebEngine")
 
-#define PQQUICKWEBENGINEPROFILE(n)                          static_cast<QQuickWebEngineProfile*>(Qt5xHb::itemGetPtr(n))
-#define PQQUICKWEBENGINESCRIPT(n)                           static_cast<QQuickWebEngineScript*>(Qt5xHb::itemGetPtr(n))
-#define PQTWEBENGINE(n)                                     static_cast<QtWebEngine*>(Qt5xHb::itemGetPtr(n))
+#define ISQQUICKWEBENGINEPROFILEORNIL(n)                    (ISQQUICKWEBENGINEPROFILE(n) || HB_ISNIL(n))
+#define ISQQUICKWEBENGINESCRIPTORNIL(n)                     (ISQQUICKWEBENGINESCRIPT(n) || HB_ISNIL(n))
+#define ISQTWEBENGINEORNIL(n)                               (ISQTWEBENGINE(n) || HB_ISNIL(n))
 
-#define OPQQUICKWEBENGINEPROFILE(n, v)                      HB_ISNIL(n) ? v : static_cast<QQuickWebEngineProfile*>(Qt5xHb::itemGetPtr(n))
-#define OPQQUICKWEBENGINESCRIPT(n, v)                       HB_ISNIL(n) ? v : static_cast<QQuickWebEngineScript*>(Qt5xHb::itemGetPtr(n))
-#define OPQTWEBENGINE(n, v)                                 HB_ISNIL(n) ? v : static_cast<QtWebEngine*>(Qt5xHb::itemGetPtr(n))
+#define PQQUICKWEBENGINEPROFILE(n)                          static_cast<QQuickWebEngineProfile *>(Qt5xHb::itemGetPtr(n))
+#define PQQUICKWEBENGINESCRIPT(n)                           static_cast<QQuickWebEngineScript *>(Qt5xHb::itemGetPtr(n))
+#define PQTWEBENGINE(n)                                     static_cast<QtWebEngine *>(Qt5xHb::itemGetPtr(n))
+
+#define OPQQUICKWEBENGINEPROFILE(n, v)                      HB_ISNIL(n) ? v : static_cast<QQuickWebEngineProfile *>(Qt5xHb::itemGetPtr(n))
+#define OPQQUICKWEBENGINESCRIPT(n, v)                       HB_ISNIL(n) ? v : static_cast<QQuickWebEngineScript *>(Qt5xHb::itemGetPtr(n))
+#define OPQTWEBENGINE(n, v)                                 HB_ISNIL(n) ? v : static_cast<QtWebEngine *>(Qt5xHb::itemGetPtr(n))
+
+#define PQQUICKWEBENGINEPROFILE_HTTPCACHETYPE(n)            static_cast<QQuickWebEngineProfile::HttpCacheType>(hb_parni(n))
+#define PQQUICKWEBENGINEPROFILE_PERSISTENTCOOKIESPOLICY(n)  static_cast<QQuickWebEngineProfile::PersistentCookiesPolicy>(hb_parni(n))
+#define PQQUICKWEBENGINESCRIPT_INJECTIONPOINT(n)            static_cast<QQuickWebEngineScript::InjectionPoint>(hb_parni(n))
+#define PQQUICKWEBENGINESCRIPT_SCRIPTWORLDID(n)             static_cast<QQuickWebEngineScript::ScriptWorldId>(hb_parni(n))
+
+#define RQTWEBENGINE(exp)                                   Qt5xHb::createReturnClass(new QtWebEngine(exp), "QTWEBENGINE", true)
 
 #endif // QT5XHB_MACROS_QTWEBENGINE_HPP

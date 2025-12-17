@@ -12,10 +12,24 @@
 #define ISQSERIALPORT(n)                                    Qt5xHb::isObjectDerivedFrom(n, "QSerialPort")
 #define ISQSERIALPORTINFO(n)                                Qt5xHb::isObjectDerivedFrom(n, "QSerialPortInfo")
 
-#define PQSERIALPORT(n)                                     static_cast<QSerialPort*>(Qt5xHb::itemGetPtr(n))
-#define PQSERIALPORTINFO(n)                                 static_cast<QSerialPortInfo*>(Qt5xHb::itemGetPtr(n))
+#define ISQSERIALPORTORNIL(n)                               (ISQSERIALPORT(n) || HB_ISNIL(n))
+#define ISQSERIALPORTINFOORNIL(n)                           (ISQSERIALPORTINFO(n) || HB_ISNIL(n))
 
-#define OPQSERIALPORT(n, v)                                 HB_ISNIL(n) ? v : static_cast<QSerialPort*>(Qt5xHb::itemGetPtr(n))
-#define OPQSERIALPORTINFO(n, v)                             HB_ISNIL(n) ? v : static_cast<QSerialPortInfo*>(Qt5xHb::itemGetPtr(n))
+#define PQSERIALPORT(n)                                     static_cast<QSerialPort *>(Qt5xHb::itemGetPtr(n))
+#define PQSERIALPORTINFO(n)                                 static_cast<QSerialPortInfo *>(Qt5xHb::itemGetPtr(n))
+
+#define OPQSERIALPORT(n, v)                                 HB_ISNIL(n) ? v : static_cast<QSerialPort *>(Qt5xHb::itemGetPtr(n))
+#define OPQSERIALPORTINFO(n, v)                             HB_ISNIL(n) ? v : static_cast<QSerialPortInfo *>(Qt5xHb::itemGetPtr(n))
+
+#define PQSERIALPORT_DATABITS(n)                            static_cast<QSerialPort::DataBits>(hb_parni(n))
+#define PQSERIALPORT_DATAERRORPOLICY(n)                     static_cast<QSerialPort::DataErrorPolicy>(hb_parni(n))
+#define PQSERIALPORT_DIRECTIONS(n)                          static_cast<QSerialPort::Directions>(hb_parni(n))
+#define PQSERIALPORT_FLOWCONTROL(n)                         static_cast<QSerialPort::FlowControl>(hb_parni(n))
+#define PQSERIALPORT_PARITY(n)                              static_cast<QSerialPort::Parity>(hb_parni(n))
+#define PQSERIALPORT_PINOUTSIGNALS(n)                       static_cast<QSerialPort::PinoutSignals>(hb_parni(n))
+#define PQSERIALPORT_SERIALPORTERROR(n)                     static_cast<QSerialPort::SerialPortError>(hb_parni(n))
+#define PQSERIALPORT_STOPBITS(n)                            static_cast<QSerialPort::StopBits>(hb_parni(n))
+
+#define RQSERIALPORTINFO(exp)                               Qt5xHb::createReturnClass(new QSerialPortInfo(exp), "QSERIALPORTINFO", true)
 
 #endif // QT5XHB_MACROS_QTSERIALPORT_HPP
