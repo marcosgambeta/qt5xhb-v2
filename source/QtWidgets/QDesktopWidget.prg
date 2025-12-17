@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
     auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->availableGeometry(OPINT(1, -1)));
-      RQRECT(ptr);
+      RQRECT(obj->availableGeometry(OPINT(1, -1)));
     }
   }
   else if (ISNUMPAR(1) && ISQWIDGET(1))
@@ -99,8 +98,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
     auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->availableGeometry(PQWIDGET(1)));
-      RQRECT(ptr);
+      RQRECT(obj->availableGeometry(PQWIDGET(1)));
     }
   }
   else if (ISNUMPAR(1) && ISQPOINT(1))
@@ -111,8 +109,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
     auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->availableGeometry(*PQPOINT(1)));
-      RQRECT(ptr);
+      RQRECT(obj->availableGeometry(*PQPOINT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -211,8 +208,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
     auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->screenGeometry(OPINT(1, -1)));
-      RQRECT(ptr);
+      RQRECT(obj->screenGeometry(OPINT(1, -1)));
     }
   }
   else if (ISNUMPAR(1) && ISQWIDGET(1))
@@ -223,8 +219,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
     auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->screenGeometry(PQWIDGET(1)));
-      RQRECT(ptr);
+      RQRECT(obj->screenGeometry(PQWIDGET(1)));
     }
   }
   else if (ISNUMPAR(1) && ISQPOINT(1))
@@ -235,8 +230,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
     auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->screenGeometry(*PQPOINT(1)));
-      RQRECT(ptr);
+      RQRECT(obj->screenGeometry(*PQPOINT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

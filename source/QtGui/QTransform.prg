@@ -968,8 +968,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAPRECT)
     auto obj = static_cast<QTransform *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->mapRect(*PQRECT(1)));
-      RQRECT(ptr);
+      RQRECT(obj->mapRect(*PQRECT(1)));
     }
   }
   else if (ISNUMPAR(1) && ISQRECTF(1))
@@ -980,8 +979,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAPRECT)
     auto obj = static_cast<QTransform *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRectF(obj->mapRect(*PQRECTF(1)));
-      RQRECTF(ptr);
+      RQRECTF(obj->mapRect(*PQRECTF(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

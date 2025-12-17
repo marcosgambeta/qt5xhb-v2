@@ -645,8 +645,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_FULLRECT)
     auto obj = static_cast<QPageLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRectF(obj->fullRect());
-      RQRECTF(ptr);
+      RQRECTF(obj->fullRect());
     }
 #endif
   }
@@ -659,8 +658,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_FULLRECT)
     auto obj = static_cast<QPageLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRectF(obj->fullRect(static_cast<QPageLayout::Unit>(hb_parni(1))));
-      RQRECTF(ptr);
+      RQRECTF(obj->fullRect(static_cast<QPageLayout::Unit>(hb_parni(1))));
     }
 #endif
   } else {
@@ -680,8 +678,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_FULLRECTPOINTS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRect(obj->fullRectPoints());
-      RQRECT(ptr);
+      RQRECT(obj->fullRectPoints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -704,8 +701,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_FULLRECTPIXELS)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QRect(obj->fullRectPixels(PINT(1)));
-      RQRECT(ptr);
+      RQRECT(obj->fullRectPixels(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -725,8 +721,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAINTRECT)
     auto obj = static_cast<QPageLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRectF(obj->paintRect());
-      RQRECTF(ptr);
+      RQRECTF(obj->paintRect());
     }
 #endif
   }
@@ -739,8 +734,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAINTRECT)
     auto obj = static_cast<QPageLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRectF(obj->paintRect(static_cast<QPageLayout::Unit>(hb_parni(1))));
-      RQRECTF(ptr);
+      RQRECTF(obj->paintRect(static_cast<QPageLayout::Unit>(hb_parni(1))));
     }
 #endif
   } else {
@@ -760,8 +754,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAINTRECTPOINTS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRect(obj->paintRectPoints());
-      RQRECT(ptr);
+      RQRECT(obj->paintRectPoints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -784,8 +777,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAINTRECTPIXELS)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QRect(obj->paintRectPixels(PINT(1)));
-      RQRECT(ptr);
+      RQRECT(obj->paintRectPixels(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

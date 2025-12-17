@@ -199,8 +199,8 @@
 #define RQBYTEARRAY(exp)                                    Qt5xHb::createReturnClass(new QByteArray(exp), "QBYTEARRAY", true)
 #define RQPOINT(exp)                                        Qt5xHb::createReturnClass(new QPoint(exp), "QPOINT", true)
 #define RQPOINTF(exp)                                       Qt5xHb::createReturnClass(new QPointF(exp), "QPOINTF", true)
-#define RQRECT(p)                                           Qt5xHb::createReturnClass(p, "QRECT", true)
-#define RQRECTF(p)                                          Qt5xHb::createReturnClass(p, "QRECTF", true)
+#define RQRECT(exp)                                         Qt5xHb::createReturnClass(new QRect(exp), "QRECT", true)
+#define RQRECTF(exp)                                        Qt5xHb::createReturnClass(new QRectF(exp), "QRECTF", true)
 #define RQPEN(p)                                            Qt5xHb::createReturnClass(p, "QPEN", true)
 #define RQBRUSH(p)                                          Qt5xHb::createReturnClass(p, "QBRUSH", true)
 

@@ -812,8 +812,7 @@ HB_FUNC_STATIC(QTREEWIDGET_VISUALITEMRECT)
     if (ISNUMPAR(1) && ISQTREEWIDGETITEM(1))
     {
 #endif
-      auto ptr = new QRect(obj->visualItemRect(PQTREEWIDGETITEM(1)));
-      RQRECT(ptr);
+      RQRECT(obj->visualItemRect(PQTREEWIDGETITEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

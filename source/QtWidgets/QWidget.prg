@@ -994,8 +994,7 @@ HB_FUNC_STATIC(QWIDGET_CHILDRENRECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRect(obj->childrenRect());
-      RQRECT(ptr);
+      RQRECT(obj->childrenRect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1091,8 +1090,7 @@ HB_FUNC_STATIC(QWIDGET_CONTENTSRECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRect(obj->contentsRect());
-      RQRECT(ptr);
+      RQRECT(obj->contentsRect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1447,8 +1445,7 @@ HB_FUNC_STATIC(QWIDGET_FRAMEGEOMETRY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRect(obj->frameGeometry());
-      RQRECT(ptr);
+      RQRECT(obj->frameGeometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2717,8 +2714,7 @@ HB_FUNC_STATIC(QWIDGET_NORMALGEOMETRY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRect(obj->normalGeometry());
-      RQRECT(ptr);
+      RQRECT(obj->normalGeometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2835,8 +2831,7 @@ HB_FUNC_STATIC(QWIDGET_RECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRect(obj->rect());
-      RQRECT(ptr);
+      RQRECT(obj->rect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

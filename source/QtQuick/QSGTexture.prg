@@ -118,8 +118,7 @@ HB_FUNC_STATIC(QSGTEXTURE_CONVERTTONORMALIZEDSOURCERECT)
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      auto ptr = new QRectF(obj->convertToNormalizedSourceRect(*PQRECTF(1)));
-      RQRECTF(ptr);
+      RQRECTF(obj->convertToNormalizedSourceRect(*PQRECTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -259,8 +258,7 @@ HB_FUNC_STATIC(QSGTEXTURE_NORMALIZEDTEXTURESUBRECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRectF(obj->normalizedTextureSubRect());
-      RQRECTF(ptr);
+      RQRECTF(obj->normalizedTextureSubRect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

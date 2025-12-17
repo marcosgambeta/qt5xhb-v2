@@ -181,8 +181,7 @@ HB_FUNC_STATIC(QSCREEN_GEOMETRY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRect(obj->geometry());
-      RQRECT(ptr);
+      RQRECT(obj->geometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -383,8 +382,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLEGEOMETRY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRect(obj->availableGeometry());
-      RQRECT(ptr);
+      RQRECT(obj->availableGeometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -467,8 +465,7 @@ HB_FUNC_STATIC(QSCREEN_VIRTUALGEOMETRY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRect(obj->virtualGeometry());
-      RQRECT(ptr);
+      RQRECT(obj->virtualGeometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -508,8 +505,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLEVIRTUALGEOMETRY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRect(obj->availableVirtualGeometry());
-      RQRECT(ptr);
+      RQRECT(obj->availableVirtualGeometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -658,9 +654,8 @@ HB_FUNC_STATIC(QSCREEN_MAPBETWEEN)
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECT(3))
     {
 #endif
-      auto ptr = new QRect(obj->mapBetween(static_cast<Qt::ScreenOrientation>(hb_parni(1)),
+      RQRECT(obj->mapBetween(static_cast<Qt::ScreenOrientation>(hb_parni(1)),
                                            static_cast<Qt::ScreenOrientation>(hb_parni(2)), *PQRECT(3)));
-      RQRECT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

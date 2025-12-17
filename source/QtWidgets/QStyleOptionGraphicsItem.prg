@@ -101,8 +101,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT)
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
-      auto ptr = new QRectF(obj->exposedRect);
-      RQRECTF(ptr);
+      RQRECTF(obj->exposedRect);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

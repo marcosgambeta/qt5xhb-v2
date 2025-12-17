@@ -338,8 +338,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CURSORRECT)
     auto obj = qobject_cast<QPlainTextEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->cursorRect(*PQTEXTCURSOR(1)));
-      RQRECT(ptr);
+      RQRECT(obj->cursorRect(*PQTEXTCURSOR(1)));
     }
   }
   else if (ISNUMPAR(0))
@@ -350,8 +349,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CURSORRECT)
     auto obj = qobject_cast<QPlainTextEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->cursorRect());
-      RQRECT(ptr);
+      RQRECT(obj->cursorRect());
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

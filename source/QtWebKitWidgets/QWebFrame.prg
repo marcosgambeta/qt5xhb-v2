@@ -576,8 +576,7 @@ HB_FUNC_STATIC(QWEBFRAME_GEOMETRY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRect(obj->geometry());
-      RQRECT(ptr);
+      RQRECT(obj->geometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -774,8 +773,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLBARGEOMETRY)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      auto ptr = new QRect(obj->scrollBarGeometry(static_cast<Qt::Orientation>(hb_parni(1))));
-      RQRECT(ptr);
+      RQRECT(obj->scrollBarGeometry(static_cast<Qt::Orientation>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

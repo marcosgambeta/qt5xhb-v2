@@ -875,8 +875,7 @@ HB_FUNC_STATIC(QPRINTER_PAGERECT)
     auto obj = static_cast<QPrinter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->pageRect());
-      RQRECT(ptr);
+      RQRECT(obj->pageRect());
     }
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
@@ -887,8 +886,7 @@ HB_FUNC_STATIC(QPRINTER_PAGERECT)
     auto obj = static_cast<QPrinter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRectF(obj->pageRect(static_cast<QPrinter::Unit>(hb_parni(1))));
-      RQRECTF(ptr);
+      RQRECTF(obj->pageRect(static_cast<QPrinter::Unit>(hb_parni(1))));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -904,8 +902,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERRECT)
     auto obj = static_cast<QPrinter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->paperRect());
-      RQRECT(ptr);
+      RQRECT(obj->paperRect());
     }
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
@@ -916,8 +913,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERRECT)
     auto obj = static_cast<QPrinter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRectF(obj->paperRect(static_cast<QPrinter::Unit>(hb_parni(1))));
-      RQRECTF(ptr);
+      RQRECTF(obj->paperRect(static_cast<QPrinter::Unit>(hb_parni(1))));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
