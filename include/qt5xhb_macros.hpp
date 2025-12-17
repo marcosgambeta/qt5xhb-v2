@@ -201,7 +201,7 @@
 #define RQPOINTF(exp)                                       Qt5xHb::createReturnClass(new QPointF(exp), "QPOINTF", true)
 #define RQRECT(exp)                                         Qt5xHb::createReturnClass(new QRect(exp), "QRECT", true)
 #define RQRECTF(exp)                                        Qt5xHb::createReturnClass(new QRectF(exp), "QRECTF", true)
-#define RQPEN(p)                                            Qt5xHb::createReturnClass(p, "QPEN", true)
+#define RQPEN(exp)                                          Qt5xHb::createReturnClass(new QPen(exp), "QPEN", true)
 #define RQBRUSH(p)                                          Qt5xHb::createReturnClass(p, "QBRUSH", true)
 
 // conversion from QString to string
