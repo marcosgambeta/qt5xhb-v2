@@ -1418,7 +1418,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_INITIALIZEGLFUNCTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQGLCONTEXT(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQGLCONTEXTORNIL(1))
     {
 #endif
       obj->initializeGLFunctions(HB_ISNIL(1) ? nullptr : static_cast<QGLContext *>(Qt5xHb::itemGetPtr(1)));
