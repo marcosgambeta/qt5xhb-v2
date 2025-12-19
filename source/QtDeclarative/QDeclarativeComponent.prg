@@ -73,7 +73,7 @@ RETURN
 
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && ISQOBJECTORNIL(2))
   {
     /*
     QDeclarativeComponent(QDeclarativeEngine * engine, QObject * parent = nullptr)
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_NEW)
     auto obj = new QDeclarativeComponent(PQDECLARATIVEENGINE(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && HB_ISCHAR(2) && ISQOBJECTORNIL(3))
   {
     /*
     QDeclarativeComponent(QDeclarativeEngine * engine, const QString &fileName, QObject * parent = nullptr)
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_NEW)
     auto obj = new QDeclarativeComponent(PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && ISQOBJECTORNIL(3))
   {
     /*
     QDeclarativeComponent(QDeclarativeEngine * engine, const QUrl &url, QObject * parent = nullptr)
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQDECLARATIVECONTEXT(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQDECLARATIVECONTEXTORNIL(1))
     {
 #endif
       auto ptr = obj->create(OPQDECLARATIVECONTEXT(1, nullptr));

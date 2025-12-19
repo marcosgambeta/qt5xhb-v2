@@ -74,7 +74,7 @@ RETURN
     */
 HB_FUNC_STATIC(QDECLARATIVEITEM_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQDECLARATIVEITEM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQDECLARATIVEITEMORNIL(1))
   {
     auto obj = new QDeclarativeItem(OPQDECLARATIVEITEM(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
