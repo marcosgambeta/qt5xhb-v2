@@ -71,7 +71,7 @@ RETURN
 
 HB_FUNC_STATIC(QQMLCOMPONENT_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQQMLENGINE(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQQMLENGINE(1) && ISQOBJECTORNIL(2))
   {
     /*
     QQmlComponent(QQmlEngine * engine, QObject * parent = nullptr)
@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_NEW)
     auto obj = new QQmlComponent(PQQMLENGINE(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 3) && ISQQMLENGINE(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQQMLENGINE(1) && HB_ISCHAR(2) && ISQOBJECTORNIL(3))
   {
     /*
     QQmlComponent(QQmlEngine * engine, const QString &fileName, QObject * parent = nullptr)
@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_NEW)
     auto obj = new QQmlComponent(PQQMLENGINE(1), PQSTRING(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(3, 4) && ISQQMLENGINE(1) && HB_ISCHAR(2) && HB_ISNUM(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && ISQQMLENGINE(1) && HB_ISCHAR(2) && HB_ISNUM(3) && ISQOBJECTORNIL(4))
   {
     /*
     QQmlComponent(QQmlEngine * engine, const QString &fileName, QQmlComponent::CompilationMode mode, QObject * parent =
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_NEW)
                                  OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 3) && ISQQMLENGINE(1) && ISQURL(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQQMLENGINE(1) && ISQURL(2) && ISQOBJECTORNIL(3))
   {
     /*
     QQmlComponent(QQmlEngine * engine, const QUrl &url, QObject * parent = nullptr)
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_NEW)
     auto obj = new QQmlComponent(PQQMLENGINE(1), *PQURL(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(3, 4) && ISQQMLENGINE(1) && ISQURL(2) && HB_ISNUM(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && ISQQMLENGINE(1) && ISQURL(2) && HB_ISNUM(3) && ISQOBJECTORNIL(4))
   {
     /*
     QQmlComponent(QQmlEngine * engine, const QUrl &url, QQmlComponent::CompilationMode mode, QObject * parent =
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_COMPLETECREATE)
 
 HB_FUNC_STATIC(QQMLCOMPONENT_CREATE)
 {
-  if (ISBETWEEN(0, 1) && (ISQQMLCONTEXT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQQMLCONTEXTORNIL(1))
   {
     /*
     virtual QObject * create(QQmlContext * context = nullptr)
@@ -194,8 +194,8 @@ HB_FUNC_STATIC(QQMLCOMPONENT_CREATE)
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
   }
-  else if (ISBETWEEN(1, 3) && ISQQMLINCUBATOR(1) && (ISQQMLCONTEXT(2) || HB_ISNIL(2)) &&
-           (ISQQMLCONTEXT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(1, 3) && ISQQMLINCUBATOR(1) && ISQQMLCONTEXTORNIL(2) &&
+           ISQQMLCONTEXTORNIL(3))
   {
     /*
     void create(QQmlIncubator &incubator, QQmlContext * context = nullptr, QQmlContext * forContext = nullptr)

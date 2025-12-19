@@ -67,7 +67,7 @@ RETURN
 
 HB_FUNC_STATIC(QQMLCONTEXT_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQQMLENGINE(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQQMLENGINE(1) && ISQOBJECTORNIL(2))
   {
     /*
     QQmlContext(QQmlEngine * engine, QObject * parent = nullptr)
@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_NEW)
     auto obj = new QQmlContext(PQQMLENGINE(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQQMLCONTEXT(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQQMLCONTEXT(1) && ISQOBJECTORNIL(2))
   {
     /*
     QQmlContext(QQmlContext * parentContext, QObject * parent = nullptr)

@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_NEW)
     auto obj = new QQmlExpression();
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(3, 4) && ISQQMLCONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && ISQQMLCONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && ISQOBJECTORNIL(4))
   {
     /*
     QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString &expression, QObject * parent = nullptr)
@@ -90,8 +90,8 @@ HB_FUNC_STATIC(QQMLEXPRESSION_NEW)
     auto obj = new QQmlExpression(PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 4) && ISQQMLSCRIPTSTRING(1) && (ISQQMLCONTEXT(2) || HB_ISNIL(2)) &&
-           (ISQOBJECT(3) || HB_ISNIL(3)) && (ISQOBJECT(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(1, 4) && ISQQMLSCRIPTSTRING(1) && ISQQMLCONTEXTORNIL(2) &&
+           ISQOBJECTORNIL(3) && ISQOBJECTORNIL(4))
   {
     /*
     QQmlExpression(const QQmlScriptString &script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject *
