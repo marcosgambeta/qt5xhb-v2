@@ -73,7 +73,7 @@ RETURN
 
 HB_FUNC_STATIC(QAUDIOINPUT_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQAUDIOFORMAT(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && ISQAUDIOFORMATORNIL(1) && ISQOBJECTORNIL(2))
   {
     /*
     QAudioInput(const QAudioFormat &format = QAudioFormat(), QObject * parent = nullptr)
@@ -82,8 +82,8 @@ HB_FUNC_STATIC(QAUDIOINPUT_NEW)
                                OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2) || HB_ISNIL(2)) &&
-           (ISQOBJECT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(1, 3) && ISQAUDIODEVICEINFO(1) && ISQAUDIOFORMATORNIL(2) &&
+           ISQOBJECTORNIL(3))
   {
     /*
     QAudioInput(const QAudioDeviceInfo &audioDeviceInfo, const QAudioFormat &format = QAudioFormat(), QObject * parent

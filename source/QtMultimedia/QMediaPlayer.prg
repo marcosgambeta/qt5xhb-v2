@@ -111,7 +111,7 @@ RETURN
     */
 HB_FUNC_STATIC(QMEDIAPLAYER_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
+  if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISNUMORNIL(2))
   {
     auto obj = new QMediaPlayer(OPQOBJECT(1, nullptr), HB_ISNIL(2) ? static_cast<QMediaPlayer::Flags>(0)
                                                                    : static_cast<QMediaPlayer::Flags>(hb_parni(2)));
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETMEDIA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQMEDIACONTENT(1) && (ISQIODEVICE(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQMEDIACONTENT(1) && ISQIODEVICEORNIL(2))
     {
 #endif
       obj->setMedia(*PQMEDIACONTENT(1), OPQIODEVICE(2, nullptr));
@@ -860,7 +860,7 @@ QMediaPlayer::Flags flags = QMediaPlayer::Flags())
 HB_FUNC_STATIC(QMEDIAPLAYER_HASSUPPORT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISARRAY(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
+  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISARRAYORNIL(2) && ISNUMORNIL(3))
   {
 #endif
     RENUM(QMediaPlayer::hasSupport(PQSTRING(1), OPQSTRINGLIST(2, QStringList()),

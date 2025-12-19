@@ -82,7 +82,7 @@ RETURN
     */
 HB_FUNC_STATIC(QAUDIODECODER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     auto obj = new QAudioDecoder(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -433,7 +433,7 @@ static QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QS
 HB_FUNC_STATIC(QAUDIODECODER_HASSUPPORT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISARRAY(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISARRAYORNIL(2))
   {
 #endif
     RENUM(QAudioDecoder::hasSupport(PQSTRING(1), OPQSTRINGLIST(2, QStringList())));
