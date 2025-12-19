@@ -68,19 +68,19 @@ RETURN
 
 HB_FUNC_STATIC(QAXOBJECT_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     // QAxObject(QObject * parent = nullptr)
     auto obj = new QAxObject(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
   {
     // QAxObject(const QString &c, QObject * parent = nullptr)
     auto obj = new QAxObject(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISPOINTER(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISPOINTER(1) && ISQOBJECTORNIL(2))
   {
     // QAxObject(IUnknown * iface, QObject * parent = nullptr)
     auto obj = new QAxObject(static_cast<IUnknown *>(hb_parptr(1)), OPQOBJECT(2, nullptr));
@@ -248,9 +248,9 @@ HB_FUNC_STATIC(QAXOBJECT_DYNAMICCALL)
 {
   auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && (ISQVARIANT(2) || HB_ISNIL(2)) && (ISQVARIANT(3) || HB_ISNIL(3)) &&
-      (ISQVARIANT(4) || HB_ISNIL(4)) && (ISQVARIANT(5) || HB_ISNIL(5)) && (ISQVARIANT(6) || HB_ISNIL(6)) &&
-      (ISQVARIANT(7) || HB_ISNIL(7)) && (ISQVARIANT(8) || HB_ISNIL(8)) && (ISQVARIANT(9) || HB_ISNIL(9)))
+  if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) &&
+      ISQVARIANTORNIL(4) && ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) &&
+      ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9))
   {
     /*
     QVariant dynamicCall(const char * function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
@@ -338,9 +338,9 @@ HB_FUNC_STATIC(QAXOBJECT_QUERYSUBOBJECT)
 {
   auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && (ISQVARIANT(2) || HB_ISNIL(2)) && (ISQVARIANT(3) || HB_ISNIL(3)) &&
-      (ISQVARIANT(4) || HB_ISNIL(4)) && (ISQVARIANT(5) || HB_ISNIL(5)) && (ISQVARIANT(6) || HB_ISNIL(6)) &&
-      (ISQVARIANT(7) || HB_ISNIL(7)) && (ISQVARIANT(8) || HB_ISNIL(8)) && (ISQVARIANT(9) || HB_ISNIL(9)))
+  if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) &&
+      ISQVARIANTORNIL(4) && ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) &&
+      ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9))
   {
     /*
     QAxObject * querySubObject(const char * name, const QVariant &var1 = QVariant(), const QVariant &var2 =
