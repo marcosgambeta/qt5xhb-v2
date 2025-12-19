@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISDESIGNABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
     {
 #endif
       RBOOL(obj->isDesignable(OPQOBJECT(1, nullptr)));
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISSCRIPTABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
     {
 #endif
       RBOOL(obj->isScriptable(OPQOBJECT(1, nullptr)));
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISSTORED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
     {
 #endif
       RBOOL(obj->isStored(OPQOBJECT(1, nullptr)));
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISEDITABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
     {
 #endif
       RBOOL(obj->isEditable(OPQOBJECT(1, nullptr)));
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISUSER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
     {
 #endif
       RBOOL(obj->isUser(OPQOBJECT(1, nullptr)));

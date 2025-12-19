@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QTIMEZONE_COMMENT)
 
 HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
 {
-  if (ISBETWEEN(1, 3) && ISQDATETIME(1) && ISNUMORNIL(2) && (ISQLOCALE(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(1, 3) && ISQDATETIME(1) && ISNUMORNIL(2) && ISQLOCALEORNIL(3))
   {
     /*
     QString displayName(const QDateTime &atDateTime, QTimeZone::NameType nameType = QTimeZone::DefaultName, const
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
     }
 #endif
   }
-  else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && (ISQLOCALE(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISQLOCALEORNIL(3))
   {
     /*
     QString displayName(QTimeZone::TimeType timeType, QTimeZone::NameType nameType = QTimeZone::DefaultName, const

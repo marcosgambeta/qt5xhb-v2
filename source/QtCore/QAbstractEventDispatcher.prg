@@ -455,7 +455,7 @@ static QAbstractEventDispatcher * instance(QThread * thread = nullptr)
 HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_INSTANCE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && (ISQTHREAD(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQTHREADORNIL(1))
   {
 #endif
     auto ptr = QAbstractEventDispatcher::instance(OPQTHREAD(1, nullptr));

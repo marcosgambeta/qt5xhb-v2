@@ -66,7 +66,7 @@ RETURN
     */
 HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQBYTEARRAYORNIL(2))
   {
     auto obj =
         new QMessageAuthenticationCode(static_cast<QCryptographicHash::Algorithm>(hb_parni(1)),

@@ -409,7 +409,7 @@ static QJsonDocument fromJson(const QByteArray &json, QJsonParseError * error = 
 HB_FUNC_STATIC(QJSONDOCUMENT_FROMJSON)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQJSONPARSEERROR(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQJSONPARSEERRORORNIL(2))
   {
 #endif
     auto ptr = new QJsonDocument(QJsonDocument::fromJson(

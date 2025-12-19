@@ -84,7 +84,7 @@ RETURN
 
 HB_FUNC_STATIC(QSETTINGS_NEW)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISQOBJECTORNIL(3))
   {
     /*
     QSettings(const QString &organization, const QString &application = QString(), QObject * parent = nullptr)
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
     Qt5xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISCHARORNIL(3) &&
-           (ISQOBJECT(4) || HB_ISNIL(4)))
+           ISQOBJECTORNIL(4))
   {
     /*
     QSettings(QSettings::Scope scope, const QString &organization, const QString &application = QString(), QObject *
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
     Qt5xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISCHARORNIL(4) &&
-           (ISQOBJECT(5) || HB_ISNIL(5)))
+           ISQOBJECTORNIL(5))
   {
     /*
     QSettings(QSettings::Format format, QSettings::Scope scope, const QString &organization, const QString &
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
                              PQSTRING(3), OPQSTRING(4, QString()), OPQOBJECT(5, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3))
   {
     /*
     QSettings(const QString &fileName, QSettings::Format format, QObject * parent = nullptr)
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
     auto obj = new QSettings(PQSTRING(1), static_cast<QSettings::Format>(hb_parni(2)), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  else if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QSettings(QObject * parent = nullptr)
@@ -721,7 +721,7 @@ HB_FUNC_STATIC(QSETTINGS_VALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQVARIANT(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQVARIANTORNIL(2))
     {
 #endif
       RQVARIANT(obj->value(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2))));

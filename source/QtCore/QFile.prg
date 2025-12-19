@@ -740,7 +740,7 @@ HB_FUNC_STATIC(QFILE_MOVETOTRASH)
     }
 #endif
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQCHAR(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQCHARORNIL(2)) // TOFIX
   {
     /*
     static bool moveToTrash(const QString &fileName, QString * pathInTrash = nullptr)
