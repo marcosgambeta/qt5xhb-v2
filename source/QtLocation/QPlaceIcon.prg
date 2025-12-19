@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QPLACEICON_URL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQSIZE(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQSIZEORNIL(1))
     {
 #endif
       auto ptr = new QUrl(obj->url(HB_ISNIL(1) ? QSize() : *static_cast<QSize *>(Qt5xHb::itemGetPtr(1))));

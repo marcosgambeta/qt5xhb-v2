@@ -82,7 +82,7 @@ RETURN
 
 HB_FUNC_STATIC(QGEOROUTEREQUEST_NEW)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISARRAY(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISARRAYORNIL(1))
   {
     /*
     QGeoRouteRequest(const QList<QGeoCoordinate> &waypoints = QList<QGeoCoordinate>())
