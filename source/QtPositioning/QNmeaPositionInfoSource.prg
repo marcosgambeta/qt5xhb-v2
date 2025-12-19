@@ -71,7 +71,7 @@ RETURN
 HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2))
   {
     auto obj = new QNmeaPositionInfoSource(static_cast<QNmeaPositionInfoSource::UpdateMode>(hb_parni(1)),
                                            OPQOBJECT(2, nullptr));
