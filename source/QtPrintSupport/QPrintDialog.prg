@@ -64,7 +64,7 @@ RETURN
 
 HB_FUNC_STATIC(QPRINTDIALOG_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQPRINTER(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQPRINTER(1) && ISQWIDGETORNIL(2))
   {
     /*
     QPrintDialog(QPrinter * printer, QWidget * parent = nullptr)
@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_NEW)
     auto obj = new QPrintDialog(PQPRINTER(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
+  else if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
   {
     /*
     QPrintDialog(QWidget * parent = nullptr)
