@@ -147,7 +147,7 @@ RETURN
     */
 HB_FUNC_STATIC(QQUICKITEM_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQQUICKITEM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQQUICKITEMORNIL(1))
   {
     auto obj = new QQuickItem(OPQQUICKITEM(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
