@@ -69,7 +69,7 @@ RETURN
 
 HB_FUNC_STATIC(QSVGRENDERER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QSvgRenderer(QObject * parent = nullptr)
@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QSVGRENDERER_NEW)
     auto obj = new QSvgRenderer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
   {
     /*
     QSvgRenderer(const QString &filename, QObject * parent = nullptr)
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QSVGRENDERER_NEW)
     auto obj = new QSvgRenderer(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQOBJECTORNIL(2))
   {
     /*
     QSvgRenderer(const QByteArray &contents, QObject * parent = nullptr)
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QSVGRENDERER_NEW)
     auto obj = new QSvgRenderer(*PQBYTEARRAY(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQXMLSTREAMREADER(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQXMLSTREAMREADER(1) && ISQOBJECTORNIL(2))
   {
     /*
     QSvgRenderer(QXmlStreamReader * contents, QObject * parent = nullptr)
@@ -428,7 +428,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISCHAR(2) && (ISQRECTF(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISCHAR(2) && ISQRECTFORNIL(3))
   {
     /*
     void render(QPainter * painter, const QString &elementId, const QRectF &bounds = QRectF())
