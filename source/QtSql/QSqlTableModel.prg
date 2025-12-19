@@ -95,7 +95,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSQLTABLEMODEL_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && (ISQSQLDATABASE(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISQSQLDATABASEORNIL(2))
   {
     auto obj = new QSqlTableModel(OPQOBJECT(1, nullptr),
                                   HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase *>(Qt5xHb::itemGetPtr(2)));
@@ -587,7 +587,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTROWS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3))
     {
 #endif
       RBOOL(obj->insertRows(PINT(1), PINT(2),
@@ -609,7 +609,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REMOVECOLUMNS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3))
     {
 #endif
       RBOOL(obj->removeColumns(PINT(1), PINT(2),
@@ -631,7 +631,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REMOVEROWS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3))
     {
 #endif
       RBOOL(obj->removeRows(PINT(1), PINT(2),
@@ -653,7 +653,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ROWCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1))
     {
 #endif
       RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1))));
