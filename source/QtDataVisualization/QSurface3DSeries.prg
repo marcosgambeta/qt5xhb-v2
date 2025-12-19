@@ -81,7 +81,7 @@ RETURN
 
 HB_FUNC_STATIC(QSURFACE3DSERIES_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QSurface3DSeries(QObject * parent = nullptr)
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(1, 2) && ISQSURFACEDATAPROXY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQSURFACEDATAPROXY(1) && ISQOBJECTORNIL(2))
   {
     /*
     QSurface3DSeries(QSurfaceDataProxy * dataProxy, QObject * parent = nullptr)

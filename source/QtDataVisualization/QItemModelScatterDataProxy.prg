@@ -99,7 +99,7 @@ RETURN
 
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QItemModelScatterDataProxy(QObject * parent = nullptr)
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && ISQOBJECTORNIL(2))
   {
     /*
     QItemModelScatterDataProxy(QAbstractItemModel * itemModel, QObject * parent = nullptr)
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_NEW)
 #endif
   }
   else if (ISBETWEEN(4, 5) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
-           (ISQOBJECT(5) || HB_ISNIL(5)))
+           ISQOBJECTORNIL(5))
   {
     /*
     QItemModelScatterDataProxy(QAbstractItemModel * itemModel, const QString &xPosRole, const QString &yPosRole, const
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_NEW)
 #endif
   }
   else if (ISBETWEEN(5, 6) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISCHAR(5) &&
-           (ISQOBJECT(6) || HB_ISNIL(6)))
+           ISQOBJECTORNIL(6))
   {
     /*
     QItemModelScatterDataProxy(QAbstractItemModel * itemModel, const QString &xPosRole, const QString &yPosRole, const

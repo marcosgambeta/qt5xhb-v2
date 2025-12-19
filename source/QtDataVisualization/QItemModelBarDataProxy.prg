@@ -119,7 +119,7 @@ RETURN
 
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QItemModelBarDataProxy(QObject * parent = nullptr)
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && ISQOBJECTORNIL(2))
   {
     /*
     QItemModelBarDataProxy(QAbstractItemModel * itemModel, QObject * parent = nullptr)
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(2, 3) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && ISQOBJECTORNIL(3))
   {
     /*
     QItemModelBarDataProxy(QAbstractItemModel * itemModel, const QString &valueRole, QObject * parent = nullptr)
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_NEW)
 #endif
   }
   else if (ISBETWEEN(4, 5) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
-           (ISQOBJECT(5) || HB_ISNIL(5)))
+           ISQOBJECTORNIL(5))
   {
     /*
     QItemModelBarDataProxy(QAbstractItemModel * itemModel, const QString &rowRole, const QString &columnRole, const
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_NEW)
 #endif
   }
   else if (ISBETWEEN(5, 6) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISCHAR(5) &&
-           (ISQOBJECT(6) || HB_ISNIL(6)))
+           ISQOBJECTORNIL(6))
   {
     /*
     QItemModelBarDataProxy(QAbstractItemModel * itemModel, const QString &rowRole, const QString &columnRole, const
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_NEW)
 #endif
   }
   else if (ISBETWEEN(6, 7) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
-           HB_ISARRAY(5) && HB_ISARRAY(6) && (ISQOBJECT(7) || HB_ISNIL(7)))
+           HB_ISARRAY(5) && HB_ISARRAY(6) && ISQOBJECTORNIL(7))
   {
     /*
     QItemModelBarDataProxy(QAbstractItemModel * itemModel, const QString &rowRole, const QString &columnRole, const
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_NEW)
 #endif
   }
   else if (ISBETWEEN(7, 8) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISCHAR(5) &&
-           HB_ISARRAY(6) && HB_ISARRAY(7) && (ISQOBJECT(8) || HB_ISNIL(8)))
+           HB_ISARRAY(6) && HB_ISARRAY(7) && ISQOBJECTORNIL(8))
   {
     /*
     QItemModelBarDataProxy(QAbstractItemModel * itemModel, const QString &rowRole, const QString &columnRole, const
