@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXTENSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQVARIANT(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQVARIANTORNIL(2))
     {
 #endif
       RQVARIANT(obj->extension(static_cast<QScriptEngineAgent::Extension>(hb_parni(1)),
