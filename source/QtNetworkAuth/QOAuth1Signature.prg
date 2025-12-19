@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_VALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQVARIANT(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQVARIANTORNIL(2))
     {
 #endif
       RQVARIANT(obj->value(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2))));
