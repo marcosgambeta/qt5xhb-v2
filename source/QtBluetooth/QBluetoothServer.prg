@@ -77,7 +77,7 @@ RETURN
 HB_FUNC_STATIC(QBLUETOOTHSERVER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2))
   {
     auto obj = new QBluetoothServer(static_cast<QBluetoothServiceInfo::Protocol>(hb_parni(1)), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_LISTEN)
 {
   auto obj = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (ISBETWEEN(0, 2) && (ISQBLUETOOTHADDRESS(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
+  if (ISBETWEEN(0, 2) && ISQBLUETOOTHADDRESSORNIL(1) && ISNUMORNIL(2))
   {
     /*
     bool listen(const QBluetoothAddress &address = QBluetoothAddress(), quint16 port = 0)
