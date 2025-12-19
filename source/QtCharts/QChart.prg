@@ -135,7 +135,7 @@ QChart(QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlag
 HB_FUNC_STATIC(QCHART_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(0, 2) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
+  if (ISBETWEEN(0, 2) && ISQGRAPHICSITEMORNIL(1) && ISNUMORNIL(2))
   {
     auto obj = new QChart(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(1)),
                           HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(Qt::WindowFlags())
@@ -884,7 +884,7 @@ HB_FUNC_STATIC(QCHART_SETAXISX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQABSTRACTAXIS(1) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQABSTRACTAXIS(1) && ISQABSTRACTSERIESORNIL(2))
     {
 #endif
       obj->setAxisX(PQABSTRACTAXIS(1), OPQABSTRACTSERIES(2, nullptr));
@@ -909,7 +909,7 @@ HB_FUNC_STATIC(QCHART_SETAXISY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQABSTRACTAXIS(1) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQABSTRACTAXIS(1) && ISQABSTRACTSERIESORNIL(2))
     {
 #endif
       obj->setAxisY(PQABSTRACTAXIS(1), OPQABSTRACTSERIES(2, nullptr));
@@ -934,7 +934,7 @@ HB_FUNC_STATIC(QCHART_AXISX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQABSTRACTSERIES(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQABSTRACTSERIESORNIL(1))
     {
 #endif
       auto ptr = obj->axisX(OPQABSTRACTSERIES(1, nullptr));
@@ -958,7 +958,7 @@ HB_FUNC_STATIC(QCHART_AXISY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQABSTRACTSERIES(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQABSTRACTSERIESORNIL(1))
     {
 #endif
       auto ptr = obj->axisY(OPQABSTRACTSERIES(1, nullptr));
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC(QCHART_AXES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISQABSTRACTSERIESORNIL(2))
     {
 #endif
       auto list = obj->axes(HB_ISNIL(1) ? static_cast<Qt::Orientations>(Qt::Horizontal | Qt::Vertical)
@@ -1589,7 +1589,7 @@ HB_FUNC_STATIC(QCHART_MAPTOVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQPOINTF(1) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQPOINTF(1) && ISQABSTRACTSERIESORNIL(2))
     {
 #endif
       RQPOINTF(obj->mapToValue(*PQPOINTF(1), OPQABSTRACTSERIES(2, nullptr)));
@@ -1612,7 +1612,7 @@ HB_FUNC_STATIC(QCHART_MAPTOPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQPOINTF(1) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQPOINTF(1) && ISQABSTRACTSERIESORNIL(2))
     {
 #endif
       RQPOINTF(obj->mapToPosition(*PQPOINTF(1), OPQABSTRACTSERIES(2, nullptr)));
