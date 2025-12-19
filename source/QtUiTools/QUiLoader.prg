@@ -78,7 +78,7 @@ RETURN
     */
 HB_FUNC_STATIC(QUILOADER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     auto obj = new QUiLoader(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && ISCHARORNIL(2))
+    if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISCHARORNIL(2))
     {
 #endif
       auto ptr = obj->createAction(OPQOBJECT(1, nullptr), OPQSTRING(2, QString()));
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEACTIONGROUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && ISCHARORNIL(2))
+    if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISCHARORNIL(2))
     {
 #endif
       auto ptr = obj->createActionGroup(OPQOBJECT(1, nullptr), OPQSTRING(2, QString()));
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QUILOADER_CREATELAYOUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)) && ISCHARORNIL(3))
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQOBJECTORNIL(2) && ISCHARORNIL(3))
     {
 #endif
       auto ptr = obj->createLayout(PQSTRING(1), OPQOBJECT(2, nullptr), OPQSTRING(3, QString()));
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEWIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && ISCHARORNIL(3))
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQWIDGETORNIL(2) && ISCHARORNIL(3))
     {
 #endif
       auto ptr = obj->createWidget(PQSTRING(1), OPQWIDGET(2, nullptr), OPQSTRING(3, QString()));
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QUILOADER_LOAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISQWIDGETORNIL(2))
     {
 #endif
       auto ptr = obj->load(PQIODEVICE(1), OPQWIDGET(2, nullptr));
