@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QICON_ADDFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && (ISQSIZE(2) || HB_ISNIL(2)) && ISNUMORNIL(3) &&
+    if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISQSIZEORNIL(2) && ISNUMORNIL(3) &&
         ISNUMORNIL(4))
     {
 #endif
@@ -412,7 +412,7 @@ static QIcon fromTheme(const QString &name, const QIcon &fallback = QIcon())
 HB_FUNC_STATIC(QICON_FROMTHEME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQICON(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQICONORNIL(2))
   {
 #endif
     RQICON(QIcon::fromTheme(PQSTRING(1), HB_ISNIL(2) ? QIcon() : *static_cast<QIcon *>(Qt5xHb::itemGetPtr(2))));

@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_FLUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && ISQREGION(1) && (ISQWINDOW(2) || HB_ISNIL(2)) && (ISQPOINT(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(1, 3) && ISQREGION(1) && ISQWINDOWORNIL(2) && ISQPOINTORNIL(3))
     {
 #endif
       obj->flush(*PQREGION(1), OPQWINDOW(2, nullptr),

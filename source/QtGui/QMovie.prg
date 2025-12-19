@@ -96,7 +96,7 @@ RETURN
 
 HB_FUNC_STATIC(QMOVIE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QMovie(QObject * parent = nullptr)
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QMOVIE_NEW)
     auto obj = new QMovie(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && ISOPTQBYTEARRAY(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && ISOPTQBYTEARRAY(2) && ISQOBJECTORNIL(3))
   {
     /*
     QMovie(QIODevice * device, const QByteArray &format = QByteArray(), QObject * parent = nullptr)
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QMOVIE_NEW)
                           OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISOPTQBYTEARRAY(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISOPTQBYTEARRAY(2) && ISQOBJECTORNIL(3))
   {
     /*
     QMovie(const QString &fileName, const QByteArray &format = QByteArray(), QObject * parent = nullptr)

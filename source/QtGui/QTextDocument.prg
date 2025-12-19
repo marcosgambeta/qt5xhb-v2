@@ -145,7 +145,7 @@ RETURN
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QTextDocument(QObject * parent = nullptr)
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_NEW)
     auto obj = new QTextDocument(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
   {
     /*
     QTextDocument(const QString &text, QObject * parent = nullptr)
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLONE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
     {
 #endif
       auto ptr = obj->clone(OPQOBJECT(1, nullptr));
@@ -486,7 +486,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_TOHTML)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQBYTEARRAY(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQBYTEARRAYORNIL(1))
     {
 #endif
       RQSTRING(obj->toHtml(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(1))));
@@ -1155,7 +1155,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DRAWCONTENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQPAINTER(1) && (ISQRECTF(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQPAINTER(1) && ISQRECTFORNIL(2))
     {
 #endif
       obj->drawContents(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *static_cast<QRectF *>(Qt5xHb::itemGetPtr(2)));

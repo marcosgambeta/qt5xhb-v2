@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QFONTMETRICS_BOUNDINGRECT)
     }
   }
   else if (ISBETWEEN(6, 8) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISCHAR(6) &&
-           ISNUMORNIL(7) && (HB_ISARRAY(8) || HB_ISNIL(8)))
+           ISNUMORNIL(7) && ISARRAYORNIL(8))
   {
     /*
     QRect boundingRect(int x, int y, int width, int height, int flags, const QString &text, int tabStops = 0, int *
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QFONTMETRICS_BOUNDINGRECT)
     }
   }
   else if (ISBETWEEN(3, 5) && ISQRECT(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISNUMORNIL(4) &&
-           (HB_ISARRAY(5) || HB_ISNIL(5)))
+           ISARRAYORNIL(5))
   {
     /*
     QRect boundingRect(const QRect &rect, int flags, const QString &text, int tabStops = 0, int * tabArray = nullptr)

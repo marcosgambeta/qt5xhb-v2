@@ -73,7 +73,7 @@ RETURN
     */
 HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     auto obj = new QOpenGLShaderProgram(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -501,7 +501,7 @@ static bool hasOpenGLShaderPrograms(QOpenGLContext * context = nullptr)
 HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_HASOPENGLSHADERPROGRAMS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && (ISQOPENGLCONTEXT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOPENGLCONTEXTORNIL(1))
   {
 #endif
     RBOOL(QOpenGLShaderProgram::hasOpenGLShaderPrograms(OPQOPENGLCONTEXT(1, nullptr)));

@@ -804,7 +804,7 @@ HB_FUNC_STATIC(QPIXMAP_COPY)
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
     }
   }
-  else if (ISBETWEEN(0, 1) && (ISQRECT(1) || HB_ISNIL(1)))
+  else if (ISBETWEEN(0, 1) && ISQRECTORNIL(1))
   {
     /*
     QPixmap copy(const QRect &rect = QRect()) const
@@ -823,7 +823,7 @@ HB_FUNC_STATIC(QPIXMAP_COPY)
 HB_FUNC_STATIC(QPIXMAP_SCROLL)
 {
   if (ISBETWEEN(6, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
-      (ISQREGION(7) || HB_ISNIL(7)))
+      ISQREGIONORNIL(7))
   {
     /*
     void scroll(int dx, int dy, int x, int y, int width, int height, QRegion * exposed = nullptr)
@@ -837,7 +837,7 @@ HB_FUNC_STATIC(QPIXMAP_SCROLL)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECT(3) && (ISQREGION(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECT(3) && ISQREGIONORNIL(4))
   {
     /*
     void scroll(int dx, int dy, const QRect &rect, QRegion * exposed = nullptr)

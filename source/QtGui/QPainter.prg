@@ -308,7 +308,7 @@ HB_FUNC_STATIC(QPAINTER_BOUNDINGRECT)
       RQRECT(obj->boundingRect(PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6)));
     }
   }
-  else if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISCHAR(2) && (ISQTEXTOPTION(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISCHAR(2) && ISQTEXTOPTIONORNIL(3))
   {
     /*
     QRectF boundingRect(const QRectF &rectangle, const QString &text, const QTextOption &option = QTextOption())
@@ -1471,7 +1471,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(3, 4) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (ISQRECTF(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISQRECTFORNIL(4))
   {
     /*
     void drawText(const QRectF &rectangle, int flags, const QString &text, QRectF * boundingRect = nullptr)
@@ -1485,7 +1485,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(3, 4) && ISQRECT(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (ISQRECT(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && ISQRECT(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISQRECTORNIL(4))
   {
     /*
     void drawText(const QRect &rectangle, int flags, const QString &text, QRect * boundingRect = nullptr)
@@ -1513,7 +1513,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
     hb_itemReturn(hb_stackSelfItem());
   }
   else if (ISBETWEEN(6, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISCHAR(6) &&
-           (ISQRECT(7) || HB_ISNIL(7)))
+           ISQRECTORNIL(7))
   {
     /*
     void drawText(int x, int y, int width, int height, int flags, const QString &text, QRect * boundingRect = nullptr)
@@ -1527,7 +1527,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISCHAR(2) && (ISQTEXTOPTION(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISCHAR(2) && ISQTEXTOPTIONORNIL(3))
   {
     /*
     void drawText(const QRectF &rectangle, const QString &text, const QTextOption &option = QTextOption())
@@ -1547,7 +1547,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
 
 HB_FUNC_STATIC(QPAINTER_DRAWTILEDPIXMAP)
 {
-  if (ISBETWEEN(2, 3) && ISQRECTF(1) && ISQPIXMAP(2) && (ISQPOINTF(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(2, 3) && ISQRECTF(1) && ISQPIXMAP(2) && ISQPOINTFORNIL(3))
   {
     /*
     void drawTiledPixmap(const QRectF &rectangle, const QPixmap &pixmap, const QPointF &position = QPointF())
@@ -1561,7 +1561,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTILEDPIXMAP)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(2, 3) && ISQRECT(1) && ISQPIXMAP(2) && (ISQPOINT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQRECT(1) && ISQPIXMAP(2) && ISQPOINTORNIL(3))
   {
     /*
     void drawTiledPixmap(const QRect &rectangle, const QPixmap &pixmap, const QPoint &position = QPoint())

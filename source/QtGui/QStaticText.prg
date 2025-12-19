@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QSTATICTEXT_PREPARE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (ISQTRANSFORM(1) || HB_ISNIL(1)) && (ISQFONT(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(0, 2) && ISQTRANSFORMORNIL(1) && ISQFONTORNIL(2))
     {
 #endif
       obj->prepare(HB_ISNIL(1) ? QTransform() : *static_cast<QTransform *>(Qt5xHb::itemGetPtr(1)),

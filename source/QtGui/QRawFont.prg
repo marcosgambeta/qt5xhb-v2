@@ -371,7 +371,7 @@ HB_FUNC_STATIC(QRAWFONT_ALPHAMAPFORGLYPH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && (ISQTRANSFORM(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISQTRANSFORMORNIL(3))
     {
 #endif
       auto ptr = new QImage(

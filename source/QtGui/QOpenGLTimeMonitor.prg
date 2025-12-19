@@ -68,7 +68,7 @@ RETURN
 HB_FUNC_STATIC(QOPENGLTIMEMONITOR_NEW)
 {
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     auto obj = new QOpenGLTimeMonitor(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);

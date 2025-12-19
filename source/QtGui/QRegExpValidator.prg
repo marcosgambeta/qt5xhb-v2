@@ -54,7 +54,7 @@ RETURN
 
 HB_FUNC_STATIC(QREGEXPVALIDATOR_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QRegExpValidator(QObject * parent = nullptr)
@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_NEW)
     auto obj = new QRegExpValidator(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQREGEXP(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQREGEXP(1) && ISQOBJECTORNIL(2))
   {
     /*
     QRegExpValidator(const QRegExp &rx, QObject * parent = nullptr)
