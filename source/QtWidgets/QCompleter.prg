@@ -95,7 +95,7 @@ RETURN
 
 HB_FUNC_STATIC(QCOMPLETER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QCompleter(QObject * parent = nullptr)
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QCOMPLETER_NEW)
     auto obj = new QCompleter(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && ISQOBJECTORNIL(2))
   {
     /*
     QCompleter(QAbstractItemModel * model, QObject * parent = nullptr)
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QCOMPLETER_NEW)
     Qt5xHb::returnNewObject(obj, false);
   }
 #ifndef QT_NO_STRINGLISTMODEL
-  else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && ISQOBJECTORNIL(2))
   {
     /*
     QCompleter(const QStringList &list, QObject * parent = nullptr)
@@ -750,7 +750,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQRECT(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQRECTORNIL(1))
     {
 #endif
       obj->complete(HB_ISNIL(1) ? QRect() : *static_cast<QRect *>(Qt5xHb::itemGetPtr(1)));

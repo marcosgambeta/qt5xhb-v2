@@ -146,7 +146,7 @@ RETURN
 
 HB_FUNC_STATIC(QGRAPHICSSCENE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QGraphicsScene(QObject * parent = nullptr)
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_NEW)
     auto obj = new QGraphicsScene(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQRECTF(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQRECTF(1) && ISQOBJECTORNIL(2))
   {
     /*
     QGraphicsScene(const QRectF &sceneRect, QObject * parent = nullptr)
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_NEW)
     auto obj = new QGraphicsScene(*PQRECTF(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQOBJECT(5) || HB_ISNIL(5)))
+  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQOBJECTORNIL(5))
   {
     /*
     QGraphicsScene(qreal x, qreal y, qreal width, qreal height, QObject * parent = nullptr)
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ACTIVEWINDOW)
 
 HB_FUNC_STATIC(QGRAPHICSSCENE_ADDELLIPSE)
 {
-  if (ISBETWEEN(1, 3) && ISQRECTF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(1, 3) && ISQRECTF(1) && ISQPENORNIL(2) && ISQBRUSHORNIL(3))
   {
     /*
     QGraphicsEllipseItem * addEllipse(const QRectF &rect, const QPen &pen = QPen(), const QBrush &brush = QBrush())
@@ -248,8 +248,8 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDELLIPSE)
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSELLIPSEITEM", false);
     }
   }
-  else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)) &&
-           (ISQBRUSH(6) || HB_ISNIL(6)))
+  else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQPENORNIL(5) &&
+           ISQBRUSHORNIL(6))
   {
     /*
     QGraphicsEllipseItem * addEllipse(qreal x, qreal y, qreal w, qreal h, const QPen &pen = QPen(), const QBrush &
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDITEM)
 
 HB_FUNC_STATIC(QGRAPHICSSCENE_ADDLINE)
 {
-  if (ISBETWEEN(1, 2) && ISQLINEF(1) && (ISQPEN(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQLINEF(1) && ISQPENORNIL(2))
   {
     /*
     QGraphicsLineItem * addLine(const QLineF &line, const QPen &pen = QPen())
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDLINE)
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLINEITEM", false);
     }
   }
-  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)))
+  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQPENORNIL(5))
   {
     /*
     QGraphicsLineItem * addLine(qreal x1, qreal y1, qreal x2, qreal y2, const QPen &pen = QPen())
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && ISQPAINTERPATH(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(1, 3) && ISQPAINTERPATH(1) && ISQPENORNIL(2) && ISQBRUSHORNIL(3))
     {
 #endif
       auto ptr = obj->addPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? QPen() : *static_cast<QPen *>(Qt5xHb::itemGetPtr(2)),
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPOLYGON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && ISQPOLYGONF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(1, 3) && ISQPOLYGONF(1) && ISQPENORNIL(2) && ISQBRUSHORNIL(3))
     {
 #endif
       auto ptr = obj->addPolygon(*PQPOLYGONF(1), HB_ISNIL(2) ? QPen() : *static_cast<QPen *>(Qt5xHb::itemGetPtr(2)),
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPOLYGON)
 
 HB_FUNC_STATIC(QGRAPHICSSCENE_ADDRECT)
 {
-  if (ISBETWEEN(1, 3) && ISQRECTF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(1, 3) && ISQRECTF(1) && ISQPENORNIL(2) && ISQBRUSHORNIL(3))
   {
     /*
     QGraphicsRectItem * addRect(const QRectF &rect, const QPen &pen = QPen(), const QBrush &brush = QBrush())
@@ -405,8 +405,8 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDRECT)
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSRECTITEM", false);
     }
   }
-  else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)) &&
-           (ISQBRUSH(6) || HB_ISNIL(6)))
+  else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQPENORNIL(5) &&
+           ISQBRUSHORNIL(6))
   {
     /*
     QGraphicsRectItem * addRect(qreal x, qreal y, qreal w, qreal h, const QPen &pen = QPen(), const QBrush &brush =
@@ -434,7 +434,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDSIMPLETEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQFONT(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQFONTORNIL(2))
     {
 #endif
       auto ptr = obj->addSimpleText(PQSTRING(1), HB_ISNIL(2) ? QFont() : *static_cast<QFont *>(Qt5xHb::itemGetPtr(2)));
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQFONT(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQFONTORNIL(2))
     {
 #endif
       auto ptr = obj->addText(PQSTRING(1), HB_ISNIL(2) ? QFont() : *static_cast<QFont *>(Qt5xHb::itemGetPtr(2)));
@@ -747,7 +747,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_INVALIDATE)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(0, 2) && (ISQRECTF(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
+  else if (ISBETWEEN(0, 2) && ISQRECTFORNIL(1) && ISNUMORNIL(2))
   {
     /*
     void invalidate(const QRectF &rect = QRectF(), QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers)
@@ -951,7 +951,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_RENDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && ISQPAINTER(1) && (ISQRECTF(2) || HB_ISNIL(2)) && (ISQRECTF(3) || HB_ISNIL(3)) &&
+    if (ISBETWEEN(1, 4) && ISQPAINTER(1) && ISQRECTFORNIL(2) && ISQRECTFORNIL(3) &&
         ISNUMORNIL(4))
     {
 #endif
@@ -1452,7 +1452,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_UPDATE)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(0, 1) && (ISQRECTF(1) || HB_ISNIL(1)))
+  else if (ISBETWEEN(0, 1) && ISQRECTFORNIL(1))
   {
     /*
     void update(const QRectF &rect = QRectF())

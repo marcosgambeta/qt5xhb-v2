@@ -67,7 +67,7 @@ RETURN
     */
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQGRAPHICSLAYOUTITEM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQGRAPHICSLAYOUTITEMORNIL(1))
   {
     auto obj =
         new QGraphicsAnchorLayout(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtr(1)));

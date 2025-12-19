@@ -90,7 +90,7 @@ RETURN
 
 HB_FUNC_STATIC(QDIRMODEL_NEW)
 {
-  if (ISBETWEEN(3, 4) && HB_ISARRAY(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
+  if (ISBETWEEN(3, 4) && HB_ISARRAY(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQOBJECTORNIL(4))
   {
     /*
     QDirModel(const QStringList &nameFilters, QDir::Filters filters, QDir::SortFlags sort, QObject * parent = nullptr)
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QDIRMODEL_NEW)
                              static_cast<QDir::SortFlags>(hb_parni(3)), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  else if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QDirModel(QObject * parent = nullptr)
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QDIRMODEL_DELETE)
 
 HB_FUNC_STATIC(QDIRMODEL_INDEX)
 {
-  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3))
   {
     /*
     QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QDIRMODEL_ROWCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1))
     {
 #endif
       RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1))));
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QDIRMODEL_COLUMNCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1))
     {
 #endif
       RINT(obj->columnCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1))));
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QDIRMODEL_HASCHILDREN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1))
     {
 #endif
       RBOOL(obj->hasChildren(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1))));
@@ -868,7 +868,7 @@ HB_FUNC_STATIC(QDIRMODEL_REFRESH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1))
     {
 #endif
       obj->refresh(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1)));

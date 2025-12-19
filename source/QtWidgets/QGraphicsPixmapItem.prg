@@ -67,7 +67,7 @@ RETURN
 
 HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQGRAPHICSITEMORNIL(1))
   {
     /*
     QGraphicsPixmapItem(QGraphicsItem * parent = nullptr)
@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_NEW)
     auto obj = new QGraphicsPixmapItem(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(1)));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 2) && ISQPIXMAP(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQPIXMAP(1) && ISQGRAPHICSITEMORNIL(2))
   {
     /*
     QGraphicsPixmapItem(const QPixmap &pixmap, QGraphicsItem * parent = nullptr)

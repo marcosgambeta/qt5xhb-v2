@@ -547,7 +547,7 @@ RETURN
 // QWidget(QWidget * parent = nullptr, Qt::WindowFlags f = 0)
 HB_FUNC_STATIC(QWIDGET_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
+  if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2))
   {
     auto obj = new QWidget(OPQWIDGET(1, nullptr),
                            HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(2)));
@@ -2928,7 +2928,7 @@ HB_FUNC_STATIC(QWIDGET_REMOVEACTION)
 
 HB_FUNC_STATIC(QWIDGET_RENDER)
 {
-  if (ISBETWEEN(1, 4) && ISQPAINTER(1) && (ISQPOINT(2) || HB_ISNIL(2)) && (ISQREGION(3) || HB_ISNIL(3)) &&
+  if (ISBETWEEN(1, 4) && ISQPAINTER(1) && ISQPOINTORNIL(2) && ISQREGIONORNIL(3) &&
       ISNUMORNIL(4))
   {
     // void render(QPaintDevice * target, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion = QRegion(), QWidget::RenderFlags renderFlags = QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren))
@@ -2944,7 +2944,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(1, 4) && HB_ISOBJECT(1) && (ISQPOINT(2) || HB_ISNIL(2)) && (ISQREGION(3) || HB_ISNIL(3)) &&
+  else if (ISBETWEEN(1, 4) && HB_ISOBJECT(1) && ISQPOINTORNIL(2) && ISQREGIONORNIL(3) &&
            ISNUMORNIL(4))
   {
     // void render(QPainter * painter, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion = QRegion(), QWidget::RenderFlags renderFlags = QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren))
@@ -4965,7 +4965,7 @@ HB_FUNC_STATIC(QWIDGET_GRAB)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQRECT(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQRECTORNIL(1))
     {
 #endif
       auto ptr = new QPixmap(
@@ -5321,7 +5321,7 @@ HB_FUNC_STATIC(QWIDGET_SETTABORDER)
 HB_FUNC_STATIC(QWIDGET_CREATEWINDOWCONTAINER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 3) && ISQWINDOW(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
+  if (ISBETWEEN(1, 3) && ISQWINDOW(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3))
   {
 #endif
     auto ptr = QWidget::createWindowContainer(PQWINDOW(1), OPQWIDGET(2, nullptr),

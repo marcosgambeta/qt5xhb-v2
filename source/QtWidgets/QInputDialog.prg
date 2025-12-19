@@ -109,7 +109,7 @@ RETURN
     */
 HB_FUNC_STATIC(QINPUTDIALOG_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
+  if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2))
   {
     auto obj = new QInputDialog(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
                                                                    : static_cast<Qt::WindowFlags>(hb_parni(2)));

@@ -63,7 +63,7 @@ RETURN
 
 HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQGRAPHICSITEMORNIL(1))
   {
     /*
     QGraphicsEllipseItem(QGraphicsItem * parent = nullptr)
@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_NEW)
     auto obj = new QGraphicsEllipseItem(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(1)));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 2) && ISQRECTF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQRECTF(1) && ISQGRAPHICSITEMORNIL(2))
   {
     /*
     QGraphicsEllipseItem(const QRectF &rect, QGraphicsItem * parent = nullptr)
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_NEW)
     Qt5xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
-           (ISQGRAPHICSITEM(5) || HB_ISNIL(5)))
+           ISQGRAPHICSITEMORNIL(5))
   {
     /*
     QGraphicsEllipseItem(qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = nullptr)
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_PAINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGETORNIL(3))
     {
 #endif
       obj->paint(PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3, nullptr));

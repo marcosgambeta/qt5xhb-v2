@@ -137,7 +137,7 @@ RETURN
 
 HB_FUNC_STATIC(QLINEEDIT_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
   {
     /*
     QLineEdit(QWidget * parent = nullptr)
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QLINEEDIT_NEW)
     auto obj = new QLineEdit(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQWIDGETORNIL(2))
   {
     /*
     QLineEdit(const QString &contents, QWidget * parent = nullptr)
@@ -1172,7 +1172,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETVALIDATOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQVALIDATOR(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQVALIDATORORNIL(1))
     {
 #endif
       obj->setValidator(OPQVALIDATOR(1, nullptr));

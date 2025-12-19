@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QFILEDIALOG_NEW)
     auto obj = new QFileDialog(PQWIDGET(1), static_cast<Qt::WindowFlags>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(0, 4) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) &&
+  else if (ISBETWEEN(0, 4) && ISQWIDGETORNIL(1) && ISCHARORNIL(2) &&
            ISCHARORNIL(3) && ISCHARORNIL(4))
   {
     /*
@@ -1423,7 +1423,7 @@ static QString getExistingDirectory(QWidget * parent = nullptr, const QString &c
 HB_FUNC_STATIC(QFILEDIALOG_GETEXISTINGDIRECTORY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 4) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) &&
+  if (ISBETWEEN(0, 4) && ISQWIDGETORNIL(1) && ISCHARORNIL(2) &&
       ISCHARORNIL(3) && ISNUMORNIL(4))
   {
 #endif
@@ -1445,7 +1445,7 @@ QString(), const QString &filter = QString(), QString * selectedFilter = nullptr
 HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) &&
+  if (ISBETWEEN(0, 6) && ISQWIDGETORNIL(1) && ISCHARORNIL(2) &&
       ISCHARORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5) &&
       ISNUMORNIL(6))
   {
@@ -1467,7 +1467,7 @@ static QStringList getOpenFileNames(QWidget * parent = nullptr, const QString &c
 HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAMES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) &&
+  if (ISBETWEEN(0, 6) && ISQWIDGETORNIL(1) && ISCHARORNIL(2) &&
       ISCHARORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5) &&
       ISNUMORNIL(6))
   {
@@ -1489,7 +1489,7 @@ QString(), const QString &filter = QString(), QString * selectedFilter = nullptr
 HB_FUNC_STATIC(QFILEDIALOG_GETSAVEFILENAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) &&
+  if (ISBETWEEN(0, 6) && ISQWIDGETORNIL(1) && ISCHARORNIL(2) &&
       ISCHARORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5) &&
       ISNUMORNIL(6))
   {
@@ -1512,9 +1512,9 @@ QStringList &supportedSchemes = QStringList())
 HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILEURL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 7) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) && (ISQURL(3) || HB_ISNIL(3)) &&
+  if (ISBETWEEN(0, 7) && ISQWIDGETORNIL(1) && ISCHARORNIL(2) && ISQURLORNIL(3) &&
       ISCHARORNIL(4) && ISCHARORNIL(5) && ISNUMORNIL(6) &&
-      (HB_ISARRAY(7) || HB_ISNIL(7)))
+      ISARRAYORNIL(7))
   {
 #endif
     auto ptr = new QUrl(QFileDialog::getOpenFileUrl(
@@ -1538,9 +1538,9 @@ QStringList &supportedSchemes = QStringList())
 HB_FUNC_STATIC(QFILEDIALOG_GETSAVEFILEURL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 7) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) && (ISQURL(3) || HB_ISNIL(3)) &&
+  if (ISBETWEEN(0, 7) && ISQWIDGETORNIL(1) && ISCHARORNIL(2) && ISQURLORNIL(3) &&
       ISCHARORNIL(4) && ISCHARORNIL(5) && ISNUMORNIL(6) &&
-      (HB_ISARRAY(7) || HB_ISNIL(7)))
+      ISARRAYORNIL(7))
   {
 #endif
     auto ptr = new QUrl(QFileDialog::getSaveFileUrl(
@@ -1563,8 +1563,8 @@ QUrl(), QFileDialog::Options options = QFileDialog::ShowDirsOnly, const QStringL
 HB_FUNC_STATIC(QFILEDIALOG_GETEXISTINGDIRECTORYURL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 5) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) && (ISQURL(3) || HB_ISNIL(3)) &&
-      ISNUMORNIL(4) && (HB_ISARRAY(5) || HB_ISNIL(5)))
+  if (ISBETWEEN(0, 5) && ISQWIDGETORNIL(1) && ISCHARORNIL(2) && ISQURLORNIL(3) &&
+      ISNUMORNIL(4) && ISARRAYORNIL(5))
   {
 #endif
     auto ptr = new QUrl(
@@ -1589,9 +1589,9 @@ QStringList &supportedSchemes = QStringList())
 HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILEURLS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 7) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) && (ISQURL(3) || HB_ISNIL(3)) &&
+  if (ISBETWEEN(0, 7) && ISQWIDGETORNIL(1) && ISCHARORNIL(2) && ISQURLORNIL(3) &&
       ISCHARORNIL(4) && ISCHARORNIL(5) && ISNUMORNIL(6) &&
-      (HB_ISARRAY(7) || HB_ISNIL(7)))
+      ISARRAYORNIL(7))
   {
 #endif
     auto list = QFileDialog::getOpenFileUrls(

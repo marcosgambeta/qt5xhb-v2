@@ -194,7 +194,7 @@ RETURN
 
 HB_FUNC_STATIC(QACTION_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QAction(QObject * parent = nullptr)
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QACTION_NEW)
     auto obj = new QAction(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
   {
     /*
     QAction(const QString &text, QObject * parent = nullptr)
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QACTION_NEW)
     auto obj = new QAction(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECTORNIL(3))
   {
     /*
     QAction(const QIcon &icon, const QString &text, QObject * parent = nullptr)
@@ -1223,7 +1223,7 @@ HB_FUNC_STATIC(QACTION_SHOWSTATUSTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
     {
 #endif
       RBOOL(obj->showStatusText(OPQWIDGET(1, nullptr)));

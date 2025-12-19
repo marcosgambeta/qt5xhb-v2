@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC(QSPLASHSCREEN_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQPIXMAP(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
+  if (ISBETWEEN(0, 2) && ISQPIXMAPORNIL(1) && ISNUMORNIL(2))
   {
     /*
     QSplashScreen(const QPixmap &pixmap = QPixmap(), Qt::WindowFlags f = 0)
@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_NEW)
                           HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 3) && ISQWIDGET(1) && (ISQPIXMAP(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
+  else if (ISBETWEEN(1, 3) && ISQWIDGET(1) && ISQPIXMAPORNIL(2) && ISNUMORNIL(3))
   {
     /*
     QSplashScreen(QWidget * parent, const QPixmap &pixmap = QPixmap(), Qt::WindowFlags f = 0)

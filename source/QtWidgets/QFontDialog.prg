@@ -64,7 +64,7 @@ RETURN
 
 HB_FUNC_STATIC(QFONTDIALOG_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
   {
     /*
     QFontDialog(QWidget * parent = nullptr)
@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QFONTDIALOG_NEW)
     auto obj = new QFontDialog(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQFONT(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQFONT(1) && ISQWIDGETORNIL(2))
   {
     /*
     QFontDialog(const QFont &initial, QWidget * parent = nullptr)
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETVISIBLE)
 
 HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
 {
-  if (ISBETWEEN(1, 2) && HB_ISLOG(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISLOG(1) && ISQWIDGETORNIL(2))
   {
     /*
     static QFont getFont(bool * ok, QWidget * parent = nullptr)
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
     Qt5xHb::createReturnClass(ptr, "QFONT", true);
     hb_storl(par1, 1);
   }
-  else if (ISBETWEEN(2, 5) && HB_ISLOG(1) && ISQFONT(2) && (ISQWIDGET(3) || HB_ISNIL(3)) &&
+  else if (ISBETWEEN(2, 5) && HB_ISLOG(1) && ISQFONT(2) && ISQWIDGETORNIL(3) &&
            ISCHARORNIL(4) && ISNUMORNIL(5))
   {
     /*
