@@ -80,7 +80,7 @@ RETURN
     */
 HB_FUNC_STATIC(QTCPSERVER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     auto obj = new QTcpServer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QTCPSERVER_LISTEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (ISQHOSTADDRESS(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
+    if (ISBETWEEN(0, 2) && ISQHOSTADDRESSORNIL(1) && ISNUMORNIL(2))
     {
 #endif
       RBOOL(obj->listen(HB_ISNIL(1) ? QHostAddress::Any : *static_cast<QHostAddress *>(Qt5xHb::itemGetPtr(1)),

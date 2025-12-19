@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QSSLKEY_TODER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQBYTEARRAY(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQBYTEARRAYORNIL(1))
     {
 #endif
       RQBYTEARRAY(obj->toDer(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(1))));
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QSSLKEY_TOPEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQBYTEARRAY(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQBYTEARRAYORNIL(1))
     {
 #endif
       RQBYTEARRAY(obj->toPem(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(1))));

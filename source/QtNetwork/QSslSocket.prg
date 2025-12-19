@@ -138,7 +138,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSSLSOCKET_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     auto obj = new QSslSocket(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
