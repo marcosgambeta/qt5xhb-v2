@@ -78,16 +78,13 @@ RETURN
 
 HB_FUNC_STATIC(QPROXYSTYLE_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISOBJECTORNIL(1)) {
     /*
     QProxyStyle(QStyle * style = nullptr)
     */
     auto obj = new QProxyStyle(OPQSTYLE(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     QProxyStyle(const QString &key)
     */
@@ -145,8 +142,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_SETBASESTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSTYLE(1))
-    {
+    if (ISNUMPAR(1) && ISQSTYLE(1)) {
 #endif
       obj->setBaseStyle(PQSTYLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,8 +165,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWPRIMITIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && ISQWIDGETORNIL(4))
-    {
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && ISQWIDGETORNIL(4)) {
 #endif
       obj->drawPrimitive(static_cast<QStyle::PrimitiveElement>(hb_parni(1)), PQSTYLEOPTION(2), PQPAINTER(3),
                          OPQWIDGET(4, nullptr));
@@ -194,8 +189,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWCONTROL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && ISQWIDGETORNIL(4))
-    {
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && ISQWIDGETORNIL(4)) {
 #endif
       obj->drawControl(static_cast<QStyle::ControlElement>(hb_parni(1)), PQSTYLEOPTION(2), PQPAINTER(3),
                        OPQWIDGET(4, nullptr));
@@ -219,8 +213,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWCOMPLEXCONTROL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPAINTER(3) && ISQWIDGETORNIL(4))
-    {
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPAINTER(3) && ISQWIDGETORNIL(4)) {
 #endif
       obj->drawComplexControl(static_cast<QStyle::ComplexControl>(hb_parni(1)), PQSTYLEOPTIONCOMPLEX(2), PQPAINTER(3),
                               OPQWIDGET(4, nullptr));
@@ -245,8 +238,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWITEMTEXT)
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(6, 7) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPALETTE(4) && HB_ISLOG(5) && HB_ISCHAR(6) &&
-        ISNUMORNIL(7))
-    {
+        ISNUMORNIL(7)) {
 #endif
       obj->drawItemText(PQPAINTER(1), *PQRECT(2), PINT(3), *PQPALETTE(4), PBOOL(5), PQSTRING(6),
                         HB_ISNIL(7) ? static_cast<QPalette::ColorRole>(QPalette::NoRole)
@@ -270,8 +262,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWITEMPIXMAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPIXMAP(4))
-    {
+    if (ISNUMPAR(4) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPIXMAP(4)) {
 #endif
       obj->drawItemPixmap(PQPAINTER(1), *PQRECT(2), PINT(3), *PQPIXMAP(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,11 +285,10 @@ HB_FUNC_STATIC(QPROXYSTYLE_SIZEFROMCONTENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQSIZE(3) && ISQWIDGET(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQSIZE(3) && ISQWIDGET(4)) {
 #endif
-      RQSIZE(obj->sizeFromContents(static_cast<QStyle::ContentsType>(hb_parni(1)), PQSTYLEOPTION(2),
-                                                 *PQSIZE(3), PQWIDGET(4)));
+      RQSIZE(obj->sizeFromContents(static_cast<QStyle::ContentsType>(hb_parni(1)), PQSTYLEOPTION(2), *PQSIZE(3),
+                                   PQWIDGET(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -316,8 +306,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_SUBELEMENTRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQWIDGET(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQWIDGET(3)) {
 #endif
       RQRECT(obj->subElementRect(static_cast<QStyle::SubElement>(hb_parni(1)), PQSTYLEOPTION(2), PQWIDGET(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -338,11 +327,10 @@ HB_FUNC_STATIC(QPROXYSTYLE_SUBCONTROLRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && HB_ISNUM(3) && ISQWIDGET(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && HB_ISNUM(3) && ISQWIDGET(4)) {
 #endif
       RQRECT(obj->subControlRect(static_cast<QStyle::ComplexControl>(hb_parni(1)), PQSTYLEOPTIONCOMPLEX(2),
-                                        static_cast<QStyle::SubControl>(hb_parni(3)), PQWIDGET(4)));
+                                 static_cast<QStyle::SubControl>(hb_parni(3)), PQWIDGET(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -360,8 +348,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_ITEMTEXTRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(5) && ISQFONTMETRICS(1) && ISQRECT(2) && HB_ISNUM(3) && HB_ISLOG(4) && HB_ISCHAR(5))
-    {
+    if (ISNUMPAR(5) && ISQFONTMETRICS(1) && ISQRECT(2) && HB_ISNUM(3) && HB_ISLOG(4) && HB_ISCHAR(5)) {
 #endif
       RQRECT(obj->itemTextRect(*PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -381,8 +368,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_ITEMPIXMAPRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && ISQRECT(1) && HB_ISNUM(2) && ISQPIXMAP(3))
-    {
+    if (ISNUMPAR(3) && ISQRECT(1) && HB_ISNUM(2) && ISQPIXMAP(3)) {
 #endif
       RQRECT(obj->itemPixmapRect(*PQRECT(1), PINT(2), *PQPIXMAP(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -403,8 +389,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_HITTESTCOMPLEXCONTROL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPOINT(3) && ISQWIDGETORNIL(4))
-    {
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPOINT(3) && ISQWIDGETORNIL(4)) {
 #endif
       RENUM(obj->hitTestComplexControl(static_cast<QStyle::ComplexControl>(hb_parni(1)), PQSTYLEOPTIONCOMPLEX(2),
                                        *PQPOINT(3), OPQWIDGET(4, nullptr)));
@@ -426,9 +411,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_STYLEHINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3) &&
-        ISQSTYLEHINTRETURNORNIL(4))
-    {
+    if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3) && ISQSTYLEHINTRETURNORNIL(4)) {
 #endif
       RINT(obj->styleHint(static_cast<QStyle::StyleHint>(hb_parni(1)),
                           HB_ISNIL(2) ? nullptr : static_cast<QStyleOption *>(Qt5xHb::itemGetPtr(2)),
@@ -452,8 +435,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_PIXELMETRIC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3))
-    {
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3)) {
 #endif
       RINT(obj->pixelMetric(static_cast<QStyle::PixelMetric>(hb_parni(1)),
                             HB_ISNIL(2) ? nullptr : static_cast<QStyleOption *>(Qt5xHb::itemGetPtr(2)),
@@ -476,9 +458,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_LAYOUTSPACING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQSTYLEOPTIONORNIL(4) &&
-        ISQWIDGETORNIL(5))
-    {
+    if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQSTYLEOPTIONORNIL(4) && ISQWIDGETORNIL(5)) {
 #endif
       RINT(obj->layoutSpacing(
           static_cast<QSizePolicy::ControlType>(hb_parni(1)), static_cast<QSizePolicy::ControlType>(hb_parni(2)),
@@ -502,12 +482,11 @@ HB_FUNC_STATIC(QPROXYSTYLE_STANDARDICON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3))
-    {
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3)) {
 #endif
       RQICON(obj->standardIcon(static_cast<QStyle::StandardPixmap>(hb_parni(1)),
-                                             HB_ISNIL(2) ? nullptr : static_cast<QStyleOption *>(Qt5xHb::itemGetPtr(2)),
-                                             OPQWIDGET(3, nullptr)));
+                               HB_ISNIL(2) ? nullptr : static_cast<QStyleOption *>(Qt5xHb::itemGetPtr(2)),
+                               OPQWIDGET(3, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -526,8 +505,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_STANDARDPIXMAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQWIDGETORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQWIDGETORNIL(3)) {
 #endif
       auto ptr = new QPixmap(obj->standardPixmap(static_cast<QStyle::StandardPixmap>(hb_parni(1)), PQSTYLEOPTION(2),
                                                  OPQWIDGET(3, nullptr)));
@@ -549,8 +527,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_GENERATEDICONPIXMAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPIXMAP(2) && ISQSTYLEOPTION(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPIXMAP(2) && ISQSTYLEOPTION(3)) {
 #endif
       auto ptr =
           new QPixmap(obj->generatedIconPixmap(static_cast<QIcon::Mode>(hb_parni(1)), *PQPIXMAP(2), PQSTYLEOPTION(3)));
@@ -586,8 +563,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_STANDARDPALETTE)
 
 HB_FUNC_STATIC(QPROXYSTYLE_POLISH)
 {
-  if (ISNUMPAR(1) && ISQWIDGET(1))
-  {
+  if (ISNUMPAR(1) && ISQWIDGET(1)) {
     /*
     void polish(QWidget * widget)
     */
@@ -598,9 +574,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_POLISH)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQPALETTE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQPALETTE(1)) {
     /*
     void polish(QPalette &pal)
     */
@@ -611,9 +585,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_POLISH)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQAPPLICATION(1))
-  {
+  } else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
     /*
     void polish(QApplication * app)
     */
@@ -631,8 +603,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_POLISH)
 
 HB_FUNC_STATIC(QPROXYSTYLE_UNPOLISH)
 {
-  if (ISNUMPAR(1) && ISQWIDGET(1))
-  {
+  if (ISNUMPAR(1) && ISQWIDGET(1)) {
     /*
     void unpolish(QWidget * widget)
     */
@@ -643,9 +614,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_UNPOLISH)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQAPPLICATION(1))
-  {
+  } else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
     /*
     void unpolish(QApplication * app)
     */

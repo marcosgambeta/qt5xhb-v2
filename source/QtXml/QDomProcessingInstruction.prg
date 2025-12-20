@@ -58,9 +58,7 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NEW)
     */
     auto obj = new QDomProcessingInstruction();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1)) {
     /*
     QDomProcessingInstruction(const QDomProcessingInstruction &x)
     */
@@ -135,8 +133,7 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_SETDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setData(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

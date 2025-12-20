@@ -55,9 +55,7 @@ HB_FUNC_STATIC(QDOMENTITYREFERENCE_NEW)
     */
     auto obj = new QDomEntityReference();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMENTITYREFERENCE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDOMENTITYREFERENCE(1)) {
     /*
     QDomEntityReference(const QDomEntityReference &x)
     */

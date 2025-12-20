@@ -57,9 +57,7 @@ HB_FUNC_STATIC(QDOMNOTATION_NEW)
     */
     auto obj = new QDomNotation();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMNOTATION(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDOMNOTATION(1)) {
     /*
     QDomNotation(const QDomNotation &x)
     */

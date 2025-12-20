@@ -70,16 +70,13 @@ RETURN
 
 HB_FUNC_STATIC(QLCDNUMBER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     /*
     QLCDNumber(QWidget * parent = nullptr)
     */
     auto obj = new QLCDNumber(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQWIDGETORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQWIDGETORNIL(2)) {
     /*
     QLCDNumber(uint numDigits, QWidget * parent = nullptr)
     */
@@ -109,37 +106,28 @@ HB_FUNC_STATIC(QLCDNUMBER_DELETE)
 
 HB_FUNC_STATIC(QLCDNUMBER_CHECKOVERFLOW)
 {
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     auto pNum = hb_param(1, HB_IT_NUMERIC);
-    if (pNum)
-    {
-      if (HB_IS_DOUBLE(pNum))
-      {
+    if (pNum) {
+      if (HB_IS_DOUBLE(pNum)) {
         /*
         bool checkOverflow(double num) const
         */
         auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-        if (obj != nullptr)
-        {
+        if (obj != nullptr) {
           RBOOL(obj->checkOverflow(PDOUBLE(1)));
         }
-      }
-      else if (HB_IS_INTEGER(pNum))
-      {
+      } else if (HB_IS_INTEGER(pNum)) {
         /*
         bool checkOverflow(int num) const
         */
         auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-        if (obj != nullptr)
-        {
+        if (obj != nullptr) {
           RBOOL(obj->checkOverflow(PINT(1)));
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
       }
     } else {
@@ -239,8 +227,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETDIGITCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDigitCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,8 +249,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMode(static_cast<QLCDNumber::Mode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,8 +271,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETSEGMENTSTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSegmentStyle(static_cast<QLCDNumber::SegmentStyle>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -361,62 +346,47 @@ HB_FUNC_STATIC(QLCDNUMBER_SIZEHINT)
 
 HB_FUNC_STATIC(QLCDNUMBER_DISPLAY)
 {
-  if (ISNUMPAR(1))
-  {
-    if (HB_ISCHAR(1))
-    {
+  if (ISNUMPAR(1)) {
+    if (HB_ISCHAR(1)) {
       /*
       void display(const QString &s)
       */
       auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-      if (obj != nullptr)
-      {
+      if (obj != nullptr) {
         obj->display(PQSTRING(1));
       }
 
       hb_itemReturn(hb_stackSelfItem());
-    }
-    else if (HB_ISNUM(1))
-    {
+    } else if (HB_ISNUM(1)) {
       auto pNum = hb_param(1, HB_IT_NUMERIC);
-      if (pNum)
-      {
-        if (HB_IS_DOUBLE(pNum))
-        {
+      if (pNum) {
+        if (HB_IS_DOUBLE(pNum)) {
           /*
           void display(double num)
           */
           auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-          if (obj != nullptr)
-          {
+          if (obj != nullptr) {
             obj->display(PDOUBLE(1));
           }
 
           hb_itemReturn(hb_stackSelfItem());
-        }
-        else if (HB_IS_INTEGER(pNum))
-        {
+        } else if (HB_IS_INTEGER(pNum)) {
           /*
           void display(int num)
           */
           auto obj = qobject_cast<QLCDNumber *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-          if (obj != nullptr)
-          {
+          if (obj != nullptr) {
             obj->display(PINT(1));
           }
 
           hb_itemReturn(hb_stackSelfItem());
-        }
-        else
-        {
+        } else {
           hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
       }
     } else {
@@ -524,8 +494,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETSMALLDECIMALPOINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setSmallDecimalPoint(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -547,20 +516,16 @@ HB_FUNC_STATIC(QLCDNUMBER_ONOVERFLOW)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("overflow()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QLCDNumber::overflow, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLCDNUMBER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -570,9 +535,7 @@ HB_FUNC_STATIC(QLCDNUMBER_ONOVERFLOW)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

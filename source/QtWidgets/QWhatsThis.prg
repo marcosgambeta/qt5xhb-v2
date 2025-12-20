@@ -84,8 +84,7 @@ static QAction * createAction(QObject * parent = nullptr)
 HB_FUNC_STATIC(QWHATSTHIS_CREATEACTION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
 #endif
     auto ptr = QWhatsThis::createAction(OPQOBJECT(1, nullptr));
     Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -172,8 +171,7 @@ static void showText(const QPoint &pos, const QString &text, QWidget * w = nullp
 HB_FUNC_STATIC(QWHATSTHIS_SHOWTEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(2, 3) && ISQPOINT(1) && HB_ISCHAR(2) && ISQWIDGETORNIL(3))
-  {
+  if (ISBETWEEN(2, 3) && ISQPOINT(1) && HB_ISCHAR(2) && ISQWIDGETORNIL(3)) {
 #endif
     QWhatsThis::showText(*PQPOINT(1), PQSTRING(2), OPQWIDGET(3, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,17 +187,14 @@ HB_FUNC_STATIC(QWHATSTHIS_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -232,8 +227,7 @@ HB_FUNC_STATIC(QWHATSTHIS_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

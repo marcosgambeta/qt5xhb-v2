@@ -70,8 +70,7 @@ RETURN
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QWinThumbnailToolBar(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_SETWINDOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWINDOW(1))
-    {
+    if (ISNUMPAR(1) && ISQWINDOW(1)) {
 #endif
       obj->setWindow(PQWINDOW(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,8 +155,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_ADDBUTTON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWINTHUMBNAILTOOLBUTTON(1))
-    {
+    if (ISNUMPAR(1) && ISQWINTHUMBNAILTOOLBUTTON(1)) {
 #endif
       obj->addButton(PQWINTHUMBNAILTOOLBUTTON(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,8 +179,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_REMOVEBUTTON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWINTHUMBNAILTOOLBUTTON(1))
-    {
+    if (ISNUMPAR(1) && ISQWINTHUMBNAILTOOLBUTTON(1)) {
 #endif
       obj->removeButton(PQWINTHUMBNAILTOOLBUTTON(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,14 +203,12 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_SETBUTTONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       QList<QWinThumbnailToolButton *> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (auto i1 = 0; i1 < nLen1; i1++)
-      {
+      for (auto i1 = 0; i1 < nLen1; i1++) {
         par1 << static_cast<QWinThumbnailToolButton *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
@@ -245,10 +239,8 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_BUTTONS)
       auto list = obj->buttons();
       auto pDynSym = hb_dynsymFindName("QWINTHUMBNAILTOOLBUTTON");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (auto item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (auto item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -260,9 +252,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_BUTTONS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QWINTHUMBNAILTOOLBUTTON", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);

@@ -64,13 +64,11 @@ RETURN
     */
 HB_FUNC_STATIC(QGESTUREEVENT_NEW)
 {
-  if (ISNUMPAR(1) && HB_ISARRAY(1))
-  {
+  if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     QList<QGesture *> par1;
     auto aList1 = hb_param(1, HB_IT_ARRAY);
     int nLen1 = hb_arrayLen(aList1);
-    for (auto i1 = 0; i1 < nLen1; i1++)
-    {
+    for (auto i1 = 0; i1 < nLen1; i1++) {
       par1 << static_cast<QGesture *>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
     }
     auto obj = new QGestureEvent(par1);
@@ -108,9 +106,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_ACCEPT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQGESTURE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQGESTURE(1)) {
     /*
     void accept(QGesture * gesture)
     */
@@ -121,9 +117,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_ACCEPT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     void accept(Qt::GestureType gestureType)
     */
@@ -153,10 +147,8 @@ HB_FUNC_STATIC(QGESTUREEVENT_ACTIVEGESTURES)
       auto list = obj->activeGestures();
       auto pDynSym = hb_dynsymFindName("QGESTURE");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (auto item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (auto item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -168,9 +160,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_ACTIVEGESTURES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QGESTURE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -196,10 +186,8 @@ HB_FUNC_STATIC(QGESTUREEVENT_CANCELEDGESTURES)
       auto list = obj->canceledGestures();
       auto pDynSym = hb_dynsymFindName("QGESTURE");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (auto item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (auto item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -211,9 +199,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_CANCELEDGESTURES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QGESTURE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -234,8 +220,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_GESTURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = obj->gesture(static_cast<Qt::GestureType>(hb_parni(1)));
       Qt5xHb::createReturnQObjectClass(ptr, "QGESTURE");
@@ -261,10 +246,8 @@ HB_FUNC_STATIC(QGESTUREEVENT_GESTURES)
       auto list = obj->gestures();
       auto pDynSym = hb_dynsymFindName("QGESTURE");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (auto item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (auto item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -276,9 +259,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_GESTURES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QGESTURE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -303,9 +284,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_IGNORE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQGESTURE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQGESTURE(1)) {
     /*
     void ignore(QGesture * gesture)
     */
@@ -316,9 +295,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_IGNORE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     void ignore(Qt::GestureType gestureType)
     */
@@ -345,9 +322,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_ISACCEPTED)
     if (obj != nullptr) {
       RBOOL(obj->isAccepted());
     }
-  }
-  else if (ISNUMPAR(1) && ISQGESTURE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQGESTURE(1)) {
     /*
     bool isAccepted(QGesture * gesture) const
     */
@@ -356,9 +331,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_ISACCEPTED)
     if (obj != nullptr) {
       RBOOL(obj->isAccepted(PQGESTURE(1)));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     bool isAccepted(Qt::GestureType gestureType) const
     */
@@ -381,8 +354,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_MAPTOGRAPHICSSCENE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINTF(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINTF(1)) {
 #endif
       RQPOINTF(obj->mapToGraphicsScene(*PQPOINTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -395,8 +367,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_MAPTOGRAPHICSSCENE)
 
 HB_FUNC_STATIC(QGESTUREEVENT_SETACCEPTED)
 {
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     /*
     void setAccepted(bool accepted)
     */
@@ -407,9 +378,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_SETACCEPTED)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQGESTURE(1) && HB_ISLOG(2))
-  {
+  } else if (ISNUMPAR(2) && ISQGESTURE(1) && HB_ISLOG(2)) {
     /*
     void setAccepted(QGesture * gesture, bool value)
     */
@@ -420,9 +389,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_SETACCEPTED)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
     /*
     void setAccepted(Qt::GestureType gestureType, bool value)
     */

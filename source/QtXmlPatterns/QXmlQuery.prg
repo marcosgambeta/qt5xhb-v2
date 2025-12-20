@@ -87,25 +87,19 @@ HB_FUNC_STATIC(QXMLQUERY_NEW)
     */
     auto obj = new QXmlQuery();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQXMLQUERY(1))
-  {
+  } else if (ISNUMPAR(1) && ISQXMLQUERY(1)) {
     /*
     QXmlQuery(const QXmlQuery &other)
     */
     auto obj = new QXmlQuery(*PQXMLQUERY(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQXMLNAMEPOOL(1))
-  {
+  } else if (ISNUMPAR(1) && ISQXMLNAMEPOOL(1)) {
     /*
     QXmlQuery(const QXmlNamePool &np)
     */
     auto obj = new QXmlQuery(*PQXMLNAMEPOOL(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQXMLNAMEPOOLORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQXMLNAMEPOOLORNIL(2)) {
     /*
     QXmlQuery(QXmlQuery::QueryLanguage queryLanguage, const QXmlNamePool &np = QXmlNamePool())
     */
@@ -134,8 +128,7 @@ HB_FUNC_STATIC(QXMLQUERY_DELETE)
 
 HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
 {
-  if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQXMLITEM(2))
-  {
+  if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQXMLITEM(2)) {
     /*
     void bindVariable(const QXmlName &name, const QXmlItem &value)
     */
@@ -146,9 +139,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQIODEVICE(2))
-  {
+  } else if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQIODEVICE(2)) {
     /*
     void bindVariable(const QXmlName &name, QIODevice * device)
     */
@@ -159,9 +150,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQXMLQUERY(2))
-  {
+  } else if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQXMLQUERY(2)) {
     /*
     void bindVariable(const QXmlName &name, const QXmlQuery &query)
     */
@@ -172,9 +161,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQXMLITEM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQXMLITEM(2)) {
     /*
     void bindVariable(const QString &localName, const QXmlItem &value)
     */
@@ -185,9 +172,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQIODEVICE(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQIODEVICE(2)) {
     /*
     void bindVariable(const QString &localName, QIODevice * device)
     */
@@ -198,9 +183,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQXMLQUERY(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQXMLQUERY(2)) {
     /*
     void bindVariable(const QString &localName, const QXmlQuery &query)
     */
@@ -218,8 +201,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
 
 HB_FUNC_STATIC(QXMLQUERY_EVALUATETO)
 {
-  if (ISNUMPAR(1) && ISQXMLRESULTITEMS(1))
-  {
+  if (ISNUMPAR(1) && ISQXMLRESULTITEMS(1)) {
     /*
     void evaluateTo(QXmlResultItems * result) const
     */
@@ -230,9 +212,7 @@ HB_FUNC_STATIC(QXMLQUERY_EVALUATETO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQABSTRACTXMLRECEIVER(1))
-  {
+  } else if (ISNUMPAR(1) && ISQABSTRACTXMLRECEIVER(1)) {
     /*
     bool evaluateTo(QAbstractXmlReceiver * callback) const
     */
@@ -241,9 +221,7 @@ HB_FUNC_STATIC(QXMLQUERY_EVALUATETO)
     if (obj != nullptr) {
       RBOOL(obj->evaluateTo(PQABSTRACTXMLRECEIVER(1)));
     }
-  }
-  else if (ISNUMPAR(1) && ISQIODEVICE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
     /*
     bool evaluateTo(QIODevice * target) const
     */
@@ -383,8 +361,7 @@ HB_FUNC_STATIC(QXMLQUERY_QUERYLANGUAGE)
 
 HB_FUNC_STATIC(QXMLQUERY_SETFOCUS)
 {
-  if (ISNUMPAR(1) && ISQXMLITEM(1))
-  {
+  if (ISNUMPAR(1) && ISQXMLITEM(1)) {
     /*
     void setFocus(const QXmlItem &item)
     */
@@ -395,9 +372,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETFOCUS)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQURL(1))
-  {
+  } else if (ISNUMPAR(1) && ISQURL(1)) {
     /*
     bool setFocus(const QUrl &documentURI)
     */
@@ -406,9 +381,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETFOCUS)
     if (obj != nullptr) {
       RBOOL(obj->setFocus(*PQURL(1)));
     }
-  }
-  else if (ISNUMPAR(1) && ISQIODEVICE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
     /*
     bool setFocus(QIODevice * document)
     */
@@ -417,9 +390,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETFOCUS)
     if (obj != nullptr) {
       RBOOL(obj->setFocus(PQIODEVICE(1)));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     bool setFocus(const QString &focus)
     */
@@ -435,8 +406,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETFOCUS)
 
 HB_FUNC_STATIC(QXMLQUERY_SETINITIALTEMPLATENAME)
 {
-  if (ISNUMPAR(1) && ISQXMLNAME(1))
-  {
+  if (ISNUMPAR(1) && ISQXMLNAME(1)) {
     /*
     void setInitialTemplateName(const QXmlName &name)
     */
@@ -447,9 +417,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETINITIALTEMPLATENAME)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     void setInitialTemplateName(const QString &localName)
     */
@@ -474,8 +442,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETMESSAGEHANDLER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTMESSAGEHANDLER(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTMESSAGEHANDLER(1)) {
 #endif
       obj->setMessageHandler(PQABSTRACTMESSAGEHANDLER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -497,8 +464,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETNETWORKACCESSMANAGER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKACCESSMANAGER(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKACCESSMANAGER(1)) {
 #endif
       obj->setNetworkAccessManager(PQNETWORKACCESSMANAGER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -513,8 +479,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETNETWORKACCESSMANAGER)
 
 HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
 {
-  if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISQURLORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISQURLORNIL(2)) {
     /*
     void setQuery(QIODevice * sourceCode, const QUrl &documentURI = QUrl())
     */
@@ -525,9 +490,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(1, 2) && ISQURL(1) && ISQURLORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQURL(1) && ISQURLORNIL(2)) {
     /*
     void setQuery(const QUrl &queryURI, const QUrl &baseURI = QUrl())
     */
@@ -538,9 +501,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQURLORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQURLORNIL(2)) {
     /*
     void setQuery(const QString &sourceCode, const QUrl &documentURI = QUrl())
     */
@@ -565,8 +526,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETURIRESOLVER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTURIRESOLVER(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTURIRESOLVER(1)) {
 #endif
       obj->setUriResolver(PQABSTRACTURIRESOLVER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -604,17 +564,14 @@ HB_FUNC_STATIC(QXMLQUERY_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -647,8 +604,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

@@ -55,9 +55,7 @@ HB_FUNC_STATIC(QDOMCOMMENT_NEW)
     */
     auto obj = new QDomComment();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMCOMMENT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDOMCOMMENT(1)) {
     /*
     QDomComment(const QDomComment &x)
     */

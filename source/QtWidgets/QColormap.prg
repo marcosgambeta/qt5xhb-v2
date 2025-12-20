@@ -70,8 +70,7 @@ RETURN
     */
 HB_FUNC_STATIC(QCOLORMAP_NEW)
 {
-  if (ISNUMPAR(1) && ISQCOLORMAP(1))
-  {
+  if (ISNUMPAR(1) && ISQCOLORMAP(1)) {
     auto obj = new QColormap(*PQCOLORMAP(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -103,8 +102,7 @@ HB_FUNC_STATIC(QCOLORMAP_COLORAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQCOLOR(obj->colorAt(PUINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,10 +127,8 @@ HB_FUNC_STATIC(QCOLORMAP_COLORMAP)
       auto list = obj->colormap();
       auto pDynSym = hb_dynsymFindName("QCOLOR");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -147,9 +143,7 @@ HB_FUNC_STATIC(QCOLORMAP_COLORMAP)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QCOLOR", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -210,8 +204,7 @@ HB_FUNC_STATIC(QCOLORMAP_PIXEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
-    {
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
 #endif
       RUINT(obj->pixel(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +241,7 @@ static QColormap instance(int screen = -1)
 HB_FUNC_STATIC(QCOLORMAP_INSTANCE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
     auto ptr = new QColormap(QColormap::instance(OPINT(1, -1)));
     Qt5xHb::createReturnClass(ptr, "QCOLORMAP", true);
@@ -264,17 +256,14 @@ HB_FUNC_STATIC(QCOLORMAP_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -307,8 +296,7 @@ HB_FUNC_STATIC(QCOLORMAP_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

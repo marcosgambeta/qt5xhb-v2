@@ -69,16 +69,13 @@ RETURN
 
 HB_FUNC_STATIC(QCOLORDIALOG_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     /*
     QColorDialog(QWidget * parent = nullptr)
     */
     auto obj = new QColorDialog(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISQWIDGETORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISQWIDGETORNIL(2)) {
     /*
     QColorDialog(const QColor &initial, QWidget * parent = nullptr)
     */
@@ -136,8 +133,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SETCURRENTCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
-    {
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
 #endif
       obj->setCurrentColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,9 +162,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_OPEN)
     hb_itemReturn(hb_stackSelfItem());
 
 #endif
-  }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
     /*
     void open(QObject * receiver, const char * member)
     */
@@ -213,8 +207,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SETOPTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setOptions(static_cast<QColorDialog::ColorDialogOptions>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -256,8 +249,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SETOPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
       obj->setOption(static_cast<QColorDialog::ColorDialogOption>(hb_parni(1)), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,8 +271,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_TESTOPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->testOption(static_cast<QColorDialog::ColorDialogOption>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,8 +291,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SETVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,8 +310,7 @@ static QColor customColor(int index)
 HB_FUNC_STATIC(QCOLORDIALOG_CUSTOMCOLOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     RQCOLOR(QColorDialog::customColor(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -337,8 +326,7 @@ static void setCustomColor(int index, QColor color)
 HB_FUNC_STATIC(QCOLORDIALOG_SETCUSTOMCOLOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQCOLOR(2))
-  {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQCOLOR(2)) {
 #endif
     QColorDialog::setCustomColor(PINT(1), *PQCOLOR(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,14 +361,12 @@ QString(), QColorDialog::ColorDialogOptions options = 0)
 HB_FUNC_STATIC(QCOLORDIALOG_GETCOLOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 4) && (ISQCOLOR(1) || HB_ISNIL(1)) && ISQWIDGETORNIL(2) &&
-      ISCHARORNIL(3) && ISNUMORNIL(4))
-  {
+  if (ISBETWEEN(0, 4) && (ISQCOLOR(1) || HB_ISNIL(1)) && ISQWIDGETORNIL(2) && ISCHARORNIL(3) && ISNUMORNIL(4)) {
 #endif
     RQCOLOR(QColorDialog::getColor(HB_ISNIL(1) ? Qt::white : *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)),
-                                          OPQWIDGET(2, nullptr), OPQSTRING(3, QString()),
-                                          HB_ISNIL(4) ? static_cast<QColorDialog::ColorDialogOptions>(0)
-                                                      : static_cast<QColorDialog::ColorDialogOptions>(hb_parni(4))));
+                                   OPQWIDGET(2, nullptr), OPQSTRING(3, QString()),
+                                   HB_ISNIL(4) ? static_cast<QColorDialog::ColorDialogOptions>(0)
+                                               : static_cast<QColorDialog::ColorDialogOptions>(hb_parni(4))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -394,8 +380,7 @@ static QColor standardColor(int index)
 HB_FUNC_STATIC(QCOLORDIALOG_STANDARDCOLOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     RQCOLOR(QColorDialog::standardColor(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,8 +396,7 @@ static void setStandardColor(int index, QColor color)
 HB_FUNC_STATIC(QCOLORDIALOG_SETSTANDARDCOLOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQCOLOR(2))
-  {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQCOLOR(2)) {
 #endif
     QColorDialog::setStandardColor(PINT(1), *PQCOLOR(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -433,21 +417,17 @@ HB_FUNC_STATIC(QCOLORDIALOG_ONCOLORSELECTED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("colorSelected(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QColorDialog::colorSelected, [sender, indexOfCodeBlock](const QColor &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOLORDIALOG");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QCOLOR");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -459,9 +439,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_ONCOLORSELECTED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -482,21 +460,17 @@ HB_FUNC_STATIC(QCOLORDIALOG_ONCURRENTCOLORCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QColorDialog::currentColorChanged,
                                            [sender, indexOfCodeBlock](const QColor &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCOLORDIALOG");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QCOLOR");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -508,9 +482,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_ONCURRENTCOLORCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

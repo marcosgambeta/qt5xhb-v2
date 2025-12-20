@@ -77,8 +77,7 @@ HB_FUNC_STATIC(QABSTRACTURIRESOLVER_RESOLVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQURL(1) && ISQURL(2))
-    {
+    if (ISNUMPAR(2) && ISQURL(1) && ISQURL(2)) {
 #endif
       auto ptr = new QUrl(obj->resolve(*PQURL(1), *PQURL(2)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);

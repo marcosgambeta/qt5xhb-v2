@@ -47,8 +47,7 @@ RETURN
     */
 HB_FUNC_STATIC(HHEADERVIEW_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQWIDGETORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQWIDGETORNIL(2)) {
     auto obj = new HHeaderView((Qt::Orientation)hb_parni(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -86,8 +85,7 @@ HB_FUNC_STATIC(HHEADERVIEW_SETPAINTSECTIONCB)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1))
-    {
+    if (ISNUMPAR(1)) {
 #endif
       obj->setPaintSectionCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -50,16 +50,13 @@ RETURN
 
 HB_FUNC_STATIC(QDATEEDIT_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     /*
     QDateEdit(QWidget * parent = nullptr)
     */
     auto obj = new QDateEdit(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQDATE(1) && ISQWIDGETORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQDATE(1) && ISQWIDGETORNIL(2)) {
     /*
     QDateEdit(const QDate &date, QWidget * parent = nullptr)
     */

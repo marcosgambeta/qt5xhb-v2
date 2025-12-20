@@ -55,9 +55,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTFRAGMENT_NEW)
     */
     auto obj = new QDomDocumentFragment();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMDOCUMENTFRAGMENT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDOMDOCUMENTFRAGMENT(1)) {
     /*
     QDomDocumentFragment(const QDomDocumentFragment &x)
     */

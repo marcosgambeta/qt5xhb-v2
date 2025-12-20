@@ -64,16 +64,13 @@ RETURN
 
 HB_FUNC_STATIC(QFONTDIALOG_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     /*
     QFontDialog(QWidget * parent = nullptr)
     */
     auto obj = new QFontDialog(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQFONT(1) && ISQWIDGETORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQFONT(1) && ISQWIDGETORNIL(2)) {
     /*
     QFontDialog(const QFont &initial, QWidget * parent = nullptr)
     */
@@ -131,8 +128,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETCURRENTFONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQFONT(1))
-    {
+    if (ISNUMPAR(1) && ISQFONT(1)) {
 #endif
       obj->setCurrentFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,8 +150,7 @@ HB_FUNC_STATIC(QFONTDIALOG_OPEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
 #endif
       obj->open(PQOBJECT(1), PCONSTCHAR(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,8 +192,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETOPTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setOptions(static_cast<QFontDialog::FontDialogOptions>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,8 +235,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETOPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
       obj->setOption(static_cast<QFontDialog::FontDialogOption>(hb_parni(1)), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,8 +257,7 @@ HB_FUNC_STATIC(QFONTDIALOG_TESTOPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->testOption(static_cast<QFontDialog::FontDialogOption>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,8 +277,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,8 +292,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETVISIBLE)
 
 HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
 {
-  if (ISBETWEEN(1, 2) && HB_ISLOG(1) && ISQWIDGETORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISLOG(1) && ISQWIDGETORNIL(2)) {
     /*
     static QFont getFont(bool * ok, QWidget * parent = nullptr)
     */
@@ -311,10 +301,7 @@ HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
     auto ptr = new QFont(QFontDialog::getFont(&par1, OPQWIDGET(2, nullptr)));
     Qt5xHb::createReturnClass(ptr, "QFONT", true);
     hb_storl(par1, 1);
-  }
-  else if (ISBETWEEN(2, 5) && HB_ISLOG(1) && ISQFONT(2) && ISQWIDGETORNIL(3) &&
-           ISCHARORNIL(4) && ISNUMORNIL(5))
-  {
+  } else if (ISBETWEEN(2, 5) && HB_ISLOG(1) && ISQFONT(2) && ISQWIDGETORNIL(3) && ISCHARORNIL(4) && ISNUMORNIL(5)) {
     /*
     static QFont getFont(bool * ok, const QFont &initial, QWidget * parent = nullptr, const QString &title =
     QString(), QFontDialog::FontDialogOptions options = 0)
@@ -340,21 +327,17 @@ HB_FUNC_STATIC(QFONTDIALOG_ONCURRENTFONTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentFontChanged(QFont)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QFontDialog::currentFontChanged, [sender, indexOfCodeBlock](const QFont &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QFONTDIALOG");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QFONT");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -366,9 +349,7 @@ HB_FUNC_STATIC(QFONTDIALOG_ONCURRENTFONTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -389,21 +370,17 @@ HB_FUNC_STATIC(QFONTDIALOG_ONFONTSELECTED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("fontSelected(QFont)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QFontDialog::fontSelected, [sender, indexOfCodeBlock](const QFont &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QFONTDIALOG");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QFONT");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -415,9 +392,7 @@ HB_FUNC_STATIC(QFONTDIALOG_ONFONTSELECTED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

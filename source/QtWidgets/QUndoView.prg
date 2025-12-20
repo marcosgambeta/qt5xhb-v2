@@ -64,24 +64,19 @@ RETURN
 
 HB_FUNC_STATIC(QUNDOVIEW_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     /*
     QUndoView(QWidget * parent = nullptr)
     */
     auto obj = new QUndoView(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQUNDOSTACK(1) && ISQWIDGETORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQUNDOSTACK(1) && ISQWIDGETORNIL(2)) {
     /*
     QUndoView(QUndoStack * stack, QWidget * parent = nullptr)
     */
     auto obj = new QUndoView(PQUNDOSTACK(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQUNDOGROUP(1) && ISQWIDGETORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQUNDOGROUP(1) && ISQWIDGETORNIL(2)) {
     /*
     QUndoView(QUndoGroup * group, QWidget * parent = nullptr)
     */
@@ -179,8 +174,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETCLEANICON)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1)))
-    {
+    if (ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1))) {
 #endif
       obj->setCleanIcon(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,8 +196,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETEMPTYLABEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setEmptyLabel(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,8 +239,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETGROUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQUNDOGROUP(1))
-    {
+    if (ISNUMPAR(1) && ISQUNDOGROUP(1)) {
 #endif
       obj->setGroup(PQUNDOGROUP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +261,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETSTACK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQUNDOSTACK(1))
-    {
+    if (ISNUMPAR(1) && ISQUNDOSTACK(1)) {
 #endif
       obj->setStack(PQUNDOSTACK(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
