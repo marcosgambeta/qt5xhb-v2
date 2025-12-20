@@ -65,9 +65,7 @@ RETURN
     */
 HB_FUNC_STATIC(QDROPEVENT_NEW)
 {
-  if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
-      ISNUMORNIL(6))
-  {
+  if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) && ISNUMORNIL(6)) {
     auto obj =
         new QDropEvent(*PQPOINT(1), static_cast<Qt::DropActions>(hb_parni(2)), PQMIMEDATA(3),
                        static_cast<Qt::MouseButtons>(hb_parni(4)), static_cast<Qt::KeyboardModifiers>(hb_parni(5)),
@@ -245,8 +243,7 @@ HB_FUNC_STATIC(QDROPEVENT_SETDROPACTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDropAction(static_cast<Qt::DropAction>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

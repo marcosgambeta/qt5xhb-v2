@@ -143,8 +143,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_CALCULATEROUTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGEOROUTEREQUEST(1))
-    {
+    if (ISNUMPAR(1) && ISQGEOROUTEREQUEST(1)) {
 #endif
       auto ptr = obj->calculateRoute(*PQGEOROUTEREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOROUTEREPLY");
@@ -167,8 +166,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_UPDATEROUTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQGEOROUTE(1) && ISQGEOCOORDINATE(2))
-    {
+    if (ISNUMPAR(2) && ISQGEOROUTE(1) && ISQGEOCOORDINATE(2)) {
 #endif
       auto ptr = obj->updateRoute(*PQGEOROUTE(1), *PQGEOCOORDINATE(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOROUTEREPLY");
@@ -323,8 +321,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_SETLOCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLOCALE(1))
-    {
+    if (ISNUMPAR(1) && ISQLOCALE(1)) {
 #endif
       obj->setLocale(*PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -371,8 +368,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_SETMEASUREMENTSYSTEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMeasurementSystem(static_cast<QLocale::MeasurementSystem>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -418,21 +414,17 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_ONFINISHED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished(QGeoRouteReply*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGeoRoutingManager::finished, [sender, indexOfCodeBlock](QGeoRouteReply *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOROUTINGMANAGER");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QGEOROUTEREPLY");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -444,9 +436,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_ONFINISHED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -471,22 +461,18 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_ONERROR)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QGeoRouteReply*,QGeoRouteReply::Error,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QGeoRoutingManager::error,
             [sender, indexOfCodeBlock](QGeoRouteReply *arg1, QGeoRouteReply::Error arg2, QString arg3) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOROUTINGMANAGER");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QGEOROUTEREPLY");
                 auto pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
@@ -502,9 +488,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_ONERROR)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

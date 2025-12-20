@@ -135,33 +135,25 @@ HB_FUNC_STATIC(QTEXTCURSOR_NEW)
     */
     auto obj = new QTextCursor();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1)) {
     /*
     QTextCursor(QTextDocument * document)
     */
     auto obj = new QTextCursor(PQTEXTDOCUMENT(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQTEXTFRAME(1))
-  {
+  } else if (ISNUMPAR(1) && ISQTEXTFRAME(1)) {
     /*
     QTextCursor(QTextFrame * frame)
     */
     auto obj = new QTextCursor(PQTEXTFRAME(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
-  {
+  } else if (ISNUMPAR(1) && ISQTEXTBLOCK(1)) {
     /*
     QTextCursor(const QTextBlock &block)
     */
     auto obj = new QTextCursor(*PQTEXTBLOCK(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
-  {
+  } else if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
     /*
     QTextCursor(const QTextCursor &cursor)
     */
@@ -196,8 +188,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SWAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
 #endif
       obj->swap(*PQTEXTCURSOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +230,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->setPosition(PINT(1), HB_ISNIL(2) ? static_cast<QTextCursor::MoveMode>(QTextCursor::MoveAnchor)
                                             : static_cast<QTextCursor::MoveMode>(hb_parni(2)));
@@ -316,8 +306,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_ANCHOR)
 
 HB_FUNC_STATIC(QTEXTCURSOR_INSERTTEXT)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     void insertText(const QString &text)
     */
@@ -328,9 +317,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTEXT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQTEXTCHARFORMAT(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQTEXTCHARFORMAT(2)) {
     /*
     void insertText(const QString &text, const QTextCharFormat &format)
     */
@@ -355,8 +342,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_MOVEPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       RBOOL(obj->movePosition(static_cast<QTextCursor::MoveOperation>(hb_parni(1)),
                               HB_ISNIL(2) ? static_cast<QTextCursor::MoveMode>(QTextCursor::MoveAnchor)
@@ -399,8 +385,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETVISUALNAVIGATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setVisualNavigation(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -422,8 +407,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETVERTICALMOVEMENTX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setVerticalMovementX(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -465,8 +449,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETKEEPPOSITIONONINSERT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setKeepPositionOnInsert(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -552,8 +535,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SELECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->select(static_cast<QTextCursor::SelectionType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -740,8 +722,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SELECTEDTABLECELLS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       int par1;
       int par2;
@@ -813,8 +794,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETCHARFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1)) {
 #endif
       obj->setCharFormat(*PQTEXTCHARFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -836,8 +816,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_MERGECHARFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1)) {
 #endif
       obj->mergeCharFormat(*PQTEXTCHARFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -880,8 +859,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETBLOCKFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTBLOCKFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTBLOCKFORMAT(1)) {
 #endif
       obj->setBlockFormat(*PQTEXTBLOCKFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -903,8 +881,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_MERGEBLOCKFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTBLOCKFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTBLOCKFORMAT(1)) {
 #endif
       obj->mergeBlockFormat(*PQTEXTBLOCKFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -947,8 +924,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETBLOCKCHARFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1)) {
 #endif
       obj->setBlockCharFormat(*PQTEXTCHARFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -970,8 +946,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_MERGEBLOCKCHARFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1)) {
 #endif
       obj->mergeBlockCharFormat(*PQTEXTCHARFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1077,9 +1052,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTBLOCK)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQTEXTBLOCKFORMAT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQTEXTBLOCKFORMAT(1)) {
     /*
     void insertBlock(const QTextBlockFormat &format)
     */
@@ -1090,9 +1063,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTBLOCK)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQTEXTBLOCKFORMAT(1) && ISQTEXTCHARFORMAT(2))
-  {
+  } else if (ISNUMPAR(2) && ISQTEXTBLOCKFORMAT(1) && ISQTEXTCHARFORMAT(2)) {
     /*
     void insertBlock(const QTextBlockFormat &format, const QTextCharFormat &charFormat)
     */
@@ -1110,8 +1081,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTBLOCK)
 
 HB_FUNC_STATIC(QTEXTCURSOR_INSERTLIST)
 {
-  if (ISNUMPAR(1) && ISQTEXTLISTFORMAT(1))
-  {
+  if (ISNUMPAR(1) && ISQTEXTLISTFORMAT(1)) {
     /*
     QTextList * insertList(const QTextListFormat &format)
     */
@@ -1121,9 +1091,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTLIST)
       auto ptr = obj->insertList(*PQTEXTLISTFORMAT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     QTextList * insertList(QTextListFormat::Style style)
     */
@@ -1140,8 +1108,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTLIST)
 
 HB_FUNC_STATIC(QTEXTCURSOR_CREATELIST)
 {
-  if (ISNUMPAR(1) && ISQTEXTLISTFORMAT(1))
-  {
+  if (ISNUMPAR(1) && ISQTEXTLISTFORMAT(1)) {
     /*
     QTextList * createList(const QTextListFormat &format)
     */
@@ -1151,9 +1118,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_CREATELIST)
       auto ptr = obj->createList(*PQTEXTLISTFORMAT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     QTextList * createList(QTextListFormat::Style style)
     */
@@ -1191,8 +1156,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_CURRENTLIST)
 
 HB_FUNC_STATIC(QTEXTCURSOR_INSERTTABLE)
 {
-  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQTEXTTABLEFORMAT(3))
-  {
+  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQTEXTTABLEFORMAT(3)) {
     /*
     QTextTable * insertTable(int rows, int cols, const QTextTableFormat &format)
     */
@@ -1202,9 +1166,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTABLE)
       auto ptr = obj->insertTable(PINT(1), PINT(2), *PQTEXTTABLEFORMAT(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTTABLE");
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     QTextTable * insertTable(int rows, int cols)
     */
@@ -1249,8 +1211,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTFRAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTFRAMEFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTFRAMEFORMAT(1)) {
 #endif
       auto ptr = obj->insertFrame(*PQTEXTFRAMEFORMAT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTFRAME");
@@ -1292,8 +1253,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTFRAGMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1)) {
 #endif
       obj->insertFragment(*PQTEXTDOCUMENTFRAGMENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1315,8 +1275,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTHTML)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->insertHtml(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1331,8 +1290,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTHTML)
 
 HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
 {
-  if (ISNUMPAR(2) && ISQTEXTIMAGEFORMAT(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && ISQTEXTIMAGEFORMAT(1) && HB_ISNUM(2)) {
     /*
     void insertImage(const QTextImageFormat &format, QTextFrameFormat::Position alignment)
     */
@@ -1343,9 +1301,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQTEXTIMAGEFORMAT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQTEXTIMAGEFORMAT(1)) {
     /*
     void insertImage(const QTextImageFormat &format)
     */
@@ -1356,9 +1312,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     void insertImage(const QString &name)
     */
@@ -1369,9 +1323,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(1, 2) && ISQIMAGE(1) && ISCHARORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQIMAGE(1) && ISCHARORNIL(2)) {
     /*
     void insertImage(const QImage &image, const QString &name = QString())
     */
@@ -1462,8 +1414,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_ISCOPYOF)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
 #endif
       RBOOL(obj->isCopyOf(*PQTEXTCURSOR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1539,17 +1490,14 @@ HB_FUNC_STATIC(QTEXTCURSOR_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -1582,8 +1530,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

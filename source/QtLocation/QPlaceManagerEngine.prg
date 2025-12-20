@@ -167,8 +167,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_GETPLACEDETAILS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto ptr = obj->getPlaceDetails(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEDETAILSREPLY");
@@ -191,8 +190,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_GETPLACECONTENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPLACECONTENTREQUEST(1))
-    {
+    if (ISNUMPAR(1) && ISQPLACECONTENTREQUEST(1)) {
 #endif
       auto ptr = obj->getPlaceContent(*PQPLACECONTENTREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACECONTENTREPLY");
@@ -215,8 +213,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_SEARCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1))
-    {
+    if (ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1)) {
 #endif
       auto ptr = obj->search(*PQPLACESEARCHREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACESEARCHREPLY");
@@ -239,8 +236,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_SEARCHSUGGESTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1))
-    {
+    if (ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1)) {
 #endif
       auto ptr = obj->searchSuggestions(*PQPLACESEARCHREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACESEARCHSUGGESTIONREPLY");
@@ -263,8 +259,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_SAVEPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPLACE(1))
-    {
+    if (ISNUMPAR(1) && ISQPLACE(1)) {
 #endif
       auto ptr = obj->savePlace(*PQPLACE(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
@@ -287,8 +282,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_REMOVEPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto ptr = obj->removePlace(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
@@ -311,8 +305,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_SAVECATEGORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQPLACECATEGORY(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && ISQPLACECATEGORY(1) && HB_ISCHAR(2)) {
 #endif
       auto ptr = obj->saveCategory(*PQPLACECATEGORY(1), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
@@ -335,8 +328,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_REMOVECATEGORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto ptr = obj->removeCategory(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
@@ -382,8 +374,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_PARENTCATEGORYID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RQSTRING(obj->parentCategoryId(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -405,8 +396,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_CHILDCATEGORYIDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RQSTRINGLIST(obj->childCategoryIds(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -428,8 +418,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_CATEGORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto ptr = new QPlaceCategory(obj->category(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QPLACECATEGORY", true);
@@ -452,16 +441,13 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_CHILDCATEGORIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto list = obj->childCategories(PQSTRING(1));
       auto pDynSym = hb_dynsymFindName("QPLACECATEGORY");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -476,9 +462,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_CHILDCATEGORIES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QPLACECATEGORY", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -506,10 +490,8 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_LOCALES)
       auto list = obj->locales();
       auto pDynSym = hb_dynsymFindName("QLOCALE");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -524,9 +506,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_LOCALES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QLOCALE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -549,14 +529,12 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_SETLOCALES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       QList<QLocale> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (auto i1 = 0; i1 < nLen1; i1++)
-      {
+      for (auto i1 = 0; i1 < nLen1; i1++) {
         par1 << *static_cast<QLocale *>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
       obj->setLocales(par1);
@@ -581,8 +559,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_CONSTRUCTICONURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQPLACEICON(1) && ISQSIZE(2))
-    {
+    if (ISNUMPAR(2) && ISQPLACEICON(1) && ISQSIZE(2)) {
 #endif
       auto ptr = new QUrl(obj->constructIconUrl(*PQPLACEICON(1), *PQSIZE(2)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -605,8 +582,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_COMPATIBLEPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPLACE(1))
-    {
+    if (ISNUMPAR(1) && ISQPLACE(1)) {
 #endif
       auto ptr = new QPlace(obj->compatiblePlace(*PQPLACE(1)));
       Qt5xHb::createReturnClass(ptr, "QPLACE", true);
@@ -629,8 +605,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_MATCHINGPLACES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPLACEMATCHREQUEST(1))
-    {
+    if (ISNUMPAR(1) && ISQPLACEMATCHREQUEST(1)) {
 #endif
       auto ptr = obj->matchingPlaces(*PQPLACEMATCHREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEMATCHREPLY");
@@ -653,21 +628,17 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONFINISHED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished(QPlaceReply*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QPlaceManagerEngine::finished, [sender, indexOfCodeBlock](QPlaceReply *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGERENGINE");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QPLACEREPLY");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -679,9 +650,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONFINISHED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -706,22 +675,18 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONERROR)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QPlaceReply*,QPlaceReply::Error,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QPlaceManagerEngine::error,
             [sender, indexOfCodeBlock](QPlaceReply *arg1, QPlaceReply::Error arg2, const QString &arg3) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGERENGINE");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QPLACEREPLY");
                 auto pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
@@ -737,9 +702,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONERROR)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -764,21 +727,17 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEADDED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("placeAdded(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QPlaceManagerEngine::placeAdded, [sender, indexOfCodeBlock](const QString &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGERENGINE");
                 auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -790,9 +749,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEADDED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -817,21 +774,17 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEUPDATED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("placeUpdated(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QPlaceManagerEngine::placeUpdated, [sender, indexOfCodeBlock](const QString &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGERENGINE");
                 auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -843,9 +796,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEUPDATED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -870,21 +821,17 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEREMOVED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("placeRemoved(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QPlaceManagerEngine::placeRemoved, [sender, indexOfCodeBlock](const QString &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGERENGINE");
                 auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -896,9 +843,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEREMOVED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -923,22 +868,18 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYADDED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("categoryAdded(QPlaceCategory,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QPlaceManagerEngine::categoryAdded,
                              [sender, indexOfCodeBlock](const QPlaceCategory &arg1, const QString &arg2) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGERENGINE");
                                  auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QPLACECATEGORY");
                                  auto pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
@@ -952,9 +893,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYADDED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -979,22 +918,18 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYUPDATED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("categoryUpdated(QPlaceCategory,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QPlaceManagerEngine::categoryUpdated,
                              [sender, indexOfCodeBlock](const QPlaceCategory &arg1, const QString &arg2) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGERENGINE");
                                  auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QPLACECATEGORY");
                                  auto pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
@@ -1008,9 +943,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYUPDATED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1035,21 +968,17 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYREMOVED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("categoryRemoved(QString,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QPlaceManagerEngine::categoryRemoved,
                                            [sender, indexOfCodeBlock](const QString &arg1, const QString &arg2) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender =
                                                    Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGERENGINE");
                                                auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
@@ -1064,9 +993,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYREMOVED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1091,20 +1018,16 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONDATACHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("dataChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QPlaceManagerEngine::dataChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPLACEMANAGERENGINE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -1114,9 +1037,7 @@ HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONDATACHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

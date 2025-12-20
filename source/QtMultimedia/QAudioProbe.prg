@@ -58,8 +58,7 @@ RETURN
     */
 HB_FUNC_STATIC(QAUDIOPROBE_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QAudioProbe(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -109,8 +108,7 @@ HB_FUNC_STATIC(QAUDIOPROBE_ISACTIVE)
 
 HB_FUNC_STATIC(QAUDIOPROBE_SETSOURCE)
 {
-  if (ISNUMPAR(1) && ISQMEDIAOBJECT(1))
-  {
+  if (ISNUMPAR(1) && ISQMEDIAOBJECT(1)) {
     /*
     bool setSource(QMediaObject * source)
     */
@@ -119,9 +117,7 @@ HB_FUNC_STATIC(QAUDIOPROBE_SETSOURCE)
     if (obj != nullptr) {
       RBOOL(obj->setSource(PQMEDIAOBJECT(1)));
     }
-  }
-  else if (ISNUMPAR(1) && ISQMEDIARECORDER(1))
-  {
+  } else if (ISNUMPAR(1) && ISQMEDIARECORDER(1)) {
     /*
     bool setSource(QMediaRecorder * source)
     */
@@ -144,21 +140,17 @@ HB_FUNC_STATIC(QAUDIOPROBE_ONAUDIOBUFFERPROBED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("audioBufferProbed(QAudioBuffer)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAudioProbe::audioBufferProbed, [sender, indexOfCodeBlock](const QAudioBuffer &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIOPROBE");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QAUDIOBUFFER");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -170,9 +162,7 @@ HB_FUNC_STATIC(QAUDIOPROBE_ONAUDIOBUFFERPROBED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -193,20 +183,16 @@ HB_FUNC_STATIC(QAUDIOPROBE_ONFLUSH)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("flush()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAudioProbe::flush, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAUDIOPROBE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -216,9 +202,7 @@ HB_FUNC_STATIC(QAUDIOPROBE_ONFLUSH)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

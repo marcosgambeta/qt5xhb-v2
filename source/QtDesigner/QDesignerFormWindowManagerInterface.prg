@@ -529,8 +529,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
 #endif
       auto ptr = obj->createFormWindow(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
                                                                           : static_cast<Qt::WindowFlags>(hb_parni(2)));
@@ -552,8 +551,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = obj->formWindow(PINT(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QDESIGNERFORMWINDOWINTERFACE");
@@ -594,8 +592,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ADDFORMWINDOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1))
-    {
+    if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1)) {
 #endif
       obj->addFormWindow(PQDESIGNERFORMWINDOWINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -617,8 +614,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_REMOVEFORMWINDOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1))
-    {
+    if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1)) {
 #endif
       obj->removeFormWindow(PQDESIGNERFORMWINDOWINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -640,8 +636,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_SETACTIVEFORMWINDOW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1))
-    {
+    if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1)) {
 #endif
       obj->setActiveFormWindow(PQDESIGNERFORMWINDOWINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -663,22 +658,18 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activeFormWindowChanged(QDesignerFormWindowInterface*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QDesignerFormWindowManagerInterface::activeFormWindowChanged,
                              [sender, indexOfCodeBlock](QDesignerFormWindowInterface *arg1) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender =
                                      Qt5xHb::Signals_return_qobject(sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
                                  auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QDESIGNERFORMWINDOWINTERFACE");
@@ -691,9 +682,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -714,22 +703,18 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("formWindowAdded(QDesignerFormWindowInterface*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QDesignerFormWindowManagerInterface::formWindowAdded,
                              [sender, indexOfCodeBlock](QDesignerFormWindowInterface *arg1) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender =
                                      Qt5xHb::Signals_return_qobject(sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
                                  auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QDESIGNERFORMWINDOWINTERFACE");
@@ -742,9 +727,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -765,22 +748,18 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("formWindowRemoved(QDesignerFormWindowInterface*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QDesignerFormWindowManagerInterface::formWindowRemoved,
                              [sender, indexOfCodeBlock](QDesignerFormWindowInterface *arg1) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender =
                                      Qt5xHb::Signals_return_qobject(sender, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
                                  auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QDESIGNERFORMWINDOWINTERFACE");
@@ -793,9 +772,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

@@ -80,9 +80,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_NEW)
     */
     auto obj = new QVideoEncoderSettings();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQVIDEOENCODERSETTINGS(1))
-  {
+  } else if (ISNUMPAR(1) && ISQVIDEOENCODERSETTINGS(1)) {
     /*
     QVideoEncoderSettings(const QVideoEncoderSettings &other)
     */
@@ -180,8 +178,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_ENCODINGOPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RQVARIANT(obj->encodingOption(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,8 +278,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETBITRATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setBitRate(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,8 +300,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETCODEC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setCodec(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -327,8 +322,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETENCODINGMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setEncodingMode(static_cast<QMultimedia::EncodingMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -350,8 +344,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETENCODINGOPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
 #endif
       obj->setEncodingOption(PQSTRING(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,8 +366,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETFRAMERATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFrameRate(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -396,8 +388,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETQUALITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setQuality(static_cast<QMultimedia::EncodingQuality>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -412,8 +403,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETQUALITY)
 
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETRESOLUTION)
 {
-  if (ISNUMPAR(1) && ISQSIZE(1))
-  {
+  if (ISNUMPAR(1) && ISQSIZE(1)) {
     /*
     void setResolution(const QSize &resolution)
     */
@@ -424,9 +414,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETRESOLUTION)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     void setResolution(int width, int height)
     */
@@ -446,17 +434,14 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -489,8 +474,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

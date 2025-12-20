@@ -70,17 +70,13 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_NEW)
     */
     auto obj = new QOpenGLPaintDevice();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSIZE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQSIZE(1)) {
     /*
     QOpenGLPaintDevice(const QSize &size)
     */
     auto obj = new QOpenGLPaintDevice(*PQSIZE(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     QOpenGLPaintDevice(int width, int height)
     */
@@ -197,8 +193,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_SETSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSIZE(1))
-    {
+    if (ISNUMPAR(1) && ISQSIZE(1)) {
 #endif
       obj->setSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,8 +215,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_SETDEVICEPIXELRATIO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDevicePixelRatio(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,8 +277,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_SETDOTSPERMETERX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDotsPerMeterX(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,8 +299,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_SETDOTSPERMETERY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDotsPerMeterY(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,8 +321,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_SETPAINTFLIPPED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setPaintFlipped(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

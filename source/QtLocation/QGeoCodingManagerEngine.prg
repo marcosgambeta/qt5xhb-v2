@@ -129,8 +129,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_MANAGERVERSION)
 
 HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_GEOCODE)
 {
-  if (ISNUMPAR(2) && ISQGEOADDRESS(1) && ISQGEOSHAPE(2))
-  {
+  if (ISNUMPAR(2) && ISQGEOADDRESS(1) && ISQGEOSHAPE(2)) {
     /*
     virtual QGeoCodeReply * geocode(const QGeoAddress &address, const QGeoShape &bounds)
     */
@@ -142,9 +141,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_GEOCODE)
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODEREPLY");
     }
 #endif
-  }
-  else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQGEOSHAPE(4))
-  {
+  } else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQGEOSHAPE(4)) {
     /*
     virtual QGeoCodeReply * geocode(const QString &address, int limit, int offset, const QGeoShape &bounds)
     */
@@ -171,8 +168,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_REVERSEGEOCODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQGEOCOORDINATE(1) && ISQGEOSHAPE(2))
-    {
+    if (ISNUMPAR(2) && ISQGEOCOORDINATE(1) && ISQGEOSHAPE(2)) {
 #endif
       auto ptr = obj->reverseGeocode(*PQGEOCOORDINATE(1), *PQGEOSHAPE(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODEREPLY");
@@ -195,8 +191,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_SETLOCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLOCALE(1))
-    {
+    if (ISNUMPAR(1) && ISQLOCALE(1)) {
 #endif
       obj->setLocale(*PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,21 +238,17 @@ HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_ONFINISHED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished(QGeoCodeReply*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QGeoCodingManagerEngine::finished, [sender, indexOfCodeBlock](QGeoCodeReply *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOCODINGMANAGERENGINE");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QGEOCODEREPLY");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -269,9 +260,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_ONFINISHED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -296,22 +285,18 @@ HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_ONERROR)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QGeoCodeReply*,QGeoCodeReply::Error,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGeoCodingManagerEngine::error,
                              [sender, indexOfCodeBlock](QGeoCodeReply *arg1, QGeoCodeReply::Error arg2, QString arg3) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOCODINGMANAGERENGINE");
                                  auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QGEOCODEREPLY");
                                  auto pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
@@ -327,9 +312,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_ONERROR)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

@@ -78,9 +78,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_NEW)
     */
     auto obj = new QAudioDeviceInfo();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQAUDIODEVICEINFO(1))
-  {
+  } else if (ISNUMPAR(1) && ISQAUDIODEVICEINFO(1)) {
     /*
     QAudioDeviceInfo(const QAudioDeviceInfo &other)
     */
@@ -138,8 +136,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_ISFORMATSUPPORTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQAUDIOFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQAUDIOFORMAT(1)) {
 #endif
       RBOOL(obj->isFormatSupported(*PQAUDIOFORMAT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,8 +176,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_NEARESTFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQAUDIOFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQAUDIOFORMAT(1)) {
 #endif
       auto ptr = new QAudioFormat(obj->nearestFormat(*PQAUDIOFORMAT(1)));
       Qt5xHb::createReturnClass(ptr, "QAUDIOFORMAT", true);
@@ -226,8 +222,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS)
 #endif
       auto list = obj->supportedByteOrders();
       auto pArray = hb_itemArrayNew(0);
-      for (const auto &item : list)
-      {
+      for (const auto &item : list) {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -337,8 +332,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES)
 #endif
       auto list = obj->supportedSampleTypes();
       auto pArray = hb_itemArrayNew(0);
-      for (const auto &item : list)
-      {
+      for (const auto &item : list) {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -358,16 +352,13 @@ static QList<QAudioDeviceInfo> availableDevices(QAudio::Mode mode)
 HB_FUNC_STATIC(QAUDIODEVICEINFO_AVAILABLEDEVICES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     auto list = QAudioDeviceInfo::availableDevices(static_cast<QAudio::Mode>(hb_parni(1)));
     auto pDynSym = hb_dynsymFindName("QAUDIODEVICEINFO");
     auto pArray = hb_itemArrayNew(0);
-    if (pDynSym != nullptr)
-    {
-      for (const auto &item : list)
-      {
+    if (pDynSym != nullptr) {
+      for (const auto &item : list) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -431,17 +422,14 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -474,8 +462,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

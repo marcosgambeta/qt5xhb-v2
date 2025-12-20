@@ -67,8 +67,7 @@ RETURN
     */
 HB_FUNC_STATIC(QHELPENGINE_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
     auto obj = new QHelpEngine(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {

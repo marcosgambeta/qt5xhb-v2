@@ -158,8 +158,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1)) {
 #endif
       RBOOL(obj->isFormatSupported(*PQVIDEOSURFACEFORMAT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,8 +178,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_NEARESTFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1)) {
 #endif
       auto ptr = new QVideoSurfaceFormat(obj->nearestFormat(*PQVIDEOSURFACEFORMAT(1)));
       Qt5xHb::createReturnClass(ptr, "QVIDEOSURFACEFORMAT", true);
@@ -201,8 +199,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_PRESENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVIDEOFRAME(1))
-    {
+    if (ISNUMPAR(1) && ISQVIDEOFRAME(1)) {
 #endif
       RBOOL(obj->present(*PQVIDEOFRAME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,8 +219,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_START)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1)) {
 #endif
       RBOOL(obj->start(*PQVIDEOSURFACEFORMAT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,21 +287,17 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONACTIVECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activeChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractVideoSurface::activeChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTVIDEOSURFACE");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -317,9 +309,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONACTIVECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -340,22 +330,18 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("surfaceFormatChanged(QVideoSurfaceFormat)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractVideoSurface::surfaceFormatChanged,
                              [sender, indexOfCodeBlock](const QVideoSurfaceFormat &arg1) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTVIDEOSURFACE");
                                  auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QVIDEOSURFACEFORMAT");
                                  hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -367,9 +353,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -390,21 +374,17 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("supportedFormatsChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractVideoSurface::supportedFormatsChanged, [sender, indexOfCodeBlock]() {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTVIDEOSURFACE");
                 hb_vmEvalBlockV(cb, 1, pSender);
                 hb_itemRelease(pSender);
@@ -414,9 +394,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -437,21 +415,17 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONNATIVERESOLUTIONCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("nativeResolutionChanged(QSize)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstractVideoSurface::nativeResolutionChanged, [sender, indexOfCodeBlock](const QSize &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTVIDEOSURFACE");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QSIZE");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -463,9 +437,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONNATIVERESOLUTIONCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

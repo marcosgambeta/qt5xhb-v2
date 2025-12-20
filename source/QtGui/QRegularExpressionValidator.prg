@@ -59,8 +59,7 @@ RETURN
 
 HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QRegularExpressionValidator(QObject * parent = nullptr)
     */
@@ -68,9 +67,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_NEW)
     auto obj = new QRegularExpressionValidator(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(1, 2) && ISQREGULAREXPRESSION(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQREGULAREXPRESSION(1) && ISQOBJECTORNIL(2)) {
     /*
     QRegularExpressionValidator(const QRegularExpression &re, QObject * parent = nullptr)
     */
@@ -135,8 +132,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQREGULAREXPRESSION(1))
-    {
+    if (ISNUMPAR(1) && ISQREGULAREXPRESSION(1)) {
 #endif
       obj->setRegularExpression(*PQREGULAREXPRESSION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,22 +156,18 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("regularExpressionChanged(QRegularExpression)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QRegularExpressionValidator::regularExpressionChanged,
                              [sender, indexOfCodeBlock](const QRegularExpression &arg1) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QREGULAREXPRESSIONVALIDATOR");
                                  auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QREGULAREXPRESSION");
                                  hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -187,9 +179,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

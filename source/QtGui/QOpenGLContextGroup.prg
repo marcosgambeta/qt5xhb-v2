@@ -81,10 +81,8 @@ HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_SHARES)
       auto list = obj->shares();
       auto pDynSym = hb_dynsymFindName("QOPENGLCONTEXT");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (auto item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (auto item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -96,9 +94,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_SHARES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QOPENGLCONTEXT", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);

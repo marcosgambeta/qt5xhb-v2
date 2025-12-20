@@ -96,8 +96,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINTF(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINTF(1)) {
 #endif
       RQSTRING(obj->anchorAt(*PQPOINTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,8 +116,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTBLOCK(1)) {
 #endif
       RQRECTF(obj->blockBoundingRect(*PQTEXTBLOCK(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,8 +178,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTFRAME(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTFRAME(1)) {
 #endif
       RQRECTF(obj->frameBoundingRect(PQTEXTFRAME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,8 +198,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = obj->handlerForObject(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QTEXTOBJECTINTERFACE", false);
@@ -223,8 +219,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2)) {
 #endif
       RINT(obj->hitTest(*PQPOINTF(1), static_cast<Qt::HitTestAccuracy>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,8 +280,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2)) {
 #endif
       obj->registerHandler(PINT(1), PQOBJECT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,8 +302,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPAINTDEVICE(1))
-    {
+    if (ISNUMPAR(1) && ISQPAINTDEVICE(1)) {
 #endif
       obj->setPaintDevice(PQPAINTDEVICE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,21 +324,17 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("documentSizeChanged(QSizeF)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstractTextDocumentLayout::documentSizeChanged, [sender, indexOfCodeBlock](const QSizeF &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTTEXTDOCUMENTLAYOUT");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QSIZEF");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -357,9 +346,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -380,21 +367,17 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pageCountChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstractTextDocumentLayout::pageCountChanged, [sender, indexOfCodeBlock](int arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTTEXTDOCUMENTLAYOUT");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -406,9 +389,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -429,21 +410,17 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("update(QRectF)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstractTextDocumentLayout::update, [sender, indexOfCodeBlock](const QRectF &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTTEXTDOCUMENTLAYOUT");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QRECTF");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -455,9 +432,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -478,21 +453,17 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("updateBlock(QTextBlock)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstractTextDocumentLayout::updateBlock, [sender, indexOfCodeBlock](const QTextBlock &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTTEXTDOCUMENTLAYOUT");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QTEXTBLOCK");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -504,9 +475,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

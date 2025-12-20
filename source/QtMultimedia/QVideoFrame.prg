@@ -93,34 +93,26 @@ HB_FUNC_STATIC(QVIDEOFRAME_NEW)
     */
     auto obj = new QVideoFrame();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(3) && ISQABSTRACTVIDEOBUFFER(1) && ISQSIZE(2) && HB_ISNUM(3))
-  {
+  } else if (ISNUMPAR(3) && ISQABSTRACTVIDEOBUFFER(1) && ISQSIZE(2) && HB_ISNUM(3)) {
     /*
     QVideoFrame(QAbstractVideoBuffer * buffer, const QSize &size, QVideoFrame::PixelFormat format)
     */
     auto obj =
         new QVideoFrame(PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), static_cast<QVideoFrame::PixelFormat>(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSIZE(2) && HB_ISNUM(3) && HB_ISNUM(4))
-  {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSIZE(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
     QVideoFrame(int bytes, const QSize &size, int bytesPerLine, QVideoFrame::PixelFormat format)
     */
     auto obj = new QVideoFrame(PINT(1), *PQSIZE(2), PINT(3), static_cast<QVideoFrame::PixelFormat>(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQIMAGE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQIMAGE(1)) {
     /*
     QVideoFrame(const QImage &image)
     */
     auto obj = new QVideoFrame(*PQIMAGE(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQVIDEOFRAME(1))
-  {
+  } else if (ISNUMPAR(1) && ISQVIDEOFRAME(1)) {
     /*
     QVideoFrame(const QVideoFrame &other)
     */
@@ -173,9 +165,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_BYTESPERLINE)
     if (obj != nullptr) {
       RINT(obj->bytesPerLine());
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     int bytesPerLine(int plane) const
     */
@@ -378,8 +368,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_MAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->map(static_cast<QAbstractVideoBuffer::MapMode>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -459,8 +448,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETENDTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setEndTime(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -482,8 +470,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETFIELDTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFieldType(static_cast<QVideoFrame::FieldType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -505,8 +492,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETSTARTTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setStartTime(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -630,8 +616,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_METADATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RQVARIANT(obj->metaData(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -651,8 +636,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETMETADATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
 #endif
       obj->setMetaData(PQSTRING(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -671,8 +655,7 @@ static QImage::Format imageFormatFromPixelFormat(QVideoFrame::PixelFormat format
 HB_FUNC_STATIC(QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     RENUM(QVideoFrame::imageFormatFromPixelFormat(static_cast<QVideoFrame::PixelFormat>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -688,8 +671,7 @@ static QVideoFrame::PixelFormat pixelFormatFromImageFormat(QImage::Format format
 HB_FUNC_STATIC(QVIDEOFRAME_PIXELFORMATFROMIMAGEFORMAT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     RENUM(QVideoFrame::pixelFormatFromImageFormat(static_cast<QImage::Format>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -703,17 +685,14 @@ HB_FUNC_STATIC(QVIDEOFRAME_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -746,8 +725,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

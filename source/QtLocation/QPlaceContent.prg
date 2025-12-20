@@ -81,9 +81,7 @@ HB_FUNC_STATIC(QPLACECONTENT_NEW)
     auto obj = new QPlaceContent();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQPLACECONTENT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQPLACECONTENT(1)) {
     /*
     QPlaceContent(const QPlaceContent &other)
     */
@@ -168,8 +166,7 @@ HB_FUNC_STATIC(QPLACECONTENT_SETSUPPLIER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPLACESUPPLIER(1))
-    {
+    if (ISNUMPAR(1) && ISQPLACESUPPLIER(1)) {
 #endif
       obj->setSupplier(*PQPLACESUPPLIER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +213,7 @@ HB_FUNC_STATIC(QPLACECONTENT_SETUSER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPLACEUSER(1))
-    {
+    if (ISNUMPAR(1) && ISQPLACEUSER(1)) {
 #endif
       obj->setUser(*PQPLACEUSER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,8 +259,7 @@ HB_FUNC_STATIC(QPLACECONTENT_SETATTRIBUTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setAttribution(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -282,17 +277,14 @@ HB_FUNC_STATIC(QPLACECONTENT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -325,8 +317,7 @@ HB_FUNC_STATIC(QPLACECONTENT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

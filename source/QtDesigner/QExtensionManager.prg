@@ -57,8 +57,7 @@ RETURN
     */
 HB_FUNC_STATIC(QEXTENSIONMANAGER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QExtensionManager(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -92,8 +91,7 @@ HB_FUNC_STATIC(QEXTENSIONMANAGER_EXTENSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
 #endif
       auto ptr = obj->extension(PQOBJECT(1), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -114,8 +112,7 @@ HB_FUNC_STATIC(QEXTENSIONMANAGER_REGISTEREXTENSIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQABSTRACTEXTENSIONFACTORY(1) && ISCHARORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQABSTRACTEXTENSIONFACTORY(1) && ISCHARORNIL(2)) {
 #endif
       obj->registerExtensions(PQABSTRACTEXTENSIONFACTORY(1), OPQSTRING(2, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,8 +134,7 @@ HB_FUNC_STATIC(QEXTENSIONMANAGER_UNREGISTEREXTENSIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQABSTRACTEXTENSIONFACTORY(1) && ISCHARORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQABSTRACTEXTENSIONFACTORY(1) && ISCHARORNIL(2)) {
 #endif
       obj->unregisterExtensions(PQABSTRACTEXTENSIONFACTORY(1), OPQSTRING(2, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

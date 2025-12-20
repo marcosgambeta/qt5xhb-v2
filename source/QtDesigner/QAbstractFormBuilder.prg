@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_LOAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISQWIDGETORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISQWIDGETORNIL(2)) {
 #endif
       auto ptr = obj->load(PQIODEVICE(1), OPQWIDGET(2, nullptr));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -120,8 +119,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SAVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQIODEVICE(1) && ISQWIDGET(2))
-    {
+    if (ISNUMPAR(2) && ISQIODEVICE(1) && ISQWIDGET(2)) {
 #endif
       obj->save(PQIODEVICE(1), PQWIDGET(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,8 +141,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDIR(1))
-    {
+    if (ISNUMPAR(1) && ISQDIR(1)) {
 #endif
       obj->setWorkingDirectory(*PQDIR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,17 +179,14 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -225,8 +219,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

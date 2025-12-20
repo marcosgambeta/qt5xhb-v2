@@ -297,8 +297,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETLEADINGINCLUDED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setLeadingIncluded(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -393,8 +392,7 @@ HB_FUNC_STATIC(QTEXTLINE_NATURALTEXTRECT)
 
 HB_FUNC_STATIC(QTEXTLINE_CURSORTOX)
 {
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     /*
     qreal cursorToX(int * cursorPos, QTextLine::Edge edge = QTextLine::Leading) const
     */
@@ -406,9 +404,7 @@ HB_FUNC_STATIC(QTEXTLINE_CURSORTOX)
                                                : static_cast<QTextLine::Edge>(hb_parni(2))));
       hb_storni(par1, 1);
     }
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     /*
     qreal cursorToX(int cursorPos, QTextLine::Edge edge = QTextLine::Leading) const
     */
@@ -432,8 +428,7 @@ HB_FUNC_STATIC(QTEXTLINE_XTOCURSOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       RINT(obj->xToCursor(PQREAL(1), HB_ISNIL(2)
                                          ? static_cast<QTextLine::CursorPosition>(QTextLine::CursorBetweenCharacters)
@@ -455,8 +450,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETLINEWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLineWidth(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -471,8 +465,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETLINEWIDTH)
 
 HB_FUNC_STATIC(QTEXTLINE_SETNUMCOLUMNS)
 {
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     void setNumColumns(int columns)
     */
@@ -483,9 +476,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETNUMCOLUMNS)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     void setNumColumns(int columns, qreal alignmentWidth)
     */
@@ -510,8 +501,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINTF(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINTF(1)) {
 #endif
       obj->setPosition(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -608,17 +598,14 @@ HB_FUNC_STATIC(QTEXTLINE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -651,8 +638,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

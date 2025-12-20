@@ -64,8 +64,7 @@ RETURN
     */
 HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QOpenGLDebugLogger(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -180,8 +179,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_PUSHGROUP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       obj->pushGroup(PQSTRING(1), OPGLUINT(2, 0),
                      HB_ISNIL(3) ? static_cast<QOpenGLDebugMessage::Source>(QOpenGLDebugMessage::ApplicationSource)
@@ -227,8 +225,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_LOGMESSAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQOPENGLDEBUGMESSAGE(1))
-    {
+    if (ISNUMPAR(1) && ISQOPENGLDEBUGMESSAGE(1)) {
 #endif
       obj->logMessage(*PQOPENGLDEBUGMESSAGE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,8 +247,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_STARTLOGGING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->startLogging(HB_ISNIL(1)
                             ? static_cast<QOpenGLDebugLogger::LoggingMode>(QOpenGLDebugLogger::AsynchronousLogging)
@@ -297,21 +293,17 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_ONMESSAGELOGGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("messageLogged(QOpenGLDebugMessage)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QOpenGLDebugLogger::messageLogged, [sender, indexOfCodeBlock](const QOpenGLDebugMessage &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QOPENGLDEBUGLOGGER");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QOPENGLDEBUGMESSAGE");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -323,9 +315,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_ONMESSAGELOGGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

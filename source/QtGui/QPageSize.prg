@@ -91,9 +91,7 @@ HB_FUNC_STATIC(QPAGESIZE_NEW)
     auto obj = new QPageSize();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     QPageSize(QPageSize::PageSizeId pageSizeId)
     */
@@ -101,9 +99,7 @@ HB_FUNC_STATIC(QPAGESIZE_NEW)
     auto obj = new QPageSize(static_cast<QPageSize::PageSizeId>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISBETWEEN(1, 3) && ISQSIZE(1) && ISCHARORNIL(2) && ISNUMORNIL(3))
-  {
+  } else if (ISBETWEEN(1, 3) && ISQSIZE(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
     /*
     QPageSize(const QSize &pointSize, const QString &name = QString(), QPageSize::SizeMatchPolicy matchPolicy =
     QPageSize::FuzzyMatch)
@@ -114,10 +110,7 @@ HB_FUNC_STATIC(QPAGESIZE_NEW)
                                          : static_cast<QPageSize::SizeMatchPolicy>(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISBETWEEN(2, 4) && ISQSIZEF(1) && HB_ISNUM(2) && ISCHARORNIL(3) &&
-           ISNUMORNIL(4))
-  {
+  } else if (ISBETWEEN(2, 4) && ISQSIZEF(1) && HB_ISNUM(2) && ISCHARORNIL(3) && ISNUMORNIL(4)) {
     /*
     QPageSize(const QSizeF &size, QPageSize::Unit units, const QString &name = QString(), QPageSize::SizeMatchPolicy
     matchPolicy = QPageSize::FuzzyMatch)
@@ -128,9 +121,7 @@ HB_FUNC_STATIC(QPAGESIZE_NEW)
                                          : static_cast<QPageSize::SizeMatchPolicy>(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQPAGESIZE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQPAGESIZE(1)) {
     /*
     QPageSize(const QPageSize &other)
     */
@@ -170,8 +161,7 @@ HB_FUNC_STATIC(QPAGESIZE_SWAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPAGESIZE(1))
-    {
+    if (ISNUMPAR(1) && ISQPAGESIZE(1)) {
 #endif
       obj->swap(*PQPAGESIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,8 +185,7 @@ HB_FUNC_STATIC(QPAGESIZE_ISEQUIVALENTTO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPAGESIZE(1))
-    {
+    if (ISNUMPAR(1) && ISQPAGESIZE(1)) {
 #endif
       RBOOL(obj->isEquivalentTo(*PQPAGESIZE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,9 +232,7 @@ HB_FUNC_STATIC(QPAGESIZE_KEY)
       RQSTRING(obj->key());
     }
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     static QString key(QPageSize::PageSizeId pageSizeId)
     */
@@ -271,9 +258,7 @@ HB_FUNC_STATIC(QPAGESIZE_NAME)
       RQSTRING(obj->name());
     }
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     static QString name(QPageSize::PageSizeId pageSizeId)
     */
@@ -299,9 +284,7 @@ HB_FUNC_STATIC(QPAGESIZE_ID)
       RENUM(obj->id());
     }
 #endif
-  }
-  else if (ISBETWEEN(1, 2) && ISQSIZE(1) && ISNUMORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQSIZE(1) && ISNUMORNIL(2)) {
     /*
     static QPageSize::PageSizeId id(const QSize &pointSize, QPageSize::SizeMatchPolicy matchPolicy =
     QPageSize::FuzzyMatch)
@@ -311,9 +294,7 @@ HB_FUNC_STATIC(QPAGESIZE_ID)
     RENUM(QPageSize::id(*PQSIZE(1), HB_ISNIL(2) ? static_cast<QPageSize::SizeMatchPolicy>(QPageSize::FuzzyMatch)
                                                 : static_cast<QPageSize::SizeMatchPolicy>(hb_parni(2))));
 #endif
-  }
-  else if (ISBETWEEN(2, 3) && ISQSIZEF(1) && HB_ISNUM(2) && ISNUMORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && ISQSIZEF(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     /*
     static QPageSize::PageSizeId id(const QSizeF &size, QPageSize::Unit units, QPageSize::SizeMatchPolicy matchPolicy =
     QPageSize::FuzzyMatch)
@@ -324,9 +305,7 @@ HB_FUNC_STATIC(QPAGESIZE_ID)
                         HB_ISNIL(3) ? static_cast<QPageSize::SizeMatchPolicy>(QPageSize::FuzzyMatch)
                                     : static_cast<QPageSize::SizeMatchPolicy>(hb_parni(3))));
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     static QPageSize::PageSizeId id(int windowsId)
     */
@@ -352,9 +331,7 @@ HB_FUNC_STATIC(QPAGESIZE_WINDOWSID)
       RINT(obj->windowsId());
     }
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     static int windowsId(QPageSize::PageSizeId pageSizeId)
     */
@@ -381,9 +358,7 @@ HB_FUNC_STATIC(QPAGESIZE_DEFINITIONSIZE)
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
     }
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     static QSizeF definitionSize(QPageSize::PageSizeId pageSizeId)
     */
@@ -410,9 +385,7 @@ HB_FUNC_STATIC(QPAGESIZE_DEFINITIONUNITS)
       RENUM(obj->definitionUnits());
     }
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     static QPageSize::Unit definitionUnits(QPageSize::PageSizeId pageSizeId)
     */
@@ -427,8 +400,7 @@ HB_FUNC_STATIC(QPAGESIZE_DEFINITIONUNITS)
 
 HB_FUNC_STATIC(QPAGESIZE_SIZE)
 {
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     QSizeF size(QPageSize::Unit units) const
     */
@@ -440,9 +412,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZE)
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
     }
 #endif
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     static QSizeF size(QPageSize::PageSizeId pageSizeId, QPageSize::Unit units)
     */
@@ -470,9 +440,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZEPOINTS)
       RQSIZE(obj->sizePoints());
     }
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     static QSize sizePoints(QPageSize::PageSizeId pageSizeId)
     */
@@ -487,8 +455,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZEPOINTS)
 
 HB_FUNC_STATIC(QPAGESIZE_SIZEPIXELS)
 {
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     QSize sizePixels(int resolution) const
     */
@@ -499,9 +466,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZEPIXELS)
       RQSIZE(obj->sizePixels(PINT(1)));
     }
 #endif
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     static QSize sizePixels(QPageSize::PageSizeId pageSizeId, int resolution)
     */
@@ -524,8 +489,7 @@ HB_FUNC_STATIC(QPAGESIZE_RECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQRECTF(obj->rect(static_cast<QPageSize::Unit>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -569,8 +533,7 @@ HB_FUNC_STATIC(QPAGESIZE_RECTPIXELS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQRECT(obj->rectPixels(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -586,17 +549,14 @@ HB_FUNC_STATIC(QPAGESIZE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -629,8 +589,7 @@ HB_FUNC_STATIC(QPAGESIZE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

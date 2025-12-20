@@ -51,8 +51,7 @@ RETURN
     */
 HB_FUNC_STATIC(QAPPLICATIONSTATECHANGEEVENT_NEW)
 {
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     auto obj = new QApplicationStateChangeEvent(static_cast<Qt::ApplicationState>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, false);
   } else {

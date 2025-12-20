@@ -60,8 +60,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSOUND_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
     auto obj = new QSound(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -138,8 +137,7 @@ HB_FUNC_STATIC(QSOUND_SETLOOPS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLoops(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,9 +225,7 @@ HB_FUNC_STATIC(QSOUND_PLAY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     static void play(const QString &filename)
     */

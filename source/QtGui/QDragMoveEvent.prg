@@ -56,9 +56,7 @@ RETURN
     */
 HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
 {
-  if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
-      ISNUMORNIL(6))
-  {
+  if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) && ISNUMORNIL(6)) {
     auto obj = new QDragMoveEvent(
         *PQPOINT(1), static_cast<Qt::DropActions>(hb_parni(2)), PQMIMEDATA(3),
         static_cast<Qt::MouseButtons>(hb_parni(4)), static_cast<Qt::KeyboardModifiers>(hb_parni(5)),
@@ -86,8 +84,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_DELETE)
 
 HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
 {
-  if (ISNUMPAR(1) && ISQRECT(1))
-  {
+  if (ISNUMPAR(1) && ISQRECT(1)) {
     /*
     void accept(const QRect &rectangle)
     */
@@ -98,9 +95,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(0))
-  {
+  } else if (ISNUMPAR(0)) {
     /*
     void accept()
     */
@@ -138,8 +133,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ANSWERRECT)
 
 HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
 {
-  if (ISNUMPAR(1) && ISQRECT(1))
-  {
+  if (ISNUMPAR(1) && ISQRECT(1)) {
     /*
     void ignore(const QRect &rectangle)
     */
@@ -150,9 +144,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(0))
-  {
+  } else if (ISNUMPAR(0)) {
     /*
     void ignore()
     */

@@ -155,8 +155,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWIDGET(1))
-    {
+    if (ISNUMPAR(1) && ISQWIDGET(1)) {
 #endif
       RBOOL(obj->isWidgetSelected(PQWIDGET(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +176,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       RBOOL(obj->movePosition(static_cast<QDesignerFormWindowCursorInterface::MoveOperation>(hb_parni(1)),
                               HB_ISNIL(2) ? static_cast<QDesignerFormWindowCursorInterface::MoveMode>(
@@ -221,8 +219,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = obj->selectedWidget(PINT(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -264,8 +261,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->setPosition(PINT(1), HB_ISNIL(2) ? static_cast<QDesignerFormWindowCursorInterface::MoveMode>(
                                                   QDesignerFormWindowCursorInterface::MoveAnchor)
@@ -289,8 +285,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = obj->widget(PINT(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -326,17 +321,14 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -369,8 +361,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

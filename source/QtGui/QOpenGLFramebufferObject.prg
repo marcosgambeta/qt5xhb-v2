@@ -191,41 +191,27 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW8)
 
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQSIZE(1) && ISNUMORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && ISQSIZE(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QOPENGLFRAMEBUFFEROBJECT_NEW1);
-  }
-  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     HB_FUNC_EXEC(QOPENGLFRAMEBUFFEROBJECT_NEW2);
   }
 #if !defined(QT_OPENGL_ES) || defined(Q_QDOC)
-  else if (ISBETWEEN(2, 4) && ISQSIZE(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4))
-  {
+  else if (ISBETWEEN(2, 4) && ISQSIZE(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     HB_FUNC_EXEC(QOPENGLFRAMEBUFFEROBJECT_NEW3);
-  }
-  else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4) && ISNUMORNIL(5))
-  {
+  } else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     HB_FUNC_EXEC(QOPENGLFRAMEBUFFEROBJECT_NEW4);
   }
 #else
-  else if (ISBETWEEN(2, 4) && ISQSIZE(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4))
-  {
+  else if (ISBETWEEN(2, 4) && ISQSIZE(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     HB_FUNC_EXEC(QOPENGLFRAMEBUFFEROBJECT_NEW5);
-  }
-  else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4) && ISNUMORNIL(5))
-  {
+  } else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     HB_FUNC_EXEC(QOPENGLFRAMEBUFFEROBJECT_NEW6);
   }
 #endif
-  else if (ISNUMPAR(2) && ISQSIZE(1) && ISQOPENGLFRAMEBUFFEROBJECTFORMAT(2))
-  {
+  else if (ISNUMPAR(2) && ISQSIZE(1) && ISQOPENGLFRAMEBUFFEROBJECTFORMAT(2)) {
     HB_FUNC_EXEC(QOPENGLFRAMEBUFFEROBJECT_NEW7);
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOPENGLFRAMEBUFFEROBJECTFORMAT(3))
-  {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOPENGLFRAMEBUFFEROBJECTFORMAT(3)) {
     HB_FUNC_EXEC(QOPENGLFRAMEBUFFEROBJECT_NEW8);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -478,8 +464,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_SETATTACHMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setAttachment(static_cast<QOpenGLFramebufferObject::Attachment>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -563,8 +548,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFERBLIT)
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER)
 {
   if (ISBETWEEN(4, 6) && ISQOPENGLFRAMEBUFFEROBJECT(1) && ISQRECT(2) && ISQOPENGLFRAMEBUFFEROBJECT(3) && ISQRECT(4) &&
-      ISNUMORNIL(5) && ISNUMORNIL(6))
-  {
+      ISNUMORNIL(5) && ISNUMORNIL(6)) {
     /*
     static void blitFramebuffer(QOpenGLFramebufferObject * target, const QRect &targetRect, QOpenGLFramebufferObject *
     source, const QRect &sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST)
@@ -575,10 +559,8 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER)
                                               OPGLENUM(6, GL_NEAREST));
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(2, 4) && ISQOPENGLFRAMEBUFFEROBJECT(1) && ISQOPENGLFRAMEBUFFEROBJECT(2) &&
-           ISNUMORNIL(3) && ISNUMORNIL(4))
-  {
+  } else if (ISBETWEEN(2, 4) && ISQOPENGLFRAMEBUFFEROBJECT(1) && ISQOPENGLFRAMEBUFFEROBJECT(2) && ISNUMORNIL(3) &&
+             ISNUMORNIL(4)) {
     /*
     static void blitFramebuffer(QOpenGLFramebufferObject * target, QOpenGLFramebufferObject * source, GLbitfield buffers
     = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST)
@@ -597,17 +579,14 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -640,8 +619,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

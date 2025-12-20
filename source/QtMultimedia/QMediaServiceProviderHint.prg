@@ -91,29 +91,21 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_NEW)
     */
     auto obj = new QMediaServiceProviderHint();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     /*
     QMediaServiceProviderHint(const QString &mimeType, const QStringList &codecs)
     */
     auto obj = new QMediaServiceProviderHint(PQSTRING(1), PQSTRINGLIST(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     /*
     QMediaServiceProviderHint(const QByteArray &device)
     */
     auto obj = new QMediaServiceProviderHint(*PQBYTEARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QMEDIASERVICEPROVIDERHINT_NEW4);
-  }
-  else if (ISNUMPAR(1) && ISQMEDIASERVICEPROVIDERHINT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQMEDIASERVICEPROVIDERHINT(1)) {
     /*
     QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
     */
@@ -286,17 +278,14 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -329,8 +318,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

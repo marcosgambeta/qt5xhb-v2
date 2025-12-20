@@ -121,8 +121,7 @@ HB_FUNC_STATIC(QPLACERESULT_SETDISTANCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDistance(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,8 +168,7 @@ HB_FUNC_STATIC(QPLACERESULT_SETPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPLACE(1))
-    {
+    if (ISNUMPAR(1) && ISQPLACE(1)) {
 #endif
       obj->setPlace(*PQPLACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +214,7 @@ HB_FUNC_STATIC(QPLACERESULT_SETSPONSORED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setSponsored(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

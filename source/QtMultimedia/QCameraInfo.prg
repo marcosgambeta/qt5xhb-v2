@@ -68,8 +68,7 @@ RETURN
 
 HB_FUNC_STATIC(QCAMERAINFO_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQBYTEARRAY(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQBYTEARRAY(1)) {
     /*
     QCameraInfo(const QByteArray &name = QByteArray())
     */
@@ -77,9 +76,7 @@ HB_FUNC_STATIC(QCAMERAINFO_NEW)
     auto obj = new QCameraInfo(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(1)));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQCAMERA(1))
-  {
+  } else if (ISNUMPAR(1) && ISQCAMERA(1)) {
     /*
     QCameraInfo(const QCamera &camera)
     */
@@ -87,9 +84,7 @@ HB_FUNC_STATIC(QCAMERAINFO_NEW)
     auto obj = new QCameraInfo(*PQCAMERA(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQCAMERAINFO(1))
-  {
+  } else if (ISNUMPAR(1) && ISQCAMERAINFO(1)) {
     /*
     QCameraInfo(const QCameraInfo &other)
     */
@@ -258,17 +253,14 @@ HB_FUNC_STATIC(QCAMERAINFO_AVAILABLECAMERAS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
     auto list = QCameraInfo::availableCameras(HB_ISNIL(1) ? static_cast<QCamera::Position>(QCamera::UnspecifiedPosition)
                                                           : static_cast<QCamera::Position>(hb_parni(1)));
     auto pDynSym = hb_dynsymFindName("QCAMERAINFO");
     auto pArray = hb_itemArrayNew(0);
-    if (pDynSym != nullptr)
-    {
-      for (const auto &item : list)
-      {
+    if (pDynSym != nullptr) {
+      for (const auto &item : list) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -299,17 +291,14 @@ HB_FUNC_STATIC(QCAMERAINFO_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -342,8 +331,7 @@ HB_FUNC_STATIC(QCAMERAINFO_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

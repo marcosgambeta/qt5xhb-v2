@@ -18,8 +18,7 @@ HCodeBlockValidator::HCodeBlockValidator(PHB_ITEM codeblock, QObject *parent) : 
 
 HCodeBlockValidator::~HCodeBlockValidator()
 {
-  if (m_block != nullptr)
-  {
+  if (m_block != nullptr) {
     hb_itemRelease(m_block);
     m_block = nullptr;
   }

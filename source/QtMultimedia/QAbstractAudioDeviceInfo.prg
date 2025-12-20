@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_ISFORMATSUPPORTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQAUDIOFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQAUDIOFORMAT(1)) {
 #endif
       RBOOL(obj->isFormatSupported(*PQAUDIOFORMAT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,8 +231,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDBYTEORDERS)
 #endif
       auto list = obj->supportedByteOrders();
       auto pArray = hb_itemArrayNew(0);
-      for (const auto &item : list)
-      {
+      for (const auto &item : list) {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -260,8 +258,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES)
 #endif
       auto list = obj->supportedSampleTypes();
       auto pArray = hb_itemArrayNew(0);
-      for (const auto &item : list)
-      {
+      for (const auto &item : list) {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);

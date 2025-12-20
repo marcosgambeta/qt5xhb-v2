@@ -105,26 +105,20 @@ HB_FUNC_STATIC(QTEXTLAYOUT_NEW)
     */
     auto obj = new QTextLayout();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     QTextLayout(const QString &text)
     */
     auto obj = new QTextLayout(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQFONT(2) && ISOBJECTORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQFONT(2) && ISOBJECTORNIL(3)) {
     /*
     QTextLayout(const QString &text, const QFont &font, QPaintDevice * paintdevice = nullptr)
     */
     auto obj = new QTextLayout(PQSTRING(1), *PQFONT(2),
                                HB_ISNIL(3) ? nullptr : static_cast<QPaintDevice *>(Qt5xHb::itemGetPtr(3)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
-  {
+  } else if (ISNUMPAR(1) && ISQTEXTBLOCK(1)) {
     /*
     QTextLayout(const QTextBlock &b)
     */
@@ -159,8 +153,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETFONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQFONT(1))
-    {
+    if (ISNUMPAR(1) && ISQFONT(1)) {
 #endif
       obj->setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,8 +196,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETRAWFONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQRAWFONT(1))
-    {
+    if (ISNUMPAR(1) && ISQRAWFONT(1)) {
 #endif
       obj->setRawFont(*PQRAWFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,8 +218,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +260,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETTEXTOPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTOPTION(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTOPTION(1)) {
 #endif
       obj->setTextOption(*PQTEXTOPTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -313,8 +303,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETPREEDITAREA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
       obj->setPreeditArea(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -398,8 +387,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETCACHEENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setCacheEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -441,8 +429,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETCURSORMOVESTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCursorMoveStyle(static_cast<Qt::CursorMoveStyle>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -591,8 +578,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_LINEAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = new QTextLine(obj->lineAt(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QTEXTLINE", true);
@@ -613,8 +599,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_LINEFORTEXTPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = new QTextLine(obj->lineForTextPosition(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QTEXTLINE", true);
@@ -635,8 +620,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_ISVALIDCURSORPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->isValidCursorPosition(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -656,8 +640,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_NEXTCURSORPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       RINT(obj->nextCursorPosition(PINT(1), HB_ISNIL(2)
                                                 ? static_cast<QTextLayout::CursorMode>(QTextLayout::SkipCharacters)
@@ -679,8 +662,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_PREVIOUSCURSORPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       RINT(obj->previousCursorPosition(PINT(1), HB_ISNIL(2)
                                                     ? static_cast<QTextLayout::CursorMode>(QTextLayout::SkipCharacters)
@@ -702,8 +684,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_LEFTCURSORPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->leftCursorPosition(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -723,8 +704,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_RIGHTCURSORPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->rightCursorPosition(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -737,8 +717,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_RIGHTCURSORPOSITION)
 
 HB_FUNC_STATIC(QTEXTLAYOUT_DRAWCURSOR)
 {
-  if (ISNUMPAR(3) && ISQPAINTER(1) && ISQPOINTF(2) && HB_ISNUM(3))
-  {
+  if (ISNUMPAR(3) && ISQPAINTER(1) && ISQPOINTF(2) && HB_ISNUM(3)) {
     /*
     void drawCursor(QPainter * p, const QPointF &pos, int cursorPosition) const
     */
@@ -749,9 +728,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_DRAWCURSOR)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(4) && ISQPAINTER(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4))
-  {
+  } else if (ISNUMPAR(4) && ISQPAINTER(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
     void drawCursor(QPainter * p, const QPointF &pos, int cursorPosition, int width) const
     */
@@ -796,8 +773,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINTF(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINTF(1)) {
 #endif
       obj->setPosition(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -879,8 +855,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETFLAGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFlags(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -897,17 +872,14 @@ HB_FUNC_STATIC(QTEXTLAYOUT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -940,8 +912,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

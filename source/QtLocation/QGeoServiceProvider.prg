@@ -321,8 +321,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_SETLOCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLOCALE(1))
-    {
+    if (ISNUMPAR(1) && ISQLOCALE(1)) {
 #endif
       obj->setLocale(*PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -346,8 +345,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_SETALLOWEXPERIMENTAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setAllowExperimental(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

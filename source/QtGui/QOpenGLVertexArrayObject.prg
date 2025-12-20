@@ -59,8 +59,7 @@ RETURN
     */
 HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QOpenGLVertexArrayObject(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {

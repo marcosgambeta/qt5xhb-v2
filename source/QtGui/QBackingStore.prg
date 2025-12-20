@@ -75,8 +75,7 @@ RETURN
     */
 HB_FUNC_STATIC(QBACKINGSTORE_NEW)
 {
-  if (ISNUMPAR(1) && ISQWINDOW(1))
-  {
+  if (ISNUMPAR(1) && ISQWINDOW(1)) {
     auto obj = new QBackingStore(PQWINDOW(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_BEGINPAINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQREGION(1))
-    {
+    if (ISNUMPAR(1) && ISQREGION(1)) {
 #endif
       obj->beginPaint(*PQREGION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,8 +151,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_FLUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && ISQREGION(1) && ISQWINDOWORNIL(2) && ISQPOINTORNIL(3))
-    {
+    if (ISBETWEEN(1, 3) && ISQREGION(1) && ISQWINDOWORNIL(2) && ISQPOINTORNIL(3)) {
 #endif
       obj->flush(*PQREGION(1), OPQWINDOW(2, nullptr),
                  HB_ISNIL(3) ? QPoint() : *static_cast<QPoint *>(Qt5xHb::itemGetPtr(3)));
@@ -218,8 +215,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_RESIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSIZE(1))
-    {
+    if (ISNUMPAR(1) && ISQSIZE(1)) {
 #endif
       obj->resize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,8 +237,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_SCROLL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && ISQREGION(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && ISQREGION(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       RBOOL(obj->scroll(*PQREGION(1), PINT(2), PINT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,8 +257,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_SETSTATICCONTENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQREGION(1))
-    {
+    if (ISNUMPAR(1) && ISQREGION(1)) {
 #endif
       obj->setStaticContents(*PQREGION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,17 +336,14 @@ HB_FUNC_STATIC(QBACKINGSTORE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -385,8 +376,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

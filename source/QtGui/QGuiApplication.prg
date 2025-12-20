@@ -209,8 +209,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_NOTIFY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2))
-    {
+    if (ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2)) {
 #endif
       RBOOL(obj->notify(PQOBJECT(1), PQEVENT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,10 +231,8 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ALLWINDOWS)
     auto list = QGuiApplication::allWindows();
     auto pDynSym = hb_dynsymFindName("QWINDOW");
     auto pArray = hb_itemArrayNew(0);
-    if (pDynSym != nullptr)
-    {
-      for (auto item : list)
-      {
+    if (pDynSym != nullptr) {
+      for (auto item : list) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -280,8 +277,7 @@ static void changeOverrideCursor(const QCursor &cursor)
 HB_FUNC_STATIC(QGUIAPPLICATION_CHANGEOVERRIDECURSOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQCURSOR(1))
-  {
+  if (ISNUMPAR(1) && ISQCURSOR(1)) {
 #endif
     QGuiApplication::changeOverrideCursor(*PQCURSOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -635,10 +631,8 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SCREENS)
     auto list = QGuiApplication::screens();
     auto pDynSym = hb_dynsymFindName("QSCREEN");
     auto pArray = hb_itemArrayNew(0);
-    if (pDynSym != nullptr)
-    {
-      for (auto item : list)
-      {
+    if (pDynSym != nullptr) {
+      for (auto item : list) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -667,8 +661,7 @@ static void setApplicationDisplayName(const QString &name)
 HB_FUNC_STATIC(QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     QGuiApplication::setApplicationDisplayName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -686,8 +679,7 @@ static void setDesktopSettingsAware(bool on)
 HB_FUNC_STATIC(QGUIAPPLICATION_SETDESKTOPSETTINGSAWARE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
     QGuiApplication::setDesktopSettingsAware(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -705,8 +697,7 @@ static void setFont(const QFont &font)
 HB_FUNC_STATIC(QGUIAPPLICATION_SETFONT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQFONT(1))
-  {
+  if (ISNUMPAR(1) && ISQFONT(1)) {
 #endif
     QGuiApplication::setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -724,8 +715,7 @@ static void setLayoutDirection(Qt::LayoutDirection direction)
 HB_FUNC_STATIC(QGUIAPPLICATION_SETLAYOUTDIRECTION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     QGuiApplication::setLayoutDirection(static_cast<Qt::LayoutDirection>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -743,8 +733,7 @@ static void setOverrideCursor(const QCursor &cursor)
 HB_FUNC_STATIC(QGUIAPPLICATION_SETOVERRIDECURSOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQCURSOR(1))
-  {
+  if (ISNUMPAR(1) && ISQCURSOR(1)) {
 #endif
     QGuiApplication::setOverrideCursor(*PQCURSOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -762,8 +751,7 @@ static void setPalette(const QPalette &pal)
 HB_FUNC_STATIC(QGUIAPPLICATION_SETPALETTE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQPALETTE(1))
-  {
+  if (ISNUMPAR(1) && ISQPALETTE(1)) {
 #endif
     QGuiApplication::setPalette(*PQPALETTE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -781,8 +769,7 @@ static void setQuitOnLastWindowClosed(bool quit)
 HB_FUNC_STATIC(QGUIAPPLICATION_SETQUITONLASTWINDOWCLOSED)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
     QGuiApplication::setQuitOnLastWindowClosed(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -817,8 +804,7 @@ static QWindow * topLevelAt(const QPoint &pos)
 HB_FUNC_STATIC(QGUIAPPLICATION_TOPLEVELAT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQPOINT(1))
-  {
+  if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
     auto ptr = QGuiApplication::topLevelAt(*PQPOINT(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
@@ -840,10 +826,8 @@ HB_FUNC_STATIC(QGUIAPPLICATION_TOPLEVELWINDOWS)
     auto list = QGuiApplication::topLevelWindows();
     auto pDynSym = hb_dynsymFindName("QWINDOW");
     auto pArray = hb_itemArrayNew(0);
-    if (pDynSym != nullptr)
-    {
-      for (auto item : list)
-      {
+    if (pDynSym != nullptr) {
+      for (auto item : list) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -947,8 +931,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SCREENAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQPOINT(1))
-  {
+  if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
     auto ptr = QGuiApplication::screenAt(*PQPOINT(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QSCREEN");
@@ -967,8 +950,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETFALLBACKSESSIONMANAGEMENTENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
     QGuiApplication::setFallbackSessionManagementEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -988,8 +970,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETHIGHDPISCALEFACTORROUNDINGPOLICY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     QGuiApplication::setHighDpiScaleFactorRoundingPolicy(
         static_cast<Qt::HighDpiScaleFactorRoundingPolicy>(hb_parni(1)));
@@ -1055,8 +1036,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETDESKTOPFILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setDesktopFileName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1080,21 +1060,17 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONAPPLICATIONSTATECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("applicationStateChanged(Qt::ApplicationState)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGuiApplication::applicationStateChanged,
                                            [sender, indexOfCodeBlock](Qt::ApplicationState arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
                                                auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1106,9 +1082,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONAPPLICATIONSTATECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1132,21 +1106,17 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONCOMMITDATAREQUEST)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("commitDataRequest(QSessionManager)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGuiApplication::commitDataRequest,
                                            [sender, indexOfCodeBlock](QSessionManager &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
                                                auto pArg1 = Qt5xHb::Signals_return_qobject(&arg1, "QSESSIONMANAGER");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1158,9 +1128,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONCOMMITDATAREQUEST)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1181,21 +1149,17 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFOCUSOBJECTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("focusObjectChanged(QObject*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGuiApplication::focusObjectChanged, [sender, indexOfCodeBlock](QObject *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QOBJECT");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1207,9 +1171,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFOCUSOBJECTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1230,21 +1192,17 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFOCUSWINDOWCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("focusWindowChanged(QWindow*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGuiApplication::focusWindowChanged, [sender, indexOfCodeBlock](QWindow *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QWINDOW");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1256,9 +1214,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFOCUSWINDOWCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1280,21 +1236,17 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFONTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("fontChanged(QFont)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGuiApplication::fontChanged, [sender, indexOfCodeBlock](const QFont &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QFONT");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1306,9 +1258,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFONTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1332,20 +1282,16 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFONTDATABASECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("fontDatabaseChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGuiApplication::fontDatabaseChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -1355,9 +1301,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONFONTDATABASECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1378,20 +1322,16 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONLASTWINDOWCLOSED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("lastWindowClosed()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGuiApplication::lastWindowClosed, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -1401,9 +1341,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONLASTWINDOWCLOSED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1425,21 +1363,17 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONLAYOUTDIRECTIONCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("layoutDirectionChanged(Qt::LayoutDirection)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGuiApplication::layoutDirectionChanged,
                                            [sender, indexOfCodeBlock](Qt::LayoutDirection arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
                                                auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1451,9 +1385,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONLAYOUTDIRECTIONCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1478,21 +1410,17 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONPALETTECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("paletteChanged(QPalette)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGuiApplication::paletteChanged,
                                            [sender, indexOfCodeBlock](const QPalette &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QPALETTE");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1504,9 +1432,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONPALETTECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1531,21 +1457,17 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONPRIMARYSCREENCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("primaryScreenChanged(QScreen*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGuiApplication::primaryScreenChanged, [sender, indexOfCodeBlock](QScreen *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QSCREEN");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1557,9 +1479,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONPRIMARYSCREENCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1583,21 +1503,17 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSAVESTATEREQUEST)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("saveStateRequest(QSessionManager)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGuiApplication::saveStateRequest,
                                            [sender, indexOfCodeBlock](QSessionManager &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
                                                auto pArg1 = Qt5xHb::Signals_return_qobject(&arg1, "QSESSIONMANAGER");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1609,9 +1525,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSAVESTATEREQUEST)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1632,21 +1546,17 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSCREENADDED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("screenAdded(QScreen*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGuiApplication::screenAdded, [sender, indexOfCodeBlock](QScreen *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QSCREEN");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1658,9 +1568,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSCREENADDED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1682,21 +1590,17 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSCREENREMOVED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("screenRemoved(QScreen*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGuiApplication::screenRemoved, [sender, indexOfCodeBlock](QScreen *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGUIAPPLICATION");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QSCREEN");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1708,9 +1612,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ONSCREENREMOVED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

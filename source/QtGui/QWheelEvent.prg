@@ -63,8 +63,7 @@ RETURN
 
 HB_FUNC_STATIC(QWHEELEVENT_NEW)
 {
-  if (ISBETWEEN(4, 5) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5))
-  {
+  if (ISBETWEEN(4, 5) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
     /*
     QWheelEvent(const QPointF &pos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,
     Qt::Orientation orient = Qt::Vertical)
@@ -74,10 +73,8 @@ HB_FUNC_STATIC(QWHEELEVENT_NEW)
                                HB_ISNIL(5) ? static_cast<Qt::Orientation>(Qt::Vertical)
                                            : static_cast<Qt::Orientation>(hb_parni(5)));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(5, 6) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
-           ISNUMORNIL(6))
-  {
+  } else if (ISBETWEEN(5, 6) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
+             ISNUMORNIL(6)) {
     /*
     QWheelEvent(const QPointF &pos, const QPointF &globalPos, int delta, Qt::MouseButtons buttons,
     Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical)
@@ -87,10 +84,8 @@ HB_FUNC_STATIC(QWHEELEVENT_NEW)
                                HB_ISNIL(6) ? static_cast<Qt::Orientation>(Qt::Vertical)
                                            : static_cast<Qt::Orientation>(hb_parni(6)));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(8) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINT(3) && ISQPOINT(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
-           HB_ISNUM(7) && HB_ISNUM(8))
-  {
+  } else if (ISNUMPAR(8) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINT(3) && ISQPOINT(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
+             HB_ISNUM(7) && HB_ISNUM(8)) {
     /*
     QWheelEvent(const QPointF &pos, const QPointF &globalPos, QPoint pixelDelta, QPoint angleDelta, int qt4Delta,
     Qt::Orientation qt4Orientation, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)

@@ -52,16 +52,13 @@ RETURN
 
 HB_FUNC_STATIC(QPAINTEVENT_NEW)
 {
-  if (ISNUMPAR(1) && ISQREGION(1))
-  {
+  if (ISNUMPAR(1) && ISQREGION(1)) {
     /*
     QPaintEvent(const QRegion &paintRegion)
     */
     auto obj = new QPaintEvent(*PQREGION(1));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(1) && ISQRECT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQRECT(1)) {
     /*
     QPaintEvent(const QRect &paintRect)
     */

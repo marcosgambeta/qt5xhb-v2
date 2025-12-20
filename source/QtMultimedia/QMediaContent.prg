@@ -75,57 +75,44 @@ HB_FUNC_STATIC(QMEDIACONTENT_NEW)
     */
     auto obj = new QMediaContent();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQURL(1))
-  {
+  } else if (ISNUMPAR(1) && ISQURL(1)) {
     /*
     QMediaContent(const QUrl &contentUrl)
     */
     auto obj = new QMediaContent(*PQURL(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQNETWORKREQUEST(1))
-  {
+  } else if (ISNUMPAR(1) && ISQNETWORKREQUEST(1)) {
     /*
     QMediaContent(const QNetworkRequest &contentRequest)
     */
     auto obj = new QMediaContent(*PQNETWORKREQUEST(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQMEDIARESOURCE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQMEDIARESOURCE(1)) {
     /*
     QMediaContent(const QMediaResource &contentResource)
     */
     auto obj = new QMediaContent(*PQMEDIARESOURCE(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISARRAY(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     /*
     QMediaContent(const QMediaResourceList &resources)
     */
     QMediaResourceList par1;
     auto aList1 = hb_param(1, HB_IT_ARRAY);
     int nLen1 = hb_arrayLen(aList1);
-    for (auto i1 = 0; i1 < nLen1; i1++)
-    {
+    for (auto i1 = 0; i1 < nLen1; i1++) {
       par1 << *static_cast<QMediaResource *>(
           hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
     }
     auto obj = new QMediaContent(par1);
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQMEDIACONTENT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQMEDIACONTENT(1)) {
     /*
     QMediaContent(const QMediaContent &other)
     */
     auto obj = new QMediaContent(*PQMEDIACONTENT(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 3) && ISQMEDIAPLAYLIST(1) && ISQURLORNIL(2) && ISOPTLOG(3))
-  {
+  } else if (ISBETWEEN(1, 3) && ISQMEDIAPLAYLIST(1) && ISQURLORNIL(2) && ISOPTLOG(3)) {
     /*
     QMediaContent(QMediaPlaylist * playlist, const QUrl &contentUrl = QUrl(), bool takeOwnership = false)
     */
@@ -273,10 +260,8 @@ HB_FUNC_STATIC(QMEDIACONTENT_RESOURCES)
       auto list = obj->resources();
       auto pDynSym = hb_dynsymFindName("QMEDIARESOURCE");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -291,9 +276,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_RESOURCES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QMEDIARESOURCE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -309,17 +292,14 @@ HB_FUNC_STATIC(QMEDIACONTENT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -352,8 +332,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

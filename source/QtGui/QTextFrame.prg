@@ -65,8 +65,7 @@ RETURN
     */
 HB_FUNC_STATIC(QTEXTFRAME_NEW)
 {
-  if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
-  {
+  if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1)) {
     auto obj = new QTextFrame(PQTEXTDOCUMENT(1));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -100,8 +99,7 @@ HB_FUNC_STATIC(QTEXTFRAME_SETFRAMEFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTFRAMEFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTFRAMEFORMAT(1)) {
 #endif
       obj->setFrameFormat(*PQTEXTFRAMEFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,10 +229,8 @@ HB_FUNC_STATIC(QTEXTFRAME_CHILDFRAMES)
       auto list = obj->childFrames();
       auto pDynSym = hb_dynsymFindName("QTEXTFRAME");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (auto item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (auto item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -246,9 +242,7 @@ HB_FUNC_STATIC(QTEXTFRAME_CHILDFRAMES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QTEXTFRAME", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);

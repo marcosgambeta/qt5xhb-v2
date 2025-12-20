@@ -95,8 +95,7 @@ HB_FUNC_STATIC(QFILEOPENEVENT_OPENFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQFILE(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQFILE(1) && HB_ISNUM(2)) {
 #endif
       RBOOL(obj->openFile(*PQFILE(1), static_cast<QIODevice::OpenMode>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

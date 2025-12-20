@@ -58,8 +58,7 @@ RETURN
 
 HB_FUNC_STATIC(QMOUSEEVENT_NEW)
 {
-  if (ISNUMPAR(5) && HB_ISNUM(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
-  {
+  if (ISNUMPAR(5) && HB_ISNUM(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     /*
     QMouseEvent(QEvent::Type type, const QPointF &localPos, Qt::MouseButton button, Qt::MouseButtons buttons,
     Qt::KeyboardModifiers modifiers)
@@ -68,9 +67,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_NEW)
         new QMouseEvent(static_cast<QEvent::Type>(hb_parni(1)), *PQPOINTF(2), static_cast<Qt::MouseButton>(hb_parni(3)),
                         static_cast<Qt::MouseButtons>(hb_parni(4)), static_cast<Qt::KeyboardModifiers>(hb_parni(5)));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(6) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6))
-  {
+  } else if (ISNUMPAR(6) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6)) {
     /*
     QMouseEvent(QEvent::Type type, const QPointF &localPos, const QPointF &screenPos, Qt::MouseButton button,
     Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
@@ -79,10 +76,8 @@ HB_FUNC_STATIC(QMOUSEEVENT_NEW)
                                static_cast<Qt::MouseButton>(hb_parni(4)), static_cast<Qt::MouseButtons>(hb_parni(5)),
                                static_cast<Qt::KeyboardModifiers>(hb_parni(6)));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(7) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
-           HB_ISNUM(7))
-  {
+  } else if (ISNUMPAR(7) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
+             HB_ISNUM(7)) {
     /*
     QMouseEvent(QEvent::Type type, const QPointF &localPos, const QPointF &windowPos, const QPointF &screenPos,
     Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)

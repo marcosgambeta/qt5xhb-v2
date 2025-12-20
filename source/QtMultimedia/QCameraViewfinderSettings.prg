@@ -82,9 +82,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_NEW)
     auto obj = new QCameraViewfinderSettings();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQCAMERAVIEWFINDERSETTINGS(1))
-  {
+  } else if (ISNUMPAR(1) && ISQCAMERAVIEWFINDERSETTINGS(1)) {
     /*
     QCameraViewfinderSettings(const QCameraViewfinderSettings &other)
     */
@@ -127,8 +125,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SWAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQCAMERAVIEWFINDERSETTINGS(1))
-    {
+    if (ISNUMPAR(1) && ISQCAMERAVIEWFINDERSETTINGS(1)) {
 #endif
       obj->swap(*PQCAMERAVIEWFINDERSETTINGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,8 +185,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_RESOLUTION)
 
 HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETRESOLUTION)
 {
-  if (ISNUMPAR(1) && ISQSIZE(1))
-  {
+  if (ISNUMPAR(1) && ISQSIZE(1)) {
     /*
     void setResolution(const QSize &)
     */
@@ -202,9 +198,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETRESOLUTION)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     void setResolution(int width, int height)
     */
@@ -254,8 +248,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETMINIMUMFRAMERATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMinimumFrameRate(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,8 +294,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETMAXIMUMFRAMERATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMaximumFrameRate(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,8 +340,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETPIXELFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPixelFormat(static_cast<QVideoFrame::PixelFormat>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -387,8 +378,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_PIXELASPECTRATIO)
 
 HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETPIXELASPECTRATIO)
 {
-  if (ISNUMPAR(1) && ISQSIZE(1))
-  {
+  if (ISNUMPAR(1) && ISQSIZE(1)) {
     /*
     void setPixelAspectRatio(const QSize &ratio)
     */
@@ -401,9 +391,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETPIXELASPECTRATIO)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     void setPixelAspectRatio(int horizontal, int vertical)
     */
@@ -425,17 +413,14 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -468,8 +453,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
