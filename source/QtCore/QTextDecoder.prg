@@ -59,16 +59,13 @@ RETURN
 
 HB_FUNC_STATIC(QTEXTDECODER_NEW)
 {
-  if (ISNUMPAR(1) && ISQTEXTCODEC(1))
-  {
+  if (ISNUMPAR(1) && ISQTEXTCODEC(1)) {
     /*
     QTextDecoder(const QTextCodec * codec)
     */
     auto obj = new QTextDecoder(PQTEXTCODEC(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQTEXTCODEC(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && ISQTEXTCODEC(1) && HB_ISNUM(2)) {
     /*
     QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
     */
@@ -100,8 +97,7 @@ void toUnicode(QString * target, const char * chars, int len)
 
 HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     /*
     QString toUnicode(const char * chars, int len)
     */
@@ -110,9 +106,7 @@ HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
     if (obj != nullptr) {
       RQSTRING(obj->toUnicode(PCONSTCHAR(1), PINT(2)));
     }
-  }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     /*
     QString toUnicode(const QByteArray &ba)
     */
@@ -150,17 +144,14 @@ HB_FUNC_STATIC(QTEXTDECODER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -193,8 +184,7 @@ HB_FUNC_STATIC(QTEXTDECODER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

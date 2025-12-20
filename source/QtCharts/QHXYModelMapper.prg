@@ -83,8 +83,7 @@ QHXYModelMapper(QObject * parent = nullptr)
 HB_FUNC_STATIC(QHXYMODELMAPPER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QHXYModelMapper(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -126,8 +125,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETSERIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXYSERIES(1))
-    {
+    if (ISNUMPAR(1) && ISQXYSERIES(1)) {
 #endif
       obj->setSeries(PQXYSERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +172,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETMODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1)) {
 #endif
       obj->setModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,8 +218,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETXROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setXRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,8 +264,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETYROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setYRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,8 +310,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETFIRSTCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFirstColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -362,8 +356,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETCOLUMNCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setColumnCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -387,20 +380,16 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONCOLUMNCOUNTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("columnCountChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QHXYModelMapper::columnCountChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHXYMODELMAPPER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -410,9 +399,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONCOLUMNCOUNTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -437,20 +424,16 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONFIRSTCOLUMNCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("firstColumnChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QHXYModelMapper::firstColumnChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHXYMODELMAPPER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -460,9 +443,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONFIRSTCOLUMNCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -487,20 +468,16 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONMODELREPLACED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("modelReplaced()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QHXYModelMapper::modelReplaced, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHXYMODELMAPPER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -510,9 +487,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONMODELREPLACED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -537,20 +512,16 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONSERIESREPLACED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("seriesReplaced()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QHXYModelMapper::seriesReplaced, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHXYMODELMAPPER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -560,9 +531,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONSERIESREPLACED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -587,20 +556,16 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONXROWCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("xRowChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QHXYModelMapper::xRowChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHXYMODELMAPPER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -610,9 +575,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONXROWCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -637,20 +600,16 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONYROWCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("yRowChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QHXYModelMapper::yRowChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHXYMODELMAPPER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -660,9 +619,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONYROWCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

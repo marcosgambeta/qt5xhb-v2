@@ -56,16 +56,13 @@ RETURN
 
 HB_FUNC_STATIC(QPROPERTYANIMATION_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QPropertyAnimation(QObject * parent = nullptr)
     */
     auto obj = new QPropertyAnimation(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && ISQBYTEARRAY(2) && ISQOBJECTORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && ISQBYTEARRAY(2) && ISQOBJECTORNIL(3)) {
     /*
     QPropertyAnimation(QObject * target, const QByteArray &propertyName, QObject * parent = nullptr)
     */
@@ -122,8 +119,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_SETPROPERTYNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       obj->setPropertyName(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,8 +141,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_SETTARGETOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQOBJECT(1))
-    {
+    if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
       obj->setTargetObject(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

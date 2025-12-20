@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_NEW)
     auto obj = new QAndroidBinder();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1)) {
     // QAndroidBinder(const QAndroidJniObject &binder)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QAndroidBinder(*PQANDROIDJNIOBJECT(1));
@@ -102,7 +100,8 @@ HB_FUNC_STATIC(QANDROIDBINDER_DELETE)
 #endif
 }
 
-// virtual bool onTransact(int code, const QAndroidParcel &data, const QAndroidParcel &reply, QAndroidBinder::CallType flags)
+// virtual bool onTransact(int code, const QAndroidParcel &data, const QAndroidParcel &reply, QAndroidBinder::CallType
+// flags)
 HB_FUNC_STATIC(QANDROIDBINDER_ONTRANSACT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -110,8 +109,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_ONTRANSACT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQANDROIDPARCEL(2) && ISQANDROIDPARCEL(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQANDROIDPARCEL(2) && ISQANDROIDPARCEL(3) && HB_ISNUM(4)) {
 #endif
       RBOOL(obj->onTransact(PINT(1), *PQANDROIDPARCEL(2), *PQANDROIDPARCEL(3),
                             static_cast<QAndroidBinder::CallType>(hb_parni(4))));
@@ -124,7 +122,8 @@ HB_FUNC_STATIC(QANDROIDBINDER_ONTRANSACT)
 #endif
 }
 
-// bool transact(int code, const QAndroidParcel &data, QAndroidParcel * reply = nullptr, QAndroidBinder::CallType flags = CallType::Normal) const
+// bool transact(int code, const QAndroidParcel &data, QAndroidParcel * reply = nullptr, QAndroidBinder::CallType flags
+// = CallType::Normal) const
 HB_FUNC_STATIC(QANDROIDBINDER_TRANSACT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -132,9 +131,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_TRANSACT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && ISQANDROIDPARCEL(2) && ISQANDROIDPARCELORNIL(3) &&
-        ISNUMORNIL(4))
-    {
+    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && ISQANDROIDPARCEL(2) && ISQANDROIDPARCELORNIL(3) && ISNUMORNIL(4)) {
 #endif
       RBOOL(obj->transact(PINT(1), *PQANDROIDPARCEL(2),
                           HB_ISNIL(3) ? nullptr : static_cast<QAndroidParcel *>(Qt5xHb::itemGetPtr(3)),

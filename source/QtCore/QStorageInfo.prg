@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_NEW)
     auto obj = new QStorageInfo();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     QStorageInfo(const QString &path)
     */
@@ -97,9 +95,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_NEW)
     auto obj = new QStorageInfo(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQDIR(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDIR(1)) {
     /*
     QStorageInfo(const QDir &dir)
     */
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_NEW)
     auto obj = new QStorageInfo(*PQDIR(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQSTORAGEINFO(1))
-  {
+  } else if (ISNUMPAR(1) && ISQSTORAGEINFO(1)) {
     /*
     QStorageInfo(const QStorageInfo &other)
     */
@@ -149,8 +143,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_SWAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSTORAGEINFO(1))
-    {
+    if (ISNUMPAR(1) && ISQSTORAGEINFO(1)) {
 #endif
       obj->swap(*PQSTORAGEINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +167,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_SETPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -489,10 +481,8 @@ HB_FUNC_STATIC(QSTORAGEINFO_MOUNTEDVOLUMES)
     auto list = QStorageInfo::mountedVolumes();
     auto pDynSym = hb_dynsymFindName("QSTORAGEINFO");
     auto pArray = hb_itemArrayNew(0);
-    if (pDynSym != nullptr)
-    {
-      for (const auto &item : list)
-      {
+    if (pDynSym != nullptr) {
+      for (const auto &item : list) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -542,17 +532,14 @@ HB_FUNC_STATIC(QSTORAGEINFO_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -585,8 +572,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

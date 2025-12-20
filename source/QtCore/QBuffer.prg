@@ -64,16 +64,13 @@ RETURN
 
 HB_FUNC_STATIC(QBUFFER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QBuffer(QObject * parent = nullptr)
     */
     auto obj = new QBuffer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQOBJECTORNIL(2)) {
     /*
     QBuffer(QByteArray * byteArray, QObject * parent = nullptr)
     */
@@ -178,8 +175,7 @@ HB_FUNC_STATIC(QBUFFER_SETBUFFER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       obj->setBuffer(PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +190,7 @@ HB_FUNC_STATIC(QBUFFER_SETBUFFER)
 
 HB_FUNC_STATIC(QBUFFER_SETDATA)
 {
-  if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     /*
     void setData(const QByteArray &data)
     */
@@ -206,9 +201,7 @@ HB_FUNC_STATIC(QBUFFER_SETDATA)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     /*
     void setData(const char * data, int size)
     */
@@ -295,8 +288,7 @@ HB_FUNC_STATIC(QBUFFER_OPEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->open(static_cast<QBuffer::OpenMode>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,8 +328,7 @@ HB_FUNC_STATIC(QBUFFER_SEEK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->seek(PQINT64(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

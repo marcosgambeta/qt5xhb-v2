@@ -169,8 +169,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETTEXTUREWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTextureWidth(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +215,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETTEXTUREHEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTextureHeight(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,8 +261,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETTEXTUREDEPTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTextureDepth(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,8 +307,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEINDEXX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSliceIndexX(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -357,8 +353,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEINDEXY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSliceIndexY(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,8 +399,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEINDEXZ)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSliceIndexZ(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -451,8 +445,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETALPHAMULTIPLIER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setAlphaMultiplier(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -498,8 +491,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETPRESERVEOPACITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setPreserveOpacity(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -545,8 +537,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETUSEHIGHDEFSHADER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setUseHighDefShader(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -592,8 +583,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETDRAWSLICES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setDrawSlices(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -639,8 +629,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETDRAWSLICEFRAMES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setDrawSliceFrames(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -686,8 +675,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEFRAMECOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
-    {
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
 #endif
       obj->setSliceFrameColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -734,8 +722,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEFRAMEWIDTHS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVECTOR3D(1))
-    {
+    if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
 #endif
       obj->setSliceFrameWidths(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -782,8 +769,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEFRAMEGAPS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVECTOR3D(1))
-    {
+    if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
 #endif
       obj->setSliceFrameGaps(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -830,8 +816,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEFRAMETHICKNESSES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVECTOR3D(1))
-    {
+    if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
 #endif
       obj->setSliceFrameThicknesses(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -855,8 +840,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETTEXTUREDIMENSIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       obj->setTextureDimensions(PINT(1), PINT(2), PINT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -902,8 +886,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEINDICES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       obj->setSliceIndices(PINT(1), PINT(2), PINT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -919,8 +902,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSLICEINDICES)
 
 HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSUBTEXTUREDATA)
 {
-  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3))
-  {
+  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
     /*
     void setSubTextureData(Qt::Axis axis, int index, const uchar * data)
     */
@@ -933,9 +915,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSUBTEXTUREDATA)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQIMAGE(3))
-  {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQIMAGE(3)) {
     /*
     void setSubTextureData(Qt::Axis axis, int index, const QImage &image)
     */
@@ -963,8 +943,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETTEXTUREFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTextureFormat(static_cast<QImage::Format>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1010,8 +989,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_RENDERSLICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       auto ptr = new QImage(obj->renderSlice(static_cast<Qt::Axis>(hb_parni(1)), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
@@ -1034,21 +1012,17 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("alphaMultiplierChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DVolume::alphaMultiplierChanged, [sender, indexOfCodeBlock](float arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
                 auto pArg1 = hb_itemPutND(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1060,9 +1034,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1087,20 +1059,16 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONCOLORTABLECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("colorTableChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QCustom3DVolume::colorTableChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -1110,9 +1078,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONCOLORTABLECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1137,21 +1103,17 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("drawSliceFramesChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DVolume::drawSliceFramesChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1163,9 +1125,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1190,21 +1150,17 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("drawSlicesChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DVolume::drawSlicesChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1216,9 +1172,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1243,21 +1197,17 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("preserveOpacityChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DVolume::preserveOpacityChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1269,9 +1219,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1296,21 +1244,17 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliceFrameColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QCustom3DVolume::sliceFrameColorChanged,
                                            [sender, indexOfCodeBlock](const QColor &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QCOLOR");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1322,9 +1266,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1349,21 +1291,17 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliceFrameGapsChanged(QVector3D)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QCustom3DVolume::sliceFrameGapsChanged,
                                            [sender, indexOfCodeBlock](const QVector3D &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QVECTOR3D");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1375,9 +1313,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1402,21 +1338,17 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliceFrameThicknessesChanged(QVector3D)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QCustom3DVolume::sliceFrameThicknessesChanged,
                                            [sender, indexOfCodeBlock](const QVector3D &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QVECTOR3D");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1428,9 +1360,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1455,21 +1385,17 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliceFrameWidthsChanged(QVector3D)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QCustom3DVolume::sliceFrameWidthsChanged,
                                            [sender, indexOfCodeBlock](const QVector3D &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QVECTOR3D");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1481,9 +1407,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1508,21 +1432,17 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliceIndexXChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DVolume::sliceIndexXChanged, [sender, indexOfCodeBlock](int arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1534,9 +1454,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1561,21 +1479,17 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliceIndexYChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DVolume::sliceIndexYChanged, [sender, indexOfCodeBlock](int arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1587,9 +1501,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1614,21 +1526,17 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sliceIndexZChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DVolume::sliceIndexZChanged, [sender, indexOfCodeBlock](int arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1640,9 +1548,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1667,21 +1573,17 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textureDepthChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DVolume::textureDepthChanged, [sender, indexOfCodeBlock](int arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1693,9 +1595,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1720,21 +1620,17 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textureFormatChanged(QImage::Format)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QCustom3DVolume::textureFormatChanged,
                                            [sender, indexOfCodeBlock](QImage::Format arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
                                                auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1746,9 +1642,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1773,21 +1667,17 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textureHeightChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DVolume::textureHeightChanged, [sender, indexOfCodeBlock](int arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1799,9 +1689,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1826,21 +1714,17 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textureWidthChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DVolume::textureWidthChanged, [sender, indexOfCodeBlock](int arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1852,9 +1736,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1879,21 +1761,17 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("useHighDefShaderChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DVolume::useHighDefShaderChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DVOLUME");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1905,9 +1783,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

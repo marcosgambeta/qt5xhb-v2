@@ -92,9 +92,7 @@ HB_FUNC_STATIC(QTIMEZONE_NEW)
     auto obj = new QTimeZone();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     /*
     QTimeZone(const QByteArray &ianaId)
     */
@@ -102,9 +100,7 @@ HB_FUNC_STATIC(QTIMEZONE_NEW)
     auto obj = new QTimeZone(*PQBYTEARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     QTimeZone(int offsetSeconds)
     */
@@ -112,10 +108,8 @@ HB_FUNC_STATIC(QTIMEZONE_NEW)
     auto obj = new QTimeZone(PINT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISBETWEEN(4, 6) && ISQBYTEARRAY(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
-           ISNUMORNIL(5) && ISCHARORNIL(6))
-  {
+  } else if (ISBETWEEN(4, 6) && ISQBYTEARRAY(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && ISNUMORNIL(5) &&
+             ISCHARORNIL(6)) {
     /*
     QTimeZone(const QByteArray &zoneId, int offsetSeconds, const QString &name, const QString &abbreviation,
     QLocale::Country country = QLocale::AnyCountry, const QString &comment = QString())
@@ -127,9 +121,7 @@ HB_FUNC_STATIC(QTIMEZONE_NEW)
                              OPQSTRING(6, QString()));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQTIMEZONE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQTIMEZONE(1)) {
     /*
     QTimeZone(const QTimeZone &other)
     */
@@ -169,8 +161,7 @@ HB_FUNC_STATIC(QTIMEZONE_SWAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTIMEZONE(1))
-    {
+    if (ISNUMPAR(1) && ISQTIMEZONE(1)) {
 #endif
       obj->swap(*PQTIMEZONE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -274,8 +265,7 @@ HB_FUNC_STATIC(QTIMEZONE_COMMENT)
 
 HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
 {
-  if (ISBETWEEN(1, 3) && ISQDATETIME(1) && ISNUMORNIL(2) && ISQLOCALEORNIL(3))
-  {
+  if (ISBETWEEN(1, 3) && ISQDATETIME(1) && ISNUMORNIL(2) && ISQLOCALEORNIL(3)) {
     /*
     QString displayName(const QDateTime &atDateTime, QTimeZone::NameType nameType = QTimeZone::DefaultName, const
     QLocale &locale = QLocale()) const
@@ -290,9 +280,7 @@ HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
                                 HB_ISNIL(3) ? QLocale() : *static_cast<QLocale *>(Qt5xHb::itemGetPtr(3))));
     }
 #endif
-  }
-  else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISQLOCALEORNIL(3))
-  {
+  } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISQLOCALEORNIL(3)) {
     /*
     QString displayName(QTimeZone::TimeType timeType, QTimeZone::NameType nameType = QTimeZone::DefaultName, const
     QLocale &locale = QLocale()) const
@@ -322,8 +310,7 @@ HB_FUNC_STATIC(QTIMEZONE_ABBREVIATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATETIME(1))
-    {
+    if (ISNUMPAR(1) && ISQDATETIME(1)) {
 #endif
       RQSTRING(obj->abbreviation(*PQDATETIME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,8 +332,7 @@ HB_FUNC_STATIC(QTIMEZONE_OFFSETFROMUTC)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATETIME(1))
-    {
+    if (ISNUMPAR(1) && ISQDATETIME(1)) {
 #endif
       RINT(obj->offsetFromUtc(*PQDATETIME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,8 +354,7 @@ HB_FUNC_STATIC(QTIMEZONE_STANDARDTIMEOFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATETIME(1))
-    {
+    if (ISNUMPAR(1) && ISQDATETIME(1)) {
 #endif
       RINT(obj->standardTimeOffset(*PQDATETIME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -391,8 +376,7 @@ HB_FUNC_STATIC(QTIMEZONE_DAYLIGHTTIMEOFFSET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATETIME(1))
-    {
+    if (ISNUMPAR(1) && ISQDATETIME(1)) {
 #endif
       RINT(obj->daylightTimeOffset(*PQDATETIME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -436,8 +420,7 @@ HB_FUNC_STATIC(QTIMEZONE_ISDAYLIGHTTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATETIME(1))
-    {
+    if (ISNUMPAR(1) && ISQDATETIME(1)) {
 #endif
       RBOOL(obj->isDaylightTime(*PQDATETIME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -496,8 +479,7 @@ HB_FUNC_STATIC(QTIMEZONE_ISTIMEZONEIDAVAILABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
     RBOOL(QTimeZone::isTimeZoneIdAvailable(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -520,10 +502,8 @@ HB_FUNC_STATIC(QTIMEZONE_AVAILABLETIMEZONEIDS1)
     auto list = QTimeZone::availableTimeZoneIds();
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
-    if (pDynSym != nullptr)
-    {
-      for (const auto &item : list)
-      {
+    if (pDynSym != nullptr) {
+      for (const auto &item : list) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -557,16 +537,13 @@ HB_FUNC_STATIC(QTIMEZONE_AVAILABLETIMEZONEIDS2)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     auto list = QTimeZone::availableTimeZoneIds(static_cast<QLocale::Country>(hb_parni(1)));
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
-    if (pDynSym != nullptr)
-    {
-      for (const auto &item : list)
-      {
+    if (pDynSym != nullptr) {
+      for (const auto &item : list) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -600,16 +577,13 @@ HB_FUNC_STATIC(QTIMEZONE_AVAILABLETIMEZONEIDS3)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     auto list = QTimeZone::availableTimeZoneIds(PINT(1));
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
-    if (pDynSym != nullptr)
-    {
-      for (const auto &item : list)
-      {
+    if (pDynSym != nullptr) {
+      for (const auto &item : list) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -640,13 +614,9 @@ HB_FUNC_STATIC(QTIMEZONE_AVAILABLETIMEZONEIDS)
 {
   if (ISNUMPAR(0)) {
     HB_FUNC_EXEC(QTIMEZONE_AVAILABLETIMEZONEIDS1);
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QTIMEZONE_AVAILABLETIMEZONEIDS2);
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QTIMEZONE_AVAILABLETIMEZONEIDS3);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -660,8 +630,7 @@ HB_FUNC_STATIC(QTIMEZONE_IANAIDTOWINDOWSID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
     RQBYTEARRAY(QTimeZone::ianaIdToWindowsId(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -674,8 +643,7 @@ HB_FUNC_STATIC(QTIMEZONE_IANAIDTOWINDOWSID)
 
 HB_FUNC_STATIC(QTIMEZONE_WINDOWSIDTODEFAULTIANAID)
 {
-  if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     /*
     static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId)
     */
@@ -683,9 +651,7 @@ HB_FUNC_STATIC(QTIMEZONE_WINDOWSIDTODEFAULTIANAID)
 
     RQBYTEARRAY(QTimeZone::windowsIdToDefaultIanaId(*PQBYTEARRAY(1)));
 #endif
-  }
-  else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2)) {
     /*
     static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId, QLocale::Country country)
     */
@@ -700,8 +666,7 @@ HB_FUNC_STATIC(QTIMEZONE_WINDOWSIDTODEFAULTIANAID)
 
 HB_FUNC_STATIC(QTIMEZONE_WINDOWSIDTOIANAIDS)
 {
-  if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     /*
     static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId)
     */
@@ -710,10 +675,8 @@ HB_FUNC_STATIC(QTIMEZONE_WINDOWSIDTOIANAIDS)
     auto list = QTimeZone::windowsIdToIanaIds(*PQBYTEARRAY(1));
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
-    if (pDynSym != nullptr)
-    {
-      for (const auto &item : list)
-      {
+    if (pDynSym != nullptr) {
+      for (const auto &item : list) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -733,9 +696,7 @@ HB_FUNC_STATIC(QTIMEZONE_WINDOWSIDTOIANAIDS)
     }
     hb_itemReturnRelease(pArray);
 #endif
-  }
-  else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2)) {
     /*
     static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId, QLocale::Country country)
     */
@@ -744,10 +705,8 @@ HB_FUNC_STATIC(QTIMEZONE_WINDOWSIDTOIANAIDS)
     auto list = QTimeZone::windowsIdToIanaIds(*PQBYTEARRAY(1), static_cast<QLocale::Country>(hb_parni(2)));
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
-    if (pDynSym != nullptr)
-    {
-      for (const auto &item : list)
-      {
+    if (pDynSym != nullptr) {
+      for (const auto &item : list) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -776,17 +735,14 @@ HB_FUNC_STATIC(QTIMEZONE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -819,8 +775,7 @@ HB_FUNC_STATIC(QTIMEZONE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

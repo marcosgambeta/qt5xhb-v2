@@ -92,8 +92,7 @@ QBoxPlotSeries(QObject * parent = nullptr)
 HB_FUNC_STATIC(QBOXPLOTSERIES_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QBoxPlotSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -178,8 +177,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_SETBOXOUTLINEVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setBoxOutlineVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,8 +223,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_SETBOXWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setBoxWidth(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,8 +269,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_SETBRUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBRUSH(1))
-    {
+    if (ISNUMPAR(1) && ISQBRUSH(1)) {
 #endif
       obj->setBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -319,8 +315,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_SETPEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPEN(1))
-    {
+    if (ISNUMPAR(1) && ISQPEN(1)) {
 #endif
       obj->setPen(*PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -338,8 +333,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_APPEND)
 {
   auto obj = qobject_cast<QBoxPlotSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (ISNUMPAR(1) && ISQBOXSET(1))
-  {
+  if (ISNUMPAR(1) && ISQBOXSET(1)) {
     /*
     bool append(QBoxSet * box)
     */
@@ -348,9 +342,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_APPEND)
       RBOOL(obj->append(PQBOXSET(1)));
     }
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISARRAY(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     /*
     bool append(QList<QBoxSet*> boxes)
     */
@@ -359,8 +351,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_APPEND)
       QList<QBoxSet *> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (auto i1 = 0; i1 < nLen1; i1++)
-      {
+      for (auto i1 = 0; i1 < nLen1; i1++) {
         par1 << static_cast<QBoxSet *>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
       RBOOL(obj->append(par1));
@@ -381,8 +372,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_REMOVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBOXSET(1))
-    {
+    if (ISNUMPAR(1) && ISQBOXSET(1)) {
 #endif
       RBOOL(obj->remove(PQBOXSET(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,8 +394,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_TAKE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBOXSET(1))
-    {
+    if (ISNUMPAR(1) && ISQBOXSET(1)) {
 #endif
       RBOOL(obj->take(PQBOXSET(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -427,8 +416,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_INSERT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBOXSET(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBOXSET(2)) {
 #endif
       RBOOL(obj->insert(PINT(1), PQBOXSET(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -455,10 +443,8 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_BOXSETS)
       auto list = obj->boxSets();
       auto pDynSym = hb_dynsymFindName("QBOXSET");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (auto item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (auto item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -470,9 +456,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_BOXSETS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBOXSET", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -541,21 +525,17 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("boxOutlineVisibilityChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QBoxPlotSeries::boxOutlineVisibilityChanged, [sender, indexOfCodeBlock]() {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
                 hb_vmEvalBlockV(cb, 1, pSender);
                 hb_itemRelease(pSender);
@@ -565,9 +545,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -592,28 +570,22 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXSETSADDED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("boxsetsAdded(QList<QBoxSet*>)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QBoxPlotSeries::boxsetsAdded, [sender, indexOfCodeBlock](QList<QBoxSet *> arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
                 auto pDynSym = hb_dynsymFindName("QBOXSET");
                 auto pArg1 = hb_itemArrayNew(0);
-                if (pDynSym != nullptr)
-                {
-                  for (auto item : arg1)
-                  {
+                if (pDynSym != nullptr) {
+                  for (auto item : arg1) {
                     hb_vmPushDynSym(pDynSym);
                     hb_vmPushNil();
                     hb_vmDo(0);
@@ -625,9 +597,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXSETSADDED)
                     hb_itemRelease(pTempObject);
                     hb_itemRelease(pTempItem);
                   }
-                }
-                else
-                {
+                } else {
                   hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBOXSET", HB_ERR_ARGS_BASEPARAMS);
                 }
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -639,9 +609,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXSETSADDED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -666,28 +634,22 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXSETSREMOVED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("boxsetsRemoved(QList<QBoxSet*>)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QBoxPlotSeries::boxsetsRemoved, [sender, indexOfCodeBlock](QList<QBoxSet *> arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
                 auto pDynSym = hb_dynsymFindName("QBOXSET");
                 auto pArg1 = hb_itemArrayNew(0);
-                if (pDynSym != nullptr)
-                {
-                  for (auto item : arg1)
-                  {
+                if (pDynSym != nullptr) {
+                  for (auto item : arg1) {
                     hb_vmPushDynSym(pDynSym);
                     hb_vmPushNil();
                     hb_vmDo(0);
@@ -699,9 +661,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXSETSREMOVED)
                     hb_itemRelease(pTempObject);
                     hb_itemRelease(pTempItem);
                   }
-                }
-                else
-                {
+                } else {
                   hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBOXSET", HB_ERR_ARGS_BASEPARAMS);
                 }
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -713,9 +673,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXSETSREMOVED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -740,20 +698,16 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXWIDTHCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("boxWidthChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QBoxPlotSeries::boxWidthChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -763,9 +717,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONBOXWIDTHCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -790,20 +742,16 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONBRUSHCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("brushChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QBoxPlotSeries::brushChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -813,9 +761,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONBRUSHCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -840,20 +786,16 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONCLICKED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QBoxSet*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QBoxPlotSeries::clicked, [sender, indexOfCodeBlock](QBoxSet *arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QBOXSET");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -865,9 +807,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONCLICKED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -892,20 +832,16 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONCOUNTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("countChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QBoxPlotSeries::countChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -915,9 +851,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONCOUNTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -942,21 +876,17 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONDOUBLECLICKED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("doubleClicked(QBoxSet*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QBoxPlotSeries::doubleClicked, [sender, indexOfCodeBlock](QBoxSet *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QBOXSET");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -968,9 +898,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONDOUBLECLICKED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -995,21 +923,17 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONHOVERED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("hovered(bool,QBoxSet*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QBoxPlotSeries::hovered, [sender, indexOfCodeBlock](bool arg1, QBoxSet *arg2) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 auto pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QBOXSET");
@@ -1023,9 +947,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONHOVERED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1050,20 +972,16 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONPENCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("penChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QBoxPlotSeries::penChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -1073,9 +991,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONPENCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1100,20 +1016,16 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONPRESSED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pressed(QBoxSet*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QBoxPlotSeries::pressed, [sender, indexOfCodeBlock](QBoxSet *arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
             auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QBOXSET");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1125,9 +1037,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONPRESSED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1152,21 +1062,17 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONRELEASED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("released(QBoxSet*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QBoxPlotSeries::released, [sender, indexOfCodeBlock](QBoxSet *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBOXPLOTSERIES");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QBOXSET");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1178,9 +1084,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_ONRELEASED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

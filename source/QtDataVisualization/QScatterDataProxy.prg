@@ -79,8 +79,7 @@ QScatterDataProxy(QObject * parent = nullptr)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QScatterDataProxy(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -169,8 +168,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ITEMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = obj->itemAt(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QSCATTERDATAITEM", false);
@@ -196,8 +194,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_SETITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSCATTERDATAITEM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSCATTERDATAITEM(2)) {
 #endif
       obj->setItem(PINT(1), *PQSCATTERDATAITEM(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,8 +221,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ADDITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSCATTERDATAITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQSCATTERDATAITEM(1)) {
 #endif
       RINT(obj->addItem(*PQSCATTERDATAITEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,8 +246,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_INSERTITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSCATTERDATAITEM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSCATTERDATAITEM(2)) {
 #endif
       obj->insertItem(PINT(1), *PQSCATTERDATAITEM(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,8 +273,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_REMOVEITEMS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->removeItems(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,20 +297,16 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONARRAYRESET)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("arrayReset()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QScatterDataProxy::arrayReset, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSCATTERDATAPROXY");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -326,9 +316,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONARRAYRESET)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -353,21 +341,17 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMCOUNTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemCountChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QScatterDataProxy::itemCountChanged, [sender, indexOfCodeBlock](int arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSCATTERDATAPROXY");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -379,9 +363,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMCOUNTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -406,21 +388,17 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSADDED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemsAdded(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QScatterDataProxy::itemsAdded, [sender, indexOfCodeBlock](int arg1, int arg2) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSCATTERDATAPROXY");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 auto pArg2 = hb_itemPutNI(nullptr, arg2);
@@ -434,9 +412,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSADDED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -461,21 +437,17 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemsChanged(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QScatterDataProxy::itemsChanged, [sender, indexOfCodeBlock](int arg1, int arg2) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSCATTERDATAPROXY");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 auto pArg2 = hb_itemPutNI(nullptr, arg2);
@@ -489,9 +461,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -516,21 +486,17 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSINSERTED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemsInserted(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QScatterDataProxy::itemsInserted, [sender, indexOfCodeBlock](int arg1, int arg2) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSCATTERDATAPROXY");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 auto pArg2 = hb_itemPutNI(nullptr, arg2);
@@ -544,9 +510,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSINSERTED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -571,21 +535,17 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSREMOVED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemsRemoved(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QScatterDataProxy::itemsRemoved, [sender, indexOfCodeBlock](int arg1, int arg2) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSCATTERDATAPROXY");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 auto pArg2 = hb_itemPutNI(nullptr, arg2);
@@ -599,9 +559,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSREMOVED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -626,21 +584,17 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONSERIESCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("seriesChanged(QScatter3DSeries*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QScatterDataProxy::seriesChanged, [sender, indexOfCodeBlock](QScatter3DSeries *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSCATTERDATAPROXY");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QSCATTER3DSERIES");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -652,9 +606,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONSERIESCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

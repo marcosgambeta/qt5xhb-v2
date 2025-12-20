@@ -57,9 +57,8 @@ RETURN
     */
 HB_FUNC_STATIC(QDBUSINTERFACE_NEW)
 {
-  if (ISBETWEEN(2, 5) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3) &&
-      ISQDBUSCONNECTIONORNIL(4) && ISQOBJECTORNIL(5))
-  {
+  if (ISBETWEEN(2, 5) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3) && ISQDBUSCONNECTIONORNIL(4) &&
+      ISQOBJECTORNIL(5)) {
     auto obj = new QDBusInterface(PQSTRING(1), PQSTRING(2), OPQSTRING(3, QString()),
                                   HB_ISNIL(4) ? QDBusConnection::sessionBus()
                                               : *static_cast<QDBusConnection *>(Qt5xHb::itemGetPtr(4)),
@@ -117,8 +116,7 @@ HB_FUNC_STATIC(QDBUSINTERFACE_QT_METACAST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       hb_retptr(static_cast<void *>(obj->qt_metacast(PCONSTCHAR(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

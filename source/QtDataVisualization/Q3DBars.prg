@@ -102,8 +102,7 @@ Q3DBars(const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr)
 HB_FUNC_STATIC(Q3DBARS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(0, 2) && ISQSURFACEFORMATORNIL(1) && ISQWINDOWORNIL(2))
-  {
+  if (ISBETWEEN(0, 2) && ISQSURFACEFORMATORNIL(1) && ISQWINDOWORNIL(2)) {
     auto obj = new Q3DBars(HB_ISNIL(1) ? nullptr : static_cast<QSurfaceFormat *>(Qt5xHb::itemGetPtr(1)),
                            OPQWINDOW(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -167,8 +166,7 @@ HB_FUNC_STATIC(Q3DBARS_SETMULTISERIESUNIFORM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setMultiSeriesUniform(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,8 +212,7 @@ HB_FUNC_STATIC(Q3DBARS_SETBARTHICKNESS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setBarThickness(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,8 +259,7 @@ HB_FUNC_STATIC(Q3DBARS_SETBARSPACING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSIZEF(1))
-    {
+    if (ISNUMPAR(1) && ISQSIZEF(1)) {
 #endif
       obj->setBarSpacing(*PQSIZEF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -309,8 +305,7 @@ HB_FUNC_STATIC(Q3DBARS_SETBARSPACINGRELATIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setBarSpacingRelative(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -357,8 +352,7 @@ HB_FUNC_STATIC(Q3DBARS_SETROWAXIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQCATEGORY3DAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQCATEGORY3DAXIS(1)) {
 #endif
       obj->setRowAxis(PQCATEGORY3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -405,8 +399,7 @@ HB_FUNC_STATIC(Q3DBARS_SETCOLUMNAXIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQCATEGORY3DAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQCATEGORY3DAXIS(1)) {
 #endif
       obj->setColumnAxis(PQCATEGORY3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -453,8 +446,7 @@ HB_FUNC_STATIC(Q3DBARS_SETVALUEAXIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1)) {
 #endif
       obj->setValueAxis(PQVALUE3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -501,8 +493,7 @@ HB_FUNC_STATIC(Q3DBARS_SETPRIMARYSERIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBAR3DSERIES(1))
-    {
+    if (ISNUMPAR(1) && ISQBAR3DSERIES(1)) {
 #endif
       obj->setPrimarySeries(PQBAR3DSERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -571,8 +562,7 @@ HB_FUNC_STATIC(Q3DBARS_SETFLOORLEVEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFloorLevel(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -596,8 +586,7 @@ HB_FUNC_STATIC(Q3DBARS_ADDSERIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBAR3DSERIES(1))
-    {
+    if (ISNUMPAR(1) && ISQBAR3DSERIES(1)) {
 #endif
       obj->addSeries(PQBAR3DSERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -621,8 +610,7 @@ HB_FUNC_STATIC(Q3DBARS_REMOVESERIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBAR3DSERIES(1))
-    {
+    if (ISNUMPAR(1) && ISQBAR3DSERIES(1)) {
 #endif
       obj->removeSeries(PQBAR3DSERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -646,8 +634,7 @@ HB_FUNC_STATIC(Q3DBARS_INSERTSERIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBAR3DSERIES(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBAR3DSERIES(2)) {
 #endif
       obj->insertSeries(PINT(1), PQBAR3DSERIES(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -676,10 +663,8 @@ HB_FUNC_STATIC(Q3DBARS_SERIESLIST)
       auto list = obj->seriesList();
       auto pDynSym = hb_dynsymFindName("QBAR3DSERIES");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (auto item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (auto item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -691,9 +676,7 @@ HB_FUNC_STATIC(Q3DBARS_SERIESLIST)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBAR3DSERIES", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -716,8 +699,7 @@ HB_FUNC_STATIC(Q3DBARS_ADDAXIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACT3DAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACT3DAXIS(1)) {
 #endif
       obj->addAxis(PQABSTRACT3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -741,8 +723,7 @@ HB_FUNC_STATIC(Q3DBARS_RELEASEAXIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACT3DAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACT3DAXIS(1)) {
 #endif
       obj->releaseAxis(PQABSTRACT3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -771,10 +752,8 @@ HB_FUNC_STATIC(Q3DBARS_AXES)
       auto list = obj->axes();
       auto pDynSym = hb_dynsymFindName("QABSTRACT3DAXIS");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (auto item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (auto item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -786,9 +765,7 @@ HB_FUNC_STATIC(Q3DBARS_AXES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QABSTRACT3DAXIS", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -811,21 +788,17 @@ HB_FUNC_STATIC(Q3DBARS_ONMULTISERIESUNIFORMCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("multiSeriesUniformChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DBars::multiSeriesUniformChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -837,9 +810,7 @@ HB_FUNC_STATIC(Q3DBARS_ONMULTISERIESUNIFORMCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -864,21 +835,17 @@ HB_FUNC_STATIC(Q3DBARS_ONBARTHICKNESSCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("barThicknessChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DBars::barThicknessChanged, [sender, indexOfCodeBlock](float arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
                 auto pArg1 = hb_itemPutND(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -890,9 +857,7 @@ HB_FUNC_STATIC(Q3DBARS_ONBARTHICKNESSCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -917,21 +882,17 @@ HB_FUNC_STATIC(Q3DBARS_ONBARSPACINGCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("barSpacingChanged(QSizeF)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DBars::barSpacingChanged, [sender, indexOfCodeBlock](const QSizeF &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QSIZEF");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -943,9 +904,7 @@ HB_FUNC_STATIC(Q3DBARS_ONBARSPACINGCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -970,21 +929,17 @@ HB_FUNC_STATIC(Q3DBARS_ONBARSPACINGRELATIVECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("barSpacingRelativeChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DBars::barSpacingRelativeChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -996,9 +951,7 @@ HB_FUNC_STATIC(Q3DBARS_ONBARSPACINGRELATIVECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1023,21 +976,17 @@ HB_FUNC_STATIC(Q3DBARS_ONROWAXISCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowAxisChanged(QCategory3DAxis*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DBars::rowAxisChanged, [sender, indexOfCodeBlock](QCategory3DAxis *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QCATEGORY3DAXIS");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1049,9 +998,7 @@ HB_FUNC_STATIC(Q3DBARS_ONROWAXISCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1076,21 +1023,17 @@ HB_FUNC_STATIC(Q3DBARS_ONCOLUMNAXISCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("columnAxisChanged(QCategory3DAxis*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DBars::columnAxisChanged, [sender, indexOfCodeBlock](QCategory3DAxis *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QCATEGORY3DAXIS");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1102,9 +1045,7 @@ HB_FUNC_STATIC(Q3DBARS_ONCOLUMNAXISCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1129,21 +1070,17 @@ HB_FUNC_STATIC(Q3DBARS_ONVALUEAXISCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("valueAxisChanged(QValue3DAxis*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DBars::valueAxisChanged, [sender, indexOfCodeBlock](QValue3DAxis *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QVALUE3DAXIS");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1155,9 +1092,7 @@ HB_FUNC_STATIC(Q3DBARS_ONVALUEAXISCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1182,21 +1117,17 @@ HB_FUNC_STATIC(Q3DBARS_ONPRIMARYSERIESCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("primarySeriesChanged(QBar3DSeries*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DBars::primarySeriesChanged, [sender, indexOfCodeBlock](QBar3DSeries *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QBAR3DSERIES");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1208,9 +1139,7 @@ HB_FUNC_STATIC(Q3DBARS_ONPRIMARYSERIESCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1235,21 +1164,17 @@ HB_FUNC_STATIC(Q3DBARS_ONSELECTEDSERIESCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectedSeriesChanged(QBar3DSeries*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DBars::selectedSeriesChanged, [sender, indexOfCodeBlock](QBar3DSeries *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QBAR3DSERIES");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1261,9 +1186,7 @@ HB_FUNC_STATIC(Q3DBARS_ONSELECTEDSERIESCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1288,20 +1211,16 @@ HB_FUNC_STATIC(Q3DBARS_ONFLOORLEVELCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("floorLevelChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &Q3DBars::floorLevelChanged, [sender, indexOfCodeBlock](float arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DBARS");
             auto pArg1 = hb_itemPutND(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1313,9 +1232,7 @@ HB_FUNC_STATIC(Q3DBARS_ONFLOORLEVELCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

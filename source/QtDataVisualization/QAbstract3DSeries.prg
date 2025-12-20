@@ -182,8 +182,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETITEMLABELFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setItemLabelFormat(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,8 +228,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,8 +274,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMesh(static_cast<QAbstract3DSeries::Mesh>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,8 +320,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHSMOOTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setMeshSmooth(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -371,8 +367,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHROTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQQUATERNION(1))
-    {
+    if (ISNUMPAR(1) && ISQQUATERNION(1)) {
 #endif
       obj->setMeshRotation(*PQQUATERNION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -418,8 +413,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETUSERDEFINEDMESH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setUserDefinedMesh(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -465,8 +459,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETCOLORSTYLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setColorStyle(static_cast<Q3DTheme::ColorStyle>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -512,8 +505,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETBASECOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
-    {
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
 #endif
       obj->setBaseColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -560,8 +552,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETBASEGRADIENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLINEARGRADIENT(1))
-    {
+    if (ISNUMPAR(1) && ISQLINEARGRADIENT(1)) {
 #endif
       obj->setBaseGradient(*PQLINEARGRADIENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -607,8 +598,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
-    {
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
 #endif
       obj->setSingleHighlightColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -655,8 +645,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTGRADIENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLINEARGRADIENT(1))
-    {
+    if (ISNUMPAR(1) && ISQLINEARGRADIENT(1)) {
 #endif
       obj->setSingleHighlightGradient(*PQLINEARGRADIENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -702,8 +691,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMULTIHIGHLIGHTCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
-    {
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
 #endif
       obj->setMultiHighlightColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -750,8 +738,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMULTIHIGHLIGHTGRADIENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLINEARGRADIENT(1))
-    {
+    if (ISNUMPAR(1) && ISQLINEARGRADIENT(1)) {
 #endif
       obj->setMultiHighlightGradient(*PQLINEARGRADIENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -797,8 +784,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -866,8 +852,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETITEMLABELVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setItemLabelVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -891,8 +876,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHAXISANDANGLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2)) {
 #endif
       obj->setMeshAxisAndAngle(*PQVECTOR3D(1), PFLOAT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -916,21 +900,17 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONBASECOLORCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("baseColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstract3DSeries::baseColorChanged, [sender, indexOfCodeBlock](const QColor &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QCOLOR");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -942,9 +922,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONBASECOLORCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -969,21 +947,17 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("baseGradientChanged(QLinearGradient)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstract3DSeries::baseGradientChanged, [sender, indexOfCodeBlock](const QLinearGradient &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QLINEARGRADIENT");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -995,9 +969,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1022,21 +994,17 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONCOLORSTYLECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("colorStyleChanged(Q3DTheme::ColorStyle)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstract3DSeries::colorStyleChanged, [sender, indexOfCodeBlock](Q3DTheme::ColorStyle arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
                 auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1048,9 +1016,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONCOLORSTYLECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1075,21 +1041,17 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemLabelChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstract3DSeries::itemLabelChanged, [sender, indexOfCodeBlock](const QString &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
                 auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1101,9 +1063,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1128,21 +1088,17 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemLabelFormatChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstract3DSeries::itemLabelFormatChanged, [sender, indexOfCodeBlock](const QString &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
                 auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1154,9 +1110,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1181,21 +1135,17 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemLabelVisibilityChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstract3DSeries::itemLabelVisibilityChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1207,9 +1157,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1234,21 +1182,17 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("meshChanged(QAbstract3DSeries::Mesh)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstract3DSeries::meshChanged, [sender, indexOfCodeBlock](QAbstract3DSeries::Mesh arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
                 auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1260,9 +1204,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1287,21 +1229,17 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHROTATIONCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("meshRotationChanged(QQuaternion)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstract3DSeries::meshRotationChanged, [sender, indexOfCodeBlock](const QQuaternion &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QQUATERNION");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1313,9 +1251,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHROTATIONCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1340,21 +1276,17 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("meshSmoothChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstract3DSeries::meshSmoothChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1366,9 +1298,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1393,21 +1323,17 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("multiHighlightColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstract3DSeries::multiHighlightColorChanged, [sender, indexOfCodeBlock](const QColor &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QCOLOR");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1419,9 +1345,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1446,22 +1370,18 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("multiHighlightGradientChanged(QLinearGradient)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstract3DSeries::multiHighlightGradientChanged,
                              [sender, indexOfCodeBlock](const QLinearGradient &arg1) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
                                  auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QLINEARGRADIENT");
                                  hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1473,9 +1393,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1500,21 +1418,17 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONNAMECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("nameChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstract3DSeries::nameChanged, [sender, indexOfCodeBlock](const QString &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
                 auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1526,9 +1440,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONNAMECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1553,21 +1465,17 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("singleHighlightColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstract3DSeries::singleHighlightColorChanged, [sender, indexOfCodeBlock](const QColor &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QCOLOR");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1579,9 +1487,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1606,22 +1512,18 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("singleHighlightGradientChanged(QLinearGradient)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstract3DSeries::singleHighlightGradientChanged,
                              [sender, indexOfCodeBlock](const QLinearGradient &arg1) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
                                  auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QLINEARGRADIENT");
                                  hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1633,9 +1535,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1660,21 +1560,17 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("userDefinedMeshChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstract3DSeries::userDefinedMeshChanged, [sender, indexOfCodeBlock](const QString &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
                 auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1686,9 +1582,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1713,21 +1607,17 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONVISIBILITYCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("visibilityChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstract3DSeries::visibilityChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DSERIES");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1739,9 +1629,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONVISIBILITYCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

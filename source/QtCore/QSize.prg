@@ -74,9 +74,7 @@ HB_FUNC_STATIC(QSIZE_NEW)
     */
     auto obj = new QSize();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     QSize(int width, int height)
     */
@@ -111,8 +109,7 @@ HB_FUNC_STATIC(QSIZE_BOUNDEDTO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSIZE(1))
-    {
+    if (ISNUMPAR(1) && ISQSIZE(1)) {
 #endif
       RQSIZE(obj->boundedTo(*PQSIZE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,8 +129,7 @@ HB_FUNC_STATIC(QSIZE_EXPANDEDTO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSIZE(1))
-    {
+    if (ISNUMPAR(1) && ISQSIZE(1)) {
 #endif
       RQSIZE(obj->expandedTo(*PQSIZE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,8 +222,7 @@ HB_FUNC_STATIC(QSIZE_ISVALID)
 
 HB_FUNC_STATIC(QSIZE_SCALE)
 {
-  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-  {
+  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     /*
     void scale(int width, int height, Qt::AspectRatioMode mode)
     */
@@ -238,9 +233,7 @@ HB_FUNC_STATIC(QSIZE_SCALE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQSIZE(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && ISQSIZE(1) && HB_ISNUM(2)) {
     /*
     void scale(const QSize &size, Qt::AspectRatioMode mode)
     */
@@ -265,8 +258,7 @@ HB_FUNC_STATIC(QSIZE_SETHEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setHeight(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,8 +280,7 @@ HB_FUNC_STATIC(QSIZE_SETWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setWidth(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,17 +339,14 @@ HB_FUNC_STATIC(QSIZE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -391,8 +379,7 @@ HB_FUNC_STATIC(QSIZE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

@@ -57,8 +57,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSOCKETNOTIFIER_NEW)
 {
-  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3))
-  {
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3)) {
     auto obj = new QSocketNotifier(PQINTPTR(1), static_cast<QSocketNotifier::Type>(hb_parni(2)), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -152,8 +151,7 @@ HB_FUNC_STATIC(QSOCKETNOTIFIER_SETENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

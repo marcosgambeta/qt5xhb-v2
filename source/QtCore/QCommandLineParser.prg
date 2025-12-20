@@ -121,8 +121,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_SETSINGLEDASHWORDOPTIONMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSingleDashWordOptionMode(static_cast<QCommandLineParser::SingleDashWordOptionMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,8 +145,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_ADDOPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1))
-    {
+    if (ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1)) {
 #endif
       RBOOL(obj->addOption(*PQCOMMANDLINEOPTION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,8 +213,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_SETAPPLICATIONDESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setApplicationDescription(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,8 +259,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_ADDPOSITIONALARGUMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3)) {
 #endif
       obj->addPositionalArgument(PQSTRING(1), PQSTRING(2), OPQSTRING(3, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,8 +299,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_CLEARPOSITIONALARGUMENTS)
 
 HB_FUNC_STATIC(QCOMMANDLINEPARSER_PROCESS)
 {
-  if (ISNUMPAR(1) && HB_ISARRAY(1))
-  {
+  if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     /*
     void process(const QStringList &arguments)
     */
@@ -317,9 +312,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_PROCESS)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQCOREAPPLICATION(1))
-  {
+  } else if (ISNUMPAR(1) && ISQCOREAPPLICATION(1)) {
     /*
     void process(const QCoreApplication &app)
     */
@@ -347,8 +340,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_PARSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       RBOOL(obj->parse(PQSTRINGLIST(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -384,8 +376,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_ERRORTEXT)
 
 HB_FUNC_STATIC(QCOMMANDLINEPARSER_ISSET)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     bool isSet(const QString &name) const
     */
@@ -396,9 +387,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_ISSET)
       RBOOL(obj->isSet(PQSTRING(1)));
     }
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1))
-  {
+  } else if (ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1)) {
     /*
     bool isSet(const QCommandLineOption &option) const
     */
@@ -416,8 +405,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_ISSET)
 
 HB_FUNC_STATIC(QCOMMANDLINEPARSER_VALUE)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     QString value(const QString &name) const
     */
@@ -428,9 +416,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_VALUE)
       RQSTRING(obj->value(PQSTRING(1)));
     }
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1))
-  {
+  } else if (ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1)) {
     /*
     QString value(const QCommandLineOption &option) const
     */
@@ -448,8 +434,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_VALUE)
 
 HB_FUNC_STATIC(QCOMMANDLINEPARSER_VALUES)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     QStringList values(const QString &name) const
     */
@@ -460,9 +445,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_VALUES)
       RQSTRINGLIST(obj->values(PQSTRING(1)));
     }
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1))
-  {
+  } else if (ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1)) {
     /*
     QStringList values(const QCommandLineOption &option) const
     */
@@ -554,8 +537,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_SHOWHELP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->showHelp(OPINT(1, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -595,17 +577,14 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -638,8 +617,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

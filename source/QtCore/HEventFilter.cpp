@@ -96,8 +96,7 @@ HEventFilter::HEventFilter(QObject *parent) : QObject(parent)
 
 HEventFilter::~HEventFilter()
 {
-  if (m_eventFilterBlock != nullptr)
-  {
+  if (m_eventFilterBlock != nullptr) {
     hb_itemRelease(m_eventFilterBlock);
     m_eventFilterBlock = nullptr;
   }
@@ -109,8 +108,7 @@ bool HEventFilter::eventFilter(QObject *object, QEvent *event)
 {
   auto result = false;
 
-  if (m_eventFilterBlock != nullptr)
-  {
+  if (m_eventFilterBlock != nullptr) {
     auto pObject = returnQObject(object, "QOBJECT");
     auto pEvent = returnQEvent(event, "QEVENT");
 
@@ -125,12 +123,10 @@ bool HEventFilter::eventFilter(QObject *object, QEvent *event)
 
 void HEventFilter::setEventFilterCB(PHB_ITEM block)
 {
-  if (m_eventFilterBlock != nullptr)
-  {
+  if (m_eventFilterBlock != nullptr) {
     hb_itemRelease(m_eventFilterBlock);
   }
-  if (block != nullptr)
-  {
+  if (block != nullptr) {
     m_eventFilterBlock = hb_itemNew(block);
   }
 }
@@ -143,15 +139,13 @@ PHB_ITEM HEventFilter::returnQEvent(QEvent *event, const char *classname)
 
   pDynSym = hb_dynsymFindName(static_cast<const char *>(eventname.toUpper().toLatin1().data()));
 
-  if (pDynSym == nullptr)
-  {
+  if (pDynSym == nullptr) {
     pDynSym = hb_dynsymFindName(classname);
   }
 
   auto pObject = hb_itemNew(nullptr);
 
-  if (pDynSym != nullptr)
-  {
+  if (pDynSym != nullptr) {
     hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
     hb_vmDo(0);
@@ -171,20 +165,17 @@ PHB_ITEM HEventFilter::returnQObject(QObject *object, const char *classname)
 {
   PHB_DYNS pDynSym = nullptr;
 
-  if (object != nullptr)
-  {
+  if (object != nullptr) {
     pDynSym = hb_dynsymFindName(static_cast<const char *>(object->metaObject()->className()));
   }
 
-  if (pDynSym == nullptr)
-  {
+  if (pDynSym == nullptr) {
     pDynSym = hb_dynsymFindName(classname);
   }
 
   auto pObject = hb_itemNew(nullptr);
 
-  if (pDynSym != nullptr)
-  {
+  if (pDynSym != nullptr) {
     hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
     hb_vmDo(0);

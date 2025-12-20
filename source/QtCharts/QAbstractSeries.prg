@@ -153,8 +153,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SETNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,8 +199,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SETVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       obj->setVisible(OPBOOL(1, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,8 +245,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SETOPACITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setOpacity(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,8 +291,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SETUSEOPENGL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       obj->setUseOpenGL(OPBOOL(1, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,8 +338,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ATTACHAXIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTAXIS(1)) {
 #endif
       RBOOL(obj->attachAxis(PQABSTRACTAXIS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -365,8 +360,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_DETACHAXIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTAXIS(1)) {
 #endif
       RBOOL(obj->detachAxis(PQABSTRACTAXIS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -393,10 +387,8 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ATTACHEDAXES)
       auto list = obj->attachedAxes();
       auto pDynSym = hb_dynsymFindName("QABSTRACTAXIS");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (auto item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (auto item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -408,9 +400,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ATTACHEDAXES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QABSTRACTAXIS", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -481,20 +471,16 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ONNAMECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("nameChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAbstractSeries::nameChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTSERIES");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -504,9 +490,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ONNAMECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -531,20 +515,16 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ONOPACITYCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("opacityChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAbstractSeries::opacityChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTSERIES");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -554,9 +534,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ONOPACITYCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -581,20 +559,16 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ONUSEOPENGLCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("useOpenGLChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAbstractSeries::useOpenGLChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTSERIES");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -604,9 +578,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ONUSEOPENGLCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -631,20 +603,16 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ONVISIBLECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("visibleChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAbstractSeries::visibleChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACTSERIES");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -654,9 +622,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ONVISIBLECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

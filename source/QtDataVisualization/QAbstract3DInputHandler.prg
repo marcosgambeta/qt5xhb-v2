@@ -119,8 +119,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTVIEW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setInputView(static_cast<QAbstract3DInputHandler::InputView>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,8 +165,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->setInputPosition(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,8 +212,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETSCENE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQ3DSCENE(1))
-    {
+    if (ISNUMPAR(1) && ISQ3DSCENE(1)) {
 #endif
       obj->setScene(PQ3DSCENE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,21 +255,17 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("inputViewChanged(QAbstract3DInputHandler::InputView)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAbstract3DInputHandler::inputViewChanged,
                                            [sender, indexOfCodeBlock](QAbstract3DInputHandler::InputView arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender =
                                                    Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DINPUTHANDLER");
                                                auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -285,9 +278,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -312,21 +303,17 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("positionChanged(QPoint)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstract3DInputHandler::positionChanged, [sender, indexOfCodeBlock](const QPoint &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DINPUTHANDLER");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QPOINT");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -338,9 +325,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -365,21 +350,17 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONSCENECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sceneChanged(Q3DScene*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstract3DInputHandler::sceneChanged, [sender, indexOfCodeBlock](Q3DScene *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QABSTRACT3DINPUTHANDLER");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "Q3DSCENE");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -391,9 +372,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONSCENECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

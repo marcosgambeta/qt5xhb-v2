@@ -55,16 +55,13 @@ RETURN
 
 HB_FUNC_STATIC(QEVENTTRANSITION_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQSTATEORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQSTATEORNIL(1)) {
     /*
     QEventTransition(QState * sourceState = nullptr)
     */
     auto obj = new QEventTransition(OPQSTATE(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISNUM(2) && ISQSTATEORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISNUM(2) && ISQSTATEORNIL(3)) {
     /*
     QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = nullptr)
     */
@@ -142,8 +139,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTSOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQOBJECT(1))
-    {
+    if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
       obj->setEventSource(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,8 +161,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setEventType(static_cast<QEvent::Type>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

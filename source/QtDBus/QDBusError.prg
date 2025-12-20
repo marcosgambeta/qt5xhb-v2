@@ -68,25 +68,19 @@ HB_FUNC_STATIC(QDBUSERROR_NEW)
     */
     auto obj = new QDBusError();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDBUSMESSAGE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDBUSMESSAGE(1)) {
     /*
     QDBusError(const QDBusMessage &msg)
     */
     auto obj = new QDBusError(*PQDBUSMESSAGE(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
     /*
     QDBusError(QDBusError::ErrorType error, const QString &message)
     */
     auto obj = new QDBusError(static_cast<QDBusError::ErrorType>(hb_parni(1)), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDBUSERROR(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDBUSERROR(1)) {
     /*
     QDBusError(const QDBusError &other)
     */
@@ -198,8 +192,7 @@ static QString errorString(QDBusError::ErrorType error)
 HB_FUNC_STATIC(QDBUSERROR_ERRORSTRING)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     RQSTRING(QDBusError::errorString(static_cast<QDBusError::ErrorType>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,17 +206,14 @@ HB_FUNC_STATIC(QDBUSERROR_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -256,8 +246,7 @@ HB_FUNC_STATIC(QDBUSERROR_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

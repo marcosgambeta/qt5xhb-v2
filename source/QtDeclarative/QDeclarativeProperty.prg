@@ -87,57 +87,43 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEW)
     */
     auto obj = new QDeclarativeProperty();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDECLARATIVEPROPERTY(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDECLARATIVEPROPERTY(1)) {
     /*
     QDeclarativeProperty(const QDeclarativeProperty &other)
     */
     auto obj = new QDeclarativeProperty(*PQDECLARATIVEPROPERTY(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
     /*
     QDeclarativeProperty(QObject * obj)
     */
     auto obj = new QDeclarativeProperty(PQOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVECONTEXT(2))
-  {
+  } else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVECONTEXT(2)) {
     /*
     QDeclarativeProperty(QObject * obj, QDeclarativeContext * ctxt)
     */
     auto obj = new QDeclarativeProperty(PQOBJECT(1), PQDECLARATIVECONTEXT(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVEENGINE(2))
-  {
+  } else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVEENGINE(2)) {
     /*
     QDeclarativeProperty(QObject * obj, QDeclarativeEngine * engine)
     */
     auto obj = new QDeclarativeProperty(PQOBJECT(1), PQDECLARATIVEENGINE(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
     /*
     QDeclarativeProperty(QObject * obj, const QString &name)
     */
     auto obj = new QDeclarativeProperty(PQOBJECT(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVECONTEXT(3))
-  {
+  } else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVECONTEXT(3)) {
     /*
     QDeclarativeProperty(QObject * obj, const QString &name, QDeclarativeContext * ctxt)
     */
     auto obj = new QDeclarativeProperty(PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVEENGINE(3))
-  {
+  } else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVEENGINE(3)) {
     /*
     QDeclarativeProperty(QObject * obj, const QString &name, QDeclarativeEngine * engine)
     */
@@ -150,8 +136,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEW)
 
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL)
 {
-  if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-  {
+  if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
     /*
     bool connectNotifySignal(QObject * dest, const char * slot) const
     */
@@ -160,9 +145,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL)
     if (obj != nullptr) {
       RBOOL(obj->connectNotifySignal(PQOBJECT(1), PCONSTCHAR(2)));
     }
-  }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
     /*
     bool connectNotifySignal(QObject * dest, int method) const
     */
@@ -550,25 +533,19 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_READ)
     if (obj != nullptr) {
       RQVARIANT(obj->read());
     }
-  }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
     /*
     static QVariant read(QObject * object, const QString &name)
     */
 
     RQVARIANT(QDeclarativeProperty::read(PQOBJECT(1), PQSTRING(2)));
-  }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVECONTEXT(3))
-  {
+  } else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVECONTEXT(3)) {
     /*
     static QVariant read(QObject * object, const QString &name, QDeclarativeContext * ctxt)
     */
 
     RQVARIANT(QDeclarativeProperty::read(PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3)));
-  }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVEENGINE(3))
-  {
+  } else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVEENGINE(3)) {
     /*
     static QVariant read(QObject * object, const QString &name, QDeclarativeEngine * engine)
     */
@@ -581,8 +558,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_READ)
 
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_WRITE)
 {
-  if (ISNUMPAR(1) && ISQVARIANT(1))
-  {
+  if (ISNUMPAR(1) && ISQVARIANT(1)) {
     /*
     bool write(const QVariant &value) const
     */
@@ -591,25 +567,19 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_WRITE)
     if (obj != nullptr) {
       RBOOL(obj->write(*PQVARIANT(1)));
     }
-  }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3))
-  {
+  } else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3)) {
     /*
     static bool write(QObject * object, const QString &name, const QVariant &value)
     */
 
     RBOOL(QDeclarativeProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3)));
-  }
-  else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVECONTEXT(4))
-  {
+  } else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVECONTEXT(4)) {
     /*
     static bool write(QObject * object, const QString &name, const QVariant &value, QDeclarativeContext * ctxt)
     */
 
     RBOOL(QDeclarativeProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVECONTEXT(4)));
-  }
-  else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVEENGINE(4))
-  {
+  } else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVEENGINE(4)) {
     /*
     static bool write(QObject * object, const QString &name, const QVariant &value, QDeclarativeEngine * engine)
     */
@@ -624,17 +594,14 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -667,8 +634,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

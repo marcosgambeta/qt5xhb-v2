@@ -102,8 +102,7 @@ RETURN
 
 HB_FUNC_STATIC(QAREASERIES_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QAreaSeries(QObject * parent = nullptr)
     */
@@ -111,9 +110,7 @@ HB_FUNC_STATIC(QAREASERIES_NEW)
     auto obj = new QAreaSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(1, 2) && ISQLINESERIES(1) && ISQLINESERIESORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQLINESERIES(1) && ISQLINESERIESORNIL(2)) {
     /*
     QAreaSeries(QLineSeries * upperSeries, QLineSeries * lowerSeries = nullptr)
     */
@@ -226,8 +223,7 @@ HB_FUNC_STATIC(QAREASERIES_SETCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
-    {
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
 #endif
       obj->setColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,8 +269,7 @@ HB_FUNC_STATIC(QAREASERIES_SETBORDERCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
-    {
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
 #endif
       obj->setBorderColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,8 +315,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setPointLabelsFormat(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -367,8 +361,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       obj->setPointLabelsVisible(OPBOOL(1, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,8 +408,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSFONT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQFONT(1))
-    {
+    if (ISNUMPAR(1) && ISQFONT(1)) {
 #endif
       obj->setPointLabelsFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -462,8 +454,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSCOLOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
-    {
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
 #endif
       obj->setPointLabelsColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -509,8 +500,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSCLIPPING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       obj->setPointLabelsClipping(OPBOOL(1, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -556,8 +546,7 @@ HB_FUNC_STATIC(QAREASERIES_SETUPPERSERIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLINESERIES(1))
-    {
+    if (ISNUMPAR(1) && ISQLINESERIES(1)) {
 #endif
       obj->setUpperSeries(PQLINESERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -581,8 +570,7 @@ HB_FUNC_STATIC(QAREASERIES_SETLOWERSERIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLINESERIES(1))
-    {
+    if (ISNUMPAR(1) && ISQLINESERIES(1)) {
 #endif
       obj->setLowerSeries(PQLINESERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -606,8 +594,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPEN(1))
-    {
+    if (ISNUMPAR(1) && ISQPEN(1)) {
 #endif
       obj->setPen(*PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -653,8 +640,7 @@ HB_FUNC_STATIC(QAREASERIES_SETBRUSH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBRUSH(1))
-    {
+    if (ISNUMPAR(1) && ISQBRUSH(1)) {
 #endif
       obj->setBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -700,8 +686,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTSVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       obj->setPointsVisible(OPBOOL(1, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -747,21 +732,17 @@ HB_FUNC_STATIC(QAREASERIES_ONBORDERCOLORCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("borderColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAreaSeries::borderColorChanged, [sender, indexOfCodeBlock](QColor arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QCOLOR");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -773,9 +754,7 @@ HB_FUNC_STATIC(QAREASERIES_ONBORDERCOLORCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -800,21 +779,17 @@ HB_FUNC_STATIC(QAREASERIES_ONCLICKED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QPointF)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAreaSeries::clicked, [sender, indexOfCodeBlock](const QPointF &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QPOINTF");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -826,9 +801,7 @@ HB_FUNC_STATIC(QAREASERIES_ONCLICKED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -853,20 +826,16 @@ HB_FUNC_STATIC(QAREASERIES_ONCOLORCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAreaSeries::colorChanged, [sender, indexOfCodeBlock](QColor arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
             auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QCOLOR");
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -878,9 +847,7 @@ HB_FUNC_STATIC(QAREASERIES_ONCOLORCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -905,21 +872,17 @@ HB_FUNC_STATIC(QAREASERIES_ONDOUBLECLICKED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("doubleClicked(QPointF)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAreaSeries::doubleClicked, [sender, indexOfCodeBlock](const QPointF &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QPOINTF");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -931,9 +894,7 @@ HB_FUNC_STATIC(QAREASERIES_ONDOUBLECLICKED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -958,21 +919,17 @@ HB_FUNC_STATIC(QAREASERIES_ONHOVERED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("hovered(QPointF,bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAreaSeries::hovered, [sender, indexOfCodeBlock](const QPointF &arg1, bool arg2) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QPOINTF");
                 auto pArg2 = hb_itemPutL(nullptr, arg2);
@@ -986,9 +943,7 @@ HB_FUNC_STATIC(QAREASERIES_ONHOVERED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1013,21 +968,17 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pointLabelsClippingChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAreaSeries::pointLabelsClippingChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1039,9 +990,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1066,21 +1015,17 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSCOLORCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pointLabelsColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAreaSeries::pointLabelsColorChanged,
                                            [sender, indexOfCodeBlock](const QColor &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QCOLOR");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1092,9 +1037,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSCOLORCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1119,21 +1062,17 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSFONTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pointLabelsFontChanged(QFont)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAreaSeries::pointLabelsFontChanged,
                                            [sender, indexOfCodeBlock](const QFont &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QFONT");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1145,9 +1084,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSFONTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1172,21 +1109,17 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSFORMATCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pointLabelsFormatChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAreaSeries::pointLabelsFormatChanged,
                                            [sender, indexOfCodeBlock](const QString &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
                                                auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1198,9 +1131,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSFORMATCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1225,21 +1156,17 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pointLabelsVisibilityChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAreaSeries::pointLabelsVisibilityChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1251,9 +1178,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1278,21 +1203,17 @@ HB_FUNC_STATIC(QAREASERIES_ONPRESSED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pressed(QPointF)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAreaSeries::pressed, [sender, indexOfCodeBlock](const QPointF &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QPOINTF");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1304,9 +1225,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPRESSED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1331,21 +1250,17 @@ HB_FUNC_STATIC(QAREASERIES_ONRELEASED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("released(QPointF)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAreaSeries::released, [sender, indexOfCodeBlock](const QPointF &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QPOINTF");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1357,9 +1272,7 @@ HB_FUNC_STATIC(QAREASERIES_ONRELEASED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1384,20 +1297,16 @@ HB_FUNC_STATIC(QAREASERIES_ONSELECTED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selected()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAreaSeries::selected, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QAREASERIES");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -1407,9 +1316,7 @@ HB_FUNC_STATIC(QAREASERIES_ONSELECTED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

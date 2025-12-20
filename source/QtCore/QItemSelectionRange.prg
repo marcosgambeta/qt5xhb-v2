@@ -82,25 +82,19 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_NEW)
     */
     auto obj = new QItemSelectionRange();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1)) {
     /*
     QItemSelectionRange(const QItemSelectionRange &other)
     */
     auto obj = new QItemSelectionRange(*PQITEMSELECTIONRANGE(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2))
-  {
+  } else if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2)) {
     /*
     QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
     */
     auto obj = new QItemSelectionRange(*PQMODELINDEX(1), *PQMODELINDEX(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQMODELINDEX(1))
-  {
+  } else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
     /*
     QItemSelectionRange(const QModelIndex &index)
     */
@@ -331,8 +325,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_MODEL)
 
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_CONTAINS)
 {
-  if (ISNUMPAR(1) && ISQMODELINDEX(1))
-  {
+  if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
     /*
     bool contains(const QModelIndex &index) const
     */
@@ -341,9 +334,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_CONTAINS)
     if (obj != nullptr) {
       RBOOL(obj->contains(*PQMODELINDEX(1)));
     }
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3))
-  {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3)) {
     /*
     bool contains(int row, int column, const QModelIndex &parentIndex) const
     */
@@ -366,8 +357,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1))
-    {
+    if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1)) {
 #endif
       RBOOL(obj->intersects(*PQITEMSELECTIONRANGE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -387,8 +377,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1))
-    {
+    if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1)) {
 #endif
       auto ptr = new QItemSelectionRange(obj->intersected(*PQITEMSELECTIONRANGE(1)));
       Qt5xHb::createReturnClass(ptr, "QITEMSELECTIONRANGE", true);
@@ -454,10 +443,8 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INDEXES)
       auto list = obj->indexes();
       auto pDynSym = hb_dynsymFindName("QMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -472,9 +459,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INDEXES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -490,17 +475,14 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -533,8 +515,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

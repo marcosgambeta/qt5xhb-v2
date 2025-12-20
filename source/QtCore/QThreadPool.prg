@@ -68,8 +68,7 @@ RETURN
     */
 HB_FUNC_STATIC(QTHREADPOOL_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QThreadPool(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -103,8 +102,7 @@ HB_FUNC_STATIC(QTHREADPOOL_START)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQRUNNABLE(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQRUNNABLE(1) && ISNUMORNIL(2)) {
 #endif
       obj->start(PQRUNNABLE(1), OPINT(2, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,8 +127,7 @@ HB_FUNC_STATIC(QTHREADPOOL_TRYSTART)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQRUNNABLE(1))
-    {
+    if (ISNUMPAR(1) && ISQRUNNABLE(1)) {
 #endif
       RBOOL(obj->tryStart(PQRUNNABLE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,8 +170,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETEXPIRYTIMEOUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setExpiryTimeout(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +212,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETMAXTHREADCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMaxThreadCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,8 +298,7 @@ HB_FUNC_STATIC(QTHREADPOOL_WAITFORDONE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RBOOL(obj->waitForDone(OPINT(1, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,8 +360,7 @@ HB_FUNC_STATIC(QTHREADPOOL_TRYTAKE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQRUNNABLE(1))
-    {
+    if (ISNUMPAR(1) && ISQRUNNABLE(1)) {
 #endif
       RBOOL(obj->tryTake(PQRUNNABLE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,8 +404,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETSTACKSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setStackSize(PUINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

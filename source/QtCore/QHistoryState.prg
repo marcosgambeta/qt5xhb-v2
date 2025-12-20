@@ -55,16 +55,13 @@ RETURN
 
 HB_FUNC_STATIC(QHISTORYSTATE_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQSTATEORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQSTATEORNIL(1)) {
     /*
     QHistoryState(QState * parent = nullptr)
     */
     auto obj = new QHistoryState(OPQSTATE(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSTATEORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSTATEORNIL(2)) {
     /*
     QHistoryState(QHistoryState::HistoryType type, QState * parent = nullptr)
     */
@@ -122,8 +119,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_SETDEFAULTSTATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1)) {
 #endif
       obj->setDefaultState(PQABSTRACTSTATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,8 +161,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_SETHISTORYTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setHistoryType(static_cast<QHistoryState::HistoryType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -85,8 +85,7 @@ QHBoxPlotModelMapper(QObject * parent = nullptr)
 HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QHBoxPlotModelMapper(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -128,8 +127,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETSERIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBOXPLOTSERIES(1))
-    {
+    if (ISNUMPAR(1) && ISQBOXPLOTSERIES(1)) {
 #endif
       obj->setSeries(PQBOXPLOTSERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,8 +174,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETMODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1)) {
 #endif
       obj->setModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,8 +220,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETFIRSTBOXSETROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFirstBoxSetRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,8 +266,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETLASTBOXSETROW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLastBoxSetRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -317,8 +312,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETFIRSTCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFirstColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -364,8 +358,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETCOLUMNCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setColumnCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -389,21 +382,17 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONCOLUMNCOUNTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("columnCountChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QHBoxPlotModelMapper::columnCountChanged, [sender, indexOfCodeBlock]() {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHBOXPLOTMODELMAPPER");
                 hb_vmEvalBlockV(cb, 1, pSender);
                 hb_itemRelease(pSender);
@@ -413,9 +402,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONCOLUMNCOUNTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -440,21 +427,17 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONFIRSTBOXSETROWCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("firstBoxSetRowChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QHBoxPlotModelMapper::firstBoxSetRowChanged, [sender, indexOfCodeBlock]() {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHBOXPLOTMODELMAPPER");
                 hb_vmEvalBlockV(cb, 1, pSender);
                 hb_itemRelease(pSender);
@@ -464,9 +447,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONFIRSTBOXSETROWCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -491,21 +472,17 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONFIRSTCOLUMNCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("firstColumnChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QHBoxPlotModelMapper::firstColumnChanged, [sender, indexOfCodeBlock]() {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHBOXPLOTMODELMAPPER");
                 hb_vmEvalBlockV(cb, 1, pSender);
                 hb_itemRelease(pSender);
@@ -515,9 +492,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONFIRSTCOLUMNCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -542,21 +517,17 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONLASTBOXSETROWCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("lastBoxSetRowChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QHBoxPlotModelMapper::lastBoxSetRowChanged, [sender, indexOfCodeBlock]() {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHBOXPLOTMODELMAPPER");
                 hb_vmEvalBlockV(cb, 1, pSender);
                 hb_itemRelease(pSender);
@@ -566,9 +537,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONLASTBOXSETROWCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -593,20 +562,16 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONMODELREPLACED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("modelReplaced()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QHBoxPlotModelMapper::modelReplaced, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHBOXPLOTMODELMAPPER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -616,9 +581,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONMODELREPLACED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -643,20 +606,16 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONSERIESREPLACED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("seriesReplaced()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QHBoxPlotModelMapper::seriesReplaced, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHBOXPLOTMODELMAPPER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -666,9 +625,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_ONSERIESREPLACED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

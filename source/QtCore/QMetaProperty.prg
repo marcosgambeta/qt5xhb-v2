@@ -284,8 +284,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISDESIGNABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
 #endif
       RBOOL(obj->isDesignable(OPQOBJECT(1, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,8 +304,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISSCRIPTABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
 #endif
       RBOOL(obj->isScriptable(OPQOBJECT(1, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,8 +324,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISSTORED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
 #endif
       RBOOL(obj->isStored(OPQOBJECT(1, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,8 +344,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISEDITABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
 #endif
       RBOOL(obj->isEditable(OPQOBJECT(1, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,8 +364,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ISUSER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
 #endif
       RBOOL(obj->isUser(OPQOBJECT(1, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -571,8 +566,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_READ)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQOBJECT(1))
-    {
+    if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
       RQVARIANT(obj->read(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -592,8 +586,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_WRITE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQOBJECT(1) && ISQVARIANT(2))
-    {
+    if (ISNUMPAR(2) && ISQOBJECT(1) && ISQVARIANT(2)) {
 #endif
       RBOOL(obj->write(PQOBJECT(1), *PQVARIANT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -613,8 +606,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_RESET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQOBJECT(1))
-    {
+    if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
       RBOOL(obj->reset(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -690,17 +682,14 @@ HB_FUNC_STATIC(QMETAPROPERTY_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -733,8 +722,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

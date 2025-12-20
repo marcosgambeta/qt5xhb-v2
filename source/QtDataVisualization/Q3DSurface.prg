@@ -83,8 +83,7 @@ Q3DSurface(const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr)
 HB_FUNC_STATIC(Q3DSURFACE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(0, 2) && ISQSURFACEFORMATORNIL(1) && ISQWINDOWORNIL(2))
-  {
+  if (ISBETWEEN(0, 2) && ISQSURFACEFORMATORNIL(1) && ISQWINDOWORNIL(2)) {
     auto obj = new Q3DSurface(HB_ISNIL(1) ? nullptr : static_cast<QSurfaceFormat *>(Qt5xHb::itemGetPtr(1)),
                               OPQWINDOW(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -149,8 +148,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SETAXISX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1)) {
 #endif
       obj->setAxisX(PQVALUE3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,8 +195,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SETAXISY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1)) {
 #endif
       obj->setAxisY(PQVALUE3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,8 +242,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SETAXISZ)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1)) {
 #endif
       obj->setAxisZ(PQVALUE3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,8 +311,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SETFLIPHORIZONTALGRID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setFlipHorizontalGrid(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -340,8 +335,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ADDSERIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSURFACE3DSERIES(1))
-    {
+    if (ISNUMPAR(1) && ISQSURFACE3DSERIES(1)) {
 #endif
       obj->addSeries(PQSURFACE3DSERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -365,8 +359,7 @@ HB_FUNC_STATIC(Q3DSURFACE_REMOVESERIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSURFACE3DSERIES(1))
-    {
+    if (ISNUMPAR(1) && ISQSURFACE3DSERIES(1)) {
 #endif
       obj->removeSeries(PQSURFACE3DSERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -395,10 +388,8 @@ HB_FUNC_STATIC(Q3DSURFACE_SERIESLIST)
       auto list = obj->seriesList();
       auto pDynSym = hb_dynsymFindName("QSURFACE3DSERIES");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (auto item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (auto item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -410,9 +401,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SERIESLIST)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSURFACE3DSERIES", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -435,8 +424,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ADDAXIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1)) {
 #endif
       obj->addAxis(PQVALUE3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -460,8 +448,7 @@ HB_FUNC_STATIC(Q3DSURFACE_RELEASEAXIS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1)) {
 #endif
       obj->releaseAxis(PQVALUE3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -490,10 +477,8 @@ HB_FUNC_STATIC(Q3DSURFACE_AXES)
       auto list = obj->axes();
       auto pDynSym = hb_dynsymFindName("QVALUE3DAXIS");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (auto item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (auto item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -505,9 +490,7 @@ HB_FUNC_STATIC(Q3DSURFACE_AXES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QVALUE3DAXIS", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -530,21 +513,17 @@ HB_FUNC_STATIC(Q3DSURFACE_ONAXISXCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisXChanged(QValue3DAxis*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DSurface::axisXChanged, [sender, indexOfCodeBlock](QValue3DAxis *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSURFACE");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QVALUE3DAXIS");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -556,9 +535,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ONAXISXCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -583,21 +560,17 @@ HB_FUNC_STATIC(Q3DSURFACE_ONAXISYCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisYChanged(QValue3DAxis*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DSurface::axisYChanged, [sender, indexOfCodeBlock](QValue3DAxis *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSURFACE");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QVALUE3DAXIS");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -609,9 +582,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ONAXISYCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -636,21 +607,17 @@ HB_FUNC_STATIC(Q3DSURFACE_ONAXISZCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisZChanged(QValue3DAxis*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DSurface::axisZChanged, [sender, indexOfCodeBlock](QValue3DAxis *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSURFACE");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QVALUE3DAXIS");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -662,9 +629,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ONAXISZCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -689,21 +654,17 @@ HB_FUNC_STATIC(Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("flipHorizontalGridChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DSurface::flipHorizontalGridChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSURFACE");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -715,9 +676,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -742,21 +701,17 @@ HB_FUNC_STATIC(Q3DSURFACE_ONSELECTEDSERIESCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectedSeriesChanged(QSurface3DSeries*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &Q3DSurface::selectedSeriesChanged,
                                            [sender, indexOfCodeBlock](QSurface3DSeries *arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSURFACE");
                                                auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QSURFACE3DSERIES");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -768,9 +723,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ONSELECTEDSERIESCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

@@ -73,9 +73,7 @@ HB_FUNC_STATIC(QUUID_NEW)
     */
     auto obj = new QUuid();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     /*
     QUuid(const QByteArray &text)
     */
@@ -223,17 +221,14 @@ HB_FUNC_STATIC(QUUID_VERSION)
 
 HB_FUNC_STATIC(QUUID_CREATEUUIDV3)
 {
-  if (ISNUMPAR(2) && ISQUUID(1) && ISQBYTEARRAY(2))
-  {
+  if (ISNUMPAR(2) && ISQUUID(1) && ISQBYTEARRAY(2)) {
     /*
     static QUuid createUuidV3(const QUuid &ns, const QByteArray &baseData)
     */
 
     auto ptr = new QUuid(QUuid::createUuidV3(*PQUUID(1), *PQBYTEARRAY(2)));
     Qt5xHb::createReturnClass(ptr, "QUUID", true);
-  }
-  else if (ISNUMPAR(2) && ISQUUID(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && ISQUUID(1) && HB_ISCHAR(2)) {
     /*
     static QUuid createUuidV3(const QUuid &ns, const QString &baseData)
     */
@@ -247,17 +242,14 @@ HB_FUNC_STATIC(QUUID_CREATEUUIDV3)
 
 HB_FUNC_STATIC(QUUID_CREATEUUIDV5)
 {
-  if (ISNUMPAR(2) && ISQUUID(1) && ISQBYTEARRAY(2))
-  {
+  if (ISNUMPAR(2) && ISQUUID(1) && ISQBYTEARRAY(2)) {
     /*
     static QUuid createUuidV5(const QUuid &ns, const QByteArray &baseData)
     */
 
     auto ptr = new QUuid(QUuid::createUuidV5(*PQUUID(1), *PQBYTEARRAY(2)));
     Qt5xHb::createReturnClass(ptr, "QUUID", true);
-  }
-  else if (ISNUMPAR(2) && ISQUUID(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && ISQUUID(1) && HB_ISCHAR(2)) {
     /*
     static QUuid createUuidV5(const QUuid &ns, const QString &baseData)
     */
@@ -275,8 +267,7 @@ static QUuid fromRfc4122(const QByteArray &bytes)
 HB_FUNC_STATIC(QUUID_FROMRFC4122)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
     auto ptr = new QUuid(QUuid::fromRfc4122(*PQBYTEARRAY(1)));
     Qt5xHb::createReturnClass(ptr, "QUUID", true);
@@ -291,17 +282,14 @@ HB_FUNC_STATIC(QUUID_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -334,8 +322,7 @@ HB_FUNC_STATIC(QUUID_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

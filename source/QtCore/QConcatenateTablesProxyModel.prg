@@ -84,8 +84,7 @@ RETURN
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QConcatenateTablesProxyModel(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -126,8 +125,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_ADDSOURCEMODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1)) {
 #endif
       obj->addSourceModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,8 +149,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_REMOVESOURCEMODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1)) {
 #endif
       obj->removeSourceModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,8 +173,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MAPFROMSOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       RQMODELINDEX(obj->mapFromSource(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,8 +195,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MAPTOSOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       RQMODELINDEX(obj->mapToSource(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,8 +217,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_DATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2)) {
 #endif
       RQVARIANT(obj->data(*PQMODELINDEX(1), OPINT(2, Qt::DisplayRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,8 +239,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_SETDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISNUMORNIL(3)) {
 #endif
       RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT(3, Qt::EditRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,8 +261,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_FLAGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       RENUM(obj->flags(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,10 +283,10 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_INDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
-      RQMODELINDEX(obj->index(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
+      RQMODELINDEX(obj->index(PINT(1), PINT(2),
+                              HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -314,8 +306,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_PARENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       RQMODELINDEX(obj->parent(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -337,8 +328,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_ROWCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1)) {
 #endif
       RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -360,8 +350,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_HEADERDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
 #endif
       RQVARIANT(obj->headerData(PINT(1), static_cast<Qt::Orientation>(hb_parni(2)), OPINT(3, Qt::DisplayRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,8 +372,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_COLUMNCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1)) {
 #endif
       RINT(obj->columnCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -428,14 +416,12 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MIMEDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       QModelIndexList par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (auto i1 = 0; i1 < nLen1; i1++)
-      {
+      for (auto i1 = 0; i1 < nLen1; i1++) {
         par1 << *static_cast<QModelIndex *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
@@ -461,8 +447,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_CANDROPMIMEDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5))
-    {
+    if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5)) {
 #endif
       RBOOL(obj->canDropMimeData(PQMIMEDATA(1), static_cast<Qt::DropAction>(hb_parni(2)), PINT(3), PINT(4),
                                  *PQMODELINDEX(5)));
@@ -486,8 +471,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_DROPMIMEDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5))
-    {
+    if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5)) {
 #endif
       RBOOL(obj->dropMimeData(PQMIMEDATA(1), static_cast<Qt::DropAction>(hb_parni(2)), PINT(3), PINT(4),
                               *PQMODELINDEX(5)));
@@ -515,10 +499,8 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_SOURCEMODELS)
       auto list = obj->sourceModels();
       auto pDynSym = hb_dynsymFindName("QABSTRACTITEMMODEL");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (auto item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (auto item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -530,9 +512,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_SOURCEMODELS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QABSTRACTITEMMODEL", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -555,8 +535,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_SPAN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       RQSIZE(obj->span(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -276,8 +276,7 @@ HB_FUNC_STATIC(QVARIANT_NEW24)
   QList<QVariant> par1;
   auto aList1 = hb_param(1, HB_IT_ARRAY);
   int nLen1 = hb_arrayLen(aList1);
-  for (auto i1 = 0; i1 < nLen1; i1++)
-  {
+  for (auto i1 = 0; i1 < nLen1; i1++) {
     par1 << *static_cast<QVariant *>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
   }
   auto obj = new QVariant(par1);
@@ -292,11 +291,8 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     */
     auto obj = new QVariant();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
-    if (ISQVARIANT(1))
-    {
+  } else if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
+    if (ISQVARIANT(1)) {
       /*
       QVariant(const QVariant &other)
       */
@@ -304,8 +300,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
       Qt5xHb::returnNewObject(obj, true);
     }
 #ifndef QT_NO_DATASTREAM
-    else if (ISQDATASTREAM(1))
-    {
+    else if (ISQDATASTREAM(1)) {
       /*
       QVariant(QDataStream &s)
       */
@@ -314,56 +309,43 @@ HB_FUNC_STATIC(QVARIANT_NEW)
       Qt5xHb::returnNewObject(obj, true);
     }
 #endif
-    else if (ISQBYTEARRAY(1))
-    {
+    else if (ISQBYTEARRAY(1)) {
       /*
       QVariant(const QByteArray &bytearray)
       */
       auto obj = new QVariant(*PQBYTEARRAY(1));
       Qt5xHb::returnNewObject(obj, true);
-    }
-    else if (ISQBITARRAY(1))
-    {
+    } else if (ISQBITARRAY(1)) {
       /*
       QVariant(const QBitArray &bitarray)
       */
       auto obj = new QVariant(*PQBITARRAY(1));
       Qt5xHb::returnNewObject(obj, true);
-    }
-    else if (ISQLATIN1STRING(1))
-    {
+    } else if (ISQLATIN1STRING(1)) {
       /*
       QVariant(QLatin1String string)
       */
       auto obj = new QVariant(*PQLATIN1STRING(1));
       Qt5xHb::returnNewObject(obj, true);
-    }
-    else if (ISQCHAR(1))
-    {
+    } else if (ISQCHAR(1)) {
       /*
       QVariant(QChar qchar)
       */
       auto obj = new QVariant(*PQCHAR(1));
       Qt5xHb::returnNewObject(obj, true);
-    }
-    else if (ISQDATE(1))
-    {
+    } else if (ISQDATE(1)) {
       /*
       QVariant(const QDate &date)
       */
       auto obj = new QVariant(*PQDATE(1));
       Qt5xHb::returnNewObject(obj, true);
-    }
-    else if (ISQTIME(1))
-    {
+    } else if (ISQTIME(1)) {
       /*
       QVariant(const QTime &time)
       */
       auto obj = new QVariant(*PQTIME(1));
       Qt5xHb::returnNewObject(obj, true);
-    }
-    else if (ISQDATETIME(1))
-    {
+    } else if (ISQDATETIME(1)) {
       /*
       QVariant(const QDateTime &datetime)
       */
@@ -371,8 +353,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
       Qt5xHb::returnNewObject(obj, true);
     }
 #ifndef QT_NO_GEOM_VARIANT
-    else if (ISQSIZE(1))
-    {
+    else if (ISQSIZE(1)) {
       /*
       QVariant(const QSize &size)
       */
@@ -381,8 +362,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     }
 #endif
 #ifndef QT_NO_GEOM_VARIANT
-    else if (ISQSIZEF(1))
-    {
+    else if (ISQSIZEF(1)) {
       /*
       QVariant(const QSizeF &size)
       */
@@ -391,8 +371,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     }
 #endif
 #ifndef QT_NO_GEOM_VARIANT
-    else if (ISQPOINT(1))
-    {
+    else if (ISQPOINT(1)) {
       /*
       QVariant(const QPoint &pt)
       */
@@ -401,8 +380,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     }
 #endif
 #ifndef QT_NO_GEOM_VARIANT
-    else if (ISQPOINTF(1))
-    {
+    else if (ISQPOINTF(1)) {
       /*
       QVariant(const QPointF &pt)
       */
@@ -411,8 +389,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     }
 #endif
 #ifndef QT_NO_GEOM_VARIANT
-    else if (ISQLINE(1))
-    {
+    else if (ISQLINE(1)) {
       /*
       QVariant(const QLine &line)
       */
@@ -421,8 +398,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     }
 #endif
 #ifndef QT_NO_GEOM_VARIANT
-    else if (ISQLINEF(1))
-    {
+    else if (ISQLINEF(1)) {
       /*
       QVariant(const QLineF &line)
       */
@@ -431,8 +407,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     }
 #endif
 #ifndef QT_NO_GEOM_VARIANT
-    else if (ISQRECT(1))
-    {
+    else if (ISQRECT(1)) {
       /*
       QVariant(const QRect &rect)
       */
@@ -441,8 +416,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     }
 #endif
 #ifndef QT_NO_GEOM_VARIANT
-    else if (ISQRECTF(1))
-    {
+    else if (ISQRECTF(1)) {
       /*
       QVariant(const QRectF &rect)
       */
@@ -450,8 +424,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
       Qt5xHb::returnNewObject(obj, true);
     }
 #endif
-    else if (ISQLOCALE(1))
-    {
+    else if (ISQLOCALE(1)) {
       /*
       QVariant(const QLocale &locale)
       */
@@ -459,8 +432,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
       Qt5xHb::returnNewObject(obj, true);
     }
 #ifndef QT_NO_REGEXP
-    else if (ISQREGEXP(1))
-    {
+    else if (ISQREGEXP(1)) {
       /*
       QVariant(const QRegExp &regExp)
       */
@@ -469,8 +441,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     }
 #endif
 #ifndef QT_NO_REGULAREXPRESSION
-    else if (ISQREGULAREXPRESSION(1))
-    {
+    else if (ISQREGULAREXPRESSION(1)) {
       /*
       QVariant(const QRegularExpression &re)
       */
@@ -478,64 +449,49 @@ HB_FUNC_STATIC(QVARIANT_NEW)
       Qt5xHb::returnNewObject(obj, true);
     }
 #endif
-    else if (ISQURL(1))
-    {
+    else if (ISQURL(1)) {
       /*
       QVariant(const QUrl &url)
       */
       auto obj = new QVariant(*PQURL(1));
       Qt5xHb::returnNewObject(obj, true);
-    }
-    else if (ISQEASINGCURVE(1))
-    {
+    } else if (ISQEASINGCURVE(1)) {
       /*
       QVariant(const QEasingCurve &easing)
       */
       auto obj = new QVariant(*PQEASINGCURVE(1));
       Qt5xHb::returnNewObject(obj, true);
-    }
-    else if (ISQUUID(1))
-    {
+    } else if (ISQUUID(1)) {
       /*
       QVariant(const QUuid &uuid)
       */
       auto obj = new QVariant(*PQUUID(1));
       Qt5xHb::returnNewObject(obj, true);
-    }
-    else if (ISQMODELINDEX(1))
-    {
+    } else if (ISQMODELINDEX(1)) {
       /*
       QVariant(const QModelIndex &modelIndex)
       */
       auto obj = new QVariant(*PQMODELINDEX(1));
       Qt5xHb::returnNewObject(obj, true);
-    }
-    else if (ISQJSONVALUE(1))
-    {
+    } else if (ISQJSONVALUE(1)) {
       /*
       QVariant(const QJsonValue &jsonValue)
       */
       auto obj = new QVariant(*PQJSONVALUE(1));
       Qt5xHb::returnNewObject(obj, true);
-    }
-    else if (ISQJSONOBJECT(1))
-    {
+    } else if (ISQJSONOBJECT(1)) {
       /*
       QVariant(const QJsonObject &jsonObject)
       */
       auto obj = new QVariant(*PQJSONOBJECT(1));
       Qt5xHb::returnNewObject(obj, true);
-    }
-    else if (ISQJSONARRAY(1))
-    {
+    } else if (ISQJSONARRAY(1)) {
       /*
       QVariant(const QJsonArray &jsonArray)
       */
       auto obj = new QVariant(*PQJSONARRAY(1));
       Qt5xHb::returnNewObject(obj, true);
-    }
-    else if (ISQJSONDOCUMENT(1))
-    {
+    } else if (ISQJSONDOCUMENT(1)) {
       /*
       QVariant(const QJsonDocument &jsonDocument)
       */
@@ -544,54 +500,37 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
-    if (hb_param(1, HB_IT_DOUBLE) != nullptr)
-    {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+    if (hb_param(1, HB_IT_DOUBLE) != nullptr) {
       HB_FUNC_EXEC(QVARIANT_NEW12);
-    }
-    else if (hb_param(1, HB_IT_LONG) != nullptr)
-    {
+    } else if (hb_param(1, HB_IT_LONG) != nullptr) {
       HB_FUNC_EXEC(QVARIANT_NEW9);
     } else {
       HB_FUNC_EXEC(QVARIANT_NEW7);
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISLOG(1)) {
     /*
     QVariant(bool b)
     */
     auto obj = new QVariant(PBOOL(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     HB_FUNC_EXEC(QVARIANT_NEW17);
-  }
-  else if (ISNUMPAR(1) && HB_ISARRAY(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     HB_FUNC_EXEC(QVARIANT_NEW19);
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISPOINTER(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISPOINTER(2)) {
     /*
     QVariant(int typeId, const void * copy)
     */
     auto obj = new QVariant(PINT(1), static_cast<const void *>(hb_parptr(2)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3))
-  {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3)) {
     /*
     QVariant(int typeId, const void * copy, uint flags)
     */
     auto obj = new QVariant(PINT(1), static_cast<const void *>(hb_parptr(2)), PUINT(3));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && hb_param(1, HB_IT_DATE) != nullptr)
-  {
+  } else if (ISNUMPAR(1) && hb_param(1, HB_IT_DATE) != nullptr) {
     int y, m, d;
     hb_dateDecode(hb_itemGetDL(hb_param(1, HB_IT_DATE)), &y, &m, &d);
     QDate date(y, m, d);
@@ -626,8 +565,7 @@ HB_FUNC_STATIC(QVARIANT_SWAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVARIANT(1))
-    {
+    if (ISNUMPAR(1) && ISQVARIANT(1)) {
 #endif
       obj->swap(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -709,8 +647,7 @@ HB_FUNC_STATIC(QVARIANT_CANCONVERT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->canConvert(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -730,8 +667,7 @@ HB_FUNC_STATIC(QVARIANT_CONVERT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->convert(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -855,8 +791,7 @@ HB_FUNC_STATIC(QVARIANT_TOINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       bool par1;
       RINT(obj->toInt(&par1));
@@ -878,8 +813,7 @@ HB_FUNC_STATIC(QVARIANT_TOUINT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       bool par1;
       RUINT(obj->toUInt(&par1));
@@ -901,8 +835,7 @@ HB_FUNC_STATIC(QVARIANT_TOLONGLONG)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       bool par1;
       RQLONGLONG(obj->toLongLong(&par1));
@@ -924,8 +857,7 @@ HB_FUNC_STATIC(QVARIANT_TOULONGLONG)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       bool par1;
       RQULONGLONG(obj->toULongLong(&par1));
@@ -967,8 +899,7 @@ HB_FUNC_STATIC(QVARIANT_TODOUBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       bool par1;
       RDOUBLE(obj->toDouble(&par1));
@@ -990,8 +921,7 @@ HB_FUNC_STATIC(QVARIANT_TOFLOAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       bool par1;
       RFLOAT(obj->toFloat(&par1));
@@ -1013,8 +943,7 @@ HB_FUNC_STATIC(QVARIANT_TOREAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       bool par1;
       RQREAL(obj->toReal(&par1));
@@ -1635,8 +1564,7 @@ HB_FUNC_STATIC(QVARIANT_LOAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATASTREAM(1))
-    {
+    if (ISNUMPAR(1) && ISQDATASTREAM(1)) {
 #endif
       obj->load(*PQDATASTREAM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1660,8 +1588,7 @@ HB_FUNC_STATIC(QVARIANT_SAVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATASTREAM(1))
-    {
+    if (ISNUMPAR(1) && ISQDATASTREAM(1)) {
 #endif
       obj->save(*PQDATASTREAM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1701,8 +1628,7 @@ static const char * typeToName(int typeId)
 HB_FUNC_STATIC(QVARIANT_TYPETONAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     hb_retc(static_cast<const char *>(QVariant::typeToName(PINT(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1718,8 +1644,7 @@ static QVariant::Type nameToType(const char * name)
 HB_FUNC_STATIC(QVARIANT_NAMETOTYPE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     RENUM(QVariant::nameToType(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1733,17 +1658,14 @@ HB_FUNC_STATIC(QVARIANT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -1776,8 +1698,7 @@ HB_FUNC_STATIC(QVARIANT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

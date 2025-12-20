@@ -87,25 +87,19 @@ HB_FUNC_STATIC(QJSONDOCUMENT_NEW)
     */
     auto obj = new QJsonDocument();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQJSONOBJECT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQJSONOBJECT(1)) {
     /*
     QJsonDocument(const QJsonObject &object)
     */
     auto obj = new QJsonDocument(*PQJSONOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQJSONARRAY(1))
-  {
+  } else if (ISNUMPAR(1) && ISQJSONARRAY(1)) {
     /*
     QJsonDocument(const QJsonArray &array)
     */
     auto obj = new QJsonDocument(*PQJSONARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQJSONDOCUMENT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQJSONDOCUMENT(1)) {
     /*
     QJsonDocument(const QJsonDocument &other)
     */
@@ -262,8 +256,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_RAWDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       int par1;
       hb_retc(static_cast<const char *>(obj->rawData(&par1)));
@@ -285,8 +278,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_SETARRAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQJSONARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQJSONARRAY(1)) {
 #endif
       obj->setArray(*PQJSONARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,8 +300,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_SETOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQJSONOBJECT(1))
-    {
+    if (ISNUMPAR(1) && ISQJSONOBJECT(1)) {
 #endif
       obj->setObject(*PQJSONOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -389,8 +380,7 @@ QJsonDocument::Validate)
 HB_FUNC_STATIC(QJSONDOCUMENT_FROMBINARYDATA)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
 #endif
     auto ptr = new QJsonDocument(QJsonDocument::fromBinaryData(
         *PQBYTEARRAY(1), HB_ISNIL(2) ? static_cast<QJsonDocument::DataValidation>(QJsonDocument::Validate)
@@ -409,8 +399,7 @@ static QJsonDocument fromJson(const QByteArray &json, QJsonParseError * error = 
 HB_FUNC_STATIC(QJSONDOCUMENT_FROMJSON)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQJSONPARSEERRORORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQJSONPARSEERRORORNIL(2)) {
 #endif
     auto ptr = new QJsonDocument(QJsonDocument::fromJson(
         *PQBYTEARRAY(1), HB_ISNIL(2) ? nullptr : static_cast<QJsonParseError *>(Qt5xHb::itemGetPtr(2))));
@@ -429,8 +418,7 @@ QJsonDocument::Validate)
 HB_FUNC_STATIC(QJSONDOCUMENT_FROMRAWDATA)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3))
-  {
+  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
 #endif
     auto ptr = new QJsonDocument(
         QJsonDocument::fromRawData(PCONSTCHAR(1), PINT(2),
@@ -450,8 +438,7 @@ static QJsonDocument fromVariant(const QVariant &variant)
 HB_FUNC_STATIC(QJSONDOCUMENT_FROMVARIANT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQVARIANT(1))
-  {
+  if (ISNUMPAR(1) && ISQVARIANT(1)) {
 #endif
     auto ptr = new QJsonDocument(QJsonDocument::fromVariant(*PQVARIANT(1)));
     Qt5xHb::createReturnClass(ptr, "QJSONDOCUMENT", true);
@@ -466,17 +453,14 @@ HB_FUNC_STATIC(QJSONDOCUMENT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -509,8 +493,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

@@ -80,10 +80,7 @@ HB_FUNC_STATIC(QTIME_NEW)
     */
     auto obj = new QTime();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4))
-  {
+  } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     /*
     QTime(int h, int m, int s = 0, int ms = 0)
     */
@@ -118,8 +115,7 @@ HB_FUNC_STATIC(QTIME_ADDMSECS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = new QTime(obj->addMSecs(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QTIME", true);
@@ -140,8 +136,7 @@ HB_FUNC_STATIC(QTIME_ADDSECS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = new QTime(obj->addSecs(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QTIME", true);
@@ -224,9 +219,7 @@ HB_FUNC_STATIC(QTIME_ISVALID)
     if (obj != nullptr) {
       RBOOL(obj->isValid());
     }
-  }
-  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4))
-  {
+  } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
     /*
     static bool isValid(int h, int m, int s, int ms = 0)
     */
@@ -286,8 +279,7 @@ HB_FUNC_STATIC(QTIME_MSECSTO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTIME(1))
-    {
+    if (ISNUMPAR(1) && ISQTIME(1)) {
 #endif
       RINT(obj->msecsTo(*PQTIME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,8 +339,7 @@ HB_FUNC_STATIC(QTIME_SECSTO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTIME(1))
-    {
+    if (ISNUMPAR(1) && ISQTIME(1)) {
 #endif
       RINT(obj->secsTo(*PQTIME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,8 +359,7 @@ HB_FUNC_STATIC(QTIME_SETHMS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4))
-    {
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
 #endif
       RBOOL(obj->setHMS(PINT(1), PINT(2), PINT(3), OPINT(4, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,8 +394,7 @@ HB_FUNC_STATIC(QTIME_START)
 
 HB_FUNC_STATIC(QTIME_TOSTRING)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     QString toString(const QString &format) const
     */
@@ -414,9 +403,7 @@ HB_FUNC_STATIC(QTIME_TOSTRING)
     if (obj != nullptr) {
       RQSTRING(obj->toString(PQSTRING(1)));
     }
-  }
-  else if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-  {
+  } else if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     /*
     QString toString(Qt::DateFormat format = Qt::TextDate) const
     */
@@ -450,8 +437,7 @@ HB_FUNC_STATIC(QTIME_CURRENTTIME)
 
 HB_FUNC_STATIC(QTIME_FROMSTRING)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     /*
     static QTime fromString(const QString &string, Qt::DateFormat format = Qt::TextDate)
     */
@@ -459,9 +445,7 @@ HB_FUNC_STATIC(QTIME_FROMSTRING)
     auto ptr = new QTime(QTime::fromString(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::DateFormat>(Qt::TextDate)
                                                                     : static_cast<Qt::DateFormat>(hb_parni(2))));
     Qt5xHb::createReturnClass(ptr, "QTIME", true);
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     /*
     static QTime fromString(const QString &string, const QString &format)
     */
@@ -477,17 +461,14 @@ HB_FUNC_STATIC(QTIME_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -520,8 +501,7 @@ HB_FUNC_STATIC(QTIME_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

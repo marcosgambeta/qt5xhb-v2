@@ -80,8 +80,7 @@ RETURN
 
 HB_FUNC_STATIC(QBLUETOOTHSOCKET_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2)) {
     /*
     QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject * parent = nullptr)
     */
@@ -89,9 +88,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_NEW)
     auto obj = new QBluetoothSocket(static_cast<QBluetoothServiceInfo::Protocol>(hb_parni(1)), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  } else if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QBluetoothSocket(QObject * parent = nullptr)
     */
@@ -263,8 +260,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CONNECTTOSERVICE)
 {
   auto obj = qobject_cast<QBluetoothSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (ISBETWEEN(1, 2) && ISQBLUETOOTHSERVICEINFO(1) && ISNUMORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && ISQBLUETOOTHSERVICEINFO(1) && ISNUMORNIL(2)) {
     /*
     void connectToService(const QBluetoothServiceInfo &service, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
     */
@@ -277,9 +273,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CONNECTTOSERVICE)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else if (ISBETWEEN(2, 3) && ISQBLUETOOTHADDRESS(1) && ISQBLUETOOTHUUID(2) && ISNUMORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && ISQBLUETOOTHADDRESS(1) && ISQBLUETOOTHUUID(2) && ISNUMORNIL(3)) {
     /*
     void connectToService(const QBluetoothAddress &address, const QBluetoothUuid &uuid, QIODevice::OpenMode openMode =
     QIODevice::ReadWrite)
@@ -293,9 +287,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CONNECTTOSERVICE)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else if (ISBETWEEN(2, 3) && ISQBLUETOOTHADDRESS(1) && HB_ISNUM(2) && ISNUMORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && ISQBLUETOOTHADDRESS(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     /*
     void connectToService(const QBluetoothAddress &address, quint16 port, QIODevice::OpenMode openMode =
     QIODevice::ReadWrite)
@@ -483,8 +475,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_SETSOCKETDESCRIPTOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4))
-    {
+    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       RBOOL(obj->setSocketDescriptor(PINT(1), static_cast<QBluetoothServiceInfo::Protocol>(hb_parni(2)),
                                      HB_ISNIL(3)
@@ -621,20 +612,16 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_ONCONNECTED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("connected()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QBluetoothSocket::connected, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHSOCKET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -644,9 +631,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_ONCONNECTED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -671,20 +656,16 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_ONDISCONNECTED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("disconnected()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QBluetoothSocket::disconnected, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHSOCKET");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -694,9 +675,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_ONDISCONNECTED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -721,22 +700,18 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_ONERROR)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QBluetoothSocket::SocketError)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, QOverload<QBluetoothSocket::SocketError>::of(&QBluetoothSocket::error),
                              [sender, indexOfCodeBlock](QBluetoothSocket::SocketError arg1) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHSOCKET");
                                  auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
                                  hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -748,9 +723,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_ONERROR)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -775,21 +748,17 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_ONSTATECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QBluetoothSocket::SocketState)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QBluetoothSocket::stateChanged, [sender, indexOfCodeBlock](QBluetoothSocket::SocketState arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHSOCKET");
                 auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -801,9 +770,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_ONSTATECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

@@ -214,8 +214,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_SETTIMEOUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTimeout(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,10 +249,8 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_TIMEOUT)
 
 HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALL)
 {
-  if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) &&
-      ISQVARIANTORNIL(4) && ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) &&
-      ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9))
-  {
+  if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
+      ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
     /*
     QDBusMessage call(const QString &method, const QVariant &arg1 = QVariant(), const QVariant &arg2 = QVariant(),
     const QVariant &arg3 = QVariant(), const QVariant &arg4 = QVariant(), const QVariant &arg5 = QVariant(), const
@@ -273,12 +270,9 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALL)
                     HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(9))));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
     }
-  }
-  else if (ISBETWEEN(2, 10) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQVARIANTORNIL(3) &&
-           ISQVARIANTORNIL(4) && ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) &&
-           ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9) &&
-           ISQVARIANTORNIL(10))
-  {
+  } else if (ISBETWEEN(2, 10) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
+             ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) &&
+             ISQVARIANTORNIL(9) && ISQVARIANTORNIL(10)) {
     /*
     QDBusMessage call(QDBus::CallMode mode, const QString &method, const QVariant &arg1 = QVariant(), const QVariant &
     arg2 = QVariant(), const QVariant &arg3 = QVariant(), const QVariant &arg4 = QVariant(), const QVariant &arg5 =
@@ -314,14 +308,12 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISARRAY(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISARRAY(3)) {
 #endif
       QList<QVariant> par3;
       auto aList3 = hb_param(3, HB_IT_ARRAY);
       int nLen3 = hb_arrayLen(aList3);
-      for (auto i3 = 0; i3 < nLen3; i3++)
-      {
+      for (auto i3 = 0; i3 < nLen3; i3++) {
         par3 << *static_cast<QVariant *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList3, i3 + 1), "POINTER", 0)));
       }
@@ -338,8 +330,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST)
 
 HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK)
 {
-  if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISARRAY(2) && ISQOBJECT(3) && HB_ISCHAR(4) && HB_ISCHAR(5))
-  {
+  if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISARRAY(2) && ISQOBJECT(3) && HB_ISCHAR(4) && HB_ISCHAR(5)) {
     /*
     bool callWithCallback(const QString &method, const QList<QVariant> &args, QObject * receiver, const char * member,
     const char * errorSlot)
@@ -350,16 +341,13 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK)
       QList<QVariant> par2;
       auto aList2 = hb_param(2, HB_IT_ARRAY);
       int nLen2 = hb_arrayLen(aList2);
-      for (auto i2 = 0; i2 < nLen2; i2++)
-      {
+      for (auto i2 = 0; i2 < nLen2; i2++) {
         par2 << *static_cast<QVariant *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList2, i2 + 1), "POINTER", 0)));
       }
       RBOOL(obj->callWithCallback(PQSTRING(1), par2, PQOBJECT(3), PCONSTCHAR(4), PCONSTCHAR(5)));
     }
-  }
-  else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISARRAY(2) && ISQOBJECT(3) && HB_ISCHAR(4))
-  {
+  } else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISARRAY(2) && ISQOBJECT(3) && HB_ISCHAR(4)) {
     /*
     bool callWithCallback(const QString &method, const QList<QVariant> &args, QObject * receiver, const char * member)
     */
@@ -369,8 +357,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK)
       QList<QVariant> par2;
       auto aList2 = hb_param(2, HB_IT_ARRAY);
       int nLen2 = hb_arrayLen(aList2);
-      for (auto i2 = 0; i2 < nLen2; i2++)
-      {
+      for (auto i2 = 0; i2 < nLen2; i2++) {
         par2 << *static_cast<QVariant *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList2, i2 + 1), "POINTER", 0)));
       }
@@ -392,10 +379,8 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_ASYNCCALL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) &&
-        ISQVARIANTORNIL(4) && ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) &&
-        ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9))
-    {
+    if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
+        ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
 #endif
       auto ptr = new QDBusPendingCall(
           obj->asyncCall(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2)),
@@ -424,14 +409,12 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_ASYNCCALLWITHARGUMENTLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
 #endif
       QList<QVariant> par2;
       auto aList2 = hb_param(2, HB_IT_ARRAY);
       int nLen2 = hb_arrayLen(aList2);
-      for (auto i2 = 0; i2 < nLen2; i2++)
-      {
+      for (auto i2 = 0; i2 < nLen2; i2++) {
         par2 << *static_cast<QVariant *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList2, i2 + 1), "POINTER", 0)));
       }

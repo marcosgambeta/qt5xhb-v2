@@ -118,25 +118,19 @@ HB_FUNC_STATIC(QRECT_NEW)
     */
     auto obj = new QRect();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2))
-  {
+  } else if (ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2)) {
     /*
     QRect(const QPoint &topLeft, const QPoint &bottomRight)
     */
     auto obj = new QRect(*PQPOINT(1), *PQPOINT(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQPOINT(1) && ISQSIZE(2))
-  {
+  } else if (ISNUMPAR(2) && ISQPOINT(1) && ISQSIZE(2)) {
     /*
     QRect(const QPoint &topLeft, const QSize &size)
     */
     auto obj = new QRect(*PQPOINT(1), *PQSIZE(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-  {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
     QRect(int x, int y, int width, int height)
     */
@@ -171,8 +165,7 @@ HB_FUNC_STATIC(QRECT_ADJUST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       obj->adjust(PINT(1), PINT(2), PINT(3), PINT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +187,7 @@ HB_FUNC_STATIC(QRECT_ADJUSTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       RQRECT(obj->adjusted(PINT(1), PINT(2), PINT(3), PINT(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,8 +280,7 @@ HB_FUNC_STATIC(QRECT_CENTER)
 
 HB_FUNC_STATIC(QRECT_CONTAINS)
 {
-  if (ISBETWEEN(1, 2) && ISQPOINT(1) && ISOPTLOG(2))
-  {
+  if (ISBETWEEN(1, 2) && ISQPOINT(1) && ISOPTLOG(2)) {
     /*
     bool contains(const QPoint &point, bool proper = false) const
     */
@@ -298,9 +289,7 @@ HB_FUNC_STATIC(QRECT_CONTAINS)
     if (obj != nullptr) {
       RBOOL(obj->contains(*PQPOINT(1), OPBOOL(2, false)));
     }
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISLOG(3))
-  {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISLOG(3)) {
     /*
     bool contains(int x, int y, bool proper) const
     */
@@ -309,9 +298,7 @@ HB_FUNC_STATIC(QRECT_CONTAINS)
     if (obj != nullptr) {
       RBOOL(obj->contains(PINT(1), PINT(2), PBOOL(3)));
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     bool contains(int x, int y) const
     */
@@ -320,9 +307,7 @@ HB_FUNC_STATIC(QRECT_CONTAINS)
     if (obj != nullptr) {
       RBOOL(obj->contains(PINT(1), PINT(2)));
     }
-  }
-  else if (ISBETWEEN(1, 2) && ISQRECT(1) && ISOPTLOG(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQRECT(1) && ISOPTLOG(2)) {
     /*
     bool contains(const QRect &rectangle, bool proper = false) const
     */
@@ -345,8 +330,7 @@ HB_FUNC_STATIC(QRECT_GETCOORDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       int par1;
       int par2;
@@ -376,8 +360,7 @@ HB_FUNC_STATIC(QRECT_GETRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       int par1;
       int par2;
@@ -427,8 +410,7 @@ HB_FUNC_STATIC(QRECT_INTERSECTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQRECT(1))
-    {
+    if (ISNUMPAR(1) && ISQRECT(1)) {
 #endif
       RQRECT(obj->intersected(*PQRECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -448,8 +430,7 @@ HB_FUNC_STATIC(QRECT_INTERSECTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQRECT(1))
-    {
+    if (ISNUMPAR(1) && ISQRECT(1)) {
 #endif
       RBOOL(obj->intersects(*PQRECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -549,8 +530,7 @@ HB_FUNC_STATIC(QRECT_MOVEBOTTOM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->moveBottom(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -572,8 +552,7 @@ HB_FUNC_STATIC(QRECT_MOVEBOTTOMLEFT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->moveBottomLeft(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -595,8 +574,7 @@ HB_FUNC_STATIC(QRECT_MOVEBOTTOMRIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->moveBottomRight(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -618,8 +596,7 @@ HB_FUNC_STATIC(QRECT_MOVECENTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->moveCenter(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -641,8 +618,7 @@ HB_FUNC_STATIC(QRECT_MOVELEFT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->moveLeft(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -664,8 +640,7 @@ HB_FUNC_STATIC(QRECT_MOVERIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->moveRight(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -680,8 +655,7 @@ HB_FUNC_STATIC(QRECT_MOVERIGHT)
 
 HB_FUNC_STATIC(QRECT_MOVETO)
 {
-  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     void moveTo(int x, int y)
     */
@@ -692,9 +666,7 @@ HB_FUNC_STATIC(QRECT_MOVETO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQPOINT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     /*
     void moveTo(const QPoint &position)
     */
@@ -719,8 +691,7 @@ HB_FUNC_STATIC(QRECT_MOVETOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->moveTop(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -742,8 +713,7 @@ HB_FUNC_STATIC(QRECT_MOVETOPLEFT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->moveTopLeft(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -765,8 +735,7 @@ HB_FUNC_STATIC(QRECT_MOVETOPRIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->moveTopRight(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -828,8 +797,7 @@ HB_FUNC_STATIC(QRECT_SETBOTTOM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setBottom(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -851,8 +819,7 @@ HB_FUNC_STATIC(QRECT_SETBOTTOMLEFT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->setBottomLeft(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -874,8 +841,7 @@ HB_FUNC_STATIC(QRECT_SETBOTTOMRIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->setBottomRight(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -897,8 +863,7 @@ HB_FUNC_STATIC(QRECT_SETCOORDS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       obj->setCoords(PINT(1), PINT(2), PINT(3), PINT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -920,8 +885,7 @@ HB_FUNC_STATIC(QRECT_SETHEIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setHeight(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -943,8 +907,7 @@ HB_FUNC_STATIC(QRECT_SETLEFT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLeft(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -966,8 +929,7 @@ HB_FUNC_STATIC(QRECT_SETRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       obj->setRect(PINT(1), PINT(2), PINT(3), PINT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -989,8 +951,7 @@ HB_FUNC_STATIC(QRECT_SETRIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setRight(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1012,8 +973,7 @@ HB_FUNC_STATIC(QRECT_SETSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSIZE(1))
-    {
+    if (ISNUMPAR(1) && ISQSIZE(1)) {
 #endif
       obj->setSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1035,8 +995,7 @@ HB_FUNC_STATIC(QRECT_SETTOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTop(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1058,8 +1017,7 @@ HB_FUNC_STATIC(QRECT_SETTOPLEFT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->setTopLeft(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1081,8 +1039,7 @@ HB_FUNC_STATIC(QRECT_SETTOPRIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->setTopRight(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1104,8 +1061,7 @@ HB_FUNC_STATIC(QRECT_SETWIDTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setWidth(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1127,8 +1083,7 @@ HB_FUNC_STATIC(QRECT_SETX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setX(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1150,8 +1105,7 @@ HB_FUNC_STATIC(QRECT_SETY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setY(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1246,8 +1200,7 @@ HB_FUNC_STATIC(QRECT_TOPRIGHT)
 
 HB_FUNC_STATIC(QRECT_TRANSLATE)
 {
-  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     void translate(int dx, int dy)
     */
@@ -1258,9 +1211,7 @@ HB_FUNC_STATIC(QRECT_TRANSLATE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQPOINT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     /*
     void translate(const QPoint &offset)
     */
@@ -1278,8 +1229,7 @@ HB_FUNC_STATIC(QRECT_TRANSLATE)
 
 HB_FUNC_STATIC(QRECT_TRANSLATED)
 {
-  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     QRect translated(int dx, int dy) const
     */
@@ -1288,9 +1238,7 @@ HB_FUNC_STATIC(QRECT_TRANSLATED)
     if (obj != nullptr) {
       RQRECT(obj->translated(PINT(1), PINT(2)));
     }
-  }
-  else if (ISNUMPAR(1) && ISQPOINT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     /*
     QRect translated(const QPoint &offset) const
     */
@@ -1313,8 +1261,7 @@ HB_FUNC_STATIC(QRECT_UNITED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQRECT(1))
-    {
+    if (ISNUMPAR(1) && ISQRECT(1)) {
 #endif
       RQRECT(obj->united(*PQRECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1389,17 +1336,14 @@ HB_FUNC_STATIC(QRECT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -1432,8 +1376,7 @@ HB_FUNC_STATIC(QRECT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

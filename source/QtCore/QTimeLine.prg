@@ -86,8 +86,7 @@ RETURN
     */
 HB_FUNC_STATIC(QTIMELINE_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISQOBJECTORNIL(2))
-  {
+  if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISQOBJECTORNIL(2)) {
     auto obj = new QTimeLine(OPINT(1, 1000), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -261,8 +260,7 @@ HB_FUNC_STATIC(QTIMELINE_FRAMEFORTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->frameForTime(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,8 +300,7 @@ HB_FUNC_STATIC(QTIMELINE_SETCURVESHAPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCurveShape(static_cast<QTimeLine::CurveShape>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -325,8 +322,7 @@ HB_FUNC_STATIC(QTIMELINE_SETDIRECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDirection(static_cast<QTimeLine::Direction>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,8 +344,7 @@ HB_FUNC_STATIC(QTIMELINE_SETDURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDuration(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -371,8 +366,7 @@ HB_FUNC_STATIC(QTIMELINE_SETEASINGCURVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQEASINGCURVE(1))
-    {
+    if (ISNUMPAR(1) && ISQEASINGCURVE(1)) {
 #endif
       obj->setEasingCurve(*PQEASINGCURVE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -394,8 +388,7 @@ HB_FUNC_STATIC(QTIMELINE_SETENDFRAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setEndFrame(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -417,8 +410,7 @@ HB_FUNC_STATIC(QTIMELINE_SETFRAMERANGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setFrameRange(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -440,8 +432,7 @@ HB_FUNC_STATIC(QTIMELINE_SETLOOPCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLoopCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -463,8 +454,7 @@ HB_FUNC_STATIC(QTIMELINE_SETSTARTFRAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setStartFrame(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -486,8 +476,7 @@ HB_FUNC_STATIC(QTIMELINE_SETUPDATEINTERVAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setUpdateInterval(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -569,8 +558,7 @@ HB_FUNC_STATIC(QTIMELINE_VALUEFORTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQREAL(obj->valueForTime(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -612,8 +600,7 @@ HB_FUNC_STATIC(QTIMELINE_SETCURRENTTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCurrentTime(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -635,8 +622,7 @@ HB_FUNC_STATIC(QTIMELINE_SETPAUSED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setPaused(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -724,20 +710,16 @@ HB_FUNC_STATIC(QTIMELINE_ONFINISHED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QTimeLine::finished, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTIMELINE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -747,9 +729,7 @@ HB_FUNC_STATIC(QTIMELINE_ONFINISHED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -770,20 +750,16 @@ HB_FUNC_STATIC(QTIMELINE_ONFRAMECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("frameChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QTimeLine::frameChanged, [sender, indexOfCodeBlock](int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTIMELINE");
             auto pArg1 = hb_itemPutNI(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -795,9 +771,7 @@ HB_FUNC_STATIC(QTIMELINE_ONFRAMECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -818,21 +792,17 @@ HB_FUNC_STATIC(QTIMELINE_ONSTATECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QTimeLine::State)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QTimeLine::stateChanged, [sender, indexOfCodeBlock](QTimeLine::State arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTIMELINE");
                 auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -844,9 +814,7 @@ HB_FUNC_STATIC(QTIMELINE_ONSTATECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -867,20 +835,16 @@ HB_FUNC_STATIC(QTIMELINE_ONVALUECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QTimeLine::valueChanged, [sender, indexOfCodeBlock](qreal arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTIMELINE");
             auto pArg1 = hb_itemPutND(nullptr, arg1);
             hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -892,9 +856,7 @@ HB_FUNC_STATIC(QTIMELINE_ONVALUECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

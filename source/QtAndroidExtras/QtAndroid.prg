@@ -68,7 +68,7 @@ RETURN
 #endif
 #endif
 
-// static QAndroidJniObject androidActivity()
+    // static QAndroidJniObject androidActivity()
 HB_FUNC_STATIC(QTANDROID_ANDROIDACTIVITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -101,13 +101,13 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDSDKVERSION)
 #endif
 }
 
-// static void startIntentSender(const QAndroidJniObject &intentSender, int receiverRequestCode, QAndroidActivityResultReceiver * resultReceiver = nullptr)
+// static void startIntentSender(const QAndroidJniObject &intentSender, int receiverRequestCode,
+// QAndroidActivityResultReceiver * resultReceiver = nullptr)
 HB_FUNC_STATIC(QTANDROID_STARTINTENTSENDER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(2, 3) && ISQANDROIDJNIOBJECT(1) && HB_ISNUM(2) && ISQANDROIDACTIVITYRESULTRECEIVERORNIL(3))
-  {
+  if (ISBETWEEN(2, 3) && ISQANDROIDJNIOBJECT(1) && HB_ISNUM(2) && ISQANDROIDACTIVITYRESULTRECEIVERORNIL(3)) {
 #endif
     QtAndroid::startIntentSender(*PQANDROIDJNIOBJECT(1), PINT(2),
                                  HB_ISNIL(3) ? nullptr
@@ -122,13 +122,13 @@ HB_FUNC_STATIC(QTANDROID_STARTINTENTSENDER)
 #endif
 }
 
-// static void startActivity(const QAndroidJniObject &intent, int receiverRequestCode, QAndroidActivityResultReceiver * resultReceiver = nullptr)
+// static void startActivity(const QAndroidJniObject &intent, int receiverRequestCode, QAndroidActivityResultReceiver *
+// resultReceiver = nullptr)
 HB_FUNC_STATIC(QTANDROID_STARTACTIVITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(2, 3) && ISQANDROIDJNIOBJECT(1) && HB_ISNUM(2) && ISQANDROIDACTIVITYRESULTRECEIVERORNIL(3))
-  {
+  if (ISBETWEEN(2, 3) && ISQANDROIDJNIOBJECT(1) && HB_ISNUM(2) && ISQANDROIDACTIVITYRESULTRECEIVERORNIL(3)) {
 #endif
     QtAndroid::startActivity(*PQANDROIDJNIOBJECT(1), PINT(2),
                              HB_ISNIL(3) ? nullptr
@@ -177,13 +177,13 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDCONTEXT)
 #endif
 }
 
-// static bool bindService(const QAndroidIntent &serviceIntent, const QAndroidServiceConnection &serviceConnection, QtAndroid::BindFlags flags = QtAndroid::BindFlag::None)
+// static bool bindService(const QAndroidIntent &serviceIntent, const QAndroidServiceConnection &serviceConnection,
+// QtAndroid::BindFlags flags = QtAndroid::BindFlag::None)
 HB_FUNC_STATIC(QTANDROID_BINDSERVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(2, 3) && ISQANDROIDINTENT(1) && ISQANDROIDSERVICECONNECTION(2) && ISNUMORNIL(3))
-  {
+  if (ISBETWEEN(2, 3) && ISQANDROIDINTENT(1) && ISQANDROIDSERVICECONNECTION(2) && ISNUMORNIL(3)) {
 #endif
     RBOOL(QtAndroid::bindService(*PQANDROIDINTENT(1), *PQANDROIDSERVICECONNECTION(2),
                                  HB_ISNIL(3) ? static_cast<QtAndroid::BindFlags>(QtAndroid::BindFlag::None)
@@ -209,9 +209,7 @@ HB_FUNC_STATIC(QTANDROID_HIDESPLASHSCREEN)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // static void hideSplashScreen(int duration)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 
@@ -231,8 +229,7 @@ HB_FUNC_STATIC(QTANDROID_CHECKPERMISSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     RENUM(QtAndroid::checkPermission(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +245,7 @@ HB_FUNC_STATIC(QTANDROID_SHOULDSHOWREQUESTPERMISSIONRATIONALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     RBOOL(QtAndroid::shouldShowRequestPermissionRationale(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,17 +260,14 @@ HB_FUNC_STATIC(QTANDROID_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -307,8 +300,7 @@ HB_FUNC_STATIC(QTANDROID_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

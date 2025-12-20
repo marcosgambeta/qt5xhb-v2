@@ -54,8 +54,7 @@ RETURN
     */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new HAbstractTableModelV2(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -92,8 +91,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETROWCOUNTCB)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
 #endif
       obj->setRowCountCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,8 +113,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETCOLUMNCOUNTCB)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
 #endif
       obj->setColumnCountCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,8 +135,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETDATACB)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
 #endif
       obj->setDataCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,8 +157,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETHEADERDATACB)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
 #endif
       obj->setHeaderDataCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +179,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETFLAGSCB)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
 #endif
       obj->setFlagsCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,8 +201,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETSETDATACB)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
 #endif
       obj->setSetDataCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

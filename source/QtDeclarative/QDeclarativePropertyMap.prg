@@ -64,8 +64,7 @@ RETURN
     */
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QDeclarativePropertyMap(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -99,8 +98,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_CLEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->clear(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,8 +120,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_CONTAINS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->contains(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +160,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_INSERT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
 #endif
       obj->insert(PQSTRING(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,8 +242,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_VALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RQVARIANT(obj->value(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,21 +262,17 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_ONVALUECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(QString,QVariant)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QDeclarativePropertyMap::valueChanged,
                                            [sender, indexOfCodeBlock](const QString &arg1, const QVariant &arg2) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender =
                                                    Qt5xHb::Signals_return_qobject(sender, "QDECLARATIVEPROPERTYMAP");
                                                auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
@@ -296,9 +287,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_ONVALUECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

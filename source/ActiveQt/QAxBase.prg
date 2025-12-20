@@ -208,10 +208,8 @@ HB_FUNC_STATIC(QAXBASE_DISABLEMETAOBJECT)
 
 HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
 {
-  if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) &&
-      ISQVARIANTORNIL(4) && ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) &&
-      ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9))
-  {
+  if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
+      ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
     /*
     QVariant dynamicCall(const char * function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
     const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
@@ -220,18 +218,17 @@ HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
     auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RQVARIANT(obj->dynamicCall(PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2)),
-                           HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)),
-                           HB_ISNIL(4) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(4)),
-                           HB_ISNIL(5) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(5)),
-                           HB_ISNIL(6) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(6)),
-                           HB_ISNIL(7) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(7)),
-                           HB_ISNIL(8) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(8)),
-                           HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(9))));
+      RQVARIANT(obj->dynamicCall(PCONSTCHAR(1),
+                                 HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2)),
+                                 HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)),
+                                 HB_ISNIL(4) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(4)),
+                                 HB_ISNIL(5) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(5)),
+                                 HB_ISNIL(6) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(6)),
+                                 HB_ISNIL(7) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(7)),
+                                 HB_ISNIL(8) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(8)),
+                                 HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(9))));
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QVariant dynamicCall(const char * function, QList<QVariant> &vars)
     auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -286,8 +283,7 @@ HB_FUNC_STATIC(QAXBASE_PROPERTYWRITABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->propertyWritable(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,10 +296,8 @@ HB_FUNC_STATIC(QAXBASE_PROPERTYWRITABLE)
 
 HB_FUNC_STATIC(QAXBASE_QUERYSUBOBJECT)
 {
-  if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) &&
-      ISQVARIANTORNIL(4) && ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) &&
-      ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9))
-  {
+  if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
+      ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
     /*
     QAxObject * querySubObject(const char * name, const QVariant &var1 = QVariant(), const QVariant &var2 =
     QVariant(), const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 =
@@ -324,9 +318,7 @@ HB_FUNC_STATIC(QAXBASE_QUERYSUBOBJECT)
                               HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(9)));
       Qt5xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QAxObject * querySubObject(const char * name, QList<QVariant> &vars)
     auto obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -346,8 +338,7 @@ HB_FUNC_STATIC(QAXBASE_SETCONTROL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->setControl(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -365,8 +356,7 @@ HB_FUNC_STATIC(QAXBASE_SETPROPERTYWRITABLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2)) {
 #endif
       obj->setPropertyWritable(PCONSTCHAR(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -425,8 +415,7 @@ HB_FUNC_STATIC(QAXBASE_SETCLASSCONTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setClassContext(PUNSIGNEDLONG(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -444,17 +433,14 @@ HB_FUNC_STATIC(QAXBASE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -487,8 +473,7 @@ HB_FUNC_STATIC(QAXBASE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

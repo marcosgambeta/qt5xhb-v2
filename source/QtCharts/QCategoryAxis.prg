@@ -74,8 +74,7 @@ QCategoryAxis(QObject * parent = nullptr)
 HB_FUNC_STATIC(QCATEGORYAXIS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QCategoryAxis(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -116,8 +115,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_STARTVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISCHARORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
 #endif
       RQREAL(obj->startValue(OPQSTRING(1, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,8 +137,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_SETSTARTVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setStartValue(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,8 +227,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_SETLABELSPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLabelsPosition(static_cast<QCategoryAxis::AxisLabelsPosition>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,8 +273,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_APPEND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
       obj->append(PQSTRING(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,8 +297,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_REMOVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->remove(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -327,8 +321,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_REPLACELABEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
 #endif
       obj->replaceLabel(PQSTRING(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -352,8 +345,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_ENDVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RQREAL(obj->endValue(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -375,20 +367,16 @@ HB_FUNC_STATIC(QCATEGORYAXIS_ONCATEGORIESCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("categoriesChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QCategoryAxis::categoriesChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCATEGORYAXIS");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -398,9 +386,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_ONCATEGORIESCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -425,22 +411,18 @@ HB_FUNC_STATIC(QCATEGORYAXIS_ONLABELSPOSITIONCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal =
         sender->metaObject()->indexOfSignal("labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QCategoryAxis::labelsPositionChanged,
                                            [sender, indexOfCodeBlock](QCategoryAxis::AxisLabelsPosition arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCATEGORYAXIS");
                                                auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -452,9 +434,7 @@ HB_FUNC_STATIC(QCATEGORYAXIS_ONLABELSPOSITIONCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

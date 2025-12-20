@@ -85,9 +85,7 @@ HB_FUNC_STATIC(QREGEXP_NEW)
     */
     auto obj = new QRegExp();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
-  {
+  } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     /*
     QRegExp(const QString &pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax =
     QRegExp::RegExp)
@@ -98,9 +96,7 @@ HB_FUNC_STATIC(QREGEXP_NEW)
                            HB_ISNIL(3) ? static_cast<QRegExp::PatternSyntax>(QRegExp::RegExp)
                                        : static_cast<QRegExp::PatternSyntax>(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQREGEXP(1))
-  {
+  } else if (ISNUMPAR(1) && ISQREGEXP(1)) {
     /*
     QRegExp(const QRegExp &rx)
     */
@@ -135,8 +131,7 @@ HB_FUNC_STATIC(QREGEXP_CAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQSTRING(obj->cap(OPINT(1, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -236,8 +231,7 @@ HB_FUNC_STATIC(QREGEXP_EXACTMATCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->exactMatch(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,8 +251,7 @@ HB_FUNC_STATIC(QREGEXP_INDEXIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       RINT(obj->indexIn(PQSTRING(1), OPINT(2, 0),
                         HB_ISNIL(3) ? static_cast<QRegExp::CaretMode>(QRegExp::CaretAtZero)
@@ -340,8 +333,7 @@ HB_FUNC_STATIC(QREGEXP_LASTINDEXIN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       RINT(obj->lastIndexIn(PQSTRING(1), OPINT(2, -1),
                             HB_ISNIL(3) ? static_cast<QRegExp::CaretMode>(QRegExp::CaretAtZero)
@@ -423,8 +415,7 @@ HB_FUNC_STATIC(QREGEXP_POS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RINT(obj->pos(OPINT(1, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -444,8 +435,7 @@ HB_FUNC_STATIC(QREGEXP_SETCASESENSITIVITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCaseSensitivity(static_cast<Qt::CaseSensitivity>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -467,8 +457,7 @@ HB_FUNC_STATIC(QREGEXP_SETMINIMAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setMinimal(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -490,8 +479,7 @@ HB_FUNC_STATIC(QREGEXP_SETPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setPattern(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -513,8 +501,7 @@ HB_FUNC_STATIC(QREGEXP_SETPATTERNSYNTAX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPatternSyntax(static_cast<QRegExp::PatternSyntax>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -533,8 +520,7 @@ static QString escape(const QString &str)
 HB_FUNC_STATIC(QREGEXP_ESCAPE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     RQSTRING(QRegExp::escape(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -548,17 +534,14 @@ HB_FUNC_STATIC(QREGEXP_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -591,8 +574,7 @@ HB_FUNC_STATIC(QREGEXP_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

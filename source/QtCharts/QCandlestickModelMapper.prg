@@ -106,8 +106,7 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SETMODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1)) {
 #endif
       obj->setModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,8 +153,7 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SETSERIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQCANDLESTICKSERIES(1))
-    {
+    if (ISNUMPAR(1) && ISQCANDLESTICKSERIES(1)) {
 #endif
       obj->setSeries(PQCANDLESTICKSERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,21 +199,17 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ONMODELREPLACED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("modelReplaced()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCandlestickModelMapper::modelReplaced, [sender, indexOfCodeBlock]() {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKMODELMAPPER");
                 hb_vmEvalBlockV(cb, 1, pSender);
                 hb_itemRelease(pSender);
@@ -225,9 +219,7 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ONMODELREPLACED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -252,21 +244,17 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ONSERIESREPLACED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("seriesReplaced()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCandlestickModelMapper::seriesReplaced, [sender, indexOfCodeBlock]() {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCANDLESTICKMODELMAPPER");
                 hb_vmEvalBlockV(cb, 1, pSender);
                 hb_itemRelease(pSender);
@@ -276,9 +264,7 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ONSERIESREPLACED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

@@ -88,8 +88,7 @@ RETURN
 
 HB_FUNC_STATIC(QCUSTOM3DITEM_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QCustom3DItem(QObject * parent = nullptr)
     */
@@ -97,10 +96,8 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_NEW)
     auto obj = new QCustom3DItem(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(5, 6) && HB_ISCHAR(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3) && ISQQUATERNION(4) && ISQIMAGE(5) &&
-           ISQOBJECTORNIL(6))
-  {
+  } else if (ISBETWEEN(5, 6) && HB_ISCHAR(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3) && ISQQUATERNION(4) && ISQIMAGE(5) &&
+             ISQOBJECTORNIL(6)) {
     /*
     QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &
     rotation, const QImage &texture, QObject * parent = nullptr)
@@ -169,8 +166,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETMESHFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setMeshFile(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +212,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETTEXTUREFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setTextureFile(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,8 +259,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVECTOR3D(1))
-    {
+    if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
 #endif
       obj->setPosition(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,8 +305,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETPOSITIONABSOLUTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setPositionAbsolute(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -359,8 +352,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETSCALING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVECTOR3D(1))
-    {
+    if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
 #endif
       obj->setScaling(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -407,8 +399,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETROTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQQUATERNION(1))
-    {
+    if (ISNUMPAR(1) && ISQQUATERNION(1)) {
 #endif
       obj->setRotation(*PQQUATERNION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -454,8 +445,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -501,8 +491,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETSHADOWCASTING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setShadowCasting(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -548,8 +537,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETSCALINGABSOLUTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setScalingAbsolute(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -573,8 +561,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETROTATIONAXISANDANGLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2)) {
 #endif
       obj->setRotationAxisAndAngle(*PQVECTOR3D(1), PFLOAT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -598,8 +585,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETTEXTUREIMAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQIMAGE(1))
-    {
+    if (ISNUMPAR(1) && ISQIMAGE(1)) {
 #endif
       obj->setTextureImage(*PQIMAGE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -623,21 +609,17 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONMESHFILECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("meshFileChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DItem::meshFileChanged, [sender, indexOfCodeBlock](const QString &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DITEM");
                 auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -649,9 +631,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONMESHFILECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -676,21 +656,17 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONPOSITIONABSOLUTECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("positionAbsoluteChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DItem::positionAbsoluteChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DITEM");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -702,9 +678,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONPOSITIONABSOLUTECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -729,21 +703,17 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONPOSITIONCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("positionChanged(QVector3D)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QCustom3DItem::positionChanged,
                                            [sender, indexOfCodeBlock](const QVector3D &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DITEM");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QVECTOR3D");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -755,9 +725,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONPOSITIONCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -782,21 +750,17 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONROTATIONCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rotationChanged(QQuaternion)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QCustom3DItem::rotationChanged,
                                            [sender, indexOfCodeBlock](const QQuaternion &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DITEM");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QQUATERNION");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -808,9 +772,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONROTATIONCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -835,21 +797,17 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONSCALINGABSOLUTECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("scalingAbsoluteChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DItem::scalingAbsoluteChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DITEM");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -861,9 +819,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONSCALINGABSOLUTECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -888,21 +844,17 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONSCALINGCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("scalingChanged(QVector3D)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DItem::scalingChanged, [sender, indexOfCodeBlock](const QVector3D &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DITEM");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QVECTOR3D");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -914,9 +866,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONSCALINGCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -941,21 +891,17 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONSHADOWCASTINGCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("shadowCastingChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DItem::shadowCastingChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DITEM");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -967,9 +913,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONSHADOWCASTINGCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -994,21 +938,17 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONTEXTUREFILECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textureFileChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QCustom3DItem::textureFileChanged,
                                            [sender, indexOfCodeBlock](const QString &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DITEM");
                                                auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1020,9 +960,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONTEXTUREFILECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1047,21 +985,17 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONVISIBLECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("visibleChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCustom3DItem::visibleChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QCUSTOM3DITEM");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1073,9 +1007,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONVISIBLECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

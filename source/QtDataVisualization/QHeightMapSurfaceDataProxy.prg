@@ -77,8 +77,7 @@ RETURN
 
 HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QHeightMapSurfaceDataProxy(QObject * parent = nullptr)
     */
@@ -86,9 +85,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_NEW)
     auto obj = new QHeightMapSurfaceDataProxy(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(1, 2) && ISQIMAGE(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQIMAGE(1) && ISQOBJECTORNIL(2)) {
     /*
     QHeightMapSurfaceDataProxy(const QImage &image, QObject * parent = nullptr)
     */
@@ -96,9 +93,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_NEW)
     auto obj = new QHeightMapSurfaceDataProxy(*PQIMAGE(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
     /*
     QHeightMapSurfaceDataProxy(const QString &filename, QObject * parent = nullptr)
     */
@@ -166,8 +161,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQIMAGE(1))
-    {
+    if (ISNUMPAR(1) && ISQIMAGE(1)) {
 #endif
       obj->setHeightMap(*PQIMAGE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,8 +207,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAPFILE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setHeightMapFile(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,8 +253,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETMINXVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMinXValue(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -307,8 +299,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETMAXXVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMaxXValue(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,8 +345,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETMINZVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMinZValue(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -401,8 +391,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETMAXZVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMaxZValue(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -426,8 +415,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETVALUERANGES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       obj->setValueRanges(PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -451,21 +439,17 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("heightMapChanged(QImage)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QHeightMapSurfaceDataProxy::heightMapChanged, [sender, indexOfCodeBlock](const QImage &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEIGHTMAPSURFACEDATAPROXY");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QIMAGE");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -477,9 +461,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -504,21 +486,17 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPFILECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("heightMapFileChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QHeightMapSurfaceDataProxy::heightMapFileChanged, [sender, indexOfCodeBlock](const QString &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEIGHTMAPSURFACEDATAPROXY");
                 auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -530,9 +508,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPFILECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -557,21 +533,17 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_ONMINXVALUECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("minXValueChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QHeightMapSurfaceDataProxy::minXValueChanged, [sender, indexOfCodeBlock](float arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEIGHTMAPSURFACEDATAPROXY");
                 auto pArg1 = hb_itemPutND(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -583,9 +555,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_ONMINXVALUECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -610,21 +580,17 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_ONMAXXVALUECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("maxXValueChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QHeightMapSurfaceDataProxy::maxXValueChanged, [sender, indexOfCodeBlock](float arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEIGHTMAPSURFACEDATAPROXY");
                 auto pArg1 = hb_itemPutND(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -636,9 +602,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_ONMAXXVALUECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -663,21 +627,17 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_ONMINZVALUECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("minZValueChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QHeightMapSurfaceDataProxy::minZValueChanged, [sender, indexOfCodeBlock](float arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEIGHTMAPSURFACEDATAPROXY");
                 auto pArg1 = hb_itemPutND(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -689,9 +649,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_ONMINZVALUECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -716,21 +674,17 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_ONMAXZVALUECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("maxZValueChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QHeightMapSurfaceDataProxy::maxZValueChanged, [sender, indexOfCodeBlock](float arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QHEIGHTMAPSURFACEDATAPROXY");
                 auto pArg1 = hb_itemPutND(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -742,9 +696,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_ONMAXZVALUECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

@@ -63,8 +63,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QSequentialAnimationGroup(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -98,8 +97,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_ADDPAUSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = obj->addPause(PINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPAUSEANIMATION");
@@ -141,8 +139,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_INSERTPAUSE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       auto ptr = obj->insertPause(PINT(1), PINT(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QPAUSEANIMATION");
@@ -183,21 +180,17 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentAnimationChanged(QAbstractAnimation*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QSequentialAnimationGroup::currentAnimationChanged,
                                            [sender, indexOfCodeBlock](QAbstractAnimation *arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender =
                                                    Qt5xHb::Signals_return_qobject(sender, "QSEQUENTIALANIMATIONGROUP");
                                                auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QABSTRACTANIMATION");
@@ -210,9 +203,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

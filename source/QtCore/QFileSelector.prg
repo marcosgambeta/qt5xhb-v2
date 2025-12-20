@@ -60,8 +60,7 @@ RETURN
     */
 HB_FUNC_STATIC(QFILESELECTOR_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QFileSelector(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -88,8 +87,7 @@ HB_FUNC_STATIC(QFILESELECTOR_DELETE)
 
 HB_FUNC_STATIC(QFILESELECTOR_SELECT)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     QString select(const QString &filePath) const
     */
@@ -98,9 +96,7 @@ HB_FUNC_STATIC(QFILESELECTOR_SELECT)
     if (obj != nullptr) {
       RQSTRING(obj->select(PQSTRING(1)));
     }
-  }
-  else if (ISNUMPAR(1) && ISQURL(1))
-  {
+  } else if (ISNUMPAR(1) && ISQURL(1)) {
     /*
     QUrl select(const QUrl &filePath) const
     */
@@ -144,8 +140,7 @@ HB_FUNC_STATIC(QFILESELECTOR_SETEXTRASELECTORS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       obj->setExtraSelectors(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

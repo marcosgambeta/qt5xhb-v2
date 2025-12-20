@@ -97,8 +97,7 @@ Q3DScene(QObject * parent = nullptr)
 HB_FUNC_STATIC(Q3DSCENE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new Q3DScene(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -183,8 +182,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETPRIMARYSUBVIEWPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQRECT(1))
-    {
+    if (ISNUMPAR(1) && ISQRECT(1)) {
 #endif
       obj->setPrimarySubViewport(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,8 +228,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETSECONDARYSUBVIEWPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQRECT(1))
-    {
+    if (ISNUMPAR(1) && ISQRECT(1)) {
 #endif
       obj->setSecondarySubViewport(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,8 +274,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETSELECTIONQUERYPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->setSelectionQueryPosition(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,8 +320,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETSECONDARYSUBVIEWONTOP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setSecondarySubviewOnTop(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -371,8 +366,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETSLICINGACTIVE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setSlicingActive(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -419,8 +413,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETACTIVECAMERA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQ3DCAMERA(1))
-    {
+    if (ISNUMPAR(1) && ISQ3DCAMERA(1)) {
 #endif
       obj->setActiveCamera(PQ3DCAMERA(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -467,8 +460,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETACTIVELIGHT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQ3DLIGHT(1))
-    {
+    if (ISNUMPAR(1) && ISQ3DLIGHT(1)) {
 #endif
       obj->setActiveLight(PQ3DLIGHT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -514,8 +506,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETDEVICEPIXELRATIO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDevicePixelRatio(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -561,8 +552,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETGRAPHPOSITIONQUERY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->setGraphPositionQuery(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -586,8 +576,7 @@ HB_FUNC_STATIC(Q3DSCENE_ISPOINTINPRIMARYSUBVIEW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       RBOOL(obj->isPointInPrimarySubView(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -609,8 +598,7 @@ HB_FUNC_STATIC(Q3DSCENE_ISPOINTINSECONDARYSUBVIEW)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       RBOOL(obj->isPointInSecondarySubView(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -650,21 +638,17 @@ HB_FUNC_STATIC(Q3DSCENE_ONACTIVECAMERACHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activeCameraChanged(Q3DCamera*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DScene::activeCameraChanged, [sender, indexOfCodeBlock](Q3DCamera *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCENE");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "Q3DCAMERA");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -676,9 +660,7 @@ HB_FUNC_STATIC(Q3DSCENE_ONACTIVECAMERACHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -703,21 +685,17 @@ HB_FUNC_STATIC(Q3DSCENE_ONACTIVELIGHTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activeLightChanged(Q3DLight*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DScene::activeLightChanged, [sender, indexOfCodeBlock](Q3DLight *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCENE");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "Q3DLIGHT");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -729,9 +707,7 @@ HB_FUNC_STATIC(Q3DSCENE_ONACTIVELIGHTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -756,21 +732,17 @@ HB_FUNC_STATIC(Q3DSCENE_ONDEVICEPIXELRATIOCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("devicePixelRatioChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DScene::devicePixelRatioChanged, [sender, indexOfCodeBlock](float arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCENE");
                 auto pArg1 = hb_itemPutND(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -782,9 +754,7 @@ HB_FUNC_STATIC(Q3DSCENE_ONDEVICEPIXELRATIOCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -809,21 +779,17 @@ HB_FUNC_STATIC(Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("graphPositionQueryChanged(QPoint)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &Q3DScene::graphPositionQueryChanged,
                                            [sender, indexOfCodeBlock](const QPoint &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCENE");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QPOINT");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -835,9 +801,7 @@ HB_FUNC_STATIC(Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -862,21 +826,17 @@ HB_FUNC_STATIC(Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("primarySubViewportChanged(QRect)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &Q3DScene::primarySubViewportChanged,
                                            [sender, indexOfCodeBlock](const QRect &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCENE");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QRECT");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -888,9 +848,7 @@ HB_FUNC_STATIC(Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -915,21 +873,17 @@ HB_FUNC_STATIC(Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("secondarySubviewOnTopChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DScene::secondarySubviewOnTopChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCENE");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -941,9 +895,7 @@ HB_FUNC_STATIC(Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -968,21 +920,17 @@ HB_FUNC_STATIC(Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("secondarySubViewportChanged(QRect)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &Q3DScene::secondarySubViewportChanged,
                                            [sender, indexOfCodeBlock](const QRect &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCENE");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QRECT");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -994,9 +942,7 @@ HB_FUNC_STATIC(Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1021,21 +967,17 @@ HB_FUNC_STATIC(Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectionQueryPositionChanged(QPoint)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &Q3DScene::selectionQueryPositionChanged,
                                            [sender, indexOfCodeBlock](const QPoint &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCENE");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QPOINT");
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1047,9 +989,7 @@ HB_FUNC_STATIC(Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1074,21 +1014,17 @@ HB_FUNC_STATIC(Q3DSCENE_ONSLICINGACTIVECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("slicingActiveChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DScene::slicingActiveChanged, [sender, indexOfCodeBlock](bool arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCENE");
                 auto pArg1 = hb_itemPutL(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1100,9 +1036,7 @@ HB_FUNC_STATIC(Q3DSCENE_ONSLICINGACTIVECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1127,21 +1061,17 @@ HB_FUNC_STATIC(Q3DSCENE_ONVIEWPORTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("viewportChanged(QRect)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DScene::viewportChanged, [sender, indexOfCodeBlock](const QRect &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "Q3DSCENE");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QRECT");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1153,9 +1083,7 @@ HB_FUNC_STATIC(Q3DSCENE_ONVIEWPORTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

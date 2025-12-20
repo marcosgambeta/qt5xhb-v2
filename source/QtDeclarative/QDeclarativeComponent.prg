@@ -73,24 +73,19 @@ RETURN
 
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && ISQOBJECTORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && ISQOBJECTORNIL(2)) {
     /*
     QDeclarativeComponent(QDeclarativeEngine * engine, QObject * parent = nullptr)
     */
     auto obj = new QDeclarativeComponent(PQDECLARATIVEENGINE(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && HB_ISCHAR(2) && ISQOBJECTORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && HB_ISCHAR(2) && ISQOBJECTORNIL(3)) {
     /*
     QDeclarativeComponent(QDeclarativeEngine * engine, const QString &fileName, QObject * parent = nullptr)
     */
     auto obj = new QDeclarativeComponent(PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && ISQOBJECTORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && ISQOBJECTORNIL(3)) {
     /*
     QDeclarativeComponent(QDeclarativeEngine * engine, const QUrl &url, QObject * parent = nullptr)
     */
@@ -127,8 +122,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_BEGINCREATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDECLARATIVECONTEXT(1))
-    {
+    if (ISNUMPAR(1) && ISQDECLARATIVECONTEXT(1)) {
 #endif
       auto ptr = obj->beginCreate(PQDECLARATIVECONTEXT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -171,8 +165,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISQDECLARATIVECONTEXTORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISQDECLARATIVECONTEXTORNIL(1)) {
 #endif
       auto ptr = obj->create(OPQDECLARATIVECONTEXT(1, nullptr));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -219,10 +212,8 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ERRORS)
       auto list = obj->errors();
       auto pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -237,9 +228,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ERRORS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -340,8 +329,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_LOADURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->loadUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,8 +371,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_SETDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQURL(2))
-    {
+    if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQURL(2)) {
 #endif
       obj->setData(*PQBYTEARRAY(1), *PQURL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -447,21 +434,17 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ONPROGRESSCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("progressChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QDeclarativeComponent::progressChanged, [sender, indexOfCodeBlock](qreal arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDECLARATIVECOMPONENT");
                 auto pArg1 = hb_itemPutND(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -473,9 +456,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ONPROGRESSCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -496,21 +477,17 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ONSTATUSCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("statusChanged(QDeclarativeComponent::Status)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QDeclarativeComponent::statusChanged,
                                            [sender, indexOfCodeBlock](QDeclarativeComponent::Status arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender =
                                                    Qt5xHb::Signals_return_qobject(sender, "QDECLARATIVECOMPONENT");
                                                auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -523,9 +500,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ONSTATUSCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

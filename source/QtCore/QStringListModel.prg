@@ -62,16 +62,13 @@ RETURN
 
 HB_FUNC_STATIC(QSTRINGLISTMODEL_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QStringListModel(QObject * parent = nullptr)
     */
     auto obj = new QStringListModel(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && ISQOBJECTORNIL(2)) {
     /*
     QStringListModel(const QStringList &strings, QObject * parent = nullptr)
     */
@@ -91,8 +88,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SETSTRINGLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       obj->setStringList(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,8 +130,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_DATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2)) {
 #endif
       RQVARIANT(obj->data(*PQMODELINDEX(1), PINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,8 +150,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_FLAGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       RENUM(obj->flags(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,8 +170,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_INSERTROWS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
       RBOOL(obj->insertRows(PINT(1), PINT(2),
                             HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
@@ -198,8 +191,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_REMOVEROWS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
       RBOOL(obj->removeRows(PINT(1), PINT(2),
                             HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
@@ -220,8 +212,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_ROWCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1)) {
 #endif
       RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,8 +232,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SETDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISNUMORNIL(3)) {
 #endif
       RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT(3, Qt::EditRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,8 +252,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SIBLING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3)) {
 #endif
       RQMODELINDEX(obj->sibling(PINT(1), PINT(2), *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,8 +272,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->sort(PINT(1),
                 HB_ISNIL(2) ? static_cast<Qt::SortOrder>(Qt::AscendingOrder) : static_cast<Qt::SortOrder>(hb_parni(2)));

@@ -76,16 +76,13 @@ RETURN
 
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_NEW)
 {
-  if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
-  {
+  if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1)) {
     /*
     QItemSelectionModel(QAbstractItemModel * model)
     */
     auto obj = new QItemSelectionModel(PQABSTRACTITEMMODEL(1));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(2) && ISQABSTRACTITEMMODEL(1) && ISQOBJECT(2))
-  {
+  } else if (ISNUMPAR(2) && ISQABSTRACTITEMMODEL(1) && ISQOBJECT(2)) {
     /*
     QItemSelectionModel(QAbstractItemModel * model, QObject * parent)
     */
@@ -142,8 +139,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISSELECTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       RBOOL(obj->isSelected(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +159,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISROWSELECTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2)) {
 #endif
       RBOOL(obj->isRowSelected(PINT(1), *PQMODELINDEX(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +179,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISCOLUMNSELECTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2)) {
 #endif
       RBOOL(obj->isColumnSelected(PINT(1), *PQMODELINDEX(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,8 +199,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2)) {
 #endif
       RBOOL(obj->rowIntersectsSelection(PINT(1), *PQMODELINDEX(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,8 +219,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2)) {
 #endif
       RBOOL(obj->columnIntersectsSelection(PINT(1), *PQMODELINDEX(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,10 +264,8 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDINDEXES)
       auto list = obj->selectedIndexes();
       auto pDynSym = hb_dynsymFindName("QMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -290,9 +280,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDINDEXES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -313,16 +301,13 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDROWS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       auto list = obj->selectedRows(OPINT(1, 0));
       auto pDynSym = hb_dynsymFindName("QMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -337,9 +322,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDROWS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -360,16 +343,13 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDCOLUMNS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       auto list = obj->selectedColumns(OPINT(1, 0));
       auto pDynSym = hb_dynsymFindName("QMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -384,9 +364,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDCOLUMNS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -449,8 +427,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SETCURRENTINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2)) {
 #endif
       obj->setCurrentIndex(*PQMODELINDEX(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -465,8 +442,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SETCURRENTINDEX)
 
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
 {
-  if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2)) {
     /*
     virtual void select(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
     */
@@ -477,9 +453,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQITEMSELECTION(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && ISQITEMSELECTION(1) && HB_ISNUM(2)) {
     /*
     virtual void select(const QItemSelection &selection, QItemSelectionModel::SelectionFlags command)
     */
@@ -592,22 +566,18 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ONSELECTIONCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectionChanged(QItemSelection,QItemSelection)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QItemSelectionModel::selectionChanged,
                              [sender, indexOfCodeBlock](const QItemSelection &arg1, const QItemSelection &arg2) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMSELECTIONMODEL");
                                  auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QITEMSELECTION");
                                  auto pArg2 = Qt5xHb::Signals_return_object((void *)&arg2, "QITEMSELECTION");
@@ -621,9 +591,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ONSELECTIONCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -644,22 +612,18 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ONCURRENTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentChanged(QModelIndex,QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QItemSelectionModel::currentChanged,
                              [sender, indexOfCodeBlock](const QModelIndex &arg1, const QModelIndex &arg2) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMSELECTIONMODEL");
                                  auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QMODELINDEX");
                                  auto pArg2 = Qt5xHb::Signals_return_object((void *)&arg2, "QMODELINDEX");
@@ -673,9 +637,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ONCURRENTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -696,22 +658,18 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ONCURRENTROWCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentRowChanged(QModelIndex,QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QItemSelectionModel::currentRowChanged,
                              [sender, indexOfCodeBlock](const QModelIndex &arg1, const QModelIndex &arg2) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMSELECTIONMODEL");
                                  auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QMODELINDEX");
                                  auto pArg2 = Qt5xHb::Signals_return_object((void *)&arg2, "QMODELINDEX");
@@ -725,9 +683,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ONCURRENTROWCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -748,22 +704,18 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentColumnChanged(QModelIndex,QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QItemSelectionModel::currentColumnChanged,
                              [sender, indexOfCodeBlock](const QModelIndex &arg1, const QModelIndex &arg2) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMSELECTIONMODEL");
                                  auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QMODELINDEX");
                                  auto pArg2 = Qt5xHb::Signals_return_object((void *)&arg2, "QMODELINDEX");
@@ -777,9 +729,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

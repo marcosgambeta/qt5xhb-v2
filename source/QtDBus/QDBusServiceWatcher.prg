@@ -65,17 +65,13 @@ RETURN
 
     HB_FUNC(QDBUSSERVICEWATCHER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QDBusServiceWatcher(QObject * parent = nullptr)
     */
     auto obj = new QDBusServiceWatcher(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && ISQDBUSCONNECTION(2) && ISNUMORNIL(3) &&
-           ISQOBJECTORNIL(4))
-  {
+  } else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && ISQDBUSCONNECTION(2) && ISNUMORNIL(3) && ISQOBJECTORNIL(4)) {
     /*
     QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, QDBusServiceWatcher::WatchMode
     watchMode = QDBusServiceWatcher::WatchForOwnerChange, QObject * parent = nullptr)
@@ -137,8 +133,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETWATCHEDSERVICES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       obj->setWatchedServices(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,8 +155,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ADDWATCHEDSERVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->addWatchedService(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,8 +177,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_REMOVEWATCHEDSERVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->removeWatchedService(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,8 +217,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETWATCHMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setWatchMode(static_cast<QDBusServiceWatcher::WatchMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,8 +260,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETCONNECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDBUSCONNECTION(1))
-    {
+    if (ISNUMPAR(1) && ISQDBUSCONNECTION(1)) {
 #endif
       obj->setConnection(*PQDBUSCONNECTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,21 +282,17 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEREGISTERED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("serviceRegistered(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QDBusServiceWatcher::serviceRegistered, [sender, indexOfCodeBlock](const QString &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDBUSSERVICEWATCHER");
                 auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -317,9 +304,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEREGISTERED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -340,21 +325,17 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEUNREGISTERED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("serviceUnregistered(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QDBusServiceWatcher::serviceUnregistered, [sender, indexOfCodeBlock](const QString &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDBUSSERVICEWATCHER");
                 auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -366,9 +347,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEUNREGISTERED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -389,22 +368,18 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEOWNERCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("serviceOwnerChanged(QString,QString,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QDBusServiceWatcher::serviceOwnerChanged,
                              [sender, indexOfCodeBlock](const QString &arg1, const QString &arg2, const QString &arg3) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDBUSSERVICEWATCHER");
                                  auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                                  auto pArg2 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg2));
@@ -420,9 +395,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEOWNERCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

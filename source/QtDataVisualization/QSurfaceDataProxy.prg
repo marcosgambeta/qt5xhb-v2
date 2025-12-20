@@ -80,8 +80,7 @@ QSurfaceDataProxy(QObject * parent = nullptr)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QSurfaceDataProxy(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -181,8 +180,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_SERIES)
 
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ITEMAT)
 {
-  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     const QSurfaceDataItem * itemAt(int rowIndex, int columnIndex) const
     */
@@ -194,9 +192,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ITEMAT)
       Qt5xHb::createReturnClass(ptr, "QSURFACEDATAITEM", false);
     }
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQPOINT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     /*
     const QSurfaceDataItem * itemAt(const QPoint &position) const
     */
@@ -215,8 +211,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ITEMAT)
 
 HB_FUNC_STATIC(QSURFACEDATAPROXY_SETITEM)
 {
-  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQSURFACEDATAITEM(3))
-  {
+  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQSURFACEDATAITEM(3)) {
     /*
     void setItem(int rowIndex, int columnIndex, const QSurfaceDataItem &item)
     */
@@ -229,9 +224,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_SETITEM)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else if (ISNUMPAR(2) && ISQPOINT(1) && ISQSURFACEDATAITEM(2))
-  {
+  } else if (ISNUMPAR(2) && ISQPOINT(1) && ISQSURFACEDATAITEM(2)) {
     /*
     void setItem(const QPoint &position, const QSurfaceDataItem &item)
     */
@@ -259,8 +252,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_REMOVEROWS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->removeRows(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,20 +276,16 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONARRAYRESET)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("arrayReset()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QSurfaceDataProxy::arrayReset, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSURFACEDATAPROXY");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -307,9 +295,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONARRAYRESET)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -334,21 +320,17 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("columnCountChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QSurfaceDataProxy::columnCountChanged, [sender, indexOfCodeBlock](int arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSURFACEDATAPROXY");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -360,9 +342,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -387,21 +367,17 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONITEMCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemChanged(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QSurfaceDataProxy::itemChanged, [sender, indexOfCodeBlock](int arg1, int arg2) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSURFACEDATAPROXY");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 auto pArg2 = hb_itemPutNI(nullptr, arg2);
@@ -415,9 +391,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONITEMCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -442,21 +416,17 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWCOUNTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowCountChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QSurfaceDataProxy::rowCountChanged, [sender, indexOfCodeBlock](int arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSURFACEDATAPROXY");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -468,9 +438,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWCOUNTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -495,21 +463,17 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSADDED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowsAdded(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QSurfaceDataProxy::rowsAdded, [sender, indexOfCodeBlock](int arg1, int arg2) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSURFACEDATAPROXY");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 auto pArg2 = hb_itemPutNI(nullptr, arg2);
@@ -523,9 +487,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSADDED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -550,21 +512,17 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowsChanged(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QSurfaceDataProxy::rowsChanged, [sender, indexOfCodeBlock](int arg1, int arg2) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSURFACEDATAPROXY");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 auto pArg2 = hb_itemPutNI(nullptr, arg2);
@@ -578,9 +536,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -605,21 +561,17 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSINSERTED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowsInserted(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QSurfaceDataProxy::rowsInserted, [sender, indexOfCodeBlock](int arg1, int arg2) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSURFACEDATAPROXY");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 auto pArg2 = hb_itemPutNI(nullptr, arg2);
@@ -633,9 +585,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSINSERTED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -660,21 +610,17 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSREMOVED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rowsRemoved(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QSurfaceDataProxy::rowsRemoved, [sender, indexOfCodeBlock](int arg1, int arg2) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSURFACEDATAPROXY");
                 auto pArg1 = hb_itemPutNI(nullptr, arg1);
                 auto pArg2 = hb_itemPutNI(nullptr, arg2);
@@ -688,9 +634,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSREMOVED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -715,21 +659,17 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONSERIESCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("seriesChanged(QSurface3DSeries*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QSurfaceDataProxy::seriesChanged, [sender, indexOfCodeBlock](QSurface3DSeries *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSURFACEDATAPROXY");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QSURFACE3DSERIES");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -741,9 +681,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONSERIESCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

@@ -116,33 +116,25 @@ HB_FUNC_STATIC(QFILEINFO_NEW)
     */
     auto obj = new QFileInfo();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     QFileInfo(const QString &file)
     */
     auto obj = new QFileInfo(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQFILE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQFILE(1)) {
     /*
     QFileInfo(const QFile &file)
     */
     auto obj = new QFileInfo(*PQFILE(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQDIR(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && ISQDIR(1) && HB_ISCHAR(2)) {
     /*
     QFileInfo(const QDir &dir, const QString &file)
     */
     auto obj = new QFileInfo(*PQDIR(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQFILEINFO(1))
-  {
+  } else if (ISNUMPAR(1) && ISQFILEINFO(1)) {
     /*
     QFileInfo(const QFileInfo &fileinfo)
     */
@@ -424,8 +416,7 @@ HB_FUNC_STATIC(QFILEINFO_EXISTS)
     }
   }
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     static bool exists(const QString &file)
     */
@@ -435,8 +426,7 @@ HB_FUNC_STATIC(QFILEINFO_EXISTS)
 #endif
   }
 #endif
-  else
-  {
+  else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -892,8 +882,7 @@ HB_FUNC_STATIC(QFILEINFO_PERMISSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->permission(static_cast<QFile::Permissions>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -955,8 +944,7 @@ HB_FUNC_STATIC(QFILEINFO_SETCACHING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setCaching(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -971,8 +959,7 @@ HB_FUNC_STATIC(QFILEINFO_SETCACHING)
 
 HB_FUNC_STATIC(QFILEINFO_SETFILE)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     void setFile(const QString &file)
     */
@@ -983,9 +970,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQFILE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQFILE(1)) {
     /*
     void setFile(const QFile &file)
     */
@@ -996,9 +981,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQDIR(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && ISQDIR(1) && HB_ISCHAR(2)) {
     /*
     void setFile(const QDir &dir, const QString &file)
     */
@@ -1063,8 +1046,7 @@ HB_FUNC_STATIC(QFILEINFO_SWAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQFILEINFO(1))
-    {
+    if (ISNUMPAR(1) && ISQFILEINFO(1)) {
 #endif
       obj->swap(*PQFILEINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1130,8 +1112,7 @@ HB_FUNC_STATIC(QFILEINFO_FILETIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = new QDateTime(obj->fileTime(static_cast<QFile::FileTime>(hb_parni(1))));
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -1193,17 +1174,14 @@ HB_FUNC_STATIC(QFILEINFO_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -1236,8 +1214,7 @@ HB_FUNC_STATIC(QFILEINFO_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

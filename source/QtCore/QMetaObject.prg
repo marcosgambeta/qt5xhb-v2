@@ -117,8 +117,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CLASSINFO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = new QMetaClassInfo(obj->classInfo(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QMETACLASSINFO", true);
@@ -199,8 +198,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CONSTRUCTOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = new QMetaMethod(obj->constructor(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QMETAMETHOD", true);
@@ -241,8 +239,7 @@ HB_FUNC_STATIC(QMETAOBJECT_ENUMERATOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = new QMetaEnum(obj->enumerator(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QMETAENUM", true);
@@ -303,8 +300,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFCLASSINFO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->indexOfClassInfo(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,8 +320,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFCONSTRUCTOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->indexOfConstructor(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,8 +340,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFENUMERATOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->indexOfEnumerator(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,8 +360,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFMETHOD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->indexOfMethod(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -387,8 +380,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFPROPERTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->indexOfProperty(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -408,8 +400,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFSIGNAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->indexOfSignal(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -429,8 +420,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFSLOT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->indexOfSlot(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -450,8 +440,7 @@ HB_FUNC_STATIC(QMETAOBJECT_METHOD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = new QMetaMethod(obj->method(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QMETAMETHOD", true);
@@ -519,8 +508,7 @@ HB_FUNC_STATIC(QMETAOBJECT_PROPERTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = new QMetaProperty(obj->property(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QMETAPROPERTY", true);
@@ -620,8 +608,7 @@ static bool checkConnectArgs(const char * signal, const char * method)
 HB_FUNC_STATIC(QMETAOBJECT_CHECKCONNECTARGS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-  {
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
 #endif
     RBOOL(QMetaObject::checkConnectArgs(PCONSTCHAR(1), PCONSTCHAR(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -637,8 +624,7 @@ static void connectSlotsByName(QObject * object)
 HB_FUNC_STATIC(QMETAOBJECT_CONNECTSLOTSBYNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
     QMetaObject::connectSlotsByName(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -656,8 +642,7 @@ static QByteArray normalizedSignature(const char * method)
 HB_FUNC_STATIC(QMETAOBJECT_NORMALIZEDSIGNATURE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     RQBYTEARRAY(QMetaObject::normalizedSignature(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -673,8 +658,7 @@ static QByteArray normalizedType(const char * type)
 HB_FUNC_STATIC(QMETAOBJECT_NORMALIZEDTYPE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     RQBYTEARRAY(QMetaObject::normalizedType(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -688,17 +672,14 @@ HB_FUNC_STATIC(QMETAOBJECT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -731,8 +712,7 @@ HB_FUNC_STATIC(QMETAOBJECT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

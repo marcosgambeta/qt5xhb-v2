@@ -58,16 +58,13 @@ RETURN
 
 HB_FUNC_STATIC(QDBUSSERVER_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
     /*
     QDBusServer(const QString &address, QObject * parent = nullptr)
     */
     auto obj = new QDBusServer(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  } else if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QDBusServer(QObject * parent = nullptr)
     */
@@ -165,21 +162,17 @@ HB_FUNC_STATIC(QDBUSSERVER_ONNEWCONNECTION)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("newConnection(QDBusConnection)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QDBusServer::newConnection, [sender, indexOfCodeBlock](const QDBusConnection &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDBUSSERVER");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QDBUSCONNECTION");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -191,9 +184,7 @@ HB_FUNC_STATIC(QDBUSSERVER_ONNEWCONNECTION)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

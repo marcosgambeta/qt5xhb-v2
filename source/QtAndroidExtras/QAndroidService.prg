@@ -54,7 +54,7 @@ RETURN
 #endif
 #endif
 
-// QAndroidService(int &argc, char **argv)
+    // QAndroidService(int &argc, char **argv)
 HB_FUNC_STATIC(QANDROIDSERVICE_NEW)
 {
   int argc;
@@ -95,8 +95,7 @@ HB_FUNC_STATIC(QANDROIDSERVICE_ONBIND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQANDROIDINTENT(1))
-    {
+    if (ISNUMPAR(1) && ISQANDROIDINTENT(1)) {
 #endif
       auto ptr = obj->onBind(*PQANDROIDINTENT(1));
       Qt5xHb::createReturnClass(ptr, "QANDROIDBINDER", false);

@@ -68,16 +68,13 @@ RETURN
 
 HB_FUNC_STATIC(QSTATE_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQSTATEORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQSTATEORNIL(1)) {
     /*
     QState(QState * parent = nullptr)
     */
     auto obj = new QState(OPQSTATE(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSTATEORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSTATEORNIL(2)) {
     /*
     QState(QState::ChildMode childMode, QState * parent = nullptr)
     */
@@ -107,8 +104,7 @@ HB_FUNC_STATIC(QSTATE_DELETE)
 
 HB_FUNC_STATIC(QSTATE_ADDTRANSITION)
 {
-  if (ISNUMPAR(1) && ISQABSTRACTTRANSITION(1))
-  {
+  if (ISNUMPAR(1) && ISQABSTRACTTRANSITION(1)) {
     /*
     void addTransition(QAbstractTransition * transition)
     */
@@ -119,9 +115,7 @@ HB_FUNC_STATIC(QSTATE_ADDTRANSITION)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQABSTRACTSTATE(3))
-  {
+  } else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQABSTRACTSTATE(3)) {
     /*
     QSignalTransition * addTransition(QObject * sender, const char * signal, QAbstractState * target)
     */
@@ -131,9 +125,7 @@ HB_FUNC_STATIC(QSTATE_ADDTRANSITION)
       auto ptr = obj->addTransition(PQOBJECT(1), PCONSTCHAR(2), PQABSTRACTSTATE(3));
       Qt5xHb::createReturnClass(ptr, "QSIGNALTRANSITION", false);
     }
-  }
-  else if (ISNUMPAR(1) && ISQABSTRACTSTATE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQABSTRACTSTATE(1)) {
     /*
     QAbstractTransition * addTransition(QAbstractState * target)
     */
@@ -157,8 +149,7 @@ HB_FUNC_STATIC(QSTATE_ASSIGNPROPERTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3))
-    {
+    if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3)) {
 #endif
       obj->assignProperty(PQOBJECT(1), PCONSTCHAR(2), *PQVARIANT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,8 +233,7 @@ HB_FUNC_STATIC(QSTATE_REMOVETRANSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTTRANSITION(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTTRANSITION(1)) {
 #endif
       obj->removeTransition(PQABSTRACTTRANSITION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,8 +255,7 @@ HB_FUNC_STATIC(QSTATE_SETCHILDMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setChildMode(static_cast<QState::ChildMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,8 +277,7 @@ HB_FUNC_STATIC(QSTATE_SETERRORSTATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1)) {
 #endif
       obj->setErrorState(PQABSTRACTSTATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,8 +299,7 @@ HB_FUNC_STATIC(QSTATE_SETINITIALSTATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1)) {
 #endif
       obj->setInitialState(PQABSTRACTSTATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,10 +326,8 @@ HB_FUNC_STATIC(QSTATE_TRANSITIONS)
       auto list = obj->transitions();
       auto pDynSym = hb_dynsymFindName("QABSTRACTTRANSITION");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (auto item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (auto item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -354,9 +339,7 @@ HB_FUNC_STATIC(QSTATE_TRANSITIONS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QABSTRACTTRANSITION", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -377,20 +360,16 @@ HB_FUNC_STATIC(QSTATE_ONFINISHED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QState::finished, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSTATE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -400,9 +379,7 @@ HB_FUNC_STATIC(QSTATE_ONFINISHED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -423,20 +400,16 @@ HB_FUNC_STATIC(QSTATE_ONPROPERTIESASSIGNED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("propertiesAssigned()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QState::propertiesAssigned, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSTATE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -446,9 +419,7 @@ HB_FUNC_STATIC(QSTATE_ONPROPERTIESASSIGNED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

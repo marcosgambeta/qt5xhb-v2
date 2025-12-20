@@ -78,8 +78,7 @@ RETURN
     */
 HB_FUNC_STATIC(QTHREAD_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QThread(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -134,8 +133,7 @@ HB_FUNC_STATIC(QTHREAD_EXIT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->exit(OPINT(1, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,8 +215,7 @@ HB_FUNC_STATIC(QTHREAD_SETEVENTDISPATCHER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTEVENTDISPATCHER(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTEVENTDISPATCHER(1)) {
 #endif
       obj->setEventDispatcher(PQABSTRACTEVENTDISPATCHER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,8 +237,7 @@ HB_FUNC_STATIC(QTHREAD_SETPRIORITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPriority(static_cast<QThread::Priority>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,8 +259,7 @@ HB_FUNC_STATIC(QTHREAD_SETSTACKSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setStackSize(PUINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,8 +301,7 @@ HB_FUNC_STATIC(QTHREAD_EVENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQEVENT(1))
-    {
+    if (ISNUMPAR(1) && ISQEVENT(1)) {
 #endif
       RBOOL(obj->event(PQEVENT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -349,8 +343,7 @@ HB_FUNC_STATIC(QTHREAD_START)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->start(HB_ISNIL(1) ? static_cast<QThread::Priority>(QThread::InheritPriority)
                              : static_cast<QThread::Priority>(hb_parni(1)));
@@ -425,8 +418,7 @@ static void msleep(unsigned long msecs)
 HB_FUNC_STATIC(QTHREAD_MSLEEP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     QThread::msleep(PUNSIGNEDLONG(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -444,8 +436,7 @@ static void sleep(unsigned long secs)
 HB_FUNC_STATIC(QTHREAD_SLEEP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     QThread::sleep(PUNSIGNEDLONG(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -463,8 +454,7 @@ static void usleep(unsigned long usecs)
 HB_FUNC_STATIC(QTHREAD_USLEEP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     QThread::usleep(PUNSIGNEDLONG(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -503,20 +493,16 @@ HB_FUNC_STATIC(QTHREAD_ONFINISHED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QThread::finished, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTHREAD");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -526,9 +512,7 @@ HB_FUNC_STATIC(QTHREAD_ONFINISHED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -549,20 +533,16 @@ HB_FUNC_STATIC(QTHREAD_ONSTARTED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("started()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QThread::started, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTHREAD");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -572,9 +552,7 @@ HB_FUNC_STATIC(QTHREAD_ONSTARTED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

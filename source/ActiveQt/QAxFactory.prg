@@ -114,8 +114,7 @@ HB_FUNC_STATIC(QAXFACTORY_CLASSID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto ptr = new QUuid(obj->classID(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QUUID", true);
@@ -134,8 +133,7 @@ HB_FUNC_STATIC(QAXFACTORY_CREATEOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto ptr = obj->createObject(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -154,8 +152,7 @@ HB_FUNC_STATIC(QAXFACTORY_EVENTSID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto ptr = new QUuid(obj->eventsID(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QUUID", true);
@@ -174,8 +171,7 @@ HB_FUNC_STATIC(QAXFACTORY_EXPOSETOSUPERCLASS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RQSTRING(obj->exposeToSuperClass(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,8 +207,7 @@ HB_FUNC_STATIC(QAXFACTORY_HASSTOCKEVENTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->hasStockEvents(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,8 +225,7 @@ HB_FUNC_STATIC(QAXFACTORY_INTERFACEID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto ptr = new QUuid(obj->interfaceID(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QUUID", true);
@@ -268,8 +262,7 @@ HB_FUNC_STATIC(QAXFACTORY_METAOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto ptr = obj->metaObject(PQSTRING(1));
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
@@ -288,8 +281,7 @@ HB_FUNC_STATIC(QAXFACTORY_REGISTERCLASS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSETTINGS(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSETTINGS(2)) {
 #endif
       obj->registerClass(PQSTRING(1), PQSETTINGS(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -309,8 +301,7 @@ HB_FUNC_STATIC(QAXFACTORY_STAYTOPLEVEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->stayTopLevel(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,8 +338,7 @@ HB_FUNC_STATIC(QAXFACTORY_UNREGISTERCLASS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSETTINGS(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSETTINGS(2)) {
 #endif
       obj->unregisterClass(PQSTRING(1), PQSETTINGS(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,8 +358,7 @@ HB_FUNC_STATIC(QAXFACTORY_VALIDATELICENSEKEY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
 #endif
       RBOOL(obj->validateLicenseKey(PQSTRING(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -398,8 +387,7 @@ HB_FUNC_STATIC(QAXFACTORY_ISSERVER)
 HB_FUNC_STATIC(QAXFACTORY_REGISTERACTIVEOBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
     RBOOL(QAxFactory::registerActiveObject(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -441,8 +429,7 @@ HB_FUNC_STATIC(QAXFACTORY_SERVERFILEPATH)
 HB_FUNC_STATIC(QAXFACTORY_STARTSERVER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
     RBOOL(QAxFactory::startServer(HB_ISNIL(1) ? static_cast<QAxFactory::ServerType>(QAxFactory::MultipleInstances)
                                               : static_cast<QAxFactory::ServerType>(hb_parni(1))));

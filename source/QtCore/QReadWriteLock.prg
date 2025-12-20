@@ -65,8 +65,7 @@ RETURN
     */
 HB_FUNC_STATIC(QREADWRITELOCK_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     auto obj = new QReadWriteLock(HB_ISNIL(1) ? static_cast<QReadWriteLock::RecursionMode>(QReadWriteLock::NonRecursive)
                                               : static_cast<QReadWriteLock::RecursionMode>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
@@ -123,9 +122,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORREAD)
     if (obj != nullptr) {
       RBOOL(obj->tryLockForRead());
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     bool tryLockForRead(int timeout)
     */
@@ -172,9 +169,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORWRITE)
     if (obj != nullptr) {
       RBOOL(obj->tryLockForWrite());
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     bool tryLockForWrite(int timeout)
     */
@@ -214,17 +209,14 @@ HB_FUNC_STATIC(QREADWRITELOCK_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -257,8 +249,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

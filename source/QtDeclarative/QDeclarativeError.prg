@@ -73,9 +73,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_NEW)
     */
     auto obj = new QDeclarativeError();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDECLARATIVEERROR(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDECLARATIVEERROR(1)) {
     /*
     QDeclarativeError(const QDeclarativeError &other)
     */
@@ -175,8 +173,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,8 +195,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETDESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setDescription(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,8 +217,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETLINE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLine(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,8 +239,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,17 +297,14 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -346,8 +337,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

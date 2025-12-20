@@ -76,9 +76,7 @@ HB_FUNC_STATIC(QMODELINDEX_NEW)
     */
     auto obj = new QModelIndex();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQMODELINDEX(1))
-  {
+  } else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
     /*
     QModelIndex(const QModelIndex &other)
     */
@@ -113,8 +111,7 @@ HB_FUNC_STATIC(QMODELINDEX_CHILD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       RQMODELINDEX(obj->child(PINT(1), PINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,8 +151,7 @@ HB_FUNC_STATIC(QMODELINDEX_DATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQVARIANT(obj->data(OPINT(1, Qt::DisplayRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -316,8 +312,7 @@ HB_FUNC_STATIC(QMODELINDEX_SIBLING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       RQMODELINDEX(obj->sibling(PINT(1), PINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -332,17 +327,14 @@ HB_FUNC_STATIC(QMODELINDEX_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -375,8 +367,7 @@ HB_FUNC_STATIC(QMODELINDEX_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

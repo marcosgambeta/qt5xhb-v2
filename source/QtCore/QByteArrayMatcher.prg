@@ -67,25 +67,19 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEW)
     */
     auto obj = new QByteArrayMatcher();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     /*
     QByteArrayMatcher(const QByteArray &pattern)
     */
     auto obj = new QByteArrayMatcher(*PQBYTEARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     /*
     QByteArrayMatcher(const char * pattern, int length)
     */
     auto obj = new QByteArrayMatcher(PCONSTCHAR(1), PINT(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQBYTEARRAYMATCHER(1))
-  {
+  } else if (ISNUMPAR(1) && ISQBYTEARRAYMATCHER(1)) {
     /*
     QByteArrayMatcher(const QByteArrayMatcher &other)
     */
@@ -113,8 +107,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_DELETE)
 
 HB_FUNC_STATIC(QBYTEARRAYMATCHER_INDEXIN)
 {
-  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
     /*
     int indexIn(const QByteArray &ba, int from = 0) const
     */
@@ -123,9 +116,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_INDEXIN)
     if (obj != nullptr) {
       RINT(obj->indexIn(*PQBYTEARRAY(1), OPINT(2, 0)));
     }
-  }
-  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     /*
     int indexIn(const char * str, int len, int from = 0) const
     */
@@ -168,8 +159,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_SETPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       obj->setPattern(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,17 +176,14 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -229,8 +216,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

@@ -63,8 +63,7 @@ QBoxPlotLegendMarker(QBoxPlotSeries * series, QLegend * legend, QObject * parent
 HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(2, 3) && ISQBOXPLOTSERIES(1) && ISQLEGEND(2) && ISQOBJECTORNIL(3))
-  {
+  if (ISBETWEEN(2, 3) && ISQBOXPLOTSERIES(1) && ISQLEGEND(2) && ISQOBJECTORNIL(3)) {
     auto obj = new QBoxPlotLegendMarker(PQBOXPLOTSERIES(1), PQLEGEND(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {

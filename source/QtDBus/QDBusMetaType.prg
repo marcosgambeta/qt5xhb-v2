@@ -78,8 +78,7 @@ static bool demarshall(const QDBusArgument &, int id, void * data)
 HB_FUNC_STATIC(QDBUSMETATYPE_DEMARSHALL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(3) && ISQDBUSARGUMENT(1) && HB_ISNUM(2) && HB_ISPOINTER(3))
-  {
+  if (ISNUMPAR(3) && ISQDBUSARGUMENT(1) && HB_ISNUM(2) && HB_ISPOINTER(3)) {
 #endif
     RBOOL(QDBusMetaType::demarshall(*PQDBUSARGUMENT(1), PINT(2), static_cast<void *>(hb_parptr(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -95,8 +94,7 @@ static int signatureToType(const char * signature)
 HB_FUNC_STATIC(QDBUSMETATYPE_SIGNATURETOTYPE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     RINT(QDBusMetaType::signatureToType(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,8 +110,7 @@ static const char * typeToSignature(int type)
 HB_FUNC_STATIC(QDBUSMETATYPE_TYPETOSIGNATURE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     hb_retc(static_cast<const char *>(QDBusMetaType::typeToSignature(PINT(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,17 +124,14 @@ HB_FUNC_STATIC(QDBUSMETATYPE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -170,8 +164,7 @@ HB_FUNC_STATIC(QDBUSMETATYPE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

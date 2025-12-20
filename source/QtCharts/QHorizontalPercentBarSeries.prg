@@ -61,8 +61,7 @@ QHorizontalPercentBarSeries(QObject * parent = nullptr)
 HB_FUNC_STATIC(QHORIZONTALPERCENTBARSERIES_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QHorizontalPercentBarSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {

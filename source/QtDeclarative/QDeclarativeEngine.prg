@@ -89,8 +89,7 @@ RETURN
     */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QDeclarativeEngine(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -124,8 +123,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDIMAGEPROVIDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQDECLARATIVEIMAGEPROVIDER(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQDECLARATIVEIMAGEPROVIDER(2)) {
 #endif
       obj->addImageProvider(PQSTRING(1), PQDECLARATIVEIMAGEPROVIDER(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,8 +145,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDIMPORTPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->addImportPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +167,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDPLUGINPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->addPluginPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -236,8 +232,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_IMAGEPROVIDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto ptr = obj->imageProvider(PQSTRING(1));
       Qt5xHb::createReturnClass(ptr, "QDECLARATIVEIMAGEPROVIDER", false);
@@ -380,8 +375,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->removeImageProvider(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -424,8 +418,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETBASEURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setBaseUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -447,8 +440,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETIMPORTPATHLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       obj->setImportPathList(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -470,8 +462,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDECLARATIVENETWORKACCESSMANAGERFACTORY(1))
-    {
+    if (ISNUMPAR(1) && ISQDECLARATIVENETWORKACCESSMANAGERFACTORY(1)) {
 #endif
       obj->setNetworkAccessManagerFactory(PQDECLARATIVENETWORKACCESSMANAGERFACTORY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -493,8 +484,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setOfflineStoragePath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -516,8 +506,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setOutputWarningsToStandardError(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -539,8 +528,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETPLUGINPATHLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       obj->setPluginPathList(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -559,8 +547,7 @@ static QDeclarativeContext * contextForObject(const QObject * object)
 HB_FUNC_STATIC(QDECLARATIVEENGINE_CONTEXTFOROBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
     auto ptr = QDeclarativeEngine::contextForObject(PQOBJECT(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
@@ -577,8 +564,7 @@ static QDeclarativeEngine::ObjectOwnership objectOwnership(QObject * object)
 HB_FUNC_STATIC(QDECLARATIVEENGINE_OBJECTOWNERSHIP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
     RENUM(QDeclarativeEngine::objectOwnership(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -594,8 +580,7 @@ static void setContextForObject(QObject * object, QDeclarativeContext * context)
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETCONTEXTFOROBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVECONTEXT(2))
-  {
+  if (ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVECONTEXT(2)) {
 #endif
     QDeclarativeEngine::setContextForObject(PQOBJECT(1), PQDECLARATIVECONTEXT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -613,8 +598,7 @@ static void setObjectOwnership(QObject * object, QDeclarativeEngine::ObjectOwner
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETOBJECTOWNERSHIP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
 #endif
     QDeclarativeEngine::setObjectOwnership(PQOBJECT(1), static_cast<QDeclarativeEngine::ObjectOwnership>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -635,20 +619,16 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ONQUIT)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("quit()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QDeclarativeEngine::quit, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDECLARATIVEENGINE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -658,9 +638,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ONQUIT)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -681,28 +659,22 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ONWARNINGS)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("warnings(QList<QDeclarativeError>)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QDeclarativeEngine::warnings, [sender, indexOfCodeBlock](const QList<QDeclarativeError> &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QDECLARATIVEENGINE");
                 auto pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
                 auto pArg1 = hb_itemArrayNew(0);
-                if (pDynSym != nullptr)
-                {
-                  for (const auto &item : arg1)
-                  {
+                if (pDynSym != nullptr) {
+                  for (const auto &item : arg1) {
                     hb_vmPushDynSym(pDynSym);
                     hb_vmPushNil();
                     hb_vmDo(0);
@@ -714,9 +686,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ONWARNINGS)
                     hb_itemRelease(pTempObject);
                     hb_itemRelease(pTempItem);
                   }
-                }
-                else
-                {
+                } else {
                   hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS);
                 }
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -728,9 +698,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ONWARNINGS)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

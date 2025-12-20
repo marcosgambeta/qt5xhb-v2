@@ -121,8 +121,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QSortFilterProxyModel(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -173,8 +172,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERREGEXP)
 
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGEXP)
 {
-  if (ISNUMPAR(1) && ISQREGEXP(1))
-  {
+  if (ISNUMPAR(1) && ISQREGEXP(1)) {
     /*
     void setFilterRegExp(const QRegExp &regExp)
     */
@@ -185,9 +183,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGEXP)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     void setFilterRegExp(const QString &pattern)
     */
@@ -230,8 +226,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERREGULAREXPRESSION)
 
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGULAREXPRESSION)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     void setFilterRegularExpression(const QString &pattern)
     */
@@ -246,9 +241,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGULAREXPRESSION)
     hb_itemReturn(hb_stackSelfItem());
 #endif
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQREGULAREXPRESSION(1))
-  {
+  } else if (ISNUMPAR(1) && ISQREGULAREXPRESSION(1)) {
     /*
     void setFilterRegularExpression(const QRegularExpression &regularExpression)
     */
@@ -297,8 +290,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERKEYCOLUMN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFilterKeyColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -340,8 +332,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETDYNAMICSORTFILTER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setDynamicSortFilter(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,8 +374,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERCASESENSITIVITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFilterCaseSensitivity(static_cast<Qt::CaseSensitivity>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -426,8 +416,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSORTCASESENSITIVITY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSortCaseSensitivity(static_cast<Qt::CaseSensitivity>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -469,8 +458,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSORTLOCALEAWARE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setSortLocaleAware(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -512,8 +500,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSORTROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSortRole(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -555,8 +542,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFilterRole(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -601,8 +587,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETRECURSIVEFILTERINGENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setRecursiveFilteringEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -625,8 +610,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSOURCEMODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1)) {
 #endif
       obj->setSourceModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -648,8 +632,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPTOSOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       RQMODELINDEX(obj->mapToSource(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -669,8 +652,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPFROMSOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       RQMODELINDEX(obj->mapFromSource(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -690,8 +672,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPSELECTIONTOSOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQITEMSELECTION(1))
-    {
+    if (ISNUMPAR(1) && ISQITEMSELECTION(1)) {
 #endif
       auto ptr = new QItemSelection(obj->mapSelectionToSource(*PQITEMSELECTION(1)));
       Qt5xHb::createReturnClass(ptr, "QITEMSELECTION", true);
@@ -712,8 +693,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPSELECTIONFROMSOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQITEMSELECTION(1))
-    {
+    if (ISNUMPAR(1) && ISQITEMSELECTION(1)) {
 #endif
       auto ptr = new QItemSelection(obj->mapSelectionFromSource(*PQITEMSELECTION(1)));
       Qt5xHb::createReturnClass(ptr, "QITEMSELECTION", true);
@@ -774,8 +754,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERWILDCARD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setFilterWildcard(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -797,8 +776,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setFilterFixedString(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -867,9 +845,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_PARENT)
       auto ptr = obj->parent();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
-  }
-  else if (ISNUMPAR(1) && ISQMODELINDEX(1))
-  {
+  } else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
     /*
     QModelIndex parent(const QModelIndex &child) const
     */
@@ -892,10 +868,10 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
-      RQMODELINDEX(obj->index(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
+      RQMODELINDEX(obj->index(PINT(1), PINT(2),
+                              HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -913,8 +889,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SIBLING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3)) {
 #endif
       RQMODELINDEX(obj->sibling(PINT(1), PINT(2), *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -934,8 +909,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_ROWCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1)) {
 #endif
       RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -955,8 +929,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_COLUMNCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1)) {
 #endif
       RINT(obj->columnCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -976,8 +949,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_HASCHILDREN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1)) {
 #endif
       RBOOL(obj->hasChildren(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -997,8 +969,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2)) {
 #endif
       RQVARIANT(obj->data(*PQMODELINDEX(1), OPINT(2, Qt::DisplayRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1018,8 +989,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISNUMORNIL(3)) {
 #endif
       RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT(3, Qt::EditRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1039,8 +1009,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_HEADERDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
 #endif
       RQVARIANT(obj->headerData(PINT(1), static_cast<Qt::Orientation>(hb_parni(2)), OPINT(3, Qt::DisplayRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1060,8 +1029,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETHEADERDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQVARIANT(3) && ISNUMORNIL(4))
-    {
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQVARIANT(3) && ISNUMORNIL(4)) {
 #endif
       RBOOL(obj->setHeaderData(PINT(1), static_cast<Qt::Orientation>(hb_parni(2)), *PQVARIANT(3),
                                OPINT(4, Qt::EditRole)));
@@ -1082,14 +1050,12 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MIMEDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       QModelIndexList par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (auto i1 = 0; i1 < nLen1; i1++)
-      {
+      for (auto i1 = 0; i1 < nLen1; i1++) {
         par1 << *static_cast<QModelIndex *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
@@ -1112,8 +1078,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DROPMIMEDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5))
-    {
+    if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5)) {
 #endif
       RBOOL(obj->dropMimeData(PQMIMEDATA(1), static_cast<Qt::DropAction>(hb_parni(2)), PINT(3), PINT(4),
                               *PQMODELINDEX(5)));
@@ -1134,8 +1099,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INSERTROWS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
       RBOOL(obj->insertRows(PINT(1), PINT(2),
                             HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
@@ -1156,8 +1120,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INSERTCOLUMNS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
       RBOOL(obj->insertColumns(PINT(1), PINT(2),
                                HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
@@ -1178,8 +1141,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_REMOVEROWS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
       RBOOL(obj->removeRows(PINT(1), PINT(2),
                             HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
@@ -1200,8 +1162,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_REMOVECOLUMNS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
       RBOOL(obj->removeColumns(PINT(1), PINT(2),
                                HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
@@ -1222,8 +1183,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FETCHMORE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       obj->fetchMore(*PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1245,8 +1205,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_CANFETCHMORE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       RBOOL(obj->canFetchMore(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1266,8 +1225,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FLAGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       RENUM(obj->flags(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1287,8 +1245,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_BUDDY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       RQMODELINDEX(obj->buddy(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1309,9 +1266,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MATCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 5) && ISQMODELINDEX(1) && HB_ISNUM(2) && ISQVARIANT(3) && ISNUMORNIL(4) &&
-        ISNUMORNIL(5))
-    {
+    if (ISBETWEEN(3, 5) && ISQMODELINDEX(1) && HB_ISNUM(2) && ISQVARIANT(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
 #endif
       auto list =
           obj->match(*PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4, 1),
@@ -1319,10 +1274,8 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MATCH)
                                  : static_cast<Qt::MatchFlags>(hb_parni(5)));
       auto pDynSym = hb_dynsymFindName("QMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -1337,9 +1290,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MATCH)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -1360,8 +1311,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SPAN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       RQSIZE(obj->span(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1381,8 +1331,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->sort(PINT(1),
                 HB_ISNIL(2) ? static_cast<Qt::SortOrder>(Qt::AscendingOrder) : static_cast<Qt::SortOrder>(hb_parni(2)));

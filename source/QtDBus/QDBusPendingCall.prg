@@ -71,8 +71,7 @@ RETURN
     */
 HB_FUNC_STATIC(QDBUSPENDINGCALL_NEW)
 {
-  if (ISNUMPAR(1) && ISQDBUSPENDINGCALL(1))
-  {
+  if (ISNUMPAR(1) && ISQDBUSPENDINGCALL(1)) {
     auto obj = new QDBusPendingCall(*PQDBUSPENDINGCALL(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -104,8 +103,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_SWAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDBUSPENDINGCALL(1))
-    {
+    if (ISNUMPAR(1) && ISQDBUSPENDINGCALL(1)) {
 #endif
       obj->swap(*PQDBUSPENDINGCALL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,8 +258,7 @@ static QDBusPendingCall fromError(const QDBusError &error)
 HB_FUNC_STATIC(QDBUSPENDINGCALL_FROMERROR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQDBUSERROR(1))
-  {
+  if (ISNUMPAR(1) && ISQDBUSERROR(1)) {
 #endif
     auto ptr = new QDBusPendingCall(QDBusPendingCall::fromError(*PQDBUSERROR(1)));
     Qt5xHb::createReturnClass(ptr, "QDBUSPENDINGCALL", true);
@@ -278,8 +275,7 @@ static QDBusPendingCall fromCompletedCall(const QDBusMessage &message)
 HB_FUNC_STATIC(QDBUSPENDINGCALL_FROMCOMPLETEDCALL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQDBUSMESSAGE(1))
-  {
+  if (ISNUMPAR(1) && ISQDBUSMESSAGE(1)) {
 #endif
     auto ptr = new QDBusPendingCall(QDBusPendingCall::fromCompletedCall(*PQDBUSMESSAGE(1)));
     Qt5xHb::createReturnClass(ptr, "QDBUSPENDINGCALL", true);
@@ -294,17 +290,14 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -337,8 +330,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

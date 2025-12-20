@@ -73,8 +73,7 @@ RETURN
 HB_FUNC_STATIC(QLOCKFILE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     auto obj = new QLockFile(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QLOCKFILE_TRYLOCK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RBOOL(obj->tryLock(OPINT(1, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,8 +177,7 @@ HB_FUNC_STATIC(QLOCKFILE_SETSTALELOCKTIME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setStaleLockTime(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +245,7 @@ HB_FUNC_STATIC(QLOCKFILE_GETLOCKINFO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1)) {
 #endif
       qint64 par1;
       RBOOL(obj->getLockInfo(&par1, nullptr, nullptr));
@@ -289,17 +285,14 @@ HB_FUNC_STATIC(QLOCKFILE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -332,8 +325,7 @@ HB_FUNC_STATIC(QLOCKFILE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

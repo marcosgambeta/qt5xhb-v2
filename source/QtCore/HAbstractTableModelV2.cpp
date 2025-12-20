@@ -21,38 +21,32 @@ HAbstractTableModelV2::HAbstractTableModelV2(QObject *parent) : QAbstractTableMo
 
 HAbstractTableModelV2::~HAbstractTableModelV2()
 {
-  if (m_rowCountBlock != nullptr)
-  {
+  if (m_rowCountBlock != nullptr) {
     hb_itemRelease(m_rowCountBlock);
     m_rowCountBlock = nullptr;
   }
 
-  if (m_columnCountBlock != nullptr)
-  {
+  if (m_columnCountBlock != nullptr) {
     hb_itemRelease(m_columnCountBlock);
     m_columnCountBlock = nullptr;
   }
 
-  if (m_dataBlock != nullptr)
-  {
+  if (m_dataBlock != nullptr) {
     hb_itemRelease(m_dataBlock);
     m_dataBlock = nullptr;
   }
 
-  if (m_headerDataBlock != nullptr)
-  {
+  if (m_headerDataBlock != nullptr) {
     hb_itemRelease(m_headerDataBlock);
     m_headerDataBlock = nullptr;
   }
 
-  if (m_flagsBlock != nullptr)
-  {
+  if (m_flagsBlock != nullptr) {
     hb_itemRelease(m_flagsBlock);
     m_flagsBlock = nullptr;
   }
 
-  if (m_setDataBlock != nullptr)
-  {
+  if (m_setDataBlock != nullptr) {
     hb_itemRelease(m_setDataBlock);
     m_setDataBlock = nullptr;
   }
@@ -60,82 +54,68 @@ HAbstractTableModelV2::~HAbstractTableModelV2()
 
 void HAbstractTableModelV2::setRowCountCB(PHB_ITEM block)
 {
-  if (m_rowCountBlock != nullptr)
-  {
+  if (m_rowCountBlock != nullptr) {
     hb_itemRelease(m_rowCountBlock);
   }
-  if (block != nullptr)
-  {
+  if (block != nullptr) {
     m_rowCountBlock = hb_itemNew(block);
   }
 }
 
 void HAbstractTableModelV2::setColumnCountCB(PHB_ITEM block)
 {
-  if (m_columnCountBlock != nullptr)
-  {
+  if (m_columnCountBlock != nullptr) {
     hb_itemRelease(m_columnCountBlock);
   }
-  if (block != nullptr)
-  {
+  if (block != nullptr) {
     m_columnCountBlock = hb_itemNew(block);
   }
 }
 
 void HAbstractTableModelV2::setDataCB(PHB_ITEM block)
 {
-  if (m_dataBlock != nullptr)
-  {
+  if (m_dataBlock != nullptr) {
     hb_itemRelease(m_dataBlock);
   }
-  if (block != nullptr)
-  {
+  if (block != nullptr) {
     m_dataBlock = hb_itemNew(block);
   }
 }
 
 void HAbstractTableModelV2::setHeaderDataCB(PHB_ITEM block)
 {
-  if (m_headerDataBlock != nullptr)
-  {
+  if (m_headerDataBlock != nullptr) {
     hb_itemRelease(m_headerDataBlock);
   }
-  if (block != nullptr)
-  {
+  if (block != nullptr) {
     m_headerDataBlock = hb_itemNew(block);
   }
 }
 
 void HAbstractTableModelV2::setFlagsCB(PHB_ITEM block)
 {
-  if (m_flagsBlock != nullptr)
-  {
+  if (m_flagsBlock != nullptr) {
     hb_itemRelease(m_flagsBlock);
   }
-  if (block != nullptr)
-  {
+  if (block != nullptr) {
     m_flagsBlock = hb_itemNew(block);
   }
 }
 
 void HAbstractTableModelV2::setSetDataCB(PHB_ITEM block)
 {
-  if (m_setDataBlock != nullptr)
-  {
+  if (m_setDataBlock != nullptr) {
     hb_itemRelease(m_setDataBlock);
   }
-  if (block != nullptr)
-  {
+  if (block != nullptr) {
     m_setDataBlock = hb_itemNew(block);
   }
 }
 
 int HAbstractTableModelV2::rowCount(const QModelIndex &parent) const
 {
-  if (m_rowCountBlock != nullptr)
-  {
-    if (parent.isValid())
-    {
+  if (m_rowCountBlock != nullptr) {
+    if (parent.isValid()) {
       return 0;
     } else {
       return (int)hb_itemGetNI(hb_vmEvalBlockV(m_rowCountBlock, 0));
@@ -147,10 +127,8 @@ int HAbstractTableModelV2::rowCount(const QModelIndex &parent) const
 
 int HAbstractTableModelV2::columnCount(const QModelIndex &parent) const
 {
-  if (m_columnCountBlock != nullptr)
-  {
-    if (parent.isValid())
-    {
+  if (m_columnCountBlock != nullptr) {
+    if (parent.isValid()) {
       return 0;
     } else {
       return (int)hb_itemGetNI(hb_vmEvalBlockV(m_columnCountBlock, 0));
@@ -164,16 +142,14 @@ QVariant HAbstractTableModelV2::data(const QModelIndex &index, int role) const
 {
   QVariant data;
 
-  if (m_dataBlock != nullptr)
-  {
+  if (m_dataBlock != nullptr) {
     // auto pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
     auto pIndex = Qt5xHb::returnQModelIndexObject((void *)&index);
     auto pRole = hb_itemPutNI(NULL, role);
 
     auto pRet = hb_itemNew(hb_vmEvalBlockV(m_dataBlock, 2, pIndex, pRole));
 
-    if (hb_clsIsParent(hb_objGetClass(pRet), "QVARIANT"))
-    {
+    if (hb_clsIsParent(hb_objGetClass(pRet), "QVARIANT")) {
       void *ptr = (void *)hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
       data = *((QVariant *)ptr);
     }
@@ -192,16 +168,14 @@ QVariant HAbstractTableModelV2::headerData(int section, Qt::Orientation orientat
 {
   QVariant data;
 
-  if (m_headerDataBlock != nullptr)
-  {
+  if (m_headerDataBlock != nullptr) {
     auto pSection = hb_itemPutNI(NULL, section);
     auto pOrientation = hb_itemPutNI(NULL, (int)orientation);
     auto pRole = hb_itemPutNI(NULL, role);
 
     auto pRet = hb_itemNew(hb_vmEvalBlockV(m_headerDataBlock, 3, pSection, pOrientation, pRole));
 
-    if (hb_clsIsParent(hb_objGetClass(pRet), "QVARIANT"))
-    {
+    if (hb_clsIsParent(hb_objGetClass(pRet), "QVARIANT")) {
       void *ptr = (void *)hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
       data = *((QVariant *)ptr);
     }
@@ -221,15 +195,13 @@ Qt::ItemFlags HAbstractTableModelV2::flags(const QModelIndex &index) const
 {
   Qt::ItemFlags flags = Qt::ItemIsSelectable | Qt::ItemIsEnabled;
 
-  if (m_flagsBlock != nullptr)
-  {
+  if (m_flagsBlock != nullptr) {
     // auto pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
     auto pIndex = Qt5xHb::returnQModelIndexObject((void *)&index);
 
     auto pRet = hb_itemNew(hb_vmEvalBlockV(m_flagsBlock, 1, pIndex));
 
-    if (hb_itemType(pRet) & HB_IT_NUMERIC)
-    {
+    if (hb_itemType(pRet) & HB_IT_NUMERIC) {
       flags = (Qt::ItemFlags)hb_itemGetNI(pRet);
     }
 
@@ -246,8 +218,7 @@ bool HAbstractTableModelV2::setData(const QModelIndex &index, const QVariant &va
 {
   bool success = false;
 
-  if (m_setDataBlock != nullptr)
-  {
+  if (m_setDataBlock != nullptr) {
     // auto pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
     auto pIndex = Qt5xHb::returnQModelIndexObject((void *)&index);
     // auto pValue = hb_itemPutPtr( NULL, (QVariant *) &value );
@@ -256,8 +227,7 @@ bool HAbstractTableModelV2::setData(const QModelIndex &index, const QVariant &va
 
     auto pRet = hb_itemNew(hb_vmEvalBlockV(m_setDataBlock, 3, pIndex, pValue, pRole));
 
-    if (hb_itemType(pRet) & HB_IT_LOGICAL)
-    {
+    if (hb_itemType(pRet) & HB_IT_LOGICAL) {
       success = hb_itemGetL(pRet);
     }
 

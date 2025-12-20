@@ -99,8 +99,7 @@ RETURN
 
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QItemModelScatterDataProxy(QObject * parent = nullptr)
     */
@@ -108,9 +107,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_NEW)
     auto obj = new QItemModelScatterDataProxy(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && ISQOBJECTORNIL(2)) {
     /*
     QItemModelScatterDataProxy(QAbstractItemModel * itemModel, QObject * parent = nullptr)
     */
@@ -118,10 +115,8 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_NEW)
     auto obj = new QItemModelScatterDataProxy(PQABSTRACTITEMMODEL(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(4, 5) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
-           ISQOBJECTORNIL(5))
-  {
+  } else if (ISBETWEEN(4, 5) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
+             ISQOBJECTORNIL(5)) {
     /*
     QItemModelScatterDataProxy(QAbstractItemModel * itemModel, const QString &xPosRole, const QString &yPosRole, const
     QString &zPosRole, QObject * parent = nullptr)
@@ -131,10 +126,8 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_NEW)
                                               OPQOBJECT(5, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(5, 6) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISCHAR(5) &&
-           ISQOBJECTORNIL(6))
-  {
+  } else if (ISBETWEEN(5, 6) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
+             HB_ISCHAR(5) && ISQOBJECTORNIL(6)) {
     /*
     QItemModelScatterDataProxy(QAbstractItemModel * itemModel, const QString &xPosRole, const QString &yPosRole, const
     QString &zPosRole, const QString &rotationRole, QObject * parent = nullptr)
@@ -204,8 +197,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETITEMMODEL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1)) {
 #endif
       obj->setItemModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,8 +243,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETXPOSROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setXPosRole(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -298,8 +289,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETYPOSROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setYPosRole(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,8 +335,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETZPOSROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setZPosRole(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -392,8 +381,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETROTATIONROLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setRotationRole(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -440,8 +428,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETXPOSROLEPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQREGEXP(1))
-    {
+    if (ISNUMPAR(1) && ISQREGEXP(1)) {
 #endif
       obj->setXPosRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -488,8 +475,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETYPOSROLEPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQREGEXP(1))
-    {
+    if (ISNUMPAR(1) && ISQREGEXP(1)) {
 #endif
       obj->setYPosRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -536,8 +522,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETZPOSROLEPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQREGEXP(1))
-    {
+    if (ISNUMPAR(1) && ISQREGEXP(1)) {
 #endif
       obj->setZPosRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -584,8 +569,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEPATTERN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQREGEXP(1))
-    {
+    if (ISNUMPAR(1) && ISQREGEXP(1)) {
 #endif
       obj->setRotationRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -631,8 +615,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETXPOSROLEREPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setXPosRoleReplace(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -678,8 +661,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETYPOSROLEREPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setYPosRoleReplace(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -725,8 +707,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETZPOSROLEREPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setZPosRoleReplace(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -772,8 +753,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEREPLACE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setRotationRoleReplace(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -797,8 +777,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_REMAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4))
-    {
+    if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4)) {
 #endif
       obj->remap(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -822,22 +801,18 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONITEMMODELCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemModelChanged(QAbstractItemModel*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QItemModelScatterDataProxy::itemModelChanged,
                              [sender, indexOfCodeBlock](const QAbstractItemModel *arg1) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
                                  auto pArg1 = Qt5xHb::Signals_return_qobject(const_cast<QAbstractItemModel *>(arg1),
                                                                              "QABSTRACTITEMMODEL");
@@ -850,9 +825,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONITEMMODELCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -877,21 +850,17 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rotationRoleChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QItemModelScatterDataProxy::rotationRoleChanged, [sender, indexOfCodeBlock](const QString &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
                 auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -903,9 +872,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -930,21 +897,17 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rotationRolePatternChanged(QRegExp)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QItemModelScatterDataProxy::rotationRolePatternChanged,
                                            [sender, indexOfCodeBlock](const QRegExp &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender =
                                                    Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QREGEXP");
@@ -957,9 +920,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -984,21 +945,17 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEREPLACECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rotationRoleReplaceChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QItemModelScatterDataProxy::rotationRoleReplaceChanged,
                                            [sender, indexOfCodeBlock](const QString &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender =
                                                    Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
                                                auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
@@ -1011,9 +968,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEREPLACECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1038,21 +993,17 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("xPosRoleChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QItemModelScatterDataProxy::xPosRoleChanged, [sender, indexOfCodeBlock](const QString &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
                 auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1064,9 +1015,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1091,21 +1040,17 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("xPosRolePatternChanged(QRegExp)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QItemModelScatterDataProxy::xPosRolePatternChanged,
                                            [sender, indexOfCodeBlock](const QRegExp &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender =
                                                    Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QREGEXP");
@@ -1118,9 +1063,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1145,21 +1088,17 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLEREPLACECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("xPosRoleReplaceChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QItemModelScatterDataProxy::xPosRoleReplaceChanged,
                                            [sender, indexOfCodeBlock](const QString &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender =
                                                    Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
                                                auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
@@ -1172,9 +1111,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONXPOSROLEREPLACECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1199,21 +1136,17 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("yPosRoleChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QItemModelScatterDataProxy::yPosRoleChanged, [sender, indexOfCodeBlock](const QString &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
                 auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1225,9 +1158,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1252,21 +1183,17 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("yPosRolePatternChanged(QRegExp)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QItemModelScatterDataProxy::yPosRolePatternChanged,
                                            [sender, indexOfCodeBlock](const QRegExp &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender =
                                                    Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QREGEXP");
@@ -1279,9 +1206,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1306,21 +1231,17 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLEREPLACECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("yPosRoleReplaceChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QItemModelScatterDataProxy::yPosRoleReplaceChanged,
                                            [sender, indexOfCodeBlock](const QString &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender =
                                                    Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
                                                auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
@@ -1333,9 +1254,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONYPOSROLEREPLACECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1360,21 +1279,17 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("zPosRoleChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QItemModelScatterDataProxy::zPosRoleChanged, [sender, indexOfCodeBlock](const QString &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
                 auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1386,9 +1301,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1413,21 +1326,17 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("zPosRolePatternChanged(QRegExp)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QItemModelScatterDataProxy::zPosRolePatternChanged,
                                            [sender, indexOfCodeBlock](const QRegExp &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender =
                                                    Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
                                                auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QREGEXP");
@@ -1440,9 +1349,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1467,21 +1374,17 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLEREPLACECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("zPosRoleReplaceChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QItemModelScatterDataProxy::zPosRoleReplaceChanged,
                                            [sender, indexOfCodeBlock](const QString &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender =
                                                    Qt5xHb::Signals_return_qobject(sender, "QITEMMODELSCATTERDATAPROXY");
                                                auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
@@ -1494,9 +1397,7 @@ HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_ONZPOSROLEREPLACECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

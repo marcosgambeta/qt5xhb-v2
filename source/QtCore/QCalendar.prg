@@ -92,9 +92,7 @@ HB_FUNC_STATIC(QCALENDAR_NEW)
     auto obj = new QCalendar();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     QCalendar(QCalendar::System system)
     */
@@ -156,8 +154,7 @@ HB_FUNC_STATIC(QCALENDAR_DAYSINYEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->daysInYear(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,8 +176,7 @@ HB_FUNC_STATIC(QCALENDAR_MONTHSINYEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->monthsInYear(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,8 +198,7 @@ HB_FUNC_STATIC(QCALENDAR_ISDATEVALID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       RBOOL(obj->isDateValid(PINT(1), PINT(2), PINT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,8 +220,7 @@ HB_FUNC_STATIC(QCALENDAR_ISLEAPYEAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->isLeapYear(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -468,8 +462,7 @@ HB_FUNC_STATIC(QCALENDAR_DATEFROMPARTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       auto ptr = new QDate(obj->dateFromParts(PINT(1), PINT(2), PINT(3)));
       Qt5xHb::createReturnClass(ptr, "QDATE", true);
@@ -492,8 +485,7 @@ HB_FUNC_STATIC(QCALENDAR_DAYOFWEEK)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATE(1))
-    {
+    if (ISNUMPAR(1) && ISQDATE(1)) {
 #endif
       RINT(obj->dayOfWeek(*PQDATE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -515,8 +507,7 @@ HB_FUNC_STATIC(QCALENDAR_WEEKDAYNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && ISQLOCALE(1) && HB_ISNUM(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && ISQLOCALE(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
 #endif
       RQSTRING(obj->weekDayName(*PQLOCALE(1), PINT(2),
                                 HB_ISNIL(3) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
@@ -540,8 +531,7 @@ HB_FUNC_STATIC(QCALENDAR_STANDALONEWEEKDAYNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && ISQLOCALE(1) && HB_ISNUM(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && ISQLOCALE(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
 #endif
       RQSTRING(obj->standaloneWeekDayName(*PQLOCALE(1), PINT(2),
                                           HB_ISNIL(3) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
@@ -577,17 +567,14 @@ HB_FUNC_STATIC(QCALENDAR_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -620,8 +607,7 @@ HB_FUNC_STATIC(QCALENDAR_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

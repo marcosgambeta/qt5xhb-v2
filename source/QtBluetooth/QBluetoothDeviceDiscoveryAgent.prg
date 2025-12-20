@@ -69,8 +69,7 @@ RETURN
 
 HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QBluetoothDeviceDiscoveryAgent(QObject * parent = nullptr)
     */
@@ -78,9 +77,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_NEW)
     auto obj = new QBluetoothDeviceDiscoveryAgent(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(1, 2) && ISQBLUETOOTHADDRESS(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQBLUETOOTHADDRESS(1) && ISQOBJECTORNIL(2)) {
     /*
     QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject * parent = nullptr)
     */
@@ -144,8 +141,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_SETINQUIRYTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setInquiryType(static_cast<QBluetoothDeviceDiscoveryAgent::InquiryType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,10 +236,8 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_DISCOVEREDDEVICES)
       auto list = obj->discoveredDevices();
       auto pDynSym = hb_dynsymFindName("QBLUETOOTHDEVICEINFO");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -258,9 +252,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_DISCOVEREDDEVICES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBLUETOOTHDEVICEINFO", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -331,22 +323,18 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEDISCOVERED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("deviceDiscovered(QBluetoothDeviceInfo)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QBluetoothDeviceDiscoveryAgent::deviceDiscovered,
                              [sender, indexOfCodeBlock](const QBluetoothDeviceInfo &arg1) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender =
                                      Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHDEVICEDISCOVERYAGENT");
                                  auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QBLUETOOTHDEVICEINFO");
@@ -359,9 +347,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEDISCOVERED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -386,21 +372,17 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONFINISHED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QBluetoothDeviceDiscoveryAgent::finished, [sender, indexOfCodeBlock]() {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHDEVICEDISCOVERYAGENT");
                 hb_vmEvalBlockV(cb, 1, pSender);
                 hb_itemRelease(pSender);
@@ -410,9 +392,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONFINISHED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -437,22 +417,18 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONERROR)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QBluetoothDeviceDiscoveryAgent::Error)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, QOverload<QBluetoothDeviceDiscoveryAgent::Error>::of(&QBluetoothDeviceDiscoveryAgent::error),
             [sender, indexOfCodeBlock](QBluetoothDeviceDiscoveryAgent::Error arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHDEVICEDISCOVERYAGENT");
                 auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -464,9 +440,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONERROR)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -491,21 +465,17 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONCANCELED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("canceled()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QBluetoothDeviceDiscoveryAgent::canceled, [sender, indexOfCodeBlock]() {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHDEVICEDISCOVERYAGENT");
                 hb_vmEvalBlockV(cb, 1, pSender);
                 hb_itemRelease(pSender);
@@ -515,9 +485,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONCANCELED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -543,23 +511,19 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEUPDATED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal =
         sender->metaObject()->indexOfSignal("deviceUpdated(QBluetoothDeviceInfo,QBluetoothDeviceInfo::Fields)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QBluetoothDeviceDiscoveryAgent::deviceUpdated,
             [sender, indexOfCodeBlock](const QBluetoothDeviceInfo &arg1, QBluetoothDeviceInfo::Fields arg2) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QBLUETOOTHDEVICEDISCOVERYAGENT");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QBLUETOOTHDEVICEINFO");
                 auto pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
@@ -573,9 +537,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEUPDATED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
