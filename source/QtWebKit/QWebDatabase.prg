@@ -71,8 +71,7 @@ RETURN
     */
 HB_FUNC_STATIC(QWEBDATABASE_NEW)
 {
-  if (ISNUMPAR(1) && ISQWEBDATABASE(1))
-  {
+  if (ISNUMPAR(1) && ISQWEBDATABASE(1)) {
     auto obj = new QWebDatabase(*PQWEBDATABASE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -240,8 +239,7 @@ static void removeDatabase(const QWebDatabase &db)
 HB_FUNC_STATIC(QWEBDATABASE_REMOVEDATABASE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQWEBDATABASE(1))
-  {
+  if (ISNUMPAR(1) && ISQWEBDATABASE(1)) {
 #endif
     QWebDatabase::removeDatabase(*PQWEBDATABASE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,17 +255,14 @@ HB_FUNC_STATIC(QWEBDATABASE_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -300,8 +295,7 @@ HB_FUNC_STATIC(QWEBDATABASE_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

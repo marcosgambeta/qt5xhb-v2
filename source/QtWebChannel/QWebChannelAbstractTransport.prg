@@ -85,8 +85,7 @@ HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQJSONOBJECT(1))
-    {
+    if (ISNUMPAR(1) && ISQJSONOBJECT(1)) {
 #endif
       obj->sendMessage(*PQJSONOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,23 +109,19 @@ HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal =
         sender->metaObject()->indexOfSignal("messageReceived(QJsonObject,QWebChannelAbstractTransport*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QWebChannelAbstractTransport::messageReceived,
                              [sender, indexOfCodeBlock](const QJsonObject &arg1, QWebChannelAbstractTransport *arg2) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QWEBCHANNELABSTRACTTRANSPORT");
                                  auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QJSONOBJECT");
                                  auto pArg2 = Qt5xHb::Signals_return_qobject(arg2, "QWEBCHANNELABSTRACTTRANSPORT");
@@ -140,9 +135,7 @@ HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

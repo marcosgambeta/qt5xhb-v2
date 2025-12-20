@@ -69,32 +69,25 @@ RETURN
 
 HB_FUNC_STATIC(QSVGRENDERER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QSvgRenderer(QObject * parent = nullptr)
     */
     auto obj = new QSvgRenderer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
     /*
     QSvgRenderer(const QString &filename, QObject * parent = nullptr)
     */
     auto obj = new QSvgRenderer(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQOBJECTORNIL(2)) {
     /*
     QSvgRenderer(const QByteArray &contents, QObject * parent = nullptr)
     */
     auto obj = new QSvgRenderer(*PQBYTEARRAY(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQXMLSTREAMREADER(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQXMLSTREAMREADER(1) && ISQOBJECTORNIL(2)) {
     /*
     QSvgRenderer(QXmlStreamReader * contents, QObject * parent = nullptr)
     */
@@ -151,8 +144,7 @@ HB_FUNC_STATIC(QSVGRENDERER_BOUNDSONELEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RQRECTF(obj->boundsOnElement(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,8 +184,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ELEMENTEXISTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->elementExists(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,8 +244,7 @@ HB_FUNC_STATIC(QSVGRENDERER_MATRIXFORELEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto ptr = new QMatrix(obj->matrixForElement(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QMATRIX", true);
@@ -275,8 +265,7 @@ HB_FUNC_STATIC(QSVGRENDERER_SETFRAMESPERSECOND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFramesPerSecond(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,8 +280,7 @@ HB_FUNC_STATIC(QSVGRENDERER_SETFRAMESPERSECOND)
 
 HB_FUNC_STATIC(QSVGRENDERER_SETVIEWBOX)
 {
-  if (ISNUMPAR(1) && ISQRECT(1))
-  {
+  if (ISNUMPAR(1) && ISQRECT(1)) {
     /*
     void setViewBox(const QRect &viewbox)
     */
@@ -303,9 +291,7 @@ HB_FUNC_STATIC(QSVGRENDERER_SETVIEWBOX)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQRECTF(1))
-  {
+  } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     /*
     void setViewBox(const QRectF &viewbox)
     */
@@ -363,8 +349,7 @@ HB_FUNC_STATIC(QSVGRENDERER_VIEWBOXF)
 
 HB_FUNC_STATIC(QSVGRENDERER_LOAD)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     bool load(const QString &filename)
     */
@@ -373,9 +358,7 @@ HB_FUNC_STATIC(QSVGRENDERER_LOAD)
     if (obj != nullptr) {
       RBOOL(obj->load(PQSTRING(1)));
     }
-  }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     /*
     bool load(const QByteArray &contents)
     */
@@ -384,9 +367,7 @@ HB_FUNC_STATIC(QSVGRENDERER_LOAD)
     if (obj != nullptr) {
       RBOOL(obj->load(*PQBYTEARRAY(1)));
     }
-  }
-  else if (ISNUMPAR(1) && ISQXMLSTREAMREADER(1))
-  {
+  } else if (ISNUMPAR(1) && ISQXMLSTREAMREADER(1)) {
     /*
     bool load(QXmlStreamReader * contents)
     */
@@ -402,8 +383,7 @@ HB_FUNC_STATIC(QSVGRENDERER_LOAD)
 
 HB_FUNC_STATIC(QSVGRENDERER_RENDER)
 {
-  if (ISNUMPAR(1) && ISQPAINTER(1))
-  {
+  if (ISNUMPAR(1) && ISQPAINTER(1)) {
     /*
     void render(QPainter * painter)
     */
@@ -414,9 +394,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQPAINTER(1) && ISQRECTF(2))
-  {
+  } else if (ISNUMPAR(2) && ISQPAINTER(1) && ISQRECTF(2)) {
     /*
     void render(QPainter * painter, const QRectF &bounds)
     */
@@ -427,9 +405,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISCHAR(2) && ISQRECTFORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISCHAR(2) && ISQRECTFORNIL(3)) {
     /*
     void render(QPainter * painter, const QString &elementId, const QRectF &bounds = QRectF())
     */
@@ -454,20 +430,16 @@ HB_FUNC_STATIC(QSVGRENDERER_ONREPAINTNEEDED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("repaintNeeded()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QSvgRenderer::repaintNeeded, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSVGRENDERER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -477,9 +449,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ONREPAINTNEEDED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

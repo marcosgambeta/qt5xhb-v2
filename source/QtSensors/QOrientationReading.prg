@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QORIENTATIONREADING_SETORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setOrientation(static_cast<QOrientationReading::Orientation>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

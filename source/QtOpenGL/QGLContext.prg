@@ -81,8 +81,7 @@ RETURN
     */
 HB_FUNC_STATIC(QGLCONTEXT_NEW)
 {
-  if (ISNUMPAR(1) && ISQGLFORMAT(1))
-  {
+  if (ISNUMPAR(1) && ISQGLFORMAT(1)) {
     auto obj = new QGLContext(*PQGLFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -107,8 +106,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DELETE)
 
 HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
 {
-  if (ISNUMPAR(4) && ISQIMAGE(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-  {
+  if (ISNUMPAR(4) && ISQIMAGE(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
     GLuint bindTexture(const QImage &image, GLenum target, GLint format, QGLContext::BindOptions options)
     */
@@ -117,9 +115,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
     if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQIMAGE(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>(hb_parni(4))));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     GLuint bindTexture(const QString &fileName)
     */
@@ -128,9 +124,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
     if (obj != nullptr) {
       RGLUINT(obj->bindTexture(PQSTRING(1)));
     }
-  }
-  else if (ISBETWEEN(1, 3) && ISQIMAGE(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
-  {
+  } else if (ISBETWEEN(1, 3) && ISQIMAGE(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     /*
     GLuint bindTexture(const QImage &image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
     */
@@ -139,9 +133,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
     if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQIMAGE(1), OPGLENUM(2, GL_TEXTURE_2D), OPGLINT(3, GL_RGBA)));
     }
-  }
-  else if (ISBETWEEN(1, 3) && ISQPIXMAP(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
-  {
+  } else if (ISBETWEEN(1, 3) && ISQPIXMAP(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     /*
     GLuint bindTexture(const QPixmap &pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
     */
@@ -150,9 +142,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
     if (obj != nullptr) {
       RGLUINT(obj->bindTexture(*PQPIXMAP(1), OPGLENUM(2, GL_TEXTURE_2D), OPGLINT(3, GL_RGBA)));
     }
-  }
-  else if (ISNUMPAR(4) && ISQPIXMAP(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-  {
+  } else if (ISNUMPAR(4) && ISQPIXMAP(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
     GLuint bindTexture(const QPixmap &pixmap, GLenum target, GLint format, QGLContext::BindOptions options)
     */
@@ -175,8 +165,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DELETETEXTURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->deleteTexture(PGLUINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,8 +223,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DONECURRENT)
 
 HB_FUNC_STATIC(QGLCONTEXT_DRAWTEXTURE)
 {
-  if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISNUM(2) && ISNUMORNIL(3))
-  {
+  if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     /*
     void drawTexture(const QRectF &target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
     */
@@ -246,9 +234,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DRAWTEXTURE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && ISNUMORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     /*
     void drawTexture(const QPointF &point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
     */
@@ -419,8 +405,7 @@ HB_FUNC_STATIC(QGLCONTEXT_SETFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGLFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQGLFORMAT(1)) {
 #endif
       obj->setFormat(*PQGLFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -461,8 +446,7 @@ static bool areSharing(const QGLContext * context1, const QGLContext * context2)
 HB_FUNC_STATIC(QGLCONTEXT_ARESHARING)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && ISQGLCONTEXT(1) && ISQGLCONTEXT(2))
-  {
+  if (ISNUMPAR(2) && ISQGLCONTEXT(1) && ISQGLCONTEXT(2)) {
 #endif
     RBOOL(QGLContext::areSharing(PQGLCONTEXT(1), PQGLCONTEXT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -495,8 +479,7 @@ static void setTextureCacheLimit(int size)
 HB_FUNC_STATIC(QGLCONTEXT_SETTEXTURECACHELIMIT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     QGLContext::setTextureCacheLimit(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -528,17 +511,14 @@ HB_FUNC_STATIC(QGLCONTEXT_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -571,8 +551,7 @@ HB_FUNC_STATIC(QGLCONTEXT_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_FONTFAMILY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQSTRING(obj->fontFamily(static_cast<QWebSettings::FontFamily>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,8 +142,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_FONTSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->fontSize(static_cast<QWebSettings::FontSize>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +182,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETATTRIBUTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->resetAttribute(static_cast<QWebSettings::WebAttribute>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,8 +204,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETFONTFAMILY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->resetFontFamily(static_cast<QWebSettings::FontFamily>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,8 +226,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETFONTSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->resetFontSize(static_cast<QWebSettings::FontSize>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,8 +248,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETATTRIBUTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
 #endif
       obj->setAttribute(static_cast<QWebSettings::WebAttribute>(hb_parni(1)), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,8 +270,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETDEFAULTTEXTENCODING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setDefaultTextEncoding(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,8 +292,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETFONTFAMILY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
       obj->setFontFamily(static_cast<QWebSettings::FontFamily>(hb_parni(1)), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -322,8 +314,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETFONTSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setFontSize(static_cast<QWebSettings::FontSize>(hb_parni(1)), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,8 +336,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETLOCALSTORAGEPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setLocalStoragePath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,8 +358,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETUSERSTYLESHEETURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setUserStyleSheetUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -391,8 +380,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_TESTATTRIBUTE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->testAttribute(static_cast<QWebSettings::WebAttribute>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -466,8 +454,7 @@ static void enablePersistentStorage(const QString &path = QString())
 HB_FUNC_STATIC(QWEBSETTINGS_ENABLEPERSISTENTSTORAGE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && ISCHARORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
 #endif
     QWebSettings::enablePersistentStorage(OPQSTRING(1, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -518,8 +505,7 @@ static QIcon iconForUrl(const QUrl &url)
 HB_FUNC_STATIC(QWEBSETTINGS_ICONFORURL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQURL(1))
-  {
+  if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
     RQICON(QWebSettings::iconForUrl(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -615,8 +601,7 @@ static void setIconDatabasePath(const QString &path)
 HB_FUNC_STATIC(QWEBSETTINGS_SETICONDATABASEPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     QWebSettings::setIconDatabasePath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -634,8 +619,7 @@ static void setMaximumPagesInCache(int pages)
 HB_FUNC_STATIC(QWEBSETTINGS_SETMAXIMUMPAGESINCACHE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     QWebSettings::setMaximumPagesInCache(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -653,8 +637,7 @@ static void setObjectCacheCapacities(int cacheMinDeadCapacity, int cacheMaxDead,
 HB_FUNC_STATIC(QWEBSETTINGS_SETOBJECTCACHECAPACITIES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-  {
+  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
     QWebSettings::setObjectCacheCapacities(PINT(1), PINT(2), PINT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -672,8 +655,7 @@ static void setOfflineStorageDefaultQuota(qint64 maximumSize)
 HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINESTORAGEDEFAULTQUOTA)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     QWebSettings::setOfflineStorageDefaultQuota(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -691,8 +673,7 @@ static void setOfflineStoragePath(const QString &path)
 HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINESTORAGEPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     QWebSettings::setOfflineStoragePath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -710,8 +691,7 @@ static void setOfflineWebApplicationCachePath(const QString &path)
 HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     QWebSettings::setOfflineWebApplicationCachePath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -729,8 +709,7 @@ static void setOfflineWebApplicationCacheQuota(qint64 maximumSize)
 HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEQUOTA)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     QWebSettings::setOfflineWebApplicationCacheQuota(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -748,8 +727,7 @@ static void setWebGraphic(QWebSettings::WebGraphic type, const QPixmap &graphic)
 HB_FUNC_STATIC(QWEBSETTINGS_SETWEBGRAPHIC)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2))
-  {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2)) {
 #endif
     QWebSettings::setWebGraphic(static_cast<QWebSettings::WebGraphic>(hb_parni(1)), *PQPIXMAP(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -767,8 +745,7 @@ static QPixmap webGraphic(QWebSettings::WebGraphic type)
 HB_FUNC_STATIC(QWEBSETTINGS_WEBGRAPHIC)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     auto ptr = new QPixmap(QWebSettings::webGraphic(static_cast<QWebSettings::WebGraphic>(hb_parni(1))));
     Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
@@ -783,17 +760,14 @@ HB_FUNC_STATIC(QWEBSETTINGS_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -826,8 +800,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

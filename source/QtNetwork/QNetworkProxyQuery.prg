@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
     */
     auto obj = new QNetworkProxyQuery();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && ISQURL(1) && ISNUMORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQURL(1) && ISNUMORNIL(2)) {
     /*
     QNetworkProxyQuery(const QUrl &requestUrl, QNetworkProxyQuery::QueryType queryType =
     QNetworkProxyQuery::UrlRequest)
@@ -94,10 +92,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
         *PQURL(1), HB_ISNIL(2) ? static_cast<QNetworkProxyQuery::QueryType>(QNetworkProxyQuery::UrlRequest)
                                : static_cast<QNetworkProxyQuery::QueryType>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && ISCHARORNIL(3) &&
-           ISNUMORNIL(4))
-  {
+  } else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && ISCHARORNIL(3) && ISNUMORNIL(4)) {
     /*
     QNetworkProxyQuery(const QString &hostname, int port, const QString &protocolTag = QString(),
     QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpSocket)
@@ -107,9 +102,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
                                HB_ISNIL(4) ? static_cast<QNetworkProxyQuery::QueryType>(QNetworkProxyQuery::TcpSocket)
                                            : static_cast<QNetworkProxyQuery::QueryType>(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISCHARORNIL(2) && ISNUMORNIL(3))
-  {
+  } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
     /*
     QNetworkProxyQuery(quint16 bindPort, const QString &protocolTag = QString(), QNetworkProxyQuery::QueryType
     queryType = QNetworkProxyQuery::TcpServer)
@@ -119,9 +112,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
                                HB_ISNIL(3) ? static_cast<QNetworkProxyQuery::QueryType>(QNetworkProxyQuery::TcpServer)
                                            : static_cast<QNetworkProxyQuery::QueryType>(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(2, 3) && ISQNETWORKCONFIGURATION(1) && ISQURL(2) && ISNUMORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && ISQNETWORKCONFIGURATION(1) && ISQURL(2) && ISNUMORNIL(3)) {
     /*
     QNetworkProxyQuery(const QNetworkConfiguration &networkConfiguration, const QUrl &requestUrl,
     QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::UrlRequest)
@@ -131,10 +122,8 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
                                HB_ISNIL(3) ? static_cast<QNetworkProxyQuery::QueryType>(QNetworkProxyQuery::UrlRequest)
                                            : static_cast<QNetworkProxyQuery::QueryType>(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(3, 5) && ISQNETWORKCONFIGURATION(1) && HB_ISCHAR(2) && HB_ISNUM(3) &&
-           ISCHARORNIL(4) && ISNUMORNIL(5))
-  {
+  } else if (ISBETWEEN(3, 5) && ISQNETWORKCONFIGURATION(1) && HB_ISCHAR(2) && HB_ISNUM(3) && ISCHARORNIL(4) &&
+             ISNUMORNIL(5)) {
     /*
     QNetworkProxyQuery(const QNetworkConfiguration &networkConfiguration, const QString &hostname, int port, const
     QString &protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpSocket)
@@ -144,10 +133,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
                                HB_ISNIL(5) ? static_cast<QNetworkProxyQuery::QueryType>(QNetworkProxyQuery::TcpSocket)
                                            : static_cast<QNetworkProxyQuery::QueryType>(hb_parni(5)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(2, 4) && ISQNETWORKCONFIGURATION(1) && HB_ISNUM(2) && ISCHARORNIL(3) &&
-           ISNUMORNIL(4))
-  {
+  } else if (ISBETWEEN(2, 4) && ISQNETWORKCONFIGURATION(1) && HB_ISNUM(2) && ISCHARORNIL(3) && ISNUMORNIL(4)) {
     /*
     QNetworkProxyQuery(const QNetworkConfiguration &networkConfiguration, quint16 bindPort, const QString &protocolTag
     = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpServer)
@@ -157,9 +143,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
                                HB_ISNIL(4) ? static_cast<QNetworkProxyQuery::QueryType>(QNetworkProxyQuery::TcpServer)
                                            : static_cast<QNetworkProxyQuery::QueryType>(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQNETWORKPROXYQUERY(1))
-  {
+  } else if (ISNUMPAR(1) && ISQNETWORKPROXYQUERY(1)) {
     /*
     QNetworkProxyQuery(const QNetworkProxyQuery &other)
     */
@@ -297,8 +281,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETLOCALPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLocalPort(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,8 +303,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPEERHOSTNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setPeerHostName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -343,8 +325,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPEERPORT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPeerPort(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,8 +347,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPROTOCOLTAG)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setProtocolTag(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -389,8 +369,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETQUERYTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setQueryType(static_cast<QNetworkProxyQuery::QueryType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -412,8 +391,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -456,8 +434,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SWAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKPROXYQUERY(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKPROXYQUERY(1)) {
 #endif
       obj->swap(*PQNETWORKPROXYQUERY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -500,8 +477,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETNETWORKCONFIGURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1)) {
 #endif
       obj->setNetworkConfiguration(*PQNETWORKCONFIGURATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -518,17 +494,14 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -561,8 +534,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

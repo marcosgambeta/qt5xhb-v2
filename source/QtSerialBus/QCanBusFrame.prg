@@ -82,8 +82,7 @@ RETURN
 
 HB_FUNC_STATIC(QCANBUSFRAME_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     /*
     QCanBusFrame(QCanBusFrame::FrameType type = QCanBusFrame::DataFrame) Q_DECL_NOTHROW
     */
@@ -92,9 +91,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_NEW)
                                             : static_cast<QCanBusFrame::FrameType>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2)) {
     /*
     QCanBusFrame(quint32 identifier, const QByteArray &data)
     */
@@ -178,8 +175,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETFRAMETYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFrameType(static_cast<QCanBusFrame::FrameType>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,8 +221,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETEXTENDEDFRAMEFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setExtendedFrameFormat(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,8 +267,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETFRAMEID)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFrameId(PQUINT32(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,8 +291,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETPAYLOAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       obj->setPayload(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -372,8 +365,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setError(static_cast<QCanBusFrame::FrameErrors>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -441,8 +433,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETFLEXIBLEDATARATEFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setFlexibleDataRateFormat(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -488,8 +479,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETBITRATESWITCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setBitrateSwitch(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -535,8 +525,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETERRORSTATEINDICATOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setErrorStateIndicator(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -582,8 +571,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETLOCALECHO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setLocalEcho(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -601,17 +589,14 @@ HB_FUNC_STATIC(QCANBUSFRAME_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -644,8 +629,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

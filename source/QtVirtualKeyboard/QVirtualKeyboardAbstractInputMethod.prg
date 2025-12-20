@@ -143,13 +143,11 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_INPUTMODES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto list = obj->inputModes(PQSTRING(1));
       auto pArray = hb_itemArrayNew(0);
-      for (const auto &item : list)
-      {
+      for (const auto &item : list) {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -172,8 +170,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SETINPUTMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
       RBOOL(obj->setInputMode(PQSTRING(1), static_cast<QVirtualKeyboardInputEngine::InputMode>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,8 +190,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SETTEXTCASE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->setTextCase(static_cast<QVirtualKeyboardInputEngine::TextCase>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,8 +210,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_KEYEVENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISNUM(3)) {
 #endif
       RBOOL(obj->keyEvent(static_cast<Qt::Key>(hb_parni(1)), PQSTRING(2),
                           static_cast<Qt::KeyboardModifiers>(hb_parni(3))));
@@ -240,8 +235,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SELECTIONLISTS)
 #endif
       auto list = obj->selectionLists();
       auto pArray = hb_itemArrayNew(0);
-      for (const auto &item : list)
-      {
+      for (const auto &item : list) {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -264,8 +258,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SELECTIONLISTITEMCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->selectionListItemCount(static_cast<QVirtualKeyboardSelectionListModel::Type>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -286,11 +279,10 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SELECTIONLISTDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       RQVARIANT(obj->selectionListData(static_cast<QVirtualKeyboardSelectionListModel::Type>(hb_parni(1)), PINT(2),
-                                 static_cast<QVirtualKeyboardSelectionListModel::Role>(hb_parni(3))));
+                                       static_cast<QVirtualKeyboardSelectionListModel::Role>(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -308,8 +300,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SELECTIONLISTITEMSELECTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->selectionListItemSelected(static_cast<QVirtualKeyboardSelectionListModel::Type>(hb_parni(1)), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,8 +322,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SELECTIONLISTREMOVEITEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       RBOOL(obj->selectionListRemoveItem(static_cast<QVirtualKeyboardSelectionListModel::Type>(hb_parni(1)), PINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -356,8 +346,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_PATTERNRECOGNITIONMODES)
 #endif
       auto list = obj->patternRecognitionModes();
       auto pArray = hb_itemArrayNew(0);
-      for (const auto &item : list)
-      {
+      for (const auto &item : list) {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -380,8 +369,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_TRACEEND)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVIRTUALKEYBOARDTRACE(1))
-    {
+    if (ISNUMPAR(1) && ISQVIRTUALKEYBOARDTRACE(1)) {
 #endif
       RBOOL(obj->traceEnd(PQVIRTUALKEYBOARDTRACE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -401,8 +389,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_CLICKPREEDITTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->clickPreeditText(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -466,22 +453,18 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal =
         sender->metaObject()->indexOfSignal("selectionListChanged(QVirtualKeyboardSelectionListModel::Type)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QVirtualKeyboardAbstractInputMethod::selectionListChanged,
                                            [sender, indexOfCodeBlock](QVirtualKeyboardSelectionListModel::Type arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(
                                                    sender, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD");
                                                auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -494,9 +477,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -517,23 +498,19 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTACTIVEITEMCHAN
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal(
         "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QVirtualKeyboardAbstractInputMethod::selectionListActiveItemChanged,
                              [sender, indexOfCodeBlock](QVirtualKeyboardSelectionListModel::Type arg1, int arg2) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender =
                                      Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD");
                                  auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
@@ -548,9 +525,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTACTIVEITEMCHAN
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -571,21 +546,17 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTSCHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectionListsChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QVirtualKeyboardAbstractInputMethod::selectionListsChanged, [sender, indexOfCodeBlock]() {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD");
                 hb_vmEvalBlockV(cb, 1, pSender);
                 hb_itemRelease(pSender);
@@ -595,9 +566,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTSCHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

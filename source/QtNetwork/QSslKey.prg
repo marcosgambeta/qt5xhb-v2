@@ -73,10 +73,8 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
     */
     auto obj = new QSslKey();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(2, 5) && ISQBYTEARRAY(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4) && ISOPTQBYTEARRAY(5))
-  {
+  } else if (ISBETWEEN(2, 5) && ISQBYTEARRAY(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4) &&
+             ISOPTQBYTEARRAY(5)) {
     /*
     QSslKey(const QByteArray &encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem,
     QSsl::KeyType type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray())
@@ -87,10 +85,7 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
         HB_ISNIL(4) ? static_cast<QSsl::KeyType>(QSsl::PrivateKey) : static_cast<QSsl::KeyType>(hb_parni(4)),
         HB_ISNIL(5) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(5)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(2, 5) && ISQIODEVICE(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4) && ISOPTQBYTEARRAY(5))
-  {
+  } else if (ISBETWEEN(2, 5) && ISQIODEVICE(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4) && ISOPTQBYTEARRAY(5)) {
     /*
     QSslKey(QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType
     type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray())
@@ -101,18 +96,14 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
         HB_ISNIL(4) ? static_cast<QSsl::KeyType>(QSsl::PrivateKey) : static_cast<QSsl::KeyType>(hb_parni(4)),
         HB_ISNIL(5) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(5)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISPOINTER(1) && ISNUMORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISPOINTER(1) && ISNUMORNIL(2)) {
     /*
     QSslKey(Qt::HANDLE handle, QSsl::KeyType type = QSsl::PrivateKey)
     */
     auto obj = new QSslKey((Qt::HANDLE)hb_parptr(1), HB_ISNIL(2) ? static_cast<QSsl::KeyType>(QSsl::PrivateKey)
                                                                  : static_cast<QSsl::KeyType>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSSLKEY(1))
-  {
+  } else if (ISNUMPAR(1) && ISQSSLKEY(1)) {
     /*
     QSslKey(const QSslKey &other)
     */
@@ -232,8 +223,7 @@ HB_FUNC_STATIC(QSSLKEY_TODER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISQBYTEARRAYORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISQBYTEARRAYORNIL(1)) {
 #endif
       RQBYTEARRAY(obj->toDer(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,8 +243,7 @@ HB_FUNC_STATIC(QSSLKEY_TOPEM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISQBYTEARRAYORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISQBYTEARRAYORNIL(1)) {
 #endif
       RQBYTEARRAY(obj->toPem(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,8 +283,7 @@ HB_FUNC_STATIC(QSSLKEY_SWAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSSLKEY(1))
-    {
+    if (ISNUMPAR(1) && ISQSSLKEY(1)) {
 #endif
       obj->swap(*PQSSLKEY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -332,17 +320,14 @@ HB_FUNC_STATIC(QSSLKEY_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -375,8 +360,7 @@ HB_FUNC_STATIC(QSSLKEY_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

@@ -54,8 +54,7 @@ RETURN
     */
 HB_FUNC_STATIC(QWEBENGINEURLSCHEMEHANDLER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QWebEngineUrlSchemeHandler(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -92,8 +91,7 @@ HB_FUNC_STATIC(QWEBENGINEURLSCHEMEHANDLER_REQUESTSTARTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWEBENGINEURLREQUESTJOB(1))
-    {
+    if (ISNUMPAR(1) && ISQWEBENGINEURLREQUESTJOB(1)) {
 #endif
       obj->requestStarted(PQWEBENGINEURLREQUESTJOB(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

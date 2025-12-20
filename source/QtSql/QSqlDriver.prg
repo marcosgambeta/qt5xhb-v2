@@ -194,8 +194,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ESCAPEIDENTIFIER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
       RQSTRING(obj->escapeIdentifier(PQSTRING(1), static_cast<QSqlDriver::IdentifierType>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,8 +214,7 @@ HB_FUNC_STATIC(QSQLDRIVER_FORMATVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQSQLFIELD(1) && ISLOGORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQSQLFIELD(1) && ISLOGORNIL(2)) {
 #endif
       RQSTRING(obj->formatValue(*PQSQLFIELD(1), OPBOOL(2, false)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -256,8 +254,7 @@ HB_FUNC_STATIC(QSQLDRIVER_HASFEATURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->hasFeature(static_cast<QSqlDriver::DriverFeature>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,8 +274,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ISIDENTIFIERESCAPED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
       RBOOL(obj->isIdentifierEscaped(PQSTRING(1), static_cast<QSqlDriver::IdentifierType>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -380,9 +376,8 @@ HB_FUNC_STATIC(QSQLDRIVER_OPEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 6) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISCHARORNIL(3) &&
-        ISCHARORNIL(4) && ISNUMORNIL(5) && ISCHARORNIL(6))
-    {
+    if (ISBETWEEN(1, 6) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISCHARORNIL(3) && ISCHARORNIL(4) && ISNUMORNIL(5) &&
+        ISCHARORNIL(6)) {
 #endif
       RBOOL(obj->open(PQSTRING(1), OPQSTRING(2, QString()), OPQSTRING(3, QString()), OPQSTRING(4, QString()),
                       OPINT(5, -1), OPQSTRING(6, QString())));
@@ -403,8 +398,7 @@ HB_FUNC_STATIC(QSQLDRIVER_PRIMARYINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto ptr = new QSqlIndex(obj->primaryIndex(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QSQLINDEX", true);
@@ -425,8 +419,7 @@ HB_FUNC_STATIC(QSQLDRIVER_RECORD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto ptr = new QSqlRecord(obj->record(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QSQLRECORD", true);
@@ -467,8 +460,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SETNUMERICALPRECISIONPOLICY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setNumericalPrecisionPolicy(static_cast<QSql::NumericalPrecisionPolicy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -491,8 +483,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SQLSTATEMENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQSQLRECORD(3) && HB_ISLOG(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQSQLRECORD(3) && HB_ISLOG(4)) {
 #endif
       RQSTRING(obj->sqlStatement(static_cast<QSqlDriver::StatementType>(hb_parni(1)), PQSTRING(2), *PQSQLRECORD(3),
                                  PBOOL(4)));
@@ -513,8 +504,7 @@ HB_FUNC_STATIC(QSQLDRIVER_STRIPDELIMITERS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
       RQSTRING(obj->stripDelimiters(PQSTRING(1), static_cast<QSqlDriver::IdentifierType>(hb_parni(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -534,8 +524,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SUBSCRIBETONOTIFICATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->subscribeToNotification(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -575,8 +564,7 @@ HB_FUNC_STATIC(QSQLDRIVER_TABLES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQSTRINGLIST(obj->tables(static_cast<QSql::TableType>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -596,8 +584,7 @@ HB_FUNC_STATIC(QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->unsubscribeFromNotification(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -637,21 +624,17 @@ HB_FUNC_STATIC(QSQLDRIVER_ONNOTIFICATION1)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("notification(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, QOverload<const QString &>::of(&QSqlDriver::notification),
                                            [sender, indexOfCodeBlock](const QString &arg1) {
                                              auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                                             if (cb != nullptr)
-                                             {
+                                             if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSQLDRIVER");
                                                auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -663,9 +646,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ONNOTIFICATION1)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -686,24 +667,20 @@ HB_FUNC_STATIC(QSQLDRIVER_ONNOTIFICATION2)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal =
         sender->metaObject()->indexOfSignal("notification(QString,QSqlDriver::NotificationSource,QVariant)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender,
             QOverload<const QString &, QSqlDriver::NotificationSource, const QVariant &>::of(&QSqlDriver::notification),
             [sender, indexOfCodeBlock](const QString &arg1, QSqlDriver::NotificationSource arg2, const QVariant &arg3) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSQLDRIVER");
                 auto pArg1 = hb_itemPutC(nullptr, QSTRINGTOSTRING(arg1));
                 auto pArg2 = hb_itemPutNI(nullptr, static_cast<int>(arg2));
@@ -719,9 +696,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ONNOTIFICATION2)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

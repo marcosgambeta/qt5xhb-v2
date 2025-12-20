@@ -60,8 +60,7 @@ RETURN
 
 HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QQmlApplicationEngine(QObject * parent = nullptr)
     */
@@ -69,9 +68,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_NEW)
     auto obj = new QQmlApplicationEngine(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(1, 2) && ISQURL(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQURL(1) && ISQOBJECTORNIL(2)) {
     /*
     QQmlApplicationEngine(const QUrl &url, QObject * parent = nullptr)
     */
@@ -79,9 +76,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_NEW)
     auto obj = new QQmlApplicationEngine(*PQURL(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
     /*
     QQmlApplicationEngine(const QString &filePath, QObject * parent = nullptr)
     */
@@ -128,10 +123,8 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_ROOTOBJECTS)
       auto list = obj->rootObjects();
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (auto item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (auto item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -143,9 +136,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_ROOTOBJECTS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QOBJECT", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -160,8 +151,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_ROOTOBJECTS)
 
 HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
 {
-  if (ISNUMPAR(1) && ISQURL(1))
-  {
+  if (ISNUMPAR(1) && ISQURL(1)) {
     /*
     void load(const QUrl &url)
     */
@@ -174,9 +164,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     void load(const QString &filePath)
     */
@@ -204,8 +192,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOADDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQURLORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQURLORNIL(2)) {
 #endif
       obj->loadData(*PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,21 +216,17 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_ONOBJECTCREATED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("objectCreated(QObject*,QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QQmlApplicationEngine::objectCreated, [sender, indexOfCodeBlock](QObject *arg1, const QUrl &arg2) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQMLAPPLICATIONENGINE");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QOBJECT");
                 auto pArg2 = Qt5xHb::Signals_return_object((void *)&arg2, "QURL");
@@ -257,9 +240,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_ONOBJECTCREATED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

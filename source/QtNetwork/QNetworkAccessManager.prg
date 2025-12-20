@@ -113,8 +113,7 @@ RETURN
     */
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QNetworkAccessManager(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -171,8 +170,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setNetworkAccessible(static_cast<QNetworkAccessManager::NetworkAccessibility>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,8 +281,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETPROXY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKPROXY(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKPROXY(1)) {
 #endif
       obj->setProxy(*PQNETWORKPROXY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -327,8 +324,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETPROXYFACTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKPROXYFACTORY(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKPROXYFACTORY(1)) {
 #endif
       obj->setProxyFactory(PQNETWORKPROXYFACTORY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -371,8 +367,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCACHE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTNETWORKCACHE(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTNETWORKCACHE(1)) {
 #endif
       obj->setCache(PQABSTRACTNETWORKCACHE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,8 +410,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCOOKIEJAR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKCOOKIEJAR(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKCOOKIEJAR(1)) {
 #endif
       obj->setCookieJar(PQNETWORKCOOKIEJAR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -439,8 +433,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETSTRICTTRANSPORTSECURITYENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setStrictTransportSecurityEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -486,8 +479,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ENABLESTRICTTRANSPORTSECURITYSTORE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISLOG(1) && ISCHARORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISLOG(1) && ISCHARORNIL(2)) {
 #endif
       obj->enableStrictTransportSecurityStore(PBOOL(1), OPQSTRING(2, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -533,14 +525,12 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ADDSTRICTTRANSPORTSECURITYHOSTS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       QVector<QHstsPolicy> par1;
       auto aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (auto i1 = 0; i1 < nLen1; i1++)
-      {
+      for (auto i1 = 0; i1 < nLen1; i1++) {
         par1 << *static_cast<QHstsPolicy *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
@@ -571,10 +561,8 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_STRICTTRANSPORTSECURITYHOSTS)
       auto list = obj->strictTransportSecurityHosts();
       auto pDynSym = hb_dynsymFindName("QHSTSPOLICY");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -589,9 +577,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_STRICTTRANSPORTSECURITYHOSTS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QHSTSPOLICY", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -613,8 +599,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_HEAD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKREQUEST(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKREQUEST(1)) {
 #endif
       auto ptr = obj->head(*PQNETWORKREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
@@ -635,8 +620,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_GET)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKREQUEST(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKREQUEST(1)) {
 #endif
       auto ptr = obj->get(*PQNETWORKREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
@@ -650,8 +634,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_GET)
 
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
 {
-  if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2))
-  {
+  if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2)) {
     /*
     QNetworkReply * post(const QNetworkRequest &request, QIODevice * data)
     */
@@ -661,9 +644,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
       auto ptr = obj->post(*PQNETWORKREQUEST(1), PQIODEVICE(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
-  }
-  else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2))
-  {
+  } else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2)) {
     /*
     QNetworkReply * post(const QNetworkRequest &request, const QByteArray &data)
     */
@@ -673,9 +654,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
       auto ptr = obj->post(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
-  }
-  else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQHTTPMULTIPART(2))
-  {
+  } else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQHTTPMULTIPART(2)) {
     /*
     QNetworkReply * post(const QNetworkRequest &request, QHttpMultiPart * multiPart)
     */
@@ -692,8 +671,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
 
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
 {
-  if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2))
-  {
+  if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2)) {
     /*
     QNetworkReply * put(const QNetworkRequest &request, QIODevice * data)
     */
@@ -703,9 +681,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
       auto ptr = obj->put(*PQNETWORKREQUEST(1), PQIODEVICE(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
-  }
-  else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2))
-  {
+  } else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2)) {
     /*
     QNetworkReply * put(const QNetworkRequest &request, const QByteArray &data)
     */
@@ -715,9 +691,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
       auto ptr = obj->put(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
-  }
-  else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQHTTPMULTIPART(2))
-  {
+  } else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQHTTPMULTIPART(2)) {
     /*
     QNetworkReply * put(const QNetworkRequest &request, QHttpMultiPart * multiPart)
     */
@@ -741,8 +715,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_DELETERESOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKREQUEST(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKREQUEST(1)) {
 #endif
       auto ptr = obj->deleteResource(*PQNETWORKREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
@@ -756,8 +729,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_DELETERESOURCE)
 
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
 {
-  if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && ISQIODEVICEORNIL(3))
-  {
+  if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && ISQIODEVICEORNIL(3)) {
     /*
     QNetworkReply * sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice * data =
     nullptr)
@@ -768,9 +740,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
       auto ptr = obj->sendCustomRequest(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2), OPQIODEVICE(3, nullptr));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
-  }
-  else if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && ISQBYTEARRAYORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && ISQBYTEARRAYORNIL(3)) {
     /*
     QNetworkReply * sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, const QByteArray &data)
     */
@@ -782,9 +752,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
 #endif
-  }
-  else if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && ISQHTTPMULTIPARTORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && ISQHTTPMULTIPARTORNIL(3)) {
     /*
     QNetworkReply * sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QHttpMultiPart *
     multiPart)
@@ -811,8 +779,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCONFIGURATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1)) {
 #endif
       obj->setConfiguration(*PQNETWORKCONFIGURATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -878,8 +845,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CONNECTTOHOSTENCRYPTED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISQSSLCONFIGURATIONORNIL(3))
-    {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISQSSLCONFIGURATIONORNIL(3)) {
 #endif
       obj->connectToHostEncrypted(PQSTRING(1), OPQUINT16(2, 443),
                                   HB_ISNIL(3) ? QSslConfiguration::defaultConfiguration()
@@ -905,8 +871,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CONNECTTOHOST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       obj->connectToHost(PQSTRING(1), OPQUINT16(2, 80));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -930,8 +895,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETREDIRECTPOLICY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setRedirectPolicy(static_cast<QNetworkRequest::RedirectPolicy>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -976,23 +940,19 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal =
         sender->metaObject()->indexOfSignal("proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QNetworkAccessManager::proxyAuthenticationRequired,
                              [sender, indexOfCodeBlock](const QNetworkProxy &arg1, QAuthenticator *arg2) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
                                  auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QNETWORKPROXY");
                                  auto pArg2 = Qt5xHb::Signals_return_object((void *)arg2, "QAUTHENTICATOR");
@@ -1006,9 +966,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1029,22 +987,18 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("authenticationRequired(QNetworkReply*,QAuthenticator*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QNetworkAccessManager::authenticationRequired,
                              [sender, indexOfCodeBlock](QNetworkReply *arg1, QAuthenticator *arg2) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
                                  auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QNETWORKREPLY");
                                  auto pArg2 = Qt5xHb::Signals_return_object((void *)arg2, "QAUTHENTICATOR");
@@ -1058,9 +1012,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1081,21 +1033,17 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONFINISHED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished(QNetworkReply*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QNetworkAccessManager::finished, [sender, indexOfCodeBlock](QNetworkReply *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QNETWORKREPLY");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1107,9 +1055,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONFINISHED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1131,21 +1077,17 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONENCRYPTED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("encrypted(QNetworkReply*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QNetworkAccessManager::encrypted, [sender, indexOfCodeBlock](QNetworkReply *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
                 auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QNETWORKREPLY");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1157,9 +1099,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONENCRYPTED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1183,30 +1123,24 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONSSLERRORS)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sslErrors(QNetworkReply*,QList<QSslError>)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QNetworkAccessManager::sslErrors,
                              [sender, indexOfCodeBlock](QNetworkReply *arg1, const QList<QSslError> &arg2) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
                                  auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QNETWORKREPLY");
                                  auto pDynSym = hb_dynsymFindName("QSSLERROR");
                                  auto pArg2 = hb_itemArrayNew(0);
-                                 if (pDynSym != nullptr)
-                                 {
-                                   for (const auto &item : arg2)
-                                   {
+                                 if (pDynSym != nullptr) {
+                                   for (const auto &item : arg2) {
                                      hb_vmPushDynSym(pDynSym);
                                      hb_vmPushNil();
                                      hb_vmDo(0);
@@ -1218,9 +1152,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONSSLERRORS)
                                      hb_itemRelease(pTempObject);
                                      hb_itemRelease(pTempItem);
                                    }
-                                 }
-                                 else
-                                 {
+                                 } else {
                                    hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS);
                                  }
                                  hb_vmEvalBlockV(cb, 3, pSender, pArg1, pArg2);
@@ -1233,9 +1165,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONSSLERRORS)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1257,23 +1187,19 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal(
         "preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QNetworkAccessManager::preSharedKeyAuthenticationRequired,
                              [sender, indexOfCodeBlock](QNetworkReply *arg1, QSslPreSharedKeyAuthenticator *arg2) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
                                  auto pArg1 = Qt5xHb::Signals_return_qobject(arg1, "QNETWORKREPLY");
                                  auto pArg2 =
@@ -1288,9 +1214,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1314,21 +1238,17 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONNETWORKSESSIONCONNECTED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("networkSessionConnected()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QNetworkAccessManager::networkSessionConnected, [sender, indexOfCodeBlock]() {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
                 hb_vmEvalBlockV(cb, 1, pSender);
                 hb_itemRelease(pSender);
@@ -1338,9 +1258,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONNETWORKSESSIONCONNECTED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -1361,23 +1279,19 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal =
         sender->metaObject()->indexOfSignal("networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QNetworkAccessManager::networkAccessibleChanged,
                              [sender, indexOfCodeBlock](QNetworkAccessManager::NetworkAccessibility arg1) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QNETWORKACCESSMANAGER");
                                  auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
                                  hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -1389,9 +1303,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

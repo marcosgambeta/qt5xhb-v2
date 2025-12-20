@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SETPOSITIONINFOSOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGEOPOSITIONINFOSOURCE(1))
-    {
+    if (ISNUMPAR(1) && ISQGEOPOSITIONINFOSOURCE(1)) {
 #endif
       obj->setPositionInfoSource(PQGEOPOSITIONINFOSOURCE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,8 +212,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_STARTMONITORING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGEOAREAMONITORINFO(1))
-    {
+    if (ISNUMPAR(1) && ISQGEOAREAMONITORINFO(1)) {
 #endif
       RBOOL(obj->startMonitoring(*PQGEOAREAMONITORINFO(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -236,8 +234,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_STOPMONITORING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGEOAREAMONITORINFO(1))
-    {
+    if (ISNUMPAR(1) && ISQGEOAREAMONITORINFO(1)) {
 #endif
       RBOOL(obj->stopMonitoring(*PQGEOAREAMONITORINFO(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,8 +256,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_REQUESTUPDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQGEOAREAMONITORINFO(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && ISQGEOAREAMONITORINFO(1) && HB_ISCHAR(2)) {
 #endif
       RBOOL(obj->requestUpdate(*PQGEOAREAMONITORINFO(1), PCONSTCHAR(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,10 +281,8 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ACTIVEMONITORS)
       auto list = obj->activeMonitors();
       auto pDynSym = hb_dynsymFindName("QGEOAREAMONITORINFO");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -303,17 +297,13 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ACTIVEMONITORS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QGEOAREAMONITORINFO", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
     }
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQGEOSHAPE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQGEOSHAPE(1)) {
     /*
     virtual QList<QGeoAreaMonitorInfo> activeMonitors(const QGeoShape &lookupArea) const = 0
     */
@@ -324,10 +314,8 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ACTIVEMONITORS)
       auto list = obj->activeMonitors(*PQGEOSHAPE(1));
       auto pDynSym = hb_dynsymFindName("QGEOAREAMONITORINFO");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -342,9 +330,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ACTIVEMONITORS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QGEOAREAMONITORINFO", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -362,8 +348,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_CREATEDEFAULTSOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
     auto ptr = QGeoAreaMonitorSource::createDefaultSource(PQOBJECT(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QGEOAREAMONITORSOURCE");
@@ -382,8 +367,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_CREATESOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
-  {
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2)) {
 #endif
     auto ptr = QGeoAreaMonitorSource::createSource(PQSTRING(1), PQOBJECT(2));
     Qt5xHb::createReturnQObjectClass(ptr, "QGEOAREAMONITORSOURCE");
@@ -423,22 +407,18 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAENTERED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGeoAreaMonitorSource::areaEntered,
                              [sender, indexOfCodeBlock](const QGeoAreaMonitorInfo &arg1, const QGeoPositionInfo &arg2) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
                                  auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QGEOAREAMONITORINFO");
                                  auto pArg2 = Qt5xHb::Signals_return_object((void *)&arg2, "QGEOPOSITIONINFO");
@@ -452,9 +432,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAENTERED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -479,22 +457,18 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAEXITED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGeoAreaMonitorSource::areaExited,
                              [sender, indexOfCodeBlock](const QGeoAreaMonitorInfo &arg1, const QGeoPositionInfo &arg2) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
                                  auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QGEOAREAMONITORINFO");
                                  auto pArg2 = Qt5xHb::Signals_return_object((void *)&arg2, "QGEOPOSITIONINFO");
@@ -508,9 +482,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAEXITED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -535,22 +507,18 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONMONITOREXPIRED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("monitorExpired(QGeoAreaMonitorInfo)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGeoAreaMonitorSource::monitorExpired,
                              [sender, indexOfCodeBlock](const QGeoAreaMonitorInfo &arg1) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
                                  auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QGEOAREAMONITORINFO");
                                  hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -562,9 +530,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONMONITOREXPIRED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -589,22 +555,18 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONERROR)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QGeoAreaMonitorSource::Error)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, QOverload<QGeoAreaMonitorSource::Error>::of(&QGeoAreaMonitorSource::error),
                              [sender, indexOfCodeBlock](QGeoAreaMonitorSource::Error arg1) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOAREAMONITORSOURCE");
                                  auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
                                  hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -616,9 +578,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONERROR)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

@@ -183,8 +183,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETDESCRIPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setDescription(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,8 +205,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETFILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setFileName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,8 +227,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETOUTPUTDEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQIODEVICE(1))
-    {
+    if (ISNUMPAR(1) && ISQIODEVICE(1)) {
 #endif
       obj->setOutputDevice(PQIODEVICE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -252,8 +249,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETRESOLUTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setResolution(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,8 +271,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETSIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSIZE(1))
-    {
+    if (ISNUMPAR(1) && ISQSIZE(1)) {
 #endif
       obj->setSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -298,8 +293,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETTITLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -314,8 +308,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETTITLE)
 
 HB_FUNC_STATIC(QSVGGENERATOR_SETVIEWBOX)
 {
-  if (ISNUMPAR(1) && ISQRECT(1))
-  {
+  if (ISNUMPAR(1) && ISQRECT(1)) {
     /*
     void setViewBox(const QRect &viewBox)
     */
@@ -326,9 +319,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETVIEWBOX)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQRECTF(1))
-  {
+  } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     /*
     void setViewBox(const QRectF &viewBox)
     */

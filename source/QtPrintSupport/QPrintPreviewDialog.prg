@@ -59,8 +59,7 @@ RETURN
 
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_NEW)
 {
-  if (ISBETWEEN(1, 3) && ISQPRINTER(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3))
-  {
+  if (ISBETWEEN(1, 3) && ISQPRINTER(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
     /*
     QPrintPreviewDialog(QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0)
     */
@@ -68,9 +67,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_NEW)
                                        HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0)
                                                    : static_cast<Qt::WindowFlags>(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2))
-  {
+  } else if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     /*
     QPrintPreviewDialog(QWidget * parent = nullptr, Qt::WindowFlags flags = 0)
     */
@@ -108,8 +105,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_OPEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
 #endif
       obj->open(PQOBJECT(1), PCONSTCHAR(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +148,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_DONE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->done(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,8 +170,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_SETVISIBLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,21 +192,17 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_ONPAINTREQUESTED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("paintRequested(QPrinter*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QPrintPreviewDialog::paintRequested, [sender, indexOfCodeBlock](QPrinter *arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QPRINTPREVIEWDIALOG");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)arg1, "QPRINTER");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -224,9 +214,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_ONPAINTREQUESTED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

@@ -126,17 +126,14 @@ RETURN
 
 HB_FUNC_STATIC(QPRINTER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     /*
     QPrinter(QPrinter::PrinterMode mode = QPrinter::ScreenResolution)
     */
     auto obj = new QPrinter(HB_ISNIL(1) ? static_cast<QPrinter::PrinterMode>(QPrinter::ScreenResolution)
                                         : static_cast<QPrinter::PrinterMode>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && ISQPRINTERINFO(1) && ISNUMORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQPRINTERINFO(1) && ISNUMORNIL(2)) {
     /*
     QPrinter(const QPrinterInfo &printer, QPrinter::PrinterMode mode = QPrinter::ScreenResolution)
     */
@@ -213,8 +210,7 @@ HB_FUNC_STATIC(QPRINTER_SETCOLLATECOPIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setCollateCopies(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -256,8 +252,7 @@ HB_FUNC_STATIC(QPRINTER_SETCOLORMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setColorMode(static_cast<QPrinter::ColorMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,8 +294,7 @@ HB_FUNC_STATIC(QPRINTER_SETCOPYCOUNT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCopyCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,8 +336,7 @@ HB_FUNC_STATIC(QPRINTER_SETCREATOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setCreator(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -385,8 +378,7 @@ HB_FUNC_STATIC(QPRINTER_SETDOCNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setDocName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -428,8 +420,7 @@ HB_FUNC_STATIC(QPRINTER_SETDOUBLESIDEDPRINTING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setDoubleSidedPrinting(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -471,8 +462,7 @@ HB_FUNC_STATIC(QPRINTER_SETDUPLEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDuplex(static_cast<QPrinter::DuplexMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -514,8 +504,7 @@ HB_FUNC_STATIC(QPRINTER_SETFONTEMBEDDINGENABLED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setFontEmbeddingEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -577,8 +566,7 @@ HB_FUNC_STATIC(QPRINTER_SETFULLPAGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setFullPage(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -600,8 +588,7 @@ HB_FUNC_STATIC(QPRINTER_GETPAGEMARGINS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
-    {
+    if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
 #endif
       qreal par1;
       qreal par2;
@@ -624,8 +611,7 @@ HB_FUNC_STATIC(QPRINTER_GETPAGEMARGINS)
 
 HB_FUNC_STATIC(QPRINTER_SETPAGEMARGINS)
 {
-  if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
-  {
+  if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     /*
     void setPageMargins(qreal left, qreal top, qreal right, qreal bottom, QPrinter::Unit unit)
     */
@@ -636,9 +622,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGEMARGINS)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQMARGINSF(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && ISQMARGINSF(1) && HB_ISNUM(2)) {
     /*
     bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
     */
@@ -723,8 +707,7 @@ HB_FUNC_STATIC(QPRINTER_SETORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setOrientation(static_cast<QPrinter::Orientation>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -766,8 +749,7 @@ HB_FUNC_STATIC(QPRINTER_SETOUTPUTFILENAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setOutputFileName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -809,8 +791,7 @@ HB_FUNC_STATIC(QPRINTER_SETOUTPUTFORMAT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setOutputFormat(static_cast<QPrinter::OutputFormat>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -852,8 +833,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGEORDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPageOrder(static_cast<QPrinter::PageOrder>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -877,9 +857,7 @@ HB_FUNC_STATIC(QPRINTER_PAGERECT)
     if (obj != nullptr) {
       RQRECT(obj->pageRect());
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     QRectF pageRect(QPrinter::Unit unit) const
     */
@@ -904,9 +882,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERRECT)
     if (obj != nullptr) {
       RQRECT(obj->paperRect());
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     QRectF paperRect(QPrinter::Unit unit) const
     */
@@ -931,9 +907,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERSIZE)
     if (obj != nullptr) {
       RENUM(obj->paperSize());
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     QSizeF paperSize(QPrinter::Unit unit) const
     */
@@ -977,8 +951,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSOURCE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPaperSource(static_cast<QPrinter::PaperSource>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1041,8 +1014,7 @@ HB_FUNC_STATIC(QPRINTER_SETPRINTPROGRAM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setPrintProgram(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1084,8 +1056,7 @@ HB_FUNC_STATIC(QPRINTER_SETPRINTRANGE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPrintRange(static_cast<QPrinter::PrintRange>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1127,8 +1098,7 @@ HB_FUNC_STATIC(QPRINTER_SETPRINTERNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setPrinterName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1212,8 +1182,7 @@ HB_FUNC_STATIC(QPRINTER_SETRESOLUTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setResolution(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1235,8 +1204,7 @@ HB_FUNC_STATIC(QPRINTER_SETFROMTO)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setFromTo(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1251,8 +1219,7 @@ HB_FUNC_STATIC(QPRINTER_SETFROMTO)
 
 HB_FUNC_STATIC(QPRINTER_SETPAPERSIZE)
 {
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     void setPaperSize(QPrinter::PaperSize newPaperSize)
     */
@@ -1263,9 +1230,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSIZE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2)) {
     /*
     void setPaperSize(const QSizeF &paperSize, QPrinter::Unit unit)
     */
@@ -1291,8 +1256,7 @@ HB_FUNC_STATIC(QPRINTER_SETPRINTERSELECTIONOPTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setPrinterSelectionOption(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1316,8 +1280,7 @@ HB_FUNC_STATIC(QPRINTER_SETWINPAGESIZE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setWinPageSize(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1345,8 +1308,7 @@ HB_FUNC_STATIC(QPRINTER_SUPPORTEDPAPERSOURCES)
 #endif
       auto list = obj->supportedPaperSources();
       auto pArray = hb_itemArrayNew(0);
-      for (const auto &item : list)
-      {
+      for (const auto &item : list) {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -1507,8 +1469,7 @@ HB_FUNC_STATIC(QPRINTER_PAGESIZE)
 
 HB_FUNC_STATIC(QPRINTER_SETPAGESIZE)
 {
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     void setPageSize(QPrinter::PageSize)
     */
@@ -1519,9 +1480,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGESIZE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQPAGESIZE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQPAGESIZE(1)) {
     /*
     bool setPageSize(const QPageSize &pageSize)
     */
@@ -1546,8 +1505,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGESIZEMM)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSIZEF(1))
-    {
+    if (ISNUMPAR(1) && ISQSIZEF(1)) {
 #endif
       obj->setPageSizeMM(*PQSIZEF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1589,8 +1547,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setPaperName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1632,8 +1589,7 @@ HB_FUNC_STATIC(QPRINTER_SETNUMCOPIES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setNumCopies(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1721,8 +1677,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGELAYOUT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPAGELAYOUT(1))
-    {
+    if (ISNUMPAR(1) && ISQPAGELAYOUT(1)) {
 #endif
       RBOOL(obj->setPageLayout(*PQPAGELAYOUT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1744,8 +1699,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGEORIENTATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->setPageOrientation(static_cast<QPageLayout::Orientation>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1767,8 +1721,7 @@ HB_FUNC_STATIC(QPRINTER_SETPDFVERSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPdfVersion(static_cast<QPagedPaintDevice::PdfVersion>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

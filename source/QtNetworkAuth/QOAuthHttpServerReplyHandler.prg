@@ -63,8 +63,7 @@ RETURN
 
 HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QOAuthHttpServerReplyHandler(QObject * parent = nullptr)
     */
@@ -72,9 +71,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_NEW)
     auto obj = new QOAuthHttpServerReplyHandler(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2)) {
     /*
     QOAuthHttpServerReplyHandler(quint16 port, QObject * parent = nullptr)
     */
@@ -82,9 +79,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_NEW)
     auto obj = new QOAuthHttpServerReplyHandler(PQUINT16(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(2, 3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3)) {
     /*
     QOAuthHttpServerReplyHandler(const QHostAddress &address, quint16 port, QObject * parent = nullptr)
     */
@@ -173,8 +168,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setCallbackPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,8 +214,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKTEXT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setCallbackText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,8 +260,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_LISTEN)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && ISQHOSTADDRESSORNIL(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(0, 2) && ISQHOSTADDRESSORNIL(1) && ISNUMORNIL(2)) {
 #endif
       RBOOL(obj->listen(HB_ISNIL(1) ? QHostAddress::Any : *static_cast<QHostAddress *>(Qt5xHb::itemGetPtr(1)),
                         OPQUINT16(2, 0)));

@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_CREATETEXTURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQQUICKWINDOW(1))
-    {
+    if (ISNUMPAR(1) && ISQQUICKWINDOW(1)) {
 #endif
       auto ptr = obj->createTexture(PQQUICKWINDOW(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");

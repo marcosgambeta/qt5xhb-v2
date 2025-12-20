@@ -70,8 +70,7 @@ RETURN
 HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  if (ISNUMPAR(4) && HB_ISNUM(1) && ISQURL(2) && HB_ISLOG(3) && HB_ISCHAR(4))
-  {
+  if (ISNUMPAR(4) && HB_ISNUM(1) && ISQURL(2) && HB_ISLOG(3) && HB_ISCHAR(4)) {
     auto obj = new QWebEngineCertificateError(PINT(1), *PQURL(2), PBOOL(3), PQSTRING(4));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -190,17 +189,14 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -233,8 +229,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

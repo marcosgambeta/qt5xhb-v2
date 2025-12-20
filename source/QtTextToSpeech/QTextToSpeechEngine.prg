@@ -113,10 +113,8 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_AVAILABLELOCALES)
       auto list = obj->availableLocales();
       auto pDynSym = hb_dynsymFindName("QLOCALE");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -131,9 +129,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_AVAILABLELOCALES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QLOCALE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -161,10 +157,8 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_AVAILABLEVOICES)
       auto list = obj->availableVoices();
       auto pDynSym = hb_dynsymFindName("QVOICE");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -179,9 +173,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_AVAILABLEVOICES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QVOICE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -204,8 +196,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->say(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,8 +314,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETRATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->setRate(PDOUBLE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,8 +358,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETPITCH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->setPitch(PDOUBLE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -414,8 +403,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETLOCALE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLOCALE(1))
-    {
+    if (ISNUMPAR(1) && ISQLOCALE(1)) {
 #endif
       RBOOL(obj->setLocale(*PQLOCALE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -459,8 +447,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETVOLUME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->setVolume(PDOUBLE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -505,8 +492,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETVOICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVOICE(1))
-    {
+    if (ISNUMPAR(1) && ISQVOICE(1)) {
 #endif
       RBOOL(obj->setVoice(*PQVOICE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -550,21 +536,17 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_ONSTATECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QTextToSpeech::State)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QTextToSpeechEngine::stateChanged, [sender, indexOfCodeBlock](QTextToSpeech::State arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QTEXTTOSPEECHENGINE");
                 auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -576,9 +558,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_ONSTATECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

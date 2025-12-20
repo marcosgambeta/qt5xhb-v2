@@ -84,17 +84,14 @@ RETURN
 
 HB_FUNC_STATIC(QSQLFIELD_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISNUMORNIL(2))
-  {
+  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISNUMORNIL(2)) {
     /*
     QSqlField(const QString &fieldName = QString(), QVariant::Type type = QVariant::Invalid)
     */
     auto obj = new QSqlField(OPQSTRING(1, QString()), HB_ISNIL(2) ? static_cast<QVariant::Type>(QVariant::Invalid)
                                                                   : static_cast<QVariant::Type>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSQLFIELD(1))
-  {
+  } else if (ISNUMPAR(1) && ISQSQLFIELD(1)) {
     /*
     QSqlField(const QSqlField &other)
     */
@@ -171,8 +168,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETDEFAULTVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVARIANT(1))
-    {
+    if (ISNUMPAR(1) && ISQVARIANT(1)) {
 #endif
       obj->setDefaultValue(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,8 +210,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETAUTOVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setAutoValue(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,8 +252,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETGENERATED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setGenerated(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,8 +314,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREADONLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setReadOnly(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,8 +376,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETLENGTH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLength(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -426,8 +418,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETNAME)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -469,8 +460,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETPRECISION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPrecision(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -512,8 +502,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREQUIREDSTATUS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setRequiredStatus(static_cast<QSqlField::RequiredStatus>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -535,8 +524,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREQUIRED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setRequired(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -578,8 +566,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setType(static_cast<QVariant::Type>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -621,8 +608,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETVALUE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVARIANT(1))
-    {
+    if (ISNUMPAR(1) && ISQVARIANT(1)) {
 #endif
       obj->setValue(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -644,8 +630,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETSQLTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSqlType(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -682,17 +667,14 @@ HB_FUNC_STATIC(QSQLFIELD_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -725,8 +707,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

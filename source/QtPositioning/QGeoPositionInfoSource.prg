@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_SETUPDATEINTERVAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setUpdateInterval(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,8 +148,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_SETPREFERREDPOSITIONINGMETHODS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPreferredPositioningMethods(static_cast<QGeoPositionInfoSource::PositioningMethods>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,8 +194,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_LASTKNOWNPOSITION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       auto ptr = new QGeoPositionInfo(obj->lastKnownPosition(OPBOOL(1, false)));
       Qt5xHb::createReturnClass(ptr, "QGEOPOSITIONINFO", true);
@@ -356,8 +353,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_REQUESTUPDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->requestUpdate(OPINT(1, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -378,8 +374,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_CREATEDEFAULTSOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
     auto ptr = QGeoPositionInfoSource::createDefaultSource(PQOBJECT(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QGEOPOSITIONINFOSOURCE");
@@ -398,8 +393,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_CREATESOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
-  {
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2)) {
 #endif
     auto ptr = QGeoPositionInfoSource::createSource(PQSTRING(1), PQOBJECT(2));
     Qt5xHb::createReturnQObjectClass(ptr, "QGEOPOSITIONINFOSOURCE");
@@ -439,21 +433,17 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_ONPOSITIONUPDATED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("positionUpdated(QGeoPositionInfo)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QGeoPositionInfoSource::positionUpdated, [sender, indexOfCodeBlock](const QGeoPositionInfo &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOPOSITIONINFOSOURCE");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QGEOPOSITIONINFO");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -465,9 +455,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_ONPOSITIONUPDATED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -492,21 +480,17 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_ONUPDATETIMEOUT)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("updateTimeout()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGeoPositionInfoSource::updateTimeout, [sender, indexOfCodeBlock]() {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOPOSITIONINFOSOURCE");
                 hb_vmEvalBlockV(cb, 1, pSender);
                 hb_itemRelease(pSender);
@@ -516,9 +500,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_ONUPDATETIMEOUT)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;
@@ -543,22 +525,18 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_ONERROR)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QGeoPositionInfoSource::Error)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, QOverload<QGeoPositionInfoSource::Error>::of(&QGeoPositionInfoSource::error),
                              [sender, indexOfCodeBlock](QGeoPositionInfoSource::Error arg1) {
                                auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-                               if (cb != nullptr)
-                               {
+                               if (cb != nullptr) {
                                  auto pSender = Qt5xHb::Signals_return_qobject(sender, "QGEOPOSITIONINFOSOURCE");
                                  auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
                                  hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -570,9 +548,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_ONERROR)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

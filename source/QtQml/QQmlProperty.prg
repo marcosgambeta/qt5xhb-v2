@@ -88,57 +88,43 @@ HB_FUNC_STATIC(QQMLPROPERTY_NEW)
     */
     auto obj = new QQmlProperty();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
     /*
     QQmlProperty(QObject * obj)
     */
     auto obj = new QQmlProperty(PQOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLCONTEXT(2))
-  {
+  } else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLCONTEXT(2)) {
     /*
     QQmlProperty(QObject * obj, QQmlContext * ctxt)
     */
     auto obj = new QQmlProperty(PQOBJECT(1), PQQMLCONTEXT(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLENGINE(2))
-  {
+  } else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLENGINE(2)) {
     /*
     QQmlProperty(QObject * obj, QQmlEngine * engine)
     */
     auto obj = new QQmlProperty(PQOBJECT(1), PQQMLENGINE(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
     /*
     QQmlProperty(QObject * obj, const QString &name)
     */
     auto obj = new QQmlProperty(PQOBJECT(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLCONTEXT(3))
-  {
+  } else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLCONTEXT(3)) {
     /*
     QQmlProperty(QObject * obj, const QString &name, QQmlContext * ctxt)
     */
     auto obj = new QQmlProperty(PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLENGINE(3))
-  {
+  } else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLENGINE(3)) {
     /*
     QQmlProperty(QObject * obj, const QString &name, QQmlEngine * engine)
     */
     auto obj = new QQmlProperty(PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQQMLPROPERTY(1))
-  {
+  } else if (ISNUMPAR(1) && ISQQMLPROPERTY(1)) {
     /*
     QQmlProperty(const QQmlProperty &other)
     */
@@ -166,8 +152,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_DELETE)
 
 HB_FUNC_STATIC(QQMLPROPERTY_CONNECTNOTIFYSIGNAL)
 {
-  if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-  {
+  if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
     /*
     bool connectNotifySignal(QObject * dest, const char * slot) const
     */
@@ -176,9 +161,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_CONNECTNOTIFYSIGNAL)
     if (obj != nullptr) {
       RBOOL(obj->connectNotifySignal(PQOBJECT(1), PCONSTCHAR(2)));
     }
-  }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
     /*
     bool connectNotifySignal(QObject * dest, int method) const
     */
@@ -526,25 +509,19 @@ HB_FUNC_STATIC(QQMLPROPERTY_READ)
     if (obj != nullptr) {
       RQVARIANT(obj->read());
     }
-  }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
     /*
     static QVariant read(QObject * object, const QString &name)
     */
 
     RQVARIANT(QQmlProperty::read(PQOBJECT(1), PQSTRING(2)));
-  }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLCONTEXT(3))
-  {
+  } else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLCONTEXT(3)) {
     /*
     static QVariant read(QObject * object, const QString &name, QQmlContext * ctxt)
     */
 
     RQVARIANT(QQmlProperty::read(PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3)));
-  }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLENGINE(3))
-  {
+  } else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLENGINE(3)) {
     /*
     static QVariant read(QObject * object, const QString &name, QQmlEngine * engine)
     */
@@ -597,8 +574,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_TYPE)
 
 HB_FUNC_STATIC(QQMLPROPERTY_WRITE)
 {
-  if (ISNUMPAR(1) && ISQVARIANT(1))
-  {
+  if (ISNUMPAR(1) && ISQVARIANT(1)) {
     /*
     bool write(const QVariant &value) const
     */
@@ -607,25 +583,19 @@ HB_FUNC_STATIC(QQMLPROPERTY_WRITE)
     if (obj != nullptr) {
       RBOOL(obj->write(*PQVARIANT(1)));
     }
-  }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3))
-  {
+  } else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3)) {
     /*
     static bool write(QObject * object, const QString &name, const QVariant &value)
     */
 
     RBOOL(QQmlProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3)));
-  }
-  else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQQMLCONTEXT(4))
-  {
+  } else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQQMLCONTEXT(4)) {
     /*
     static bool write(QObject * object, const QString &name, const QVariant &value, QQmlContext * ctxt)
     */
 
     RBOOL(QQmlProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQQMLCONTEXT(4)));
-  }
-  else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQQMLENGINE(4))
-  {
+  } else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQQMLENGINE(4)) {
     /*
     static bool write(QObject * object, const QString &name, const QVariant &value, QQmlEngine * engine)
     */
@@ -640,17 +610,14 @@ HB_FUNC_STATIC(QQMLPROPERTY_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -683,8 +650,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

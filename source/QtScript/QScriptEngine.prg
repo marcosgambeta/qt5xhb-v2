@@ -101,9 +101,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEW)
     */
     auto obj = new QScriptEngine();
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
     /*
     QScriptEngine(QObject * parent)
     */
@@ -140,8 +138,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_ABORTEVALUATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISQSCRIPTVALUEORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISQSCRIPTVALUEORNIL(1)) {
 #endif
       obj->abortEvaluation(HB_ISNIL(1) ? QScriptValue() : *static_cast<QScriptValue *>(Qt5xHb::itemGetPtr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +266,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_DEFAULTPROTOTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       auto ptr = new QScriptValue(obj->defaultPrototype(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
@@ -284,8 +280,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_DEFAULTPROTOTYPE)
 
 HB_FUNC_STATIC(QSCRIPTENGINE_EVALUATE)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3))
-  {
+  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
     /*
     QScriptValue evaluate(const QString &program, const QString &fileName = QString(), int lineNumber = 1)
     */
@@ -295,9 +290,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_EVALUATE)
       auto ptr = new QScriptValue(obj->evaluate(PQSTRING(1), OPQSTRING(2, QString()), OPINT(3, 1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQSCRIPTPROGRAM(1))
-  {
+  } else if (ISNUMPAR(1) && ISQSCRIPTPROGRAM(1)) {
     /*
     QScriptValue evaluate(const QScriptProgram &program)
     */
@@ -362,8 +355,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_IMPORTEXTENSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto ptr = new QScriptValue(obj->importExtension(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
@@ -404,8 +396,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISQSCRIPTVALUEORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISQSCRIPTVALUEORNIL(1)) {
 #endif
       obj->installTranslatorFunctions(HB_ISNIL(1) ? QScriptValue()
                                                   : *static_cast<QScriptValue *>(Qt5xHb::itemGetPtr(1)));
@@ -448,8 +439,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWARRAY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       auto ptr = new QScriptValue(obj->newArray(OPUINT(1, 0)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
@@ -470,8 +460,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWDATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATETIME(1))
-    {
+    if (ISNUMPAR(1) && ISQDATETIME(1)) {
 #endif
       auto ptr = new QScriptValue(obj->newDate(*PQDATETIME(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
@@ -495,9 +484,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWOBJECT)
       auto ptr = new QScriptValue(obj->newObject());
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
-  }
-  else if (ISBETWEEN(1, 2) && ISQSCRIPTCLASS(1) && ISQSCRIPTVALUEORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQSCRIPTCLASS(1) && ISQSCRIPTVALUEORNIL(2)) {
     /*
     QScriptValue newObject(QScriptClass * scriptClass, const QScriptValue &data = QScriptValue())
     */
@@ -522,8 +509,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWQMETAOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQMETAOBJECT(1) && ISQSCRIPTVALUEORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQMETAOBJECT(1) && ISQSCRIPTVALUEORNIL(2)) {
 #endif
       auto ptr = new QScriptValue(obj->newQMetaObject(
           PQMETAOBJECT(1), HB_ISNIL(2) ? QScriptValue() : *static_cast<QScriptValue *>(Qt5xHb::itemGetPtr(2))));
@@ -538,8 +524,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWQMETAOBJECT)
 
 HB_FUNC_STATIC(QSCRIPTENGINE_NEWREGEXP)
 {
-  if (ISNUMPAR(1) && ISQREGEXP(1))
-  {
+  if (ISNUMPAR(1) && ISQREGEXP(1)) {
     /*
     QScriptValue newRegExp(const QRegExp &regexp)
     */
@@ -549,9 +534,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWREGEXP)
       auto ptr = new QScriptValue(obj->newRegExp(*PQREGEXP(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     /*
     QScriptValue newRegExp(const QString &pattern, const QString &flags)
     */
@@ -568,8 +551,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWREGEXP)
 
 HB_FUNC_STATIC(QSCRIPTENGINE_NEWVARIANT)
 {
-  if (ISNUMPAR(1) && ISQVARIANT(1))
-  {
+  if (ISNUMPAR(1) && ISQVARIANT(1)) {
     /*
     QScriptValue newVariant(const QVariant &value)
     */
@@ -579,9 +561,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWVARIANT)
       auto ptr = new QScriptValue(obj->newVariant(*PQVARIANT(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
-  }
-  else if (ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQVARIANT(2))
-  {
+  } else if (ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQVARIANT(2)) {
     /*
     QScriptValue newVariant(const QScriptValue &object, const QVariant &value)
     */
@@ -689,8 +669,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->reportAdditionalMemoryCost(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -712,8 +691,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETAGENT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSCRIPTENGINEAGENT(1))
-    {
+    if (ISNUMPAR(1) && ISQSCRIPTENGINEAGENT(1)) {
 #endif
       obj->setAgent(PQSCRIPTENGINEAGENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -735,8 +713,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETDEFAULTPROTOTYPE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSCRIPTVALUE(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSCRIPTVALUE(2)) {
 #endif
       obj->setDefaultPrototype(PINT(1), *PQSCRIPTVALUE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -758,8 +735,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETGLOBALOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSCRIPTVALUE(1))
-    {
+    if (ISNUMPAR(1) && ISQSCRIPTVALUE(1)) {
 #endif
       obj->setGlobalObject(*PQSCRIPTVALUE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -781,8 +757,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setProcessEventsInterval(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -804,8 +779,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_TOOBJECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSCRIPTVALUE(1))
-    {
+    if (ISNUMPAR(1) && ISQSCRIPTVALUE(1)) {
 #endif
       auto ptr = new QScriptValue(obj->toObject(*PQSCRIPTVALUE(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
@@ -826,8 +800,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_TOSTRINGHANDLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto ptr = new QScriptString(obj->toStringHandle(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTSTRING", true);
@@ -927,8 +900,7 @@ static QScriptSyntaxCheckResult checkSyntax(const QString &program)
 HB_FUNC_STATIC(QSCRIPTENGINE_CHECKSYNTAX)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     auto ptr = new QScriptSyntaxCheckResult(QScriptEngine::checkSyntax(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QSCRIPTSYNTAXCHECKRESULT", true);
@@ -948,21 +920,17 @@ HB_FUNC_STATIC(QSCRIPTENGINE_ONSIGNALHANDLEREXCEPTION)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("signalHandlerException(QScriptValue)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QScriptEngine::signalHandlerException, [sender, indexOfCodeBlock](const QScriptValue &arg1) {
               auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-              if (cb != nullptr)
-              {
+              if (cb != nullptr) {
                 auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSCRIPTENGINE");
                 auto pArg1 = Qt5xHb::Signals_return_object((void *)&arg1, "QSCRIPTVALUE");
                 hb_vmEvalBlockV(cb, 2, pSender, pArg1);
@@ -974,9 +942,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_ONSIGNALHANDLEREXCEPTION)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_NEW)
     auto obj = new QNetworkDatagram();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && ISQHOSTADDRESSORNIL(2) && ISNUMORNIL(3))
-  {
+  } else if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && ISQHOSTADDRESSORNIL(2) && ISNUMORNIL(3)) {
     /*
     QNetworkDatagram(const QByteArray &data, const QHostAddress &destinationAddress = QHostAddress(), quint16 port =
     0) [IMPLICIT]
@@ -101,9 +99,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_NEW)
                                     OPQUINT16(3, 0));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQNETWORKDATAGRAM(1))
-  {
+  } else if (ISNUMPAR(1) && ISQNETWORKDATAGRAM(1)) {
     /*
     QNetworkDatagram(const QNetworkDatagram &other)
     */
@@ -146,8 +142,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SWAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKDATAGRAM(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKDATAGRAM(1)) {
 #endif
       obj->swap(*PQNETWORKDATAGRAM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,8 +256,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SETINTERFACEINDEX)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setInterfaceIndex(PUINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -376,8 +370,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SETSENDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQHOSTADDRESS(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQHOSTADDRESS(1) && ISNUMORNIL(2)) {
 #endif
       obj->setSender(*PQHOSTADDRESS(1), OPQUINT16(2, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -401,8 +394,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SETDESTINATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQHOSTADDRESS(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQHOSTADDRESS(1) && HB_ISNUM(2)) {
 #endif
       obj->setDestination(*PQHOSTADDRESS(1), PQUINT16(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -448,8 +440,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SETHOPLIMIT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setHopLimit(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -495,8 +486,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SETDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       obj->setData(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -520,8 +510,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_MAKEREPLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       auto ptr = new QNetworkDatagram(obj->makeReply(*PQBYTEARRAY(1)));
       Qt5xHb::createReturnClass(ptr, "QNETWORKDATAGRAM", true);
@@ -538,17 +527,14 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -581,8 +567,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

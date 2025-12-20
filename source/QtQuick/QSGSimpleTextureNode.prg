@@ -131,8 +131,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETFILTERING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFiltering(static_cast<QSGTexture::Filtering>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,8 +146,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETFILTERING)
 
 HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETRECT)
 {
-  if (ISNUMPAR(1) && ISQRECTF(1))
-  {
+  if (ISNUMPAR(1) && ISQRECTF(1)) {
     /*
     void setRect(const QRectF &r)
     */
@@ -159,9 +157,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETRECT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-  {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
     void setRect(qreal x, qreal y, qreal w, qreal h)
     */
@@ -186,8 +182,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETTEXTURE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSGTEXTURE(1))
-    {
+    if (ISNUMPAR(1) && ISQSGTEXTURE(1)) {
 #endif
       obj->setTexture(PQSGTEXTURE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

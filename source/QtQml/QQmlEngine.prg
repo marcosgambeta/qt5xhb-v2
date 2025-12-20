@@ -93,8 +93,7 @@ RETURN
     */
 HB_FUNC_STATIC(QQMLENGINE_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QQmlEngine(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -128,8 +127,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDIMAGEPROVIDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQQMLIMAGEPROVIDERBASE(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQQMLIMAGEPROVIDERBASE(2)) {
 #endif
       obj->addImageProvider(PQSTRING(1), PQQMLIMAGEPROVIDERBASE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,8 +149,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDIMPORTPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->addImportPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +171,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDNAMEDBUNDLE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
 #endif
       RBOOL(obj->addNamedBundle(PQSTRING(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,8 +191,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDPLUGINPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->addPluginPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,8 +256,7 @@ HB_FUNC_STATIC(QQMLENGINE_IMAGEPROVIDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       auto ptr = obj->imageProvider(PQSTRING(1));
       Qt5xHb::createReturnClass(ptr, "QQMLIMAGEPROVIDERBASE", false);
@@ -429,8 +423,7 @@ HB_FUNC_STATIC(QQMLENGINE_REMOVEIMAGEPROVIDER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->removeImageProvider(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -473,8 +466,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETBASEURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setBaseUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -496,8 +488,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETIMPORTPATHLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       obj->setImportPathList(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -519,8 +510,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETINCUBATIONCONTROLLER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQQMLINCUBATIONCONTROLLER(1))
-    {
+    if (ISNUMPAR(1) && ISQQMLINCUBATIONCONTROLLER(1)) {
 #endif
       obj->setIncubationController(PQQMLINCUBATIONCONTROLLER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -542,8 +532,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETNETWORKACCESSMANAGERFACTORY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQQMLNETWORKACCESSMANAGERFACTORY(1))
-    {
+    if (ISNUMPAR(1) && ISQQMLNETWORKACCESSMANAGERFACTORY(1)) {
 #endif
       obj->setNetworkAccessManagerFactory(PQQMLNETWORKACCESSMANAGERFACTORY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -565,8 +554,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETOFFLINESTORAGEPATH)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setOfflineStoragePath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -588,8 +576,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setOutputWarningsToStandardError(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -611,8 +598,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETPLUGINPATHLIST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       obj->setPluginPathList(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -653,8 +639,7 @@ static QQmlContext * contextForObject(const QObject * object)
 HB_FUNC_STATIC(QQMLENGINE_CONTEXTFOROBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
     auto ptr = QQmlEngine::contextForObject(PQOBJECT(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
@@ -671,8 +656,7 @@ static QQmlEngine::ObjectOwnership objectOwnership(QObject * object)
 HB_FUNC_STATIC(QQMLENGINE_OBJECTOWNERSHIP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
     RENUM(QQmlEngine::objectOwnership(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -688,8 +672,7 @@ static void setContextForObject(QObject * object, QQmlContext * context)
 HB_FUNC_STATIC(QQMLENGINE_SETCONTEXTFOROBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLCONTEXT(2))
-  {
+  if (ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLCONTEXT(2)) {
 #endif
     QQmlEngine::setContextForObject(PQOBJECT(1), PQQMLCONTEXT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -707,8 +690,7 @@ static void setObjectOwnership(QObject * object, QQmlEngine::ObjectOwnership own
 HB_FUNC_STATIC(QQMLENGINE_SETOBJECTOWNERSHIP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
 #endif
     QQmlEngine::setObjectOwnership(PQOBJECT(1), static_cast<QQmlEngine::ObjectOwnership>(hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -729,20 +711,16 @@ HB_FUNC_STATIC(QQMLENGINE_ONQUIT)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("quit()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QQmlEngine::quit, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQMLENGINE");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -752,9 +730,7 @@ HB_FUNC_STATIC(QQMLENGINE_ONQUIT)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

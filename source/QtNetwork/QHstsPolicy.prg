@@ -80,9 +80,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_NEW)
     auto obj = new QHstsPolicy();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISBETWEEN(3, 4) && ISQDATETIME(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISNUMORNIL(4))
-  {
+  } else if (ISBETWEEN(3, 4) && ISQDATETIME(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISNUMORNIL(4)) {
     /*
     QHstsPolicy(const QDateTime &expiry, QHstsPolicy::PolicyFlags flags, const QString &host, QUrl::ParsingMode mode =
     QUrl::DecodedMode)
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_NEW)
                                            : static_cast<QUrl::ParsingMode>(hb_parni(4)));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQHSTSPOLICY(1))
-  {
+  } else if (ISNUMPAR(1) && ISQHSTSPOLICY(1)) {
     /*
     QHstsPolicy(const QHstsPolicy &rhs)
     */
@@ -138,8 +134,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SWAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQHSTSPOLICY(1))
-    {
+    if (ISNUMPAR(1) && ISQHSTSPOLICY(1)) {
 #endif
       obj->swap(*PQHSTSPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +158,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SETHOST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       obj->setHost(PQSTRING(1), HB_ISNIL(2) ? static_cast<QUrl::ParsingMode>(QUrl::DecodedMode)
                                             : static_cast<QUrl::ParsingMode>(hb_parni(2)));
@@ -189,8 +183,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_HOST)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQSTRING(obj->host(HB_ISNIL(1) ? static_cast<QUrl::ComponentFormattingOptions>(QUrl::FullyDecoded)
                                      : static_cast<QUrl::ComponentFormattingOptions>(hb_parni(1))));
@@ -213,8 +206,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SETEXPIRY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATETIME(1))
-    {
+    if (ISNUMPAR(1) && ISQDATETIME(1)) {
 #endif
       obj->setExpiry(*PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,8 +253,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SETINCLUDESSUBDOMAINS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setIncludesSubDomains(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,17 +315,14 @@ HB_FUNC_STATIC(QHSTSPOLICY_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -367,8 +355,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

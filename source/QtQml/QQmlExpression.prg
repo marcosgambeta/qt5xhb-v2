@@ -81,18 +81,14 @@ HB_FUNC_STATIC(QQMLEXPRESSION_NEW)
     */
     auto obj = new QQmlExpression();
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(3, 4) && ISQQMLCONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && ISQOBJECTORNIL(4))
-  {
+  } else if (ISBETWEEN(3, 4) && ISQQMLCONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && ISQOBJECTORNIL(4)) {
     /*
     QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString &expression, QObject * parent = nullptr)
     */
     auto obj = new QQmlExpression(PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 4) && ISQQMLSCRIPTSTRING(1) && ISQQMLCONTEXTORNIL(2) &&
-           ISQOBJECTORNIL(3) && ISQOBJECTORNIL(4))
-  {
+  } else if (ISBETWEEN(1, 4) && ISQQMLSCRIPTSTRING(1) && ISQQMLCONTEXTORNIL(2) && ISQOBJECTORNIL(3) &&
+             ISQOBJECTORNIL(4)) {
     /*
     QQmlExpression(const QQmlScriptString &script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject *
     parent = nullptr)
@@ -236,8 +232,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_EVALUATE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       bool par1;
       RQVARIANT(obj->evaluate(&par1));
@@ -360,8 +355,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETEXPRESSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setExpression(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,8 +377,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETNOTIFYONVALUECHANGED)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setNotifyOnValueChanged(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -406,8 +399,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETSOURCELOCATION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
 #endif
       obj->setSourceLocation(PQSTRING(1), PINT(2), OPINT(3, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -449,20 +441,16 @@ HB_FUNC_STATIC(QQMLEXPRESSION_ONVALUECHANGED)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QQmlExpression::valueChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QQMLEXPRESSION");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -472,9 +460,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_ONVALUECHANGED)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

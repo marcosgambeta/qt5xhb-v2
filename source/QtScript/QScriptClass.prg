@@ -75,8 +75,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSCRIPTCLASS_NEW)
 {
-  if (ISNUMPAR(1) && ISQSCRIPTENGINE(1))
-  {
+  if (ISNUMPAR(1) && ISQSCRIPTENGINE(1)) {
     auto obj = new QScriptClass(PQSCRIPTENGINE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -129,11 +128,10 @@ HB_FUNC_STATIC(QSCRIPTCLASS_EXTENSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQVARIANTORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQVARIANTORNIL(2)) {
 #endif
       RQVARIANT(obj->extension(static_cast<QScriptClass::Extension>(hb_parni(1)),
-                                      HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2))));
+                               HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -171,8 +169,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_NEWITERATOR)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSCRIPTVALUE(1))
-    {
+    if (ISNUMPAR(1) && ISQSCRIPTVALUE(1)) {
 #endif
       auto ptr = obj->newIterator(*PQSCRIPTVALUE(1));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTCLASSPROPERTYITERATOR", false);
@@ -193,8 +190,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3)) {
 #endif
       auto ptr = new QScriptValue(obj->property(*PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
@@ -215,8 +211,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTYFLAGS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3)) {
 #endif
       RENUM(obj->propertyFlags(*PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,8 +255,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_SETPROPERTY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3) && ISQSCRIPTVALUE(4))
-    {
+    if (ISNUMPAR(4) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3) && ISQSCRIPTVALUE(4)) {
 #endif
       obj->setProperty(*PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3), *PQSCRIPTVALUE(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,8 +277,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_SUPPORTSEXTENSION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->supportsExtension(static_cast<QScriptClass::Extension>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,17 +292,14 @@ HB_FUNC_STATIC(QSCRIPTCLASS_NEWFROM)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISOBJECT(1))
-  {
+  if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     auto des = hb_itemPutL(nullptr, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (ISNUMPAR(1) && HB_ISPOINTER(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
     auto ptr = hb_itemPutPtr(nullptr, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -342,8 +332,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_SETSELFDESTRUCTION)
 {
   auto self = hb_stackSelfItem();
 
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     auto des = hb_itemPutL(nullptr, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

@@ -71,8 +71,7 @@ RETURN
 
 HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISQURLORNIL(1) && ISNUMORNIL(2))
-  {
+  if (ISBETWEEN(0, 2) && ISQURLORNIL(1) && ISNUMORNIL(2)) {
     /*
     QWebEngineHttpRequest(const QUrl &url = QUrl(), QWebEngineHttpRequest::Method = QWebEngineHttpRequest::Get)
     */
@@ -89,7 +88,9 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_NEW)
     */
     auto obj = new QWebEngineHttpRequest(*PQWEBENGINEHTTPREQUEST(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else {
+  }
+  else
+  {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -121,8 +122,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SWAP)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWEBENGINEHTTPREQUEST(1))
-    {
+    if (ISNUMPAR(1) && ISQWEBENGINEHTTPREQUEST(1)) {
 #endif
       obj->swap(*PQWEBENGINEHTTPREQUEST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,8 +164,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETMETHOD)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMethod(static_cast<QWebEngineHttpRequest::Method>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,8 +207,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETURL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,8 +249,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETPOSTDATA)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       obj->setPostData(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -274,8 +271,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_HASHEADER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       RBOOL(obj->hasHeader(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,10 +296,8 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_HEADERS)
       auto list = obj->headers();
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -318,9 +312,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_HEADERS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -341,8 +333,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_HEADER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       RQBYTEARRAY(obj->header(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -362,8 +353,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETHEADER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2))
-    {
+    if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2)) {
 #endif
       obj->setHeader(*PQBYTEARRAY(1), *PQBYTEARRAY(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -385,8 +375,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_UNSETHEADER)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       obj->unsetHeader(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

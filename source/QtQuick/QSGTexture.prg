@@ -115,8 +115,7 @@ HB_FUNC_STATIC(QSGTEXTURE_CONVERTTONORMALIZEDSOURCERECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQRECTF(1))
-    {
+    if (ISNUMPAR(1) && ISQRECTF(1)) {
 #endif
       RQRECTF(obj->convertToNormalizedSourceRect(*PQRECTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,8 +296,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETFILTERING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFiltering(static_cast<QSGTexture::Filtering>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,8 +318,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETHORIZONTALWRAPMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setHorizontalWrapMode(static_cast<QSGTexture::WrapMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -343,8 +340,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETMIPMAPFILTERING)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMipmapFiltering(static_cast<QSGTexture::Filtering>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,8 +362,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETVERTICALWRAPMODE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setVerticalWrapMode(static_cast<QSGTexture::WrapMode>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -429,8 +424,7 @@ HB_FUNC_STATIC(QSGTEXTURE_UPDATEBINDOPTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISLOGORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       obj->updateBindOptions(OPBOOL(1, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

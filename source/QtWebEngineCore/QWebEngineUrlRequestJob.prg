@@ -124,8 +124,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REPLY)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQIODEVICE(2))
-    {
+    if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQIODEVICE(2)) {
 #endif
       obj->reply(*PQBYTEARRAY(1), PQIODEVICE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,8 +146,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_FAIL)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->fail(static_cast<QWebEngineUrlRequestJob::Error>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +168,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REDIRECT)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->redirect(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

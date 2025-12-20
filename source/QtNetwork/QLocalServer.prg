@@ -74,8 +74,7 @@ RETURN
     */
 HB_FUNC_STATIC(QLOCALSERVER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     auto obj = new QLocalServer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QLOCALSERVER_SETSOCKETOPTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSocketOptions(static_cast<QLocalServer::SocketOptions>(hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,8 +228,7 @@ HB_FUNC_STATIC(QLOCALSERVER_ISLISTENING)
 
 HB_FUNC_STATIC(QLOCALSERVER_LISTEN)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     bool listen(const QString &name)
     */
@@ -240,9 +237,7 @@ HB_FUNC_STATIC(QLOCALSERVER_LISTEN)
     if (obj != nullptr) {
       RBOOL(obj->listen(PQSTRING(1)));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     bool listen(qintptr socketDescriptor)
     */
@@ -343,8 +338,7 @@ static bool removeServer(const QString &name)
 HB_FUNC_STATIC(QLOCALSERVER_REMOVESERVER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     RBOOL(QLocalServer::removeServer(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,8 +377,7 @@ HB_FUNC_STATIC(QLOCALSERVER_SETMAXPENDINGCONNECTIONS)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMaxPendingConnections(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -406,8 +399,7 @@ HB_FUNC_STATIC(QLOCALSERVER_WAITFORNEWCONNECTION)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISLOGORNIL(2))
-    {
+    if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISLOGORNIL(2)) {
 #endif
       bool par2;
       RBOOL(obj->waitForNewConnection(OPINT(1, 0), &par2));
@@ -451,20 +443,16 @@ HB_FUNC_STATIC(QLOCALSERVER_ONNEWCONNECTION)
 
   auto result = false;
 
-  if (sender != nullptr)
-  {
+  if (sender != nullptr) {
     auto indexOfSignal = sender->metaObject()->indexOfSignal("newConnection()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
-      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock))
-      {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+      if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QLocalServer::newConnection, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
 
-          if (cb != nullptr)
-          {
+          if (cb != nullptr) {
             auto pSender = Qt5xHb::Signals_return_qobject(sender, "QLOCALSERVER");
             hb_vmEvalBlockV(cb, 1, pSender);
             hb_itemRelease(pSender);
@@ -474,9 +462,7 @@ HB_FUNC_STATIC(QLOCALSERVER_ONNEWCONNECTION)
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
-    }
-    else if (ISNUMPAR(0))
-    {
+    } else if (ISNUMPAR(0)) {
       Qt5xHb::Signals_disconnection(sender, indexOfSignal);
       QObject::disconnect(Qt5xHb::Signals_get_connection(sender, indexOfSignal));
       result = true;

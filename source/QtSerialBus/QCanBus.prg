@@ -107,16 +107,13 @@ HB_FUNC_STATIC(QCANBUS_AVAILABLEDEVICES)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
 #endif
       auto list = obj->availableDevices(PQSTRING(1), nullptr);
       auto pDynSym = hb_dynsymFindName("QCANBUSDEVICEINFO");
       auto pArray = hb_itemArrayNew(0);
-      if (pDynSym != nullptr)
-      {
-        for (const auto &item : list)
-        {
+      if (pDynSym != nullptr) {
+        for (const auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -131,9 +128,7 @@ HB_FUNC_STATIC(QCANBUS_AVAILABLEDEVICES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, nullptr, "QCANBUSDEVICEINFO", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -157,8 +152,7 @@ HB_FUNC_STATIC(QCANBUS_CREATEDEVICE)
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3)) {
 #endif
       auto ptr = obj->createDevice(PQSTRING(1), PQSTRING(2), nullptr);
       Qt5xHb::createReturnQObjectClass(ptr, "QCANBUSDEVICE");
