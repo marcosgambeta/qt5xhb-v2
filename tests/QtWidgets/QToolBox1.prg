@@ -29,8 +29,8 @@ FUNCTION Main()
 
    oApp:exec()
 
+   // delete objects
    oToolBox:delete()
-
    oApp:delete()
 
 RETURN NIL

@@ -32,6 +32,7 @@ FUNCTION Main()
 
    WAIT
 
+   // delete objects
    oApp:delete()
 
 RETURN NIL

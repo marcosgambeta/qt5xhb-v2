@@ -44,8 +44,8 @@ FUNCTION Main()
    // inicia o loop de eventos
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

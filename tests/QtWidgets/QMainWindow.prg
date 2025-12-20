@@ -22,9 +22,9 @@ FUNCTION Main()
    oWindow:show()
 
    oApp:exec()
-   
+
+   // delete objects
    oWindow:delete()
-   
    oApp:delete()
 
 RETURN NIL

@@ -19,8 +19,8 @@ FUNCTION Main()
 
    oApp:exec()
 
+   // delete objects
    oQuickWidget:delete()
-
    oApp:delete()
 
 RETURN NIL

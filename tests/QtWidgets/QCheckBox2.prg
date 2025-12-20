@@ -39,8 +39,8 @@ FUNCTION Main()
 
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

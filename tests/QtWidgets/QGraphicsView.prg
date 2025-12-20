@@ -22,10 +22,9 @@ FUNCTION Main()
 
    oApp:exec()
 
+   // delete objects
    oScene:delete()
-
    oView:delete()
-
    oApp:delete()
 
 RETURN NIL

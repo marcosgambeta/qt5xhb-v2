@@ -36,6 +36,7 @@ FUNCTION Main()
 
    oApp:exec()
 
+   // delete objects
    oCamera:delete()
    oVideoWidget:delete()
    oApp:delete()

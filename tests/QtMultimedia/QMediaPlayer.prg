@@ -23,8 +23,8 @@ FUNCTION Main()
 
    oApp:exec()
 
+   // delete objects
    oPlayer:delete()
-
    oApp:delete()
 
 RETURN NIL

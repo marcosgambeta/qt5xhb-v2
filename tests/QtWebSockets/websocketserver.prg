@@ -30,8 +30,8 @@ FUNCTION Main()
 
    oApp:exec()
 
+   // delete objects
    oWebSocketServer:delete()
-
    oApp:delete()
 
 RETURN NIL

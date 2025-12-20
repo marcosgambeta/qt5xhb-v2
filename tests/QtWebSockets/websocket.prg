@@ -90,6 +90,8 @@ FUNCTION Main()
 
    oApp:exec()
 
+   // delete objects
+
    oWindow:delete()
 
    FOR n := 1 TO TOTAL_DE_SOCKETS

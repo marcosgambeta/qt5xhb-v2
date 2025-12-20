@@ -49,8 +49,8 @@ FUNCTION Main()
 
    oApp:exec()
 
+   // delete objects
    oLabel:delete()
-
    oApp:delete()
 
 RETURN NIL

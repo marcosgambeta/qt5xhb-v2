@@ -30,6 +30,7 @@ FUNCTION Main()
 
    endif
 
+   // delete objects
    oFile:delete()
 
 RETURN NIL
