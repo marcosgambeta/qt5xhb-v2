@@ -318,7 +318,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rotationEnabledChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DInputHandler::rotationEnabledChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectionEnabledChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DInputHandler::selectionEnabledChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("zoomAtTargetEnabledChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &Q3DInputHandler::zoomAtTargetEnabledChanged,
                                            [sender, indexOfCodeBlock](bool arg1) {
@@ -459,7 +459,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("zoomEnabledChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DInputHandler::zoomEnabledChanged, [sender, indexOfCodeBlock](bool arg1) {

@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_ONDATAPROXYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("dataProxyChanged(QBarDataProxy*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QBar3DSeries::dataProxyChanged, [sender, indexOfCodeBlock](QBarDataProxy *arg1) {
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_ONSELECTEDBARCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectedBarChanged(QPoint)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QBar3DSeries::selectedBarChanged, [sender, indexOfCodeBlock](const QPoint &arg1) {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_ONMESHANGLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("meshAngleChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QBar3DSeries::meshAngleChanged, [sender, indexOfCodeBlock](float arg1) {

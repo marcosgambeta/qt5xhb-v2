@@ -155,7 +155,7 @@ HB_FUNC_STATIC(Q3DLIGHT_ONAUTOPOSITIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("autoPositionChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DLight::autoPositionChanged, [sender, indexOfCodeBlock](bool arg1) {

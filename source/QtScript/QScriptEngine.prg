@@ -924,7 +924,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_ONSIGNALHANDLEREXCEPTION)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("signalHandlerException(QScriptValue)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QScriptEngine::signalHandlerException, [sender, indexOfCodeBlock](const QScriptValue &arg1) {

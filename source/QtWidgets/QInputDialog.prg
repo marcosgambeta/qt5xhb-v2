@@ -1172,7 +1172,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONDOUBLEVALUECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("doubleValueChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QInputDialog::doubleValueChanged, [sender, indexOfCodeBlock](double arg1) {
@@ -1215,7 +1215,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONDOUBLEVALUESELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("doubleValueSelected(double)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QInputDialog::doubleValueSelected, [sender, indexOfCodeBlock](double arg1) {
@@ -1258,7 +1258,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONINTVALUECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("intValueChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QInputDialog::intValueChanged, [sender, indexOfCodeBlock](int arg1) {
@@ -1301,7 +1301,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONINTVALUESELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("intValueSelected(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QInputDialog::intValueSelected, [sender, indexOfCodeBlock](int arg1) {
@@ -1344,7 +1344,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONTEXTVALUECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textValueChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QInputDialog::textValueChanged, [sender, indexOfCodeBlock](const QString &arg1) {
@@ -1387,7 +1387,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONTEXTVALUESELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("textValueSelected(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QInputDialog::textValueSelected, [sender, indexOfCodeBlock](const QString &arg1) {

@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONFORMATTERCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("formatterChanged(QValue3DAxisFormatter*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QValue3DAxis::formatterChanged, [sender, indexOfCodeBlock](QValue3DAxisFormatter *arg1) {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONLABELFORMATCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelFormatChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QValue3DAxis::labelFormatChanged,
                                            [sender, indexOfCodeBlock](const QString &arg1) {
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONREVERSEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("reversedChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QValue3DAxis::reversedChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONSEGMENTCOUNTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("segmentCountChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QValue3DAxis::segmentCountChanged, [sender, indexOfCodeBlock](int arg1) {
@@ -541,7 +541,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONSUBSEGMENTCOUNTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("subSegmentCountChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QValue3DAxis::subSegmentCountChanged, [sender, indexOfCodeBlock](int arg1) {

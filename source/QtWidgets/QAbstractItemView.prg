@@ -1684,7 +1684,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONACTIVATED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activated(QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstractItemView::activated, [sender, indexOfCodeBlock](const QModelIndex &arg1) {
@@ -1727,7 +1727,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONCLICKED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractItemView::clicked, [sender, indexOfCodeBlock](const QModelIndex &arg1) {
@@ -1770,7 +1770,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONDOUBLECLICKED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("doubleClicked(QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstractItemView::doubleClicked, [sender, indexOfCodeBlock](const QModelIndex &arg1) {
@@ -1813,7 +1813,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONENTERED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("entered(QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractItemView::entered, [sender, indexOfCodeBlock](const QModelIndex &arg1) {
@@ -1856,7 +1856,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONPRESSED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pressed(QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractItemView::pressed, [sender, indexOfCodeBlock](const QModelIndex &arg1) {
@@ -1899,7 +1899,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONVIEWPORTENTERED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("viewportEntered()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAbstractItemView::viewportEntered, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);

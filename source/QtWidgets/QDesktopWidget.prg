@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_ONRESIZED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("resized(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QDesktopWidget::resized, [sender, indexOfCodeBlock](int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_ONSCREENCOUNTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("screenCountChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QDesktopWidget::screenCountChanged, [sender, indexOfCodeBlock](int arg1) {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_ONWORKAREARESIZED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("workAreaResized(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QDesktopWidget::workAreaResized, [sender, indexOfCodeBlock](int arg1) {

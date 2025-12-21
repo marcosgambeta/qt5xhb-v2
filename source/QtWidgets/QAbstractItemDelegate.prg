@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_ONCLOSEEDITOR)
         sender->metaObject()->indexOfSignal("closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractItemDelegate::closeEditor,
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_ONCOMMITDATA)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("commitData(QWidget*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractItemDelegate::commitData, [sender, indexOfCodeBlock](QWidget *arg1) {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sizeHintChanged(QModelIndex)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstractItemDelegate::sizeHintChanged, [sender, indexOfCodeBlock](const QModelIndex &arg1) {

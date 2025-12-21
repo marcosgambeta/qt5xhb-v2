@@ -356,7 +356,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_ONFORMATCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("formatChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QDateTimeAxis::formatChanged, [sender, indexOfCodeBlock](QString arg1) {
@@ -403,7 +403,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_ONMAXCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("maxChanged(QDateTime)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QDateTimeAxis::maxChanged, [sender, indexOfCodeBlock](QDateTime arg1) {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_ONMINCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("minChanged(QDateTime)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QDateTimeAxis::minChanged, [sender, indexOfCodeBlock](QDateTime arg1) {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_ONRANGECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rangeChanged(QDateTime,QDateTime)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QDateTimeAxis::rangeChanged,
                                            [sender, indexOfCodeBlock](QDateTime arg1, QDateTime arg2) {
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_ONTICKCOUNTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("tickCountChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QDateTimeAxis::tickCountChanged, [sender, indexOfCodeBlock](int arg1) {

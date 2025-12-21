@@ -729,7 +729,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONAXISLEFTXCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisLeftXChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGamepad::axisLeftXChanged, [sender, indexOfCodeBlock](double arg1) {
@@ -776,7 +776,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONAXISLEFTYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisLeftYChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGamepad::axisLeftYChanged, [sender, indexOfCodeBlock](double arg1) {
@@ -823,7 +823,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONAXISRIGHTXCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisRightXChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGamepad::axisRightXChanged, [sender, indexOfCodeBlock](double arg1) {
@@ -870,7 +870,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONAXISRIGHTYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisRightYChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGamepad::axisRightYChanged, [sender, indexOfCodeBlock](double arg1) {
@@ -917,7 +917,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONACHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonAChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGamepad::buttonAChanged, [sender, indexOfCodeBlock](bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -963,7 +963,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONBCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonBChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGamepad::buttonBChanged, [sender, indexOfCodeBlock](bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1009,7 +1009,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONCENTERCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonCenterChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGamepad::buttonCenterChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -1056,7 +1056,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONDOWNCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonDownChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGamepad::buttonDownChanged, [sender, indexOfCodeBlock](bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1102,7 +1102,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONGUIDECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonGuideChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGamepad::buttonGuideChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -1149,7 +1149,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONL1CHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonL1Changed(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGamepad::buttonL1Changed, [sender, indexOfCodeBlock](bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1195,7 +1195,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONL2CHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonL2Changed(double)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGamepad::buttonL2Changed, [sender, indexOfCodeBlock](double arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1241,7 +1241,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONL3CHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonL3Changed(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGamepad::buttonL3Changed, [sender, indexOfCodeBlock](bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1287,7 +1287,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONLEFTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonLeftChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGamepad::buttonLeftChanged, [sender, indexOfCodeBlock](bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1333,7 +1333,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONR1CHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonR1Changed(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGamepad::buttonR1Changed, [sender, indexOfCodeBlock](bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1379,7 +1379,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONR2CHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonR2Changed(double)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGamepad::buttonR2Changed, [sender, indexOfCodeBlock](double arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1425,7 +1425,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONR3CHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonR3Changed(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGamepad::buttonR3Changed, [sender, indexOfCodeBlock](bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1471,7 +1471,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONRIGHTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonRightChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGamepad::buttonRightChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -1518,7 +1518,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONSELECTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonSelectChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGamepad::buttonSelectChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -1565,7 +1565,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONSTARTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonStartChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGamepad::buttonStartChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -1612,7 +1612,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONUPCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonUpChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGamepad::buttonUpChanged, [sender, indexOfCodeBlock](bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1658,7 +1658,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONXCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonXChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGamepad::buttonXChanged, [sender, indexOfCodeBlock](bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1704,7 +1704,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("buttonYChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGamepad::buttonYChanged, [sender, indexOfCodeBlock](bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1750,7 +1750,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONCONNECTEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("connectedChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGamepad::connectedChanged, [sender, indexOfCodeBlock](bool arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1796,7 +1796,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONDEVICEIDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("deviceIdChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGamepad::deviceIdChanged, [sender, indexOfCodeBlock](int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1842,7 +1842,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONNAMECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("nameChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QGamepad::nameChanged, [sender, indexOfCodeBlock](QString arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);

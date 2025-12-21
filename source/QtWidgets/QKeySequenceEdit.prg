@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_ONEDITINGFINISHED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("editingFinished()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QKeySequenceEdit::editingFinished, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("keySequenceChanged(QKeySequence)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QKeySequenceEdit::keySequenceChanged, [sender, indexOfCodeBlock](const QKeySequence &arg1) {

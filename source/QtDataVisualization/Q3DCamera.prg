@@ -599,7 +599,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONCAMERAPRESETCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("cameraPresetChanged(Q3DCamera::CameraPreset)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &Q3DCamera::cameraPresetChanged,
                                            [sender, indexOfCodeBlock](Q3DCamera::CameraPreset arg1) {
@@ -646,7 +646,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONMAXZOOMLEVELCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("maxZoomLevelChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DCamera::maxZoomLevelChanged, [sender, indexOfCodeBlock](float arg1) {
@@ -693,7 +693,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONMINZOOMLEVELCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("minZoomLevelChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DCamera::minZoomLevelChanged, [sender, indexOfCodeBlock](float arg1) {
@@ -740,7 +740,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONTARGETCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("targetChanged(QVector3D)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DCamera::targetChanged, [sender, indexOfCodeBlock](const QVector3D &arg1) {
@@ -787,7 +787,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONWRAPXROTATIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("wrapXRotationChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DCamera::wrapXRotationChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -834,7 +834,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONWRAPYROTATIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("wrapYRotationChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DCamera::wrapYRotationChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -881,7 +881,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONXROTATIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("xRotationChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DCamera::xRotationChanged, [sender, indexOfCodeBlock](float arg1) {
@@ -928,7 +928,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONYROTATIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("yRotationChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DCamera::yRotationChanged, [sender, indexOfCodeBlock](float arg1) {
@@ -975,7 +975,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONZOOMLEVELCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("zoomLevelChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DCamera::zoomLevelChanged, [sender, indexOfCodeBlock](float arg1) {

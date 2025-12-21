@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_ONCOOKIEADDED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("cookieAdded(QNetworkCookie)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QWebEngineCookieStore::cookieAdded, [sender, indexOfCodeBlock](const QNetworkCookie &arg1) {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_ONCOOKIEREMOVED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("cookieRemoved(QNetworkCookie)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QWebEngineCookieStore::cookieRemoved, [sender, indexOfCodeBlock](const QNetworkCookie &arg1) {

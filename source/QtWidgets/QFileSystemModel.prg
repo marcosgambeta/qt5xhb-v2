@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ONDIRECTORYLOADED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("directoryLoaded(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QFileSystemModel::directoryLoaded, [sender, indexOfCodeBlock](const QString &arg1) {
@@ -1109,7 +1109,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ONFILERENAMED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("fileRenamed(QString,QString,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QFileSystemModel::fileRenamed,
@@ -1157,7 +1157,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ONROOTPATHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rootPathChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QFileSystemModel::rootPathChanged, [sender, indexOfCodeBlock](const QString &arg1) {

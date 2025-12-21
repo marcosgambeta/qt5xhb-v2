@@ -576,7 +576,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONLOCALECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("localeChanged(QLocale)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QTextToSpeech::localeChanged, [sender, indexOfCodeBlock](const QLocale &arg1) {
@@ -623,7 +623,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONPITCHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("pitchChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QTextToSpeech::pitchChanged, [sender, indexOfCodeBlock](double arg1) {
@@ -670,7 +670,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONRATECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("rateChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QTextToSpeech::rateChanged, [sender, indexOfCodeBlock](double arg1) {
@@ -717,7 +717,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONSTATECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QTextToSpeech::State)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QTextToSpeech::stateChanged,
                                            [sender, indexOfCodeBlock](QTextToSpeech::State arg1) {
@@ -764,7 +764,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONVOICECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("voiceChanged(QVoice)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QTextToSpeech::voiceChanged, [sender, indexOfCodeBlock](const QVoice &arg1) {
@@ -811,7 +811,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONVOLUMECHANGED1)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("volumeChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, QOverload<int>::of(&QTextToSpeech::volumeChanged),
                                            [sender, indexOfCodeBlock](int arg1) {
@@ -858,7 +858,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_ONVOLUMECHANGED2)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("volumeChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, QOverload<double>::of(&QTextToSpeech::volumeChanged),
                                            [sender, indexOfCodeBlock](double arg1) {

@@ -997,7 +997,7 @@ HB_FUNC_STATIC(QMENU_ONABOUTTOHIDE)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToHide()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QMenu::aboutToHide, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1037,7 +1037,7 @@ HB_FUNC_STATIC(QMENU_ONABOUTTOSHOW)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("aboutToShow()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QMenu::aboutToShow, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1077,7 +1077,7 @@ HB_FUNC_STATIC(QMENU_ONHOVERED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("hovered(QAction*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QMenu::hovered, [sender, indexOfCodeBlock](QAction *arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC(QMENU_ONTRIGGERED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("triggered(QAction*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QMenu::triggered, [sender, indexOfCodeBlock](QAction *arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);

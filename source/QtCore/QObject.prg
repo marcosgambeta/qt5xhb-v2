@@ -1969,7 +1969,7 @@ HB_FUNC_STATIC(QOBJECT_ONDESTROYED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("destroyed(QObject*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QObject::destroyed, [sender, indexOfCodeBlock](QObject *arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -2010,7 +2010,7 @@ HB_FUNC_STATIC(QOBJECT_ONOBJECTNAMECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("objectNameChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QObject::objectNameChanged, [sender, indexOfCodeBlock](const QString &arg1) {

@@ -460,7 +460,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_ONCURRENTLOOPCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentLoopChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAnimation::currentLoopChanged, [sender, indexOfCodeBlock](int arg1) {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_ONDIRECTIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("directionChanged(QAbstractAnimation::Direction)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAbstractAnimation::directionChanged,
                                            [sender, indexOfCodeBlock](QAbstractAnimation::Direction arg1) {
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_ONFINISHED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAbstractAnimation::finished, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -588,7 +588,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_ONSTATECHANGED)
         sender->metaObject()->indexOfSignal("stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAbstractAnimation::stateChanged,

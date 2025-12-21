@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QMETADATAREADERCONTROL_ONMETADATACHANGED1)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("metaDataChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, QOverload<>::of(&QMetaDataReaderControl::metaDataChanged), [sender, indexOfCodeBlock]() {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QMETADATAREADERCONTROL_ONMETADATACHANGED2)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("metaDataChanged(QString,QVariant)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, QOverload<const QString &, const QVariant &>::of(&QMetaDataReaderControl::metaDataChanged),
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QMETADATAREADERCONTROL_ONMETADATAAVAILABLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("metaDataAvailableChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QMetaDataReaderControl::metaDataAvailableChanged, [sender, indexOfCodeBlock](bool arg1) {

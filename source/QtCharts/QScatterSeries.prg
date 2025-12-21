@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QSCATTERSERIES_ONBORDERCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("borderColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QScatterSeries::borderColorChanged, [sender, indexOfCodeBlock](QColor arg1) {
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QSCATTERSERIES_ONCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QScatterSeries::colorChanged, [sender, indexOfCodeBlock](QColor arg1) {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC(QSCATTERSERIES_ONMARKERSHAPECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("markerShapeChanged(QScatterSeries::MarkerShape)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QScatterSeries::markerShapeChanged,
                                            [sender, indexOfCodeBlock](QScatterSeries::MarkerShape arg1) {
@@ -541,7 +541,7 @@ HB_FUNC_STATIC(QSCATTERSERIES_ONMARKERSIZECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("markerSizeChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QScatterSeries::markerSizeChanged, [sender, indexOfCodeBlock](qreal arg1) {

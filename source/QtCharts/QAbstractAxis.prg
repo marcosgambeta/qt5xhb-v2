@@ -1515,7 +1515,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("colorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::colorChanged, [sender, indexOfCodeBlock](QColor arg1) {
@@ -1562,7 +1562,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONGRIDLINECOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("gridLineColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAbstractAxis::gridLineColorChanged,
                                            [sender, indexOfCodeBlock](const QColor &arg1) {
@@ -1609,7 +1609,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONGRIDLINEPENCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("gridLinePenChanged(QPen)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::gridLinePenChanged, [sender, indexOfCodeBlock](const QPen &arg1) {
@@ -1656,7 +1656,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONGRIDVISIBLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("gridVisibleChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::gridVisibleChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -1703,7 +1703,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSANGLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsAngleChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::labelsAngleChanged, [sender, indexOfCodeBlock](int arg1) {
@@ -1750,7 +1750,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSBRUSHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsBrushChanged(QBrush)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAbstractAxis::labelsBrushChanged,
                                            [sender, indexOfCodeBlock](const QBrush &arg1) {
@@ -1797,7 +1797,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::labelsColorChanged, [sender, indexOfCodeBlock](QColor arg1) {
@@ -1844,7 +1844,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSFONTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsFontChanged(QFont)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::labelsFontChanged, [sender, indexOfCodeBlock](const QFont &arg1) {
@@ -1891,7 +1891,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLABELSVISIBLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("labelsVisibleChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::labelsVisibleChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -1938,7 +1938,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLINEPENCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("linePenChanged(QPen)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::linePenChanged, [sender, indexOfCodeBlock](const QPen &arg1) {
@@ -1985,7 +1985,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONLINEVISIBLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("lineVisibleChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::lineVisibleChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -2032,7 +2032,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONMINORGRIDLINECOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("minorGridLineColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAbstractAxis::minorGridLineColorChanged,
                                            [sender, indexOfCodeBlock](const QColor &arg1) {
@@ -2079,7 +2079,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONMINORGRIDLINEPENCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("minorGridLinePenChanged(QPen)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAbstractAxis::minorGridLinePenChanged,
                                            [sender, indexOfCodeBlock](const QPen &arg1) {
@@ -2126,7 +2126,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONMINORGRIDVISIBLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("minorGridVisibleChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::minorGridVisibleChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -2173,7 +2173,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONREVERSECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("reverseChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::reverseChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -2220,7 +2220,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESBORDERCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("shadesBorderColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::shadesBorderColorChanged, [sender, indexOfCodeBlock](QColor arg1) {
@@ -2267,7 +2267,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESBRUSHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("shadesBrushChanged(QBrush)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QAbstractAxis::shadesBrushChanged,
                                            [sender, indexOfCodeBlock](const QBrush &arg1) {
@@ -2314,7 +2314,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESCOLORCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("shadesColorChanged(QColor)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::shadesColorChanged, [sender, indexOfCodeBlock](QColor arg1) {
@@ -2361,7 +2361,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESPENCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("shadesPenChanged(QPen)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::shadesPenChanged, [sender, indexOfCodeBlock](const QPen &arg1) {
@@ -2408,7 +2408,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONSHADESVISIBLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("shadesVisibleChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::shadesVisibleChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -2455,7 +2455,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLEBRUSHCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("titleBrushChanged(QBrush)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::titleBrushChanged, [sender, indexOfCodeBlock](const QBrush &arg1) {
@@ -2502,7 +2502,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLEFONTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("titleFontChanged(QFont)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::titleFontChanged, [sender, indexOfCodeBlock](const QFont &arg1) {
@@ -2549,7 +2549,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLETEXTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("titleTextChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::titleTextChanged, [sender, indexOfCodeBlock](const QString &arg1) {
@@ -2596,7 +2596,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONTITLEVISIBLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("titleVisibleChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::titleVisibleChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -2643,7 +2643,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ONVISIBLECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("visibleChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAbstractAxis::visibleChanged, [sender, indexOfCodeBlock](bool arg1) {

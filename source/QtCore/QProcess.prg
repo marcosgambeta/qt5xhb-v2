@@ -1268,7 +1268,7 @@ HB_FUNC_STATIC(QPROCESS_ONERROR)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QProcess::ProcessError)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, QOverload<QProcess::ProcessError>::of(&QProcess::error),
                                            [sender, indexOfCodeBlock](QProcess::ProcessError arg1) {
@@ -1311,7 +1311,7 @@ HB_FUNC_STATIC(QPROCESS_ONFINISHED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("finished(int,QProcess::ExitStatus)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
                                            [sender, indexOfCodeBlock](int arg1, QProcess::ExitStatus arg2) {
@@ -1356,7 +1356,7 @@ HB_FUNC_STATIC(QPROCESS_ONREADYREADSTANDARDERROR)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("readyReadStandardError()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QProcess::readyReadStandardError, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1396,7 +1396,7 @@ HB_FUNC_STATIC(QPROCESS_ONREADYREADSTANDARDOUTPUT)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("readyReadStandardOutput()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QProcess::readyReadStandardOutput, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1436,7 +1436,7 @@ HB_FUNC_STATIC(QPROCESS_ONSTARTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("started()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QProcess::started, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -1476,7 +1476,7 @@ HB_FUNC_STATIC(QPROCESS_ONSTATECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QProcess::ProcessState)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QProcess::stateChanged, [sender, indexOfCodeBlock](QProcess::ProcessState arg1) {
@@ -1520,7 +1520,7 @@ HB_FUNC_STATIC(QPROCESS_ONERROROCCURRED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("errorOccurred(QProcess::ProcessError)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QProcess::errorOccurred, [sender, indexOfCodeBlock](QProcess::ProcessError arg1) {

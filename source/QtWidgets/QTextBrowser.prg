@@ -541,7 +541,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_ONANCHORCLICKED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("anchorClicked(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QTextBrowser::anchorClicked, [sender, indexOfCodeBlock](const QUrl &arg1) {
@@ -584,7 +584,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_ONBACKWARDAVAILABLE)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("backwardAvailable(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QTextBrowser::backwardAvailable, [sender, indexOfCodeBlock](bool arg1) {
@@ -627,7 +627,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_ONFORWARDAVAILABLE)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("forwardAvailable(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QTextBrowser::forwardAvailable, [sender, indexOfCodeBlock](bool arg1) {
@@ -670,7 +670,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_ONHIGHLIGHTED1)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, QOverload<const QUrl &>::of(&QTextBrowser::highlighted),
                                            [sender, indexOfCodeBlock](const QUrl &arg1) {
@@ -713,7 +713,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_ONHIGHLIGHTED2)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("highlighted(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, QOverload<const QString &>::of(&QTextBrowser::highlighted),
                                            [sender, indexOfCodeBlock](const QString &arg1) {
@@ -756,7 +756,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_ONHISTORYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("historyChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QTextBrowser::historyChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -796,7 +796,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_ONSOURCECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("sourceChanged(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QTextBrowser::sourceChanged, [sender, indexOfCodeBlock](const QUrl &arg1) {

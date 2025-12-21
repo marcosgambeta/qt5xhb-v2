@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_ONENABLEDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("enabledChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QGraphicsEffect::enabledChanged, [sender, indexOfCodeBlock](bool arg1) {

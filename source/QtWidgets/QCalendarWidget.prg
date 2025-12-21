@@ -991,7 +991,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_ONACTIVATED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activated(QDate)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCalendarWidget::activated, [sender, indexOfCodeBlock](const QDate &arg1) {
@@ -1034,7 +1034,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_ONCLICKED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("clicked(QDate)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QCalendarWidget::clicked, [sender, indexOfCodeBlock](const QDate &arg1) {
@@ -1077,7 +1077,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_ONCURRENTPAGECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentPageChanged(int,int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QCalendarWidget::currentPageChanged,
                                            [sender, indexOfCodeBlock](int arg1, int arg2) {
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_ONSELECTIONCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectionChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QCalendarWidget::selectionChanged, [sender, indexOfCodeBlock]() {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);

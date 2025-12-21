@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_ONERROROCCURRED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("errorOccurred(QModbusDevice::Error)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QModbusDevice::errorOccurred,
                                            [sender, indexOfCodeBlock](QModbusDevice::Error arg1) {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_ONSTATECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stateChanged(QModbusDevice::State)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QModbusDevice::stateChanged,
                                            [sender, indexOfCodeBlock](QModbusDevice::State arg1) {

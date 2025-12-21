@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_ONERROR)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QAxScript*,int,QString,int,QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAxScriptManager::error,

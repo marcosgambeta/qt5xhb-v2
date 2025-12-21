@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ONDATAPROXYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("dataProxyChanged(QScatterDataProxy*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QScatter3DSeries::dataProxyChanged, [sender, indexOfCodeBlock](QScatterDataProxy *arg1) {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ONITEMSIZECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("itemSizeChanged(float)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QScatter3DSeries::itemSizeChanged, [sender, indexOfCodeBlock](float arg1) {
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ONSELECTEDITEMCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectedItemChanged(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QScatter3DSeries::selectedItemChanged, [sender, indexOfCodeBlock](int arg1) {

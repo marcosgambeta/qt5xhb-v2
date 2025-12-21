@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_ONACTIVEINPUTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("activeInputChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QAudioInputSelectorControl::activeInputChanged, [sender, indexOfCodeBlock](const QString &arg1) {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_ONAVAILABLEINPUTSCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("availableInputsChanged()");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QAudioInputSelectorControl::availableInputsChanged, [sender, indexOfCodeBlock]() {

@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QFONTDIALOG_ONCURRENTFONTCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("currentFontChanged(QFont)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QFontDialog::currentFontChanged, [sender, indexOfCodeBlock](const QFont &arg1) {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC(QFONTDIALOG_ONFONTSELECTED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("fontSelected(QFont)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QFontDialog::fontSelected, [sender, indexOfCodeBlock](const QFont &arg1) {

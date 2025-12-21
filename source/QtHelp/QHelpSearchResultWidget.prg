@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("requestShowLink(QUrl)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QHelpSearchResultWidget::requestShowLink, [sender, indexOfCodeBlock](const QUrl &arg1) {

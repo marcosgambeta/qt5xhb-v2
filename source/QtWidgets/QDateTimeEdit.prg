@@ -1192,7 +1192,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_ONDATECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("dateChanged(QDate)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QDateTimeEdit::dateChanged, [sender, indexOfCodeBlock](const QDate &arg1) {
@@ -1235,7 +1235,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_ONDATETIMECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("dateTimeChanged(QDateTime)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QDateTimeEdit::dateTimeChanged,
                                            [sender, indexOfCodeBlock](const QDateTime &arg1) {
@@ -1278,7 +1278,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_ONTIMECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("timeChanged(QTime)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QDateTimeEdit::timeChanged, [sender, indexOfCodeBlock](const QTime &arg1) {

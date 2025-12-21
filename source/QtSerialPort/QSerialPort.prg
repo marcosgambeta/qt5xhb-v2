@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC(QSERIALPORT_ONBAUDRATECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("baudRateChanged(qint32,QSerialPort::Directions)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QSerialPort::baudRateChanged,
                                            [sender, indexOfCodeBlock](qint32 arg1, QSerialPort::Directions arg2) {
@@ -1091,7 +1091,7 @@ HB_FUNC_STATIC(QSERIALPORT_ONDATABITSCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("dataBitsChanged(QSerialPort::DataBits)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QSerialPort::dataBitsChanged,
                                            [sender, indexOfCodeBlock](QSerialPort::DataBits arg1) {
@@ -1138,7 +1138,7 @@ HB_FUNC_STATIC(QSERIALPORT_ONPARITYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("parityChanged(QSerialPort::Parity)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QSerialPort::parityChanged, [sender, indexOfCodeBlock](QSerialPort::Parity arg1) {
@@ -1185,7 +1185,7 @@ HB_FUNC_STATIC(QSERIALPORT_ONSTOPBITSCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("stopBitsChanged(QSerialPort::StopBits)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QSerialPort::stopBitsChanged,
                                            [sender, indexOfCodeBlock](QSerialPort::StopBits arg1) {
@@ -1232,7 +1232,7 @@ HB_FUNC_STATIC(QSERIALPORT_ONFLOWCONTROLCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("flowControlChanged(QSerialPort::FlowControl)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QSerialPort::flowControlChanged,
                                            [sender, indexOfCodeBlock](QSerialPort::FlowControl arg1) {
@@ -1279,7 +1279,7 @@ HB_FUNC_STATIC(QSERIALPORT_ONDATAERRORPOLICYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QSerialPort::dataErrorPolicyChanged,
                                            [sender, indexOfCodeBlock](QSerialPort::DataErrorPolicy arg1) {
@@ -1326,7 +1326,7 @@ HB_FUNC_STATIC(QSERIALPORT_ONDATATERMINALREADYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("dataTerminalReadyChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QSerialPort::dataTerminalReadyChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -1373,7 +1373,7 @@ HB_FUNC_STATIC(QSERIALPORT_ONREQUESTTOSENDCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("requestToSendChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QSerialPort::requestToSendChanged, [sender, indexOfCodeBlock](bool arg1) {
@@ -1420,7 +1420,7 @@ HB_FUNC_STATIC(QSERIALPORT_ONERROR)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("error(QSerialPort::SerialPortError)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, QOverload<QSerialPort::SerialPortError>::of(&QSerialPort::error),
                                            [sender, indexOfCodeBlock](QSerialPort::SerialPortError arg1) {
@@ -1467,7 +1467,7 @@ HB_FUNC_STATIC(QSERIALPORT_ONSETTINGSRESTOREDONCLOSECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("settingsRestoredOnCloseChanged(bool)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QSerialPort::settingsRestoredOnCloseChanged,
                                            [sender, indexOfCodeBlock](bool arg1) {

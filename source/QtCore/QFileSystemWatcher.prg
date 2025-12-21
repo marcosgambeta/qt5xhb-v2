@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONDIRECTORYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("directoryChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(
             sender, &QFileSystemWatcher::directoryChanged, [sender, indexOfCodeBlock](const QString &arg1) {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONFILECHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("fileChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QFileSystemWatcher::fileChanged, [sender, indexOfCodeBlock](const QString &arg1) {

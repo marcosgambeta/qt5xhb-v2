@@ -789,7 +789,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREDELETE)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("beforeDelete(int)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QSqlTableModel::beforeDelete, [sender, indexOfCodeBlock](int arg1) {
           auto cb = Qt5xHb::Signals_return_codeblock(indexOfCodeBlock);
@@ -831,7 +831,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREINSERT)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("beforeInsert(QSqlRecord)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QSqlTableModel::beforeInsert, [sender, indexOfCodeBlock](QSqlRecord &arg1) {
@@ -874,7 +874,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREUPDATE)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("beforeUpdate(int,QSqlRecord)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QSqlTableModel::beforeUpdate,
                                            [sender, indexOfCodeBlock](int arg1, QSqlRecord &arg2) {
@@ -919,7 +919,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ONPRIMEINSERT)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("primeInsert(int,QSqlRecord)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QSqlTableModel::primeInsert,
                                            [sender, indexOfCodeBlock](int arg1, QSqlRecord &arg2) {

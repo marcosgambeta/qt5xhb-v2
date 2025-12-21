@@ -468,7 +468,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ONAXISXCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisXChanged(QValue3DAxis*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DScatter::axisXChanged, [sender, indexOfCodeBlock](QValue3DAxis *arg1) {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ONAXISYCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisYChanged(QValue3DAxis*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DScatter::axisYChanged, [sender, indexOfCodeBlock](QValue3DAxis *arg1) {
@@ -562,7 +562,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ONAXISZCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("axisZChanged(QValue3DAxis*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &Q3DScatter::axisZChanged, [sender, indexOfCodeBlock](QValue3DAxis *arg1) {
@@ -609,7 +609,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ONSELECTEDSERIESCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("selectedSeriesChanged(QScatter3DSeries*)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &Q3DScatter::selectedSeriesChanged,
                                            [sender, indexOfCodeBlock](QScatter3DSeries *arg1) {

@@ -538,7 +538,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_ONVALUECHANGED1)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(double)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, QOverload<double>::of(&QDoubleSpinBox::valueChanged),
                                            [sender, indexOfCodeBlock](double arg1) {
@@ -581,7 +581,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_ONVALUECHANGED2)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("valueChanged(QString)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, QOverload<const QString &>::of(&QDoubleSpinBox::valueChanged),
                                            [sender, indexOfCodeBlock](const QString &arg1) {

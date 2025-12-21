@@ -424,7 +424,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_ONPROGRESSCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("progressChanged(qreal)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection =
             QObject::connect(sender, &QQmlComponent::progressChanged, [sender, indexOfCodeBlock](qreal arg1) {
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_ONSTATUSCHANGED)
     auto indexOfSignal = sender->metaObject()->indexOfSignal("statusChanged(QQmlComponent::Status)");
     auto indexOfCodeBlock = -1;
 
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
+    if (ISNUMPAR(1) && ISBLOCKORSYMBOL(1)) {
       if (Qt5xHb::Signals_connection(sender, indexOfSignal, indexOfCodeBlock)) {
         auto connection = QObject::connect(sender, &QQmlComponent::statusChanged,
                                            [sender, indexOfCodeBlock](QQmlComponent::Status arg1) {
