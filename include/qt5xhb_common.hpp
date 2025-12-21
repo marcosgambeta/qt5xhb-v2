@@ -30,6 +30,8 @@
 #define ISARRAYORNIL(n) (HB_ISARRAY(n)||HB_ISNIL(n))
 #define ISOBJECTORNIL(n) (HB_ISOBJECT(n)||HB_ISNIL(n))
 
+#define ISBLOCKORSYMBOL(n) (HB_ISBLOCK(n)||HB_ISSYMBOL(n))
+
 // TOCHECK: for xHarbour compatibility
 #ifdef __XHARBOUR__
 #define hb_objGetClass(x) HB_OBJ_CLASS(x)
