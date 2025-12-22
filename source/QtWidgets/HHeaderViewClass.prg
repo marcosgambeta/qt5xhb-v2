@@ -9,8 +9,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPAINTER
-REQUEST QRECT
+REQUEST QPainter
+REQUEST QRect
 #endif
 
 CLASS HHeaderView INHERIT QHeaderView
@@ -42,6 +42,8 @@ RETURN
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) auto p = (HHeaderView *)Qt5xHb::itemGetPtrStackSelfItem()
+
     /*
     HHeaderView(Qt::Orientation orientation, QWidget *parent = nullptr)
     */
@@ -51,13 +53,13 @@ HB_FUNC_STATIC(HHEADERVIEW_NEW)
     auto obj = new HHeaderView((Qt::Orientation)hb_parni(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
-    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC(HHEADERVIEW_DELETE)
 {
-  auto obj = (HHeaderView *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -81,7 +83,7 @@ void setPaintSectionCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HHEADERVIEW_SETPAINTSECTIONCB)
 {
-  auto obj = (HHeaderView *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -90,7 +92,7 @@ HB_FUNC_STATIC(HHEADERVIEW_SETPAINTSECTIONCB)
       obj->setPaintSectionCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
-      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
