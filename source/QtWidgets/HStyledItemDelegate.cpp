@@ -114,9 +114,9 @@ QSize HStyledItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QM
   QSize size;
 
   if (m_sizeHintBlock != nullptr) {
-    // auto pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
+    // auto pOption = hb_itemPutPtr( nullptr, (QStyleOptionViewItem *) &option );
     auto pOption = Qt5xHb::returnQStyleOptionViewItemObject((void *)&option);
-    // auto pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    // auto pIndex = hb_itemPutPtr( nullptr, (QModelIndex *) &index );
     auto pIndex = Qt5xHb::returnQModelIndexObject((void *)&index);
 
     auto pRet = hb_vmEvalBlockV(m_sizeHintBlock, 2, pOption, pIndex);
@@ -142,9 +142,9 @@ QString HStyledItemDelegate::displayText(const QVariant &value, const QLocale &l
   QString data = value.toString();
 
   if (m_displayTextBlock != nullptr) {
-    // auto pValue = hb_itemPutPtr( NULL, (QVariant *) &value );
+    // auto pValue = hb_itemPutPtr( nullptr, (QVariant *) &value );
     auto pValue = Qt5xHb::returnQVariantObject((void *)&value);
-    // auto pLocale = hb_itemPutPtr( NULL, (QLocale *) &locale );
+    // auto pLocale = hb_itemPutPtr( nullptr, (QLocale *) &locale );
     auto pLocale = Qt5xHb::returnQLocaleObject((void *)&locale);
 
     auto pRet = hb_vmEvalBlockV(m_displayTextBlock, 2, pValue, pLocale);
@@ -171,11 +171,11 @@ QWidget *HStyledItemDelegate::createEditor(QWidget *parent, const QStyleOptionVi
   QWidget *widget = nullptr;
 
   if (m_createEditorBlock != nullptr) {
-    // auto pParent = hb_itemPutPtr( NULL, (QWidget *) parent );
+    // auto pParent = hb_itemPutPtr( nullptr, (QWidget *) parent );
     auto pParent = Qt5xHb::returnQWidgetObject(parent);
-    // auto pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
+    // auto pOption = hb_itemPutPtr( nullptr, (QStyleOptionViewItem *) &option );
     auto pOption = Qt5xHb::returnQStyleOptionViewItemObject((void *)&option);
-    // auto pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    // auto pIndex = hb_itemPutPtr( nullptr, (QModelIndex *) &index );
     auto pIndex = Qt5xHb::returnQModelIndexObject((void *)&index);
 
     auto pRet = hb_vmEvalBlockV(m_createEditorBlock, 3, pParent, pOption, pIndex);
