@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECTF
+REQUEST QRectF
 #endif
 
 CLASS QGraphicsBlurEffect INHERIT QGraphicsWidget
@@ -57,9 +57,9 @@ RETURN
 #include <QtWidgets/QGraphicsBlurEffect>
 #endif
 
-    /*
-    QGraphicsBlurEffect(QObject * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGraphicsBlurEffect *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QGraphicsBlurEffect(QObject *parent = nullptr)
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_NEW)
 
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_DELETE)
 {
-  auto obj = qobject_cast<QGraphicsBlurEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -87,12 +87,10 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QGraphicsBlurEffect::BlurHints blurHints() const
-*/
+// QGraphicsBlurEffect::BlurHints blurHints() const
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURHINTS)
 {
-  auto obj = qobject_cast<QGraphicsBlurEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,12 +105,10 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURHINTS)
   }
 }
 
-/*
-qreal blurRadius() const
-*/
+// qreal blurRadius() const
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURRADIUS)
 {
-  auto obj = qobject_cast<QGraphicsBlurEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,12 +123,10 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURRADIUS)
   }
 }
 
-/*
-virtual QRectF boundingRectFor(const QRectF &rect) const
-*/
+// virtual QRectF boundingRectFor(const QRectF &rect) const
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR)
 {
-  auto obj = qobject_cast<QGraphicsBlurEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,12 +141,10 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR)
   }
 }
 
-/*
-void setBlurHints(QGraphicsBlurEffect::BlurHints hints)
-*/
+// void setBlurHints(QGraphicsBlurEffect::BlurHints hints)
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURHINTS)
 {
-  auto obj = qobject_cast<QGraphicsBlurEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,12 +161,10 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURHINTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setBlurRadius(qreal blurRadius)
-*/
+// void setBlurRadius(qreal blurRadius)
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURRADIUS)
 {
-  auto obj = qobject_cast<QGraphicsBlurEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,12 +181,10 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURRADIUS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void blurHintsChanged(QGraphicsBlurEffect::BlurHints hints)
-*/
+// void blurHintsChanged(QGraphicsBlurEffect::BlurHints hints)
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED)
 {
-  auto sender = qobject_cast<QGraphicsBlurEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -219,7 +207,6 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -235,12 +222,10 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED)
   hb_retl(result);
 }
 
-/*
-void blurRadiusChanged(qreal radius)
-*/
+// void blurRadiusChanged(qreal radius)
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED)
 {
-  auto sender = qobject_cast<QGraphicsBlurEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -262,7 +247,6 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

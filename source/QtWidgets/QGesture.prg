@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINTF
+REQUEST QPointF
 #endif
 
 CLASS QGesture INHERIT QObject
@@ -57,9 +57,9 @@ RETURN
 #include <QtWidgets/QGesture>
 #endif
 
-    /*
-    QGesture(QObject * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGesture *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QGesture(QObject *parent = nullptr)
 HB_FUNC_STATIC(QGESTURE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QGESTURE_NEW)
 
 HB_FUNC_STATIC(QGESTURE_DELETE)
 {
-  auto obj = qobject_cast<QGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -87,12 +87,10 @@ HB_FUNC_STATIC(QGESTURE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QGesture::GestureCancelPolicy gestureCancelPolicy() const
-*/
+// QGesture::GestureCancelPolicy gestureCancelPolicy() const
 HB_FUNC_STATIC(QGESTURE_GESTURECANCELPOLICY)
 {
-  auto obj = qobject_cast<QGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,12 +105,10 @@ HB_FUNC_STATIC(QGESTURE_GESTURECANCELPOLICY)
   }
 }
 
-/*
-Qt::GestureType gestureType() const
-*/
+// Qt::GestureType gestureType() const
 HB_FUNC_STATIC(QGESTURE_GESTURETYPE)
 {
-  auto obj = qobject_cast<QGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,12 +123,10 @@ HB_FUNC_STATIC(QGESTURE_GESTURETYPE)
   }
 }
 
-/*
-bool hasHotSpot() const
-*/
+// bool hasHotSpot() const
 HB_FUNC_STATIC(QGESTURE_HASHOTSPOT)
 {
-  auto obj = qobject_cast<QGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,12 +141,10 @@ HB_FUNC_STATIC(QGESTURE_HASHOTSPOT)
   }
 }
 
-/*
-QPointF hotSpot() const
-*/
+// QPointF hotSpot() const
 HB_FUNC_STATIC(QGESTURE_HOTSPOT)
 {
-  auto obj = qobject_cast<QGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,12 +159,10 @@ HB_FUNC_STATIC(QGESTURE_HOTSPOT)
   }
 }
 
-/*
-void setGestureCancelPolicy(QGesture::GestureCancelPolicy policy)
-*/
+// void setGestureCancelPolicy(QGesture::GestureCancelPolicy policy)
 HB_FUNC_STATIC(QGESTURE_SETGESTURECANCELPOLICY)
 {
-  auto obj = qobject_cast<QGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,12 +179,10 @@ HB_FUNC_STATIC(QGESTURE_SETGESTURECANCELPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHotSpot(const QPointF &value)
-*/
+// void setHotSpot(const QPointF &value)
 HB_FUNC_STATIC(QGESTURE_SETHOTSPOT)
 {
-  auto obj = qobject_cast<QGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,12 +199,10 @@ HB_FUNC_STATIC(QGESTURE_SETHOTSPOT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::GestureState state() const
-*/
+// Qt::GestureState state() const
 HB_FUNC_STATIC(QGESTURE_STATE)
 {
-  auto obj = qobject_cast<QGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,12 +217,10 @@ HB_FUNC_STATIC(QGESTURE_STATE)
   }
 }
 
-/*
-void unsetHotSpot()
-*/
+// void unsetHotSpot()
 HB_FUNC_STATIC(QGESTURE_UNSETHOTSPOT)
 {
-  auto obj = qobject_cast<QGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

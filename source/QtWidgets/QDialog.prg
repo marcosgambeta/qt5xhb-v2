@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
-REQUEST QWIDGET
+REQUEST QSize
+REQUEST QWidget
 #endif
 
 CLASS QDialog INHERIT QWidget
@@ -74,9 +74,7 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QDialog *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-    /*
-    QDialog(QWidget * parent = nullptr, Qt::WindowFlags f = 0)
-    */
+// QDialog(QWidget *parent = nullptr, Qt::WindowFlags f = 0)
 HB_FUNC_STATIC(QDIALOG_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
@@ -105,9 +103,7 @@ HB_FUNC_STATIC(QDIALOG_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isSizeGripEnabled() const
-*/
+// bool isSizeGripEnabled() const
 HB_FUNC_STATIC(QDIALOG_ISSIZEGRIPENABLED)
 {
   GET_PTR_FROM_SELF(obj);
@@ -125,9 +121,7 @@ HB_FUNC_STATIC(QDIALOG_ISSIZEGRIPENABLED)
   }
 }
 
-/*
-void setSizeGripEnabled(bool)
-*/
+// void setSizeGripEnabled(bool)
 HB_FUNC_STATIC(QDIALOG_SETSIZEGRIPENABLED)
 {
   GET_PTR_FROM_SELF(obj);
@@ -147,9 +141,7 @@ HB_FUNC_STATIC(QDIALOG_SETSIZEGRIPENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int result() const
-*/
+// int result() const
 HB_FUNC_STATIC(QDIALOG_RESULT)
 {
   GET_PTR_FROM_SELF(obj);
@@ -167,9 +159,7 @@ HB_FUNC_STATIC(QDIALOG_RESULT)
   }
 }
 
-/*
-void setModal(bool modal)
-*/
+// void setModal(bool modal)
 HB_FUNC_STATIC(QDIALOG_SETMODAL)
 {
   GET_PTR_FROM_SELF(obj);
@@ -189,9 +179,7 @@ HB_FUNC_STATIC(QDIALOG_SETMODAL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setResult(int i)
-*/
+// void setResult(int i)
 HB_FUNC_STATIC(QDIALOG_SETRESULT)
 {
   GET_PTR_FROM_SELF(obj);
@@ -211,9 +199,7 @@ HB_FUNC_STATIC(QDIALOG_SETRESULT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize minimumSizeHint() const
-*/
+// QSize minimumSizeHint() const
 HB_FUNC_STATIC(QDIALOG_MINIMUMSIZEHINT)
 {
   GET_PTR_FROM_SELF(obj);
@@ -231,9 +217,7 @@ HB_FUNC_STATIC(QDIALOG_MINIMUMSIZEHINT)
   }
 }
 
-/*
-void setVisible(bool visible)
-*/
+// void setVisible(bool visible)
 HB_FUNC_STATIC(QDIALOG_SETVISIBLE)
 {
   GET_PTR_FROM_SELF(obj);
@@ -253,9 +237,7 @@ HB_FUNC_STATIC(QDIALOG_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize sizeHint() const
-*/
+// QSize sizeHint() const
 HB_FUNC_STATIC(QDIALOG_SIZEHINT)
 {
   GET_PTR_FROM_SELF(obj);
@@ -273,9 +255,7 @@ HB_FUNC_STATIC(QDIALOG_SIZEHINT)
   }
 }
 
-/*
-virtual void accept()
-*/
+// virtual void accept()
 HB_FUNC_STATIC(QDIALOG_ACCEPT)
 {
   GET_PTR_FROM_SELF(obj);
@@ -295,9 +275,7 @@ HB_FUNC_STATIC(QDIALOG_ACCEPT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void done(int r)
-*/
+// virtual void done(int r)
 HB_FUNC_STATIC(QDIALOG_DONE)
 {
   GET_PTR_FROM_SELF(obj);
@@ -317,9 +295,7 @@ HB_FUNC_STATIC(QDIALOG_DONE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int exec()
-*/
+// virtual int exec()
 HB_FUNC_STATIC(QDIALOG_EXEC)
 {
   GET_PTR_FROM_SELF(obj);
@@ -337,9 +313,7 @@ HB_FUNC_STATIC(QDIALOG_EXEC)
   }
 }
 
-/*
-virtual void open()
-*/
+// virtual void open()
 HB_FUNC_STATIC(QDIALOG_OPEN)
 {
   GET_PTR_FROM_SELF(obj);
@@ -359,9 +333,7 @@ HB_FUNC_STATIC(QDIALOG_OPEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void reject()
-*/
+// virtual void reject()
 HB_FUNC_STATIC(QDIALOG_REJECT)
 {
   GET_PTR_FROM_SELF(obj);
@@ -381,9 +353,7 @@ HB_FUNC_STATIC(QDIALOG_REJECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::Orientation orientation() const
-*/
+// Qt::Orientation orientation() const
 HB_FUNC_STATIC(QDIALOG_ORIENTATION)
 {
   GET_PTR_FROM_SELF(obj);
@@ -401,9 +371,7 @@ HB_FUNC_STATIC(QDIALOG_ORIENTATION)
   }
 }
 
-/*
-void setOrientation(Qt::Orientation orientation)
-*/
+// void setOrientation(Qt::Orientation orientation)
 HB_FUNC_STATIC(QDIALOG_SETORIENTATION)
 {
   GET_PTR_FROM_SELF(obj);
@@ -423,9 +391,7 @@ HB_FUNC_STATIC(QDIALOG_SETORIENTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget * extension() const
-*/
+// QWidget *extension() const
 HB_FUNC_STATIC(QDIALOG_EXTENSION)
 {
   GET_PTR_FROM_SELF(obj);
@@ -444,9 +410,7 @@ HB_FUNC_STATIC(QDIALOG_EXTENSION)
   }
 }
 
-/*
-void setExtension(QWidget * extension)
-*/
+// void setExtension(QWidget *extension)
 HB_FUNC_STATIC(QDIALOG_SETEXTENSION)
 {
   GET_PTR_FROM_SELF(obj);
@@ -466,9 +430,7 @@ HB_FUNC_STATIC(QDIALOG_SETEXTENSION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void showExtension(bool)
-*/
+// void showExtension(bool)
 HB_FUNC_STATIC(QDIALOG_SHOWEXTENSION)
 {
   GET_PTR_FROM_SELF(obj);
@@ -488,9 +450,7 @@ HB_FUNC_STATIC(QDIALOG_SHOWEXTENSION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void accepted()
-*/
+// void accepted()
 HB_FUNC_STATIC(QDIALOG_ONACCEPTED)
 {
   GET_PTR_FROM_SELF(sender);
@@ -512,7 +472,6 @@ HB_FUNC_STATIC(QDIALOG_ONACCEPTED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -528,9 +487,7 @@ HB_FUNC_STATIC(QDIALOG_ONACCEPTED)
   hb_retl(result);
 }
 
-/*
-void finished(int result)
-*/
+// void finished(int result)
 HB_FUNC_STATIC(QDIALOG_ONFINISHED)
 {
   GET_PTR_FROM_SELF(sender);
@@ -554,7 +511,6 @@ HB_FUNC_STATIC(QDIALOG_ONFINISHED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -570,9 +526,7 @@ HB_FUNC_STATIC(QDIALOG_ONFINISHED)
   hb_retl(result);
 }
 
-/*
-void rejected()
-*/
+// void rejected()
 HB_FUNC_STATIC(QDIALOG_ONREJECTED)
 {
   GET_PTR_FROM_SELF(sender);
@@ -594,7 +548,6 @@ HB_FUNC_STATIC(QDIALOG_ONREJECTED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

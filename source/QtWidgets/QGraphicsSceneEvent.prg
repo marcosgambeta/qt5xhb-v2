@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QWIDGET
+REQUEST QWidget
 #endif
 
 CLASS QGraphicsSceneEvent INHERIT QEvent
@@ -47,9 +47,11 @@ RETURN
 #include <QtWidgets/QGraphicsSceneEvent>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QGraphicsSceneEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSSCENEEVENT_DELETE)
 {
-  auto obj = static_cast<QGraphicsSceneEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -62,12 +64,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget * widget() const
-*/
+// QWidget *widget() const
 HB_FUNC_STATIC(QGRAPHICSSCENEEVENT_WIDGET)
 {
-  auto obj = static_cast<QGraphicsSceneEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

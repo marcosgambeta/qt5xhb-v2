@@ -48,20 +48,20 @@ RETURN
 #include <QtWidgets/QDateEdit>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QDateEdit *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QDATEEDIT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
-    /*
-    QDateEdit(QWidget * parent = nullptr)
-    */
+    // QDateEdit(QWidget *parent = nullptr)
     auto obj = new QDateEdit(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(1, 2) && ISQDATE(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QDateEdit(const QDate &date, QWidget * parent = nullptr)
-    */
+    // QDateEdit(const QDate &date, QWidget *parent = nullptr)
     auto obj = new QDateEdit(*PQDATE(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QDATEEDIT_NEW)
 
 HB_FUNC_STATIC(QDATEEDIT_DELETE)
 {
-  auto obj = qobject_cast<QDateEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);

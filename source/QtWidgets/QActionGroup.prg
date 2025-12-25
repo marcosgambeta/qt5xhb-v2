@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACTION
+REQUEST QAction
 #endif
 
 CLASS QActionGroup INHERIT QObject
@@ -62,9 +62,9 @@ RETURN
 #include <QtWidgets/QActionGroup>
 #endif
 
-    /*
-    QActionGroup(QObject * parent)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QActionGroup(QObject *parent)
 HB_FUNC_STATIC(QACTIONGROUP_NEW)
 {
   if (ISNUMPAR(1) && ISQOBJECT(1)) {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QACTIONGROUP_NEW)
 
 HB_FUNC_STATIC(QACTIONGROUP_DELETE)
 {
-  auto obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -95,47 +95,42 @@ HB_FUNC_STATIC(QACTIONGROUP_DELETE)
 HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
 {
   if (ISNUMPAR(1) && ISQACTION(1)) {
-    /*
-    QAction * addAction(QAction * action)
-    */
-    auto obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // QAction *addAction(QAction *action)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = obj->addAction(PQACTION(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
+
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QAction * addAction(const QString &text)
-    */
-    auto obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // QAction *addAction(const QString &text)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = obj->addAction(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
+
   } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
-    /*
-    QAction * addAction(const QIcon &icon, const QString &text)
-    */
-    auto obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // QAction *addAction(const QIcon &icon, const QString &text)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = obj->addAction(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
                                 PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-QAction * checkedAction() const
-*/
+// QAction *checkedAction() const
 HB_FUNC_STATIC(QACTIONGROUP_CHECKEDACTION)
 {
-  auto obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,12 +146,10 @@ HB_FUNC_STATIC(QACTIONGROUP_CHECKEDACTION)
   }
 }
 
-/*
-bool isEnabled() const
-*/
+// bool isEnabled() const
 HB_FUNC_STATIC(QACTIONGROUP_ISENABLED)
 {
-  auto obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,12 +164,10 @@ HB_FUNC_STATIC(QACTIONGROUP_ISENABLED)
   }
 }
 
-/*
-bool isExclusive() const
-*/
+// bool isExclusive() const
 HB_FUNC_STATIC(QACTIONGROUP_ISEXCLUSIVE)
 {
-  auto obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,12 +182,10 @@ HB_FUNC_STATIC(QACTIONGROUP_ISEXCLUSIVE)
   }
 }
 
-/*
-bool isVisible() const
-*/
+// bool isVisible() const
 HB_FUNC_STATIC(QACTIONGROUP_ISVISIBLE)
 {
-  auto obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,12 +200,10 @@ HB_FUNC_STATIC(QACTIONGROUP_ISVISIBLE)
   }
 }
 
-/*
-void removeAction(QAction * action)
-*/
+// void removeAction(QAction *action)
 HB_FUNC_STATIC(QACTIONGROUP_REMOVEACTION)
 {
-  auto obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,12 +220,10 @@ HB_FUNC_STATIC(QACTIONGROUP_REMOVEACTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDisabled(bool b)
-*/
+// void setDisabled(bool b)
 HB_FUNC_STATIC(QACTIONGROUP_SETDISABLED)
 {
-  auto obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,12 +240,10 @@ HB_FUNC_STATIC(QACTIONGROUP_SETDISABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEnabled(bool)
-*/
+// void setEnabled(bool)
 HB_FUNC_STATIC(QACTIONGROUP_SETENABLED)
 {
-  auto obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,12 +260,10 @@ HB_FUNC_STATIC(QACTIONGROUP_SETENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setExclusive(bool)
-*/
+// void setExclusive(bool)
 HB_FUNC_STATIC(QACTIONGROUP_SETEXCLUSIVE)
 {
-  auto obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,12 +280,10 @@ HB_FUNC_STATIC(QACTIONGROUP_SETEXCLUSIVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVisible(bool)
-*/
+// void setVisible(bool)
 HB_FUNC_STATIC(QACTIONGROUP_SETVISIBLE)
 {
-  auto obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,12 +300,10 @@ HB_FUNC_STATIC(QACTIONGROUP_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void hovered(QAction * action)
-*/
+// void hovered(QAction *action)
 HB_FUNC_STATIC(QACTIONGROUP_ONHOVERED)
 {
-  auto sender = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -347,7 +324,6 @@ HB_FUNC_STATIC(QACTIONGROUP_ONHOVERED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -363,12 +339,10 @@ HB_FUNC_STATIC(QACTIONGROUP_ONHOVERED)
   hb_retl(result);
 }
 
-/*
-void triggered(QAction * action)
-*/
+// void triggered(QAction *action)
 HB_FUNC_STATIC(QACTIONGROUP_ONTRIGGERED)
 {
-  auto sender = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -389,7 +363,6 @@ HB_FUNC_STATIC(QACTIONGROUP_ONTRIGGERED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QGRAPHICSANCHOR
-REQUEST QGRAPHICSLAYOUTITEM
+REQUEST QGraphicsAnchor
+REQUEST QGraphicsLayoutItem
 #endif
 
 CLASS QGraphicsAnchorLayout INHERIT QGraphicsLayout
@@ -62,9 +62,9 @@ RETURN
 #include <QtWidgets/QGraphicsAnchorLayout>
 #endif
 
-    /*
-    QGraphicsAnchorLayout(QGraphicsLayoutItem * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QGraphicsAnchorLayout *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QGraphicsAnchorLayout(QGraphicsLayoutItem *parent = nullptr)
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQGRAPHICSLAYOUTITEMORNIL(1)) {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_NEW)
 
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_DELETE)
 {
-  auto obj = static_cast<QGraphicsAnchorLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -91,13 +91,11 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QGraphicsAnchor * addAnchor(QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem *
-secondItem, Qt::AnchorPoint secondEdge)
-*/
+// QGraphicsAnchor *addAnchor(QGraphicsLayoutItem *firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem
+// *secondItem, Qt::AnchorPoint secondEdge)
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDANCHOR)
 {
-  auto obj = static_cast<QGraphicsAnchorLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,13 +112,11 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDANCHOR)
   }
 }
 
-/*
-void addAnchors(QGraphicsLayoutItem * firstItem, QGraphicsLayoutItem * secondItem, Qt::Orientations orientations =
-Qt::Horizontal | Qt::Vertical)
-*/
+// void addAnchors(QGraphicsLayoutItem *firstItem, QGraphicsLayoutItem *secondItem, Qt::Orientations orientations =
+// Qt::Horizontal | Qt::Vertical)
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDANCHORS)
 {
-  auto obj = static_cast<QGraphicsAnchorLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,13 +135,11 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDANCHORS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addCornerAnchors(QGraphicsLayoutItem * firstItem, Qt::Corner firstCorner, QGraphicsLayoutItem * secondItem,
-Qt::Corner secondCorner)
-*/
+// void addCornerAnchors(QGraphicsLayoutItem *firstItem, Qt::Corner firstCorner, QGraphicsLayoutItem *secondItem,
+// Qt::Corner secondCorner)
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDCORNERANCHORS)
 {
-  auto obj = static_cast<QGraphicsAnchorLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,13 +157,11 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDCORNERANCHORS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QGraphicsAnchor * anchor(QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem,
-Qt::AnchorPoint secondEdge)
-*/
+// QGraphicsAnchor *anchor(QGraphicsLayoutItem *firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem *secondItem,
+// Qt::AnchorPoint secondEdge)
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ANCHOR)
 {
-  auto obj = static_cast<QGraphicsAnchorLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,12 +178,10 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ANCHOR)
   }
 }
 
-/*
-qreal horizontalSpacing() const
-*/
+// qreal horizontalSpacing() const
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_HORIZONTALSPACING)
 {
-  auto obj = static_cast<QGraphicsAnchorLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,12 +196,10 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_HORIZONTALSPACING)
   }
 }
 
-/*
-void setHorizontalSpacing(qreal spacing)
-*/
+// void setHorizontalSpacing(qreal spacing)
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_SETHORIZONTALSPACING)
 {
-  auto obj = static_cast<QGraphicsAnchorLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,12 +216,10 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_SETHORIZONTALSPACING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSpacing(qreal spacing)
-*/
+// void setSpacing(qreal spacing)
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_SETSPACING)
 {
-  auto obj = static_cast<QGraphicsAnchorLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,12 +236,10 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_SETSPACING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalSpacing(qreal spacing)
-*/
+// void setVerticalSpacing(qreal spacing)
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_SETVERTICALSPACING)
 {
-  auto obj = static_cast<QGraphicsAnchorLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,12 +256,10 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_SETVERTICALSPACING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal verticalSpacing() const
-*/
+// qreal verticalSpacing() const
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_VERTICALSPACING)
 {
-  auto obj = static_cast<QGraphicsAnchorLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,12 +274,10 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_VERTICALSPACING)
   }
 }
 
-/*
-virtual int count() const
-*/
+// virtual int count() const
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_COUNT)
 {
-  auto obj = static_cast<QGraphicsAnchorLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -312,12 +292,10 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_COUNT)
   }
 }
 
-/*
-virtual void invalidate()
-*/
+// virtual void invalidate()
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_INVALIDATE)
 {
-  auto obj = static_cast<QGraphicsAnchorLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -334,12 +312,10 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_INVALIDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QGraphicsLayoutItem * itemAt(int index) const
-*/
+// virtual QGraphicsLayoutItem *itemAt(int index) const
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ITEMAT)
 {
-  auto obj = static_cast<QGraphicsAnchorLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -355,12 +331,10 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ITEMAT)
   }
 }
 
-/*
-virtual void removeAt(int index)
-*/
+// virtual void removeAt(int index)
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_REMOVEAT)
 {
-  auto obj = static_cast<QGraphicsAnchorLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,12 +351,10 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_REMOVEAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setGeometry(const QRectF &geom)
-*/
+// virtual void setGeometry(const QRectF &geom)
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_SETGEOMETRY)
 {
-  auto obj = static_cast<QGraphicsAnchorLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

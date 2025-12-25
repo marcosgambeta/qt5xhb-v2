@@ -11,11 +11,11 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCALENDARWIDGET
-REQUEST QDATE
-REQUEST QDATETIME
-REQUEST QSIZE
-REQUEST QTIME
+REQUEST QCalendarWidget
+REQUEST QDate
+REQUEST QDateTime
+REQUEST QSize
+REQUEST QTime
 #endif
 
 CLASS QDateTimeEdit INHERIT QAbstractSpinBox
@@ -107,32 +107,30 @@ RETURN
 
 #include <QtWidgets/QCalendarWidget>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QDATETIMEEDIT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
-    /*
-    QDateTimeEdit(QWidget * parent = nullptr)
-    */
+    // QDateTimeEdit(QWidget *parent = nullptr)
     auto obj = new QDateTimeEdit(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(1, 2) && ISQDATETIME(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QDateTimeEdit(const QDateTime &datetime, QWidget * parent = nullptr)
-    */
+    // QDateTimeEdit(const QDateTime &datetime, QWidget *parent = nullptr)
     auto obj = new QDateTimeEdit(*PQDATETIME(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(1, 2) && ISQDATE(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QDateTimeEdit(const QDate &date, QWidget * parent = nullptr)
-    */
+    // QDateTimeEdit(const QDate &date, QWidget *parent = nullptr)
     auto obj = new QDateTimeEdit(*PQDATE(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(1, 2) && ISQTIME(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QDateTimeEdit(const QTime &time, QWidget * parent = nullptr)
-    */
+    // QDateTimeEdit(const QTime &time, QWidget *parent = nullptr)
     auto obj = new QDateTimeEdit(*PQTIME(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -140,7 +138,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_NEW)
 
 HB_FUNC_STATIC(QDATETIMEEDIT_DELETE)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -155,12 +153,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool calendarPopup() const
-*/
+// bool calendarPopup() const
 HB_FUNC_STATIC(QDATETIMEEDIT_CALENDARPOPUP)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,12 +171,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CALENDARPOPUP)
   }
 }
 
-/*
-QCalendarWidget * calendarWidget() const
-*/
+// QCalendarWidget *calendarWidget() const
 HB_FUNC_STATIC(QDATETIMEEDIT_CALENDARWIDGET)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,12 +190,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CALENDARWIDGET)
   }
 }
 
-/*
-void clearMaximumDate()
-*/
+// void clearMaximumDate()
 HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMAXIMUMDATE)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,12 +210,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMAXIMUMDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearMaximumDateTime()
-*/
+// void clearMaximumDateTime()
 HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMAXIMUMDATETIME)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,12 +230,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMAXIMUMDATETIME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearMaximumTime()
-*/
+// void clearMaximumTime()
 HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMAXIMUMTIME)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,12 +250,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMAXIMUMTIME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearMinimumDate()
-*/
+// void clearMinimumDate()
 HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMINIMUMDATE)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,12 +270,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMINIMUMDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearMinimumDateTime()
-*/
+// void clearMinimumDateTime()
 HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMINIMUMDATETIME)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,12 +290,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMINIMUMDATETIME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearMinimumTime()
-*/
+// void clearMinimumTime()
 HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMINIMUMTIME)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -328,12 +310,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMINIMUMTIME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDateTimeEdit::Section currentSection() const
-*/
+// QDateTimeEdit::Section currentSection() const
 HB_FUNC_STATIC(QDATETIMEEDIT_CURRENTSECTION)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,12 +328,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CURRENTSECTION)
   }
 }
 
-/*
-int currentSectionIndex() const
-*/
+// int currentSectionIndex() const
 HB_FUNC_STATIC(QDATETIMEEDIT_CURRENTSECTIONINDEX)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,19 +346,16 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CURRENTSECTIONINDEX)
   }
 }
 
-/*
-QDate date() const
-*/
+// QDate date() const
 HB_FUNC_STATIC(QDATETIMEEDIT_DATE)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QDate(obj->date());
-      Qt5xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->date());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -389,19 +364,16 @@ HB_FUNC_STATIC(QDATETIMEEDIT_DATE)
   }
 }
 
-/*
-QDateTime dateTime() const
-*/
+// QDateTime dateTime() const
 HB_FUNC_STATIC(QDATETIMEEDIT_DATETIME)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QDateTime(obj->dateTime());
-      Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->dateTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -410,12 +382,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_DATETIME)
   }
 }
 
-/*
-QString displayFormat() const
-*/
+// QString displayFormat() const
 HB_FUNC_STATIC(QDATETIMEEDIT_DISPLAYFORMAT)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -430,12 +400,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_DISPLAYFORMAT)
   }
 }
 
-/*
-QDateTimeEdit::Sections displayedSections() const
-*/
+// QDateTimeEdit::Sections displayedSections() const
 HB_FUNC_STATIC(QDATETIMEEDIT_DISPLAYEDSECTIONS)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -450,19 +418,16 @@ HB_FUNC_STATIC(QDATETIMEEDIT_DISPLAYEDSECTIONS)
   }
 }
 
-/*
-QDate maximumDate() const
-*/
+// QDate maximumDate() const
 HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMDATE)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QDate(obj->maximumDate());
-      Qt5xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->maximumDate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -471,19 +436,16 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMDATE)
   }
 }
 
-/*
-QDateTime maximumDateTime() const
-*/
+// QDateTime maximumDateTime() const
 HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMDATETIME)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QDateTime(obj->maximumDateTime());
-      Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->maximumDateTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -492,19 +454,16 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMDATETIME)
   }
 }
 
-/*
-QTime maximumTime() const
-*/
+// QTime maximumTime() const
 HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMTIME)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QTime(obj->maximumTime());
-      Qt5xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->maximumTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -513,19 +472,16 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMTIME)
   }
 }
 
-/*
-QDate minimumDate() const
-*/
+// QDate minimumDate() const
 HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMDATE)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QDate(obj->minimumDate());
-      Qt5xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->minimumDate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -534,19 +490,16 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMDATE)
   }
 }
 
-/*
-QDateTime minimumDateTime() const
-*/
+// QDateTime minimumDateTime() const
 HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMDATETIME)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QDateTime(obj->minimumDateTime());
-      Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->minimumDateTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -555,19 +508,16 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMDATETIME)
   }
 }
 
-/*
-QTime minimumTime() const
-*/
+// QTime minimumTime() const
 HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMTIME)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QTime(obj->minimumTime());
-      Qt5xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->minimumTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -576,12 +526,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMTIME)
   }
 }
 
-/*
-QDateTimeEdit::Section sectionAt(int index) const
-*/
+// QDateTimeEdit::Section sectionAt(int index) const
 HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONAT)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -596,12 +544,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONAT)
   }
 }
 
-/*
-int sectionCount() const
-*/
+// int sectionCount() const
 HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONCOUNT)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -616,12 +562,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONCOUNT)
   }
 }
 
-/*
-QString sectionText(QDateTimeEdit::Section section) const
-*/
+// QString sectionText(QDateTimeEdit::Section section) const
 HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONTEXT)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -636,12 +580,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONTEXT)
   }
 }
 
-/*
-void setCalendarPopup(bool enable)
-*/
+// void setCalendarPopup(bool enable)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETCALENDARPOPUP)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -658,12 +600,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCALENDARPOPUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCalendarWidget(QCalendarWidget * calendarWidget)
-*/
+// void setCalendarWidget(QCalendarWidget *calendarWidget)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETCALENDARWIDGET)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -680,12 +620,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCALENDARWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCurrentSection(QDateTimeEdit::Section section)
-*/
+// void setCurrentSection(QDateTimeEdit::Section section)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETCURRENTSECTION)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -702,12 +640,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCURRENTSECTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCurrentSectionIndex(int index)
-*/
+// void setCurrentSectionIndex(int index)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETCURRENTSECTIONINDEX)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -724,12 +660,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCURRENTSECTIONINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDateRange(const QDate &min, const QDate &max)
-*/
+// void setDateRange(const QDate &min, const QDate &max)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETDATERANGE)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -746,12 +680,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDATERANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDateTimeRange(const QDateTime &min, const QDateTime &max)
-*/
+// void setDateTimeRange(const QDateTime &min, const QDateTime &max)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETDATETIMERANGE)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -768,12 +700,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDATETIMERANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDisplayFormat(const QString &format)
-*/
+// void setDisplayFormat(const QString &format)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETDISPLAYFORMAT)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -790,12 +720,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDISPLAYFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMaximumDate(const QDate &max)
-*/
+// void setMaximumDate(const QDate &max)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMDATE)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -812,12 +740,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMaximumDateTime(const QDateTime &dt)
-*/
+// void setMaximumDateTime(const QDateTime &dt)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMDATETIME)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -834,12 +760,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMDATETIME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMaximumTime(const QTime &max)
-*/
+// void setMaximumTime(const QTime &max)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMTIME)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -856,12 +780,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMTIME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMinimumDate(const QDate &min)
-*/
+// void setMinimumDate(const QDate &min)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMDATE)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -878,12 +800,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMinimumDateTime(const QDateTime &dt)
-*/
+// void setMinimumDateTime(const QDateTime &dt)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMDATETIME)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -900,12 +820,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMDATETIME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMinimumTime(const QTime &min)
-*/
+// void setMinimumTime(const QTime &min)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMTIME)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -922,12 +840,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMTIME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSelectedSection(QDateTimeEdit::Section section)
-*/
+// void setSelectedSection(QDateTimeEdit::Section section)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETSELECTEDSECTION)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -944,12 +860,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETSELECTEDSECTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTimeRange(const QTime &min, const QTime &max)
-*/
+// void setTimeRange(const QTime &min, const QTime &max)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETTIMERANGE)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -966,12 +880,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETTIMERANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTimeSpec(Qt::TimeSpec spec)
-*/
+// void setTimeSpec(Qt::TimeSpec spec)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETTIMESPEC)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -988,19 +900,16 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETTIMESPEC)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTime time() const
-*/
+// QTime time() const
 HB_FUNC_STATIC(QDATETIMEEDIT_TIME)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QTime(obj->time());
-      Qt5xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->time());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1009,12 +918,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_TIME)
   }
 }
 
-/*
-Qt::TimeSpec timeSpec() const
-*/
+// Qt::TimeSpec timeSpec() const
 HB_FUNC_STATIC(QDATETIMEEDIT_TIMESPEC)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1029,12 +936,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_TIMESPEC)
   }
 }
 
-/*
-virtual void clear()
-*/
+// virtual void clear()
 HB_FUNC_STATIC(QDATETIMEEDIT_CLEAR)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1051,12 +956,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool event(QEvent * event)
-*/
+// virtual bool event(QEvent *event)
 HB_FUNC_STATIC(QDATETIMEEDIT_EVENT)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1071,12 +974,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_EVENT)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QDATETIMEEDIT_SIZEHINT)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1091,12 +992,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SIZEHINT)
   }
 }
 
-/*
-virtual void stepBy(int steps)
-*/
+// virtual void stepBy(int steps)
 HB_FUNC_STATIC(QDATETIMEEDIT_STEPBY)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1113,12 +1012,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_STEPBY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDate(const QDate &date)
-*/
+// void setDate(const QDate &date)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETDATE)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1135,12 +1032,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDateTime(const QDateTime &dateTime)
-*/
+// void setDateTime(const QDateTime &dateTime)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETDATETIME)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1157,12 +1052,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDATETIME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTime(const QTime &time)
-*/
+// void setTime(const QTime &time)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETTIME)
 {
-  auto obj = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1179,12 +1072,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETTIME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void dateChanged(const QDate &date)
-*/
+// void dateChanged(const QDate &date)
 HB_FUNC_STATIC(QDATETIMEEDIT_ONDATECHANGED)
 {
-  auto sender = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1206,7 +1097,6 @@ HB_FUNC_STATIC(QDATETIMEEDIT_ONDATECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1222,12 +1112,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_ONDATECHANGED)
   hb_retl(result);
 }
 
-/*
-void dateTimeChanged(const QDateTime &datetime)
-*/
+// void dateTimeChanged(const QDateTime &datetime)
 HB_FUNC_STATIC(QDATETIMEEDIT_ONDATETIMECHANGED)
 {
-  auto sender = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1249,7 +1137,6 @@ HB_FUNC_STATIC(QDATETIMEEDIT_ONDATETIMECHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1265,12 +1152,10 @@ HB_FUNC_STATIC(QDATETIMEEDIT_ONDATETIMECHANGED)
   hb_retl(result);
 }
 
-/*
-void timeChanged(const QTime &time)
-*/
+// void timeChanged(const QTime &time)
 HB_FUNC_STATIC(QDATETIMEEDIT_ONTIMECHANGED)
 {
-  auto sender = qobject_cast<QDateTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1292,7 +1177,6 @@ HB_FUNC_STATIC(QDATETIMEEDIT_ONTIMECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

@@ -48,9 +48,9 @@ RETURN
 #include <QtWidgets/QCommonStyle>
 #endif
 
-    /*
-    QCommonStyle()
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCommonStyle *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QCommonStyle()
 HB_FUNC_STATIC(QCOMMONSTYLE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_NEW)
 
 HB_FUNC_STATIC(QCOMMONSTYLE_DELETE)
 {
-  auto obj = qobject_cast<QCommonStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);

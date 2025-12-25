@@ -11,10 +11,10 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMODELINDEX
-REQUEST QRECT
-REQUEST QSIZE
-REQUEST QWIDGET
+REQUEST QModelIndex
+REQUEST QRect
+REQUEST QSize
+REQUEST QWidget
 #endif
 
 CLASS QColumnView INHERIT QAbstractItemView
@@ -76,9 +76,9 @@ RETURN
 #include <QtWidgets/QColumnView>
 #endif
 
-    /*
-    QColumnView(QWidget * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QColumnView(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QCOLUMNVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_NEW)
 
 HB_FUNC_STATIC(QCOLUMNVIEW_DELETE)
 {
-  auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -106,12 +106,10 @@ HB_FUNC_STATIC(QCOLUMNVIEW_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<int> columnWidths() const
-*/
+// QList<int> columnWidths() const
 HB_FUNC_STATIC(QCOLUMNVIEW_COLUMNWIDTHS)
 {
-  auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,12 +125,10 @@ HB_FUNC_STATIC(QCOLUMNVIEW_COLUMNWIDTHS)
   }
 }
 
-/*
-QWidget * previewWidget() const
-*/
+// QWidget *previewWidget() const
 HB_FUNC_STATIC(QCOLUMNVIEW_PREVIEWWIDGET)
 {
-  auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,12 +144,10 @@ HB_FUNC_STATIC(QCOLUMNVIEW_PREVIEWWIDGET)
   }
 }
 
-/*
-bool resizeGripsVisible() const
-*/
+// bool resizeGripsVisible() const
 HB_FUNC_STATIC(QCOLUMNVIEW_RESIZEGRIPSVISIBLE)
 {
-  auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,12 +162,10 @@ HB_FUNC_STATIC(QCOLUMNVIEW_RESIZEGRIPSVISIBLE)
   }
 }
 
-/*
-void setColumnWidths(const QList<int> &list)
-*/
+// void setColumnWidths(const QList<int> &list)
 HB_FUNC_STATIC(QCOLUMNVIEW_SETCOLUMNWIDTHS)
 {
-  auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,12 +190,10 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETCOLUMNWIDTHS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPreviewWidget(QWidget * widget)
-*/
+// void setPreviewWidget(QWidget *widget)
 HB_FUNC_STATIC(QCOLUMNVIEW_SETPREVIEWWIDGET)
 {
-  auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,12 +210,10 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETPREVIEWWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setResizeGripsVisible(bool visible)
-*/
+// void setResizeGripsVisible(bool visible)
 HB_FUNC_STATIC(QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE)
 {
-  auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,12 +230,10 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QModelIndex indexAt(const QPoint &point) const
-*/
+// virtual QModelIndex indexAt(const QPoint &point) const
 HB_FUNC_STATIC(QCOLUMNVIEW_INDEXAT)
 {
-  auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,12 +248,10 @@ HB_FUNC_STATIC(QCOLUMNVIEW_INDEXAT)
   }
 }
 
-/*
-virtual void scrollTo(const QModelIndex &index, QColumnView::ScrollHint hint = QColumnView::EnsureVisible)
-*/
+// virtual void scrollTo(const QModelIndex &index, QColumnView::ScrollHint hint = QColumnView::EnsureVisible)
 HB_FUNC_STATIC(QCOLUMNVIEW_SCROLLTO)
 {
-  auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,12 +269,10 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SCROLLTO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void selectAll()
-*/
+// virtual void selectAll()
 HB_FUNC_STATIC(QCOLUMNVIEW_SELECTALL)
 {
-  auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -307,12 +289,10 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SELECTALL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setModel(QAbstractItemModel * model)
-*/
+// virtual void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC(QCOLUMNVIEW_SETMODEL)
 {
-  auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,12 +309,10 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETMODEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setRootIndex(const QModelIndex &index)
-*/
+// virtual void setRootIndex(const QModelIndex &index)
 HB_FUNC_STATIC(QCOLUMNVIEW_SETROOTINDEX)
 {
-  auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -351,12 +329,10 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETROOTINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setSelectionModel(QItemSelectionModel * newSelectionModel)
-*/
+// virtual void setSelectionModel(QItemSelectionModel *newSelectionModel)
 HB_FUNC_STATIC(QCOLUMNVIEW_SETSELECTIONMODEL)
 {
-  auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,12 +349,10 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETSELECTIONMODEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QCOLUMNVIEW_SIZEHINT)
 {
-  auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -393,12 +367,10 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SIZEHINT)
   }
 }
 
-/*
-virtual QRect visualRect(const QModelIndex &index) const
-*/
+// virtual QRect visualRect(const QModelIndex &index) const
 HB_FUNC_STATIC(QCOLUMNVIEW_VISUALRECT)
 {
-  auto obj = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -413,12 +385,10 @@ HB_FUNC_STATIC(QCOLUMNVIEW_VISUALRECT)
   }
 }
 
-/*
-void updatePreviewWidget(const QModelIndex &index)
-*/
+// void updatePreviewWidget(const QModelIndex &index)
 HB_FUNC_STATIC(QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET)
 {
-  auto sender = qobject_cast<QColumnView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -440,7 +410,6 @@ HB_FUNC_STATIC(QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

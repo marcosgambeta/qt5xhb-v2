@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVECTOR3D
+REQUEST QVector3D
 #endif
 
 CLASS QGraphicsScale INHERIT QGraphicsTransform
@@ -64,9 +64,9 @@ RETURN
 #include <QtWidgets/QGraphicsScale>
 #endif
 
-    /*
-    QGraphicsScale(QObject * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGraphicsScale *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QGraphicsScale(QObject *parent = nullptr)
 HB_FUNC_STATIC(QGRAPHICSSCALE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_NEW)
 
 HB_FUNC_STATIC(QGRAPHICSSCALE_DELETE)
 {
-  auto obj = qobject_cast<QGraphicsScale *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -94,19 +94,16 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVector3D origin() const
-*/
+// QVector3D origin() const
 HB_FUNC_STATIC(QGRAPHICSSCALE_ORIGIN)
 {
-  auto obj = qobject_cast<QGraphicsScale *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QVector3D(obj->origin());
-      Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
+      RQVECTOR3D(obj->origin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -115,12 +112,10 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ORIGIN)
   }
 }
 
-/*
-void setOrigin(const QVector3D &point)
-*/
+// void setOrigin(const QVector3D &point)
 HB_FUNC_STATIC(QGRAPHICSSCALE_SETORIGIN)
 {
-  auto obj = qobject_cast<QGraphicsScale *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,12 +132,10 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_SETORIGIN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setXScale(qreal)
-*/
+// void setXScale(qreal)
 HB_FUNC_STATIC(QGRAPHICSSCALE_SETXSCALE)
 {
-  auto obj = qobject_cast<QGraphicsScale *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,12 +152,10 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_SETXSCALE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setYScale(qreal)
-*/
+// void setYScale(qreal)
 HB_FUNC_STATIC(QGRAPHICSSCALE_SETYSCALE)
 {
-  auto obj = qobject_cast<QGraphicsScale *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,12 +172,10 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_SETYSCALE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setZScale(qreal)
-*/
+// void setZScale(qreal)
 HB_FUNC_STATIC(QGRAPHICSSCALE_SETZSCALE)
 {
-  auto obj = qobject_cast<QGraphicsScale *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,12 +192,10 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_SETZSCALE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal xScale() const
-*/
+// qreal xScale() const
 HB_FUNC_STATIC(QGRAPHICSSCALE_XSCALE)
 {
-  auto obj = qobject_cast<QGraphicsScale *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,12 +210,10 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_XSCALE)
   }
 }
 
-/*
-qreal yScale() const
-*/
+// qreal yScale() const
 HB_FUNC_STATIC(QGRAPHICSSCALE_YSCALE)
 {
-  auto obj = qobject_cast<QGraphicsScale *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,12 +228,10 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_YSCALE)
   }
 }
 
-/*
-qreal zScale() const
-*/
+// qreal zScale() const
 HB_FUNC_STATIC(QGRAPHICSSCALE_ZSCALE)
 {
-  auto obj = qobject_cast<QGraphicsScale *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,12 +246,10 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ZSCALE)
   }
 }
 
-/*
-virtual void applyTo(QMatrix4x4 * matrix) const
-*/
+// virtual void applyTo(QMatrix4x4 *matrix) const
 HB_FUNC_STATIC(QGRAPHICSSCALE_APPLYTO)
 {
-  auto obj = qobject_cast<QGraphicsScale *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,12 +266,10 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_APPLYTO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void originChanged()
-*/
+// void originChanged()
 HB_FUNC_STATIC(QGRAPHICSSCALE_ONORIGINCHANGED)
 {
-  auto sender = qobject_cast<QGraphicsScale *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -309,7 +288,6 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ONORIGINCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -325,12 +303,10 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ONORIGINCHANGED)
   hb_retl(result);
 }
 
-/*
-void scaleChanged()
-*/
+// void scaleChanged()
 HB_FUNC_STATIC(QGRAPHICSSCALE_ONSCALECHANGED)
 {
-  auto sender = qobject_cast<QGraphicsScale *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -349,7 +325,6 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ONSCALECHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -365,12 +340,10 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ONSCALECHANGED)
   hb_retl(result);
 }
 
-/*
-void xScaleChanged()
-*/
+// void xScaleChanged()
 HB_FUNC_STATIC(QGRAPHICSSCALE_ONXSCALECHANGED)
 {
-  auto sender = qobject_cast<QGraphicsScale *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -389,7 +362,6 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ONXSCALECHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -405,12 +377,10 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ONXSCALECHANGED)
   hb_retl(result);
 }
 
-/*
-void yScaleChanged()
-*/
+// void yScaleChanged()
 HB_FUNC_STATIC(QGRAPHICSSCALE_ONYSCALECHANGED)
 {
-  auto sender = qobject_cast<QGraphicsScale *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -429,7 +399,6 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ONYSCALECHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -445,12 +414,10 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ONYSCALECHANGED)
   hb_retl(result);
 }
 
-/*
-void zScaleChanged()
-*/
+// void zScaleChanged()
 HB_FUNC_STATIC(QGRAPHICSSCALE_ONZSCALECHANGED)
 {
-  auto sender = qobject_cast<QGraphicsScale *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -469,7 +436,6 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ONZSCALECHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

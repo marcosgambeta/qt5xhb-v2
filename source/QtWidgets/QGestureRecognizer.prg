@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QGESTURE
+REQUEST QGesture
 #endif
 
 CLASS QGestureRecognizer
@@ -62,9 +62,11 @@ RETURN
 
 #include <QtWidgets/QGesture>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QGestureRecognizer *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGESTURERECOGNIZER_DELETE)
 {
-  auto obj = static_cast<QGestureRecognizer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -77,12 +79,10 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QGesture * create(QObject * target)
-*/
+// virtual QGesture *create(QObject *target)
 HB_FUNC_STATIC(QGESTURERECOGNIZER_CREATE)
 {
-  auto obj = static_cast<QGestureRecognizer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -98,12 +98,10 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_CREATE)
   }
 }
 
-/*
-virtual QGestureRecognizer::Result recognize(QGesture * gesture, QObject * watched, QEvent * event) = 0
-*/
+// virtual QGestureRecognizer::Result recognize(QGesture *gesture, QObject *watched, QEvent *event) = 0
 HB_FUNC_STATIC(QGESTURERECOGNIZER_RECOGNIZE)
 {
-  auto obj = static_cast<QGestureRecognizer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,12 +116,10 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_RECOGNIZE)
   }
 }
 
-/*
-virtual void reset(QGesture * gesture)
-*/
+// virtual void reset(QGesture *gesture)
 HB_FUNC_STATIC(QGESTURERECOGNIZER_RESET)
 {
-  auto obj = static_cast<QGestureRecognizer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,9 +136,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_RESET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static Qt::GestureType registerRecognizer(QGestureRecognizer * recognizer)
-*/
+// static Qt::GestureType registerRecognizer(QGestureRecognizer *recognizer)
 HB_FUNC_STATIC(QGESTURERECOGNIZER_REGISTERRECOGNIZER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,9 +150,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_REGISTERRECOGNIZER)
 #endif
 }
 
-/*
-static void unregisterRecognizer(Qt::GestureType type)
-*/
+// static void unregisterRecognizer(Qt::GestureType type)
 HB_FUNC_STATIC(QGESTURERECOGNIZER_UNREGISTERRECOGNIZER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

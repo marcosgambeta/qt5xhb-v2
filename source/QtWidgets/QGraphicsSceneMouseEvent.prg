@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINT
-REQUEST QPOINTF
+REQUEST QPoint
+REQUEST QPointF
 #endif
 
 CLASS QGraphicsSceneMouseEvent INHERIT QGraphicsSceneEvent
@@ -59,9 +59,11 @@ RETURN
 #include <QtWidgets/QGraphicsSceneMouseEvent>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_DELETE)
 {
-  auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -74,12 +76,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::MouseButton button() const
-*/
+// Qt::MouseButton button() const
 HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTON)
 {
-  auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -94,12 +94,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTON)
   }
 }
 
-/*
-QPointF buttonDownPos(Qt::MouseButton button) const
-*/
+// QPointF buttonDownPos(Qt::MouseButton button) const
 HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS)
 {
-  auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,12 +112,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS)
   }
 }
 
-/*
-QPointF buttonDownScenePos(Qt::MouseButton button) const
-*/
+// QPointF buttonDownScenePos(Qt::MouseButton button) const
 HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS)
 {
-  auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,12 +130,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS)
   }
 }
 
-/*
-QPoint buttonDownScreenPos(Qt::MouseButton button) const
-*/
+// QPoint buttonDownScreenPos(Qt::MouseButton button) const
 HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS)
 {
-  auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,12 +148,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS)
   }
 }
 
-/*
-Qt::MouseButtons buttons() const
-*/
+// Qt::MouseButtons buttons() const
 HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTONS)
 {
-  auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,12 +166,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_BUTTONS)
   }
 }
 
-/*
-QPointF lastPos() const
-*/
+// QPointF lastPos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_LASTPOS)
 {
-  auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,12 +184,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_LASTPOS)
   }
 }
 
-/*
-QPointF lastScenePos() const
-*/
+// QPointF lastScenePos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_LASTSCENEPOS)
 {
-  auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,12 +202,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_LASTSCENEPOS)
   }
 }
 
-/*
-QPoint lastScreenPos() const
-*/
+// QPoint lastScreenPos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_LASTSCREENPOS)
 {
-  auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,12 +220,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_LASTSCREENPOS)
   }
 }
 
-/*
-Qt::KeyboardModifiers modifiers() const
-*/
+// Qt::KeyboardModifiers modifiers() const
 HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_MODIFIERS)
 {
-  auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -254,12 +238,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_MODIFIERS)
   }
 }
 
-/*
-QPointF pos() const
-*/
+// QPointF pos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_POS)
 {
-  auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -274,12 +256,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_POS)
   }
 }
 
-/*
-QPointF scenePos() const
-*/
+// QPointF scenePos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_SCENEPOS)
 {
-  auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,12 +274,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_SCENEPOS)
   }
 }
 
-/*
-QPoint screenPos() const
-*/
+// QPoint screenPos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEMOUSEEVENT_SCREENPOS)
 {
-  auto obj = static_cast<QGraphicsSceneMouseEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

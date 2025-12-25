@@ -48,9 +48,11 @@ RETURN
 #include <QtWidgets/QGraphicsTransform>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGraphicsTransform *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSTRANSFORM_DELETE)
 {
-  auto obj = qobject_cast<QGraphicsTransform *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -65,12 +67,10 @@ HB_FUNC_STATIC(QGRAPHICSTRANSFORM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void applyTo(QMatrix4x4 * matrix) const = 0
-*/
+// virtual void applyTo(QMatrix4x4 *matrix) const = 0
 HB_FUNC_STATIC(QGRAPHICSTRANSFORM_APPLYTO)
 {
-  auto obj = qobject_cast<QGraphicsTransform *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

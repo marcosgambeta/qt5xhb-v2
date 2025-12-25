@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
+REQUEST QSize
 #endif
 
 CLASS QCheckBox INHERIT QAbstractButton
@@ -65,20 +65,20 @@ RETURN
 #include <QtWidgets/QCheckBox>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCheckBox *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QCHECKBOX_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
-    /*
-    QCheckBox(QWidget * parent = nullptr)
-    */
+    // QCheckBox(QWidget *parent = nullptr)
     auto obj = new QCheckBox(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QCheckBox(const QString &text, QWidget * parent = nullptr)
-    */
+    // QCheckBox(const QString &text, QWidget *parent = nullptr)
     auto obj = new QCheckBox(PQSTRING(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QCHECKBOX_NEW)
 
 HB_FUNC_STATIC(QCHECKBOX_DELETE)
 {
-  auto obj = qobject_cast<QCheckBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -101,12 +101,10 @@ HB_FUNC_STATIC(QCHECKBOX_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::CheckState checkState() const
-*/
+// Qt::CheckState checkState() const
 HB_FUNC_STATIC(QCHECKBOX_CHECKSTATE)
 {
-  auto obj = qobject_cast<QCheckBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,12 +119,10 @@ HB_FUNC_STATIC(QCHECKBOX_CHECKSTATE)
   }
 }
 
-/*
-bool isTristate() const
-*/
+// bool isTristate() const
 HB_FUNC_STATIC(QCHECKBOX_ISTRISTATE)
 {
-  auto obj = qobject_cast<QCheckBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,12 +137,10 @@ HB_FUNC_STATIC(QCHECKBOX_ISTRISTATE)
   }
 }
 
-/*
-void setCheckState(Qt::CheckState state)
-*/
+// void setCheckState(Qt::CheckState state)
 HB_FUNC_STATIC(QCHECKBOX_SETCHECKSTATE)
 {
-  auto obj = qobject_cast<QCheckBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,12 +157,10 @@ HB_FUNC_STATIC(QCHECKBOX_SETCHECKSTATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTristate(bool y = true)
-*/
+// void setTristate(bool y = true)
 HB_FUNC_STATIC(QCHECKBOX_SETTRISTATE)
 {
-  auto obj = qobject_cast<QCheckBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,12 +177,10 @@ HB_FUNC_STATIC(QCHECKBOX_SETTRISTATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize minimumSizeHint() const
-*/
+// QSize minimumSizeHint() const
 HB_FUNC_STATIC(QCHECKBOX_MINIMUMSIZEHINT)
 {
-  auto obj = qobject_cast<QCheckBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,12 +195,10 @@ HB_FUNC_STATIC(QCHECKBOX_MINIMUMSIZEHINT)
   }
 }
 
-/*
-QSize sizeHint() const
-*/
+// QSize sizeHint() const
 HB_FUNC_STATIC(QCHECKBOX_SIZEHINT)
 {
-  auto obj = qobject_cast<QCheckBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,12 +213,10 @@ HB_FUNC_STATIC(QCHECKBOX_SIZEHINT)
   }
 }
 
-/*
-void stateChanged(int state)
-*/
+// void stateChanged(int state)
 HB_FUNC_STATIC(QCHECKBOX_ONSTATECHANGED)
 {
-  auto sender = qobject_cast<QCheckBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -251,7 +237,6 @@ HB_FUNC_STATIC(QCHECKBOX_ONSTATECHANGED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

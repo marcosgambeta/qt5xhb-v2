@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECT
-REQUEST QSIZE
+REQUEST QRect
+REQUEST QSize
 #endif
 
 CLASS QFrame INHERIT QWidget
@@ -64,9 +64,9 @@ RETURN
 #include <QtWidgets/QFrame>
 #endif
 
-    /*
-    QFrame(QWidget * parent = nullptr, Qt::WindowFlags f = 0)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QFrame *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QFrame(QWidget *parent = nullptr, Qt::WindowFlags f = 0)
 HB_FUNC_STATIC(QFRAME_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QFRAME_NEW)
 
 HB_FUNC_STATIC(QFRAME_DELETE)
 {
-  auto obj = qobject_cast<QFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -95,12 +95,10 @@ HB_FUNC_STATIC(QFRAME_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRect frameRect() const
-*/
+// QRect frameRect() const
 HB_FUNC_STATIC(QFRAME_FRAMERECT)
 {
-  auto obj = qobject_cast<QFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,12 +113,10 @@ HB_FUNC_STATIC(QFRAME_FRAMERECT)
   }
 }
 
-/*
-QFrame::Shadow frameShadow() const
-*/
+// QFrame::Shadow frameShadow() const
 HB_FUNC_STATIC(QFRAME_FRAMESHADOW)
 {
-  auto obj = qobject_cast<QFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,12 +131,10 @@ HB_FUNC_STATIC(QFRAME_FRAMESHADOW)
   }
 }
 
-/*
-QFrame::Shape frameShape() const
-*/
+// QFrame::Shape frameShape() const
 HB_FUNC_STATIC(QFRAME_FRAMESHAPE)
 {
-  auto obj = qobject_cast<QFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,12 +149,10 @@ HB_FUNC_STATIC(QFRAME_FRAMESHAPE)
   }
 }
 
-/*
-int frameStyle() const
-*/
+// int frameStyle() const
 HB_FUNC_STATIC(QFRAME_FRAMESTYLE)
 {
-  auto obj = qobject_cast<QFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,12 +167,10 @@ HB_FUNC_STATIC(QFRAME_FRAMESTYLE)
   }
 }
 
-/*
-int frameWidth() const
-*/
+// int frameWidth() const
 HB_FUNC_STATIC(QFRAME_FRAMEWIDTH)
 {
-  auto obj = qobject_cast<QFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,12 +185,10 @@ HB_FUNC_STATIC(QFRAME_FRAMEWIDTH)
   }
 }
 
-/*
-int lineWidth() const
-*/
+// int lineWidth() const
 HB_FUNC_STATIC(QFRAME_LINEWIDTH)
 {
-  auto obj = qobject_cast<QFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,12 +203,10 @@ HB_FUNC_STATIC(QFRAME_LINEWIDTH)
   }
 }
 
-/*
-int midLineWidth() const
-*/
+// int midLineWidth() const
 HB_FUNC_STATIC(QFRAME_MIDLINEWIDTH)
 {
-  auto obj = qobject_cast<QFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,12 +221,10 @@ HB_FUNC_STATIC(QFRAME_MIDLINEWIDTH)
   }
 }
 
-/*
-void setFrameRect(const QRect &)
-*/
+// void setFrameRect(const QRect &)
 HB_FUNC_STATIC(QFRAME_SETFRAMERECT)
 {
-  auto obj = qobject_cast<QFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,12 +241,10 @@ HB_FUNC_STATIC(QFRAME_SETFRAMERECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFrameShadow(QFrame::Shadow)
-*/
+// void setFrameShadow(QFrame::Shadow)
 HB_FUNC_STATIC(QFRAME_SETFRAMESHADOW)
 {
-  auto obj = qobject_cast<QFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,12 +261,10 @@ HB_FUNC_STATIC(QFRAME_SETFRAMESHADOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFrameShape(QFrame::Shape)
-*/
+// void setFrameShape(QFrame::Shape)
 HB_FUNC_STATIC(QFRAME_SETFRAMESHAPE)
 {
-  auto obj = qobject_cast<QFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,12 +281,10 @@ HB_FUNC_STATIC(QFRAME_SETFRAMESHAPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFrameStyle(int style)
-*/
+// void setFrameStyle(int style)
 HB_FUNC_STATIC(QFRAME_SETFRAMESTYLE)
 {
-  auto obj = qobject_cast<QFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,12 +301,10 @@ HB_FUNC_STATIC(QFRAME_SETFRAMESTYLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setLineWidth(int)
-*/
+// void setLineWidth(int)
 HB_FUNC_STATIC(QFRAME_SETLINEWIDTH)
 {
-  auto obj = qobject_cast<QFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,12 +321,10 @@ HB_FUNC_STATIC(QFRAME_SETLINEWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMidLineWidth(int)
-*/
+// void setMidLineWidth(int)
 HB_FUNC_STATIC(QFRAME_SETMIDLINEWIDTH)
 {
-  auto obj = qobject_cast<QFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -367,12 +341,10 @@ HB_FUNC_STATIC(QFRAME_SETMIDLINEWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QFRAME_SIZEHINT)
 {
-  auto obj = qobject_cast<QFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

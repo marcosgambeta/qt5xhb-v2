@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINT
-REQUEST QPOINTF
+REQUEST QPoint
+REQUEST QPointF
 #endif
 
 CLASS QGraphicsSceneHelpEvent INHERIT QGraphicsSceneEvent
@@ -49,9 +49,11 @@ RETURN
 #include <QtWidgets/QGraphicsSceneHelpEvent>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QGraphicsSceneHelpEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSSCENEHELPEVENT_DELETE)
 {
-  auto obj = static_cast<QGraphicsSceneHelpEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -64,12 +66,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHELPEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPointF scenePos() const
-*/
+// QPointF scenePos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEHELPEVENT_SCENEPOS)
 {
-  auto obj = static_cast<QGraphicsSceneHelpEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -84,12 +84,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHELPEVENT_SCENEPOS)
   }
 }
 
-/*
-QPoint screenPos() const
-*/
+// QPoint screenPos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEHELPEVENT_SCREENPOS)
 {
-  auto obj = static_cast<QGraphicsSceneHelpEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

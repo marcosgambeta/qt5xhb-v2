@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTBUTTON
+REQUEST QAbstractButton
 #endif
 
 CLASS QButtonGroup INHERIT QObject
@@ -74,9 +74,9 @@ RETURN
 
 #include <QtWidgets/QAbstractButton>
 
-    /*
-    QButtonGroup(QObject * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QButtonGroup(QObject *parent = nullptr)
 HB_FUNC_STATIC(QBUTTONGROUP_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_NEW)
 
 HB_FUNC_STATIC(QBUTTONGROUP_DELETE)
 {
-  auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -107,38 +107,34 @@ HB_FUNC_STATIC(QBUTTONGROUP_DELETE)
 HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
 {
   if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1)) {
-    /*
-    void addButton(QAbstractButton * button)
-    */
-    auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void addButton(QAbstractButton *button)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->addButton(PQABSTRACTBUTTON(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2)) {
-    /*
-    void addButton(QAbstractButton * button, int id)
-    */
-    auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void addButton(QAbstractButton *button, int id)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->addButton(PQABSTRACTBUTTON(1), PINT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-QAbstractButton * button(int id) const
-*/
+// QAbstractButton *button(int id) const
 HB_FUNC_STATIC(QBUTTONGROUP_BUTTON)
 {
-  auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,12 +150,10 @@ HB_FUNC_STATIC(QBUTTONGROUP_BUTTON)
   }
 }
 
-/*
-QList<QAbstractButton*> buttons() const
-*/
+// QList<QAbstractButton *> buttons() const
 HB_FUNC_STATIC(QBUTTONGROUP_BUTTONS)
 {
-  auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,12 +187,10 @@ HB_FUNC_STATIC(QBUTTONGROUP_BUTTONS)
   }
 }
 
-/*
-QAbstractButton * checkedButton() const
-*/
+// QAbstractButton *checkedButton() const
 HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDBUTTON)
 {
-  auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,12 +206,10 @@ HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDBUTTON)
   }
 }
 
-/*
-int checkedId() const
-*/
+// int checkedId() const
 HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDID)
 {
-  auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,12 +224,10 @@ HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDID)
   }
 }
 
-/*
-bool exclusive() const
-*/
+// bool exclusive() const
 HB_FUNC_STATIC(QBUTTONGROUP_EXCLUSIVE)
 {
-  auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -254,12 +242,10 @@ HB_FUNC_STATIC(QBUTTONGROUP_EXCLUSIVE)
   }
 }
 
-/*
-int id(QAbstractButton * button) const
-*/
+// int id(QAbstractButton *button) const
 HB_FUNC_STATIC(QBUTTONGROUP_ID)
 {
-  auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -274,12 +260,10 @@ HB_FUNC_STATIC(QBUTTONGROUP_ID)
   }
 }
 
-/*
-void removeButton(QAbstractButton * button)
-*/
+// void removeButton(QAbstractButton *button)
 HB_FUNC_STATIC(QBUTTONGROUP_REMOVEBUTTON)
 {
-  auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -296,12 +280,10 @@ HB_FUNC_STATIC(QBUTTONGROUP_REMOVEBUTTON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setExclusive(bool)
-*/
+// void setExclusive(bool)
 HB_FUNC_STATIC(QBUTTONGROUP_SETEXCLUSIVE)
 {
-  auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -318,12 +300,10 @@ HB_FUNC_STATIC(QBUTTONGROUP_SETEXCLUSIVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setId(QAbstractButton * button, int id)
-*/
+// void setId(QAbstractButton *button, int id)
 HB_FUNC_STATIC(QBUTTONGROUP_SETID)
 {
-  auto obj = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -340,12 +320,10 @@ HB_FUNC_STATIC(QBUTTONGROUP_SETID)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void buttonClicked(QAbstractButton * button)
-*/
+// void buttonClicked(QAbstractButton *button)
 HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONCLICKED1)
 {
-  auto sender = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -367,7 +345,6 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONCLICKED1)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -383,12 +360,10 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONCLICKED1)
   hb_retl(result);
 }
 
-/*
-void buttonClicked(int id)
-*/
+// void buttonClicked(int id)
 HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONCLICKED2)
 {
-  auto sender = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -410,7 +385,6 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONCLICKED2)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -426,12 +400,10 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONCLICKED2)
   hb_retl(result);
 }
 
-/*
-void buttonPressed(QAbstractButton * button)
-*/
+// void buttonPressed(QAbstractButton *button)
 HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONPRESSED1)
 {
-  auto sender = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -453,7 +425,6 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONPRESSED1)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -469,12 +440,10 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONPRESSED1)
   hb_retl(result);
 }
 
-/*
-void buttonPressed(int id)
-*/
+// void buttonPressed(int id)
 HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONPRESSED2)
 {
-  auto sender = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -496,7 +465,6 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONPRESSED2)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -512,12 +480,10 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONPRESSED2)
   hb_retl(result);
 }
 
-/*
-void buttonReleased(QAbstractButton * button)
-*/
+// void buttonReleased(QAbstractButton *button)
 HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONRELEASED1)
 {
-  auto sender = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -539,7 +505,6 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONRELEASED1)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -555,12 +520,10 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONRELEASED1)
   hb_retl(result);
 }
 
-/*
-void buttonReleased(int id)
-*/
+// void buttonReleased(int id)
 HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONRELEASED2)
 {
-  auto sender = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -582,7 +545,6 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONRELEASED2)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -598,13 +560,11 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONRELEASED2)
   hb_retl(result);
 }
 
-/*
-void buttonToggled(QAbstractButton * button, bool checked)
-*/
+// void buttonToggled(QAbstractButton *button, bool checked)
 HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONTOGGLED1)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto sender = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -628,7 +588,6 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONTOGGLED1)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -647,13 +606,11 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONTOGGLED1)
 #endif
 }
 
-/*
-void buttonToggled(int id, bool checked)
-*/
+// void buttonToggled(int id, bool checked)
 HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONTOGGLED2)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto sender = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -677,7 +634,6 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONTOGGLED2)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -696,13 +652,11 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONTOGGLED2)
 #endif
 }
 
-/*
-void idClicked(int id)
-*/
+// void idClicked(int id)
 HB_FUNC_STATIC(QBUTTONGROUP_ONIDCLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
-  auto sender = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -723,7 +677,6 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONIDCLICKED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -742,13 +695,11 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONIDCLICKED)
 #endif
 }
 
-/*
-void idPressed(int id)
-*/
+// void idPressed(int id)
 HB_FUNC_STATIC(QBUTTONGROUP_ONIDPRESSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
-  auto sender = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -769,7 +720,6 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONIDPRESSED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -788,13 +738,11 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONIDPRESSED)
 #endif
 }
 
-/*
-void idReleased(int id)
-*/
+// void idReleased(int id)
 HB_FUNC_STATIC(QBUTTONGROUP_ONIDRELEASED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
-  auto sender = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -815,7 +763,6 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONIDRELEASED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -834,13 +781,11 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONIDRELEASED)
 #endif
 }
 
-/*
-void idToggled(int id, bool checked)
-*/
+// void idToggled(int id, bool checked)
 HB_FUNC_STATIC(QBUTTONGROUP_ONIDTOGGLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
-  auto sender = qobject_cast<QButtonGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -864,7 +809,6 @@ HB_FUNC_STATIC(QBUTTONGROUP_ONIDTOGGLED)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

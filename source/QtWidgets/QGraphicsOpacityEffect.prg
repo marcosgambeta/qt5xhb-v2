@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBRUSH
+REQUEST QBrush
 #endif
 
 CLASS QGraphicsOpacityEffect INHERIT QGraphicsEffect
@@ -56,9 +56,9 @@ RETURN
 #include <QtWidgets/QGraphicsOpacityEffect>
 #endif
 
-    /*
-    QGraphicsOpacityEffect(QObject * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGraphicsOpacityEffect *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QGraphicsOpacityEffect(QObject *parent = nullptr)
 HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_NEW)
 
 HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_DELETE)
 {
-  auto obj = qobject_cast<QGraphicsOpacityEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -86,12 +86,10 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal opacity() const
-*/
+// qreal opacity() const
 HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_OPACITY)
 {
-  auto obj = qobject_cast<QGraphicsOpacityEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,12 +104,10 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_OPACITY)
   }
 }
 
-/*
-QBrush opacityMask() const
-*/
+// QBrush opacityMask() const
 HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_OPACITYMASK)
 {
-  auto obj = qobject_cast<QGraphicsOpacityEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,12 +122,10 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_OPACITYMASK)
   }
 }
 
-/*
-void setOpacity(qreal opacity)
-*/
+// void setOpacity(qreal opacity)
 HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_SETOPACITY)
 {
-  auto obj = qobject_cast<QGraphicsOpacityEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,12 +142,10 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_SETOPACITY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOpacityMask(const QBrush &mask)
-*/
+// void setOpacityMask(const QBrush &mask)
 HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_SETOPACITYMASK)
 {
-  auto obj = qobject_cast<QGraphicsOpacityEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,12 +162,10 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_SETOPACITYMASK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void opacityChanged(qreal opacity)
-*/
+// void opacityChanged(qreal opacity)
 HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED)
 {
-  auto sender = qobject_cast<QGraphicsOpacityEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -197,7 +187,6 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -213,12 +202,10 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED)
   hb_retl(result);
 }
 
-/*
-void opacityMaskChanged(const QBrush &mask)
-*/
+// void opacityMaskChanged(const QBrush &mask)
 HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED)
 {
-  auto sender = qobject_cast<QGraphicsOpacityEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -240,7 +227,6 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

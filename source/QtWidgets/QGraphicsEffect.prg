@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECTF
+REQUEST QRectF
 #endif
 
 CLASS QGraphicsEffect INHERIT QObject
@@ -55,9 +55,11 @@ RETURN
 #include <QtWidgets/QGraphicsEffect>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGraphicsEffect *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSEFFECT_DELETE)
 {
-  auto obj = qobject_cast<QGraphicsEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -72,12 +74,10 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRectF boundingRect() const
-*/
+// QRectF boundingRect() const
 HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECT)
 {
-  auto obj = qobject_cast<QGraphicsEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -92,12 +92,10 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECT)
   }
 }
 
-/*
-virtual QRectF boundingRectFor(const QRectF &rect) const
-*/
+// virtual QRectF boundingRectFor(const QRectF &rect) const
 HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECTFOR)
 {
-  auto obj = qobject_cast<QGraphicsEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,12 +110,10 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECTFOR)
   }
 }
 
-/*
-bool isEnabled() const
-*/
+// bool isEnabled() const
 HB_FUNC_STATIC(QGRAPHICSEFFECT_ISENABLED)
 {
-  auto obj = qobject_cast<QGraphicsEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,12 +128,10 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_ISENABLED)
   }
 }
 
-/*
-void setEnabled(bool enable)
-*/
+// void setEnabled(bool enable)
 HB_FUNC_STATIC(QGRAPHICSEFFECT_SETENABLED)
 {
-  auto obj = qobject_cast<QGraphicsEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,12 +148,10 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_SETENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void update()
-*/
+// void update()
 HB_FUNC_STATIC(QGRAPHICSEFFECT_UPDATE)
 {
-  auto obj = qobject_cast<QGraphicsEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,12 +168,10 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_UPDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void enabledChanged(bool enabled)
-*/
+// void enabledChanged(bool enabled)
 HB_FUNC_STATIC(QGRAPHICSEFFECT_ONENABLEDCHANGED)
 {
-  auto sender = qobject_cast<QGraphicsEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -203,7 +193,6 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_ONENABLEDCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

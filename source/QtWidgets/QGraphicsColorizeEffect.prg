@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCOLOR
+REQUEST QColor
 #endif
 
 CLASS QGraphicsColorizeEffect INHERIT QGraphicsEffect
@@ -56,9 +56,9 @@ RETURN
 #include <QtWidgets/QGraphicsColorizeEffect>
 #endif
 
-    /*
-    QGraphicsColorizeEffect(QObject * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGraphicsColorizeEffect *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QGraphicsColorizeEffect(QObject *parent = nullptr)
 HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_NEW)
 
 HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_DELETE)
 {
-  auto obj = qobject_cast<QGraphicsColorizeEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -86,12 +86,10 @@ HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QColor color() const
-*/
+// QColor color() const
 HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_COLOR)
 {
-  auto obj = qobject_cast<QGraphicsColorizeEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,12 +104,10 @@ HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_COLOR)
   }
 }
 
-/*
-qreal strength() const
-*/
+// qreal strength() const
 HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_STRENGTH)
 {
-  auto obj = qobject_cast<QGraphicsColorizeEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,12 +122,10 @@ HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_STRENGTH)
   }
 }
 
-/*
-void setColor(const QColor &c)
-*/
+// void setColor(const QColor &c)
 HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_SETCOLOR)
 {
-  auto obj = qobject_cast<QGraphicsColorizeEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,12 +142,10 @@ HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_SETCOLOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStrength(qreal strength)
-*/
+// void setStrength(qreal strength)
 HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH)
 {
-  auto obj = qobject_cast<QGraphicsColorizeEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,12 +162,10 @@ HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void colorChanged(const QColor &color)
-*/
+// void colorChanged(const QColor &color)
 HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED)
 {
-  auto sender = qobject_cast<QGraphicsColorizeEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -197,7 +187,6 @@ HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -213,12 +202,10 @@ HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED)
   hb_retl(result);
 }
 
-/*
-void strengthChanged(qreal strength)
-*/
+// void strengthChanged(qreal strength)
 HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED)
 {
-  auto sender = qobject_cast<QGraphicsColorizeEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -240,7 +227,6 @@ HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

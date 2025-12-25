@@ -11,10 +11,10 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMIMEDATA
-REQUEST QPOINT
-REQUEST QPOINTF
-REQUEST QWIDGET
+REQUEST QMimeData
+REQUEST QPoint
+REQUEST QPointF
+REQUEST QWidget
 #endif
 
 CLASS QGraphicsSceneDragDropEvent INHERIT QGraphicsSceneEvent
@@ -63,9 +63,11 @@ RETURN
 
 #include <QtCore/QMimeData>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QGraphicsSceneDragDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_DELETE)
 {
-  auto obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -78,12 +80,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void acceptProposedAction()
-*/
+// void acceptProposedAction()
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_ACCEPTPROPOSEDACTION)
 {
-  auto obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -100,12 +100,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_ACCEPTPROPOSEDACTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::MouseButtons buttons() const
-*/
+// Qt::MouseButtons buttons() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_BUTTONS)
 {
-  auto obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,12 +118,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_BUTTONS)
   }
 }
 
-/*
-Qt::DropAction dropAction() const
-*/
+// Qt::DropAction dropAction() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION)
 {
-  auto obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,12 +136,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION)
   }
 }
 
-/*
-const QMimeData * mimeData() const
-*/
+// const QMimeData *mimeData() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA)
 {
-  auto obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,12 +155,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA)
   }
 }
 
-/*
-Qt::KeyboardModifiers modifiers() const
-*/
+// Qt::KeyboardModifiers modifiers() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_MODIFIERS)
 {
-  auto obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,12 +173,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_MODIFIERS)
   }
 }
 
-/*
-QPointF pos() const
-*/
+// QPointF pos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_POS)
 {
-  auto obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,12 +191,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_POS)
   }
 }
 
-/*
-Qt::DropActions possibleActions() const
-*/
+// Qt::DropActions possibleActions() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_POSSIBLEACTIONS)
 {
-  auto obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,12 +209,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_POSSIBLEACTIONS)
   }
 }
 
-/*
-Qt::DropAction proposedAction() const
-*/
+// Qt::DropAction proposedAction() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_PROPOSEDACTION)
 {
-  auto obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,12 +227,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_PROPOSEDACTION)
   }
 }
 
-/*
-QPointF scenePos() const
-*/
+// QPointF scenePos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS)
 {
-  auto obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,12 +245,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS)
   }
 }
 
-/*
-QPoint screenPos() const
-*/
+// QPoint screenPos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS)
 {
-  auto obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,12 +263,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS)
   }
 }
 
-/*
-void setDropAction(Qt::DropAction action)
-*/
+// void setDropAction(Qt::DropAction action)
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SETDROPACTION)
 {
-  auto obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,12 +283,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SETDROPACTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget * source() const
-*/
+// QWidget *source() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SOURCE)
 {
-  auto obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

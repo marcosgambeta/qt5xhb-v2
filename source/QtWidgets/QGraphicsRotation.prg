@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVECTOR3D
+REQUEST QVector3D
 #endif
 
 CLASS QGraphicsRotation INHERIT QGraphicsTransform
@@ -60,9 +60,9 @@ RETURN
 #include <QtWidgets/QGraphicsRotation>
 #endif
 
-    /*
-    QGraphicsRotation(QObject * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGraphicsRotation *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QGraphicsRotation(QObject *parent = nullptr)
 HB_FUNC_STATIC(QGRAPHICSROTATION_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_NEW)
 
 HB_FUNC_STATIC(QGRAPHICSROTATION_DELETE)
 {
-  auto obj = qobject_cast<QGraphicsRotation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -90,12 +90,10 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal angle() const
-*/
+// qreal angle() const
 HB_FUNC_STATIC(QGRAPHICSROTATION_ANGLE)
 {
-  auto obj = qobject_cast<QGraphicsRotation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,19 +108,16 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_ANGLE)
   }
 }
 
-/*
-QVector3D axis() const
-*/
+// QVector3D axis() const
 HB_FUNC_STATIC(QGRAPHICSROTATION_AXIS)
 {
-  auto obj = qobject_cast<QGraphicsRotation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QVector3D(obj->axis());
-      Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
+      RQVECTOR3D(obj->axis());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -131,19 +126,16 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_AXIS)
   }
 }
 
-/*
-QVector3D origin() const
-*/
+// QVector3D origin() const
 HB_FUNC_STATIC(QGRAPHICSROTATION_ORIGIN)
 {
-  auto obj = qobject_cast<QGraphicsRotation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QVector3D(obj->origin());
-      Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
+      RQVECTOR3D(obj->origin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -152,12 +144,10 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_ORIGIN)
   }
 }
 
-/*
-void setAngle(qreal)
-*/
+// void setAngle(qreal)
 HB_FUNC_STATIC(QGRAPHICSROTATION_SETANGLE)
 {
-  auto obj = qobject_cast<QGraphicsRotation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,38 +167,34 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETANGLE)
 HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
 {
   if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
-    /*
-    void setAxis(const QVector3D &axis)
-    */
-    auto obj = qobject_cast<QGraphicsRotation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void setAxis(const QVector3D &axis)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setAxis(*PQVECTOR3D(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    void setAxis(Qt::Axis axis)
-    */
-    auto obj = qobject_cast<QGraphicsRotation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void setAxis(Qt::Axis axis)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setAxis(static_cast<Qt::Axis>(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-void setOrigin(const QVector3D &point)
-*/
+// void setOrigin(const QVector3D &point)
 HB_FUNC_STATIC(QGRAPHICSROTATION_SETORIGIN)
 {
-  auto obj = qobject_cast<QGraphicsRotation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,12 +211,10 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETORIGIN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void applyTo(QMatrix4x4 * matrix) const
-*/
+// virtual void applyTo(QMatrix4x4 *matrix) const
 HB_FUNC_STATIC(QGRAPHICSROTATION_APPLYTO)
 {
-  auto obj = qobject_cast<QGraphicsRotation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,12 +231,10 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_APPLYTO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void angleChanged()
-*/
+// void angleChanged()
 HB_FUNC_STATIC(QGRAPHICSROTATION_ONANGLECHANGED)
 {
-  auto sender = qobject_cast<QGraphicsRotation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -271,7 +253,6 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_ONANGLECHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -287,12 +268,10 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_ONANGLECHANGED)
   hb_retl(result);
 }
 
-/*
-void axisChanged()
-*/
+// void axisChanged()
 HB_FUNC_STATIC(QGRAPHICSROTATION_ONAXISCHANGED)
 {
-  auto sender = qobject_cast<QGraphicsRotation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -311,7 +290,6 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_ONAXISCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -327,12 +305,10 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_ONAXISCHANGED)
   hb_retl(result);
 }
 
-/*
-void originChanged()
-*/
+// void originChanged()
 HB_FUNC_STATIC(QGRAPHICSROTATION_ONORIGINCHANGED)
 {
-  auto sender = qobject_cast<QGraphicsRotation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -351,7 +327,6 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_ONORIGINCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

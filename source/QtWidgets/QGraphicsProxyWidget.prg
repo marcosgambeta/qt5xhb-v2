@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECTF
-REQUEST QWIDGET
+REQUEST QRectF
+REQUEST QWidget
 #endif
 
 CLASS QGraphicsProxyWidget INHERIT QGraphicsWidget
@@ -57,9 +57,9 @@ RETURN
 #include <QtWidgets/QGraphicsProxyWidget>
 #endif
 
-    /*
-    QGraphicsProxyWidget(QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = 0)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGraphicsProxyWidget *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QGraphicsProxyWidget(QGraphicsItem *parent = nullptr, Qt::WindowFlags wFlags = 0)
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQGRAPHICSITEMORNIL(1) && ISNUMORNIL(2)) {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_NEW)
 
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_DELETE)
 {
-  auto obj = qobject_cast<QGraphicsProxyWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -89,12 +89,10 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QGraphicsProxyWidget * createProxyForChildWidget(QWidget * child)
-*/
+// QGraphicsProxyWidget *createProxyForChildWidget(QWidget *child)
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET)
 {
-  auto obj = qobject_cast<QGraphicsProxyWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,12 +108,10 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET)
   }
 }
 
-/*
-void setWidget(QWidget * widget)
-*/
+// void setWidget(QWidget *widget)
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETWIDGET)
 {
-  auto obj = qobject_cast<QGraphicsProxyWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,12 +128,10 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRectF subWidgetRect(const QWidget * widget) const
-*/
+// QRectF subWidgetRect(const QWidget *widget) const
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SUBWIDGETRECT)
 {
-  auto obj = qobject_cast<QGraphicsProxyWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,12 +146,10 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SUBWIDGETRECT)
   }
 }
 
-/*
-QWidget * widget() const
-*/
+// QWidget *widget() const
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_WIDGET)
 {
-  auto obj = qobject_cast<QGraphicsProxyWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,12 +165,10 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_WIDGET)
   }
 }
 
-/*
-virtual void paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget)
-*/
+// virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_PAINT)
 {
-  auto obj = qobject_cast<QGraphicsProxyWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,12 +185,10 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_PAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setGeometry(const QRectF &rect)
-*/
+// virtual void setGeometry(const QRectF &rect)
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETGEOMETRY)
 {
-  auto obj = qobject_cast<QGraphicsProxyWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,12 +205,10 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETGEOMETRY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int type() const
-*/
+// virtual int type() const
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_TYPE)
 {
-  auto obj = qobject_cast<QGraphicsProxyWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

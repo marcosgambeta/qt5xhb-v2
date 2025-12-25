@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
+REQUEST QSize
 #endif
 
 CLASS QGroupBox INHERIT QWidget
@@ -63,20 +63,20 @@ RETURN
 #include <QtWidgets/QGroupBox>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QGROUPBOX_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
-    /*
-    QGroupBox(QWidget * parent = nullptr)
-    */
+    // QGroupBox(QWidget *parent = nullptr)
     auto obj = new QGroupBox(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QGroupBox(const QString &title, QWidget * parent = nullptr)
-    */
+    // QGroupBox(const QString &title, QWidget *parent = nullptr)
     auto obj = new QGroupBox(PQSTRING(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QGROUPBOX_NEW)
 
 HB_FUNC_STATIC(QGROUPBOX_DELETE)
 {
-  auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -99,12 +99,10 @@ HB_FUNC_STATIC(QGROUPBOX_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::Alignment alignment() const
-*/
+// Qt::Alignment alignment() const
 HB_FUNC_STATIC(QGROUPBOX_ALIGNMENT)
 {
-  auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,12 +117,10 @@ HB_FUNC_STATIC(QGROUPBOX_ALIGNMENT)
   }
 }
 
-/*
-bool isCheckable() const
-*/
+// bool isCheckable() const
 HB_FUNC_STATIC(QGROUPBOX_ISCHECKABLE)
 {
-  auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,12 +135,10 @@ HB_FUNC_STATIC(QGROUPBOX_ISCHECKABLE)
   }
 }
 
-/*
-bool isChecked() const
-*/
+// bool isChecked() const
 HB_FUNC_STATIC(QGROUPBOX_ISCHECKED)
 {
-  auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,12 +153,10 @@ HB_FUNC_STATIC(QGROUPBOX_ISCHECKED)
   }
 }
 
-/*
-bool isFlat() const
-*/
+// bool isFlat() const
 HB_FUNC_STATIC(QGROUPBOX_ISFLAT)
 {
-  auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,12 +171,10 @@ HB_FUNC_STATIC(QGROUPBOX_ISFLAT)
   }
 }
 
-/*
-void setAlignment(int alignment)
-*/
+// void setAlignment(int alignment)
 HB_FUNC_STATIC(QGROUPBOX_SETALIGNMENT)
 {
-  auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,12 +191,10 @@ HB_FUNC_STATIC(QGROUPBOX_SETALIGNMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCheckable(bool checkable)
-*/
+// void setCheckable(bool checkable)
 HB_FUNC_STATIC(QGROUPBOX_SETCHECKABLE)
 {
-  auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,12 +211,10 @@ HB_FUNC_STATIC(QGROUPBOX_SETCHECKABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFlat(bool flat)
-*/
+// void setFlat(bool flat)
 HB_FUNC_STATIC(QGROUPBOX_SETFLAT)
 {
-  auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,12 +231,10 @@ HB_FUNC_STATIC(QGROUPBOX_SETFLAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTitle(const QString &title)
-*/
+// void setTitle(const QString &title)
 HB_FUNC_STATIC(QGROUPBOX_SETTITLE)
 {
-  auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,12 +251,10 @@ HB_FUNC_STATIC(QGROUPBOX_SETTITLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QGROUPBOX_TITLE)
 {
-  auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -287,12 +269,10 @@ HB_FUNC_STATIC(QGROUPBOX_TITLE)
   }
 }
 
-/*
-virtual QSize minimumSizeHint() const
-*/
+// virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QGROUPBOX_MINIMUMSIZEHINT)
 {
-  auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -307,12 +287,10 @@ HB_FUNC_STATIC(QGROUPBOX_MINIMUMSIZEHINT)
   }
 }
 
-/*
-void setChecked(bool checked)
-*/
+// void setChecked(bool checked)
 HB_FUNC_STATIC(QGROUPBOX_SETCHECKED)
 {
-  auto obj = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,12 +307,10 @@ HB_FUNC_STATIC(QGROUPBOX_SETCHECKED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clicked(bool checked = false)
-*/
+// void clicked(bool checked = false)
 HB_FUNC_STATIC(QGROUPBOX_ONCLICKED)
 {
-  auto sender = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -355,7 +331,6 @@ HB_FUNC_STATIC(QGROUPBOX_ONCLICKED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -371,12 +346,10 @@ HB_FUNC_STATIC(QGROUPBOX_ONCLICKED)
   hb_retl(result);
 }
 
-/*
-void toggled(bool on)
-*/
+// void toggled(bool on)
 HB_FUNC_STATIC(QGROUPBOX_ONTOGGLED)
 {
-  auto sender = qobject_cast<QGroupBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -397,7 +370,6 @@ HB_FUNC_STATIC(QGROUPBOX_ONTOGGLED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

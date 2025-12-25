@@ -50,9 +50,9 @@ RETURN
 #include <QtWidgets/QErrorMessage>
 #endif
 
-    /*
-    QErrorMessage(QWidget * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QErrorMessage *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QErrorMessage(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QERRORMESSAGE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_NEW)
 
 HB_FUNC_STATIC(QERRORMESSAGE_DELETE)
 {
-  auto obj = qobject_cast<QErrorMessage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -83,35 +83,31 @@ HB_FUNC_STATIC(QERRORMESSAGE_DELETE)
 HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    void showMessage(const QString &message)
-    */
-    auto obj = qobject_cast<QErrorMessage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void showMessage(const QString &message)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->showMessage(PQSTRING(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    /*
-    void showMessage(const QString &message, const QString &type)
-    */
-    auto obj = qobject_cast<QErrorMessage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void showMessage(const QString &message, const QString &type)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->showMessage(PQSTRING(1), PQSTRING(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-static QErrorMessage * qtHandler()
-*/
+// static QErrorMessage *qtHandler()
 HB_FUNC_STATIC(QERRORMESSAGE_QTHANDLER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

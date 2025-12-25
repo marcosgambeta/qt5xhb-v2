@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINTF
+REQUEST QPointF
 #endif
 
 CLASS QGraphicsSceneMoveEvent INHERIT QGraphicsSceneEvent
@@ -49,9 +49,9 @@ RETURN
 #include <QtWidgets/QGraphicsSceneMoveEvent>
 #endif
 
-    /*
-    QGraphicsSceneMoveEvent()
-    */
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QGraphicsSceneMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QGraphicsSceneMoveEvent()
 HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_NEW)
 
 HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_DELETE)
 {
-  auto obj = static_cast<QGraphicsSceneMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -77,12 +77,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPointF newPos() const
-*/
+// QPointF newPos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_NEWPOS)
 {
-  auto obj = static_cast<QGraphicsSceneMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -97,12 +95,10 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_NEWPOS)
   }
 }
 
-/*
-QPointF oldPos() const
-*/
+// QPointF oldPos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_OLDPOS)
 {
-  auto obj = static_cast<QGraphicsSceneMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -285,8 +285,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SHORTCUT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QKeySequence(obj->shortcut());
-      Qt5xHb::createReturnClass(ptr, "QKEYSEQUENCE", true);
+      RQKEYSEQUENCE(obj->shortcut());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -584,7 +583,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETDOWN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// QButtonGroup * group() const
+// QButtonGroup *group() const
 HB_FUNC_STATIC(QABSTRACTBUTTON_GROUP)
 {
 #ifndef QT_NO_BUTTONGROUP
@@ -605,7 +604,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_GROUP)
 #endif
 }
 
-// void animateClick(int msec = 100) [SLOT]
+// void animateClick(int msec = 100)
 HB_FUNC_STATIC(QABSTRACTBUTTON_ANIMATECLICK)
 {
   GET_PTR_FROM_SELF(obj);
@@ -689,7 +688,6 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ONCLICKED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -705,9 +703,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ONCLICKED)
   hb_retl(result);
 }
 
-/*
-void pressed()
-*/
+// void pressed()
 HB_FUNC_STATIC(QABSTRACTBUTTON_ONPRESSED)
 {
   GET_PTR_FROM_SELF(sender);
@@ -729,7 +725,6 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ONPRESSED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -745,9 +740,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ONPRESSED)
   hb_retl(result);
 }
 
-/*
-void released()
-*/
+// void released()
 HB_FUNC_STATIC(QABSTRACTBUTTON_ONRELEASED)
 {
   GET_PTR_FROM_SELF(sender);
@@ -769,7 +762,6 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ONRELEASED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -785,9 +777,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ONRELEASED)
   hb_retl(result);
 }
 
-/*
-void toggled(bool checked)
-*/
+// void toggled(bool checked)
 HB_FUNC_STATIC(QABSTRACTBUTTON_ONTOGGLED)
 {
   GET_PTR_FROM_SELF(sender);
@@ -811,7 +801,6 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ONTOGGLED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

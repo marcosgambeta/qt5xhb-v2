@@ -11,11 +11,11 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTITEMDELEGATE
-REQUEST QABSTRACTITEMMODEL
-REQUEST QBYTEARRAY
-REQUEST QMODELINDEX
-REQUEST QWIDGET
+REQUEST QAbstractItemDelegate
+REQUEST QAbstractItemModel
+REQUEST QByteArray
+REQUEST QModelIndex
+REQUEST QWidget
 #endif
 
 CLASS QDataWidgetMapper INHERIT QObject
@@ -83,9 +83,9 @@ RETURN
 #include <QtCore/QModelIndex>
 #include <QtWidgets/QAbstractItemDelegate>
 
-    /*
-    QDataWidgetMapper(QObject * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QDataWidgetMapper(QObject *parent = nullptr)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_NEW)
 
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_DELETE)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -116,38 +116,34 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_DELETE)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_ADDMAPPING)
 {
   if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2)) {
-    /*
-    void addMapping(QWidget * widget, int section)
-    */
-    auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void addMapping(QWidget *widget, int section)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->addMapping(PQWIDGET(1), PINT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(3) && ISQWIDGET(1) && HB_ISNUM(2) && ISQBYTEARRAY(3)) {
-    /*
-    void addMapping(QWidget * widget, int section, const QByteArray &propertyName)
-    */
-    auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void addMapping(QWidget *widget, int section, const QByteArray &propertyName)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->addMapping(PQWIDGET(1), PINT(2), *PQBYTEARRAY(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-void clearMapping()
-*/
+// void clearMapping()
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_CLEARMAPPING)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,12 +160,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_CLEARMAPPING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int currentIndex() const
-*/
+// int currentIndex() const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_CURRENTINDEX)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,12 +178,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_CURRENTINDEX)
   }
 }
 
-/*
-QAbstractItemDelegate * itemDelegate() const
-*/
+// QAbstractItemDelegate *itemDelegate() const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_ITEMDELEGATE)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,12 +197,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ITEMDELEGATE)
   }
 }
 
-/*
-QByteArray mappedPropertyName(QWidget * widget) const
-*/
+// QByteArray mappedPropertyName(QWidget *widget) const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,12 +215,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME)
   }
 }
 
-/*
-int mappedSection(QWidget * widget) const
-*/
+// int mappedSection(QWidget *widget) const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDSECTION)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,12 +233,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDSECTION)
   }
 }
 
-/*
-QWidget * mappedWidgetAt(int section) const
-*/
+// QWidget *mappedWidgetAt(int section) const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDWIDGETAT)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,12 +252,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDWIDGETAT)
   }
 }
 
-/*
-QAbstractItemModel * model() const
-*/
+// QAbstractItemModel *model() const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_MODEL)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -287,12 +271,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_MODEL)
   }
 }
 
-/*
-Qt::Orientation orientation() const
-*/
+// Qt::Orientation orientation() const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_ORIENTATION)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -307,12 +289,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ORIENTATION)
   }
 }
 
-/*
-void removeMapping(QWidget * widget)
-*/
+// void removeMapping(QWidget *widget)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_REMOVEMAPPING)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,12 +309,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_REMOVEMAPPING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QModelIndex rootIndex() const
-*/
+// QModelIndex rootIndex() const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_ROOTINDEX)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -349,12 +327,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ROOTINDEX)
   }
 }
 
-/*
-void setItemDelegate(QAbstractItemDelegate * delegate)
-*/
+// void setItemDelegate(QAbstractItemDelegate *delegate)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETITEMDELEGATE)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -371,12 +347,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETITEMDELEGATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setModel(QAbstractItemModel * model)
-*/
+// void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETMODEL)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -393,12 +367,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETMODEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOrientation(Qt::Orientation aOrientation)
-*/
+// void setOrientation(Qt::Orientation aOrientation)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETORIENTATION)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,12 +387,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETORIENTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRootIndex(const QModelIndex &index)
-*/
+// void setRootIndex(const QModelIndex &index)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETROOTINDEX)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -437,12 +407,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETROOTINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSubmitPolicy(QDataWidgetMapper::SubmitPolicy policy)
-*/
+// void setSubmitPolicy(QDataWidgetMapper::SubmitPolicy policy)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETSUBMITPOLICY)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -459,12 +427,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETSUBMITPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDataWidgetMapper::SubmitPolicy submitPolicy() const
-*/
+// QDataWidgetMapper::SubmitPolicy submitPolicy() const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SUBMITPOLICY)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -479,12 +445,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SUBMITPOLICY)
   }
 }
 
-/*
-void revert()
-*/
+// void revert()
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_REVERT)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -501,12 +465,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_REVERT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setCurrentIndex(int index)
-*/
+// virtual void setCurrentIndex(int index)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETCURRENTINDEX)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -523,12 +485,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETCURRENTINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCurrentModelIndex(const QModelIndex &index)
-*/
+// void setCurrentModelIndex(const QModelIndex &index)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETCURRENTMODELINDEX)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -545,12 +505,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETCURRENTMODELINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool submit()
-*/
+// bool submit()
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SUBMIT)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -565,12 +523,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SUBMIT)
   }
 }
 
-/*
-void toFirst()
-*/
+// void toFirst()
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_TOFIRST)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -587,12 +543,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_TOFIRST)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void toLast()
-*/
+// void toLast()
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_TOLAST)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -609,12 +563,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_TOLAST)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void toNext()
-*/
+// void toNext()
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_TONEXT)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -631,12 +583,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_TONEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void toPrevious()
-*/
+// void toPrevious()
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_TOPREVIOUS)
 {
-  auto obj = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -653,12 +603,10 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_TOPREVIOUS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void currentIndexChanged(int index)
-*/
+// void currentIndexChanged(int index)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED)
 {
-  auto sender = qobject_cast<QDataWidgetMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -680,7 +628,6 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

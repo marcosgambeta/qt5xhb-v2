@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBRUSH
-REQUEST QPAINTERPATH
-REQUEST QPEN
+REQUEST QBrush
+REQUEST QPainterPath
+REQUEST QPen
 #endif
 
 CLASS QAbstractGraphicsShapeItem INHERIT QGraphicsItem
@@ -57,9 +57,11 @@ RETURN
 #include <QtGui/QBrush>
 #include <QtGui/QPen>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAbstractGraphicsShapeItem *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_DELETE)
 {
-  auto obj = static_cast<QAbstractGraphicsShapeItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -72,12 +74,10 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QBrush brush() const
-*/
+// QBrush brush() const
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_BRUSH)
 {
-  auto obj = static_cast<QAbstractGraphicsShapeItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -92,12 +92,10 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_BRUSH)
   }
 }
 
-/*
-void setBrush(const QBrush &brush)
-*/
+// void setBrush(const QBrush &brush)
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH)
 {
-  auto obj = static_cast<QAbstractGraphicsShapeItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,12 +112,10 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPen pen() const
-*/
+// QPen pen() const
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_PEN)
 {
-  auto obj = static_cast<QAbstractGraphicsShapeItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,12 +130,10 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_PEN)
   }
 }
 
-/*
-void setPen(const QPen &pen)
-*/
+// void setPen(const QPen &pen)
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETPEN)
 {
-  auto obj = static_cast<QAbstractGraphicsShapeItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,12 +150,10 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETPEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isObscuredBy(const QGraphicsItem * item) const
-*/
+// bool isObscuredBy(const QGraphicsItem *item) const
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY)
 {
-  auto obj = static_cast<QAbstractGraphicsShapeItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,19 +168,16 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY)
   }
 }
 
-/*
-QPainterPath opaqueArea() const
-*/
+// QPainterPath opaqueArea() const
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA)
 {
-  auto obj = static_cast<QAbstractGraphicsShapeItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPainterPath(obj->opaqueArea());
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->opaqueArea());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QGRAPHICSLAYOUTITEM
-REQUEST QSIZEF
+REQUEST QGraphicsLayoutItem
+REQUEST QSizeF
 #endif
 
 CLASS QGraphicsLinearLayout INHERIT QGraphicsLayout
@@ -69,23 +69,23 @@ RETURN
 #include <QtWidgets/QGraphicsLinearLayout>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQGRAPHICSLAYOUTITEMORNIL(1)) {
-    /*
-    QGraphicsLinearLayout(QGraphicsLayoutItem * parent = nullptr)
-    */
+    // QGraphicsLinearLayout(QGraphicsLayoutItem *parent = nullptr)
     auto obj =
         new QGraphicsLinearLayout(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtr(1)));
     Qt5xHb::returnNewObject(obj, true);
+
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQGRAPHICSLAYOUTITEMORNIL(2)) {
-    /*
-    QGraphicsLinearLayout(Qt::Orientation orientation, QGraphicsLayoutItem * parent = nullptr)
-    */
+    // QGraphicsLinearLayout(Qt::Orientation orientation, QGraphicsLayoutItem *parent = nullptr)
     auto obj =
         new QGraphicsLinearLayout(static_cast<Qt::Orientation>(hb_parni(1)),
                                   HB_ISNIL(2) ? nullptr : static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, true);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_NEW)
 
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_DELETE)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -106,12 +106,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addItem(QGraphicsLayoutItem * item)
-*/
+// void addItem(QGraphicsLayoutItem *item)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ADDITEM)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,12 +126,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ADDITEM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addStretch(int stretch = 1)
-*/
+// void addStretch(int stretch = 1)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ADDSTRETCH)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,12 +146,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ADDSTRETCH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::Alignment alignment(QGraphicsLayoutItem * item) const
-*/
+// Qt::Alignment alignment(QGraphicsLayoutItem *item) const
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ALIGNMENT)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,12 +164,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ALIGNMENT)
   }
 }
 
-/*
-void insertItem(int index, QGraphicsLayoutItem * item)
-*/
+// void insertItem(int index, QGraphicsLayoutItem *item)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_INSERTITEM)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,12 +184,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_INSERTITEM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void insertStretch(int index, int stretch = 1)
-*/
+// void insertStretch(int index, int stretch = 1)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_INSERTSTRETCH)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,12 +204,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_INSERTSTRETCH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal itemSpacing(int index) const
-*/
+// qreal itemSpacing(int index) const
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ITEMSPACING)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,12 +222,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ITEMSPACING)
   }
 }
 
-/*
-Qt::Orientation orientation() const
-*/
+// Qt::Orientation orientation() const
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ORIENTATION)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -254,12 +240,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ORIENTATION)
   }
 }
 
-/*
-void removeItem(QGraphicsLayoutItem * item)
-*/
+// void removeItem(QGraphicsLayoutItem *item)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_REMOVEITEM)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,12 +260,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_REMOVEITEM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAlignment(QGraphicsLayoutItem * item, Qt::Alignment alignment)
-*/
+// void setAlignment(QGraphicsLayoutItem *item, Qt::Alignment alignment)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETALIGNMENT)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -298,12 +280,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETALIGNMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setItemSpacing(int index, qreal spacing)
-*/
+// void setItemSpacing(int index, qreal spacing)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETITEMSPACING)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,12 +300,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETITEMSPACING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOrientation(Qt::Orientation orientation)
-*/
+// void setOrientation(Qt::Orientation orientation)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETORIENTATION)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,12 +320,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETORIENTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSpacing(qreal spacing)
-*/
+// void setSpacing(qreal spacing)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETSPACING)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -364,12 +340,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETSPACING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStretchFactor(QGraphicsLayoutItem * item, int stretch)
-*/
+// void setStretchFactor(QGraphicsLayoutItem *item, int stretch)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETSTRETCHFACTOR)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -386,12 +360,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETSTRETCHFACTOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal spacing() const
-*/
+// qreal spacing() const
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SPACING)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -406,12 +378,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SPACING)
   }
 }
 
-/*
-int stretchFactor(QGraphicsLayoutItem * item) const
-*/
+// int stretchFactor(QGraphicsLayoutItem *item) const
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_STRETCHFACTOR)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -426,12 +396,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_STRETCHFACTOR)
   }
 }
 
-/*
-virtual int count() const
-*/
+// virtual int count() const
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_COUNT)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -446,12 +414,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_COUNT)
   }
 }
 
-/*
-virtual void invalidate()
-*/
+// virtual void invalidate()
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_INVALIDATE)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -468,12 +434,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_INVALIDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QGraphicsLayoutItem * itemAt(int index) const
-*/
+// virtual QGraphicsLayoutItem *itemAt(int index) const
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ITEMAT)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -489,12 +453,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ITEMAT)
   }
 }
 
-/*
-virtual void removeAt(int index)
-*/
+// virtual void removeAt(int index)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_REMOVEAT)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -511,12 +473,10 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_REMOVEAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setGeometry(const QRectF &rect)
-*/
+// virtual void setGeometry(const QRectF &rect)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETGEOMETRY)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -533,20 +493,17 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETGEOMETRY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSizeF sizeHint(Qt::SizeHint which, const QSizeF &constraint = QSizeF()) const
-*/
+// virtual QSizeF sizeHint(Qt::SizeHint which, const QSizeF &constraint = QSizeF()) const
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SIZEHINT)
 {
-  auto obj = static_cast<QGraphicsLinearLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSIZEFORNIL(2)) {
 #endif
-      auto ptr = new QSizeF(obj->sizeHint(static_cast<Qt::SizeHint>(hb_parni(1)),
-                                          HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF *>(Qt5xHb::itemGetPtr(2))));
-      Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->sizeHint(static_cast<Qt::SizeHint>(hb_parni(1)),
+                            HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF *>(Qt5xHb::itemGetPtr(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

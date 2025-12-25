@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QGESTURE
-REQUEST QPOINTF
-REQUEST QWIDGET
+REQUEST QGesture
+REQUEST QPointF
+REQUEST QWidget
 #endif
 
 CLASS QGestureEvent INHERIT QEvent
@@ -59,9 +59,9 @@ RETURN
 #include <QtWidgets/QGestureEvent>
 #endif
 
-    /*
-    QGestureEvent(const QList<QGesture*> &gestures)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QGestureEvent(const QList<QGesture *> &gestures)
 HB_FUNC_STATIC(QGESTUREEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISARRAY(1)) {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_NEW)
 
 HB_FUNC_STATIC(QGESTUREEVENT_DELETE)
 {
-  auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -96,49 +96,44 @@ HB_FUNC_STATIC(QGESTUREEVENT_DELETE)
 HB_FUNC_STATIC(QGESTUREEVENT_ACCEPT)
 {
   if (ISNUMPAR(0)) {
-    /*
-    void accept()
-    */
-    auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+    // void accept()
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->accept();
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(1) && ISQGESTURE(1)) {
-    /*
-    void accept(QGesture * gesture)
-    */
-    auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+    // void accept(QGesture *gesture)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->accept(PQGESTURE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    void accept(Qt::GestureType gestureType)
-    */
-    auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+    // void accept(Qt::GestureType gestureType)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->accept(static_cast<Qt::GestureType>(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-QList<QGesture*> activeGestures() const
-*/
+// QList<QGesture *> activeGestures() const
 HB_FUNC_STATIC(QGESTUREEVENT_ACTIVEGESTURES)
 {
-  auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,12 +167,10 @@ HB_FUNC_STATIC(QGESTUREEVENT_ACTIVEGESTURES)
   }
 }
 
-/*
-QList<QGesture*> canceledGestures() const
-*/
+// QList<QGesture *> canceledGestures() const
 HB_FUNC_STATIC(QGESTUREEVENT_CANCELEDGESTURES)
 {
-  auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,12 +204,10 @@ HB_FUNC_STATIC(QGESTUREEVENT_CANCELEDGESTURES)
   }
 }
 
-/*
-QGesture * gesture(Qt::GestureType type) const
-*/
+// QGesture *gesture(Qt::GestureType type) const
 HB_FUNC_STATIC(QGESTUREEVENT_GESTURE)
 {
-  auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,12 +223,10 @@ HB_FUNC_STATIC(QGESTUREEVENT_GESTURE)
   }
 }
 
-/*
-QList<QGesture*> gestures() const
-*/
+// QList<QGesture *> gestures() const
 HB_FUNC_STATIC(QGESTUREEVENT_GESTURES)
 {
-  auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -274,38 +263,35 @@ HB_FUNC_STATIC(QGESTUREEVENT_GESTURES)
 HB_FUNC_STATIC(QGESTUREEVENT_IGNORE)
 {
   if (ISNUMPAR(0)) {
-    /*
-    void ignore()
-    */
-    auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+    // void ignore()
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->ignore();
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(1) && ISQGESTURE(1)) {
-    /*
-    void ignore(QGesture * gesture)
-    */
-    auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+    // void ignore(QGesture *gesture)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->ignore(PQGESTURE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    void ignore(Qt::GestureType gestureType)
-    */
-    auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+    // void ignore(Qt::GestureType gestureType)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->ignore(static_cast<Qt::GestureType>(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -314,43 +300,38 @@ HB_FUNC_STATIC(QGESTUREEVENT_IGNORE)
 HB_FUNC_STATIC(QGESTUREEVENT_ISACCEPTED)
 {
   if (ISNUMPAR(0)) {
-    /*
-    bool isAccepted() const
-    */
-    auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+    // bool isAccepted() const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->isAccepted());
     }
+
   } else if (ISNUMPAR(1) && ISQGESTURE(1)) {
-    /*
-    bool isAccepted(QGesture * gesture) const
-    */
-    auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+    // bool isAccepted(QGesture *gesture) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->isAccepted(PQGESTURE(1)));
     }
+
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    bool isAccepted(Qt::GestureType gestureType) const
-    */
-    auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+    // bool isAccepted(Qt::GestureType gestureType) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->isAccepted(static_cast<Qt::GestureType>(hb_parni(1))));
     }
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-QPointF mapToGraphicsScene(const QPointF &gesturePoint) const
-*/
+// QPointF mapToGraphicsScene(const QPointF &gesturePoint) const
 HB_FUNC_STATIC(QGESTUREEVENT_MAPTOGRAPHICSSCENE)
 {
-  auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,49 +349,44 @@ HB_FUNC_STATIC(QGESTUREEVENT_MAPTOGRAPHICSSCENE)
 HB_FUNC_STATIC(QGESTUREEVENT_SETACCEPTED)
 {
   if (ISNUMPAR(1) && HB_ISLOG(1)) {
-    /*
-    void setAccepted(bool accepted)
-    */
-    auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+    // void setAccepted(bool accepted)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setAccepted(PBOOL(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(2) && ISQGESTURE(1) && HB_ISLOG(2)) {
-    /*
-    void setAccepted(QGesture * gesture, bool value)
-    */
-    auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+    // void setAccepted(QGesture *gesture, bool value)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setAccepted(PQGESTURE(1), PBOOL(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
-    /*
-    void setAccepted(Qt::GestureType gestureType, bool value)
-    */
-    auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+    // void setAccepted(Qt::GestureType gestureType, bool value)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setAccepted(static_cast<Qt::GestureType>(hb_parni(1)), PBOOL(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-QWidget * widget() const
-*/
+// QWidget *widget() const
 HB_FUNC_STATIC(QGESTUREEVENT_WIDGET)
 {
-  auto obj = static_cast<QGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

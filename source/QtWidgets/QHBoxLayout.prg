@@ -48,20 +48,20 @@ RETURN
 #include <QtWidgets/QHBoxLayout>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QHBoxLayout *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QHBOXLAYOUT_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QHBoxLayout()
-    */
+    // QHBoxLayout()
     auto obj = new QHBoxLayout();
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
-    /*
-    QHBoxLayout(QWidget * parent)
-    */
+    // QHBoxLayout(QWidget *parent)
     auto obj = new QHBoxLayout(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, false);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QHBOXLAYOUT_NEW)
 
 HB_FUNC_STATIC(QHBOXLAYOUT_DELETE)
 {
-  auto obj = qobject_cast<QHBoxLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QICON
+REQUEST QIcon
 #endif
 
 CLASS QFileIconProvider
@@ -58,9 +58,9 @@ RETURN
 #include <QtWidgets/QFileIconProvider>
 #endif
 
-    /*
-    QFileIconProvider()
-    */
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QFileIconProvider *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QFileIconProvider()
 HB_FUNC_STATIC(QFILEICONPROVIDER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_NEW)
 
 HB_FUNC_STATIC(QFILEICONPROVIDER_DELETE)
 {
-  auto obj = static_cast<QFileIconProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -89,34 +89,30 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_DELETE)
 HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    virtual QIcon icon(QFileIconProvider::IconType type) const
-    */
-    auto obj = static_cast<QFileIconProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
+    // virtual QIcon icon(QFileIconProvider::IconType type) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQICON(obj->icon(static_cast<QFileIconProvider::IconType>(hb_parni(1))));
     }
+
   } else if (ISNUMPAR(1) && ISQFILEINFO(1)) {
-    /*
-    virtual QIcon icon(const QFileInfo &info) const
-    */
-    auto obj = static_cast<QFileIconProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
+    // virtual QIcon icon(const QFileInfo &info) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RQICON(obj->icon(*PQFILEINFO(1)));
     }
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-virtual QString type(const QFileInfo &info) const
-*/
+// virtual QString type(const QFileInfo &info) const
 HB_FUNC_STATIC(QFILEICONPROVIDER_TYPE)
 {
-  auto obj = static_cast<QFileIconProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

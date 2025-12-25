@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECT
-REQUEST QWIDGET
+REQUEST QRect
+REQUEST QWidget
 #endif
 
 CLASS QDesktopWidget INHERIT QWidget
@@ -60,9 +60,11 @@ RETURN
 #include <QtWidgets/QDesktopWidget>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QDESKTOPWIDGET_DELETE)
 {
-  auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -80,43 +82,41 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_DELETE)
 HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    /*
-    const QRect availableGeometry(int screen = -1) const
-    */
-    auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // const QRect availableGeometry(int screen = -1) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RQRECT(obj->availableGeometry(OPINT(1, -1)));
+      auto ptr = new QRect(obj->availableGeometry(OPINT(1, -1)));
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
+
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
-    /*
-    const QRect availableGeometry(const QWidget * widget) const
-    */
-    auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // const QRect availableGeometry(const QWidget *widget) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RQRECT(obj->availableGeometry(PQWIDGET(1)));
+      auto ptr = new QRect(obj->availableGeometry(PQWIDGET(1)));
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
+
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
-    /*
-    const QRect availableGeometry(const QPoint &p) const
-    */
-    auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // const QRect availableGeometry(const QPoint &p) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RQRECT(obj->availableGeometry(*PQPOINT(1)));
+      auto ptr = new QRect(obj->availableGeometry(*PQPOINT(1)));
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-bool isVirtualDesktop() const
-*/
+// bool isVirtualDesktop() const
 HB_FUNC_STATIC(QDESKTOPWIDGET_ISVIRTUALDESKTOP)
 {
-  auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,12 +131,10 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_ISVIRTUALDESKTOP)
   }
 }
 
-/*
-int primaryScreen() const
-*/
+// int primaryScreen() const
 HB_FUNC_STATIC(QDESKTOPWIDGET_PRIMARYSCREEN)
 {
-  auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,12 +149,10 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_PRIMARYSCREEN)
   }
 }
 
-/*
-QWidget * screen(int screen = -1)
-*/
+// QWidget *screen(int screen = -1)
 HB_FUNC_STATIC(QDESKTOPWIDGET_SCREEN)
 {
-  auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,12 +168,10 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREEN)
   }
 }
 
-/*
-int screenCount() const
-*/
+// int screenCount() const
 HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENCOUNT)
 {
-  auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,32 +189,32 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENCOUNT)
 HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    /*
-    const QRect screenGeometry(int screen = -1) const
-    */
-    auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // const QRect screenGeometry(int screen = -1) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RQRECT(obj->screenGeometry(OPINT(1, -1)));
+      auto ptr = new QRect(obj->screenGeometry(OPINT(1, -1)));
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
+
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
-    /*
-    const QRect screenGeometry(const QWidget * widget) const
-    */
-    auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // const QRect screenGeometry(const QWidget *widget) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RQRECT(obj->screenGeometry(PQWIDGET(1)));
+      auto ptr = new QRect(obj->screenGeometry(PQWIDGET(1)));
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
+
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
-    /*
-    const QRect screenGeometry(const QPoint &p) const
-    */
-    auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // const QRect screenGeometry(const QPoint &p) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RQRECT(obj->screenGeometry(*PQPOINT(1)));
+      auto ptr = new QRect(obj->screenGeometry(*PQPOINT(1)));
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -229,34 +223,30 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
 HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENNUMBER)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
-    /*
-    int screenNumber(const QWidget * widget = nullptr) const
-    */
-    auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // int screenNumber(const QWidget *widget = nullptr) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->screenNumber(OPQWIDGET(1, nullptr)));
     }
+
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
-    /*
-    int screenNumber(const QPoint &point) const
-    */
-    auto obj = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // int screenNumber(const QPoint &point) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->screenNumber(*PQPOINT(1)));
     }
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-void resized(int screen)
-*/
+// void resized(int screen)
 HB_FUNC_STATIC(QDESKTOPWIDGET_ONRESIZED)
 {
-  auto sender = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -277,7 +267,6 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_ONRESIZED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -293,12 +282,10 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_ONRESIZED)
   hb_retl(result);
 }
 
-/*
-void screenCountChanged(int newCount)
-*/
+// void screenCountChanged(int newCount)
 HB_FUNC_STATIC(QDESKTOPWIDGET_ONSCREENCOUNTCHANGED)
 {
-  auto sender = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -320,7 +307,6 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_ONSCREENCOUNTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -336,12 +322,10 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_ONSCREENCOUNTCHANGED)
   hb_retl(result);
 }
 
-/*
-void workAreaResized(int screen)
-*/
+// void workAreaResized(int screen)
 HB_FUNC_STATIC(QDESKTOPWIDGET_ONWORKAREARESIZED)
 {
-  auto sender = qobject_cast<QDesktopWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -363,7 +347,6 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_ONWORKAREARESIZED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

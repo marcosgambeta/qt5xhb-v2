@@ -11,14 +11,14 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTITEMDELEGATE
-REQUEST QABSTRACTITEMMODEL
-REQUEST QITEMSELECTIONMODEL
-REQUEST QMODELINDEX
-REQUEST QRECT
-REQUEST QSIZE
-REQUEST QVARIANT
-REQUEST QWIDGET
+REQUEST QAbstractItemDelegate
+REQUEST QAbstractItemModel
+REQUEST QItemSelectionModel
+REQUEST QModelIndex
+REQUEST QRect
+REQUEST QSize
+REQUEST QVariant
+REQUEST QWidget
 #endif
 
 CLASS QAbstractItemView INHERIT QAbstractScrollArea
@@ -207,9 +207,11 @@ RETURN
 #include <QtWidgets/QAbstractItemView>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_DELETE)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -224,12 +226,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool alternatingRowColors() const
-*/
+// bool alternatingRowColors() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ALTERNATINGROWCOLORS)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,12 +244,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ALTERNATINGROWCOLORS)
   }
 }
 
-/*
-void setAlternatingRowColors(bool enable)
-*/
+// void setAlternatingRowColors(bool enable)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETALTERNATINGROWCOLORS)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,12 +264,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETALTERNATINGROWCOLORS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int autoScrollMargin() const
-*/
+// int autoScrollMargin() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_AUTOSCROLLMARGIN)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -286,12 +282,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_AUTOSCROLLMARGIN)
   }
 }
 
-/*
-void setAutoScrollMargin(int margin)
-*/
+// void setAutoScrollMargin(int margin)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETAUTOSCROLLMARGIN)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,12 +302,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETAUTOSCROLLMARGIN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QModelIndex currentIndex() const
-*/
+// QModelIndex currentIndex() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_CURRENTINDEX)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -328,12 +320,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_CURRENTINDEX)
   }
 }
 
-/*
-void setCurrentIndex(const QModelIndex &index)
-*/
+// void setCurrentIndex(const QModelIndex &index)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETCURRENTINDEX)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -350,12 +340,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETCURRENTINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::DropAction defaultDropAction() const
-*/
+// Qt::DropAction defaultDropAction() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_DEFAULTDROPACTION)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -370,12 +358,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_DEFAULTDROPACTION)
   }
 }
 
-/*
-void setDefaultDropAction(Qt::DropAction dropAction)
-*/
+// void setDefaultDropAction(Qt::DropAction dropAction)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDEFAULTDROPACTION)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -392,12 +378,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDEFAULTDROPACTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractItemView::DragDropMode dragDropMode() const
-*/
+// QAbstractItemView::DragDropMode dragDropMode() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_DRAGDROPMODE)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -412,12 +396,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_DRAGDROPMODE)
   }
 }
 
-/*
-void setDragDropMode(QAbstractItemView::DragDropMode behavior)
-*/
+// void setDragDropMode(QAbstractItemView::DragDropMode behavior)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGDROPMODE)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -434,12 +416,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGDROPMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool dragDropOverwriteMode() const
-*/
+// bool dragDropOverwriteMode() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_DRAGDROPOVERWRITEMODE)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -454,12 +434,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_DRAGDROPOVERWRITEMODE)
   }
 }
 
-/*
-void setDragDropOverwriteMode(bool overwrite)
-*/
+// void setDragDropOverwriteMode(bool overwrite)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGDROPOVERWRITEMODE)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -476,12 +454,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGDROPOVERWRITEMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool dragEnabled() const
-*/
+// bool dragEnabled() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_DRAGENABLED)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -496,12 +472,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_DRAGENABLED)
   }
 }
 
-/*
-void setDragEnabled(bool enable)
-*/
+// void setDragEnabled(bool enable)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGENABLED)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -518,12 +492,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractItemView::EditTriggers editTriggers() const
-*/
+// QAbstractItemView::EditTriggers editTriggers() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_EDITTRIGGERS)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -538,12 +510,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_EDITTRIGGERS)
   }
 }
 
-/*
-void setEditTriggers(QAbstractItemView::EditTriggers triggers)
-*/
+// void setEditTriggers(QAbstractItemView::EditTriggers triggers)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETEDITTRIGGERS)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -560,12 +530,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETEDITTRIGGERS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool hasAutoScroll() const
-*/
+// bool hasAutoScroll() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_HASAUTOSCROLL)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -580,12 +548,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_HASAUTOSCROLL)
   }
 }
 
-/*
-void setAutoScroll(bool enable)
-*/
+// void setAutoScroll(bool enable)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETAUTOSCROLL)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -602,12 +568,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETAUTOSCROLL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractItemView::ScrollMode horizontalScrollMode() const
-*/
+// QAbstractItemView::ScrollMode horizontalScrollMode() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_HORIZONTALSCROLLMODE)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -622,12 +586,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_HORIZONTALSCROLLMODE)
   }
 }
 
-/*
-void setHorizontalScrollMode(QAbstractItemView::ScrollMode mode)
-*/
+// void setHorizontalScrollMode(QAbstractItemView::ScrollMode mode)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETHORIZONTALSCROLLMODE)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -644,12 +606,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETHORIZONTALSCROLLMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize iconSize() const
-*/
+// QSize iconSize() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ICONSIZE)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -664,12 +624,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ICONSIZE)
   }
 }
 
-/*
-void setIconSize(const QSize &size)
-*/
+// void setIconSize(const QSize &size)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETICONSIZE)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -686,12 +644,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETICONSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget * indexWidget(const QModelIndex &index) const
-*/
+// QWidget *indexWidget(const QModelIndex &index) const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXWIDGET)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -707,12 +663,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXWIDGET)
   }
 }
 
-/*
-void setIndexWidget(const QModelIndex &index, QWidget * widget)
-*/
+// void setIndexWidget(const QModelIndex &index, QWidget *widget)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETINDEXWIDGET)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -729,12 +683,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETINDEXWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void closePersistentEditor(const QModelIndex &index)
-*/
+// void closePersistentEditor(const QModelIndex &index)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_CLOSEPERSISTENTEDITOR)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -751,12 +703,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_CLOSEPERSISTENTEDITOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QModelIndex indexAt(const QPoint &point) const = 0
-*/
+// virtual QModelIndex indexAt(const QPoint &point) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXAT)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -774,36 +724,32 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXAT)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATE)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QAbstractItemDelegate * itemDelegate() const
-    */
-    auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // QAbstractItemDelegate *itemDelegate() const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = obj->itemDelegate();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
     }
+
   } else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
-    /*
-    QAbstractItemDelegate * itemDelegate(const QModelIndex &index) const
-    */
-    auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // QAbstractItemDelegate *itemDelegate(const QModelIndex &index) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = obj->itemDelegate(*PQMODELINDEX(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
     }
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-void setItemDelegate(QAbstractItemDelegate * delegate)
-*/
+// void setItemDelegate(QAbstractItemDelegate *delegate)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETITEMDELEGATE)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -820,12 +766,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETITEMDELEGATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractItemDelegate * itemDelegateForColumn(int column) const
-*/
+// QAbstractItemDelegate *itemDelegateForColumn(int column) const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATEFORCOLUMN)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -841,12 +785,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATEFORCOLUMN)
   }
 }
 
-/*
-void setItemDelegateForColumn(int column, QAbstractItemDelegate * delegate)
-*/
+// void setItemDelegateForColumn(int column, QAbstractItemDelegate *delegate)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETITEMDELEGATEFORCOLUMN)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -863,12 +805,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETITEMDELEGATEFORCOLUMN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractItemDelegate * itemDelegateForRow(int row) const
-*/
+// QAbstractItemDelegate *itemDelegateForRow(int row) const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATEFORROW)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -884,12 +824,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATEFORROW)
   }
 }
 
-/*
-void setItemDelegateForRow(int row, QAbstractItemDelegate * delegate)
-*/
+// void setItemDelegateForRow(int row, QAbstractItemDelegate *delegate)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETITEMDELEGATEFORROW)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -906,12 +844,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETITEMDELEGATEFORROW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void keyboardSearch(const QString &search)
-*/
+// virtual void keyboardSearch(const QString &search)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_KEYBOARDSEARCH)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -928,12 +864,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_KEYBOARDSEARCH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractItemModel * model() const
-*/
+// QAbstractItemModel *model() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_MODEL)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -949,12 +883,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_MODEL)
   }
 }
 
-/*
-virtual void setModel(QAbstractItemModel * model)
-*/
+// virtual void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETMODEL)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -971,12 +903,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETMODEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void openPersistentEditor(const QModelIndex &index)
-*/
+// void openPersistentEditor(const QModelIndex &index)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_OPENPERSISTENTEDITOR)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -993,12 +923,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_OPENPERSISTENTEDITOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QModelIndex rootIndex() const
-*/
+// QModelIndex rootIndex() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ROOTINDEX)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1013,12 +941,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ROOTINDEX)
   }
 }
 
-/*
-virtual void setRootIndex(const QModelIndex &index)
-*/
+// virtual void setRootIndex(const QModelIndex &index)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETROOTINDEX)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1035,13 +961,11 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETROOTINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void scrollTo(const QModelIndex &index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible)
-= 0
-*/
+// virtual void scrollTo(const QModelIndex &index, QAbstractItemView::ScrollHint hint =
+// QAbstractItemView::EnsureVisible) = 0
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SCROLLTO)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1060,12 +984,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SCROLLTO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractItemView::SelectionBehavior selectionBehavior() const
-*/
+// QAbstractItemView::SelectionBehavior selectionBehavior() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTIONBEHAVIOR)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1080,12 +1002,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTIONBEHAVIOR)
   }
 }
 
-/*
-void setSelectionBehavior(QAbstractItemView::SelectionBehavior behavior)
-*/
+// void setSelectionBehavior(QAbstractItemView::SelectionBehavior behavior)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONBEHAVIOR)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1102,12 +1022,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONBEHAVIOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractItemView::SelectionMode selectionMode() const
-*/
+// QAbstractItemView::SelectionMode selectionMode() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTIONMODE)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1122,12 +1040,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTIONMODE)
   }
 }
 
-/*
-void setSelectionMode(QAbstractItemView::SelectionMode mode)
-*/
+// void setSelectionMode(QAbstractItemView::SelectionMode mode)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONMODE)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1144,12 +1060,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QItemSelectionModel * selectionModel() const
-*/
+// QItemSelectionModel *selectionModel() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTIONMODEL)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1165,12 +1079,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTIONMODEL)
   }
 }
 
-/*
-virtual void setSelectionModel(QItemSelectionModel * selectionModel)
-*/
+// virtual void setSelectionModel(QItemSelectionModel *selectionModel)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONMODEL)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1187,12 +1099,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONMODEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool showDropIndicator() const
-*/
+// bool showDropIndicator() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SHOWDROPINDICATOR)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1207,12 +1117,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SHOWDROPINDICATOR)
   }
 }
 
-/*
-void setDropIndicatorShown(bool enable)
-*/
+// void setDropIndicatorShown(bool enable)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDROPINDICATORSHOWN)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1229,12 +1137,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDROPINDICATORSHOWN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool tabKeyNavigation() const
-*/
+// bool tabKeyNavigation() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_TABKEYNAVIGATION)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1249,12 +1155,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_TABKEYNAVIGATION)
   }
 }
 
-/*
-void setTabKeyNavigation(bool enable)
-*/
+// void setTabKeyNavigation(bool enable)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETTABKEYNAVIGATION)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1271,12 +1175,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETTABKEYNAVIGATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::TextElideMode textElideMode() const
-*/
+// Qt::TextElideMode textElideMode() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_TEXTELIDEMODE)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1291,12 +1193,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_TEXTELIDEMODE)
   }
 }
 
-/*
-void setTextElideMode(Qt::TextElideMode mode)
-*/
+// void setTextElideMode(Qt::TextElideMode mode)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETTEXTELIDEMODE)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1313,12 +1213,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETTEXTELIDEMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractItemView::ScrollMode verticalScrollMode() const
-*/
+// QAbstractItemView::ScrollMode verticalScrollMode() const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_VERTICALSCROLLMODE)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1333,12 +1231,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_VERTICALSCROLLMODE)
   }
 }
 
-/*
-void setVerticalScrollMode(QAbstractItemView::ScrollMode mode)
-*/
+// void setVerticalScrollMode(QAbstractItemView::ScrollMode mode)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETVERTICALSCROLLMODE)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1355,12 +1251,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETVERTICALSCROLLMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int sizeHintForColumn(int column) const
-*/
+// virtual int sizeHintForColumn(int column) const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORCOLUMN)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1375,12 +1269,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORCOLUMN)
   }
 }
 
-/*
-QSize sizeHintForIndex(const QModelIndex &index) const
-*/
+// QSize sizeHintForIndex(const QModelIndex &index) const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORINDEX)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1395,12 +1287,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORINDEX)
   }
 }
 
-/*
-virtual int sizeHintForRow(int row) const
-*/
+// virtual int sizeHintForRow(int row) const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORROW)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1415,12 +1305,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORROW)
   }
 }
 
-/*
-virtual QRect visualRect(const QModelIndex &index) const = 0
-*/
+// virtual QRect visualRect(const QModelIndex &index) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_VISUALRECT)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1435,12 +1323,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_VISUALRECT)
   }
 }
 
-/*
-virtual QVariant inputMethodQuery(Qt::InputMethodQuery query) const
-*/
+// virtual QVariant inputMethodQuery(Qt::InputMethodQuery query) const
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_INPUTMETHODQUERY)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1455,12 +1341,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_INPUTMETHODQUERY)
   }
 }
 
-/*
-void clearSelection()
-*/
+// void clearSelection()
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_CLEARSELECTION)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1477,12 +1361,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_CLEARSELECTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void edit(const QModelIndex &index)
-*/
+// void edit(const QModelIndex &index)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_EDIT)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1499,12 +1381,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_EDIT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void reset()
-*/
+// virtual void reset()
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_RESET)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1521,12 +1401,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_RESET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void scrollToBottom()
-*/
+// void scrollToBottom()
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SCROLLTOBOTTOM)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1543,12 +1421,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SCROLLTOBOTTOM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void scrollToTop()
-*/
+// void scrollToTop()
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SCROLLTOTOP)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1565,12 +1441,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SCROLLTOTOP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void selectAll()
-*/
+// virtual void selectAll()
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTALL)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1590,71 +1464,64 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTALL)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
 {
   if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
-    /*
-    void update(int x, int y, int w, int h)
-    */
-    auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void update(int x, int y, int w, int h)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->update(PINT(1), PINT(2), PINT(3), PINT(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(1) && ISQRECT(1)) {
-    /*
-    void update(const QRect &rect)
-    */
-    auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void update(const QRect &rect)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->update(*PQRECT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(1) && ISQREGION(1)) {
-    /*
-    void update(const QRegion &rgn)
-    */
-    auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void update(const QRegion &rgn)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->update(*PQREGION(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(0)) {
-    /*
-    void update()
-    */
-    auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void update()
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->update();
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
-    /*
-    void update(const QModelIndex &index)
-    */
-    auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void update(const QModelIndex &index)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->update(*PQMODELINDEX(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-virtual void doItemsLayout()
-*/
+// virtual void doItemsLayout()
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_DOITEMSLAYOUT)
 {
-  auto obj = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1671,12 +1538,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_DOITEMSLAYOUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void activated(const QModelIndex &index)
-*/
+// void activated(const QModelIndex &index)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONACTIVATED)
 {
-  auto sender = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1698,7 +1563,6 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONACTIVATED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1714,12 +1578,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONACTIVATED)
   hb_retl(result);
 }
 
-/*
-void clicked(const QModelIndex &index)
-*/
+// void clicked(const QModelIndex &index)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONCLICKED)
 {
-  auto sender = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1741,7 +1603,6 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONCLICKED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1757,12 +1618,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONCLICKED)
   hb_retl(result);
 }
 
-/*
-void doubleClicked(const QModelIndex &index)
-*/
+// void doubleClicked(const QModelIndex &index)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONDOUBLECLICKED)
 {
-  auto sender = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1784,7 +1643,6 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONDOUBLECLICKED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1800,12 +1658,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONDOUBLECLICKED)
   hb_retl(result);
 }
 
-/*
-void entered(const QModelIndex &index)
-*/
+// void entered(const QModelIndex &index)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONENTERED)
 {
-  auto sender = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1827,7 +1683,6 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONENTERED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1843,12 +1698,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONENTERED)
   hb_retl(result);
 }
 
-/*
-void pressed(const QModelIndex &index)
-*/
+// void pressed(const QModelIndex &index)
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONPRESSED)
 {
-  auto sender = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1870,7 +1723,6 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONPRESSED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1886,12 +1738,10 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONPRESSED)
   hb_retl(result);
 }
 
-/*
-void viewportEntered()
-*/
+// void viewportEntered()
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONVIEWPORTENTERED)
 {
-  auto sender = qobject_cast<QAbstractItemView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1910,7 +1760,6 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONVIEWPORTENTERED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

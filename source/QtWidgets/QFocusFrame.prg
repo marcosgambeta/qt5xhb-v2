@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QWIDGET
+REQUEST QWidget
 #endif
 
 CLASS QFocusFrame INHERIT QWidget
@@ -51,9 +51,9 @@ RETURN
 #include <QtWidgets/QFocusFrame>
 #endif
 
-    /*
-    QFocusFrame(QWidget * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QFocusFrame *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QFocusFrame(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QFOCUSFRAME_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QFOCUSFRAME_NEW)
 
 HB_FUNC_STATIC(QFOCUSFRAME_DELETE)
 {
-  auto obj = qobject_cast<QFocusFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -81,12 +81,10 @@ HB_FUNC_STATIC(QFOCUSFRAME_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWidget(QWidget * widget)
-*/
+// void setWidget(QWidget *widget)
 HB_FUNC_STATIC(QFOCUSFRAME_SETWIDGET)
 {
-  auto obj = qobject_cast<QFocusFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,12 +101,10 @@ HB_FUNC_STATIC(QFOCUSFRAME_SETWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget * widget() const
-*/
+// QWidget *widget() const
 HB_FUNC_STATIC(QFOCUSFRAME_WIDGET)
 {
-  auto obj = qobject_cast<QFocusFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

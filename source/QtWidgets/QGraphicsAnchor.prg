@@ -52,9 +52,11 @@ RETURN
 #include <QtWidgets/QGraphicsAnchor>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGraphicsAnchor *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSANCHOR_DELETE)
 {
-  auto obj = qobject_cast<QGraphicsAnchor *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -69,12 +71,10 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSizePolicy(QSizePolicy::Policy policy)
-*/
+// void setSizePolicy(QSizePolicy::Policy policy)
 HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSIZEPOLICY)
 {
-  auto obj = qobject_cast<QGraphicsAnchor *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -91,12 +91,10 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSIZEPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSpacing(qreal spacing)
-*/
+// void setSpacing(qreal spacing)
 HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSPACING)
 {
-  auto obj = qobject_cast<QGraphicsAnchor *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,12 +111,10 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSPACING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSizePolicy::Policy sizePolicy() const
-*/
+// QSizePolicy::Policy sizePolicy() const
 HB_FUNC_STATIC(QGRAPHICSANCHOR_SIZEPOLICY)
 {
-  auto obj = qobject_cast<QGraphicsAnchor *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,12 +129,10 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SIZEPOLICY)
   }
 }
 
-/*
-qreal spacing() const
-*/
+// qreal spacing() const
 HB_FUNC_STATIC(QGRAPHICSANCHOR_SPACING)
 {
-  auto obj = qobject_cast<QGraphicsAnchor *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,12 +147,10 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SPACING)
   }
 }
 
-/*
-void unsetSpacing()
-*/
+// void unsetSpacing()
 HB_FUNC_STATIC(QGRAPHICSANCHOR_UNSETSPACING)
 {
-  auto obj = qobject_cast<QGraphicsAnchor *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

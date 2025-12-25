@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCOLOR
+REQUEST QColor
 #endif
 
 CLASS QColormap
@@ -65,9 +65,9 @@ RETURN
 
 #include <QtGui/QColor>
 
-    /*
-    QColormap(const QColormap &colormap)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QColormap *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QColormap(const QColormap &colormap)
 HB_FUNC_STATIC(QCOLORMAP_NEW)
 {
   if (ISNUMPAR(1) && ISQCOLORMAP(1)) {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QCOLORMAP_NEW)
 
 HB_FUNC_STATIC(QCOLORMAP_DELETE)
 {
-  auto obj = static_cast<QColormap *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -93,18 +93,17 @@ HB_FUNC_STATIC(QCOLORMAP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QColor colorAt(uint pixel) const
-*/
+// const QColor colorAt(uint pixel) const
 HB_FUNC_STATIC(QCOLORMAP_COLORAT)
 {
-  auto obj = static_cast<QColormap *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQCOLOR(obj->colorAt(PUINT(1)));
+      auto ptr = new QColor(obj->colorAt(PUINT(1)));
+      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -113,12 +112,10 @@ HB_FUNC_STATIC(QCOLORMAP_COLORAT)
   }
 }
 
-/*
-const QVector<QColor> colormap() const
-*/
+// const QVector<QColor> colormap() const
 HB_FUNC_STATIC(QCOLORMAP_COLORMAP)
 {
-  auto obj = static_cast<QColormap *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,12 +152,10 @@ HB_FUNC_STATIC(QCOLORMAP_COLORMAP)
   }
 }
 
-/*
-int depth() const
-*/
+// int depth() const
 HB_FUNC_STATIC(QCOLORMAP_DEPTH)
 {
-  auto obj = static_cast<QColormap *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,12 +170,10 @@ HB_FUNC_STATIC(QCOLORMAP_DEPTH)
   }
 }
 
-/*
-QColormap::Mode mode() const
-*/
+// QColormap::Mode mode() const
 HB_FUNC_STATIC(QCOLORMAP_MODE)
 {
-  auto obj = static_cast<QColormap *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,12 +188,10 @@ HB_FUNC_STATIC(QCOLORMAP_MODE)
   }
 }
 
-/*
-uint pixel(const QColor &color) const
-*/
+// uint pixel(const QColor &color) const
 HB_FUNC_STATIC(QCOLORMAP_PIXEL)
 {
-  auto obj = static_cast<QColormap *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,12 +206,10 @@ HB_FUNC_STATIC(QCOLORMAP_PIXEL)
   }
 }
 
-/*
-int size() const
-*/
+// int size() const
 HB_FUNC_STATIC(QCOLORMAP_SIZE)
 {
-  auto obj = static_cast<QColormap *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,16 +224,13 @@ HB_FUNC_STATIC(QCOLORMAP_SIZE)
   }
 }
 
-/*
-static QColormap instance(int screen = -1)
-*/
+// static QColormap instance(int screen = -1)
 HB_FUNC_STATIC(QCOLORMAP_INSTANCE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-    auto ptr = new QColormap(QColormap::instance(OPINT(1, -1)));
-    Qt5xHb::createReturnClass(ptr, "QCOLORMAP", true);
+    RQCOLORMAP(QColormap::instance(OPINT(1, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

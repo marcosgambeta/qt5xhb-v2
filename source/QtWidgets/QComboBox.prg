@@ -11,16 +11,16 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTITEMDELEGATE
-REQUEST QABSTRACTITEMMODEL
-REQUEST QABSTRACTITEMVIEW
-REQUEST QCOMPLETER
-REQUEST QICON
-REQUEST QLINEEDIT
-REQUEST QMODELINDEX
-REQUEST QSIZE
-REQUEST QVALIDATOR
-REQUEST QVARIANT
+REQUEST QAbstractItemDelegate
+REQUEST QAbstractItemModel
+REQUEST QAbstractItemView
+REQUEST QCompleter
+REQUEST QIcon
+REQUEST QLineEdit
+REQUEST QModelIndex
+REQUEST QSize
+REQUEST QValidator
+REQUEST QVariant
 #endif
 
 CLASS QComboBox INHERIT QWidget
@@ -141,9 +141,9 @@ RETURN
 #include <QtWidgets/QCompleter>
 #include <QtWidgets/QLineEdit>
 
-    /*
-    QComboBox(QWidget * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QComboBox(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QCOMBOBOX_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QCOMBOBOX_NEW)
 
 HB_FUNC_STATIC(QCOMBOBOX_DELETE)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -174,21 +174,18 @@ HB_FUNC_STATIC(QCOMBOBOX_DELETE)
 HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQVARIANTORNIL(2)) {
-    /*
-    void addItem(const QString &text, const QVariant &userData = QVariant())
-    */
-    auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void addItem(const QString &text, const QVariant &userData = QVariant())
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->addItem(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQVARIANTORNIL(3)) {
-    /*
-    void addItem(const QIcon &icon, const QString &text, const QVariant &userData = QVariant())
-    */
-    auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void addItem(const QIcon &icon, const QString &text, const QVariant &userData = QVariant())
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->addItem(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2),
@@ -196,17 +193,16 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-void addItems(const QStringList &texts)
-*/
+// void addItems(const QStringList &texts)
 HB_FUNC_STATIC(QCOMBOBOX_ADDITEMS)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,12 +219,10 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEMS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QCompleter * completer() const
-*/
+// QCompleter *completer() const
 HB_FUNC_STATIC(QCOMBOBOX_COMPLETER)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,12 +238,10 @@ HB_FUNC_STATIC(QCOMBOBOX_COMPLETER)
   }
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QCOMBOBOX_COUNT)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,12 +256,10 @@ HB_FUNC_STATIC(QCOMBOBOX_COUNT)
   }
 }
 
-/*
-int currentIndex() const
-*/
+// int currentIndex() const
 HB_FUNC_STATIC(QCOMBOBOX_CURRENTINDEX)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,12 +274,10 @@ HB_FUNC_STATIC(QCOMBOBOX_CURRENTINDEX)
   }
 }
 
-/*
-QString currentText() const
-*/
+// QString currentText() const
 HB_FUNC_STATIC(QCOMBOBOX_CURRENTTEXT)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,12 +292,10 @@ HB_FUNC_STATIC(QCOMBOBOX_CURRENTTEXT)
   }
 }
 
-/*
-bool duplicatesEnabled() const
-*/
+// bool duplicatesEnabled() const
 HB_FUNC_STATIC(QCOMBOBOX_DUPLICATESENABLED)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,13 +310,11 @@ HB_FUNC_STATIC(QCOMBOBOX_DUPLICATESENABLED)
   }
 }
 
-/*
-int findData(const QVariant &data, int role = Qt::UserRole, Qt::MatchFlags flags = Qt::MatchExactly |
-Qt::MatchCaseSensitive) const
-*/
+// int findData(const QVariant &data, int role = Qt::UserRole, Qt::MatchFlags flags = Qt::MatchExactly |
+// Qt::MatchCaseSensitive) const
 HB_FUNC_STATIC(QCOMBOBOX_FINDDATA)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,12 +331,10 @@ HB_FUNC_STATIC(QCOMBOBOX_FINDDATA)
   }
 }
 
-/*
-int findText(const QString &text, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive) const
-*/
+// int findText(const QString &text, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive) const
 HB_FUNC_STATIC(QCOMBOBOX_FINDTEXT)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -369,12 +351,10 @@ HB_FUNC_STATIC(QCOMBOBOX_FINDTEXT)
   }
 }
 
-/*
-bool hasFrame() const
-*/
+// bool hasFrame() const
 HB_FUNC_STATIC(QCOMBOBOX_HASFRAME)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -389,12 +369,10 @@ HB_FUNC_STATIC(QCOMBOBOX_HASFRAME)
   }
 }
 
-/*
-virtual void hidePopup()
-*/
+// virtual void hidePopup()
 HB_FUNC_STATIC(QCOMBOBOX_HIDEPOPUP)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,12 +389,10 @@ HB_FUNC_STATIC(QCOMBOBOX_HIDEPOPUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize iconSize() const
-*/
+// QSize iconSize() const
 HB_FUNC_STATIC(QCOMBOBOX_ICONSIZE)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -434,21 +410,18 @@ HB_FUNC_STATIC(QCOMBOBOX_ICONSIZE)
 HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
 {
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQVARIANTORNIL(3)) {
-    /*
-    void insertItem(int index, const QString &text, const QVariant &userData = QVariant())
-    */
-    auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void insertItem(int index, const QString &text, const QVariant &userData = QVariant())
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->insertItem(PINT(1), PQSTRING(2), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3) && ISQVARIANTORNIL(4)) {
-    /*
-    void insertItem(int index, const QIcon &icon, const QString &text, const QVariant &userData = QVariant())
-    */
-    auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void insertItem(int index, const QIcon &icon, const QString &text, const QVariant &userData = QVariant())
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->insertItem(PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(2)) : QIcon(hb_parc(2)),
@@ -456,17 +429,16 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-void insertItems(int index, const QStringList &list)
-*/
+// void insertItems(int index, const QStringList &list)
 HB_FUNC_STATIC(QCOMBOBOX_INSERTITEMS)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -483,12 +455,10 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEMS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QComboBox::InsertPolicy insertPolicy() const
-*/
+// QComboBox::InsertPolicy insertPolicy() const
 HB_FUNC_STATIC(QCOMBOBOX_INSERTPOLICY)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -503,12 +473,10 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTPOLICY)
   }
 }
 
-/*
-void insertSeparator(int index)
-*/
+// void insertSeparator(int index)
 HB_FUNC_STATIC(QCOMBOBOX_INSERTSEPARATOR)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -525,12 +493,10 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTSEPARATOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isEditable() const
-*/
+// bool isEditable() const
 HB_FUNC_STATIC(QCOMBOBOX_ISEDITABLE)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -545,12 +511,10 @@ HB_FUNC_STATIC(QCOMBOBOX_ISEDITABLE)
   }
 }
 
-/*
-QVariant itemData(int index, int role = Qt::UserRole) const
-*/
+// QVariant itemData(int index, int role = Qt::UserRole) const
 HB_FUNC_STATIC(QCOMBOBOX_ITEMDATA)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -565,12 +529,10 @@ HB_FUNC_STATIC(QCOMBOBOX_ITEMDATA)
   }
 }
 
-/*
-QAbstractItemDelegate * itemDelegate() const
-*/
+// QAbstractItemDelegate *itemDelegate() const
 HB_FUNC_STATIC(QCOMBOBOX_ITEMDELEGATE)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -586,12 +548,10 @@ HB_FUNC_STATIC(QCOMBOBOX_ITEMDELEGATE)
   }
 }
 
-/*
-QIcon itemIcon(int index) const
-*/
+// QIcon itemIcon(int index) const
 HB_FUNC_STATIC(QCOMBOBOX_ITEMICON)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -606,12 +566,10 @@ HB_FUNC_STATIC(QCOMBOBOX_ITEMICON)
   }
 }
 
-/*
-QString itemText(int index) const
-*/
+// QString itemText(int index) const
 HB_FUNC_STATIC(QCOMBOBOX_ITEMTEXT)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -626,12 +584,10 @@ HB_FUNC_STATIC(QCOMBOBOX_ITEMTEXT)
   }
 }
 
-/*
-QLineEdit * lineEdit() const
-*/
+// QLineEdit *lineEdit() const
 HB_FUNC_STATIC(QCOMBOBOX_LINEEDIT)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -647,12 +603,10 @@ HB_FUNC_STATIC(QCOMBOBOX_LINEEDIT)
   }
 }
 
-/*
-int maxCount() const
-*/
+// int maxCount() const
 HB_FUNC_STATIC(QCOMBOBOX_MAXCOUNT)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -667,12 +621,10 @@ HB_FUNC_STATIC(QCOMBOBOX_MAXCOUNT)
   }
 }
 
-/*
-int maxVisibleItems() const
-*/
+// int maxVisibleItems() const
 HB_FUNC_STATIC(QCOMBOBOX_MAXVISIBLEITEMS)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -687,12 +639,10 @@ HB_FUNC_STATIC(QCOMBOBOX_MAXVISIBLEITEMS)
   }
 }
 
-/*
-int minimumContentsLength() const
-*/
+// int minimumContentsLength() const
 HB_FUNC_STATIC(QCOMBOBOX_MINIMUMCONTENTSLENGTH)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -707,12 +657,10 @@ HB_FUNC_STATIC(QCOMBOBOX_MINIMUMCONTENTSLENGTH)
   }
 }
 
-/*
-QAbstractItemModel * model() const
-*/
+// QAbstractItemModel *model() const
 HB_FUNC_STATIC(QCOMBOBOX_MODEL)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -728,12 +676,10 @@ HB_FUNC_STATIC(QCOMBOBOX_MODEL)
   }
 }
 
-/*
-int modelColumn() const
-*/
+// int modelColumn() const
 HB_FUNC_STATIC(QCOMBOBOX_MODELCOLUMN)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -748,12 +694,10 @@ HB_FUNC_STATIC(QCOMBOBOX_MODELCOLUMN)
   }
 }
 
-/*
-void removeItem(int index)
-*/
+// void removeItem(int index)
 HB_FUNC_STATIC(QCOMBOBOX_REMOVEITEM)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -770,12 +714,10 @@ HB_FUNC_STATIC(QCOMBOBOX_REMOVEITEM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QModelIndex rootModelIndex() const
-*/
+// QModelIndex rootModelIndex() const
 HB_FUNC_STATIC(QCOMBOBOX_ROOTMODELINDEX)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -790,12 +732,10 @@ HB_FUNC_STATIC(QCOMBOBOX_ROOTMODELINDEX)
   }
 }
 
-/*
-void setCompleter(QCompleter * completer)
-*/
+// void setCompleter(QCompleter *completer)
 HB_FUNC_STATIC(QCOMBOBOX_SETCOMPLETER)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -812,12 +752,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETCOMPLETER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDuplicatesEnabled(bool enable)
-*/
+// void setDuplicatesEnabled(bool enable)
 HB_FUNC_STATIC(QCOMBOBOX_SETDUPLICATESENABLED)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -834,12 +772,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETDUPLICATESENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEditable(bool editable)
-*/
+// void setEditable(bool editable)
 HB_FUNC_STATIC(QCOMBOBOX_SETEDITABLE)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -856,12 +792,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETEDITABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFrame(bool)
-*/
+// void setFrame(bool)
 HB_FUNC_STATIC(QCOMBOBOX_SETFRAME)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -878,12 +812,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETFRAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setIconSize(const QSize &size)
-*/
+// void setIconSize(const QSize &size)
 HB_FUNC_STATIC(QCOMBOBOX_SETICONSIZE)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -900,12 +832,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETICONSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setInsertPolicy(QComboBox::InsertPolicy policy)
-*/
+// void setInsertPolicy(QComboBox::InsertPolicy policy)
 HB_FUNC_STATIC(QCOMBOBOX_SETINSERTPOLICY)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -922,12 +852,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETINSERTPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setItemData(int index, const QVariant &value, int role = Qt::UserRole)
-*/
+// void setItemData(int index, const QVariant &value, int role = Qt::UserRole)
 HB_FUNC_STATIC(QCOMBOBOX_SETITEMDATA)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -944,12 +872,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETITEMDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setItemDelegate(QAbstractItemDelegate * delegate)
-*/
+// void setItemDelegate(QAbstractItemDelegate *delegate)
 HB_FUNC_STATIC(QCOMBOBOX_SETITEMDELEGATE)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -966,12 +892,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETITEMDELEGATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setItemIcon(int index, const QIcon &icon)
-*/
+// void setItemIcon(int index, const QIcon &icon)
 HB_FUNC_STATIC(QCOMBOBOX_SETITEMICON)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -988,12 +912,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETITEMICON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setItemText(int index, const QString &text)
-*/
+// void setItemText(int index, const QString &text)
 HB_FUNC_STATIC(QCOMBOBOX_SETITEMTEXT)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1010,12 +932,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETITEMTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setLineEdit(QLineEdit * edit)
-*/
+// void setLineEdit(QLineEdit *edit)
 HB_FUNC_STATIC(QCOMBOBOX_SETLINEEDIT)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1032,12 +952,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETLINEEDIT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMaxCount(int max)
-*/
+// void setMaxCount(int max)
 HB_FUNC_STATIC(QCOMBOBOX_SETMAXCOUNT)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1054,12 +972,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETMAXCOUNT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMaxVisibleItems(int maxItems)
-*/
+// void setMaxVisibleItems(int maxItems)
 HB_FUNC_STATIC(QCOMBOBOX_SETMAXVISIBLEITEMS)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1076,12 +992,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETMAXVISIBLEITEMS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMinimumContentsLength(int characters)
-*/
+// void setMinimumContentsLength(int characters)
 HB_FUNC_STATIC(QCOMBOBOX_SETMINIMUMCONTENTSLENGTH)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1098,12 +1012,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETMINIMUMCONTENTSLENGTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setModel(QAbstractItemModel * model)
-*/
+// void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC(QCOMBOBOX_SETMODEL)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1120,12 +1032,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETMODEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setModelColumn(int visibleColumn)
-*/
+// void setModelColumn(int visibleColumn)
 HB_FUNC_STATIC(QCOMBOBOX_SETMODELCOLUMN)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1142,12 +1052,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETMODELCOLUMN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRootModelIndex(const QModelIndex &index)
-*/
+// void setRootModelIndex(const QModelIndex &index)
 HB_FUNC_STATIC(QCOMBOBOX_SETROOTMODELINDEX)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1164,12 +1072,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETROOTMODELINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSizeAdjustPolicy(QComboBox::SizeAdjustPolicy policy)
-*/
+// void setSizeAdjustPolicy(QComboBox::SizeAdjustPolicy policy)
 HB_FUNC_STATIC(QCOMBOBOX_SETSIZEADJUSTPOLICY)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1186,12 +1092,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETSIZEADJUSTPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setValidator(const QValidator * validator)
-*/
+// void setValidator(const QValidator *validator)
 HB_FUNC_STATIC(QCOMBOBOX_SETVALIDATOR)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1208,12 +1112,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETVALIDATOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setView(QAbstractItemView * itemView)
-*/
+// void setView(QAbstractItemView *itemView)
 HB_FUNC_STATIC(QCOMBOBOX_SETVIEW)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1230,12 +1132,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETVIEW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void showPopup()
-*/
+// virtual void showPopup()
 HB_FUNC_STATIC(QCOMBOBOX_SHOWPOPUP)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1252,12 +1152,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SHOWPOPUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QComboBox::SizeAdjustPolicy sizeAdjustPolicy() const
-*/
+// QComboBox::SizeAdjustPolicy sizeAdjustPolicy() const
 HB_FUNC_STATIC(QCOMBOBOX_SIZEADJUSTPOLICY)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1272,18 +1170,16 @@ HB_FUNC_STATIC(QCOMBOBOX_SIZEADJUSTPOLICY)
   }
 }
 
-/*
-const QValidator * validator() const
-*/
+// const QValidator *validator() const
 HB_FUNC_STATIC(QCOMBOBOX_VALIDATOR)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = obj->validator();
+      const auto ptr = obj->validator();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALIDATOR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -1293,12 +1189,10 @@ HB_FUNC_STATIC(QCOMBOBOX_VALIDATOR)
   }
 }
 
-/*
-QAbstractItemView * view() const
-*/
+// QAbstractItemView *view() const
 HB_FUNC_STATIC(QCOMBOBOX_VIEW)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1314,12 +1208,10 @@ HB_FUNC_STATIC(QCOMBOBOX_VIEW)
   }
 }
 
-/*
-virtual bool event(QEvent * event)
-*/
+// virtual bool event(QEvent *event)
 HB_FUNC_STATIC(QCOMBOBOX_EVENT)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1334,12 +1226,10 @@ HB_FUNC_STATIC(QCOMBOBOX_EVENT)
   }
 }
 
-/*
-virtual QSize minimumSizeHint() const
-*/
+// virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QCOMBOBOX_MINIMUMSIZEHINT)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1354,12 +1244,10 @@ HB_FUNC_STATIC(QCOMBOBOX_MINIMUMSIZEHINT)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QCOMBOBOX_SIZEHINT)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1374,12 +1262,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SIZEHINT)
   }
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QCOMBOBOX_CLEAR)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1396,12 +1282,10 @@ HB_FUNC_STATIC(QCOMBOBOX_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearEditText()
-*/
+// void clearEditText()
 HB_FUNC_STATIC(QCOMBOBOX_CLEAREDITTEXT)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1418,12 +1302,10 @@ HB_FUNC_STATIC(QCOMBOBOX_CLEAREDITTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCurrentIndex(int index)
-*/
+// void setCurrentIndex(int index)
 HB_FUNC_STATIC(QCOMBOBOX_SETCURRENTINDEX)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1440,12 +1322,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETCURRENTINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEditText(const QString &text)
-*/
+// void setEditText(const QString &text)
 HB_FUNC_STATIC(QCOMBOBOX_SETEDITTEXT)
 {
-  auto obj = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1462,12 +1342,10 @@ HB_FUNC_STATIC(QCOMBOBOX_SETEDITTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void currentTextChanged(const QString &text)
-*/
+// void currentTextChanged(const QString &text)
 HB_FUNC_STATIC(QCOMBOBOX_ONCURRENTTEXTCHANGED)
 {
-  auto sender = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1489,7 +1367,6 @@ HB_FUNC_STATIC(QCOMBOBOX_ONCURRENTTEXTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1505,12 +1382,10 @@ HB_FUNC_STATIC(QCOMBOBOX_ONCURRENTTEXTCHANGED)
   hb_retl(result);
 }
 
-/*
-void editTextChanged(const QString &text)
-*/
+// void editTextChanged(const QString &text)
 HB_FUNC_STATIC(QCOMBOBOX_ONEDITTEXTCHANGED)
 {
-  auto sender = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1532,7 +1407,6 @@ HB_FUNC_STATIC(QCOMBOBOX_ONEDITTEXTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1548,13 +1422,11 @@ HB_FUNC_STATIC(QCOMBOBOX_ONEDITTEXTCHANGED)
   hb_retl(result);
 }
 
-/*
-void textActivated(const QString &text)
-*/
+// void textActivated(const QString &text)
 HB_FUNC_STATIC(QCOMBOBOX_ONTEXTACTIVATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
-  auto sender = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1576,7 +1448,6 @@ HB_FUNC_STATIC(QCOMBOBOX_ONTEXTACTIVATED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1595,13 +1466,11 @@ HB_FUNC_STATIC(QCOMBOBOX_ONTEXTACTIVATED)
 #endif
 }
 
-/*
-void textHighlighted(const QString &text)
-*/
+// void textHighlighted(const QString &text)
 HB_FUNC_STATIC(QCOMBOBOX_ONTEXTHIGHLIGHTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
-  auto sender = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1623,7 +1492,6 @@ HB_FUNC_STATIC(QCOMBOBOX_ONTEXTHIGHLIGHTED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1642,12 +1510,10 @@ HB_FUNC_STATIC(QCOMBOBOX_ONTEXTHIGHLIGHTED)
 #endif
 }
 
-/*
-void activated(int index)
-*/
+// void activated(int index)
 HB_FUNC_STATIC(QCOMBOBOX_ONACTIVATED1)
 {
-  auto sender = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1669,7 +1535,6 @@ HB_FUNC_STATIC(QCOMBOBOX_ONACTIVATED1)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1685,12 +1550,10 @@ HB_FUNC_STATIC(QCOMBOBOX_ONACTIVATED1)
   hb_retl(result);
 }
 
-/*
-void activated(const QString &text)
-*/
+// void activated(const QString &text)
 HB_FUNC_STATIC(QCOMBOBOX_ONACTIVATED2)
 {
-  auto sender = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1712,7 +1575,6 @@ HB_FUNC_STATIC(QCOMBOBOX_ONACTIVATED2)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1728,12 +1590,10 @@ HB_FUNC_STATIC(QCOMBOBOX_ONACTIVATED2)
   hb_retl(result);
 }
 
-/*
-void currentIndexChanged(int index)
-*/
+// void currentIndexChanged(int index)
 HB_FUNC_STATIC(QCOMBOBOX_ONCURRENTINDEXCHANGED1)
 {
-  auto sender = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1755,7 +1615,6 @@ HB_FUNC_STATIC(QCOMBOBOX_ONCURRENTINDEXCHANGED1)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1771,12 +1630,10 @@ HB_FUNC_STATIC(QCOMBOBOX_ONCURRENTINDEXCHANGED1)
   hb_retl(result);
 }
 
-/*
-void currentIndexChanged(const QString &text)
-*/
+// void currentIndexChanged(const QString &text)
 HB_FUNC_STATIC(QCOMBOBOX_ONCURRENTINDEXCHANGED2)
 {
-  auto sender = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1798,7 +1655,6 @@ HB_FUNC_STATIC(QCOMBOBOX_ONCURRENTINDEXCHANGED2)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1814,12 +1670,10 @@ HB_FUNC_STATIC(QCOMBOBOX_ONCURRENTINDEXCHANGED2)
   hb_retl(result);
 }
 
-/*
-void highlighted(int index)
-*/
+// void highlighted(int index)
 HB_FUNC_STATIC(QCOMBOBOX_ONHIGHLIGHTED1)
 {
-  auto sender = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1841,7 +1695,6 @@ HB_FUNC_STATIC(QCOMBOBOX_ONHIGHLIGHTED1)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1857,12 +1710,10 @@ HB_FUNC_STATIC(QCOMBOBOX_ONHIGHLIGHTED1)
   hb_retl(result);
 }
 
-/*
-void highlighted(const QString &text)
-*/
+// void highlighted(const QString &text)
 HB_FUNC_STATIC(QCOMBOBOX_ONHIGHLIGHTED2)
 {
-  auto sender = qobject_cast<QComboBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1884,7 +1735,6 @@ HB_FUNC_STATIC(QCOMBOBOX_ONHIGHLIGHTED2)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

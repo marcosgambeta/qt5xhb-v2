@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPUSHBUTTON
+REQUEST QPushButton
 #endif
 
 CLASS QDialogButtonBox INHERIT QWidget
@@ -68,30 +68,29 @@ RETURN
 
 #include <QtWidgets/QPushButton>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
-    /*
-    QDialogButtonBox(QWidget * parent = nullptr)
-    */
+    // QDialogButtonBox(QWidget *parent = nullptr)
     auto obj = new QDialogButtonBox(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QDialogButtonBox(Qt::Orientation orientation, QWidget * parent = nullptr)
-    */
+    // QDialogButtonBox(Qt::Orientation orientation, QWidget *parent = nullptr)
     auto obj = new QDialogButtonBox(static_cast<Qt::Orientation>(hb_parni(1)), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISQWIDGETORNIL(3)) {
-    /*
-    QDialogButtonBox(QDialogButtonBox::StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget *
-    parent = nullptr)
-    */
+    // QDialogButtonBox(QDialogButtonBox::StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget
+    // *parent = nullptr)
     auto obj = new QDialogButtonBox(static_cast<QDialogButtonBox::StandardButtons>(hb_parni(1)),
                                     HB_ISNIL(2) ? static_cast<Qt::Orientation>(Qt::Horizontal)
                                                 : static_cast<Qt::Orientation>(hb_parni(2)),
                                     OPQWIDGET(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -99,7 +98,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_NEW)
 
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_DELETE)
 {
-  auto obj = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -117,47 +116,42 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_DELETE)
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_ADDBUTTON)
 {
   if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2)) {
-    /*
-    void addButton(QAbstractButton * button, QDialogButtonBox::ButtonRole role)
-    */
-    auto obj = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void addButton(QAbstractButton *button, QDialogButtonBox::ButtonRole role)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->addButton(PQABSTRACTBUTTON(1), static_cast<QDialogButtonBox::ButtonRole>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
-    /*
-    QPushButton * addButton(const QString &text, QDialogButtonBox::ButtonRole role)
-    */
-    auto obj = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // QPushButton *addButton(const QString &text, QDialogButtonBox::ButtonRole role)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = obj->addButton(PQSTRING(1), static_cast<QDialogButtonBox::ButtonRole>(hb_parni(2)));
       Qt5xHb::createReturnQWidgetClass(ptr, "QPUSHBUTTON");
     }
+
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QPushButton * addButton(QDialogButtonBox::StandardButton button)
-    */
-    auto obj = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // QPushButton *addButton(QDialogButtonBox::StandardButton button)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = obj->addButton(static_cast<QDialogButtonBox::StandardButton>(hb_parni(1)));
       Qt5xHb::createReturnQWidgetClass(ptr, "QPUSHBUTTON");
     }
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-QPushButton * button(QDialogButtonBox::StandardButton which) const
-*/
+// QPushButton *button(QDialogButtonBox::StandardButton which) const
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_BUTTON)
 {
-  auto obj = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,12 +167,10 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_BUTTON)
   }
 }
 
-/*
-QDialogButtonBox::ButtonRole buttonRole(QAbstractButton * button) const
-*/
+// QDialogButtonBox::ButtonRole buttonRole(QAbstractButton *button) const
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_BUTTONROLE)
 {
-  auto obj = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,12 +185,10 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_BUTTONROLE)
   }
 }
 
-/*
-bool centerButtons() const
-*/
+// bool centerButtons() const
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_CENTERBUTTONS)
 {
-  auto obj = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,12 +203,10 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_CENTERBUTTONS)
   }
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_CLEAR)
 {
-  auto obj = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,12 +223,10 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::Orientation orientation() const
-*/
+// Qt::Orientation orientation() const
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_ORIENTATION)
 {
-  auto obj = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,12 +241,10 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ORIENTATION)
   }
 }
 
-/*
-void removeButton(QAbstractButton * button)
-*/
+// void removeButton(QAbstractButton *button)
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_REMOVEBUTTON)
 {
-  auto obj = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,12 +261,10 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_REMOVEBUTTON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCenterButtons(bool center)
-*/
+// void setCenterButtons(bool center)
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETCENTERBUTTONS)
 {
-  auto obj = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,12 +281,10 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETCENTERBUTTONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOrientation(Qt::Orientation orientation)
-*/
+// void setOrientation(Qt::Orientation orientation)
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETORIENTATION)
 {
-  auto obj = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,12 +301,10 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETORIENTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStandardButtons(QDialogButtonBox::StandardButtons buttons)
-*/
+// void setStandardButtons(QDialogButtonBox::StandardButtons buttons)
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETSTANDARDBUTTONS)
 {
-  auto obj = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -343,12 +321,10 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETSTANDARDBUTTONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDialogButtonBox::StandardButton standardButton(QAbstractButton * button) const
-*/
+// QDialogButtonBox::StandardButton standardButton(QAbstractButton *button) const
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_STANDARDBUTTON)
 {
-  auto obj = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -363,12 +339,10 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_STANDARDBUTTON)
   }
 }
 
-/*
-QDialogButtonBox::StandardButtons standardButtons() const
-*/
+// QDialogButtonBox::StandardButtons standardButtons() const
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_STANDARDBUTTONS)
 {
-  auto obj = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,12 +357,10 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_STANDARDBUTTONS)
   }
 }
 
-/*
-void accepted()
-*/
+// void accepted()
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONACCEPTED)
 {
-  auto sender = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -407,7 +379,6 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONACCEPTED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -423,12 +394,10 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONACCEPTED)
   hb_retl(result);
 }
 
-/*
-void clicked(QAbstractButton * button)
-*/
+// void clicked(QAbstractButton *button)
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONCLICKED)
 {
-  auto sender = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -450,7 +419,6 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONCLICKED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -466,12 +434,10 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONCLICKED)
   hb_retl(result);
 }
 
-/*
-void helpRequested()
-*/
+// void helpRequested()
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONHELPREQUESTED)
 {
-  auto sender = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -490,7 +456,6 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONHELPREQUESTED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -506,12 +471,10 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONHELPREQUESTED)
   hb_retl(result);
 }
 
-/*
-void rejected()
-*/
+// void rejected()
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONREJECTED)
 {
-  auto sender = qobject_cast<QDialogButtonBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -530,7 +493,6 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONREJECTED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
