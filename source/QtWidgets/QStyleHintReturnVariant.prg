@@ -46,9 +46,9 @@ RETURN
 #include <QtWidgets/QStyleHintReturnVariant>
 #endif
 
-    /*
-    QStyleHintReturnVariant()
-    */
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QStyleHintReturnVariant *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QStyleHintReturnVariant()
 HB_FUNC_STATIC(QSTYLEHINTRETURNVARIANT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QSTYLEHINTRETURNVARIANT_NEW)
 
 HB_FUNC_STATIC(QSTYLEHINTRETURNVARIANT_DELETE)
 {
-  auto obj = static_cast<QStyleHintReturnVariant *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;

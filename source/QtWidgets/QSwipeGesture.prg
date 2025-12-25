@@ -51,9 +51,11 @@ RETURN
 #include <QtWidgets/QSwipeGesture>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QSwipeGesture *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSWIPEGESTURE_DELETE)
 {
-  auto obj = qobject_cast<QSwipeGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -68,12 +70,10 @@ HB_FUNC_STATIC(QSWIPEGESTURE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSwipeGesture::SwipeDirection horizontalDirection() const
-*/
+// QSwipeGesture::SwipeDirection horizontalDirection() const
 HB_FUNC_STATIC(QSWIPEGESTURE_HORIZONTALDIRECTION)
 {
-  auto obj = qobject_cast<QSwipeGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -88,12 +88,10 @@ HB_FUNC_STATIC(QSWIPEGESTURE_HORIZONTALDIRECTION)
   }
 }
 
-/*
-void setSwipeAngle(qreal value)
-*/
+// void setSwipeAngle(qreal value)
 HB_FUNC_STATIC(QSWIPEGESTURE_SETSWIPEANGLE)
 {
-  auto obj = qobject_cast<QSwipeGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,12 +108,10 @@ HB_FUNC_STATIC(QSWIPEGESTURE_SETSWIPEANGLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal swipeAngle() const
-*/
+// qreal swipeAngle() const
 HB_FUNC_STATIC(QSWIPEGESTURE_SWIPEANGLE)
 {
-  auto obj = qobject_cast<QSwipeGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,12 +126,10 @@ HB_FUNC_STATIC(QSWIPEGESTURE_SWIPEANGLE)
   }
 }
 
-/*
-QSwipeGesture::SwipeDirection verticalDirection() const
-*/
+// QSwipeGesture::SwipeDirection verticalDirection() const
 HB_FUNC_STATIC(QSWIPEGESTURE_VERTICALDIRECTION)
 {
-  auto obj = qobject_cast<QSwipeGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

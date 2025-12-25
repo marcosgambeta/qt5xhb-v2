@@ -11,13 +11,13 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBRUSH
-REQUEST QCOLOR
-REQUEST QFONT
-REQUEST QICON
-REQUEST QLISTWIDGET
-REQUEST QSIZE
-REQUEST QVARIANT
+REQUEST QBrush
+REQUEST QColor
+REQUEST QFont
+REQUEST QIcon
+REQUEST QListWidget
+REQUEST QSize
+REQUEST QVariant
 #endif
 
 CLASS QListWidgetItem
@@ -101,35 +101,33 @@ RETURN
 #include <QtWidgets/QListWidgetItem>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QLISTWIDGETITEM_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQLISTWIDGETORNIL(1) && ISNUMORNIL(2)) {
-    /*
-    QListWidgetItem(QListWidget * parent = nullptr, int type = QListWidgetItem::Type)
-    */
+    // QListWidgetItem(QListWidget *parent = nullptr, int type = QListWidgetItem::Type)
     auto obj = new QListWidgetItem(OPQLISTWIDGET(1, nullptr), OPINT(2, QListWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQLISTWIDGETORNIL(2) && ISNUMORNIL(3)) {
-    /*
-    QListWidgetItem(const QString &text, QListWidget * parent = nullptr, int type = QListWidgetItem::Type)
-    */
+    // QListWidgetItem(const QString &text, QListWidget *parent = nullptr, int type = QListWidgetItem::Type)
     auto obj = new QListWidgetItem(PQSTRING(1), OPQLISTWIDGET(2, nullptr), OPINT(3, QListWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(2, 4) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQLISTWIDGETORNIL(3) &&
              ISNUMORNIL(4)) {
-    /*
-    QListWidgetItem(const QIcon &icon, const QString &text, QListWidget * parent = nullptr, int type =
-    QListWidgetItem::Type)
-    */
+    // QListWidgetItem(const QIcon &icon, const QString &text, QListWidget *parent = nullptr, int type =
+    // QListWidgetItem::Type)
     auto obj = new QListWidgetItem(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
                                    PQSTRING(2), OPQLISTWIDGET(3, nullptr), OPINT(4, QListWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1)) {
-    /*
-    QListWidgetItem(const QListWidgetItem &other)
-    */
+    // QListWidgetItem(const QListWidgetItem &other)
     auto obj = new QListWidgetItem(*PQLISTWIDGETITEM(1));
     Qt5xHb::returnNewObject(obj, false);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -137,7 +135,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_NEW)
 
 HB_FUNC_STATIC(QLISTWIDGETITEM_DELETE)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -150,12 +148,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QBrush background() const
-*/
+// QBrush background() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_BACKGROUND)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,12 +166,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_BACKGROUND)
   }
 }
 
-/*
-void setBackground(const QBrush &brush)
-*/
+// void setBackground(const QBrush &brush)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETBACKGROUND)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,12 +186,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETBACKGROUND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::CheckState checkState() const
-*/
+// Qt::CheckState checkState() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_CHECKSTATE)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,12 +204,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_CHECKSTATE)
   }
 }
 
-/*
-void setCheckState(Qt::CheckState state)
-*/
+// void setCheckState(Qt::CheckState state)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETCHECKSTATE)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,12 +224,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETCHECKSTATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QListWidgetItem * clone() const
-*/
+// virtual QListWidgetItem *clone() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_CLONE)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,12 +243,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_CLONE)
   }
 }
 
-/*
-virtual QVariant data(int role) const
-*/
+// virtual QVariant data(int role) const
 HB_FUNC_STATIC(QLISTWIDGETITEM_DATA)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,12 +261,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_DATA)
   }
 }
 
-/*
-virtual void setData(int role, const QVariant &value)
-*/
+// virtual void setData(int role, const QVariant &value)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETDATA)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,12 +281,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::ItemFlags flags() const
-*/
+// Qt::ItemFlags flags() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_FLAGS)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -317,12 +299,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_FLAGS)
   }
 }
 
-/*
-void setFlags(Qt::ItemFlags flags)
-*/
+// void setFlags(Qt::ItemFlags flags)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETFLAGS)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,19 +319,16 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETFLAGS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QFont font() const
-*/
+// QFont font() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_FONT)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QFont(obj->font());
-      Qt5xHb::createReturnClass(ptr, "QFONT", true);
+      RQFONT(obj->font());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -360,12 +337,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_FONT)
   }
 }
 
-/*
-void setFont(const QFont &font)
-*/
+// void setFont(const QFont &font)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETFONT)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -382,12 +357,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETFONT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QBrush foreground() const
-*/
+// QBrush foreground() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_FOREGROUND)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -402,12 +375,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_FOREGROUND)
   }
 }
 
-/*
-void setForeground(const QBrush &brush)
-*/
+// void setForeground(const QBrush &brush)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETFOREGROUND)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -424,12 +395,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETFOREGROUND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QIcon icon() const
-*/
+// QIcon icon() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_ICON)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -444,12 +413,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_ICON)
   }
 }
 
-/*
-void setIcon(const QIcon &icon)
-*/
+// void setIcon(const QIcon &icon)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETICON)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -466,12 +433,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETICON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isHidden() const
-*/
+// bool isHidden() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_ISHIDDEN)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -486,12 +451,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_ISHIDDEN)
   }
 }
 
-/*
-void setHidden(bool hide)
-*/
+// void setHidden(bool hide)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETHIDDEN)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -508,12 +471,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETHIDDEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isSelected() const
-*/
+// bool isSelected() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_ISSELECTED)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -528,12 +489,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_ISSELECTED)
   }
 }
 
-/*
-void setSelected(bool select)
-*/
+// void setSelected(bool select)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETSELECTED)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -550,12 +509,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETSELECTED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QListWidget * listWidget() const
-*/
+// QListWidget *listWidget() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_LISTWIDGET)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -571,12 +528,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_LISTWIDGET)
   }
 }
 
-/*
-virtual void read(QDataStream &in)
-*/
+// virtual void read(QDataStream &in)
 HB_FUNC_STATIC(QLISTWIDGETITEM_READ)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -593,12 +548,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_READ)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize sizeHint() const
-*/
+// QSize sizeHint() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_SIZEHINT)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -613,12 +566,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SIZEHINT)
   }
 }
 
-/*
-void setSizeHint(const QSize &size)
-*/
+// void setSizeHint(const QSize &size)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETSIZEHINT)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -635,12 +586,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETSIZEHINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString statusTip() const
-*/
+// QString statusTip() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_STATUSTIP)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -655,12 +604,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_STATUSTIP)
   }
 }
 
-/*
-void setStatusTip(const QString &statusTip)
-*/
+// void setStatusTip(const QString &statusTip)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETSTATUSTIP)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -677,12 +624,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETSTATUSTIP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_TEXT)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -697,12 +642,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_TEXT)
   }
 }
 
-/*
-void setText(const QString &text)
-*/
+// void setText(const QString &text)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXT)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -719,12 +662,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int textAlignment() const
-*/
+// int textAlignment() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_TEXTALIGNMENT)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -739,12 +680,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_TEXTALIGNMENT)
   }
 }
 
-/*
-void setTextAlignment(int alignment)
-*/
+// void setTextAlignment(int alignment)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXTALIGNMENT)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -761,12 +700,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXTALIGNMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString toolTip() const
-*/
+// QString toolTip() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_TOOLTIP)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -781,12 +718,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_TOOLTIP)
   }
 }
 
-/*
-void setToolTip(const QString &toolTip)
-*/
+// void setToolTip(const QString &toolTip)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETTOOLTIP)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -803,12 +738,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETTOOLTIP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int type() const
-*/
+// int type() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_TYPE)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -823,12 +756,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_TYPE)
   }
 }
 
-/*
-QString whatsThis() const
-*/
+// QString whatsThis() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_WHATSTHIS)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -843,12 +774,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_WHATSTHIS)
   }
 }
 
-/*
-void setWhatsThis(const QString &whatsThis)
-*/
+// void setWhatsThis(const QString &whatsThis)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETWHATSTHIS)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -865,12 +794,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETWHATSTHIS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void write(QDataStream &out) const
-*/
+// virtual void write(QDataStream &out) const
 HB_FUNC_STATIC(QLISTWIDGETITEM_WRITE)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -887,12 +814,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_WRITE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QColor backgroundColor() const
-*/
+// QColor backgroundColor() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_BACKGROUNDCOLOR)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -907,12 +832,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_BACKGROUNDCOLOR)
   }
 }
 
-/*
-virtual void setBackgroundColor(const QColor &color)
-*/
+// virtual void setBackgroundColor(const QColor &color)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETBACKGROUNDCOLOR)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -929,12 +852,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETBACKGROUNDCOLOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QColor textColor() const
-*/
+// QColor textColor() const
 HB_FUNC_STATIC(QLISTWIDGETITEM_TEXTCOLOR)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -949,12 +870,10 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_TEXTCOLOR)
   }
 }
 
-/*
-void setTextColor(const QColor &color)
-*/
+// void setTextColor(const QColor &color)
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXTCOLOR)
 {
-  auto obj = static_cast<QListWidgetItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

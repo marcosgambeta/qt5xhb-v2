@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QIMAGE
-REQUEST QOPENGLCONTEXT
-REQUEST QSURFACEFORMAT
+REQUEST QImage
+REQUEST QOpenGLContext
+REQUEST QSurfaceFormat
 #endif
 
 CLASS QOpenGLWidget INHERIT QWidget
@@ -70,9 +70,9 @@ RETURN
 
 #include <QtGui/QOpenGLContext>
 
-    /*
-    QOpenGLWidget(QWidget* parent = nullptr, Qt::WindowFlags f = 0)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QOpenGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QOpenGLWidget(QWidget* parent = nullptr, Qt::WindowFlags f = 0)
 HB_FUNC_STATIC(QOPENGLWIDGET_NEW)
 {
 #ifndef QT_NO_OPENGL
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QOPENGLWIDGET_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  auto obj = qobject_cast<QOpenGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -107,21 +107,18 @@ HB_FUNC_STATIC(QOPENGLWIDGET_DELETE)
 #endif
 }
 
-/*
-QSurfaceFormat format() const
-*/
+// QSurfaceFormat format() const
 HB_FUNC_STATIC(QOPENGLWIDGET_FORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  auto obj = qobject_cast<QOpenGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QSurfaceFormat(obj->format());
-      Qt5xHb::createReturnClass(ptr, "QSURFACEFORMAT", true);
+      RQSURFACEFORMAT(obj->format());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -132,14 +129,12 @@ HB_FUNC_STATIC(QOPENGLWIDGET_FORMAT)
 #endif
 }
 
-/*
-void setFormat(const QSurfaceFormat &format)
-*/
+// void setFormat(const QSurfaceFormat &format)
 HB_FUNC_STATIC(QOPENGLWIDGET_SETFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  auto obj = qobject_cast<QOpenGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,14 +153,12 @@ HB_FUNC_STATIC(QOPENGLWIDGET_SETFORMAT)
 #endif
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QOPENGLWIDGET_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  auto obj = qobject_cast<QOpenGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,14 +175,12 @@ HB_FUNC_STATIC(QOPENGLWIDGET_ISVALID)
 #endif
 }
 
-/*
-void makeCurrent()
-*/
+// void makeCurrent()
 HB_FUNC_STATIC(QOPENGLWIDGET_MAKECURRENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  auto obj = qobject_cast<QOpenGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,14 +199,12 @@ HB_FUNC_STATIC(QOPENGLWIDGET_MAKECURRENT)
 #endif
 }
 
-/*
-void doneCurrent()
-*/
+// void doneCurrent()
 HB_FUNC_STATIC(QOPENGLWIDGET_DONECURRENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  auto obj = qobject_cast<QOpenGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,14 +223,12 @@ HB_FUNC_STATIC(QOPENGLWIDGET_DONECURRENT)
 #endif
 }
 
-/*
-QOpenGLContext *context() const
-*/
+// QOpenGLContext *context() const
 HB_FUNC_STATIC(QOPENGLWIDGET_CONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  auto obj = qobject_cast<QOpenGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,14 +246,12 @@ HB_FUNC_STATIC(QOPENGLWIDGET_CONTEXT)
 #endif
 }
 
-/*
-GLuint defaultFramebufferObject() const
-*/
+// GLuint defaultFramebufferObject() const
 HB_FUNC_STATIC(QOPENGLWIDGET_DEFAULTFRAMEBUFFEROBJECT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  auto obj = qobject_cast<QOpenGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,21 +268,18 @@ HB_FUNC_STATIC(QOPENGLWIDGET_DEFAULTFRAMEBUFFEROBJECT)
 #endif
 }
 
-/*
-QImage grabFramebuffer()
-*/
+// QImage grabFramebuffer()
 HB_FUNC_STATIC(QOPENGLWIDGET_GRABFRAMEBUFFER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  auto obj = qobject_cast<QOpenGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QImage(obj->grabFramebuffer());
-      Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->grabFramebuffer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -308,13 +290,11 @@ HB_FUNC_STATIC(QOPENGLWIDGET_GRABFRAMEBUFFER)
 #endif
 }
 
-/*
-void aboutToCompose()
-*/
+// void aboutToCompose()
 HB_FUNC_STATIC(QOPENGLWIDGET_ONABOUTTOCOMPOSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QOpenGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -333,7 +313,6 @@ HB_FUNC_STATIC(QOPENGLWIDGET_ONABOUTTOCOMPOSE)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -352,13 +331,11 @@ HB_FUNC_STATIC(QOPENGLWIDGET_ONABOUTTOCOMPOSE)
 #endif
 }
 
-/*
-void frameSwapped()
-*/
+// void frameSwapped()
 HB_FUNC_STATIC(QOPENGLWIDGET_ONFRAMESWAPPED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QOpenGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -377,7 +354,6 @@ HB_FUNC_STATIC(QOPENGLWIDGET_ONFRAMESWAPPED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -396,13 +372,11 @@ HB_FUNC_STATIC(QOPENGLWIDGET_ONFRAMESWAPPED)
 #endif
 }
 
-/*
-void aboutToResize()
-*/
+// void aboutToResize()
 HB_FUNC_STATIC(QOPENGLWIDGET_ONABOUTTORESIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QOpenGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -421,7 +395,6 @@ HB_FUNC_STATIC(QOPENGLWIDGET_ONABOUTTORESIZE)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -440,13 +413,11 @@ HB_FUNC_STATIC(QOPENGLWIDGET_ONABOUTTORESIZE)
 #endif
 }
 
-/*
-void resized()
-*/
+// void resized()
 HB_FUNC_STATIC(QOPENGLWIDGET_ONRESIZED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto sender = qobject_cast<QOpenGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -465,7 +436,6 @@ HB_FUNC_STATIC(QOPENGLWIDGET_ONRESIZED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

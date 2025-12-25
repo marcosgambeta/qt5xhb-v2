@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACTION
+REQUEST QAction
 #endif
 
 CLASS QWhatsThis
@@ -63,9 +63,11 @@ RETURN
 
 #include <QtWidgets/QAction>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QWhatsThis *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QWHATSTHIS_DELETE)
 {
-  auto obj = static_cast<QWhatsThis *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -78,9 +80,7 @@ HB_FUNC_STATIC(QWHATSTHIS_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QAction * createAction(QObject * parent = nullptr)
-*/
+// static QAction *createAction(QObject *parent = nullptr)
 HB_FUNC_STATIC(QWHATSTHIS_CREATEACTION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -95,9 +95,7 @@ HB_FUNC_STATIC(QWHATSTHIS_CREATEACTION)
 #endif
 }
 
-/*
-static void enterWhatsThisMode()
-*/
+// static void enterWhatsThisMode()
 HB_FUNC_STATIC(QWHATSTHIS_ENTERWHATSTHISMODE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QWHATSTHIS_ENTERWHATSTHISMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void hideText()
-*/
+// static void hideText()
 HB_FUNC_STATIC(QWHATSTHIS_HIDETEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,9 +127,7 @@ HB_FUNC_STATIC(QWHATSTHIS_HIDETEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static bool inWhatsThisMode()
-*/
+// static bool inWhatsThisMode()
 HB_FUNC_STATIC(QWHATSTHIS_INWHATSTHISMODE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,9 +141,7 @@ HB_FUNC_STATIC(QWHATSTHIS_INWHATSTHISMODE)
 #endif
 }
 
-/*
-static void leaveWhatsThisMode()
-*/
+// static void leaveWhatsThisMode()
 HB_FUNC_STATIC(QWHATSTHIS_LEAVEWHATSTHISMODE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,9 +157,7 @@ HB_FUNC_STATIC(QWHATSTHIS_LEAVEWHATSTHISMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void showText(const QPoint &pos, const QString &text, QWidget * w = nullptr)
-*/
+// static void showText(const QPoint &pos, const QString &text, QWidget *w = nullptr)
 HB_FUNC_STATIC(QWHATSTHIS_SHOWTEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

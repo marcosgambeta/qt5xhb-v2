@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCOLOR
+REQUEST QColor
 #endif
 
 CLASS QStyleOptionFocusRect INHERIT QStyleOption
@@ -48,31 +48,29 @@ RETURN
 #include <QtWidgets/QStyleOptionFocusRect>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QStyleOptionFocusRect *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QStyleOptionFocusRect()
-    */
+    // QStyleOptionFocusRect()
     auto obj = new QStyleOptionFocusRect();
     Qt5xHb::returnNewObject(obj, true);
+
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONFOCUSRECT(1)) {
-    /*
-    QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
-    */
+    // QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
     auto obj = new QStyleOptionFocusRect(*PQSTYLEOPTIONFOCUSRECT(1));
     Qt5xHb::returnNewObject(obj, true);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-QColor backgroundColor
-*/
+// QColor backgroundColor
 HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR)
 {
-  auto obj = static_cast<QStyleOptionFocusRect *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -85,7 +83,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR)
 
 HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_SETBACKGROUNDCOLOR)
 {
-  auto obj = static_cast<QStyleOptionFocusRect *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && ISQCOLOR(1)) {

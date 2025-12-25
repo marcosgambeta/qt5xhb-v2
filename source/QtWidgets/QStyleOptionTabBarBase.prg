@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECT
+REQUEST QRect
 #endif
 
 CLASS QStyleOptionTabBarBase INHERIT QStyleOption
@@ -54,31 +54,29 @@ RETURN
 #include <QtWidgets/QStyleOptionTabBarBase>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QStyleOptionTabBarBase *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QStyleOptionTabBarBase()
-    */
+    // QStyleOptionTabBarBase()
     auto obj = new QStyleOptionTabBarBase();
     Qt5xHb::returnNewObject(obj, true);
+
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONTABBARBASE(1)) {
-    /*
-    QStyleOptionTabBarBase(const QStyleOptionTabBarBase &other)
-    */
+    // QStyleOptionTabBarBase(const QStyleOptionTabBarBase &other)
     auto obj = new QStyleOptionTabBarBase(*PQSTYLEOPTIONTABBARBASE(1));
     Qt5xHb::returnNewObject(obj, true);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-QTabBar::Shape shape
-*/
+// QTabBar::Shape shape
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SHAPE)
 {
-  auto obj = static_cast<QStyleOptionTabBarBase *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -91,7 +89,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SHAPE)
 
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETSHAPE)
 {
-  auto obj = static_cast<QStyleOptionTabBarBase *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -104,12 +102,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETSHAPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRect tabBarRect
-*/
+// QRect tabBarRect
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_TABBARRECT)
 {
-  auto obj = static_cast<QStyleOptionTabBarBase *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -122,7 +118,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_TABBARRECT)
 
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETTABBARRECT)
 {
-  auto obj = static_cast<QStyleOptionTabBarBase *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && ISQRECT(1)) {
@@ -135,12 +131,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETTABBARRECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRect selectedTabRect
-*/
+// QRect selectedTabRect
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT)
 {
-  auto obj = static_cast<QStyleOptionTabBarBase *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -153,7 +147,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT)
 
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETSELECTEDTABRECT)
 {
-  auto obj = static_cast<QStyleOptionTabBarBase *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && ISQRECT(1)) {
@@ -166,12 +160,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETSELECTEDTABRECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool documentMode
-*/
+// bool documentMode
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_DOCUMENTMODE)
 {
-  auto obj = static_cast<QStyleOptionTabBarBase *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -184,7 +176,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_DOCUMENTMODE)
 
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETDOCUMENTMODE)
 {
-  auto obj = static_cast<QStyleOptionTabBarBase *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISLOG(1)) {

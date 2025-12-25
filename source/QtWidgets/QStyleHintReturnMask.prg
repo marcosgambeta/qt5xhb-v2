@@ -46,9 +46,9 @@ RETURN
 #include <QtWidgets/QStyleHintReturnMask>
 #endif
 
-    /*
-    QStyleHintReturnMask()
-    */
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QStyleHintReturnMask *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QStyleHintReturnMask()
 HB_FUNC_STATIC(QSTYLEHINTRETURNMASK_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QSTYLEHINTRETURNMASK_NEW)
 
 HB_FUNC_STATIC(QSTYLEHINTRETURNMASK_DELETE)
 {
-  auto obj = static_cast<QStyleHintReturnMask *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;

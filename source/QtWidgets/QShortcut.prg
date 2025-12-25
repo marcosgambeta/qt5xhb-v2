@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QKEYSEQUENCE
-REQUEST QWIDGET
+REQUEST QKeySequence
+REQUEST QWidget
 #endif
 
 CLASS QShortcut INHERIT QObject
@@ -65,24 +65,24 @@ RETURN
 #include <QtWidgets/QShortcut>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QShortcut *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSHORTCUT_NEW)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1)) {
-    /*
-    QShortcut(QWidget * parent)
-    */
+    // QShortcut(QWidget *parent)
     auto obj = new QShortcut(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(2, 5) && ISQKEYSEQUENCE(1) && ISQWIDGET(2) && ISCHARORNIL(3) && ISCHARORNIL(4) &&
              ISNUMORNIL(5)) {
-    /*
-    QShortcut(const QKeySequence &key, QWidget * parent, const char * member = nullptr, const char * ambiguousMember =
-    nullptr, Qt::ShortcutContext context = Qt::WindowShortcut)
-    */
+    // QShortcut(const QKeySequence &key, QWidget *parent, const char *member = nullptr, const char *ambiguousMember =
+    // nullptr, Qt::ShortcutContext context = Qt::WindowShortcut)
     auto obj = new QShortcut(*PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3, nullptr), OPCONSTCHAR(4, nullptr),
                              HB_ISNIL(5) ? static_cast<Qt::ShortcutContext>(Qt::WindowShortcut)
                                          : static_cast<Qt::ShortcutContext>(hb_parni(5)));
     Qt5xHb::returnNewObject(obj, false);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QSHORTCUT_NEW)
 
 HB_FUNC_STATIC(QSHORTCUT_DELETE)
 {
-  auto obj = qobject_cast<QShortcut *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -105,12 +105,10 @@ HB_FUNC_STATIC(QSHORTCUT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool autoRepeat() const
-*/
+// bool autoRepeat() const
 HB_FUNC_STATIC(QSHORTCUT_AUTOREPEAT)
 {
-  auto obj = qobject_cast<QShortcut *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,12 +123,10 @@ HB_FUNC_STATIC(QSHORTCUT_AUTOREPEAT)
   }
 }
 
-/*
-Qt::ShortcutContext context() const
-*/
+// Qt::ShortcutContext context() const
 HB_FUNC_STATIC(QSHORTCUT_CONTEXT)
 {
-  auto obj = qobject_cast<QShortcut *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,12 +141,10 @@ HB_FUNC_STATIC(QSHORTCUT_CONTEXT)
   }
 }
 
-/*
-int id() const
-*/
+// int id() const
 HB_FUNC_STATIC(QSHORTCUT_ID)
 {
-  auto obj = qobject_cast<QShortcut *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,12 +159,10 @@ HB_FUNC_STATIC(QSHORTCUT_ID)
   }
 }
 
-/*
-bool isEnabled() const
-*/
+// bool isEnabled() const
 HB_FUNC_STATIC(QSHORTCUT_ISENABLED)
 {
-  auto obj = qobject_cast<QShortcut *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,19 +177,16 @@ HB_FUNC_STATIC(QSHORTCUT_ISENABLED)
   }
 }
 
-/*
-QKeySequence key() const
-*/
+// QKeySequence key() const
 HB_FUNC_STATIC(QSHORTCUT_KEY)
 {
-  auto obj = qobject_cast<QShortcut *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QKeySequence(obj->key());
-      Qt5xHb::createReturnClass(ptr, "QKEYSEQUENCE", true);
+      RQKEYSEQUENCE(obj->key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -206,12 +195,10 @@ HB_FUNC_STATIC(QSHORTCUT_KEY)
   }
 }
 
-/*
-QWidget * parentWidget() const
-*/
+// QWidget *parentWidget() const
 HB_FUNC_STATIC(QSHORTCUT_PARENTWIDGET)
 {
-  auto obj = qobject_cast<QShortcut *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,12 +214,10 @@ HB_FUNC_STATIC(QSHORTCUT_PARENTWIDGET)
   }
 }
 
-/*
-void setAutoRepeat(bool on)
-*/
+// void setAutoRepeat(bool on)
 HB_FUNC_STATIC(QSHORTCUT_SETAUTOREPEAT)
 {
-  auto obj = qobject_cast<QShortcut *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,12 +234,10 @@ HB_FUNC_STATIC(QSHORTCUT_SETAUTOREPEAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setContext(Qt::ShortcutContext context)
-*/
+// void setContext(Qt::ShortcutContext context)
 HB_FUNC_STATIC(QSHORTCUT_SETCONTEXT)
 {
-  auto obj = qobject_cast<QShortcut *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -271,12 +254,10 @@ HB_FUNC_STATIC(QSHORTCUT_SETCONTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEnabled(bool enable)
-*/
+// void setEnabled(bool enable)
 HB_FUNC_STATIC(QSHORTCUT_SETENABLED)
 {
-  auto obj = qobject_cast<QShortcut *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,12 +274,10 @@ HB_FUNC_STATIC(QSHORTCUT_SETENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setKey(const QKeySequence &key)
-*/
+// void setKey(const QKeySequence &key)
 HB_FUNC_STATIC(QSHORTCUT_SETKEY)
 {
-  auto obj = qobject_cast<QShortcut *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,12 +294,10 @@ HB_FUNC_STATIC(QSHORTCUT_SETKEY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWhatsThis(const QString &text)
-*/
+// void setWhatsThis(const QString &text)
 HB_FUNC_STATIC(QSHORTCUT_SETWHATSTHIS)
 {
-  auto obj = qobject_cast<QShortcut *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -337,12 +314,10 @@ HB_FUNC_STATIC(QSHORTCUT_SETWHATSTHIS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString whatsThis() const
-*/
+// QString whatsThis() const
 HB_FUNC_STATIC(QSHORTCUT_WHATSTHIS)
 {
-  auto obj = qobject_cast<QShortcut *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -357,12 +332,10 @@ HB_FUNC_STATIC(QSHORTCUT_WHATSTHIS)
   }
 }
 
-/*
-void activated()
-*/
+// void activated()
 HB_FUNC_STATIC(QSHORTCUT_ONACTIVATED)
 {
-  auto sender = qobject_cast<QShortcut *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -381,7 +354,6 @@ HB_FUNC_STATIC(QSHORTCUT_ONACTIVATED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -397,12 +369,10 @@ HB_FUNC_STATIC(QSHORTCUT_ONACTIVATED)
   hb_retl(result);
 }
 
-/*
-void activatedAmbiguously()
-*/
+// void activatedAmbiguously()
 HB_FUNC_STATIC(QSHORTCUT_ONACTIVATEDAMBIGUOUSLY)
 {
-  auto sender = qobject_cast<QShortcut *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -421,7 +391,6 @@ HB_FUNC_STATIC(QSHORTCUT_ONACTIVATEDAMBIGUOUSLY)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

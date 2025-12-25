@@ -55,9 +55,9 @@ RETURN
 #include <QtWidgets/QStyleHintReturn>
 #endif
 
-    /*
-    QStyleHintReturn(int version = QStyleOption::Version, int type = QStyleHintReturn::SH_Default)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QStyleHintReturn *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QStyleHintReturn(int version = QStyleOption::Version, int type = QStyleHintReturn::SH_Default)
 HB_FUNC_STATIC(QSTYLEHINTRETURN_NEW)
 {
   if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2)) {
@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QSTYLEHINTRETURN_NEW)
 
 HB_FUNC_STATIC(QSTYLEHINTRETURN_DELETE)
 {
-  auto obj = static_cast<QStyleHintReturn *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;

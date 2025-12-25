@@ -55,31 +55,29 @@ RETURN
 #include <QtWidgets/QStyleOptionDockWidget>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QStyleOptionDockWidget *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QStyleOptionDockWidget()
-    */
+    // QStyleOptionDockWidget()
     auto obj = new QStyleOptionDockWidget();
     Qt5xHb::returnNewObject(obj, true);
+
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONDOCKWIDGET(1)) {
-    /*
-    QStyleOptionDockWidget(const QStyleOptionDockWidget &other)
-    */
+    // QStyleOptionDockWidget(const QStyleOptionDockWidget &other)
     auto obj = new QStyleOptionDockWidget(*PQSTYLEOPTIONDOCKWIDGET(1));
     Qt5xHb::returnNewObject(obj, true);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-QString title
-*/
+// QString title
 HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_TITLE)
 {
-  auto obj = static_cast<QStyleOptionDockWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -92,7 +90,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_TITLE)
 
 HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETTITLE)
 {
-  auto obj = static_cast<QStyleOptionDockWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
@@ -105,12 +103,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETTITLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool closable
-*/
+// bool closable
 HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_CLOSABLE)
 {
-  auto obj = static_cast<QStyleOptionDockWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -123,7 +119,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_CLOSABLE)
 
 HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE)
 {
-  auto obj = static_cast<QStyleOptionDockWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISLOG(1)) {
@@ -136,12 +132,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool movable
-*/
+// bool movable
 HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_MOVABLE)
 {
-  auto obj = static_cast<QStyleOptionDockWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -154,7 +148,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_MOVABLE)
 
 HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETMOVABLE)
 {
-  auto obj = static_cast<QStyleOptionDockWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISLOG(1)) {
@@ -167,12 +161,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETMOVABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool floatable
-*/
+// bool floatable
 HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_FLOATABLE)
 {
-  auto obj = static_cast<QStyleOptionDockWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -185,7 +177,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_FLOATABLE)
 
 HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETFLOATABLE)
 {
-  auto obj = static_cast<QStyleOptionDockWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISLOG(1)) {
@@ -198,12 +190,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETFLOATABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool verticalTitleBar
-*/
+// bool verticalTitleBar
 HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_VERTICALTITLEBAR)
 {
-  auto obj = static_cast<QStyleOptionDockWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -216,7 +206,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_VERTICALTITLEBAR)
 
 HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETVERTICALTITLEBAR)
 {
-  auto obj = static_cast<QStyleOptionDockWidget *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISLOG(1)) {

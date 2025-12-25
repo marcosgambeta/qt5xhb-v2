@@ -11,13 +11,13 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACTION
-REQUEST QCOMPLETER
-REQUEST QMARGINS
-REQUEST QMENU
-REQUEST QSIZE
-REQUEST QVALIDATOR
-REQUEST QVARIANT
+REQUEST QAction
+REQUEST QCompleter
+REQUEST QMargins
+REQUEST QMenu
+REQUEST QSize
+REQUEST QValidator
+REQUEST QVariant
 #endif
 
 CLASS QLineEdit INHERIT QWidget
@@ -135,20 +135,20 @@ RETURN
 #include <QtWidgets/QCompleter>
 #include <QtWidgets/QMenu>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QLINEEDIT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
-    /*
-    QLineEdit(QWidget * parent = nullptr)
-    */
+    // QLineEdit(QWidget *parent = nullptr)
     auto obj = new QLineEdit(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QLineEdit(const QString &contents, QWidget * parent = nullptr)
-    */
+    // QLineEdit(const QString &contents, QWidget *parent = nullptr)
     auto obj = new QLineEdit(PQSTRING(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QLINEEDIT_NEW)
 
 HB_FUNC_STATIC(QLINEEDIT_DELETE)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -171,12 +171,10 @@ HB_FUNC_STATIC(QLINEEDIT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::Alignment alignment() const
-*/
+// Qt::Alignment alignment() const
 HB_FUNC_STATIC(QLINEEDIT_ALIGNMENT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,12 +189,10 @@ HB_FUNC_STATIC(QLINEEDIT_ALIGNMENT)
   }
 }
 
-/*
-void setAlignment(Qt::Alignment flag)
-*/
+// void setAlignment(Qt::Alignment flag)
 HB_FUNC_STATIC(QLINEEDIT_SETALIGNMENT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,12 +209,10 @@ HB_FUNC_STATIC(QLINEEDIT_SETALIGNMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void backspace()
-*/
+// void backspace()
 HB_FUNC_STATIC(QLINEEDIT_BACKSPACE)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,12 +229,10 @@ HB_FUNC_STATIC(QLINEEDIT_BACKSPACE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QCompleter * completer() const
-*/
+// QCompleter *completer() const
 HB_FUNC_STATIC(QLINEEDIT_COMPLETER)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -256,12 +248,10 @@ HB_FUNC_STATIC(QLINEEDIT_COMPLETER)
   }
 }
 
-/*
-void setCompleter(QCompleter * c)
-*/
+// void setCompleter(QCompleter *c)
 HB_FUNC_STATIC(QLINEEDIT_SETCOMPLETER)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,12 +268,10 @@ HB_FUNC_STATIC(QLINEEDIT_SETCOMPLETER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QMenu * createStandardContextMenu()
-*/
+// QMenu *createStandardContextMenu()
 HB_FUNC_STATIC(QLINEEDIT_CREATESTANDARDCONTEXTMENU)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,12 +287,10 @@ HB_FUNC_STATIC(QLINEEDIT_CREATESTANDARDCONTEXTMENU)
   }
 }
 
-/*
-void cursorBackward(bool mark, int steps = 1)
-*/
+// void cursorBackward(bool mark, int steps = 1)
 HB_FUNC_STATIC(QLINEEDIT_CURSORBACKWARD)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,12 +307,10 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORBACKWARD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void cursorForward(bool mark, int steps = 1)
-*/
+// void cursorForward(bool mark, int steps = 1)
 HB_FUNC_STATIC(QLINEEDIT_CURSORFORWARD)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -343,12 +327,10 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORFORWARD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int cursorPosition() const
-*/
+// int cursorPosition() const
 HB_FUNC_STATIC(QLINEEDIT_CURSORPOSITION)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -363,12 +345,10 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORPOSITION)
   }
 }
 
-/*
-void setCursorPosition(int)
-*/
+// void setCursorPosition(int)
 HB_FUNC_STATIC(QLINEEDIT_SETCURSORPOSITION)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -385,12 +365,10 @@ HB_FUNC_STATIC(QLINEEDIT_SETCURSORPOSITION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int cursorPositionAt(const QPoint &pos)
-*/
+// int cursorPositionAt(const QPoint &pos)
 HB_FUNC_STATIC(QLINEEDIT_CURSORPOSITIONAT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -405,12 +383,10 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORPOSITIONAT)
   }
 }
 
-/*
-void cursorWordBackward(bool mark)
-*/
+// void cursorWordBackward(bool mark)
 HB_FUNC_STATIC(QLINEEDIT_CURSORWORDBACKWARD)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -427,12 +403,10 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORWORDBACKWARD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void cursorWordForward(bool mark)
-*/
+// void cursorWordForward(bool mark)
 HB_FUNC_STATIC(QLINEEDIT_CURSORWORDFORWARD)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -449,12 +423,10 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORWORDFORWARD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void del()
-*/
+// void del()
 HB_FUNC_STATIC(QLINEEDIT_DEL)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -471,12 +443,10 @@ HB_FUNC_STATIC(QLINEEDIT_DEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void deselect()
-*/
+// void deselect()
 HB_FUNC_STATIC(QLINEEDIT_DESELECT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -493,12 +463,10 @@ HB_FUNC_STATIC(QLINEEDIT_DESELECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString displayText() const
-*/
+// QString displayText() const
 HB_FUNC_STATIC(QLINEEDIT_DISPLAYTEXT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -513,12 +481,10 @@ HB_FUNC_STATIC(QLINEEDIT_DISPLAYTEXT)
   }
 }
 
-/*
-bool dragEnabled() const
-*/
+// bool dragEnabled() const
 HB_FUNC_STATIC(QLINEEDIT_DRAGENABLED)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -533,12 +499,10 @@ HB_FUNC_STATIC(QLINEEDIT_DRAGENABLED)
   }
 }
 
-/*
-void setDragEnabled(bool b)
-*/
+// void setDragEnabled(bool b)
 HB_FUNC_STATIC(QLINEEDIT_SETDRAGENABLED)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -555,12 +519,10 @@ HB_FUNC_STATIC(QLINEEDIT_SETDRAGENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QLineEdit::EchoMode echoMode() const
-*/
+// QLineEdit::EchoMode echoMode() const
 HB_FUNC_STATIC(QLINEEDIT_ECHOMODE)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -575,12 +537,10 @@ HB_FUNC_STATIC(QLINEEDIT_ECHOMODE)
   }
 }
 
-/*
-void setEchoMode(QLineEdit::EchoMode)
-*/
+// void setEchoMode(QLineEdit::EchoMode)
 HB_FUNC_STATIC(QLINEEDIT_SETECHOMODE)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -597,12 +557,10 @@ HB_FUNC_STATIC(QLINEEDIT_SETECHOMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void end(bool mark)
-*/
+// void end(bool mark)
 HB_FUNC_STATIC(QLINEEDIT_END)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -619,12 +577,10 @@ HB_FUNC_STATIC(QLINEEDIT_END)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void getTextMargins(int * left, int * top, int * right, int * bottom) const
-*/
+// void getTextMargins(int *left, int *top, int *right, int *bottom) const
 HB_FUNC_STATIC(QLINEEDIT_GETTEXTMARGINS)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -649,12 +605,10 @@ HB_FUNC_STATIC(QLINEEDIT_GETTEXTMARGINS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool hasAcceptableInput() const
-*/
+// bool hasAcceptableInput() const
 HB_FUNC_STATIC(QLINEEDIT_HASACCEPTABLEINPUT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -669,12 +623,10 @@ HB_FUNC_STATIC(QLINEEDIT_HASACCEPTABLEINPUT)
   }
 }
 
-/*
-bool hasSelectedText() const
-*/
+// bool hasSelectedText() const
 HB_FUNC_STATIC(QLINEEDIT_HASSELECTEDTEXT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -689,12 +641,10 @@ HB_FUNC_STATIC(QLINEEDIT_HASSELECTEDTEXT)
   }
 }
 
-/*
-void home(bool mark)
-*/
+// void home(bool mark)
 HB_FUNC_STATIC(QLINEEDIT_HOME)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -711,12 +661,10 @@ HB_FUNC_STATIC(QLINEEDIT_HOME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString inputMask() const
-*/
+// QString inputMask() const
 HB_FUNC_STATIC(QLINEEDIT_INPUTMASK)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -731,12 +679,10 @@ HB_FUNC_STATIC(QLINEEDIT_INPUTMASK)
   }
 }
 
-/*
-void setInputMask(const QString &inputMask)
-*/
+// void setInputMask(const QString &inputMask)
 HB_FUNC_STATIC(QLINEEDIT_SETINPUTMASK)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -753,12 +699,10 @@ HB_FUNC_STATIC(QLINEEDIT_SETINPUTMASK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void insert(const QString &newText)
-*/
+// void insert(const QString &newText)
 HB_FUNC_STATIC(QLINEEDIT_INSERT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -775,12 +719,10 @@ HB_FUNC_STATIC(QLINEEDIT_INSERT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isModified() const
-*/
+// bool isModified() const
 HB_FUNC_STATIC(QLINEEDIT_ISMODIFIED)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -795,12 +737,10 @@ HB_FUNC_STATIC(QLINEEDIT_ISMODIFIED)
   }
 }
 
-/*
-void setModified(bool)
-*/
+// void setModified(bool)
 HB_FUNC_STATIC(QLINEEDIT_SETMODIFIED)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -817,12 +757,10 @@ HB_FUNC_STATIC(QLINEEDIT_SETMODIFIED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isReadOnly() const
-*/
+// bool isReadOnly() const
 HB_FUNC_STATIC(QLINEEDIT_ISREADONLY)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -837,12 +775,10 @@ HB_FUNC_STATIC(QLINEEDIT_ISREADONLY)
   }
 }
 
-/*
-void setReadOnly(bool)
-*/
+// void setReadOnly(bool)
 HB_FUNC_STATIC(QLINEEDIT_SETREADONLY)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -859,12 +795,10 @@ HB_FUNC_STATIC(QLINEEDIT_SETREADONLY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isRedoAvailable() const
-*/
+// bool isRedoAvailable() const
 HB_FUNC_STATIC(QLINEEDIT_ISREDOAVAILABLE)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -879,12 +813,10 @@ HB_FUNC_STATIC(QLINEEDIT_ISREDOAVAILABLE)
   }
 }
 
-/*
-bool isUndoAvailable() const
-*/
+// bool isUndoAvailable() const
 HB_FUNC_STATIC(QLINEEDIT_ISUNDOAVAILABLE)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -899,12 +831,10 @@ HB_FUNC_STATIC(QLINEEDIT_ISUNDOAVAILABLE)
   }
 }
 
-/*
-int maxLength() const
-*/
+// int maxLength() const
 HB_FUNC_STATIC(QLINEEDIT_MAXLENGTH)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -919,12 +849,10 @@ HB_FUNC_STATIC(QLINEEDIT_MAXLENGTH)
   }
 }
 
-/*
-void setMaxLength(int)
-*/
+// void setMaxLength(int)
 HB_FUNC_STATIC(QLINEEDIT_SETMAXLENGTH)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -941,12 +869,10 @@ HB_FUNC_STATIC(QLINEEDIT_SETMAXLENGTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString placeholderText() const
-*/
+// QString placeholderText() const
 HB_FUNC_STATIC(QLINEEDIT_PLACEHOLDERTEXT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -961,12 +887,10 @@ HB_FUNC_STATIC(QLINEEDIT_PLACEHOLDERTEXT)
   }
 }
 
-/*
-void setPlaceholderText(const QString &)
-*/
+// void setPlaceholderText(const QString &)
 HB_FUNC_STATIC(QLINEEDIT_SETPLACEHOLDERTEXT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -983,12 +907,10 @@ HB_FUNC_STATIC(QLINEEDIT_SETPLACEHOLDERTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize minimumSizeHint() const
-*/
+// QSize minimumSizeHint() const
 HB_FUNC_STATIC(QLINEEDIT_MINIMUMSIZEHINT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1003,12 +925,10 @@ HB_FUNC_STATIC(QLINEEDIT_MINIMUMSIZEHINT)
   }
 }
 
-/*
-QString selectedText() const
-*/
+// QString selectedText() const
 HB_FUNC_STATIC(QLINEEDIT_SELECTEDTEXT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1023,12 +943,10 @@ HB_FUNC_STATIC(QLINEEDIT_SELECTEDTEXT)
   }
 }
 
-/*
-int selectionStart() const
-*/
+// int selectionStart() const
 HB_FUNC_STATIC(QLINEEDIT_SELECTIONSTART)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1043,12 +961,10 @@ HB_FUNC_STATIC(QLINEEDIT_SELECTIONSTART)
   }
 }
 
-/*
-bool hasFrame() const
-*/
+// bool hasFrame() const
 HB_FUNC_STATIC(QLINEEDIT_HASFRAME)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1063,12 +979,10 @@ HB_FUNC_STATIC(QLINEEDIT_HASFRAME)
   }
 }
 
-/*
-void setFrame(bool)
-*/
+// void setFrame(bool)
 HB_FUNC_STATIC(QLINEEDIT_SETFRAME)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1085,12 +999,10 @@ HB_FUNC_STATIC(QLINEEDIT_SETFRAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSelection(int start, int length)
-*/
+// void setSelection(int start, int length)
 HB_FUNC_STATIC(QLINEEDIT_SETSELECTION)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1110,38 +1022,34 @@ HB_FUNC_STATIC(QLINEEDIT_SETSELECTION)
 HB_FUNC_STATIC(QLINEEDIT_SETTEXTMARGINS)
 {
   if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
-    /*
-    void setTextMargins(int left, int top, int right, int bottom)
-    */
-    auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void setTextMargins(int left, int top, int right, int bottom)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setTextMargins(PINT(1), PINT(2), PINT(3), PINT(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(1) && ISQMARGINS(1)) {
-    /*
-    void setTextMargins(const QMargins &margins)
-    */
-    auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void setTextMargins(const QMargins &margins)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setTextMargins(*PQMARGINS(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-void setValidator(const QValidator * v = nullptr)
-*/
+// void setValidator(const QValidator *v = nullptr)
 HB_FUNC_STATIC(QLINEEDIT_SETVALIDATOR)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1158,12 +1066,10 @@ HB_FUNC_STATIC(QLINEEDIT_SETVALIDATOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QValidator * validator() const
-*/
+// const QValidator *validator() const
 HB_FUNC_STATIC(QLINEEDIT_VALIDATOR)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1179,12 +1085,10 @@ HB_FUNC_STATIC(QLINEEDIT_VALIDATOR)
   }
 }
 
-/*
-QSize sizeHint() const
-*/
+// QSize sizeHint() const
 HB_FUNC_STATIC(QLINEEDIT_SIZEHINT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1199,12 +1103,10 @@ HB_FUNC_STATIC(QLINEEDIT_SIZEHINT)
   }
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QLINEEDIT_TEXT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1219,12 +1121,10 @@ HB_FUNC_STATIC(QLINEEDIT_TEXT)
   }
 }
 
-/*
-void setText(const QString &)
-*/
+// void setText(const QString &)
 HB_FUNC_STATIC(QLINEEDIT_SETTEXT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1241,19 +1141,16 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QMargins textMargins() const
-*/
+// QMargins textMargins() const
 HB_FUNC_STATIC(QLINEEDIT_TEXTMARGINS)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QMargins(obj->textMargins());
-      Qt5xHb::createReturnClass(ptr, "QMARGINS", true);
+      RQMARGINS(obj->textMargins());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1262,12 +1159,10 @@ HB_FUNC_STATIC(QLINEEDIT_TEXTMARGINS)
   }
 }
 
-/*
-bool event(QEvent * e)
-*/
+// bool event(QEvent *e)
 HB_FUNC_STATIC(QLINEEDIT_EVENT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1282,12 +1177,10 @@ HB_FUNC_STATIC(QLINEEDIT_EVENT)
   }
 }
 
-/*
-QVariant inputMethodQuery(Qt::InputMethodQuery property) const
-*/
+// QVariant inputMethodQuery(Qt::InputMethodQuery property) const
 HB_FUNC_STATIC(QLINEEDIT_INPUTMETHODQUERY)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1302,12 +1195,10 @@ HB_FUNC_STATIC(QLINEEDIT_INPUTMETHODQUERY)
   }
 }
 
-/*
-void copy() const
-*/
+// void copy() const
 HB_FUNC_STATIC(QLINEEDIT_COPY)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1324,12 +1215,10 @@ HB_FUNC_STATIC(QLINEEDIT_COPY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void cut()
-*/
+// void cut()
 HB_FUNC_STATIC(QLINEEDIT_CUT)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1346,12 +1235,10 @@ HB_FUNC_STATIC(QLINEEDIT_CUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void paste()
-*/
+// void paste()
 HB_FUNC_STATIC(QLINEEDIT_PASTE)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1368,12 +1255,10 @@ HB_FUNC_STATIC(QLINEEDIT_PASTE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void redo()
-*/
+// void redo()
 HB_FUNC_STATIC(QLINEEDIT_REDO)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1390,12 +1275,10 @@ HB_FUNC_STATIC(QLINEEDIT_REDO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void selectAll()
-*/
+// void selectAll()
 HB_FUNC_STATIC(QLINEEDIT_SELECTALL)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1412,12 +1295,10 @@ HB_FUNC_STATIC(QLINEEDIT_SELECTALL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void undo()
-*/
+// void undo()
 HB_FUNC_STATIC(QLINEEDIT_UNDO)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1434,12 +1315,10 @@ HB_FUNC_STATIC(QLINEEDIT_UNDO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCursorMoveStyle(Qt::CursorMoveStyle style)
-*/
+// void setCursorMoveStyle(Qt::CursorMoveStyle style)
 HB_FUNC_STATIC(QLINEEDIT_SETCURSORMOVESTYLE)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1456,12 +1335,10 @@ HB_FUNC_STATIC(QLINEEDIT_SETCURSORMOVESTYLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::CursorMoveStyle cursorMoveStyle() const
-*/
+// Qt::CursorMoveStyle cursorMoveStyle() const
 HB_FUNC_STATIC(QLINEEDIT_CURSORMOVESTYLE)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1476,12 +1353,10 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORMOVESTYLE)
   }
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QLINEEDIT_CLEAR)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1501,38 +1376,34 @@ HB_FUNC_STATIC(QLINEEDIT_CLEAR)
 HB_FUNC_STATIC(QLINEEDIT_ADDACTION)
 {
   if (ISNUMPAR(2) && ISQACTION(1) && HB_ISNUM(2)) {
-    /*
-    void addAction(QAction * action, QLineEdit::ActionPosition position)
-    */
-    auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void addAction(QAction *action, QLineEdit::ActionPosition position)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->addAction(PQACTION(1), static_cast<QLineEdit::ActionPosition>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISNUM(2)) {
-    /*
-    QAction * addAction(const QIcon &icon, QLineEdit::ActionPosition position)
-    */
-    auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // QAction *addAction(const QIcon &icon, QLineEdit::ActionPosition position)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = obj->addAction(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
                                 static_cast<QLineEdit::ActionPosition>(hb_parni(2)));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-void setClearButtonEnabled(bool enable)
-*/
+// void setClearButtonEnabled(bool enable)
 HB_FUNC_STATIC(QLINEEDIT_SETCLEARBUTTONENABLED)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1549,12 +1420,10 @@ HB_FUNC_STATIC(QLINEEDIT_SETCLEARBUTTONENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isClearButtonEnabled() const
-*/
+// bool isClearButtonEnabled() const
 HB_FUNC_STATIC(QLINEEDIT_ISCLEARBUTTONENABLED)
 {
-  auto obj = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1569,12 +1438,10 @@ HB_FUNC_STATIC(QLINEEDIT_ISCLEARBUTTONENABLED)
   }
 }
 
-/*
-void cursorPositionChanged(int oldPos, int newPos)
-*/
+// void cursorPositionChanged(int oldPos, int newPos)
 HB_FUNC_STATIC(QLINEEDIT_ONCURSORPOSITIONCHANGED)
 {
-  auto sender = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1598,7 +1465,6 @@ HB_FUNC_STATIC(QLINEEDIT_ONCURSORPOSITIONCHANGED)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1614,12 +1480,10 @@ HB_FUNC_STATIC(QLINEEDIT_ONCURSORPOSITIONCHANGED)
   hb_retl(result);
 }
 
-/*
-void editingFinished()
-*/
+// void editingFinished()
 HB_FUNC_STATIC(QLINEEDIT_ONEDITINGFINISHED)
 {
-  auto sender = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1638,7 +1502,6 @@ HB_FUNC_STATIC(QLINEEDIT_ONEDITINGFINISHED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1654,13 +1517,11 @@ HB_FUNC_STATIC(QLINEEDIT_ONEDITINGFINISHED)
   hb_retl(result);
 }
 
-/*
-void inputRejected()
-*/
+// void inputRejected()
 HB_FUNC_STATIC(QLINEEDIT_ONINPUTREJECTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
-  auto sender = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1679,7 +1540,6 @@ HB_FUNC_STATIC(QLINEEDIT_ONINPUTREJECTED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1698,12 +1558,10 @@ HB_FUNC_STATIC(QLINEEDIT_ONINPUTREJECTED)
 #endif
 }
 
-/*
-void returnPressed()
-*/
+// void returnPressed()
 HB_FUNC_STATIC(QLINEEDIT_ONRETURNPRESSED)
 {
-  auto sender = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1722,7 +1580,6 @@ HB_FUNC_STATIC(QLINEEDIT_ONRETURNPRESSED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1738,12 +1595,10 @@ HB_FUNC_STATIC(QLINEEDIT_ONRETURNPRESSED)
   hb_retl(result);
 }
 
-/*
-void selectionChanged()
-*/
+// void selectionChanged()
 HB_FUNC_STATIC(QLINEEDIT_ONSELECTIONCHANGED)
 {
-  auto sender = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1762,7 +1617,6 @@ HB_FUNC_STATIC(QLINEEDIT_ONSELECTIONCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1778,12 +1632,10 @@ HB_FUNC_STATIC(QLINEEDIT_ONSELECTIONCHANGED)
   hb_retl(result);
 }
 
-/*
-void textChanged(const QString &text)
-*/
+// void textChanged(const QString &text)
 HB_FUNC_STATIC(QLINEEDIT_ONTEXTCHANGED)
 {
-  auto sender = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1805,7 +1657,6 @@ HB_FUNC_STATIC(QLINEEDIT_ONTEXTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1821,12 +1672,10 @@ HB_FUNC_STATIC(QLINEEDIT_ONTEXTCHANGED)
   hb_retl(result);
 }
 
-/*
-void textEdited(const QString &text)
-*/
+// void textEdited(const QString &text)
 HB_FUNC_STATIC(QLINEEDIT_ONTEXTEDITED)
 {
-  auto sender = qobject_cast<QLineEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1848,7 +1697,6 @@ HB_FUNC_STATIC(QLINEEDIT_ONTEXTEDITED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

@@ -67,9 +67,9 @@ RETURN
 #include <QtWidgets/QSpinBox>
 #endif
 
-    /*
-    QSpinBox(QWidget * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QSpinBox(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QSPINBOX_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QSPINBOX_NEW)
 
 HB_FUNC_STATIC(QSPINBOX_DELETE)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -97,12 +97,10 @@ HB_FUNC_STATIC(QSPINBOX_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString cleanText() const
-*/
+// QString cleanText() const
 HB_FUNC_STATIC(QSPINBOX_CLEANTEXT)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,12 +115,10 @@ HB_FUNC_STATIC(QSPINBOX_CLEANTEXT)
   }
 }
 
-/*
-int maximum() const
-*/
+// int maximum() const
 HB_FUNC_STATIC(QSPINBOX_MAXIMUM)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,12 +133,10 @@ HB_FUNC_STATIC(QSPINBOX_MAXIMUM)
   }
 }
 
-/*
-void setMaximum(int max)
-*/
+// void setMaximum(int max)
 HB_FUNC_STATIC(QSPINBOX_SETMAXIMUM)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,12 +153,10 @@ HB_FUNC_STATIC(QSPINBOX_SETMAXIMUM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int minimum() const
-*/
+// int minimum() const
 HB_FUNC_STATIC(QSPINBOX_MINIMUM)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,12 +171,10 @@ HB_FUNC_STATIC(QSPINBOX_MINIMUM)
   }
 }
 
-/*
-void setMinimum(int min)
-*/
+// void setMinimum(int min)
 HB_FUNC_STATIC(QSPINBOX_SETMINIMUM)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,12 +191,10 @@ HB_FUNC_STATIC(QSPINBOX_SETMINIMUM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString prefix() const
-*/
+// QString prefix() const
 HB_FUNC_STATIC(QSPINBOX_PREFIX)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,12 +209,10 @@ HB_FUNC_STATIC(QSPINBOX_PREFIX)
   }
 }
 
-/*
-void setPrefix(const QString &prefix)
-*/
+// void setPrefix(const QString &prefix)
 HB_FUNC_STATIC(QSPINBOX_SETPREFIX)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,12 +229,10 @@ HB_FUNC_STATIC(QSPINBOX_SETPREFIX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRange(int min, int max)
-*/
+// void setRange(int min, int max)
 HB_FUNC_STATIC(QSPINBOX_SETRANGE)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,12 +249,10 @@ HB_FUNC_STATIC(QSPINBOX_SETRANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int singleStep() const
-*/
+// int singleStep() const
 HB_FUNC_STATIC(QSPINBOX_SINGLESTEP)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,12 +267,10 @@ HB_FUNC_STATIC(QSPINBOX_SINGLESTEP)
   }
 }
 
-/*
-void setSingleStep(int val)
-*/
+// void setSingleStep(int val)
 HB_FUNC_STATIC(QSPINBOX_SETSINGLESTEP)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -307,12 +287,10 @@ HB_FUNC_STATIC(QSPINBOX_SETSINGLESTEP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString suffix() const
-*/
+// QString suffix() const
 HB_FUNC_STATIC(QSPINBOX_SUFFIX)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -327,12 +305,10 @@ HB_FUNC_STATIC(QSPINBOX_SUFFIX)
   }
 }
 
-/*
-void setSuffix(const QString &suffix)
-*/
+// void setSuffix(const QString &suffix)
 HB_FUNC_STATIC(QSPINBOX_SETSUFFIX)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -349,12 +325,10 @@ HB_FUNC_STATIC(QSPINBOX_SETSUFFIX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int value() const
-*/
+// int value() const
 HB_FUNC_STATIC(QSPINBOX_VALUE)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -369,12 +343,10 @@ HB_FUNC_STATIC(QSPINBOX_VALUE)
   }
 }
 
-/*
-void setValue(int val)
-*/
+// void setValue(int val)
 HB_FUNC_STATIC(QSPINBOX_SETVALUE)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -391,12 +363,10 @@ HB_FUNC_STATIC(QSPINBOX_SETVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int displayIntegerBase() const
-*/
+// int displayIntegerBase() const
 HB_FUNC_STATIC(QSPINBOX_DISPLAYINTEGERBASE)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,12 +381,10 @@ HB_FUNC_STATIC(QSPINBOX_DISPLAYINTEGERBASE)
   }
 }
 
-/*
-void setDisplayIntegerBase(int base)
-*/
+// void setDisplayIntegerBase(int base)
 HB_FUNC_STATIC(QSPINBOX_SETDISPLAYINTEGERBASE)
 {
-  auto obj = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -433,12 +401,10 @@ HB_FUNC_STATIC(QSPINBOX_SETDISPLAYINTEGERBASE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void valueChanged(int value)
-*/
+// void valueChanged(int value)
 HB_FUNC_STATIC(QSPINBOX_ONVALUECHANGED1)
 {
-  auto sender = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -460,7 +426,6 @@ HB_FUNC_STATIC(QSPINBOX_ONVALUECHANGED1)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -476,12 +441,10 @@ HB_FUNC_STATIC(QSPINBOX_ONVALUECHANGED1)
   hb_retl(result);
 }
 
-/*
-void valueChanged(const QString &text)
-*/
+// void valueChanged(const QString &text)
 HB_FUNC_STATIC(QSPINBOX_ONVALUECHANGED2)
 {
-  auto sender = qobject_cast<QSpinBox *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -503,7 +466,6 @@ HB_FUNC_STATIC(QSPINBOX_ONVALUECHANGED2)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

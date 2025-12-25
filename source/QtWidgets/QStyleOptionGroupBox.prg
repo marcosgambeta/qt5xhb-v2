@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCOLOR
+REQUEST QColor
 #endif
 
 CLASS QStyleOptionGroupBox INHERIT QStyleOptionComplex
@@ -58,31 +58,29 @@ RETURN
 #include <QtWidgets/QStyleOptionGroupBox>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QStyleOptionGroupBox *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QStyleOptionGroupBox()
-    */
+    // QStyleOptionGroupBox()
     auto obj = new QStyleOptionGroupBox();
     Qt5xHb::returnNewObject(obj, true);
+
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONGROUPBOX(1)) {
-    /*
-    QStyleOptionGroupBox(const QStyleOptionGroupBox &other)
-    */
+    // QStyleOptionGroupBox(const QStyleOptionGroupBox &other)
     auto obj = new QStyleOptionGroupBox(*PQSTYLEOPTIONGROUPBOX(1));
     Qt5xHb::returnNewObject(obj, true);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-QStyleOptionFrame::FrameFeatures features
-*/
+// QStyleOptionFrame::FrameFeatures features
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_FEATURES)
 {
-  auto obj = static_cast<QStyleOptionGroupBox *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -95,7 +93,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_FEATURES)
 
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETFEATURES)
 {
-  auto obj = static_cast<QStyleOptionGroupBox *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -108,12 +106,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETFEATURES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString text
-*/
+// QString text
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXT)
 {
-  auto obj = static_cast<QStyleOptionGroupBox *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -126,7 +122,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXT)
 
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXT)
 {
-  auto obj = static_cast<QStyleOptionGroupBox *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
@@ -139,12 +135,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::Alignment textAlignment
-*/
+// Qt::Alignment textAlignment
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT)
 {
-  auto obj = static_cast<QStyleOptionGroupBox *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -157,7 +151,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT)
 
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT)
 {
-  auto obj = static_cast<QStyleOptionGroupBox *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -170,12 +164,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QColor textColor
-*/
+// QColor textColor
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXTCOLOR)
 {
-  auto obj = static_cast<QStyleOptionGroupBox *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -188,7 +180,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXTCOLOR)
 
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXTCOLOR)
 {
-  auto obj = static_cast<QStyleOptionGroupBox *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && ISQCOLOR(1)) {
@@ -201,12 +193,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXTCOLOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int lineWidth
-*/
+// int lineWidth
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_LINEWIDTH)
 {
-  auto obj = static_cast<QStyleOptionGroupBox *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -219,7 +209,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_LINEWIDTH)
 
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETLINEWIDTH)
 {
-  auto obj = static_cast<QStyleOptionGroupBox *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -232,12 +222,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETLINEWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int midLineWidth
-*/
+// int midLineWidth
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH)
 {
-  auto obj = static_cast<QStyleOptionGroupBox *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -250,7 +238,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH)
 
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETMIDLINEWIDTH)
 {
-  auto obj = static_cast<QStyleOptionGroupBox *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMENU
-REQUEST QSIZE
+REQUEST QMenu
+REQUEST QSize
 #endif
 
 CLASS QPushButton INHERIT QAbstractButton
@@ -79,33 +79,31 @@ RETURN
 
 #include <QtWidgets/QMenu>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QPushButton *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QPUSHBUTTON_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
-    /*
-    QPushButton(QWidget * parent = nullptr)
-    */
+    // QPushButton(QWidget *parent = nullptr)
     auto obj = new QPushButton(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QPushButton(const QString &text, QWidget * parent = nullptr)
-    */
+    // QPushButton(const QString &text, QWidget *parent = nullptr)
     auto obj = new QPushButton(PQSTRING(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQWIDGETORNIL(3)) {
-    /*
-    QPushButton(const QIcon &icon, const QString &text, QWidget * parent = nullptr)
-    */
+    // QPushButton(const QIcon &icon, const QString &text, QWidget *parent = nullptr)
     auto obj = new QPushButton(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
                                PQSTRING(2), OPQWIDGET(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(2, 3) && ISQPIXMAP(1) && HB_ISCHAR(2) && ISQWIDGETORNIL(3)) {
-    /*
-    QPushButton(const QPixmap &icon, const QString &text, QWidget * parent = nullptr)
-    */
+    // QPushButton(const QPixmap &icon, const QString &text, QWidget *parent = nullptr)
     auto obj = new QPushButton(*PQPIXMAP(1), PQSTRING(2), OPQWIDGET(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -113,7 +111,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_NEW)
 
 HB_FUNC_STATIC(QPUSHBUTTON_DELETE)
 {
-  auto obj = qobject_cast<QPushButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -128,12 +126,10 @@ HB_FUNC_STATIC(QPUSHBUTTON_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool autoDefault() const
-*/
+// bool autoDefault() const
 HB_FUNC_STATIC(QPUSHBUTTON_AUTODEFAULT)
 {
-  auto obj = qobject_cast<QPushButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,12 +144,10 @@ HB_FUNC_STATIC(QPUSHBUTTON_AUTODEFAULT)
   }
 }
 
-/*
-bool isDefault() const
-*/
+// bool isDefault() const
 HB_FUNC_STATIC(QPUSHBUTTON_ISDEFAULT)
 {
-  auto obj = qobject_cast<QPushButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,12 +162,10 @@ HB_FUNC_STATIC(QPUSHBUTTON_ISDEFAULT)
   }
 }
 
-/*
-bool isFlat() const
-*/
+// bool isFlat() const
 HB_FUNC_STATIC(QPUSHBUTTON_ISFLAT)
 {
-  auto obj = qobject_cast<QPushButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,13 +180,11 @@ HB_FUNC_STATIC(QPUSHBUTTON_ISFLAT)
   }
 }
 
-/*
-QMenu * menu () const
-*/
+// QMenu *menu () const
 HB_FUNC_STATIC(QPUSHBUTTON_MENU)
 {
 #ifndef QT_NO_MENU
-  auto obj = qobject_cast<QPushButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,12 +201,10 @@ HB_FUNC_STATIC(QPUSHBUTTON_MENU)
 #endif
 }
 
-/*
-void setAutoDefault(bool)
-*/
+// void setAutoDefault(bool)
 HB_FUNC_STATIC(QPUSHBUTTON_SETAUTODEFAULT)
 {
-  auto obj = qobject_cast<QPushButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,12 +221,10 @@ HB_FUNC_STATIC(QPUSHBUTTON_SETAUTODEFAULT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDefault(bool)
-*/
+// void setDefault(bool)
 HB_FUNC_STATIC(QPUSHBUTTON_SETDEFAULT)
 {
-  auto obj = qobject_cast<QPushButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,12 +241,10 @@ HB_FUNC_STATIC(QPUSHBUTTON_SETDEFAULT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFlat(bool)
-*/
+// void setFlat(bool)
 HB_FUNC_STATIC(QPUSHBUTTON_SETFLAT)
 {
-  auto obj = qobject_cast<QPushButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,13 +261,11 @@ HB_FUNC_STATIC(QPUSHBUTTON_SETFLAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMenu (QMenu * menu)
-*/
+// void setMenu (QMenu *menu)
 HB_FUNC_STATIC(QPUSHBUTTON_SETMENU)
 {
 #ifndef QT_NO_MENU
-  auto obj = qobject_cast<QPushButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,13 +283,11 @@ HB_FUNC_STATIC(QPUSHBUTTON_SETMENU)
 #endif
 }
 
-/*
-void showMenu ()
-*/
+// void showMenu ()
 HB_FUNC_STATIC(QPUSHBUTTON_SHOWMENU)
 {
 #ifndef QT_NO_MENU
-  auto obj = qobject_cast<QPushButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -325,12 +305,10 @@ HB_FUNC_STATIC(QPUSHBUTTON_SHOWMENU)
 #endif
 }
 
-/*
-QSize minimumSizeHint() const
-*/
+// QSize minimumSizeHint() const
 HB_FUNC_STATIC(QPUSHBUTTON_MINIMUMSIZEHINT)
 {
-  auto obj = qobject_cast<QPushButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,12 +323,10 @@ HB_FUNC_STATIC(QPUSHBUTTON_MINIMUMSIZEHINT)
   }
 }
 
-/*
-QSize sizeHint() const
-*/
+// QSize sizeHint() const
 HB_FUNC_STATIC(QPUSHBUTTON_SIZEHINT)
 {
-  auto obj = qobject_cast<QPushButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

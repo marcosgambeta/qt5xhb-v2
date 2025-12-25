@@ -49,31 +49,29 @@ RETURN
 #include <QtWidgets/QStyleOptionRubberBand>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QStyleOptionRubberBand *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QStyleOptionRubberBand()
-    */
+    // QStyleOptionRubberBand()
     auto obj = new QStyleOptionRubberBand();
     Qt5xHb::returnNewObject(obj, true);
+
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONRUBBERBAND(1)) {
-    /*
-    QStyleOptionRubberBand(const QStyleOptionRubberBand &other)
-    */
+    // QStyleOptionRubberBand(const QStyleOptionRubberBand &other)
     auto obj = new QStyleOptionRubberBand(*PQSTYLEOPTIONRUBBERBAND(1));
     Qt5xHb::returnNewObject(obj, true);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-QRubberBand::Shape shape
-*/
+// QRubberBand::Shape shape
 HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SHAPE)
 {
-  auto obj = static_cast<QStyleOptionRubberBand *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -86,7 +84,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SHAPE)
 
 HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SETSHAPE)
 {
-  auto obj = static_cast<QStyleOptionRubberBand *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -99,12 +97,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SETSHAPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool opaque
-*/
+// bool opaque
 HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_OPAQUE)
 {
-  auto obj = static_cast<QStyleOptionRubberBand *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -117,7 +113,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_OPAQUE)
 
 HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SETOPAQUE)
 {
-  auto obj = static_cast<QStyleOptionRubberBand *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISLOG(1)) {

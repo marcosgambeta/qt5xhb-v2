@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
+REQUEST QSize
 #endif
 
 CLASS QInputDialog INHERIT QDialog
@@ -104,9 +104,9 @@ RETURN
 #include <QtWidgets/QInputDialog>
 #endif
 
-    /*
-    QInputDialog(QWidget * parent = nullptr, Qt::WindowFlags flags = 0)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QInputDialog(QWidget *parent = nullptr, Qt::WindowFlags flags = 0)
 HB_FUNC_STATIC(QINPUTDIALOG_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_NEW)
 
 HB_FUNC_STATIC(QINPUTDIALOG_DELETE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -135,12 +135,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString cancelButtonText() const
-*/
+// QString cancelButtonText() const
 HB_FUNC_STATIC(QINPUTDIALOG_CANCELBUTTONTEXT)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,12 +153,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_CANCELBUTTONTEXT)
   }
 }
 
-/*
-void setCancelButtonText(const QString &text)
-*/
+// void setCancelButtonText(const QString &text)
 HB_FUNC_STATIC(QINPUTDIALOG_SETCANCELBUTTONTEXT)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,12 +173,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCANCELBUTTONTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringList comboBoxItems() const
-*/
+// QStringList comboBoxItems() const
 HB_FUNC_STATIC(QINPUTDIALOG_COMBOBOXITEMS)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,12 +191,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_COMBOBOXITEMS)
   }
 }
 
-/*
-void setComboBoxItems(const QStringList &items)
-*/
+// void setComboBoxItems(const QStringList &items)
 HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXITEMS)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,12 +211,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXITEMS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int doubleDecimals() const
-*/
+// int doubleDecimals() const
 HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEDECIMALS)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,12 +229,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEDECIMALS)
   }
 }
 
-/*
-void setDoubleDecimals(int decimals)
-*/
+// void setDoubleDecimals(int decimals)
 HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEDECIMALS)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,12 +249,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEDECIMALS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-double doubleMaximum() const
-*/
+// double doubleMaximum() const
 HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEMAXIMUM)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,12 +267,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEMAXIMUM)
   }
 }
 
-/*
-void setDoubleMaximum(double max)
-*/
+// void setDoubleMaximum(double max)
 HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMAXIMUM)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,12 +287,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMAXIMUM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-double doubleMinimum() const
-*/
+// double doubleMinimum() const
 HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEMINIMUM)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,12 +305,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEMINIMUM)
   }
 }
 
-/*
-void setDoubleMinimum(double min)
-*/
+// void setDoubleMinimum(double min)
 HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMINIMUM)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,12 +325,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMINIMUM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-double doubleValue() const
-*/
+// double doubleValue() const
 HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEVALUE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -365,12 +343,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEVALUE)
   }
 }
 
-/*
-void setDoubleValue(double value)
-*/
+// void setDoubleValue(double value)
 HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEVALUE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -387,12 +363,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QInputDialog::InputMode inputMode() const
-*/
+// QInputDialog::InputMode inputMode() const
 HB_FUNC_STATIC(QINPUTDIALOG_INPUTMODE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -407,12 +381,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_INPUTMODE)
   }
 }
 
-/*
-void setInputMode(QInputDialog::InputMode mode)
-*/
+// void setInputMode(QInputDialog::InputMode mode)
 HB_FUNC_STATIC(QINPUTDIALOG_SETINPUTMODE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -429,12 +401,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINPUTMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int intMaximum() const
-*/
+// int intMaximum() const
 HB_FUNC_STATIC(QINPUTDIALOG_INTMAXIMUM)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -449,12 +419,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_INTMAXIMUM)
   }
 }
 
-/*
-void setIntMaximum(int max)
-*/
+// void setIntMaximum(int max)
 HB_FUNC_STATIC(QINPUTDIALOG_SETINTMAXIMUM)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -471,12 +439,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTMAXIMUM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int intMinimum() const
-*/
+// int intMinimum() const
 HB_FUNC_STATIC(QINPUTDIALOG_INTMINIMUM)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -491,12 +457,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_INTMINIMUM)
   }
 }
 
-/*
-void setIntMinimum(int min)
-*/
+// void setIntMinimum(int min)
 HB_FUNC_STATIC(QINPUTDIALOG_SETINTMINIMUM)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -513,12 +477,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTMINIMUM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int intStep() const
-*/
+// int intStep() const
 HB_FUNC_STATIC(QINPUTDIALOG_INTSTEP)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -533,12 +495,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_INTSTEP)
   }
 }
 
-/*
-void setIntStep(int step)
-*/
+// void setIntStep(int step)
 HB_FUNC_STATIC(QINPUTDIALOG_SETINTSTEP)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -555,12 +515,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTSTEP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int intValue() const
-*/
+// int intValue() const
 HB_FUNC_STATIC(QINPUTDIALOG_INTVALUE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -575,12 +533,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_INTVALUE)
   }
 }
 
-/*
-void setIntValue(int value)
-*/
+// void setIntValue(int value)
 HB_FUNC_STATIC(QINPUTDIALOG_SETINTVALUE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -597,12 +553,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isComboBoxEditable() const
-*/
+// bool isComboBoxEditable() const
 HB_FUNC_STATIC(QINPUTDIALOG_ISCOMBOBOXEDITABLE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -617,12 +571,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_ISCOMBOBOXEDITABLE)
   }
 }
 
-/*
-void setComboBoxEditable(bool editable)
-*/
+// void setComboBoxEditable(bool editable)
 HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXEDITABLE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -639,12 +591,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXEDITABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString labelText() const
-*/
+// QString labelText() const
 HB_FUNC_STATIC(QINPUTDIALOG_LABELTEXT)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -659,12 +609,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_LABELTEXT)
   }
 }
 
-/*
-void setLabelText(const QString &text)
-*/
+// void setLabelText(const QString &text)
 HB_FUNC_STATIC(QINPUTDIALOG_SETLABELTEXT)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -681,12 +629,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETLABELTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString okButtonText() const
-*/
+// QString okButtonText() const
 HB_FUNC_STATIC(QINPUTDIALOG_OKBUTTONTEXT)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -701,12 +647,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_OKBUTTONTEXT)
   }
 }
 
-/*
-void setOkButtonText(const QString &text)
-*/
+// void setOkButtonText(const QString &text)
 HB_FUNC_STATIC(QINPUTDIALOG_SETOKBUTTONTEXT)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -723,12 +667,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOKBUTTONTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void open(QObject * receiver, const char * member)
-*/
+// void open(QObject *receiver, const char *member)
 HB_FUNC_STATIC(QINPUTDIALOG_OPEN)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -745,12 +687,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_OPEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QInputDialog::InputDialogOptions options() const
-*/
+// QInputDialog::InputDialogOptions options() const
 HB_FUNC_STATIC(QINPUTDIALOG_OPTIONS)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -765,12 +705,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_OPTIONS)
   }
 }
 
-/*
-void setOptions(QInputDialog::InputDialogOptions options)
-*/
+// void setOptions(QInputDialog::InputDialogOptions options)
 HB_FUNC_STATIC(QINPUTDIALOG_SETOPTIONS)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -787,12 +725,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOPTIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDoubleRange(double min, double max)
-*/
+// void setDoubleRange(double min, double max)
 HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLERANGE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -809,12 +745,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLERANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setIntRange(int min, int max)
-*/
+// void setIntRange(int min, int max)
 HB_FUNC_STATIC(QINPUTDIALOG_SETINTRANGE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -831,12 +765,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTRANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOption(QInputDialog::InputDialogOption option, bool on = true)
-*/
+// void setOption(QInputDialog::InputDialogOption option, bool on = true)
 HB_FUNC_STATIC(QINPUTDIALOG_SETOPTION)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -853,12 +785,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool testOption(QInputDialog::InputDialogOption option) const
-*/
+// bool testOption(QInputDialog::InputDialogOption option) const
 HB_FUNC_STATIC(QINPUTDIALOG_TESTOPTION)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -873,12 +803,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_TESTOPTION)
   }
 }
 
-/*
-QLineEdit::EchoMode textEchoMode() const
-*/
+// QLineEdit::EchoMode textEchoMode() const
 HB_FUNC_STATIC(QINPUTDIALOG_TEXTECHOMODE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -893,12 +821,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_TEXTECHOMODE)
   }
 }
 
-/*
-void setTextEchoMode(QLineEdit::EchoMode mode)
-*/
+// void setTextEchoMode(QLineEdit::EchoMode mode)
 HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTECHOMODE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -915,12 +841,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTECHOMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString textValue() const
-*/
+// QString textValue() const
 HB_FUNC_STATIC(QINPUTDIALOG_TEXTVALUE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -935,12 +859,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_TEXTVALUE)
   }
 }
 
-/*
-void setTextValue(const QString &text)
-*/
+// void setTextValue(const QString &text)
 HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTVALUE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -957,12 +879,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void done(int result)
-*/
+// void done(int result)
 HB_FUNC_STATIC(QINPUTDIALOG_DONE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -979,12 +899,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_DONE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize minimumSizeHint() const
-*/
+// QSize minimumSizeHint() const
 HB_FUNC_STATIC(QINPUTDIALOG_MINIMUMSIZEHINT)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -999,12 +917,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_MINIMUMSIZEHINT)
   }
 }
 
-/*
-void setVisible(bool visible)
-*/
+// void setVisible(bool visible)
 HB_FUNC_STATIC(QINPUTDIALOG_SETVISIBLE)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1021,12 +937,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize sizeHint() const
-*/
+// QSize sizeHint() const
 HB_FUNC_STATIC(QINPUTDIALOG_SIZEHINT)
 {
-  auto obj = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1041,10 +955,9 @@ HB_FUNC_STATIC(QINPUTDIALOG_SIZEHINT)
   }
 }
 
-/*
-static double getDouble(QWidget * parent, const QString &title, const QString &label, double value = 0, double
-minValue = -2147483647, double maxValue = 2147483647, int decimals = 1, bool * ok = nullptr, Qt::WindowFlags flags = 0)
-*/
+// static double getDouble(QWidget *parent, const QString &title, const QString &label, double value = 0, double
+// minValue = -2147483647, double maxValue = 2147483647, int decimals = 1, bool *ok = nullptr, Qt::WindowFlags flags =
+// 0)
 HB_FUNC_STATIC(QINPUTDIALOG_GETDOUBLE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1063,10 +976,8 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETDOUBLE)
 #endif
 }
 
-/*
-static int getInt(QWidget * parent, const QString &title, const QString &label, int value = 0, int minValue =
--2147483647, int maxValue = 2147483647, int step = 1, bool * ok = nullptr, Qt::WindowFlags flags = 0)
-*/
+// static int getInt(QWidget *parent, const QString &title, const QString &label, int value = 0, int minValue =
+// -2147483647, int maxValue = 2147483647, int step = 1, bool *ok = nullptr, Qt::WindowFlags flags = 0)
 HB_FUNC_STATIC(QINPUTDIALOG_GETINT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1085,11 +996,9 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETINT)
 #endif
 }
 
-/*
-static QString getItem(QWidget * parent, const QString &title, const QString &label, const QStringList &items, int
-current = 0, bool editable = true, bool * ok = nullptr, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints
-= Qt::ImhNone)
-*/
+// static QString getItem(QWidget *parent, const QString &title, const QString &label, const QStringList &items, int
+// current = 0, bool editable = true, bool *ok = nullptr, Qt::WindowFlags flags = 0, Qt::InputMethodHints
+// inputMethodHints = Qt::ImhNone)
 HB_FUNC_STATIC(QINPUTDIALOG_GETITEM)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1109,11 +1018,9 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETITEM)
 #endif
 }
 
-/*
-static QString getText(QWidget * parent, const QString &title, const QString &label, QLineEdit::EchoMode echo =
-QLineEdit::Normal, const QString &text = QString(), bool * ok = nullptr, Qt::WindowFlags flags = 0,
-Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
-*/
+// static QString getText(QWidget *parent, const QString &title, const QString &label, QLineEdit::EchoMode echo =
+// QLineEdit::Normal, const QString &text = QString(), bool *ok = nullptr, Qt::WindowFlags flags = 0,
+// Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
 HB_FUNC_STATIC(QINPUTDIALOG_GETTEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1136,10 +1043,8 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETTEXT)
 #endif
 }
 
-/*
-static QString getMultiLineText(QWidget * parent, const QString &title, const QString &label, const QString &text =
-QString(), bool * ok = nullptr, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
-*/
+// static QString getMultiLineText(QWidget *parent, const QString &title, const QString &label, const QString &text =
+// QString(), bool *ok = nullptr, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
 HB_FUNC_STATIC(QINPUTDIALOG_GETMULTILINETEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1159,12 +1064,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETMULTILINETEXT)
 #endif
 }
 
-/*
-void doubleValueChanged(double value)
-*/
+// void doubleValueChanged(double value)
 HB_FUNC_STATIC(QINPUTDIALOG_ONDOUBLEVALUECHANGED)
 {
-  auto sender = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1186,7 +1089,6 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONDOUBLEVALUECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1202,12 +1104,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONDOUBLEVALUECHANGED)
   hb_retl(result);
 }
 
-/*
-void doubleValueSelected(double value)
-*/
+// void doubleValueSelected(double value)
 HB_FUNC_STATIC(QINPUTDIALOG_ONDOUBLEVALUESELECTED)
 {
-  auto sender = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1229,7 +1129,6 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONDOUBLEVALUESELECTED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1245,12 +1144,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONDOUBLEVALUESELECTED)
   hb_retl(result);
 }
 
-/*
-void intValueChanged(int value)
-*/
+// void intValueChanged(int value)
 HB_FUNC_STATIC(QINPUTDIALOG_ONINTVALUECHANGED)
 {
-  auto sender = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1272,7 +1169,6 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONINTVALUECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1288,12 +1184,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONINTVALUECHANGED)
   hb_retl(result);
 }
 
-/*
-void intValueSelected(int value)
-*/
+// void intValueSelected(int value)
 HB_FUNC_STATIC(QINPUTDIALOG_ONINTVALUESELECTED)
 {
-  auto sender = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1315,7 +1209,6 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONINTVALUESELECTED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1331,12 +1224,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONINTVALUESELECTED)
   hb_retl(result);
 }
 
-/*
-void textValueChanged(const QString &text)
-*/
+// void textValueChanged(const QString &text)
 HB_FUNC_STATIC(QINPUTDIALOG_ONTEXTVALUECHANGED)
 {
-  auto sender = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1358,7 +1249,6 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONTEXTVALUECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1374,12 +1264,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONTEXTVALUECHANGED)
   hb_retl(result);
 }
 
-/*
-void textValueSelected(const QString &text)
-*/
+// void textValueSelected(const QString &text)
 HB_FUNC_STATIC(QINPUTDIALOG_ONTEXTVALUESELECTED)
 {
-  auto sender = qobject_cast<QInputDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1401,7 +1289,6 @@ HB_FUNC_STATIC(QINPUTDIALOG_ONTEXTVALUESELECTED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

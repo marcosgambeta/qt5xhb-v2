@@ -48,20 +48,20 @@ RETURN
 #include <QtWidgets/QTimeEdit>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QTIMEEDIT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
-    /*
-    QTimeEdit(QWidget * parent = nullptr)
-    */
+    // QTimeEdit(QWidget *parent = nullptr)
     auto obj = new QTimeEdit(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(1, 2) && ISQTIME(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QTimeEdit(const QTime &time, QWidget * parent = nullptr)
-    */
+    // QTimeEdit(const QTime &time, QWidget *parent = nullptr)
     auto obj = new QTimeEdit(*PQTIME(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QTIMEEDIT_NEW)
 
 HB_FUNC_STATIC(QTIMEEDIT_DELETE)
 {
-  auto obj = qobject_cast<QTimeEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);

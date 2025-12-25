@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QICON
-REQUEST QMENU
-REQUEST QRECT
+REQUEST QIcon
+REQUEST QMenu
+REQUEST QRect
 #endif
 
 CLASS QSystemTrayIcon INHERIT QObject
@@ -70,21 +70,21 @@ RETURN
 
 #include <QtWidgets/QMenu>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QSystemTrayIcon *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSYSTEMTRAYICON_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QSystemTrayIcon(QObject * parent = nullptr)
-    */
+    // QSystemTrayIcon(QObject *parent = nullptr)
     auto obj = new QSystemTrayIcon(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(1, 2) && (ISQICON(1) || HB_ISCHAR(1)) && ISQOBJECTORNIL(2)) {
-    /*
-    QSystemTrayIcon(const QIcon &icon, QObject * parent = nullptr)
-    */
+    // QSystemTrayIcon(const QIcon &icon, QObject *parent = nullptr)
     auto obj = new QSystemTrayIcon(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
                                    OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_NEW)
 
 HB_FUNC_STATIC(QSYSTEMTRAYICON_DELETE)
 {
-  auto obj = qobject_cast<QSystemTrayIcon *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -107,12 +107,10 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QMenu * contextMenu() const
-*/
+// QMenu *contextMenu() const
 HB_FUNC_STATIC(QSYSTEMTRAYICON_CONTEXTMENU)
 {
-  auto obj = qobject_cast<QSystemTrayIcon *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,12 +126,10 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_CONTEXTMENU)
   }
 }
 
-/*
-QRect geometry() const
-*/
+// QRect geometry() const
 HB_FUNC_STATIC(QSYSTEMTRAYICON_GEOMETRY)
 {
-  auto obj = qobject_cast<QSystemTrayIcon *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,12 +144,10 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_GEOMETRY)
   }
 }
 
-/*
-QIcon icon() const
-*/
+// QIcon icon() const
 HB_FUNC_STATIC(QSYSTEMTRAYICON_ICON)
 {
-  auto obj = qobject_cast<QSystemTrayIcon *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,12 +162,10 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_ICON)
   }
 }
 
-/*
-bool isVisible() const
-*/
+// bool isVisible() const
 HB_FUNC_STATIC(QSYSTEMTRAYICON_ISVISIBLE)
 {
-  auto obj = qobject_cast<QSystemTrayIcon *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,12 +180,10 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_ISVISIBLE)
   }
 }
 
-/*
-void setContextMenu(QMenu * menu)
-*/
+// void setContextMenu(QMenu *menu)
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SETCONTEXTMENU)
 {
-  auto obj = qobject_cast<QSystemTrayIcon *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,12 +200,10 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETCONTEXTMENU)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setIcon(const QIcon &icon)
-*/
+// void setIcon(const QIcon &icon)
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SETICON)
 {
-  auto obj = qobject_cast<QSystemTrayIcon *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,12 +220,10 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETICON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setToolTip(const QString &tip)
-*/
+// void setToolTip(const QString &tip)
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SETTOOLTIP)
 {
-  auto obj = qobject_cast<QSystemTrayIcon *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -254,13 +240,11 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETTOOLTIP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void showMessage(const QString &title, const QString &message, QSystemTrayIcon::MessageIcon icon =
-QSystemTrayIcon::Information, int millisecondsTimeoutHint = 10000)
-*/
+// void showMessage(const QString &title, const QString &message, QSystemTrayIcon::MessageIcon icon =
+// QSystemTrayIcon::Information, int millisecondsTimeoutHint = 10000)
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOWMESSAGE)
 {
-  auto obj = qobject_cast<QSystemTrayIcon *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,12 +264,10 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOWMESSAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString toolTip() const
-*/
+// QString toolTip() const
 HB_FUNC_STATIC(QSYSTEMTRAYICON_TOOLTIP)
 {
-  auto obj = qobject_cast<QSystemTrayIcon *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,12 +282,10 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_TOOLTIP)
   }
 }
 
-/*
-void hide()
-*/
+// void hide()
 HB_FUNC_STATIC(QSYSTEMTRAYICON_HIDE)
 {
-  auto obj = qobject_cast<QSystemTrayIcon *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -322,12 +302,10 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_HIDE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVisible(bool visible)
-*/
+// void setVisible(bool visible)
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SETVISIBLE)
 {
-  auto obj = qobject_cast<QSystemTrayIcon *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -344,12 +322,10 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void show()
-*/
+// void show()
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOW)
 {
-  auto obj = qobject_cast<QSystemTrayIcon *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,9 +342,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static bool isSystemTrayAvailable()
-*/
+// static bool isSystemTrayAvailable()
 HB_FUNC_STATIC(QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -382,9 +356,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE)
 #endif
 }
 
-/*
-static bool supportsMessages()
-*/
+// static bool supportsMessages()
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SUPPORTSMESSAGES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -398,12 +370,10 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SUPPORTSMESSAGES)
 #endif
 }
 
-/*
-void activated(QSystemTrayIcon::ActivationReason reason)
-*/
+// void activated(QSystemTrayIcon::ActivationReason reason)
 HB_FUNC_STATIC(QSYSTEMTRAYICON_ONACTIVATED)
 {
-  auto sender = qobject_cast<QSystemTrayIcon *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -419,13 +389,12 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_ONACTIVATED)
 
                                              if (cb != nullptr) {
                                                auto pSender = Qt5xHb::Signals_return_qobject(sender, "QSYSTEMTRAYICON");
-                                               auto pArg1 = hb_itemPutNI(nullptr, static_cast<int>(arg1));
+                                               auto pArg1 = hb_itemPutNI(nullptr, (int)arg1);
                                                hb_vmEvalBlockV(cb, 2, pSender, pArg1);
                                                hb_itemRelease(pSender);
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -441,12 +410,10 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_ONACTIVATED)
   hb_retl(result);
 }
 
-/*
-void messageClicked()
-*/
+// void messageClicked()
 HB_FUNC_STATIC(QSYSTEMTRAYICON_ONMESSAGECLICKED)
 {
-  auto sender = qobject_cast<QSystemTrayIcon *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -465,7 +432,6 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_ONMESSAGECLICKED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

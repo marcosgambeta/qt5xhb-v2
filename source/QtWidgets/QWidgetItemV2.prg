@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
+REQUEST QSize
 #endif
 
 CLASS QWidgetItemV2 INHERIT QWidgetItem
@@ -51,9 +51,9 @@ RETURN
 #include <QtWidgets/QWidgetItemV2>
 #endif
 
-    /*
-    QWidgetItemV2(QWidget * widget)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QWidgetItemV2 *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QWidgetItemV2(QWidget *widget)
 HB_FUNC_STATIC(QWIDGETITEMV2_NEW)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1)) {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QWIDGETITEMV2_NEW)
 
 HB_FUNC_STATIC(QWIDGETITEMV2_DELETE)
 {
-  auto obj = static_cast<QWidgetItemV2 *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -79,12 +79,10 @@ HB_FUNC_STATIC(QWIDGETITEMV2_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize sizeHint() const
-*/
+// QSize sizeHint() const
 HB_FUNC_STATIC(QWIDGETITEMV2_SIZEHINT)
 {
-  auto obj = static_cast<QWidgetItemV2 *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -99,12 +97,10 @@ HB_FUNC_STATIC(QWIDGETITEMV2_SIZEHINT)
   }
 }
 
-/*
-QSize minimumSize() const
-*/
+// QSize minimumSize() const
 HB_FUNC_STATIC(QWIDGETITEMV2_MINIMUMSIZE)
 {
-  auto obj = static_cast<QWidgetItemV2 *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,12 +115,10 @@ HB_FUNC_STATIC(QWIDGETITEMV2_MINIMUMSIZE)
   }
 }
 
-/*
-QSize maximumSize() const
-*/
+// QSize maximumSize() const
 HB_FUNC_STATIC(QWIDGETITEMV2_MAXIMUMSIZE)
 {
-  auto obj = static_cast<QWidgetItemV2 *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,12 +133,10 @@ HB_FUNC_STATIC(QWIDGETITEMV2_MAXIMUMSIZE)
   }
 }
 
-/*
-int heightForWidth(int width) const
-*/
+// int heightForWidth(int width) const
 HB_FUNC_STATIC(QWIDGETITEMV2_HEIGHTFORWIDTH)
 {
-  auto obj = static_cast<QWidgetItemV2 *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

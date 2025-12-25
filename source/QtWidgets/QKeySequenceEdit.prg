@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QKEYSEQUENCE
+REQUEST QKeySequence
 #endif
 
 CLASS QKeySequenceEdit INHERIT QWidget
@@ -59,25 +59,25 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QKeySequenceEdit *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QKEYSEQUENCEEDIT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
-    /*
-    QKeySequenceEdit(QWidget * parent = nullptr)
-    */
+    // QKeySequenceEdit(QWidget *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QKeySequenceEdit(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
+
   } else if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QKeySequenceEdit(const QKeySequence &keySequence, QWidget * parent = nullptr)
-    */
+    // QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QKeySequenceEdit(*PQKEYSEQUENCE(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_NEW)
 HB_FUNC_STATIC(QKEYSEQUENCEEDIT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QKeySequenceEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -103,20 +103,17 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_DELETE)
 #endif
 }
 
-/*
-QKeySequence keySequence() const
-*/
+// QKeySequence keySequence() const
 HB_FUNC_STATIC(QKEYSEQUENCEEDIT_KEYSEQUENCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QKeySequenceEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QKeySequence(obj->keySequence());
-      Qt5xHb::createReturnClass(ptr, "QKEYSEQUENCE", true);
+      RQKEYSEQUENCE(obj->keySequence());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -126,13 +123,11 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_KEYSEQUENCE)
 #endif
 }
 
-/*
-void setKeySequence(const QKeySequence &keySequence)
-*/
+// void setKeySequence(const QKeySequence &keySequence)
 HB_FUNC_STATIC(QKEYSEQUENCEEDIT_SETKEYSEQUENCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QKeySequenceEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,13 +145,11 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_SETKEYSEQUENCE)
 #endif
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QKEYSEQUENCEEDIT_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QKeySequenceEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,13 +167,11 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_CLEAR)
 #endif
 }
 
-/*
-void editingFinished()
-*/
+// void editingFinished()
 HB_FUNC_STATIC(QKEYSEQUENCEEDIT_ONEDITINGFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto sender = qobject_cast<QKeySequenceEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -199,7 +190,6 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_ONEDITINGFINISHED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -218,13 +208,11 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_ONEDITINGFINISHED)
 #endif
 }
 
-/*
-void keySequenceChanged(const QKeySequence &keySequence)
-*/
+// void keySequenceChanged(const QKeySequence &keySequence)
 HB_FUNC_STATIC(QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto sender = qobject_cast<QKeySequenceEdit *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -246,7 +234,6 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

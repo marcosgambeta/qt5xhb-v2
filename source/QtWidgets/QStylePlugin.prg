@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSTYLE
+REQUEST QStyle
 #endif
 
 CLASS QStylePlugin INHERIT QObject
@@ -51,9 +51,11 @@ RETURN
 
 #include <QtWidgets/QStyle>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QStylePlugin *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSTYLEPLUGIN_DELETE)
 {
-  auto obj = qobject_cast<QStylePlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -68,12 +70,10 @@ HB_FUNC_STATIC(QSTYLEPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QStyle * create(const QString &key) = 0
-*/
+// virtual QStyle *create(const QString &key) = 0
 HB_FUNC_STATIC(QSTYLEPLUGIN_CREATE)
 {
-  auto obj = qobject_cast<QStylePlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECTF
-REQUEST QSIZEF
+REQUEST QRectF
+REQUEST QSizeF
 #endif
 
 CLASS QPlainTextDocumentLayout INHERIT QAbstractTextDocumentLayout
@@ -59,9 +59,9 @@ RETURN
 #include <QtWidgets/QPlainTextDocumentLayout>
 #endif
 
-    /*
-    QPlainTextDocumentLayout(QTextDocument * document)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QPlainTextDocumentLayout *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QPlainTextDocumentLayout(QTextDocument *document)
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_NEW)
 {
   if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1)) {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_NEW)
 
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_DELETE)
 {
-  auto obj = qobject_cast<QPlainTextDocumentLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -89,12 +89,10 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int cursorWidth() const
-*/
+// int cursorWidth() const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH)
 {
-  auto obj = qobject_cast<QPlainTextDocumentLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,12 +107,10 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH)
   }
 }
 
-/*
-void ensureBlockLayout(const QTextBlock &block) const
-*/
+// void ensureBlockLayout(const QTextBlock &block) const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT)
 {
-  auto obj = qobject_cast<QPlainTextDocumentLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,12 +127,10 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void requestUpdate()
-*/
+// void requestUpdate()
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE)
 {
-  auto obj = qobject_cast<QPlainTextDocumentLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,12 +147,10 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCursorWidth(int width)
-*/
+// void setCursorWidth(int width)
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH)
 {
-  auto obj = qobject_cast<QPlainTextDocumentLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,12 +167,10 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QRectF blockBoundingRect(const QTextBlock &block) const
-*/
+// virtual QRectF blockBoundingRect(const QTextBlock &block) const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 {
-  auto obj = qobject_cast<QPlainTextDocumentLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,19 +185,16 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
   }
 }
 
-/*
-virtual QSizeF documentSize() const
-*/
+// virtual QSizeF documentSize() const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
 {
-  auto obj = qobject_cast<QPlainTextDocumentLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QSizeF(obj->documentSize());
-      Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->documentSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -216,12 +203,10 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
   }
 }
 
-/*
-virtual QRectF frameBoundingRect(QTextFrame *) const
-*/
+// virtual QRectF frameBoundingRect(QTextFrame *) const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 {
-  auto obj = qobject_cast<QPlainTextDocumentLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -236,12 +221,10 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
   }
 }
 
-/*
-virtual int hitTest(const QPointF &, Qt::HitTestAccuracy) const
-*/
+// virtual int hitTest(const QPointF &, Qt::HitTestAccuracy) const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_HITTEST)
 {
-  auto obj = qobject_cast<QPlainTextDocumentLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -256,12 +239,10 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_HITTEST)
   }
 }
 
-/*
-virtual int pageCount() const
-*/
+// virtual int pageCount() const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_PAGECOUNT)
 {
-  auto obj = qobject_cast<QPlainTextDocumentLayout *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,12 +11,12 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTBUTTON
-REQUEST QPIXMAP
-REQUEST QSIZE
-REQUEST QVARIANT
-REQUEST QWIDGET
-REQUEST QWIZARDPAGE
+REQUEST QAbstractButton
+REQUEST QPixmap
+REQUEST QSize
+REQUEST QVariant
+REQUEST QWidget
+REQUEST QWizardPage
 #endif
 
 CLASS QWizard INHERIT QDialog
@@ -103,9 +103,9 @@ RETURN
 #include <QtCore/QVariant>
 #include <QtWidgets/QAbstractButton>
 
-    /*
-    QWizard(QWidget * parent = nullptr, Qt::WindowFlags flags = 0)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QWizard(QWidget *parent = nullptr, Qt::WindowFlags flags = 0)
 HB_FUNC_STATIC(QWIZARD_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QWIZARD_NEW)
 
 HB_FUNC_STATIC(QWIZARD_DELETE)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -134,12 +134,10 @@ HB_FUNC_STATIC(QWIZARD_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int addPage(QWizardPage * page)
-*/
+// int addPage(QWizardPage *page)
 HB_FUNC_STATIC(QWIZARD_ADDPAGE)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,12 +152,10 @@ HB_FUNC_STATIC(QWIZARD_ADDPAGE)
   }
 }
 
-/*
-QAbstractButton * button(QWizard::WizardButton which) const
-*/
+// QAbstractButton *button(QWizard::WizardButton which) const
 HB_FUNC_STATIC(QWIZARD_BUTTON)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,12 +171,10 @@ HB_FUNC_STATIC(QWIZARD_BUTTON)
   }
 }
 
-/*
-void setButton(QWizard::WizardButton which, QAbstractButton * button)
-*/
+// void setButton(QWizard::WizardButton which, QAbstractButton *button)
 HB_FUNC_STATIC(QWIZARD_SETBUTTON)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,12 +191,10 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString buttonText(QWizard::WizardButton which) const
-*/
+// QString buttonText(QWizard::WizardButton which) const
 HB_FUNC_STATIC(QWIZARD_BUTTONTEXT)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,12 +209,10 @@ HB_FUNC_STATIC(QWIZARD_BUTTONTEXT)
   }
 }
 
-/*
-void setButtonText(QWizard::WizardButton which, const QString &text)
-*/
+// void setButtonText(QWizard::WizardButton which, const QString &text)
 HB_FUNC_STATIC(QWIZARD_SETBUTTONTEXT)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,12 +229,10 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTONTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int currentId() const
-*/
+// int currentId() const
 HB_FUNC_STATIC(QWIZARD_CURRENTID)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,12 +247,10 @@ HB_FUNC_STATIC(QWIZARD_CURRENTID)
   }
 }
 
-/*
-QWizardPage * currentPage() const
-*/
+// QWizardPage *currentPage() const
 HB_FUNC_STATIC(QWIZARD_CURRENTPAGE)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,12 +266,10 @@ HB_FUNC_STATIC(QWIZARD_CURRENTPAGE)
   }
 }
 
-/*
-QVariant field(const QString &name) const
-*/
+// QVariant field(const QString &name) const
 HB_FUNC_STATIC(QWIZARD_FIELD)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,12 +284,10 @@ HB_FUNC_STATIC(QWIZARD_FIELD)
   }
 }
 
-/*
-bool hasVisitedPage(int id) const
-*/
+// bool hasVisitedPage(int id) const
 HB_FUNC_STATIC(QWIZARD_HASVISITEDPAGE)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,12 +302,10 @@ HB_FUNC_STATIC(QWIZARD_HASVISITEDPAGE)
   }
 }
 
-/*
-virtual int nextId() const
-*/
+// virtual int nextId() const
 HB_FUNC_STATIC(QWIZARD_NEXTID)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -340,12 +320,10 @@ HB_FUNC_STATIC(QWIZARD_NEXTID)
   }
 }
 
-/*
-QWizard::WizardOptions options() const
-*/
+// QWizard::WizardOptions options() const
 HB_FUNC_STATIC(QWIZARD_OPTIONS)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -360,12 +338,10 @@ HB_FUNC_STATIC(QWIZARD_OPTIONS)
   }
 }
 
-/*
-void setOptions(QWizard::WizardOptions options)
-*/
+// void setOptions(QWizard::WizardOptions options)
 HB_FUNC_STATIC(QWIZARD_SETOPTIONS)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -382,12 +358,10 @@ HB_FUNC_STATIC(QWIZARD_SETOPTIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWizardPage * page(int id) const
-*/
+// QWizardPage *page(int id) const
 HB_FUNC_STATIC(QWIZARD_PAGE)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -403,12 +377,10 @@ HB_FUNC_STATIC(QWIZARD_PAGE)
   }
 }
 
-/*
-QList<int> pageIds() const
-*/
+// QList<int> pageIds() const
 HB_FUNC_STATIC(QWIZARD_PAGEIDS)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -424,19 +396,16 @@ HB_FUNC_STATIC(QWIZARD_PAGEIDS)
   }
 }
 
-/*
-QPixmap pixmap(QWizard::WizardPixmap which) const
-*/
+// QPixmap pixmap(QWizard::WizardPixmap which) const
 HB_FUNC_STATIC(QWIZARD_PIXMAP)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = new QPixmap(obj->pixmap(static_cast<QWizard::WizardPixmap>(hb_parni(1))));
-      Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
+      RQPIXMAP(obj->pixmap(static_cast<QWizard::WizardPixmap>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -445,12 +414,10 @@ HB_FUNC_STATIC(QWIZARD_PIXMAP)
   }
 }
 
-/*
-void removePage(int id)
-*/
+// void removePage(int id)
 HB_FUNC_STATIC(QWIZARD_REMOVEPAGE)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -467,12 +434,10 @@ HB_FUNC_STATIC(QWIZARD_REMOVEPAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setButtonLayout(const QList<QWizard::WizardButton> &layout)
-*/
+// void setButtonLayout(const QList<QWizard::WizardButton> &layout)
 HB_FUNC_STATIC(QWIZARD_SETBUTTONLAYOUT)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -495,12 +460,10 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTONLAYOUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDefaultProperty(const char * className, const char * property, const char * changedSignal)
-*/
+// void setDefaultProperty(const char *className, const char *property, const char *changedSignal)
 HB_FUNC_STATIC(QWIZARD_SETDEFAULTPROPERTY)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -517,12 +480,10 @@ HB_FUNC_STATIC(QWIZARD_SETDEFAULTPROPERTY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setField(const QString &name, const QVariant &value)
-*/
+// void setField(const QString &name, const QVariant &value)
 HB_FUNC_STATIC(QWIZARD_SETFIELD)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -539,12 +500,10 @@ HB_FUNC_STATIC(QWIZARD_SETFIELD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOption(QWizard::WizardOption option, bool on = true)
-*/
+// void setOption(QWizard::WizardOption option, bool on = true)
 HB_FUNC_STATIC(QWIZARD_SETOPTION)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -561,12 +520,10 @@ HB_FUNC_STATIC(QWIZARD_SETOPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPage(int id, QWizardPage * page)
-*/
+// void setPage(int id, QWizardPage *page)
 HB_FUNC_STATIC(QWIZARD_SETPAGE)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -583,12 +540,10 @@ HB_FUNC_STATIC(QWIZARD_SETPAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPixmap(QWizard::WizardPixmap which, const QPixmap &pixmap)
-*/
+// void setPixmap(QWizard::WizardPixmap which, const QPixmap &pixmap)
 HB_FUNC_STATIC(QWIZARD_SETPIXMAP)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -605,12 +560,10 @@ HB_FUNC_STATIC(QWIZARD_SETPIXMAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSideWidget(QWidget * widget)
-*/
+// void setSideWidget(QWidget *widget)
 HB_FUNC_STATIC(QWIZARD_SETSIDEWIDGET)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -627,12 +580,10 @@ HB_FUNC_STATIC(QWIZARD_SETSIDEWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget * sideWidget() const
-*/
+// QWidget *sideWidget() const
 HB_FUNC_STATIC(QWIZARD_SIDEWIDGET)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -648,12 +599,10 @@ HB_FUNC_STATIC(QWIZARD_SIDEWIDGET)
   }
 }
 
-/*
-int startId() const
-*/
+// int startId() const
 HB_FUNC_STATIC(QWIZARD_STARTID)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -668,12 +617,10 @@ HB_FUNC_STATIC(QWIZARD_STARTID)
   }
 }
 
-/*
-void setStartId(int id)
-*/
+// void setStartId(int id)
 HB_FUNC_STATIC(QWIZARD_SETSTARTID)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -690,12 +637,10 @@ HB_FUNC_STATIC(QWIZARD_SETSTARTID)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::TextFormat subTitleFormat() const
-*/
+// Qt::TextFormat subTitleFormat() const
 HB_FUNC_STATIC(QWIZARD_SUBTITLEFORMAT)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -710,12 +655,10 @@ HB_FUNC_STATIC(QWIZARD_SUBTITLEFORMAT)
   }
 }
 
-/*
-void setSubTitleFormat(Qt::TextFormat format)
-*/
+// void setSubTitleFormat(Qt::TextFormat format)
 HB_FUNC_STATIC(QWIZARD_SETSUBTITLEFORMAT)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -732,12 +675,10 @@ HB_FUNC_STATIC(QWIZARD_SETSUBTITLEFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool testOption(QWizard::WizardOption option) const
-*/
+// bool testOption(QWizard::WizardOption option) const
 HB_FUNC_STATIC(QWIZARD_TESTOPTION)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -752,12 +693,10 @@ HB_FUNC_STATIC(QWIZARD_TESTOPTION)
   }
 }
 
-/*
-Qt::TextFormat titleFormat() const
-*/
+// Qt::TextFormat titleFormat() const
 HB_FUNC_STATIC(QWIZARD_TITLEFORMAT)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -772,12 +711,10 @@ HB_FUNC_STATIC(QWIZARD_TITLEFORMAT)
   }
 }
 
-/*
-void setTitleFormat(Qt::TextFormat format)
-*/
+// void setTitleFormat(Qt::TextFormat format)
 HB_FUNC_STATIC(QWIZARD_SETTITLEFORMAT)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -794,12 +731,10 @@ HB_FUNC_STATIC(QWIZARD_SETTITLEFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool validateCurrentPage()
-*/
+// virtual bool validateCurrentPage()
 HB_FUNC_STATIC(QWIZARD_VALIDATECURRENTPAGE)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -814,12 +749,10 @@ HB_FUNC_STATIC(QWIZARD_VALIDATECURRENTPAGE)
   }
 }
 
-/*
-QList<int> visitedPages() const
-*/
+// QList<int> visitedPages() const
 HB_FUNC_STATIC(QWIZARD_VISITEDPAGES)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -835,12 +768,10 @@ HB_FUNC_STATIC(QWIZARD_VISITEDPAGES)
   }
 }
 
-/*
-QWizard::WizardStyle wizardStyle() const
-*/
+// QWizard::WizardStyle wizardStyle() const
 HB_FUNC_STATIC(QWIZARD_WIZARDSTYLE)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -855,12 +786,10 @@ HB_FUNC_STATIC(QWIZARD_WIZARDSTYLE)
   }
 }
 
-/*
-void setWizardStyle(QWizard::WizardStyle style)
-*/
+// void setWizardStyle(QWizard::WizardStyle style)
 HB_FUNC_STATIC(QWIZARD_SETWIZARDSTYLE)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -877,12 +806,10 @@ HB_FUNC_STATIC(QWIZARD_SETWIZARDSTYLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVisible(bool visible)
-*/
+// void setVisible(bool visible)
 HB_FUNC_STATIC(QWIZARD_SETVISIBLE)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -899,12 +826,10 @@ HB_FUNC_STATIC(QWIZARD_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize sizeHint() const
-*/
+// QSize sizeHint() const
 HB_FUNC_STATIC(QWIZARD_SIZEHINT)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -919,12 +844,10 @@ HB_FUNC_STATIC(QWIZARD_SIZEHINT)
   }
 }
 
-/*
-void back()
-*/
+// void back()
 HB_FUNC_STATIC(QWIZARD_BACK)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -941,12 +864,10 @@ HB_FUNC_STATIC(QWIZARD_BACK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void next()
-*/
+// void next()
 HB_FUNC_STATIC(QWIZARD_NEXT)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -963,12 +884,10 @@ HB_FUNC_STATIC(QWIZARD_NEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void restart()
-*/
+// void restart()
 HB_FUNC_STATIC(QWIZARD_RESTART)
 {
-  auto obj = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -985,12 +904,10 @@ HB_FUNC_STATIC(QWIZARD_RESTART)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void currentIdChanged(int id)
-*/
+// void currentIdChanged(int id)
 HB_FUNC_STATIC(QWIZARD_ONCURRENTIDCHANGED)
 {
-  auto sender = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1011,7 +928,6 @@ HB_FUNC_STATIC(QWIZARD_ONCURRENTIDCHANGED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1027,12 +943,10 @@ HB_FUNC_STATIC(QWIZARD_ONCURRENTIDCHANGED)
   hb_retl(result);
 }
 
-/*
-void customButtonClicked(int which)
-*/
+// void customButtonClicked(int which)
 HB_FUNC_STATIC(QWIZARD_ONCUSTOMBUTTONCLICKED)
 {
-  auto sender = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1053,7 +967,6 @@ HB_FUNC_STATIC(QWIZARD_ONCUSTOMBUTTONCLICKED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1069,12 +982,10 @@ HB_FUNC_STATIC(QWIZARD_ONCUSTOMBUTTONCLICKED)
   hb_retl(result);
 }
 
-/*
-void helpRequested()
-*/
+// void helpRequested()
 HB_FUNC_STATIC(QWIZARD_ONHELPREQUESTED)
 {
-  auto sender = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1093,7 +1004,6 @@ HB_FUNC_STATIC(QWIZARD_ONHELPREQUESTED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1109,12 +1019,10 @@ HB_FUNC_STATIC(QWIZARD_ONHELPREQUESTED)
   hb_retl(result);
 }
 
-/*
-void pageAdded(int id)
-*/
+// void pageAdded(int id)
 HB_FUNC_STATIC(QWIZARD_ONPAGEADDED)
 {
-  auto sender = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1135,7 +1043,6 @@ HB_FUNC_STATIC(QWIZARD_ONPAGEADDED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1151,12 +1058,10 @@ HB_FUNC_STATIC(QWIZARD_ONPAGEADDED)
   hb_retl(result);
 }
 
-/*
-void pageRemoved(int id)
-*/
+// void pageRemoved(int id)
 HB_FUNC_STATIC(QWIZARD_ONPAGEREMOVED)
 {
-  auto sender = qobject_cast<QWizard *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1177,7 +1082,6 @@ HB_FUNC_STATIC(QWIZARD_ONPAGEREMOVED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

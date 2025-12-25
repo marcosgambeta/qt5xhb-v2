@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPIXMAP
+REQUEST QPixmap
 #endif
 
 CLASS QWizardPage INHERIT QWidget
@@ -68,9 +68,9 @@ RETURN
 #include <QtWidgets/QWizardPage>
 #endif
 
-    /*
-    QWizardPage(QWidget * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QWizardPage(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QWIZARDPAGE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_NEW)
 
 HB_FUNC_STATIC(QWIZARDPAGE_DELETE)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -98,12 +98,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString buttonText(QWizard::WizardButton which) const
-*/
+// QString buttonText(QWizard::WizardButton which) const
 HB_FUNC_STATIC(QWIZARDPAGE_BUTTONTEXT)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,12 +116,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_BUTTONTEXT)
   }
 }
 
-/*
-void setButtonText(QWizard::WizardButton which, const QString &text)
-*/
+// void setButtonText(QWizard::WizardButton which, const QString &text)
 HB_FUNC_STATIC(QWIZARDPAGE_SETBUTTONTEXT)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,12 +136,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETBUTTONTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void cleanupPage()
-*/
+// virtual void cleanupPage()
 HB_FUNC_STATIC(QWIZARDPAGE_CLEANUPPAGE)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,12 +156,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_CLEANUPPAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void initializePage()
-*/
+// virtual void initializePage()
 HB_FUNC_STATIC(QWIZARDPAGE_INITIALIZEPAGE)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,12 +176,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_INITIALIZEPAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isCommitPage() const
-*/
+// bool isCommitPage() const
 HB_FUNC_STATIC(QWIZARDPAGE_ISCOMMITPAGE)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,12 +194,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_ISCOMMITPAGE)
   }
 }
 
-/*
-void setCommitPage(bool commitPage)
-*/
+// void setCommitPage(bool commitPage)
 HB_FUNC_STATIC(QWIZARDPAGE_SETCOMMITPAGE)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,12 +214,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETCOMMITPAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool isComplete() const
-*/
+// virtual bool isComplete() const
 HB_FUNC_STATIC(QWIZARDPAGE_ISCOMPLETE)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,12 +232,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_ISCOMPLETE)
   }
 }
 
-/*
-bool isFinalPage() const
-*/
+// bool isFinalPage() const
 HB_FUNC_STATIC(QWIZARDPAGE_ISFINALPAGE)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,12 +250,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_ISFINALPAGE)
   }
 }
 
-/*
-void setFinalPage(bool finalPage)
-*/
+// void setFinalPage(bool finalPage)
 HB_FUNC_STATIC(QWIZARDPAGE_SETFINALPAGE)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,12 +270,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETFINALPAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int nextId() const
-*/
+// virtual int nextId() const
 HB_FUNC_STATIC(QWIZARDPAGE_NEXTID)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,19 +288,16 @@ HB_FUNC_STATIC(QWIZARDPAGE_NEXTID)
   }
 }
 
-/*
-QPixmap pixmap(QWizard::WizardPixmap which) const
-*/
+// QPixmap pixmap(QWizard::WizardPixmap which) const
 HB_FUNC_STATIC(QWIZARDPAGE_PIXMAP)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = new QPixmap(obj->pixmap(static_cast<QWizard::WizardPixmap>(hb_parni(1))));
-      Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
+      RQPIXMAP(obj->pixmap(static_cast<QWizard::WizardPixmap>(hb_parni(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -329,12 +306,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_PIXMAP)
   }
 }
 
-/*
-void setPixmap(QWizard::WizardPixmap which, const QPixmap &pixmap)
-*/
+// void setPixmap(QWizard::WizardPixmap which, const QPixmap &pixmap)
 HB_FUNC_STATIC(QWIZARDPAGE_SETPIXMAP)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -351,12 +326,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETPIXMAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString subTitle() const
-*/
+// QString subTitle() const
 HB_FUNC_STATIC(QWIZARDPAGE_SUBTITLE)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -371,12 +344,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_SUBTITLE)
   }
 }
 
-/*
-void setSubTitle(const QString &subTitle)
-*/
+// void setSubTitle(const QString &subTitle)
 HB_FUNC_STATIC(QWIZARDPAGE_SETSUBTITLE)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -393,12 +364,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETSUBTITLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QWIZARDPAGE_TITLE)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -413,12 +382,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_TITLE)
   }
 }
 
-/*
-void setTitle(const QString &title)
-*/
+// void setTitle(const QString &title)
 HB_FUNC_STATIC(QWIZARDPAGE_SETTITLE)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -435,12 +402,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETTITLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool validatePage()
-*/
+// virtual bool validatePage()
 HB_FUNC_STATIC(QWIZARDPAGE_VALIDATEPAGE)
 {
-  auto obj = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -455,12 +420,10 @@ HB_FUNC_STATIC(QWIZARDPAGE_VALIDATEPAGE)
   }
 }
 
-/*
-void completeChanged()
-*/
+// void completeChanged()
 HB_FUNC_STATIC(QWIZARDPAGE_ONCOMPLETECHANGED)
 {
-  auto sender = qobject_cast<QWizardPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -479,7 +442,6 @@ HB_FUNC_STATIC(QWIZARDPAGE_ONCOMPLETECHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

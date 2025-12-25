@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACTION
-REQUEST QUNDOSTACK
+REQUEST QAction
+REQUEST QUndoStack
 #endif
 
 CLASS QUndoGroup INHERIT QObject
@@ -75,9 +75,9 @@ RETURN
 #include <QtWidgets/QAction>
 #include <QtWidgets/QUndoStack>
 
-    /*
-    QUndoGroup(QObject * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QUndoGroup(QObject *parent = nullptr)
 HB_FUNC_STATIC(QUNDOGROUP_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QUNDOGROUP_NEW)
 
 HB_FUNC_STATIC(QUNDOGROUP_DELETE)
 {
-  auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -105,12 +105,10 @@ HB_FUNC_STATIC(QUNDOGROUP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QUndoStack * activeStack() const
-*/
+// QUndoStack *activeStack() const
 HB_FUNC_STATIC(QUNDOGROUP_ACTIVESTACK)
 {
-  auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,12 +124,10 @@ HB_FUNC_STATIC(QUNDOGROUP_ACTIVESTACK)
   }
 }
 
-/*
-void addStack(QUndoStack * stack)
-*/
+// void addStack(QUndoStack *stack)
 HB_FUNC_STATIC(QUNDOGROUP_ADDSTACK)
 {
-  auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,12 +144,10 @@ HB_FUNC_STATIC(QUNDOGROUP_ADDSTACK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool canRedo() const
-*/
+// bool canRedo() const
 HB_FUNC_STATIC(QUNDOGROUP_CANREDO)
 {
-  auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,12 +162,10 @@ HB_FUNC_STATIC(QUNDOGROUP_CANREDO)
   }
 }
 
-/*
-bool canUndo() const
-*/
+// bool canUndo() const
 HB_FUNC_STATIC(QUNDOGROUP_CANUNDO)
 {
-  auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,12 +180,10 @@ HB_FUNC_STATIC(QUNDOGROUP_CANUNDO)
   }
 }
 
-/*
-QAction * createRedoAction(QObject * parent, const QString &prefix = QString()) const
-*/
+// QAction *createRedoAction(QObject *parent, const QString &prefix = QString()) const
 HB_FUNC_STATIC(QUNDOGROUP_CREATEREDOACTION)
 {
-  auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,12 +199,10 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEREDOACTION)
   }
 }
 
-/*
-QAction * createUndoAction(QObject * parent, const QString &prefix = QString()) const
-*/
+// QAction *createUndoAction(QObject *parent, const QString &prefix = QString()) const
 HB_FUNC_STATIC(QUNDOGROUP_CREATEUNDOACTION)
 {
-  auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,12 +218,10 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEUNDOACTION)
   }
 }
 
-/*
-bool isClean() const
-*/
+// bool isClean() const
 HB_FUNC_STATIC(QUNDOGROUP_ISCLEAN)
 {
-  auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,12 +236,10 @@ HB_FUNC_STATIC(QUNDOGROUP_ISCLEAN)
   }
 }
 
-/*
-QString redoText() const
-*/
+// QString redoText() const
 HB_FUNC_STATIC(QUNDOGROUP_REDOTEXT)
 {
-  auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,12 +254,10 @@ HB_FUNC_STATIC(QUNDOGROUP_REDOTEXT)
   }
 }
 
-/*
-void removeStack(QUndoStack * stack)
-*/
+// void removeStack(QUndoStack *stack)
 HB_FUNC_STATIC(QUNDOGROUP_REMOVESTACK)
 {
-  auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,12 +274,10 @@ HB_FUNC_STATIC(QUNDOGROUP_REMOVESTACK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QUndoStack*> stacks() const
-*/
+// QList<QUndoStack *> stacks() const
 HB_FUNC_STATIC(QUNDOGROUP_STACKS)
 {
-  auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,12 +311,10 @@ HB_FUNC_STATIC(QUNDOGROUP_STACKS)
   }
 }
 
-/*
-QString undoText() const
-*/
+// QString undoText() const
 HB_FUNC_STATIC(QUNDOGROUP_UNDOTEXT)
 {
-  auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -351,12 +329,10 @@ HB_FUNC_STATIC(QUNDOGROUP_UNDOTEXT)
   }
 }
 
-/*
-void redo()
-*/
+// void redo()
 HB_FUNC_STATIC(QUNDOGROUP_REDO)
 {
-  auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,12 +349,10 @@ HB_FUNC_STATIC(QUNDOGROUP_REDO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setActiveStack(QUndoStack * stack)
-*/
+// void setActiveStack(QUndoStack *stack)
 HB_FUNC_STATIC(QUNDOGROUP_SETACTIVESTACK)
 {
-  auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -395,12 +369,10 @@ HB_FUNC_STATIC(QUNDOGROUP_SETACTIVESTACK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void undo()
-*/
+// void undo()
 HB_FUNC_STATIC(QUNDOGROUP_UNDO)
 {
-  auto obj = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -417,12 +389,10 @@ HB_FUNC_STATIC(QUNDOGROUP_UNDO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void activeStackChanged(QUndoStack * stack)
-*/
+// void activeStackChanged(QUndoStack *stack)
 HB_FUNC_STATIC(QUNDOGROUP_ONACTIVESTACKCHANGED)
 {
-  auto sender = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -444,7 +414,6 @@ HB_FUNC_STATIC(QUNDOGROUP_ONACTIVESTACKCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -460,12 +429,10 @@ HB_FUNC_STATIC(QUNDOGROUP_ONACTIVESTACKCHANGED)
   hb_retl(result);
 }
 
-/*
-void canRedoChanged(bool canRedo)
-*/
+// void canRedoChanged(bool canRedo)
 HB_FUNC_STATIC(QUNDOGROUP_ONCANREDOCHANGED)
 {
-  auto sender = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -486,7 +453,6 @@ HB_FUNC_STATIC(QUNDOGROUP_ONCANREDOCHANGED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -502,12 +468,10 @@ HB_FUNC_STATIC(QUNDOGROUP_ONCANREDOCHANGED)
   hb_retl(result);
 }
 
-/*
-void canUndoChanged(bool canUndo)
-*/
+// void canUndoChanged(bool canUndo)
 HB_FUNC_STATIC(QUNDOGROUP_ONCANUNDOCHANGED)
 {
-  auto sender = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -528,7 +492,6 @@ HB_FUNC_STATIC(QUNDOGROUP_ONCANUNDOCHANGED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -544,12 +507,10 @@ HB_FUNC_STATIC(QUNDOGROUP_ONCANUNDOCHANGED)
   hb_retl(result);
 }
 
-/*
-void cleanChanged(bool clean)
-*/
+// void cleanChanged(bool clean)
 HB_FUNC_STATIC(QUNDOGROUP_ONCLEANCHANGED)
 {
-  auto sender = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -570,7 +531,6 @@ HB_FUNC_STATIC(QUNDOGROUP_ONCLEANCHANGED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -586,12 +546,10 @@ HB_FUNC_STATIC(QUNDOGROUP_ONCLEANCHANGED)
   hb_retl(result);
 }
 
-/*
-void indexChanged(int idx)
-*/
+// void indexChanged(int idx)
 HB_FUNC_STATIC(QUNDOGROUP_ONINDEXCHANGED)
 {
-  auto sender = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -612,7 +570,6 @@ HB_FUNC_STATIC(QUNDOGROUP_ONINDEXCHANGED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -628,12 +585,10 @@ HB_FUNC_STATIC(QUNDOGROUP_ONINDEXCHANGED)
   hb_retl(result);
 }
 
-/*
-void redoTextChanged(const QString &redoText)
-*/
+// void redoTextChanged(const QString &redoText)
 HB_FUNC_STATIC(QUNDOGROUP_ONREDOTEXTCHANGED)
 {
-  auto sender = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -655,7 +610,6 @@ HB_FUNC_STATIC(QUNDOGROUP_ONREDOTEXTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -671,12 +625,10 @@ HB_FUNC_STATIC(QUNDOGROUP_ONREDOTEXTCHANGED)
   hb_retl(result);
 }
 
-/*
-void undoTextChanged(const QString &undoText)
-*/
+// void undoTextChanged(const QString &undoText)
 HB_FUNC_STATIC(QUNDOGROUP_ONUNDOTEXTCHANGED)
 {
-  auto sender = qobject_cast<QUndoGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -698,7 +650,6 @@ HB_FUNC_STATIC(QUNDOGROUP_ONUNDOTEXTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

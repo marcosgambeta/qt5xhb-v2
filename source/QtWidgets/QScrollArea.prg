@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
-REQUEST QWIDGET
+REQUEST QSize
+REQUEST QWidget
 #endif
 
 CLASS QScrollArea INHERIT QAbstractScrollArea
@@ -61,9 +61,9 @@ RETURN
 #include <QtWidgets/QScrollArea>
 #endif
 
-    /*
-    QScrollArea(QWidget * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QScrollArea(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QSCROLLAREA_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QSCROLLAREA_NEW)
 
 HB_FUNC_STATIC(QSCROLLAREA_DELETE)
 {
-  auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -91,12 +91,10 @@ HB_FUNC_STATIC(QSCROLLAREA_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::Alignment alignment() const
-*/
+// Qt::Alignment alignment() const
 HB_FUNC_STATIC(QSCROLLAREA_ALIGNMENT)
 {
-  auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,12 +109,10 @@ HB_FUNC_STATIC(QSCROLLAREA_ALIGNMENT)
   }
 }
 
-/*
-void ensureVisible(int x, int y, int xmargin = 50, int ymargin = 50)
-*/
+// void ensureVisible(int x, int y, int xmargin = 50, int ymargin = 50)
 HB_FUNC_STATIC(QSCROLLAREA_ENSUREVISIBLE)
 {
-  auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,12 +129,10 @@ HB_FUNC_STATIC(QSCROLLAREA_ENSUREVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void ensureWidgetVisible(QWidget * childWidget, int xmargin = 50, int ymargin = 50)
-*/
+// void ensureWidgetVisible(QWidget *childWidget, int xmargin = 50, int ymargin = 50)
 HB_FUNC_STATIC(QSCROLLAREA_ENSUREWIDGETVISIBLE)
 {
-  auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,12 +149,10 @@ HB_FUNC_STATIC(QSCROLLAREA_ENSUREWIDGETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAlignment(Qt::Alignment)
-*/
+// void setAlignment(Qt::Alignment)
 HB_FUNC_STATIC(QSCROLLAREA_SETALIGNMENT)
 {
-  auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,12 +169,10 @@ HB_FUNC_STATIC(QSCROLLAREA_SETALIGNMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWidget(QWidget * widget)
-*/
+// void setWidget(QWidget *widget)
 HB_FUNC_STATIC(QSCROLLAREA_SETWIDGET)
 {
-  auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,12 +189,10 @@ HB_FUNC_STATIC(QSCROLLAREA_SETWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWidgetResizable(bool resizable)
-*/
+// void setWidgetResizable(bool resizable)
 HB_FUNC_STATIC(QSCROLLAREA_SETWIDGETRESIZABLE)
 {
-  auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,12 +209,10 @@ HB_FUNC_STATIC(QSCROLLAREA_SETWIDGETRESIZABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget * takeWidget()
-*/
+// QWidget *takeWidget()
 HB_FUNC_STATIC(QSCROLLAREA_TAKEWIDGET)
 {
-  auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,12 +228,10 @@ HB_FUNC_STATIC(QSCROLLAREA_TAKEWIDGET)
   }
 }
 
-/*
-QWidget * widget() const
-*/
+// QWidget *widget() const
 HB_FUNC_STATIC(QSCROLLAREA_WIDGET)
 {
-  auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,12 +247,10 @@ HB_FUNC_STATIC(QSCROLLAREA_WIDGET)
   }
 }
 
-/*
-bool widgetResizable() const
-*/
+// bool widgetResizable() const
 HB_FUNC_STATIC(QSCROLLAREA_WIDGETRESIZABLE)
 {
-  auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,12 +265,10 @@ HB_FUNC_STATIC(QSCROLLAREA_WIDGETRESIZABLE)
   }
 }
 
-/*
-virtual bool focusNextPrevChild(bool next)
-*/
+// virtual bool focusNextPrevChild(bool next)
 HB_FUNC_STATIC(QSCROLLAREA_FOCUSNEXTPREVCHILD)
 {
-  auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,12 +283,10 @@ HB_FUNC_STATIC(QSCROLLAREA_FOCUSNEXTPREVCHILD)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSCROLLAREA_SIZEHINT)
 {
-  auto obj = qobject_cast<QScrollArea *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

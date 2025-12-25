@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSTYLE
+REQUEST QStyle
 #endif
 
 CLASS QStylePainter INHERIT QPainter
@@ -53,26 +53,25 @@ RETURN
 #include <QtWidgets/QStylePainter>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QStylePainter *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEPAINTER_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QStylePainter()
-    */
+    // QStylePainter()
     auto obj = new QStylePainter();
     Qt5xHb::returnNewObject(obj, true);
+
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
-    /*
-    QStylePainter(QWidget * w)
-    */
+    // QStylePainter(QWidget *w)
     auto obj = new QStylePainter(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, true);
+
   } else if (ISNUMPAR(2) && ISQPAINTDEVICE(1) && ISQWIDGET(2)) {
-    /*
-    QStylePainter(QPaintDevice * pd, QWidget * w)
-    */
+    // QStylePainter(QPaintDevice *pd, QWidget *w)
     auto obj = new QStylePainter(PQPAINTDEVICE(1), PQWIDGET(2));
     Qt5xHb::returnNewObject(obj, true);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -81,34 +80,30 @@ HB_FUNC_STATIC(QSTYLEPAINTER_NEW)
 HB_FUNC_STATIC(QSTYLEPAINTER_BEGIN)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1)) {
-    /*
-    bool begin(QWidget * w)
-    */
-    auto obj = static_cast<QStylePainter *>(Qt5xHb::itemGetPtrStackSelfItem());
+    // bool begin(QWidget *w)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->begin(PQWIDGET(1)));
     }
+
   } else if (ISNUMPAR(2) && ISQPAINTDEVICE(1) && ISQWIDGET(2)) {
-    /*
-    bool begin(QPaintDevice * pd, QWidget * w)
-    */
-    auto obj = static_cast<QStylePainter *>(Qt5xHb::itemGetPtrStackSelfItem());
+    // bool begin(QPaintDevice *pd, QWidget *w)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->begin(PQPAINTDEVICE(1), PQWIDGET(2)));
     }
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-void drawPrimitive(QStyle::PrimitiveElement pe, const QStyleOption &opt)
-*/
+// void drawPrimitive(QStyle::PrimitiveElement pe, const QStyleOption &opt)
 HB_FUNC_STATIC(QSTYLEPAINTER_DRAWPRIMITIVE)
 {
-  auto obj = static_cast<QStylePainter *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,12 +120,10 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWPRIMITIVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void drawControl(QStyle::ControlElement ce, const QStyleOption &opt)
-*/
+// void drawControl(QStyle::ControlElement ce, const QStyleOption &opt)
 HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCONTROL)
 {
-  auto obj = static_cast<QStylePainter *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,12 +140,10 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCONTROL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void drawComplexControl(QStyle::ComplexControl cc, const QStyleOptionComplex &opt)
-*/
+// void drawComplexControl(QStyle::ComplexControl cc, const QStyleOptionComplex &opt)
 HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCOMPLEXCONTROL)
 {
-  auto obj = static_cast<QStylePainter *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,13 +160,11 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCOMPLEXCONTROL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void drawItemText(const QRect &r, int flags, const QPalette &pal, bool enabled, const QString &text,
-QPalette::ColorRole textRole = QPalette::NoRole)
-*/
+// void drawItemText(const QRect &r, int flags, const QPalette &pal, bool enabled, const QString &text,
+// QPalette::ColorRole textRole = QPalette::NoRole)
 HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMTEXT)
 {
-  auto obj = static_cast<QStylePainter *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,12 +183,10 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void drawItemPixmap(const QRect &r, int flags, const QPixmap &pixmap)
-*/
+// void drawItemPixmap(const QRect &r, int flags, const QPixmap &pixmap)
 HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMPIXMAP)
 {
-  auto obj = static_cast<QStylePainter *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,12 +203,10 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMPIXMAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStyle * style() const
-*/
+// QStyle *style() const
 HB_FUNC_STATIC(QSTYLEPAINTER_STYLE)
 {
-  auto obj = static_cast<QStylePainter *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

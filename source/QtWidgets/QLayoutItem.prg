@@ -11,11 +11,11 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QLAYOUT
-REQUEST QRECT
-REQUEST QSIZE
-REQUEST QSPACERITEM
-REQUEST QWIDGET
+REQUEST QLayout
+REQUEST QRect
+REQUEST QSize
+REQUEST QSpacerItem
+REQUEST QWidget
 #endif
 
 CLASS QLayoutItem
@@ -78,9 +78,11 @@ RETURN
 
 #include <QtWidgets/QLayout>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QLAYOUTITEM_DELETE)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -93,12 +95,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::Alignment alignment() const
-*/
+// Qt::Alignment alignment() const
 HB_FUNC_STATIC(QLAYOUTITEM_ALIGNMENT)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,12 +113,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_ALIGNMENT)
   }
 }
 
-/*
-QSizePolicy::ControlTypes controlTypes() const
-*/
+// QSizePolicy::ControlTypes controlTypes() const
 HB_FUNC_STATIC(QLAYOUTITEM_CONTROLTYPES)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,12 +131,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_CONTROLTYPES)
   }
 }
 
-/*
-virtual Qt::Orientations expandingDirections() const = 0
-*/
+// virtual Qt::Orientations expandingDirections() const = 0
 HB_FUNC_STATIC(QLAYOUTITEM_EXPANDINGDIRECTIONS)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,12 +149,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_EXPANDINGDIRECTIONS)
   }
 }
 
-/*
-virtual QRect geometry() const = 0
-*/
+// virtual QRect geometry() const = 0
 HB_FUNC_STATIC(QLAYOUTITEM_GEOMETRY)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,12 +167,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_GEOMETRY)
   }
 }
 
-/*
-virtual bool hasHeightForWidth() const
-*/
+// virtual bool hasHeightForWidth() const
 HB_FUNC_STATIC(QLAYOUTITEM_HASHEIGHTFORWIDTH)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,12 +185,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_HASHEIGHTFORWIDTH)
   }
 }
 
-/*
-virtual int heightForWidth(int w) const
-*/
+// virtual int heightForWidth(int w) const
 HB_FUNC_STATIC(QLAYOUTITEM_HEIGHTFORWIDTH)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,12 +203,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_HEIGHTFORWIDTH)
   }
 }
 
-/*
-virtual void invalidate()
-*/
+// virtual void invalidate()
 HB_FUNC_STATIC(QLAYOUTITEM_INVALIDATE)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,12 +223,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_INVALIDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool isEmpty() const = 0
-*/
+// virtual bool isEmpty() const = 0
 HB_FUNC_STATIC(QLAYOUTITEM_ISEMPTY)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,12 +241,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_ISEMPTY)
   }
 }
 
-/*
-virtual QLayout * layout()
-*/
+// virtual QLayout *layout()
 HB_FUNC_STATIC(QLAYOUTITEM_LAYOUT)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,12 +260,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_LAYOUT)
   }
 }
 
-/*
-virtual QSize maximumSize() const = 0
-*/
+// virtual QSize maximumSize() const = 0
 HB_FUNC_STATIC(QLAYOUTITEM_MAXIMUMSIZE)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -296,12 +278,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_MAXIMUMSIZE)
   }
 }
 
-/*
-virtual int minimumHeightForWidth(int w) const
-*/
+// virtual int minimumHeightForWidth(int w) const
 HB_FUNC_STATIC(QLAYOUTITEM_MINIMUMHEIGHTFORWIDTH)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -316,12 +296,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_MINIMUMHEIGHTFORWIDTH)
   }
 }
 
-/*
-virtual QSize minimumSize() const = 0
-*/
+// virtual QSize minimumSize() const = 0
 HB_FUNC_STATIC(QLAYOUTITEM_MINIMUMSIZE)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,12 +314,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_MINIMUMSIZE)
   }
 }
 
-/*
-void setAlignment(Qt::Alignment alignment)
-*/
+// void setAlignment(Qt::Alignment alignment)
 HB_FUNC_STATIC(QLAYOUTITEM_SETALIGNMENT)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -358,12 +334,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_SETALIGNMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setGeometry(const QRect &r) = 0
-*/
+// virtual void setGeometry(const QRect &r) = 0
 HB_FUNC_STATIC(QLAYOUTITEM_SETGEOMETRY)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -380,12 +354,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_SETGEOMETRY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSize sizeHint() const = 0
-*/
+// virtual QSize sizeHint() const = 0
 HB_FUNC_STATIC(QLAYOUTITEM_SIZEHINT)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -400,12 +372,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_SIZEHINT)
   }
 }
 
-/*
-virtual QSpacerItem * spacerItem()
-*/
+// virtual QSpacerItem *spacerItem()
 HB_FUNC_STATIC(QLAYOUTITEM_SPACERITEM)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -421,12 +391,10 @@ HB_FUNC_STATIC(QLAYOUTITEM_SPACERITEM)
   }
 }
 
-/*
-virtual QWidget * widget()
-*/
+// virtual QWidget *widget()
 HB_FUNC_STATIC(QLAYOUTITEM_WIDGET)
 {
-  auto obj = static_cast<QLayoutItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

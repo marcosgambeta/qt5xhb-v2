@@ -71,24 +71,24 @@ RETURN
 #include <QtWidgets/QSizePolicy>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSIZEPOLICY_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QSizePolicy()
-    */
+    // QSizePolicy()
     auto obj = new QSizePolicy();
     Qt5xHb::returnNewObject(obj, true);
+
   } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
-    /*
-    QSizePolicy(QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical, QSizePolicy::ControlType type =
-    QSizePolicy::DefaultType)
-    */
+    // QSizePolicy(QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical, QSizePolicy::ControlType type =
+    // QSizePolicy::DefaultType)
     auto obj =
         new QSizePolicy(static_cast<QSizePolicy::Policy>(hb_parni(1)), static_cast<QSizePolicy::Policy>(hb_parni(2)),
                         HB_ISNIL(3) ? static_cast<QSizePolicy::ControlType>(QSizePolicy::DefaultType)
                                     : static_cast<QSizePolicy::ControlType>(hb_parni(3)));
     Qt5xHb::returnNewObject(obj, true);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_NEW)
 
 HB_FUNC_STATIC(QSIZEPOLICY_DELETE)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -109,12 +109,10 @@ HB_FUNC_STATIC(QSIZEPOLICY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSizePolicy::ControlType controlType() const
-*/
+// QSizePolicy::ControlType controlType() const
 HB_FUNC_STATIC(QSIZEPOLICY_CONTROLTYPE)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,12 +127,10 @@ HB_FUNC_STATIC(QSIZEPOLICY_CONTROLTYPE)
   }
 }
 
-/*
-Qt::Orientations expandingDirections() const
-*/
+// Qt::Orientations expandingDirections() const
 HB_FUNC_STATIC(QSIZEPOLICY_EXPANDINGDIRECTIONS)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,12 +145,10 @@ HB_FUNC_STATIC(QSIZEPOLICY_EXPANDINGDIRECTIONS)
   }
 }
 
-/*
-bool hasHeightForWidth() const
-*/
+// bool hasHeightForWidth() const
 HB_FUNC_STATIC(QSIZEPOLICY_HASHEIGHTFORWIDTH)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,12 +163,10 @@ HB_FUNC_STATIC(QSIZEPOLICY_HASHEIGHTFORWIDTH)
   }
 }
 
-/*
-bool hasWidthForHeight() const
-*/
+// bool hasWidthForHeight() const
 HB_FUNC_STATIC(QSIZEPOLICY_HASWIDTHFORHEIGHT)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,12 +181,10 @@ HB_FUNC_STATIC(QSIZEPOLICY_HASWIDTHFORHEIGHT)
   }
 }
 
-/*
-QSizePolicy::Policy horizontalPolicy() const
-*/
+// QSizePolicy::Policy horizontalPolicy() const
 HB_FUNC_STATIC(QSIZEPOLICY_HORIZONTALPOLICY)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,12 +199,10 @@ HB_FUNC_STATIC(QSIZEPOLICY_HORIZONTALPOLICY)
   }
 }
 
-/*
-int horizontalStretch() const
-*/
+// int horizontalStretch() const
 HB_FUNC_STATIC(QSIZEPOLICY_HORIZONTALSTRETCH)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,12 +217,10 @@ HB_FUNC_STATIC(QSIZEPOLICY_HORIZONTALSTRETCH)
   }
 }
 
-/*
-void setControlType(QSizePolicy::ControlType type)
-*/
+// void setControlType(QSizePolicy::ControlType type)
 HB_FUNC_STATIC(QSIZEPOLICY_SETCONTROLTYPE)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,12 +237,10 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETCONTROLTYPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHeightForWidth(bool dependent)
-*/
+// void setHeightForWidth(bool dependent)
 HB_FUNC_STATIC(QSIZEPOLICY_SETHEIGHTFORWIDTH)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,12 +257,10 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETHEIGHTFORWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHorizontalPolicy(QSizePolicy::Policy policy)
-*/
+// void setHorizontalPolicy(QSizePolicy::Policy policy)
 HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALPOLICY)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -295,12 +277,10 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHorizontalStretch(int stretchFactor)
-*/
+// void setHorizontalStretch(int stretchFactor)
 HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALSTRETCH)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -317,12 +297,10 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALSTRETCH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalPolicy(QSizePolicy::Policy policy)
-*/
+// void setVerticalPolicy(QSizePolicy::Policy policy)
 HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALPOLICY)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,12 +317,10 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalStretch(int stretchFactor)
-*/
+// void setVerticalStretch(int stretchFactor)
 HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALSTRETCH)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -361,12 +337,10 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALSTRETCH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWidthForHeight(bool dependent)
-*/
+// void setWidthForHeight(bool dependent)
 HB_FUNC_STATIC(QSIZEPOLICY_SETWIDTHFORHEIGHT)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,12 +357,10 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETWIDTHFORHEIGHT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void transpose()
-*/
+// void transpose()
 HB_FUNC_STATIC(QSIZEPOLICY_TRANSPOSE)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -405,12 +377,10 @@ HB_FUNC_STATIC(QSIZEPOLICY_TRANSPOSE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSizePolicy::Policy verticalPolicy() const
-*/
+// QSizePolicy::Policy verticalPolicy() const
 HB_FUNC_STATIC(QSIZEPOLICY_VERTICALPOLICY)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -425,12 +395,10 @@ HB_FUNC_STATIC(QSIZEPOLICY_VERTICALPOLICY)
   }
 }
 
-/*
-int verticalStretch() const
-*/
+// int verticalStretch() const
 HB_FUNC_STATIC(QSIZEPOLICY_VERTICALSTRETCH)
 {
-  auto obj = static_cast<QSizePolicy *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

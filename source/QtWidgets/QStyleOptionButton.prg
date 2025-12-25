@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QICON
-REQUEST QSIZE
+REQUEST QIcon
+REQUEST QSize
 #endif
 
 CLASS QStyleOptionButton INHERIT QStyleOption
@@ -55,31 +55,29 @@ RETURN
 #include <QtWidgets/QStyleOptionButton>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QStyleOptionButton *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QStyleOptionButton()
-    */
+    // QStyleOptionButton()
     auto obj = new QStyleOptionButton();
     Qt5xHb::returnNewObject(obj, true);
+
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONBUTTON(1)) {
-    /*
-    QStyleOptionButton(const QStyleOptionButton &other)
-    */
+    // QStyleOptionButton(const QStyleOptionButton &other)
     auto obj = new QStyleOptionButton(*PQSTYLEOPTIONBUTTON(1));
     Qt5xHb::returnNewObject(obj, true);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-ButtonFeatures features
-*/
+// ButtonFeatures features
 HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_FEATURES)
 {
-  auto obj = static_cast<QStyleOptionButton *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -92,7 +90,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_FEATURES)
 
 HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETFEATURES)
 {
-  auto obj = static_cast<QStyleOptionButton *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -105,12 +103,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETFEATURES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString text
-*/
+// QString text
 HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_TEXT)
 {
-  auto obj = static_cast<QStyleOptionButton *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -123,7 +119,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_TEXT)
 
 HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETTEXT)
 {
-  auto obj = static_cast<QStyleOptionButton *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
@@ -136,12 +132,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QIcon icon
-*/
+// QIcon icon
 HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_ICON)
 {
-  auto obj = static_cast<QStyleOptionButton *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -154,7 +148,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_ICON)
 
 HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETICON)
 {
-  auto obj = static_cast<QStyleOptionButton *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && ISQICON(1)) {
@@ -167,12 +161,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETICON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize iconSize
-*/
+// QSize iconSize
 HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_ICONSIZE)
 {
-  auto obj = static_cast<QStyleOptionButton *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -185,7 +177,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_ICONSIZE)
 
 HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETICONSIZE)
 {
-  auto obj = static_cast<QStyleOptionButton *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && ISQSIZE(1)) {

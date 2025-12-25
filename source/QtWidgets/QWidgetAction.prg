@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QWIDGET
+REQUEST QWidget
 #endif
 
 CLASS QWidgetAction INHERIT QAction
@@ -53,9 +53,9 @@ RETURN
 #include <QtWidgets/QWidgetAction>
 #endif
 
-    /*
-    QWidgetAction(QObject * parent)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWidgetAction *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QWidgetAction(QObject *parent)
 HB_FUNC_STATIC(QWIDGETACTION_NEW)
 {
   if (ISNUMPAR(1) && ISQOBJECT(1)) {
@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QWIDGETACTION_NEW)
 
 HB_FUNC_STATIC(QWIDGETACTION_DELETE)
 {
-  auto obj = qobject_cast<QWidgetAction *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -83,12 +83,10 @@ HB_FUNC_STATIC(QWIDGETACTION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget * defaultWidget() const
-*/
+// QWidget *defaultWidget() const
 HB_FUNC_STATIC(QWIDGETACTION_DEFAULTWIDGET)
 {
-  auto obj = qobject_cast<QWidgetAction *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -104,12 +102,10 @@ HB_FUNC_STATIC(QWIDGETACTION_DEFAULTWIDGET)
   }
 }
 
-/*
-void releaseWidget(QWidget * widget)
-*/
+// void releaseWidget(QWidget *widget)
 HB_FUNC_STATIC(QWIDGETACTION_RELEASEWIDGET)
 {
-  auto obj = qobject_cast<QWidgetAction *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,12 +122,10 @@ HB_FUNC_STATIC(QWIDGETACTION_RELEASEWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget * requestWidget(QWidget * parent)
-*/
+// QWidget *requestWidget(QWidget *parent)
 HB_FUNC_STATIC(QWIDGETACTION_REQUESTWIDGET)
 {
-  auto obj = qobject_cast<QWidgetAction *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,12 +141,10 @@ HB_FUNC_STATIC(QWIDGETACTION_REQUESTWIDGET)
   }
 }
 
-/*
-void setDefaultWidget(QWidget * widget)
-*/
+// void setDefaultWidget(QWidget *widget)
 HB_FUNC_STATIC(QWIDGETACTION_SETDEFAULTWIDGET)
 {
-  auto obj = qobject_cast<QWidgetAction *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

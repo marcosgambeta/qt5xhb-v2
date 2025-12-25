@@ -55,21 +55,21 @@ RETURN
 #include <QtWidgets/QTileRules>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QTileRules *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTILERULES_NEW)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
-    */
+    // QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
     auto obj = new QTileRules(static_cast<Qt::TileRule>(hb_parni(1)), static_cast<Qt::TileRule>(hb_parni(2)));
     Qt5xHb::returnNewObject(obj, true);
+
   } else if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    /*
-    QTileRules(Qt::TileRule rule = Qt::StretchTile)
-    */
+    // QTileRules(Qt::TileRule rule = Qt::StretchTile)
     auto obj = new QTileRules(HB_ISNIL(1) ? static_cast<Qt::TileRule>(Qt::StretchTile)
                                           : static_cast<Qt::TileRule>(hb_parni(1)));
     Qt5xHb::returnNewObject(obj, true);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QTILERULES_NEW)
 
 HB_FUNC_STATIC(QTILERULES_DELETE)
 {
-  auto obj = static_cast<QTileRules *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;

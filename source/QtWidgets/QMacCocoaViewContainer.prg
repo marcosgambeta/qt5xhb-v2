@@ -45,4 +45,6 @@ RETURN
 #include <QtWidgets/QMacCocoaViewContainer>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QMacCocoaViewContainer *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 #pragma ENDDUMP

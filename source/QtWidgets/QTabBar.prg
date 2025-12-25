@@ -11,12 +11,12 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCOLOR
-REQUEST QICON
-REQUEST QRECT
-REQUEST QSIZE
-REQUEST QVARIANT
-REQUEST QWIDGET
+REQUEST QColor
+REQUEST QIcon
+REQUEST QRect
+REQUEST QSize
+REQUEST QVariant
+REQUEST QWidget
 #endif
 
 CLASS QTabBar INHERIT QWidget
@@ -112,9 +112,9 @@ RETURN
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
 
-    /*
-    QTabBar(QWidget * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QTabBar(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QTABBAR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QTABBAR_NEW)
 
 HB_FUNC_STATIC(QTABBAR_DELETE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -145,34 +145,30 @@ HB_FUNC_STATIC(QTABBAR_DELETE)
 HB_FUNC_STATIC(QTABBAR_ADDTAB)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    int addTab(const QString &text)
-    */
-    auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // int addTab(const QString &text)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->addTab(PQSTRING(1)));
     }
+
   } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
-    /*
-    int addTab(const QIcon &icon, const QString &text)
-    */
-    auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // int addTab(const QIcon &icon, const QString &text)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->addTab(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2)));
     }
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QTABBAR_COUNT)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,12 +183,10 @@ HB_FUNC_STATIC(QTABBAR_COUNT)
   }
 }
 
-/*
-int currentIndex() const
-*/
+// int currentIndex() const
 HB_FUNC_STATIC(QTABBAR_CURRENTINDEX)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,12 +201,10 @@ HB_FUNC_STATIC(QTABBAR_CURRENTINDEX)
   }
 }
 
-/*
-bool documentMode() const
-*/
+// bool documentMode() const
 HB_FUNC_STATIC(QTABBAR_DOCUMENTMODE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,12 +219,10 @@ HB_FUNC_STATIC(QTABBAR_DOCUMENTMODE)
   }
 }
 
-/*
-bool drawBase() const
-*/
+// bool drawBase() const
 HB_FUNC_STATIC(QTABBAR_DRAWBASE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,12 +237,10 @@ HB_FUNC_STATIC(QTABBAR_DRAWBASE)
   }
 }
 
-/*
-Qt::TextElideMode elideMode() const
-*/
+// Qt::TextElideMode elideMode() const
 HB_FUNC_STATIC(QTABBAR_ELIDEMODE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,12 +255,10 @@ HB_FUNC_STATIC(QTABBAR_ELIDEMODE)
   }
 }
 
-/*
-bool expanding() const
-*/
+// bool expanding() const
 HB_FUNC_STATIC(QTABBAR_EXPANDING)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -287,12 +273,10 @@ HB_FUNC_STATIC(QTABBAR_EXPANDING)
   }
 }
 
-/*
-QSize iconSize() const
-*/
+// QSize iconSize() const
 HB_FUNC_STATIC(QTABBAR_ICONSIZE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,35 +294,31 @@ HB_FUNC_STATIC(QTABBAR_ICONSIZE)
 HB_FUNC_STATIC(QTABBAR_INSERTTAB)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(1)) {
-    /*
-    int insertTab(int index, const QString &text)
-    */
-    auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // int insertTab(int index, const QString &text)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->insertTab(PINT(1), PQSTRING(2)));
     }
+
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3)) {
-    /*
-    int insertTab(int index, const QIcon &icon, const QString &text)
-    */
-    auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // int insertTab(int index, const QIcon &icon, const QString &text)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RINT(obj->insertTab(PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(2)) : QIcon(hb_parc(2)),
                           PQSTRING(3)));
     }
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-bool isMovable() const
-*/
+// bool isMovable() const
 HB_FUNC_STATIC(QTABBAR_ISMOVABLE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,12 +333,10 @@ HB_FUNC_STATIC(QTABBAR_ISMOVABLE)
   }
 }
 
-/*
-bool isTabEnabled(int index) const
-*/
+// bool isTabEnabled(int index) const
 HB_FUNC_STATIC(QTABBAR_ISTABENABLED)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,12 +351,10 @@ HB_FUNC_STATIC(QTABBAR_ISTABENABLED)
   }
 }
 
-/*
-void moveTab(int from, int to)
-*/
+// void moveTab(int from, int to)
 HB_FUNC_STATIC(QTABBAR_MOVETAB)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -395,12 +371,10 @@ HB_FUNC_STATIC(QTABBAR_MOVETAB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void removeTab(int index)
-*/
+// void removeTab(int index)
 HB_FUNC_STATIC(QTABBAR_REMOVETAB)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -417,12 +391,10 @@ HB_FUNC_STATIC(QTABBAR_REMOVETAB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTabBar::SelectionBehavior selectionBehaviorOnRemove() const
-*/
+// QTabBar::SelectionBehavior selectionBehaviorOnRemove() const
 HB_FUNC_STATIC(QTABBAR_SELECTIONBEHAVIORONREMOVE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -437,12 +409,10 @@ HB_FUNC_STATIC(QTABBAR_SELECTIONBEHAVIORONREMOVE)
   }
 }
 
-/*
-void setDocumentMode(bool set)
-*/
+// void setDocumentMode(bool set)
 HB_FUNC_STATIC(QTABBAR_SETDOCUMENTMODE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -459,12 +429,10 @@ HB_FUNC_STATIC(QTABBAR_SETDOCUMENTMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDrawBase(bool drawTheBase)
-*/
+// void setDrawBase(bool drawTheBase)
 HB_FUNC_STATIC(QTABBAR_SETDRAWBASE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -481,12 +449,10 @@ HB_FUNC_STATIC(QTABBAR_SETDRAWBASE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setElideMode(Qt::TextElideMode)
-*/
+// void setElideMode(Qt::TextElideMode)
 HB_FUNC_STATIC(QTABBAR_SETELIDEMODE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -503,12 +469,10 @@ HB_FUNC_STATIC(QTABBAR_SETELIDEMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setExpanding(bool enabled)
-*/
+// void setExpanding(bool enabled)
 HB_FUNC_STATIC(QTABBAR_SETEXPANDING)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -525,12 +489,10 @@ HB_FUNC_STATIC(QTABBAR_SETEXPANDING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setIconSize(const QSize &size)
-*/
+// void setIconSize(const QSize &size)
 HB_FUNC_STATIC(QTABBAR_SETICONSIZE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -547,12 +509,10 @@ HB_FUNC_STATIC(QTABBAR_SETICONSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMovable(bool movable)
-*/
+// void setMovable(bool movable)
 HB_FUNC_STATIC(QTABBAR_SETMOVABLE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -569,12 +529,10 @@ HB_FUNC_STATIC(QTABBAR_SETMOVABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSelectionBehaviorOnRemove(QTabBar::SelectionBehavior behavior)
-*/
+// void setSelectionBehaviorOnRemove(QTabBar::SelectionBehavior behavior)
 HB_FUNC_STATIC(QTABBAR_SETSELECTIONBEHAVIORONREMOVE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -591,12 +549,10 @@ HB_FUNC_STATIC(QTABBAR_SETSELECTIONBEHAVIORONREMOVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setShape(QTabBar::Shape shape)
-*/
+// void setShape(QTabBar::Shape shape)
 HB_FUNC_STATIC(QTABBAR_SETSHAPE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -613,12 +569,10 @@ HB_FUNC_STATIC(QTABBAR_SETSHAPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabButton(int index, QTabBar::ButtonPosition position, QWidget * widget)
-*/
+// void setTabButton(int index, QTabBar::ButtonPosition position, QWidget *widget)
 HB_FUNC_STATIC(QTABBAR_SETTABBUTTON)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -635,12 +589,10 @@ HB_FUNC_STATIC(QTABBAR_SETTABBUTTON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabData(int index, const QVariant &data)
-*/
+// void setTabData(int index, const QVariant &data)
 HB_FUNC_STATIC(QTABBAR_SETTABDATA)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -657,12 +609,10 @@ HB_FUNC_STATIC(QTABBAR_SETTABDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabEnabled(int index, bool enabled)
-*/
+// void setTabEnabled(int index, bool enabled)
 HB_FUNC_STATIC(QTABBAR_SETTABENABLED)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -679,12 +629,10 @@ HB_FUNC_STATIC(QTABBAR_SETTABENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabIcon(int index, const QIcon &icon)
-*/
+// void setTabIcon(int index, const QIcon &icon)
 HB_FUNC_STATIC(QTABBAR_SETTABICON)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -701,12 +649,10 @@ HB_FUNC_STATIC(QTABBAR_SETTABICON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabText(int index, const QString &text)
-*/
+// void setTabText(int index, const QString &text)
 HB_FUNC_STATIC(QTABBAR_SETTABTEXT)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -723,12 +669,10 @@ HB_FUNC_STATIC(QTABBAR_SETTABTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabTextColor(int index, const QColor &color)
-*/
+// void setTabTextColor(int index, const QColor &color)
 HB_FUNC_STATIC(QTABBAR_SETTABTEXTCOLOR)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -746,12 +690,10 @@ HB_FUNC_STATIC(QTABBAR_SETTABTEXTCOLOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabToolTip(int index, const QString &tip)
-*/
+// void setTabToolTip(int index, const QString &tip)
 HB_FUNC_STATIC(QTABBAR_SETTABTOOLTIP)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -768,12 +710,10 @@ HB_FUNC_STATIC(QTABBAR_SETTABTOOLTIP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabWhatsThis(int index, const QString &text)
-*/
+// void setTabWhatsThis(int index, const QString &text)
 HB_FUNC_STATIC(QTABBAR_SETTABWHATSTHIS)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -790,12 +730,10 @@ HB_FUNC_STATIC(QTABBAR_SETTABWHATSTHIS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabsClosable(bool closable)
-*/
+// void setTabsClosable(bool closable)
 HB_FUNC_STATIC(QTABBAR_SETTABSCLOSABLE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -812,12 +750,10 @@ HB_FUNC_STATIC(QTABBAR_SETTABSCLOSABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUsesScrollButtons(bool useButtons)
-*/
+// void setUsesScrollButtons(bool useButtons)
 HB_FUNC_STATIC(QTABBAR_SETUSESSCROLLBUTTONS)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -834,12 +770,10 @@ HB_FUNC_STATIC(QTABBAR_SETUSESSCROLLBUTTONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTabBar::Shape shape() const
-*/
+// QTabBar::Shape shape() const
 HB_FUNC_STATIC(QTABBAR_SHAPE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -854,12 +788,10 @@ HB_FUNC_STATIC(QTABBAR_SHAPE)
   }
 }
 
-/*
-int tabAt(const QPoint &position) const
-*/
+// int tabAt(const QPoint &position) const
 HB_FUNC_STATIC(QTABBAR_TABAT)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -874,12 +806,10 @@ HB_FUNC_STATIC(QTABBAR_TABAT)
   }
 }
 
-/*
-QWidget * tabButton(int index, QTabBar::ButtonPosition position) const
-*/
+// QWidget *tabButton(int index, QTabBar::ButtonPosition position) const
 HB_FUNC_STATIC(QTABBAR_TABBUTTON)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -895,12 +825,10 @@ HB_FUNC_STATIC(QTABBAR_TABBUTTON)
   }
 }
 
-/*
-QVariant tabData(int index) const
-*/
+// QVariant tabData(int index) const
 HB_FUNC_STATIC(QTABBAR_TABDATA)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -915,12 +843,10 @@ HB_FUNC_STATIC(QTABBAR_TABDATA)
   }
 }
 
-/*
-QIcon tabIcon(int index) const
-*/
+// QIcon tabIcon(int index) const
 HB_FUNC_STATIC(QTABBAR_TABICON)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -935,12 +861,10 @@ HB_FUNC_STATIC(QTABBAR_TABICON)
   }
 }
 
-/*
-QRect tabRect(int index) const
-*/
+// QRect tabRect(int index) const
 HB_FUNC_STATIC(QTABBAR_TABRECT)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -955,12 +879,10 @@ HB_FUNC_STATIC(QTABBAR_TABRECT)
   }
 }
 
-/*
-QString tabText(int index) const
-*/
+// QString tabText(int index) const
 HB_FUNC_STATIC(QTABBAR_TABTEXT)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -975,12 +897,10 @@ HB_FUNC_STATIC(QTABBAR_TABTEXT)
   }
 }
 
-/*
-QColor tabTextColor(int index) const
-*/
+// QColor tabTextColor(int index) const
 HB_FUNC_STATIC(QTABBAR_TABTEXTCOLOR)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -995,12 +915,10 @@ HB_FUNC_STATIC(QTABBAR_TABTEXTCOLOR)
   }
 }
 
-/*
-QString tabToolTip(int index) const
-*/
+// QString tabToolTip(int index) const
 HB_FUNC_STATIC(QTABBAR_TABTOOLTIP)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1015,12 +933,10 @@ HB_FUNC_STATIC(QTABBAR_TABTOOLTIP)
   }
 }
 
-/*
-QString tabWhatsThis(int index) const
-*/
+// QString tabWhatsThis(int index) const
 HB_FUNC_STATIC(QTABBAR_TABWHATSTHIS)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1035,12 +951,10 @@ HB_FUNC_STATIC(QTABBAR_TABWHATSTHIS)
   }
 }
 
-/*
-bool tabsClosable() const
-*/
+// bool tabsClosable() const
 HB_FUNC_STATIC(QTABBAR_TABSCLOSABLE)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1055,12 +969,10 @@ HB_FUNC_STATIC(QTABBAR_TABSCLOSABLE)
   }
 }
 
-/*
-bool usesScrollButtons() const
-*/
+// bool usesScrollButtons() const
 HB_FUNC_STATIC(QTABBAR_USESSCROLLBUTTONS)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1075,12 +987,10 @@ HB_FUNC_STATIC(QTABBAR_USESSCROLLBUTTONS)
   }
 }
 
-/*
-virtual QSize minimumSizeHint() const
-*/
+// virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QTABBAR_MINIMUMSIZEHINT)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1095,12 +1005,10 @@ HB_FUNC_STATIC(QTABBAR_MINIMUMSIZEHINT)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QTABBAR_SIZEHINT)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1115,12 +1023,10 @@ HB_FUNC_STATIC(QTABBAR_SIZEHINT)
   }
 }
 
-/*
-void setCurrentIndex(int index)
-*/
+// void setCurrentIndex(int index)
 HB_FUNC_STATIC(QTABBAR_SETCURRENTINDEX)
 {
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1137,13 +1043,11 @@ HB_FUNC_STATIC(QTABBAR_SETCURRENTINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool autoHide() const
-*/
+// bool autoHide() const
 HB_FUNC_STATIC(QTABBAR_AUTOHIDE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1159,13 +1063,11 @@ HB_FUNC_STATIC(QTABBAR_AUTOHIDE)
 #endif
 }
 
-/*
-void setAutoHide(bool hide)
-*/
+// void setAutoHide(bool hide)
 HB_FUNC_STATIC(QTABBAR_SETAUTOHIDE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1183,13 +1085,11 @@ HB_FUNC_STATIC(QTABBAR_SETAUTOHIDE)
 #endif
 }
 
-/*
-bool changeCurrentOnDrag() const
-*/
+// bool changeCurrentOnDrag() const
 HB_FUNC_STATIC(QTABBAR_CHANGECURRENTONDRAG)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1205,13 +1105,11 @@ HB_FUNC_STATIC(QTABBAR_CHANGECURRENTONDRAG)
 #endif
 }
 
-/*
-void setChangeCurrentOnDrag(bool change)
-*/
+// void setChangeCurrentOnDrag(bool change)
 HB_FUNC_STATIC(QTABBAR_SETCHANGECURRENTONDRAG)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1229,12 +1127,10 @@ HB_FUNC_STATIC(QTABBAR_SETCHANGECURRENTONDRAG)
 #endif
 }
 
-/*
-void currentChanged(int index)
-*/
+// void currentChanged(int index)
 HB_FUNC_STATIC(QTABBAR_ONCURRENTCHANGED)
 {
-  auto sender = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1255,7 +1151,6 @@ HB_FUNC_STATIC(QTABBAR_ONCURRENTCHANGED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1271,12 +1166,10 @@ HB_FUNC_STATIC(QTABBAR_ONCURRENTCHANGED)
   hb_retl(result);
 }
 
-/*
-void tabCloseRequested(int index)
-*/
+// void tabCloseRequested(int index)
 HB_FUNC_STATIC(QTABBAR_ONTABCLOSEREQUESTED)
 {
-  auto sender = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1297,7 +1190,6 @@ HB_FUNC_STATIC(QTABBAR_ONTABCLOSEREQUESTED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1313,12 +1205,10 @@ HB_FUNC_STATIC(QTABBAR_ONTABCLOSEREQUESTED)
   hb_retl(result);
 }
 
-/*
-void tabMoved(int from, int to)
-*/
+// void tabMoved(int from, int to)
 HB_FUNC_STATIC(QTABBAR_ONTABMOVED)
 {
-  auto sender = qobject_cast<QTabBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1341,7 +1231,6 @@ HB_FUNC_STATIC(QTABBAR_ONTABMOVED)
             hb_itemRelease(pArg2);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

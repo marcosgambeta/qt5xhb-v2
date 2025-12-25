@@ -50,21 +50,21 @@ RETURN
 #include <QtWidgets/QStyleOptionComplex>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QStyleOptionComplex *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_NEW)
 {
   if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2)) {
-    /*
-    QStyleOptionComplex(int version = QStyleOptionComplex::Version, int type = QStyleOptionComplex::SO_Complex)
-    */
+    // QStyleOptionComplex(int version = QStyleOptionComplex::Version, int type = QStyleOptionComplex::SO_Complex)
     auto obj =
         new QStyleOptionComplex(OPINT(1, QStyleOptionComplex::Version), OPINT(2, QStyleOptionComplex::SO_Complex));
     Qt5xHb::returnNewObject(obj, true);
+
   } else if (ISNUMPAR(1) && ISQSTYLEOPTIONCOMPLEX(1)) {
-    /*
-    QStyleOptionComplex(const QStyleOptionComplex &other)
-    */
+    // QStyleOptionComplex(const QStyleOptionComplex &other)
     auto obj = new QStyleOptionComplex(*PQSTYLEOPTIONCOMPLEX(1));
     Qt5xHb::returnNewObject(obj, true);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_NEW)
 
 HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_DELETE)
 {
-  auto obj = static_cast<QStyleOptionComplex *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -85,12 +85,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStyle::SubControls subControls
-*/
+// QStyle::SubControls subControls
 HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SUBCONTROLS)
 {
-  auto obj = static_cast<QStyleOptionComplex *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -103,7 +101,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SUBCONTROLS)
 
 HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS)
 {
-  auto obj = static_cast<QStyleOptionComplex *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -116,12 +114,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStyle::SubControls activeSubControls
-*/
+// QStyle::SubControls activeSubControls
 HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS)
 {
-  auto obj = static_cast<QStyleOptionComplex *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(0)) {
@@ -134,7 +130,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS)
 
 HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS)
 {
-  auto obj = static_cast<QStyleOptionComplex *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {

@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QHEADERVIEW
-REQUEST QMODELINDEX
-REQUEST QRECT
+REQUEST QHeaderView
+REQUEST QModelIndex
+REQUEST QRect
 #endif
 
 CLASS QTableView INHERIT QAbstractItemView
@@ -100,9 +100,9 @@ RETURN
 
 #include <QtWidgets/QHeaderView>
 
-    /*
-    QTableView(QWidget * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QTableView(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QTABLEVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -113,12 +113,10 @@ HB_FUNC_STATIC(QTABLEVIEW_NEW)
   }
 }
 
-/*
-~QTableView()
-*/
+// ~QTableView()
 HB_FUNC_STATIC(QTABLEVIEW_DELETE)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -133,12 +131,10 @@ HB_FUNC_STATIC(QTABLEVIEW_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool showGrid() const
-*/
+// bool showGrid() const
 HB_FUNC_STATIC(QTABLEVIEW_SHOWGRID)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,12 +149,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SHOWGRID)
   }
 }
 
-/*
-void setShowGrid(bool show)
-*/
+// void setShowGrid(bool show)
 HB_FUNC_STATIC(QTABLEVIEW_SETSHOWGRID)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,12 +169,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SETSHOWGRID)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::PenStyle gridStyle() const
-*/
+// Qt::PenStyle gridStyle() const
 HB_FUNC_STATIC(QTABLEVIEW_GRIDSTYLE)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,12 +187,10 @@ HB_FUNC_STATIC(QTABLEVIEW_GRIDSTYLE)
   }
 }
 
-/*
-void setGridStyle(Qt::PenStyle style)
-*/
+// void setGridStyle(Qt::PenStyle style)
 HB_FUNC_STATIC(QTABLEVIEW_SETGRIDSTYLE)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,12 +207,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SETGRIDSTYLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isSortingEnabled() const
-*/
+// bool isSortingEnabled() const
 HB_FUNC_STATIC(QTABLEVIEW_ISSORTINGENABLED)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -237,12 +225,10 @@ HB_FUNC_STATIC(QTABLEVIEW_ISSORTINGENABLED)
   }
 }
 
-/*
-void setSortingEnabled(bool enable)
-*/
+// void setSortingEnabled(bool enable)
 HB_FUNC_STATIC(QTABLEVIEW_SETSORTINGENABLED)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,12 +245,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SETSORTINGENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool wordWrap() const
-*/
+// bool wordWrap() const
 HB_FUNC_STATIC(QTABLEVIEW_WORDWRAP)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,12 +263,10 @@ HB_FUNC_STATIC(QTABLEVIEW_WORDWRAP)
   }
 }
 
-/*
-void setWordWrap(bool on)
-*/
+// void setWordWrap(bool on)
 HB_FUNC_STATIC(QTABLEVIEW_SETWORDWRAP)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,12 +283,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SETWORDWRAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isCornerButtonEnabled() const
-*/
+// bool isCornerButtonEnabled() const
 HB_FUNC_STATIC(QTABLEVIEW_ISCORNERBUTTONENABLED)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,12 +301,10 @@ HB_FUNC_STATIC(QTABLEVIEW_ISCORNERBUTTONENABLED)
   }
 }
 
-/*
-void setCornerButtonEnabled(bool enable)
-*/
+// void setCornerButtonEnabled(bool enable)
 HB_FUNC_STATIC(QTABLEVIEW_SETCORNERBUTTONENABLED)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -343,12 +321,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SETCORNERBUTTONENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setModel(QAbstractItemModel * model) override
-*/
+// void setModel(QAbstractItemModel *model) override
 HB_FUNC_STATIC(QTABLEVIEW_SETMODEL)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -365,12 +341,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SETMODEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRootIndex(const QModelIndex &index) override
-*/
+// void setRootIndex(const QModelIndex &index) override
 HB_FUNC_STATIC(QTABLEVIEW_SETROOTINDEX)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -387,12 +361,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SETROOTINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSelectionModel(QItemSelectionModel * selectionModel) override
-*/
+// void setSelectionModel(QItemSelectionModel *selectionModel) override
 HB_FUNC_STATIC(QTABLEVIEW_SETSELECTIONMODEL)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -409,15 +381,11 @@ HB_FUNC_STATIC(QTABLEVIEW_SETSELECTIONMODEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void doItemsLayout() override
-*/
-/*
-QHeaderView * horizontalHeader() const
-*/
+// void doItemsLayout() override
+// QHeaderView *horizontalHeader() const
 HB_FUNC_STATIC(QTABLEVIEW_HORIZONTALHEADER)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -433,12 +401,10 @@ HB_FUNC_STATIC(QTABLEVIEW_HORIZONTALHEADER)
   }
 }
 
-/*
-QHeaderView * verticalHeader() const
-*/
+// QHeaderView *verticalHeader() const
 HB_FUNC_STATIC(QTABLEVIEW_VERTICALHEADER)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -454,12 +420,10 @@ HB_FUNC_STATIC(QTABLEVIEW_VERTICALHEADER)
   }
 }
 
-/*
-void setHorizontalHeader(QHeaderView * header)
-*/
+// void setHorizontalHeader(QHeaderView *header)
 HB_FUNC_STATIC(QTABLEVIEW_SETHORIZONTALHEADER)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -476,12 +440,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SETHORIZONTALHEADER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalHeader(QHeaderView * header)
-*/
+// void setVerticalHeader(QHeaderView *header)
 HB_FUNC_STATIC(QTABLEVIEW_SETVERTICALHEADER)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -498,12 +460,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SETVERTICALHEADER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int rowViewportPosition(int row) const
-*/
+// int rowViewportPosition(int row) const
 HB_FUNC_STATIC(QTABLEVIEW_ROWVIEWPORTPOSITION)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -518,12 +478,10 @@ HB_FUNC_STATIC(QTABLEVIEW_ROWVIEWPORTPOSITION)
   }
 }
 
-/*
-int rowAt(int y) const
-*/
+// int rowAt(int y) const
 HB_FUNC_STATIC(QTABLEVIEW_ROWAT)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -538,12 +496,10 @@ HB_FUNC_STATIC(QTABLEVIEW_ROWAT)
   }
 }
 
-/*
-void setRowHeight(int row, int height)
-*/
+// void setRowHeight(int row, int height)
 HB_FUNC_STATIC(QTABLEVIEW_SETROWHEIGHT)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -560,12 +516,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SETROWHEIGHT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int rowHeight(int row) const
-*/
+// int rowHeight(int row) const
 HB_FUNC_STATIC(QTABLEVIEW_ROWHEIGHT)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -580,12 +534,10 @@ HB_FUNC_STATIC(QTABLEVIEW_ROWHEIGHT)
   }
 }
 
-/*
-int columnViewportPosition(int column) const
-*/
+// int columnViewportPosition(int column) const
 HB_FUNC_STATIC(QTABLEVIEW_COLUMNVIEWPORTPOSITION)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -600,12 +552,10 @@ HB_FUNC_STATIC(QTABLEVIEW_COLUMNVIEWPORTPOSITION)
   }
 }
 
-/*
-int columnAt(int x) const
-*/
+// int columnAt(int x) const
 HB_FUNC_STATIC(QTABLEVIEW_COLUMNAT)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -620,12 +570,10 @@ HB_FUNC_STATIC(QTABLEVIEW_COLUMNAT)
   }
 }
 
-/*
-void setColumnWidth(int column, int width)
-*/
+// void setColumnWidth(int column, int width)
 HB_FUNC_STATIC(QTABLEVIEW_SETCOLUMNWIDTH)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -642,12 +590,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SETCOLUMNWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int columnWidth(int column) const
-*/
+// int columnWidth(int column) const
 HB_FUNC_STATIC(QTABLEVIEW_COLUMNWIDTH)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -662,12 +608,10 @@ HB_FUNC_STATIC(QTABLEVIEW_COLUMNWIDTH)
   }
 }
 
-/*
-bool isRowHidden(int row) const
-*/
+// bool isRowHidden(int row) const
 HB_FUNC_STATIC(QTABLEVIEW_ISROWHIDDEN)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -682,12 +626,10 @@ HB_FUNC_STATIC(QTABLEVIEW_ISROWHIDDEN)
   }
 }
 
-/*
-void setRowHidden(int row, bool hide)
-*/
+// void setRowHidden(int row, bool hide)
 HB_FUNC_STATIC(QTABLEVIEW_SETROWHIDDEN)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -704,12 +646,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SETROWHIDDEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isColumnHidden(int column) const
-*/
+// bool isColumnHidden(int column) const
 HB_FUNC_STATIC(QTABLEVIEW_ISCOLUMNHIDDEN)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -724,12 +664,10 @@ HB_FUNC_STATIC(QTABLEVIEW_ISCOLUMNHIDDEN)
   }
 }
 
-/*
-void setColumnHidden(int column, bool hide)
-*/
+// void setColumnHidden(int column, bool hide)
 HB_FUNC_STATIC(QTABLEVIEW_SETCOLUMNHIDDEN)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -746,12 +684,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SETCOLUMNHIDDEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRect visualRect(const QModelIndex &index) const override
-*/
+// QRect visualRect(const QModelIndex &index) const override
 HB_FUNC_STATIC(QTABLEVIEW_VISUALRECT)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -766,12 +702,11 @@ HB_FUNC_STATIC(QTABLEVIEW_VISUALRECT)
   }
 }
 
-/*
-void scrollTo(const QModelIndex &index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible) override
-*/
+// void scrollTo(const QModelIndex &index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible)
+// override
 HB_FUNC_STATIC(QTABLEVIEW_SCROLLTO)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -790,12 +725,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SCROLLTO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QModelIndex indexAt(const QPoint &p) const override
-*/
+// QModelIndex indexAt(const QPoint &p) const override
 HB_FUNC_STATIC(QTABLEVIEW_INDEXAT)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -810,12 +743,10 @@ HB_FUNC_STATIC(QTABLEVIEW_INDEXAT)
   }
 }
 
-/*
-void setSpan(int row, int column, int rowSpan, int columnSpan)
-*/
+// void setSpan(int row, int column, int rowSpan, int columnSpan)
 HB_FUNC_STATIC(QTABLEVIEW_SETSPAN)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -832,12 +763,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SETSPAN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int rowSpan(int row, int column) const
-*/
+// int rowSpan(int row, int column) const
 HB_FUNC_STATIC(QTABLEVIEW_ROWSPAN)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -852,12 +781,10 @@ HB_FUNC_STATIC(QTABLEVIEW_ROWSPAN)
   }
 }
 
-/*
-int columnSpan(int row, int column) const
-*/
+// int columnSpan(int row, int column) const
 HB_FUNC_STATIC(QTABLEVIEW_COLUMNSPAN)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -872,12 +799,10 @@ HB_FUNC_STATIC(QTABLEVIEW_COLUMNSPAN)
   }
 }
 
-/*
-void clearSpans()
-*/
+// void clearSpans()
 HB_FUNC_STATIC(QTABLEVIEW_CLEARSPANS)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -894,12 +819,10 @@ HB_FUNC_STATIC(QTABLEVIEW_CLEARSPANS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void sortByColumn(int column, Qt::SortOrder order)
-*/
+// void sortByColumn(int column, Qt::SortOrder order)
 HB_FUNC_STATIC(QTABLEVIEW_SORTBYCOLUMN)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -916,12 +839,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SORTBYCOLUMN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void selectRow(int row)
-*/
+// void selectRow(int row)
 HB_FUNC_STATIC(QTABLEVIEW_SELECTROW)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -938,12 +859,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SELECTROW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void selectColumn(int column)
-*/
+// void selectColumn(int column)
 HB_FUNC_STATIC(QTABLEVIEW_SELECTCOLUMN)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -960,12 +879,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SELECTCOLUMN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void hideRow(int row)
-*/
+// void hideRow(int row)
 HB_FUNC_STATIC(QTABLEVIEW_HIDEROW)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -982,12 +899,10 @@ HB_FUNC_STATIC(QTABLEVIEW_HIDEROW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void hideColumn(int column)
-*/
+// void hideColumn(int column)
 HB_FUNC_STATIC(QTABLEVIEW_HIDECOLUMN)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1004,12 +919,10 @@ HB_FUNC_STATIC(QTABLEVIEW_HIDECOLUMN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void showRow(int row)
-*/
+// void showRow(int row)
 HB_FUNC_STATIC(QTABLEVIEW_SHOWROW)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1026,12 +939,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SHOWROW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void showColumn(int column)
-*/
+// void showColumn(int column)
 HB_FUNC_STATIC(QTABLEVIEW_SHOWCOLUMN)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1048,12 +959,10 @@ HB_FUNC_STATIC(QTABLEVIEW_SHOWCOLUMN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void resizeRowToContents(int row)
-*/
+// void resizeRowToContents(int row)
 HB_FUNC_STATIC(QTABLEVIEW_RESIZEROWTOCONTENTS)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1070,12 +979,10 @@ HB_FUNC_STATIC(QTABLEVIEW_RESIZEROWTOCONTENTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void resizeRowsToContents()
-*/
+// void resizeRowsToContents()
 HB_FUNC_STATIC(QTABLEVIEW_RESIZEROWSTOCONTENTS)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1092,12 +999,10 @@ HB_FUNC_STATIC(QTABLEVIEW_RESIZEROWSTOCONTENTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void resizeColumnToContents(int column)
-*/
+// void resizeColumnToContents(int column)
 HB_FUNC_STATIC(QTABLEVIEW_RESIZECOLUMNTOCONTENTS)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1114,12 +1019,10 @@ HB_FUNC_STATIC(QTABLEVIEW_RESIZECOLUMNTOCONTENTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void resizeColumnsToContents()
-*/
+// void resizeColumnsToContents()
 HB_FUNC_STATIC(QTABLEVIEW_RESIZECOLUMNSTOCONTENTS)
 {
-  auto obj = qobject_cast<QTableView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1136,8 +1039,6 @@ HB_FUNC_STATIC(QTABLEVIEW_RESIZECOLUMNSTOCONTENTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void sortByColumn(int column)
-*/
+// void sortByColumn(int column)
 
 #pragma ENDDUMP

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
+REQUEST QSize
 #endif
 
 CLASS QScrollBar INHERIT QAbstractSlider
@@ -51,20 +51,20 @@ RETURN
 #include <QtWidgets/QScrollBar>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QScrollBar *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSCROLLBAR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
-    /*
-    QScrollBar(QWidget * parent = nullptr)
-    */
+    // QScrollBar(QWidget *parent = nullptr)
     auto obj = new QScrollBar(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QScrollBar(Qt::Orientation orientation, QWidget * parent = nullptr)
-    */
+    // QScrollBar(Qt::Orientation orientation, QWidget *parent = nullptr)
     auto obj = new QScrollBar(static_cast<Qt::Orientation>(hb_parni(1)), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QSCROLLBAR_NEW)
 
 HB_FUNC_STATIC(QSCROLLBAR_DELETE)
 {
-  auto obj = qobject_cast<QScrollBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -87,12 +87,10 @@ HB_FUNC_STATIC(QSCROLLBAR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool event(QEvent * event)
-*/
+// virtual bool event(QEvent *event)
 HB_FUNC_STATIC(QSCROLLBAR_EVENT)
 {
-  auto obj = qobject_cast<QScrollBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,12 +105,10 @@ HB_FUNC_STATIC(QSCROLLBAR_EVENT)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSCROLLBAR_SIZEHINT)
 {
-  auto obj = qobject_cast<QScrollBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

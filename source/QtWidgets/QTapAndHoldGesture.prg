@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINTF
+REQUEST QPointF
 #endif
 
 CLASS QTapAndHoldGesture INHERIT QGesture
@@ -52,9 +52,11 @@ RETURN
 #include <QtWidgets/QTapAndHoldGesture>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QTapAndHoldGesture *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QTAPANDHOLDGESTURE_DELETE)
 {
-  auto obj = qobject_cast<QTapAndHoldGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -69,12 +71,10 @@ HB_FUNC_STATIC(QTAPANDHOLDGESTURE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPointF position() const
-*/
+// QPointF position() const
 HB_FUNC_STATIC(QTAPANDHOLDGESTURE_POSITION)
 {
-  auto obj = qobject_cast<QTapAndHoldGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -89,12 +89,10 @@ HB_FUNC_STATIC(QTAPANDHOLDGESTURE_POSITION)
   }
 }
 
-/*
-void setPosition(const QPointF &pos)
-*/
+// void setPosition(const QPointF &pos)
 HB_FUNC_STATIC(QTAPANDHOLDGESTURE_SETPOSITION)
 {
-  auto obj = qobject_cast<QTapAndHoldGesture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,9 +109,7 @@ HB_FUNC_STATIC(QTAPANDHOLDGESTURE_SETPOSITION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void setTimeout(int msecs)
-*/
+// static void setTimeout(int msecs)
 HB_FUNC_STATIC(QTAPANDHOLDGESTURE_SETTIMEOUT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,9 +125,7 @@ HB_FUNC_STATIC(QTAPANDHOLDGESTURE_SETTIMEOUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static int timeout()
-*/
+// static int timeout()
 HB_FUNC_STATIC(QTAPANDHOLDGESTURE_TIMEOUT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSTYLE
+REQUEST QStyle
 #endif
 
 CLASS QStyleFactory
@@ -59,9 +59,11 @@ RETURN
 
 #include <QtWidgets/QStyle>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QStyleFactory *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEFACTORY_DELETE)
 {
-  auto obj = static_cast<QStyleFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -74,9 +76,7 @@ HB_FUNC_STATIC(QSTYLEFACTORY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QStyle * create(const QString &key)
-*/
+// static QStyle *create(const QString &key)
 HB_FUNC_STATIC(QSTYLEFACTORY_CREATE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -91,9 +91,7 @@ HB_FUNC_STATIC(QSTYLEFACTORY_CREATE)
 #endif
 }
 
-/*
-static QStringList keys()
-*/
+// static QStringList keys()
 HB_FUNC_STATIC(QSTYLEFACTORY_KEYS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

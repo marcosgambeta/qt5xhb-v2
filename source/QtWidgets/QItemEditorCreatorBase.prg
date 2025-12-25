@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QWIDGET
+REQUEST QByteArray
+REQUEST QWidget
 #endif
 
 CLASS QItemEditorCreatorBase
@@ -58,9 +58,11 @@ RETURN
 #include <QtWidgets/QItemEditorCreatorBase>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QItemEditorCreatorBase *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QITEMEDITORCREATORBASE_DELETE)
 {
-  auto obj = static_cast<QItemEditorCreatorBase *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -73,12 +75,10 @@ HB_FUNC_STATIC(QITEMEDITORCREATORBASE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QWidget * createWidget(QWidget * parent) const = 0
-*/
+// virtual QWidget *createWidget(QWidget *parent) const = 0
 HB_FUNC_STATIC(QITEMEDITORCREATORBASE_CREATEWIDGET)
 {
-  auto obj = static_cast<QItemEditorCreatorBase *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -94,12 +94,10 @@ HB_FUNC_STATIC(QITEMEDITORCREATORBASE_CREATEWIDGET)
   }
 }
 
-/*
-virtual QByteArray valuePropertyName() const = 0
-*/
+// virtual QByteArray valuePropertyName() const = 0
 HB_FUNC_STATIC(QITEMEDITORCREATORBASE_VALUEPROPERTYNAME)
 {
-  auto obj = static_cast<QItemEditorCreatorBase *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

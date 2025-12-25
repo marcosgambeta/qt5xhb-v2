@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QWIDGET
+REQUEST QWidget
 #endif
 
 CLASS QStackedWidget INHERIT QFrame
@@ -62,9 +62,9 @@ RETURN
 #include <QtWidgets/QStackedWidget>
 #endif
 
-    /*
-    QStackedWidget(QWidget * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QStackedWidget *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QStackedWidget(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QSTACKEDWIDGET_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_NEW)
 
 HB_FUNC_STATIC(QSTACKEDWIDGET_DELETE)
 {
-  auto obj = qobject_cast<QStackedWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -92,12 +92,10 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int addWidget(QWidget * widget)
-*/
+// int addWidget(QWidget *widget)
 HB_FUNC_STATIC(QSTACKEDWIDGET_ADDWIDGET)
 {
-  auto obj = qobject_cast<QStackedWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,12 +110,10 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_ADDWIDGET)
   }
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QSTACKEDWIDGET_COUNT)
 {
-  auto obj = qobject_cast<QStackedWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,12 +128,10 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_COUNT)
   }
 }
 
-/*
-int currentIndex() const
-*/
+// int currentIndex() const
 HB_FUNC_STATIC(QSTACKEDWIDGET_CURRENTINDEX)
 {
-  auto obj = qobject_cast<QStackedWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,12 +146,10 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_CURRENTINDEX)
   }
 }
 
-/*
-QWidget * currentWidget() const
-*/
+// QWidget *currentWidget() const
 HB_FUNC_STATIC(QSTACKEDWIDGET_CURRENTWIDGET)
 {
-  auto obj = qobject_cast<QStackedWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,12 +165,10 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_CURRENTWIDGET)
   }
 }
 
-/*
-int indexOf(QWidget * widget) const
-*/
+// int indexOf(QWidget *widget) const
 HB_FUNC_STATIC(QSTACKEDWIDGET_INDEXOF)
 {
-  auto obj = qobject_cast<QStackedWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,12 +183,10 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_INDEXOF)
   }
 }
 
-/*
-int insertWidget(int index, QWidget * widget)
-*/
+// int insertWidget(int index, QWidget *widget)
 HB_FUNC_STATIC(QSTACKEDWIDGET_INSERTWIDGET)
 {
-  auto obj = qobject_cast<QStackedWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,12 +201,10 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_INSERTWIDGET)
   }
 }
 
-/*
-void removeWidget(QWidget * widget)
-*/
+// void removeWidget(QWidget *widget)
 HB_FUNC_STATIC(QSTACKEDWIDGET_REMOVEWIDGET)
 {
-  auto obj = qobject_cast<QStackedWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,12 +221,10 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_REMOVEWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget * widget(int index) const
-*/
+// QWidget *widget(int index) const
 HB_FUNC_STATIC(QSTACKEDWIDGET_WIDGET)
 {
-  auto obj = qobject_cast<QStackedWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -256,12 +240,10 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_WIDGET)
   }
 }
 
-/*
-void setCurrentIndex(int index)
-*/
+// void setCurrentIndex(int index)
 HB_FUNC_STATIC(QSTACKEDWIDGET_SETCURRENTINDEX)
 {
-  auto obj = qobject_cast<QStackedWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,12 +260,10 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_SETCURRENTINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCurrentWidget(QWidget * widget)
-*/
+// void setCurrentWidget(QWidget *widget)
 HB_FUNC_STATIC(QSTACKEDWIDGET_SETCURRENTWIDGET)
 {
-  auto obj = qobject_cast<QStackedWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,12 +280,10 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_SETCURRENTWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void currentChanged(int index)
-*/
+// void currentChanged(int index)
 HB_FUNC_STATIC(QSTACKEDWIDGET_ONCURRENTCHANGED)
 {
-  auto sender = qobject_cast<QStackedWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -327,7 +305,6 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_ONCURRENTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -343,12 +320,10 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_ONCURRENTCHANGED)
   hb_retl(result);
 }
 
-/*
-void widgetRemoved(int index)
-*/
+// void widgetRemoved(int index)
 HB_FUNC_STATIC(QSTACKEDWIDGET_ONWIDGETREMOVED)
 {
-  auto sender = qobject_cast<QStackedWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -370,7 +345,6 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_ONWIDGETREMOVED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

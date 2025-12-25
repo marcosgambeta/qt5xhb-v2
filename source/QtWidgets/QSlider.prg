@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
+REQUEST QSize
 #endif
 
 CLASS QSlider INHERIT QAbstractSlider
@@ -68,20 +68,20 @@ RETURN
 #include <QtWidgets/QSlider>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QSlider *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSLIDER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
-    /*
-    QSlider(QWidget * parent = nullptr)
-    */
+    // QSlider(QWidget *parent = nullptr)
     auto obj = new QSlider(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QSlider(Qt::Orientation orientation, QWidget * parent = nullptr)
-    */
+    // QSlider(Qt::Orientation orientation, QWidget *parent = nullptr)
     auto obj = new QSlider(static_cast<Qt::Orientation>(hb_parni(1)), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QSLIDER_NEW)
 
 HB_FUNC_STATIC(QSLIDER_DELETE)
 {
-  auto obj = qobject_cast<QSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -104,12 +104,10 @@ HB_FUNC_STATIC(QSLIDER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int tickInterval() const
-*/
+// int tickInterval() const
 HB_FUNC_STATIC(QSLIDER_TICKINTERVAL)
 {
-  auto obj = qobject_cast<QSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,12 +122,10 @@ HB_FUNC_STATIC(QSLIDER_TICKINTERVAL)
   }
 }
 
-/*
-void setTickInterval(int ti)
-*/
+// void setTickInterval(int ti)
 HB_FUNC_STATIC(QSLIDER_SETTICKINTERVAL)
 {
-  auto obj = qobject_cast<QSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,12 +142,10 @@ HB_FUNC_STATIC(QSLIDER_SETTICKINTERVAL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSlider::TickPosition tickPosition() const
-*/
+// QSlider::TickPosition tickPosition() const
 HB_FUNC_STATIC(QSLIDER_TICKPOSITION)
 {
-  auto obj = qobject_cast<QSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,12 +160,10 @@ HB_FUNC_STATIC(QSLIDER_TICKPOSITION)
   }
 }
 
-/*
-void setTickPosition(QSlider::TickPosition position)
-*/
+// void setTickPosition(QSlider::TickPosition position)
 HB_FUNC_STATIC(QSLIDER_SETTICKPOSITION)
 {
-  auto obj = qobject_cast<QSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,12 +180,10 @@ HB_FUNC_STATIC(QSLIDER_SETTICKPOSITION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool event(QEvent * event)
-*/
+// virtual bool event(QEvent *event)
 HB_FUNC_STATIC(QSLIDER_EVENT)
 {
-  auto obj = qobject_cast<QSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,12 +198,10 @@ HB_FUNC_STATIC(QSLIDER_EVENT)
   }
 }
 
-/*
-virtual QSize minimumSizeHint() const
-*/
+// virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QSLIDER_MINIMUMSIZEHINT)
 {
-  auto obj = qobject_cast<QSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,12 +216,10 @@ HB_FUNC_STATIC(QSLIDER_MINIMUMSIZEHINT)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSLIDER_SIZEHINT)
 {
-  auto obj = qobject_cast<QSlider *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

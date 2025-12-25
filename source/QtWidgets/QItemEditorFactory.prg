@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QWIDGET
+REQUEST QByteArray
+REQUEST QWidget
 #endif
 
 CLASS QItemEditorFactory
@@ -62,9 +62,9 @@ RETURN
 #include <QtWidgets/QItemEditorFactory>
 #endif
 
-    /*
-    QItemEditorFactory()
-    */
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QItemEditorFactory *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QItemEditorFactory()
 HB_FUNC_STATIC(QITEMEDITORFACTORY_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_NEW)
 
 HB_FUNC_STATIC(QITEMEDITORFACTORY_DELETE)
 {
-  auto obj = static_cast<QItemEditorFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -90,12 +90,10 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QWidget * createEditor(int userType, QWidget * parent) const
-*/
+// virtual QWidget *createEditor(int userType, QWidget *parent) const
 HB_FUNC_STATIC(QITEMEDITORFACTORY_CREATEEDITOR)
 {
-  auto obj = static_cast<QItemEditorFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,12 +109,10 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_CREATEEDITOR)
   }
 }
 
-/*
-virtual QByteArray valuePropertyName(int userType) const
-*/
+// virtual QByteArray valuePropertyName(int userType) const
 HB_FUNC_STATIC(QITEMEDITORFACTORY_VALUEPROPERTYNAME)
 {
-  auto obj = static_cast<QItemEditorFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,12 +127,10 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_VALUEPROPERTYNAME)
   }
 }
 
-/*
-void registerEditor(int userType, QItemEditorCreatorBase * creator)
-*/
+// void registerEditor(int userType, QItemEditorCreatorBase *creator)
 HB_FUNC_STATIC(QITEMEDITORFACTORY_REGISTEREDITOR)
 {
-  auto obj = static_cast<QItemEditorFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,9 +147,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_REGISTEREDITOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static const QItemEditorFactory * defaultFactory()
-*/
+// static const QItemEditorFactory *defaultFactory()
 HB_FUNC_STATIC(QITEMEDITORFACTORY_DEFAULTFACTORY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,9 +162,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_DEFAULTFACTORY)
 #endif
 }
 
-/*
-static void setDefaultFactory(QItemEditorFactory * factory)
-*/
+// static void setDefaultFactory(QItemEditorFactory *factory)
 HB_FUNC_STATIC(QITEMEDITORFACTORY_SETDEFAULTFACTORY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

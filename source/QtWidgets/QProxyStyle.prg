@@ -11,12 +11,12 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QICON
-REQUEST QPALETTE
-REQUEST QPIXMAP
-REQUEST QRECT
-REQUEST QSIZE
-REQUEST QSTYLE
+REQUEST QIcon
+REQUEST QPalette
+REQUEST QPixmap
+REQUEST QRect
+REQUEST QSize
+REQUEST QStyle
 #endif
 
 CLASS QProxyStyle INHERIT QCommonStyle
@@ -76,20 +76,20 @@ RETURN
 #include <QtWidgets/QProxyStyle>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QPROXYSTYLE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISOBJECTORNIL(1)) {
-    /*
-    QProxyStyle(QStyle * style = nullptr)
-    */
+    // QProxyStyle(QStyle *style = nullptr)
     auto obj = new QProxyStyle(OPQSTYLE(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QProxyStyle(const QString &key)
-    */
+    // QProxyStyle(const QString &key)
     auto obj = new QProxyStyle(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, false);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_NEW)
 
 HB_FUNC_STATIC(QPROXYSTYLE_DELETE)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -112,12 +112,10 @@ HB_FUNC_STATIC(QPROXYSTYLE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStyle * baseStyle() const
-*/
+// QStyle *baseStyle() const
 HB_FUNC_STATIC(QPROXYSTYLE_BASESTYLE)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,12 +131,10 @@ HB_FUNC_STATIC(QPROXYSTYLE_BASESTYLE)
   }
 }
 
-/*
-void setBaseStyle(QStyle * style)
-*/
+// void setBaseStyle(QStyle *style)
 HB_FUNC_STATIC(QPROXYSTYLE_SETBASESTYLE)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,13 +151,11 @@ HB_FUNC_STATIC(QPROXYSTYLE_SETBASESTYLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void drawPrimitive(QStyle::PrimitiveElement element, const QStyleOption * option, QPainter * painter, const QWidget *
-widget = nullptr) const
-*/
+// void drawPrimitive(QStyle::PrimitiveElement element, const QStyleOption *option, QPainter *painter, const QWidget
+// *widget = nullptr) const
 HB_FUNC_STATIC(QPROXYSTYLE_DRAWPRIMITIVE)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,13 +173,11 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWPRIMITIVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void drawControl(QStyle::ControlElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget
-= nullptr) const
-*/
+// void drawControl(QStyle::ControlElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget
+// = nullptr) const
 HB_FUNC_STATIC(QPROXYSTYLE_DRAWCONTROL)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,13 +195,11 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWCONTROL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void drawComplexControl(QStyle::ComplexControl control, const QStyleOptionComplex * option, QPainter * painter, const
-QWidget * widget = nullptr) const
-*/
+// void drawComplexControl(QStyle::ComplexControl control, const QStyleOptionComplex *option, QPainter *painter, const
+// QWidget *widget = nullptr) const
 HB_FUNC_STATIC(QPROXYSTYLE_DRAWCOMPLEXCONTROL)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,13 +217,11 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWCOMPLEXCONTROL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void drawItemText(QPainter * painter, const QRect &rect, int flags, const QPalette &pal, bool enabled, const QString &
-text, QPalette::ColorRole textRole = QPalette::NoRole) const
-*/
+// void drawItemText(QPainter *painter, const QRect &rect, int flags, const QPalette &pal, bool enabled, const QString
+// &text, QPalette::ColorRole textRole = QPalette::NoRole) const
 HB_FUNC_STATIC(QPROXYSTYLE_DRAWITEMTEXT)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,12 +241,10 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWITEMTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void drawItemPixmap(QPainter * painter, const QRect &rect, int alignment, const QPixmap &pixmap) const
-*/
+// virtual void drawItemPixmap(QPainter *painter, const QRect &rect, int alignment, const QPixmap &pixmap) const
 HB_FUNC_STATIC(QPROXYSTYLE_DRAWITEMPIXMAP)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,13 +261,11 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWITEMPIXMAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize sizeFromContents(QStyle::ContentsType type, const QStyleOption * option, const QSize &size, const QWidget *
-widget) const
-*/
+// QSize sizeFromContents(QStyle::ContentsType type, const QStyleOption *option, const QSize &size, const QWidget
+// *widget) const
 HB_FUNC_STATIC(QPROXYSTYLE_SIZEFROMCONTENTS)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,12 +281,10 @@ HB_FUNC_STATIC(QPROXYSTYLE_SIZEFROMCONTENTS)
   }
 }
 
-/*
-QRect subElementRect(QStyle::SubElement element, const QStyleOption * option, const QWidget * widget) const
-*/
+// QRect subElementRect(QStyle::SubElement element, const QStyleOption *option, const QWidget *widget) const
 HB_FUNC_STATIC(QPROXYSTYLE_SUBELEMENTRECT)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -317,13 +299,11 @@ HB_FUNC_STATIC(QPROXYSTYLE_SUBELEMENTRECT)
   }
 }
 
-/*
-QRect subControlRect(QStyle::ComplexControl cc, const QStyleOptionComplex * opt, QStyle::SubControl sc, const QWidget *
-widget) const
-*/
+// QRect subControlRect(QStyle::ComplexControl cc, const QStyleOptionComplex *opt, QStyle::SubControl sc, const QWidget
+// *widget) const
 HB_FUNC_STATIC(QPROXYSTYLE_SUBCONTROLRECT)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,12 +319,10 @@ HB_FUNC_STATIC(QPROXYSTYLE_SUBCONTROLRECT)
   }
 }
 
-/*
-QRect itemTextRect(const QFontMetrics &fm, const QRect &r, int flags, bool enabled, const QString &text) const
-*/
+// QRect itemTextRect(const QFontMetrics &fm, const QRect &r, int flags, bool enabled, const QString &text) const
 HB_FUNC_STATIC(QPROXYSTYLE_ITEMTEXTRECT)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -359,12 +337,10 @@ HB_FUNC_STATIC(QPROXYSTYLE_ITEMTEXTRECT)
   }
 }
 
-/*
-QRect itemPixmapRect(const QRect &r, int flags, const QPixmap &pixmap) const
-*/
+// QRect itemPixmapRect(const QRect &r, int flags, const QPixmap &pixmap) const
 HB_FUNC_STATIC(QPROXYSTYLE_ITEMPIXMAPRECT)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -379,13 +355,11 @@ HB_FUNC_STATIC(QPROXYSTYLE_ITEMPIXMAPRECT)
   }
 }
 
-/*
-QStyle::SubControl hitTestComplexControl(QStyle::ComplexControl control, const QStyleOptionComplex * option, const
-QPoint &pos, const QWidget * widget = nullptr) const
-*/
+// QStyle::SubControl hitTestComplexControl(QStyle::ComplexControl control, const QStyleOptionComplex *option, const
+// QPoint &pos, const QWidget *widget = nullptr) const
 HB_FUNC_STATIC(QPROXYSTYLE_HITTESTCOMPLEXCONTROL)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -401,13 +375,11 @@ HB_FUNC_STATIC(QPROXYSTYLE_HITTESTCOMPLEXCONTROL)
   }
 }
 
-/*
-int styleHint(QStyle::StyleHint hint, const QStyleOption * option = nullptr, const QWidget * widget = nullptr,
-QStyleHintReturn * returnData = nullptr) const
-*/
+// int styleHint(QStyle::StyleHint hint, const QStyleOption *option = nullptr, const QWidget *widget = nullptr,
+// QStyleHintReturn *returnData = nullptr) const
 HB_FUNC_STATIC(QPROXYSTYLE_STYLEHINT)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -425,13 +397,11 @@ HB_FUNC_STATIC(QPROXYSTYLE_STYLEHINT)
   }
 }
 
-/*
-int pixelMetric(QStyle::PixelMetric metric, const QStyleOption * option = nullptr, const QWidget * widget = nullptr)
-const
-*/
+// int pixelMetric(QStyle::PixelMetric metric, const QStyleOption *option = nullptr, const QWidget *widget = nullptr)
+// const
 HB_FUNC_STATIC(QPROXYSTYLE_PIXELMETRIC)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -448,13 +418,11 @@ HB_FUNC_STATIC(QPROXYSTYLE_PIXELMETRIC)
   }
 }
 
-/*
-int layoutSpacing(QSizePolicy::ControlType control1, QSizePolicy::ControlType control2, Qt::Orientation orientation,
-const QStyleOption * option = nullptr, const QWidget * widget = nullptr) const
-*/
+// int layoutSpacing(QSizePolicy::ControlType control1, QSizePolicy::ControlType control2, Qt::Orientation orientation,
+// const QStyleOption *option = nullptr, const QWidget *widget = nullptr) const
 HB_FUNC_STATIC(QPROXYSTYLE_LAYOUTSPACING)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -472,13 +440,11 @@ HB_FUNC_STATIC(QPROXYSTYLE_LAYOUTSPACING)
   }
 }
 
-/*
-QIcon standardIcon(QStyle::StandardPixmap standardIcon, const QStyleOption * option = nullptr, const QWidget * widget =
-nullptr) const
-*/
+// QIcon standardIcon(QStyle::StandardPixmap standardIcon, const QStyleOption *option = nullptr, const QWidget *widget =
+// nullptr) const
 HB_FUNC_STATIC(QPROXYSTYLE_STANDARDICON)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -495,21 +461,18 @@ HB_FUNC_STATIC(QPROXYSTYLE_STANDARDICON)
   }
 }
 
-/*
-QPixmap standardPixmap(QStyle::StandardPixmap standardPixmap, const QStyleOption * opt, const QWidget * widget =
-nullptr) const
-*/
+// QPixmap standardPixmap(QStyle::StandardPixmap standardPixmap, const QStyleOption *opt, const QWidget *widget =
+// nullptr) const
 HB_FUNC_STATIC(QPROXYSTYLE_STANDARDPIXMAP)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQWIDGETORNIL(3)) {
 #endif
-      auto ptr = new QPixmap(obj->standardPixmap(static_cast<QStyle::StandardPixmap>(hb_parni(1)), PQSTYLEOPTION(2),
-                                                 OPQWIDGET(3, nullptr)));
-      Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
+      RQPIXMAP(obj->standardPixmap(static_cast<QStyle::StandardPixmap>(hb_parni(1)), PQSTYLEOPTION(2),
+                                   OPQWIDGET(3, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -518,20 +481,16 @@ HB_FUNC_STATIC(QPROXYSTYLE_STANDARDPIXMAP)
   }
 }
 
-/*
-QPixmap generatedIconPixmap(QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption * opt) const
-*/
+// QPixmap generatedIconPixmap(QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption *opt) const
 HB_FUNC_STATIC(QPROXYSTYLE_GENERATEDICONPIXMAP)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPIXMAP(2) && ISQSTYLEOPTION(3)) {
 #endif
-      auto ptr =
-          new QPixmap(obj->generatedIconPixmap(static_cast<QIcon::Mode>(hb_parni(1)), *PQPIXMAP(2), PQSTYLEOPTION(3)));
-      Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
+      RQPIXMAP(obj->generatedIconPixmap(static_cast<QIcon::Mode>(hb_parni(1)), *PQPIXMAP(2), PQSTYLEOPTION(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -540,19 +499,16 @@ HB_FUNC_STATIC(QPROXYSTYLE_GENERATEDICONPIXMAP)
   }
 }
 
-/*
-QPalette standardPalette() const
-*/
+// QPalette standardPalette() const
 HB_FUNC_STATIC(QPROXYSTYLE_STANDARDPALETTE)
 {
-  auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPalette(obj->standardPalette());
-      Qt5xHb::createReturnClass(ptr, "QPALETTE", true);
+      RQPALETTE(obj->standardPalette());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -564,38 +520,35 @@ HB_FUNC_STATIC(QPROXYSTYLE_STANDARDPALETTE)
 HB_FUNC_STATIC(QPROXYSTYLE_POLISH)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1)) {
-    /*
-    void polish(QWidget * widget)
-    */
-    auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void polish(QWidget *widget)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->polish(PQWIDGET(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(1) && ISQPALETTE(1)) {
-    /*
-    void polish(QPalette &pal)
-    */
-    auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void polish(QPalette &pal)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->polish(*PQPALETTE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
-    /*
-    void polish(QApplication * app)
-    */
-    auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void polish(QApplication *app)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->polish(PQAPPLICATION(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -604,27 +557,25 @@ HB_FUNC_STATIC(QPROXYSTYLE_POLISH)
 HB_FUNC_STATIC(QPROXYSTYLE_UNPOLISH)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1)) {
-    /*
-    void unpolish(QWidget * widget)
-    */
-    auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void unpolish(QWidget *widget)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->unpolish(PQWIDGET(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
-    /*
-    void unpolish(QApplication * app)
-    */
-    auto obj = qobject_cast<QProxyStyle *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void unpolish(QApplication *app)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->unpolish(PQAPPLICATION(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

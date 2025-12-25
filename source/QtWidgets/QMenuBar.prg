@@ -11,11 +11,11 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACTION
-REQUEST QMENU
-REQUEST QRECT
-REQUEST QSIZE
-REQUEST QWIDGET
+REQUEST QAction
+REQUEST QMenu
+REQUEST QRect
+REQUEST QSize
+REQUEST QWidget
 #endif
 
 CLASS QMenuBar INHERIT QWidget
@@ -81,9 +81,9 @@ RETURN
 #include <QtWidgets/QMenuBar>
 #endif
 
-    /*
-    QMenuBar(QWidget * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QMenuBar(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QMENUBAR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QMENUBAR_NEW)
 
 HB_FUNC_STATIC(QMENUBAR_DELETE)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -111,12 +111,10 @@ HB_FUNC_STATIC(QMENUBAR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAction * activeAction() const
-*/
+// QAction *activeAction() const
 HB_FUNC_STATIC(QMENUBAR_ACTIVEACTION)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,36 +133,33 @@ HB_FUNC_STATIC(QMENUBAR_ACTIVEACTION)
 HB_FUNC_STATIC(QMENUBAR_ADDACTION)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QAction * addAction(const QString &text)
-    */
-    auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // QAction *addAction(const QString &text)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = obj->addAction(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
+
   } else if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3)) {
-    /*
-    QAction * addAction(const QString &text, const QObject * receiver, const char * member)
-    */
-    auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // QAction *addAction(const QString &text, const QObject *receiver, const char *member)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = obj->addAction(PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
+
   } else if (ISNUMPAR(1) && ISQACTION(1)) {
-    /*
-    void addAction(QAction * action)
-    */
-    auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // void addAction(QAction *action)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->addAction(PQACTION(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -173,47 +168,42 @@ HB_FUNC_STATIC(QMENUBAR_ADDACTION)
 HB_FUNC_STATIC(QMENUBAR_ADDMENU)
 {
   if (ISNUMPAR(1) && ISQMENU(1)) {
-    /*
-    QAction * addMenu(QMenu * menu)
-    */
-    auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // QAction *addMenu(QMenu *menu)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = obj->addMenu(PQMENU(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
+
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QMenu * addMenu(const QString &title)
-    */
-    auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // QMenu *addMenu(const QString &title)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr = obj->addMenu(PQSTRING(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
+
   } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
-    /*
-    QMenu * addMenu(const QIcon &icon, const QString &title)
-    */
-    auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    // QMenu *addMenu(const QIcon &icon, const QString &title)
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto ptr =
           obj->addMenu(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2));
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-QAction * addSeparator()
-*/
+// QAction *addSeparator()
 HB_FUNC_STATIC(QMENUBAR_ADDSEPARATOR)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,12 +219,10 @@ HB_FUNC_STATIC(QMENUBAR_ADDSEPARATOR)
   }
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QMENUBAR_CLEAR)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,12 +239,10 @@ HB_FUNC_STATIC(QMENUBAR_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAction * insertMenu(QAction * before, QMenu * menu)
-*/
+// QAction *insertMenu(QAction *before, QMenu *menu)
 HB_FUNC_STATIC(QMENUBAR_INSERTMENU)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,12 +258,10 @@ HB_FUNC_STATIC(QMENUBAR_INSERTMENU)
   }
 }
 
-/*
-QAction * insertSeparator(QAction * before)
-*/
+// QAction *insertSeparator(QAction *before)
 HB_FUNC_STATIC(QMENUBAR_INSERTSEPARATOR)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,12 +277,10 @@ HB_FUNC_STATIC(QMENUBAR_INSERTSEPARATOR)
   }
 }
 
-/*
-bool isDefaultUp() const
-*/
+// bool isDefaultUp() const
 HB_FUNC_STATIC(QMENUBAR_ISDEFAULTUP)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -313,12 +295,10 @@ HB_FUNC_STATIC(QMENUBAR_ISDEFAULTUP)
   }
 }
 
-/*
-void setDefaultUp(bool)
-*/
+// void setDefaultUp(bool)
 HB_FUNC_STATIC(QMENUBAR_SETDEFAULTUP)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,12 +315,10 @@ HB_FUNC_STATIC(QMENUBAR_SETDEFAULTUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isNativeMenuBar() const
-*/
+// bool isNativeMenuBar() const
 HB_FUNC_STATIC(QMENUBAR_ISNATIVEMENUBAR)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -355,12 +333,10 @@ HB_FUNC_STATIC(QMENUBAR_ISNATIVEMENUBAR)
   }
 }
 
-/*
-void setNativeMenuBar(bool nativeMenuBar)
-*/
+// void setNativeMenuBar(bool nativeMenuBar)
 HB_FUNC_STATIC(QMENUBAR_SETNATIVEMENUBAR)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,12 +353,10 @@ HB_FUNC_STATIC(QMENUBAR_SETNATIVEMENUBAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setActiveAction(QAction * act)
-*/
+// void setActiveAction(QAction *act)
 HB_FUNC_STATIC(QMENUBAR_SETACTIVEACTION)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -399,12 +373,10 @@ HB_FUNC_STATIC(QMENUBAR_SETACTIVEACTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int heightForWidth(int) const
-*/
+// int heightForWidth(int) const
 HB_FUNC_STATIC(QMENUBAR_HEIGHTFORWIDTH)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -419,12 +391,10 @@ HB_FUNC_STATIC(QMENUBAR_HEIGHTFORWIDTH)
   }
 }
 
-/*
-QSize minimumSizeHint() const
-*/
+// QSize minimumSizeHint() const
 HB_FUNC_STATIC(QMENUBAR_MINIMUMSIZEHINT)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -439,12 +409,10 @@ HB_FUNC_STATIC(QMENUBAR_MINIMUMSIZEHINT)
   }
 }
 
-/*
-QSize sizeHint() const
-*/
+// QSize sizeHint() const
 HB_FUNC_STATIC(QMENUBAR_SIZEHINT)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -459,12 +427,10 @@ HB_FUNC_STATIC(QMENUBAR_SIZEHINT)
   }
 }
 
-/*
-virtual void setVisible(bool visible)
-*/
+// virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QMENUBAR_SETVISIBLE)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -481,12 +447,10 @@ HB_FUNC_STATIC(QMENUBAR_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRect actionGeometry(QAction *) const
-*/
+// QRect actionGeometry(QAction *) const
 HB_FUNC_STATIC(QMENUBAR_ACTIONGEOMETRY)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -501,12 +465,10 @@ HB_FUNC_STATIC(QMENUBAR_ACTIONGEOMETRY)
   }
 }
 
-/*
-QAction * actionAt(const QPoint &) const
-*/
+// QAction *actionAt(const QPoint &) const
 HB_FUNC_STATIC(QMENUBAR_ACTIONAT)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -522,12 +484,10 @@ HB_FUNC_STATIC(QMENUBAR_ACTIONAT)
   }
 }
 
-/*
-QWidget * cornerWidget(Qt::Corner corner = Qt::TopRightCorner) const
-*/
+// QWidget *cornerWidget(Qt::Corner corner = Qt::TopRightCorner) const
 HB_FUNC_STATIC(QMENUBAR_CORNERWIDGET)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -544,12 +504,10 @@ HB_FUNC_STATIC(QMENUBAR_CORNERWIDGET)
   }
 }
 
-/*
-void setCornerWidget(QWidget * w, Qt::Corner corner = Qt::TopRightCorner)
-*/
+// void setCornerWidget(QWidget *w, Qt::Corner corner = Qt::TopRightCorner)
 HB_FUNC_STATIC(QMENUBAR_SETCORNERWIDGET)
 {
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -567,13 +525,11 @@ HB_FUNC_STATIC(QMENUBAR_SETCORNERWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDefaultAction (QAction * act)
-*/
+// void setDefaultAction (QAction *act)
 HB_FUNC_STATIC(QMENUBAR_SETDEFAULTACTION)
 {
 #ifdef Q_OS_WINCE
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -591,13 +547,11 @@ HB_FUNC_STATIC(QMENUBAR_SETDEFAULTACTION)
 #endif
 }
 
-/*
-QAction * defaultAction () const
-*/
+// QAction *defaultAction () const
 HB_FUNC_STATIC(QMENUBAR_DEFAULTACTION)
 {
 #ifdef Q_OS_WINCE
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -614,9 +568,7 @@ HB_FUNC_STATIC(QMENUBAR_DEFAULTACTION)
 #endif
 }
 
-/*
-static void wceCommands(uint command)
-*/
+// static void wceCommands(uint command)
 HB_FUNC_STATIC(QMENUBAR_WCECOMMANDS)
 {
 #ifdef Q_OS_WINCE
@@ -634,9 +586,7 @@ HB_FUNC_STATIC(QMENUBAR_WCECOMMANDS)
 #endif
 }
 
-/*
-static void wceRefresh()
-*/
+// static void wceRefresh()
 HB_FUNC_STATIC(QMENUBAR_WCEREFRESH)
 {
 #ifdef Q_OS_WINCE
@@ -654,14 +604,12 @@ HB_FUNC_STATIC(QMENUBAR_WCEREFRESH)
 #endif
 }
 
-/*
-NSMenu * QMenuBar::toNSMenu()
-*/
+// NSMenu *QMenuBar::toNSMenu()
 HB_FUNC_STATIC(QMENUBAR_TONSMENU)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifdef Q_OS_OSX
-  auto obj = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -678,12 +626,10 @@ HB_FUNC_STATIC(QMENUBAR_TONSMENU)
 #endif
 }
 
-/*
-void hovered(QAction * action)
-*/
+// void hovered(QAction *action)
 HB_FUNC_STATIC(QMENUBAR_ONHOVERED)
 {
-  auto sender = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -704,7 +650,6 @@ HB_FUNC_STATIC(QMENUBAR_ONHOVERED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -720,12 +665,10 @@ HB_FUNC_STATIC(QMENUBAR_ONHOVERED)
   hb_retl(result);
 }
 
-/*
-void triggered(QAction * action)
-*/
+// void triggered(QAction *action)
 HB_FUNC_STATIC(QMENUBAR_ONTRIGGERED)
 {
-  auto sender = qobject_cast<QMenuBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -746,7 +689,6 @@ HB_FUNC_STATIC(QMENUBAR_ONTRIGGERED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

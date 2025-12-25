@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
+REQUEST QSize
 #endif
 
 CLASS QSizeGrip INHERIT QWidget
@@ -51,9 +51,9 @@ RETURN
 #include <QtWidgets/QSizeGrip>
 #endif
 
-    /*
-    QSizeGrip(QWidget * parent)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QSizeGrip *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QSizeGrip(QWidget *parent)
 HB_FUNC_STATIC(QSIZEGRIP_NEW)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1)) {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QSIZEGRIP_NEW)
 
 HB_FUNC_STATIC(QSIZEGRIP_DELETE)
 {
-  auto obj = qobject_cast<QSizeGrip *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -81,12 +81,10 @@ HB_FUNC_STATIC(QSIZEGRIP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setVisible(bool visible)
-*/
+// virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QSIZEGRIP_SETVISIBLE)
 {
-  auto obj = qobject_cast<QSizeGrip *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,12 +101,10 @@ HB_FUNC_STATIC(QSIZEGRIP_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSIZEGRIP_SIZEHINT)
 {
-  auto obj = qobject_cast<QSizeGrip *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

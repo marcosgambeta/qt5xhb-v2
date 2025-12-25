@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QITEMEDITORFACTORY
+REQUEST QItemEditorFactory
 #endif
 
 CLASS QItemDelegate INHERIT QAbstractItemDelegate
@@ -53,9 +53,9 @@ RETURN
 #include <QtWidgets/QItemDelegate>
 #endif
 
-    /*
-    QItemDelegate(QObject * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QItemDelegate *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QItemDelegate(QObject *parent = nullptr)
 HB_FUNC_STATIC(QITEMDELEGATE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QITEMDELEGATE_NEW)
 
 HB_FUNC_STATIC(QITEMDELEGATE_DELETE)
 {
-  auto obj = qobject_cast<QItemDelegate *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -83,12 +83,10 @@ HB_FUNC_STATIC(QITEMDELEGATE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool hasClipping() const
-*/
+// bool hasClipping() const
 HB_FUNC_STATIC(QITEMDELEGATE_HASCLIPPING)
 {
-  auto obj = qobject_cast<QItemDelegate *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,12 +101,10 @@ HB_FUNC_STATIC(QITEMDELEGATE_HASCLIPPING)
   }
 }
 
-/*
-QItemEditorFactory * itemEditorFactory() const
-*/
+// QItemEditorFactory *itemEditorFactory() const
 HB_FUNC_STATIC(QITEMDELEGATE_ITEMEDITORFACTORY)
 {
-  auto obj = qobject_cast<QItemDelegate *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,12 +120,10 @@ HB_FUNC_STATIC(QITEMDELEGATE_ITEMEDITORFACTORY)
   }
 }
 
-/*
-void setClipping(bool clip)
-*/
+// void setClipping(bool clip)
 HB_FUNC_STATIC(QITEMDELEGATE_SETCLIPPING)
 {
-  auto obj = qobject_cast<QItemDelegate *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,12 +140,10 @@ HB_FUNC_STATIC(QITEMDELEGATE_SETCLIPPING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setItemEditorFactory(QItemEditorFactory * factory)
-*/
+// void setItemEditorFactory(QItemEditorFactory *factory)
 HB_FUNC_STATIC(QITEMDELEGATE_SETITEMEDITORFACTORY)
 {
-  auto obj = qobject_cast<QItemDelegate *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

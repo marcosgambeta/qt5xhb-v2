@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPAINTERPATH
+REQUEST QPainterPath
 #endif
 
 CLASS QMouseEventTransition INHERIT QEventTransition
@@ -57,21 +57,21 @@ RETURN
 
 #include <QtGui/QPainterPath>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QMouseEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQSTATEORNIL(1)) {
-    /*
-    QMouseEventTransition(QState * sourceState = nullptr)
-    */
+    // QMouseEventTransition(QState *sourceState = nullptr)
     auto obj = new QMouseEventTransition(OPQSTATE(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else if (ISBETWEEN(3, 4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQSTATEORNIL(4)) {
-    /*
-    QMouseEventTransition(QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = nullptr)
-    */
+    // QMouseEventTransition(QObject *object, QEvent::Type type, Qt::MouseButton button, QState *sourceState = nullptr)
     auto obj = new QMouseEventTransition(PQOBJECT(1), static_cast<QEvent::Type>(hb_parni(2)),
                                          static_cast<Qt::MouseButton>(hb_parni(3)), OPQSTATE(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
+
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_NEW)
 
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_DELETE)
 {
-  auto obj = qobject_cast<QMouseEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -94,12 +94,10 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::MouseButton button() const
-*/
+// Qt::MouseButton button() const
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_BUTTON)
 {
-  auto obj = qobject_cast<QMouseEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,19 +112,16 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_BUTTON)
   }
 }
 
-/*
-QPainterPath hitTestPath() const
-*/
+// QPainterPath hitTestPath() const
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_HITTESTPATH)
 {
-  auto obj = qobject_cast<QMouseEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPainterPath(obj->hitTestPath());
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->hitTestPath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -135,12 +130,10 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_HITTESTPATH)
   }
 }
 
-/*
-Qt::KeyboardModifiers modifierMask() const
-*/
+// Qt::KeyboardModifiers modifierMask() const
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_MODIFIERMASK)
 {
-  auto obj = qobject_cast<QMouseEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,12 +148,10 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_MODIFIERMASK)
   }
 }
 
-/*
-void setButton(Qt::MouseButton button)
-*/
+// void setButton(Qt::MouseButton button)
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETBUTTON)
 {
-  auto obj = qobject_cast<QMouseEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,12 +168,10 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETBUTTON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHitTestPath(const QPainterPath &path)
-*/
+// void setHitTestPath(const QPainterPath &path)
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETHITTESTPATH)
 {
-  auto obj = qobject_cast<QMouseEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,12 +188,10 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETHITTESTPATH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setModifierMask(Qt::KeyboardModifiers modifierMask)
-*/
+// void setModifierMask(Qt::KeyboardModifiers modifierMask)
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETMODIFIERMASK)
 {
-  auto obj = qobject_cast<QMouseEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
