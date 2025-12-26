@@ -1462,53 +1462,34 @@ HB_FUNC_STATIC(QIMAGE_CONVERTTO)
 #endif
 }
 
-/*
-QVariant toVariant()
-*/
-void QImage_toVariant1()
-{
-  auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
-
-  if (obj != nullptr) {
-    QVariant *variant = new QVariant();
-    variant->setValue<QImage>(*obj);
-    Qt5xHb::createReturnClass(variant, "QVARIANT", true);
-  }
-}
-
-/*
-static QVariant toVariant(const QImage &)
-*/
-void QImage_toVariant2()
-{
-  QImage *image = (QImage *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
-  QVariant *variant = new QVariant();
-  variant->setValue<QImage>(*image);
-  Qt5xHb::createReturnClass(variant, "QVARIANT", true);
-}
-
-//[1]QVariant toVariant()
-//[2]static QVariant toVariant(const QImage &)
-
 HB_FUNC_STATIC(QIMAGE_TOVARIANT)
 {
   if (ISNUMPAR(0)) {
-    QImage_toVariant1();
+    // QVariant toVariant()
+    auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
+
+    if (obj != nullptr) {
+      auto variant = new QVariant();
+      variant->setValue<QImage>(*obj);
+      Qt5xHb::createReturnClass(variant, "QVARIANT", true);
+    }
   } else if (ISNUMPAR(1) && ISQIMAGE(1)) {
-    QImage_toVariant2();
+    // static QVariant toVariant(const QImage &)
+    auto image = static_cast<QImage *>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    auto variant = new QVariant();
+    variant->setValue<QImage>(*image);
+    Qt5xHb::createReturnClass(variant, "QVARIANT", true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-static QImage fromVariant(const QVariant &)
-*/
+// static QImage fromVariant(const QVariant &)
 HB_FUNC_STATIC(QIMAGE_FROMVARIANT)
 {
   if (ISNUMPAR(1) && ISQVARIANT(1)) {
-    QVariant *variant = (QVariant *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
-    QImage *image = new QImage(variant->value<QImage>());
+    auto variant = static_cast<QVariant *>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    auto image = new QImage(variant->value<QImage>());
     Qt5xHb::createReturnClass(image, "QIMAGE", true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

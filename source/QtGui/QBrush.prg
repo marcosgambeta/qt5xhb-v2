@@ -489,53 +489,34 @@ HB_FUNC_STATIC(QBRUSH_TRANSFORM)
   }
 }
 
-/*
-QVariant toVariant()
-*/
-void QBrush_toVariant1()
-{
-  auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
-
-  if (obj != nullptr) {
-    QVariant *variant = new QVariant();
-    variant->setValue<QBrush>(*obj);
-    Qt5xHb::createReturnClass(variant, "QVARIANT", true);
-  }
-}
-
-/*
-static QVariant toVariant(const QBrush &)
-*/
-void QBrush_toVariant2()
-{
-  QBrush *brush = (QBrush *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
-  QVariant *variant = new QVariant();
-  variant->setValue<QBrush>(*brush);
-  Qt5xHb::createReturnClass(variant, "QVARIANT", true);
-}
-
-//[1]QVariant toVariant()
-//[2]static QVariant toVariant(const QBrush &)
-
 HB_FUNC_STATIC(QBRUSH_TOVARIANT)
 {
   if (ISNUMPAR(0)) {
-    QBrush_toVariant1();
+    // QVariant toVariant()
+    auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
+
+    if (obj != nullptr) {
+      auto variant = new QVariant();
+      variant->setValue<QBrush>(*obj);
+      Qt5xHb::createReturnClass(variant, "QVARIANT", true);
+    }
   } else if (ISNUMPAR(1) && ISQBRUSH(1)) {
-    QBrush_toVariant2();
+    // static QVariant toVariant(const QBrush &)
+    auto brush = static_cast<QBrush *>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    auto variant = new QVariant();
+    variant->setValue<QBrush>(*brush);
+    Qt5xHb::createReturnClass(variant, "QVARIANT", true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-static QBrush fromVariant(const QVariant &)
-*/
+// static QBrush fromVariant(const QVariant &)
 HB_FUNC_STATIC(QBRUSH_FROMVARIANT)
 {
   if (ISNUMPAR(1) && ISQVARIANT(1)) {
-    QVariant *variant = (QVariant *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
-    QBrush *brush = new QBrush(variant->value<QBrush>());
+    auto variant = static_cast<QVariant *>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    auto brush = new QBrush(variant->value<QBrush>());
     Qt5xHb::createReturnClass(brush, "QBRUSH", true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

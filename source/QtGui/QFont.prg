@@ -1332,53 +1332,34 @@ HB_FUNC_STATIC(QFONT_SUBSTITUTIONS)
 #endif
 }
 
-/*
-QVariant toVariant()
-*/
-void QFont_toVariant1()
-{
-  auto obj = static_cast<QFont *>(Qt5xHb::itemGetPtrStackSelfItem());
-
-  if (obj != nullptr) {
-    QVariant *variant = new QVariant();
-    variant->setValue<QFont>(*obj);
-    Qt5xHb::createReturnClass(variant, "QVARIANT", true);
-  }
-}
-
-/*
-static QVariant toVariant(const QFont &)
-*/
-void QFont_toVariant2()
-{
-  QFont *font = (QFont *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
-  QVariant *variant = new QVariant();
-  variant->setValue<QFont>(*font);
-  Qt5xHb::createReturnClass(variant, "QVARIANT", true);
-}
-
-//[1]QVariant toVariant()
-//[2]static QVariant toVariant(const QFont &)
-
 HB_FUNC_STATIC(QFONT_TOVARIANT)
 {
   if (ISNUMPAR(0)) {
-    QFont_toVariant1();
+    // QVariant toVariant()
+    auto obj = static_cast<QFont *>(Qt5xHb::itemGetPtrStackSelfItem());
+
+    if (obj != nullptr) {
+      auto variant = new QVariant();
+      variant->setValue<QFont>(*obj);
+      Qt5xHb::createReturnClass(variant, "QVARIANT", true);
+    }
   } else if (ISNUMPAR(1) && ISQFONT(1)) {
-    QFont_toVariant2();
+    // static QVariant toVariant(const QFont &)
+    auto font = static_cast<QFont *>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    auto variant = new QVariant();
+    variant->setValue<QFont>(*font);
+    Qt5xHb::createReturnClass(variant, "QVARIANT", true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-static QFont fromVariant(const QVariant &)
-*/
+// static QFont fromVariant(const QVariant &)
 HB_FUNC_STATIC(QFONT_FROMVARIANT)
 {
   if (ISNUMPAR(1) && ISQVARIANT(1)) {
-    QVariant *variant = (QVariant *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
-    QFont *font = new QFont(variant->value<QFont>());
+    auto variant = static_cast<QVariant *>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    auto font = new QFont(variant->value<QFont>());
     Qt5xHb::createReturnClass(font, "QFONT", true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

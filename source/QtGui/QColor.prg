@@ -2031,53 +2031,34 @@ HB_FUNC(QRGBA)
   }
 }
 
-/*
-QVariant toVariant()
-*/
-void QColor_toVariant1()
-{
-  auto obj = static_cast<QColor *>(Qt5xHb::itemGetPtrStackSelfItem());
-
-  if (obj != nullptr) {
-    QVariant *variant = new QVariant();
-    variant->setValue<QColor>(*obj);
-    Qt5xHb::createReturnClass(variant, "QVARIANT", true);
-  }
-}
-
-/*
-static QVariant toVariant(const QColor &)
-*/
-void QColor_toVariant2()
-{
-  QColor *color = (QColor *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
-  QVariant *variant = new QVariant();
-  variant->setValue<QColor>(*color);
-  Qt5xHb::createReturnClass(variant, "QVARIANT", true);
-}
-
-//[1]QVariant toVariant()
-//[2]static QVariant toVariant(const QColor &)
-
 HB_FUNC_STATIC(QCOLOR_TOVARIANT)
 {
   if (ISNUMPAR(0)) {
-    QColor_toVariant1();
+    // QVariant toVariant()
+    auto obj = static_cast<QColor *>(Qt5xHb::itemGetPtrStackSelfItem());
+
+    if (obj != nullptr) {
+      auto variant = new QVariant();
+      variant->setValue<QColor>(*obj);
+      Qt5xHb::createReturnClass(variant, "QVARIANT", true);
+    }
   } else if (ISNUMPAR(1) && ISQCOLOR(1)) {
-    QColor_toVariant2();
+    // static QVariant toVariant(const QColor &)
+    auto color = static_cast<QColor *>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    auto variant = new QVariant();
+    variant->setValue<QColor>(*color);
+    Qt5xHb::createReturnClass(variant, "QVARIANT", true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-static QColor fromVariant(const QVariant &)
-*/
+// static QColor fromVariant(const QVariant &)
 HB_FUNC_STATIC(QCOLOR_FROMVARIANT)
 {
   if (ISNUMPAR(1) && ISQVARIANT(1)) {
-    QVariant *variant = (QVariant *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
-    QColor *color = new QColor(variant->value<QColor>());
+    auto variant = static_cast<QVariant *>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    auto color = new QColor(variant->value<QColor>());
     Qt5xHb::createReturnClass(color, "QCOLOR", true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

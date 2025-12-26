@@ -1031,53 +1031,34 @@ HB_FUNC_STATIC(QPIXMAP_FROMIMAGEREADER)
 #endif
 }
 
-/*
-QVariant toVariant()
-*/
-void QPixmap_toVariant1()
-{
-  auto obj = static_cast<QPixmap *>(Qt5xHb::itemGetPtrStackSelfItem());
-
-  if (obj != nullptr) {
-    QVariant *variant = new QVariant();
-    variant->setValue<QPixmap>(*obj);
-    Qt5xHb::createReturnClass(variant, "QVARIANT", true);
-  }
-}
-
-/*
-static QVariant toVariant(const QPixmap &)
-*/
-void QPixmap_toVariant2()
-{
-  QPixmap *pixmap = (QPixmap *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
-  QVariant *variant = new QVariant();
-  variant->setValue<QPixmap>(*pixmap);
-  Qt5xHb::createReturnClass(variant, "QVARIANT", true);
-}
-
-//[1]QVariant toVariant()
-//[2]static QVariant toVariant(const QPixmap &)
-
 HB_FUNC_STATIC(QPIXMAP_TOVARIANT)
 {
   if (ISNUMPAR(0)) {
-    QPixmap_toVariant1();
+    // QVariant toVariant()
+    auto obj = static_cast<QPixmap *>(Qt5xHb::itemGetPtrStackSelfItem());
+
+    if (obj != nullptr) {
+      auto variant = new QVariant();
+      variant->setValue<QPixmap>(*obj);
+      Qt5xHb::createReturnClass(variant, "QVARIANT", true);
+    }
   } else if (ISNUMPAR(1) && ISQPIXMAP(1)) {
-    QPixmap_toVariant2();
+    // static QVariant toVariant(const QPixmap &)
+    auto pixmap = static_cast<QPixmap *>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    auto variant = new QVariant();
+    variant->setValue<QPixmap>(*pixmap);
+    Qt5xHb::createReturnClass(variant, "QVARIANT", true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-static QPixmap fromVariant(const QVariant &)
-*/
+// static QPixmap fromVariant(const QVariant &)
 HB_FUNC_STATIC(QPIXMAP_FROMVARIANT)
 {
   if (ISNUMPAR(1) && ISQVARIANT(1)) {
-    QVariant *variant = (QVariant *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
-    QPixmap *pixmap = new QPixmap(variant->value<QPixmap>());
+    auto variant = static_cast<QVariant *>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    auto pixmap = new QPixmap(variant->value<QPixmap>());
     Qt5xHb::createReturnClass(pixmap, "QPIXMAP", true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

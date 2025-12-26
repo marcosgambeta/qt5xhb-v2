@@ -519,53 +519,34 @@ HB_FUNC_STATIC(QICON_SETFALLBACKTHEMENAME)
 #endif
 }
 
-/*
-QVariant toVariant()
-*/
-void QIcon_toVariant1()
-{
-  auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
-
-  if (obj != nullptr) {
-    QVariant *variant = new QVariant();
-    variant->setValue<QIcon>(*obj);
-    Qt5xHb::createReturnClass(variant, "QVARIANT", true);
-  }
-}
-
-/*
-static QVariant toVariant(const QIcon &)
-*/
-void QIcon_toVariant2()
-{
-  QIcon *icon = (QIcon *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
-  QVariant *variant = new QVariant();
-  variant->setValue<QIcon>(*icon);
-  Qt5xHb::createReturnClass(variant, "QVARIANT", true);
-}
-
-//[1]QVariant toVariant()
-//[2]static QVariant toVariant(const QIcon &)
-
 HB_FUNC_STATIC(QICON_TOVARIANT)
 {
   if (ISNUMPAR(0)) {
-    QIcon_toVariant1();
+    // QVariant toVariant()
+    auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
+
+    if (obj != nullptr) {
+      auto variant = new QVariant();
+      variant->setValue<QIcon>(*obj);
+      Qt5xHb::createReturnClass(variant, "QVARIANT", true);
+    }
   } else if (ISNUMPAR(1) && ISQICON(1)) {
-    QIcon_toVariant2();
+    // static QVariant toVariant(const QIcon &)
+    auto icon = static_cast<QIcon *>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    auto variant = new QVariant();
+    variant->setValue<QIcon>(*icon);
+    Qt5xHb::createReturnClass(variant, "QVARIANT", true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-static QIcon fromVariant(const QVariant &)
-*/
+// static QIcon fromVariant(const QVariant &)
 HB_FUNC_STATIC(QICON_FROMVARIANT)
 {
   if (ISNUMPAR(1) && ISQVARIANT(1)) {
-    QVariant *variant = (QVariant *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
-    QIcon *icon = new QIcon(variant->value<QIcon>());
+    auto variant = static_cast<QVariant *>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    auto icon = new QIcon(variant->value<QIcon>());
     Qt5xHb::createReturnClass(icon, "QICON", true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
