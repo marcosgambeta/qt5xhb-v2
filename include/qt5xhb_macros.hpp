@@ -210,4 +210,16 @@
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
 //#define QSTRINGTOSTRING(x)                                  (const char *) x.toUtf8().data()
 
+// delete macro
+#define DELETE_QOBJECT(object) \
+  if (object != nullptr) { \
+    Qt5xHb::Events_disconnect_all_events(object, true); \
+    Qt5xHb::Signals_disconnect_all_signals(object, true); \
+    delete object; \
+    object = nullptr; \
+    auto ptr = hb_itemPutPtr(nullptr, nullptr); \
+    hb_objSendMsg(hb_stackSelfItem(), "_POINTER", 1, ptr); \
+    hb_itemRelease(ptr); \
+  }
+
 #endif // QT5XHB_MACROS_HPP
