@@ -45,77 +45,83 @@ Follow the installer instructions to install the Qt Framework (MinGW version) 32
 
 #### Compiling the Harbour 3.2.0dev
 
+(work in progress)
+
 #### Compiling the Harbour 3.4.0dev
 
 Get the Harbour source code. Open a command prompt and follow the instructions below:
 
 Add the C++ compiler to the path:  
-´´´
+```Batch
 set PATH=C:\Qt\Tools\mingw810_32\bin;%PATH%
-´´´
+```
 or  
-´´´
+```Batch
 set PATH=C:\Qt\Tools\mingw810_64\bin;%PATH%
-´´´
+```
 
 Define the folder where the binaries will be installed:  
-´´´
+```Batch
 set HB_INSTALL_PREFIX=C:\Harbour
-´´´
+```
 
 Compile the Harbour source code, executing the command below:   
-´´´
+```Batch
 mingw32-make -j %NUMBER_OF_PROCESSORS% install
-´´´
+```
 
 #### Compiling the xHarbour source code
 
+(work in progress)
+
 #### Compiling the Harbour++ source code
+
+(work in progress)
 
 #### Compiling the Qt5xHb source code
 
 Get the Qt5xHb source code. Open a command prompt and follow the instructions below:
 
 Add the bin folders of the C++ compiler, Qt Framework and Harbour to PATH:  
-´´´
+```Batch
 set PATH=C:\Qt\Tools\mingw810_32\bin;%PATH%
 set PATH=C:\Qt\5.15.2\mingw81_32\bin;%PATH%
 set PATH=C:\Harbour\bin;%PATH%
-´´´
+```
 or  
-´´´
+```Batch
 set PATH=C:\Qt\Tools\mingw810_64\bin;%PATH%
 set PATH=C:\Qt\5.15.2\mingw81_64\bin;%PATH%
 set PATH=C:\Harbour\bin;%PATH%
-´´´
+```
 
 Define the variables QT_INC_DIR and QT_LIB_DIR:  
-´´´
+```Batch
 set QT_INC_DIR=C:\Qt\5.15.2\mingw81_32\include
 set QT_LIB_DIR=C:\Qt\5.15.2\mingw81_32\lib
-´´´
+```
 or  
-´´´
+```Batch
 set QT_INC_DIR=C:\Qt\5.15.2\mingw81_64\include
 set QT_LIB_DIR=C:\Qt\5.15.2\mingw81_64\lib
-´´´
+```
 
 Compile the libraries using the hbmk2 tool:  
-´´´
+```Batch
 hbmk2 qt5xhb.hbp -jobs=%NUMBER_OF_PROCESSORS%
-´´´
+```
 
 Test the libraries:
-´´´
+```Batch
 cd examples
 hbmk2 mainwindow ../qt5xhb_515.hbc -gc3 -gtgui <ENTER>
 mainwindow <ENTER>
-´´´
+```
 
 Test the windeployqt tool:  
-´´´
+```Batch
 windeployqt mainwindow.exe <ENTER>
-´´´
+```
 
 Execute the mainwindow.exe with a double click.
 
