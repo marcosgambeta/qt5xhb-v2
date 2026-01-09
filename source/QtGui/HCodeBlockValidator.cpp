@@ -63,5 +63,7 @@ QValidator::State HCodeBlockValidator::validate(QString &input, int &pos) const
 
 void HCodeBlockValidator::fixup(QString &input) const
 {
+  HB_SYMBOL_UNUSED(input);
+
   // TODO: implementar
 }
