@@ -29,6 +29,96 @@ Open a issue if you have problems with the compilation:
 
 https://github.com/marcosgambeta/qt5xhb-v2/issues  
 
+### Using Qt 5.15.2 (MS-Windows and MinGW)
+
+#### Installing the Qt Framework 5.15
+
+Get the installer in the link below:
+
+https://www.qt.io/development/download-open-source
+
+The installer require login and password. Register here if necessary:
+
+https://login.qt.io/register
+
+Follow the installer instructions to install the Qt Framework (MinGW version) 32-bit and/or 64-bit.
+
+#### Compiling the Harbour 3.2.0dev
+
+#### Compiling the Harbour 3.4.0dev
+
+Get the Harbour source code. Open a command prompt and follow the instructions below:
+
+Add the C++ compiler to the path:  
+´´´
+set PATH=C:\Qt\Tools\mingw810_32\bin;%PATH%
+´´´
+or  
+´´´
+set PATH=C:\Qt\Tools\mingw810_64\bin;%PATH%
+´´´
+
+Define the folder where the binaries will be installed:  
+´´´
+set HB_INSTALL_PREFIX=C:\Harbour
+´´´
+
+Compile the Harbour source code, executing the command below:   
+´´´
+mingw32-make -j %NUMBER_OF_PROCESSORS% install
+´´´
+
+#### Compiling the xHarbour source code
+
+#### Compiling the Harbour++ source code
+
+#### Compiling the Qt5xHb source code
+
+Get the Qt5xHb source code. Open a command prompt and follow the instructions below:
+
+Add the bin folders of the C++ compiler, Qt Framework and Harbour to PATH:  
+´´´
+set PATH=C:\Qt\Tools\mingw810_32\bin;%PATH%
+set PATH=C:\Qt\5.15.2\mingw81_32\bin;%PATH%
+set PATH=C:\Harbour\bin;%PATH%
+´´´
+or  
+´´´
+set PATH=C:\Qt\Tools\mingw810_64\bin;%PATH%
+set PATH=C:\Qt\5.15.2\mingw81_64\bin;%PATH%
+set PATH=C:\Harbour\bin;%PATH%
+´´´
+
+Define the variables QT_INC_DIR and QT_LIB_DIR:  
+´´´
+set QT_INC_DIR=C:\Qt\5.15.2\mingw81_32\include
+set QT_LIB_DIR=C:\Qt\5.15.2\mingw81_32\lib
+´´´
+or  
+´´´
+set QT_INC_DIR=C:\Qt\5.15.2\mingw81_64\include
+set QT_LIB_DIR=C:\Qt\5.15.2\mingw81_64\lib
+´´´
+
+Compile the libraries using the hbmk2 tool:  
+´´´
+hbmk2 qt5xhb.hbp -jobs=%NUMBER_OF_PROCESSORS%
+´´´
+
+Test the libraries:
+´´´
+cd examples
+hbmk2 mainwindow ../qt5xhb_515.hbc -gc3 -gtgui <ENTER>
+mainwindow <ENTER>
+´´´
+
+Test the windeployqt tool:  
+´´´
+windeployqt mainwindow.exe <ENTER>
+´´´
+
+Execute the mainwindow.exe with a double click.
+
 ## Portuguese
 
 Bibliotecas de ligação para Harbour++/Harbour/xHarbour e Qt Framework 5.
