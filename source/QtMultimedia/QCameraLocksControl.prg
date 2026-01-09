@@ -53,12 +53,12 @@ RETURN
 #include <QtMultimedia/QCameraLocksControl>
 #endif
 
-    /*
-    ~QCameraLocksControl()
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCameraLocksControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QCameraLocksControl()
 HB_FUNC_STATIC(QCAMERALOCKSCONTROL_DELETE)
 {
-  auto obj = qobject_cast<QCameraLocksControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -73,12 +73,10 @@ HB_FUNC_STATIC(QCAMERALOCKSCONTROL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QCamera::LockStatus lockStatus(QCamera::LockType lock) const = 0
-*/
+// virtual QCamera::LockStatus lockStatus(QCamera::LockType lock) const = 0
 HB_FUNC_STATIC(QCAMERALOCKSCONTROL_LOCKSTATUS)
 {
-  auto obj = qobject_cast<QCameraLocksControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -93,12 +91,10 @@ HB_FUNC_STATIC(QCAMERALOCKSCONTROL_LOCKSTATUS)
   }
 }
 
-/*
-virtual void searchAndLock(QCamera::LockTypes locks) = 0
-*/
+// virtual void searchAndLock(QCamera::LockTypes locks) = 0
 HB_FUNC_STATIC(QCAMERALOCKSCONTROL_SEARCHANDLOCK)
 {
-  auto obj = qobject_cast<QCameraLocksControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,12 +111,10 @@ HB_FUNC_STATIC(QCAMERALOCKSCONTROL_SEARCHANDLOCK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QCamera::LockTypes supportedLocks() const = 0
-*/
+// virtual QCamera::LockTypes supportedLocks() const = 0
 HB_FUNC_STATIC(QCAMERALOCKSCONTROL_SUPPORTEDLOCKS)
 {
-  auto obj = qobject_cast<QCameraLocksControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,12 +129,10 @@ HB_FUNC_STATIC(QCAMERALOCKSCONTROL_SUPPORTEDLOCKS)
   }
 }
 
-/*
-virtual void unlock(QCamera::LockTypes locks) = 0
-*/
+// virtual void unlock(QCamera::LockTypes locks) = 0
 HB_FUNC_STATIC(QCAMERALOCKSCONTROL_UNLOCK)
 {
-  auto obj = qobject_cast<QCameraLocksControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,12 +149,10 @@ HB_FUNC_STATIC(QCAMERALOCKSCONTROL_UNLOCK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void lockStatusChanged(QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason)
-*/
+// void lockStatusChanged(QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason)
 HB_FUNC_STATIC(QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED)
 {
-  auto sender = qobject_cast<QCameraLocksControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 

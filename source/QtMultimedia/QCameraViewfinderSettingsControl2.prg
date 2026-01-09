@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCAMERAVIEWFINDERSETTINGS
+REQUEST QCameraViewfinderSettings
 #endif
 
 CLASS QCameraViewfinderSettingsControl2 INHERIT QMediaControl
@@ -55,13 +55,13 @@ RETURN
 #endif
 #endif
 
-    /*
-    virtual ~QCameraViewfinderSettingsControl2()
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCameraViewfinderSettingsControl2 *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual ~QCameraViewfinderSettingsControl2()
 HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL2_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-  auto obj = qobject_cast<QCameraViewfinderSettingsControl2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -77,13 +77,11 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL2_DELETE)
 #endif
 }
 
-/*
-virtual QList<QCameraViewfinderSettings> supportedViewfinderSettings() const = 0
-*/
+// virtual QList<QCameraViewfinderSettings> supportedViewfinderSettings() const = 0
 HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL2_SUPPORTEDVIEWFINDERSETTINGS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-  auto obj = qobject_cast<QCameraViewfinderSettingsControl2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,20 +119,17 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL2_SUPPORTEDVIEWFINDERSETTINGS)
 #endif
 }
 
-/*
-virtual QCameraViewfinderSettings viewfinderSettings() const = 0
-*/
+// virtual QCameraViewfinderSettings viewfinderSettings() const = 0
 HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL2_VIEWFINDERSETTINGS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-  auto obj = qobject_cast<QCameraViewfinderSettingsControl2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QCameraViewfinderSettings(obj->viewfinderSettings());
-      Qt5xHb::createReturnClass(ptr, "QCAMERAVIEWFINDERSETTINGS", true);
+      RQCAMERAVIEWFINDERSETTINGS(obj->viewfinderSettings());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -144,13 +139,11 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL2_VIEWFINDERSETTINGS)
 #endif
 }
 
-/*
-virtual void setViewfinderSettings(const QCameraViewfinderSettings &settings) = 0
-*/
+// virtual void setViewfinderSettings(const QCameraViewfinderSettings &settings) = 0
 HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL2_SETVIEWFINDERSETTINGS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-  auto obj = qobject_cast<QCameraViewfinderSettingsControl2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

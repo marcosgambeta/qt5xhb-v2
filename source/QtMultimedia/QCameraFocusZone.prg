@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECTF
+REQUEST QRectF
 #endif
 
 CLASS QCameraFocusZone
@@ -59,9 +59,9 @@ RETURN
 #include <QtMultimedia/QCameraFocusZone>
 #endif
 
-    /*
-    QCameraFocusZone(const QCameraFocusZone &other)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QCameraFocusZone *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QCameraFocusZone(const QCameraFocusZone &other)
 HB_FUNC_STATIC(QCAMERAFOCUSZONE_NEW)
 {
   if (ISNUMPAR(1) && ISQCAMERAFOCUSZONE(1)) {
@@ -72,12 +72,10 @@ HB_FUNC_STATIC(QCAMERAFOCUSZONE_NEW)
   }
 }
 
-/*
-~QCameraFocusZone()
-*/
+// ~QCameraFocusZone()
 HB_FUNC_STATIC(QCAMERAFOCUSZONE_DELETE)
 {
-  auto obj = static_cast<QCameraFocusZone *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     delete obj;
@@ -90,12 +88,10 @@ HB_FUNC_STATIC(QCAMERAFOCUSZONE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QCAMERAFOCUSZONE_ISVALID)
 {
-  auto obj = static_cast<QCameraFocusZone *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,12 +106,10 @@ HB_FUNC_STATIC(QCAMERAFOCUSZONE_ISVALID)
   }
 }
 
-/*
-QRectF area() const
-*/
+// QRectF area() const
 HB_FUNC_STATIC(QCAMERAFOCUSZONE_AREA)
 {
-  auto obj = static_cast<QCameraFocusZone *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,12 +124,10 @@ HB_FUNC_STATIC(QCAMERAFOCUSZONE_AREA)
   }
 }
 
-/*
-QCameraFocusZone::FocusZoneStatus status() const
-*/
+// QCameraFocusZone::FocusZoneStatus status() const
 HB_FUNC_STATIC(QCAMERAFOCUSZONE_STATUS)
 {
-  auto obj = static_cast<QCameraFocusZone *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,9 +142,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSZONE_STATUS)
   }
 }
 
-/*
-void setStatus(FocusZoneStatus status)
-*/
+// void setStatus(FocusZoneStatus status)
 
 HB_FUNC_STATIC(QCAMERAFOCUSZONE_NEWFROM)
 {

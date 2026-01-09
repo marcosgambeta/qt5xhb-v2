@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
+REQUEST QVariant
 #endif
 
 CLASS QCameraImageProcessingControl INHERIT QMediaControl
@@ -52,12 +52,12 @@ RETURN
 #include <QtMultimedia/QCameraImageProcessingControl>
 #endif
 
-    /*
-    ~QCameraImageProcessingControl()
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCameraImageProcessingControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QCameraImageProcessingControl()
 HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_DELETE)
 {
-  auto obj = qobject_cast<QCameraImageProcessingControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -72,12 +72,10 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool isParameterSupported(QCameraImageProcessingControl::ProcessingParameter parameter) const = 0
-*/
+// virtual bool isParameterSupported(QCameraImageProcessingControl::ProcessingParameter parameter) const = 0
 HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERSUPPORTED)
 {
-  auto obj = qobject_cast<QCameraImageProcessingControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -92,13 +90,10 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERSUPPORTED)
   }
 }
 
-/*
-virtual bool isParameterValueSupported(QCameraImageProcessingControl::ProcessingParameter parameter, const QVariant &
-value) const = 0
-*/
+// virtual bool isParameterValueSupported(QCameraImageProcessingControl::ProcessingParameter parameter, const QVariant &value) const = 0
 HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERVALUESUPPORTED)
 {
-  auto obj = qobject_cast<QCameraImageProcessingControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,12 +109,10 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERVALUESUPPORTED)
   }
 }
 
-/*
-virtual QVariant parameter(QCameraImageProcessingControl::ProcessingParameter parameter) const = 0
-*/
+// virtual QVariant parameter(QCameraImageProcessingControl::ProcessingParameter parameter) const = 0
 HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_PARAMETER)
 {
-  auto obj = qobject_cast<QCameraImageProcessingControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,12 +127,10 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_PARAMETER)
   }
 }
 
-/*
-virtual void setParameter(QCameraImageProcessingControl::ProcessingParameter parameter, const QVariant &value) = 0
-*/
+// virtual void setParameter(QCameraImageProcessingControl::ProcessingParameter parameter, const QVariant &value) = 0
 HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_SETPARAMETER)
 {
-  auto obj = qobject_cast<QCameraImageProcessingControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

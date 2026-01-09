@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QIMAGEENCODERSETTINGS
-REQUEST QMEDIAOBJECT
-REQUEST QSIZE
+REQUEST QImageEncoderSettings
+REQUEST QMediaObject
+REQUEST QSize
 #endif
 
 CLASS QCameraImageCapture INHERIT QObject,QMediaBindableInterface
@@ -80,9 +80,9 @@ RETURN
 #include <QtMultimedia/QCameraImageCapture>
 #endif
 
-    /*
-    QCameraImageCapture(QMediaObject * mediaObject, QObject * parent = nullptr)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QCameraImageCapture(QMediaObject *mediaObject, QObject *parent = nullptr)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQMEDIAOBJECT(1) && ISQOBJECTORNIL(2)) {
@@ -93,12 +93,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_NEW)
   }
 }
 
-/*
-~QCameraImageCapture()
-*/
+// ~QCameraImageCapture()
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_DELETE)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -113,12 +111,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isReadyForCapture() const
-*/
+// bool isReadyForCapture() const
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ISREADYFORCAPTURE)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,12 +129,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ISREADYFORCAPTURE)
   }
 }
 
-/*
-QMultimedia::AvailabilityStatus availability() const
-*/
+// QMultimedia::AvailabilityStatus availability() const
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_AVAILABILITY)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,12 +147,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_AVAILABILITY)
   }
 }
 
-/*
-QVideoFrame::PixelFormat bufferFormat() const
-*/
+// QVideoFrame::PixelFormat bufferFormat() const
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_BUFFERFORMAT)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,12 +165,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_BUFFERFORMAT)
   }
 }
 
-/*
-QCameraImageCapture::CaptureDestinations captureDestination() const
-*/
+// QCameraImageCapture::CaptureDestinations captureDestination() const
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_CAPTUREDESTINATION)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,19 +183,16 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_CAPTUREDESTINATION)
   }
 }
 
-/*
-QImageEncoderSettings encodingSettings() const
-*/
+// QImageEncoderSettings encodingSettings() const
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ENCODINGSETTINGS)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QImageEncoderSettings(obj->encodingSettings());
-      Qt5xHb::createReturnClass(ptr, "QIMAGEENCODERSETTINGS", true);
+      RQIMAGEENCODERSETTINGS(obj->encodingSettings());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -214,12 +201,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ENCODINGSETTINGS)
   }
 }
 
-/*
-QCameraImageCapture::Error error() const
-*/
+// QCameraImageCapture::Error error() const
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ERROR)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,12 +219,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ERROR)
   }
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ERRORSTRING)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -254,12 +237,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ERRORSTRING)
   }
 }
 
-/*
-QString imageCodecDescription(const QString &codecName) const
-*/
+// QString imageCodecDescription(const QString &codecName) const
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_IMAGECODECDESCRIPTION)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -274,12 +255,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_IMAGECODECDESCRIPTION)
   }
 }
 
-/*
-bool isAvailable() const
-*/
+// bool isAvailable() const
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ISAVAILABLE)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,12 +273,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ISAVAILABLE)
   }
 }
 
-/*
-bool isCaptureDestinationSupported(QCameraImageCapture::CaptureDestinations destination) const
-*/
+// bool isCaptureDestinationSupported(QCameraImageCapture::CaptureDestinations destination) const
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ISCAPTUREDESTINATIONSUPPORTED)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -314,12 +291,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ISCAPTUREDESTINATIONSUPPORTED)
   }
 }
 
-/*
-QMediaObject * mediaObject() const override
-*/
+// QMediaObject *mediaObject() const override
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_MEDIAOBJECT)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,12 +310,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_MEDIAOBJECT)
   }
 }
 
-/*
-void setBufferFormat(const QVideoFrame::PixelFormat format)
-*/
+// void setBufferFormat(const QVideoFrame::PixelFormat format)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SETBUFFERFORMAT)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -357,12 +330,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SETBUFFERFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCaptureDestination(QCameraImageCapture::CaptureDestinations destination)
-*/
+// void setCaptureDestination(QCameraImageCapture::CaptureDestinations destination)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SETCAPTUREDESTINATION)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -379,12 +350,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SETCAPTUREDESTINATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEncodingSettings(const QImageEncoderSettings &settings)
-*/
+// void setEncodingSettings(const QImageEncoderSettings &settings)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SETENCODINGSETTINGS)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -401,12 +370,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SETENCODINGSETTINGS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QVideoFrame::PixelFormat> supportedBufferFormats() const
-*/
+// QList<QVideoFrame::PixelFormat> supportedBufferFormats() const
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SUPPORTEDBUFFERFORMATS)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -428,12 +395,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SUPPORTEDBUFFERFORMATS)
   }
 }
 
-/*
-QStringList supportedImageCodecs() const
-*/
+// QStringList supportedImageCodecs() const
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SUPPORTEDIMAGECODECS)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -448,13 +413,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SUPPORTEDIMAGECODECS)
   }
 }
 
-/*
-QList<QSize> supportedResolutions(const QImageEncoderSettings &settings = QImageEncoderSettings(), bool * continuous =
-nullptr) const
-*/
+// QList<QSize> supportedResolutions(const QImageEncoderSettings &settings = QImageEncoderSettings(), bool *continuous = nullptr) const
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -494,12 +456,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS)
   }
 }
 
-/*
-void cancelCapture()
-*/
+// void cancelCapture()
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_CANCELCAPTURE)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -516,12 +476,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_CANCELCAPTURE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int capture(const QString &location = QString())
-*/
+// int capture(const QString &location = QString())
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_CAPTURE)
 {
-  auto obj = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -536,12 +494,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_CAPTURE)
   }
 }
 
-/*
-void bufferFormatChanged(QVideoFrame::PixelFormat format)
-*/
+// void bufferFormatChanged(QVideoFrame::PixelFormat format)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONBUFFERFORMATCHANGED)
 {
-  auto sender = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -580,12 +536,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONBUFFERFORMATCHANGED)
   hb_retl(result);
 }
 
-/*
-void captureDestinationChanged(QCameraImageCapture::CaptureDestinations destination)
-*/
+// void captureDestinationChanged(QCameraImageCapture::CaptureDestinations destination)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONCAPTUREDESTINATIONCHANGED)
 {
-  auto sender = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -625,12 +579,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONCAPTUREDESTINATIONCHANGED)
   hb_retl(result);
 }
 
-/*
-void error(int id, QCameraImageCapture::Error error, const QString &errorString)
-*/
+// void error(int id, QCameraImageCapture::Error error, const QString &errorString)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONERROR)
 {
-  auto sender = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -673,12 +625,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONERROR)
   hb_retl(result);
 }
 
-/*
-void imageAvailable(int id, const QVideoFrame &buffer)
-*/
+// void imageAvailable(int id, const QVideoFrame &buffer)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGEAVAILABLE)
 {
-  auto sender = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -719,12 +669,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGEAVAILABLE)
   hb_retl(result);
 }
 
-/*
-void imageCaptured(int id, const QImage &preview)
-*/
+// void imageCaptured(int id, const QImage &preview)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGECAPTURED)
 {
-  auto sender = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -764,12 +712,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGECAPTURED)
   hb_retl(result);
 }
 
-/*
-void imageExposed(int id)
-*/
+// void imageExposed(int id)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGEEXPOSED)
 {
-  auto sender = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -807,12 +753,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGEEXPOSED)
   hb_retl(result);
 }
 
-/*
-void imageMetadataAvailable(int id, const QString &key, const QVariant &value)
-*/
+// void imageMetadataAvailable(int id, const QString &key, const QVariant &value)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGEMETADATAAVAILABLE)
 {
-  auto sender = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -855,12 +799,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGEMETADATAAVAILABLE)
   hb_retl(result);
 }
 
-/*
-void imageSaved(int id, const QString &fileName)
-*/
+// void imageSaved(int id, const QString &fileName)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGESAVED)
 {
-  auto sender = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -900,12 +842,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGESAVED)
   hb_retl(result);
 }
 
-/*
-void readyForCaptureChanged(bool ready)
-*/
+// void readyForCaptureChanged(bool ready)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONREADYFORCAPTURECHANGED)
 {
-  auto sender = qobject_cast<QCameraImageCapture *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 

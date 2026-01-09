@@ -52,12 +52,12 @@ RETURN
 #include <QtMultimedia/QCameraCaptureBufferFormatControl>
 #endif
 
-    /*
-    ~QCameraCaptureBufferFormatControl()
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCameraCaptureBufferFormatControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QCameraCaptureBufferFormatControl()
 HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_DELETE)
 {
-  auto obj = qobject_cast<QCameraCaptureBufferFormatControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -72,12 +72,10 @@ HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QVideoFrame::PixelFormat bufferFormat() const = 0
-*/
+// virtual QVideoFrame::PixelFormat bufferFormat() const = 0
 HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_BUFFERFORMAT)
 {
-  auto obj = qobject_cast<QCameraCaptureBufferFormatControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -92,12 +90,10 @@ HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_BUFFERFORMAT)
   }
 }
 
-/*
-virtual void setBufferFormat(QVideoFrame::PixelFormat format) = 0
-*/
+// virtual void setBufferFormat(QVideoFrame::PixelFormat format) = 0
 HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_SETBUFFERFORMAT)
 {
-  auto obj = qobject_cast<QCameraCaptureBufferFormatControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,12 +110,10 @@ HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_SETBUFFERFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QList<QVideoFrame::PixelFormat> supportedBufferFormats() const = 0
-*/
+// virtual QList<QVideoFrame::PixelFormat> supportedBufferFormats() const = 0
 HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_SUPPORTEDBUFFERFORMATS)
 {
-  auto obj = qobject_cast<QCameraCaptureBufferFormatControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,12 +135,10 @@ HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_SUPPORTEDBUFFERFORMATS)
   }
 }
 
-/*
-void bufferFormatChanged(QVideoFrame::PixelFormat format)
-*/
+// void bufferFormatChanged(QVideoFrame::PixelFormat format)
 HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED)
 {
-  auto sender = qobject_cast<QCameraCaptureBufferFormatControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 

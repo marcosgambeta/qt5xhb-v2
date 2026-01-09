@@ -60,12 +60,12 @@ RETURN
 #include <QtMultimedia/QCameraImageCaptureControl>
 #endif
 
-    /*
-    ~QCameraImageCaptureControl()
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCameraImageCaptureControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QCameraImageCaptureControl()
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_DELETE)
 {
-  auto obj = qobject_cast<QCameraImageCaptureControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -80,12 +80,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void cancelCapture() = 0
-*/
+// virtual void cancelCapture() = 0
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE)
 {
-  auto obj = qobject_cast<QCameraImageCaptureControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -102,12 +100,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int capture(const QString &fileName) = 0
-*/
+// virtual int capture(const QString &fileName) = 0
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_CAPTURE)
 {
-  auto obj = qobject_cast<QCameraImageCaptureControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,12 +118,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_CAPTURE)
   }
 }
 
-/*
-virtual QCameraImageCapture::DriveMode driveMode() const = 0
-*/
+// virtual QCameraImageCapture::DriveMode driveMode() const = 0
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_DRIVEMODE)
 {
-  auto obj = qobject_cast<QCameraImageCaptureControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,12 +136,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_DRIVEMODE)
   }
 }
 
-/*
-virtual bool isReadyForCapture() const = 0
-*/
+// virtual bool isReadyForCapture() const = 0
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE)
 {
-  auto obj = qobject_cast<QCameraImageCaptureControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,12 +154,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE)
   }
 }
 
-/*
-virtual void setDriveMode(QCameraImageCapture::DriveMode mode) = 0
-*/
+// virtual void setDriveMode(QCameraImageCapture::DriveMode mode) = 0
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE)
 {
-  auto obj = qobject_cast<QCameraImageCaptureControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,12 +174,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void error(int id, int error, const QString &errorString)
-*/
+// void error(int id, int error, const QString &errorString)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONERROR)
 {
-  auto sender = qobject_cast<QCameraImageCaptureControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -232,12 +220,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONERROR)
   hb_retl(result);
 }
 
-/*
-void imageAvailable(int requestId, const QVideoFrame &buffer)
-*/
+// void imageAvailable(int requestId, const QVideoFrame &buffer)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE)
 {
-  auto sender = qobject_cast<QCameraImageCaptureControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -278,12 +264,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE)
   hb_retl(result);
 }
 
-/*
-void imageCaptured(int requestId, const QImage &preview)
-*/
+// void imageCaptured(int requestId, const QImage &preview)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED)
 {
-  auto sender = qobject_cast<QCameraImageCaptureControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -324,12 +308,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED)
   hb_retl(result);
 }
 
-/*
-void imageExposed(int requestId)
-*/
+// void imageExposed(int requestId)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED)
 {
-  auto sender = qobject_cast<QCameraImageCaptureControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -367,12 +349,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED)
   hb_retl(result);
 }
 
-/*
-void imageMetadataAvailable(int id, const QString &key, const QVariant &value)
-*/
+// void imageMetadataAvailable(int id, const QString &key, const QVariant &value)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE)
 {
-  auto sender = qobject_cast<QCameraImageCaptureControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -415,12 +395,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE)
   hb_retl(result);
 }
 
-/*
-void imageSaved(int requestId, const QString &fileName)
-*/
+// void imageSaved(int requestId, const QString &fileName)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED)
 {
-  auto sender = qobject_cast<QCameraImageCaptureControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -460,12 +438,10 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED)
   hb_retl(result);
 }
 
-/*
-void readyForCaptureChanged(bool ready)
-*/
+// void readyForCaptureChanged(bool ready)
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONREADYFORCAPTURECHANGED)
 {
-  auto sender = qobject_cast<QCameraImageCaptureControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 

@@ -52,12 +52,12 @@ RETURN
 #include <QtMultimedia/QCameraCaptureDestinationControl>
 #endif
 
-    /*
-    ~QCameraCaptureDestinationControl()
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCameraCaptureDestinationControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QCameraCaptureDestinationControl()
 HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_DELETE)
 {
-  auto obj = qobject_cast<QCameraCaptureDestinationControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -72,12 +72,10 @@ HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QCameraImageCapture::CaptureDestinations captureDestination() const = 0
-*/
+// virtual QCameraImageCapture::CaptureDestinations captureDestination() const = 0
 HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_CAPTUREDESTINATION)
 {
-  auto obj = qobject_cast<QCameraCaptureDestinationControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -92,12 +90,10 @@ HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_CAPTUREDESTINATION)
   }
 }
 
-/*
-virtual bool isCaptureDestinationSupported(QCameraImageCapture::CaptureDestinations destination) const = 0
-*/
+// virtual bool isCaptureDestinationSupported(QCameraImageCapture::CaptureDestinations destination) const = 0
 HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_ISCAPTUREDESTINATIONSUPPORTED)
 {
-  auto obj = qobject_cast<QCameraCaptureDestinationControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,12 +108,10 @@ HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_ISCAPTUREDESTINATIONSUPPORTED)
   }
 }
 
-/*
-virtual void setCaptureDestination(QCameraImageCapture::CaptureDestinations destination) = 0
-*/
+// virtual void setCaptureDestination(QCameraImageCapture::CaptureDestinations destination) = 0
 HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_SETCAPTUREDESTINATION)
 {
-  auto obj = qobject_cast<QCameraCaptureDestinationControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,12 +128,10 @@ HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_SETCAPTUREDESTINATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void captureDestinationChanged(QCameraImageCapture::CaptureDestinations destination)
-*/
+// void captureDestinationChanged(QCameraImageCapture::CaptureDestinations destination)
 HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_ONCAPTUREDESTINATIONCHANGED)
 {
-  auto sender = qobject_cast<QCameraCaptureDestinationControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 

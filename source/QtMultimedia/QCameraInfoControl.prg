@@ -53,13 +53,13 @@ RETURN
 #endif
 #endif
 
-    /*
-    virtual ~QCameraInfoControl()
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCameraInfoControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual ~QCameraInfoControl()
 HB_FUNC_STATIC(QCAMERAINFOCONTROL_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  auto obj = qobject_cast<QCameraInfoControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -75,13 +75,11 @@ HB_FUNC_STATIC(QCAMERAINFOCONTROL_DELETE)
 #endif
 }
 
-/*
-virtual QCamera::Position cameraPosition(const QString &deviceName) const = 0
-*/
+// virtual QCamera::Position cameraPosition(const QString &deviceName) const = 0
 HB_FUNC_STATIC(QCAMERAINFOCONTROL_CAMERAPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  auto obj = qobject_cast<QCameraInfoControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -97,13 +95,11 @@ HB_FUNC_STATIC(QCAMERAINFOCONTROL_CAMERAPOSITION)
 #endif
 }
 
-/*
-virtual int cameraOrientation(const QString &deviceName) const = 0
-*/
+// virtual int cameraOrientation(const QString &deviceName) const = 0
 HB_FUNC_STATIC(QCAMERAINFOCONTROL_CAMERAORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  auto obj = qobject_cast<QCameraInfoControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

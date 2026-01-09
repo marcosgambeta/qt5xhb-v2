@@ -61,12 +61,12 @@ RETURN
 #include <QtMultimedia/QCameraZoomControl>
 #endif
 
-    /*
-    ~QCameraZoomControl()
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCameraZoomControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QCameraZoomControl()
 HB_FUNC_STATIC(QCAMERAZOOMCONTROL_DELETE)
 {
-  auto obj = qobject_cast<QCameraZoomControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -81,12 +81,10 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual qreal currentDigitalZoom() const = 0
-*/
+// virtual qreal currentDigitalZoom() const = 0
 HB_FUNC_STATIC(QCAMERAZOOMCONTROL_CURRENTDIGITALZOOM)
 {
-  auto obj = qobject_cast<QCameraZoomControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -101,12 +99,10 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_CURRENTDIGITALZOOM)
   }
 }
 
-/*
-virtual qreal currentOpticalZoom() const = 0
-*/
+// virtual qreal currentOpticalZoom() const = 0
 HB_FUNC_STATIC(QCAMERAZOOMCONTROL_CURRENTOPTICALZOOM)
 {
-  auto obj = qobject_cast<QCameraZoomControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,12 +117,10 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_CURRENTOPTICALZOOM)
   }
 }
 
-/*
-virtual qreal maximumDigitalZoom() const = 0
-*/
+// virtual qreal maximumDigitalZoom() const = 0
 HB_FUNC_STATIC(QCAMERAZOOMCONTROL_MAXIMUMDIGITALZOOM)
 {
-  auto obj = qobject_cast<QCameraZoomControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,12 +135,10 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_MAXIMUMDIGITALZOOM)
   }
 }
 
-/*
-virtual qreal maximumOpticalZoom() const = 0
-*/
+// virtual qreal maximumOpticalZoom() const = 0
 HB_FUNC_STATIC(QCAMERAZOOMCONTROL_MAXIMUMOPTICALZOOM)
 {
-  auto obj = qobject_cast<QCameraZoomControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,12 +153,10 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_MAXIMUMOPTICALZOOM)
   }
 }
 
-/*
-virtual qreal requestedDigitalZoom() const = 0
-*/
+// virtual qreal requestedDigitalZoom() const = 0
 HB_FUNC_STATIC(QCAMERAZOOMCONTROL_REQUESTEDDIGITALZOOM)
 {
-  auto obj = qobject_cast<QCameraZoomControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,12 +171,10 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_REQUESTEDDIGITALZOOM)
   }
 }
 
-/*
-virtual qreal requestedOpticalZoom() const = 0
-*/
+// virtual qreal requestedOpticalZoom() const = 0
 HB_FUNC_STATIC(QCAMERAZOOMCONTROL_REQUESTEDOPTICALZOOM)
 {
-  auto obj = qobject_cast<QCameraZoomControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,12 +189,10 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_REQUESTEDOPTICALZOOM)
   }
 }
 
-/*
-virtual void zoomTo(qreal optical, qreal digital) = 0
-*/
+// virtual void zoomTo(qreal optical, qreal digital) = 0
 HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ZOOMTO)
 {
-  auto obj = qobject_cast<QCameraZoomControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,12 +209,10 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ZOOMTO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void currentDigitalZoomChanged(qreal zoom)
-*/
+// void currentDigitalZoomChanged(qreal zoom)
 HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONCURRENTDIGITALZOOMCHANGED)
 {
-  auto sender = qobject_cast<QCameraZoomControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -266,12 +250,10 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONCURRENTDIGITALZOOMCHANGED)
   hb_retl(result);
 }
 
-/*
-void currentOpticalZoomChanged(qreal zoom)
-*/
+// void currentOpticalZoomChanged(qreal zoom)
 HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONCURRENTOPTICALZOOMCHANGED)
 {
-  auto sender = qobject_cast<QCameraZoomControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -309,12 +291,10 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONCURRENTOPTICALZOOMCHANGED)
   hb_retl(result);
 }
 
-/*
-void maximumDigitalZoomChanged(qreal zoom)
-*/
+// void maximumDigitalZoomChanged(qreal zoom)
 HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONMAXIMUMDIGITALZOOMCHANGED)
 {
-  auto sender = qobject_cast<QCameraZoomControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -352,12 +332,10 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONMAXIMUMDIGITALZOOMCHANGED)
   hb_retl(result);
 }
 
-/*
-void maximumOpticalZoomChanged(qreal zoom)
-*/
+// void maximumOpticalZoomChanged(qreal zoom)
 HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONMAXIMUMOPTICALZOOMCHANGED)
 {
-  auto sender = qobject_cast<QCameraZoomControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -395,12 +373,10 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONMAXIMUMOPTICALZOOMCHANGED)
   hb_retl(result);
 }
 
-/*
-void requestedDigitalZoomChanged(qreal zoom)
-*/
+// void requestedDigitalZoomChanged(qreal zoom)
 HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONREQUESTEDDIGITALZOOMCHANGED)
 {
-  auto sender = qobject_cast<QCameraZoomControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -438,12 +414,10 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONREQUESTEDDIGITALZOOMCHANGED)
   hb_retl(result);
 }
 
-/*
-void requestedOpticalZoomChanged(qreal zoom)
-*/
+// void requestedOpticalZoomChanged(qreal zoom)
 HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONREQUESTEDOPTICALZOOMCHANGED)
 {
-  auto sender = qobject_cast<QCameraZoomControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
