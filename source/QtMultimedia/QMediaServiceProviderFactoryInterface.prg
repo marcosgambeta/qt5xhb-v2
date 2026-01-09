@@ -62,13 +62,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERFACTORYINTERFACE_DELETE)
 {
   auto obj = static_cast<QMediaServiceProviderFactoryInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
-  if (obj != nullptr) {
-    delete obj;
-    obj = nullptr;
-    auto ptr = hb_itemPutPtr(nullptr, nullptr);
-    hb_objSendMsg(hb_stackSelfItem(), "_POINTER", 1, ptr);
-    hb_itemRelease(ptr);
-  }
+  DELETE_OBJECT(obj);
 
   hb_itemReturn(hb_stackSelfItem());
 }

@@ -99,13 +99,7 @@ HB_FUNC_STATIC(QCAMERAINFO_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   GET_PTR_FROM_SELF(obj);
 
-  if (obj != nullptr) {
-    delete obj;
-    obj = nullptr;
-    auto ptr = hb_itemPutPtr(nullptr, nullptr);
-    hb_objSendMsg(hb_stackSelfItem(), "_POINTER", 1, ptr);
-    hb_itemRelease(ptr);
-  }
+  DELETE_OBJECT(obj);
 
   hb_itemReturn(hb_stackSelfItem());
 #endif
