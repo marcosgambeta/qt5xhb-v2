@@ -60,10 +60,10 @@ libs=hbqtxml5
 libs=hbqtxmlpatterns5
 
 # include folder of the Qt Framework 5
-incpaths=${QTDIR}/include
+incpaths=${QT_INC_DIR}
 
 # lib folder of the Qt Framework 5
-libpaths=${QTDIR}/lib
+libpaths=${QT_LIB_DIR}
 
 # libraries of the Qt Framework 5
 {android}libs=Qt5AndroidExtras
