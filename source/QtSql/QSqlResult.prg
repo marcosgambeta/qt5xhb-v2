@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
+REQUEST QVariant
 #endif
 
 CLASS QSqlResult
@@ -56,21 +56,21 @@ RETURN
 #include <QtSql/QSqlResult>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSqlResult *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSQLRESULT_DELETE)
 {
-  auto obj = static_cast<QSqlResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QVariant handle() const
-*/
+// virtual QVariant handle() const
 HB_FUNC_STATIC(QSQLRESULT_HANDLE)
 {
-  auto obj = static_cast<QSqlResult *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

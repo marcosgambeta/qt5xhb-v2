@@ -67,19 +67,16 @@ RETURN
 #include <QtSql/QSqlError>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSqlError *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSQLERROR_NEW)
 {
   if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
-    /*
-    QSqlError(const QString &driverText, const QString &databaseText, QSqlError::ErrorType type, int number)
-    */
+    // QSqlError(const QString &driverText, const QString &databaseText, QSqlError::ErrorType type, int number)
     auto obj = new QSqlError(PQSTRING(1), PQSTRING(2), static_cast<QSqlError::ErrorType>(hb_parni(3)), PINT(4));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(0, 4) && ISCHARORNIL(1) && ISCHARORNIL(2) && ISNUMORNIL(3) && ISCHARORNIL(4)) {
-    /*
-    QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), QSqlError::ErrorType
-    type = QSqlError::NoError, const QString &errorCode = QString())
-    */
+    // QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), QSqlError::ErrorType type = QSqlError::NoError, const QString &errorCode = QString())
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QSqlError(OPQSTRING(1, QString()), OPQSTRING(2, QString()),
                              HB_ISNIL(3) ? static_cast<QSqlError::ErrorType>(QSqlError::NoError)
@@ -88,9 +85,7 @@ HB_FUNC_STATIC(QSQLERROR_NEW)
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQSQLERROR(1)) {
-    /*
-    QSqlError(const QSqlError &other)
-    */
+    // QSqlError(const QSqlError &other)
     auto obj = new QSqlError(*PQSQLERROR(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -100,19 +95,17 @@ HB_FUNC_STATIC(QSQLERROR_NEW)
 
 HB_FUNC_STATIC(QSQLERROR_DELETE)
 {
-  auto obj = static_cast<QSqlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString databaseText() const
-*/
+// QString databaseText() const
 HB_FUNC_STATIC(QSQLERROR_DATABASETEXT)
 {
-  auto obj = static_cast<QSqlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,12 +120,10 @@ HB_FUNC_STATIC(QSQLERROR_DATABASETEXT)
   }
 }
 
-/*
-QT_DEPRECATED void setDatabaseText(const QString &databaseText)
-*/
+// QT_DEPRECATED void setDatabaseText(const QString &databaseText)
 HB_FUNC_STATIC(QSQLERROR_SETDATABASETEXT)
 {
-  auto obj = static_cast<QSqlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,12 +140,10 @@ HB_FUNC_STATIC(QSQLERROR_SETDATABASETEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString driverText() const
-*/
+// QString driverText() const
 HB_FUNC_STATIC(QSQLERROR_DRIVERTEXT)
 {
-  auto obj = static_cast<QSqlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,12 +158,10 @@ HB_FUNC_STATIC(QSQLERROR_DRIVERTEXT)
   }
 }
 
-/*
-QT_DEPRECATED void setDriverText(const QString &driverText)
-*/
+// QT_DEPRECATED void setDriverText(const QString &driverText)
 HB_FUNC_STATIC(QSQLERROR_SETDRIVERTEXT)
 {
-  auto obj = static_cast<QSqlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,12 +178,10 @@ HB_FUNC_STATIC(QSQLERROR_SETDRIVERTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QSQLERROR_ISVALID)
 {
-  auto obj = static_cast<QSqlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,12 +196,10 @@ HB_FUNC_STATIC(QSQLERROR_ISVALID)
   }
 }
 
-/*
-QT_DEPRECATED int number() const
-*/
+// QT_DEPRECATED int number() const
 HB_FUNC_STATIC(QSQLERROR_NUMBER)
 {
-  auto obj = static_cast<QSqlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,12 +214,10 @@ HB_FUNC_STATIC(QSQLERROR_NUMBER)
   }
 }
 
-/*
-QT_DEPRECATED void setNumber(int number)
-*/
+// QT_DEPRECATED void setNumber(int number)
 HB_FUNC_STATIC(QSQLERROR_SETNUMBER)
 {
-  auto obj = static_cast<QSqlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,12 +234,10 @@ HB_FUNC_STATIC(QSQLERROR_SETNUMBER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QSQLERROR_TEXT)
 {
-  auto obj = static_cast<QSqlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,12 +252,10 @@ HB_FUNC_STATIC(QSQLERROR_TEXT)
   }
 }
 
-/*
-QSqlError::ErrorType type() const
-*/
+// QSqlError::ErrorType type() const
 HB_FUNC_STATIC(QSQLERROR_TYPE)
 {
-  auto obj = static_cast<QSqlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,12 +270,10 @@ HB_FUNC_STATIC(QSQLERROR_TYPE)
   }
 }
 
-/*
-QT_DEPRECATED void setType(QSqlError::ErrorType type)
-*/
+// QT_DEPRECATED void setType(QSqlError::ErrorType type)
 HB_FUNC_STATIC(QSQLERROR_SETTYPE)
 {
-  auto obj = static_cast<QSqlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,13 +290,11 @@ HB_FUNC_STATIC(QSQLERROR_SETTYPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString nativeErrorCode() const
-*/
+// QString nativeErrorCode() const
 HB_FUNC_STATIC(QSQLERROR_NATIVEERRORCODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  auto obj = static_cast<QSqlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -337,13 +310,11 @@ HB_FUNC_STATIC(QSQLERROR_NATIVEERRORCODE)
 #endif
 }
 
-/*
-void swap(QSqlError &other)
-*/
+// void swap(QSqlError &other)
 HB_FUNC_STATIC(QSQLERROR_SWAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  auto obj = static_cast<QSqlError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

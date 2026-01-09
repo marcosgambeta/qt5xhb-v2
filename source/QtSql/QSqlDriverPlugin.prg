@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSQLDRIVER
+REQUEST QSqlDriver
 #endif
 
 CLASS QSqlDriverPlugin INHERIT QObject
@@ -51,21 +51,21 @@ RETURN
 
 #include <QtSql/QSqlDriver>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QSqlDriverPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSQLDRIVERPLUGIN_DELETE)
 {
-  auto obj = qobject_cast<QSqlDriverPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSqlDriver * create(const QString &key) = 0
-*/
+// virtual QSqlDriver *create(const QString &key) = 0
 HB_FUNC_STATIC(QSQLDRIVERPLUGIN_CREATE)
 {
-  auto obj = qobject_cast<QSqlDriverPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
