@@ -8,6 +8,8 @@
 
 -olib/${hb_plat}/${hb_comp}/hbqtqml5
 
+-inc
+
 -workdir=obj
 
 -n

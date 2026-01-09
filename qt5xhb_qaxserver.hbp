@@ -10,6 +10,8 @@
 
 -olib/${hb_plat}/${hb_comp}/hbqaxserver5
 
+-inc
+
 -workdir=obj
 
 -n

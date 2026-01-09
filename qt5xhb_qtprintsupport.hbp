@@ -8,6 +8,8 @@
 
 -olib/${hb_plat}/${hb_comp}/hbqtprintsupport5
 
+-inc
+
 -workdir=obj
 
 -n

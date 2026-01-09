@@ -8,6 +8,8 @@
 
 -olib/${hb_plat}/${hb_comp}/hbqtwebview5
 
+-inc
+
 -workdir=obj
 
 -n
