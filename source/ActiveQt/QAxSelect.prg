@@ -50,7 +50,9 @@ RETURN
 #include <ActiveQt/QAxSelect>
 #endif
 
-    // QAxSelect(QWidget * parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags())
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAxSelect *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QAxSelect(QWidget * parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags())
 HB_FUNC_STATIC(QAXSELECT_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
@@ -65,7 +67,7 @@ HB_FUNC_STATIC(QAXSELECT_NEW)
 // ~QAxSelect() override
 HB_FUNC_STATIC(QAXSELECT_DELETE)
 {
-  auto obj = qobject_cast<QAxSelect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
@@ -75,7 +77,7 @@ HB_FUNC_STATIC(QAXSELECT_DELETE)
 // QString clsid() const
 HB_FUNC_STATIC(QAXSELECT_CLSID)
 {
-  auto obj = qobject_cast<QAxSelect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -94,7 +96,7 @@ HB_FUNC_STATIC(QAXSELECT_CLSID)
 HB_FUNC_STATIC(QAXSELECT_SANDBOXINGLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
-  auto obj = qobject_cast<QAxSelect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

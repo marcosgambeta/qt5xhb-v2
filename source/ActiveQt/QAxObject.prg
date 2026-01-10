@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
+REQUEST QVariant
 #endif
 
 CLASS QAxObject INHERIT QObject,QAxBase
@@ -66,6 +66,8 @@ RETURN
 
 #include <QtCore/QStringList>
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QAXOBJECT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -87,7 +89,7 @@ HB_FUNC_STATIC(QAXOBJECT_NEW)
 
 HB_FUNC_STATIC(QAXOBJECT_DELETE)
 {
-  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
@@ -97,7 +99,7 @@ HB_FUNC_STATIC(QAXOBJECT_DELETE)
 // bool doVerb(const QString &verb)
 HB_FUNC_STATIC(QAXOBJECT_DOVERB)
 {
-  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +119,7 @@ HB_FUNC_STATIC(QAXOBJECT_DOVERB)
 // QVariant asVariant() const
 HB_FUNC_STATIC(QAXOBJECT_ASVARIANT)
 {
-  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QAXOBJECT_ASVARIANT)
 // virtual void clear()
 HB_FUNC_STATIC(QAXOBJECT_CLEAR)
 {
-  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +157,7 @@ HB_FUNC_STATIC(QAXOBJECT_CLEAR)
 // QString control() const
 HB_FUNC_STATIC(QAXOBJECT_CONTROL)
 {
-  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +175,7 @@ HB_FUNC_STATIC(QAXOBJECT_CONTROL)
 // void disableClassInfo()
 HB_FUNC_STATIC(QAXOBJECT_DISABLECLASSINFO)
 {
-  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +195,7 @@ HB_FUNC_STATIC(QAXOBJECT_DISABLECLASSINFO)
 // void disableEventSink()
 HB_FUNC_STATIC(QAXOBJECT_DISABLEEVENTSINK)
 {
-  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +215,7 @@ HB_FUNC_STATIC(QAXOBJECT_DISABLEEVENTSINK)
 // void disableMetaObject()
 HB_FUNC_STATIC(QAXOBJECT_DISABLEMETAOBJECT)
 {
-  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,15 +234,11 @@ HB_FUNC_STATIC(QAXOBJECT_DISABLEMETAOBJECT)
 
 HB_FUNC_STATIC(QAXOBJECT_DYNAMICCALL)
 {
-  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
   if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
       ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
-    /*
-    QVariant dynamicCall(const char * function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
-    const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
-    QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
-    */
+    // QVariant dynamicCall(const char * function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(), const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
+    GET_PTR_FROM_SELF(obj);
+
     if (obj != nullptr) {
       RQVARIANT(obj->dynamicCall(PCONSTCHAR(1),
                                  HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2)),
@@ -254,6 +252,8 @@ HB_FUNC_STATIC(QAXOBJECT_DYNAMICCALL)
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QVariant dynamicCall(const char * function, QList<QVariant> &vars)
+    GET_PTR_FROM_SELF(obj);
+
     if (obj != nullptr) {
       RQVARIANT(obj->dynamicCall(PCONSTCHAR(1), PQVARIANTLIST(2)));
     }
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QAXOBJECT_DYNAMICCALL)
 // QString generateDocumentation()
 HB_FUNC_STATIC(QAXOBJECT_GENERATEDOCUMENTATION)
 {
-  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QAXOBJECT_GENERATEDOCUMENTATION)
 // bool isNull() const
 HB_FUNC_STATIC(QAXOBJECT_ISNULL)
 {
-  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QAXOBJECT_ISNULL)
 // virtual bool propertyWritable(const char * prop) const
 HB_FUNC_STATIC(QAXOBJECT_PROPERTYWRITABLE)
 {
-  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -318,16 +318,11 @@ HB_FUNC_STATIC(QAXOBJECT_PROPERTYWRITABLE)
 
 HB_FUNC_STATIC(QAXOBJECT_QUERYSUBOBJECT)
 {
-  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
   if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
       ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
-    /*
-    QAxObject * querySubObject(const char * name, const QVariant &var1 = QVariant(), const QVariant &var2 =
-    QVariant(), const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 =
-    QVariant(), const QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 =
-    QVariant())
-    */
+    // QAxObject * querySubObject(const char * name, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(), const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
+    GET_PTR_FROM_SELF(obj);
+
     if (obj != nullptr) {
       auto ptr =
           obj->querySubObject(PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2)),
@@ -342,6 +337,8 @@ HB_FUNC_STATIC(QAXOBJECT_QUERYSUBOBJECT)
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QAxObject * querySubObject(const char * name, QList<QVariant> &vars)
+    GET_PTR_FROM_SELF(obj);
+
     if (obj != nullptr) {
       auto ptr = obj->querySubObject(PCONSTCHAR(1), PQVARIANTLIST(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
@@ -354,7 +351,7 @@ HB_FUNC_STATIC(QAXOBJECT_QUERYSUBOBJECT)
 // bool setControl(const QString &)
 HB_FUNC_STATIC(QAXOBJECT_SETCONTROL)
 {
-  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -372,7 +369,7 @@ HB_FUNC_STATIC(QAXOBJECT_SETCONTROL)
 // virtual void setPropertyWritable(const char * prop, bool ok)
 HB_FUNC_STATIC(QAXOBJECT_SETPROPERTYWRITABLE)
 {
-  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -392,7 +389,7 @@ HB_FUNC_STATIC(QAXOBJECT_SETPROPERTYWRITABLE)
 // QStringList verbs() const
 HB_FUNC_STATIC(QAXOBJECT_VERBS)
 {
-  auto obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
