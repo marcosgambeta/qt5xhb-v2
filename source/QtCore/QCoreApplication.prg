@@ -93,9 +93,9 @@ RETURN
 
 #include <QtCore/QStringList>
 
-    /*
-    QCoreApplication (int &argc, char ** argv)
-    */
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCoreApplication *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QCoreApplication (int &argc, char ** argv)
 HB_FUNC_STATIC(QCOREAPPLICATION_NEW)
 {
   int argc;
@@ -108,19 +108,17 @@ HB_FUNC_STATIC(QCOREAPPLICATION_NEW)
 
 HB_FUNC_STATIC(QCOREAPPLICATION_DELETE)
 {
-  auto obj = qobject_cast<QCoreApplication *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool notify(QObject * receiver, QEvent * event)
-*/
+// virtual bool notify(QObject * receiver, QEvent * event)
 HB_FUNC_STATIC(QCOREAPPLICATION_NOTIFY)
 {
-  auto obj = qobject_cast<QCoreApplication *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,12 +133,10 @@ HB_FUNC_STATIC(QCOREAPPLICATION_NOTIFY)
   }
 }
 
-/*
-void quit()
-*/
+// void quit()
 HB_FUNC_STATIC(QCOREAPPLICATION_QUIT)
 {
-  auto obj = qobject_cast<QCoreApplication *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,9 +153,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_QUIT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void addLibraryPath(const QString &path)
-*/
+// static void addLibraryPath(const QString &path)
 HB_FUNC_STATIC(QCOREAPPLICATION_ADDLIBRARYPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,9 +169,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ADDLIBRARYPATH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QString applicationDirPath()
-*/
+// static QString applicationDirPath()
 HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONDIRPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,9 +183,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONDIRPATH)
 #endif
 }
 
-/*
-static QString applicationFilePath()
-*/
+// static QString applicationFilePath()
 HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONFILEPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,9 +197,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONFILEPATH)
 #endif
 }
 
-/*
-static QString applicationName()
-*/
+// static QString applicationName()
 HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,9 +211,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONNAME)
 #endif
 }
 
-/*
-static qint64 applicationPid()
-*/
+// static qint64 applicationPid()
 HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONPID)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,9 +225,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONPID)
 #endif
 }
 
-/*
-static QString applicationVersion()
-*/
+// static QString applicationVersion()
 HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONVERSION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,9 +239,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_APPLICATIONVERSION)
 #endif
 }
 
-/*
-static QStringList arguments()
-*/
+// static QStringList arguments()
 HB_FUNC_STATIC(QCOREAPPLICATION_ARGUMENTS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -271,9 +253,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ARGUMENTS)
 #endif
 }
 
-/*
-static bool closingDown()
-*/
+// static bool closingDown()
 HB_FUNC_STATIC(QCOREAPPLICATION_CLOSINGDOWN)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -287,9 +267,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_CLOSINGDOWN)
 #endif
 }
 
-/*
-static int exec()
-*/
+// static int exec()
 HB_FUNC_STATIC(QCOREAPPLICATION_EXEC)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,9 +281,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_EXEC)
 #endif
 }
 
-/*
-static void exit(int returnCode = 0)
-*/
+// static void exit(int returnCode = 0)
 HB_FUNC_STATIC(QCOREAPPLICATION_EXIT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,9 +297,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_EXIT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void flush()
-*/
+// static void flush()
 HB_FUNC_STATIC(QCOREAPPLICATION_FLUSH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,9 +313,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_FLUSH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static bool hasPendingEvents()
-*/
+// static bool hasPendingEvents()
 HB_FUNC_STATIC(QCOREAPPLICATION_HASPENDINGEVENTS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -355,9 +327,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_HASPENDINGEVENTS)
 #endif
 }
 
-/*
-static void installTranslator(QTranslator * translationFile)
-*/
+// static void installTranslator(QTranslator * translationFile)
 HB_FUNC_STATIC(QCOREAPPLICATION_INSTALLTRANSLATOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,9 +343,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_INSTALLTRANSLATOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QCoreApplication * instance()
-*/
+// static QCoreApplication * instance()
 HB_FUNC_STATIC(QCOREAPPLICATION_INSTANCE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -390,9 +358,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_INSTANCE)
 #endif
 }
 
-/*
-static QStringList libraryPaths()
-*/
+// static QStringList libraryPaths()
 HB_FUNC_STATIC(QCOREAPPLICATION_LIBRARYPATHS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -406,9 +372,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_LIBRARYPATHS)
 #endif
 }
 
-/*
-static QString organizationDomain()
-*/
+// static QString organizationDomain()
 HB_FUNC_STATIC(QCOREAPPLICATION_ORGANIZATIONDOMAIN)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -422,9 +386,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ORGANIZATIONDOMAIN)
 #endif
 }
 
-/*
-static QString organizationName()
-*/
+// static QString organizationName()
 HB_FUNC_STATIC(QCOREAPPLICATION_ORGANIZATIONNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -441,20 +403,12 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ORGANIZATIONNAME)
 HB_FUNC_STATIC(QCOREAPPLICATION_POSTEVENT)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2)) {
-    /*
-    static void postEvent(QObject * receiver, QEvent * event)
-    */
-
+    // static void postEvent(QObject * receiver, QEvent * event)
     QCoreApplication::postEvent(PQOBJECT(1), PQEVENT(2));
-
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(3) && ISQOBJECT(1) && ISQEVENT(2) && HB_ISNUM(3)) {
-    /*
-    static void postEvent(QObject * receiver, QEvent * event, int priority)
-    */
-
+    // static void postEvent(QObject * receiver, QEvent * event, int priority)
     QCoreApplication::postEvent(PQOBJECT(1), PQEVENT(2), PINT(3));
-
     hb_itemReturn(hb_stackSelfItem());
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -464,30 +418,20 @@ HB_FUNC_STATIC(QCOREAPPLICATION_POSTEVENT)
 HB_FUNC_STATIC(QCOREAPPLICATION_PROCESSEVENTS)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    /*
-    static void processEvents(QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents)
-    */
-
+    // static void processEvents(QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents)
     QCoreApplication::processEvents(HB_ISNIL(1) ? static_cast<QEventLoop::ProcessEventsFlags>(QEventLoop::AllEvents)
                                                 : static_cast<QEventLoop::ProcessEventsFlags>(hb_parni(1)));
-
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    static void processEvents(QEventLoop::ProcessEventsFlags flags, int maxtime)
-    */
-
+    // static void processEvents(QEventLoop::ProcessEventsFlags flags, int maxtime)
     QCoreApplication::processEvents(static_cast<QEventLoop::ProcessEventsFlags>(hb_parni(1)), PINT(2));
-
     hb_itemReturn(hb_stackSelfItem());
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-static void removeLibraryPath(const QString &path)
-*/
+// static void removeLibraryPath(const QString &path)
 HB_FUNC_STATIC(QCOREAPPLICATION_REMOVELIBRARYPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -506,29 +450,19 @@ HB_FUNC_STATIC(QCOREAPPLICATION_REMOVELIBRARYPATH)
 HB_FUNC_STATIC(QCOREAPPLICATION_REMOVEPOSTEDEVENTS)
 {
   if (ISNUMPAR(1) && ISQOBJECT(1)) {
-    /*
-    static void removePostedEvents(QObject * receiver)
-    */
-
+    // static void removePostedEvents(QObject * receiver)
     QCoreApplication::removePostedEvents(PQOBJECT(1));
-
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
-    /*
-    static void removePostedEvents(QObject * receiver, int eventType)
-    */
-
+    // static void removePostedEvents(QObject * receiver, int eventType)
     QCoreApplication::removePostedEvents(PQOBJECT(1), PINT(2));
-
     hb_itemReturn(hb_stackSelfItem());
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-static void removeTranslator(QTranslator * translationFile)
-*/
+// static void removeTranslator(QTranslator * translationFile)
 HB_FUNC_STATIC(QCOREAPPLICATION_REMOVETRANSLATOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -544,9 +478,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_REMOVETRANSLATOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static bool sendEvent(QObject * receiver, QEvent * event)
-*/
+// static bool sendEvent(QObject * receiver, QEvent * event)
 HB_FUNC_STATIC(QCOREAPPLICATION_SENDEVENT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -563,29 +495,19 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SENDEVENT)
 HB_FUNC_STATIC(QCOREAPPLICATION_SENDPOSTEDEVENTS)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
-    /*
-    static void sendPostedEvents(QObject * receiver, int event_type)
-    */
-
+    // static void sendPostedEvents(QObject * receiver, int event_type)
     QCoreApplication::sendPostedEvents(PQOBJECT(1), PINT(2));
-
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(0)) {
-    /*
-    static void sendPostedEvents()
-    */
-
+    // static void sendPostedEvents()
     QCoreApplication::sendPostedEvents();
-
     hb_itemReturn(hb_stackSelfItem());
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-static void setApplicationName(const QString &application)
-*/
+// static void setApplicationName(const QString &application)
 HB_FUNC_STATIC(QCOREAPPLICATION_SETAPPLICATIONNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -601,9 +523,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETAPPLICATIONNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void setApplicationVersion(const QString &version)
-*/
+// static void setApplicationVersion(const QString &version)
 HB_FUNC_STATIC(QCOREAPPLICATION_SETAPPLICATIONVERSION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -619,9 +539,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETAPPLICATIONVERSION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void setAttribute(Qt::ApplicationAttribute attribute, bool on = true)
-*/
+// static void setAttribute(Qt::ApplicationAttribute attribute, bool on = true)
 HB_FUNC_STATIC(QCOREAPPLICATION_SETATTRIBUTE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -637,9 +555,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETATTRIBUTE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void setLibraryPaths(const QStringList &paths)
-*/
+// static void setLibraryPaths(const QStringList &paths)
 HB_FUNC_STATIC(QCOREAPPLICATION_SETLIBRARYPATHS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -655,9 +571,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETLIBRARYPATHS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void setOrganizationDomain(const QString &orgDomain)
-*/
+// static void setOrganizationDomain(const QString &orgDomain)
 HB_FUNC_STATIC(QCOREAPPLICATION_SETORGANIZATIONDOMAIN)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -673,9 +587,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETORGANIZATIONDOMAIN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void setOrganizationName(const QString &orgName)
-*/
+// static void setOrganizationName(const QString &orgName)
 HB_FUNC_STATIC(QCOREAPPLICATION_SETORGANIZATIONNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -691,9 +603,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETORGANIZATIONNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static bool startingUp()
-*/
+// static bool startingUp()
 HB_FUNC_STATIC(QCOREAPPLICATION_STARTINGUP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -707,9 +617,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_STARTINGUP)
 #endif
 }
 
-/*
-static bool testAttribute(Qt::ApplicationAttribute attribute)
-*/
+// static bool testAttribute(Qt::ApplicationAttribute attribute)
 HB_FUNC_STATIC(QCOREAPPLICATION_TESTATTRIBUTE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -723,10 +631,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_TESTATTRIBUTE)
 #endif
 }
 
-/*
-static QString translate(const char * context, const char * sourceText, const char * disambiguation = nullptr, int n =
--1)
-*/
+// static QString translate(const char * context, const char * sourceText, const char * disambiguation = nullptr, int n = -1)
 HB_FUNC_STATIC(QCOREAPPLICATION_TRANSLATE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -740,9 +645,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_TRANSLATE)
 #endif
 }
 
-/*
-static bool isSetuidAllowed()
-*/
+// static bool isSetuidAllowed()
 HB_FUNC_STATIC(QCOREAPPLICATION_ISSETUIDALLOWED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -758,9 +661,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ISSETUIDALLOWED)
 #endif
 }
 
-/*
-static void setSetuidAllowed(bool allow)
-*/
+// static void setSetuidAllowed(bool allow)
 HB_FUNC_STATIC(QCOREAPPLICATION_SETSETUIDALLOWED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -778,12 +679,10 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETSETUIDALLOWED)
 #endif
 }
 
-/*
-void aboutToQuit()
-*/
+// void aboutToQuit()
 HB_FUNC_STATIC(QCOREAPPLICATION_ONABOUTTOQUIT)
 {
-  auto sender = qobject_cast<QCoreApplication *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -818,12 +717,10 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONABOUTTOQUIT)
   hb_retl(result);
 }
 
-/*
-void applicationNameChanged()
-*/
+// void applicationNameChanged()
 HB_FUNC_STATIC(QCOREAPPLICATION_ONAPPLICATIONNAMECHANGED)
 {
-  auto sender = qobject_cast<QCoreApplication *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -859,12 +756,10 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONAPPLICATIONNAMECHANGED)
   hb_retl(result);
 }
 
-/*
-void applicationVersionChanged()
-*/
+// void applicationVersionChanged()
 HB_FUNC_STATIC(QCOREAPPLICATION_ONAPPLICATIONVERSIONCHANGED)
 {
-  auto sender = qobject_cast<QCoreApplication *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -900,12 +795,10 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONAPPLICATIONVERSIONCHANGED)
   hb_retl(result);
 }
 
-/*
-void organizationDomainChanged()
-*/
+// void organizationDomainChanged()
 HB_FUNC_STATIC(QCOREAPPLICATION_ONORGANIZATIONDOMAINCHANGED)
 {
-  auto sender = qobject_cast<QCoreApplication *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -941,12 +834,10 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ONORGANIZATIONDOMAINCHANGED)
   hb_retl(result);
 }
 
-/*
-void organizationNameChanged()
-*/
+// void organizationNameChanged()
 HB_FUNC_STATIC(QCOREAPPLICATION_ONORGANIZATIONNAMECHANGED)
 {
-  auto sender = qobject_cast<QCoreApplication *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
