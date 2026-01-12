@@ -126,17 +126,17 @@ METHOD createMenuBar() CLASS MainWindow
 
    ::oMenu2 := ::oMenuBar:AddMenu("&Edit")
 
-   ::oActionCut := ::oMenu2:AddAction(QIcon():New("images/cut.png"), "Cut")
+   ::oActionCut := ::oMenu2:AddAction(QIcon():New("images/cut.png"), "Cu&t")
    ::oActionCut:setStatusTip("Execute the 'Cut' option")
    ::oActionCut:setShortcut(QKeySequence():new("CTRL+X"))
    ::oActionCut:onTriggered({||::showMessage("Edit/Cut")})
 
-   ::oActionCopy := ::oMenu2:AddAction(QIcon():new("images/copy.png"), "Copy")
+   ::oActionCopy := ::oMenu2:AddAction(QIcon():new("images/copy.png"), "&Copy")
    ::oActionCopy:setStatusTip("Execute the 'Copy' option")
    ::oActionCopy:setShortcut(QKeySequence():new("CTRL+C"))
    ::oActionCopy:onTriggered({||::showMessage("Edit/Copy")})
 
-   ::oActionPaste := ::oMenu2:AddAction(QIcon():New("images/paste.png"), "Paste")
+   ::oActionPaste := ::oMenu2:AddAction(QIcon():New("images/paste.png"), "&Paste")
    ::oActionPaste:setStatusTip("Execute the 'Paste' option")
    ::oActionPaste:setShortcut(QKeySequence():new("CTRL+V"))
    ::oActionPaste:onTriggered({||::showMessage("Edit/Paste")})
