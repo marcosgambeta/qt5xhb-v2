@@ -38,7 +38,7 @@ CLASS QMacPasteboardMime
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMacPasteboardMime
    IF ::self_destruction

@@ -37,7 +37,7 @@ CLASS QDBusContext
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDBusContext
    IF ::self_destruction

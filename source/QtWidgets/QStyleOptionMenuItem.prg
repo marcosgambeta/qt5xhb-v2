@@ -42,7 +42,7 @@ CLASS QStyleOptionMenuItem INHERIT QStyleOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionMenuItem
    IF ::self_destruction

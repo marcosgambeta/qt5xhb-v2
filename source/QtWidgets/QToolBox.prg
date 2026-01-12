@@ -42,7 +42,7 @@ CLASS QToolBox INHERIT QFrame
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QToolBox
    IF ::self_destruction

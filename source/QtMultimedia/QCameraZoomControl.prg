@@ -33,7 +33,7 @@ CLASS QCameraZoomControl INHERIT QMediaControl
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCameraZoomControl
    IF ::self_destruction

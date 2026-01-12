@@ -48,7 +48,7 @@ CLASS QNetworkDatagram
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QNetworkDatagram
    IF ::self_destruction

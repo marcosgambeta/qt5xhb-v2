@@ -35,7 +35,7 @@ CLASS QXmlInputSource
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlInputSource
    IF ::self_destruction

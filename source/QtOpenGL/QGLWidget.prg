@@ -49,7 +49,7 @@ CLASS QGLWidget INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGLWidget
    IF ::self_destruction

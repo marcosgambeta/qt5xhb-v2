@@ -26,7 +26,7 @@ CLASS QGraphicsSceneContextMenuEvent INHERIT QGraphicsSceneEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsSceneContextMenuEvent
    IF ::self_destruction

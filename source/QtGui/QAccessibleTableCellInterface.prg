@@ -37,7 +37,7 @@ CLASS QAccessibleTableCellInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAccessibleTableCellInterface
    IF ::self_destruction

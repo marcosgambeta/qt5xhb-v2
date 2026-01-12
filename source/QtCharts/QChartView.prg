@@ -24,7 +24,7 @@ CLASS QChartView INHERIT QGraphicsView
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QChartView
    IF ::self_destruction

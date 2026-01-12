@@ -36,7 +36,7 @@ CLASS QAndroidIntent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAndroidIntent
    IF ::self_destruction

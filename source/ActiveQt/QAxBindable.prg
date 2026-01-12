@@ -34,7 +34,7 @@ CLASS QAxBindable
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAxBindable
    IF ::self_destruction

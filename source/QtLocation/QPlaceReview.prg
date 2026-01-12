@@ -33,7 +33,7 @@ CLASS QPlaceReview INHERIT QPlaceContent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceReview
    IF ::self_destruction

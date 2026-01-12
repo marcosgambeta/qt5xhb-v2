@@ -19,7 +19,7 @@ CLASS QAccessibleStateChangeEvent INHERIT QAccessibleEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAccessibleStateChangeEvent
    IF ::self_destruction

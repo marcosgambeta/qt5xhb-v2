@@ -34,7 +34,7 @@ CLASS QBuffer INHERIT QIODevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBuffer
    IF ::self_destruction

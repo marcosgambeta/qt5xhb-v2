@@ -42,7 +42,7 @@ CLASS QDomNamedNodeMap
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDomNamedNodeMap
    IF ::self_destruction

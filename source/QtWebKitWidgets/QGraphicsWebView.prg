@@ -72,7 +72,7 @@ CLASS QGraphicsWebView INHERIT QGraphicsWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsWebView
    IF ::self_destruction

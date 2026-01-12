@@ -42,7 +42,7 @@ CLASS QIconEngine
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QIconEngine
    IF ::self_destruction

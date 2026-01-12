@@ -49,7 +49,7 @@ CLASS QPushButton INHERIT QAbstractButton
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPushButton
    IF ::self_destruction

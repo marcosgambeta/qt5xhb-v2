@@ -41,7 +41,7 @@ CLASS QTabletEvent INHERIT QInputEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTabletEvent
    IF ::self_destruction

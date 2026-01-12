@@ -51,7 +51,7 @@ CLASS QAtomicInt
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAtomicInt
    IF ::self_destruction

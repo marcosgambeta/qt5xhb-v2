@@ -50,7 +50,7 @@ CLASS QIcon
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QIcon
    IF ::self_destruction

@@ -21,7 +21,7 @@ CLASS QDomEntityReference INHERIT QDomNode
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDomEntityReference
    IF ::self_destruction

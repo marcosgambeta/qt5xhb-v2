@@ -50,7 +50,7 @@ CLASS QCalendar
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCalendar
    IF ::self_destruction

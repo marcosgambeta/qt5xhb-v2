@@ -23,7 +23,7 @@ CLASS QScriptExtensionPlugin INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QScriptExtensionPlugin
    IF ::self_destruction

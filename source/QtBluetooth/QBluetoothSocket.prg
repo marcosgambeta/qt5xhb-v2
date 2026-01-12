@@ -46,7 +46,7 @@ CLASS QBluetoothSocket INHERIT QIODevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBluetoothSocket
    IF ::self_destruction

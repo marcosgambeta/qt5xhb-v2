@@ -23,7 +23,7 @@ CLASS QModbusServer INHERIT QModbusDevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QModbusServer
    IF ::self_destruction

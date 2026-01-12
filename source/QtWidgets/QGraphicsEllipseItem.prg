@@ -35,7 +35,7 @@ CLASS QGraphicsEllipseItem INHERIT QAbstractGraphicsShapeItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsEllipseItem
    IF ::self_destruction

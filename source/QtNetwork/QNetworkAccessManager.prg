@@ -68,7 +68,7 @@ CLASS QNetworkAccessManager INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QNetworkAccessManager
    IF ::self_destruction

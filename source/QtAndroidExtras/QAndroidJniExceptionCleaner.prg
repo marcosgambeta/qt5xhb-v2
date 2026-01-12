@@ -30,7 +30,7 @@ CLASS QAndroidJniExceptionCleaner
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAndroidJniExceptionCleaner
    IF ::self_destruction

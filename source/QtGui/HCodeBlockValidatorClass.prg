@@ -17,7 +17,7 @@ CLASS HCodeBlockValidator INHERIT QValidator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS HCodeBlockValidator
    IF ::self_destruction

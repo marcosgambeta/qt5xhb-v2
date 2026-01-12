@@ -125,7 +125,7 @@ CLASS QPainter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPainter
    IF ::self_destruction

@@ -49,7 +49,7 @@ CLASS QAudioDecoder INHERIT QMediaObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAudioDecoder
    IF ::self_destruction

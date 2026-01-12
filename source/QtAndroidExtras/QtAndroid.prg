@@ -38,7 +38,7 @@ CLASS QtAndroid
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QtAndroid
    IF ::self_destruction

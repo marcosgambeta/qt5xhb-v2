@@ -41,7 +41,7 @@ CLASS QMediaTimeRange
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMediaTimeRange
    IF ::self_destruction

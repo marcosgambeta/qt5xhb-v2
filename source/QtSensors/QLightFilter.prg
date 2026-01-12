@@ -17,7 +17,7 @@ CLASS QLightFilter INHERIT QSensorFilter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLightFilter
    IF ::self_destruction

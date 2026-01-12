@@ -45,7 +45,7 @@ CLASS QMetaEnum
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMetaEnum
    IF ::self_destruction

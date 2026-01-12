@@ -39,7 +39,7 @@ CLASS QBluetoothServer INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBluetoothServer
    IF ::self_destruction

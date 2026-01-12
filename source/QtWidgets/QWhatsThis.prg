@@ -35,7 +35,7 @@ CLASS QWhatsThis
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWhatsThis
    IF ::self_destruction

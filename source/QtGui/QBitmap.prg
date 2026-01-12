@@ -26,7 +26,7 @@ CLASS QBitmap INHERIT QPixmap
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBitmap
    IF ::self_destruction

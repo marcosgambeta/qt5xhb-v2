@@ -25,7 +25,7 @@ CLASS QAbstractVideoFilter INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractVideoFilter
    IF ::self_destruction

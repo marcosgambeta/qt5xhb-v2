@@ -38,7 +38,7 @@ CLASS QWebDatabase
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebDatabase
    IF ::self_destruction

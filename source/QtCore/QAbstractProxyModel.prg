@@ -22,7 +22,7 @@ CLASS QAbstractProxyModel INHERIT QAbstractItemModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractProxyModel
    IF ::self_destruction

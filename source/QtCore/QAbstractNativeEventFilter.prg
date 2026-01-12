@@ -20,7 +20,7 @@ CLASS QAbstractNativeEventFilter INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractNativeEventFilter
    IF ::self_destruction

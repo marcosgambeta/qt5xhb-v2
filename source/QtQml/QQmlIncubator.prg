@@ -39,7 +39,7 @@ CLASS QQmlIncubator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlIncubator
    IF ::self_destruction

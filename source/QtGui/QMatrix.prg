@@ -60,7 +60,7 @@ CLASS QMatrix
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMatrix
    IF ::self_destruction

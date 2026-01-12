@@ -40,7 +40,7 @@ CLASS QMarginsF
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMarginsF
    IF ::self_destruction

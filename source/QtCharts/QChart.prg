@@ -92,7 +92,7 @@ CLASS QChart INHERIT QGraphicsWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QChart
    IF ::self_destruction

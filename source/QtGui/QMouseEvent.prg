@@ -30,7 +30,7 @@ CLASS QMouseEvent INHERIT QInputEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMouseEvent
    IF ::self_destruction

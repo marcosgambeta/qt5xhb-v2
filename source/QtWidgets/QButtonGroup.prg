@@ -44,7 +44,7 @@ CLASS QButtonGroup INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QButtonGroup
    IF ::self_destruction

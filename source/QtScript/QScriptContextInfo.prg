@@ -39,7 +39,7 @@ CLASS QScriptContextInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QScriptContextInfo
    IF ::self_destruction

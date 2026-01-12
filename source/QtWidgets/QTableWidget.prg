@@ -81,7 +81,7 @@ CLASS QTableWidget INHERIT QTableView
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTableWidget
    IF ::self_destruction

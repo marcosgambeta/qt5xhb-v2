@@ -28,7 +28,7 @@ CLASS QGLFramebufferObjectFormat INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGLFramebufferObjectFormat
    IF ::self_destruction

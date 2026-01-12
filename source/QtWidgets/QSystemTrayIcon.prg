@@ -40,7 +40,7 @@ CLASS QSystemTrayIcon INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSystemTrayIcon
    IF ::self_destruction

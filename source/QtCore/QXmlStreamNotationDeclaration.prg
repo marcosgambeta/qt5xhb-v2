@@ -33,7 +33,7 @@ CLASS QXmlStreamNotationDeclaration
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlStreamNotationDeclaration
    IF ::self_destruction

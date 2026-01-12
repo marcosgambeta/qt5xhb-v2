@@ -36,7 +36,7 @@ CLASS QGraphicsVideoItem INHERIT QGraphicsObject,QMediaBindableInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsVideoItem
    IF ::self_destruction

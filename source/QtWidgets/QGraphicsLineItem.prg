@@ -35,7 +35,7 @@ CLASS QGraphicsLineItem INHERIT QGraphicsItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsLineItem
    IF ::self_destruction

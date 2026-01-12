@@ -30,7 +30,7 @@ CLASS QMediaServiceSupportedFormatsInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMediaServiceSupportedFormatsInterface
    IF ::self_destruction

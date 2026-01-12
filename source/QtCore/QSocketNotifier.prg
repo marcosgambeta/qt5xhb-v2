@@ -24,7 +24,7 @@ CLASS QSocketNotifier INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSocketNotifier
    IF ::self_destruction

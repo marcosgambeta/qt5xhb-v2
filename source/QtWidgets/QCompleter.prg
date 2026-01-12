@@ -62,7 +62,7 @@ CLASS QCompleter INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCompleter
    IF ::self_destruction

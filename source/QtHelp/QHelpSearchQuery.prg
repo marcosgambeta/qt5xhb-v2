@@ -29,7 +29,7 @@ CLASS QHelpSearchQuery
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHelpSearchQuery
    IF ::self_destruction

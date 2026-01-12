@@ -30,7 +30,7 @@ CLASS QMediaBindableInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMediaBindableInterface
    IF ::self_destruction

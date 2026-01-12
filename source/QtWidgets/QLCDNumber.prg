@@ -40,7 +40,7 @@ CLASS QLCDNumber INHERIT QFrame
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLCDNumber
    IF ::self_destruction

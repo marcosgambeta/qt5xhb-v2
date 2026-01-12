@@ -39,7 +39,7 @@ CLASS QUuid
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QUuid
    IF ::self_destruction

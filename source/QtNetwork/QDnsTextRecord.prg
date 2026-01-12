@@ -34,7 +34,7 @@ CLASS QDnsTextRecord
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDnsTextRecord
    IF ::self_destruction

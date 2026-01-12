@@ -40,7 +40,7 @@ CLASS QDBusPendingCall
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDBusPendingCall
    IF ::self_destruction

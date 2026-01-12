@@ -22,7 +22,7 @@ CLASS QAccessibleTextCursorEvent INHERIT QAccessibleEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAccessibleTextCursorEvent
    IF ::self_destruction

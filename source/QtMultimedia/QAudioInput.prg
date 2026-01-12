@@ -43,7 +43,7 @@ CLASS QAudioInput INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAudioInput
    IF ::self_destruction

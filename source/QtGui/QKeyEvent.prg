@@ -29,7 +29,7 @@ CLASS QKeyEvent INHERIT QInputEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QKeyEvent
    IF ::self_destruction

@@ -30,7 +30,7 @@ CLASS QPagedPaintDevice INHERIT QPaintDevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPagedPaintDevice
    IF ::self_destruction

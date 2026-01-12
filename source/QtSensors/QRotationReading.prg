@@ -23,7 +23,7 @@ CLASS QRotationReading INHERIT QSensorReading
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRotationReading
    IF ::self_destruction

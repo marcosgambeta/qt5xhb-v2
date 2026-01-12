@@ -28,7 +28,7 @@ CLASS QAudioRecorder INHERIT QMediaRecorder
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAudioRecorder
    IF ::self_destruction

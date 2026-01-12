@@ -49,7 +49,7 @@ CLASS QCommandLineParser
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCommandLineParser
    IF ::self_destruction

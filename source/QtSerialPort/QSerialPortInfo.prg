@@ -43,7 +43,7 @@ CLASS QSerialPortInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSerialPortInfo
    IF ::self_destruction

@@ -51,7 +51,7 @@ CLASS Q3DCamera INHERIT Q3DObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS Q3DCamera
    IF ::self_destruction

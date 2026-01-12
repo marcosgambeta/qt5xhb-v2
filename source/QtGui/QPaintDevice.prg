@@ -43,7 +43,7 @@ CLASS QPaintDevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPaintDevice
    IF ::self_destruction

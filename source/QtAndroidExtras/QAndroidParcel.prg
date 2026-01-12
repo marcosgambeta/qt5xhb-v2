@@ -42,7 +42,7 @@ CLASS QAndroidParcel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAndroidParcel
    IF ::self_destruction

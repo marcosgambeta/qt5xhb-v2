@@ -31,7 +31,7 @@ CLASS QEnterEvent INHERIT QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QEnterEvent
    IF ::self_destruction

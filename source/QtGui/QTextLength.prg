@@ -32,7 +32,7 @@ CLASS QTextLength
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextLength
    IF ::self_destruction

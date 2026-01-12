@@ -43,7 +43,7 @@ CLASS QScriptValueIterator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QScriptValueIterator
    IF ::self_destruction

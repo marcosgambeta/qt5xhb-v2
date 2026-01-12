@@ -41,7 +41,7 @@ CLASS QElapsedTimer
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QElapsedTimer
    IF ::self_destruction

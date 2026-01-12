@@ -22,7 +22,7 @@ CLASS QTapReading INHERIT QSensorReading
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTapReading
    IF ::self_destruction

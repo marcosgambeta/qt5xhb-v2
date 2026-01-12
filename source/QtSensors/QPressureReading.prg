@@ -21,7 +21,7 @@ CLASS QPressureReading INHERIT QSensorReading
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPressureReading
    IF ::self_destruction

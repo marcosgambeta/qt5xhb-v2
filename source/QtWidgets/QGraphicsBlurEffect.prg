@@ -29,7 +29,7 @@ CLASS QGraphicsBlurEffect INHERIT QGraphicsWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsBlurEffect
    IF ::self_destruction

@@ -86,7 +86,7 @@ CLASS QWebElement
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebElement
    IF ::self_destruction

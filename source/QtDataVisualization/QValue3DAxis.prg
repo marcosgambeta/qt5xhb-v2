@@ -37,7 +37,7 @@ CLASS QValue3DAxis INHERIT QAbstract3DAxis
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QValue3DAxis
    IF ::self_destruction

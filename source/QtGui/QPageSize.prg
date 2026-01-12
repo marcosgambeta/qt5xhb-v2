@@ -48,7 +48,7 @@ CLASS QPageSize
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPageSize
    IF ::self_destruction

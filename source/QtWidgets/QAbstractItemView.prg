@@ -179,7 +179,7 @@ CLASS QAbstractItemView INHERIT QAbstractScrollArea
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractItemView
    IF ::self_destruction

@@ -84,7 +84,7 @@ CLASS QSortFilterProxyModel INHERIT QAbstractProxyModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSortFilterProxyModel
    IF ::self_destruction

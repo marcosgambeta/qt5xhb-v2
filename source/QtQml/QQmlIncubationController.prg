@@ -34,7 +34,7 @@ CLASS QQmlIncubationController
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlIncubationController
    IF ::self_destruction

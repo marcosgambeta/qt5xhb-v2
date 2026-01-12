@@ -37,7 +37,7 @@ CLASS QSourceLocation
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSourceLocation
    IF ::self_destruction

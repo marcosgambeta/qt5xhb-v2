@@ -26,7 +26,7 @@ CLASS QFormBuilder INHERIT QAbstractFormBuilder
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QFormBuilder
    IF ::self_destruction

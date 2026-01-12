@@ -25,7 +25,7 @@ CLASS QObjectCleanupHandler INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QObjectCleanupHandler
    IF ::self_destruction

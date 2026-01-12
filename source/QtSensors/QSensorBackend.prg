@@ -34,7 +34,7 @@ CLASS QSensorBackend INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSensorBackend
    IF ::self_destruction

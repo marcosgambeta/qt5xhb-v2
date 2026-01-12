@@ -50,7 +50,7 @@ CLASS QGeoAddress
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoAddress
    IF ::self_destruction

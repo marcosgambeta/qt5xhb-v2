@@ -40,7 +40,7 @@ CLASS QTextBoundaryFinder
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextBoundaryFinder
    IF ::self_destruction

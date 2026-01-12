@@ -23,7 +23,7 @@ CLASS QBoxPlotLegendMarker INHERIT QLegendMarker
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBoxPlotLegendMarker
    IF ::self_destruction

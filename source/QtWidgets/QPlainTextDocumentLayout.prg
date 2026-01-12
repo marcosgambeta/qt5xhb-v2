@@ -31,7 +31,7 @@ CLASS QPlainTextDocumentLayout INHERIT QAbstractTextDocumentLayout
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlainTextDocumentLayout
    IF ::self_destruction

@@ -68,7 +68,7 @@ CLASS QJSValue
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QJSValue
    IF ::self_destruction

@@ -29,7 +29,7 @@ CLASS QGraphicsProxyWidget INHERIT QGraphicsWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsProxyWidget
    IF ::self_destruction

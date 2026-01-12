@@ -51,7 +51,7 @@ CLASS QStyle INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyle
    IF ::self_destruction

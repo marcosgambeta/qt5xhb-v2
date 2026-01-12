@@ -27,7 +27,7 @@ CLASS QWebEngineCookieStore INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebEngineCookieStore
    IF ::self_destruction

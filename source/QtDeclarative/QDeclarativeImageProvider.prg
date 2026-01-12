@@ -34,7 +34,7 @@ CLASS QDeclarativeImageProvider
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDeclarativeImageProvider
    IF ::self_destruction

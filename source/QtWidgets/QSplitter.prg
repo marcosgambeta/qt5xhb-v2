@@ -49,7 +49,7 @@ CLASS QSplitter INHERIT QFrame
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSplitter
    IF ::self_destruction

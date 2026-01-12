@@ -34,7 +34,7 @@ CLASS QHttpPart
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHttpPart
    IF ::self_destruction

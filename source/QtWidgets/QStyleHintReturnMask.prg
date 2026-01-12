@@ -20,7 +20,7 @@ CLASS QStyleHintReturnMask INHERIT QStyleHintReturn
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleHintReturnMask
    IF ::self_destruction

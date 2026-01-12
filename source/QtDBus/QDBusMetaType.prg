@@ -31,7 +31,7 @@ CLASS QDBusMetaType
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDBusMetaType
    IF ::self_destruction

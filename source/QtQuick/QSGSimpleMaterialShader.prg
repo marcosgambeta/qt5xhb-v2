@@ -17,7 +17,7 @@ CLASS QSGSimpleMaterialShader INHERIT QSGMaterialShader
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSGSimpleMaterialShader
    IF ::self_destruction

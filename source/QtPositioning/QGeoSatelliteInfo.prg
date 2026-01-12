@@ -39,7 +39,7 @@ CLASS QGeoSatelliteInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoSatelliteInfo
    IF ::self_destruction

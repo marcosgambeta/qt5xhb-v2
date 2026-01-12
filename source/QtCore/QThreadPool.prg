@@ -35,7 +35,7 @@ CLASS QThreadPool INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QThreadPool
    IF ::self_destruction

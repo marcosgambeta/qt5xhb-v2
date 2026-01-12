@@ -90,7 +90,7 @@ CLASS Q3DTheme INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS Q3DTheme
    IF ::self_destruction

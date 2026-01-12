@@ -34,7 +34,7 @@ CLASS QFontDialog INHERIT QDialog
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QFontDialog
    IF ::self_destruction

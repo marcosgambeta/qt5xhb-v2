@@ -22,7 +22,7 @@ CLASS QStyleOptionFocusRect INHERIT QStyleOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionFocusRect
    IF ::self_destruction

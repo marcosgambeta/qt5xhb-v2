@@ -31,7 +31,7 @@ CLASS QGenericPluginFactory
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGenericPluginFactory
    IF ::self_destruction

@@ -30,7 +30,7 @@ CLASS QVideoFilterRunnable
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVideoFilterRunnable
    IF ::self_destruction

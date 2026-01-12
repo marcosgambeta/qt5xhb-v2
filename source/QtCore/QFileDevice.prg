@@ -36,7 +36,7 @@ CLASS QFileDevice INHERIT QIODevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QFileDevice
    IF ::self_destruction

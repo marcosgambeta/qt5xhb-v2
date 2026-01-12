@@ -52,7 +52,7 @@ CLASS QDataWidgetMapper INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDataWidgetMapper
    IF ::self_destruction

@@ -34,7 +34,7 @@ CLASS QScrollerProperties
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QScrollerProperties
    IF ::self_destruction

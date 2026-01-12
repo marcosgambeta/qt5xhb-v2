@@ -32,7 +32,7 @@ CLASS QGraphicsSvgItem INHERIT QGraphicsObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsSvgItem
    IF ::self_destruction

@@ -35,7 +35,7 @@ CLASS QTextItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextItem
    IF ::self_destruction

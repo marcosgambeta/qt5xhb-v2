@@ -39,7 +39,7 @@ CLASS QRegularExpressionMatchIterator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRegularExpressionMatchIterator
    IF ::self_destruction

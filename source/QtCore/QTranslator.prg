@@ -23,7 +23,7 @@ CLASS QTranslator INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTranslator
    IF ::self_destruction

@@ -25,7 +25,7 @@ CLASS QConicalGradient INHERIT QGradient
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QConicalGradient
    IF ::self_destruction

@@ -45,7 +45,7 @@ CLASS QRegularExpression
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRegularExpression
    IF ::self_destruction

@@ -41,7 +41,7 @@ CLASS QWebSecurityOrigin
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebSecurityOrigin
    IF ::self_destruction

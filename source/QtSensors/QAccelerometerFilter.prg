@@ -20,7 +20,7 @@ CLASS QAccelerometerFilter INHERIT QSensorFilter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAccelerometerFilter
    IF ::self_destruction

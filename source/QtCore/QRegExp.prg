@@ -49,7 +49,7 @@ CLASS QRegExp
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRegExp
    IF ::self_destruction

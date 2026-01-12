@@ -31,7 +31,7 @@ CLASS QQmlPropertyMap INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlPropertyMap
    IF ::self_destruction

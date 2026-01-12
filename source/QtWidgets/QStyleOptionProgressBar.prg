@@ -37,7 +37,7 @@ CLASS QStyleOptionProgressBar INHERIT QStyleOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionProgressBar
    IF ::self_destruction

@@ -40,7 +40,7 @@ CLASS QDockWidget INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDockWidget
    IF ::self_destruction

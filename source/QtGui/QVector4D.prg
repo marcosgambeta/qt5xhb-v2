@@ -53,7 +53,7 @@ CLASS QVector4D
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVector4D
    IF ::self_destruction

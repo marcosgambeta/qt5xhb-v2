@@ -22,7 +22,7 @@ CLASS QGyroscope INHERIT QSensor
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGyroscope
    IF ::self_destruction

@@ -28,7 +28,7 @@ CLASS QPlaceReply INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceReply
    IF ::self_destruction

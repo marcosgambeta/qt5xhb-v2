@@ -26,7 +26,7 @@ CLASS QOpenGLVertexArrayObject INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOpenGLVertexArrayObject
    IF ::self_destruction

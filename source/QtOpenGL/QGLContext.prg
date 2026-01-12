@@ -50,7 +50,7 @@ CLASS QGLContext
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGLContext
    IF ::self_destruction

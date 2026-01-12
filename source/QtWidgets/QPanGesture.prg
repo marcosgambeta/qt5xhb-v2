@@ -27,7 +27,7 @@ CLASS QPanGesture INHERIT QGesture
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPanGesture
    IF ::self_destruction

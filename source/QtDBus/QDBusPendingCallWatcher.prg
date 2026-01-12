@@ -24,7 +24,7 @@ CLASS QDBusPendingCallWatcher INHERIT QObject,QDBusPendingCall
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDBusPendingCallWatcher
    IF ::self_destruction

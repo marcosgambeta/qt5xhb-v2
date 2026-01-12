@@ -39,7 +39,7 @@ CLASS QGlyphRun
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGlyphRun
    IF ::self_destruction

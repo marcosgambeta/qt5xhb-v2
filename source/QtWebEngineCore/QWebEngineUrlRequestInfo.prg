@@ -38,7 +38,7 @@ CLASS QWebEngineUrlRequestInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebEngineUrlRequestInfo
    IF ::self_destruction

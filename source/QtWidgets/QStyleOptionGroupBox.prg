@@ -32,7 +32,7 @@ CLASS QStyleOptionGroupBox INHERIT QStyleOptionComplex
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionGroupBox
    IF ::self_destruction

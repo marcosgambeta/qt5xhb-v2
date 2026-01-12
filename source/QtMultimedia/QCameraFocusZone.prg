@@ -33,7 +33,7 @@ CLASS QCameraFocusZone
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCameraFocusZone
    IF ::self_destruction

@@ -30,7 +30,7 @@ CLASS QLogValue3DAxisFormatter INHERIT QValue3DAxisFormatter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLogValue3DAxisFormatter
    IF ::self_destruction

@@ -49,7 +49,7 @@ CLASS QMetaMethod
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMetaMethod
    IF ::self_destruction

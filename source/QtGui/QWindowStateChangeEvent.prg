@@ -22,7 +22,7 @@ CLASS QWindowStateChangeEvent INHERIT QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWindowStateChangeEvent
    IF ::self_destruction

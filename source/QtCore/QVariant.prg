@@ -117,7 +117,7 @@ CLASS QVariant
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVariant
    IF ::self_destruction

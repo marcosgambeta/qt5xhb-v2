@@ -40,7 +40,7 @@ CLASS QCursor
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCursor
    IF ::self_destruction

@@ -30,7 +30,7 @@ CLASS QOpenGLTimerQuery INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOpenGLTimerQuery
    IF ::self_destruction

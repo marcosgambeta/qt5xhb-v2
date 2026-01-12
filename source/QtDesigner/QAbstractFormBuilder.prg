@@ -35,7 +35,7 @@ CLASS QAbstractFormBuilder
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractFormBuilder
    IF ::self_destruction

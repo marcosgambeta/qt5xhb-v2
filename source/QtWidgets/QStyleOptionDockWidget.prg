@@ -29,7 +29,7 @@ CLASS QStyleOptionDockWidget INHERIT QStyleOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionDockWidget
    IF ::self_destruction

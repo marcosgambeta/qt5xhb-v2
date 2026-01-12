@@ -53,7 +53,7 @@ CLASS QUndoStack INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QUndoStack
    IF ::self_destruction

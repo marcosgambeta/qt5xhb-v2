@@ -46,7 +46,7 @@ CLASS QTextCodec
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextCodec
    IF ::self_destruction

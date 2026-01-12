@@ -32,7 +32,7 @@ CLASS QOpenGLShader INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOpenGLShader
    IF ::self_destruction

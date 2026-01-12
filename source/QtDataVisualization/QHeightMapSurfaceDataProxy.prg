@@ -41,7 +41,7 @@ CLASS QHeightMapSurfaceDataProxy INHERIT QSurfaceDataProxy
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHeightMapSurfaceDataProxy
    IF ::self_destruction

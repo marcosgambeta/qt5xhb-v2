@@ -33,7 +33,7 @@ CLASS QBluetoothAddress
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBluetoothAddress
    IF ::self_destruction

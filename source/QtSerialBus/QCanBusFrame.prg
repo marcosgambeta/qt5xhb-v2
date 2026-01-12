@@ -50,7 +50,7 @@ CLASS QCanBusFrame
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCanBusFrame
    IF ::self_destruction

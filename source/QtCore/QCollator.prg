@@ -41,7 +41,7 @@ CLASS QCollator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCollator
    IF ::self_destruction

@@ -63,7 +63,7 @@ CLASS QScreen INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QScreen
    IF ::self_destruction

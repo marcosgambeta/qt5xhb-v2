@@ -34,7 +34,7 @@ CLASS QBluetoothTransferRequest
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBluetoothTransferRequest
    IF ::self_destruction

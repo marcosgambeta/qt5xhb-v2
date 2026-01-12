@@ -20,7 +20,7 @@ CLASS QRotationFilter INHERIT QSensorFilter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRotationFilter
    IF ::self_destruction

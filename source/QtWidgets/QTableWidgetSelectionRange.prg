@@ -35,7 +35,7 @@ CLASS QTableWidgetSelectionRange
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTableWidgetSelectionRange
    IF ::self_destruction

@@ -38,7 +38,7 @@ CLASS QGeoRoutingManagerEngine INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoRoutingManagerEngine
    IF ::self_destruction

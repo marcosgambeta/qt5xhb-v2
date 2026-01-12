@@ -20,7 +20,7 @@ CLASS QAltimeterFilter INHERIT QSensorFilter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAltimeterFilter
    IF ::self_destruction

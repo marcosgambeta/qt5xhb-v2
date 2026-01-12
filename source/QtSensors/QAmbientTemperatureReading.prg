@@ -21,7 +21,7 @@ CLASS QAmbientTemperatureReading INHERIT QSensorReading
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAmbientTemperatureReading
    IF ::self_destruction

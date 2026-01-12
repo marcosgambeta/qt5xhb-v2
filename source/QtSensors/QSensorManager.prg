@@ -34,7 +34,7 @@ CLASS QSensorManager
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSensorManager
    IF ::self_destruction

@@ -20,7 +20,7 @@ CLASS QProximityFilter INHERIT QSensorFilter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QProximityFilter
    IF ::self_destruction

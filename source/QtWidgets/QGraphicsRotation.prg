@@ -32,7 +32,7 @@ CLASS QGraphicsRotation INHERIT QGraphicsTransform
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsRotation
    IF ::self_destruction

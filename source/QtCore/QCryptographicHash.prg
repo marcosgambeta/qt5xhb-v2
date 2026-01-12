@@ -35,7 +35,7 @@ CLASS QCryptographicHash
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCryptographicHash
    IF ::self_destruction

@@ -104,7 +104,7 @@ CLASS QLocale
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLocale
    IF ::self_destruction

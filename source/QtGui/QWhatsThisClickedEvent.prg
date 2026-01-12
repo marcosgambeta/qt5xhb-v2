@@ -21,7 +21,7 @@ CLASS QWhatsThisClickedEvent INHERIT QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWhatsThisClickedEvent
    IF ::self_destruction

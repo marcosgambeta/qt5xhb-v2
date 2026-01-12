@@ -32,7 +32,7 @@ CLASS QFileIconProvider
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QFileIconProvider
    IF ::self_destruction

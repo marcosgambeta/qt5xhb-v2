@@ -27,7 +27,7 @@ CLASS QMouseEventTransition INHERIT QEventTransition
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMouseEventTransition
    IF ::self_destruction

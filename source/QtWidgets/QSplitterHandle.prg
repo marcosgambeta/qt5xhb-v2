@@ -27,7 +27,7 @@ CLASS QSplitterHandle INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSplitterHandle
    IF ::self_destruction

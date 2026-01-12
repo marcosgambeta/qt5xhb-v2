@@ -30,7 +30,7 @@ CLASS QWinThumbnailToolBar INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWinThumbnailToolBar
    IF ::self_destruction

@@ -36,7 +36,7 @@ CLASS QDnsServiceRecord
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDnsServiceRecord
    IF ::self_destruction

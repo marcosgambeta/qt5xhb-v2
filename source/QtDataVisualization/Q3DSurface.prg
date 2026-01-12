@@ -43,7 +43,7 @@ CLASS Q3DSurface INHERIT QAbstract3DGraph
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS Q3DSurface
    IF ::self_destruction

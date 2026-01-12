@@ -49,7 +49,7 @@ CLASS QXmlQuery
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlQuery
    IF ::self_destruction

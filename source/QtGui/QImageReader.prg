@@ -74,7 +74,7 @@ CLASS QImageReader
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QImageReader
    IF ::self_destruction

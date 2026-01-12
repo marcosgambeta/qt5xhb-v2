@@ -23,7 +23,7 @@ CLASS QAreaLegendMarker INHERIT QLegendMarker
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAreaLegendMarker
    IF ::self_destruction

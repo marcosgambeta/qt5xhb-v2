@@ -24,7 +24,7 @@ CLASS QPaintEvent INHERIT QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPaintEvent
    IF ::self_destruction

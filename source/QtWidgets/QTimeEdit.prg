@@ -20,7 +20,7 @@ CLASS QTimeEdit INHERIT QDateTimeEdit
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTimeEdit
    IF ::self_destruction

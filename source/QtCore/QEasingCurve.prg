@@ -43,7 +43,7 @@ CLASS QEasingCurve
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QEasingCurve
    IF ::self_destruction

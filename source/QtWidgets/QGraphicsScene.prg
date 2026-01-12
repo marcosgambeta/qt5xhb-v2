@@ -110,7 +110,7 @@ CLASS QGraphicsScene INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsScene
    IF ::self_destruction

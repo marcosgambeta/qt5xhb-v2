@@ -21,7 +21,7 @@ CLASS QOAuthOobReplyHandler INHERIT QAbstractOAuthReplyHandler
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOAuthOobReplyHandler
    IF ::self_destruction

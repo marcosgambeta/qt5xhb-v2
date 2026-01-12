@@ -64,7 +64,7 @@ CLASS QMenu INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMenu
    IF ::self_destruction

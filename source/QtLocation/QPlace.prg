@@ -74,7 +74,7 @@ CLASS QPlace
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlace
    IF ::self_destruction

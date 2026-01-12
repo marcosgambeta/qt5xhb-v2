@@ -41,7 +41,7 @@ CLASS QScatterDataItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QScatterDataItem
    IF ::self_destruction

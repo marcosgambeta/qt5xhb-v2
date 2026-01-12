@@ -27,7 +27,7 @@ CLASS QAudioSystemPlugin INHERIT QObject,QAudioSystemFactoryInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAudioSystemPlugin
    IF ::self_destruction

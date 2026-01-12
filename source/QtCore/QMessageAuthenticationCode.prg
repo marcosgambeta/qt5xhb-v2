@@ -35,7 +35,7 @@ CLASS QMessageAuthenticationCode
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMessageAuthenticationCode
    IF ::self_destruction

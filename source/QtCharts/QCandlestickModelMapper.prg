@@ -28,7 +28,7 @@ CLASS QCandlestickModelMapper INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCandlestickModelMapper
    IF ::self_destruction

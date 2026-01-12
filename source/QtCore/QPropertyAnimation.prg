@@ -26,7 +26,7 @@ CLASS QPropertyAnimation INHERIT QVariantAnimation
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPropertyAnimation
    IF ::self_destruction

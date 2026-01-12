@@ -34,7 +34,7 @@ CLASS QDnsMailExchangeRecord
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDnsMailExchangeRecord
    IF ::self_destruction

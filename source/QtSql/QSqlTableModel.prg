@@ -60,7 +60,7 @@ CLASS QSqlTableModel INHERIT QSqlQueryModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSqlTableModel
    IF ::self_destruction

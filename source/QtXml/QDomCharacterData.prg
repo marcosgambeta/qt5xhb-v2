@@ -29,7 +29,7 @@ CLASS QDomCharacterData INHERIT QDomNode
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDomCharacterData
    IF ::self_destruction

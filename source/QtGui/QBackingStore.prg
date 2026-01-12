@@ -44,7 +44,7 @@ CLASS QBackingStore
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBackingStore
    IF ::self_destruction

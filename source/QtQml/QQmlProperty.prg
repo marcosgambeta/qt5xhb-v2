@@ -54,7 +54,7 @@ CLASS QQmlProperty
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlProperty
    IF ::self_destruction

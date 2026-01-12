@@ -23,7 +23,7 @@ CLASS QSizeGrip INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSizeGrip
    IF ::self_destruction

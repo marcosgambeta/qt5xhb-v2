@@ -29,7 +29,7 @@ CLASS QMediaGaplessPlaybackControl INHERIT QMediaControl
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMediaGaplessPlaybackControl
    IF ::self_destruction

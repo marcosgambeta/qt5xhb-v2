@@ -54,7 +54,7 @@ CLASS QVector3D
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVector3D
    IF ::self_destruction

@@ -31,7 +31,7 @@ CLASS QAccessibleImageInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAccessibleImageInterface
    IF ::self_destruction

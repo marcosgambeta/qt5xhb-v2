@@ -34,7 +34,7 @@ CLASS QSharedMemory INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSharedMemory
    IF ::self_destruction

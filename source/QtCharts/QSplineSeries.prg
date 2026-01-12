@@ -21,7 +21,7 @@ CLASS QSplineSeries INHERIT QLineSeries
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSplineSeries
    IF ::self_destruction

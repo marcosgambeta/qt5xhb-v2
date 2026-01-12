@@ -47,7 +47,7 @@ CLASS QAbstractOAuth INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractOAuth
    IF ::self_destruction

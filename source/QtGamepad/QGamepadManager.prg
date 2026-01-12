@@ -37,7 +37,7 @@ CLASS QGamepadManager INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGamepadManager
    IF ::self_destruction

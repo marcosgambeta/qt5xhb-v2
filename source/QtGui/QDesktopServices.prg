@@ -31,7 +31,7 @@ CLASS QDesktopServices
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDesktopServices
    IF ::self_destruction

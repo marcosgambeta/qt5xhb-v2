@@ -42,7 +42,7 @@ CLASS QRegion
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRegion
    IF ::self_destruction

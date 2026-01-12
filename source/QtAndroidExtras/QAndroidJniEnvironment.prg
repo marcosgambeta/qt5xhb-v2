@@ -31,7 +31,7 @@ CLASS QAndroidJniEnvironment
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAndroidJniEnvironment
    IF ::self_destruction

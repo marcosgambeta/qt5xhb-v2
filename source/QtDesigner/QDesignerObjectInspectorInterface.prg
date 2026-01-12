@@ -22,7 +22,7 @@ CLASS QDesignerObjectInspectorInterface INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDesignerObjectInspectorInterface
    IF ::self_destruction

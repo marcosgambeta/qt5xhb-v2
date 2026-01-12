@@ -56,7 +56,7 @@ CLASS QDomElement INHERIT QDomNode
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDomElement
    IF ::self_destruction

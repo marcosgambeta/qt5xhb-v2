@@ -34,7 +34,7 @@ CLASS QGeoServiceProvider INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoServiceProvider
    IF ::self_destruction

@@ -20,7 +20,7 @@ CLASS QAmbientTemperatureFilter INHERIT QSensorFilter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAmbientTemperatureFilter
    IF ::self_destruction

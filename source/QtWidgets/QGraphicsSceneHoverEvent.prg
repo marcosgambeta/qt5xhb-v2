@@ -28,7 +28,7 @@ CLASS QGraphicsSceneHoverEvent INHERIT QGraphicsSceneEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsSceneHoverEvent
    IF ::self_destruction

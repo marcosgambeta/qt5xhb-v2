@@ -21,7 +21,7 @@ CLASS QHorizontalBarSeries INHERIT QAbstractBarSeries
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHorizontalBarSeries
    IF ::self_destruction

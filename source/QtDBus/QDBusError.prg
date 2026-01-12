@@ -34,7 +34,7 @@ CLASS QDBusError
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDBusError
    IF ::self_destruction

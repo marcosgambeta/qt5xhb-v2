@@ -76,7 +76,7 @@ CLASS QInputDialog INHERIT QDialog
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QInputDialog
    IF ::self_destruction

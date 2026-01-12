@@ -40,7 +40,7 @@ CLASS QColorSpace
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QColorSpace
    IF ::self_destruction

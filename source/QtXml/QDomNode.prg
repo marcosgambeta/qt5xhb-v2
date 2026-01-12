@@ -106,7 +106,7 @@ CLASS QDomNode
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDomNode
    IF ::self_destruction

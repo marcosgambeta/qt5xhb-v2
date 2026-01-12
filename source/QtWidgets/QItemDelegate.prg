@@ -25,7 +25,7 @@ CLASS QItemDelegate INHERIT QAbstractItemDelegate
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QItemDelegate
    IF ::self_destruction

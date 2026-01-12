@@ -29,7 +29,7 @@ CLASS QVideoDeviceSelectorControl INHERIT QMediaControl
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVideoDeviceSelectorControl
    IF ::self_destruction

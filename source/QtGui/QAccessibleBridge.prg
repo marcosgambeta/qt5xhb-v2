@@ -30,7 +30,7 @@ CLASS QAccessibleBridge
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAccessibleBridge
    IF ::self_destruction

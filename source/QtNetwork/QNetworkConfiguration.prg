@@ -43,7 +43,7 @@ CLASS QNetworkConfiguration
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QNetworkConfiguration
    IF ::self_destruction

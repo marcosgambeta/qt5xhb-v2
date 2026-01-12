@@ -29,7 +29,7 @@ CLASS QEventLoopLocker
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QEventLoopLocker
    IF ::self_destruction

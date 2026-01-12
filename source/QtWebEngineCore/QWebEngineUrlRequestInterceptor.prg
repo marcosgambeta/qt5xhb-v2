@@ -20,7 +20,7 @@ CLASS QWebEngineUrlRequestInterceptor INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebEngineUrlRequestInterceptor
    IF ::self_destruction

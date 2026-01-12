@@ -55,7 +55,7 @@ CLASS QPictureIO
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPictureIO
    IF ::self_destruction

@@ -23,7 +23,7 @@ CLASS QWebHistoryInterface INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebHistoryInterface
    IF ::self_destruction

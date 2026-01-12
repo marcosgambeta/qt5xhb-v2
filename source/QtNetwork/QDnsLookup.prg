@@ -49,7 +49,7 @@ CLASS QDnsLookup INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDnsLookup
    IF ::self_destruction

@@ -26,7 +26,7 @@ CLASS QImageEncoderControl INHERIT QMediaControl
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QImageEncoderControl
    IF ::self_destruction

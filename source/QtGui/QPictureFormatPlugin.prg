@@ -22,7 +22,7 @@ CLASS QPictureFormatPlugin INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPictureFormatPlugin
    IF ::self_destruction

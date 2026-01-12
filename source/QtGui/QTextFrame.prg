@@ -30,7 +30,7 @@ CLASS QTextFrame INHERIT QTextObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextFrame
    IF ::self_destruction

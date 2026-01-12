@@ -22,7 +22,7 @@ CLASS QAndroidService INHERIT QCoreApplication
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAndroidService
    IF ::self_destruction

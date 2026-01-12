@@ -45,7 +45,7 @@ CLASS QOpenGLContext INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOpenGLContext
    IF ::self_destruction

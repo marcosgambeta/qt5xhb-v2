@@ -21,7 +21,7 @@ CLASS QGenericPlugin INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGenericPlugin
    IF ::self_destruction

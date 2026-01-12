@@ -37,7 +37,7 @@ CLASS QCameraImageProcessing INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCameraImageProcessing
    IF ::self_destruction

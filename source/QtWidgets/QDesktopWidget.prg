@@ -32,7 +32,7 @@ CLASS QDesktopWidget INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDesktopWidget
    IF ::self_destruction

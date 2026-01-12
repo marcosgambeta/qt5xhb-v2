@@ -20,7 +20,7 @@ CLASS QSGTransformNode INHERIT QSGNode
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSGTransformNode
    IF ::self_destruction

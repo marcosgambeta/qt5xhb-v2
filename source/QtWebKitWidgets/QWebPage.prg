@@ -106,7 +106,7 @@ CLASS QWebPage INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebPage
    IF ::self_destruction

@@ -45,7 +45,7 @@ CLASS QWinTaskbarProgress INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWinTaskbarProgress
    IF ::self_destruction

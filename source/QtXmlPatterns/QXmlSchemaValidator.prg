@@ -44,7 +44,7 @@ CLASS QXmlSchemaValidator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlSchemaValidator
    IF ::self_destruction

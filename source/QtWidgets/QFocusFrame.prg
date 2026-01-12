@@ -23,7 +23,7 @@ CLASS QFocusFrame INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QFocusFrame
    IF ::self_destruction

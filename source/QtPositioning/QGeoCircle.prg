@@ -27,7 +27,7 @@ CLASS QGeoCircle INHERIT QGeoShape
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoCircle
    IF ::self_destruction

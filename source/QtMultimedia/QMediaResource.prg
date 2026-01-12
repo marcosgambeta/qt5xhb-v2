@@ -54,7 +54,7 @@ CLASS QMediaResource
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMediaResource
    IF ::self_destruction

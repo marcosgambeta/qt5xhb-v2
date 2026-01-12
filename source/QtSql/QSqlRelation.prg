@@ -33,7 +33,7 @@ CLASS QSqlRelation
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSqlRelation
    IF ::self_destruction

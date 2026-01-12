@@ -22,7 +22,7 @@ CLASS QAltimeter INHERIT QSensor
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAltimeter
    IF ::self_destruction

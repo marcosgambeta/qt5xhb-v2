@@ -29,7 +29,7 @@ CLASS QAndroidActivityResultReceiver
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAndroidActivityResultReceiver
    IF ::self_destruction

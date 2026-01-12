@@ -38,7 +38,7 @@ CLASS QBluetoothLocalDevice INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBluetoothLocalDevice
    IF ::self_destruction

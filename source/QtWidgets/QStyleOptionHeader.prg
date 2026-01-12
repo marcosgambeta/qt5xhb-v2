@@ -38,7 +38,7 @@ CLASS QStyleOptionHeader INHERIT QStyleOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionHeader
    IF ::self_destruction

@@ -76,7 +76,7 @@ CLASS QFileSystemModel INHERIT QAbstractItemModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QFileSystemModel
    IF ::self_destruction

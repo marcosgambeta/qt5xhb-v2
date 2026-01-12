@@ -43,7 +43,7 @@ CLASS QThread INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QThread
    IF ::self_destruction

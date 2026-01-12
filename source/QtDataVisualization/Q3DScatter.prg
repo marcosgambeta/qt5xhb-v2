@@ -40,7 +40,7 @@ CLASS Q3DScatter INHERIT QAbstract3DGraph
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS Q3DScatter
    IF ::self_destruction

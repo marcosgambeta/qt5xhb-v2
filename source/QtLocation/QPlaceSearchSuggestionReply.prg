@@ -22,7 +22,7 @@ CLASS QPlaceSearchSuggestionReply INHERIT QPlaceReply
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceSearchSuggestionReply
    IF ::self_destruction

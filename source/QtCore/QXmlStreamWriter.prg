@@ -57,7 +57,7 @@ CLASS QXmlStreamWriter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlStreamWriter
    IF ::self_destruction

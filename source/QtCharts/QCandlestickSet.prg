@@ -49,7 +49,7 @@ CLASS QCandlestickSet INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCandlestickSet
    IF ::self_destruction

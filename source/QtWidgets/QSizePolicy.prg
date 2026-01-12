@@ -45,7 +45,7 @@ CLASS QSizePolicy
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSizePolicy
    IF ::self_destruction

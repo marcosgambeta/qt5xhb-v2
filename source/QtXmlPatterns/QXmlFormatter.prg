@@ -33,7 +33,7 @@ CLASS QXmlFormatter INHERIT QXmlSerializer
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlFormatter
    IF ::self_destruction

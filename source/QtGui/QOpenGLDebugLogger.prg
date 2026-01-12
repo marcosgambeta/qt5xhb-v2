@@ -31,7 +31,7 @@ CLASS QOpenGLDebugLogger INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOpenGLDebugLogger
    IF ::self_destruction

@@ -41,7 +41,7 @@ CLASS QDesignerFormWindowCursorInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDesignerFormWindowCursorInterface
    IF ::self_destruction

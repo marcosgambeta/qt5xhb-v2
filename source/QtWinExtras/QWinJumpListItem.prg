@@ -44,7 +44,7 @@ CLASS QWinJumpListItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWinJumpListItem
    IF ::self_destruction

@@ -36,7 +36,7 @@ CLASS QDesignerContainerExtension
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDesignerContainerExtension
    IF ::self_destruction

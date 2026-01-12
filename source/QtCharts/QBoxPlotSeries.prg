@@ -52,7 +52,7 @@ CLASS QBoxPlotSeries INHERIT QAbstractSeries
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBoxPlotSeries
    IF ::self_destruction

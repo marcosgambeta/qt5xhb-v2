@@ -57,7 +57,7 @@ CLASS QAbstractSpinBox INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractSpinBox
    IF ::self_destruction

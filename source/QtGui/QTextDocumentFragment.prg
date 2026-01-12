@@ -34,7 +34,7 @@ CLASS QTextDocumentFragment
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextDocumentFragment
    IF ::self_destruction

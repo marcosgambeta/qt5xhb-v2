@@ -31,7 +31,7 @@ CLASS QGraphicsRectItem INHERIT QAbstractGraphicsShapeItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsRectItem
    IF ::self_destruction

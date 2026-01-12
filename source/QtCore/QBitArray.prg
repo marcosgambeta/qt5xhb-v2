@@ -42,7 +42,7 @@ CLASS QBitArray
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBitArray
    IF ::self_destruction

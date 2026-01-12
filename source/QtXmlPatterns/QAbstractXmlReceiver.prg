@@ -40,7 +40,7 @@ CLASS QAbstractXmlReceiver
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractXmlReceiver
    IF ::self_destruction

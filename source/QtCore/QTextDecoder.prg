@@ -31,7 +31,7 @@ CLASS QTextDecoder
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextDecoder
    IF ::self_destruction

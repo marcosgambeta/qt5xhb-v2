@@ -20,7 +20,7 @@ CLASS QPressureFilter INHERIT QSensorFilter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPressureFilter
    IF ::self_destruction

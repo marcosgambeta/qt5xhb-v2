@@ -41,7 +41,7 @@ CLASS QSqlError
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSqlError
    IF ::self_destruction

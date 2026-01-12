@@ -20,7 +20,7 @@ CLASS QGraphicsTransform INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsTransform
    IF ::self_destruction

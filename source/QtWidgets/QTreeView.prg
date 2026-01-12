@@ -83,7 +83,7 @@ CLASS QTreeView INHERIT QAbstractItemView
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTreeView
    IF ::self_destruction

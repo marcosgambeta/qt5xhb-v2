@@ -40,7 +40,7 @@ CLASS QVPieModelMapper INHERIT QPieModelMapper
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVPieModelMapper
    IF ::self_destruction

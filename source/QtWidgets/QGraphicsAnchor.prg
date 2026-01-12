@@ -24,7 +24,7 @@ CLASS QGraphicsAnchor INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsAnchor
    IF ::self_destruction

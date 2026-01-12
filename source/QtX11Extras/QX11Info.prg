@@ -43,7 +43,7 @@ CLASS QX11Info
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QX11Info
    IF ::self_destruction

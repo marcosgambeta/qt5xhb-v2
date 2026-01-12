@@ -46,7 +46,7 @@ CLASS QAbstractAudioOutput INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractAudioOutput
    IF ::self_destruction

@@ -65,7 +65,7 @@ CLASS QGraphicsGridLayout INHERIT QGraphicsLayout
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsGridLayout
    IF ::self_destruction

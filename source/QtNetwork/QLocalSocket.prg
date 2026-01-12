@@ -49,7 +49,7 @@ CLASS QLocalSocket INHERIT QIODevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLocalSocket
    IF ::self_destruction

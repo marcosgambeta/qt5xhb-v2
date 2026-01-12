@@ -25,7 +25,7 @@ CLASS QHttpMultiPart INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHttpMultiPart
    IF ::self_destruction

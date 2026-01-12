@@ -32,7 +32,7 @@ CLASS QTextList INHERIT QTextBlockGroup
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextList
    IF ::self_destruction

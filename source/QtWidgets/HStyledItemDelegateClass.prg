@@ -35,7 +35,7 @@ CLASS HStyledItemDelegate INHERIT QStyledItemDelegate
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS HStyledItemDelegate
    IF ::self_destruction

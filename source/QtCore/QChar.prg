@@ -71,7 +71,7 @@ CLASS QChar
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QChar
    IF ::self_destruction

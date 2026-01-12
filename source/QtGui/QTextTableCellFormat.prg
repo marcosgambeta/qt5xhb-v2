@@ -30,7 +30,7 @@ CLASS QTextTableCellFormat INHERIT QTextCharFormat
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextTableCellFormat
    IF ::self_destruction

@@ -39,7 +39,7 @@ CLASS QMediaServiceProviderHint
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMediaServiceProviderHint
    IF ::self_destruction

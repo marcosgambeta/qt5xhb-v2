@@ -43,7 +43,7 @@ CLASS QStyleOptionSlider INHERIT QStyleOptionComplex
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionSlider
    IF ::self_destruction

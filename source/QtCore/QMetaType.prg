@@ -35,7 +35,7 @@ CLASS QMetaType
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMetaType
    IF ::self_destruction

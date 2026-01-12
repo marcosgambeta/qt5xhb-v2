@@ -115,7 +115,7 @@ CLASS QColor
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QColor
    IF ::self_destruction

@@ -43,7 +43,7 @@ CLASS QTextOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextOption
    IF ::self_destruction

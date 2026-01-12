@@ -26,7 +26,7 @@ CLASS QCache
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCache
    IF ::self_destruction

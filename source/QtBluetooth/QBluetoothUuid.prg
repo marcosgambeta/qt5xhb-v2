@@ -27,7 +27,7 @@ CLASS QBluetoothUuid INHERIT QUuid
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBluetoothUuid
    IF ::self_destruction

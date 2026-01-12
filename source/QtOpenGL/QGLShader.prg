@@ -31,7 +31,7 @@ CLASS QGLShader INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGLShader
    IF ::self_destruction

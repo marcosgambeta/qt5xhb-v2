@@ -31,7 +31,7 @@ CLASS QGeoRouteReply INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoRouteReply
    IF ::self_destruction

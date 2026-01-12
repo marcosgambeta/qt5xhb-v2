@@ -100,7 +100,7 @@ CLASS QLineEdit INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLineEdit
    IF ::self_destruction

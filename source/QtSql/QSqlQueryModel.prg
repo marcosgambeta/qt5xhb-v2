@@ -38,7 +38,7 @@ CLASS QSqlQueryModel INHERIT QAbstractTableModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSqlQueryModel
    IF ::self_destruction

@@ -38,7 +38,7 @@ CLASS QGeoAreaMonitorSource INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoAreaMonitorSource
    IF ::self_destruction

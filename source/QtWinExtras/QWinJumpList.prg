@@ -29,7 +29,7 @@ CLASS QWinJumpList INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWinJumpList
    IF ::self_destruction

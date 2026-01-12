@@ -29,7 +29,7 @@ CLASS QTextListFormat INHERIT QTextFormat
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextListFormat
    IF ::self_destruction

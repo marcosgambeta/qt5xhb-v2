@@ -60,7 +60,7 @@ CLASS QListWidget INHERIT QListView
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QListWidget
    IF ::self_destruction

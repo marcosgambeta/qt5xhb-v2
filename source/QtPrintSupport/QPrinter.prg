@@ -98,7 +98,7 @@ CLASS QPrinter INHERIT QPagedPaintDevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPrinter
    IF ::self_destruction

@@ -112,7 +112,7 @@ CLASS QStandardItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStandardItem
    IF ::self_destruction

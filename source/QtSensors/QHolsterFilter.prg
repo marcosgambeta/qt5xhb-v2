@@ -20,7 +20,7 @@ CLASS QHolsterFilter INHERIT QSensorFilter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHolsterFilter
    IF ::self_destruction

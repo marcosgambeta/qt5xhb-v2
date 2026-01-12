@@ -34,7 +34,7 @@ CLASS QPlaceContactDetail
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceContactDetail
    IF ::self_destruction

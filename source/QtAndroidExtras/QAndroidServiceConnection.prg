@@ -33,7 +33,7 @@ CLASS QAndroidServiceConnection
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAndroidServiceConnection
    IF ::self_destruction

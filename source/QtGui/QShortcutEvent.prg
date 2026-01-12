@@ -24,7 +24,7 @@ CLASS QShortcutEvent INHERIT QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QShortcutEvent
    IF ::self_destruction

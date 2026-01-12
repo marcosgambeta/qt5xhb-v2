@@ -29,7 +29,7 @@ CLASS QDebugStateSaver
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDebugStateSaver
    IF ::self_destruction

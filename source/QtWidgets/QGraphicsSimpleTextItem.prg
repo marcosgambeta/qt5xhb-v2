@@ -34,7 +34,7 @@ CLASS QGraphicsSimpleTextItem INHERIT QAbstractGraphicsShapeItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsSimpleTextItem
    IF ::self_destruction

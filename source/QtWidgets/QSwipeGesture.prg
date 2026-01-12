@@ -23,7 +23,7 @@ CLASS QSwipeGesture INHERIT QGesture
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSwipeGesture
    IF ::self_destruction

@@ -72,7 +72,7 @@ CLASS QUrl
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QUrl
    IF ::self_destruction

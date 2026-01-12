@@ -22,7 +22,7 @@ CLASS QQmlWebChannel INHERIT QWebChannel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlWebChannel
    IF ::self_destruction

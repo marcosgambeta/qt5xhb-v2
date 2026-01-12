@@ -28,7 +28,7 @@ CLASS QDeclarativePropertyValueSource
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDeclarativePropertyValueSource
    IF ::self_destruction

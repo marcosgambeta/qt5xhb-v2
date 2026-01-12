@@ -21,7 +21,7 @@ CLASS QPercentBarSeries INHERIT QAbstractBarSeries
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPercentBarSeries
    IF ::self_destruction

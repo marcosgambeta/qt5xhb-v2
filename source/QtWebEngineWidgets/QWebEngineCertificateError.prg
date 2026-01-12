@@ -34,7 +34,7 @@ CLASS QWebEngineCertificateError
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebEngineCertificateError
    IF ::self_destruction

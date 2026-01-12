@@ -51,7 +51,7 @@ CLASS QDataStream
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDataStream
    IF ::self_destruction

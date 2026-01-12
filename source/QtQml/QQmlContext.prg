@@ -35,7 +35,7 @@ CLASS QQmlContext INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlContext
    IF ::self_destruction

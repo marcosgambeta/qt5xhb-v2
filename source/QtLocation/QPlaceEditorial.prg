@@ -26,7 +26,7 @@ CLASS QPlaceEditorial INHERIT QPlaceContent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceEditorial
    IF ::self_destruction

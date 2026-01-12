@@ -44,7 +44,7 @@ CLASS QTextBlockFormat INHERIT QTextFormat
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextBlockFormat
    IF ::self_destruction

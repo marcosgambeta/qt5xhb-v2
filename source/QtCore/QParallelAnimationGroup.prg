@@ -21,7 +21,7 @@ CLASS QParallelAnimationGroup INHERIT QAnimationGroup
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QParallelAnimationGroup
    IF ::self_destruction

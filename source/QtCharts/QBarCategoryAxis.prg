@@ -41,7 +41,7 @@ CLASS QBarCategoryAxis INHERIT QAbstractAxis
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBarCategoryAxis
    IF ::self_destruction

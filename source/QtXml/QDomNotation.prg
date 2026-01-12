@@ -23,7 +23,7 @@ CLASS QDomNotation INHERIT QDomNode
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDomNotation
    IF ::self_destruction

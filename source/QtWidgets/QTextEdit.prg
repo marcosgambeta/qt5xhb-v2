@@ -117,7 +117,7 @@ CLASS QTextEdit INHERIT QAbstractScrollArea
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextEdit
    IF ::self_destruction

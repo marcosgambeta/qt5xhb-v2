@@ -35,7 +35,7 @@ CLASS QXmlNodeModelIndex
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlNodeModelIndex
    IF ::self_destruction

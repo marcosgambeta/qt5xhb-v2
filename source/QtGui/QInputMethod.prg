@@ -43,7 +43,7 @@ CLASS QInputMethod INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QInputMethod
    IF ::self_destruction

@@ -36,7 +36,7 @@ CLASS QHelpSearchEngine INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHelpSearchEngine
    IF ::self_destruction

@@ -24,7 +24,7 @@ CLASS QCategory3DAxis INHERIT QAbstract3DAxis
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCategory3DAxis
    IF ::self_destruction

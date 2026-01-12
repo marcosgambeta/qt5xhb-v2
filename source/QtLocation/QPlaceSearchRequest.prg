@@ -50,7 +50,7 @@ CLASS QPlaceSearchRequest
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceSearchRequest
    IF ::self_destruction

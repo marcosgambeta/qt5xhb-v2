@@ -22,7 +22,7 @@ CLASS QWinColorizationChangeEvent INHERIT QWinEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWinColorizationChangeEvent
    IF ::self_destruction

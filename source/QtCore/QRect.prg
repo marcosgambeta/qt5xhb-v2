@@ -84,7 +84,7 @@ CLASS QRect
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRect
    IF ::self_destruction

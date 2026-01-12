@@ -27,7 +27,7 @@ CLASS QPlaceImage INHERIT QPlaceContent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceImage
    IF ::self_destruction

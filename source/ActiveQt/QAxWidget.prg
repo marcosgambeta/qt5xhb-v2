@@ -42,7 +42,7 @@ CLASS QAxWidget INHERIT QWidget,QAxBase
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAxWidget
    IF ::self_destruction

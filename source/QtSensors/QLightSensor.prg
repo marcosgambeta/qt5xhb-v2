@@ -26,7 +26,7 @@ CLASS QLightSensor INHERIT QSensor
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLightSensor
    IF ::self_destruction

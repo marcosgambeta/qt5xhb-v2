@@ -21,7 +21,7 @@ CLASS QWinCompositionChangeEvent INHERIT QWinEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWinCompositionChangeEvent
    IF ::self_destruction

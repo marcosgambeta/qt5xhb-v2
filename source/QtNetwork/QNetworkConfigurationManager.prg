@@ -33,7 +33,7 @@ CLASS QNetworkConfigurationManager INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QNetworkConfigurationManager
    IF ::self_destruction

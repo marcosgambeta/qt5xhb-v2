@@ -27,7 +27,7 @@ CLASS QSensorGestureManager INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSensorGestureManager
    IF ::self_destruction

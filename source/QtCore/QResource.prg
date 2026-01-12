@@ -41,7 +41,7 @@ CLASS QResource
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QResource
    IF ::self_destruction

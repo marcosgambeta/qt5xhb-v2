@@ -117,7 +117,7 @@ CLASS QListView INHERIT QAbstractItemView
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QListView
    IF ::self_destruction

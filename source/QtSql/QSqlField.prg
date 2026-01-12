@@ -56,7 +56,7 @@ CLASS QSqlField
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSqlField
    IF ::self_destruction

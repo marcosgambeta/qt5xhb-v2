@@ -34,7 +34,7 @@ CLASS QGradient
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGradient
    IF ::self_destruction

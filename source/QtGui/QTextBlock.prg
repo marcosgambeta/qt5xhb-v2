@@ -64,7 +64,7 @@ CLASS QTextBlock
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextBlock
    IF ::self_destruction

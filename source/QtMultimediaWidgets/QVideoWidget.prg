@@ -42,7 +42,7 @@ CLASS QVideoWidget INHERIT QWidget,QMediaBindableInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVideoWidget
    IF ::self_destruction

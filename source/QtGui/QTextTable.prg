@@ -39,7 +39,7 @@ CLASS QTextTable INHERIT QTextFrame
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextTable
    IF ::self_destruction

@@ -34,7 +34,7 @@ CLASS QStringMatcher
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStringMatcher
    IF ::self_destruction

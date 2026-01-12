@@ -140,7 +140,7 @@ CLASS QByteArray
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QByteArray
    IF ::self_destruction

@@ -83,7 +83,7 @@ CLASS QGLFormat
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGLFormat
    IF ::self_destruction

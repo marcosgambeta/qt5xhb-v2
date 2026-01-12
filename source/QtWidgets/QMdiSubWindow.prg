@@ -43,7 +43,7 @@ CLASS QMdiSubWindow INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMdiSubWindow
    IF ::self_destruction

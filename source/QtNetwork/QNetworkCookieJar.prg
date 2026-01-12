@@ -26,7 +26,7 @@ CLASS QNetworkCookieJar INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QNetworkCookieJar
    IF ::self_destruction

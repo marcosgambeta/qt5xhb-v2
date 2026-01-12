@@ -85,7 +85,7 @@ CLASS QDir
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDir
    IF ::self_destruction

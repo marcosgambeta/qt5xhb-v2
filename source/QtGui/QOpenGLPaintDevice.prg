@@ -36,7 +36,7 @@ CLASS QOpenGLPaintDevice INHERIT QPaintDevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOpenGLPaintDevice
    IF ::self_destruction

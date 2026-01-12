@@ -25,7 +25,7 @@ CLASS QSGGeometryNode INHERIT QSGBasicGeometryNode
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSGGeometryNode
    IF ::self_destruction

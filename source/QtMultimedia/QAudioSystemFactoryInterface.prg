@@ -36,7 +36,7 @@ CLASS QAudioSystemFactoryInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAudioSystemFactoryInterface
    IF ::self_destruction

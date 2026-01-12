@@ -25,7 +25,7 @@ CLASS QPieLegendMarker INHERIT QLegendMarker
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPieLegendMarker
    IF ::self_destruction

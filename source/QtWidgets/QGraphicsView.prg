@@ -88,7 +88,7 @@ CLASS QGraphicsView INHERIT QAbstractScrollArea
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsView
    IF ::self_destruction

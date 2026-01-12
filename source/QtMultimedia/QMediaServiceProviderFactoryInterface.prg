@@ -29,7 +29,7 @@ CLASS QMediaServiceProviderFactoryInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMediaServiceProviderFactoryInterface
    IF ::self_destruction

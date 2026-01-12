@@ -31,7 +31,7 @@ CLASS QStyleOptionToolBar INHERIT QStyleOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionToolBar
    IF ::self_destruction

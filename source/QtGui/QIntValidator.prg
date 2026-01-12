@@ -32,7 +32,7 @@ CLASS QIntValidator INHERIT QValidator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QIntValidator
    IF ::self_destruction

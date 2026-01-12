@@ -40,7 +40,7 @@ CLASS QIdentityProxyModel INHERIT QAbstractProxyModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QIdentityProxyModel
    IF ::self_destruction

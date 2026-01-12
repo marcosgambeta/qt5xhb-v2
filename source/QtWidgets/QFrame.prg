@@ -36,7 +36,7 @@ CLASS QFrame INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QFrame
    IF ::self_destruction

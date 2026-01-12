@@ -98,7 +98,7 @@ CLASS QFileDialog INHERIT QDialog
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QFileDialog
    IF ::self_destruction

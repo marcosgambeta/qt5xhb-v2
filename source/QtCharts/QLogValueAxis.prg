@@ -41,7 +41,7 @@ CLASS QLogValueAxis INHERIT QAbstractAxis
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLogValueAxis
    IF ::self_destruction

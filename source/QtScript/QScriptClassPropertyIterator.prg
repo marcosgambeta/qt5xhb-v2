@@ -40,7 +40,7 @@ CLASS QScriptClassPropertyIterator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QScriptClassPropertyIterator
    IF ::self_destruction

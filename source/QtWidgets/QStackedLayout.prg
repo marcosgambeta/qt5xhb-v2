@@ -33,7 +33,7 @@ CLASS QStackedLayout INHERIT QLayout
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStackedLayout
    IF ::self_destruction

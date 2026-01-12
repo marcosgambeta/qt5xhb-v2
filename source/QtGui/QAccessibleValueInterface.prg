@@ -34,7 +34,7 @@ CLASS QAccessibleValueInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAccessibleValueInterface
    IF ::self_destruction

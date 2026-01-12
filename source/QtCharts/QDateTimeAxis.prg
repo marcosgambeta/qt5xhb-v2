@@ -37,7 +37,7 @@ CLASS QDateTimeAxis INHERIT QAbstractAxis
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDateTimeAxis
    IF ::self_destruction

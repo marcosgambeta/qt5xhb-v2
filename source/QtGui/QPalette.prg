@@ -63,7 +63,7 @@ CLASS QPalette
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPalette
    IF ::self_destruction

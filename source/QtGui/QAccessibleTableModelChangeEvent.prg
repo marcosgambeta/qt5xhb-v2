@@ -30,7 +30,7 @@ CLASS QAccessibleTableModelChangeEvent INHERIT QAccessibleEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAccessibleTableModelChangeEvent
    IF ::self_destruction

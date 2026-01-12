@@ -43,7 +43,7 @@ CLASS QWinJumpListCategory
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWinJumpListCategory
    IF ::self_destruction

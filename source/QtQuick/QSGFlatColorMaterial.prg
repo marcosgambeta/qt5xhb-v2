@@ -23,7 +23,7 @@ CLASS QSGFlatColorMaterial INHERIT QSGMaterial
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSGFlatColorMaterial
    IF ::self_destruction

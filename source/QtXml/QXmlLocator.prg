@@ -30,7 +30,7 @@ CLASS QXmlLocator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlLocator
    IF ::self_destruction

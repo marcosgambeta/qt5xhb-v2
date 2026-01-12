@@ -23,7 +23,7 @@ CLASS QFocusEvent INHERIT QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QFocusEvent
    IF ::self_destruction

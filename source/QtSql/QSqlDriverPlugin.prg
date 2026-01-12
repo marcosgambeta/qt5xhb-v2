@@ -21,7 +21,7 @@ CLASS QSqlDriverPlugin INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSqlDriverPlugin
    IF ::self_destruction

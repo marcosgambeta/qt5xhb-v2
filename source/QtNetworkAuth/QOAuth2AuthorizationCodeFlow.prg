@@ -27,7 +27,7 @@ CLASS QOAuth2AuthorizationCodeFlow INHERIT QAbstractOAuth2
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOAuth2AuthorizationCodeFlow
    IF ::self_destruction

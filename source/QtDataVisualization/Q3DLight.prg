@@ -24,7 +24,7 @@ CLASS Q3DLight INHERIT Q3DObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS Q3DLight
    IF ::self_destruction

@@ -42,7 +42,7 @@ CLASS QQmlListReference
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlListReference
    IF ::self_destruction

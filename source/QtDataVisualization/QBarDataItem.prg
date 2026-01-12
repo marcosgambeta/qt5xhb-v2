@@ -33,7 +33,7 @@ CLASS QBarDataItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBarDataItem
    IF ::self_destruction

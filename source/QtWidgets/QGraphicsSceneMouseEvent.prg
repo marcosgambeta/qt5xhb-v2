@@ -33,7 +33,7 @@ CLASS QGraphicsSceneMouseEvent INHERIT QGraphicsSceneEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsSceneMouseEvent
    IF ::self_destruction

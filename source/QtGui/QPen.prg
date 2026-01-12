@@ -52,7 +52,7 @@ CLASS QPen
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPen
    IF ::self_destruction

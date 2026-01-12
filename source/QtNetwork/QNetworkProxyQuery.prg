@@ -46,7 +46,7 @@ CLASS QNetworkProxyQuery
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QNetworkProxyQuery
    IF ::self_destruction

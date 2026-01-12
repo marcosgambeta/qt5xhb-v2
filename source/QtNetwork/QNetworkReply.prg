@@ -56,7 +56,7 @@ CLASS QNetworkReply INHERIT QIODevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QNetworkReply
    IF ::self_destruction

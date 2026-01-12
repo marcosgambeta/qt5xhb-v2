@@ -25,7 +25,7 @@ CLASS QHelpIndexModel INHERIT QStringListModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHelpIndexModel
    IF ::self_destruction

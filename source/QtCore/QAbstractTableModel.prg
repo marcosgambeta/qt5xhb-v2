@@ -22,7 +22,7 @@ CLASS QAbstractTableModel INHERIT QAbstractItemModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractTableModel
    IF ::self_destruction

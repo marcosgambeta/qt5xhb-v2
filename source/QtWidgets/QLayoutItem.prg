@@ -50,7 +50,7 @@ CLASS QLayoutItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLayoutItem
    IF ::self_destruction

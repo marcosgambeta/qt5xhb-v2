@@ -35,7 +35,7 @@ CLASS QCameraFocusControl INHERIT QMediaControl
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCameraFocusControl
    IF ::self_destruction

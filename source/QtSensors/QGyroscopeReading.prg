@@ -25,7 +25,7 @@ CLASS QGyroscopeReading INHERIT QSensorReading
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGyroscopeReading
    IF ::self_destruction

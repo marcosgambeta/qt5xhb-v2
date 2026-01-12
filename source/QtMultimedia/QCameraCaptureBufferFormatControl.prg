@@ -24,7 +24,7 @@ CLASS QCameraCaptureBufferFormatControl INHERIT QMediaObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCameraCaptureBufferFormatControl
    IF ::self_destruction

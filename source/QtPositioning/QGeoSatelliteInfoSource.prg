@@ -35,7 +35,7 @@ CLASS QGeoSatelliteInfoSource INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoSatelliteInfoSource
    IF ::self_destruction

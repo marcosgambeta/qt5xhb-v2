@@ -36,7 +36,7 @@ CLASS QCameraInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCameraInfo
    IF ::self_destruction

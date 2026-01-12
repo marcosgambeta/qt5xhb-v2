@@ -41,7 +41,7 @@ CLASS QTextDocumentWriter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextDocumentWriter
    IF ::self_destruction

@@ -24,7 +24,7 @@ CLASS QAudioRoleControl INHERIT QMediaControl
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAudioRoleControl
    IF ::self_destruction

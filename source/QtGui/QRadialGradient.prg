@@ -31,7 +31,7 @@ CLASS QRadialGradient INHERIT QGradient
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRadialGradient
    IF ::self_destruction

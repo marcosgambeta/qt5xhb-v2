@@ -20,7 +20,7 @@ CLASS QOrientationFilter INHERIT QSensorFilter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOrientationFilter
    IF ::self_destruction

@@ -23,7 +23,7 @@ CLASS QHelpContentWidget INHERIT QTreeView
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHelpContentWidget
    IF ::self_destruction

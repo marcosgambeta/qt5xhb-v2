@@ -40,7 +40,7 @@ CLASS QQmlError
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlError
    IF ::self_destruction

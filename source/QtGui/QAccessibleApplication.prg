@@ -29,7 +29,7 @@ CLASS QAccessibleApplication INHERIT QAccessibleObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAccessibleApplication
    IF ::self_destruction

@@ -39,7 +39,7 @@ CLASS QSvgRenderer INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSvgRenderer
    IF ::self_destruction

@@ -28,7 +28,7 @@ CLASS HAbstractListModelV2 INHERIT QAbstractListModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS HAbstractListModelV2
    IF ::self_destruction

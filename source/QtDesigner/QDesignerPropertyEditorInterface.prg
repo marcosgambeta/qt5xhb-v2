@@ -30,7 +30,7 @@ CLASS QDesignerPropertyEditorInterface INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDesignerPropertyEditorInterface
    IF ::self_destruction

@@ -70,7 +70,7 @@ CLASS QSerialPort INHERIT QIODevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSerialPort
    IF ::self_destruction

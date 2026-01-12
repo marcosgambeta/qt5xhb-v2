@@ -26,7 +26,7 @@ CLASS QSignalTransition INHERIT QAbstractTransition
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSignalTransition
    IF ::self_destruction

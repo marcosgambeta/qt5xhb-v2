@@ -36,7 +36,7 @@ CLASS QDBusUnixFileDescriptor
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDBusUnixFileDescriptor
    IF ::self_destruction

@@ -109,7 +109,7 @@ CLASS QComboBox INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QComboBox
    IF ::self_destruction

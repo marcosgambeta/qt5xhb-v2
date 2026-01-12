@@ -36,7 +36,7 @@ CLASS QXmlStreamAttribute
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlStreamAttribute
    IF ::self_destruction

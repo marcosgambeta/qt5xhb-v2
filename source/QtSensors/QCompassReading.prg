@@ -23,7 +23,7 @@ CLASS QCompassReading INHERIT QSensorReading
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCompassReading
    IF ::self_destruction

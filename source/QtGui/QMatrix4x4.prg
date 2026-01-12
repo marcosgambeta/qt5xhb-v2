@@ -65,7 +65,7 @@ CLASS QMatrix4x4
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMatrix4x4
    IF ::self_destruction

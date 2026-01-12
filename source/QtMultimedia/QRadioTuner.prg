@@ -60,7 +60,7 @@ CLASS QRadioTuner INHERIT QMediaObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRadioTuner
    IF ::self_destruction

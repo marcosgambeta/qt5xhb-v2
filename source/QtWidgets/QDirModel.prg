@@ -60,7 +60,7 @@ CLASS QDirModel INHERIT QAbstractItemModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDirModel
    IF ::self_destruction

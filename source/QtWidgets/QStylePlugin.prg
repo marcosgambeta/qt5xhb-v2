@@ -21,7 +21,7 @@ CLASS QStylePlugin INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStylePlugin
    IF ::self_destruction

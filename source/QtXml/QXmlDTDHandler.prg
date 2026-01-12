@@ -31,7 +31,7 @@ CLASS QXmlDTDHandler
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlDTDHandler
    IF ::self_destruction

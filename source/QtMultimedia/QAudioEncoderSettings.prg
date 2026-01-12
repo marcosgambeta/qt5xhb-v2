@@ -45,7 +45,7 @@ CLASS QAudioEncoderSettings
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAudioEncoderSettings
    IF ::self_destruction

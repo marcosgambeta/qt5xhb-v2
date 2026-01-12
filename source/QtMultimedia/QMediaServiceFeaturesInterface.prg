@@ -29,7 +29,7 @@ CLASS QMediaServiceFeaturesInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMediaServiceFeaturesInterface
    IF ::self_destruction

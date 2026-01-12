@@ -63,7 +63,7 @@ CLASS QMovie INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMovie
    IF ::self_destruction

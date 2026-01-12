@@ -75,7 +75,7 @@ CLASS QListWidgetItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QListWidgetItem
    IF ::self_destruction

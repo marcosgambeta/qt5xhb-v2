@@ -73,7 +73,7 @@ CLASS QSqlDatabase
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSqlDatabase
    IF ::self_destruction

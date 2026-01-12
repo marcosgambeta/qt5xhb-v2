@@ -52,7 +52,7 @@ CLASS QHelpEngineCore INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHelpEngineCore
    IF ::self_destruction

@@ -28,7 +28,7 @@ CLASS QOpenGLTimeMonitor INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOpenGLTimeMonitor
    IF ::self_destruction

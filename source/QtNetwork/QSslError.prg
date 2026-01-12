@@ -34,7 +34,7 @@ CLASS QSslError
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSslError
    IF ::self_destruction

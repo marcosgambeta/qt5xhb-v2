@@ -33,7 +33,7 @@ CLASS QByteArrayMatcher
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QByteArrayMatcher
    IF ::self_destruction

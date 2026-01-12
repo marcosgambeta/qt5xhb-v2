@@ -31,7 +31,7 @@ CLASS QModbusReply INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QModbusReply
    IF ::self_destruction

@@ -77,7 +77,7 @@ CLASS QDateTimeEdit INHERIT QAbstractSpinBox
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDateTimeEdit
    IF ::self_destruction

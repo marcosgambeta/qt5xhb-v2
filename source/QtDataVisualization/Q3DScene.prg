@@ -57,7 +57,7 @@ CLASS Q3DScene INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS Q3DScene
    IF ::self_destruction

@@ -45,7 +45,7 @@ CLASS QJsonValueRef
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QJsonValueRef
    IF ::self_destruction

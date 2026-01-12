@@ -37,7 +37,7 @@ CLASS QDomImplementation
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDomImplementation
    IF ::self_destruction

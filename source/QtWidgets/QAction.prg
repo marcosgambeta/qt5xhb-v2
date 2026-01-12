@@ -162,7 +162,7 @@ CLASS QAction INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAction
    IF ::self_destruction

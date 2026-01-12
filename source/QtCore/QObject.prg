@@ -254,7 +254,7 @@ CLASS QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QObject
    IF ::self_destruction

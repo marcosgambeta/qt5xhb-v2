@@ -31,7 +31,7 @@ CLASS QRunnable
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRunnable
    IF ::self_destruction

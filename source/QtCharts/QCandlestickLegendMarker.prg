@@ -23,7 +23,7 @@ CLASS QCandlestickLegendMarker INHERIT QLegendMarker
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCandlestickLegendMarker
    IF ::self_destruction

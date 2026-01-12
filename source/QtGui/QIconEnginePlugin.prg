@@ -21,7 +21,7 @@ CLASS QIconEnginePlugin INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QIconEnginePlugin
    IF ::self_destruction

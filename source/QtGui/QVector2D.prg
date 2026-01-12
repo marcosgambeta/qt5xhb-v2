@@ -49,7 +49,7 @@ CLASS QVector2D
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVector2D
    IF ::self_destruction

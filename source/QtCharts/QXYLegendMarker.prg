@@ -23,7 +23,7 @@ CLASS QXYLegendMarker INHERIT QLegendMarker
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXYLegendMarker
    IF ::self_destruction

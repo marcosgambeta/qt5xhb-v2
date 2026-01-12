@@ -47,7 +47,7 @@ CLASS QTextToSpeech INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextToSpeech
    IF ::self_destruction

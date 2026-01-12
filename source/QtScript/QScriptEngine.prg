@@ -63,7 +63,7 @@ CLASS QScriptEngine INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QScriptEngine
    IF ::self_destruction

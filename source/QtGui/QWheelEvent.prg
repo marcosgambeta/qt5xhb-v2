@@ -35,7 +35,7 @@ CLASS QWheelEvent INHERIT QInputEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWheelEvent
    IF ::self_destruction

@@ -39,7 +39,7 @@ CLASS QSpinBox INHERIT QAbstractSpinBox
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSpinBox
    IF ::self_destruction

@@ -35,7 +35,7 @@ CLASS QTextTableFormat INHERIT QTextFrameFormat
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextTableFormat
    IF ::self_destruction

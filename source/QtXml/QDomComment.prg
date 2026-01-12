@@ -21,7 +21,7 @@ CLASS QDomComment INHERIT QDomCharacterData
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDomComment
    IF ::self_destruction

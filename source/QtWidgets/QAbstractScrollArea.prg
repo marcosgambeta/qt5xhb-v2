@@ -58,7 +58,7 @@ CLASS QAbstractScrollArea INHERIT QFrame
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractScrollArea
    IF ::self_destruction

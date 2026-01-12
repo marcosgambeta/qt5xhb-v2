@@ -30,7 +30,7 @@ CLASS QScrollPrepareEvent INHERIT QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QScrollPrepareEvent
    IF ::self_destruction

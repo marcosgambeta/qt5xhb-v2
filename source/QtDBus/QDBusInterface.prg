@@ -23,7 +23,7 @@ CLASS QDBusInterface INHERIT QDBusAbstractInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDBusInterface
    IF ::self_destruction

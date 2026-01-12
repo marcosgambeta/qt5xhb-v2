@@ -36,7 +36,7 @@ CLASS QOpenGLWidget INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOpenGLWidget
    IF ::self_destruction

@@ -51,7 +51,7 @@ CLASS QBrush
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBrush
    IF ::self_destruction

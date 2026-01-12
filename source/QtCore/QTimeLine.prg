@@ -53,7 +53,7 @@ CLASS QTimeLine INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTimeLine
    IF ::self_destruction

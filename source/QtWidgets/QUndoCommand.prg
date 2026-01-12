@@ -38,7 +38,7 @@ CLASS QUndoCommand
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QUndoCommand
    IF ::self_destruction

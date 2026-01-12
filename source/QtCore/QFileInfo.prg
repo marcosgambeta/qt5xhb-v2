@@ -79,7 +79,7 @@ CLASS QFileInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QFileInfo
    IF ::self_destruction

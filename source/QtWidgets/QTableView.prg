@@ -70,7 +70,7 @@ CLASS QTableView INHERIT QAbstractItemView
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTableView
    IF ::self_destruction

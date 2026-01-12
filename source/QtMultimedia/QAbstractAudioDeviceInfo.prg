@@ -29,7 +29,7 @@ CLASS QAbstractAudioDeviceInfo INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractAudioDeviceInfo
    IF ::self_destruction

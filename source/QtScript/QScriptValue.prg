@@ -80,7 +80,7 @@ CLASS QScriptValue
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QScriptValue
    IF ::self_destruction

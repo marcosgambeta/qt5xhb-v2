@@ -24,7 +24,7 @@ CLASS QCanBus INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCanBus
    IF ::self_destruction

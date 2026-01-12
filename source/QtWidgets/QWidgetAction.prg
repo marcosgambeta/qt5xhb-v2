@@ -25,7 +25,7 @@ CLASS QWidgetAction INHERIT QAction
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWidgetAction
    IF ::self_destruction

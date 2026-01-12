@@ -51,7 +51,7 @@ CLASS QImageWriter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QImageWriter
    IF ::self_destruction

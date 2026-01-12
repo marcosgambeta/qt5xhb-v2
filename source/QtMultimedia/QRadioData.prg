@@ -40,7 +40,7 @@ CLASS QRadioData INHERIT QObject,QMediaBindableInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRadioData
    IF ::self_destruction

@@ -39,7 +39,7 @@ CLASS QGeoPositionInfoSource INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoPositionInfoSource
    IF ::self_destruction

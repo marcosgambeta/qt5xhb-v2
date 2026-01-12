@@ -33,7 +33,7 @@ CLASS QGeoCodeReply INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoCodeReply
    IF ::self_destruction

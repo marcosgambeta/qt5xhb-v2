@@ -35,7 +35,7 @@ CLASS QPlaceSearchResult
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceSearchResult
    IF ::self_destruction

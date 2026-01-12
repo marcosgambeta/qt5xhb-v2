@@ -93,7 +93,7 @@ CLASS QPlainTextEdit INHERIT QAbstractScrollArea
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlainTextEdit
    IF ::self_destruction

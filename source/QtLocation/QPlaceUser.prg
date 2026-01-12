@@ -33,7 +33,7 @@ CLASS QPlaceUser
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceUser
    IF ::self_destruction

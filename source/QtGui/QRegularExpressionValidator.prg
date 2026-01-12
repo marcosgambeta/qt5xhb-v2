@@ -25,7 +25,7 @@ CLASS QRegularExpressionValidator INHERIT QValidator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRegularExpressionValidator
    IF ::self_destruction

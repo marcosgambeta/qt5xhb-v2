@@ -27,7 +27,7 @@ CLASS QDomAttr INHERIT QDomNode
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDomAttr
    IF ::self_destruction

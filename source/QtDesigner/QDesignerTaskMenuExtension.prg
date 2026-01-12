@@ -31,7 +31,7 @@ CLASS QDesignerTaskMenuExtension
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDesignerTaskMenuExtension
    IF ::self_destruction

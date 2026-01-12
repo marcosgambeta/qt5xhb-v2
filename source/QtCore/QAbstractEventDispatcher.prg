@@ -41,7 +41,7 @@ CLASS QAbstractEventDispatcher INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractEventDispatcher
    IF ::self_destruction

@@ -36,7 +36,7 @@ CLASS QGraphicsAnchorLayout INHERIT QGraphicsLayout
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsAnchorLayout
    IF ::self_destruction

@@ -49,7 +49,7 @@ CLASS QImageIOHandler
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QImageIOHandler
    IF ::self_destruction

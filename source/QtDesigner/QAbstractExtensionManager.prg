@@ -32,7 +32,7 @@ CLASS QAbstractExtensionManager
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractExtensionManager
    IF ::self_destruction

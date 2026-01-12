@@ -34,7 +34,7 @@ CLASS QJSValueIterator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QJSValueIterator
    IF ::self_destruction

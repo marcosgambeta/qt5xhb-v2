@@ -41,7 +41,7 @@ CLASS QQuickWebEngineScript INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQuickWebEngineScript
    IF ::self_destruction

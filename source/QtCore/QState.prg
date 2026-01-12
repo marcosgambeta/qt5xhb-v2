@@ -36,7 +36,7 @@ CLASS QState INHERIT QAbstractState
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QState
    IF ::self_destruction

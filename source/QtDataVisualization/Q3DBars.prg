@@ -62,7 +62,7 @@ CLASS Q3DBars INHERIT QAbstract3DGraph
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS Q3DBars
    IF ::self_destruction

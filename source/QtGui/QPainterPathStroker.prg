@@ -45,7 +45,7 @@ CLASS QPainterPathStroker
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPainterPathStroker
    IF ::self_destruction

@@ -48,7 +48,7 @@ CLASS QProxyStyle INHERIT QCommonStyle
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QProxyStyle
    IF ::self_destruction

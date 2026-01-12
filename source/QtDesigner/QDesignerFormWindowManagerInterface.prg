@@ -52,7 +52,7 @@ CLASS QDesignerFormWindowManagerInterface INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDesignerFormWindowManagerInterface
    IF ::self_destruction

@@ -49,7 +49,7 @@ CLASS QLegendMarker INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLegendMarker
    IF ::self_destruction

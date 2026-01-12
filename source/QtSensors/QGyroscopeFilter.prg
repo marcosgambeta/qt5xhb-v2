@@ -20,7 +20,7 @@ CLASS QGyroscopeFilter INHERIT QSensorFilter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGyroscopeFilter
    IF ::self_destruction

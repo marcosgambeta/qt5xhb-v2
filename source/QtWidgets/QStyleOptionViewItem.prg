@@ -58,7 +58,7 @@ CLASS QStyleOptionViewItem INHERIT QStyleOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionViewItem
    IF ::self_destruction

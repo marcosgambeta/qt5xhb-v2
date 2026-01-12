@@ -42,7 +42,7 @@ CLASS QCameraViewfinderSettings
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCameraViewfinderSettings
    IF ::self_destruction

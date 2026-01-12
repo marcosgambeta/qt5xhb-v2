@@ -63,7 +63,7 @@ CLASS QGraphicsLayoutItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsLayoutItem
    IF ::self_destruction

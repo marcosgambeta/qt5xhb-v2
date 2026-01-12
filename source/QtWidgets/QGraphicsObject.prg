@@ -172,7 +172,7 @@ CLASS QGraphicsObject INHERIT QObject,QGraphicsItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsObject
    IF ::self_destruction

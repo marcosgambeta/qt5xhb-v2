@@ -38,7 +38,7 @@ CLASS QXmlNamespaceSupport
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlNamespaceSupport
    IF ::self_destruction

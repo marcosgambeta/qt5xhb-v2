@@ -50,7 +50,7 @@ CLASS QJsonValue
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QJsonValue
    IF ::self_destruction

@@ -24,7 +24,7 @@ CLASS QDomProcessingInstruction INHERIT QDomNode
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDomProcessingInstruction
    IF ::self_destruction

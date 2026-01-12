@@ -46,7 +46,7 @@ CLASS QTime
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTime
    IF ::self_destruction

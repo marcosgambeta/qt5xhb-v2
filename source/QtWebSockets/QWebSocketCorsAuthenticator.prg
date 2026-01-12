@@ -33,7 +33,7 @@ CLASS QWebSocketCorsAuthenticator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebSocketCorsAuthenticator
    IF ::self_destruction

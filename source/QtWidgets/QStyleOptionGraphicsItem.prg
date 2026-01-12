@@ -28,7 +28,7 @@ CLASS QStyleOptionGraphicsItem INHERIT QStyleOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionGraphicsItem
    IF ::self_destruction

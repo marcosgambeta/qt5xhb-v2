@@ -36,7 +36,7 @@ CLASS QPdfWriter INHERIT QObject,QPagedPaintDevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPdfWriter
    IF ::self_destruction

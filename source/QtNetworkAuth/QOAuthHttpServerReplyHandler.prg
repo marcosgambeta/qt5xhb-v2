@@ -29,7 +29,7 @@ CLASS QOAuthHttpServerReplyHandler INHERIT QOAuthOobReplyHandler
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOAuthHttpServerReplyHandler
    IF ::self_destruction

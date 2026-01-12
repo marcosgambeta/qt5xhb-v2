@@ -55,7 +55,7 @@ CLASS QPieSeries INHERIT QAbstractSeries
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPieSeries
    IF ::self_destruction

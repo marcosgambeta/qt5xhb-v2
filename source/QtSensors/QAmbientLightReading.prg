@@ -21,7 +21,7 @@ CLASS QAmbientLightReading INHERIT QSensorReading
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAmbientLightReading
    IF ::self_destruction

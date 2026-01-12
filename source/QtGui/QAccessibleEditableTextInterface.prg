@@ -31,7 +31,7 @@ CLASS QAccessibleEditableTextInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAccessibleEditableTextInterface
    IF ::self_destruction

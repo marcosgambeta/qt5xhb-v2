@@ -36,7 +36,7 @@ CLASS QAxObject INHERIT QObject,QAxBase
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAxObject
    IF ::self_destruction

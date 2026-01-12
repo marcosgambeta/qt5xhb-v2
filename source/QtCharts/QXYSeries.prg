@@ -70,7 +70,7 @@ CLASS QXYSeries INHERIT QAbstractSeries
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXYSeries
    IF ::self_destruction

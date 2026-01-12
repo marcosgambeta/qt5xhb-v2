@@ -21,7 +21,7 @@ CLASS QLineSeries INHERIT QXYSeries
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLineSeries
    IF ::self_destruction

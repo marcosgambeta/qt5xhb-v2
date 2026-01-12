@@ -33,7 +33,7 @@ CLASS QDesignerDynamicPropertySheetExtension
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDesignerDynamicPropertySheetExtension
    IF ::self_destruction

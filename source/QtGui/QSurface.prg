@@ -34,7 +34,7 @@ CLASS QSurface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSurface
    IF ::self_destruction

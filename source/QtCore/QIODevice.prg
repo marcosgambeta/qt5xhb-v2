@@ -53,7 +53,7 @@ CLASS QIODevice INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QIODevice
    IF ::self_destruction

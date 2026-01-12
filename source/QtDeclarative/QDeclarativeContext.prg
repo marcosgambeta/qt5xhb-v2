@@ -34,7 +34,7 @@ CLASS QDeclarativeContext INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDeclarativeContext
    IF ::self_destruction

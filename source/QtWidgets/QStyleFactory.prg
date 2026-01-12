@@ -31,7 +31,7 @@ CLASS QStyleFactory
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleFactory
    IF ::self_destruction

@@ -33,7 +33,7 @@ CLASS QSemaphore
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSemaphore
    IF ::self_destruction

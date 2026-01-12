@@ -31,7 +31,7 @@ CLASS QSpacerItem INHERIT QLayoutItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSpacerItem
    IF ::self_destruction

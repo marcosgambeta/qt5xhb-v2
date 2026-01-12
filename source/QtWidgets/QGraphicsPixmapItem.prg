@@ -39,7 +39,7 @@ CLASS QGraphicsPixmapItem INHERIT QGraphicsItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsPixmapItem
    IF ::self_destruction

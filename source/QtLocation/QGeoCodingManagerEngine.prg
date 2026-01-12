@@ -30,7 +30,7 @@ CLASS QGeoCodingManagerEngine INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoCodingManagerEngine
    IF ::self_destruction

@@ -29,7 +29,7 @@ CLASS QCanBusFactory
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCanBusFactory
    IF ::self_destruction

@@ -36,7 +36,7 @@ CLASS QXmlName
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlName
    IF ::self_destruction

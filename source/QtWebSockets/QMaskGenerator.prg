@@ -21,7 +21,7 @@ CLASS QMaskGenerator INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMaskGenerator
    IF ::self_destruction

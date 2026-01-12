@@ -62,7 +62,7 @@ CLASS QtWin
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QtWin
    IF ::self_destruction

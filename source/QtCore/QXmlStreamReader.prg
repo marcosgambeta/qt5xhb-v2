@@ -87,7 +87,7 @@ CLASS QXmlStreamReader
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlStreamReader
    IF ::self_destruction

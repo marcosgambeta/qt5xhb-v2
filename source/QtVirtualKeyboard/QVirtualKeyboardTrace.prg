@@ -43,7 +43,7 @@ CLASS QVirtualKeyboardTrace INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVirtualKeyboardTrace
    IF ::self_destruction

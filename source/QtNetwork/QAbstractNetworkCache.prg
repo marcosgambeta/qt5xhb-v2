@@ -29,7 +29,7 @@ CLASS QAbstractNetworkCache INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractNetworkCache
    IF ::self_destruction

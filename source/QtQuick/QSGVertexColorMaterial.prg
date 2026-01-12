@@ -20,7 +20,7 @@ CLASS QSGVertexColorMaterial INHERIT QSGMaterial
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSGVertexColorMaterial
    IF ::self_destruction

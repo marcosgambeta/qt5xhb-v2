@@ -30,7 +30,7 @@ CLASS QDeclarativeNetworkAccessManagerFactory
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDeclarativeNetworkAccessManagerFactory
    IF ::self_destruction

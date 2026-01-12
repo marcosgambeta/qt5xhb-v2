@@ -36,7 +36,7 @@ CLASS QDirIterator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDirIterator
    IF ::self_destruction

@@ -22,7 +22,7 @@ CLASS QErrorMessage INHERIT QDialog
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QErrorMessage
    IF ::self_destruction

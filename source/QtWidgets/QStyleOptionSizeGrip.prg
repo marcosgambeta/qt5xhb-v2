@@ -21,7 +21,7 @@ CLASS QStyleOptionSizeGrip INHERIT QStyleOptionComplex
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionSizeGrip
    IF ::self_destruction

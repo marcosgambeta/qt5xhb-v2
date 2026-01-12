@@ -52,7 +52,7 @@ CLASS QPrinterInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPrinterInfo
    IF ::self_destruction

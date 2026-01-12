@@ -21,7 +21,7 @@ CLASS QAbstractUriResolver INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractUriResolver
    IF ::self_destruction

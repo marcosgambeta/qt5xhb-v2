@@ -23,7 +23,7 @@ CLASS QRadioButton INHERIT QAbstractButton
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRadioButton
    IF ::self_destruction

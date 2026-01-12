@@ -22,7 +22,7 @@ CLASS QSGOpacityNode INHERIT QSGNode
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSGOpacityNode
    IF ::self_destruction

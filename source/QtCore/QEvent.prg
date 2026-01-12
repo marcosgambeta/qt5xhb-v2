@@ -36,7 +36,7 @@ CLASS QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QEvent
    IF ::self_destruction

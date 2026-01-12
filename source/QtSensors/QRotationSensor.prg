@@ -26,7 +26,7 @@ CLASS QRotationSensor INHERIT QSensor
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRotationSensor
    IF ::self_destruction

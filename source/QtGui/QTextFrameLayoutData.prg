@@ -28,7 +28,7 @@ CLASS QTextFrameLayoutData
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextFrameLayoutData
    IF ::self_destruction

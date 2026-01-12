@@ -81,7 +81,7 @@ CLASS QProcess INHERIT QIODevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QProcess
    IF ::self_destruction

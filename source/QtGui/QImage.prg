@@ -84,7 +84,7 @@ CLASS QImage INHERIT QPaintDevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QImage
    IF ::self_destruction

@@ -28,7 +28,7 @@ CLASS QSensorPluginInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSensorPluginInterface
    IF ::self_destruction

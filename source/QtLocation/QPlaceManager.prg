@@ -59,7 +59,7 @@ CLASS QPlaceManager INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceManager
    IF ::self_destruction

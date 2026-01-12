@@ -22,7 +22,7 @@ CLASS QMediaAudioProbeControl INHERIT QMediaControl
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMediaAudioProbeControl
    IF ::self_destruction

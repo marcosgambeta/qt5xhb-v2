@@ -56,7 +56,7 @@ CLASS QQmlEngine INHERIT QJSEngine
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlEngine
    IF ::self_destruction

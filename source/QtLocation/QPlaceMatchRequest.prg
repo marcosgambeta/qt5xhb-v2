@@ -34,7 +34,7 @@ CLASS QPlaceMatchRequest
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceMatchRequest
    IF ::self_destruction

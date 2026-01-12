@@ -36,7 +36,7 @@ CLASS QItemEditorFactory
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QItemEditorFactory
    IF ::self_destruction

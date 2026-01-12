@@ -65,7 +65,7 @@ CLASS QQuickWebEngineProfile INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQuickWebEngineProfile
    IF ::self_destruction

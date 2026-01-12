@@ -42,7 +42,7 @@ CLASS QAbstractAnimation INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractAnimation
    IF ::self_destruction

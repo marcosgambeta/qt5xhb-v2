@@ -39,7 +39,7 @@ CLASS QSslCipher
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSslCipher
    IF ::self_destruction

@@ -51,7 +51,7 @@ CLASS QStyleOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOption
    IF ::self_destruction

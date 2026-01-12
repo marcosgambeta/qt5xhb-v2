@@ -25,7 +25,7 @@ CLASS QStyleOptionSpinBox INHERIT QStyleOptionComplex
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionSpinBox
    IF ::self_destruction

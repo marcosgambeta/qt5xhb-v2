@@ -30,7 +30,7 @@ CLASS QDoubleValidator INHERIT QValidator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDoubleValidator
    IF ::self_destruction

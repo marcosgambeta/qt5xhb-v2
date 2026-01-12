@@ -38,7 +38,7 @@ CLASS QMediaObject INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMediaObject
    IF ::self_destruction

@@ -42,7 +42,7 @@ CLASS QDesignerCustomWidgetInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDesignerCustomWidgetInterface
    IF ::self_destruction

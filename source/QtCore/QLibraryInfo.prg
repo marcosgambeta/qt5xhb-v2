@@ -34,7 +34,7 @@ CLASS QLibraryInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLibraryInfo
    IF ::self_destruction

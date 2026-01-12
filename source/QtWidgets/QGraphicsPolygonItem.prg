@@ -34,7 +34,7 @@ CLASS QGraphicsPolygonItem INHERIT QAbstractGraphicsShapeItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsPolygonItem
    IF ::self_destruction

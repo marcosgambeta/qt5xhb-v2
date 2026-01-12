@@ -35,7 +35,7 @@ CLASS QTouchDevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTouchDevice
    IF ::self_destruction

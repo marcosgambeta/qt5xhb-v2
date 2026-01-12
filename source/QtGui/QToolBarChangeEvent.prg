@@ -21,7 +21,7 @@ CLASS QToolBarChangeEvent INHERIT QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QToolBarChangeEvent
    IF ::self_destruction

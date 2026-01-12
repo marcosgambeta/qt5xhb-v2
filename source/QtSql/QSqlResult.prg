@@ -30,7 +30,7 @@ CLASS QSqlResult
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSqlResult
    IF ::self_destruction

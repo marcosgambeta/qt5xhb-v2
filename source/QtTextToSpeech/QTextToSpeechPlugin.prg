@@ -28,7 +28,7 @@ CLASS QTextToSpeechPlugin
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextToSpeechPlugin
    IF ::self_destruction

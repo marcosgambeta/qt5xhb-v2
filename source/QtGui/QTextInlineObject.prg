@@ -44,7 +44,7 @@ CLASS QTextInlineObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextInlineObject
    IF ::self_destruction

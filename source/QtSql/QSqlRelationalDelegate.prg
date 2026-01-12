@@ -23,7 +23,7 @@ CLASS QSqlRelationalDelegate INHERIT QItemDelegate
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSqlRelationalDelegate
    IF ::self_destruction

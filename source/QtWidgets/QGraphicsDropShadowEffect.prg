@@ -38,7 +38,7 @@ CLASS QGraphicsDropShadowEffect INHERIT QGraphicsEffect
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsDropShadowEffect
    IF ::self_destruction

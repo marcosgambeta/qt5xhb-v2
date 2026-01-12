@@ -31,7 +31,7 @@ CLASS QTimer INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTimer
    IF ::self_destruction

@@ -57,7 +57,7 @@ CLASS QOpenGLFramebufferObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOpenGLFramebufferObject
    IF ::self_destruction

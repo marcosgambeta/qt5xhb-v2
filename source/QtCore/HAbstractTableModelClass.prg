@@ -63,7 +63,7 @@ CLASS HAbstractTableModel INHERIT QAbstractTableModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS HAbstractTableModel
    IF ::self_destruction
@@ -72,10 +72,10 @@ PROCEDURE destroyObject() CLASS HAbstractTableModel
 RETURN
 
 CLASS HDBFTableModel INHERIT HAbstractTableModel
-END CLASS
+ENDCLASS
 
 CLASS HArrayTableModel INHERIT HAbstractTableModel
-END CLASS
+ENDCLASS
 
 // clang-format on
 

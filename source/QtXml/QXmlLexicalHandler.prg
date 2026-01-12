@@ -36,7 +36,7 @@ CLASS QXmlLexicalHandler
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlLexicalHandler
    IF ::self_destruction

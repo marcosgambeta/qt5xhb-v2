@@ -41,7 +41,7 @@ CLASS QDeclarativeExpression INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDeclarativeExpression
    IF ::self_destruction

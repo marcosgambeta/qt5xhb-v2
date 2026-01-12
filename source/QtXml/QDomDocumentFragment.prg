@@ -21,7 +21,7 @@ CLASS QDomDocumentFragment INHERIT QDomNode
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDomDocumentFragment
    IF ::self_destruction

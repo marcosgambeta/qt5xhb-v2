@@ -29,7 +29,7 @@ CLASS QTextImageFormat INHERIT QTextCharFormat
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextImageFormat
    IF ::self_destruction

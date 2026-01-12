@@ -41,7 +41,7 @@ CLASS QDebug
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDebug
    IF ::self_destruction

@@ -76,7 +76,7 @@ CLASS QStandardItemModel INHERIT QAbstractItemModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStandardItemModel
    IF ::self_destruction

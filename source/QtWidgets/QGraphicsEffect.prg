@@ -27,7 +27,7 @@ CLASS QGraphicsEffect INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsEffect
    IF ::self_destruction

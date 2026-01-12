@@ -30,7 +30,7 @@ CLASS QQmlNetworkAccessManagerFactory
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlNetworkAccessManagerFactory
    IF ::self_destruction

@@ -21,7 +21,7 @@ CLASS QWebEngineUrlSchemeHandler INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebEngineUrlSchemeHandler
    IF ::self_destruction

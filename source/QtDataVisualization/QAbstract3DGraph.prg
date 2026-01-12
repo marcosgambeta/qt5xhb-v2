@@ -100,7 +100,7 @@ CLASS QAbstract3DGraph INHERIT QWindow
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstract3DGraph
    IF ::self_destruction

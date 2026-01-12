@@ -42,7 +42,7 @@ CLASS QPinchGesture INHERIT QGesture
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPinchGesture
    IF ::self_destruction

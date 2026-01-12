@@ -23,7 +23,7 @@ CLASS QPlaceProposedSearchResult INHERIT QPlaceSearchResult
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceProposedSearchResult
    IF ::self_destruction

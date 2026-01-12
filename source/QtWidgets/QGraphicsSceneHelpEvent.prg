@@ -23,7 +23,7 @@ CLASS QGraphicsSceneHelpEvent INHERIT QGraphicsSceneEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsSceneHelpEvent
    IF ::self_destruction

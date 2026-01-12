@@ -35,7 +35,7 @@ CLASS QCompressedHelpInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCompressedHelpInfo
    IF ::self_destruction

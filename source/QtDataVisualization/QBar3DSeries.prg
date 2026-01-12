@@ -33,7 +33,7 @@ CLASS QBar3DSeries INHERIT QAbstract3DSeries
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBar3DSeries
    IF ::self_destruction

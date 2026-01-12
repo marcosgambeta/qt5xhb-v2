@@ -33,7 +33,7 @@ CLASS QHelpContentModel INHERIT QAbstractItemModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHelpContentModel
    IF ::self_destruction

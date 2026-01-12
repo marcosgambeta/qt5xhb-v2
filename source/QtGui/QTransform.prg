@@ -79,7 +79,7 @@ CLASS QTransform
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTransform
    IF ::self_destruction

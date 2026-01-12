@@ -22,7 +22,7 @@ CLASS QProximitySensor INHERIT QSensor
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QProximitySensor
    IF ::self_destruction

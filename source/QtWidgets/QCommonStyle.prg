@@ -20,7 +20,7 @@ CLASS QCommonStyle INHERIT QStyle
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCommonStyle
    IF ::self_destruction

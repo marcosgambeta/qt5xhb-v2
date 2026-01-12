@@ -39,7 +39,7 @@ CLASS QWebEngineSettings
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebEngineSettings
    IF ::self_destruction

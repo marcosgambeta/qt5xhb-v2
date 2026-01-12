@@ -41,7 +41,7 @@ CLASS QPolygonF
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPolygonF
    IF ::self_destruction

@@ -35,7 +35,7 @@ CLASS QSGMaterial
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSGMaterial
    IF ::self_destruction

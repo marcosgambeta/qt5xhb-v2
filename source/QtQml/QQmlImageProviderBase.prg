@@ -30,7 +30,7 @@ CLASS QQmlImageProviderBase
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlImageProviderBase
    IF ::self_destruction

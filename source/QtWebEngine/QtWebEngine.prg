@@ -28,7 +28,7 @@ CLASS QtWebEngine
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QtWebEngine
    IF ::self_destruction

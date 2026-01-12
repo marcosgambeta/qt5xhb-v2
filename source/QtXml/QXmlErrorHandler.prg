@@ -32,7 +32,7 @@ CLASS QXmlErrorHandler
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlErrorHandler
    IF ::self_destruction

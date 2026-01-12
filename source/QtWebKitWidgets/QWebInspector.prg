@@ -26,7 +26,7 @@ CLASS QWebInspector INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebInspector
    IF ::self_destruction

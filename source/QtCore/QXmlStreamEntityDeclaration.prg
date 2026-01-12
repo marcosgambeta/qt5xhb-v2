@@ -35,7 +35,7 @@ CLASS QXmlStreamEntityDeclaration
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlStreamEntityDeclaration
    IF ::self_destruction

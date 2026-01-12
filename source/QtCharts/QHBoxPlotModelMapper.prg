@@ -40,7 +40,7 @@ CLASS QHBoxPlotModelMapper INHERIT QBoxPlotModelMapper
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHBoxPlotModelMapper
    IF ::self_destruction

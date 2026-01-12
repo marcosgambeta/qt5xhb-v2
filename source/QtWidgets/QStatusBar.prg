@@ -32,7 +32,7 @@ CLASS QStatusBar INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStatusBar
    IF ::self_destruction

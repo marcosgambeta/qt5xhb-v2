@@ -44,7 +44,7 @@ CLASS QAudioDeviceInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAudioDeviceInfo
    IF ::self_destruction

@@ -31,7 +31,7 @@ CLASS QCollatorSortKey
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCollatorSortKey
    IF ::self_destruction

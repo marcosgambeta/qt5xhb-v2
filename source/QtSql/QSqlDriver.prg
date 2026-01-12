@@ -52,7 +52,7 @@ CLASS QSqlDriver INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSqlDriver
    IF ::self_destruction

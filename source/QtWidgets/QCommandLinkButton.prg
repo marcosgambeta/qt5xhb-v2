@@ -36,7 +36,7 @@ CLASS QCommandLinkButton INHERIT QPushButton
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCommandLinkButton
    IF ::self_destruction

@@ -46,7 +46,7 @@ CLASS QVideoEncoderSettings
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVideoEncoderSettings
    IF ::self_destruction

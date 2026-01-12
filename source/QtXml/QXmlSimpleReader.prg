@@ -22,7 +22,7 @@ CLASS QXmlSimpleReader INHERIT QXmlReader
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlSimpleReader
    IF ::self_destruction

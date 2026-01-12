@@ -67,7 +67,7 @@ CLASS QSqlQuery
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSqlQuery
    IF ::self_destruction

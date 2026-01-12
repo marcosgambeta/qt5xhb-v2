@@ -21,7 +21,7 @@ CLASS QOrientationReading INHERIT QSensorReading
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOrientationReading
    IF ::self_destruction

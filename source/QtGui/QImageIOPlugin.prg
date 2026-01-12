@@ -22,7 +22,7 @@ CLASS QImageIOPlugin INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QImageIOPlugin
    IF ::self_destruction

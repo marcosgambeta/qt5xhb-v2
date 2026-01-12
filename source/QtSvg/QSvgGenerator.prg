@@ -39,7 +39,7 @@ CLASS QSvgGenerator INHERIT QPaintDevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSvgGenerator
    IF ::self_destruction

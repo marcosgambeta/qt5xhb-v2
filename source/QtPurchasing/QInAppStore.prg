@@ -29,7 +29,7 @@ CLASS QInAppStore INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QInAppStore
    IF ::self_destruction

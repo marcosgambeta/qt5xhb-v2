@@ -49,7 +49,7 @@ CLASS QAudioFormat
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAudioFormat
    IF ::self_destruction

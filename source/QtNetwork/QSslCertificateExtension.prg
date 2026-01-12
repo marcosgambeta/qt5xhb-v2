@@ -36,7 +36,7 @@ CLASS QSslCertificateExtension
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSslCertificateExtension
    IF ::self_destruction

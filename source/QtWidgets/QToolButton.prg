@@ -60,7 +60,7 @@ CLASS QToolButton INHERIT QAbstractButton
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QToolButton
    IF ::self_destruction

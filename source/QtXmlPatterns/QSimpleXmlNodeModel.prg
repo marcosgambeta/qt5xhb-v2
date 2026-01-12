@@ -29,7 +29,7 @@ CLASS QSimpleXmlNodeModel INHERIT QAbstractXmlNodeModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSimpleXmlNodeModel
    IF ::self_destruction

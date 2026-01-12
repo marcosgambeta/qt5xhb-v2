@@ -25,7 +25,7 @@ CLASS QAccelerometerReading INHERIT QSensorReading
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAccelerometerReading
    IF ::self_destruction

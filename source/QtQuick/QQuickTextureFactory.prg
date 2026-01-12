@@ -26,7 +26,7 @@ CLASS QQuickTextureFactory INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQuickTextureFactory
    IF ::self_destruction

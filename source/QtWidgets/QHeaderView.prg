@@ -135,7 +135,7 @@ CLASS QHeaderView INHERIT QAbstractItemView
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHeaderView
    IF ::self_destruction

@@ -34,7 +34,7 @@ CLASS QXmlParseException
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlParseException
    IF ::self_destruction

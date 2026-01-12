@@ -110,7 +110,7 @@ CLASS QTextDocument INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextDocument
    IF ::self_destruction

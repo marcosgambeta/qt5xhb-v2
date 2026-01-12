@@ -21,7 +21,7 @@ CLASS QTouch3DInputHandler INHERIT Q3DInputHandler
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTouch3DInputHandler
    IF ::self_destruction

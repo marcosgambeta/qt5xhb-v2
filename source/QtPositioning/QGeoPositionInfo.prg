@@ -40,7 +40,7 @@ CLASS QGeoPositionInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoPositionInfo
    IF ::self_destruction

@@ -26,7 +26,7 @@ CLASS QAxScriptEngine INHERIT QAxObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAxScriptEngine
    IF ::self_destruction

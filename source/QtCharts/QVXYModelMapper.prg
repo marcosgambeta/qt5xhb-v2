@@ -40,7 +40,7 @@ CLASS QVXYModelMapper INHERIT QXYModelMapper
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVXYModelMapper
    IF ::self_destruction

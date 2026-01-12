@@ -33,7 +33,7 @@ CLASS QMetaClassInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMetaClassInfo
    IF ::self_destruction

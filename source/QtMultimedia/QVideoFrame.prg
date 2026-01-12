@@ -57,7 +57,7 @@ CLASS QVideoFrame
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVideoFrame
    IF ::self_destruction

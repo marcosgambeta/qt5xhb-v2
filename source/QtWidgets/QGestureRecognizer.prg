@@ -34,7 +34,7 @@ CLASS QGestureRecognizer
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGestureRecognizer
    IF ::self_destruction

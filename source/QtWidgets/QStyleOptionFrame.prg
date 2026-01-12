@@ -27,7 +27,7 @@ CLASS QStyleOptionFrame INHERIT QStyleOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionFrame
    IF ::self_destruction

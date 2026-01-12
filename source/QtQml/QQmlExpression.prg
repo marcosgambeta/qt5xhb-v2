@@ -42,7 +42,7 @@ CLASS QQmlExpression INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlExpression
    IF ::self_destruction

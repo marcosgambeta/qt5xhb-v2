@@ -27,7 +27,7 @@ CLASS QTemporaryFile INHERIT QFile
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTemporaryFile
    IF ::self_destruction

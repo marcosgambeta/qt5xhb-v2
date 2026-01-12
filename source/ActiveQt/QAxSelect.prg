@@ -22,7 +22,7 @@ CLASS QAxSelect INHERIT QDialog
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAxSelect
    IF ::self_destruction

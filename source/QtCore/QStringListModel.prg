@@ -32,7 +32,7 @@ CLASS QStringListModel INHERIT QAbstractListModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStringListModel
    IF ::self_destruction

@@ -54,7 +54,7 @@ CLASS QVideoSurfaceFormat
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVideoSurfaceFormat
    IF ::self_destruction

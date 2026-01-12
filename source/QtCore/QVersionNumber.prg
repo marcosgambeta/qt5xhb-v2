@@ -43,7 +43,7 @@ CLASS QVersionNumber
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVersionNumber
    IF ::self_destruction

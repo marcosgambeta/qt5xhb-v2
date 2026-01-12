@@ -43,7 +43,7 @@ CLASS QGeoManeuver
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoManeuver
    IF ::self_destruction

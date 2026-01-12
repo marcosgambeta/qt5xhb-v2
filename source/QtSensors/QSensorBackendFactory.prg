@@ -29,7 +29,7 @@ CLASS QSensorBackendFactory
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSensorBackendFactory
    IF ::self_destruction

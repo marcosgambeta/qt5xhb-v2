@@ -17,7 +17,7 @@ CLASS QSGSimpleMaterial INHERIT QSGMaterial
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSGSimpleMaterial
    IF ::self_destruction

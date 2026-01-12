@@ -30,7 +30,7 @@ CLASS QUdpSocket INHERIT QAbstractSocket
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QUdpSocket
    IF ::self_destruction

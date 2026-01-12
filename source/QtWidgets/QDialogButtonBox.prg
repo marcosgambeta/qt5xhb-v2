@@ -38,7 +38,7 @@ CLASS QDialogButtonBox INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDialogButtonBox
    IF ::self_destruction

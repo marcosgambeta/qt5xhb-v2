@@ -46,7 +46,7 @@ CLASS QOpenGLPixelTransferOptions
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOpenGLPixelTransferOptions
    IF ::self_destruction

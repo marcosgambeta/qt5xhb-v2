@@ -44,7 +44,7 @@ CLASS QQuickWidget INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQuickWidget
    IF ::self_destruction

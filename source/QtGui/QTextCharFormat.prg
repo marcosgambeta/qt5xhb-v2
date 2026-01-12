@@ -82,7 +82,7 @@ CLASS QTextCharFormat INHERIT QTextFormat
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextCharFormat
    IF ::self_destruction

@@ -40,7 +40,7 @@ CLASS QSize
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSize
    IF ::self_destruction

@@ -23,7 +23,7 @@ CLASS QScreenOrientationChangeEvent INHERIT QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QScreenOrientationChangeEvent
    IF ::self_destruction

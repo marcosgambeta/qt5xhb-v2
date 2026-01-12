@@ -71,7 +71,7 @@ CLASS QCandlestickSeries INHERIT QAbstractSeries
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCandlestickSeries
    IF ::self_destruction

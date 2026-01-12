@@ -31,7 +31,7 @@ CLASS QDropEvent INHERIT QEvent,QMimeSource
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDropEvent
    IF ::self_destruction

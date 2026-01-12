@@ -29,7 +29,7 @@ CLASS QNativeGestureEvent INHERIT QInputEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QNativeGestureEvent
    IF ::self_destruction

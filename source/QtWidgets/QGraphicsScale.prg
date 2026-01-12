@@ -36,7 +36,7 @@ CLASS QGraphicsScale INHERIT QGraphicsTransform
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsScale
    IF ::self_destruction

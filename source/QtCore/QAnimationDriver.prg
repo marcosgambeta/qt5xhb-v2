@@ -30,7 +30,7 @@ CLASS QAnimationDriver INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAnimationDriver
    IF ::self_destruction

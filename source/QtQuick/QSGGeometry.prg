@@ -47,7 +47,7 @@ CLASS QSGGeometry
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSGGeometry
    IF ::self_destruction

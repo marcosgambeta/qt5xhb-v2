@@ -35,7 +35,7 @@ CLASS QGraphicsSceneDragDropEvent INHERIT QGraphicsSceneEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsSceneDragDropEvent
    IF ::self_destruction

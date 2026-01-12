@@ -85,7 +85,7 @@ CLASS QTextFormat
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextFormat
    IF ::self_destruction

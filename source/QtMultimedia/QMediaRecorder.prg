@@ -79,7 +79,7 @@ CLASS QMediaRecorder INHERIT QObject,QMediaBindableInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMediaRecorder
    IF ::self_destruction

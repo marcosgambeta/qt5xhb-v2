@@ -26,7 +26,7 @@ CLASS QSysInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSysInfo
    IF ::self_destruction

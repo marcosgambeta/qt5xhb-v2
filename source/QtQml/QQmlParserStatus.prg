@@ -30,7 +30,7 @@ CLASS QQmlParserStatus
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlParserStatus
    IF ::self_destruction

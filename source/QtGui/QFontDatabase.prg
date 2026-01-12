@@ -52,7 +52,7 @@ CLASS QFontDatabase
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QFontDatabase
    IF ::self_destruction

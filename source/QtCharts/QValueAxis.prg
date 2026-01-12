@@ -40,7 +40,7 @@ CLASS QValueAxis INHERIT QAbstractAxis
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QValueAxis
    IF ::self_destruction

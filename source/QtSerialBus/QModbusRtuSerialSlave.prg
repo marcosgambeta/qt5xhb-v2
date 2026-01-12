@@ -21,7 +21,7 @@ CLASS QModbusRtuSerialSlave INHERIT QModbusServer
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QModbusRtuSerialSlave
    IF ::self_destruction

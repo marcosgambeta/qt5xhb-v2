@@ -40,7 +40,7 @@ CLASS QGeoRectangle INHERIT QGeoShape
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoRectangle
    IF ::self_destruction

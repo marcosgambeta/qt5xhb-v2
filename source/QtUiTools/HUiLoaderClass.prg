@@ -27,7 +27,7 @@ CLASS HUiLoader INHERIT QUiLoader
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS HUiLoader
    IF ::self_destruction

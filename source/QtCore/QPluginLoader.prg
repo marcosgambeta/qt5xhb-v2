@@ -31,7 +31,7 @@ CLASS QPluginLoader INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPluginLoader
    IF ::self_destruction

@@ -39,7 +39,7 @@ CLASS QMediaContent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMediaContent
    IF ::self_destruction

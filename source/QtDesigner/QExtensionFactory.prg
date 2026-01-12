@@ -24,7 +24,7 @@ CLASS QExtensionFactory INHERIT QObject,QAbstractExtensionFactory
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QExtensionFactory
    IF ::self_destruction

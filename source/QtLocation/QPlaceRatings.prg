@@ -36,7 +36,7 @@ CLASS QPlaceRatings
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceRatings
    IF ::self_destruction

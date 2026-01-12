@@ -35,7 +35,7 @@ CLASS QAbstractVideoSurface INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractVideoSurface
    IF ::self_destruction

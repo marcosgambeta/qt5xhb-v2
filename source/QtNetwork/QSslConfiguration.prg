@@ -71,7 +71,7 @@ CLASS QSslConfiguration
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSslConfiguration
    IF ::self_destruction

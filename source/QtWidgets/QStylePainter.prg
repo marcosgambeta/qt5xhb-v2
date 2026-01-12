@@ -27,7 +27,7 @@ CLASS QStylePainter INHERIT QPainter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStylePainter
    IF ::self_destruction

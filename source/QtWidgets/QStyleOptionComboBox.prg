@@ -34,7 +34,7 @@ CLASS QStyleOptionComboBox INHERIT QStyleOptionComplex
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionComboBox
    IF ::self_destruction

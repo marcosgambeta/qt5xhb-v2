@@ -32,7 +32,7 @@ CLASS QItemEditorCreatorBase
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QItemEditorCreatorBase
    IF ::self_destruction

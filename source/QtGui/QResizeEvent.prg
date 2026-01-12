@@ -23,7 +23,7 @@ CLASS QResizeEvent INHERIT QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QResizeEvent
    IF ::self_destruction

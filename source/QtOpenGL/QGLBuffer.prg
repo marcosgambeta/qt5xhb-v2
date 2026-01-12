@@ -44,7 +44,7 @@ CLASS QGLBuffer
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGLBuffer
    IF ::self_destruction

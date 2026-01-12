@@ -37,7 +37,7 @@ CLASS QGLColormap
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGLColormap
    IF ::self_destruction

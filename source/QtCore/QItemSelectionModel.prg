@@ -46,7 +46,7 @@ CLASS QItemSelectionModel INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QItemSelectionModel
    IF ::self_destruction

@@ -23,7 +23,7 @@ CLASS QTiltSensor INHERIT QSensor
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTiltSensor
    IF ::self_destruction

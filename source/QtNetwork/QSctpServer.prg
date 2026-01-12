@@ -24,7 +24,7 @@ CLASS QSctpServer INHERIT QTcpServer
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSctpServer
    IF ::self_destruction

@@ -22,7 +22,7 @@ CLASS QPolarChart INHERIT QChart
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPolarChart
    IF ::self_destruction

@@ -23,7 +23,7 @@ CLASS QPlaceDetailsReply INHERIT QPlaceReply
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceDetailsReply
    IF ::self_destruction

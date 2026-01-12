@@ -88,7 +88,7 @@ CLASS QFont
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QFont
    IF ::self_destruction

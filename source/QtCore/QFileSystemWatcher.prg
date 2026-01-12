@@ -29,7 +29,7 @@ CLASS QFileSystemWatcher INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QFileSystemWatcher
    IF ::self_destruction

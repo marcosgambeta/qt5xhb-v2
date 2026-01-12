@@ -28,7 +28,7 @@ CLASS QSensorFilter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSensorFilter
    IF ::self_destruction

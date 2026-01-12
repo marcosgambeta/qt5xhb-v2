@@ -29,7 +29,7 @@ CLASS QSplashScreen INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSplashScreen
    IF ::self_destruction

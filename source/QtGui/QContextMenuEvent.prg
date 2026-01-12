@@ -28,7 +28,7 @@ CLASS QContextMenuEvent INHERIT QInputEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QContextMenuEvent
    IF ::self_destruction

@@ -27,7 +27,7 @@ CLASS QKeySequenceEdit INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QKeySequenceEdit
    IF ::self_destruction

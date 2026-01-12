@@ -22,7 +22,7 @@ CLASS HHeaderView INHERIT QHeaderView
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS HHeaderView
    IF ::self_destruction

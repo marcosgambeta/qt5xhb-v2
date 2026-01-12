@@ -40,7 +40,7 @@ CLASS QVBoxPlotModelMapper INHERIT QBoxPlotModelMapper
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVBoxPlotModelMapper
    IF ::self_destruction

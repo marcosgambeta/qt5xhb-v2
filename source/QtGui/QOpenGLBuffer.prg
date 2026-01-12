@@ -35,7 +35,7 @@ CLASS QOpenGLBuffer INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOpenGLBuffer
    IF ::self_destruction

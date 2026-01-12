@@ -37,7 +37,7 @@ CLASS QLockFile
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLockFile
    IF ::self_destruction

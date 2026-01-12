@@ -39,7 +39,7 @@ CLASS QGLPixelBuffer INHERIT QPaintDevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGLPixelBuffer
    IF ::self_destruction

@@ -39,7 +39,7 @@ CLASS QAccessibleActionInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAccessibleActionInterface
    IF ::self_destruction

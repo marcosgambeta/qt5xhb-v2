@@ -38,7 +38,7 @@ CLASS QPlaceContent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceContent
    IF ::self_destruction

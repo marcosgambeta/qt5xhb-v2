@@ -32,7 +32,7 @@ CLASS QSGMaterialShader
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSGMaterialShader
    IF ::self_destruction

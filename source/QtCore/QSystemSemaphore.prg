@@ -35,7 +35,7 @@ CLASS QSystemSemaphore
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSystemSemaphore
    IF ::self_destruction

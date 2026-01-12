@@ -40,7 +40,7 @@ CLASS QPixmapCache
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPixmapCache
    IF ::self_destruction

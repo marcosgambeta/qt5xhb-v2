@@ -72,7 +72,7 @@ CLASS QWizard INHERIT QDialog
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWizard
    IF ::self_destruction

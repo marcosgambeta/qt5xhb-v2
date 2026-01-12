@@ -48,7 +48,7 @@ CLASS QQuickPaintedItem INHERIT QQuickItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQuickPaintedItem
    IF ::self_destruction

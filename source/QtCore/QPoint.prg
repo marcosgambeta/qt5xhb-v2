@@ -35,7 +35,7 @@ CLASS QPoint
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPoint
    IF ::self_destruction

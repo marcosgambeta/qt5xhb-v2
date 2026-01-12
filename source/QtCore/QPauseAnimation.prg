@@ -22,7 +22,7 @@ CLASS QPauseAnimation INHERIT QAbstractAnimation
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPauseAnimation
    IF ::self_destruction

@@ -71,7 +71,7 @@ CLASS QWebView INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebView
    IF ::self_destruction

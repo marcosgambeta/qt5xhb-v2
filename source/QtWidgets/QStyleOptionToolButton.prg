@@ -39,7 +39,7 @@ CLASS QStyleOptionToolButton INHERIT QStyleOptionComplex
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionToolButton
    IF ::self_destruction

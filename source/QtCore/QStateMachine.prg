@@ -43,7 +43,7 @@ CLASS QStateMachine INHERIT QState
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStateMachine
    IF ::self_destruction

@@ -27,7 +27,7 @@ CLASS QAudioOutputSelectorControl INHERIT QMediaControl
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAudioOutputSelectorControl
    IF ::self_destruction

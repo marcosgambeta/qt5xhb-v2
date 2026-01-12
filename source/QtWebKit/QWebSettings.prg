@@ -65,7 +65,7 @@ CLASS QWebSettings
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebSettings
    IF ::self_destruction

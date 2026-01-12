@@ -32,7 +32,7 @@ CLASS QVirtualKeyboardSelectionListModel INHERIT QAbstractListModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVirtualKeyboardSelectionListModel
    IF ::self_destruction

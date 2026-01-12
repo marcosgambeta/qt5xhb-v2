@@ -33,7 +33,7 @@ CLASS Q3DInputHandler INHERIT QAbstract3DInputHandler
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS Q3DInputHandler
    IF ::self_destruction

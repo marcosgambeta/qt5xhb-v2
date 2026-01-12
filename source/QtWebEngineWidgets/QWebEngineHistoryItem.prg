@@ -37,7 +37,7 @@ CLASS QWebEngineHistoryItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebEngineHistoryItem
    IF ::self_destruction

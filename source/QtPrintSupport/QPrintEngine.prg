@@ -35,7 +35,7 @@ CLASS QPrintEngine
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPrintEngine
    IF ::self_destruction

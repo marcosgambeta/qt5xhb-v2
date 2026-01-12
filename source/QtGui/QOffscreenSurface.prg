@@ -35,7 +35,7 @@ CLASS QOffscreenSurface INHERIT QObject,QSurface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOffscreenSurface
    IF ::self_destruction

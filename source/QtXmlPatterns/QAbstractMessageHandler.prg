@@ -20,7 +20,7 @@ CLASS QAbstractMessageHandler INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractMessageHandler
    IF ::self_destruction

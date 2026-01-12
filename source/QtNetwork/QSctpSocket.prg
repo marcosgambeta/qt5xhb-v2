@@ -28,7 +28,7 @@ CLASS QSctpSocket INHERIT QTcpSocket
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSctpSocket
    IF ::self_destruction

@@ -38,7 +38,7 @@ CLASS QHstsPolicy
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHstsPolicy
    IF ::self_destruction

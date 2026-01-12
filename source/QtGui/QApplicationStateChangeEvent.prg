@@ -20,7 +20,7 @@ CLASS QApplicationStateChangeEvent INHERIT QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QApplicationStateChangeEvent
    IF ::self_destruction

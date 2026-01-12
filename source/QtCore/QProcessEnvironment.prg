@@ -39,7 +39,7 @@ CLASS QProcessEnvironment
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QProcessEnvironment
    IF ::self_destruction

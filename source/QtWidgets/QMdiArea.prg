@@ -57,7 +57,7 @@ CLASS QMdiArea INHERIT QAbstractScrollArea
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMdiArea
    IF ::self_destruction

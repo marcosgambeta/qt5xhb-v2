@@ -44,7 +44,7 @@ CLASS QDesignerPropertySheetExtension
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDesignerPropertySheetExtension
    IF ::self_destruction

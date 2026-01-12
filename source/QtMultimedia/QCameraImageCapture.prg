@@ -52,7 +52,7 @@ CLASS QCameraImageCapture INHERIT QObject,QMediaBindableInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCameraImageCapture
    IF ::self_destruction

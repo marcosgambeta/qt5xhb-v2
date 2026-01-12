@@ -40,7 +40,7 @@ CLASS QSlider INHERIT QAbstractSlider
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSlider
    IF ::self_destruction

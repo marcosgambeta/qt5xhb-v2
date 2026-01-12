@@ -58,7 +58,7 @@ CLASS HAbstractListModel INHERIT QAbstractListModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS HAbstractListModel
    IF ::self_destruction
@@ -67,10 +67,10 @@ PROCEDURE destroyObject() CLASS HAbstractListModel
 RETURN
 
 CLASS HDBFListModel INHERIT HAbstractListModel
-END CLASS
+ENDCLASS
 
 CLASS HArrayListModel INHERIT HAbstractListModel
-END CLASS
+ENDCLASS
 
 // clang-format on
 

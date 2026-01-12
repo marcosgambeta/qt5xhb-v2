@@ -40,7 +40,7 @@ CLASS QImageEncoderSettings
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QImageEncoderSettings
    IF ::self_destruction

@@ -33,7 +33,7 @@ CLASS QBasicTimer
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBasicTimer
    IF ::self_destruction

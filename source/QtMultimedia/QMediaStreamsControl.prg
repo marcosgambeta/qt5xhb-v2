@@ -28,7 +28,7 @@ CLASS QMediaStreamsControl INHERIT QMediaControl
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMediaStreamsControl
    IF ::self_destruction

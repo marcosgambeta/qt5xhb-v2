@@ -34,7 +34,7 @@ CLASS QDBusObjectPath
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDBusObjectPath
    IF ::self_destruction

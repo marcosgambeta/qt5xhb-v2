@@ -29,7 +29,7 @@ CLASS QTreeWidgetItemIterator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTreeWidgetItemIterator
    IF ::self_destruction

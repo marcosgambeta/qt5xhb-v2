@@ -61,7 +61,7 @@ CLASS QDBusConnection
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDBusConnection
    IF ::self_destruction

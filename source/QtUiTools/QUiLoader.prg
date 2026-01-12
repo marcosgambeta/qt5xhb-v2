@@ -39,7 +39,7 @@ CLASS QUiLoader INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QUiLoader
    IF ::self_destruction

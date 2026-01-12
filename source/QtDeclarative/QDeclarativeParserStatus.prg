@@ -29,7 +29,7 @@ CLASS QDeclarativeParserStatus
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDeclarativeParserStatus
    IF ::self_destruction

@@ -48,7 +48,7 @@ CLASS QGeoRouteRequest
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoRouteRequest
    IF ::self_destruction

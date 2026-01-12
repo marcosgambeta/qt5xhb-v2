@@ -36,7 +36,7 @@ CLASS QDomNodeList
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDomNodeList
    IF ::self_destruction

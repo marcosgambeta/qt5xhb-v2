@@ -39,7 +39,7 @@ CLASS QSGTexture INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSGTexture
    IF ::self_destruction

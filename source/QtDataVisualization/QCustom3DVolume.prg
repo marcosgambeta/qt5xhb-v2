@@ -77,7 +77,7 @@ CLASS QCustom3DVolume INHERIT QCustom3DItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCustom3DVolume
    IF ::self_destruction

@@ -42,7 +42,7 @@ CLASS QVirtualKeyboardAbstractInputMethod INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVirtualKeyboardAbstractInputMethod
    IF ::self_destruction

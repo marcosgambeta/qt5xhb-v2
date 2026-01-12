@@ -28,7 +28,7 @@ CLASS QQuickImageProvider INHERIT QQmlImageProviderBase
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQuickImageProvider
    IF ::self_destruction

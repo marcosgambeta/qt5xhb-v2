@@ -48,7 +48,7 @@ CLASS QOAuth1Signature
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOAuth1Signature
    IF ::self_destruction

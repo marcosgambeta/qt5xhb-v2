@@ -55,7 +55,7 @@ CLASS QDate
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDate
    IF ::self_destruction

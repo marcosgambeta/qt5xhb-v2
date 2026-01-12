@@ -49,7 +49,7 @@ CLASS QTextFrameFormat INHERIT QTextFormat
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextFrameFormat
    IF ::self_destruction

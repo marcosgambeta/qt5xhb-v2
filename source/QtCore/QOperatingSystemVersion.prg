@@ -37,7 +37,7 @@ CLASS QOperatingSystemVersion
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOperatingSystemVersion
    IF ::self_destruction

@@ -42,7 +42,7 @@ CLASS QAccessibleTextInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAccessibleTextInterface
    IF ::self_destruction

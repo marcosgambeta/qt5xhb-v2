@@ -51,7 +51,7 @@ CLASS QBluetoothDeviceInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBluetoothDeviceInfo
    IF ::self_destruction

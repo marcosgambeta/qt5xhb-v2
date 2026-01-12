@@ -21,7 +21,7 @@ CLASS QStatusTipEvent INHERIT QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStatusTipEvent
    IF ::self_destruction

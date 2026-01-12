@@ -25,7 +25,7 @@ CLASS QSGClipNode INHERIT QSGBasicGeometryNode
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSGClipNode
    IF ::self_destruction

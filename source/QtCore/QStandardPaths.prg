@@ -35,7 +35,7 @@ CLASS QStandardPaths
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStandardPaths
    IF ::self_destruction

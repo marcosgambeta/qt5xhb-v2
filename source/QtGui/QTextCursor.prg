@@ -95,7 +95,7 @@ CLASS QTextCursor
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextCursor
    IF ::self_destruction

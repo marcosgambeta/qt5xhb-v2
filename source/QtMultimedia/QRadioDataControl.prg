@@ -36,7 +36,7 @@ CLASS QRadioDataControl INHERIT QMediaControl
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRadioDataControl
    IF ::self_destruction

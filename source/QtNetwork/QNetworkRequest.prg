@@ -53,7 +53,7 @@ CLASS QNetworkRequest
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QNetworkRequest
    IF ::self_destruction

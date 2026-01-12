@@ -55,7 +55,7 @@ CLASS QToolBar INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QToolBar
    IF ::self_destruction

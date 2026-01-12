@@ -53,7 +53,7 @@ CLASS QXmlReader
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlReader
    IF ::self_destruction

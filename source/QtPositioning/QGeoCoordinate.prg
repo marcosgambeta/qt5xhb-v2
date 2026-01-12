@@ -41,7 +41,7 @@ CLASS QGeoCoordinate
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoCoordinate
    IF ::self_destruction

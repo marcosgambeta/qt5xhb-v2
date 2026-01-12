@@ -48,7 +48,7 @@ CLASS QSoundEffect INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSoundEffect
    IF ::self_destruction

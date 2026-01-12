@@ -20,7 +20,7 @@ CLASS QDragEnterEvent INHERIT QDragMoveEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDragEnterEvent
    IF ::self_destruction

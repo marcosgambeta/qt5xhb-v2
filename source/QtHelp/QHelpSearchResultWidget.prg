@@ -23,7 +23,7 @@ CLASS QHelpSearchResultWidget INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHelpSearchResultWidget
    IF ::self_destruction

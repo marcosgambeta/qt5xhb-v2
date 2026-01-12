@@ -21,7 +21,7 @@ CLASS QAccessibleBridgePlugin INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAccessibleBridgePlugin
    IF ::self_destruction

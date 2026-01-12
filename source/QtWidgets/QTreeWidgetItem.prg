@@ -96,7 +96,7 @@ CLASS QTreeWidgetItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTreeWidgetItem
    IF ::self_destruction

@@ -21,7 +21,7 @@ CLASS QDomCDATASection INHERIT QDomText
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDomCDATASection
    IF ::self_destruction

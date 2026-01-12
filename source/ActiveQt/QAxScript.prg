@@ -35,7 +35,7 @@ CLASS QAxScript INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAxScript
    IF ::self_destruction

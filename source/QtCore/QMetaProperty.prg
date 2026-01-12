@@ -61,7 +61,7 @@ CLASS QMetaProperty
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMetaProperty
    IF ::self_destruction

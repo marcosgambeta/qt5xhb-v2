@@ -37,7 +37,7 @@ CLASS QStyleOptionTabWidgetFrame INHERIT QStyleOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionTabWidgetFrame
    IF ::self_destruction

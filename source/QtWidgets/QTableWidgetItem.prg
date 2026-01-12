@@ -70,7 +70,7 @@ CLASS QTableWidgetItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTableWidgetItem
    IF ::self_destruction

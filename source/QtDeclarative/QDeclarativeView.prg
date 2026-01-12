@@ -39,7 +39,7 @@ CLASS QDeclarativeView INHERIT QGraphicsView
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDeclarativeView
    IF ::self_destruction

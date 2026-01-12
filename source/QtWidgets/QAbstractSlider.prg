@@ -109,7 +109,7 @@ CLASS QAbstractSlider INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractSlider
    IF ::self_destruction

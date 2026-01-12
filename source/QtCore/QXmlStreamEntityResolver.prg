@@ -29,7 +29,7 @@ CLASS QXmlStreamEntityResolver
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlStreamEntityResolver
    IF ::self_destruction

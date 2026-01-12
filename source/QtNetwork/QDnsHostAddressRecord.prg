@@ -34,7 +34,7 @@ CLASS QDnsHostAddressRecord
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDnsHostAddressRecord
    IF ::self_destruction

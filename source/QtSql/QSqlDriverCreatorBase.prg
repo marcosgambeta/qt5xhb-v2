@@ -30,7 +30,7 @@ CLASS QSqlDriverCreatorBase
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSqlDriverCreatorBase
    IF ::self_destruction

@@ -20,7 +20,7 @@ CLASS HEventFilter INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS HEventFilter
    IF ::self_destruction

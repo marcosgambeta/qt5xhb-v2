@@ -40,7 +40,7 @@ CLASS QDrag INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDrag
    IF ::self_destruction

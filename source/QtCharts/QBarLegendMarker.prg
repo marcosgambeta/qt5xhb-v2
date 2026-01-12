@@ -25,7 +25,7 @@ CLASS QBarLegendMarker INHERIT QLegendMarker
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBarLegendMarker
    IF ::self_destruction

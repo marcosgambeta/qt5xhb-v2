@@ -47,7 +47,7 @@ CLASS QProgressDialog INHERIT QDialog
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QProgressDialog
    IF ::self_destruction

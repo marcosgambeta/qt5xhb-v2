@@ -36,7 +36,7 @@ CLASS QCanBusDeviceInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCanBusDeviceInfo
    IF ::self_destruction

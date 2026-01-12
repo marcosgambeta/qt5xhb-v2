@@ -33,7 +33,7 @@ CLASS QVariantAnimation INHERIT QAbstractAnimation
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVariantAnimation
    IF ::self_destruction

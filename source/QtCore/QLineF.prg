@@ -57,7 +57,7 @@ CLASS QLineF
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLineF
    IF ::self_destruction

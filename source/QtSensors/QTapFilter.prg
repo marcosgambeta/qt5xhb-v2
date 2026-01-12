@@ -20,7 +20,7 @@ CLASS QTapFilter INHERIT QSensorFilter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTapFilter
    IF ::self_destruction

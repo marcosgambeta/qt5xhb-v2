@@ -26,7 +26,7 @@ CLASS QAtomicPointer
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAtomicPointer
    IF ::self_destruction

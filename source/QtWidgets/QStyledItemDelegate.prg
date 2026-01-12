@@ -32,7 +32,7 @@ CLASS QStyledItemDelegate INHERIT QAbstractItemDelegate
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyledItemDelegate
    IF ::self_destruction

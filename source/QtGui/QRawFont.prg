@@ -63,7 +63,7 @@ CLASS QRawFont
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRawFont
    IF ::self_destruction

@@ -34,7 +34,7 @@ CLASS QVoice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVoice
    IF ::self_destruction

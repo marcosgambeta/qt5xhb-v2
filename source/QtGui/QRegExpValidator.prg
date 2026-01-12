@@ -24,7 +24,7 @@ CLASS QRegExpValidator INHERIT QValidator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QRegExpValidator
    IF ::self_destruction

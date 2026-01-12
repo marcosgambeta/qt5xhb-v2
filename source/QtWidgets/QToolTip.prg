@@ -38,7 +38,7 @@ CLASS QToolTip
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QToolTip
    IF ::self_destruction

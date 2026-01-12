@@ -24,7 +24,7 @@ CLASS QTapAndHoldGesture INHERIT QGesture
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTapAndHoldGesture
    IF ::self_destruction

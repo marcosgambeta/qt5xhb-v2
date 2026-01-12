@@ -27,7 +27,7 @@ CLASS QSaveFile INHERIT QFileDevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSaveFile
    IF ::self_destruction

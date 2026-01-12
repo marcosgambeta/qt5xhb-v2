@@ -92,7 +92,7 @@ CLASS QItemModelSurfaceDataProxy INHERIT QSurfaceDataProxy
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QItemModelSurfaceDataProxy
    IF ::self_destruction

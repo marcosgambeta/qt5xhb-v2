@@ -22,7 +22,7 @@ CLASS QDomText INHERIT QDomCharacterData
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDomText
    IF ::self_destruction

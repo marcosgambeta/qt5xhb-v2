@@ -43,7 +43,7 @@ CLASS QDBusArgument
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDBusArgument
    IF ::self_destruction

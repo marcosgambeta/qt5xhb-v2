@@ -31,7 +31,7 @@ CLASS QUndoView INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QUndoView
    IF ::self_destruction

@@ -28,7 +28,7 @@ CLASS QGraphicsColorizeEffect INHERIT QGraphicsEffect
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsColorizeEffect
    IF ::self_destruction

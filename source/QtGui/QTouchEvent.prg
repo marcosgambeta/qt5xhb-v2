@@ -26,7 +26,7 @@ CLASS QTouchEvent INHERIT QInputEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTouchEvent
    IF ::self_destruction

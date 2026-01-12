@@ -34,7 +34,7 @@ CLASS QReadWriteLock
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QReadWriteLock
    IF ::self_destruction

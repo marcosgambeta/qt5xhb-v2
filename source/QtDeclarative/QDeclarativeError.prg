@@ -39,7 +39,7 @@ CLASS QDeclarativeError
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDeclarativeError
    IF ::self_destruction

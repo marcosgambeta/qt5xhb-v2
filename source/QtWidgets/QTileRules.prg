@@ -29,7 +29,7 @@ CLASS QTileRules
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTileRules
    IF ::self_destruction

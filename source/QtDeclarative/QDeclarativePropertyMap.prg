@@ -31,7 +31,7 @@ CLASS QDeclarativePropertyMap INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDeclarativePropertyMap
    IF ::self_destruction

@@ -42,7 +42,7 @@ CLASS QPolygon
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPolygon
    IF ::self_destruction

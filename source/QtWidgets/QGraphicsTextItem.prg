@@ -57,7 +57,7 @@ CLASS QGraphicsTextItem INHERIT QGraphicsObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsTextItem
    IF ::self_destruction

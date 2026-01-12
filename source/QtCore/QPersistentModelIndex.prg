@@ -44,7 +44,7 @@ CLASS QPersistentModelIndex
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPersistentModelIndex
    IF ::self_destruction

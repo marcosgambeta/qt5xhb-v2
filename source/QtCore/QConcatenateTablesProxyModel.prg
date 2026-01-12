@@ -43,7 +43,7 @@ CLASS QConcatenateTablesProxyModel INHERIT QAbstractItemModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QConcatenateTablesProxyModel
    IF ::self_destruction

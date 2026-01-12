@@ -27,7 +27,7 @@ CLASS QHelpEvent INHERIT QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHelpEvent
    IF ::self_destruction

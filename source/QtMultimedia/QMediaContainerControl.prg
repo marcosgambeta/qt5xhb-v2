@@ -23,7 +23,7 @@ CLASS QMediaContainerControl INHERIT QMediaControl
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMediaContainerControl
    IF ::self_destruction

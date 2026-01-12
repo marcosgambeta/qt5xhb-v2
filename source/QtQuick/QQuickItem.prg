@@ -110,7 +110,7 @@ CLASS QQuickItem INHERIT QObject,QQmlParserStatus
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQuickItem
    IF ::self_destruction

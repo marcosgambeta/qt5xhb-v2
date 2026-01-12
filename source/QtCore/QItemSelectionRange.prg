@@ -48,7 +48,7 @@ CLASS QItemSelectionRange
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QItemSelectionRange
    IF ::self_destruction

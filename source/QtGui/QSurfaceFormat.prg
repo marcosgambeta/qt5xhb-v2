@@ -58,7 +58,7 @@ CLASS QSurfaceFormat
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSurfaceFormat
    IF ::self_destruction

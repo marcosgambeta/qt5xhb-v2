@@ -47,7 +47,7 @@ CLASS QStorageInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStorageInfo
    IF ::self_destruction

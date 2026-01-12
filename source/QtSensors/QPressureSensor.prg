@@ -22,7 +22,7 @@ CLASS QPressureSensor INHERIT QSensor
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPressureSensor
    IF ::self_destruction

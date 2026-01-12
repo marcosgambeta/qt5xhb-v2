@@ -54,7 +54,7 @@ CLASS QDomDocument INHERIT QDomNode
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDomDocument
    IF ::self_destruction

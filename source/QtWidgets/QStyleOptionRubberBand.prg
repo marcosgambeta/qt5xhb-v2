@@ -23,7 +23,7 @@ CLASS QStyleOptionRubberBand INHERIT QStyleOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionRubberBand
    IF ::self_destruction

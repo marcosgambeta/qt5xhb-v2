@@ -28,7 +28,7 @@ CLASS QTextBlockUserData
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextBlockUserData
    IF ::self_destruction

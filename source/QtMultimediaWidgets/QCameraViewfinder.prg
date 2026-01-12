@@ -22,7 +22,7 @@ CLASS QCameraViewfinder INHERIT QVideoWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCameraViewfinder
    IF ::self_destruction

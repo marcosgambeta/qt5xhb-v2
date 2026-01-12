@@ -31,7 +31,7 @@ CLASS QSignalBlocker
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSignalBlocker
    IF ::self_destruction

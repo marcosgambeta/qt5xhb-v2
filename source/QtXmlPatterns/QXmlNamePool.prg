@@ -29,7 +29,7 @@ CLASS QXmlNamePool
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlNamePool
    IF ::self_destruction

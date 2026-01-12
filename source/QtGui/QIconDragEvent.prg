@@ -20,7 +20,7 @@ CLASS QIconDragEvent INHERIT QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QIconDragEvent
    IF ::self_destruction

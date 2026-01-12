@@ -46,7 +46,7 @@ CLASS QUrlQuery
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QUrlQuery
    IF ::self_destruction

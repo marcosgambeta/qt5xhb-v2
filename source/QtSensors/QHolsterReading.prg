@@ -21,7 +21,7 @@ CLASS QHolsterReading INHERIT QSensorReading
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHolsterReading
    IF ::self_destruction

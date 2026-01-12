@@ -24,7 +24,7 @@ CLASS QMagnetometerReading INHERIT QSensorReading
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMagnetometerReading
    IF ::self_destruction

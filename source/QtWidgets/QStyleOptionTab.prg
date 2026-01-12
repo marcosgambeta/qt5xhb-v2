@@ -45,7 +45,7 @@ CLASS QStyleOptionTab INHERIT QStyleOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionTab
    IF ::self_destruction

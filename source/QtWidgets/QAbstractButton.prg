@@ -111,7 +111,7 @@ CLASS QAbstractButton INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractButton
    IF ::self_destruction

@@ -29,7 +29,7 @@ CLASS QMessageLogger
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMessageLogger
    IF ::self_destruction

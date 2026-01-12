@@ -26,7 +26,7 @@ CLASS QAbstractState INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractState
    IF ::self_destruction

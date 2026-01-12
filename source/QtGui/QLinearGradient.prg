@@ -25,7 +25,7 @@ CLASS QLinearGradient INHERIT QGradient
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLinearGradient
    IF ::self_destruction

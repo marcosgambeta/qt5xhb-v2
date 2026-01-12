@@ -39,7 +39,7 @@ CLASS QScatterSeries INHERIT QXYSeries
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QScatterSeries
    IF ::self_destruction

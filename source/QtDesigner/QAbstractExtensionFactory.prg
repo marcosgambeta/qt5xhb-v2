@@ -30,7 +30,7 @@ CLASS QAbstractExtensionFactory
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractExtensionFactory
    IF ::self_destruction

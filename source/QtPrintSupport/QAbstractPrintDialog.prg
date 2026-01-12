@@ -35,7 +35,7 @@ CLASS QAbstractPrintDialog INHERIT QDialog
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractPrintDialog
    IF ::self_destruction

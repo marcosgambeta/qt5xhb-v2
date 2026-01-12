@@ -28,7 +28,7 @@ CLASS QGeoServiceProviderFactory
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoServiceProviderFactory
    IF ::self_destruction

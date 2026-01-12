@@ -32,7 +32,7 @@ CLASS QBBSystemLocaleData INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBBSystemLocaleData
    IF ::self_destruction

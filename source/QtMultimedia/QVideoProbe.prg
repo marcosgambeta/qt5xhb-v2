@@ -25,7 +25,7 @@ CLASS QVideoProbe INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVideoProbe
    IF ::self_destruction

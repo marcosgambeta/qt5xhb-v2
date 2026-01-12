@@ -28,7 +28,7 @@ CLASS QStyleOptionTabBarBase INHERIT QStyleOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionTabBarBase
    IF ::self_destruction

@@ -38,7 +38,7 @@ CLASS QDesignerFormEditorInterface INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDesignerFormEditorInterface
    IF ::self_destruction

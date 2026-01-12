@@ -33,7 +33,7 @@ CLASS QDBusServiceWatcher INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDBusServiceWatcher
    IF ::self_destruction

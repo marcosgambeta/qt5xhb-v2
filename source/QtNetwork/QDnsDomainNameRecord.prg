@@ -33,7 +33,7 @@ CLASS QDnsDomainNameRecord
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDnsDomainNameRecord
    IF ::self_destruction

@@ -19,7 +19,7 @@ CLASS QSGDynamicTexture INHERIT QSGTexture
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSGDynamicTexture
    IF ::self_destruction

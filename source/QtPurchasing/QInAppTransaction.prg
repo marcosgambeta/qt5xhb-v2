@@ -29,7 +29,7 @@ CLASS QInAppTransaction INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QInAppTransaction
    IF ::self_destruction

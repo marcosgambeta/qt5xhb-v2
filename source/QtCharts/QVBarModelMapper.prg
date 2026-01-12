@@ -40,7 +40,7 @@ CLASS QVBarModelMapper INHERIT QBarModelMapper
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVBarModelMapper
    IF ::self_destruction

@@ -20,7 +20,7 @@ CLASS QWinEvent INHERIT QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWinEvent
    IF ::self_destruction

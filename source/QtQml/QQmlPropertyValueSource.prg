@@ -29,7 +29,7 @@ CLASS QQmlPropertyValueSource
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlPropertyValueSource
    IF ::self_destruction

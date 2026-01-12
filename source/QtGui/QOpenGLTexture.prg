@@ -93,7 +93,7 @@ CLASS QOpenGLTexture
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOpenGLTexture
    IF ::self_destruction

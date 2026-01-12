@@ -74,7 +74,7 @@ CLASS QPainterPath
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPainterPath
    IF ::self_destruction

@@ -43,7 +43,7 @@ CLASS QWebEngineHttpRequest
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebEngineHttpRequest
    IF ::self_destruction

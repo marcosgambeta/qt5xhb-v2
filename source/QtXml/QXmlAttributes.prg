@@ -39,7 +39,7 @@ CLASS QXmlAttributes
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlAttributes
    IF ::self_destruction

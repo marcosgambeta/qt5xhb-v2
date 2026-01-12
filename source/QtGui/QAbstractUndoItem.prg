@@ -30,7 +30,7 @@ CLASS QAbstractUndoItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractUndoItem
    IF ::self_destruction

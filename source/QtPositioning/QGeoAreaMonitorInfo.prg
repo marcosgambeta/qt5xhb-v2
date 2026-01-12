@@ -41,7 +41,7 @@ CLASS QGeoAreaMonitorInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoAreaMonitorInfo
    IF ::self_destruction

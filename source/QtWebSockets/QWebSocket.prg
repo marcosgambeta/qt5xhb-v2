@@ -74,7 +74,7 @@ CLASS QWebSocket INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebSocket
    IF ::self_destruction

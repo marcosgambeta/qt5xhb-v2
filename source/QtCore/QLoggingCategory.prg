@@ -37,7 +37,7 @@ CLASS QLoggingCategory
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLoggingCategory
    IF ::self_destruction

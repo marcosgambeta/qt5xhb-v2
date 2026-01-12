@@ -37,7 +37,7 @@ CLASS QOpenGLDebugMessage
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QOpenGLDebugMessage
    IF ::self_destruction

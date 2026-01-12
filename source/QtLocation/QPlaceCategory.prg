@@ -39,7 +39,7 @@ CLASS QPlaceCategory
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceCategory
    IF ::self_destruction

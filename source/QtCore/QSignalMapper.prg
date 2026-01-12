@@ -34,7 +34,7 @@ CLASS QSignalMapper INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSignalMapper
    IF ::self_destruction

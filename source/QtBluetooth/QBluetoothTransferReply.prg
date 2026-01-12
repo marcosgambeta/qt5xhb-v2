@@ -31,7 +31,7 @@ CLASS QBluetoothTransferReply INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBluetoothTransferReply
    IF ::self_destruction

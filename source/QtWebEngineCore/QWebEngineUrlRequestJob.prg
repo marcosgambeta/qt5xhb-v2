@@ -26,7 +26,7 @@ CLASS QWebEngineUrlRequestJob INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebEngineUrlRequestJob
    IF ::self_destruction

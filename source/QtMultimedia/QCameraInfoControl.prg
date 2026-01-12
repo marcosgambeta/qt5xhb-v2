@@ -21,7 +21,7 @@ CLASS QCameraInfoControl INHERIT QMediaControl
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCameraInfoControl
    IF ::self_destruction

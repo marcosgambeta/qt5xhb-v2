@@ -25,7 +25,7 @@ CLASS QAudioProbe INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAudioProbe
    IF ::self_destruction

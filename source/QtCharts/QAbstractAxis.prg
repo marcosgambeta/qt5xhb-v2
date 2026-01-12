@@ -107,7 +107,7 @@ CLASS QAbstractAxis INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractAxis
    IF ::self_destruction

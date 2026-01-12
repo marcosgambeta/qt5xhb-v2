@@ -42,7 +42,7 @@ CLASS QFontInfo
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QFontInfo
    IF ::self_destruction

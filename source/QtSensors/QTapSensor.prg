@@ -26,7 +26,7 @@ CLASS QTapSensor INHERIT QSensor
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTapSensor
    IF ::self_destruction

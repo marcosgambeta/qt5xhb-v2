@@ -38,7 +38,7 @@ CLASS QCommandLineOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCommandLineOption
    IF ::self_destruction

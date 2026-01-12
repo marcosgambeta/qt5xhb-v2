@@ -51,7 +51,7 @@ CLASS QNetworkSession INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QNetworkSession
    IF ::self_destruction

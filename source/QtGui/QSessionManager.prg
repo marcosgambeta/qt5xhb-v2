@@ -33,7 +33,7 @@ CLASS QSessionManager INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSessionManager
    IF ::self_destruction

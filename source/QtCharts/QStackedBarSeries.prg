@@ -21,7 +21,7 @@ CLASS QStackedBarSeries INHERIT QAbstractBarSeries
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStackedBarSeries
    IF ::self_destruction

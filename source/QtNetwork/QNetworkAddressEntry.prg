@@ -39,7 +39,7 @@ CLASS QNetworkAddressEntry
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QNetworkAddressEntry
    IF ::self_destruction

@@ -62,7 +62,7 @@ CLASS QLegend INHERIT QGraphicsWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QLegend
    IF ::self_destruction

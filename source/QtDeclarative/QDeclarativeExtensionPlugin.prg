@@ -20,7 +20,7 @@ CLASS QDeclarativeExtensionPlugin INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDeclarativeExtensionPlugin
    IF ::self_destruction

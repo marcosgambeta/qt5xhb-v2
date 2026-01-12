@@ -39,7 +39,7 @@ CLASS QAccessibleWidget INHERIT QAccessibleObject,QAccessibleActionInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAccessibleWidget
    IF ::self_destruction

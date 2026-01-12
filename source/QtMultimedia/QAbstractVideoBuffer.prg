@@ -34,7 +34,7 @@ CLASS QAbstractVideoBuffer
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAbstractVideoBuffer
    IF ::self_destruction

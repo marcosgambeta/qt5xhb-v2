@@ -23,7 +23,7 @@ CLASS QCameraViewfinderSettingsControl INHERIT QMediaControl
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCameraViewfinderSettingsControl
    IF ::self_destruction

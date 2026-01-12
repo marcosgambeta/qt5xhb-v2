@@ -21,7 +21,7 @@ CLASS QQmlExtensionPlugin INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlExtensionPlugin
    IF ::self_destruction

@@ -134,7 +134,7 @@ CLASS QGuiApplication INHERIT QCoreApplication
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGuiApplication
    IF ::self_destruction

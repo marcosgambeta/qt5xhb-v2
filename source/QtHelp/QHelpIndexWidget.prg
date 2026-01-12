@@ -23,7 +23,7 @@ CLASS QHelpIndexWidget INHERIT QListView
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHelpIndexWidget
    IF ::self_destruction

@@ -54,7 +54,7 @@ CLASS QPaintEngineState
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPaintEngineState
    IF ::self_destruction

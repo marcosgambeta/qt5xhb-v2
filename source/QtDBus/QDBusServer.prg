@@ -26,7 +26,7 @@ CLASS QDBusServer INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDBusServer
    IF ::self_destruction

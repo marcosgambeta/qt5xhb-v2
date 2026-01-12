@@ -32,7 +32,7 @@ CLASS QScatter3DSeries INHERIT QAbstract3DSeries
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QScatter3DSeries
    IF ::self_destruction

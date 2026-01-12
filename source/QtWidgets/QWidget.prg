@@ -505,7 +505,7 @@ CLASS QWidget INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWidget
    IF ::self_destruction

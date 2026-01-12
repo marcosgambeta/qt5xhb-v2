@@ -35,7 +35,7 @@ CLASS QDBusSignature
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDBusSignature
    IF ::self_destruction

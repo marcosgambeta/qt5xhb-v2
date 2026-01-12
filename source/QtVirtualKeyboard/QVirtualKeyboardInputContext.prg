@@ -61,7 +61,7 @@ CLASS QVirtualKeyboardInputContext INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVirtualKeyboardInputContext
    IF ::self_destruction

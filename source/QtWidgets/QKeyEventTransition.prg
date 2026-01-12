@@ -24,7 +24,7 @@ CLASS QKeyEventTransition INHERIT QEventTransition
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QKeyEventTransition
    IF ::self_destruction

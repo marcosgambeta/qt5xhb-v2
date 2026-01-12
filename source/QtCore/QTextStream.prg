@@ -69,7 +69,7 @@ CLASS QTextStream
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextStream
    IF ::self_destruction

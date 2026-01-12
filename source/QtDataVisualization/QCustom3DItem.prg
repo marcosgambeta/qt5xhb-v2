@@ -52,7 +52,7 @@ CLASS QCustom3DItem INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCustom3DItem
    IF ::self_destruction

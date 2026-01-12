@@ -33,7 +33,7 @@ CLASS QAndroidBinder
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAndroidBinder
    IF ::self_destruction

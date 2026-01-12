@@ -31,7 +31,7 @@ CLASS QScriptString
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QScriptString
    IF ::self_destruction

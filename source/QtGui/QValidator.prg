@@ -24,7 +24,7 @@ CLASS QValidator INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QValidator
    IF ::self_destruction

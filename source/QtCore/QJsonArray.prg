@@ -54,7 +54,7 @@ CLASS QJsonArray
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QJsonArray
    IF ::self_destruction

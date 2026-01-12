@@ -49,7 +49,7 @@ CLASS QSGNode
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSGNode
    IF ::self_destruction

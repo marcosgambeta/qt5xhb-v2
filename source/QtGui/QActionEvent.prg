@@ -23,7 +23,7 @@ CLASS QActionEvent INHERIT QEvent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QActionEvent
    IF ::self_destruction

@@ -84,7 +84,7 @@ CLASS QGLFunctions
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGLFunctions
    IF ::self_destruction

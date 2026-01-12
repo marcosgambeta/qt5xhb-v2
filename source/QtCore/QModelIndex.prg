@@ -42,7 +42,7 @@ CLASS QModelIndex
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QModelIndex
    IF ::self_destruction

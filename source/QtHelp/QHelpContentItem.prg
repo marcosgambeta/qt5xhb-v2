@@ -36,7 +36,7 @@ CLASS QHelpContentItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHelpContentItem
    IF ::self_destruction

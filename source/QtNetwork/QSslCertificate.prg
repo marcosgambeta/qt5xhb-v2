@@ -59,7 +59,7 @@ CLASS QSslCertificate
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSslCertificate
    IF ::self_destruction

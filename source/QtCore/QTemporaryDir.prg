@@ -34,7 +34,7 @@ CLASS QTemporaryDir
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTemporaryDir
    IF ::self_destruction

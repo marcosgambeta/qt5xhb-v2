@@ -69,7 +69,7 @@ CLASS QMessageBox INHERIT QDialog
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMessageBox
    IF ::self_destruction

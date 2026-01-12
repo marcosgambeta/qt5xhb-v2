@@ -100,7 +100,7 @@ CLASS QSslSocket INHERIT QTcpSocket
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSslSocket
    IF ::self_destruction

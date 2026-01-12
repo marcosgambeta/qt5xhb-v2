@@ -49,7 +49,7 @@ CLASS QJsonDocument
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QJsonDocument
    IF ::self_destruction

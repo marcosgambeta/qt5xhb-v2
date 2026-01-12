@@ -34,7 +34,7 @@ CLASS QSqlRelationalTableModel INHERIT QSqlTableModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSqlRelationalTableModel
    IF ::self_destruction

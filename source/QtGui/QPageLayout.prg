@@ -61,7 +61,7 @@ CLASS QPageLayout
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPageLayout
    IF ::self_destruction

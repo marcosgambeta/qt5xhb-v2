@@ -74,7 +74,7 @@ CLASS QMainWindow INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMainWindow
    IF ::self_destruction

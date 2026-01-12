@@ -39,7 +39,7 @@ CLASS QDeclarativeListReference
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDeclarativeListReference
    IF ::self_destruction

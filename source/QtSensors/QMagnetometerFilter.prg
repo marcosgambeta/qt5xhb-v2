@@ -17,7 +17,7 @@ CLASS QMagnetometerFilter INHERIT QSensorFilter
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMagnetometerFilter
    IF ::self_destruction

@@ -152,7 +152,7 @@ CLASS QWindow INHERIT QObject,QSurface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWindow
    IF ::self_destruction

@@ -44,7 +44,7 @@ CLASS QDialog INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QDialog
    IF ::self_destruction

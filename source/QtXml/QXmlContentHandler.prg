@@ -40,7 +40,7 @@ CLASS QXmlContentHandler
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QXmlContentHandler
    IF ::self_destruction

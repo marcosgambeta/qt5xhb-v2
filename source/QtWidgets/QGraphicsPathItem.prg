@@ -31,7 +31,7 @@ CLASS QGraphicsPathItem INHERIT QAbstractGraphicsShapeItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsPathItem
    IF ::self_destruction

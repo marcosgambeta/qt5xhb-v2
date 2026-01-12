@@ -27,7 +27,7 @@ CLASS QMetaDataReaderControl INHERIT QMediaControl
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMetaDataReaderControl
    IF ::self_destruction

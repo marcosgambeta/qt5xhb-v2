@@ -40,7 +40,7 @@ CLASS QAuthenticator
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAuthenticator
    IF ::self_destruction

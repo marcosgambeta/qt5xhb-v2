@@ -68,7 +68,7 @@ CLASS QCalendarWidget INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCalendarWidget
    IF ::self_destruction

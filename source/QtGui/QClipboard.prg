@@ -40,7 +40,7 @@ CLASS QClipboard INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QClipboard
    IF ::self_destruction

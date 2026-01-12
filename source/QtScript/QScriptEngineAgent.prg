@@ -43,7 +43,7 @@ CLASS QScriptEngineAgent
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QScriptEngineAgent
    IF ::self_destruction

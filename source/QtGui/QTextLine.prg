@@ -54,7 +54,7 @@ CLASS QTextLine
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextLine
    IF ::self_destruction

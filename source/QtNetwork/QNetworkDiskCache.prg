@@ -35,7 +35,7 @@ CLASS QNetworkDiskCache INHERIT QAbstractNetworkCache
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QNetworkDiskCache
    IF ::self_destruction

@@ -45,7 +45,7 @@ CLASS QSurface3DSeries INHERIT QAbstract3DSeries
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QSurface3DSeries
    IF ::self_destruction

@@ -39,7 +39,7 @@ CLASS QQmlComponent INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlComponent
    IF ::self_destruction

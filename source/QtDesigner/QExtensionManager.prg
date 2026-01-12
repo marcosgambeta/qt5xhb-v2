@@ -24,7 +24,7 @@ CLASS QExtensionManager INHERIT QObject,QAbstractExtensionManager
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QExtensionManager
    IF ::self_destruction

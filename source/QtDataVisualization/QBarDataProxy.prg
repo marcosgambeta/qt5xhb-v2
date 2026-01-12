@@ -42,7 +42,7 @@ CLASS QBarDataProxy INHERIT QAbstractDataProxy
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBarDataProxy
    IF ::self_destruction

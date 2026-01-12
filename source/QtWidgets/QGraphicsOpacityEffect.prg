@@ -28,7 +28,7 @@ CLASS QGraphicsOpacityEffect INHERIT QGraphicsEffect
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsOpacityEffect
    IF ::self_destruction

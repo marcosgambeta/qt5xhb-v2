@@ -29,7 +29,7 @@ CLASS QStyleHintReturn
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleHintReturn
    IF ::self_destruction

@@ -48,7 +48,7 @@ CLASS QColumnView INHERIT QAbstractItemView
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QColumnView
    IF ::self_destruction

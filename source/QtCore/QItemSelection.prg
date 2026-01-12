@@ -35,7 +35,7 @@ CLASS QItemSelection
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QItemSelection
    IF ::self_destruction

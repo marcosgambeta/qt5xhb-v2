@@ -169,7 +169,7 @@ CLASS QGraphicsItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsItem
    IF ::self_destruction

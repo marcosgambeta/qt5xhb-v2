@@ -28,7 +28,7 @@ CLASS Q3DObject INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS Q3DObject
    IF ::self_destruction

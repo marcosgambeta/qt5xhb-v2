@@ -29,7 +29,7 @@ CLASS QJsonParseError
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QJsonParseError
    IF ::self_destruction

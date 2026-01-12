@@ -25,7 +25,7 @@ CLASS QFileSelector INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QFileSelector
    IF ::self_destruction

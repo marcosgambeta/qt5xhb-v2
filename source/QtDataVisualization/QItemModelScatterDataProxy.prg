@@ -63,7 +63,7 @@ CLASS QItemModelScatterDataProxy INHERIT QScatterDataProxy
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QItemModelScatterDataProxy
    IF ::self_destruction

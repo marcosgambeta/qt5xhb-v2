@@ -23,7 +23,7 @@ CLASS QScrollBar INHERIT QAbstractSlider
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QScrollBar
    IF ::self_destruction

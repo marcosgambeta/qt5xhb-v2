@@ -53,7 +53,7 @@ CLASS QQuaternion
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQuaternion
    IF ::self_destruction

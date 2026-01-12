@@ -40,7 +40,7 @@ CLASS QPlaceSupplier
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPlaceSupplier
    IF ::self_destruction

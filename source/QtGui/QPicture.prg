@@ -31,7 +31,7 @@ CLASS QPicture INHERIT QPaintDevice
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QPicture
    IF ::self_destruction

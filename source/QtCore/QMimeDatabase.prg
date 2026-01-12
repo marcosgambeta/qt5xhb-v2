@@ -38,7 +38,7 @@ CLASS QMimeDatabase
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMimeDatabase
    IF ::self_destruction

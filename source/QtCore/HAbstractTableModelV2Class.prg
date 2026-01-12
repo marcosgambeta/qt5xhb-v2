@@ -29,7 +29,7 @@ CLASS HAbstractTableModelV2 INHERIT QAbstractTableModel
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS HAbstractTableModelV2
    IF ::self_destruction

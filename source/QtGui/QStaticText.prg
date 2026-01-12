@@ -44,7 +44,7 @@ CLASS QStaticText
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStaticText
    IF ::self_destruction

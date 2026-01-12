@@ -44,7 +44,7 @@ CLASS QMimeData INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMimeData
    IF ::self_destruction

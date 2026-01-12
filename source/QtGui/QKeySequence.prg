@@ -36,7 +36,7 @@ CLASS QKeySequence
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QKeySequence
    IF ::self_destruction

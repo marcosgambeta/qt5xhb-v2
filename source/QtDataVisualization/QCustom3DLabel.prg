@@ -44,7 +44,7 @@ CLASS QCustom3DLabel INHERIT QCustom3DItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCustom3DLabel
    IF ::self_destruction

@@ -44,7 +44,7 @@ CLASS QMimeType
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMimeType
    IF ::self_destruction

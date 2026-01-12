@@ -22,7 +22,7 @@ CLASS QMediaServiceProviderPlugin INHERIT QObject,QMediaServiceProviderFactoryIn
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMediaServiceProviderPlugin
    IF ::self_destruction

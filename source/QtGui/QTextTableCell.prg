@@ -43,7 +43,7 @@ CLASS QTextTableCell
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextTableCell
    IF ::self_destruction

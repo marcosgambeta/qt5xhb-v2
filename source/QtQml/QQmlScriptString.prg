@@ -35,7 +35,7 @@ CLASS QQmlScriptString
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QQmlScriptString
    IF ::self_destruction

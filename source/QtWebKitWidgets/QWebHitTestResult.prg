@@ -54,7 +54,7 @@ CLASS QWebHitTestResult
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QWebHitTestResult
    IF ::self_destruction

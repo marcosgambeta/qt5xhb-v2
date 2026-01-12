@@ -46,7 +46,7 @@ CLASS QAxBase
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QAxBase
    IF ::self_destruction

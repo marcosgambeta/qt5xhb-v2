@@ -34,7 +34,7 @@ CLASS QCategoryAxis INHERIT QValueAxis
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QCategoryAxis
    IF ::self_destruction

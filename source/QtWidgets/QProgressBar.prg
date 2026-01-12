@@ -46,7 +46,7 @@ CLASS QProgressBar INHERIT QWidget
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QProgressBar
    IF ::self_destruction

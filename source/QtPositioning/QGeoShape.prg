@@ -33,7 +33,7 @@ CLASS QGeoShape
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGeoShape
    IF ::self_destruction

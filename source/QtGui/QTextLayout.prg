@@ -68,7 +68,7 @@ CLASS QTextLayout
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTextLayout
    IF ::self_destruction

@@ -20,7 +20,7 @@ CLASS QVBoxLayout INHERIT QBoxLayout
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QVBoxLayout
    IF ::self_destruction

@@ -44,7 +44,7 @@ CLASS QHostAddress
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QHostAddress
    IF ::self_destruction

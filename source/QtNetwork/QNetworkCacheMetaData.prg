@@ -41,7 +41,7 @@ CLASS QNetworkCacheMetaData
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QNetworkCacheMetaData
    IF ::self_destruction

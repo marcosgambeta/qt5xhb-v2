@@ -52,7 +52,7 @@ CLASS QTimeZone
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QTimeZone
    IF ::self_destruction

@@ -51,7 +51,7 @@ CLASS QFontMetricsF
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QFontMetricsF
    IF ::self_destruction

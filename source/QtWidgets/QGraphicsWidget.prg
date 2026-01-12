@@ -79,7 +79,7 @@ CLASS QGraphicsWidget INHERIT QGraphicsObject,QGraphicsLayoutItem
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QGraphicsWidget
    IF ::self_destruction

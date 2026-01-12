@@ -24,7 +24,7 @@ CLASS QStyleOptionComplex INHERIT QStyleOption
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionComplex
    IF ::self_destruction

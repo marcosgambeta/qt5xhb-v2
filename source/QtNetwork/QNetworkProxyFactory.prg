@@ -35,7 +35,7 @@ CLASS QNetworkProxyFactory
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QNetworkProxyFactory
    IF ::self_destruction

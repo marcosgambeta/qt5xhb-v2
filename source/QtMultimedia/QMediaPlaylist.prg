@@ -57,7 +57,7 @@ CLASS QMediaPlaylist INHERIT QObject,QMediaBindableInterface
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QMediaPlaylist
    IF ::self_destruction

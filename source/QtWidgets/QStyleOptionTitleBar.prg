@@ -28,7 +28,7 @@ CLASS QStyleOptionTitleBar INHERIT QStyleOptionComplex
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QStyleOptionTitleBar
    IF ::self_destruction

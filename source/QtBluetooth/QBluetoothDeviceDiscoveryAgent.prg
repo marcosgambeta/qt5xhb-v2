@@ -35,7 +35,7 @@ CLASS QBluetoothDeviceDiscoveryAgent INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBluetoothDeviceDiscoveryAgent
    IF ::self_destruction

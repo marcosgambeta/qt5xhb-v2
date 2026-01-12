@@ -44,7 +44,7 @@ CLASS QBoxSet INHERIT QObject
 
    DESTRUCTOR destroyObject
 
-END CLASS
+ENDCLASS
 
 PROCEDURE destroyObject() CLASS QBoxSet
    IF ::self_destruction
