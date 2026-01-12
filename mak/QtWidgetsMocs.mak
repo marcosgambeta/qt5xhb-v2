@@ -1,7 +1,7 @@
 #
 # Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 #
-# Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
+# Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 #
 
 $(QT5XHB_OBJ_DIR)/HStyledItemDelegateMoc.cpp            : $(QT5XHB_SRC_DIR)/QtWidgets/HStyledItemDelegate.hpp
