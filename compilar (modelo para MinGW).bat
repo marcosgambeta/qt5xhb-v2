@@ -1,61 +1,64 @@
 rem
-rem Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
+rem Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 rem
-rem Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
+rem Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 rem
-rem Batch para compilação (Windows/MinGW)
-rem
-
-rem
-rem Utilize este .bat como modelo para compilar as bibliotecas para Windows
-rem usando MinGW, fazendo uma cópia e ajustando os parâmetros e caminhos.
+rem Batch for MinGW
 rem
 
-rem Cria um PATH reduzido. Embora opcional, evita conflitos com outras
-rem ferramentas de programação instaladas no ambiente de desenvolvimento.
+rem This file is an example/model. Make a copy and adjust the paths.
+
+rem Creates a reduced PATH. Although optional, it avoids conflicts with other
+rem programming tools installed in the development environment.
 set PATH=%SYSTEMROOT%;%SYSTEMROOT%\system32
 
-rem Pasta da instalação do Qt Framework.
-set QTDIR=C:\Qt\Qt5.4.0\5.4\mingw491_32
+rem Set Qt Framework paths.
+set QT_BIN_DIR=C:\Qt\5.15.2\mingw81_64\bin
+set QT_INC_DIR=C:\Qt\5.15.2\mingw81_64\include
+set QT_LIB_DIR=C:\Qt\5.15.2\mingw81_64\lib
 
-rem Pasta da instalação do Harbour.
-set HBDIR=C:\Harbour
+rem Set Harbour paths.
+set HB_BIN_DIR=C:\Harbour\bin
+set HB_INC_DIR=C:\Harbour\include
 
-rem Pasta da instalação do compilador C/C++.
-set CPPDIR=C:\Qt\Qt5.4.0\Tools\mingw491_32
+rem Set C/C++ Compiler paths.
+set CPP_BIN_DIR=C:\Qt\Tools\mingw810_64\bin
 
-rem Configura a variável PATH, conforme as variáveis definidas acima.
-set PATH=%QTDIR%\bin;%HBDIR%\bin;%CPPDIR%\bin;%PATH%
+rem Configure the PATH variable according to the variables defined above.
+set PATH=%QT_BIN_DIR%;%HB_BIN_DIR%;%CPP_BIN_DIR%;%PATH%
 
-rem Define a plataforma (win)
+rem Set the platform (win).
 set QTPLATFORM=win
 
-rem Define o compilador C++ (mingw/mingw64)
-set QTCOMP=mingw
+rem Set the C/C++ compiler (mingw or mingw64).
+set QTCOMP=mingw64
 
-rem Define se é Harbour ou xHarbour (harbour/xharbour)
+rem Set the Harbour project (harbour or xharbour).
 set HBCOMP=harbour
 
-rem Ative a linha abaixo para usar a flag QT5XHB_DONT_CHECK_PARAMETERS
+rem Activate the line below to set the flag QT5XHB_DONT_CHECK_PARAMETERS.
 rem set QT5XHB_USER_CFLAGS=-DQT5XHB_DONT_CHECK_PARAMETERS
 
-rem Cria a pasta para as bibliotecas, caso não exista.
+rem Creates folders for libraries, if they don't already exist.
 if not exist lib mkdir lib
 if not exist lib\%QTPLATFORM% mkdir lib\%QTPLATFORM%
 if not exist lib\%QTPLATFORM%\%QTCOMP% mkdir lib\%QTPLATFORM%\%QTCOMP%
 
-rem Cria a pasta para os objetos, caso não exista.
+rem Creates folders for objects, if they don't already exist.
 if not exist obj mkdir obj
 if not exist obj\%QTPLATFORM% mkdir obj\%QTPLATFORM%
 if not exist obj\%QTPLATFORM%\%QTCOMP% mkdir obj\%QTPLATFORM%\%QTCOMP%
 
-rem Compila as bibliotecas.
-mingw32-make -f makefile_mingw 1>%QTPLATFORM%_%QTCOMP%-1.log 2>%QTPLATFORM%_%QTCOMP%-2.log
+rem Compile the libraries.
+mingw32-make -f makefile_mingw -j %NUMBER_OF_PROCESSORS% 1>%QTPLATFORM%_%QTCOMP%-1.log 2>%QTPLATFORM%_%QTCOMP%-2.log
 
-rem Limpa as variáveis criadas.
-set QTDIR=
-set HBDIR=
-set CPPDIR=
+rem Clears the variables.
+set QT_BIN_DIR=
+set QT_INC_DIR=
+set QT_LIB_DIR=
+set HB_BIN_DIR=
+set HB_INC_DIR=
+set CPP_BIN_DIR=
 set QTPLATFORM=
 set QTCOMP=
 set HBCOMP=

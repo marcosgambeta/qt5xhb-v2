@@ -1,14 +1,15 @@
 #
 # Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 #
-# Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
+# Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 #
-# Makefile for Windows/MinGW
+# Makefile for MinGW
 #
 
-QT_BIN_DIR = $(QTDIR)/bin
-QT_INC_DIR = $(QTDIR)/include
-QT_LIB_DIR = $(QTDIR)/lib
+# deprecated
+#QT_BIN_DIR = $(QTDIR)/bin
+#QT_INC_DIR = $(QTDIR)/include
+#QT_LIB_DIR = $(QTDIR)/lib
 
 # Qt Framework modules
 include mak/modules1.mak
@@ -16,8 +17,9 @@ include mak/modules1.mak
 # check if the module is present in the Qt Framework installation
 include mak/modules2.mak
 
-HB_BIN_DIR = $(HBDIR)/bin
-HB_INC_DIR = $(HBDIR)/include
+# deprecated
+# HB_BIN_DIR = $(HBDIR)/bin
+# HB_INC_DIR = $(HBDIR)/include
 
 QT5XHB_INC_DIR = include
 QT5XHB_OBJ_DIR = obj/$(QTPLATFORM)/$(QTCOMP)
@@ -35,7 +37,7 @@ PRGFLAGS = -n -w3 -gc3
 ifeq ($(HBCOMP),xharbour)
    PRGFLAGS = -n -w2
 endif
-# ative a linha abaixo para compilar sem REQUEST <ClassName>
+# activate the line below to compile without 'REQUEST <ClassName>'
 # PRGFLAGS += -DQT5XHB_NO_REQUESTS
 
 # PRGINCLUDES
@@ -50,7 +52,7 @@ CFLAGS += -c -O2 -frtti -fexceptions -mthreads -Wall -Wno-deprecated -Wno-deprec
 CFLAGS += -DQT_DLL
 CFLAGS += -DQT_NO_DEBUG
 CFLAGS += -DQT_THREAD_SUPPORT
-# defina a flag abaixo para compilar sem checagem de parametros
+# set the flag below to compile without parameters checking
 # set QT5XHB_USER_CFLAGS=-DQT5XHB_DONT_CHECK_PARAMETERS
 CFLAGS += $(QT5XHB_USER_CFLAGS)
 include mak/modules3.mak
