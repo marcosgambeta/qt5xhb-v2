@@ -14,10 +14,12 @@ FUNCTION Main()
    LOCAL oView
    LOCAL aEstados
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with the HAbstractTableModel class")
    oWindow:resize(800, 600)
 
    aEstados := {}
@@ -49,25 +51,27 @@ FUNCTION Main()
    aadd(aEstados, {"../images/estados/sergipe.png"         , "Sergipe"            })
    aadd(aEstados, {"../images/estados/tocantins.png"       , "Tocantins"          })
 
+   // create model
    oModel := HAbstractTableModel():new()
 
-   // total de linhas
+   // row count
    oModel:setRowCountCB({||len(aEstados)})
-   // total de colunas (1=imagem 2=nome)
+   // column count (1=state flag 2=state name)
    oModel:setColumnCountCB({||2})
 
-   // conteúdo da célula (coluna 2)
+   // cell data (column 2)
    oModel:setCB(Qt_DisplayRole, {|nRow, nCol|iif(nCol == 1, aEstados[nRow + 1, 2], NIL)})
-   // conteúdo da célula (coluna 1)
+   // cell image (column 1)
    oModel:setCB(Qt_DecorationRole, {|nRow, nCol|iif(nCol == 0, QPixmap():new(aEstados[nRow + 1, 1]), NIL)})
-   // tamanho da célula (coluna 1)
+   // cell size hint (column 1)
    oModel:setCB(Qt_SizeHintRole, {|nRow, nCol|iif(nCol == 0, QSize():new(150, 107), NIL)})
 
-   // títulos das colunas
+   // column title
    oModel:setHorizontalHeaderCB(Qt_DisplayRole, {|nCol|{"Bandeira", "Estado"}[nCol + 1]})
-   // títulos das linhas
+   // row title
    oModel:setVerticalHeaderCB(Qt_DisplayRole, {|nRow|alltrim(str(nRow))})
 
+   // create view
    oView := QTableView():new(oWindow)
    oView:move(10, 10)
    oView:resize(800 - 20, 600 - 20)
@@ -75,8 +79,10 @@ FUNCTION Main()
    oView:resizeRowsToContents()
    oView:resizeColumnsToContents()
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
    // delete objects

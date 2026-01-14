@@ -13,24 +13,31 @@ FUNCTION Main()
    LOCAL oModel
    LOCAL oList
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste com a classe HAbstractListModel")
+   oWindow:setWindowTitle("Test with the HAbstractListModel class")
    oWindow:resize(400, 600)
 
+   // create model
    oModel := HAbstractListModel():new()
-   // total de linhas: 100 mil
+   // row count: 100 mil
    oModel:setRowCountCB({||100000})
-   oModel:setCB(Qt_DisplayRole, {|nRow|"Linha " + alltrim(str(nRow))})
+   // cell data
+   oModel:setCB(Qt_DisplayRole, {|nRow|"Row " + alltrim(str(nRow))})
 
+   // create view
    oList := QListView():new(oWindow)
    oList:move(10, 10)
    oList:resize(400 - 20, 600 - 20)
    oList:setModel(oModel)
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
    // delete objects

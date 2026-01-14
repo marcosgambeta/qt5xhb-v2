@@ -13,25 +13,31 @@ FUNCTION Main()
    LOCAL oModel
    LOCAL oList
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste com a classe HAbstractListModel")
+   oWindow:setWindowTitle("Test with the HAbstractListModel class")
    oWindow:resize(400, 600)
 
+   // create model
    oModel := HAbstractListModel():new()
    oModel:setRowCountCB({||100})
-   oModel:setCB(Qt_DisplayRole, {|nRow|"Linha " + alltrim(str(nRow))})
+   oModel:setCB(Qt_DisplayRole, {|nRow|"Row " + alltrim(str(nRow))})
    // checked/unchecked
    oModel:setCB(Qt_CheckStateRole, {|nRow|iif(nRow / 2 == int(nRow / 2), Qt_Checked, Qt_Unchecked)})
 
+   // create view
    oList := QListView():new(oWindow)
    oList:move(10, 10)
    oList:resize(400 - 20, 600 - 20)
    oList:setModel(oModel)
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
    // delete objects

@@ -17,23 +17,26 @@ FUNCTION Main()
    LOCAL nRow
    LOCAL aData
 
-   aData := Array(NUMR_ROWS)
+   aData := array(NUMR_ROWS)
    FOR nRow := 1 TO NUMR_ROWS
-      aData[nRow] := {"Linha " + alltrim(str(nRow)), Qt_Checked}
+      aData[nRow] := {"Row " + alltrim(str(nRow)), Qt_Checked}
    NEXT nRow
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with the HAbstractListModel class")
    oWindow:resize(800, 600)
 
+   // create model
    oModel := HAbstractListModel():new()
-   // total de linhas
+   // row count
    oModel:setRowCountCB({||NUMR_ROWS})
-   // conteúdo da linha
+   // row data
    oModel:setDisplayRoleCB({|nRow|aData[nRow + 1][1]})
-   // conteúdo para edição da linha
+   // row edit
    oModel:setEditRoleCB({|nRow|aData[nRow + 1][1]})
    // checked/unchecked
    oModel:setCheckStateRoleCB({|nRow|aData[nRow + 1][2]})
@@ -48,15 +51,18 @@ FUNCTION Main()
          aData[nRow + 1, 2] := oVariant:toInt()
          RETURN .T.
       ENDIF
-      }) // grava conteúdo da linha se não for vazio
+      }) // save row data if not empty
 
+   // create view
    oView := QListView():new(oWindow)
    oView:move(10, 10)
    oView:resize(800 - 20, 600 - 20)
    oView:setModel(oModel)
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
    // delete objects

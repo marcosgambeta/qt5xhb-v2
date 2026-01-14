@@ -15,10 +15,12 @@ FUNCTION Main()
    LOCAL oModel
    LOCAL oView
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with the HAbstractTableModelV2 class")
    oWindow:resize(800, 600)
 
    s_aEstados := {}
@@ -50,8 +52,10 @@ FUNCTION Main()
    aadd(s_aEstados, {"../images/estados/sergipe.png"         , "Sergipe"            })
    aadd(s_aEstados, {"../images/estados/tocantins.png"       , "Tocantins"          })
 
+   // create model
    oModel := myModel():new()
 
+   // create view
    oView := QTableView():new(oWindow)
    oView:move(10, 10)
    oView:resize(800 - 20, 600 - 20)
@@ -59,8 +63,10 @@ FUNCTION Main()
    oView:resizeRowsToContents()
    oView:resizeColumnsToContents()
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
    // delete objects
@@ -97,7 +103,7 @@ METHOD rowCount() CLASS myModel
 RETURN len(s_aEstados)
 
 METHOD columnCount() CLASS myModel
-RETURN 2 // coluna 1=imagem coluna 2=nome
+RETURN 2 // column 1=flag column 2=state name
 
 METHOD data(oIndex, nRole) CLASS myModel
 
@@ -124,9 +130,9 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
    LOCAL oVariant := QVariant():new()
 
    IF nOrientation == Qt_Horizontal .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new({"Bandeira", "Estado"}[nSection + 1])
+      oVariant := QVariant():new({"Flag", "State Name"}[nSection + 1])
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Linha " + alltrim(str(nSection)))
+      oVariant := QVariant():new("Row " + alltrim(str(nSection)))
    ENDIF
 
 RETURN oVariant

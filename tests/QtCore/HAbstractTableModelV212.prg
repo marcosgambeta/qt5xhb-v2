@@ -17,10 +17,12 @@ FUNCTION Main()
    LOCAL nRow
    LOCAL nColumn
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with the HAbstractTableModelV2 class")
    oWindow:resize(800, 600)
 
    s_aDados := Array(100, 100)
@@ -31,8 +33,10 @@ FUNCTION Main()
       NEXT nColumn
    NEXT nRow
 
+   // create model
    oModel := myModel():new()
 
+   // create view
    oView := QTableView():new(oWindow)
    oView:move(10, 10)
    oView:resize(800 - 20, 600 - 20)
@@ -40,8 +44,10 @@ FUNCTION Main()
    oView:resizeRowsToContents()
    oView:resizeColumnsToContents()
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
    // delete objects
@@ -107,9 +113,9 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
    LOCAL oVariant := QVariant():new()
 
    IF nOrientation == Qt_Horizontal .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Coluna " + alltrim(str(nSection)))
+      oVariant := QVariant():new("Column " + alltrim(str(nSection)))
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Linha " + alltrim(str(nSection)))
+      oVariant := QVariant():new("Row " + alltrim(str(nSection)))
    ENDIF
 
 RETURN oVariant

@@ -22,37 +22,43 @@ FUNCTION Main()
    aData := Array(NUMR_ROWS, 10)
    FOR nRow := 1 TO NUMR_ROWS
       FOR nCol := 1 TO NUMR_COLS
-         aData[nRow, nCol] := "Célula " + alltrim(str(nRow)) + "," + alltrim(str(nCol))
+         aData[nRow, nCol] := "Cell " + alltrim(str(nRow)) + "," + alltrim(str(nCol))
       NEXT nCol
    NEXT nRow
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with the HAbstractTableModel class")
    oWindow:resize(800, 600)
 
+   // create model
    oModel := HAbstractTableModel():new()
-   // total de linhas
+   // row count
    oModel:setRowCountCB({||NUMR_ROWS})
-   // total de colunas
+   // column count
    oModel:setColumnCountCB({||NUMR_COLS})
-   // conteúdo da célula
+   // cell data
    oModel:setCB(Qt_DisplayRole, {|nRow, nCol|aData[nRow + 1, nCol + 1]})
-   // conteúdo para edição da célula
+   // cell edit
    oModel:setCB(Qt_EditRole, {|nRow, nCol|aData[nRow + 1, nCol + 1]})
    // flags
    oModel:setFlagsCB({||Qt_ItemIsSelectable + Qt_ItemIsEditable + Qt_ItemIsEnabled})
-   // grava conteúdo da célula se não for vazio
+   // save cell data if not empty
    oModel:setSetDataCB({|nRow, nCol, oVariant|aData[nRow + 1, nCol + 1] := oVariant:toString(), .T.})
 
+   // create view
    oView := QTableView():new(oWindow)
    oView:move(10, 10)
    oView:resize(800 - 20, 600 - 20)
    oView:setModel(oModel)
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
    // delete objects

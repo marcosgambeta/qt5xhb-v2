@@ -14,10 +14,12 @@ FUNCTION Main()
    LOCAL oComboBox
    LOCAL aEstados
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste com a classe HAbstractListModel")
+   oWindow:setWindowTitle("Test with the HAbstractListModel class")
    oWindow:resize(640, 480)
 
    aEstados := {}
@@ -50,19 +52,23 @@ FUNCTION Main()
    aadd(aEstados, {"../images/estados/sergipe.png"         , "Sergipe"            })
    aadd(aEstados, {"../images/estados/tocantins.png"       , "Tocantins"          })
 
+   // create model
    oModel := HAbstractListModel():new(oWindow)
    oModel:setRowCountCB({||len(aEstados)})
    oModel:setDisplayRoleCB({|nRow|aEstados[nRow + 1, 2]})
    oModel:setDecorationRoleCB({|nRow|aEstados[nRow + 1, 1]})
 
+   // create view
    oComboBox := QComboBox():new(oWindow)
    oComboBox:move(10, 10)
    oComboBox:resize(200, 20)
    oComboBox:setModel(oModel)
    ? oComboBox:onActivated({|oSender, nIndex|qout(strzero(nIndex, 4)), qout(aEstados[nIndex + 1, 2])})
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
    // delete objects

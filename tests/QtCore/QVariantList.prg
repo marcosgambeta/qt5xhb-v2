@@ -12,7 +12,7 @@ FUNCTION Main()
    LOCAL aVariantList
    LOCAL n
 
-   oVariant := QVariant():new19({"um", "dois", "tres", "quatro", "cinco"})
+   oVariant := QVariant():new19({"one", "two", "three", "four", "five"})
 
    aVariantList := oVariant:toList()
 
@@ -21,7 +21,7 @@ FUNCTION Main()
    FOR n := 1 TO len(aVariantList)
       ? aVariantList[n]:toString()
    NEXT n
-   
+
    WAIT
 
 RETURN NIL
