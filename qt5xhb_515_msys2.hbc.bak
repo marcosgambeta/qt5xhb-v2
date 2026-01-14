@@ -1,0 +1,122 @@
+#
+# Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+#
+# Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
+#
+# Configuration file for Qt5xHb, HBMK2 and MSYS2 (Qt Framework 5.15)
+#
+
+description=Qt5xHb
+
+# include folder of the Qt5xHb
+incpaths=include
+
+# lib folder of the Qt5xHb
+libpaths=lib/${hb_plat}/${hb_comp}
+
+# libraries of the Qt5xHb
+{android}libs=hbqtandroidextras5
+{allwin}libs=hbqaxcontainer5
+#{allwin}libs=hbqaxserver5 (do not activate)
+libs=hbqtbluetooth5
+libs=hbqtcharts5
+libs=hbqtcore5
+libs=hbqtdatavisualization5
+libs=hbqtdbus5
+libs=hbqtdesigner5
+libs=hbqtgamepad5
+libs=hbqtgui5
+libs=hbqthelp5
+libs=hbqtlocation5
+{darwin}libs=hbqtmacextras5
+libs=hbqtmultimedia5
+libs=hbqtmultimediawidgets5
+libs=hbqtnetwork5
+libs=hbqtnetworkauth5
+libs=hbqtopengl5
+libs=hbqtpositioning5
+libs=hbqtprintsupport5
+libs=hbqtpurchasing5
+libs=hbqtqml5
+libs=hbqtquick5
+libs=hbqtquickwidgets5
+libs=hbqtscript5
+libs=hbqtscripttools5
+libs=hbqtsensors5
+libs=hbqtserialport5
+libs=hbqtsql5
+libs=hbqtsvg5
+libs=hbqttexttospeech5
+libs=hbqtuitools5
+libs=hbqtwebchannel5
+{!mingw&!mingw64}libs=hbqtwebengine5
+{!mingw&!mingw64}libs=hbqtwebenginecore5
+{!mingw&!mingw64}libs=hbqtwebenginewidgets5
+libs=hbqtwebsockets5
+{!mingw&!mingw64}libs=hbqtwebview5
+libs=hbqtwidgets5
+{linux}libs=hbqtx11extras5
+{allwin}libs=hbqtwinextras5
+libs=hbqtxml5
+libs=hbqtxmlpatterns5
+
+# include folder of the Qt Framework 5
+incpaths=${QT_INC_DIR}
+
+# lib folder of the Qt Framework 5
+libpaths=${QT_LIB_DIR}
+
+# libraries of the Qt Framework 5
+{android}libs=Qt5AndroidExtras
+{allwin}libs=Qt5AxBase
+{allwin}libs=Qt5AxContainer
+libs=Qt5Bluetooth.dll.
+libs=Qt5Charts.dll.
+libs=Qt5Core.dll.
+libs=Qt5DataVisualization.dll.
+libs=Qt5DBus
+libs=Qt5Designer.dll.
+libs=Qt5Gamepad.dll.
+libs=Qt5Gui.dll.
+libs=Qt5Help.dll.
+libs=Qt5Location.dll.
+{darwin}libs=Qt5MacExtras
+libs=Qt5Multimedia.dll.
+libs=Qt5MultimediaWidgets.dll.
+libs=Qt5Network.dll.
+libs=Qt5NetworkAuth.dll.
+libs=Qt5OpenGL.dll.
+libs=Qt5Positioning.dll.
+libs=Qt5PrintSupport.dll.
+libs=Qt5Purchasing.dll.
+libs=Qt5Qml.dll.
+libs=Qt5Quick.dll.
+libs=Qt5QuickWidgets.dll.
+libs=Qt5Script.dll.
+libs=Qt5ScriptTools.dll.
+libs=Qt5Sensors.dll.
+libs=Qt5SerialPort.dll.
+libs=Qt5Sql.dll.
+libs=Qt5Svg.dll.
+libs=Qt5TextToSpeech.dll.
+libs=Qt5UiTools
+libs=Qt5WebChannel.dll.
+{!mingw&!mingw64}libs=Qt5WebEngine
+{!mingw&!mingw64}libs=Qt5WebEngineCore
+{!mingw&!mingw64}libs=Qt5WebEngineWidgets
+libs=Qt5WebSockets.dll.
+{!mingw&!mingw64}libs=Qt5WebView
+libs=Qt5Widgets.dll.
+{linux}libs=Qt5X11Extras
+{allwin}libs=Qt5WinExtras.dll.
+libs=Qt5Xml.dll.
+libs=Qt5XmlPatterns.dll.
+
+# others parameters
+cpp=yes
+gui=yes
+
+{msvc}ldflags=/NODEFAULTLIB:msvcrt.lib
+
+prgflags=-D__QT5XHB__
+cflags=-D__QT5XHB__
