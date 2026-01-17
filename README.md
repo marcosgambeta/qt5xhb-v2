@@ -18,7 +18,7 @@ https://github.com/vszakats/hb
 https://github.com/xHarbour-org/xharbour  
 https://github.com/marcosgambeta/harbourpp-v1  
 
-3. Download, configure and compile the Qt5xHb v2. 
+3. Download and compile the Qt5xHb v2. 
 
 Open a issue if you have problems with the compilation:
 
