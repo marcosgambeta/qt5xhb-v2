@@ -79,7 +79,7 @@ RETURN
     auto obj = new QDBusServiceWatcher(
         PQSTRING(1), *PQDBUSCONNECTION(2),
         HB_ISNIL(3) ? static_cast<QDBusServiceWatcher::WatchMode>(QDBusServiceWatcher::WatchForOwnerChange)
-                    : static_cast<QDBusServiceWatcher::WatchMode>(hb_parni(3)),
+                    : PQDBUSSERVICEWATCHER_WATCHMODE(3),
         OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETWATCHMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setWatchMode(static_cast<QDBusServiceWatcher::WatchMode>(hb_parni(1)));
+      obj->setWatchMode(PQDBUSSERVICEWATCHER_WATCHMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

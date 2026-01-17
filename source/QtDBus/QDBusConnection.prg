@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CALL)
 #endif
       auto ptr = new QDBusMessage(obj->call(*PQDBUSMESSAGE(1),
                                             HB_ISNIL(2) ? static_cast<QDBus::CallMode>(QDBus::Block)
-                                                        : static_cast<QDBus::CallMode>(hb_parni(2)),
+                                                        : PQDBUS_CALLMODE(2),
                                             OPINT(3, -1)));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -408,7 +408,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_REGISTEROBJECT)
       RBOOL(obj->registerObject(PQSTRING(1), PQOBJECT(2),
                                 HB_ISNIL(3)
                                     ? static_cast<QDBusConnection::RegisterOptions>(QDBusConnection::ExportAdaptors)
-                                    : static_cast<QDBusConnection::RegisterOptions>(hb_parni(3))));
+                                    : PQDBUSCONNECTION_REGISTEROPTIONS(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_UNREGISTEROBJECT)
 #endif
       obj->unregisterObject(PQSTRING(1),
                             HB_ISNIL(2) ? static_cast<QDBusConnection::UnregisterMode>(QDBusConnection::UnregisterNode)
-                                        : static_cast<QDBusConnection::UnregisterMode>(hb_parni(2)));
+                                        : PQDBUSCONNECTION_UNREGISTERMODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -551,7 +551,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECTTOBUS)
     */
 
     auto ptr = new QDBusConnection(
-        QDBusConnection::connectToBus(static_cast<QDBusConnection::BusType>(hb_parni(1)), PQSTRING(2)));
+        QDBusConnection::connectToBus(PQDBUSCONNECTION_BUSTYPE(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QDBUSCONNECTION", true);
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     /*
