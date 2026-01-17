@@ -66,7 +66,7 @@ RETURN
 HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    auto obj = new QDeclarativeImageProvider(static_cast<QDeclarativeImageProvider::ImageType>(hb_parni(1)));
+    auto obj = new QDeclarativeImageProvider(PQDECLARATIVEIMAGEPROVIDER_IMAGETYPE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
