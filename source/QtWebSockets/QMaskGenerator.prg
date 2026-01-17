@@ -53,10 +53,12 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QMaskGenerator *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QMASKGENERATOR_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  auto obj = static_cast<QMaskGenerator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
@@ -64,13 +66,11 @@ HB_FUNC_STATIC(QMASKGENERATOR_DELETE)
 #endif
 }
 
-/*
-virtual bool seed() = 0
-*/
+// virtual bool seed() = 0
 HB_FUNC_STATIC(QMASKGENERATOR_SEED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  auto obj = static_cast<QMaskGenerator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -86,13 +86,11 @@ HB_FUNC_STATIC(QMASKGENERATOR_SEED)
 #endif
 }
 
-/*
-virtual quint32 nextMask() = 0
-*/
+// virtual quint32 nextMask() = 0
 HB_FUNC_STATIC(QMASKGENERATOR_NEXTMASK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  auto obj = static_cast<QMaskGenerator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -66,20 +66,18 @@ RETURN
 #include <QtCore/QLatin1String>
 #include <QtCore/QString>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QWebSocketCorsAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_NEW)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QWebSocketCorsAuthenticator(const QString &origin)
-    */
+    // QWebSocketCorsAuthenticator(const QString &origin)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QWebSocketCorsAuthenticator(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQWEBSOCKETCORSAUTHENTICATOR(1)) {
-    /*
-    QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
-    */
+    // QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QWebSocketCorsAuthenticator(*PQWEBSOCKETCORSAUTHENTICATOR(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -92,7 +90,7 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_NEW)
 HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  auto obj = static_cast<QWebSocketCorsAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -100,13 +98,11 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_DELETE)
 #endif
 }
 
-/*
-void swap(QWebSocketCorsAuthenticator &other)
-*/
+// void swap(QWebSocketCorsAuthenticator &other)
 HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_SWAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  auto obj = static_cast<QWebSocketCorsAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,13 +120,11 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_SWAP)
 #endif
 }
 
-/*
-QString origin() const
-*/
+// QString origin() const
 HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_ORIGIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  auto obj = static_cast<QWebSocketCorsAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,13 +140,11 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_ORIGIN)
 #endif
 }
 
-/*
-bool allowed() const
-*/
+// bool allowed() const
 HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_ALLOWED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  auto obj = static_cast<QWebSocketCorsAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,13 +160,11 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_ALLOWED)
 #endif
 }
 
-/*
-void setAllowed(bool allowed)
-*/
+// void setAllowed(bool allowed)
 HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_SETALLOWED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  auto obj = static_cast<QWebSocketCorsAuthenticator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
