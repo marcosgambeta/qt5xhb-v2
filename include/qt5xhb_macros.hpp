@@ -232,4 +232,6 @@
     hb_itemRelease(ptr); \
   }
 
+#define PQTMSGTYPE(n) static_cast<QtMsgType>(hb_parni(n))
+
 #endif // QT5XHB_MACROS_HPP
