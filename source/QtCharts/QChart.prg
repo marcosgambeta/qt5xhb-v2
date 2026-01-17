@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QCHART_NEW)
   if (ISBETWEEN(0, 2) && ISQGRAPHICSITEMORNIL(1) && ISNUMORNIL(2)) {
     auto obj = new QChart(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(1)),
                           HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(Qt::WindowFlags())
-                                      : static_cast<Qt::WindowFlags>(hb_parni(2)));
+                                      : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QCHART_SETTHEME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setTheme(static_cast<QChart::ChartTheme>(hb_parni(1)));
+      obj->setTheme(PQCHART_CHARTTHEME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QCHART_SETANIMATIONOPTIONS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setAnimationOptions(static_cast<QChart::AnimationOptions>(hb_parni(1)));
+      obj->setAnimationOptions(PQCHART_ANIMATIONOPTIONS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -954,7 +954,7 @@ HB_FUNC_STATIC(QCHART_ADDAXIS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQABSTRACTAXIS(1) && HB_ISNUM(2)) {
 #endif
-      obj->addAxis(PQABSTRACTAXIS(1), static_cast<Qt::Alignment>(hb_parni(2)));
+      obj->addAxis(PQABSTRACTAXIS(1), PQT_ALIGNMENT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1004,7 +1004,7 @@ HB_FUNC_STATIC(QCHART_AXES)
     if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISQABSTRACTSERIESORNIL(2)) {
 #endif
       auto list = obj->axes(HB_ISNIL(1) ? static_cast<Qt::Orientations>(Qt::Horizontal | Qt::Vertical)
-                                        : static_cast<Qt::Orientations>(hb_parni(1)),
+                                        : PQT_ORIENTATIONS(1),
                             OPQABSTRACTSERIES(2, nullptr));
       auto pDynSym = hb_dynsymFindName("QABSTRACTAXIS");
       auto pArray = hb_itemArrayNew(0);

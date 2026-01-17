@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QPOLARCHART_NEW)
   if (ISBETWEEN(0, 2) && ISQGRAPHICSITEMORNIL(1) && ISNUMORNIL(2)) {
     auto obj = new QPolarChart(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(1)),
                                HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(Qt::WindowFlags())
-                                           : static_cast<Qt::WindowFlags>(hb_parni(2)));
+                                           : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QPOLARCHART_ADDAXIS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQABSTRACTAXIS(1) && HB_ISNUM(2)) {
 #endif
-      obj->addAxis(PQABSTRACTAXIS(1), static_cast<QPolarChart::PolarOrientation>(hb_parni(2)));
+      obj->addAxis(PQABSTRACTAXIS(1), PQPOLARCHART_POLARORIENTATION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
