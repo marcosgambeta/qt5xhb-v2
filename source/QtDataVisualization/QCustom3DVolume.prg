@@ -902,7 +902,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSUBTEXTUREDATA)
     auto obj = qobject_cast<QCustom3DVolume *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      obj->setSubTextureData(static_cast<Qt::Axis>(hb_parni(1)), PINT(2), PCONSTUCHAR(3));
+      obj->setSubTextureData(PQT_AXIS(1), PINT(2), PCONSTUCHAR(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -915,7 +915,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETSUBTEXTUREDATA)
     auto obj = qobject_cast<QCustom3DVolume *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      obj->setSubTextureData(static_cast<Qt::Axis>(hb_parni(1)), PINT(2), *PQIMAGE(3));
+      obj->setSubTextureData(PQT_AXIS(1), PINT(2), *PQIMAGE(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -937,7 +937,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SETTEXTUREFORMAT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setTextureFormat(static_cast<QImage::Format>(hb_parni(1)));
+      obj->setTextureFormat(PQIMAGE_FORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -983,7 +983,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_RENDERSLICE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      auto ptr = new QImage(obj->renderSlice(static_cast<Qt::Axis>(hb_parni(1)), PINT(2)));
+      auto ptr = new QImage(obj->renderSlice(PQT_AXIS(1), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

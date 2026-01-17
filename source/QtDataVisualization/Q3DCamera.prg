@@ -286,7 +286,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETCAMERAPRESET)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCameraPreset(static_cast<Q3DCamera::CameraPreset>(hb_parni(1)));
+      obj->setCameraPreset(PQ3DCAMERA_CAMERAPRESET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

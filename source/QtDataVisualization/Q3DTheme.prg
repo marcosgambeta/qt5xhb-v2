@@ -139,7 +139,7 @@ HB_FUNC_STATIC(Q3DTHEME_NEW)
     Q3DTheme(Q3DTheme::Theme themeType, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    auto obj = new Q3DTheme(static_cast<Q3DTheme::Theme>(hb_parni(1)), OPQOBJECT(2, nullptr));
+    auto obj = new Q3DTheme(PQ3DTHEME_THEME(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETTYPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setType(static_cast<Q3DTheme::Theme>(hb_parni(1)));
+      obj->setType(PQ3DTHEME_THEME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETCOLORSTYLE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setColorStyle(static_cast<Q3DTheme::ColorStyle>(hb_parni(1)));
+      obj->setColorStyle(PQ3DTHEME_COLORSTYLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETSELECTIONMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSelectionMode(static_cast<QAbstract3DGraph::SelectionFlags>(hb_parni(1)));
+      obj->setSelectionMode(PQABSTRACT3DGRAPH_SELECTIONFLAGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETSHADOWQUALITY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setShadowQuality(static_cast<QAbstract3DGraph::ShadowQuality>(hb_parni(1)));
+      obj->setShadowQuality(PQABSTRACT3DGRAPH_SHADOWQUALITY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -576,7 +576,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETOPTIMIZATIONHINTS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOptimizationHints(static_cast<QAbstract3DGraph::OptimizationHints>(hb_parni(1)));
+      obj->setOptimizationHints(PQABSTRACT3DGRAPH_OPTIMIZATIONHINTS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
