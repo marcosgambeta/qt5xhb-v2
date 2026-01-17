@@ -20,11 +20,19 @@ https://github.com/marcosgambeta/harbourpp-v1
 
 3. Download and compile the Qt5xHb v2. 
 
+Use this file to compile using MinGW and Makefiles:  
+compile_with_mingw.bat
+
+Use this file to compile using MSYS2/MinGW and Makefiles:  
+compile_with_mingw_msys2.bat
+
+See the notes in the files.
+
 Open a issue if you have problems with the compilation:
 
 https://github.com/marcosgambeta/qt5xhb-v2/issues  
 
-### Using Qt 5.15.2 (MS-Windows and MinGW)
+### Using Qt 5.15.2 from qt.io (MS-Windows and MinGW)
 
 #### Installing the Qt Framework 5.15
 
