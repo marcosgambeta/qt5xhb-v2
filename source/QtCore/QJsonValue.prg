@@ -86,7 +86,7 @@ RETURN
 HB_FUNC_STATIC(QJSONVALUE_NEW1)
 {
   auto obj = new QJsonValue(HB_ISNIL(1) ? static_cast<QJsonValue::Type>(QJsonValue::Null)
-                                        : static_cast<QJsonValue::Type>(hb_parni(1)));
+                                        : PQJSONVALUE_TYPE(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 

@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_WRITABLELOCATION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    RQSTRING(QStandardPaths::writableLocation(static_cast<QStandardPaths::StandardLocation>(hb_parni(1))));
+    RQSTRING(QStandardPaths::writableLocation(PQSTANDARDPATHS_STANDARDLOCATION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_STANDARDLOCATIONS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    RQSTRINGLIST(QStandardPaths::standardLocations(static_cast<QStandardPaths::StandardLocation>(hb_parni(1))));
+    RQSTRINGLIST(QStandardPaths::standardLocations(PQSTANDARDPATHS_STANDARDLOCATION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -102,9 +102,9 @@ HB_FUNC_STATIC(QSTANDARDPATHS_LOCATE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
 #endif
-    RQSTRING(QStandardPaths::locate(static_cast<QStandardPaths::StandardLocation>(hb_parni(1)), PQSTRING(2),
+    RQSTRING(QStandardPaths::locate(PQSTANDARDPATHS_STANDARDLOCATION(1), PQSTRING(2),
                                     HB_ISNIL(3) ? static_cast<QStandardPaths::LocateOptions>(QStandardPaths::LocateFile)
-                                                : static_cast<QStandardPaths::LocateOptions>(hb_parni(3))));
+                                                : PQSTANDARDPATHS_LOCATEOPTIONS(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -121,10 +121,10 @@ HB_FUNC_STATIC(QSTANDARDPATHS_LOCATEALL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
 #endif
-    RQSTRINGLIST(QStandardPaths::locateAll(static_cast<QStandardPaths::StandardLocation>(hb_parni(1)), PQSTRING(2),
+    RQSTRINGLIST(QStandardPaths::locateAll(PQSTANDARDPATHS_STANDARDLOCATION(1), PQSTRING(2),
                                            HB_ISNIL(3)
                                                ? static_cast<QStandardPaths::LocateOptions>(QStandardPaths::LocateFile)
-                                               : static_cast<QStandardPaths::LocateOptions>(hb_parni(3))));
+                                               : PQSTANDARDPATHS_LOCATEOPTIONS(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_DISPLAYNAME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    RQSTRING(QStandardPaths::displayName(static_cast<QStandardPaths::StandardLocation>(hb_parni(1))));
+    RQSTRING(QStandardPaths::displayName(PQSTANDARDPATHS_STANDARDLOCATION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

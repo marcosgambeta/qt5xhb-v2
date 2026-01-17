@@ -181,7 +181,7 @@ RETURN
     */
 HB_FUNC_STATIC(QVARIANT_NEW2)
 {
-  auto obj = new QVariant(static_cast<QVariant::Type>(hb_parni(1)));
+  auto obj = new QVariant(PQVARIANT_TYPE(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 

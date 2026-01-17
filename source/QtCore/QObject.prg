@@ -495,7 +495,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILD)
 #endif
       auto ptr = obj->findChild<QObject *>(OPQSTRING(1, QString()),
                                            HB_ISNIL(2) ? static_cast<Qt::FindChildOptions>(Qt::FindChildrenRecursively)
-                                                       : static_cast<Qt::FindChildOptions>(hb_parni(2)));
+                                                       : PQT_FINDCHILDOPTIONS(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
     if (obj != nullptr) {
       auto list = obj->findChildren<QObject *>(
           OPQSTRING(1, QString()), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions>(Qt::FindChildrenRecursively)
-                                               : static_cast<Qt::FindChildOptions>(hb_parni(2)));
+                                               : PQT_FINDCHILDOPTIONS(2));
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
@@ -544,7 +544,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
     if (obj != nullptr) {
       auto list = obj->findChildren<QObject *>(
           *PQREGEXP(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions>(Qt::FindChildrenRecursively)
-                                    : static_cast<Qt::FindChildOptions>(hb_parni(2)));
+                                    : PQT_FINDCHILDOPTIONS(2));
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
@@ -575,7 +575,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
     if (obj != nullptr) {
       auto list = obj->findChildren<QObject *>(
           *PQREGULAREXPRESSION(1), HB_ISNIL(2) ? static_cast<Qt::FindChildOptions>(Qt::FindChildrenRecursively)
-                                               : static_cast<Qt::FindChildOptions>(hb_parni(2)));
+                                               : PQT_FINDCHILDOPTIONS(2));
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
@@ -900,7 +900,7 @@ HB_FUNC_STATIC(QOBJECT_STARTTIMER)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       RINT(obj->startTimer(PINT(1), HB_ISNIL(2) ? static_cast<Qt::TimerType>(Qt::CoarseTimer)
-                                                : static_cast<Qt::TimerType>(hb_parni(2))));
+                                                : PQT_TIMERTYPE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

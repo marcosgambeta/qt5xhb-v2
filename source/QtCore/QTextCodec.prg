@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEDECODER)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       auto ptr = obj->makeDecoder(HB_ISNIL(1) ? static_cast<QTextCodec::ConversionFlags>(QTextCodec::DefaultConversion)
-                                              : static_cast<QTextCodec::ConversionFlags>(hb_parni(1)));
+                                              : PQTEXTCODEC_CONVERSIONFLAGS(1));
       Qt5xHb::createReturnClass(ptr, "QTEXTDECODER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEENCODER)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       auto ptr = obj->makeEncoder(HB_ISNIL(1) ? static_cast<QTextCodec::ConversionFlags>(QTextCodec::DefaultConversion)
-                                              : static_cast<QTextCodec::ConversionFlags>(hb_parni(1)));
+                                              : PQTEXTCODEC_CONVERSIONFLAGS(1));
       Qt5xHb::createReturnClass(ptr, "QTEXTENCODER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

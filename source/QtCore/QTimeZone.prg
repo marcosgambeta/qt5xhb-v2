@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QTIMEZONE_NEW)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QTimeZone(*PQBYTEARRAY(1), PINT(2), PQSTRING(3), PQSTRING(4),
                              HB_ISNIL(5) ? static_cast<QLocale::Country>(QLocale::AnyCountry)
-                                         : static_cast<QLocale::Country>(hb_parni(5)),
+                                         : PQLOCALE_COUNTRY(5),
                              OPQSTRING(6, QString()));
     Qt5xHb::returnNewObject(obj, true);
 #endif
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
     if (obj != nullptr) {
       RQSTRING(obj->displayName(*PQDATETIME(1),
                                 HB_ISNIL(2) ? static_cast<QTimeZone::NameType>(QTimeZone::DefaultName)
-                                            : static_cast<QTimeZone::NameType>(hb_parni(2)),
+                                            : PQTIMEZONE_NAMETYPE(2),
                                 HB_ISNIL(3) ? QLocale() : *static_cast<QLocale *>(Qt5xHb::itemGetPtr(3))));
     }
 #endif
@@ -283,9 +283,9 @@ HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
     auto obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RQSTRING(obj->displayName(static_cast<QTimeZone::TimeType>(hb_parni(1)),
+      RQSTRING(obj->displayName(PQTIMEZONE_TIMETYPE(1),
                                 HB_ISNIL(2) ? static_cast<QTimeZone::NameType>(QTimeZone::DefaultName)
-                                            : static_cast<QTimeZone::NameType>(hb_parni(2)),
+                                            : PQTIMEZONE_NAMETYPE(2),
                                 HB_ISNIL(3) ? QLocale() : *static_cast<QLocale *>(Qt5xHb::itemGetPtr(3))));
     }
 #endif
@@ -533,7 +533,7 @@ HB_FUNC_STATIC(QTIMEZONE_AVAILABLETIMEZONEIDS2)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    auto list = QTimeZone::availableTimeZoneIds(static_cast<QLocale::Country>(hb_parni(1)));
+    auto list = QTimeZone::availableTimeZoneIds(PQLOCALE_COUNTRY(1));
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr) {
@@ -651,7 +651,7 @@ HB_FUNC_STATIC(QTIMEZONE_WINDOWSIDTODEFAULTIANAID)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 
-    RQBYTEARRAY(QTimeZone::windowsIdToDefaultIanaId(*PQBYTEARRAY(1), static_cast<QLocale::Country>(hb_parni(2))));
+    RQBYTEARRAY(QTimeZone::windowsIdToDefaultIanaId(*PQBYTEARRAY(1), PQLOCALE_COUNTRY(2)));
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -696,7 +696,7 @@ HB_FUNC_STATIC(QTIMEZONE_WINDOWSIDTOIANAIDS)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 
-    auto list = QTimeZone::windowsIdToIanaIds(*PQBYTEARRAY(1), static_cast<QLocale::Country>(hb_parni(2)));
+    auto list = QTimeZone::windowsIdToIanaIds(*PQBYTEARRAY(1), PQLOCALE_COUNTRY(2));
     auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr) {

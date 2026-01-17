@@ -183,7 +183,7 @@ QChar(QChar::SpecialCharacter ch)
 */
 HB_FUNC_STATIC(QCHAR_NEW10)
 {
-  auto obj = new QChar(static_cast<QChar::SpecialCharacter>(hb_parni(1)));
+  auto obj = new QChar(PQCHAR_SPECIALCHARACTER(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 

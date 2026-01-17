@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QURL_NEW)
     /*
     QUrl(const QString &url, QUrl::ParsingMode parsingMode)
     */
-    auto obj = new QUrl(PQSTRING(1), static_cast<QUrl::ParsingMode>(hb_parni(2)));
+    auto obj = new QUrl(PQSTRING(1), PQURL_PARSINGMODE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -662,7 +662,7 @@ HB_FUNC_STATIC(QURL_SETURL)
     auto obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->setUrl(PQSTRING(1), static_cast<QUrl::ParsingMode>(hb_parni(2)));
+      obj->setUrl(PQSTRING(1), PQURL_PARSINGMODE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -749,7 +749,7 @@ HB_FUNC_STATIC(QURL_TOENCODED)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQBYTEARRAY(obj->toEncoded(HB_ISNIL(1) ? static_cast<QUrl::FormattingOptions>(QUrl::None)
-                                             : static_cast<QUrl::FormattingOptions>(hb_parni(1))));
+                                             : PQURL_FORMATTINGOPTIONS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -790,7 +790,7 @@ HB_FUNC_STATIC(QURL_TOSTRING)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQSTRING(obj->toString(HB_ISNIL(1) ? static_cast<QUrl::FormattingOptions>(QUrl::None)
-                                         : static_cast<QUrl::FormattingOptions>(hb_parni(1))));
+                                         : PQURL_FORMATTINGOPTIONS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -889,7 +889,7 @@ HB_FUNC_STATIC(QURL_FROMENCODED)
     static QUrl fromEncoded(const QByteArray &input, QUrl::ParsingMode parsingMode)
     */
 
-    auto ptr = new QUrl(QUrl::fromEncoded(*PQBYTEARRAY(1), static_cast<QUrl::ParsingMode>(hb_parni(2))));
+    auto ptr = new QUrl(QUrl::fromEncoded(*PQBYTEARRAY(1), PQURL_PARSINGMODE(2)));
     Qt5xHb::createReturnClass(ptr, "QURL", true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

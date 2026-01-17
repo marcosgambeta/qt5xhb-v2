@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QSTATE_NEW)
     /*
     QState(QState::ChildMode childMode, QState * parent = nullptr)
     */
-    auto obj = new QState(static_cast<QState::ChildMode>(hb_parni(1)), OPQSTATE(2, nullptr));
+    auto obj = new QState(PQSTATE_CHILDMODE(1), OPQSTATE(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QSTATE_SETCHILDMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setChildMode(static_cast<QState::ChildMode>(hb_parni(1)));
+      obj->setChildMode(PQSTATE_CHILDMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

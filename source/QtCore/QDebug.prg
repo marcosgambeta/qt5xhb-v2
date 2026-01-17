@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QDEBUG_NEW)
     /*
     QDebug(QtMsgType t)
     */
-    auto obj = new QDebug(static_cast<QtMsgType>(hb_parni(1)));
+    auto obj = new QDebug(PQTMSGTYPE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDEBUG(1)) {
     /*

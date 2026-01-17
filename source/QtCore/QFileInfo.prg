@@ -878,7 +878,7 @@ HB_FUNC_STATIC(QFILEINFO_PERMISSION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->permission(static_cast<QFile::Permissions>(hb_parni(1))));
+      RBOOL(obj->permission(PQFILE_PERMISSIONS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC(QFILEINFO_FILETIME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = new QDateTime(obj->fileTime(static_cast<QFile::FileTime>(hb_parni(1))));
+      auto ptr = new QDateTime(obj->fileTime(PQFILE_FILETIME(1)));
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

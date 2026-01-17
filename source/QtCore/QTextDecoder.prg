@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QTEXTDECODER_NEW)
     /*
     QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
     */
-    auto obj = new QTextDecoder(PQTEXTCODEC(1), static_cast<QTextCodec::ConversionFlags>(hb_parni(2)));
+    auto obj = new QTextDecoder(PQTEXTCODEC(1), PQTEXTCODEC_CONVERSIONFLAGS(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QDATETIME_NEW)
     */
     auto obj =
         new QDateTime(*PQDATE(1), *PQTIME(2),
-                      HB_ISNIL(3) ? static_cast<Qt::TimeSpec>(Qt::LocalTime) : static_cast<Qt::TimeSpec>(hb_parni(3)));
+                      HB_ISNIL(3) ? static_cast<Qt::TimeSpec>(Qt::LocalTime) : PQT_TIMESPEC(3));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDATETIME(1)) {
     /*
@@ -432,7 +432,7 @@ HB_FUNC_STATIC(QDATETIME_SETTIMESPEC)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setTimeSpec(static_cast<Qt::TimeSpec>(hb_parni(1)));
+      obj->setTimeSpec(PQT_TIMESPEC(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -566,7 +566,7 @@ HB_FUNC_STATIC(QDATETIME_TOSTRING)
 
     if (obj != nullptr) {
       RQSTRING(obj->toString(HB_ISNIL(1) ? static_cast<Qt::DateFormat>(Qt::TextDate)
-                                         : static_cast<Qt::DateFormat>(hb_parni(1))));
+                                         : PQT_DATEFORMAT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -584,7 +584,7 @@ HB_FUNC_STATIC(QDATETIME_TOTIMESPEC)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = new QDateTime(obj->toTimeSpec(static_cast<Qt::TimeSpec>(hb_parni(1))));
+      auto ptr = new QDateTime(obj->toTimeSpec(PQT_TIMESPEC(1)));
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -711,7 +711,7 @@ HB_FUNC_STATIC(QDATETIME_FROMSTRING)
 
     auto ptr =
         new QDateTime(QDateTime::fromString(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::DateFormat>(Qt::TextDate)
-                                                                     : static_cast<Qt::DateFormat>(hb_parni(2))));
+                                                                     : PQT_DATEFORMAT(2)));
     Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     /*

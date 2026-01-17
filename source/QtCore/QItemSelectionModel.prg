@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SETCURRENTINDEX)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2)) {
 #endif
-      obj->setCurrentIndex(*PQMODELINDEX(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
+      obj->setCurrentIndex(*PQMODELINDEX(1), PQITEMSELECTIONMODEL_SELECTIONFLAGS(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -441,7 +441,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
     auto obj = qobject_cast<QItemSelectionModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      obj->select(*PQMODELINDEX(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
+      obj->select(*PQMODELINDEX(1), PQITEMSELECTIONMODEL_SELECTIONFLAGS(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
     auto obj = qobject_cast<QItemSelectionModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      obj->select(*PQITEMSELECTION(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
+      obj->select(*PQITEMSELECTION(1), PQITEMSELECTIONMODEL_SELECTIONFLAGS(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());

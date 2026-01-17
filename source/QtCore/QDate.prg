@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QDATE_TOSTRING)
 
     if (obj != nullptr) {
       RQSTRING(obj->toString(HB_ISNIL(1) ? static_cast<Qt::DateFormat>(Qt::TextDate)
-                                         : static_cast<Qt::DateFormat>(hb_parni(1))));
+                                         : PQT_DATEFORMAT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -510,7 +510,7 @@ HB_FUNC_STATIC(QDATE_FROMSTRING)
     */
 
     auto ptr = new QDate(QDate::fromString(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::DateFormat>(Qt::TextDate)
-                                                                    : static_cast<Qt::DateFormat>(hb_parni(2))));
+                                                                    : PQT_DATEFORMAT(2)));
     Qt5xHb::createReturnClass(ptr, "QDATE", true);
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     /*
@@ -575,7 +575,7 @@ HB_FUNC_STATIC(QDATE_LONGDAYNAME)
     static QString longDayName(int weekday, QDate::MonthNameType type)
     */
 
-    RQSTRING(QDate::longDayName(PINT(1), static_cast<QDate::MonthNameType>(hb_parni(2))));
+    RQSTRING(QDate::longDayName(PINT(1), PQDATE_MONTHNAMETYPE(2)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -594,7 +594,7 @@ HB_FUNC_STATIC(QDATE_LONGMONTHNAME)
     static QString longMonthName(int month, QDate::MonthNameType type)
     */
 
-    RQSTRING(QDate::longMonthName(PINT(1), static_cast<QDate::MonthNameType>(hb_parni(2))));
+    RQSTRING(QDate::longMonthName(PINT(1), PQDATE_MONTHNAMETYPE(2)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -613,7 +613,7 @@ HB_FUNC_STATIC(QDATE_SHORTDAYNAME)
     static QString shortDayName(int weekday, QDate::MonthNameType type)
     */
 
-    RQSTRING(QDate::shortDayName(PINT(1), static_cast<QDate::MonthNameType>(hb_parni(2))));
+    RQSTRING(QDate::shortDayName(PINT(1), PQDATE_MONTHNAMETYPE(2)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -632,7 +632,7 @@ HB_FUNC_STATIC(QDATE_SHORTMONTHNAME)
     static QString shortMonthName(int month, QDate::MonthNameType type)
     */
 
-    RQSTRING(QDate::shortMonthName(PINT(1), static_cast<QDate::MonthNameType>(hb_parni(2))));
+    RQSTRING(QDate::shortMonthName(PINT(1), PQDATE_MONTHNAMETYPE(2)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

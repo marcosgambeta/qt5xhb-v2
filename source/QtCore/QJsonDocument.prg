@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_FROMBINARYDATA)
 #endif
     auto ptr = new QJsonDocument(QJsonDocument::fromBinaryData(
         *PQBYTEARRAY(1), HB_ISNIL(2) ? static_cast<QJsonDocument::DataValidation>(QJsonDocument::Validate)
-                                     : static_cast<QJsonDocument::DataValidation>(hb_parni(2))));
+                                     : PQJSONDOCUMENT_DATAVALIDATION(2)));
     Qt5xHb::createReturnClass(ptr, "QJSONDOCUMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_FROMRAWDATA)
     auto ptr = new QJsonDocument(
         QJsonDocument::fromRawData(PCONSTCHAR(1), PINT(2),
                                    HB_ISNIL(3) ? static_cast<QJsonDocument::DataValidation>(QJsonDocument::Validate)
-                                               : static_cast<QJsonDocument::DataValidation>(hb_parni(3))));
+                                               : PQJSONDOCUMENT_DATAVALIDATION(3)));
     Qt5xHb::createReturnClass(ptr, "QJSONDOCUMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {

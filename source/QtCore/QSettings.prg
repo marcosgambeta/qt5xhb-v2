@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
     QSettings(QSettings::Scope scope, const QString &organization, const QString &application = QString(), QObject *
     parent = nullptr)
     */
-    auto obj = new QSettings(static_cast<QSettings::Scope>(hb_parni(1)), PQSTRING(2), OPQSTRING(3, QString()),
+    auto obj = new QSettings(PQSETTINGS_SCOPE(1), PQSTRING(2), OPQSTRING(3, QString()),
                              OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISCHARORNIL(4) && ISQOBJECTORNIL(5)) {
@@ -103,14 +103,14 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
     QSettings(QSettings::Format format, QSettings::Scope scope, const QString &organization, const QString &
     application = QString(), QObject * parent = nullptr)
     */
-    auto obj = new QSettings(static_cast<QSettings::Format>(hb_parni(1)), static_cast<QSettings::Scope>(hb_parni(2)),
+    auto obj = new QSettings(PQSETTINGS_FORMAT(1), PQSETTINGS_SCOPE(2),
                              PQSTRING(3), OPQSTRING(4, QString()), OPQOBJECT(5, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3)) {
     /*
     QSettings(const QString &fileName, QSettings::Format format, QObject * parent = nullptr)
     */
-    auto obj = new QSettings(PQSTRING(1), static_cast<QSettings::Format>(hb_parni(2)), OPQOBJECT(3, nullptr));
+    auto obj = new QSettings(PQSTRING(1), PQSETTINGS_FORMAT(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
@@ -726,7 +726,7 @@ HB_FUNC_STATIC(QSETTINGS_SETDEFAULTFORMAT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    QSettings::setDefaultFormat(static_cast<QSettings::Format>(hb_parni(1)));
+    QSettings::setDefaultFormat(PQSETTINGS_FORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -744,7 +744,7 @@ HB_FUNC_STATIC(QSETTINGS_SETPATH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
 #endif
-    QSettings::setPath(static_cast<QSettings::Format>(hb_parni(1)), static_cast<QSettings::Scope>(hb_parni(2)),
+    QSettings::setPath(PQSETTINGS_FORMAT(1), PQSETTINGS_SCOPE(2),
                        PQSTRING(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {

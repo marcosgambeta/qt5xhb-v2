@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QDATASTREAM_NEW)
     /*
     QDataStream(QByteArray *, QIODevice::OpenMode flags)
     */
-    auto obj = new QDataStream(PQBYTEARRAY(1), static_cast<QIODevice::OpenMode>(hb_parni(2)));
+    auto obj = new QDataStream(PQBYTEARRAY(1), PQIODEVICE_OPENMODE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     /*
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETSTATUS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setStatus(static_cast<QDataStream::Status>(hb_parni(1)));
+      obj->setStatus(PQDATASTREAM_STATUS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETFLOATINGPOINTPRECISION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFloatingPointPrecision(static_cast<QDataStream::FloatingPointPrecision>(hb_parni(1)));
+      obj->setFloatingPointPrecision(PQDATASTREAM_FLOATINGPOINTPRECISION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETBYTEORDER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setByteOrder(static_cast<QDataStream::ByteOrder>(hb_parni(1)));
+      obj->setByteOrder(PQDATASTREAM_BYTEORDER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

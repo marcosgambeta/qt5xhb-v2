@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_READELEMENTTEXT)
       RQSTRING(obj->readElementText(
           HB_ISNIL(1)
               ? static_cast<QXmlStreamReader::ReadElementTextBehaviour>(QXmlStreamReader::ErrorOnUnexpectedElement)
-              : static_cast<QXmlStreamReader::ReadElementTextBehaviour>(hb_parni(1))));
+              : PQXMLSTREAMREADER_READELEMENTTEXTBEHAVIOUR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

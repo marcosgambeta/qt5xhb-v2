@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_PROCESSEVENTS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->processEvents(static_cast<QEventLoop::ProcessEventsFlags>(hb_parni(1))));
+      RBOOL(obj->processEvents(PQEVENTLOOP_PROCESSEVENTSFLAGS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTERTIMER)
     auto obj = qobject_cast<QAbstractEventDispatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      RINT(obj->registerTimer(PINT(1), static_cast<Qt::TimerType>(hb_parni(2)), PQOBJECT(3)));
+      RINT(obj->registerTimer(PINT(1), PQT_TIMERTYPE(2), PQOBJECT(3)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQOBJECT(4)) {
     /*
@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTERTIMER)
     auto obj = qobject_cast<QAbstractEventDispatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      obj->registerTimer(PINT(1), PINT(2), static_cast<Qt::TimerType>(hb_parni(3)), PQOBJECT(4));
+      obj->registerTimer(PINT(1), PINT(2), PQT_TIMERTYPE(3), PQOBJECT(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());

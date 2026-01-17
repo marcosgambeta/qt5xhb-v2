@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QCALENDAR_NEW)
     QCalendar(QCalendar::System system)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
-    auto obj = new QCalendar(static_cast<QCalendar::System>(hb_parni(1)));
+    auto obj = new QCalendar(PQCALENDAR_SYSTEM(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else {
@@ -505,7 +505,7 @@ HB_FUNC_STATIC(QCALENDAR_WEEKDAYNAME)
 #endif
       RQSTRING(obj->weekDayName(*PQLOCALE(1), PINT(2),
                                 HB_ISNIL(3) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
-                                            : static_cast<QLocale::FormatType>(hb_parni(3))));
+                                            : PQLOCALE_FORMATTYPE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QCALENDAR_STANDALONEWEEKDAYNAME)
 #endif
       RQSTRING(obj->standaloneWeekDayName(*PQLOCALE(1), PINT(2),
                                           HB_ISNIL(3) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
-                                                      : static_cast<QLocale::FormatType>(hb_parni(3))));
+                                                      : PQLOCALE_FORMATTYPE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      RBOOL(obj->open(static_cast<QFile::OpenMode>(hb_parni(1))));
+      RBOOL(obj->open(PQFILE_OPENMODE(1)));
     }
   } else if (ISBETWEEN(2, 3) && HB_ISPOINTER(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     /*
@@ -280,9 +280,9 @@ HB_FUNC_STATIC(QFILE_OPEN)
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      RBOOL(obj->open(static_cast<FILE *>(hb_parptr(1)), static_cast<QFile::OpenMode>(hb_parni(2)),
+      RBOOL(obj->open(static_cast<FILE *>(hb_parptr(1)), PQFILE_OPENMODE(2),
                       HB_ISNIL(3) ? static_cast<QFile::FileHandleFlags>(QFile::DontCloseHandle)
-                                  : static_cast<QFile::FileHandleFlags>(hb_parni(3))));
+                                  : PQFILE_FILEHANDLEFLAGS(3)));
     }
   } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     /*
@@ -291,9 +291,9 @@ HB_FUNC_STATIC(QFILE_OPEN)
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      RBOOL(obj->open(PINT(1), static_cast<QFile::OpenMode>(hb_parni(2)),
+      RBOOL(obj->open(PINT(1), PQFILE_OPENMODE(2),
                       HB_ISNIL(3) ? static_cast<QFile::FileHandleFlags>(QFile::DontCloseHandle)
-                                  : static_cast<QFile::FileHandleFlags>(hb_parni(3))));
+                                  : PQFILE_FILEHANDLEFLAGS(3)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -419,14 +419,14 @@ HB_FUNC_STATIC(QFILE_SETPERMISSIONS)
     auto obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      RBOOL(obj->setPermissions(static_cast<QFile::Permissions>(hb_parni(1))));
+      RBOOL(obj->setPermissions(PQFILE_PERMISSIONS(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     /*
     static bool setPermissions(const QString &fileName, QFile::Permissions permissions)
     */
 
-    RBOOL(QFile::setPermissions(PQSTRING(1), static_cast<QFile::Permissions>(hb_parni(2))));
+    RBOOL(QFile::setPermissions(PQSTRING(1), PQFILE_PERMISSIONS(2)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

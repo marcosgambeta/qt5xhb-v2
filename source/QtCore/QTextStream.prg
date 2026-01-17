@@ -115,14 +115,14 @@ HB_FUNC_STATIC(QTEXTSTREAM_NEW)
     */
     auto obj = new QTextStream(static_cast<FILE *>(hb_parptr(1)),
                                HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
-                                           : static_cast<QIODevice::OpenMode>(hb_parni(2)));
+                                           : PQIODEVICE_OPENMODE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
     /*
     QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
     */
     auto obj = new QTextStream(*PQBYTEARRAY(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadOnly)
-                                                            : static_cast<QIODevice::OpenMode>(hb_parni(2)));
+                                                            : PQIODEVICE_OPENMODE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETSTATUS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setStatus(static_cast<QTextStream::Status>(hb_parni(1)));
+      obj->setStatus(PQTEXTSTREAM_STATUS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -625,7 +625,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETFIELDALIGNMENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFieldAlignment(static_cast<QTextStream::FieldAlignment>(hb_parni(1)));
+      obj->setFieldAlignment(PQTEXTSTREAM_FIELDALIGNMENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -752,7 +752,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETNUMBERFLAGS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setNumberFlags(static_cast<QTextStream::NumberFlags>(hb_parni(1)));
+      obj->setNumberFlags(PQTEXTSTREAM_NUMBERFLAGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -836,7 +836,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETREALNUMBERNOTATION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setRealNumberNotation(static_cast<QTextStream::RealNumberNotation>(hb_parni(1)));
+      obj->setRealNumberNotation(PQTEXTSTREAM_REALNUMBERNOTATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

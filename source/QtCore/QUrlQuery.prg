@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QURLQUERY_ALLQUERYITEMVALUES)
 #endif
       RQSTRINGLIST(obj->allQueryItemValues(
           PQSTRING(1), HB_ISNIL(2) ? static_cast<QUrl::ComponentFormattingOptions>(QUrl::PrettyDecoded)
-                                   : static_cast<QUrl::ComponentFormattingOptions>(hb_parni(2))));
+                                   : PQURL_COMPONENTFORMATTINGOPTIONS(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERY)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQSTRING(obj->query(HB_ISNIL(1) ? static_cast<QUrl::ComponentFormattingOptions>(QUrl::PrettyDecoded)
-                                      : static_cast<QUrl::ComponentFormattingOptions>(hb_parni(1))));
+                                      : PQURL_COMPONENTFORMATTINGOPTIONS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERYITEMVALUE)
 #endif
       RQSTRING(obj->queryItemValue(PQSTRING(1), HB_ISNIL(2)
                                                     ? static_cast<QUrl::ComponentFormattingOptions>(QUrl::PrettyDecoded)
-                                                    : static_cast<QUrl::ComponentFormattingOptions>(hb_parni(2))));
+                                                    : PQURL_COMPONENTFORMATTINGOPTIONS(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QURLQUERY_TOSTRING)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQSTRING(obj->toString(HB_ISNIL(1) ? static_cast<QUrl::ComponentFormattingOptions>(QUrl::PrettyDecoded)
-                                         : static_cast<QUrl::ComponentFormattingOptions>(hb_parni(1))));
+                                         : PQURL_COMPONENTFORMATTINGOPTIONS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

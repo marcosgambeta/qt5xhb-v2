@@ -2348,7 +2348,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMBASE64)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 
-    RQBYTEARRAY(QByteArray::fromBase64(*PQBYTEARRAY(1), static_cast<QByteArray::Base64Options>(hb_parni(2))));
+    RQBYTEARRAY(QByteArray::fromBase64(*PQBYTEARRAY(1), PQBYTEARRAY_BASE64OPTIONS(2)));
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2559,7 +2559,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COMPARE)
 
     if (obj != nullptr) {
       RINT(obj->compare(PCONSTCHAR(1), HB_ISNIL(2) ? static_cast<Qt::CaseSensitivity>(Qt::CaseSensitive)
-                                                   : static_cast<Qt::CaseSensitivity>(hb_parni(2))));
+                                                   : PQT_CASESENSITIVITY(2)));
     }
 #endif
   } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
@@ -2571,7 +2571,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COMPARE)
 
     if (obj != nullptr) {
       RINT(obj->compare(*PQBYTEARRAY(1), HB_ISNIL(2) ? static_cast<Qt::CaseSensitivity>(Qt::CaseSensitive)
-                                                     : static_cast<Qt::CaseSensitivity>(hb_parni(2))));
+                                                     : PQT_CASESENSITIVITY(2)));
     }
 #endif
   } else {
