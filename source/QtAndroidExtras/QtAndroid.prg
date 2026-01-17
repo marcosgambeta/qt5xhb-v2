@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QTANDROID_BINDSERVICE)
 #endif
     RBOOL(QtAndroid::bindService(*PQANDROIDINTENT(1), *PQANDROIDSERVICECONNECTION(2),
                                  HB_ISNIL(3) ? static_cast<QtAndroid::BindFlags>(QtAndroid::BindFlag::None)
-                                             : static_cast<QtAndroid::BindFlags>(hb_parni(3))));
+                                             : PQTANDROID_BINDFLAGS(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
