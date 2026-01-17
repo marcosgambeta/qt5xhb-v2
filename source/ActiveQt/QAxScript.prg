@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QAXSCRIPT_FUNCTIONS)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQSTRINGLIST(obj->functions(HB_ISNIL(1) ? static_cast<QAxScript::FunctionFlags>(QAxScript::FunctionNames)
-                                              : static_cast<QAxScript::FunctionFlags>(hb_parni(1))));
+                                              : PQAXSCRIPT_FUNCTIONFLAGS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
