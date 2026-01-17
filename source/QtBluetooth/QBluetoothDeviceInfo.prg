@@ -380,7 +380,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_SETSERVICEUUIDS)
         par1 << *static_cast<QBluetoothUuid *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
-      obj->setServiceUuids(par1, static_cast<QBluetoothDeviceInfo::DataCompleteness>(hb_parni(2)));
+      obj->setServiceUuids(par1, PQBLUETOOTHDEVICEINFO_DATACOMPLETENESS(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -470,7 +470,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_SETCORECONFIGURATIONS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCoreConfigurations(static_cast<QBluetoothDeviceInfo::CoreConfigurations>(hb_parni(1)));
+      obj->setCoreConfigurations(PQBLUETOOTHDEVICEINFO_CORECONFIGURATIONS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

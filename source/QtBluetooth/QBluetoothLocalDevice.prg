@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_REQUESTPAIRING)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQBLUETOOTHADDRESS(1) && HB_ISNUM(2)) {
 #endif
-      obj->requestPairing(*PQBLUETOOTHADDRESS(1), static_cast<QBluetoothLocalDevice::Pairing>(hb_parni(2)));
+      obj->requestPairing(*PQBLUETOOTHADDRESS(1), PQBLUETOOTHLOCALDEVICE_PAIRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_SETHOSTMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setHostMode(static_cast<QBluetoothLocalDevice::HostMode>(hb_parni(1)));
+      obj->setHostMode(PQBLUETOOTHLOCALDEVICE_HOSTMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

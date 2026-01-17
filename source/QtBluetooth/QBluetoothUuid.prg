@@ -63,7 +63,7 @@ RETURN
 HB_FUNC_STATIC(QBLUETOOTHUUID_NEW2)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = new QBluetoothUuid(static_cast<QBluetoothUuid::ProtocolUuid>(hb_parni(1)));
+  auto obj = new QBluetoothUuid(PQBLUETOOTHUUID_PROTOCOLUUID(1));
   Qt5xHb::returnNewObject(obj, true);
 #endif
 }
@@ -74,7 +74,7 @@ QBluetoothUuid(QBluetoothUuid::ServiceClassUuid uuid)
 HB_FUNC_STATIC(QBLUETOOTHUUID_NEW3)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = new QBluetoothUuid(static_cast<QBluetoothUuid::ServiceClassUuid>(hb_parni(1)));
+  auto obj = new QBluetoothUuid(PQBLUETOOTHUUID_SERVICECLASSUUID(1));
   Qt5xHb::returnNewObject(obj, true);
 #endif
 }
