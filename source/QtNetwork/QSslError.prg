@@ -72,13 +72,13 @@ HB_FUNC_STATIC(QSSLERROR_NEW)
     /*
     QSslError(QSslError::SslError error)
     */
-    auto obj = new QSslError(static_cast<QSslError::SslError>(hb_parni(1)));
+    auto obj = new QSslError(PQSSLERROR_SSLERROR(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSSLCERTIFICATE(2)) {
     /*
     QSslError(QSslError::SslError error, const QSslCertificate &certificate)
     */
-    auto obj = new QSslError(static_cast<QSslError::SslError>(hb_parni(1)), *PQSSLCERTIFICATE(2));
+    auto obj = new QSslError(PQSSLERROR_SSLERROR(1), *PQSSLCERTIFICATE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSSLERROR(1)) {
     /*

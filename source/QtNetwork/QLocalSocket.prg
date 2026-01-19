@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
 
     if (obj != nullptr) {
       obj->connectToServer(HB_ISNIL(1) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
-                                       : static_cast<QIODevice::OpenMode>(hb_parni(1)));
+                                       : PQIODEVICE_OPENMODE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
 
     if (obj != nullptr) {
       obj->connectToServer(PQSTRING(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
-                                                    : static_cast<QIODevice::OpenMode>(hb_parni(2)));
+                                                    : PQIODEVICE_OPENMODE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_OPEN)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RBOOL(obj->open(HB_ISNIL(1) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
-                                  : static_cast<QIODevice::OpenMode>(hb_parni(1))));
+                                  : PQIODEVICE_OPENMODE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -479,9 +479,9 @@ HB_FUNC_STATIC(QLOCALSOCKET_SETSOCKETDESCRIPTOR)
       RBOOL(obj->setSocketDescriptor(PQINTPTR(1),
                                      HB_ISNIL(2)
                                          ? static_cast<QLocalSocket::LocalSocketState>(QLocalSocket::ConnectedState)
-                                         : static_cast<QLocalSocket::LocalSocketState>(hb_parni(2)),
+                                         : PQLOCALSOCKET_LOCALSOCKETSTATE(2),
                                      HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
-                                                 : static_cast<QIODevice::OpenMode>(hb_parni(3))));
+                                                 : PQIODEVICE_OPENMODE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

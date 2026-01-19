@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QSSLCIPHER_NEW)
     /*
     QSslCipher(const QString &name, QSsl::SslProtocol protocol)
     */
-    auto obj = new QSslCipher(PQSTRING(1), static_cast<QSsl::SslProtocol>(hb_parni(2)));
+    auto obj = new QSslCipher(PQSTRING(1), PQSSL_SSLPROTOCOL(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSSLCIPHER(1)) {
     /*

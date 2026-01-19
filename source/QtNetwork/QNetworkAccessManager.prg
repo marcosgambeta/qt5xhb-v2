@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setNetworkAccessible(static_cast<QNetworkAccessManager::NetworkAccessibility>(hb_parni(1)));
+      obj->setNetworkAccessible(PQNETWORKACCESSMANAGER_NETWORKACCESSIBILITY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -889,7 +889,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETREDIRECTPOLICY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setRedirectPolicy(static_cast<QNetworkRequest::RedirectPolicy>(hb_parni(1)));
+      obj->setRedirectPolicy(PQNETWORKREQUEST_REDIRECTPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

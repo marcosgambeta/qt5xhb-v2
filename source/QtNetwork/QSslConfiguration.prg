@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETPROTOCOL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setProtocol(static_cast<QSsl::SslProtocol>(hb_parni(1)));
+      obj->setProtocol(PQSSL_SSLPROTOCOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETPEERVERIFYMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setPeerVerifyMode(static_cast<QSslSocket::PeerVerifyMode>(hb_parni(1)));
+      obj->setPeerVerifyMode(PQSSLSOCKET_PEERVERIFYMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -799,7 +799,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETSSLOPTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
 #endif
-      obj->setSslOption(static_cast<QSsl::SslOption>(hb_parni(1)), PBOOL(2));
+      obj->setSslOption(PQSSL_SSLOPTION(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -821,7 +821,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_TESTSSLOPTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->testSslOption(static_cast<QSsl::SslOption>(hb_parni(1))));
+      RBOOL(obj->testSslOption(PQSSL_SSLOPTION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

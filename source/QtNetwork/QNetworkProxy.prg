@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_NEW)
     QNetworkProxy(QNetworkProxy::ProxyType type, const QString &hostName = QString(), quint16 port = 0, const QString &
     user = QString(), const QString &password = QString())
     */
-    auto obj = new QNetworkProxy(static_cast<QNetworkProxy::ProxyType>(hb_parni(1)), OPQSTRING(2, QString()),
+    auto obj = new QNetworkProxy(PQNETWORKPROXY_PROXYTYPE(1), OPQSTRING(2, QString()),
                                  OPQUINT16(3, 0), OPQSTRING(4, QString()), OPQSTRING(5, QString()));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQNETWORKPROXY(1)) {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETTYPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setType(static_cast<QNetworkProxy::ProxyType>(hb_parni(1)));
+      obj->setType(PQNETWORKPROXY_PROXYTYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETCAPABILITIES)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCapabilities(static_cast<QNetworkProxy::Capabilities>(hb_parni(1)));
+      obj->setCapabilities(PQNETWORKPROXY_CAPABILITIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_HEADER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQVARIANT(obj->header(static_cast<QNetworkRequest::KnownHeaders>(hb_parni(1))));
+      RQVARIANT(obj->header(PQNETWORKREQUEST_KNOWNHEADERS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -477,7 +477,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETHEADER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2)) {
 #endif
-      obj->setHeader(static_cast<QNetworkRequest::KnownHeaders>(hb_parni(1)), *PQVARIANT(2));
+      obj->setHeader(PQNETWORKREQUEST_KNOWNHEADERS(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

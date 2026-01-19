@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_HEADER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQVARIANT(obj->header(static_cast<QNetworkRequest::KnownHeaders>(hb_parni(1))));
+      RQVARIANT(obj->header(PQNETWORKREQUEST_KNOWNHEADERS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -441,7 +441,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ATTRIBUTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQVARIANT(obj->attribute(static_cast<QNetworkRequest::Attribute>(hb_parni(1))));
+      RQVARIANT(obj->attribute(PQNETWORKREQUEST_ATTRIBUTE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

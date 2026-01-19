@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_NEW)
     QSslCertificate(QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem)
     */
     auto obj = new QSslCertificate(PQIODEVICE(1), HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem)
-                                                              : static_cast<QSsl::EncodingFormat>(hb_parni(2)));
+                                                              : PQSSL_ENCODINGFORMAT(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(0, 2) && ISOPTQBYTEARRAY(1) && ISNUMORNIL(2)) {
     /*
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_NEW)
     */
     auto obj = new QSslCertificate(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(1)),
                                    HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem)
-                                               : static_cast<QSsl::EncodingFormat>(hb_parni(2)));
+                                               : PQSSL_ENCODINGFORMAT(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSSLCERTIFICATE(1)) {
     /*
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_DIGEST)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQBYTEARRAY(obj->digest(HB_ISNIL(1) ? static_cast<QCryptographicHash::Algorithm>(QCryptographicHash::Md5)
-                                          : static_cast<QCryptographicHash::Algorithm>(hb_parni(1))));
+                                          : PQCRYPTOGRAPHICHASH_ALGORITHM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -329,7 +329,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_ISSUERINFO)
     auto obj = static_cast<QSslCertificate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RQSTRINGLIST(obj->issuerInfo(static_cast<QSslCertificate::SubjectInfo>(hb_parni(1))));
+      RQSTRINGLIST(obj->issuerInfo(PQSSLCERTIFICATE_SUBJECTINFO(1)));
     }
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     /*
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_SUBJECTINFO)
     auto obj = static_cast<QSslCertificate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RQSTRINGLIST(obj->subjectInfo(static_cast<QSslCertificate::SubjectInfo>(hb_parni(1))));
+      RQSTRINGLIST(obj->subjectInfo(PQSSLCERTIFICATE_SUBJECTINFO(1)));
     }
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     /*
@@ -636,9 +636,9 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMPATH)
 #endif
     auto list = QSslCertificate::fromPath(PQSTRING(1),
                                           HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem)
-                                                      : static_cast<QSsl::EncodingFormat>(hb_parni(2)),
+                                                      : PQSSL_ENCODINGFORMAT(2),
                                           HB_ISNIL(3) ? static_cast<QRegExp::PatternSyntax>(QRegExp::FixedString)
-                                                      : static_cast<QRegExp::PatternSyntax>(hb_parni(3)));
+                                                      : PQREGEXP_PATTERNSYNTAX(3));
     auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr) {
@@ -678,7 +678,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDEVICE)
 #endif
     auto list =
         QSslCertificate::fromDevice(PQIODEVICE(1), HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem)
-                                                               : static_cast<QSsl::EncodingFormat>(hb_parni(2)));
+                                                               : PQSSL_ENCODINGFORMAT(2));
     auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr) {
@@ -718,7 +718,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDATA)
 #endif
     auto list =
         QSslCertificate::fromData(*PQBYTEARRAY(1), HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem)
-                                                               : static_cast<QSsl::EncodingFormat>(hb_parni(2)));
+                                                               : PQSSL_ENCODINGFORMAT(2));
     auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr) {

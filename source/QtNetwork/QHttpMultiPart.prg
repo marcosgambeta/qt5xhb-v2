@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_NEW)
     /*
     QHttpMultiPart(QHttpMultiPart::ContentType contentType, QObject * parent = nullptr)
     */
-    auto obj = new QHttpMultiPart(static_cast<QHttpMultiPart::ContentType>(hb_parni(1)), OPQOBJECT(2, nullptr));
+    auto obj = new QHttpMultiPart(PQHTTPMULTIPART_CONTENTTYPE(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_SETCONTENTTYPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setContentType(static_cast<QHttpMultiPart::ContentType>(hb_parni(1)));
+      obj->setContentType(PQHTTPMULTIPART_CONTENTTYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

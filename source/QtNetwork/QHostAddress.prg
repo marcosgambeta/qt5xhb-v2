@@ -84,7 +84,7 @@ QHostAddress(QHostAddress::SpecialAddress address)
 */
 HB_FUNC_STATIC(QHOSTADDRESS_NEW9)
 {
-  auto obj = new QHostAddress(static_cast<QHostAddress::SpecialAddress>(hb_parni(1)));
+  auto obj = new QHostAddress(PQHOSTADDRESS_SPECIALADDRESS(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISEQUAL)
 #endif
       RBOOL(obj->isEqual(*PQHOSTADDRESS(1),
                          HB_ISNIL(2) ? static_cast<QHostAddress::ConversionMode>(QHostAddress::TolerantConversion)
-                                     : static_cast<QHostAddress::ConversionMode>(hb_parni(2))));
+                                     : PQHOSTADDRESS_CONVERSIONMODE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS)
 #endif
       auto list = obj->allConfigurations(
           HB_ISNIL(1) ? static_cast<QNetworkConfiguration::StateFlags>(QNetworkConfiguration::StateFlags())
-                      : static_cast<QNetworkConfiguration::StateFlags>(hb_parni(1)));
+                      : PQNETWORKCONFIGURATION_STATEFLAGS(1));
       auto pDynSym = hb_dynsymFindName("QNETWORKCONFIGURATION");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
