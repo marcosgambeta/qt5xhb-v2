@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_ISFEATURESUPPORTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isFeatureSupported(static_cast<QSensor::Feature>(hb_parni(1))));
+      RBOOL(obj->isFeatureSupported(PQSENSOR_FEATURE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
