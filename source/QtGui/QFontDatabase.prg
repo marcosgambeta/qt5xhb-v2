@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QFONTDATABASE_FAMILIES)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQSTRINGLIST(obj->families(HB_ISNIL(1) ? static_cast<QFontDatabase::WritingSystem>(QFontDatabase::Any)
-                                             : static_cast<QFontDatabase::WritingSystem>(hb_parni(1))));
+                                             : PQFONTDATABASE_WRITINGSYSTEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -492,7 +492,7 @@ HB_FUNC_STATIC(QFONTDATABASE_WRITINGSYSTEMNAME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    RQSTRING(QFontDatabase::writingSystemName(static_cast<QFontDatabase::WritingSystem>(hb_parni(1))));
+    RQSTRING(QFontDatabase::writingSystemName(PQFONTDATABASE_WRITINGSYSTEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -508,7 +508,7 @@ HB_FUNC_STATIC(QFONTDATABASE_WRITINGSYSTEMSAMPLE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    RQSTRING(QFontDatabase::writingSystemSample(static_cast<QFontDatabase::WritingSystem>(hb_parni(1))));
+    RQSTRING(QFontDatabase::writingSystemSample(PQFONTDATABASE_WRITINGSYSTEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

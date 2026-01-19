@@ -54,7 +54,7 @@ RETURN
 HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
-    auto obj = new QWindowStateChangeEvent(static_cast<Qt::WindowStates>(hb_parni(1)), OPBOOL(2, false));
+    auto obj = new QWindowStateChangeEvent(PQT_WINDOWSTATES(1), OPBOOL(2, false));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_INVOKEACTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->invokeAction(static_cast<QInputMethod::Action>(hb_parni(1)), PINT(2));
+      obj->invokeAction(PQINPUTMETHOD_ACTION(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_UPDATE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->update(static_cast<Qt::InputMethodQueries>(hb_parni(1)));
+      obj->update(PQT_INPUTMETHODQUERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

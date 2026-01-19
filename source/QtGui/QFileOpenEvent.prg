@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QFILEOPENEVENT_OPENFILE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQFILE(1) && HB_ISNUM(2)) {
 #endif
-      RBOOL(obj->openFile(*PQFILE(1), static_cast<QIODevice::OpenMode>(hb_parni(2))));
+      RBOOL(obj->openFile(*PQFILE(1), PQIODEVICE_OPENMODE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

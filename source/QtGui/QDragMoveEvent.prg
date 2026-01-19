@@ -58,9 +58,9 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
 {
   if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) && ISNUMORNIL(6)) {
     auto obj = new QDragMoveEvent(
-        *PQPOINT(1), static_cast<Qt::DropActions>(hb_parni(2)), PQMIMEDATA(3),
-        static_cast<Qt::MouseButtons>(hb_parni(4)), static_cast<Qt::KeyboardModifiers>(hb_parni(5)),
-        HB_ISNIL(6) ? static_cast<QEvent::Type>(QEvent::DragMove) : static_cast<QEvent::Type>(hb_parni(6)));
+        *PQPOINT(1), PQT_DROPACTIONS(2), PQMIMEDATA(3),
+        PQT_MOUSEBUTTONS(4), PQT_KEYBOARDMODIFIERS(5),
+        HB_ISNIL(6) ? static_cast<QEvent::Type>(QEvent::DragMove) : PQEVENT_TYPE(6));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

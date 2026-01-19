@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QTEXTOPTION_NEW)
     /*
     QTextOption(Qt::Alignment alignment)
     */
-    auto obj = new QTextOption(static_cast<Qt::Alignment>(hb_parni(1)));
+    auto obj = new QTextOption(PQT_ALIGNMENT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQTEXTOPTION(1)) {
     /*
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETALIGNMENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
+      obj->setAlignment(PQT_ALIGNMENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETTEXTDIRECTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setTextDirection(static_cast<Qt::LayoutDirection>(hb_parni(1)));
+      obj->setTextDirection(PQT_LAYOUTDIRECTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETWRAPMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setWrapMode(static_cast<QTextOption::WrapMode>(hb_parni(1)));
+      obj->setWrapMode(PQTEXTOPTION_WRAPMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETFLAGS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFlags(static_cast<QTextOption::Flags>(hb_parni(1)));
+      obj->setFlags(PQTEXTOPTION_FLAGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

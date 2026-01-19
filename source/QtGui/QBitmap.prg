@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QBITMAP_FROMDATA)
 #endif
     auto ptr = new QBitmap(QBitmap::fromData(*PQSIZE(1), PCONSTUCHAR(2),
                                              HB_ISNIL(3) ? static_cast<QImage::Format>(QImage::Format_MonoLSB)
-                                                         : static_cast<QImage::Format>(hb_parni(3))));
+                                                         : PQIMAGE_FORMAT(3)));
     Qt5xHb::createReturnClass(ptr, "QBITMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QBITMAP_FROMIMAGE)
 #endif
     auto ptr =
         new QBitmap(QBitmap::fromImage(*PQIMAGE(1), HB_ISNIL(2) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
-                                                                : static_cast<Qt::ImageConversionFlags>(hb_parni(2))));
+                                                                : PQT_IMAGECONVERSIONFLAGS(2)));
     Qt5xHb::createReturnClass(ptr, "QBITMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {

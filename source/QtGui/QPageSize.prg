@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QPAGESIZE_NEW)
     QPageSize(QPageSize::PageSizeId pageSizeId)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-    auto obj = new QPageSize(static_cast<QPageSize::PageSizeId>(hb_parni(1)));
+    auto obj = new QPageSize(PQPAGESIZE_PAGESIZEID(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISBETWEEN(1, 3) && ISQSIZE(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QPAGESIZE_NEW)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QPageSize(*PQSIZE(1), OPQSTRING(2, QString()),
                              HB_ISNIL(3) ? static_cast<QPageSize::SizeMatchPolicy>(QPageSize::FuzzyMatch)
-                                         : static_cast<QPageSize::SizeMatchPolicy>(hb_parni(3)));
+                                         : PQPAGESIZE_SIZEMATCHPOLICY(3));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISBETWEEN(2, 4) && ISQSIZEF(1) && HB_ISNUM(2) && ISCHARORNIL(3) && ISNUMORNIL(4)) {
@@ -116,9 +116,9 @@ HB_FUNC_STATIC(QPAGESIZE_NEW)
     matchPolicy = QPageSize::FuzzyMatch)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-    auto obj = new QPageSize(*PQSIZEF(1), static_cast<QPageSize::Unit>(hb_parni(2)), OPQSTRING(3, QString()),
+    auto obj = new QPageSize(*PQSIZEF(1), PQPAGESIZE_UNIT(2), OPQSTRING(3, QString()),
                              HB_ISNIL(4) ? static_cast<QPageSize::SizeMatchPolicy>(QPageSize::FuzzyMatch)
-                                         : static_cast<QPageSize::SizeMatchPolicy>(hb_parni(4)));
+                                         : PQPAGESIZE_SIZEMATCHPOLICY(4));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPAGESIZE(1)) {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QPAGESIZE_KEY)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 
-    RQSTRING(QPageSize::key(static_cast<QPageSize::PageSizeId>(hb_parni(1))));
+    RQSTRING(QPageSize::key(PQPAGESIZE_PAGESIZEID(1)));
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QPAGESIZE_NAME)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 
-    RQSTRING(QPageSize::name(static_cast<QPageSize::PageSizeId>(hb_parni(1))));
+    RQSTRING(QPageSize::name(PQPAGESIZE_PAGESIZEID(1)));
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QPAGESIZE_ID)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 
     RENUM(QPageSize::id(*PQSIZE(1), HB_ISNIL(2) ? static_cast<QPageSize::SizeMatchPolicy>(QPageSize::FuzzyMatch)
-                                                : static_cast<QPageSize::SizeMatchPolicy>(hb_parni(2))));
+                                                : PQPAGESIZE_SIZEMATCHPOLICY(2)));
 #endif
   } else if (ISBETWEEN(2, 3) && ISQSIZEF(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     /*
@@ -295,9 +295,9 @@ HB_FUNC_STATIC(QPAGESIZE_ID)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 
-    RENUM(QPageSize::id(*PQSIZEF(1), static_cast<QPageSize::Unit>(hb_parni(2)),
+    RENUM(QPageSize::id(*PQSIZEF(1), PQPAGESIZE_UNIT(2),
                         HB_ISNIL(3) ? static_cast<QPageSize::SizeMatchPolicy>(QPageSize::FuzzyMatch)
-                                    : static_cast<QPageSize::SizeMatchPolicy>(hb_parni(3))));
+                                    : PQPAGESIZE_SIZEMATCHPOLICY(3)));
 #endif
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QPAGESIZE_WINDOWSID)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 
-    RINT(QPageSize::windowsId(static_cast<QPageSize::PageSizeId>(hb_parni(1))));
+    RINT(QPageSize::windowsId(PQPAGESIZE_PAGESIZEID(1)));
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QPAGESIZE_DEFINITIONSIZE)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 
-    auto ptr = new QSizeF(QPageSize::definitionSize(static_cast<QPageSize::PageSizeId>(hb_parni(1))));
+    auto ptr = new QSizeF(QPageSize::definitionSize(PQPAGESIZE_PAGESIZEID(1)));
     Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #endif
   } else {
@@ -385,7 +385,7 @@ HB_FUNC_STATIC(QPAGESIZE_DEFINITIONUNITS)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 
-    RENUM(QPageSize::definitionUnits(static_cast<QPageSize::PageSizeId>(hb_parni(1))));
+    RENUM(QPageSize::definitionUnits(PQPAGESIZE_PAGESIZEID(1)));
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -402,7 +402,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZE)
     auto obj = static_cast<QPageSize *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QSizeF(obj->size(static_cast<QPageSize::Unit>(hb_parni(1))));
+      auto ptr = new QSizeF(obj->size(PQPAGESIZE_UNIT(1)));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
     }
 #endif
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 
     auto ptr = new QSizeF(
-        QPageSize::size(static_cast<QPageSize::PageSizeId>(hb_parni(1)), static_cast<QPageSize::Unit>(hb_parni(2))));
+        QPageSize::size(PQPAGESIZE_PAGESIZEID(1), PQPAGESIZE_UNIT(2)));
     Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #endif
   } else {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZEPOINTS)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 
-    RQSIZE(QPageSize::sizePoints(static_cast<QPageSize::PageSizeId>(hb_parni(1))));
+    RQSIZE(QPageSize::sizePoints(PQPAGESIZE_PAGESIZEID(1)));
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -466,7 +466,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZEPIXELS)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 
-    RQSIZE(QPageSize::sizePixels(static_cast<QPageSize::PageSizeId>(hb_parni(1)), PINT(2)));
+    RQSIZE(QPageSize::sizePixels(PQPAGESIZE_PAGESIZEID(1), PINT(2)));
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -485,7 +485,7 @@ HB_FUNC_STATIC(QPAGESIZE_RECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQRECTF(obj->rect(static_cast<QPageSize::Unit>(hb_parni(1))));
+      RQRECTF(obj->rect(PQPAGESIZE_UNIT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

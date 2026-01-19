@@ -466,7 +466,7 @@ HB_FUNC_STATIC(QMOVIE_SETCACHEMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCacheMode(static_cast<QMovie::CacheMode>(hb_parni(1)));
+      obj->setCacheMode(PQMOVIE_CACHEMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

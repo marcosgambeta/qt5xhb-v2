@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_NEW)
     /*
     QSurfaceFormat(QSurfaceFormat::FormatOptions options)
     */
-    auto obj = new QSurfaceFormat(static_cast<QSurfaceFormat::FormatOptions>(hb_parni(1)));
+    auto obj = new QSurfaceFormat(PQSURFACEFORMAT_FORMATOPTIONS(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSURFACEFORMAT(1)) {
     /*
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETSWAPBEHAVIOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSwapBehavior(static_cast<QSurfaceFormat::SwapBehavior>(hb_parni(1)));
+      obj->setSwapBehavior(PQSURFACEFORMAT_SWAPBEHAVIOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -485,7 +485,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETPROFILE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setProfile(static_cast<QSurfaceFormat::OpenGLContextProfile>(hb_parni(1)));
+      obj->setProfile(PQSURFACEFORMAT_OPENGLCONTEXTPROFILE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -527,7 +527,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETRENDERABLETYPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setRenderableType(static_cast<QSurfaceFormat::RenderableType>(hb_parni(1)));
+      obj->setRenderableType(PQSURFACEFORMAT_RENDERABLETYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -695,7 +695,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETOPTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOption(static_cast<QSurfaceFormat::FormatOptions>(hb_parni(1)));
+      obj->setOption(PQSURFACEFORMAT_FORMATOPTIONS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -717,7 +717,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_TESTOPTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->testOption(static_cast<QSurfaceFormat::FormatOptions>(hb_parni(1))));
+      RBOOL(obj->testOption(PQSURFACEFORMAT_FORMATOPTIONS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

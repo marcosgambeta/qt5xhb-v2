@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWIMAGE)
 #endif
       obj->drawImage(*PQRECTF(1), *PQIMAGE(2), *PQRECTF(3),
                      HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
-                                 : static_cast<Qt::ImageConversionFlags>(hb_parni(4)));
+                                 : PQT_IMAGECONVERSIONFLAGS(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QPAINTENGINE_HASFEATURE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->hasFeature(static_cast<QPaintEngine::PaintEngineFeatures>(hb_parni(1))));
+      RBOOL(obj->hasFeature(PQPAINTENGINE_PAINTENGINEFEATURES(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

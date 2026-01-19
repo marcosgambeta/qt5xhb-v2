@@ -649,7 +649,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETLAYOUTDIRECTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    QGuiApplication::setLayoutDirection(static_cast<Qt::LayoutDirection>(hb_parni(1)));
+    QGuiApplication::setLayoutDirection(PQT_LAYOUTDIRECTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -879,7 +879,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETHIGHDPISCALEFACTORROUNDINGPOLICY)
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     QGuiApplication::setHighDpiScaleFactorRoundingPolicy(
-        static_cast<Qt::HighDpiScaleFactorRoundingPolicy>(hb_parni(1)));
+        PQT_HIGHDPISCALEFACTORROUNDINGPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

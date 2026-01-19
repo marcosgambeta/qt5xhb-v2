@@ -52,7 +52,7 @@ RETURN
 HB_FUNC_STATIC(QAPPLICATIONSTATECHANGEEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    auto obj = new QApplicationStateChangeEvent(static_cast<Qt::ApplicationState>(hb_parni(1)));
+    auto obj = new QApplicationStateChangeEvent(PQT_APPLICATIONSTATE(1));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

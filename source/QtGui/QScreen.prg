@@ -573,7 +573,7 @@ HB_FUNC_STATIC(QSCREEN_SETORIENTATIONUPDATEMASK)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOrientationUpdateMask(static_cast<Qt::ScreenOrientations>(hb_parni(1)));
+      obj->setOrientationUpdateMask(PQT_SCREENORIENTATIONS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -595,8 +595,8 @@ HB_FUNC_STATIC(QSCREEN_ANGLEBETWEEN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      RINT(obj->angleBetween(static_cast<Qt::ScreenOrientation>(hb_parni(1)),
-                             static_cast<Qt::ScreenOrientation>(hb_parni(2))));
+      RINT(obj->angleBetween(PQT_SCREENORIENTATION(1),
+                             PQT_SCREENORIENTATION(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -616,8 +616,8 @@ HB_FUNC_STATIC(QSCREEN_TRANSFORMBETWEEN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECT(3)) {
 #endif
-      auto ptr = new QTransform(obj->transformBetween(static_cast<Qt::ScreenOrientation>(hb_parni(1)),
-                                                      static_cast<Qt::ScreenOrientation>(hb_parni(2)), *PQRECT(3)));
+      auto ptr = new QTransform(obj->transformBetween(PQT_SCREENORIENTATION(1),
+                                                      PQT_SCREENORIENTATION(2), *PQRECT(3)));
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -638,8 +638,8 @@ HB_FUNC_STATIC(QSCREEN_MAPBETWEEN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECT(3)) {
 #endif
-      RQRECT(obj->mapBetween(static_cast<Qt::ScreenOrientation>(hb_parni(1)),
-                             static_cast<Qt::ScreenOrientation>(hb_parni(2)), *PQRECT(3)));
+      RQRECT(obj->mapBetween(PQT_SCREENORIENTATION(1),
+                             PQT_SCREENORIENTATION(2), *PQRECT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -659,7 +659,7 @@ HB_FUNC_STATIC(QSCREEN_ISPORTRAIT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isPortrait(static_cast<Qt::ScreenOrientation>(hb_parni(1))));
+      RBOOL(obj->isPortrait(PQT_SCREENORIENTATION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -679,7 +679,7 @@ HB_FUNC_STATIC(QSCREEN_ISLANDSCAPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isLandscape(static_cast<Qt::ScreenOrientation>(hb_parni(1))));
+      RBOOL(obj->isLandscape(PQT_SCREENORIENTATION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

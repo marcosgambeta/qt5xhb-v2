@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QMATRIX_NEW)
     /*
     QMatrix(Qt::Initialization)
     */
-    auto obj = new QMatrix(static_cast<Qt::Initialization>(hb_parni(1)));
+    auto obj = new QMatrix(PQT_INITIALIZATION(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(0)) {
     /*

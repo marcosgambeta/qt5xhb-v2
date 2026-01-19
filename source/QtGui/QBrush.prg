@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QBRUSH_NEW)
     /*
     QBrush(Qt::BrushStyle style)
     */
-    auto obj = new QBrush(static_cast<Qt::BrushStyle>(hb_parni(1)));
+    auto obj = new QBrush(PQT_BRUSHSTYLE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISNUMORNIL(2)) {
     /*
@@ -99,15 +99,15 @@ HB_FUNC_STATIC(QBRUSH_NEW)
     */
     auto obj = new QBrush(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)),
                           HB_ISNIL(2) ? static_cast<Qt::BrushStyle>(Qt::SolidPattern)
-                                      : static_cast<Qt::BrushStyle>(hb_parni(2)));
+                                      : PQT_BRUSHSTYLE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     /*
     QBrush(Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern)
     */
-    auto obj = new QBrush(static_cast<Qt::GlobalColor>(hb_parni(1)), HB_ISNIL(2)
+    auto obj = new QBrush(PQT_GLOBALCOLOR(1), HB_ISNIL(2)
                                                                          ? static_cast<Qt::BrushStyle>(Qt::SolidPattern)
-                                                                         : static_cast<Qt::BrushStyle>(hb_parni(2)));
+                                                                         : PQT_BRUSHSTYLE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISQPIXMAP(2)) {
     /*
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QBRUSH_NEW)
     /*
     QBrush(Qt::GlobalColor color, const QPixmap &pixmap)
     */
-    auto obj = new QBrush(static_cast<Qt::GlobalColor>(hb_parni(1)), *PQPIXMAP(2));
+    auto obj = new QBrush(PQT_GLOBALCOLOR(1), *PQPIXMAP(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQPIXMAP(1)) {
     /*
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QBRUSH_SETCOLOR)
     auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->setColor(static_cast<Qt::GlobalColor>(hb_parni(1)));
+      obj->setColor(PQT_GLOBALCOLOR(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QBRUSH_SETSTYLE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setStyle(static_cast<Qt::BrushStyle>(hb_parni(1)));
+      obj->setStyle(PQT_BRUSHSTYLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_OPTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQVARIANT(obj->option(static_cast<QImageIOHandler::ImageOption>(hb_parni(1))));
+      RQVARIANT(obj->option(PQIMAGEIOHANDLER_IMAGEOPTION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -383,7 +383,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_SETOPTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2)) {
 #endif
-      obj->setOption(static_cast<QImageIOHandler::ImageOption>(hb_parni(1)), *PQVARIANT(2));
+      obj->setOption(PQIMAGEIOHANDLER_IMAGEOPTION(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_SUPPORTSOPTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->supportsOption(static_cast<QImageIOHandler::ImageOption>(hb_parni(1))));
+      RBOOL(obj->supportsOption(PQIMAGEIOHANDLER_IMAGEOPTION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

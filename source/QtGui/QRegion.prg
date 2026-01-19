@@ -82,21 +82,21 @@ HB_FUNC_STATIC(QREGION_NEW)
     */
     auto obj = new QRegion(PINT(1), PINT(2), PINT(3), PINT(4),
                            HB_ISNIL(5) ? static_cast<QRegion::RegionType>(QRegion::Rectangle)
-                                       : static_cast<QRegion::RegionType>(hb_parni(5)));
+                                       : PQREGION_REGIONTYPE(5));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && ISQRECT(1) && ISNUMORNIL(2)) {
     /*
     QRegion(const QRect &r, QRegion::RegionType t = QRegion::Rectangle)
     */
     auto obj = new QRegion(*PQRECT(1), HB_ISNIL(2) ? static_cast<QRegion::RegionType>(QRegion::Rectangle)
-                                                   : static_cast<QRegion::RegionType>(hb_parni(2)));
+                                                   : PQREGION_REGIONTYPE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && ISQPOLYGON(1) && ISNUMORNIL(2)) {
     /*
     QRegion(const QPolygon &pa, Qt::FillRule fillRule = Qt::OddEvenFill)
     */
     auto obj = new QRegion(*PQPOLYGON(1), HB_ISNIL(2) ? static_cast<Qt::FillRule>(Qt::OddEvenFill)
-                                                      : static_cast<Qt::FillRule>(hb_parni(2)));
+                                                      : PQT_FILLRULE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQREGION(1)) {
     /*

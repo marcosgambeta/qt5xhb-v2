@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_SETTEXT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
-      obj->setText(static_cast<QAccessible::Text>(hb_parni(1)), PQSTRING(2));
+      obj->setText(PQACCESSIBLE_TEXT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

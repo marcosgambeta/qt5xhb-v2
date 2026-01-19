@@ -111,7 +111,7 @@ GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8)
 */
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW3)
 {
-  auto obj = new QOpenGLFramebufferObject(*PQSIZE(1), static_cast<QOpenGLFramebufferObject::Attachment>(hb_parni(2)),
+  auto obj = new QOpenGLFramebufferObject(*PQSIZE(1), PQOPENGLFRAMEBUFFEROBJECT_ATTACHMENT(2),
                                           OPGLENUM(3, GL_TEXTURE_2D), OPGLENUM(4, GL_RGBA8));
   Qt5xHb::returnNewObject(obj, true);
 }
@@ -123,7 +123,7 @@ GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8)
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW4)
 {
   auto obj =
-      new QOpenGLFramebufferObject(PINT(1), PINT(2), static_cast<QOpenGLFramebufferObject::Attachment>(hb_parni(3)),
+      new QOpenGLFramebufferObject(PINT(1), PINT(2), PQOPENGLFRAMEBUFFEROBJECT_ATTACHMENT(3),
                                    OPGLENUM(4, GL_TEXTURE_2D), OPGLENUM(5, GL_RGBA8));
   Qt5xHb::returnNewObject(obj, true);
 }
@@ -152,7 +152,7 @@ GL_TEXTURE_2D, GLenum internal_format = GL_RGBA)
 */
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW5)
 {
-  auto obj = new QOpenGLFramebufferObject(*PQSIZE(1), static_cast<QOpenGLFramebufferObject::Attachment>(hb_parni(2)),
+  auto obj = new QOpenGLFramebufferObject(*PQSIZE(1), PQOPENGLFRAMEBUFFEROBJECT_ATTACHMENT(2),
                                           OPGLENUM(3, GL_TEXTURE_2D), OPGLENUM(4, GL_RGBA));
   Qt5xHb::returnNewObject(obj, true);
 }
@@ -164,7 +164,7 @@ GL_TEXTURE_2D, GLenum internal_format = GL_RGBA)
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW6)
 {
   auto obj =
-      new QOpenGLFramebufferObject(PINT(1), PINT(2), static_cast<QOpenGLFramebufferObject::Attachment>(hb_parni(3)),
+      new QOpenGLFramebufferObject(PINT(1), PINT(2), PQOPENGLFRAMEBUFFEROBJECT_ATTACHMENT(3),
                                    OPGLENUM(4, GL_TEXTURE_2D), OPGLENUM(5, GL_RGBA));
   Qt5xHb::returnNewObject(obj, true);
 }
@@ -460,7 +460,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_SETATTACHMENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setAttachment(static_cast<QOpenGLFramebufferObject::Attachment>(hb_parni(1)));
+      obj->setAttachment(PQOPENGLFRAMEBUFFEROBJECT_ATTACHMENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

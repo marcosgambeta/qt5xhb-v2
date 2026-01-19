@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setMode(static_cast<QPageLayout::Mode>(hb_parni(1)));
+      obj->setMode(PQPAGELAYOUT_MODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETORIENTATION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOrientation(static_cast<QPageLayout::Orientation>(hb_parni(1)));
+      obj->setOrientation(PQPAGELAYOUT_ORIENTATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETUNITS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setUnits(static_cast<QPageLayout::Unit>(hb_parni(1)));
+      obj->setUnits(PQPAGELAYOUT_UNIT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -488,7 +488,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MARGINS)
     auto obj = static_cast<QPageLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QMarginsF(obj->margins(static_cast<QPageLayout::Unit>(hb_parni(1))));
+      auto ptr = new QMarginsF(obj->margins(PQPAGELAYOUT_UNIT(1)));
       Qt5xHb::createReturnClass(ptr, "QMARGINSF", true);
     }
 #endif
@@ -634,7 +634,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_FULLRECT)
     auto obj = static_cast<QPageLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RQRECTF(obj->fullRect(static_cast<QPageLayout::Unit>(hb_parni(1))));
+      RQRECTF(obj->fullRect(PQPAGELAYOUT_UNIT(1)));
     }
 #endif
   } else {
@@ -707,7 +707,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAINTRECT)
     auto obj = static_cast<QPageLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RQRECTF(obj->paintRect(static_cast<QPageLayout::Unit>(hb_parni(1))));
+      RQRECTF(obj->paintRect(PQPAGELAYOUT_UNIT(1)));
     }
 #endif
   } else {

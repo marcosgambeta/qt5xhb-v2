@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_NEW)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
     auto obj = new QAccessibleTableModelChangeEvent(
-        PQOBJECT(1), static_cast<QAccessibleTableModelChangeEvent::ModelChangeType>(hb_parni(2)));
+        PQOBJECT(1), PQACCESSIBLETABLEMODELCHANGEEVENT_MODELCHANGETYPE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETMODELCHANGETYPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setModelChangeType(static_cast<QAccessibleTableModelChangeEvent::ModelChangeType>(hb_parni(1)));
+      obj->setModelChangeType(PQACCESSIBLETABLEMODELCHANGEEVENT_MODELCHANGETYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

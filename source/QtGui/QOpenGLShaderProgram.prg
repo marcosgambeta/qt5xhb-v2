@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
-      RBOOL(obj->addShaderFromSourceCode(static_cast<QOpenGLShader::ShaderType>(hb_parni(1)), PCONSTCHAR(2)));
+      RBOOL(obj->addShaderFromSourceCode(PQOPENGLSHADER_SHADERTYPE(1), PCONSTCHAR(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2)) {
 #endif
-      RBOOL(obj->addShaderFromSourceCode(static_cast<QOpenGLShader::ShaderType>(hb_parni(1)), *PQBYTEARRAY(2)));
+      RBOOL(obj->addShaderFromSourceCode(PQOPENGLSHADER_SHADERTYPE(1), *PQBYTEARRAY(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
-      RBOOL(obj->addShaderFromSourceCode(static_cast<QOpenGLShader::ShaderType>(hb_parni(1)), PQSTRING(2)));
+      RBOOL(obj->addShaderFromSourceCode(PQOPENGLSHADER_SHADERTYPE(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
-      RBOOL(obj->addShaderFromSourceFile(static_cast<QOpenGLShader::ShaderType>(hb_parni(1)), PQSTRING(2)));
+      RBOOL(obj->addShaderFromSourceFile(PQOPENGLSHADER_SHADERTYPE(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

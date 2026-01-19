@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QCURSOR_NEW)
     /*
     QCursor(Qt::CursorShape shape)
     */
-    auto obj = new QCursor(static_cast<Qt::CursorShape>(hb_parni(1)));
+    auto obj = new QCursor(PQT_CURSORSHAPE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 4) && ISQBITMAP(1) && ISQBITMAP(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     /*
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QCURSOR_SETSHAPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setShape(static_cast<Qt::CursorShape>(hb_parni(1)));
+      obj->setShape(PQT_CURSORSHAPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

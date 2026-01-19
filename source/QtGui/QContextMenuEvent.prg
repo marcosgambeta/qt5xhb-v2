@@ -61,20 +61,20 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_NEW)
     QContextMenuEvent(QContextMenuEvent::Reason reason, const QPoint &pos, const QPoint &globalPos,
     Qt::KeyboardModifiers modifiers)
     */
-    auto obj = new QContextMenuEvent(static_cast<QContextMenuEvent::Reason>(hb_parni(1)), *PQPOINT(2), *PQPOINT(3),
-                                     static_cast<Qt::KeyboardModifiers>(hb_parni(4)));
+    auto obj = new QContextMenuEvent(PQCONTEXTMENUEVENT_REASON(1), *PQPOINT(2), *PQPOINT(3),
+                                     PQT_KEYBOARDMODIFIERS(4));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3)) {
     /*
     QContextMenuEvent(QContextMenuEvent::Reason reason, const QPoint &pos, const QPoint &globalPos)
     */
-    auto obj = new QContextMenuEvent(static_cast<QContextMenuEvent::Reason>(hb_parni(1)), *PQPOINT(2), *PQPOINT(3));
+    auto obj = new QContextMenuEvent(PQCONTEXTMENUEVENT_REASON(1), *PQPOINT(2), *PQPOINT(3));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINT(2)) {
     /*
     QContextMenuEvent(QContextMenuEvent::Reason reason, const QPoint &pos)
     */
-    auto obj = new QContextMenuEvent(static_cast<QContextMenuEvent::Reason>(hb_parni(1)), *PQPOINT(2));
+    auto obj = new QContextMenuEvent(PQCONTEXTMENUEVENT_REASON(1), *PQPOINT(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QPOLYGON_CONTAINSPOINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQPOINT(1) && HB_ISNUM(2)) {
 #endif
-      RBOOL(obj->containsPoint(*PQPOINT(1), static_cast<Qt::FillRule>(hb_parni(2))));
+      RBOOL(obj->containsPoint(*PQPOINT(1), PQT_FILLRULE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

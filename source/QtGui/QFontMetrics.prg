@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QFONTMETRICS_ELIDEDTEXT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
 #endif
-      RQSTRING(obj->elidedText(PQSTRING(1), static_cast<Qt::TextElideMode>(hb_parni(2)), PINT(3), OPINT(4, 0)));
+      RQSTRING(obj->elidedText(PQSTRING(1), PQT_TEXTELIDEMODE(2), PINT(3), OPINT(4, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

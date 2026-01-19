@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QTRANSFORM_NEW)
     /*
     QTransform(Qt::Initialization)
     */
-    auto obj = new QTransform(static_cast<Qt::Initialization>(hb_parni(1)));
+    auto obj = new QTransform(PQT_INITIALIZATION(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(0)) {
     /*
@@ -724,7 +724,7 @@ HB_FUNC_STATIC(QTRANSFORM_ROTATE)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       auto ptr =
-          &obj->rotate(PQREAL(1), HB_ISNIL(2) ? static_cast<Qt::Axis>(Qt::ZAxis) : static_cast<Qt::Axis>(hb_parni(2)));
+          &obj->rotate(PQREAL(1), HB_ISNIL(2) ? static_cast<Qt::Axis>(Qt::ZAxis) : PQT_AXIS(2));
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -746,7 +746,7 @@ HB_FUNC_STATIC(QTRANSFORM_ROTATERADIANS)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       auto ptr = &obj->rotateRadians(PQREAL(1), HB_ISNIL(2) ? static_cast<Qt::Axis>(Qt::ZAxis)
-                                                            : static_cast<Qt::Axis>(hb_parni(2)));
+                                                            : PQT_AXIS(2));
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

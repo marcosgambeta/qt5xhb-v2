@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TEXT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQSTRING(obj->text(static_cast<QAccessible::Text>(hb_parni(1))));
+      RQSTRING(obj->text(PQACCESSIBLE_TEXT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_SETTEXT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
-      obj->setText(static_cast<QAccessible::Text>(hb_parni(1)), PQSTRING(2));
+      obj->setText(PQACCESSIBLE_TEXT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -578,7 +578,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INTERFACE_CAST)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      hb_retptr(static_cast<void *>(obj->interface_cast(static_cast<QAccessible::InterfaceType>(hb_parni(1)))));
+      hb_retptr(static_cast<void *>(obj->interface_cast(PQACCESSIBLE_INTERFACETYPE(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QWINDOW_SETMODALITY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setModality(static_cast<Qt::WindowModality>(hb_parni(1)));
+      obj->setModality(PQT_WINDOWMODALITY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QWINDOW_SETFLAGS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFlags(static_cast<Qt::WindowFlags>(hb_parni(1)));
+      obj->setFlags(PQT_WINDOWFLAGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -773,7 +773,7 @@ HB_FUNC_STATIC(QWINDOW_SETVISIBILITY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setVisibility(static_cast<QWindow::Visibility>(hb_parni(1)));
+      obj->setVisibility(PQWINDOW_VISIBILITY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -816,7 +816,7 @@ HB_FUNC_STATIC(QWINDOW_REPORTCONTENTORIENTATIONCHANGE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->reportContentOrientationChange(static_cast<Qt::ScreenOrientation>(hb_parni(1)));
+      obj->reportContentOrientationChange(PQT_SCREENORIENTATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC(QWINDOW_ISANCESTOROF)
     if (ISBETWEEN(1, 2) && ISQWINDOW(1) && ISNUMORNIL(2)) {
 #endif
       RBOOL(obj->isAncestorOf(PQWINDOW(1), HB_ISNIL(2) ? static_cast<QWindow::AncestorMode>(QWindow::IncludeTransients)
-                                                       : static_cast<QWindow::AncestorMode>(hb_parni(2))));
+                                                       : PQWINDOW_ANCESTORMODE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1213,7 +1213,7 @@ HB_FUNC_STATIC(QWINDOW_PARENT)
     auto obj = qobject_cast<QWindow *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = obj->parent(static_cast<QWindow::AncestorMode>(hb_parni(1)));
+      auto ptr = obj->parent(PQWINDOW_ANCESTORMODE(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
     }
 #endif
@@ -1561,7 +1561,7 @@ HB_FUNC_STATIC(QWINDOW_SETSURFACETYPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSurfaceType(static_cast<QSurface::SurfaceType>(hb_parni(1)));
+      obj->setSurfaceType(PQSURFACE_SURFACETYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2041,7 +2041,7 @@ HB_FUNC_STATIC(QWINDOW_SETFLAG)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setFlag(static_cast<Qt::WindowType>(hb_parni(1)), OPBOOL(2, true));
+      obj->setFlag(PQT_WINDOWTYPE(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2169,7 +2169,7 @@ HB_FUNC_STATIC(QWINDOW_SETWINDOWSTATE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setWindowState(static_cast<Qt::WindowState>(hb_parni(1)));
+      obj->setWindowState(PQT_WINDOWSTATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2192,7 +2192,7 @@ HB_FUNC_STATIC(QWINDOW_SETWINDOWSTATES)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setWindowStates(static_cast<Qt::WindowStates>(hb_parni(1)));
+      obj->setWindowStates(PQT_WINDOWSTATES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
