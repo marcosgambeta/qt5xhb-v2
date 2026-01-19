@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETPRINTRANGE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setPrintRange(static_cast<QAbstractPrintDialog::PrintRange>(hb_parni(1)));
+      obj->setPrintRange(PQABSTRACTPRINTDIALOG_PRINTRANGE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_ADDENABLEDOPTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->addEnabledOption(static_cast<QAbstractPrintDialog::PrintDialogOption>(hb_parni(1)));
+      obj->addEnabledOption(PQABSTRACTPRINTDIALOG_PRINTDIALOGOPTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETENABLEDOPTIONS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setEnabledOptions(static_cast<QAbstractPrintDialog::PrintDialogOptions>(hb_parni(1)));
+      obj->setEnabledOptions(PQABSTRACTPRINTDIALOG_PRINTDIALOGOPTIONS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_ISOPTIONENABLED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isOptionEnabled(static_cast<QAbstractPrintDialog::PrintDialogOption>(hb_parni(1))));
+      RBOOL(obj->isOptionEnabled(PQABSTRACTPRINTDIALOG_PRINTDIALOGOPTION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
