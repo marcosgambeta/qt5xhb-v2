@@ -684,7 +684,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETOBJECTOWNERSHIP)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
 #endif
-    QQmlEngine::setObjectOwnership(PQOBJECT(1), static_cast<QQmlEngine::ObjectOwnership>(hb_parni(2)));
+    QQmlEngine::setObjectOwnership(PQOBJECT(1), PQQMLENGINE_OBJECTOWNERSHIP(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
