@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QSGMATERIAL_SETFLAG)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setFlag(static_cast<QSGMaterial::Flags>(hb_parni(1)), OPBOOL(2, true));
+      obj->setFlag(PQSGMATERIAL_FLAGS(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

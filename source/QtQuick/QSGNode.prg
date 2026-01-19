@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QSGNODE_MARKDIRTY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->markDirty(static_cast<QSGNode::DirtyState>(hb_parni(1)));
+      obj->markDirty(PQSGNODE_DIRTYSTATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -470,7 +470,7 @@ HB_FUNC_STATIC(QSGNODE_SETFLAG)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setFlag(static_cast<QSGNode::Flag>(hb_parni(1)), OPBOOL(2, true));
+      obj->setFlag(PQSGNODE_FLAG(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -492,7 +492,7 @@ HB_FUNC_STATIC(QSGNODE_SETFLAGS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setFlags(static_cast<QSGNode::Flags>(hb_parni(1)), OPBOOL(2, true));
+      obj->setFlags(PQSGNODE_FLAGS(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

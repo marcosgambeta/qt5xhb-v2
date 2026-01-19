@@ -60,9 +60,9 @@ RETURN
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
-    auto obj = new QQuickImageProvider(static_cast<QQmlImageProviderBase::ImageType>(hb_parni(1)),
+    auto obj = new QQuickImageProvider(PQQMLIMAGEPROVIDERBASE_IMAGETYPE(1),
                                        HB_ISNIL(2) ? static_cast<QQmlImageProviderBase::Flags>(0)
-                                                   : static_cast<QQmlImageProviderBase::Flags>(hb_parni(2)));
+                                                   : PQQMLIMAGEPROVIDERBASE_FLAGS(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
