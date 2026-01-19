@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETSTATE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setState(static_cast<QMediaRecorder::State>(hb_parni(1)));
+      obj->setState(PQMEDIARECORDER_STATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

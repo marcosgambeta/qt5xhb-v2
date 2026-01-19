@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_SETQUALITY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setQuality(static_cast<QMultimedia::EncodingQuality>(hb_parni(1)));
+      obj->setQuality(PQMULTIMEDIA_ENCODINGQUALITY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

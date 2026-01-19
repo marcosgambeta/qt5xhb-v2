@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_AVAILABLEDEVICES)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto list = obj->availableDevices(static_cast<QAudio::Mode>(hb_parni(1)));
+      auto list = obj->availableDevices(PQAUDIO_MODE(1));
       auto pDynSym = hb_dynsymFindName("QBYTEARRAY");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_CREATEDEVICEINFO)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2)) {
 #endif
-      auto ptr = obj->createDeviceInfo(*PQBYTEARRAY(1), static_cast<QAudio::Mode>(hb_parni(2)));
+      auto ptr = obj->createDeviceInfo(*PQBYTEARRAY(1), PQAUDIO_MODE(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAUDIODEVICEINFO");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

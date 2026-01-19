@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERSUPPORTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isParameterSupported(static_cast<QCameraImageProcessingControl::ProcessingParameter>(hb_parni(1))));
+      RBOOL(obj->isParameterSupported(PQCAMERAIMAGEPROCESSINGCONTROL_PROCESSINGPARAMETER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERVALUESUPPORTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2)) {
 #endif
-      RBOOL(obj->isParameterValueSupported(static_cast<QCameraImageProcessingControl::ProcessingParameter>(hb_parni(1)),
+      RBOOL(obj->isParameterValueSupported(PQCAMERAIMAGEPROCESSINGCONTROL_PROCESSINGPARAMETER(1),
                                            *PQVARIANT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_PARAMETER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQVARIANT(obj->parameter(static_cast<QCameraImageProcessingControl::ProcessingParameter>(hb_parni(1))));
+      RQVARIANT(obj->parameter(PQCAMERAIMAGEPROCESSINGCONTROL_PROCESSINGPARAMETER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_SETPARAMETER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2)) {
 #endif
-      obj->setParameter(static_cast<QCameraImageProcessingControl::ProcessingParameter>(hb_parni(1)), *PQVARIANT(2));
+      obj->setParameter(PQCAMERAIMAGEPROCESSINGCONTROL_PROCESSINGPARAMETER(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

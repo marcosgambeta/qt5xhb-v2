@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISNUMORNIL(2)) {
     auto obj = new QMediaPlayer(OPQOBJECT(1, nullptr), HB_ISNIL(2) ? static_cast<QMediaPlayer::Flags>(0)
-                                                                   : static_cast<QMediaPlayer::Flags>(hb_parni(2)));
+                                                                   : PQMEDIAPLAYER_FLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -559,7 +559,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETAUDIOROLE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setAudioRole(static_cast<QAudio::Role>(hb_parni(1)));
+      obj->setAudioRole(PQAUDIO_ROLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -841,7 +841,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_HASSUPPORT)
 #endif
     RENUM(QMediaPlayer::hasSupport(PQSTRING(1), OPQSTRINGLIST(2, QStringList()),
                                    HB_ISNIL(3) ? static_cast<QMediaPlayer::Flags>(QMediaPlayer::Flags())
-                                               : static_cast<QMediaPlayer::Flags>(hb_parni(3))));
+                                               : PQMEDIAPLAYER_FLAGS(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -858,7 +858,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SUPPORTEDMIMETYPES)
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
     RQSTRINGLIST(QMediaPlayer::supportedMimeTypes(HB_ISNIL(1) ? static_cast<QMediaPlayer::Flags>(QMediaPlayer::Flags())
-                                                              : static_cast<QMediaPlayer::Flags>(hb_parni(1))));
+                                                              : PQMEDIAPLAYER_FLAGS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

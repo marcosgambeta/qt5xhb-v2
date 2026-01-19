@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QCAMERALOCKSCONTROL_LOCKSTATUS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RENUM(obj->lockStatus(static_cast<QCamera::LockType>(hb_parni(1))));
+      RENUM(obj->lockStatus(PQCAMERA_LOCKTYPE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QCAMERALOCKSCONTROL_SEARCHANDLOCK)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->searchAndLock(static_cast<QCamera::LockTypes>(hb_parni(1)));
+      obj->searchAndLock(PQCAMERA_LOCKTYPES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QCAMERALOCKSCONTROL_UNLOCK)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->unlock(static_cast<QCamera::LockTypes>(hb_parni(1)));
+      obj->unlock(PQCAMERA_LOCKTYPES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETBYTEORDER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setByteOrder(static_cast<QAudioFormat::Endian>(hb_parni(1)));
+      obj->setByteOrder(PQAUDIOFORMAT_ENDIAN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETSAMPLETYPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSampleType(static_cast<QAudioFormat::SampleType>(hb_parni(1)));
+      obj->setSampleType(PQAUDIOFORMAT_SAMPLETYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

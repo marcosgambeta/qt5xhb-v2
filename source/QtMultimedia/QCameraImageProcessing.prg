@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_ISWHITEBALANCEMODESUPPORTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isWhiteBalanceModeSupported(static_cast<QCameraImageProcessing::WhiteBalanceMode>(hb_parni(1))));
+      RBOOL(obj->isWhiteBalanceModeSupported(PQCAMERAIMAGEPROCESSING_WHITEBALANCEMODE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETWHITEBALANCEMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setWhiteBalanceMode(static_cast<QCameraImageProcessing::WhiteBalanceMode>(hb_parni(1)));
+      obj->setWhiteBalanceMode(PQCAMERAIMAGEPROCESSING_WHITEBALANCEMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -403,7 +403,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETCOLORFILTER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setColorFilter(static_cast<QCameraImageProcessing::ColorFilter>(hb_parni(1)));
+      obj->setColorFilter(PQCAMERAIMAGEPROCESSING_COLORFILTER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -425,7 +425,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_ISCOLORFILTERSUPPORTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isColorFilterSupported(static_cast<QCameraImageProcessing::ColorFilter>(hb_parni(1))));
+      RBOOL(obj->isColorFilterSupported(PQCAMERAIMAGEPROCESSING_COLORFILTER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

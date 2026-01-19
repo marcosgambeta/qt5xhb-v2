@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKENABLED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isEventFeedbackEnabled(static_cast<QCameraFeedbackControl::EventType>(hb_parni(1))));
+      RBOOL(obj->isEventFeedbackEnabled(PQCAMERAFEEDBACKCONTROL_EVENTTYPE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKLOCKED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isEventFeedbackLocked(static_cast<QCameraFeedbackControl::EventType>(hb_parni(1))));
+      RBOOL(obj->isEventFeedbackLocked(PQCAMERAFEEDBACKCONTROL_EVENTTYPE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_RESETEVENTFEEDBACK)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->resetEventFeedback(static_cast<QCameraFeedbackControl::EventType>(hb_parni(1)));
+      obj->resetEventFeedback(PQCAMERAFEEDBACKCONTROL_EVENTTYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
 #endif
-      RBOOL(obj->setEventFeedbackEnabled(static_cast<QCameraFeedbackControl::EventType>(hb_parni(1)), PBOOL(2)));
+      RBOOL(obj->setEventFeedbackEnabled(PQCAMERAFEEDBACKCONTROL_EVENTTYPE(1), PBOOL(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKSOUND)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
-      RBOOL(obj->setEventFeedbackSound(static_cast<QCameraFeedbackControl::EventType>(hb_parni(1)), PQSTRING(2)));
+      RBOOL(obj->setEventFeedbackSound(PQCAMERAFEEDBACKCONTROL_EVENTTYPE(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

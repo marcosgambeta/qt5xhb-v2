@@ -70,7 +70,7 @@ RETURN
     */
 HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_NEW4)
 {
-  auto obj = new QMediaServiceProviderHint(static_cast<QCamera::Position>(hb_parni(1)));
+  auto obj = new QMediaServiceProviderHint(PQCAMERA_POSITION(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
@@ -79,7 +79,7 @@ QMediaServiceProviderHint(QMediaServiceProviderHint::Features features)
 */
 HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_NEW5)
 {
-  auto obj = new QMediaServiceProviderHint(static_cast<QMediaServiceProviderHint::Features>(hb_parni(1)));
+  auto obj = new QMediaServiceProviderHint(PQMEDIASERVICEPROVIDERHINT_FEATURES(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 

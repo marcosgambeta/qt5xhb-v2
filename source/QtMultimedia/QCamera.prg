@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QCAMERA_NEW)
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2)) {
     // QCamera(QCamera::Position position, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-    auto obj = new QCamera(static_cast<QCamera::Position>(hb_parni(1)), OPQOBJECT(2, nullptr));
+    auto obj = new QCamera(PQCAMERA_POSITION(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QCAMERA_SETCAPTUREMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCaptureMode(static_cast<QCamera::CaptureModes>(hb_parni(1)));
+      obj->setCaptureMode(PQCAMERA_CAPTUREMODES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -218,7 +218,7 @@ HB_FUNC_STATIC(QCAMERA_LOCKSTATUS)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RENUM(obj->lockStatus(static_cast<QCamera::LockType>(hb_parni(1))));
+      RENUM(obj->lockStatus(PQCAMERA_LOCKTYPE(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QCAMERA_ISCAPTUREMODESUPPORTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isCaptureModeSupported(static_cast<QCamera::CaptureModes>(hb_parni(1))));
+      RBOOL(obj->isCaptureModeSupported(PQCAMERA_CAPTUREMODES(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -442,7 +442,7 @@ HB_FUNC_STATIC(QCAMERA_SEARCHANDLOCK)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->searchAndLock(static_cast<QCamera::LockTypes>(hb_parni(1)));
+      obj->searchAndLock(PQCAMERA_LOCKTYPES(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -527,7 +527,7 @@ HB_FUNC_STATIC(QCAMERA_UNLOCK)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->unlock(static_cast<QCamera::LockTypes>(hb_parni(1)));
+      obj->unlock(PQCAMERA_LOCKTYPES(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());

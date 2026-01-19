@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QRADIOTUNER_SETBAND)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setBand(static_cast<QRadioTuner::Band>(hb_parni(1)));
+      obj->setBand(PQRADIOTUNER_BAND(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QRADIOTUNER_SETSTEREOMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setStereoMode(static_cast<QRadioTuner::StereoMode>(hb_parni(1)));
+      obj->setStereoMode(PQRADIOTUNER_STEREOMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -477,7 +477,7 @@ HB_FUNC_STATIC(QRADIOTUNER_ISBANDSUPPORTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isBandSupported(static_cast<QRadioTuner::Band>(hb_parni(1))));
+      RBOOL(obj->isBandSupported(PQRADIOTUNER_BAND(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -497,7 +497,7 @@ HB_FUNC_STATIC(QRADIOTUNER_FREQUENCYSTEP)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RINT(obj->frequencyStep(static_cast<QRadioTuner::Band>(hb_parni(1))));
+      RINT(obj->frequencyStep(PQRADIOTUNER_BAND(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -602,7 +602,7 @@ HB_FUNC_STATIC(QRADIOTUNER_SEARCHALLSTATIONS)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->searchAllStations(HB_ISNIL(1) ? static_cast<QRadioTuner::SearchMode>(QRadioTuner::SearchFast)
-                                         : static_cast<QRadioTuner::SearchMode>(hb_parni(1)));
+                                         : PQRADIOTUNER_SEARCHMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

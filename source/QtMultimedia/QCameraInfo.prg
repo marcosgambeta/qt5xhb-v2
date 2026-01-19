@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QCAMERAINFO_AVAILABLECAMERAS)
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
     auto list = QCameraInfo::availableCameras(HB_ISNIL(1) ? static_cast<QCamera::Position>(QCamera::UnspecifiedPosition)
-                                                          : static_cast<QCamera::Position>(hb_parni(1)));
+                                                          : PQCAMERA_POSITION(1));
     auto pDynSym = hb_dynsymFindName("QCAMERAINFO");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr) {

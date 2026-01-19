@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETFLASHMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFlashMode(static_cast<QCameraExposure::FlashModes>(hb_parni(1)));
+      obj->setFlashMode(PQCAMERAEXPOSURE_FLASHMODES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETEXPOSUREMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setExposureMode(static_cast<QCameraExposure::ExposureMode>(hb_parni(1)));
+      obj->setExposureMode(PQCAMERAEXPOSURE_EXPOSUREMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETMETERINGMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setMeteringMode(static_cast<QCameraExposure::MeteringMode>(hb_parni(1)));
+      obj->setMeteringMode(PQCAMERAEXPOSURE_METERINGMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ISEXPOSUREMODESUPPORTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isExposureModeSupported(static_cast<QCameraExposure::ExposureMode>(hb_parni(1))));
+      RBOOL(obj->isExposureModeSupported(PQCAMERAEXPOSURE_EXPOSUREMODE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ISFLASHMODESUPPORTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isFlashModeSupported(static_cast<QCameraExposure::FlashModes>(hb_parni(1))));
+      RBOOL(obj->isFlashModeSupported(PQCAMERAEXPOSURE_FLASHMODES(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ISMETERINGMODESUPPORTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isMeteringModeSupported(static_cast<QCameraExposure::MeteringMode>(hb_parni(1))));
+      RBOOL(obj->isMeteringModeSupported(PQCAMERAEXPOSURE_METERINGMODE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

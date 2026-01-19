@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_SETPLAYBACKMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setPlaybackMode(static_cast<QMediaPlaylist::PlaybackMode>(hb_parni(1)));
+      obj->setPlaybackMode(PQMEDIAPLAYLIST_PLAYBACKMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
