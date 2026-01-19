@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QINAPPSTORE_REGISTERPRODUCT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
-      obj->registerProduct(static_cast<QInAppProduct::ProductType>(hb_parni(1)), PQSTRING(2));
+      obj->registerProduct(PQINAPPPRODUCT_PRODUCTTYPE(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
