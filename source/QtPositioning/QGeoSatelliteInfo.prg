@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSATELLITESYSTEM)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSatelliteSystem(static_cast<QGeoSatelliteInfo::SatelliteSystem>(hb_parni(1)));
+      obj->setSatelliteSystem(PQGEOSATELLITEINFO_SATELLITESYSTEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SETATTRIBUTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setAttribute(static_cast<QGeoSatelliteInfo::Attribute>(hb_parni(1)), PQREAL(2));
+      obj->setAttribute(PQGEOSATELLITEINFO_ATTRIBUTE(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_ATTRIBUTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQREAL(obj->attribute(static_cast<QGeoSatelliteInfo::Attribute>(hb_parni(1))));
+      RQREAL(obj->attribute(PQGEOSATELLITEINFO_ATTRIBUTE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_REMOVEATTRIBUTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->removeAttribute(static_cast<QGeoSatelliteInfo::Attribute>(hb_parni(1)));
+      obj->removeAttribute(PQGEOSATELLITEINFO_ATTRIBUTE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_HASATTRIBUTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->hasAttribute(static_cast<QGeoSatelliteInfo::Attribute>(hb_parni(1))));
+      RBOOL(obj->hasAttribute(PQGEOSATELLITEINFO_ATTRIBUTE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

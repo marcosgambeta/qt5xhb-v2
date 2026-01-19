@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFO_SETATTRIBUTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setAttribute(static_cast<QGeoPositionInfo::Attribute>(hb_parni(1)), PQREAL(2));
+      obj->setAttribute(PQGEOPOSITIONINFO_ATTRIBUTE(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFO_ATTRIBUTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQREAL(obj->attribute(static_cast<QGeoPositionInfo::Attribute>(hb_parni(1))));
+      RQREAL(obj->attribute(PQGEOPOSITIONINFO_ATTRIBUTE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFO_REMOVEATTRIBUTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->removeAttribute(static_cast<QGeoPositionInfo::Attribute>(hb_parni(1)));
+      obj->removeAttribute(PQGEOPOSITIONINFO_ATTRIBUTE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFO_HASATTRIBUTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->hasAttribute(static_cast<QGeoPositionInfo::Attribute>(hb_parni(1))));
+      RBOOL(obj->hasAttribute(PQGEOPOSITIONINFO_ATTRIBUTE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
