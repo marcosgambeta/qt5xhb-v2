@@ -116,7 +116,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSCRIPTVALUE_NEW3)
 {
-  auto obj = new QScriptValue(static_cast<QScriptValue::SpecialValue>(hb_parni(1)));
+  auto obj = new QScriptValue(PQSCRIPTVALUE_SPECIALVALUE(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 

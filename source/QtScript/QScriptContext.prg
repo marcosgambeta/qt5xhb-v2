@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWERROR)
     auto obj = static_cast<QScriptContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QScriptValue(obj->throwError(static_cast<QScriptContext::Error>(hb_parni(1)), PQSTRING(2)));
+      auto ptr = new QScriptValue(obj->throwError(PQSCRIPTCONTEXT_ERROR(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {

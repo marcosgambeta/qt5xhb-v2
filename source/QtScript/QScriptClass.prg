@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_EXTENSION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQVARIANTORNIL(2)) {
 #endif
-      RQVARIANT(obj->extension(static_cast<QScriptClass::Extension>(hb_parni(1)),
+      RQVARIANT(obj->extension(PQSCRIPTCLASS_EXTENSION(1),
                                HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_SUPPORTSEXTENSION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->supportsExtension(static_cast<QScriptClass::Extension>(hb_parni(1))));
+      RBOOL(obj->supportsExtension(PQSCRIPTCLASS_EXTENSION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
