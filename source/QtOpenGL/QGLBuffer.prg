@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QGLBUFFER_NEW)
     /*
     QGLBuffer(QGLBuffer::Type type)
     */
-    auto obj = new QGLBuffer(static_cast<QGLBuffer::Type>(hb_parni(1)));
+    auto obj = new QGLBuffer(PQGLBUFFER_TYPE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQGLBUFFER(1)) {
     /*
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QGLBUFFER_MAP)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      hb_retptr(static_cast<void *>(obj->map(static_cast<QGLBuffer::Access>(hb_parni(1)))));
+      hb_retptr(static_cast<void *>(obj->map(PQGLBUFFER_ACCESS(1))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QGLBUFFER_RELEASE)
     static void release(QGLBuffer::Type type)
     */
 
-    QGLBuffer::release(static_cast<QGLBuffer::Type>(hb_parni(1)));
+    QGLBuffer::release(PQGLBUFFER_TYPE(1));
 
     hb_itemReturn(hb_stackSelfItem());
   } else {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QGLBUFFER_SETUSAGEPATTERN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setUsagePattern(static_cast<QGLBuffer::UsagePattern>(hb_parni(1)));
+      obj->setUsagePattern(PQGLBUFFER_USAGEPATTERN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
     auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RGLUINT(obj->bindTexture(*PQIMAGE(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>(hb_parni(4))));
+      RGLUINT(obj->bindTexture(*PQIMAGE(1), PGLENUM(2), PGLINT(3), PQGLCONTEXT_BINDOPTIONS(4)));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
     auto obj = static_cast<QGLContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RGLUINT(obj->bindTexture(*PQPIXMAP(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>(hb_parni(4))));
+      RGLUINT(obj->bindTexture(*PQPIXMAP(1), PGLENUM(2), PGLINT(3), PQGLCONTEXT_BINDOPTIONS(4)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

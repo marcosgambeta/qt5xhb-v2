@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QGLFORMAT_NEW)
     /*
     QGLFormat(QGL::FormatOptions options, int plane = 0)
     */
-    auto obj = new QGLFormat(static_cast<QGL::FormatOptions>(hb_parni(1)), OPINT(2, 0));
+    auto obj = new QGLFormat(PQGL_FORMATOPTIONS(1), OPINT(2, 0));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQGLFORMAT(1)) {
     /*
@@ -754,7 +754,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETOPTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOption(static_cast<QGL::FormatOptions>(hb_parni(1)));
+      obj->setOption(PQGL_FORMATOPTIONS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -820,7 +820,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETPROFILE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setProfile(static_cast<QGLFormat::OpenGLContextProfile>(hb_parni(1)));
+      obj->setProfile(PQGLFORMAT_OPENGLCONTEXTPROFILE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1120,7 +1120,7 @@ HB_FUNC_STATIC(QGLFORMAT_TESTOPTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->testOption(static_cast<QGL::FormatOptions>(hb_parni(1))));
+      RBOOL(obj->testOption(PQGL_FORMATOPTIONS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
