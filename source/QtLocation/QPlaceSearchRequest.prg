@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETVISIBILITYSCOPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setVisibilityScope(static_cast<QLocation::VisibilityScope>(hb_parni(1)));
+      obj->setVisibilityScope(PQLOCATION_VISIBILITYSCOPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETRELEVANCEHINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setRelevanceHint(static_cast<QPlaceSearchRequest::RelevanceHint>(hb_parni(1)));
+      obj->setRelevanceHint(PQPLACESEARCHREQUEST_RELEVANCEHINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

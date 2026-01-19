@@ -486,7 +486,7 @@ HB_FUNC_STATIC(QPLACE_TOTALCONTENTCOUNT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RINT(obj->totalContentCount(static_cast<QPlaceContent::Type>(hb_parni(1))));
+      RINT(obj->totalContentCount(PQPLACECONTENT_TYPE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -508,7 +508,7 @@ HB_FUNC_STATIC(QPLACE_SETTOTALCONTENTCOUNT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setTotalContentCount(static_cast<QPlaceContent::Type>(hb_parni(1)), PINT(2));
+      obj->setTotalContentCount(PQPLACECONTENT_TYPE(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1019,7 +1019,7 @@ HB_FUNC_STATIC(QPLACE_SETVISIBILITY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setVisibility(static_cast<QLocation::Visibility>(hb_parni(1)));
+      obj->setVisibility(PQLOCATION_VISIBILITY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

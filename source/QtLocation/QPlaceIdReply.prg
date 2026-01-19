@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QPLACEIDREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2)) {
-    auto obj = new QPlaceIdReply(static_cast<QPlaceIdReply::OperationType>(hb_parni(1)), OPQOBJECT(2, nullptr));
+    auto obj = new QPlaceIdReply(PQPLACEIDREPLY_OPERATIONTYPE(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

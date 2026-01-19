@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_SETTRAVELMODES)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setTravelModes(static_cast<QGeoRouteRequest::TravelModes>(hb_parni(1)));
+      obj->setTravelModes(PQGEOROUTEREQUEST_TRAVELMODES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -383,8 +383,8 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_SETFEATUREWEIGHT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setFeatureWeight(static_cast<QGeoRouteRequest::FeatureType>(hb_parni(1)),
-                            static_cast<QGeoRouteRequest::FeatureWeight>(hb_parni(2)));
+      obj->setFeatureWeight(PQGEOROUTEREQUEST_FEATURETYPE(1),
+                            PQGEOROUTEREQUEST_FEATUREWEIGHT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -408,7 +408,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_FEATUREWEIGHT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RENUM(obj->featureWeight(static_cast<QGeoRouteRequest::FeatureType>(hb_parni(1))));
+      RENUM(obj->featureWeight(PQGEOROUTEREQUEST_FEATURETYPE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -459,7 +459,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_SETROUTEOPTIMIZATION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setRouteOptimization(static_cast<QGeoRouteRequest::RouteOptimizations>(hb_parni(1)));
+      obj->setRouteOptimization(PQGEOROUTEREQUEST_ROUTEOPTIMIZATIONS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -505,7 +505,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_SETSEGMENTDETAIL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSegmentDetail(static_cast<QGeoRouteRequest::SegmentDetail>(hb_parni(1)));
+      obj->setSegmentDetail(PQGEOROUTEREQUEST_SEGMENTDETAIL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -551,7 +551,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_SETMANEUVERDETAIL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setManeuverDetail(static_cast<QGeoRouteRequest::ManeuverDetail>(hb_parni(1)));
+      obj->setManeuverDetail(PQGEOROUTEREQUEST_MANEUVERDETAIL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
