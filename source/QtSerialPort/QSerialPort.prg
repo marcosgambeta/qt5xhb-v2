@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QSERIALPORT_OPEN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->open(static_cast<QIODevice::OpenMode>(hb_parni(1))));
+      RBOOL(obj->open(PQIODEVICE_OPENMODE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETBAUDRATE)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       RBOOL(obj->setBaudRate(PQINT32(1), HB_ISNIL(2) ? static_cast<QSerialPort::Directions>(QSerialPort::AllDirections)
-                                                     : static_cast<QSerialPort::Directions>(hb_parni(2))));
+                                                     : PQSERIALPORT_DIRECTIONS(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QSERIALPORT_BAUDRATE)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQINT32(obj->baudRate(HB_ISNIL(1) ? static_cast<QSerialPort::Directions>(QSerialPort::AllDirections)
-                                        : static_cast<QSerialPort::Directions>(hb_parni(1))));
+                                        : PQSERIALPORT_DIRECTIONS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETDATABITS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->setDataBits(static_cast<QSerialPort::DataBits>(hb_parni(1))));
+      RBOOL(obj->setDataBits(PQSERIALPORT_DATABITS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETPARITY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->setParity(static_cast<QSerialPort::Parity>(hb_parni(1))));
+      RBOOL(obj->setParity(PQSERIALPORT_PARITY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -454,7 +454,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETSTOPBITS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->setStopBits(static_cast<QSerialPort::StopBits>(hb_parni(1))));
+      RBOOL(obj->setStopBits(PQSERIALPORT_STOPBITS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -498,7 +498,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETFLOWCONTROL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->setFlowControl(static_cast<QSerialPort::FlowControl>(hb_parni(1))));
+      RBOOL(obj->setFlowControl(PQSERIALPORT_FLOWCONTROL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -675,7 +675,7 @@ HB_FUNC_STATIC(QSERIALPORT_CLEAR)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RBOOL(obj->clear(HB_ISNIL(1) ? static_cast<QSerialPort::Directions>(QSerialPort::AllDirections)
-                                   : static_cast<QSerialPort::Directions>(hb_parni(1))));
+                                   : PQSERIALPORT_DIRECTIONS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -720,7 +720,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETDATAERRORPOLICY)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RBOOL(obj->setDataErrorPolicy(HB_ISNIL(1) ? static_cast<QSerialPort::DataErrorPolicy>(QSerialPort::IgnorePolicy)
-                                                : static_cast<QSerialPort::DataErrorPolicy>(hb_parni(1))));
+                                                : PQSERIALPORT_DATAERRORPOLICY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
