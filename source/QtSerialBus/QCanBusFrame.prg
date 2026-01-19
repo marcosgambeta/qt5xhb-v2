@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_NEW)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     auto obj = new QCanBusFrame(HB_ISNIL(1) ? static_cast<QCanBusFrame::FrameType>(QCanBusFrame::DataFrame)
-                                            : static_cast<QCanBusFrame::FrameType>(hb_parni(1)));
+                                            : PQCANBUSFRAME_FRAMETYPE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2)) {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETFRAMETYPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFrameType(static_cast<QCanBusFrame::FrameType>(hb_parni(1)));
+      obj->setFrameType(PQCANBUSFRAME_FRAMETYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETERROR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setError(static_cast<QCanBusFrame::FrameErrors>(hb_parni(1)));
+      obj->setError(PQCANBUSFRAME_FRAMEERRORS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
