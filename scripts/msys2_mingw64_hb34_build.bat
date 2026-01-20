@@ -24,6 +24,47 @@ rem This file is an example/model. Make a copy and adjust the paths.
 rem Make a folder and copy this script to the folder.
 rem Adjust the paths if necessary.
 rem Execute the script and wait.
+rem Check if the all libraries was created (40 files):
+rem qt5xhb-v2\lib\win\mingw64\libhbqaxcontainer5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqaxserver5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtbluetooth5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtcharts5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtcore5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtdatavisualization5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtdbus5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtdesigner5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtgamepad5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtgui5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqthelp5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtlocation5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtmultimedia5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtmultimediawidgets5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtnetwork5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtnetworkauth5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtopengl5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtpositioning5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtprintsupport5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtpurchasing5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtqml5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtquick5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtquickwidgets5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtscript5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtscripttools5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtsensors5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtserialbus5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtserialport5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtsql5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtsvg5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqttexttospeech5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtuitools5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtvirtualkeyboard5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtwebchannel5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtwebsockets5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtwebview5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtwidgets5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtwinextras5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtxml5.a
+rem qt5xhb-v2\lib\win\mingw64\libhbqtxmlpatterns5.a
 
 rem Add bin folder of MSYS2/MinGW64 to path:
 set PATH=C:\msys64\mingw64\bin;%PATH%
