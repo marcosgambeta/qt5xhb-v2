@@ -404,7 +404,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETLINKDELEGATIONPOLICY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setLinkDelegationPolicy(static_cast<QWebPage::LinkDelegationPolicy>(hb_parni(1)));
+      obj->setLinkDelegationPolicy(PQWEBPAGE_LINKDELEGATIONPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -531,7 +531,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETVISIBILITYSTATE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setVisibilityState(static_cast<QWebPage::VisibilityState>(hb_parni(1)));
+      obj->setVisibilityState(PQWEBPAGE_VISIBILITYSTATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -554,7 +554,7 @@ HB_FUNC_STATIC(QWEBPAGE_ACTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = obj->action(static_cast<QWebPage::WebAction>(hb_parni(1)));
+      auto ptr = obj->action(PQWEBPAGE_WEBACTION(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -643,7 +643,7 @@ HB_FUNC_STATIC(QWEBPAGE_FINDTEXT)
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       RBOOL(obj->findText(PQSTRING(1), HB_ISNIL(2) ? static_cast<QWebPage::FindFlags>(0)
-                                                   : static_cast<QWebPage::FindFlags>(hb_parni(2))));
+                                                   : PQWEBPAGE_FINDFLAGS(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -725,7 +725,7 @@ HB_FUNC_STATIC(QWEBPAGE_INPUTMETHODQUERY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQVARIANT(obj->inputMethodQuery(static_cast<Qt::InputMethodQuery>(hb_parni(1))));
+      RQVARIANT(obj->inputMethodQuery(PQT_INPUTMETHODQUERY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -940,7 +940,7 @@ HB_FUNC_STATIC(QWEBPAGE_TRIGGERACTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->triggerAction(static_cast<QWebPage::WebAction>(hb_parni(1)), OPBOOL(2, false));
+      obj->triggerAction(PQWEBPAGE_WEBACTION(1), OPBOOL(2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1093,8 +1093,8 @@ HB_FUNC_STATIC(QWEBPAGE_SETFEATUREPERMISSION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQWEBFRAME(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      obj->setFeaturePermission(PQWEBFRAME(1), static_cast<QWebPage::Feature>(hb_parni(2)),
-                                static_cast<QWebPage::PermissionPolicy>(hb_parni(3)));
+      obj->setFeaturePermission(PQWEBFRAME(1), PQWEBPAGE_FEATURE(2),
+                                PQWEBPAGE_PERMISSIONPOLICY(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

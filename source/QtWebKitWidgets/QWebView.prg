@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QWEBVIEW_SETRENDERHINTS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setRenderHints(static_cast<QPainter::RenderHints>(hb_parni(1)));
+      obj->setRenderHints(PQPAINTER_RENDERHINTS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -429,7 +429,7 @@ HB_FUNC_STATIC(QWEBVIEW_FINDTEXT)
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       RBOOL(obj->findText(PQSTRING(1), HB_ISNIL(2) ? static_cast<QWebPage::FindFlags>(0)
-                                                   : static_cast<QWebPage::FindFlags>(hb_parni(2))));
+                                                   : PQWEBPAGE_FINDFLAGS(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QWEBVIEW_LOAD)
     if (obj != nullptr) {
       obj->load(*PQNETWORKREQUEST(1),
                 HB_ISNIL(2) ? static_cast<QNetworkAccessManager::Operation>(QNetworkAccessManager::GetOperation)
-                            : static_cast<QNetworkAccessManager::Operation>(hb_parni(2)),
+                            : PQNETWORKACCESSMANAGER_OPERATION(2),
                 HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(3)));
     }
 
@@ -525,7 +525,7 @@ HB_FUNC_STATIC(QWEBVIEW_PAGEACTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = obj->pageAction(static_cast<QWebPage::WebAction>(hb_parni(1)));
+      auto ptr = obj->pageAction(PQWEBPAGE_WEBACTION(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC(QWEBVIEW_SETRENDERHINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setRenderHint(static_cast<QPainter::RenderHint>(hb_parni(1)), OPBOOL(2, true));
+      obj->setRenderHint(PQPAINTER_RENDERHINT(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -657,7 +657,7 @@ HB_FUNC_STATIC(QWEBVIEW_TRIGGERPAGEACTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->triggerPageAction(static_cast<QWebPage::WebAction>(hb_parni(1)), OPBOOL(2, false));
+      obj->triggerPageAction(PQWEBPAGE_WEBACTION(1), OPBOOL(2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -789,7 +789,7 @@ HB_FUNC_STATIC(QWEBVIEW_INPUTMETHODQUERY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQVARIANT(obj->inputMethodQuery(static_cast<Qt::InputMethodQuery>(hb_parni(1))));
+      RQVARIANT(obj->inputMethodQuery(PQT_INPUTMETHODQUERY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
