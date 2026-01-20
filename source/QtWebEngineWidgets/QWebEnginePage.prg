@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ACTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = obj->action(static_cast<QWebEnginePage::WebAction>(hb_parni(1)));
+      auto ptr = obj->action(PQWEBENGINEPAGE_WEBACTION(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_TRIGGERACTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->triggerAction(static_cast<QWebEnginePage::WebAction>(hb_parni(1)), OPBOOL(2, false));
+      obj->triggerAction(PQWEBENGINEPAGE_WEBACTION(1), OPBOOL(2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -343,8 +343,8 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETFEATUREPERMISSION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQURL(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      obj->setFeaturePermission(*PQURL(1), static_cast<QWebEnginePage::Feature>(hb_parni(2)),
-                                static_cast<QWebEnginePage::PermissionPolicy>(hb_parni(3)));
+      obj->setFeaturePermission(*PQURL(1), PQWEBENGINEPAGE_FEATURE(2),
+                                PQWEBENGINEPAGE_PERMISSIONPOLICY(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

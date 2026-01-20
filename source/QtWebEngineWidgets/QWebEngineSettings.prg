@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_FONTFAMILY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQSTRING(obj->fontFamily(static_cast<QWebEngineSettings::FontFamily>(hb_parni(1))));
+      RQSTRING(obj->fontFamily(PQWEBENGINESETTINGS_FONTFAMILY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_SETFONTFAMILY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
-      obj->setFontFamily(static_cast<QWebEngineSettings::FontFamily>(hb_parni(1)), PQSTRING(2));
+      obj->setFontFamily(PQWEBENGINESETTINGS_FONTFAMILY(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETFONTFAMILY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->resetFontFamily(static_cast<QWebEngineSettings::FontFamily>(hb_parni(1)));
+      obj->resetFontFamily(PQWEBENGINESETTINGS_FONTFAMILY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_FONTSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RINT(obj->fontSize(static_cast<QWebEngineSettings::FontSize>(hb_parni(1))));
+      RINT(obj->fontSize(PQWEBENGINESETTINGS_FONTSIZE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_SETFONTSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setFontSize(static_cast<QWebEngineSettings::FontSize>(hb_parni(1)), PINT(2));
+      obj->setFontSize(PQWEBENGINESETTINGS_FONTSIZE(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETFONTSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->resetFontSize(static_cast<QWebEngineSettings::FontSize>(hb_parni(1)));
+      obj->resetFontSize(PQWEBENGINESETTINGS_FONTSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_SETATTRIBUTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
 #endif
-      obj->setAttribute(static_cast<QWebEngineSettings::WebAttribute>(hb_parni(1)), PBOOL(2));
+      obj->setAttribute(PQWEBENGINESETTINGS_WEBATTRIBUTE(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_TESTATTRIBUTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->testAttribute(static_cast<QWebEngineSettings::WebAttribute>(hb_parni(1))));
+      RBOOL(obj->testAttribute(PQWEBENGINESETTINGS_WEBATTRIBUTE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETATTRIBUTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->resetAttribute(static_cast<QWebEngineSettings::WebAttribute>(hb_parni(1)));
+      obj->resetAttribute(PQWEBENGINESETTINGS_WEBATTRIBUTE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

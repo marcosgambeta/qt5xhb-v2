@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_PAGEACTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = obj->pageAction(static_cast<QWebEnginePage::WebAction>(hb_parni(1)));
+      auto ptr = obj->pageAction(PQWEBENGINEPAGE_WEBACTION(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_TRIGGERPAGEACTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->triggerPageAction(static_cast<QWebEnginePage::WebAction>(hb_parni(1)), OPBOOL(2, false));
+      obj->triggerPageAction(PQWEBENGINEPAGE_WEBACTION(1), OPBOOL(2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
