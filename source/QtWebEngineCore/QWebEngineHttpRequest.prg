@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_NEW)
     auto obj =
         new QWebEngineHttpRequest(HB_ISNIL(1) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(1)),
                                   HB_ISNIL(2) ? static_cast<QWebEngineHttpRequest::Method>(QWebEngineHttpRequest::Get)
-                                              : static_cast<QWebEngineHttpRequest::Method>(hb_parni(2)));
+                                              : PQWEBENGINEHTTPREQUEST_METHOD(2));
     Qt5xHb::returnNewObject(obj, true);
   }
   elseif(ISNUMPAR(1) && ISQWEBENGINEHTTPREQUEST(1))
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_SETMETHOD)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setMethod(static_cast<QWebEngineHttpRequest::Method>(hb_parni(1)));
+      obj->setMethod(PQWEBENGINEHTTPREQUEST_METHOD(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
