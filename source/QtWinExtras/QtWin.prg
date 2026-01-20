@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QTWIN_TOHBITMAP)
 #endif
     hb_retptr(static_cast<HBITMAP>(
         QtWin::toHBITMAP(*PQPIXMAP(1), HB_ISNIL(2) ? static_cast<QtWin::HBitmapFormat>(QtWin::HBitmapNoAlpha)
-                                                   : static_cast<QtWin::HBitmapFormat>(hb_parni(2)))));
+                                                   : PQTWIN_HBITMAPFORMAT(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QTWIN_FROMHBITMAP)
 #endif
     auto ptr = new QPixmap(
         QtWin::fromHBITMAP((HBITMAP)hb_parptr(1), HB_ISNIL(2) ? static_cast<QtWin::HBitmapFormat>(QtWin::HBitmapNoAlpha)
-                                                              : static_cast<QtWin::HBitmapFormat>(hb_parni(2))));
+                                                              : PQTWIN_HBITMAPFORMAT(2)));
     Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QTWIN_SETWINDOWFLIP3DPOLICY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && ISQWINDOW(1) && HB_ISNUM(2)) {
 #endif
-    QtWin::setWindowFlip3DPolicy(PQWINDOW(1), static_cast<QtWin::WindowFlip3DPolicy>(hb_parni(2)));
+    QtWin::setWindowFlip3DPolicy(PQWINDOW(1), PQTWIN_WINDOWFLIP3DPOLICY(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
