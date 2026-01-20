@@ -73,14 +73,14 @@ HB_FUNC_STATIC(QSQLERROR_NEW)
 {
   if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QSqlError(const QString &driverText, const QString &databaseText, QSqlError::ErrorType type, int number)
-    auto obj = new QSqlError(PQSTRING(1), PQSTRING(2), static_cast<QSqlError::ErrorType>(hb_parni(3)), PINT(4));
+    auto obj = new QSqlError(PQSTRING(1), PQSTRING(2), PQSQLERROR_ERRORTYPE(3), PINT(4));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(0, 4) && ISCHARORNIL(1) && ISCHARORNIL(2) && ISNUMORNIL(3) && ISCHARORNIL(4)) {
     // QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), QSqlError::ErrorType type = QSqlError::NoError, const QString &errorCode = QString())
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QSqlError(OPQSTRING(1, QString()), OPQSTRING(2, QString()),
                              HB_ISNIL(3) ? static_cast<QSqlError::ErrorType>(QSqlError::NoError)
-                                         : static_cast<QSqlError::ErrorType>(hb_parni(3)),
+                                         : PQSQLERROR_ERRORTYPE(3),
                              OPQSTRING(4, QString()));
     Qt5xHb::returnNewObject(obj, true);
 #endif
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QSQLERROR_SETTYPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setType(static_cast<QSqlError::ErrorType>(hb_parni(1)));
+      obj->setType(PQSQLERROR_ERRORTYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

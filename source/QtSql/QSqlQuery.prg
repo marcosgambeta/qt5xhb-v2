@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QSQLQUERY_ADDBINDVALUE)
     if (ISBETWEEN(1, 2) && ISQVARIANT(1) && ISNUMORNIL(2)) {
 #endif
       obj->addBindValue(*PQVARIANT(1), HB_ISNIL(2) ? static_cast<QSql::ParamType>(QSql::In)
-                                                   : static_cast<QSql::ParamType>(hb_parni(2)));
+                                                   : PQSQL_PARAMTYPE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QSQLQUERY_BINDVALUE)
 
     if (obj != nullptr) {
       obj->bindValue(PQSTRING(1), *PQVARIANT(2),
-                     HB_ISNIL(3) ? static_cast<QSql::ParamType>(QSql::In) : static_cast<QSql::ParamType>(hb_parni(3)));
+                     HB_ISNIL(3) ? static_cast<QSql::ParamType>(QSql::In) : PQSQL_PARAMTYPE(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QSQLQUERY_BINDVALUE)
 
     if (obj != nullptr) {
       obj->bindValue(PINT(1), *PQVARIANT(2),
-                     HB_ISNIL(3) ? static_cast<QSql::ParamType>(QSql::In) : static_cast<QSql::ParamType>(hb_parni(3)));
+                     HB_ISNIL(3) ? static_cast<QSql::ParamType>(QSql::In) : PQSQL_PARAMTYPE(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QSQLQUERY_EXECBATCH)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RBOOL(obj->execBatch(HB_ISNIL(1) ? static_cast<QSqlQuery::BatchExecutionMode>(QSqlQuery::ValuesAsRows)
-                                       : static_cast<QSqlQuery::BatchExecutionMode>(hb_parni(1))));
+                                       : PQSQLQUERY_BATCHEXECUTIONMODE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -623,7 +623,7 @@ HB_FUNC_STATIC(QSQLQUERY_SETNUMERICALPRECISIONPOLICY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setNumericalPrecisionPolicy(static_cast<QSql::NumericalPrecisionPolicy>(hb_parni(1)));
+      obj->setNumericalPrecisionPolicy(PQSQL_NUMERICALPRECISIONPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
