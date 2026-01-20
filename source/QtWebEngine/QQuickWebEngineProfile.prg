@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETHTTPCACHETYPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setHttpCacheType(static_cast<QQuickWebEngineProfile::HttpCacheType>(hb_parni(1)));
+      obj->setHttpCacheType(PQQUICKWEBENGINEPROFILE_HTTPCACHETYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETPERSISTENTCOOKIESPOLICY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setPersistentCookiesPolicy(static_cast<QQuickWebEngineProfile::PersistentCookiesPolicy>(hb_parni(1)));
+      obj->setPersistentCookiesPolicy(PQQUICKWEBENGINEPROFILE_PERSISTENTCOOKIESPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

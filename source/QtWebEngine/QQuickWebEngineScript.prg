@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETINJECTIONPOINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setInjectionPoint(static_cast<QQuickWebEngineScript::InjectionPoint>(hb_parni(1)));
+      obj->setInjectionPoint(PQQUICKWEBENGINESCRIPT_INJECTIONPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETWORLDID)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setWorldId(static_cast<QQuickWebEngineScript::ScriptWorldId>(hb_parni(1)));
+      obj->setWorldId(PQQUICKWEBENGINESCRIPT_SCRIPTWORLDID(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
