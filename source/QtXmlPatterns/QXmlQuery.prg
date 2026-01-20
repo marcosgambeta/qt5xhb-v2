@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QXMLQUERY_NEW)
     /*
     QXmlQuery(QXmlQuery::QueryLanguage queryLanguage, const QXmlNamePool &np = QXmlNamePool())
     */
-    auto obj = new QXmlQuery(static_cast<QXmlQuery::QueryLanguage>(hb_parni(1)),
+    auto obj = new QXmlQuery(PQXMLQUERY_QUERYLANGUAGE(1),
                              HB_ISNIL(2) ? QXmlNamePool() : *static_cast<QXmlNamePool *>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, true);
   } else {
