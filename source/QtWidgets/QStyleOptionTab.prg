@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETSHAPE)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->shape = static_cast<QTabBar::Shape>(hb_parni(1));
+      obj->shape = PQTABBAR_SHAPE(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETPOSITION)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->position = static_cast<QStyleOptionTab::TabPosition>(hb_parni(1));
+      obj->position = PQSTYLEOPTIONTAB_TABPOSITION(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETSELECTEDPOSITION)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->selectedPosition = static_cast<QStyleOptionTab::SelectedPosition>(hb_parni(1));
+      obj->selectedPosition = PQSTYLEOPTIONTAB_SELECTEDPOSITION(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETCORNERWIDGETS)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->cornerWidgets = static_cast<QStyleOptionTab::CornerWidgets>(hb_parni(1));
+      obj->cornerWidgets = PQSTYLEOPTIONTAB_CORNERWIDGETS(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -429,7 +429,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETFEATURES)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->features = static_cast<QStyleOptionTab::TabFeatures>(hb_parni(1));
+      obj->features = PQSTYLEOPTIONTAB_TABFEATURES(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

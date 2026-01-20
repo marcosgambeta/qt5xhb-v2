@@ -827,7 +827,7 @@ HB_FUNC_STATIC(QTREEVIEW_SORTBYCOLUMN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->sortByColumn(PINT(1), static_cast<Qt::SortOrder>(hb_parni(2)));
+      obj->sortByColumn(PINT(1), PQT_SORTORDER(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -962,7 +962,7 @@ HB_FUNC_STATIC(QTREEVIEW_SCROLLTO)
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2)) {
 #endif
       obj->scrollTo(*PQMODELINDEX(1), HB_ISNIL(2) ? static_cast<QTreeView::ScrollHint>(QTreeView::EnsureVisible)
-                                                  : static_cast<QTreeView::ScrollHint>(hb_parni(2)));
+                                                  : PQTREEVIEW_SCROLLHINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

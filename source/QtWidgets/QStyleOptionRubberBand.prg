@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SETSHAPE)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->shape = static_cast<QRubberBand::Shape>(hb_parni(1));
+      obj->shape = PQRUBBERBAND_SHAPE(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

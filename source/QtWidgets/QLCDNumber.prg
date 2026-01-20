@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setMode(static_cast<QLCDNumber::Mode>(hb_parni(1)));
+      obj->setMode(PQLCDNUMBER_MODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETSEGMENTSTYLE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSegmentStyle(static_cast<QLCDNumber::SegmentStyle>(hb_parni(1)));
+      obj->setSegmentStyle(PQLCDNUMBER_SEGMENTSTYLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

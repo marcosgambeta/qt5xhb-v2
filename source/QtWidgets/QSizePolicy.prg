@@ -84,9 +84,9 @@ HB_FUNC_STATIC(QSIZEPOLICY_NEW)
     // QSizePolicy(QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical, QSizePolicy::ControlType type =
     // QSizePolicy::DefaultType)
     auto obj =
-        new QSizePolicy(static_cast<QSizePolicy::Policy>(hb_parni(1)), static_cast<QSizePolicy::Policy>(hb_parni(2)),
+        new QSizePolicy(PQSIZEPOLICY_POLICY(1), PQSIZEPOLICY_POLICY(2),
                         HB_ISNIL(3) ? static_cast<QSizePolicy::ControlType>(QSizePolicy::DefaultType)
-                                    : static_cast<QSizePolicy::ControlType>(hb_parni(3)));
+                                    : PQSIZEPOLICY_CONTROLTYPE(3));
     Qt5xHb::returnNewObject(obj, true);
 
   } else {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETCONTROLTYPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setControlType(static_cast<QSizePolicy::ControlType>(hb_parni(1)));
+      obj->setControlType(PQSIZEPOLICY_CONTROLTYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALPOLICY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setHorizontalPolicy(static_cast<QSizePolicy::Policy>(hb_parni(1)));
+      obj->setHorizontalPolicy(PQSIZEPOLICY_POLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALPOLICY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setVerticalPolicy(static_cast<QSizePolicy::Policy>(hb_parni(1)));
+      obj->setVerticalPolicy(PQSIZEPOLICY_POLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

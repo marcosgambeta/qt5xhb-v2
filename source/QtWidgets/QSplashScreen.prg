@@ -65,14 +65,14 @@ HB_FUNC_STATIC(QSPLASHSCREEN_NEW)
     // QSplashScreen(const QPixmap &pixmap = QPixmap(), Qt::WindowFlags f = 0)
     auto obj =
         new QSplashScreen(HB_ISNIL(1) ? QPixmap() : *static_cast<QPixmap *>(Qt5xHb::itemGetPtr(1)),
-                          HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(2)));
+                          HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
 
   } else if (ISBETWEEN(1, 3) && ISQWIDGET(1) && ISQPIXMAPORNIL(2) && ISNUMORNIL(3)) {
     // QSplashScreen(QWidget *parent, const QPixmap &pixmap = QPixmap(), Qt::WindowFlags f = 0)
     auto obj =
         new QSplashScreen(PQWIDGET(1), HB_ISNIL(2) ? QPixmap() : *static_cast<QPixmap *>(Qt5xHb::itemGetPtr(2)),
-                          HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(3)));
+                          HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(3));
     Qt5xHb::returnNewObject(obj, false);
 
   } else {

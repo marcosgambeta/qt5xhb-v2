@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETSTATE)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->state = static_cast<QStyle::State>(hb_parni(1));
+      obj->state = PQSTYLE_STATE(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETDIRECTION)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->direction = static_cast<Qt::LayoutDirection>(hb_parni(1));
+      obj->direction = PQT_LAYOUTDIRECTION(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

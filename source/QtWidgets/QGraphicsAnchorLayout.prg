@@ -95,8 +95,8 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDANCHOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && ISQGRAPHICSLAYOUTITEM(3) && HB_ISNUM(4)) {
 #endif
-      auto ptr = obj->addAnchor(PQGRAPHICSLAYOUTITEM(1), static_cast<Qt::AnchorPoint>(hb_parni(2)),
-                                PQGRAPHICSLAYOUTITEM(3), static_cast<Qt::AnchorPoint>(hb_parni(4)));
+      auto ptr = obj->addAnchor(PQGRAPHICSLAYOUTITEM(1), PQT_ANCHORPOINT(2),
+                                PQGRAPHICSLAYOUTITEM(3), PQT_ANCHORPOINT(4));
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSANCHOR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDANCHORS)
 #endif
       obj->addAnchors(PQGRAPHICSLAYOUTITEM(1), PQGRAPHICSLAYOUTITEM(2),
                       HB_ISNIL(3) ? static_cast<Qt::Orientations>(Qt::Horizontal | Qt::Vertical)
-                                  : static_cast<Qt::Orientations>(hb_parni(3)));
+                                  : PQT_ORIENTATIONS(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -139,8 +139,8 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDCORNERANCHORS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && ISQGRAPHICSLAYOUTITEM(3) && HB_ISNUM(4)) {
 #endif
-      obj->addCornerAnchors(PQGRAPHICSLAYOUTITEM(1), static_cast<Qt::Corner>(hb_parni(2)), PQGRAPHICSLAYOUTITEM(3),
-                            static_cast<Qt::Corner>(hb_parni(4)));
+      obj->addCornerAnchors(PQGRAPHICSLAYOUTITEM(1), PQT_CORNER(2), PQGRAPHICSLAYOUTITEM(3),
+                            PQT_CORNER(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -161,8 +161,8 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ANCHOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && ISQGRAPHICSLAYOUTITEM(3) && HB_ISNUM(4)) {
 #endif
-      auto ptr = obj->anchor(PQGRAPHICSLAYOUTITEM(1), static_cast<Qt::AnchorPoint>(hb_parni(2)),
-                             PQGRAPHICSLAYOUTITEM(3), static_cast<Qt::AnchorPoint>(hb_parni(4)));
+      auto ptr = obj->anchor(PQGRAPHICSLAYOUTITEM(1), PQT_ANCHORPOINT(2),
+                             PQGRAPHICSLAYOUTITEM(3), PQT_ANCHORPOINT(4));
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSANCHOR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

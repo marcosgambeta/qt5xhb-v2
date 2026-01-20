@@ -396,7 +396,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETFLOW)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFlow(static_cast<QListView::Flow>(hb_parni(1)));
+      obj->setFlow(PQLISTVIEW_FLOW(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETLAYOUTMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setLayoutMode(static_cast<QListView::LayoutMode>(hb_parni(1)));
+      obj->setLayoutMode(PQLISTVIEW_LAYOUTMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -476,7 +476,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETMOVEMENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setMovement(static_cast<QListView::Movement>(hb_parni(1)));
+      obj->setMovement(PQLISTVIEW_MOVEMENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -496,7 +496,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETRESIZEMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setResizeMode(static_cast<QListView::ResizeMode>(hb_parni(1)));
+      obj->setResizeMode(PQLISTVIEW_RESIZEMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -596,7 +596,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETVIEWMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setViewMode(static_cast<QListView::ViewMode>(hb_parni(1)));
+      obj->setViewMode(PQLISTVIEW_VIEWMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -747,7 +747,7 @@ HB_FUNC_STATIC(QLISTVIEW_SCROLLTO)
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2)) {
 #endif
       obj->scrollTo(*PQMODELINDEX(1), HB_ISNIL(2) ? static_cast<QListView::ScrollHint>(QListView::EnsureVisible)
-                                                  : static_cast<QListView::ScrollHint>(hb_parni(2)));
+                                                  : PQLISTVIEW_SCROLLHINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

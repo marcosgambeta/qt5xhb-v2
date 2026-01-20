@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETBUTTONSYMBOLS)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->buttonSymbols = static_cast<QAbstractSpinBox::ButtonSymbols>(hb_parni(1));
+      obj->buttonSymbols = PQABSTRACTSPINBOX_BUTTONSYMBOLS(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETSTEPENABLED)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->stepEnabled = static_cast<QAbstractSpinBox::StepEnabled>(hb_parni(1));
+      obj->stepEnabled = PQABSTRACTSPINBOX_STEPENABLED(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

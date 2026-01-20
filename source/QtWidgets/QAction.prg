@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QACTION_ACTIVATE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->activate(static_cast<QAction::ActionEvent>(hb_parni(1)));
+      obj->activate(PQACTION_ACTIONEVENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -800,7 +800,7 @@ HB_FUNC_STATIC(QACTION_SETMENUROLE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setMenuRole(static_cast<QAction::MenuRole>(hb_parni(1)));
+      obj->setMenuRole(PQACTION_MENUROLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -820,7 +820,7 @@ HB_FUNC_STATIC(QACTION_SETPRIORITY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setPriority(static_cast<QAction::Priority>(hb_parni(1)));
+      obj->setPriority(PQACTION_PRIORITY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -880,7 +880,7 @@ HB_FUNC_STATIC(QACTION_SETSHORTCUTCONTEXT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setShortcutContext(static_cast<Qt::ShortcutContext>(hb_parni(1)));
+      obj->setShortcutContext(PQT_SHORTCUTCONTEXT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -915,7 +915,7 @@ HB_FUNC_STATIC(QACTION_SETSHORTCUTS)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->setShortcuts(static_cast<QKeySequence::StandardKey>(hb_parni(1)));
+      obj->setShortcuts(PQKEYSEQUENCE_STANDARDKEY(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());

@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RQICON(obj->icon(static_cast<QFileIconProvider::IconType>(hb_parni(1))));
+      RQICON(obj->icon(PQFILEICONPROVIDER_ICONTYPE(1)));
     }
 
   } else if (ISNUMPAR(1) && ISQFILEINFO(1)) {

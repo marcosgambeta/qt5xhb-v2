@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2)) {
 #endif
-      obj->addScrollBarWidget(PQWIDGET(1), static_cast<Qt::Alignment>(hb_parni(2)));
+      obj->addScrollBarWidget(PQWIDGET(1), PQT_ALIGNMENT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setHorizontalScrollBarPolicy(static_cast<Qt::ScrollBarPolicy>(hb_parni(1)));
+      obj->setHorizontalScrollBarPolicy(PQT_SCROLLBARPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SCROLLBARWIDGETS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto list = obj->scrollBarWidgets(static_cast<Qt::Alignment>(hb_parni(1)));
+      auto list = obj->scrollBarWidgets(PQT_ALIGNMENT(1));
       auto pDynSym = hb_dynsymFindName("QWIDGET");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setVerticalScrollBarPolicy(static_cast<Qt::ScrollBarPolicy>(hb_parni(1)));
+      obj->setVerticalScrollBarPolicy(PQT_SCROLLBARPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETSIZEADJUSTPOLICY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSizeAdjustPolicy(static_cast<QAbstractScrollArea::SizeAdjustPolicy>(hb_parni(1)));
+      obj->setSizeAdjustPolicy(PQABSTRACTSCROLLAREA_SIZEADJUSTPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

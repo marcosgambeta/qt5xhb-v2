@@ -693,7 +693,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETCHECKSTATE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setCheckState(PINT(1), static_cast<Qt::CheckState>(hb_parni(2)));
+      obj->setCheckState(PINT(1), PQT_CHECKSTATE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -713,7 +713,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETCHILDINDICATORPOLICY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setChildIndicatorPolicy(static_cast<QTreeWidgetItem::ChildIndicatorPolicy>(hb_parni(1)));
+      obj->setChildIndicatorPolicy(PQTREEWIDGETITEM_CHILDINDICATORPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -813,7 +813,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETFLAGS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFlags(static_cast<Qt::ItemFlags>(hb_parni(1)));
+      obj->setFlags(PQT_ITEMFLAGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1071,7 +1071,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SORTCHILDREN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->sortChildren(PINT(1), static_cast<Qt::SortOrder>(hb_parni(2)));
+      obj->sortChildren(PINT(1), PQT_SORTORDER(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWPRIMITIVE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTYLEOPTION(2)) {
 #endif
-      obj->drawPrimitive(static_cast<QStyle::PrimitiveElement>(hb_parni(1)), *PQSTYLEOPTION(2));
+      obj->drawPrimitive(PQSTYLE_PRIMITIVEELEMENT(1), *PQSTYLEOPTION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCONTROL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTYLEOPTION(2)) {
 #endif
-      obj->drawControl(static_cast<QStyle::ControlElement>(hb_parni(1)), *PQSTYLEOPTION(2));
+      obj->drawControl(PQSTYLE_CONTROLELEMENT(1), *PQSTYLEOPTION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCOMPLEXCONTROL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2)) {
 #endif
-      obj->drawComplexControl(static_cast<QStyle::ComplexControl>(hb_parni(1)), *PQSTYLEOPTIONCOMPLEX(2));
+      obj->drawComplexControl(PQSTYLE_COMPLEXCONTROL(1), *PQSTYLEOPTIONCOMPLEX(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMTEXT)
 #endif
       obj->drawItemText(*PQRECT(1), PINT(2), *PQPALETTE(3), PBOOL(4), PQSTRING(5),
                         HB_ISNIL(6) ? static_cast<QPalette::ColorRole>(QPalette::NoRole)
-                                    : static_cast<QPalette::ColorRole>(hb_parni(6)));
+                                    : PQPALETTE_COLORROLE(6));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

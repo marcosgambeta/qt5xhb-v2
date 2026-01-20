@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_NEW)
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQGRAPHICSLAYOUTITEMORNIL(2)) {
     // QGraphicsLinearLayout(Qt::Orientation orientation, QGraphicsLayoutItem *parent = nullptr)
     auto obj =
-        new QGraphicsLinearLayout(static_cast<Qt::Orientation>(hb_parni(1)),
+        new QGraphicsLinearLayout(PQT_ORIENTATION(1),
                                   HB_ISNIL(2) ? nullptr : static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, true);
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETALIGNMENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setAlignment(PQGRAPHICSLAYOUTITEM(1), static_cast<Qt::Alignment>(hb_parni(2)));
+      obj->setAlignment(PQGRAPHICSLAYOUTITEM(1), PQT_ALIGNMENT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETORIENTATION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOrientation(static_cast<Qt::Orientation>(hb_parni(1)));
+      obj->setOrientation(PQT_ORIENTATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -496,7 +496,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SIZEHINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSIZEFORNIL(2)) {
 #endif
-      RQSIZEF(obj->sizeHint(static_cast<Qt::SizeHint>(hb_parni(1)),
+      RQSIZEF(obj->sizeHint(PQT_SIZEHINT(1),
                             HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF *>(Qt5xHb::itemGetPtr(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

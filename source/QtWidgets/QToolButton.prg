@@ -218,7 +218,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETARROWTYPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setArrowType(static_cast<Qt::ArrowType>(hb_parni(1)));
+      obj->setArrowType(PQT_ARROWTYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETPOPUPMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setPopupMode(static_cast<QToolButton::ToolButtonPopupMode>(hb_parni(1)));
+      obj->setPopupMode(PQTOOLBUTTON_TOOLBUTTONPOPUPMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETTOOLBUTTONSTYLE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setToolButtonStyle(static_cast<Qt::ToolButtonStyle>(hb_parni(1)));
+      obj->setToolButtonStyle(PQT_TOOLBUTTONSTYLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

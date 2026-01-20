@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     auto obj = new QInputDialog(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
-                                                                   : static_cast<Qt::WindowFlags>(hb_parni(2)));
+                                                                   : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINPUTMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setInputMode(static_cast<QInputDialog::InputMode>(hb_parni(1)));
+      obj->setInputMode(PQINPUTDIALOG_INPUTMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -706,7 +706,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOPTIONS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOptions(static_cast<QInputDialog::InputDialogOptions>(hb_parni(1)));
+      obj->setOptions(PQINPUTDIALOG_INPUTDIALOGOPTIONS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -766,7 +766,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOPTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setOption(static_cast<QInputDialog::InputDialogOption>(hb_parni(1)), OPBOOL(2, true));
+      obj->setOption(PQINPUTDIALOG_INPUTDIALOGOPTION(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -786,7 +786,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_TESTOPTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->testOption(static_cast<QInputDialog::InputDialogOption>(hb_parni(1))));
+      RBOOL(obj->testOption(PQINPUTDIALOG_INPUTDIALOGOPTION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -822,7 +822,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTECHOMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setTextEchoMode(static_cast<QLineEdit::EchoMode>(hb_parni(1)));
+      obj->setTextEchoMode(PQLINEEDIT_ECHOMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -959,7 +959,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETDOUBLE)
     bool par8;
     RDOUBLE(QInputDialog::getDouble(
         PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPDOUBLE(4, 0), OPDOUBLE(5, -2147483647), OPDOUBLE(6, 2147483647),
-        OPINT(7, 1), &par8, HB_ISNIL(9) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(9))));
+        OPINT(7, 1), &par8, HB_ISNIL(9) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(9)));
     hb_storl(par8, 8);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -979,7 +979,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETINT)
     bool par8;
     RINT(QInputDialog::getInt(
         PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPINT(4, 0), OPINT(5, -2147483647), OPINT(6, 2147483647), OPINT(7, 1),
-        &par8, HB_ISNIL(9) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(9))));
+        &par8, HB_ISNIL(9) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(9)));
     hb_storl(par8, 8);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -1000,8 +1000,8 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETITEM)
     bool par7;
     RQSTRING(QInputDialog::getItem(
         PQWIDGET(1), PQSTRING(2), PQSTRING(3), PQSTRINGLIST(4), OPINT(5, 0), OPBOOL(6, true), &par7,
-        HB_ISNIL(8) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(8)),
-        HB_ISNIL(9) ? static_cast<Qt::InputMethodHints>(Qt::ImhNone) : static_cast<Qt::InputMethodHints>(hb_parni(9))));
+        HB_ISNIL(8) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(8),
+        HB_ISNIL(9) ? static_cast<Qt::InputMethodHints>(Qt::ImhNone) : PQT_INPUTMETHODHINTS(9)));
     hb_storl(par7, 7);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -1023,10 +1023,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETTEXT)
     RQSTRING(QInputDialog::getText(
         PQWIDGET(1), PQSTRING(2), PQSTRING(3),
         HB_ISNIL(4) ? static_cast<QLineEdit::EchoMode>(QLineEdit::Normal)
-                    : static_cast<QLineEdit::EchoMode>(hb_parni(4)),
+                    : PQLINEEDIT_ECHOMODE(4),
         OPQSTRING(5, QString()), &par6,
-        HB_ISNIL(7) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(7)),
-        HB_ISNIL(8) ? static_cast<Qt::InputMethodHints>(Qt::ImhNone) : static_cast<Qt::InputMethodHints>(hb_parni(8))));
+        HB_ISNIL(7) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(7),
+        HB_ISNIL(8) ? static_cast<Qt::InputMethodHints>(Qt::ImhNone) : PQT_INPUTMETHODHINTS(8)));
     hb_storl(par6, 6);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -1046,8 +1046,8 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETMULTILINETEXT)
     bool par5;
     RQSTRING(QInputDialog::getMultiLineText(
         PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPQSTRING(4, QString()), &par5,
-        HB_ISNIL(6) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(6)),
-        HB_ISNIL(7) ? static_cast<Qt::InputMethodHints>(Qt::ImhNone) : static_cast<Qt::InputMethodHints>(hb_parni(7))));
+        HB_ISNIL(6) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(6),
+        HB_ISNIL(7) ? static_cast<Qt::InputMethodHints>(Qt::ImhNone) : PQT_INPUTMETHODHINTS(7)));
     hb_storl(par5, 5);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {

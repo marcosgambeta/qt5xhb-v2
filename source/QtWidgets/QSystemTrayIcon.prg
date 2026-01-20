@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOWMESSAGE)
 #endif
       obj->showMessage(PQSTRING(1), PQSTRING(2),
                        HB_ISNIL(3) ? static_cast<QSystemTrayIcon::MessageIcon>(QSystemTrayIcon::Information)
-                                   : static_cast<QSystemTrayIcon::MessageIcon>(hb_parni(3)),
+                                   : PQSYSTEMTRAYICON_MESSAGEICON(3),
                        OPINT(4, 10000));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

@@ -455,7 +455,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTITEM)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->setCurrentItem(PQLISTWIDGETITEM(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
+      obj->setCurrentItem(PQLISTWIDGETITEM(1), PQITEMSELECTIONMODEL_SELECTIONFLAGS(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTROW)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->setCurrentRow(PINT(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
+      obj->setCurrentRow(PINT(1), PQITEMSELECTIONMODEL_SELECTIONFLAGS(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -542,7 +542,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SORTITEMS)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->sortItems(HB_ISNIL(1) ? static_cast<Qt::SortOrder>(Qt::AscendingOrder)
-                                 : static_cast<Qt::SortOrder>(hb_parni(1)));
+                                 : PQT_SORTORDER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -641,7 +641,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SCROLLTOITEM)
 #endif
       obj->scrollToItem(PQLISTWIDGETITEM(1),
                         HB_ISNIL(2) ? static_cast<QAbstractItemView::ScrollHint>(QAbstractItemView::EnsureVisible)
-                                    : static_cast<QAbstractItemView::ScrollHint>(hb_parni(2)));
+                                    : PQABSTRACTITEMVIEW_SCROLLHINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

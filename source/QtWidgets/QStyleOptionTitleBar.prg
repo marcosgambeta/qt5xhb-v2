@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTITLEBARFLAGS)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->titleBarFlags = static_cast<Qt::WindowFlags>(hb_parni(1));
+      obj->titleBarFlags = PQT_WINDOWFLAGS(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

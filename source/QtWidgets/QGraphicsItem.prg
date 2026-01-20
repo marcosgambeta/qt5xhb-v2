@@ -442,7 +442,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_COLLIDESWITHITEM)
 #endif
       RBOOL(obj->collidesWithItem(PQGRAPHICSITEM(1), HB_ISNIL(2)
                                                          ? static_cast<Qt::ItemSelectionMode>(Qt::IntersectsItemShape)
-                                                         : static_cast<Qt::ItemSelectionMode>(hb_parni(2))));
+                                                         : PQT_ITEMSELECTIONMODE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_COLLIDESWITHPATH)
 #endif
       RBOOL(obj->collidesWithPath(*PQPAINTERPATH(1), HB_ISNIL(2)
                                                          ? static_cast<Qt::ItemSelectionMode>(Qt::IntersectsItemShape)
-                                                         : static_cast<Qt::ItemSelectionMode>(hb_parni(2))));
+                                                         : PQT_ITEMSELECTIONMODE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2016,7 +2016,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SETACCEPTEDMOUSEBUTTONS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setAcceptedMouseButtons(static_cast<Qt::MouseButtons>(hb_parni(1)));
+      obj->setAcceptedMouseButtons(PQT_MOUSEBUTTONS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2076,7 +2076,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SETCACHEMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSIZEORNIL(2)) {
 #endif
-      obj->setCacheMode(static_cast<QGraphicsItem::CacheMode>(hb_parni(1)),
+      obj->setCacheMode(PQGRAPHICSITEM_CACHEMODE(1),
                         HB_ISNIL(2) ? QSize() : *static_cast<QSize *>(Qt5xHb::itemGetPtr(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -2177,7 +2177,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SETFLAG)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setFlag(static_cast<QGraphicsItem::GraphicsItemFlag>(hb_parni(1)), OPBOOL(2, true));
+      obj->setFlag(PQGRAPHICSITEM_GRAPHICSITEMFLAG(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2197,7 +2197,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SETFLAGS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFlags(static_cast<QGraphicsItem::GraphicsItemFlags>(hb_parni(1)));
+      obj->setFlags(PQGRAPHICSITEM_GRAPHICSITEMFLAGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2218,7 +2218,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SETFOCUS)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->setFocus(HB_ISNIL(1) ? static_cast<Qt::FocusReason>(Qt::OtherFocusReason)
-                                : static_cast<Qt::FocusReason>(hb_parni(1)));
+                                : PQT_FOCUSREASON(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2298,7 +2298,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SETINPUTMETHODHINTS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setInputMethodHints(static_cast<Qt::InputMethodHints>(hb_parni(1)));
+      obj->setInputMethodHints(PQT_INPUTMETHODHINTS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2338,7 +2338,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SETPANELMODALITY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setPanelModality(static_cast<QGraphicsItem::PanelModality>(hb_parni(1)));
+      obj->setPanelModality(PQGRAPHICSITEM_PANELMODALITY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

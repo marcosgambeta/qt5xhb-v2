@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETTEXTALIGNMENT)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->textAlignment = static_cast<Qt::Alignment>(hb_parni(1));
+      obj->textAlignment = PQT_ALIGNMENT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETICONALIGNMENT)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->iconAlignment = static_cast<Qt::Alignment>(hb_parni(1));
+      obj->iconAlignment = PQT_ALIGNMENT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETPOSITION)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->position = static_cast<QStyleOptionHeader::SectionPosition>(hb_parni(1));
+      obj->position = PQSTYLEOPTIONHEADER_SECTIONPOSITION(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETSELECTEDPOSITION)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->selectedPosition = static_cast<QStyleOptionHeader::SelectedPosition>(hb_parni(1));
+      obj->selectedPosition = PQSTYLEOPTIONHEADER_SELECTEDPOSITION(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETSORTINDICATOR)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->sortIndicator = static_cast<QStyleOptionHeader::SortIndicator>(hb_parni(1));
+      obj->sortIndicator = PQSTYLEOPTIONHEADER_SORTINDICATOR(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETORIENTATION)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->orientation = static_cast<Qt::Orientation>(hb_parni(1));
+      obj->orientation = PQT_ORIENTATION(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

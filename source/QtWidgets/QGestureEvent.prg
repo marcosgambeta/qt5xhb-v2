@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_ACCEPT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->accept(static_cast<Qt::GestureType>(hb_parni(1)));
+      obj->accept(PQT_GESTURETYPE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_GESTURE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = obj->gesture(static_cast<Qt::GestureType>(hb_parni(1)));
+      auto ptr = obj->gesture(PQT_GESTURETYPE(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QGESTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_IGNORE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->ignore(static_cast<Qt::GestureType>(hb_parni(1)));
+      obj->ignore(PQT_GESTURETYPE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_ISACCEPTED)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RBOOL(obj->isAccepted(static_cast<Qt::GestureType>(hb_parni(1))));
+      RBOOL(obj->isAccepted(PQT_GESTURETYPE(1)));
     }
 
   } else {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_SETACCEPTED)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->setAccepted(static_cast<Qt::GestureType>(hb_parni(1)), PBOOL(2));
+      obj->setAccepted(PQT_GESTURETYPE(1), PBOOL(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());

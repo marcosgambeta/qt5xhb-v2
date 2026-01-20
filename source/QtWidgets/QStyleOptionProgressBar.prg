@@ -218,7 +218,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETTEXTALIGNMENT)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->textAlignment = static_cast<Qt::Alignment>(hb_parni(1));
+      obj->textAlignment = PQT_ALIGNMENT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETORIENTATION)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->orientation = static_cast<Qt::Orientation>(hb_parni(1));
+      obj->orientation = PQT_ORIENTATION(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

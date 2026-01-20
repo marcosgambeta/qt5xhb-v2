@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SCROLLTO)
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2)) {
 #endif
       obj->scrollTo(*PQMODELINDEX(1), HB_ISNIL(2) ? static_cast<QColumnView::ScrollHint>(QColumnView::EnsureVisible)
-                                                  : static_cast<QColumnView::ScrollHint>(hb_parni(2)));
+                                                  : PQCOLUMNVIEW_SCROLLHINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

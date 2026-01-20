@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QCOMBOBOX_FINDDATA)
 #endif
       RINT(obj->findData(*PQVARIANT(1), OPINT(2, Qt::UserRole),
                          HB_ISNIL(3) ? static_cast<Qt::MatchFlags>(Qt::MatchExactly | Qt::MatchCaseSensitive)
-                                     : static_cast<Qt::MatchFlags>(hb_parni(3))));
+                                     : PQT_MATCHFLAGS(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QCOMBOBOX_FINDTEXT)
 #endif
       RINT(obj->findText(PQSTRING(1), HB_ISNIL(2)
                                           ? static_cast<Qt::MatchFlags>(Qt::MatchExactly | Qt::MatchCaseSensitive)
-                                          : static_cast<Qt::MatchFlags>(hb_parni(2))));
+                                          : PQT_MATCHFLAGS(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -833,7 +833,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETINSERTPOLICY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setInsertPolicy(static_cast<QComboBox::InsertPolicy>(hb_parni(1)));
+      obj->setInsertPolicy(PQCOMBOBOX_INSERTPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETSIZEADJUSTPOLICY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSizeAdjustPolicy(static_cast<QComboBox::SizeAdjustPolicy>(hb_parni(1)));
+      obj->setSizeAdjustPolicy(PQCOMBOBOX_SIZEADJUSTPOLICY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

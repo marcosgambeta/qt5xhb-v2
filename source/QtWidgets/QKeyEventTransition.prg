@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_NEW)
   } else if (ISBETWEEN(3, 4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQSTATEORNIL(4)) {
     // QKeyEventTransition(QObject *object, QEvent::Type type, int key, QState *sourceState = nullptr)
     auto obj =
-        new QKeyEventTransition(PQOBJECT(1), static_cast<QEvent::Type>(hb_parni(2)), PINT(3), OPQSTATE(4, nullptr));
+        new QKeyEventTransition(PQOBJECT(1), PQEVENT_TYPE(2), PINT(3), OPQSTATE(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   } else {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_SETMODIFIERMASK)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setModifierMask(static_cast<Qt::KeyboardModifiers>(hb_parni(1)));
+      obj->setModifierMask(PQT_KEYBOARDMODIFIERS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

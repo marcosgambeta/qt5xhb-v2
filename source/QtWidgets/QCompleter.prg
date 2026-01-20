@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCASESENSITIVITY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCaseSensitivity(static_cast<Qt::CaseSensitivity>(hb_parni(1)));
+      obj->setCaseSensitivity(PQT_CASESENSITIVITY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -453,7 +453,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCompletionMode(static_cast<QCompleter::CompletionMode>(hb_parni(1)));
+      obj->setCompletionMode(PQCOMPLETER_COMPLETIONMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -551,7 +551,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETMODELSORTING)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setModelSorting(static_cast<QCompleter::ModelSorting>(hb_parni(1)));
+      obj->setModelSorting(PQCOMPLETER_MODELSORTING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -727,7 +727,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETFILTERMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFilterMode(static_cast<Qt::MatchFlags>(hb_parni(1)));
+      obj->setFilterMode(PQT_MATCHFLAGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

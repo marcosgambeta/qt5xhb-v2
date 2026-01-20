@@ -643,7 +643,7 @@ HB_FUNC_STATIC(QAPPLICATION_ISEFFECTENABLED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    RBOOL(QApplication::isEffectEnabled(static_cast<Qt::UIEffect>(hb_parni(1))));
+    RBOOL(QApplication::isEffectEnabled(PQT_UIEFFECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -902,7 +902,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETEFFECTENABLED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-    QApplication::setEffectEnabled(static_cast<Qt::UIEffect>(hb_parni(1)), OPBOOL(2, true));
+    QApplication::setEffectEnabled(PQT_UIEFFECT(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -966,7 +966,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETLAYOUTDIRECTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    QApplication::setLayoutDirection(static_cast<Qt::LayoutDirection>(hb_parni(1)));
+    QApplication::setLayoutDirection(PQT_LAYOUTDIRECTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

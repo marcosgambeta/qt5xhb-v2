@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_UNREGISTERRECOGNIZER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    QGestureRecognizer::unregisterRecognizer(static_cast<Qt::GestureType>(hb_parni(1)));
+    QGestureRecognizer::unregisterRecognizer(PQT_GESTURETYPE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

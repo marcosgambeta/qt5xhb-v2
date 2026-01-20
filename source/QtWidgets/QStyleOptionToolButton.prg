@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETFEATURES)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->features = static_cast<QStyleOptionToolButton::ToolButtonFeatures>(hb_parni(1));
+      obj->features = PQSTYLEOPTIONTOOLBUTTON_TOOLBUTTONFEATURES(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETARROWTYPE)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->arrowType = static_cast<Qt::ArrowType>(hb_parni(1));
+      obj->arrowType = PQT_ARROWTYPE(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETTOOLBUTTONSTYLE)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->toolButtonStyle = static_cast<Qt::ToolButtonStyle>(hb_parni(1));
+      obj->toolButtonStyle = PQT_TOOLBUTTONSTYLE(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

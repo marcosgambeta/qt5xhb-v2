@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETALIGNMENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
+      obj->setAlignment(PQT_ALIGNMENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -538,7 +538,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETECHOMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setEchoMode(static_cast<QLineEdit::EchoMode>(hb_parni(1)));
+      obj->setEchoMode(PQLINEEDIT_ECHOMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1178,7 +1178,7 @@ HB_FUNC_STATIC(QLINEEDIT_INPUTMETHODQUERY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQVARIANT(obj->inputMethodQuery(static_cast<Qt::InputMethodQuery>(hb_parni(1))));
+      RQVARIANT(obj->inputMethodQuery(PQT_INPUTMETHODQUERY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1316,7 +1316,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETCURSORMOVESTYLE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCursorMoveStyle(static_cast<Qt::CursorMoveStyle>(hb_parni(1)));
+      obj->setCursorMoveStyle(PQT_CURSORMOVESTYLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1372,7 +1372,7 @@ HB_FUNC_STATIC(QLINEEDIT_ADDACTION)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->addAction(PQACTION(1), static_cast<QLineEdit::ActionPosition>(hb_parni(2)));
+      obj->addAction(PQACTION(1), PQLINEEDIT_ACTIONPOSITION(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1383,7 +1383,7 @@ HB_FUNC_STATIC(QLINEEDIT_ADDACTION)
 
     if (obj != nullptr) {
       auto ptr = obj->addAction(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
-                                static_cast<QLineEdit::ActionPosition>(hb_parni(2)));
+                                PQLINEEDIT_ACTIONPOSITION(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 

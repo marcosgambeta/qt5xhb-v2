@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_NEW)
   if (ISBETWEEN(0, 2) && ISQGRAPHICSITEMORNIL(1) && ISNUMORNIL(2)) {
     auto obj = new QGraphicsProxyWidget(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(1)),
                                         HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
-                                                    : static_cast<Qt::WindowFlags>(hb_parni(2)));
+                                                    : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

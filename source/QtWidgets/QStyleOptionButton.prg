@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETFEATURES)
 
   if (obj != nullptr) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->features = static_cast<QStyleOptionButton::ButtonFeatures>(hb_parni(1));
+      obj->features = PQSTYLEOPTIONBUTTON_BUTTONFEATURES(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

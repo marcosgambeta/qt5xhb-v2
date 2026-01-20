@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_ELIDEDTEXT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(4) && ISQFONTMETRICS(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISCHAR(4)) {
 #endif
-    RQSTRING(QAbstractItemDelegate::elidedText(*PQFONTMETRICS(1), PINT(2), static_cast<Qt::TextElideMode>(hb_parni(3)),
+    RQSTRING(QAbstractItemDelegate::elidedText(*PQFONTMETRICS(1), PINT(2), PQT_TEXTELIDEMODE(3),
                                                PQSTRING(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {

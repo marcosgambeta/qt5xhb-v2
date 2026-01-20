@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QSHORTCUT_NEW)
     // nullptr, Qt::ShortcutContext context = Qt::WindowShortcut)
     auto obj = new QShortcut(*PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3, nullptr), OPCONSTCHAR(4, nullptr),
                              HB_ISNIL(5) ? static_cast<Qt::ShortcutContext>(Qt::WindowShortcut)
-                                         : static_cast<Qt::ShortcutContext>(hb_parni(5)));
+                                         : PQT_SHORTCUTCONTEXT(5));
     Qt5xHb::returnNewObject(obj, false);
 
   } else {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETCONTEXT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setContext(static_cast<Qt::ShortcutContext>(hb_parni(1)));
+      obj->setContext(PQT_SHORTCUTCONTEXT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

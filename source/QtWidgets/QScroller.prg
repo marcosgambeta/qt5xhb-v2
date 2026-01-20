@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QSCROLLER_HANDLEINPUT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQPOINTF(2) && ISNUMORNIL(3)) {
 #endif
-      RBOOL(obj->handleInput(static_cast<QScroller::Input>(hb_parni(1)), *PQPOINTF(2), OPQINT64(3, 0)));
+      RBOOL(obj->handleInput(PQSCROLLER_INPUT(1), *PQPOINTF(2), OPQINT64(3, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QSCROLLER_GRABGESTURE)
 #endif
     RENUM(QScroller::grabGesture(PQOBJECT(1), HB_ISNIL(2)
                                                   ? static_cast<QScroller::ScrollerGestureType>(QScroller::TouchGesture)
-                                                  : static_cast<QScroller::ScrollerGestureType>(hb_parni(2))));
+                                                  : PQSCROLLER_SCROLLERGESTURETYPE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

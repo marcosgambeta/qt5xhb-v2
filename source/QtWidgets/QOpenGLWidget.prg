@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QOPENGLWIDGET_NEW)
 #ifndef QT_NO_OPENGL
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     auto obj = new QOpenGLWidget(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
-                                                                    : static_cast<Qt::WindowFlags>(hb_parni(2)));
+                                                                    : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

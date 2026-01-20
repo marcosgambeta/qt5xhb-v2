@@ -486,7 +486,7 @@ HB_FUNC_STATIC(QMENUBAR_CORNERWIDGET)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       auto ptr = obj->cornerWidget(HB_ISNIL(1) ? static_cast<Qt::Corner>(Qt::TopRightCorner)
-                                               : static_cast<Qt::Corner>(hb_parni(1)));
+                                               : PQT_CORNER(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -506,7 +506,7 @@ HB_FUNC_STATIC(QMENUBAR_SETCORNERWIDGET)
     if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2)) {
 #endif
       obj->setCornerWidget(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::Corner>(Qt::TopRightCorner)
-                                                    : static_cast<Qt::Corner>(hb_parni(2)));
+                                                    : PQT_CORNER(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

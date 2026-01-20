@@ -78,13 +78,13 @@ HB_FUNC_STATIC(QDOCKWIDGET_NEW)
     // QDockWidget(const QString &title, QWidget *parent = nullptr, Qt::WindowFlags flags = 0)
     auto obj =
         new QDockWidget(PQSTRING(1), OPQWIDGET(2, nullptr),
-                        HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(3)));
+                        HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(3));
     Qt5xHb::returnNewObject(obj, false);
 
   } else if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     // QDockWidget(QWidget *parent = nullptr, Qt::WindowFlags flags = 0)
     auto obj = new QDockWidget(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
-                                                                  : static_cast<Qt::WindowFlags>(hb_parni(2)));
+                                                                  : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
 
   } else {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_ISAREAALLOWED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isAreaAllowed(static_cast<Qt::DockWidgetArea>(hb_parni(1))));
+      RBOOL(obj->isAreaAllowed(PQT_DOCKWIDGETAREA(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETALLOWEDAREAS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setAllowedAreas(static_cast<Qt::DockWidgetAreas>(hb_parni(1)));
+      obj->setAllowedAreas(PQT_DOCKWIDGETAREAS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETFEATURES)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFeatures(static_cast<QDockWidget::DockWidgetFeatures>(hb_parni(1)));
+      obj->setFeatures(PQDOCKWIDGET_DOCKWIDGETFEATURES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

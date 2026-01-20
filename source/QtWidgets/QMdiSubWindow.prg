@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     auto obj = new QMdiSubWindow(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
-                                                                    : static_cast<Qt::WindowFlags>(hb_parni(2)));
+                                                                    : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETOPTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setOption(static_cast<QMdiSubWindow::SubWindowOption>(hb_parni(1)), OPBOOL(2, true));
+      obj->setOption(PQMDISUBWINDOW_SUBWINDOWOPTION(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_TESTOPTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->testOption(static_cast<QMdiSubWindow::SubWindowOption>(hb_parni(1))));
+      RBOOL(obj->testOption(PQMDISUBWINDOW_SUBWINDOWOPTION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
