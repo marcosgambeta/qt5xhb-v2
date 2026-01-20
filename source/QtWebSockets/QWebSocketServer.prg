@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_NEW)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3)) {
     auto obj =
-        new QWebSocketServer(PQSTRING(1), static_cast<QWebSocketServer::SslMode>(hb_parni(2)), OPQOBJECT(3, nullptr));
+        new QWebSocketServer(PQSTRING(1), PQWEBSOCKETSERVER_SSLMODE(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

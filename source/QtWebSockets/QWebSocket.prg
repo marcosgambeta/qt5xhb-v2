@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QWEBSOCKET_NEW)
   if (ISBETWEEN(0, 3) && ISCHARORNIL(1) && ISNUMORNIL(2) && ISQOBJECTORNIL(3)) {
     auto obj = new QWebSocket(OPQSTRING(1, QString()),
                               HB_ISNIL(2) ? static_cast<QWebSocketProtocol::Version>(QWebSocketProtocol::VersionLatest)
-                                          : static_cast<QWebSocketProtocol::Version>(hb_parni(2)),
+                                          : PQWEBSOCKETPROTOCOL_VERSION(2),
                               OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -519,7 +519,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SETPAUSEMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setPauseMode(static_cast<QAbstractSocket::PauseModes>(hb_parni(1)));
+      obj->setPauseMode(PQABSTRACTSOCKET_PAUSEMODES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -800,7 +800,7 @@ HB_FUNC_STATIC(QWEBSOCKET_CLOSE)
     if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISCHARORNIL(2)) {
 #endif
       obj->close(HB_ISNIL(1) ? static_cast<QWebSocketProtocol::CloseCode>(QWebSocketProtocol::CloseCodeNormal)
-                             : static_cast<QWebSocketProtocol::CloseCode>(hb_parni(1)),
+                             : PQWEBSOCKETPROTOCOL_CLOSECODE(1),
                  OPQSTRING(2, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
