@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_FONTFAMILY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQSTRING(obj->fontFamily(static_cast<QWebSettings::FontFamily>(hb_parni(1))));
+      RQSTRING(obj->fontFamily(PQWEBSETTINGS_FONTFAMILY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_FONTSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RINT(obj->fontSize(static_cast<QWebSettings::FontSize>(hb_parni(1))));
+      RINT(obj->fontSize(PQWEBSETTINGS_FONTSIZE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETATTRIBUTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->resetAttribute(static_cast<QWebSettings::WebAttribute>(hb_parni(1)));
+      obj->resetAttribute(PQWEBSETTINGS_WEBATTRIBUTE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETFONTFAMILY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->resetFontFamily(static_cast<QWebSettings::FontFamily>(hb_parni(1)));
+      obj->resetFontFamily(PQWEBSETTINGS_FONTFAMILY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETFONTSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->resetFontSize(static_cast<QWebSettings::FontSize>(hb_parni(1)));
+      obj->resetFontSize(PQWEBSETTINGS_FONTSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETATTRIBUTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
 #endif
-      obj->setAttribute(static_cast<QWebSettings::WebAttribute>(hb_parni(1)), PBOOL(2));
+      obj->setAttribute(PQWEBSETTINGS_WEBATTRIBUTE(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETFONTFAMILY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
-      obj->setFontFamily(static_cast<QWebSettings::FontFamily>(hb_parni(1)), PQSTRING(2));
+      obj->setFontFamily(PQWEBSETTINGS_FONTFAMILY(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETFONTSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setFontSize(static_cast<QWebSettings::FontSize>(hb_parni(1)), PINT(2));
+      obj->setFontSize(PQWEBSETTINGS_FONTSIZE(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_TESTATTRIBUTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->testAttribute(static_cast<QWebSettings::WebAttribute>(hb_parni(1))));
+      RBOOL(obj->testAttribute(PQWEBSETTINGS_WEBATTRIBUTE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -729,7 +729,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETWEBGRAPHIC)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2)) {
 #endif
-    QWebSettings::setWebGraphic(static_cast<QWebSettings::WebGraphic>(hb_parni(1)), *PQPIXMAP(2));
+    QWebSettings::setWebGraphic(PQWEBSETTINGS_WEBGRAPHIC(1), *PQPIXMAP(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -747,7 +747,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_WEBGRAPHIC)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    auto ptr = new QPixmap(QWebSettings::webGraphic(static_cast<QWebSettings::WebGraphic>(hb_parni(1))));
+    auto ptr = new QPixmap(QWebSettings::webGraphic(PQWEBSETTINGS_WEBGRAPHIC(1)));
     Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
