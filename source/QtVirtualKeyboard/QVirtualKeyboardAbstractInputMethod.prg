@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SETINPUTMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
-      RBOOL(obj->setInputMode(PQSTRING(1), static_cast<QVirtualKeyboardInputEngine::InputMode>(hb_parni(2))));
+      RBOOL(obj->setInputMode(PQSTRING(1), PQVIRTUALKEYBOARDINPUTENGINE_INPUTMODE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SETTEXTCASE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->setTextCase(static_cast<QVirtualKeyboardInputEngine::TextCase>(hb_parni(1))));
+      RBOOL(obj->setTextCase(PQVIRTUALKEYBOARDINPUTENGINE_TEXTCASE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -204,8 +204,8 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_KEYEVENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISNUM(3)) {
 #endif
-      RBOOL(obj->keyEvent(static_cast<Qt::Key>(hb_parni(1)), PQSTRING(2),
-                          static_cast<Qt::KeyboardModifiers>(hb_parni(3))));
+      RBOOL(obj->keyEvent(PQT_KEY(1), PQSTRING(2),
+                          PQT_KEYBOARDMODIFIERS(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SELECTIONLISTITEMCOUNT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RINT(obj->selectionListItemCount(static_cast<QVirtualKeyboardSelectionListModel::Type>(hb_parni(1))));
+      RINT(obj->selectionListItemCount(PQVIRTUALKEYBOARDSELECTIONLISTMODEL_TYPE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -273,8 +273,8 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SELECTIONLISTDATA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      RQVARIANT(obj->selectionListData(static_cast<QVirtualKeyboardSelectionListModel::Type>(hb_parni(1)), PINT(2),
-                                       static_cast<QVirtualKeyboardSelectionListModel::Role>(hb_parni(3))));
+      RQVARIANT(obj->selectionListData(PQVIRTUALKEYBOARDSELECTIONLISTMODEL_TYPE(1), PINT(2),
+                                       PQVIRTUALKEYBOARDSELECTIONLISTMODEL_ROLE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SELECTIONLISTITEMSELECTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->selectionListItemSelected(static_cast<QVirtualKeyboardSelectionListModel::Type>(hb_parni(1)), PINT(2));
+      obj->selectionListItemSelected(PQVIRTUALKEYBOARDSELECTIONLISTMODEL_TYPE(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SELECTIONLISTREMOVEITEM)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      RBOOL(obj->selectionListRemoveItem(static_cast<QVirtualKeyboardSelectionListModel::Type>(hb_parni(1)), PINT(2)));
+      RBOOL(obj->selectionListRemoveItem(PQVIRTUALKEYBOARDSELECTIONLISTMODEL_TYPE(1), PINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
