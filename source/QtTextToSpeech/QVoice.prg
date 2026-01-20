@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QVOICE_GENDERNAME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    RQSTRING(QVoice::genderName(static_cast<QVoice::Gender>(hb_parni(1))));
+    RQSTRING(QVoice::genderName(PQVOICE_GENDER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QVOICE_AGENAME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    RQSTRING(QVoice::ageName(static_cast<QVoice::Age>(hb_parni(1))));
+    RQSTRING(QVoice::ageName(PQVOICE_AGE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
