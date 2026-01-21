@@ -354,8 +354,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_START)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      obj->start(HB_ISNIL(1) ? static_cast<QBluetoothServiceDiscoveryAgent::DiscoveryMode>(
-                                   QBluetoothServiceDiscoveryAgent::MinimalDiscovery)
+      obj->start(HB_ISNIL(1) ? QBluetoothServiceDiscoveryAgent::MinimalDiscovery
                              : PQBLUETOOTHSERVICEDISCOVERYAGENT_DISCOVERYMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

@@ -746,7 +746,7 @@ HB_FUNC_STATIC(QLISTVIEW_SCROLLTO)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2)) {
 #endif
-      obj->scrollTo(*PQMODELINDEX(1), HB_ISNIL(2) ? static_cast<QListView::ScrollHint>(QListView::EnsureVisible)
+      obj->scrollTo(*PQMODELINDEX(1), HB_ISNIL(2) ? QListView::EnsureVisible
                                                   : PQLISTVIEW_SCROLLHINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

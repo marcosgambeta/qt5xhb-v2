@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILE)
 
     if (obj != nullptr) {
       auto ptr = new QMimeType(obj->mimeTypeForFile(
-          PQSTRING(1), HB_ISNIL(2) ? static_cast<QMimeDatabase::MatchMode>(QMimeDatabase::MatchDefault)
+          PQSTRING(1), HB_ISNIL(2) ? QMimeDatabase::MatchDefault
                                    : PQMIMEDATABASE_MATCHMODE(2)));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILE)
 
     if (obj != nullptr) {
       auto ptr = new QMimeType(obj->mimeTypeForFile(
-          *PQFILEINFO(1), HB_ISNIL(2) ? static_cast<QMimeDatabase::MatchMode>(QMimeDatabase::MatchDefault)
+          *PQFILEINFO(1), HB_ISNIL(2) ? QMimeDatabase::MatchDefault
                                       : PQMIMEDATABASE_MATCHMODE(2)));
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }

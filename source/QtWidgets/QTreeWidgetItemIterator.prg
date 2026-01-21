@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEMITERATOR_NEW)
     // QTreeWidgetItemIterator(QTreeWidget *widget, QTreeWidgetItemIterator::IteratorFlags flags =
     // QTreeWidgetItemIterator::All)
     auto obj = new QTreeWidgetItemIterator(
-        PQTREEWIDGET(1), HB_ISNIL(2) ? static_cast<QTreeWidgetItemIterator::IteratorFlags>(QTreeWidgetItemIterator::All)
+        PQTREEWIDGET(1), HB_ISNIL(2) ? QTreeWidgetItemIterator::All
                                      : PQTREEWIDGETITEMITERATOR_ITERATORFLAGS(2));
     Qt5xHb::returnNewObject(obj, true);
 

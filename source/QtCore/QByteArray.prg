@@ -2558,7 +2558,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COMPARE)
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RINT(obj->compare(PCONSTCHAR(1), HB_ISNIL(2) ? static_cast<Qt::CaseSensitivity>(Qt::CaseSensitive)
+      RINT(obj->compare(PCONSTCHAR(1), HB_ISNIL(2) ? Qt::CaseSensitive
                                                    : PQT_CASESENSITIVITY(2)));
     }
 #endif
@@ -2570,7 +2570,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COMPARE)
     auto obj = static_cast<QByteArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RINT(obj->compare(*PQBYTEARRAY(1), HB_ISNIL(2) ? static_cast<Qt::CaseSensitivity>(Qt::CaseSensitive)
+      RINT(obj->compare(*PQBYTEARRAY(1), HB_ISNIL(2) ? Qt::CaseSensitive
                                                      : PQT_CASESENSITIVITY(2)));
     }
 #endif

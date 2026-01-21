@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_NEW)
     QCanBusFrame(QCanBusFrame::FrameType type = QCanBusFrame::DataFrame) Q_DECL_NOTHROW
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-    auto obj = new QCanBusFrame(HB_ISNIL(1) ? static_cast<QCanBusFrame::FrameType>(QCanBusFrame::DataFrame)
+    auto obj = new QCanBusFrame(HB_ISNIL(1) ? QCanBusFrame::DataFrame
                                             : PQCANBUSFRAME_FRAMETYPE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif

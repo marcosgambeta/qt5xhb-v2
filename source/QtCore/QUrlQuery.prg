@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QURLQUERY_ALLQUERYITEMVALUES)
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       RQSTRINGLIST(obj->allQueryItemValues(
-          PQSTRING(1), HB_ISNIL(2) ? static_cast<QUrl::ComponentFormattingOptions>(QUrl::PrettyDecoded)
+          PQSTRING(1), HB_ISNIL(2) ? QUrl::PrettyDecoded
                                    : PQURL_COMPONENTFORMATTINGOPTIONS(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQSTRING(obj->query(HB_ISNIL(1) ? static_cast<QUrl::ComponentFormattingOptions>(QUrl::PrettyDecoded)
+      RQSTRING(obj->query(HB_ISNIL(1) ? QUrl::PrettyDecoded
                                       : PQURL_COMPONENTFORMATTINGOPTIONS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QURLQUERY_TOSTRING)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQSTRING(obj->toString(HB_ISNIL(1) ? static_cast<QUrl::ComponentFormattingOptions>(QUrl::PrettyDecoded)
+      RQSTRING(obj->toString(HB_ISNIL(1) ? QUrl::PrettyDecoded
                                          : PQURL_COMPONENTFORMATTINGOPTIONS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

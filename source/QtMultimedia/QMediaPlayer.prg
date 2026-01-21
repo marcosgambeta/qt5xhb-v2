@@ -840,7 +840,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_HASSUPPORT)
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISARRAYORNIL(2) && ISNUMORNIL(3)) {
 #endif
     RENUM(QMediaPlayer::hasSupport(PQSTRING(1), OPQSTRINGLIST(2, QStringList()),
-                                   HB_ISNIL(3) ? static_cast<QMediaPlayer::Flags>(QMediaPlayer::Flags())
+                                   HB_ISNIL(3) ? QMediaPlayer::Flags()
                                                : PQMEDIAPLAYER_FLAGS(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -857,7 +857,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SUPPORTEDMIMETYPES)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-    RQSTRINGLIST(QMediaPlayer::supportedMimeTypes(HB_ISNIL(1) ? static_cast<QMediaPlayer::Flags>(QMediaPlayer::Flags())
+    RQSTRINGLIST(QMediaPlayer::supportedMimeTypes(HB_ISNIL(1) ? QMediaPlayer::Flags()
                                                               : PQMEDIAPLAYER_FLAGS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {

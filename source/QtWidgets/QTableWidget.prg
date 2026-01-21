@@ -689,7 +689,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SORTITEMS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->sortItems(PINT(1), HB_ISNIL(2) ? static_cast<Qt::SortOrder>(Qt::AscendingOrder)
+      obj->sortItems(PINT(1), HB_ISNIL(2) ? Qt::AscendingOrder
                                           : PQT_SORTORDER(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -962,7 +962,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SCROLLTOITEM)
     if (ISBETWEEN(1, 2) && ISQTABLEWIDGETITEM(1) && ISNUMORNIL(2)) {
 #endif
       obj->scrollToItem(PQTABLEWIDGETITEM(1),
-                        HB_ISNIL(2) ? static_cast<QAbstractItemView::ScrollHint>(QAbstractItemView::EnsureVisible)
+                        HB_ISNIL(2) ? QAbstractItemView::EnsureVisible
                                     : PQABSTRACTITEMVIEW_SCROLLHINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

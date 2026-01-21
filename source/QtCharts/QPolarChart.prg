@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QPOLARCHART_NEW)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   if (ISBETWEEN(0, 2) && ISQGRAPHICSITEMORNIL(1) && ISNUMORNIL(2)) {
     auto obj = new QPolarChart(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(1)),
-                               HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(Qt::WindowFlags())
+                               HB_ISNIL(2) ? Qt::WindowFlags()
                                            : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {

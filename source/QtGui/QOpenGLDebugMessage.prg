@@ -224,9 +224,9 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_CREATEAPPLICATIONMESSAGE)
 #endif
     auto ptr = new QOpenGLDebugMessage(QOpenGLDebugMessage::createApplicationMessage(
         PQSTRING(1), OPGLUINT(2, 0),
-        HB_ISNIL(3) ? static_cast<QOpenGLDebugMessage::Severity>(QOpenGLDebugMessage::NotificationSeverity)
+        HB_ISNIL(3) ? QOpenGLDebugMessage::NotificationSeverity
                     : PQOPENGLDEBUGMESSAGE_SEVERITY(3),
-        HB_ISNIL(4) ? static_cast<QOpenGLDebugMessage::Type>(QOpenGLDebugMessage::OtherType)
+        HB_ISNIL(4) ? QOpenGLDebugMessage::OtherType
                     : PQOPENGLDEBUGMESSAGE_TYPE(4)));
     Qt5xHb::createReturnClass(ptr, "QOPENGLDEBUGMESSAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,9 +247,9 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_CREATETHIRDPARTYMESSAGE)
 #endif
     auto ptr = new QOpenGLDebugMessage(QOpenGLDebugMessage::createThirdPartyMessage(
         PQSTRING(1), OPGLUINT(2, 0),
-        HB_ISNIL(3) ? static_cast<QOpenGLDebugMessage::Severity>(QOpenGLDebugMessage::NotificationSeverity)
+        HB_ISNIL(3) ? QOpenGLDebugMessage::NotificationSeverity
                     : PQOPENGLDEBUGMESSAGE_SEVERITY(3),
-        HB_ISNIL(4) ? static_cast<QOpenGLDebugMessage::Type>(QOpenGLDebugMessage::OtherType)
+        HB_ISNIL(4) ? QOpenGLDebugMessage::OtherType
                     : PQOPENGLDEBUGMESSAGE_TYPE(4)));
     Qt5xHb::createReturnClass(ptr, "QOPENGLDEBUGMESSAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

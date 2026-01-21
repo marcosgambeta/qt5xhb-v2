@@ -71,7 +71,7 @@ RETURN
 HB_FUNC_STATIC(QQMLINCUBATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    auto obj = new QQmlIncubator(HB_ISNIL(1) ? static_cast<QQmlIncubator::IncubationMode>(QQmlIncubator::Asynchronous)
+    auto obj = new QQmlIncubator(HB_ISNIL(1) ? QQmlIncubator::Asynchronous
                                              : PQQMLINCUBATOR_INCUBATIONMODE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {

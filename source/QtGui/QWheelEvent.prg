@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QWHEELEVENT_NEW)
     */
     auto obj = new QWheelEvent(*PQPOINTF(1), PINT(2), PQT_MOUSEBUTTONS(3),
                                PQT_KEYBOARDMODIFIERS(4),
-                               HB_ISNIL(5) ? static_cast<Qt::Orientation>(Qt::Vertical)
+                               HB_ISNIL(5) ? Qt::Vertical
                                            : PQT_ORIENTATION(5));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(5, 6) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QWHEELEVENT_NEW)
     */
     auto obj = new QWheelEvent(*PQPOINTF(1), *PQPOINTF(2), PINT(3), PQT_MOUSEBUTTONS(4),
                                PQT_KEYBOARDMODIFIERS(5),
-                               HB_ISNIL(6) ? static_cast<Qt::Orientation>(Qt::Vertical)
+                               HB_ISNIL(6) ? Qt::Vertical
                                            : PQT_ORIENTATION(6));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(8) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINT(3) && ISQPOINT(4) && HB_ISNUM(5) && HB_ISNUM(6) &&

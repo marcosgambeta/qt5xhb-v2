@@ -56,7 +56,7 @@ RETURN
 HB_FUNC_STATIC(QAXSELECT_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
-    auto obj = new QAxSelect(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(Qt::WindowFlags())
+    auto obj = new QAxSelect(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? Qt::WindowFlags()
                                                                 : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {

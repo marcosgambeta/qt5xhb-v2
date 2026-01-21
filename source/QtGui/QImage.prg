@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QIMAGE_CONVERTTOFORMAT)
 
     if (obj != nullptr) {
       auto ptr = new QImage(obj->convertToFormat(PQIMAGE_FORMAT(1),
-                                                 HB_ISNIL(2) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
+                                                 HB_ISNIL(2) ? Qt::AutoColor
                                                              : PQT_IMAGECONVERSIONFLAGS(2)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
     }
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QIMAGE_CONVERTTOFORMAT)
         par2 << temp2;
       }
       auto ptr = new QImage(obj->convertToFormat(PQIMAGE_FORMAT(1), par2,
-                                                 HB_ISNIL(3) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
+                                                 HB_ISNIL(3) ? Qt::AutoColor
                                                              : PQT_IMAGECONVERSIONFLAGS(3)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
     }
@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QIMAGE_CREATEALPHAMASK)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      auto ptr = new QImage(obj->createAlphaMask(HB_ISNIL(1) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
+      auto ptr = new QImage(obj->createAlphaMask(HB_ISNIL(1) ? Qt::AutoColor
                                                              : PQT_IMAGECONVERSIONFLAGS(1)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -448,7 +448,7 @@ HB_FUNC_STATIC(QIMAGE_CREATEMASKFROMCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      auto ptr = new QImage(obj->createMaskFromColor(PQRGB(1), HB_ISNIL(2) ? static_cast<Qt::MaskMode>(Qt::MaskInColor)
+      auto ptr = new QImage(obj->createMaskFromColor(PQRGB(1), HB_ISNIL(2) ? Qt::MaskInColor
                                                                            : PQT_MASKMODE(2)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -630,7 +630,7 @@ HB_FUNC_STATIC(QIMAGE_INVERTPIXELS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      obj->invertPixels(HB_ISNIL(1) ? static_cast<QImage::InvertMode>(QImage::InvertRgb)
+      obj->invertPixels(HB_ISNIL(1) ? QImage::InvertRgb
                                     : PQIMAGE_INVERTMODE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -900,9 +900,9 @@ HB_FUNC_STATIC(QIMAGE_SCALED)
 
     if (obj != nullptr) {
       auto ptr = new QImage(obj->scaled(*PQSIZE(1),
-                                        HB_ISNIL(2) ? static_cast<Qt::AspectRatioMode>(Qt::IgnoreAspectRatio)
+                                        HB_ISNIL(2) ? Qt::IgnoreAspectRatio
                                                     : PQT_ASPECTRATIOMODE(2),
-                                        HB_ISNIL(3) ? static_cast<Qt::TransformationMode>(Qt::FastTransformation)
+                                        HB_ISNIL(3) ? Qt::FastTransformation
                                                     : PQT_TRANSFORMATIONMODE(3)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
     }
@@ -915,9 +915,9 @@ HB_FUNC_STATIC(QIMAGE_SCALED)
 
     if (obj != nullptr) {
       auto ptr = new QImage(obj->scaled(PINT(1), PINT(2),
-                                        HB_ISNIL(3) ? static_cast<Qt::AspectRatioMode>(Qt::IgnoreAspectRatio)
+                                        HB_ISNIL(3) ? Qt::IgnoreAspectRatio
                                                     : PQT_ASPECTRATIOMODE(3),
-                                        HB_ISNIL(4) ? static_cast<Qt::TransformationMode>(Qt::FastTransformation)
+                                        HB_ISNIL(4) ? Qt::FastTransformation
                                                     : PQT_TRANSFORMATIONMODE(4)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
     }
@@ -938,7 +938,7 @@ HB_FUNC_STATIC(QIMAGE_SCALEDTOHEIGHT)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       auto ptr = new QImage(
-          obj->scaledToHeight(PINT(1), HB_ISNIL(2) ? static_cast<Qt::TransformationMode>(Qt::FastTransformation)
+          obj->scaledToHeight(PINT(1), HB_ISNIL(2) ? Qt::FastTransformation
                                                    : PQT_TRANSFORMATIONMODE(2)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -961,7 +961,7 @@ HB_FUNC_STATIC(QIMAGE_SCALEDTOWIDTH)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       auto ptr = new QImage(
-          obj->scaledToWidth(PINT(1), HB_ISNIL(2) ? static_cast<Qt::TransformationMode>(Qt::FastTransformation)
+          obj->scaledToWidth(PINT(1), HB_ISNIL(2) ? Qt::FastTransformation
                                                   : PQT_TRANSFORMATIONMODE(2)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1236,7 +1236,7 @@ HB_FUNC_STATIC(QIMAGE_TRANSFORMED)
 
     if (obj != nullptr) {
       auto ptr = new QImage(
-          obj->transformed(*PQMATRIX(1), HB_ISNIL(2) ? static_cast<Qt::TransformationMode>(Qt::FastTransformation)
+          obj->transformed(*PQMATRIX(1), HB_ISNIL(2) ? Qt::FastTransformation
                                                      : PQT_TRANSFORMATIONMODE(2)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
     }
@@ -1248,7 +1248,7 @@ HB_FUNC_STATIC(QIMAGE_TRANSFORMED)
 
     if (obj != nullptr) {
       auto ptr = new QImage(
-          obj->transformed(*PQTRANSFORM(1), HB_ISNIL(2) ? static_cast<Qt::TransformationMode>(Qt::FastTransformation)
+          obj->transformed(*PQTRANSFORM(1), HB_ISNIL(2) ? Qt::FastTransformation
                                                         : PQT_TRANSFORMATIONMODE(2)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
     }
@@ -1443,7 +1443,7 @@ HB_FUNC_STATIC(QIMAGE_CONVERTTO)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->convertTo(PQIMAGE_FORMAT(1),
-                     HB_ISNIL(2) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
+                     HB_ISNIL(2) ? Qt::AutoColor
                                  : PQT_IMAGECONVERSIONFLAGS(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

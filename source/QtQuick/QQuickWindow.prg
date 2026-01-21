@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_CREATETEXTUREFROMID)
 #endif
       auto ptr = obj->createTextureFromId(
           PUINT(1), *PQSIZE(2),
-          HB_ISNIL(3) ? static_cast<QQuickWindow::CreateTextureOptions>(QQuickWindow::CreateTextureOption(0))
+          HB_ISNIL(3) ? QQuickWindow::CreateTextureOption(0)
                       : PQQUICKWINDOW_CREATETEXTUREOPTIONS(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

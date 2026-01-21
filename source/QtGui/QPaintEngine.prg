@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWIMAGE)
     if (ISBETWEEN(3, 4) && ISQRECTF(1) && ISQIMAGE(2) && ISQRECTF(3) && ISNUMORNIL(4)) {
 #endif
       obj->drawImage(*PQRECTF(1), *PQIMAGE(2), *PQRECTF(3),
-                     HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
+                     HB_ISNIL(4) ? Qt::AutoColor
                                  : PQT_IMAGECONVERSIONFLAGS(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_TORAWFORM)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQBYTEARRAY(obj->toRawForm(HB_ISNIL(1) ? static_cast<QNetworkCookie::RawForm>(QNetworkCookie::Full)
+      RQBYTEARRAY(obj->toRawForm(HB_ISNIL(1) ? QNetworkCookie::Full
                                              : PQNETWORKCOOKIE_RAWFORM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

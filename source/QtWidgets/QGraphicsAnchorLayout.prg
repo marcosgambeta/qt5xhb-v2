@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDANCHORS)
     if (ISBETWEEN(2, 3) && ISQGRAPHICSLAYOUTITEM(1) && ISQGRAPHICSLAYOUTITEM(2) && ISNUMORNIL(3)) {
 #endif
       obj->addAnchors(PQGRAPHICSLAYOUTITEM(1), PQGRAPHICSLAYOUTITEM(2),
-                      HB_ISNIL(3) ? static_cast<Qt::Orientations>(Qt::Horizontal | Qt::Vertical)
+                      HB_ISNIL(3) ? Qt::Horizontal | Qt::Vertical
                                   : PQT_ORIENTATIONS(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT)
     if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQOBJECT(2) && ISNUMORNIL(3)) {
 #endif
       obj->addToJavaScriptWindowObject(PQSTRING(1), PQOBJECT(2),
-                                       HB_ISNIL(3) ? static_cast<QWebFrame::ValueOwnership>(QWebFrame::QtOwnership)
+                                       HB_ISNIL(3) ? QWebFrame::QtOwnership
                                                    : PQWEBFRAME_VALUEOWNERSHIP(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -617,7 +617,7 @@ HB_FUNC_STATIC(QWEBFRAME_LOAD)
 
     if (obj != nullptr) {
       obj->load(*PQNETWORKREQUEST(1),
-                HB_ISNIL(2) ? static_cast<QNetworkAccessManager::Operation>(QNetworkAccessManager::GetOperation)
+                HB_ISNIL(2) ? QNetworkAccessManager::GetOperation
                             : PQNETWORKACCESSMANAGER_OPERATION(2),
                 HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(3)));
     }

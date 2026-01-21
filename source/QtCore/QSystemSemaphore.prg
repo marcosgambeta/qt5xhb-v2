@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_NEW)
 {
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     auto obj = new QSystemSemaphore(PQSTRING(1), OPINT(2, 0),
-                                    HB_ISNIL(3) ? static_cast<QSystemSemaphore::AccessMode>(QSystemSemaphore::Open)
+                                    HB_ISNIL(3) ? QSystemSemaphore::Open
                                                 : PQSYSTEMSEMAPHORE_ACCESSMODE(3));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_SETKEY)
     if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       obj->setKey(PQSTRING(1), OPINT(2, 0),
-                  HB_ISNIL(3) ? static_cast<QSystemSemaphore::AccessMode>(QSystemSemaphore::Open)
+                  HB_ISNIL(3) ? QSystemSemaphore::Open
                               : PQSYSTEMSEMAPHORE_ACCESSMODE(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

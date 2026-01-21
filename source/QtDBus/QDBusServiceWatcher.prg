@@ -78,7 +78,7 @@ RETURN
     */
     auto obj = new QDBusServiceWatcher(
         PQSTRING(1), *PQDBUSCONNECTION(2),
-        HB_ISNIL(3) ? static_cast<QDBusServiceWatcher::WatchMode>(QDBusServiceWatcher::WatchForOwnerChange)
+        HB_ISNIL(3) ? QDBusServiceWatcher::WatchForOwnerChange
                     : PQDBUSSERVICEWATCHER_WATCHMODE(3),
         OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);

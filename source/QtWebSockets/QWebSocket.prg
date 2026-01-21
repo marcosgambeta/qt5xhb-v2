@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QWEBSOCKET_NEW)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   if (ISBETWEEN(0, 3) && ISCHARORNIL(1) && ISNUMORNIL(2) && ISQOBJECTORNIL(3)) {
     auto obj = new QWebSocket(OPQSTRING(1, QString()),
-                              HB_ISNIL(2) ? static_cast<QWebSocketProtocol::Version>(QWebSocketProtocol::VersionLatest)
+                              HB_ISNIL(2) ? QWebSocketProtocol::VersionLatest
                                           : PQWEBSOCKETPROTOCOL_VERSION(2),
                               OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -799,7 +799,7 @@ HB_FUNC_STATIC(QWEBSOCKET_CLOSE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISCHARORNIL(2)) {
 #endif
-      obj->close(HB_ISNIL(1) ? static_cast<QWebSocketProtocol::CloseCode>(QWebSocketProtocol::CloseCodeNormal)
+      obj->close(HB_ISNIL(1) ? QWebSocketProtocol::CloseCodeNormal
                              : PQWEBSOCKETPROTOCOL_CLOSECODE(1),
                  OPQSTRING(2, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

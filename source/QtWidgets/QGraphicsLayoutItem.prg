@@ -679,7 +679,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETSIZEPOLICY)
 
     if (obj != nullptr) {
       obj->setSizePolicy(PQSIZEPOLICY_POLICY(1), PQSIZEPOLICY_POLICY(2),
-                         HB_ISNIL(3) ? static_cast<QSizePolicy::ControlType>(QSizePolicy::DefaultType)
+                         HB_ISNIL(3) ? QSizePolicy::DefaultType
                                      : PQSIZEPOLICY_CONTROLTYPE(3));
     }
 

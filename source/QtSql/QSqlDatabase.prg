@@ -627,7 +627,7 @@ HB_FUNC_STATIC(QSQLDATABASE_TABLES)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQSTRINGLIST(obj->tables(HB_ISNIL(1) ? static_cast<QSql::TableType>(QSql::Tables)
+      RQSTRINGLIST(obj->tables(HB_ISNIL(1) ? QSql::Tables
                                            : PQSQL_TABLETYPE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

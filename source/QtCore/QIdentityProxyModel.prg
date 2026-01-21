@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MATCH)
 #endif
       auto list =
           obj->match(*PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4, 1),
-                     HB_ISNIL(5) ? static_cast<Qt::MatchFlags>(Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap))
+                     HB_ISNIL(5) ? Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap)
                                  : PQT_MATCHFLAGS(5));
       auto pDynSym = hb_dynsymFindName("QMODELINDEX");
       auto pArray = hb_itemArrayNew(0);

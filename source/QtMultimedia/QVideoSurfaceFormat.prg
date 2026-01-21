@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_NEW)
     */
     auto obj = new QVideoSurfaceFormat(
         *PQSIZE(1), PQVIDEOFRAME_PIXELFORMAT(2),
-        HB_ISNIL(3) ? static_cast<QAbstractVideoBuffer::HandleType>(QAbstractVideoBuffer::NoHandle)
+        HB_ISNIL(3) ? QAbstractVideoBuffer::NoHandle
                     : PQABSTRACTVIDEOBUFFER_HANDLETYPE(3));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1)) {

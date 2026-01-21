@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QTIMEZONE_NEW)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QTimeZone(*PQBYTEARRAY(1), PINT(2), PQSTRING(3), PQSTRING(4),
-                             HB_ISNIL(5) ? static_cast<QLocale::Country>(QLocale::AnyCountry)
+                             HB_ISNIL(5) ? QLocale::AnyCountry
                                          : PQLOCALE_COUNTRY(5),
                              OPQSTRING(6, QString()));
     Qt5xHb::returnNewObject(obj, true);
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
 
     if (obj != nullptr) {
       RQSTRING(obj->displayName(*PQDATETIME(1),
-                                HB_ISNIL(2) ? static_cast<QTimeZone::NameType>(QTimeZone::DefaultName)
+                                HB_ISNIL(2) ? QTimeZone::DefaultName
                                             : PQTIMEZONE_NAMETYPE(2),
                                 HB_ISNIL(3) ? QLocale() : *static_cast<QLocale *>(Qt5xHb::itemGetPtr(3))));
     }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
 
     if (obj != nullptr) {
       RQSTRING(obj->displayName(PQTIMEZONE_TIMETYPE(1),
-                                HB_ISNIL(2) ? static_cast<QTimeZone::NameType>(QTimeZone::DefaultName)
+                                HB_ISNIL(2) ? QTimeZone::DefaultName
                                             : PQTIMEZONE_NAMETYPE(2),
                                 HB_ISNIL(3) ? QLocale() : *static_cast<QLocale *>(Qt5xHb::itemGetPtr(3))));
     }

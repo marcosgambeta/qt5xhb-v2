@@ -2217,7 +2217,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SETFOCUS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      obj->setFocus(HB_ISNIL(1) ? static_cast<Qt::FocusReason>(Qt::OtherFocusReason)
+      obj->setFocus(HB_ISNIL(1) ? Qt::OtherFocusReason
                                 : PQT_FOCUSREASON(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

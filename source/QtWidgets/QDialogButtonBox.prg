@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_NEW)
     // QDialogButtonBox(QDialogButtonBox::StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget
     // *parent = nullptr)
     auto obj = new QDialogButtonBox(PQDIALOGBUTTONBOX_STANDARDBUTTONS(1),
-                                    HB_ISNIL(2) ? static_cast<Qt::Orientation>(Qt::Horizontal)
+                                    HB_ISNIL(2) ? Qt::Horizontal
                                                 : PQT_ORIENTATION(2),
                                     OPQWIDGET(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);

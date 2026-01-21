@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_NEW)
 {
   if (ISBETWEEN(1, 3) && ISQWIDGET(1) && ISNUMORNIL(2) && ISCHARORNIL(3)) {
     auto obj = new QAccessibleWidget(PQWIDGET(1),
-                                     HB_ISNIL(2) ? static_cast<QAccessible::Role>(QAccessible::Client)
+                                     HB_ISNIL(2) ? QAccessible::Client
                                                  : PQACCESSIBLE_ROLE(2),
                                      OPQSTRING(3, QString()));
     Qt5xHb::returnNewObject(obj, true);

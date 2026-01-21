@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QAXFACTORY_STARTSERVER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-    RBOOL(QAxFactory::startServer(HB_ISNIL(1) ? static_cast<QAxFactory::ServerType>(QAxFactory::MultipleInstances)
+    RBOOL(QAxFactory::startServer(HB_ISNIL(1) ? QAxFactory::MultipleInstances
                                               : PQAXFACTORY_SERVERTYPE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {

@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_GRABSHORTCUT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && ISNUMORNIL(2)) {
 #endif
-      RINT(obj->grabShortcut(*PQKEYSEQUENCE(1), HB_ISNIL(2) ? static_cast<Qt::ShortcutContext>(Qt::WindowShortcut)
+      RINT(obj->grabShortcut(*PQKEYSEQUENCE(1), HB_ISNIL(2) ? Qt::WindowShortcut
                                                             : PQT_SHORTCUTCONTEXT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

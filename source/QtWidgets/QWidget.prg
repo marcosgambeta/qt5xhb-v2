@@ -1477,7 +1477,7 @@ HB_FUNC_STATIC(QWIDGET_GRABGESTURE)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->grabGesture(PQT_GESTURETYPE(1),
-                       HB_ISNIL(2) ? static_cast<Qt::GestureFlags>(Qt::GestureFlags())
+                       HB_ISNIL(2) ? Qt::GestureFlags()
                                    : PQT_GESTUREFLAGS(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -1550,7 +1550,7 @@ HB_FUNC_STATIC(QWIDGET_GRABSHORTCUT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && ISNUMORNIL(2)) {
 #endif
-      RINT(obj->grabShortcut(*PQKEYSEQUENCE(1), HB_ISNIL(2) ? static_cast<Qt::ShortcutContext>(Qt::WindowShortcut)
+      RINT(obj->grabShortcut(*PQKEYSEQUENCE(1), HB_ISNIL(2) ? Qt::WindowShortcut
                                                             : PQT_SHORTCUTCONTEXT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -2867,8 +2867,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
     if (obj != nullptr) {
       obj->render(PQPAINTDEVICE(1), HB_ISNIL(2) ? QPoint() : *static_cast<QPoint *>(Qt5xHb::itemGetPtr(2)),
                   HB_ISNIL(3) ? QRegion() : *static_cast<QRegion *>(Qt5xHb::itemGetPtr(3)),
-                  HB_ISNIL(4) ? static_cast<QWidget::RenderFlags>(
-                                    QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren))
+                  HB_ISNIL(4) ? QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren)
                               : PQWIDGET_RENDERFLAGS(4));
     }
 
@@ -2882,8 +2881,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
     if (obj != nullptr) {
       obj->render(PQPAINTER(1), HB_ISNIL(2) ? QPoint() : *static_cast<QPoint *>(Qt5xHb::itemGetPtr(2)),
                   HB_ISNIL(3) ? QRegion() : *static_cast<QRegion *>(Qt5xHb::itemGetPtr(3)),
-                  HB_ISNIL(4) ? static_cast<QWidget::RenderFlags>(
-                                    QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren))
+                  HB_ISNIL(4) ? QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren)
                               : PQWIDGET_RENDERFLAGS(4));
     }
 

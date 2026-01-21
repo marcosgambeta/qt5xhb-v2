@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QSQLERROR_NEW)
     // QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), QSqlError::ErrorType type = QSqlError::NoError, const QString &errorCode = QString())
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QSqlError(OPQSTRING(1, QString()), OPQSTRING(2, QString()),
-                             HB_ISNIL(3) ? static_cast<QSqlError::ErrorType>(QSqlError::NoError)
+                             HB_ISNIL(3) ? QSqlError::NoError
                                          : PQSQLERROR_ERRORTYPE(3),
                              OPQSTRING(4, QString()));
     Qt5xHb::returnNewObject(obj, true);

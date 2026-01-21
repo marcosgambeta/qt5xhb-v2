@@ -173,8 +173,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       RBOOL(obj->movePosition(PQDESIGNERFORMWINDOWCURSORINTERFACE_MOVEOPERATION(1),
-                              HB_ISNIL(2) ? static_cast<QDesignerFormWindowCursorInterface::MoveMode>(
-                                                QDesignerFormWindowCursorInterface::MoveAnchor)
+                              HB_ISNIL(2) ? QDesignerFormWindowCursorInterface::MoveAnchor
                                           : PQDESIGNERFORMWINDOWCURSORINTERFACE_MOVEMODE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -257,8 +256,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setPosition(PINT(1), HB_ISNIL(2) ? static_cast<QDesignerFormWindowCursorInterface::MoveMode>(
-                                                  QDesignerFormWindowCursorInterface::MoveAnchor)
+      obj->setPosition(PINT(1), HB_ISNIL(2) ? QDesignerFormWindowCursorInterface::MoveAnchor
                                             : PQDESIGNERFORMWINDOWCURSORINTERFACE_MOVEMODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

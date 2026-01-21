@@ -132,9 +132,9 @@ HB_FUNC_STATIC(QDIR_NEW)
     */
     auto obj =
         new QDir(PQSTRING(1), PQSTRING(2),
-                 HB_ISNIL(3) ? static_cast<QDir::SortFlags>(QDir::SortFlags(QDir::Name | QDir::IgnoreCase))
+                 HB_ISNIL(3) ? QDir::SortFlags(QDir::Name | QDir::IgnoreCase)
                              : PQDIR_SORTFLAGS(3),
-                 HB_ISNIL(4) ? static_cast<QDir::Filters>(QDir::AllEntries) : PQDIR_FILTERS(4));
+                 HB_ISNIL(4) ? QDir::AllEntries : PQDIR_FILTERS(4));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -302,8 +302,8 @@ HB_FUNC_STATIC(QDIR_ENTRYINFOLIST)
     if (obj != nullptr) {
       auto list = obj->entryInfoList(
           PQSTRINGLIST(1),
-          HB_ISNIL(2) ? static_cast<QDir::Filters>(QDir::NoFilter) : PQDIR_FILTERS(2),
-          HB_ISNIL(3) ? static_cast<QDir::SortFlags>(QDir::NoSort) : PQDIR_SORTFLAGS(3));
+          HB_ISNIL(2) ? QDir::NoFilter : PQDIR_FILTERS(2),
+          HB_ISNIL(3) ? QDir::NoSort : PQDIR_SORTFLAGS(3));
       auto pDynSym = hb_dynsymFindName("QFILEINFO");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
@@ -335,8 +335,8 @@ HB_FUNC_STATIC(QDIR_ENTRYINFOLIST)
 
     if (obj != nullptr) {
       auto list = obj->entryInfoList(
-          HB_ISNIL(1) ? static_cast<QDir::Filters>(QDir::NoFilter) : PQDIR_FILTERS(1),
-          HB_ISNIL(2) ? static_cast<QDir::SortFlags>(QDir::NoSort) : PQDIR_SORTFLAGS(2));
+          HB_ISNIL(1) ? QDir::NoFilter : PQDIR_FILTERS(1),
+          HB_ISNIL(2) ? QDir::NoSort : PQDIR_SORTFLAGS(2));
       auto pDynSym = hb_dynsymFindName("QFILEINFO");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
@@ -377,8 +377,8 @@ HB_FUNC_STATIC(QDIR_ENTRYLIST)
     if (obj != nullptr) {
       RQSTRINGLIST(obj->entryList(
           PQSTRINGLIST(1),
-          HB_ISNIL(2) ? static_cast<QDir::Filters>(QDir::NoFilter) : PQDIR_FILTERS(2),
-          HB_ISNIL(3) ? static_cast<QDir::SortFlags>(QDir::NoSort) : PQDIR_SORTFLAGS(3)));
+          HB_ISNIL(2) ? QDir::NoFilter : PQDIR_FILTERS(2),
+          HB_ISNIL(3) ? QDir::NoSort : PQDIR_SORTFLAGS(3)));
     }
   } else if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2)) {
     /*
@@ -388,8 +388,8 @@ HB_FUNC_STATIC(QDIR_ENTRYLIST)
 
     if (obj != nullptr) {
       RQSTRINGLIST(obj->entryList(
-          HB_ISNIL(1) ? static_cast<QDir::Filters>(QDir::NoFilter) : PQDIR_FILTERS(1),
-          HB_ISNIL(2) ? static_cast<QDir::SortFlags>(QDir::NoSort) : PQDIR_SORTFLAGS(2)));
+          HB_ISNIL(1) ? QDir::NoFilter : PQDIR_FILTERS(1),
+          HB_ISNIL(2) ? QDir::NoSort : PQDIR_SORTFLAGS(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

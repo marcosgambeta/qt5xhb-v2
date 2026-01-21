@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QDIRITERATOR_NEW)
     QDirIterator(const QString &path, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags)
     */
     auto obj = new QDirIterator(PQSTRING(1),
-                                HB_ISNIL(2) ? static_cast<QDirIterator::IteratorFlags>(QDirIterator::NoIteratorFlags)
+                                HB_ISNIL(2) ? QDirIterator::NoIteratorFlags
                                             : PQDIRITERATOR_ITERATORFLAGS(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QDIRITERATOR_NEW)
     QDirIterator::NoIteratorFlags)
     */
     auto obj = new QDirIterator(PQSTRING(1), PQDIR_FILTERS(2),
-                                HB_ISNIL(3) ? static_cast<QDirIterator::IteratorFlags>(QDirIterator::NoIteratorFlags)
+                                HB_ISNIL(3) ? QDirIterator::NoIteratorFlags
                                             : PQDIRITERATOR_ITERATORFLAGS(3));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISARRAY(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
@@ -95,9 +95,9 @@ HB_FUNC_STATIC(QDIRITERATOR_NEW)
     QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags)
     */
     auto obj = new QDirIterator(PQSTRING(1), PQSTRINGLIST(2),
-                                HB_ISNIL(3) ? static_cast<QDir::Filters>(QDir::NoFilter)
+                                HB_ISNIL(3) ? QDir::NoFilter
                                             : PQDIR_FILTERS(3),
-                                HB_ISNIL(4) ? static_cast<QDirIterator::IteratorFlags>(QDirIterator::NoIteratorFlags)
+                                HB_ISNIL(4) ? QDirIterator::NoIteratorFlags
                                             : PQDIRITERATOR_ITERATORFLAGS(4));
     Qt5xHb::returnNewObject(obj, true);
   } else {

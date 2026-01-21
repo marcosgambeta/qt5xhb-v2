@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_LOAD)
 
     if (obj != nullptr) {
       obj->load(*PQNETWORKREQUEST(1),
-                HB_ISNIL(2) ? static_cast<QNetworkAccessManager::Operation>(QNetworkAccessManager::GetOperation)
+                HB_ISNIL(2) ? QNetworkAccessManager::GetOperation
                             : PQNETWORKACCESSMANAGER_OPERATION(2),
                 HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(3)));
     }

@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_GRABGESTURE)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->grabGesture(PQT_GESTURETYPE(1),
-                       HB_ISNIL(2) ? static_cast<Qt::GestureFlags>(Qt::GestureFlags())
+                       HB_ISNIL(2) ? Qt::GestureFlags()
                                    : PQT_GESTUREFLAGS(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -2264,7 +2264,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_SETFOCUS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      obj->setFocus(HB_ISNIL(1) ? static_cast<Qt::FocusReason>(Qt::OtherFocusReason)
+      obj->setFocus(HB_ISNIL(1) ? Qt::OtherFocusReason
                                 : PQT_FOCUSREASON(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

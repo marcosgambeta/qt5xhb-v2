@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_FINDITEMS)
     if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       auto list = obj->findItems(PQSTRING(1),
-                                 HB_ISNIL(2) ? static_cast<Qt::MatchFlags>(Qt::MatchExactly)
+                                 HB_ISNIL(2) ? Qt::MatchExactly
                                              : PQT_MATCHFLAGS(2),
                                  OPINT(3, 0));
       auto pDynSym = hb_dynsymFindName("QSTANDARDITEM");
@@ -812,7 +812,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SORT)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->sort(PINT(1),
-                HB_ISNIL(2) ? static_cast<Qt::SortOrder>(Qt::AscendingOrder) : PQT_SORTORDER(2));
+                HB_ISNIL(2) ? Qt::AscendingOrder : PQT_SORTORDER(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

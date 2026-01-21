@@ -1775,7 +1775,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SORTCHILDREN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->sortChildren(PINT(1), HB_ISNIL(2) ? static_cast<Qt::SortOrder>(Qt::AscendingOrder)
+      obj->sortChildren(PINT(1), HB_ISNIL(2) ? Qt::AscendingOrder
                                              : PQT_SORTORDER(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

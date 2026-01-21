@@ -961,7 +961,7 @@ HB_FUNC_STATIC(QTREEVIEW_SCROLLTO)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2)) {
 #endif
-      obj->scrollTo(*PQMODELINDEX(1), HB_ISNIL(2) ? static_cast<QTreeView::ScrollHint>(QTreeView::EnsureVisible)
+      obj->scrollTo(*PQMODELINDEX(1), HB_ISNIL(2) ? QTreeView::EnsureVisible
                                                   : PQTREEVIEW_SCROLLHINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

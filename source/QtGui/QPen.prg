@@ -105,9 +105,9 @@ HB_FUNC_STATIC(QPEN_NEW)
     */
     auto obj = new QPen(
         *PQBRUSH(1), PQREAL(2),
-        HB_ISNIL(3) ? static_cast<Qt::PenStyle>(Qt::SolidLine) : PQT_PENSTYLE(3),
-        HB_ISNIL(4) ? static_cast<Qt::PenCapStyle>(Qt::SquareCap) : PQT_PENCAPSTYLE(4),
-        HB_ISNIL(5) ? static_cast<Qt::PenJoinStyle>(Qt::BevelJoin) : PQT_PENJOINSTYLE(5));
+        HB_ISNIL(3) ? Qt::SolidLine : PQT_PENSTYLE(3),
+        HB_ISNIL(4) ? Qt::SquareCap : PQT_PENCAPSTYLE(4),
+        HB_ISNIL(5) ? Qt::BevelJoin : PQT_PENJOINSTYLE(5));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQPEN(1)) {
     /*

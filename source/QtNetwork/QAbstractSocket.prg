@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_BIND)
 
     if (obj != nullptr) {
       RBOOL(obj->bind(*PQHOSTADDRESS(1), OPQUINT16(2, 0),
-                      HB_ISNIL(3) ? static_cast<QAbstractSocket::BindMode>(QAbstractSocket::DefaultForPlatform)
+                      HB_ISNIL(3) ? QAbstractSocket::DefaultForPlatform
                                   : PQABSTRACTSOCKET_BINDMODE(3)));
     }
   } else if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2)) {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
 
     if (obj != nullptr) {
       obj->connectToHost(PQSTRING(1), PQUINT16(2),
-                         HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
+                         HB_ISNIL(3) ? QIODevice::ReadWrite
                                      : PQIODEVICE_OPENMODE(3),
                          HB_ISNIL(4)
                              ? static_cast<QAbstractSocket::NetworkLayerProtocol>(QAbstractSocket::AnyIPProtocol)
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
 
     if (obj != nullptr) {
       obj->connectToHost(*PQHOSTADDRESS(1), PQUINT16(2),
-                         HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
+                         HB_ISNIL(3) ? QIODevice::ReadWrite
                                      : PQIODEVICE_OPENMODE(3));
     }
 
@@ -558,7 +558,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SETSOCKETDESCRIPTOR)
                                      HB_ISNIL(2)
                                          ? static_cast<QAbstractSocket::SocketState>(QAbstractSocket::ConnectedState)
                                          : PQABSTRACTSOCKET_SOCKETSTATE(2),
-                                     HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
+                                     HB_ISNIL(3) ? QIODevice::ReadWrite
                                                  : PQIODEVICE_OPENMODE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

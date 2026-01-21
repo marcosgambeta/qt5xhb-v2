@@ -192,9 +192,9 @@ HB_FUNC_STATIC(QSSLSOCKET_CONNECTTOHOSTENCRYPTED)
     if (obj != nullptr) {
       obj->connectToHostEncrypted(
           PQSTRING(1), PQUINT16(2),
-          HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
+          HB_ISNIL(3) ? QIODevice::ReadWrite
                       : PQIODEVICE_OPENMODE(3),
-          HB_ISNIL(4) ? static_cast<QAbstractSocket::NetworkLayerProtocol>(QAbstractSocket::AnyIPProtocol)
+          HB_ISNIL(4) ? QAbstractSocket::AnyIPProtocol
                       : PQABSTRACTSOCKET_NETWORKLAYERPROTOCOL(4));
     }
 
@@ -209,9 +209,9 @@ HB_FUNC_STATIC(QSSLSOCKET_CONNECTTOHOSTENCRYPTED)
     if (obj != nullptr) {
       obj->connectToHostEncrypted(
           PQSTRING(1), PQUINT16(2), PQSTRING(3),
-          HB_ISNIL(4) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
+          HB_ISNIL(4) ? QIODevice::ReadWrite
                       : PQIODEVICE_OPENMODE(4),
-          HB_ISNIL(5) ? static_cast<QAbstractSocket::NetworkLayerProtocol>(QAbstractSocket::AnyIPProtocol)
+          HB_ISNIL(5) ? QAbstractSocket::AnyIPProtocol
                       : PQABSTRACTSOCKET_NETWORKLAYERPROTOCOL(5));
     }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETSOCKETDESCRIPTOR)
                                      HB_ISNIL(2)
                                          ? static_cast<QAbstractSocket::SocketState>(QAbstractSocket::ConnectedState)
                                          : PQABSTRACTSOCKET_SOCKETSTATE(2),
-                                     HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
+                                     HB_ISNIL(3) ? QIODevice::ReadWrite
                                                  : PQIODEVICE_OPENMODE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CONNECTTOHOST)
     if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       obj->connectToHost(PQSTRING(1), PQUINT16(2),
-                         HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
+                         HB_ISNIL(3) ? QIODevice::ReadWrite
                                      : PQIODEVICE_OPENMODE(3),
                          HB_ISNIL(4)
                              ? static_cast<QAbstractSocket::NetworkLayerProtocol>(QAbstractSocket::AnyIPProtocol)
@@ -891,7 +891,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETLOCALCERTIFICATE)
     auto obj = qobject_cast<QSslSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      obj->setLocalCertificate(PQSTRING(1), HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem)
+      obj->setLocalCertificate(PQSTRING(1), HB_ISNIL(2) ? QSsl::Pem
                                                         : PQSSL_ENCODINGFORMAT(2));
     }
 
@@ -1051,8 +1051,8 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPRIVATEKEY)
     if (obj != nullptr) {
       obj->setPrivateKey(
           PQSTRING(1),
-          HB_ISNIL(2) ? static_cast<QSsl::KeyAlgorithm>(QSsl::Rsa) : PQSSL_KEYALGORITHM(2),
-          HB_ISNIL(3) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem) : PQSSL_ENCODINGFORMAT(3),
+          HB_ISNIL(2) ? QSsl::Rsa : PQSSL_KEYALGORITHM(2),
+          HB_ISNIL(3) ? QSsl::Pem : PQSSL_ENCODINGFORMAT(3),
           HB_ISNIL(4) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(4)));
     }
 
@@ -1273,9 +1273,9 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDCACERTIFICATES)
 
     if (obj != nullptr) {
       RBOOL(obj->addCaCertificates(PQSTRING(1),
-                                   HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem)
+                                   HB_ISNIL(2) ? QSsl::Pem
                                                : PQSSL_ENCODINGFORMAT(2),
-                                   HB_ISNIL(3) ? static_cast<QRegExp::PatternSyntax>(QRegExp::FixedString)
+                                   HB_ISNIL(3) ? QRegExp::FixedString
                                                : PQREGEXP_PATTERNSYNTAX(3)));
     }
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
@@ -1421,9 +1421,9 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDDEFAULTCACERTIFICATES)
     */
 
     RBOOL(QSslSocket::addDefaultCaCertificates(PQSTRING(1),
-                                               HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem)
+                                               HB_ISNIL(2) ? QSsl::Pem
                                                            : PQSSL_ENCODINGFORMAT(2),
-                                               HB_ISNIL(3) ? static_cast<QRegExp::PatternSyntax>(QRegExp::FixedString)
+                                               HB_ISNIL(3) ? QRegExp::FixedString
                                                            : PQREGEXP_PATTERNSYNTAX(3)));
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     /*

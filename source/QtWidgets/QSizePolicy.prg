@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_NEW)
     // QSizePolicy::DefaultType)
     auto obj =
         new QSizePolicy(PQSIZEPOLICY_POLICY(1), PQSIZEPOLICY_POLICY(2),
-                        HB_ISNIL(3) ? static_cast<QSizePolicy::ControlType>(QSizePolicy::DefaultType)
+                        HB_ISNIL(3) ? QSizePolicy::DefaultType
                                     : PQSIZEPOLICY_CONTROLTYPE(3));
     Qt5xHb::returnNewObject(obj, true);
 

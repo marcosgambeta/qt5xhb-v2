@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QFONTDATABASE_FAMILIES)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQSTRINGLIST(obj->families(HB_ISNIL(1) ? static_cast<QFontDatabase::WritingSystem>(QFontDatabase::Any)
+      RQSTRINGLIST(obj->families(HB_ISNIL(1) ? QFontDatabase::Any
                                              : PQFONTDATABASE_WRITINGSYSTEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

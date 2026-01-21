@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QTEXTLINE_CURSORTOX)
 
     if (obj != nullptr) {
       int par1;
-      RQREAL(obj->cursorToX(&par1, HB_ISNIL(2) ? static_cast<QTextLine::Edge>(QTextLine::Leading)
+      RQREAL(obj->cursorToX(&par1, HB_ISNIL(2) ? QTextLine::Leading
                                                : PQTEXTLINE_EDGE(2)));
       hb_storni(par1, 1);
     }
@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QTEXTLINE_CURSORTOX)
     auto obj = static_cast<QTextLine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RQREAL(obj->cursorToX(PINT(1), HB_ISNIL(2) ? static_cast<QTextLine::Edge>(QTextLine::Leading)
+      RQREAL(obj->cursorToX(PINT(1), HB_ISNIL(2) ? QTextLine::Leading
                                                  : PQTEXTLINE_EDGE(2)));
     }
   } else {

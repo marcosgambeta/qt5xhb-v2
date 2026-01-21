@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CALL)
     if (ISBETWEEN(1, 3) && ISQDBUSMESSAGE(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       auto ptr = new QDBusMessage(obj->call(*PQDBUSMESSAGE(1),
-                                            HB_ISNIL(2) ? static_cast<QDBus::CallMode>(QDBus::Block)
+                                            HB_ISNIL(2) ? QDBus::Block
                                                         : PQDBUS_CALLMODE(2),
                                             OPINT(3, -1)));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
@@ -429,7 +429,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_UNREGISTEROBJECT)
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       obj->unregisterObject(PQSTRING(1),
-                            HB_ISNIL(2) ? static_cast<QDBusConnection::UnregisterMode>(QDBusConnection::UnregisterNode)
+                            HB_ISNIL(2) ? QDBusConnection::UnregisterNode
                                         : PQDBUSCONNECTION_UNREGISTERMODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

@@ -102,7 +102,7 @@ RETURN
     */
 HB_FUNC_STATIC(QJSVALUE_NEW1)
 {
-  auto obj = new QJSValue(HB_ISNIL(1) ? static_cast<QJSValue::SpecialValue>(QJSValue::UndefinedValue)
+  auto obj = new QJSValue(HB_ISNIL(1) ? QJSValue::UndefinedValue
                                       : PQJSVALUE_SPECIALVALUE(1));
   Qt5xHb::returnNewObject(obj, true);
 }

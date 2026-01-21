@@ -382,8 +382,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_TOSTRING)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQSTRING(obj->toString(HB_ISNIL(1) ? static_cast<QGeoCoordinate::CoordinateFormat>(
-                                               QGeoCoordinate::DegreesMinutesSecondsWithHemisphere)
+      RQSTRING(obj->toString(HB_ISNIL(1) ? QGeoCoordinate::DegreesMinutesSecondsWithHemisphere
                                          : PQGEOCOORDINATE_COORDINATEFORMAT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

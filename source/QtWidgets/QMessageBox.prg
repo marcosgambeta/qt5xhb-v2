@@ -116,10 +116,10 @@ HB_FUNC_STATIC(QMESSAGEBOX_NEW)
     // buttons = QMessageBox::NoButton, QWidget *parent = nullptr, Qt::WindowFlags f = Qt::Dialog |
     // Qt::MSWindowsFixedSizeDialogHint)
     auto obj = new QMessageBox(PQMESSAGEBOX_ICON(1), PQSTRING(2), PQSTRING(3),
-                               HB_ISNIL(4) ? static_cast<QMessageBox::StandardButtons>(QMessageBox::NoButton)
+                               HB_ISNIL(4) ? QMessageBox::NoButton
                                            : PQMESSAGEBOX_STANDARDBUTTONS(4),
                                OPQWIDGET(5, nullptr),
-                               HB_ISNIL(6) ? static_cast<Qt::WindowFlags>(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint)
+                               HB_ISNIL(6) ? Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint
                                            : PQT_WINDOWFLAGS(6));
     Qt5xHb::returnNewObject(obj, false);
 
@@ -806,9 +806,9 @@ HB_FUNC_STATIC(QMESSAGEBOX_CRITICAL)
   if (ISBETWEEN(3, 5) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
 #endif
     RENUM(QMessageBox::critical(PQWIDGET(1), PQSTRING(2), PQSTRING(3),
-                                HB_ISNIL(4) ? static_cast<QMessageBox::StandardButtons>(QMessageBox::Ok)
+                                HB_ISNIL(4) ? QMessageBox::Ok
                                             : PQMESSAGEBOX_STANDARDBUTTONS(4),
-                                HB_ISNIL(5) ? static_cast<QMessageBox::StandardButton>(QMessageBox::NoButton)
+                                HB_ISNIL(5) ? QMessageBox::NoButton
                                             : PQMESSAGEBOX_STANDARDBUTTON(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -826,9 +826,9 @@ HB_FUNC_STATIC(QMESSAGEBOX_INFORMATION)
   if (ISBETWEEN(3, 5) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
 #endif
     RENUM(QMessageBox::information(PQWIDGET(1), PQSTRING(2), PQSTRING(3),
-                                   HB_ISNIL(4) ? static_cast<QMessageBox::StandardButtons>(QMessageBox::Ok)
+                                   HB_ISNIL(4) ? QMessageBox::Ok
                                                : PQMESSAGEBOX_STANDARDBUTTONS(4),
-                                   HB_ISNIL(5) ? static_cast<QMessageBox::StandardButton>(QMessageBox::NoButton)
+                                   HB_ISNIL(5) ? QMessageBox::NoButton
                                                : PQMESSAGEBOX_STANDARDBUTTON(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -846,9 +846,9 @@ HB_FUNC_STATIC(QMESSAGEBOX_QUESTION)
   if (ISBETWEEN(3, 5) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
 #endif
     RENUM(QMessageBox::question(PQWIDGET(1), PQSTRING(2), PQSTRING(3),
-                                HB_ISNIL(4) ? static_cast<QMessageBox::StandardButtons>(QMessageBox::Ok)
+                                HB_ISNIL(4) ? QMessageBox::Ok
                                             : PQMESSAGEBOX_STANDARDBUTTONS(4),
-                                HB_ISNIL(5) ? static_cast<QMessageBox::StandardButton>(QMessageBox::NoButton)
+                                HB_ISNIL(5) ? QMessageBox::NoButton
                                             : PQMESSAGEBOX_STANDARDBUTTON(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -866,9 +866,9 @@ HB_FUNC_STATIC(QMESSAGEBOX_WARNING)
   if (ISBETWEEN(3, 5) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
 #endif
     RENUM(QMessageBox::warning(PQWIDGET(1), PQSTRING(2), PQSTRING(3),
-                               HB_ISNIL(4) ? static_cast<QMessageBox::StandardButtons>(QMessageBox::Ok)
+                               HB_ISNIL(4) ? QMessageBox::Ok
                                            : PQMESSAGEBOX_STANDARDBUTTONS(4),
-                               HB_ISNIL(5) ? static_cast<QMessageBox::StandardButton>(QMessageBox::NoButton)
+                               HB_ISNIL(5) ? QMessageBox::NoButton
                                            : PQMESSAGEBOX_STANDARDBUTTON(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {

@@ -66,7 +66,7 @@ RETURN
 HB_FUNC_STATIC(QREADWRITELOCK_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    auto obj = new QReadWriteLock(HB_ISNIL(1) ? static_cast<QReadWriteLock::RecursionMode>(QReadWriteLock::NonRecursive)
+    auto obj = new QReadWriteLock(HB_ISNIL(1) ? QReadWriteLock::NonRecursive
                                               : PQREADWRITELOCK_RECURSIONMODE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {

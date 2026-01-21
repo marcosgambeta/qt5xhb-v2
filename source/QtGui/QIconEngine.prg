@@ -155,8 +155,8 @@ HB_FUNC_STATIC(QICONENGINE_AVAILABLESIZES)
     if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2)) {
 #endif
       auto list = obj->availableSizes(
-          HB_ISNIL(1) ? static_cast<QIcon::Mode>(QIcon::Normal) : PQICON_MODE(1),
-          HB_ISNIL(2) ? static_cast<QIcon::State>(QIcon::Off) : PQICON_STATE(2));
+          HB_ISNIL(1) ? QIcon::Normal : PQICON_MODE(1),
+          HB_ISNIL(2) ? QIcon::Off : PQICON_STATE(2));
       auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {

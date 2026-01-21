@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_NEW)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QOpenGLTexture(
-        *PQIMAGE(1), HB_ISNIL(2) ? static_cast<QOpenGLTexture::MipMapGeneration>(QOpenGLTexture::GenerateMipMaps)
+        *PQIMAGE(1), HB_ISNIL(2) ? QOpenGLTexture::GenerateMipMaps
                                  : PQOPENGLTEXTURE_MIPMAPGENERATION(2));
     Qt5xHb::returnNewObject(obj, true);
 #endif

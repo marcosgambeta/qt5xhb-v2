@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->fitInView(*PQRECTF(1), HB_ISNIL(2) ? static_cast<Qt::AspectRatioMode>(Qt::IgnoreAspectRatio)
+      obj->fitInView(*PQRECTF(1), HB_ISNIL(2) ? Qt::IgnoreAspectRatio
                                               : PQT_ASPECTRATIOMODE(2));
     }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
 
     if (obj != nullptr) {
       obj->fitInView(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
-                     HB_ISNIL(5) ? static_cast<Qt::AspectRatioMode>(Qt::IgnoreAspectRatio)
+                     HB_ISNIL(5) ? Qt::IgnoreAspectRatio
                                  : PQT_ASPECTRATIOMODE(5));
     }
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->fitInView(PQGRAPHICSITEM(1), HB_ISNIL(2) ? static_cast<Qt::AspectRatioMode>(Qt::IgnoreAspectRatio)
+      obj->fitInView(PQGRAPHICSITEM(1), HB_ISNIL(2) ? Qt::IgnoreAspectRatio
                                                     : PQT_ASPECTRATIOMODE(2));
     }
 
@@ -572,7 +572,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RENDER)
 #endif
       obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *static_cast<QRectF *>(Qt5xHb::itemGetPtr(2)),
                   HB_ISNIL(3) ? QRect() : *static_cast<QRect *>(Qt5xHb::itemGetPtr(3)),
-                  HB_ISNIL(4) ? static_cast<Qt::AspectRatioMode>(Qt::KeepAspectRatio)
+                  HB_ISNIL(4) ? Qt::KeepAspectRatio
                               : PQT_ASPECTRATIOMODE(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -1300,7 +1300,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_INVALIDATESCENE)
     if (ISBETWEEN(0, 2) && ISQRECTFORNIL(1) && ISNUMORNIL(2)) {
 #endif
       obj->invalidateScene(HB_ISNIL(1) ? QRectF() : *static_cast<QRectF *>(Qt5xHb::itemGetPtr(1)),
-                           HB_ISNIL(2) ? static_cast<QGraphicsScene::SceneLayers>(QGraphicsScene::AllLayers)
+                           HB_ISNIL(2) ? QGraphicsScene::AllLayers
                                        : PQGRAPHICSSCENE_SCENELAYERS(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

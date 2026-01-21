@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_LOCATE)
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
 #endif
     RQSTRING(QStandardPaths::locate(PQSTANDARDPATHS_STANDARDLOCATION(1), PQSTRING(2),
-                                    HB_ISNIL(3) ? static_cast<QStandardPaths::LocateOptions>(QStandardPaths::LocateFile)
+                                    HB_ISNIL(3) ? QStandardPaths::LocateFile
                                                 : PQSTANDARDPATHS_LOCATEOPTIONS(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {

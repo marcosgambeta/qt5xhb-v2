@@ -501,7 +501,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDERRORFILE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setStandardErrorFile(PQSTRING(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::Truncate)
+      obj->setStandardErrorFile(PQSTRING(1), HB_ISNIL(2) ? QIODevice::Truncate
                                                          : PQIODEVICE_OPENMODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDOUTPUTFILE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setStandardOutputFile(PQSTRING(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::Truncate)
+      obj->setStandardOutputFile(PQSTRING(1), HB_ISNIL(2) ? QIODevice::Truncate
                                                           : PQIODEVICE_OPENMODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -612,7 +612,7 @@ HB_FUNC_STATIC(QPROCESS_START)
 
     if (obj != nullptr) {
       obj->start(PQSTRING(1), PQSTRINGLIST(2),
-                 HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
+                 HB_ISNIL(3) ? QIODevice::ReadWrite
                              : PQIODEVICE_OPENMODE(3));
     }
 
@@ -624,7 +624,7 @@ HB_FUNC_STATIC(QPROCESS_START)
     auto obj = qobject_cast<QProcess *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      obj->start(PQSTRING(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
+      obj->start(PQSTRING(1), HB_ISNIL(2) ? QIODevice::ReadWrite
                                           : PQIODEVICE_OPENMODE(2));
     }
 
@@ -637,7 +637,7 @@ HB_FUNC_STATIC(QPROCESS_START)
     auto obj = qobject_cast<QProcess *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      obj->start(HB_ISNIL(1) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
+      obj->start(HB_ISNIL(1) ? QIODevice::ReadWrite
                              : PQIODEVICE_OPENMODE(1));
     }
 
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC(QPROCESS_OPEN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RBOOL(obj->open(HB_ISNIL(1) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
+      RBOOL(obj->open(HB_ISNIL(1) ? QIODevice::ReadWrite
                                   : PQIODEVICE_OPENMODE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

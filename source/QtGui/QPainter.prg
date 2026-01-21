@@ -590,7 +590,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 
     if (obj != nullptr) {
       obj->drawImage(*PQRECTF(1), *PQIMAGE(2), *PQRECTF(3),
-                     HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
+                     HB_ISNIL(4) ? Qt::AutoColor
                                  : PQT_IMAGECONVERSIONFLAGS(4));
     }
 
@@ -601,7 +601,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 
     if (obj != nullptr) {
       obj->drawImage(*PQRECT(1), *PQIMAGE(2), *PQRECT(3),
-                     HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
+                     HB_ISNIL(4) ? Qt::AutoColor
                                  : PQT_IMAGECONVERSIONFLAGS(4));
     }
 
@@ -630,7 +630,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 
     if (obj != nullptr) {
       obj->drawImage(*PQPOINTF(1), *PQIMAGE(2), *PQRECTF(3),
-                     HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
+                     HB_ISNIL(4) ? Qt::AutoColor
                                  : PQT_IMAGECONVERSIONFLAGS(4));
     }
 
@@ -641,7 +641,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 
     if (obj != nullptr) {
       obj->drawImage(*PQPOINT(1), *PQIMAGE(2), *PQRECT(3),
-                     HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
+                     HB_ISNIL(4) ? Qt::AutoColor
                                  : PQT_IMAGECONVERSIONFLAGS(4));
     }
 
@@ -671,7 +671,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 
     if (obj != nullptr) {
       obj->drawImage(PINT(1), PINT(2), *PQIMAGE(3), OPINT(4, 0), OPINT(5, 0), OPINT(6, -1), OPINT(7, -1),
-                     HB_ISNIL(8) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
+                     HB_ISNIL(8) ? Qt::AutoColor
                                  : PQT_IMAGECONVERSIONFLAGS(8));
     }
 
@@ -995,7 +995,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWPOLYGON)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->drawPolygon(*PQPOLYGONF(1), HB_ISNIL(2) ? static_cast<Qt::FillRule>(Qt::OddEvenFill)
+      obj->drawPolygon(*PQPOLYGONF(1), HB_ISNIL(2) ? Qt::OddEvenFill
                                                    : PQT_FILLRULE(2));
     }
 
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWPOLYGON)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->drawPolygon(*PQPOLYGON(1), HB_ISNIL(2) ? static_cast<Qt::FillRule>(Qt::OddEvenFill)
+      obj->drawPolygon(*PQPOLYGON(1), HB_ISNIL(2) ? Qt::OddEvenFill
                                                   : PQT_FILLRULE(2));
     }
 
@@ -1082,7 +1082,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWROUNDEDRECT)
 
     if (obj != nullptr) {
       obj->drawRoundedRect(*PQRECTF(1), PQREAL(2), PQREAL(3),
-                           HB_ISNIL(4) ? static_cast<Qt::SizeMode>(Qt::AbsoluteSize)
+                           HB_ISNIL(4) ? Qt::AbsoluteSize
                                        : PQT_SIZEMODE(4));
     }
 
@@ -1093,7 +1093,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWROUNDEDRECT)
 
     if (obj != nullptr) {
       obj->drawRoundedRect(*PQRECT(1), PQREAL(2), PQREAL(3),
-                           HB_ISNIL(4) ? static_cast<Qt::SizeMode>(Qt::AbsoluteSize)
+                           HB_ISNIL(4) ? Qt::AbsoluteSize
                                        : PQT_SIZEMODE(4));
     }
 
@@ -1105,7 +1105,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWROUNDEDRECT)
 
     if (obj != nullptr) {
       obj->drawRoundedRect(PINT(1), PINT(2), PINT(3), PINT(4), PQREAL(5), PQREAL(6),
-                           HB_ISNIL(7) ? static_cast<Qt::SizeMode>(Qt::AbsoluteSize)
+                           HB_ISNIL(7) ? Qt::AbsoluteSize
                                        : PQT_SIZEMODE(7));
     }
 
@@ -1893,7 +1893,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPPATH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setClipPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip)
+      obj->setClipPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? Qt::ReplaceClip
                                                       : PQT_CLIPOPERATION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -1912,7 +1912,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->setClipRect(*PQRECTF(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip)
+      obj->setClipRect(*PQRECTF(1), HB_ISNIL(2) ? Qt::ReplaceClip
                                                 : PQT_CLIPOPERATION(2));
     }
 
@@ -1923,7 +1923,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPRECT)
 
     if (obj != nullptr) {
       obj->setClipRect(PINT(1), PINT(2), PINT(3), PINT(4),
-                       HB_ISNIL(5) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip)
+                       HB_ISNIL(5) ? Qt::ReplaceClip
                                    : PQT_CLIPOPERATION(5));
     }
 
@@ -1933,7 +1933,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->setClipRect(*PQRECT(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip)
+      obj->setClipRect(*PQRECT(1), HB_ISNIL(2) ? Qt::ReplaceClip
                                                : PQT_CLIPOPERATION(2));
     }
 
@@ -1952,7 +1952,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPREGION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQREGION(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setClipRegion(*PQREGION(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip)
+      obj->setClipRegion(*PQREGION(1), HB_ISNIL(2) ? Qt::ReplaceClip
                                                    : PQT_CLIPOPERATION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

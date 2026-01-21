@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QTABWIDGET_CORNERWIDGET)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      auto ptr = obj->cornerWidget(HB_ISNIL(1) ? static_cast<Qt::Corner>(Qt::TopRightCorner)
+      auto ptr = obj->cornerWidget(HB_ISNIL(1) ? Qt::TopRightCorner
                                                : PQT_CORNER(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETCORNERWIDGET)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setCornerWidget(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::Corner>(Qt::TopRightCorner)
+      obj->setCornerWidget(PQWIDGET(1), HB_ISNIL(2) ? Qt::TopRightCorner
                                                     : PQT_CORNER(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

@@ -1430,7 +1430,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLEARUNDOREDOSTACKS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      obj->clearUndoRedoStacks(HB_ISNIL(1) ? static_cast<QTextDocument::Stacks>(QTextDocument::UndoAndRedoStacks)
+      obj->clearUndoRedoStacks(HB_ISNIL(1) ? QTextDocument::UndoAndRedoStacks
                                            : PQTEXTDOCUMENT_STACKS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -1663,7 +1663,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETMARKDOWN)
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       obj->setMarkdown(PQSTRING(1),
-                       HB_ISNIL(2) ? static_cast<QTextDocument::MarkdownFeatures>(QTextDocument::MarkdownDialectGitHub)
+                       HB_ISNIL(2) ? QTextDocument::MarkdownDialectGitHub
                                    : PQTEXTDOCUMENT_MARKDOWNFEATURES(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

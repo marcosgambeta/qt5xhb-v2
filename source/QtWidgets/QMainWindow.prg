@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBARBREAK)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      obj->addToolBarBreak(HB_ISNIL(1) ? static_cast<Qt::ToolBarArea>(Qt::TopToolBarArea)
+      obj->addToolBarBreak(HB_ISNIL(1) ? Qt::TopToolBarArea
                                        : PQT_TOOLBARAREA(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

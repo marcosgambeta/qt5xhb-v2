@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_MOVECURSOR)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->moveCursor(PQTEXTCURSOR_MOVEOPERATION(1),
-                      HB_ISNIL(2) ? static_cast<QTextCursor::MoveMode>(QTextCursor::MoveAnchor)
+                      HB_ISNIL(2) ? QTextCursor::MoveAnchor
                                   : PQTEXTCURSOR_MOVEMODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

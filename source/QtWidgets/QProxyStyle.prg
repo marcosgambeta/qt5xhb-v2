@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWITEMTEXT)
         ISNUMORNIL(7)) {
 #endif
       obj->drawItemText(PQPAINTER(1), *PQRECT(2), PINT(3), *PQPALETTE(4), PBOOL(5), PQSTRING(6),
-                        HB_ISNIL(7) ? static_cast<QPalette::ColorRole>(QPalette::NoRole)
+                        HB_ISNIL(7) ? QPalette::NoRole
                                     : PQPALETTE_COLORROLE(7));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

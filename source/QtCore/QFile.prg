@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
 
     if (obj != nullptr) {
       RBOOL(obj->open(static_cast<FILE *>(hb_parptr(1)), PQFILE_OPENMODE(2),
-                      HB_ISNIL(3) ? static_cast<QFile::FileHandleFlags>(QFile::DontCloseHandle)
+                      HB_ISNIL(3) ? QFile::DontCloseHandle
                                   : PQFILE_FILEHANDLEFLAGS(3)));
     }
   } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
 
     if (obj != nullptr) {
       RBOOL(obj->open(PINT(1), PQFILE_OPENMODE(2),
-                      HB_ISNIL(3) ? static_cast<QFile::FileHandleFlags>(QFile::DontCloseHandle)
+                      HB_ISNIL(3) ? QFile::DontCloseHandle
                                   : PQFILE_FILEHANDLEFLAGS(3)));
     }
   } else {

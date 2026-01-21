@@ -114,14 +114,14 @@ HB_FUNC_STATIC(QTEXTSTREAM_NEW)
     QTextStream(FILE * fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
     */
     auto obj = new QTextStream(static_cast<FILE *>(hb_parptr(1)),
-                               HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
+                               HB_ISNIL(2) ? QIODevice::ReadWrite
                                            : PQIODEVICE_OPENMODE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
     /*
     QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
     */
-    auto obj = new QTextStream(*PQBYTEARRAY(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadOnly)
+    auto obj = new QTextStream(*PQBYTEARRAY(1), HB_ISNIL(2) ? QIODevice::ReadOnly
                                                             : PQIODEVICE_OPENMODE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {

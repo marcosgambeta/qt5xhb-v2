@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_NEW)
     */
     auto obj =
         new QWebEngineHttpRequest(HB_ISNIL(1) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(1)),
-                                  HB_ISNIL(2) ? static_cast<QWebEngineHttpRequest::Method>(QWebEngineHttpRequest::Get)
+                                  HB_ISNIL(2) ? QWebEngineHttpRequest::Get
                                               : PQWEBENGINEHTTPREQUEST_METHOD(2));
     Qt5xHb::returnNewObject(obj, true);
   }

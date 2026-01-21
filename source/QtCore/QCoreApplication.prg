@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_PROCESSEVENTS)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // static void processEvents(QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents)
-    QCoreApplication::processEvents(HB_ISNIL(1) ? static_cast<QEventLoop::ProcessEventsFlags>(QEventLoop::AllEvents)
+    QCoreApplication::processEvents(HB_ISNIL(1) ? QEventLoop::AllEvents
                                                 : PQEVENTLOOP_PROCESSEVENTSFLAGS(1));
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {

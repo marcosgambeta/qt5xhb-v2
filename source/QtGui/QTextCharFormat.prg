@@ -793,7 +793,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTSTYLEHINT)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->setFontStyleHint(PQFONT_STYLEHINT(1),
-                            HB_ISNIL(2) ? static_cast<QFont::StyleStrategy>(QFont::PreferDefault)
+                            HB_ISNIL(2) ? QFont::PreferDefault
                                         : PQFONT_STYLESTRATEGY(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

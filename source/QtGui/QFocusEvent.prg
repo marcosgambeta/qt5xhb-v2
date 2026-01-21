@@ -56,7 +56,7 @@ HB_FUNC_STATIC(QFOCUSEVENT_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     auto obj = new QFocusEvent(PQEVENT_TYPE(1),
-                               HB_ISNIL(2) ? static_cast<Qt::FocusReason>(Qt::OtherFocusReason)
+                               HB_ISNIL(2) ? Qt::OtherFocusReason
                                            : PQT_FOCUSREASON(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {

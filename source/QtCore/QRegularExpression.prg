@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_NEW)
     QRegularExpression::NoPatternOption)
     */
     auto obj = new QRegularExpression(
-        PQSTRING(1), HB_ISNIL(2) ? static_cast<QRegularExpression::PatternOptions>(QRegularExpression::NoPatternOption)
+        PQSTRING(1), HB_ISNIL(2) ? QRegularExpression::NoPatternOption
                                  : PQREGULAREXPRESSION_PATTERNOPTIONS(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQREGULAREXPRESSION(1)) {
@@ -163,9 +163,9 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_GLOBALMATCH)
 #endif
       auto ptr = new QRegularExpressionMatchIterator(obj->globalMatch(
           PQSTRING(1), OPINT(2, 0),
-          HB_ISNIL(3) ? static_cast<QRegularExpression::MatchType>(QRegularExpression::NormalMatch)
+          HB_ISNIL(3) ? QRegularExpression::NormalMatch
                       : PQREGULAREXPRESSION_MATCHTYPE(3),
-          HB_ISNIL(4) ? static_cast<QRegularExpression::MatchOptions>(QRegularExpression::NoMatchOption)
+          HB_ISNIL(4) ? QRegularExpression::NoMatchOption
                       : PQREGULAREXPRESSION_MATCHOPTIONS(4)));
       Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSIONMATCHITERATOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,9 +211,9 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_MATCH)
 #endif
       auto ptr = new QRegularExpressionMatch(
           obj->match(PQSTRING(1), OPINT(2, 0),
-                     HB_ISNIL(3) ? static_cast<QRegularExpression::MatchType>(QRegularExpression::NormalMatch)
+                     HB_ISNIL(3) ? QRegularExpression::NormalMatch
                                  : PQREGULAREXPRESSION_MATCHTYPE(3),
-                     HB_ISNIL(4) ? static_cast<QRegularExpression::MatchOptions>(QRegularExpression::NoMatchOption)
+                     HB_ISNIL(4) ? QRegularExpression::NoMatchOption
                                  : PQREGULAREXPRESSION_MATCHOPTIONS(4)));
       Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSIONMATCH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

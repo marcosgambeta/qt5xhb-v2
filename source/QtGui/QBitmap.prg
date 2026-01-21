@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QBITMAP_FROMDATA)
   if (ISBETWEEN(2, 3) && ISQSIZE(1) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
 #endif
     auto ptr = new QBitmap(QBitmap::fromData(*PQSIZE(1), PCONSTUCHAR(2),
-                                             HB_ISNIL(3) ? static_cast<QImage::Format>(QImage::Format_MonoLSB)
+                                             HB_ISNIL(3) ? QImage::Format_MonoLSB
                                                          : PQIMAGE_FORMAT(3)));
     Qt5xHb::createReturnClass(ptr, "QBITMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QBITMAP_FROMIMAGE)
   if (ISBETWEEN(1, 2) && ISQIMAGE(1) && ISNUMORNIL(2)) {
 #endif
     auto ptr =
-        new QBitmap(QBitmap::fromImage(*PQIMAGE(1), HB_ISNIL(2) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
+        new QBitmap(QBitmap::fromImage(*PQIMAGE(1), HB_ISNIL(2) ? Qt::AutoColor
                                                                 : PQT_IMAGECONVERSIONFLAGS(2)));
     Qt5xHb::createReturnClass(ptr, "QBITMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QDROPEVENT_NEW)
     auto obj =
         new QDropEvent(*PQPOINT(1), PQT_DROPACTIONS(2), PQMIMEDATA(3),
                        PQT_MOUSEBUTTONS(4), PQT_KEYBOARDMODIFIERS(5),
-                       HB_ISNIL(6) ? static_cast<QEvent::Type>(QEvent::Drop) : PQEVENT_TYPE(6));
+                       HB_ISNIL(6) ? QEvent::Drop : PQEVENT_TYPE(6));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

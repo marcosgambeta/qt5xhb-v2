@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QMDIAREA_SUBWINDOWLIST)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      auto list = obj->subWindowList(HB_ISNIL(1) ? static_cast<QMdiArea::WindowOrder>(QMdiArea::CreationOrder)
+      auto list = obj->subWindowList(HB_ISNIL(1) ? QMdiArea::CreationOrder
                                                  : PQMDIAREA_WINDOWORDER(1));
       auto pDynSym = hb_dynsymFindName("QMDISUBWINDOW");
       auto pArray = hb_itemArrayNew(0);

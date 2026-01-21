@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QTANDROID_BINDSERVICE)
   if (ISBETWEEN(2, 3) && ISQANDROIDINTENT(1) && ISQANDROIDSERVICECONNECTION(2) && ISNUMORNIL(3)) {
 #endif
     RBOOL(QtAndroid::bindService(*PQANDROIDINTENT(1), *PQANDROIDSERVICECONNECTION(2),
-                                 HB_ISNIL(3) ? static_cast<QtAndroid::BindFlags>(QtAndroid::BindFlag::None)
+                                 HB_ISNIL(3) ? QtAndroid::BindFlag::None
                                              : PQTANDROID_BINDFLAGS(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {

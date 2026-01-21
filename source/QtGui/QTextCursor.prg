@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETPOSITION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setPosition(PINT(1), HB_ISNIL(2) ? static_cast<QTextCursor::MoveMode>(QTextCursor::MoveAnchor)
+      obj->setPosition(PINT(1), HB_ISNIL(2) ? QTextCursor::MoveAnchor
                                             : PQTEXTCURSOR_MOVEMODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_MOVEPOSITION)
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       RBOOL(obj->movePosition(PQTEXTCURSOR_MOVEOPERATION(1),
-                              HB_ISNIL(2) ? static_cast<QTextCursor::MoveMode>(QTextCursor::MoveAnchor)
+                              HB_ISNIL(2) ? QTextCursor::MoveAnchor
                                           : PQTEXTCURSOR_MOVEMODE(2),
                               OPINT(3, 1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

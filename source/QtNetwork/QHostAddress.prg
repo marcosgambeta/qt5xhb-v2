@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISEQUAL)
     if (ISBETWEEN(1, 2) && ISQHOSTADDRESS(1) && ISNUMORNIL(2)) {
 #endif
       RBOOL(obj->isEqual(*PQHOSTADDRESS(1),
-                         HB_ISNIL(2) ? static_cast<QHostAddress::ConversionMode>(QHostAddress::TolerantConversion)
+                         HB_ISNIL(2) ? QHostAddress::TolerantConversion
                                      : PQHOSTADDRESS_CONVERSIONMODE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
