@@ -16,8 +16,10 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oButton
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:resize(320, 240)
 
@@ -27,8 +29,10 @@ FUNCTION Main()
    ? oButton:onPressed({||qout("pressed")})
    ? oButton:onReleased({||qout("released")})
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

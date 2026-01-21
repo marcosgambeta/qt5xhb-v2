@@ -12,16 +12,20 @@ FUNCTION Main()
    LOCAL oMainWindow
    LOCAL oStatusBar
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oMainWindow := QMainWindow():new()
 
    oStatusBar := oMainWindow:statusBar()
 
    oStatusBar:showMessage("teste")
 
+   // show window
    oMainWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

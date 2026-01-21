@@ -12,8 +12,10 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oSpinBox
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640, 480)
@@ -22,8 +24,10 @@ FUNCTION Main()
    oSpinBox:move(20, 20)
    oSpinBox:setTooltip("Eu sou um QSpinBox")
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

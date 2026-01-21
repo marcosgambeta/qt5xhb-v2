@@ -12,8 +12,10 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oDateTimeEdit
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640, 480)
@@ -22,8 +24,10 @@ FUNCTION Main()
    oDateTimeEdit:move(20, 20)
    oDateTimeEdit:setTooltip("Eu sou um QDateTimeEdit")
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

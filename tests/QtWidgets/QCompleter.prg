@@ -14,8 +14,10 @@ FUNCTION Main()
    LOCAL oLineEdit
    LOCAL aDados
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste com a classe QCompleter")
    oWindow:resize(640, 480)
@@ -42,8 +44,10 @@ FUNCTION Main()
    oLineEdit:resize(200, 20)
    oLineEdit:setCompleter(oCompleter)
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

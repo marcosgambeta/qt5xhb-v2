@@ -14,6 +14,7 @@ FUNCTION Main()
    LOCAl oModel
    LOCAL oView
 
+   // create application
    oApp := QApplication():new()
 
    // cria um objeto da classe QSqlDatabase
@@ -73,7 +74,7 @@ FUNCTION Main()
    oModel:setHeaderData(1, Qt_Horizontal, QVariant():new("Nome"))
    oModel:setHeaderData(2, Qt_Horizontal, QVariant():new("Saldo"))
 
-   // cria a janela
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640, 480)
@@ -98,8 +99,10 @@ FUNCTION Main()
    // esconde a coluna 0 'Id'
    oView:hideColumn(0)
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

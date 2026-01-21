@@ -21,8 +21,10 @@ FUNCTION Main()
    LOCAL oItem_002_001
    LOCAL oItem_002_002
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste com a classe QTreeWidget")
    oWindow:resize(800, 600)
@@ -71,8 +73,10 @@ FUNCTION Main()
    // abre todos os itens
    oTree:expandAll()
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

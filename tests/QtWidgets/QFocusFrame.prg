@@ -13,8 +13,10 @@ FUNCTION Main()
    LOCAL oLabel
    LOCAL oFocusFrame
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
 
    oLabel := QLabel():new("QLabel", oWindow)
@@ -23,8 +25,10 @@ FUNCTION Main()
    oFocusFrame := QFocusFrame():new()
    oFocusFrame:setWidget(oLabel)
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

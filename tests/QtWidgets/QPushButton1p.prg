@@ -16,8 +16,10 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oButton
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    WITH OBJECT oWindow := QWidget():new()
 
       WITH OBJECT oButton := QPushButton():new(oWindow)
@@ -29,10 +31,12 @@ FUNCTION Main()
          :bReleased := {||qout("released")}
       ENDWITH
 
+      // show window
       :lVisible := .T.
 
    ENDWITH
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

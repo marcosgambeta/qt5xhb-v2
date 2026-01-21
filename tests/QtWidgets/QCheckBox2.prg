@@ -17,8 +17,10 @@ FUNCTION Main()
    LOCAL oCheckBox1
    LOCAL oCheckBox2
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
 
    oCheckBox1 := QCheckBox():new("CheckBox1", oWindow)
@@ -35,8 +37,10 @@ FUNCTION Main()
    ? oCheckBox2:onReleased({||qout("2-released")})
    ? oCheckBox2:onStateChanged({||qout("2-stateChanged=" + alltrim(str(oCheckBox2:checkState())))})
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

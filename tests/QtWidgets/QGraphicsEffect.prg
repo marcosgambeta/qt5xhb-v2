@@ -12,8 +12,10 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oLabel
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Test")
    oWindow:resize(640, 480)
@@ -24,8 +26,10 @@ FUNCTION Main()
 
    oLabel:setGraphicsEffect(QGraphicsDropShadowEffect():new())
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

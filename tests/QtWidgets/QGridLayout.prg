@@ -22,8 +22,10 @@ FUNCTION Main()
    LOCAL oEditField5
    LOCAL oLayout
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
 
    oLabelField1 := QLabel():new("Campo 1")
@@ -57,8 +59,10 @@ FUNCTION Main()
 
    oWindow:setLayout(oLayout)
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

@@ -18,8 +18,10 @@ FUNCTION Main()
    LOCAL oRadioButton2
    LOCAL oRadioButton3
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
 
    oRadioButton1 := QRadioButton():new("RadioButton1", oWindow)
@@ -42,8 +44,10 @@ FUNCTION Main()
 
    oRadioButton2:setChecked(.T.)
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

@@ -13,8 +13,10 @@ FUNCTION Main()
    LOCAL oListView
    LOCAL oSLM
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640, 480)
@@ -27,8 +29,10 @@ FUNCTION Main()
 
    oListView:setModel(oSLM)
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

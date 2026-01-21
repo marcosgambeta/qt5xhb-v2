@@ -12,6 +12,7 @@ FUNCTION Main()
    LOCAL oScene
    LOCAL oView
 
+   // create application
    oApp := QApplication():new()
 
    oScene := QGraphicsScene():new()
@@ -20,6 +21,7 @@ FUNCTION Main()
    oView := QGraphicsView():new(oScene)
    oView:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

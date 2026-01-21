@@ -20,8 +20,10 @@ FUNCTION Main()
    LOCAL oButtonGroup
    LOCAL o
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:resize(640, 480)
 
@@ -70,8 +72,10 @@ FUNCTION Main()
    ? oButtonGroup:button(3):className()
    ? oButtonGroup:button(3):metaObject():className()
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

@@ -15,6 +15,7 @@ FUNCTION Main()
    LOCAL oApp
    LOCAL oToolBox
 
+   // create application
    oApp := QApplication():new()
 
    oToolBox := QToolBox():new()
@@ -27,6 +28,7 @@ FUNCTION Main()
 
    oToolBox:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

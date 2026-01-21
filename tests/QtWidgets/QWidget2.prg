@@ -11,8 +11,10 @@ FUNCTION Main()
    LOCAL oApp
    LOCAL oWindow
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:cWindowTitle := "Teste"
    oWindow:nWidth       := 640
@@ -47,6 +49,7 @@ FUNCTION Main()
    ? "nX=", oWindow:nX
    ? "nY=", oWindow:nY
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

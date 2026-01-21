@@ -16,8 +16,10 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oScrollBar
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640, 480)
@@ -28,8 +30,10 @@ FUNCTION Main()
    oScrollBar:setTooltip("Eu sou um QScrollBar")
    ? oScrollBar:onSliderMoved({|oSender, nValue|test(oSender, nValue)})
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

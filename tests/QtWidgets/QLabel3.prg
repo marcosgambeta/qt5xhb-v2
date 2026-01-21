@@ -20,8 +20,10 @@ FUNCTION Main()
    LOCAL o2
    LOCAL o3
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640, 480)
@@ -68,8 +70,10 @@ FUNCTION Main()
    ? o3:className()
    ? o3:pointer
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

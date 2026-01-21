@@ -16,8 +16,10 @@ FUNCTION Main()
    LOCAL nRows := 1000
    LOCAL nCols := 100
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Qt5xHb - teste")
    oWindow:resize(800, 600)
@@ -34,8 +36,10 @@ FUNCTION Main()
       NEXT c
    NEXT r
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

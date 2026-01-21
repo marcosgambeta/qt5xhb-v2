@@ -12,14 +12,18 @@ FUNCTION Main()
    LOCAL oMainWindow
    LOCAL oDockWidget
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oMainWindow := QMainWindow():new()
 
    oDockWidget := QDockWidget():new("Teste", oMainWindow)
 
+   // show window
    oMainWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

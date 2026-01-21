@@ -11,16 +11,20 @@ FUNCTION Main()
    lOCAL oApp
    LOCAL oWindow
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QMainWindow():new()
 
    oWindow:setWindowTitle("Teste")
 
    oWindow:resize(640, 480)
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

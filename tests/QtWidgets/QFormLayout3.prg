@@ -49,8 +49,10 @@ FUNCTION Main()
    // layout horizontal
    LOCAL oLayout
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
 
    // montagem do objeto oFormLayoutA
@@ -130,8 +132,10 @@ FUNCTION Main()
 
    oWindow:setLayout(oLayout)
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

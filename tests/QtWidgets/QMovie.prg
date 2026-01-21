@@ -13,10 +13,10 @@ FUNCTION Main()
    LOCAL oLabel
    LOCAL oMovie
 
-   // cria o objeto QApplication
+   // create application
    oApp := QApplication():new()
 
-   // cria uma janela
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640, 480)
@@ -39,9 +39,10 @@ FUNCTION Main()
    // inicia a animação
    oMovie:start()
 
+   // show window
    oWindow:show()
 
-   // inicia o loop de eventos
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

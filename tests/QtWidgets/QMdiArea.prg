@@ -16,8 +16,10 @@ FUNCTION Main()
    LOCAL oMdiSubWindow3
    LOCAL oMdiSubWindow4
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oMainWindow := QMainWindow():new()
    oMainWindow:setWindowTitle("Qt5xHb - teste com MDI")
    oMainWindow:resize(800, 600)
@@ -41,8 +43,10 @@ FUNCTION Main()
    oMdiSubWindow4:setWindowTitle("Janela 4")
    oMdiSubWindow4:resize(320, 240)
 
+   // show window
    oMainWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

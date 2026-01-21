@@ -30,8 +30,10 @@ FUNCTION Main()
    LOCAL oMenuD
    LOCAL oActionD1
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oMainWindow := QMainWindow():new()
    oMainWindow:setWindowTitle("Testando classes QMainWindow, QMenu, QMenuBar e QAction")
    oMainWindow:resize(640, 480)
@@ -76,8 +78,10 @@ FUNCTION Main()
    oActionD1 := oMenuD:addAction("Option 1")
    ? oActionD1:onTriggered({||qout("Menu D/Option 1")})
 
+   // show window
    oMainWindow:Show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

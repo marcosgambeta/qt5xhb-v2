@@ -17,8 +17,10 @@ FUNCTION Main()
    LOCAL oButton5
    LOCAL oLayout
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
 
    oButton1 := QPushButton():new("Um"    )
@@ -37,8 +39,10 @@ FUNCTION Main()
 
    oWindow:setLayout(oLayout)
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

@@ -16,8 +16,10 @@ FUNCTION Main()
    LOCAL oRadio3
    LOCAL oVBox
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:resize(320, 240)
 
@@ -39,8 +41,10 @@ FUNCTION Main()
 
    oGroupBox:setLayout(oVBox)
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects

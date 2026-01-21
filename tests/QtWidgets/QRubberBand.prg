@@ -12,16 +12,20 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oRubberBand
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
 
    oRubberBand := QRubberBand():new(QRubberBand_Rectangle, oWindow)
    oRubberBand:move(20, 20)
    oRubberBand:resize(100, 100)
 
+   // show window
    oWindow:show()
 
+   // execute application (start event loop)
    oApp:exec()
 
    // delete objects
