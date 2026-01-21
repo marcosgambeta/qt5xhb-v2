@@ -73,7 +73,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtCharts;
+using namespace QtCharts;
 
 /*
 QLogValueAxis(QObject * parent = nullptr)

@@ -87,7 +87,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtCharts;
+using namespace QtCharts;
 
 /*
 QPieSeries(QObject * parent = nullptr)

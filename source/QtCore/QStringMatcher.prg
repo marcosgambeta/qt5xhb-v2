@@ -72,16 +72,13 @@ HB_FUNC_STATIC(QSTRINGMATCHER_NEW)
     /*
     QStringMatcher(const QString &pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive)
     */
-    auto obj = new QStringMatcher(PQSTRING(1), HB_ISNIL(2) ? Qt::CaseSensitive
-                                                           : PQT_CASESENSITIVITY(2));
+    auto obj = new QStringMatcher(PQSTRING(1), HB_ISNIL(2) ? Qt::CaseSensitive : PQT_CASESENSITIVITY(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 3) && ISQCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     /*
     QStringMatcher(const QChar * uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive)
     */
-    auto obj = new QStringMatcher(PQCHAR(1), PINT(2),
-                                  HB_ISNIL(3) ? Qt::CaseSensitive
-                                              : PQT_CASESENSITIVITY(3));
+    auto obj = new QStringMatcher(PQCHAR(1), PINT(2), HB_ISNIL(3) ? Qt::CaseSensitive : PQT_CASESENSITIVITY(3));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSTRINGMATCHER(1)) {
     /*

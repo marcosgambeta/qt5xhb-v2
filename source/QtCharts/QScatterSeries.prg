@@ -71,7 +71,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtCharts;
+using namespace QtCharts;
 
 /*
 QScatterSeries(QObject * parent = nullptr)

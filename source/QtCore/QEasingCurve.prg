@@ -77,8 +77,7 @@ HB_FUNC_STATIC(QEASINGCURVE_NEW)
     /*
     QEasingCurve(QEasingCurve::Type type = QEasingCurve::Linear)
     */
-    auto obj = new QEasingCurve(HB_ISNIL(1) ? QEasingCurve::Linear
-                                            : PQEASINGCURVE_TYPE(1));
+    auto obj = new QEasingCurve(HB_ISNIL(1) ? QEasingCurve::Linear : PQEASINGCURVE_TYPE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQEASINGCURVE(1)) {
     /*

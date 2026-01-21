@@ -63,8 +63,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_NEW)
 
   } else if (ISBETWEEN(3, 4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQSTATEORNIL(4)) {
     // QKeyEventTransition(QObject *object, QEvent::Type type, int key, QState *sourceState = nullptr)
-    auto obj =
-        new QKeyEventTransition(PQOBJECT(1), PQEVENT_TYPE(2), PINT(3), OPQSTATE(4, nullptr));
+    auto obj = new QKeyEventTransition(PQOBJECT(1), PQEVENT_TYPE(2), PINT(3), OPQSTATE(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   } else {

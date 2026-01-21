@@ -585,24 +585,22 @@ HB_FUNC_STATIC(QPAINTER_DRAWELLIPSE)
 HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 {
   if (ISBETWEEN(3, 4) && ISQRECTF(1) && ISQIMAGE(2) && ISQRECTF(3) && ISNUMORNIL(4)) {
-    // void drawImage(const QRectF &target, const QImage &image, const QRectF &source, Qt::ImageConversionFlags flags = Qt::AutoColor)
+    // void drawImage(const QRectF &target, const QImage &image, const QRectF &source, Qt::ImageConversionFlags flags =
+    // Qt::AutoColor)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->drawImage(*PQRECTF(1), *PQIMAGE(2), *PQRECTF(3),
-                     HB_ISNIL(4) ? Qt::AutoColor
-                                 : PQT_IMAGECONVERSIONFLAGS(4));
+      obj->drawImage(*PQRECTF(1), *PQIMAGE(2), *PQRECTF(3), HB_ISNIL(4) ? Qt::AutoColor : PQT_IMAGECONVERSIONFLAGS(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(3, 4) && ISQRECT(1) && ISQIMAGE(2) && ISQRECT(3) && ISNUMORNIL(4)) {
-    // void drawImage(const QRect &target, const QImage &image, const QRect &source, Qt::ImageConversionFlags flags = Qt::AutoColor)
+    // void drawImage(const QRect &target, const QImage &image, const QRect &source, Qt::ImageConversionFlags flags =
+    // Qt::AutoColor)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->drawImage(*PQRECT(1), *PQIMAGE(2), *PQRECT(3),
-                     HB_ISNIL(4) ? Qt::AutoColor
-                                 : PQT_IMAGECONVERSIONFLAGS(4));
+      obj->drawImage(*PQRECT(1), *PQIMAGE(2), *PQRECT(3), HB_ISNIL(4) ? Qt::AutoColor : PQT_IMAGECONVERSIONFLAGS(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -625,24 +623,22 @@ HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(3, 4) && ISQPOINTF(1) && ISQIMAGE(2) && ISQRECTF(3) && ISNUMORNIL(4)) {
-    // void drawImage(const QPointF &point, const QImage &image, const QRectF &source, Qt::ImageConversionFlags flags = Qt::AutoColor)
+    // void drawImage(const QPointF &point, const QImage &image, const QRectF &source, Qt::ImageConversionFlags flags =
+    // Qt::AutoColor)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->drawImage(*PQPOINTF(1), *PQIMAGE(2), *PQRECTF(3),
-                     HB_ISNIL(4) ? Qt::AutoColor
-                                 : PQT_IMAGECONVERSIONFLAGS(4));
+      obj->drawImage(*PQPOINTF(1), *PQIMAGE(2), *PQRECTF(3), HB_ISNIL(4) ? Qt::AutoColor : PQT_IMAGECONVERSIONFLAGS(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(3, 4) && ISQPOINT(1) && ISQIMAGE(2) && ISQRECT(3) && ISNUMORNIL(4)) {
-    // void drawImage(const QPoint &point, const QImage &image, const QRect &source, Qt::ImageConversionFlags flags = Qt::AutoColor)
+    // void drawImage(const QPoint &point, const QImage &image, const QRect &source, Qt::ImageConversionFlags flags =
+    // Qt::AutoColor)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->drawImage(*PQPOINT(1), *PQIMAGE(2), *PQRECT(3),
-                     HB_ISNIL(4) ? Qt::AutoColor
-                                 : PQT_IMAGECONVERSIONFLAGS(4));
+      obj->drawImage(*PQPOINT(1), *PQIMAGE(2), *PQRECT(3), HB_ISNIL(4) ? Qt::AutoColor : PQT_IMAGECONVERSIONFLAGS(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -666,13 +662,13 @@ HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(3, 8) && HB_ISNUM(1) && HB_ISNUM(2) && ISQIMAGE(3) && ISNUMORNIL(4) && ISNUMORNIL(5) &&
              ISNUMORNIL(6) && ISNUMORNIL(7) && ISNUMORNIL(8)) {
-    // void drawImage(int x, int y, const QImage &image, int sx = 0, int sy = 0, int sw = -1, int sh = -1, Qt::ImageConversionFlags flags = Qt::AutoColor)
+    // void drawImage(int x, int y, const QImage &image, int sx = 0, int sy = 0, int sw = -1, int sh = -1,
+    // Qt::ImageConversionFlags flags = Qt::AutoColor)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->drawImage(PINT(1), PINT(2), *PQIMAGE(3), OPINT(4, 0), OPINT(5, 0), OPINT(6, -1), OPINT(7, -1),
-                     HB_ISNIL(8) ? Qt::AutoColor
-                                 : PQT_IMAGECONVERSIONFLAGS(8));
+                     HB_ISNIL(8) ? Qt::AutoColor : PQT_IMAGECONVERSIONFLAGS(8));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -995,8 +991,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWPOLYGON)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->drawPolygon(*PQPOLYGONF(1), HB_ISNIL(2) ? Qt::OddEvenFill
-                                                   : PQT_FILLRULE(2));
+      obj->drawPolygon(*PQPOLYGONF(1), HB_ISNIL(2) ? Qt::OddEvenFill : PQT_FILLRULE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1005,8 +1000,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWPOLYGON)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->drawPolygon(*PQPOLYGON(1), HB_ISNIL(2) ? Qt::OddEvenFill
-                                                  : PQT_FILLRULE(2));
+      obj->drawPolygon(*PQPOLYGON(1), HB_ISNIL(2) ? Qt::OddEvenFill : PQT_FILLRULE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1081,9 +1075,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWROUNDEDRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->drawRoundedRect(*PQRECTF(1), PQREAL(2), PQREAL(3),
-                           HB_ISNIL(4) ? Qt::AbsoluteSize
-                                       : PQT_SIZEMODE(4));
+      obj->drawRoundedRect(*PQRECTF(1), PQREAL(2), PQREAL(3), HB_ISNIL(4) ? Qt::AbsoluteSize : PQT_SIZEMODE(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1092,21 +1084,19 @@ HB_FUNC_STATIC(QPAINTER_DRAWROUNDEDRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->drawRoundedRect(*PQRECT(1), PQREAL(2), PQREAL(3),
-                           HB_ISNIL(4) ? Qt::AbsoluteSize
-                                       : PQT_SIZEMODE(4));
+      obj->drawRoundedRect(*PQRECT(1), PQREAL(2), PQREAL(3), HB_ISNIL(4) ? Qt::AbsoluteSize : PQT_SIZEMODE(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(6, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
              HB_ISNUM(6) && ISNUMORNIL(7)) {
-    // void drawRoundedRect(int x, int y, int w, int h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize)
+    // void drawRoundedRect(int x, int y, int w, int h, qreal xRadius, qreal yRadius, Qt::SizeMode mode =
+    // Qt::AbsoluteSize)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->drawRoundedRect(PINT(1), PINT(2), PINT(3), PINT(4), PQREAL(5), PQREAL(6),
-                           HB_ISNIL(7) ? Qt::AbsoluteSize
-                                       : PQT_SIZEMODE(7));
+                           HB_ISNIL(7) ? Qt::AbsoluteSize : PQT_SIZEMODE(7));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1200,7 +1190,8 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(6, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
              HB_ISCHAR(6) && ISQRECTORNIL(7)) {
-    // void drawText(int x, int y, int width, int height, int flags, const QString &text, QRect * boundingRect = nullptr)
+    // void drawText(int x, int y, int width, int height, int flags, const QString &text, QRect * boundingRect =
+    // nullptr)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
@@ -1893,8 +1884,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPPATH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setClipPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? Qt::ReplaceClip
-                                                      : PQT_CLIPOPERATION(2));
+      obj->setClipPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? Qt::ReplaceClip : PQT_CLIPOPERATION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1912,8 +1902,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->setClipRect(*PQRECTF(1), HB_ISNIL(2) ? Qt::ReplaceClip
-                                                : PQT_CLIPOPERATION(2));
+      obj->setClipRect(*PQRECTF(1), HB_ISNIL(2) ? Qt::ReplaceClip : PQT_CLIPOPERATION(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1922,9 +1911,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->setClipRect(PINT(1), PINT(2), PINT(3), PINT(4),
-                       HB_ISNIL(5) ? Qt::ReplaceClip
-                                   : PQT_CLIPOPERATION(5));
+      obj->setClipRect(PINT(1), PINT(2), PINT(3), PINT(4), HB_ISNIL(5) ? Qt::ReplaceClip : PQT_CLIPOPERATION(5));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1933,8 +1920,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->setClipRect(*PQRECT(1), HB_ISNIL(2) ? Qt::ReplaceClip
-                                               : PQT_CLIPOPERATION(2));
+      obj->setClipRect(*PQRECT(1), HB_ISNIL(2) ? Qt::ReplaceClip : PQT_CLIPOPERATION(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1952,8 +1938,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPREGION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQREGION(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setClipRegion(*PQREGION(1), HB_ISNIL(2) ? Qt::ReplaceClip
-                                                   : PQT_CLIPOPERATION(2));
+      obj->setClipRegion(*PQREGION(1), HB_ISNIL(2) ? Qt::ReplaceClip : PQT_CLIPOPERATION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -81,9 +81,8 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_NEW)
 
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQGRAPHICSLAYOUTITEMORNIL(2)) {
     // QGraphicsLinearLayout(Qt::Orientation orientation, QGraphicsLayoutItem *parent = nullptr)
-    auto obj =
-        new QGraphicsLinearLayout(PQT_ORIENTATION(1),
-                                  HB_ISNIL(2) ? nullptr : static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtr(2)));
+    auto obj = new QGraphicsLinearLayout(
+        PQT_ORIENTATION(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, true);
 
   } else {
@@ -496,8 +495,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SIZEHINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSIZEFORNIL(2)) {
 #endif
-      RQSIZEF(obj->sizeHint(PQT_SIZEHINT(1),
-                            HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF *>(Qt5xHb::itemGetPtr(2))));
+      RQSIZEF(obj->sizeHint(PQT_SIZEHINT(1), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF *>(Qt5xHb::itemGetPtr(2))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

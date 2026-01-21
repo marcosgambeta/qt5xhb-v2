@@ -53,7 +53,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtCharts;
+using namespace QtCharts;
 
 /*
 QHorizontalBarSeries(QObject * parent = nullptr)

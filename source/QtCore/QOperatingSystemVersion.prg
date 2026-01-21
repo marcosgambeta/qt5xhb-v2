@@ -75,8 +75,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
-    auto obj = new QOperatingSystemVersion(PQOPERATINGSYSTEMVERSION_OSTYPE(1), PINT(2),
-                                           OPINT(3, -1), OPINT(4, -1));
+    auto obj = new QOperatingSystemVersion(PQOPERATINGSYSTEMVERSION_OSTYPE(1), PINT(2), OPINT(3, -1), OPINT(4, -1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

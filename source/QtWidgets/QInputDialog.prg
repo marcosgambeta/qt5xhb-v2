@@ -110,8 +110,8 @@ RETURN
 HB_FUNC_STATIC(QINPUTDIALOG_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
-    auto obj = new QInputDialog(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
-                                                                   : PQT_WINDOWFLAGS(2));
+    auto obj =
+        new QInputDialog(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -957,9 +957,9 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETDOUBLE)
       ISNUMORNIL(6) && ISNUMORNIL(7) && ISLOGORNIL(8) && ISNUMORNIL(9)) {
 #endif
     bool par8;
-    RDOUBLE(QInputDialog::getDouble(
-        PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPDOUBLE(4, 0), OPDOUBLE(5, -2147483647), OPDOUBLE(6, 2147483647),
-        OPINT(7, 1), &par8, HB_ISNIL(9) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(9)));
+    RDOUBLE(QInputDialog::getDouble(PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPDOUBLE(4, 0), OPDOUBLE(5, -2147483647),
+                                    OPDOUBLE(6, 2147483647), OPINT(7, 1), &par8,
+                                    HB_ISNIL(9) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(9)));
     hb_storl(par8, 8);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -977,9 +977,9 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETINT)
       ISNUMORNIL(6) && ISNUMORNIL(7) && ISLOGORNIL(8) && ISNUMORNIL(9)) {
 #endif
     bool par8;
-    RINT(QInputDialog::getInt(
-        PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPINT(4, 0), OPINT(5, -2147483647), OPINT(6, 2147483647), OPINT(7, 1),
-        &par8, HB_ISNIL(9) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(9)));
+    RINT(QInputDialog::getInt(PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPINT(4, 0), OPINT(5, -2147483647),
+                              OPINT(6, 2147483647), OPINT(7, 1), &par8,
+                              HB_ISNIL(9) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(9)));
     hb_storl(par8, 8);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -998,10 +998,9 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETITEM)
       ISLOGORNIL(6) && ISLOGORNIL(7) && ISNUMORNIL(8) && ISNUMORNIL(9)) {
 #endif
     bool par7;
-    RQSTRING(QInputDialog::getItem(
-        PQWIDGET(1), PQSTRING(2), PQSTRING(3), PQSTRINGLIST(4), OPINT(5, 0), OPBOOL(6, true), &par7,
-        HB_ISNIL(8) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(8),
-        HB_ISNIL(9) ? Qt::ImhNone : PQT_INPUTMETHODHINTS(9)));
+    RQSTRING(QInputDialog::getItem(PQWIDGET(1), PQSTRING(2), PQSTRING(3), PQSTRINGLIST(4), OPINT(5, 0), OPBOOL(6, true),
+                                   &par7, HB_ISNIL(8) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(8),
+                                   HB_ISNIL(9) ? Qt::ImhNone : PQT_INPUTMETHODHINTS(9)));
     hb_storl(par7, 7);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -1020,13 +1019,10 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETTEXT)
       ISLOGORNIL(6) && ISNUMORNIL(7) && ISNUMORNIL(8)) {
 #endif
     bool par6;
-    RQSTRING(QInputDialog::getText(
-        PQWIDGET(1), PQSTRING(2), PQSTRING(3),
-        HB_ISNIL(4) ? QLineEdit::Normal
-                    : PQLINEEDIT_ECHOMODE(4),
-        OPQSTRING(5, QString()), &par6,
-        HB_ISNIL(7) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(7),
-        HB_ISNIL(8) ? Qt::ImhNone : PQT_INPUTMETHODHINTS(8)));
+    RQSTRING(QInputDialog::getText(PQWIDGET(1), PQSTRING(2), PQSTRING(3),
+                                   HB_ISNIL(4) ? QLineEdit::Normal : PQLINEEDIT_ECHOMODE(4), OPQSTRING(5, QString()),
+                                   &par6, HB_ISNIL(7) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(7),
+                                   HB_ISNIL(8) ? Qt::ImhNone : PQT_INPUTMETHODHINTS(8)));
     hb_storl(par6, 6);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -1044,10 +1040,9 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETMULTILINETEXT)
       ISNUMORNIL(6) && ISNUMORNIL(7)) {
 #endif
     bool par5;
-    RQSTRING(QInputDialog::getMultiLineText(
-        PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPQSTRING(4, QString()), &par5,
-        HB_ISNIL(6) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(6),
-        HB_ISNIL(7) ? Qt::ImhNone : PQT_INPUTMETHODHINTS(7)));
+    RQSTRING(QInputDialog::getMultiLineText(PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPQSTRING(4, QString()), &par5,
+                                            HB_ISNIL(6) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(6),
+                                            HB_ISNIL(7) ? Qt::ImhNone : PQT_INPUTMETHODHINTS(7)));
     hb_storl(par5, 5);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {

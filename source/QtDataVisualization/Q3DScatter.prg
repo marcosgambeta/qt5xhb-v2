@@ -72,7 +72,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 /*
 Q3DScatter(const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr)

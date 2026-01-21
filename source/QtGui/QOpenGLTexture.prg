@@ -140,9 +140,8 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_NEW)
     QOpenGLTexture(const QImage &image, QOpenGLTexture::MipMapGeneration genMipMaps = QOpenGLTexture::GenerateMipMaps)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = new QOpenGLTexture(
-        *PQIMAGE(1), HB_ISNIL(2) ? QOpenGLTexture::GenerateMipMaps
-                                 : PQOPENGLTEXTURE_MIPMAPGENERATION(2));
+    auto obj = new QOpenGLTexture(*PQIMAGE(1),
+                                  HB_ISNIL(2) ? QOpenGLTexture::GenerateMipMaps : PQOPENGLTEXTURE_MIPMAPGENERATION(2));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else {
@@ -681,8 +680,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_CREATETEXTUREVIEW)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6)) {
 #endif
-      auto ptr = obj->createTextureView(PQOPENGLTEXTURE_TARGET(1),
-                                        PQOPENGLTEXTURE_TEXTUREFORMAT(2), PINT(3), PINT(4),
+      auto ptr = obj->createTextureView(PQOPENGLTEXTURE_TARGET(1), PQOPENGLTEXTURE_TEXTUREFORMAT(2), PINT(3), PINT(4),
                                         PINT(5), PINT(6));
       Qt5xHb::createReturnClass(ptr, "QOPENGLTEXTURE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -921,8 +919,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETSWIZZLEMASK)
     auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->setSwizzleMask(PQOPENGLTEXTURE_SWIZZLECOMPONENT(1),
-                          PQOPENGLTEXTURE_SWIZZLEVALUE(2));
+      obj->setSwizzleMask(PQOPENGLTEXTURE_SWIZZLECOMPONENT(1), PQOPENGLTEXTURE_SWIZZLEVALUE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -936,10 +933,8 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETSWIZZLEMASK)
     auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->setSwizzleMask(PQOPENGLTEXTURE_SWIZZLEVALUE(1),
-                          PQOPENGLTEXTURE_SWIZZLEVALUE(2),
-                          PQOPENGLTEXTURE_SWIZZLEVALUE(3),
-                          PQOPENGLTEXTURE_SWIZZLEVALUE(4));
+      obj->setSwizzleMask(PQOPENGLTEXTURE_SWIZZLEVALUE(1), PQOPENGLTEXTURE_SWIZZLEVALUE(2),
+                          PQOPENGLTEXTURE_SWIZZLEVALUE(3), PQOPENGLTEXTURE_SWIZZLEVALUE(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1121,8 +1116,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETMINMAGFILTERS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setMinMagFilters(PQOPENGLTEXTURE_FILTER(1),
-                            PQOPENGLTEXTURE_FILTER(2));
+      obj->setMinMagFilters(PQOPENGLTEXTURE_FILTER(1), PQOPENGLTEXTURE_FILTER(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1203,8 +1197,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETWRAPMODE)
     auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->setWrapMode(PQOPENGLTEXTURE_COORDINATEDIRECTION(1),
-                       PQOPENGLTEXTURE_WRAPMODE(2));
+      obj->setWrapMode(PQOPENGLTEXTURE_COORDINATEDIRECTION(1), PQOPENGLTEXTURE_WRAPMODE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());

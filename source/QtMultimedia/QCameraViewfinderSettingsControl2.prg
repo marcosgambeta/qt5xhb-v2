@@ -55,7 +55,8 @@ RETURN
 #endif
 #endif
 
-#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCameraViewfinderSettingsControl2 *>(Qt5xHb::getQObjectPointerFromSelfItem())
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QCameraViewfinderSettingsControl2 *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // virtual ~QCameraViewfinderSettingsControl2()
 HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL2_DELETE)

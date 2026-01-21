@@ -65,7 +65,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 /*
 Q3DInputHandler(QObject * parent = nullptr)

@@ -64,11 +64,8 @@ RETURN
 HB_FUNC_STATIC(QSPACERITEM_NEW)
 {
   if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
-    auto obj = new QSpacerItem(PINT(1), PINT(2),
-                               HB_ISNIL(3) ? QSizePolicy::Minimum
-                                           : PQSIZEPOLICY_POLICY(3),
-                               HB_ISNIL(4) ? QSizePolicy::Minimum
-                                           : PQSIZEPOLICY_POLICY(4));
+    auto obj = new QSpacerItem(PINT(1), PINT(2), HB_ISNIL(3) ? QSizePolicy::Minimum : PQSIZEPOLICY_POLICY(3),
+                               HB_ISNIL(4) ? QSizePolicy::Minimum : PQSIZEPOLICY_POLICY(4));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -94,11 +91,8 @@ HB_FUNC_STATIC(QSPACERITEM_CHANGESIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
-      obj->changeSize(PINT(1), PINT(2),
-                      HB_ISNIL(3) ? QSizePolicy::Minimum
-                                  : PQSIZEPOLICY_POLICY(3),
-                      HB_ISNIL(4) ? QSizePolicy::Minimum
-                                  : PQSIZEPOLICY_POLICY(4));
+      obj->changeSize(PINT(1), PINT(2), HB_ISNIL(3) ? QSizePolicy::Minimum : PQSIZEPOLICY_POLICY(3),
+                      HB_ISNIL(4) ? QSizePolicy::Minimum : PQSIZEPOLICY_POLICY(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

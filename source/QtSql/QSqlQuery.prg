@@ -142,8 +142,7 @@ HB_FUNC_STATIC(QSQLQUERY_ADDBINDVALUE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQVARIANT(1) && ISNUMORNIL(2)) {
 #endif
-      obj->addBindValue(*PQVARIANT(1), HB_ISNIL(2) ? QSql::In
-                                                   : PQSQL_PARAMTYPE(2));
+      obj->addBindValue(*PQVARIANT(1), HB_ISNIL(2) ? QSql::In : PQSQL_PARAMTYPE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -179,8 +178,7 @@ HB_FUNC_STATIC(QSQLQUERY_BINDVALUE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->bindValue(PQSTRING(1), *PQVARIANT(2),
-                     HB_ISNIL(3) ? QSql::In : PQSQL_PARAMTYPE(3));
+      obj->bindValue(PQSTRING(1), *PQVARIANT(2), HB_ISNIL(3) ? QSql::In : PQSQL_PARAMTYPE(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -189,8 +187,7 @@ HB_FUNC_STATIC(QSQLQUERY_BINDVALUE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->bindValue(PINT(1), *PQVARIANT(2),
-                     HB_ISNIL(3) ? QSql::In : PQSQL_PARAMTYPE(3));
+      obj->bindValue(PINT(1), *PQVARIANT(2), HB_ISNIL(3) ? QSql::In : PQSQL_PARAMTYPE(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -289,8 +286,7 @@ HB_FUNC_STATIC(QSQLQUERY_EXECBATCH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RBOOL(obj->execBatch(HB_ISNIL(1) ? QSqlQuery::ValuesAsRows
-                                       : PQSQLQUERY_BATCHEXECUTIONMODE(1)));
+      RBOOL(obj->execBatch(HB_ISNIL(1) ? QSqlQuery::ValuesAsRows : PQSQLQUERY_BATCHEXECUTIONMODE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

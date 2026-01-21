@@ -72,8 +72,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2)) {
-    auto obj = new QNmeaPositionInfoSource(PQNMEAPOSITIONINFOSOURCE_UPDATEMODE(1),
-                                           OPQOBJECT(2, nullptr));
+    auto obj = new QNmeaPositionInfoSource(PQNMEAPOSITIONINFOSOURCE_UPDATEMODE(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

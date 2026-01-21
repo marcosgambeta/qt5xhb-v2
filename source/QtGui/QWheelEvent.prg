@@ -68,10 +68,8 @@ HB_FUNC_STATIC(QWHEELEVENT_NEW)
     QWheelEvent(const QPointF &pos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,
     Qt::Orientation orient = Qt::Vertical)
     */
-    auto obj = new QWheelEvent(*PQPOINTF(1), PINT(2), PQT_MOUSEBUTTONS(3),
-                               PQT_KEYBOARDMODIFIERS(4),
-                               HB_ISNIL(5) ? Qt::Vertical
-                                           : PQT_ORIENTATION(5));
+    auto obj = new QWheelEvent(*PQPOINTF(1), PINT(2), PQT_MOUSEBUTTONS(3), PQT_KEYBOARDMODIFIERS(4),
+                               HB_ISNIL(5) ? Qt::Vertical : PQT_ORIENTATION(5));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(5, 6) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
              ISNUMORNIL(6)) {
@@ -79,10 +77,8 @@ HB_FUNC_STATIC(QWHEELEVENT_NEW)
     QWheelEvent(const QPointF &pos, const QPointF &globalPos, int delta, Qt::MouseButtons buttons,
     Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical)
     */
-    auto obj = new QWheelEvent(*PQPOINTF(1), *PQPOINTF(2), PINT(3), PQT_MOUSEBUTTONS(4),
-                               PQT_KEYBOARDMODIFIERS(5),
-                               HB_ISNIL(6) ? Qt::Vertical
-                                           : PQT_ORIENTATION(6));
+    auto obj = new QWheelEvent(*PQPOINTF(1), *PQPOINTF(2), PINT(3), PQT_MOUSEBUTTONS(4), PQT_KEYBOARDMODIFIERS(5),
+                               HB_ISNIL(6) ? Qt::Vertical : PQT_ORIENTATION(6));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(8) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINT(3) && ISQPOINT(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
              HB_ISNUM(7) && HB_ISNUM(8)) {
@@ -90,9 +86,8 @@ HB_FUNC_STATIC(QWHEELEVENT_NEW)
     QWheelEvent(const QPointF &pos, const QPointF &globalPos, QPoint pixelDelta, QPoint angleDelta, int qt4Delta,
     Qt::Orientation qt4Orientation, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
     */
-    auto obj = new QWheelEvent(*PQPOINTF(1), *PQPOINTF(2), *PQPOINT(3), *PQPOINT(4), PINT(5),
-                               PQT_ORIENTATION(6), PQT_MOUSEBUTTONS(7),
-                               PQT_KEYBOARDMODIFIERS(8));
+    auto obj = new QWheelEvent(*PQPOINTF(1), *PQPOINTF(2), *PQPOINT(3), *PQPOINT(4), PINT(5), PQT_ORIENTATION(6),
+                               PQT_MOUSEBUTTONS(7), PQT_KEYBOARDMODIFIERS(8));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

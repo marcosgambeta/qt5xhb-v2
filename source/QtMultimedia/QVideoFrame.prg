@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_NEW)
     /*
     QVideoFrame(QAbstractVideoBuffer * buffer, const QSize &size, QVideoFrame::PixelFormat format)
     */
-    auto obj =
-        new QVideoFrame(PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), PQVIDEOFRAME_PIXELFORMAT(3));
+    auto obj = new QVideoFrame(PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), PQVIDEOFRAME_PIXELFORMAT(3));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSIZE(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*

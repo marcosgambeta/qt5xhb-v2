@@ -60,7 +60,8 @@ RETURN
 #include <QtMultimedia/QCameraImageCaptureControl>
 #endif
 
-#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCameraImageCaptureControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QCameraImageCaptureControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // ~QCameraImageCaptureControl()
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_DELETE)

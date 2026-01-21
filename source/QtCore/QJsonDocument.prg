@@ -377,8 +377,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_FROMBINARYDATA)
   if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
 #endif
     auto ptr = new QJsonDocument(QJsonDocument::fromBinaryData(
-        *PQBYTEARRAY(1), HB_ISNIL(2) ? QJsonDocument::Validate
-                                     : PQJSONDOCUMENT_DATAVALIDATION(2)));
+        *PQBYTEARRAY(1), HB_ISNIL(2) ? QJsonDocument::Validate : PQJSONDOCUMENT_DATAVALIDATION(2)));
     Qt5xHb::createReturnClass(ptr, "QJSONDOCUMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -414,10 +413,8 @@ HB_FUNC_STATIC(QJSONDOCUMENT_FROMRAWDATA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
 #endif
-    auto ptr = new QJsonDocument(
-        QJsonDocument::fromRawData(PCONSTCHAR(1), PINT(2),
-                                   HB_ISNIL(3) ? QJsonDocument::Validate
-                                               : PQJSONDOCUMENT_DATAVALIDATION(3)));
+    auto ptr = new QJsonDocument(QJsonDocument::fromRawData(
+        PCONSTCHAR(1), PINT(2), HB_ISNIL(3) ? QJsonDocument::Validate : PQJSONDOCUMENT_DATAVALIDATION(3)));
     Qt5xHb::createReturnClass(ptr, "QJSONDOCUMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {

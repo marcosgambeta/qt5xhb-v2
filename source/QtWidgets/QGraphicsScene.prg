@@ -427,8 +427,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDWIDGET)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2)) {
 #endif
-      auto ptr = obj->addWidget(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
-                                                         : PQT_WINDOWFLAGS(2));
+      auto ptr = obj->addWidget(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSPROXYWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -658,8 +657,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_INVALIDATE)
 
     if (obj != nullptr) {
       obj->invalidate(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
-                      HB_ISNIL(5) ? QGraphicsScene::AllLayers
-                                  : PQGRAPHICSSCENE_SCENELAYERS(5));
+                      HB_ISNIL(5) ? QGraphicsScene::AllLayers : PQGRAPHICSSCENE_SCENELAYERS(5));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -670,8 +668,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_INVALIDATE)
 
     if (obj != nullptr) {
       obj->invalidate(HB_ISNIL(1) ? QRectF() : *static_cast<QRectF *>(Qt5xHb::itemGetPtr(1)),
-                      HB_ISNIL(2) ? QGraphicsScene::AllLayers
-                                  : PQGRAPHICSSCENE_SCENELAYERS(2));
+                      HB_ISNIL(2) ? QGraphicsScene::AllLayers : PQGRAPHICSSCENE_SCENELAYERS(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -847,8 +844,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_RENDER)
 #endif
       obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *static_cast<QRectF *>(Qt5xHb::itemGetPtr(2)),
                   HB_ISNIL(3) ? QRectF() : *static_cast<QRectF *>(Qt5xHb::itemGetPtr(3)),
-                  HB_ISNIL(4) ? Qt::KeepAspectRatio
-                              : PQT_ASPECTRATIOMODE(4));
+                  HB_ISNIL(4) ? Qt::KeepAspectRatio : PQT_ASPECTRATIOMODE(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1002,8 +998,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETFOCUS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      obj->setFocus(HB_ISNIL(1) ? Qt::OtherFocusReason
-                                : PQT_FOCUSREASON(1));
+      obj->setFocus(HB_ISNIL(1) ? Qt::OtherFocusReason : PQT_FOCUSREASON(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1023,8 +1018,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETFOCUSITEM)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setFocusItem(PQGRAPHICSITEM(1), HB_ISNIL(2) ? Qt::OtherFocusReason
-                                                       : PQT_FOCUSREASON(2));
+      obj->setFocusItem(PQGRAPHICSITEM(1), HB_ISNIL(2) ? Qt::OtherFocusReason : PQT_FOCUSREASON(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

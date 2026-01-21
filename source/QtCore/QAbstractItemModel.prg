@@ -205,8 +205,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_DROPMIMEDATA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5)) {
 #endif
-      RBOOL(obj->dropMimeData(PQMIMEDATA(1), PQT_DROPACTION(2), PINT(3), PINT(4),
-                              *PQMODELINDEX(5)));
+      RBOOL(obj->dropMimeData(PQMIMEDATA(1), PQT_DROPACTION(2), PINT(3), PINT(4), *PQMODELINDEX(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -434,10 +433,8 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_MATCH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 5) && ISQMODELINDEX(1) && HB_ISNUM(2) && ISQVARIANT(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
 #endif
-      auto list =
-          obj->match(*PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4, 1),
-                     HB_ISNIL(5) ? Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap)
-                                 : PQT_MATCHFLAGS(5));
+      auto list = obj->match(*PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4, 1),
+                             HB_ISNIL(5) ? Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap) : PQT_MATCHFLAGS(5));
       auto pDynSym = hb_dynsymFindName("QMODELINDEX");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
@@ -642,8 +639,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETHEADERDATA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQVARIANT(3) && ISNUMORNIL(4)) {
 #endif
-      RBOOL(obj->setHeaderData(PINT(1), PQT_ORIENTATION(2), *PQVARIANT(3),
-                               OPINT(4, Qt::EditRole)));
+      RBOOL(obj->setHeaderData(PINT(1), PQT_ORIENTATION(2), *PQVARIANT(3), OPINT(4, Qt::EditRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -683,8 +679,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SORT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->sort(PINT(1),
-                HB_ISNIL(2) ? Qt::AscendingOrder : PQT_SORTORDER(2));
+      obj->sort(PINT(1), HB_ISNIL(2) ? Qt::AscendingOrder : PQT_SORTORDER(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

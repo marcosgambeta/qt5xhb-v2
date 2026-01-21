@@ -503,9 +503,7 @@ HB_FUNC_STATIC(QCALENDAR_WEEKDAYNAME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && ISQLOCALE(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
 #endif
-      RQSTRING(obj->weekDayName(*PQLOCALE(1), PINT(2),
-                                HB_ISNIL(3) ? QLocale::LongFormat
-                                            : PQLOCALE_FORMATTYPE(3)));
+      RQSTRING(obj->weekDayName(*PQLOCALE(1), PINT(2), HB_ISNIL(3) ? QLocale::LongFormat : PQLOCALE_FORMATTYPE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -528,8 +526,7 @@ HB_FUNC_STATIC(QCALENDAR_STANDALONEWEEKDAYNAME)
     if (ISBETWEEN(2, 3) && ISQLOCALE(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
 #endif
       RQSTRING(obj->standaloneWeekDayName(*PQLOCALE(1), PINT(2),
-                                          HB_ISNIL(3) ? QLocale::LongFormat
-                                                      : PQLOCALE_FORMATTYPE(3)));
+                                          HB_ISNIL(3) ? QLocale::LongFormat : PQLOCALE_FORMATTYPE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -66,10 +66,9 @@ HB_FUNC_STATIC(QANDROIDJNIEXCEPTIONCLEANER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    auto obj = new QAndroidJniExceptionCleaner(
-        HB_ISNIL(1)
-            ? static_cast<QAndroidJniExceptionCleaner::OutputMode>(QAndroidJniExceptionCleaner::OutputMode::Silent)
-            : PQANDROIDJNIEXCEPTIONCLEANER_OUTPUTMODE(1));
+    auto obj = new QAndroidJniExceptionCleaner(HB_ISNIL(1) ? static_cast<QAndroidJniExceptionCleaner::OutputMode>(
+                                                                 QAndroidJniExceptionCleaner::OutputMode::Silent)
+                                                           : PQANDROIDJNIEXCEPTIONCLEANER_OUTPUTMODE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

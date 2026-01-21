@@ -232,10 +232,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_FINDITEMS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
-      auto list = obj->findItems(PQSTRING(1),
-                                 HB_ISNIL(2) ? Qt::MatchExactly
-                                             : PQT_MATCHFLAGS(2),
-                                 OPINT(3, 0));
+      auto list = obj->findItems(PQSTRING(1), HB_ISNIL(2) ? Qt::MatchExactly : PQT_MATCHFLAGS(2), OPINT(3, 0));
       auto pDynSym = hb_dynsymFindName("QSTANDARDITEM");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
@@ -666,8 +663,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SETHEADERDATA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQVARIANT(3) && ISNUMORNIL(4)) {
 #endif
-      RBOOL(obj->setHeaderData(PINT(1), PQT_ORIENTATION(2), *PQVARIANT(3),
-                               OPINT(4, Qt::EditRole)));
+      RBOOL(obj->setHeaderData(PINT(1), PQT_ORIENTATION(2), *PQVARIANT(3), OPINT(4, Qt::EditRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -811,8 +807,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SORT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->sort(PINT(1),
-                HB_ISNIL(2) ? Qt::AscendingOrder : PQT_SORTORDER(2));
+      obj->sort(PINT(1), HB_ISNIL(2) ? Qt::AscendingOrder : PQT_SORTORDER(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1269,8 +1264,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_DROPMIMEDATA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5)) {
 #endif
-      RBOOL(obj->dropMimeData(PQMIMEDATA(1), PQT_DROPACTION(2), PINT(3), PINT(4),
-                              *PQMODELINDEX(5)));
+      RBOOL(obj->dropMimeData(PQMIMEDATA(1), PQT_DROPACTION(2), PINT(3), PINT(4), *PQMODELINDEX(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

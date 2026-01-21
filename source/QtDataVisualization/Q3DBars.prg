@@ -94,7 +94,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 /*
 Q3DBars(const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr)

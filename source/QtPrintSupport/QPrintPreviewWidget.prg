@@ -81,15 +81,14 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_NEW)
     QPrintPreviewWidget(QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0)
     */
     auto obj = new QPrintPreviewWidget(PQPRINTER(1), OPQWIDGET(2, nullptr),
-                                       HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0)
-                                                   : PQT_WINDOWFLAGS(3));
+                                       HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(3));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     /*
     QPrintPreviewWidget(QWidget * parent = nullptr, Qt::WindowFlags flags = 0)
     */
-    auto obj = new QPrintPreviewWidget(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
-                                                                          : PQT_WINDOWFLAGS(2));
+    auto obj = new QPrintPreviewWidget(OPQWIDGET(1, nullptr),
+                                       HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

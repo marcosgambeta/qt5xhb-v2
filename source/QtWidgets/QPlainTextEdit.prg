@@ -404,8 +404,8 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_FIND)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
-      RBOOL(obj->find(PQSTRING(1), HB_ISNIL(2) ? static_cast<QTextDocument::FindFlags>(0)
-                                               : PQTEXTDOCUMENT_FINDFLAGS(2)));
+      RBOOL(
+          obj->find(PQSTRING(1), HB_ISNIL(2) ? static_cast<QTextDocument::FindFlags>(0) : PQTEXTDOCUMENT_FINDFLAGS(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -533,9 +533,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_MOVECURSOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->moveCursor(PQTEXTCURSOR_MOVEOPERATION(1),
-                      HB_ISNIL(2) ? QTextCursor::MoveAnchor
-                                  : PQTEXTCURSOR_MOVEMODE(2));
+      obj->moveCursor(PQTEXTCURSOR_MOVEOPERATION(1), HB_ISNIL(2) ? QTextCursor::MoveAnchor : PQTEXTCURSOR_MOVEMODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

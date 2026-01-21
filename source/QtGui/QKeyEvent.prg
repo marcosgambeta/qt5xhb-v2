@@ -63,9 +63,8 @@ HB_FUNC_STATIC(QKEYEVENT_NEW)
 {
   if (ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISCHARORNIL(4) && ISLOGORNIL(5) &&
       ISNUMORNIL(6)) {
-    auto obj =
-        new QKeyEvent(PQEVENT_TYPE(1), PINT(2), PQT_KEYBOARDMODIFIERS(3),
-                      OPQSTRING(4, QString()), OPBOOL(5, false), OPUSHORT(6, 1));
+    auto obj = new QKeyEvent(PQEVENT_TYPE(1), PINT(2), PQT_KEYBOARDMODIFIERS(3), OPQSTRING(4, QString()),
+                             OPBOOL(5, false), OPUSHORT(6, 1));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

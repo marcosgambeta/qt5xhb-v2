@@ -494,8 +494,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILD)
     if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISNUMORNIL(2)) {
 #endif
       auto ptr = obj->findChild<QObject *>(OPQSTRING(1, QString()),
-                                           HB_ISNIL(2) ? Qt::FindChildrenRecursively
-                                                       : PQT_FINDCHILDOPTIONS(2));
+                                           HB_ISNIL(2) ? Qt::FindChildrenRecursively : PQT_FINDCHILDOPTIONS(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -513,9 +512,8 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto list = obj->findChildren<QObject *>(
-          OPQSTRING(1, QString()), HB_ISNIL(2) ? Qt::FindChildrenRecursively
-                                               : PQT_FINDCHILDOPTIONS(2));
+      auto list = obj->findChildren<QObject *>(OPQSTRING(1, QString()),
+                                               HB_ISNIL(2) ? Qt::FindChildrenRecursively : PQT_FINDCHILDOPTIONS(2));
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
@@ -542,9 +540,8 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto list = obj->findChildren<QObject *>(
-          *PQREGEXP(1), HB_ISNIL(2) ? Qt::FindChildrenRecursively
-                                    : PQT_FINDCHILDOPTIONS(2));
+      auto list = obj->findChildren<QObject *>(*PQREGEXP(1),
+                                               HB_ISNIL(2) ? Qt::FindChildrenRecursively : PQT_FINDCHILDOPTIONS(2));
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
@@ -573,9 +570,8 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto list = obj->findChildren<QObject *>(
-          *PQREGULAREXPRESSION(1), HB_ISNIL(2) ? Qt::FindChildrenRecursively
-                                               : PQT_FINDCHILDOPTIONS(2));
+      auto list = obj->findChildren<QObject *>(*PQREGULAREXPRESSION(1),
+                                               HB_ISNIL(2) ? Qt::FindChildrenRecursively : PQT_FINDCHILDOPTIONS(2));
       auto pDynSym = hb_dynsymFindName("QOBJECT");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
@@ -899,8 +895,7 @@ HB_FUNC_STATIC(QOBJECT_STARTTIMER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      RINT(obj->startTimer(PINT(1), HB_ISNIL(2) ? Qt::CoarseTimer
-                                                : PQT_TIMERTYPE(2)));
+      RINT(obj->startTimer(PINT(1), HB_ISNIL(2) ? Qt::CoarseTimer : PQT_TIMERTYPE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

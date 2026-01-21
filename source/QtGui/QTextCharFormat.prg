@@ -792,9 +792,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTSTYLEHINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setFontStyleHint(PQFONT_STYLEHINT(1),
-                            HB_ISNIL(2) ? QFont::PreferDefault
-                                        : PQFONT_STYLESTRATEGY(2));
+      obj->setFontStyleHint(PQFONT_STYLEHINT(1), HB_ISNIL(2) ? QFont::PreferDefault : PQFONT_STYLESTRATEGY(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

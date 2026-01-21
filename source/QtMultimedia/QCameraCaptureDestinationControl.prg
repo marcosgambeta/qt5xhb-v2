@@ -52,7 +52,8 @@ RETURN
 #include <QtMultimedia/QCameraCaptureDestinationControl>
 #endif
 
-#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCameraCaptureDestinationControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QCameraCaptureDestinationControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // ~QCameraCaptureDestinationControl()
 HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_DELETE)

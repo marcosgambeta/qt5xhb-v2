@@ -197,8 +197,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_BIND)
 
     if (obj != nullptr) {
       RBOOL(obj->bind(*PQHOSTADDRESS(1), OPQUINT16(2, 0),
-                      HB_ISNIL(3) ? QAbstractSocket::DefaultForPlatform
-                                  : PQABSTRACTSOCKET_BINDMODE(3)));
+                      HB_ISNIL(3) ? QAbstractSocket::DefaultForPlatform : PQABSTRACTSOCKET_BINDMODE(3)));
     }
   } else if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2)) {
     /*
@@ -226,9 +225,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
     auto obj = qobject_cast<QAbstractSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      obj->connectToHost(PQSTRING(1), PQUINT16(2),
-                         HB_ISNIL(3) ? QIODevice::ReadWrite
-                                     : PQIODEVICE_OPENMODE(3),
+      obj->connectToHost(PQSTRING(1), PQUINT16(2), HB_ISNIL(3) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(3),
                          HB_ISNIL(4)
                              ? static_cast<QAbstractSocket::NetworkLayerProtocol>(QAbstractSocket::AnyIPProtocol)
                              : PQABSTRACTSOCKET_NETWORKLAYERPROTOCOL(4));
@@ -243,9 +240,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
     auto obj = qobject_cast<QAbstractSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      obj->connectToHost(*PQHOSTADDRESS(1), PQUINT16(2),
-                         HB_ISNIL(3) ? QIODevice::ReadWrite
-                                     : PQIODEVICE_OPENMODE(3));
+      obj->connectToHost(*PQHOSTADDRESS(1), PQUINT16(2), HB_ISNIL(3) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -558,8 +553,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SETSOCKETDESCRIPTOR)
                                      HB_ISNIL(2)
                                          ? static_cast<QAbstractSocket::SocketState>(QAbstractSocket::ConnectedState)
                                          : PQABSTRACTSOCKET_SOCKETSTATE(2),
-                                     HB_ISNIL(3) ? QIODevice::ReadWrite
-                                                 : PQIODEVICE_OPENMODE(3)));
+                                     HB_ISNIL(3) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

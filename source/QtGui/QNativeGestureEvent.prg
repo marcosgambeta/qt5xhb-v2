@@ -63,8 +63,8 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_NEW)
 {
   if (ISNUMPAR(7) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
       HB_ISNUM(7)) {
-    auto obj = new QNativeGestureEvent(PQT_NATIVEGESTURETYPE(1), *PQPOINTF(2), *PQPOINTF(3),
-                                       *PQPOINTF(4), PQREAL(5), PULONG(6), PQUINT64(7));
+    auto obj = new QNativeGestureEvent(PQT_NATIVEGESTURETYPE(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), PQREAL(5),
+                                       PULONG(6), PQUINT64(7));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

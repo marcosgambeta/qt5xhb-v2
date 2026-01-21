@@ -548,8 +548,7 @@ RETURN
 HB_FUNC_STATIC(QWIDGET_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
-    auto obj = new QWidget(OPQWIDGET(1, nullptr),
-                           HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
+    auto obj = new QWidget(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1476,9 +1475,7 @@ HB_FUNC_STATIC(QWIDGET_GRABGESTURE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->grabGesture(PQT_GESTURETYPE(1),
-                       HB_ISNIL(2) ? Qt::GestureFlags()
-                                   : PQT_GESTUREFLAGS(2));
+      obj->grabGesture(PQT_GESTURETYPE(1), HB_ISNIL(2) ? Qt::GestureFlags() : PQT_GESTUREFLAGS(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1550,8 +1547,7 @@ HB_FUNC_STATIC(QWIDGET_GRABSHORTCUT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && ISNUMORNIL(2)) {
 #endif
-      RINT(obj->grabShortcut(*PQKEYSEQUENCE(1), HB_ISNIL(2) ? Qt::WindowShortcut
-                                                            : PQT_SHORTCUTCONTEXT(2)));
+      RINT(obj->grabShortcut(*PQKEYSEQUENCE(1), HB_ISNIL(2) ? Qt::WindowShortcut : PQT_SHORTCUTCONTEXT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -5197,8 +5193,7 @@ HB_FUNC_STATIC(QWIDGET_CREATEWINDOWCONTAINER)
   if (ISBETWEEN(1, 3) && ISQWINDOW(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
 #endif
     auto ptr = QWidget::createWindowContainer(PQWINDOW(1), OPQWIDGET(2, nullptr),
-                                              HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0)
-                                                          : PQT_WINDOWFLAGS(3));
+                                              HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(3));
     Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {

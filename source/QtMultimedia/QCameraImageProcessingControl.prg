@@ -52,7 +52,8 @@ RETURN
 #include <QtMultimedia/QCameraImageProcessingControl>
 #endif
 
-#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QCameraImageProcessingControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QCameraImageProcessingControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
 // ~QCameraImageProcessingControl()
 HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_DELETE)
@@ -82,7 +83,8 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERSUPPORTED)
   }
 }
 
-// virtual bool isParameterValueSupported(QCameraImageProcessingControl::ProcessingParameter parameter, const QVariant &value) const = 0
+// virtual bool isParameterValueSupported(QCameraImageProcessingControl::ProcessingParameter parameter, const QVariant
+// &value) const = 0
 HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERVALUESUPPORTED)
 {
   GET_PTR_FROM_SELF(obj);
@@ -91,8 +93,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERVALUESUPPORTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2)) {
 #endif
-      RBOOL(obj->isParameterValueSupported(PQCAMERAIMAGEPROCESSINGCONTROL_PROCESSINGPARAMETER(1),
-                                           *PQVARIANT(2)));
+      RBOOL(obj->isParameterValueSupported(PQCAMERAIMAGEPROCESSINGCONTROL_PROCESSINGPARAMETER(1), *PQVARIANT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

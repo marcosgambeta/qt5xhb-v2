@@ -57,7 +57,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtCharts;
+using namespace QtCharts;
 
 /*
 QBarLegendMarker(QAbstractBarSeries * series, QBarSet * barset, QLegend * legend, QObject * parent = nullptr)

@@ -212,8 +212,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_ADDWIDGET)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQWIDGET(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
-      obj->addWidget(PQWIDGET(1), OPINT(2, 0),
-                     HB_ISNIL(3) ? static_cast<Qt::Alignment>(0) : PQT_ALIGNMENT(3));
+      obj->addWidget(PQWIDGET(1), OPINT(2, 0), HB_ISNIL(3) ? static_cast<Qt::Alignment>(0) : PQT_ALIGNMENT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

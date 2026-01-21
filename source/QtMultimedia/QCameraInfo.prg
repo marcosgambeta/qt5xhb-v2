@@ -228,8 +228,7 @@ HB_FUNC_STATIC(QCAMERAINFO_AVAILABLECAMERAS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-    auto list = QCameraInfo::availableCameras(HB_ISNIL(1) ? QCamera::UnspecifiedPosition
-                                                          : PQCAMERA_POSITION(1));
+    auto list = QCameraInfo::availableCameras(HB_ISNIL(1) ? QCamera::UnspecifiedPosition : PQCAMERA_POSITION(1));
     auto pDynSym = hb_dynsymFindName("QCAMERAINFO");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr) {

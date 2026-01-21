@@ -206,7 +206,9 @@ HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
 {
   if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
       ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
-    // QVariant dynamicCall(const char * function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(), const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
+    // QVariant dynamicCall(const char * function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
+    // const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
+    // QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
@@ -290,7 +292,10 @@ HB_FUNC_STATIC(QAXBASE_QUERYSUBOBJECT)
 {
   if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
       ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
-    // QAxObject * querySubObject(const char * name, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(), const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
+    // QAxObject * querySubObject(const char * name, const QVariant &var1 = QVariant(), const QVariant &var2 =
+    // QVariant(), const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 =
+    // QVariant(), const QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 =
+    // QVariant())
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {

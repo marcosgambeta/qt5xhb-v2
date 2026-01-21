@@ -105,9 +105,8 @@ HB_FUNC_STATIC(QRAWFONT_NEW)
     QRawFont(const QString &fileName, qreal pixelSize, QFont::HintingPreference hintingPreference =
     QFont::PreferDefaultHinting)
     */
-    auto obj = new QRawFont(PQSTRING(1), PQREAL(2),
-                            HB_ISNIL(3) ? QFont::PreferDefaultHinting
-                                        : PQFONT_HINTINGPREFERENCE(3));
+    auto obj =
+        new QRawFont(PQSTRING(1), PQREAL(2), HB_ISNIL(3) ? QFont::PreferDefaultHinting : PQFONT_HINTINGPREFERENCE(3));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     /*
@@ -115,8 +114,7 @@ HB_FUNC_STATIC(QRAWFONT_NEW)
     QFont::PreferDefaultHinting)
     */
     auto obj = new QRawFont(*PQBYTEARRAY(1), PQREAL(2),
-                            HB_ISNIL(3) ? QFont::PreferDefaultHinting
-                                        : PQFONT_HINTINGPREFERENCE(3));
+                            HB_ISNIL(3) ? QFont::PreferDefaultHinting : PQFONT_HINTINGPREFERENCE(3));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQRAWFONT(1)) {
     /*
@@ -352,11 +350,9 @@ HB_FUNC_STATIC(QRAWFONT_ALPHAMAPFORGLYPH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISQTRANSFORMORNIL(3)) {
 #endif
-      auto ptr = new QImage(
-          obj->alphaMapForGlyph(PQUINT32(1),
-                                HB_ISNIL(2) ? QRawFont::SubPixelAntialiasing
-                                            : PQRAWFONT_ANTIALIASINGTYPE(2),
-                                HB_ISNIL(3) ? QTransform() : *static_cast<QTransform *>(Qt5xHb::itemGetPtr(3))));
+      auto ptr = new QImage(obj->alphaMapForGlyph(
+          PQUINT32(1), HB_ISNIL(2) ? QRawFont::SubPixelAntialiasing : PQRAWFONT_ANTIALIASINGTYPE(2),
+          HB_ISNIL(3) ? QTransform() : *static_cast<QTransform *>(Qt5xHb::itemGetPtr(3))));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -774,8 +770,7 @@ HB_FUNC_STATIC(QRAWFONT_FROMFONT)
   if (ISBETWEEN(1, 2) && ISQFONT(1) && ISNUMORNIL(2)) {
 #endif
     auto ptr = new QRawFont(
-        QRawFont::fromFont(*PQFONT(1), HB_ISNIL(2) ? QFontDatabase::Any
-                                                   : PQFONTDATABASE_WRITINGSYSTEM(2)));
+        QRawFont::fromFont(*PQFONT(1), HB_ISNIL(2) ? QFontDatabase::Any : PQFONTDATABASE_WRITINGSYSTEM(2)));
     Qt5xHb::createReturnClass(ptr, "QRAWFONT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {

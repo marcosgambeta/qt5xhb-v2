@@ -106,8 +106,7 @@ HB_FUNC_STATIC(QPAGESIZE_NEW)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QPageSize(*PQSIZE(1), OPQSTRING(2, QString()),
-                             HB_ISNIL(3) ? QPageSize::FuzzyMatch
-                                         : PQPAGESIZE_SIZEMATCHPOLICY(3));
+                             HB_ISNIL(3) ? QPageSize::FuzzyMatch : PQPAGESIZE_SIZEMATCHPOLICY(3));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISBETWEEN(2, 4) && ISQSIZEF(1) && HB_ISNUM(2) && ISCHARORNIL(3) && ISNUMORNIL(4)) {
@@ -117,8 +116,7 @@ HB_FUNC_STATIC(QPAGESIZE_NEW)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QPageSize(*PQSIZEF(1), PQPAGESIZE_UNIT(2), OPQSTRING(3, QString()),
-                             HB_ISNIL(4) ? QPageSize::FuzzyMatch
-                                         : PQPAGESIZE_SIZEMATCHPOLICY(4));
+                             HB_ISNIL(4) ? QPageSize::FuzzyMatch : PQPAGESIZE_SIZEMATCHPOLICY(4));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPAGESIZE(1)) {
@@ -285,8 +283,7 @@ HB_FUNC_STATIC(QPAGESIZE_ID)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 
-    RENUM(QPageSize::id(*PQSIZE(1), HB_ISNIL(2) ? QPageSize::FuzzyMatch
-                                                : PQPAGESIZE_SIZEMATCHPOLICY(2)));
+    RENUM(QPageSize::id(*PQSIZE(1), HB_ISNIL(2) ? QPageSize::FuzzyMatch : PQPAGESIZE_SIZEMATCHPOLICY(2)));
 #endif
   } else if (ISBETWEEN(2, 3) && ISQSIZEF(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     /*
@@ -296,8 +293,7 @@ HB_FUNC_STATIC(QPAGESIZE_ID)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 
     RENUM(QPageSize::id(*PQSIZEF(1), PQPAGESIZE_UNIT(2),
-                        HB_ISNIL(3) ? QPageSize::FuzzyMatch
-                                    : PQPAGESIZE_SIZEMATCHPOLICY(3)));
+                        HB_ISNIL(3) ? QPageSize::FuzzyMatch : PQPAGESIZE_SIZEMATCHPOLICY(3)));
 #endif
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
@@ -412,8 +408,7 @@ HB_FUNC_STATIC(QPAGESIZE_SIZE)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 
-    auto ptr = new QSizeF(
-        QPageSize::size(PQPAGESIZE_PAGESIZEID(1), PQPAGESIZE_UNIT(2)));
+    auto ptr = new QSizeF(QPageSize::size(PQPAGESIZE_PAGESIZEID(1), PQPAGESIZE_UNIT(2)));
     Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #endif
   } else {

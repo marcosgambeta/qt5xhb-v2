@@ -113,8 +113,8 @@ RETURN
 HB_FUNC_STATIC(QMAINWINDOW_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
-    auto obj = new QMainWindow(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
-                                                                  : PQT_WINDOWFLAGS(2));
+    auto obj =
+        new QMainWindow(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -147,8 +147,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDDOCKWIDGET)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->addDockWidget(PQT_DOCKWIDGETAREA(1), PQDOCKWIDGET(2),
-                         PQT_ORIENTATION(3));
+      obj->addDockWidget(PQT_DOCKWIDGETAREA(1), PQDOCKWIDGET(2), PQT_ORIENTATION(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -203,8 +202,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBARBREAK)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      obj->addToolBarBreak(HB_ISNIL(1) ? Qt::TopToolBarArea
-                                       : PQT_TOOLBARAREA(1));
+      obj->addToolBarBreak(HB_ISNIL(1) ? Qt::TopToolBarArea : PQT_TOOLBARAREA(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -740,8 +738,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETTABPOSITION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setTabPosition(PQT_DOCKWIDGETAREAS(1),
-                          PQTABWIDGET_TABPOSITION(2));
+      obj->setTabPosition(PQT_DOCKWIDGETAREAS(1), PQTABWIDGET_TABPOSITION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

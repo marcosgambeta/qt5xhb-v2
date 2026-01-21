@@ -333,7 +333,8 @@ HB_FUNC_STATIC(QSQLDRIVER_NUMERICALPRECISIONPOLICY)
   }
 }
 
-// virtual bool open(const QString &db, const QString &user = QString(), const QString &password = QString(), const QString &host = QString(), int port = -1, const QString &options = QString()) = 0
+// virtual bool open(const QString &db, const QString &user = QString(), const QString &password = QString(), const
+// QString &host = QString(), int port = -1, const QString &options = QString()) = 0
 HB_FUNC_STATIC(QSQLDRIVER_OPEN)
 {
   GET_PTR_FROM_SELF(obj);
@@ -427,7 +428,8 @@ HB_FUNC_STATIC(QSQLDRIVER_SETNUMERICALPRECISIONPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// virtual QString sqlStatement(QSqlDriver::StatementType type, const QString &tableName, const QSqlRecord &rec, bool preparedStatement) const
+// virtual QString sqlStatement(QSqlDriver::StatementType type, const QString &tableName, const QSqlRecord &rec, bool
+// preparedStatement) const
 HB_FUNC_STATIC(QSQLDRIVER_SQLSTATEMENT)
 {
   GET_PTR_FROM_SELF(obj);
@@ -436,8 +438,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SQLSTATEMENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQSQLRECORD(3) && HB_ISLOG(4)) {
 #endif
-      RQSTRING(obj->sqlStatement(PQSQLDRIVER_STATEMENTTYPE(1), PQSTRING(2), *PQSQLRECORD(3),
-                                 PBOOL(4)));
+      RQSTRING(obj->sqlStatement(PQSQLDRIVER_STATEMENTTYPE(1), PQSTRING(2), *PQSQLRECORD(3), PBOOL(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

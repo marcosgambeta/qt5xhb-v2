@@ -55,7 +55,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtCharts;
+using namespace QtCharts;
 
 /*
 QXYLegendMarker(QXYSeries * series, QLegend * legend, QObject * parent = nullptr)

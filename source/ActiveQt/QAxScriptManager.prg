@@ -115,7 +115,9 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_CALL)
 {
   if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
       ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
-    // QVariant call(const QString &function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(), const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
+    // QVariant call(const QString &function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
+    // const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
+    // QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
@@ -149,8 +151,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_FUNCTIONS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQSTRINGLIST(obj->functions(HB_ISNIL(1) ? QAxScript::FunctionNames
-                                              : PQAXSCRIPT_FUNCTIONFLAGS(1)));
+      RQSTRINGLIST(obj->functions(HB_ISNIL(1) ? QAxScript::FunctionNames : PQAXSCRIPT_FUNCTIONFLAGS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

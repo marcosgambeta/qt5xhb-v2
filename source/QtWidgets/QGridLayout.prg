@@ -145,8 +145,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDLAYOUT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->addLayout(PQLAYOUT(1), PINT(2), PINT(3),
-                     HB_ISNIL(4) ? static_cast<Qt::Alignment>(0) : PQT_ALIGNMENT(4));
+      obj->addLayout(PQLAYOUT(1), PINT(2), PINT(3), HB_ISNIL(4) ? static_cast<Qt::Alignment>(0) : PQT_ALIGNMENT(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -175,8 +174,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDWIDGET)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->addWidget(PQWIDGET(1), PINT(2), PINT(3),
-                     HB_ISNIL(4) ? static_cast<Qt::Alignment>(0) : PQT_ALIGNMENT(4));
+      obj->addWidget(PQWIDGET(1), PINT(2), PINT(3), HB_ISNIL(4) ? static_cast<Qt::Alignment>(0) : PQT_ALIGNMENT(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());

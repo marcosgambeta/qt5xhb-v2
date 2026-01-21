@@ -278,10 +278,8 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CALL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQDBUSMESSAGE(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
-      auto ptr = new QDBusMessage(obj->call(*PQDBUSMESSAGE(1),
-                                            HB_ISNIL(2) ? QDBus::Block
-                                                        : PQDBUS_CALLMODE(2),
-                                            OPINT(3, -1)));
+      auto ptr =
+          new QDBusMessage(obj->call(*PQDBUSMESSAGE(1), HB_ISNIL(2) ? QDBus::Block : PQDBUS_CALLMODE(2), OPINT(3, -1)));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -429,8 +427,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_UNREGISTEROBJECT)
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       obj->unregisterObject(PQSTRING(1),
-                            HB_ISNIL(2) ? QDBusConnection::UnregisterNode
-                                        : PQDBUSCONNECTION_UNREGISTERMODE(2));
+                            HB_ISNIL(2) ? QDBusConnection::UnregisterNode : PQDBUSCONNECTION_UNREGISTERMODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -550,8 +547,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECTTOBUS)
     static QDBusConnection connectToBus(QDBusConnection::BusType type, const QString &name)
     */
 
-    auto ptr = new QDBusConnection(
-        QDBusConnection::connectToBus(PQDBUSCONNECTION_BUSTYPE(1), PQSTRING(2)));
+    auto ptr = new QDBusConnection(QDBusConnection::connectToBus(PQDBUSCONNECTION_BUSTYPE(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QDBUSCONNECTION", true);
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     /*

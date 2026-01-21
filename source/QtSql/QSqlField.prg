@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QSQLFIELD_NEW)
 {
   if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISNUMORNIL(2)) {
     // QSqlField(const QString &fieldName = QString(), QVariant::Type type = QVariant::Invalid)
-    auto obj = new QSqlField(OPQSTRING(1, QString()), HB_ISNIL(2) ? QVariant::Invalid
-                                                                  : PQVARIANT_TYPE(2));
+    auto obj = new QSqlField(OPQSTRING(1, QString()), HB_ISNIL(2) ? QVariant::Invalid : PQVARIANT_TYPE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSQLFIELD(1)) {
     // QSqlField(const QSqlField &other)

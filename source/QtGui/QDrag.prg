@@ -144,8 +144,7 @@ HB_FUNC_STATIC(QDRAG_EXEC)
     auto obj = qobject_cast<QDrag *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      RENUM(obj->exec(HB_ISNIL(1) ? Qt::MoveAction
-                                  : PQT_DROPACTIONS(1)));
+      RENUM(obj->exec(HB_ISNIL(1) ? Qt::MoveAction : PQT_DROPACTIONS(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*

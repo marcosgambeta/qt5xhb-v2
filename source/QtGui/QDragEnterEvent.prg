@@ -53,8 +53,7 @@ RETURN
 HB_FUNC_STATIC(QDRAGENTEREVENT_NEW)
 {
   if (ISNUMPAR(5) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
-    auto obj = new QDragEnterEvent(*PQPOINT(1), PQT_DROPACTIONS(2), PQMIMEDATA(3),
-                                   PQT_MOUSEBUTTONS(4),
+    auto obj = new QDragEnterEvent(*PQPOINT(1), PQT_DROPACTIONS(2), PQMIMEDATA(3), PQT_MOUSEBUTTONS(4),
                                    PQT_KEYBOARDMODIFIERS(5));
     Qt5xHb::returnNewObject(obj, false);
   } else {

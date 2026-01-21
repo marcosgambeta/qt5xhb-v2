@@ -155,8 +155,7 @@ HB_FUNC_STATIC(QMDIAREA_ADDSUBWINDOW)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2)) {
 #endif
-      auto ptr = obj->addSubWindow(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
-                                                            : PQT_WINDOWFLAGS(2));
+      auto ptr = obj->addSubWindow(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
       Qt5xHb::createReturnQWidgetClass(ptr, "QMDISUBWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -390,8 +389,7 @@ HB_FUNC_STATIC(QMDIAREA_SUBWINDOWLIST)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      auto list = obj->subWindowList(HB_ISNIL(1) ? QMdiArea::CreationOrder
-                                                 : PQMDIAREA_WINDOWORDER(1));
+      auto list = obj->subWindowList(HB_ISNIL(1) ? QMdiArea::CreationOrder : PQMDIAREA_WINDOWORDER(1));
       auto pDynSym = hb_dynsymFindName("QMDISUBWINDOW");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {

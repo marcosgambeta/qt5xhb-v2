@@ -405,7 +405,8 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SUPPORTEDIMAGECODECS)
   }
 }
 
-// QList<QSize> supportedResolutions(const QImageEncoderSettings &settings = QImageEncoderSettings(), bool *continuous = nullptr) const
+// QList<QSize> supportedResolutions(const QImageEncoderSettings &settings = QImageEncoderSettings(), bool *continuous =
+// nullptr) const
 HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS)
 {
   GET_PTR_FROM_SELF(obj);

@@ -56,7 +56,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 /*
 QCategory3DAxis(QObject * parent = nullptr)

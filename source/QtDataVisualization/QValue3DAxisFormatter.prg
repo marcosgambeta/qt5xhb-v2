@@ -52,7 +52,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 /*
 QValue3DAxisFormatter(QObject * parent = nullptr)

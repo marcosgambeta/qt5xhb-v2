@@ -141,7 +141,8 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_SETVALUE)
   }
 }
 
-// virtual QVariantList supportedParameterRange(QCameraExposureControl::ExposureParameter parameter, bool * continuous) const = 0
+// virtual QVariantList supportedParameterRange(QCameraExposureControl::ExposureParameter parameter, bool * continuous)
+// const = 0
 HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE)
 {
   GET_PTR_FROM_SELF(obj);
@@ -151,8 +152,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE)
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
 #endif
       bool par2;
-      auto list =
-          obj->supportedParameterRange(PQCAMERAEXPOSURECONTROL_EXPOSUREPARAMETER(1), &par2);
+      auto list = obj->supportedParameterRange(PQCAMERAEXPOSURECONTROL_EXPOSUREPARAMETER(1), &par2);
       auto pDynSym = hb_dynsymFindName("QVARIANT");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {

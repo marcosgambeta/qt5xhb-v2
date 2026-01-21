@@ -49,6 +49,6 @@ RETURN
 #endif
 #endif
 
-    using namespace QtCharts;
+using namespace QtCharts;
 
 #pragma ENDDUMP

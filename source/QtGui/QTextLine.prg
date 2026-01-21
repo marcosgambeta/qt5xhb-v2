@@ -394,8 +394,7 @@ HB_FUNC_STATIC(QTEXTLINE_CURSORTOX)
 
     if (obj != nullptr) {
       int par1;
-      RQREAL(obj->cursorToX(&par1, HB_ISNIL(2) ? QTextLine::Leading
-                                               : PQTEXTLINE_EDGE(2)));
+      RQREAL(obj->cursorToX(&par1, HB_ISNIL(2) ? QTextLine::Leading : PQTEXTLINE_EDGE(2)));
       hb_storni(par1, 1);
     }
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
@@ -405,8 +404,7 @@ HB_FUNC_STATIC(QTEXTLINE_CURSORTOX)
     auto obj = static_cast<QTextLine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RQREAL(obj->cursorToX(PINT(1), HB_ISNIL(2) ? QTextLine::Leading
-                                                 : PQTEXTLINE_EDGE(2)));
+      RQREAL(obj->cursorToX(PINT(1), HB_ISNIL(2) ? QTextLine::Leading : PQTEXTLINE_EDGE(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -53,7 +53,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 /*
 QTouch3DInputHandler(QObject * parent = nullptr)

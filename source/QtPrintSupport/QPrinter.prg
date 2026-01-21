@@ -130,16 +130,13 @@ HB_FUNC_STATIC(QPRINTER_NEW)
     /*
     QPrinter(QPrinter::PrinterMode mode = QPrinter::ScreenResolution)
     */
-    auto obj = new QPrinter(HB_ISNIL(1) ? QPrinter::ScreenResolution
-                                        : PQPRINTER_PRINTERMODE(1));
+    auto obj = new QPrinter(HB_ISNIL(1) ? QPrinter::ScreenResolution : PQPRINTER_PRINTERMODE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && ISQPRINTERINFO(1) && ISNUMORNIL(2)) {
     /*
     QPrinter(const QPrinterInfo &printer, QPrinter::PrinterMode mode = QPrinter::ScreenResolution)
     */
-    auto obj =
-        new QPrinter(*PQPRINTERINFO(1), HB_ISNIL(2) ? QPrinter::ScreenResolution
-                                                    : PQPRINTER_PRINTERMODE(2));
+    auto obj = new QPrinter(*PQPRINTERINFO(1), HB_ISNIL(2) ? QPrinter::ScreenResolution : PQPRINTER_PRINTERMODE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -404,8 +404,7 @@ HB_FUNC_STATIC(QTIME_TOSTRING)
     auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RQSTRING(obj->toString(HB_ISNIL(1) ? Qt::TextDate
-                                         : PQT_DATEFORMAT(1)));
+      RQSTRING(obj->toString(HB_ISNIL(1) ? Qt::TextDate : PQT_DATEFORMAT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -436,8 +435,7 @@ HB_FUNC_STATIC(QTIME_FROMSTRING)
     static QTime fromString(const QString &string, Qt::DateFormat format = Qt::TextDate)
     */
 
-    auto ptr = new QTime(QTime::fromString(PQSTRING(1), HB_ISNIL(2) ? Qt::TextDate
-                                                                    : PQT_DATEFORMAT(2)));
+    auto ptr = new QTime(QTime::fromString(PQSTRING(1), HB_ISNIL(2) ? Qt::TextDate : PQT_DATEFORMAT(2)));
     Qt5xHb::createReturnClass(ptr, "QTIME", true);
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     /*

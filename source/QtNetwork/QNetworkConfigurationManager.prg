@@ -98,9 +98,8 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      auto list = obj->allConfigurations(
-          HB_ISNIL(1) ? QNetworkConfiguration::StateFlags()
-                      : PQNETWORKCONFIGURATION_STATEFLAGS(1));
+      auto list = obj->allConfigurations(HB_ISNIL(1) ? QNetworkConfiguration::StateFlags()
+                                                     : PQNETWORKCONFIGURATION_STATEFLAGS(1));
       auto pDynSym = hb_dynsymFindName("QNETWORKCONFIGURATION");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {

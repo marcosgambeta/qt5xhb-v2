@@ -97,16 +97,14 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_NEW)
     /*
     QSslCertificate(QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem)
     */
-    auto obj = new QSslCertificate(PQIODEVICE(1), HB_ISNIL(2) ? QSsl::Pem
-                                                              : PQSSL_ENCODINGFORMAT(2));
+    auto obj = new QSslCertificate(PQIODEVICE(1), HB_ISNIL(2) ? QSsl::Pem : PQSSL_ENCODINGFORMAT(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(0, 2) && ISOPTQBYTEARRAY(1) && ISNUMORNIL(2)) {
     /*
     QSslCertificate(const QByteArray &data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem)
     */
     auto obj = new QSslCertificate(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(1)),
-                                   HB_ISNIL(2) ? QSsl::Pem
-                                               : PQSSL_ENCODINGFORMAT(2));
+                                   HB_ISNIL(2) ? QSsl::Pem : PQSSL_ENCODINGFORMAT(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSSLCERTIFICATE(1)) {
     /*
@@ -310,8 +308,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_DIGEST)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQBYTEARRAY(obj->digest(HB_ISNIL(1) ? QCryptographicHash::Md5
-                                          : PQCRYPTOGRAPHICHASH_ALGORITHM(1)));
+      RQBYTEARRAY(obj->digest(HB_ISNIL(1) ? QCryptographicHash::Md5 : PQCRYPTOGRAPHICHASH_ALGORITHM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -634,11 +631,8 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMPATH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
-    auto list = QSslCertificate::fromPath(PQSTRING(1),
-                                          HB_ISNIL(2) ? QSsl::Pem
-                                                      : PQSSL_ENCODINGFORMAT(2),
-                                          HB_ISNIL(3) ? QRegExp::FixedString
-                                                      : PQREGEXP_PATTERNSYNTAX(3));
+    auto list = QSslCertificate::fromPath(PQSTRING(1), HB_ISNIL(2) ? QSsl::Pem : PQSSL_ENCODINGFORMAT(2),
+                                          HB_ISNIL(3) ? QRegExp::FixedString : PQREGEXP_PATTERNSYNTAX(3));
     auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr) {
@@ -676,9 +670,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDEVICE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISNUMORNIL(2)) {
 #endif
-    auto list =
-        QSslCertificate::fromDevice(PQIODEVICE(1), HB_ISNIL(2) ? QSsl::Pem
-                                                               : PQSSL_ENCODINGFORMAT(2));
+    auto list = QSslCertificate::fromDevice(PQIODEVICE(1), HB_ISNIL(2) ? QSsl::Pem : PQSSL_ENCODINGFORMAT(2));
     auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr) {
@@ -716,9 +708,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDATA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
 #endif
-    auto list =
-        QSslCertificate::fromData(*PQBYTEARRAY(1), HB_ISNIL(2) ? QSsl::Pem
-                                                               : PQSSL_ENCODINGFORMAT(2));
+    auto list = QSslCertificate::fromData(*PQBYTEARRAY(1), HB_ISNIL(2) ? QSsl::Pem : PQSSL_ENCODINGFORMAT(2));
     auto pDynSym = hb_dynsymFindName("QSSLCERTIFICATE");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr) {

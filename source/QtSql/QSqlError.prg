@@ -76,12 +76,11 @@ HB_FUNC_STATIC(QSQLERROR_NEW)
     auto obj = new QSqlError(PQSTRING(1), PQSTRING(2), PQSQLERROR_ERRORTYPE(3), PINT(4));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(0, 4) && ISCHARORNIL(1) && ISCHARORNIL(2) && ISNUMORNIL(3) && ISCHARORNIL(4)) {
-    // QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), QSqlError::ErrorType type = QSqlError::NoError, const QString &errorCode = QString())
+    // QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), QSqlError::ErrorType
+    // type = QSqlError::NoError, const QString &errorCode = QString())
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QSqlError(OPQSTRING(1, QString()), OPQSTRING(2, QString()),
-                             HB_ISNIL(3) ? QSqlError::NoError
-                                         : PQSQLERROR_ERRORTYPE(3),
-                             OPQSTRING(4, QString()));
+                             HB_ISNIL(3) ? QSqlError::NoError : PQSQLERROR_ERRORTYPE(3), OPQSTRING(4, QString()));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQSQLERROR(1)) {

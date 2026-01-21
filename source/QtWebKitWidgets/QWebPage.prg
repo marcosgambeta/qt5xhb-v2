@@ -642,8 +642,7 @@ HB_FUNC_STATIC(QWEBPAGE_FINDTEXT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
-      RBOOL(obj->findText(PQSTRING(1), HB_ISNIL(2) ? static_cast<QWebPage::FindFlags>(0)
-                                                   : PQWEBPAGE_FINDFLAGS(2)));
+      RBOOL(obj->findText(PQSTRING(1), HB_ISNIL(2) ? static_cast<QWebPage::FindFlags>(0) : PQWEBPAGE_FINDFLAGS(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1093,8 +1092,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETFEATUREPERMISSION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQWEBFRAME(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      obj->setFeaturePermission(PQWEBFRAME(1), PQWEBPAGE_FEATURE(2),
-                                PQWEBPAGE_PERMISSIONPOLICY(3));
+      obj->setFeaturePermission(PQWEBFRAME(1), PQWEBPAGE_FEATURE(2), PQWEBPAGE_PERMISSIONPOLICY(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

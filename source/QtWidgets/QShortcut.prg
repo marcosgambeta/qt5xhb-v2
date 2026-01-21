@@ -79,8 +79,7 @@ HB_FUNC_STATIC(QSHORTCUT_NEW)
     // QShortcut(const QKeySequence &key, QWidget *parent, const char *member = nullptr, const char *ambiguousMember =
     // nullptr, Qt::ShortcutContext context = Qt::WindowShortcut)
     auto obj = new QShortcut(*PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3, nullptr), OPCONSTCHAR(4, nullptr),
-                             HB_ISNIL(5) ? Qt::WindowShortcut
-                                         : PQT_SHORTCUTCONTEXT(5));
+                             HB_ISNIL(5) ? Qt::WindowShortcut : PQT_SHORTCUTCONTEXT(5));
     Qt5xHb::returnNewObject(obj, false);
 
   } else {

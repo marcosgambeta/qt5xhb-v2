@@ -104,8 +104,8 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_NEW)
     QGLFramebufferObject(const QSize &size, QGLFramebufferObject::Attachment attachment, GLenum target = GL_TEXTURE_2D,
     GLenum internal_format = GL_RGBA8)
     */
-    auto obj = new QGLFramebufferObject(*PQSIZE(1), PQGLFRAMEBUFFEROBJECT_ATTACHMENT(2),
-                                        OPGLENUM(3, GL_TEXTURE_2D), OPGLENUM(4, GL_RGBA8));
+    auto obj = new QGLFramebufferObject(*PQSIZE(1), PQGLFRAMEBUFFEROBJECT_ATTACHMENT(2), OPGLENUM(3, GL_TEXTURE_2D),
+                                        OPGLENUM(4, GL_RGBA8));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_NEW)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     auto obj = new QHstsPolicy(*PQDATETIME(1), PQHSTSPOLICY_POLICYFLAGS(2), PQSTRING(3),
-                               HB_ISNIL(4) ? QUrl::DecodedMode
-                                           : PQURL_PARSINGMODE(4));
+                               HB_ISNIL(4) ? QUrl::DecodedMode : PQURL_PARSINGMODE(4));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQHSTSPOLICY(1)) {
@@ -154,8 +153,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SETHOST)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setHost(PQSTRING(1), HB_ISNIL(2) ? QUrl::DecodedMode
-                                            : PQURL_PARSINGMODE(2));
+      obj->setHost(PQSTRING(1), HB_ISNIL(2) ? QUrl::DecodedMode : PQURL_PARSINGMODE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -179,8 +177,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_HOST)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQSTRING(obj->host(HB_ISNIL(1) ? QUrl::FullyDecoded
-                                     : PQURL_COMPONENTFORMATTINGOPTIONS(1)));
+      RQSTRING(obj->host(HB_ISNIL(1) ? QUrl::FullyDecoded : PQURL_COMPONENTFORMATTINGOPTIONS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

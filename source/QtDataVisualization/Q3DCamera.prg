@@ -83,7 +83,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 /*
 Q3DCamera(QObject * parent = nullptr)

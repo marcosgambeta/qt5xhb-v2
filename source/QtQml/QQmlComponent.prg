@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_NEW)
     QQmlComponent(QQmlEngine * engine, const QString &fileName, QQmlComponent::CompilationMode mode, QObject * parent =
     nullptr)
     */
-    auto obj = new QQmlComponent(PQQMLENGINE(1), PQSTRING(2), PQQMLCOMPONENT_COMPILATIONMODE(3),
-                                 OPQOBJECT(4, nullptr));
+    auto obj = new QQmlComponent(PQQMLENGINE(1), PQSTRING(2), PQQMLCOMPONENT_COMPILATIONMODE(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(2, 3) && ISQQMLENGINE(1) && ISQURL(2) && ISQOBJECTORNIL(3)) {
     /*
@@ -102,8 +101,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_NEW)
     QQmlComponent(QQmlEngine * engine, const QUrl &url, QQmlComponent::CompilationMode mode, QObject * parent =
     nullptr)
     */
-    auto obj = new QQmlComponent(PQQMLENGINE(1), *PQURL(2), PQQMLCOMPONENT_COMPILATIONMODE(3),
-                                 OPQOBJECT(4, nullptr));
+    auto obj = new QQmlComponent(PQQMLENGINE(1), *PQURL(2), PQQMLCOMPONENT_COMPILATIONMODE(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

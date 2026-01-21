@@ -129,9 +129,8 @@ HB_FUNC_STATIC(QICON_ACTUALSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQSIZE(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
-      RQSIZE(obj->actualSize(
-          *PQSIZE(1), HB_ISNIL(2) ? QIcon::Normal : PQICON_MODE(2),
-          HB_ISNIL(3) ? QIcon::Off : PQICON_STATE(3)));
+      RQSIZE(obj->actualSize(*PQSIZE(1), HB_ISNIL(2) ? QIcon::Normal : PQICON_MODE(2),
+                             HB_ISNIL(3) ? QIcon::Off : PQICON_STATE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -153,8 +152,7 @@ HB_FUNC_STATIC(QICON_ADDFILE)
     if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISQSIZEORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       obj->addFile(PQSTRING(1), HB_ISNIL(2) ? QSize() : *static_cast<QSize *>(Qt5xHb::itemGetPtr(2)),
-                   HB_ISNIL(3) ? QIcon::Normal : PQICON_MODE(3),
-                   HB_ISNIL(4) ? QIcon::Off : PQICON_STATE(4));
+                   HB_ISNIL(3) ? QIcon::Normal : PQICON_MODE(3), HB_ISNIL(4) ? QIcon::Off : PQICON_STATE(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -176,8 +174,7 @@ HB_FUNC_STATIC(QICON_ADDPIXMAP)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQPIXMAP(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
-      obj->addPixmap(*PQPIXMAP(1),
-                     HB_ISNIL(2) ? QIcon::Normal : PQICON_MODE(2),
+      obj->addPixmap(*PQPIXMAP(1), HB_ISNIL(2) ? QIcon::Normal : PQICON_MODE(2),
                      HB_ISNIL(3) ? QIcon::Off : PQICON_STATE(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -200,9 +197,8 @@ HB_FUNC_STATIC(QICON_AVAILABLESIZES)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2)) {
 #endif
-      auto list = obj->availableSizes(
-          HB_ISNIL(1) ? QIcon::Normal : PQICON_MODE(1),
-          HB_ISNIL(2) ? QIcon::Off : PQICON_STATE(2));
+      auto list =
+          obj->availableSizes(HB_ISNIL(1) ? QIcon::Normal : PQICON_MODE(1), HB_ISNIL(2) ? QIcon::Off : PQICON_STATE(2));
       auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
@@ -303,10 +299,8 @@ HB_FUNC_STATIC(QICON_PAINT)
     auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->paint(PQPAINTER(1), *PQRECT(2),
-                 HB_ISNIL(3) ? Qt::AlignCenter : PQT_ALIGNMENT(3),
-                 HB_ISNIL(4) ? QIcon::Normal : PQICON_MODE(4),
-                 HB_ISNIL(5) ? QIcon::Off : PQICON_STATE(5));
+      obj->paint(PQPAINTER(1), *PQRECT(2), HB_ISNIL(3) ? Qt::AlignCenter : PQT_ALIGNMENT(3),
+                 HB_ISNIL(4) ? QIcon::Normal : PQICON_MODE(4), HB_ISNIL(5) ? QIcon::Off : PQICON_STATE(5));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -319,10 +313,8 @@ HB_FUNC_STATIC(QICON_PAINT)
     auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->paint(PQPAINTER(1), PINT(2), PINT(3), PINT(4), PINT(5),
-                 HB_ISNIL(6) ? Qt::AlignCenter : PQT_ALIGNMENT(6),
-                 HB_ISNIL(7) ? QIcon::Normal : PQICON_MODE(7),
-                 HB_ISNIL(8) ? QIcon::Off : PQICON_STATE(8));
+      obj->paint(PQPAINTER(1), PINT(2), PINT(3), PINT(4), PINT(5), HB_ISNIL(6) ? Qt::AlignCenter : PQT_ALIGNMENT(6),
+                 HB_ISNIL(7) ? QIcon::Normal : PQICON_MODE(7), HB_ISNIL(8) ? QIcon::Off : PQICON_STATE(8));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -340,9 +332,8 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPixmap(obj->pixmap(
-          *PQSIZE(1), HB_ISNIL(2) ? QIcon::Normal : PQICON_MODE(2),
-          HB_ISNIL(3) ? QIcon::Off : PQICON_STATE(3)));
+      auto ptr = new QPixmap(obj->pixmap(*PQSIZE(1), HB_ISNIL(2) ? QIcon::Normal : PQICON_MODE(2),
+                                         HB_ISNIL(3) ? QIcon::Off : PQICON_STATE(3)));
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
     }
   } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
@@ -352,10 +343,8 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPixmap(
-          obj->pixmap(PINT(1), PINT(2),
-                      HB_ISNIL(3) ? QIcon::Normal : PQICON_MODE(3),
-                      HB_ISNIL(4) ? QIcon::Off : PQICON_STATE(4)));
+      auto ptr = new QPixmap(obj->pixmap(PINT(1), PINT(2), HB_ISNIL(3) ? QIcon::Normal : PQICON_MODE(3),
+                                         HB_ISNIL(4) ? QIcon::Off : PQICON_STATE(4)));
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
     }
   } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
@@ -365,9 +354,8 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPixmap(obj->pixmap(
-          PINT(1), HB_ISNIL(2) ? QIcon::Normal : PQICON_MODE(2),
-          HB_ISNIL(3) ? QIcon::Off : PQICON_STATE(3)));
+      auto ptr = new QPixmap(obj->pixmap(PINT(1), HB_ISNIL(2) ? QIcon::Normal : PQICON_MODE(2),
+                                         HB_ISNIL(3) ? QIcon::Off : PQICON_STATE(3)));
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
     }
   } else {

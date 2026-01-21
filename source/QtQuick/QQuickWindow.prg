@@ -209,10 +209,9 @@ HB_FUNC_STATIC(QQUICKWINDOW_CREATETEXTUREFROMID)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSIZE(2) && ISNUMORNIL(3)) {
 #endif
-      auto ptr = obj->createTextureFromId(
-          PUINT(1), *PQSIZE(2),
-          HB_ISNIL(3) ? QQuickWindow::CreateTextureOption(0)
-                      : PQQUICKWINDOW_CREATETEXTUREOPTIONS(3));
+      auto ptr = obj->createTextureFromId(PUINT(1), *PQSIZE(2),
+                                          HB_ISNIL(3) ? QQuickWindow::CreateTextureOption(0)
+                                                      : PQQUICKWINDOW_CREATETEXTUREOPTIONS(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

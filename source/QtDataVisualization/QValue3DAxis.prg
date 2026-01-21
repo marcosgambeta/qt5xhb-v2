@@ -69,7 +69,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 /*
 QValue3DAxis(QObject * parent = nullptr)

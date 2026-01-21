@@ -523,8 +523,8 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
 #endif
-      auto ptr = obj->createFormWindow(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
-                                                                          : PQT_WINDOWFLAGS(2));
+      auto ptr = obj->createFormWindow(OPQWIDGET(1, nullptr),
+                                       HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
       Qt5xHb::createReturnQWidgetClass(ptr, "QDESIGNERFORMWINDOWINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

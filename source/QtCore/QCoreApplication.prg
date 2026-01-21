@@ -419,8 +419,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_PROCESSEVENTS)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // static void processEvents(QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents)
-    QCoreApplication::processEvents(HB_ISNIL(1) ? QEventLoop::AllEvents
-                                                : PQEVENTLOOP_PROCESSEVENTSFLAGS(1));
+    QCoreApplication::processEvents(HB_ISNIL(1) ? QEventLoop::AllEvents : PQEVENTLOOP_PROCESSEVENTSFLAGS(1));
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // static void processEvents(QEventLoop::ProcessEventsFlags flags, int maxtime)
@@ -631,7 +630,8 @@ HB_FUNC_STATIC(QCOREAPPLICATION_TESTATTRIBUTE)
 #endif
 }
 
-// static QString translate(const char * context, const char * sourceText, const char * disambiguation = nullptr, int n = -1)
+// static QString translate(const char * context, const char * sourceText, const char * disambiguation = nullptr, int n
+// = -1)
 HB_FUNC_STATIC(QCOREAPPLICATION_TRANSLATE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

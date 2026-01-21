@@ -87,8 +87,8 @@ HB_FUNC_STATIC(QVIDEOFILTERRUNNABLE_RUN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQVIDEOFRAME(1) && ISQVIDEOSURFACEFORMAT(2) && HB_ISNUM(3)) {
 #endif
-      auto ptr = new QVideoFrame(obj->run(PQVIDEOFRAME(1), *PQVIDEOSURFACEFORMAT(2),
-                                          PQVIDEOFILTERRUNNABLE_RUNFLAGS(3)));
+      auto ptr =
+          new QVideoFrame(obj->run(PQVIDEOFRAME(1), *PQVIDEOSURFACEFORMAT(2), PQVIDEOFILTERRUNNABLE_RUNFLAGS(3)));
       Qt5xHb::createReturnClass(ptr, "QVIDEOFRAME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

@@ -122,9 +122,8 @@ GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8)
 */
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW4)
 {
-  auto obj =
-      new QOpenGLFramebufferObject(PINT(1), PINT(2), PQOPENGLFRAMEBUFFEROBJECT_ATTACHMENT(3),
-                                   OPGLENUM(4, GL_TEXTURE_2D), OPGLENUM(5, GL_RGBA8));
+  auto obj = new QOpenGLFramebufferObject(PINT(1), PINT(2), PQOPENGLFRAMEBUFFEROBJECT_ATTACHMENT(3),
+                                          OPGLENUM(4, GL_TEXTURE_2D), OPGLENUM(5, GL_RGBA8));
   Qt5xHb::returnNewObject(obj, true);
 }
 
@@ -163,9 +162,8 @@ GL_TEXTURE_2D, GLenum internal_format = GL_RGBA)
 */
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW6)
 {
-  auto obj =
-      new QOpenGLFramebufferObject(PINT(1), PINT(2), PQOPENGLFRAMEBUFFEROBJECT_ATTACHMENT(3),
-                                   OPGLENUM(4, GL_TEXTURE_2D), OPGLENUM(5, GL_RGBA));
+  auto obj = new QOpenGLFramebufferObject(PINT(1), PINT(2), PQOPENGLFRAMEBUFFEROBJECT_ATTACHMENT(3),
+                                          OPGLENUM(4, GL_TEXTURE_2D), OPGLENUM(5, GL_RGBA));
   Qt5xHb::returnNewObject(obj, true);
 }
 

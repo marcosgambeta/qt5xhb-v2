@@ -679,8 +679,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETSIZEPOLICY)
 
     if (obj != nullptr) {
       obj->setSizePolicy(PQSIZEPOLICY_POLICY(1), PQSIZEPOLICY_POLICY(2),
-                         HB_ISNIL(3) ? QSizePolicy::DefaultType
-                                     : PQSIZEPOLICY_CONTROLTYPE(3));
+                         HB_ISNIL(3) ? QSizePolicy::DefaultType : PQSIZEPOLICY_CONTROLTYPE(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());

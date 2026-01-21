@@ -243,9 +243,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOWMESSAGE)
     if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       obj->showMessage(PQSTRING(1), PQSTRING(2),
-                       HB_ISNIL(3) ? QSystemTrayIcon::Information
-                                   : PQSYSTEMTRAYICON_MESSAGEICON(3),
-                       OPINT(4, 10000));
+                       HB_ISNIL(3) ? QSystemTrayIcon::Information : PQSYSTEMTRAYICON_MESSAGEICON(3), OPINT(4, 10000));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

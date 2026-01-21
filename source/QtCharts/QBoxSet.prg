@@ -76,7 +76,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtCharts;
+using namespace QtCharts;
 
 HB_FUNC_STATIC(QBOXSET_NEW)
 {

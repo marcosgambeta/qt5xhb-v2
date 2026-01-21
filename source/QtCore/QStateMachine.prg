@@ -403,8 +403,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_POSTEVENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQEVENT(1) && ISNUMORNIL(2)) {
 #endif
-      obj->postEvent(PQEVENT(1), HB_ISNIL(2) ? QStateMachine::NormalPriority
-                                             : PQSTATEMACHINE_EVENTPRIORITY(2));
+      obj->postEvent(PQEVENT(1), HB_ISNIL(2) ? QStateMachine::NormalPriority : PQSTATEMACHINE_EVENTPRIORITY(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

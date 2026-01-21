@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NEW)
     QDnsLookup(QDnsLookup::Type type, const QString &name, const QHostAddress &nameserver, QObject * parent = nullptr)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    auto obj = new QDnsLookup(PQDNSLOOKUP_TYPE(1), PQSTRING(2), *PQHOSTADDRESS(3),
-                              OPQOBJECT(4, nullptr));
+    auto obj = new QDnsLookup(PQDNSLOOKUP_TYPE(1), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else {

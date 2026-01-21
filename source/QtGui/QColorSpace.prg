@@ -95,8 +95,7 @@ HB_FUNC_STATIC(QCOLORSPACE_NEW)
   QColorSpace(QColorSpace::Primaries primaries, QColorSpace::TransferFunction fun, float gamma = 0.0f)
   */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
-    auto obj = new QColorSpace(PQCOLORSPACE_PRIMARIES(1),
-                               PQCOLORSPACE_TRANSFERFUNCTION(2), OPFLOAT(3, 0.0f));
+    auto obj = new QColorSpace(PQCOLORSPACE_PRIMARIES(1), PQCOLORSPACE_TRANSFERFUNCTION(2), OPFLOAT(3, 0.0f));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -119,8 +118,8 @@ HB_FUNC_STATIC(QCOLORSPACE_NEW)
   bluePoint, QColorSpace::TransferFunction fun, float gamma = 0.0f)
   */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
-    auto obj = new QColorSpace(*PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4),
-                               PQCOLORSPACE_TRANSFERFUNCTION(5), OPFLOAT(6, 0.0f));
+    auto obj = new QColorSpace(*PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), PQCOLORSPACE_TRANSFERFUNCTION(5),
+                               OPFLOAT(6, 0.0f));
     Qt5xHb::returnNewObject(obj, true);
 #endif
 
@@ -280,8 +279,7 @@ HB_FUNC_STATIC(QCOLORSPACE_WITHTRANSFERFUNCTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      auto ptr = new QColorSpace(
-          obj->withTransferFunction(PQCOLORSPACE_TRANSFERFUNCTION(1), OPFLOAT(2, 0.0f)));
+      auto ptr = new QColorSpace(obj->withTransferFunction(PQCOLORSPACE_TRANSFERFUNCTION(1), OPFLOAT(2, 0.0f)));
       Qt5xHb::createReturnClass(ptr, "QCOLORSPACE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

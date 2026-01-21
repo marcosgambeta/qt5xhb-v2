@@ -627,8 +627,7 @@ HB_FUNC_STATIC(QSQLDATABASE_TABLES)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQSTRINGLIST(obj->tables(HB_ISNIL(1) ? QSql::Tables
-                                           : PQSQL_TABLETYPE(1)));
+      RQSTRINGLIST(obj->tables(HB_ISNIL(1) ? QSql::Tables : PQSQL_TABLETYPE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -696,11 +695,14 @@ HB_FUNC_STATIC(QSQLDATABASE_SETUSERNAME)
 HB_FUNC_STATIC(QSQLDATABASE_ADDDATABASE)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
-    // static QSqlDatabase addDatabase(const QString &type, const QString &connectionName = QLatin1String(QSqlDatabase::defaultConnection))
+    // static QSqlDatabase addDatabase(const QString &type, const QString &connectionName =
+    // QLatin1String(QSqlDatabase::defaultConnection))
     RQSQLDATABASE(QSqlDatabase::addDatabase(PQSTRING(1), OPQSTRING(2, QLatin1String(QSqlDatabase::defaultConnection))));
   } else if (ISBETWEEN(1, 2) && ISQSQLDRIVER(1) && ISCHARORNIL(2)) {
-    // static QSqlDatabase addDatabase(QSqlDriver *driver, const QString &connectionName = QLatin1String(QSqlDatabase::defaultConnection))
-    RQSQLDATABASE(QSqlDatabase::addDatabase(PQSQLDRIVER(1), OPQSTRING(2, QLatin1String(QSqlDatabase::defaultConnection))));
+    // static QSqlDatabase addDatabase(QSqlDriver *driver, const QString &connectionName =
+    // QLatin1String(QSqlDatabase::defaultConnection))
+    RQSQLDATABASE(
+        QSqlDatabase::addDatabase(PQSQLDRIVER(1), OPQSTRING(2, QLatin1String(QSqlDatabase::defaultConnection))));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -748,13 +750,15 @@ HB_FUNC_STATIC(QSQLDATABASE_CONTAINS)
 #endif
 }
 
-// static QSqlDatabase database(const QString &connectionName = QLatin1String(QSqlDatabase::defaultConnection), bool open = true)
+// static QSqlDatabase database(const QString &connectionName = QLatin1String(QSqlDatabase::defaultConnection), bool
+// open = true)
 HB_FUNC_STATIC(QSQLDATABASE_DATABASE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISLOGORNIL(2)) {
 #endif
-    RQSQLDATABASE(QSqlDatabase::database(OPQSTRING(1, QLatin1String(QSqlDatabase::defaultConnection)), OPBOOL(2, true)));
+    RQSQLDATABASE(
+        QSqlDatabase::database(OPQSTRING(1, QLatin1String(QSqlDatabase::defaultConnection)), OPBOOL(2, true)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

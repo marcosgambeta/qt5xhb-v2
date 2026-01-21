@@ -62,7 +62,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 /*
 QLogValue3DAxisFormatter(QObject * parent = nullptr)

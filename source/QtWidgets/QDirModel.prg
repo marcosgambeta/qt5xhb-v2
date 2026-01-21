@@ -94,8 +94,7 @@ HB_FUNC_STATIC(QDIRMODEL_NEW)
 {
   if (ISBETWEEN(3, 4) && HB_ISARRAY(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQOBJECTORNIL(4)) {
     // QDirModel(const QStringList &nameFilters, QDir::Filters filters, QDir::SortFlags sort, QObject *parent = nullptr)
-    auto obj = new QDirModel(PQSTRINGLIST(1), PQDIR_FILTERS(2),
-                             PQDIR_SORTFLAGS(3), OPQOBJECT(4, nullptr));
+    auto obj = new QDirModel(PQSTRINGLIST(1), PQDIR_FILTERS(2), PQDIR_SORTFLAGS(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   } else if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -294,8 +293,7 @@ HB_FUNC_STATIC(QDIRMODEL_SORT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->sort(PINT(1),
-                HB_ISNIL(2) ? Qt::AscendingOrder : PQT_SORTORDER(2));
+      obj->sort(PINT(1), HB_ISNIL(2) ? Qt::AscendingOrder : PQT_SORTORDER(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

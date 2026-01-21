@@ -79,8 +79,7 @@ HB_FUNC_STATIC(QAXWIDGET_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     // QAxWidget(QWidget * parent = nullptr, Qt::WindowFlags f = 0)
-    auto obj = new QAxWidget(OPQWIDGET(1, nullptr),
-                             HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
+    auto obj = new QAxWidget(OPQWIDGET(1, nullptr), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
     // QAxWidget(const QString &c, QWidget * parent = nullptr, Qt::WindowFlags f = 0)
@@ -301,7 +300,9 @@ HB_FUNC_STATIC(QAXWIDGET_DYNAMICCALL)
 {
   if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
       ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
-    // QVariant dynamicCall(const char * function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(), const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
+    // QVariant dynamicCall(const char * function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
+    // const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
+    // QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
@@ -385,7 +386,10 @@ HB_FUNC_STATIC(QAXWIDGET_QUERYSUBOBJECT)
 {
   if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
       ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
-    // QAxObject * querySubObject(const char * name, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(), const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
+    // QAxObject * querySubObject(const char * name, const QVariant &var1 = QVariant(), const QVariant &var2 =
+    // QVariant(), const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 =
+    // QVariant(), const QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 =
+    // QVariant())
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {

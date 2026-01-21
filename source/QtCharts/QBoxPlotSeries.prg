@@ -84,7 +84,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtCharts;
+using namespace QtCharts;
 
 /*
 QBoxPlotSeries(QObject * parent = nullptr)

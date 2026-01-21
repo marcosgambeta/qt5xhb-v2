@@ -575,9 +575,9 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QTextCursor(obj->find(PQSTRING(1), OPINT(2, 0),
-                                           HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0)
-                                                       : PQTEXTDOCUMENT_FINDFLAGS(3)));
+      auto ptr = new QTextCursor(
+          obj->find(PQSTRING(1), OPINT(2, 0),
+                    HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0) : PQTEXTDOCUMENT_FINDFLAGS(3)));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQTEXTCURSOR(2) && ISNUMORNIL(3)) {
@@ -587,9 +587,9 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QTextCursor(obj->find(PQSTRING(1), *PQTEXTCURSOR(2),
-                                           HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0)
-                                                       : PQTEXTDOCUMENT_FINDFLAGS(3)));
+      auto ptr = new QTextCursor(
+          obj->find(PQSTRING(1), *PQTEXTCURSOR(2),
+                    HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0) : PQTEXTDOCUMENT_FINDFLAGS(3)));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   } else if (ISBETWEEN(1, 3) && ISQREGEXP(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
@@ -599,9 +599,9 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QTextCursor(obj->find(*PQREGEXP(1), OPINT(2, 0),
-                                           HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0)
-                                                       : PQTEXTDOCUMENT_FINDFLAGS(3)));
+      auto ptr = new QTextCursor(
+          obj->find(*PQREGEXP(1), OPINT(2, 0),
+                    HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0) : PQTEXTDOCUMENT_FINDFLAGS(3)));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   } else if (ISBETWEEN(2, 3) && ISQREGEXP(1) && ISQTEXTCURSOR(2) && ISNUMORNIL(3)) {
@@ -611,9 +611,9 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QTextCursor(obj->find(*PQREGEXP(1), *PQTEXTCURSOR(2),
-                                           HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0)
-                                                       : PQTEXTDOCUMENT_FINDFLAGS(3)));
+      auto ptr = new QTextCursor(
+          obj->find(*PQREGEXP(1), *PQTEXTCURSOR(2),
+                    HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0) : PQTEXTDOCUMENT_FINDFLAGS(3)));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   } else {
@@ -1430,8 +1430,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLEARUNDOREDOSTACKS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      obj->clearUndoRedoStacks(HB_ISNIL(1) ? QTextDocument::UndoAndRedoStacks
-                                           : PQTEXTDOCUMENT_STACKS(1));
+      obj->clearUndoRedoStacks(HB_ISNIL(1) ? QTextDocument::UndoAndRedoStacks : PQTEXTDOCUMENT_STACKS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1663,8 +1662,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETMARKDOWN)
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       obj->setMarkdown(PQSTRING(1),
-                       HB_ISNIL(2) ? QTextDocument::MarkdownDialectGitHub
-                                   : PQTEXTDOCUMENT_MARKDOWNFEATURES(2));
+                       HB_ISNIL(2) ? QTextDocument::MarkdownDialectGitHub : PQTEXTDOCUMENT_MARKDOWNFEATURES(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

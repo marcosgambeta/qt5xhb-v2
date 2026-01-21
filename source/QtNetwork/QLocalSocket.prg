@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
     auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      obj->connectToServer(HB_ISNIL(1) ? QIODevice::ReadWrite
-                                       : PQIODEVICE_OPENMODE(1));
+      obj->connectToServer(HB_ISNIL(1) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -123,8 +122,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
     auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      obj->connectToServer(PQSTRING(1), HB_ISNIL(2) ? QIODevice::ReadWrite
-                                                    : PQIODEVICE_OPENMODE(2));
+      obj->connectToServer(PQSTRING(1), HB_ISNIL(2) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -330,8 +328,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_OPEN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RBOOL(obj->open(HB_ISNIL(1) ? QIODevice::ReadWrite
-                                  : PQIODEVICE_OPENMODE(1)));
+      RBOOL(obj->open(HB_ISNIL(1) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -480,8 +477,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SETSOCKETDESCRIPTOR)
                                      HB_ISNIL(2)
                                          ? static_cast<QLocalSocket::LocalSocketState>(QLocalSocket::ConnectedState)
                                          : PQLOCALSOCKET_LOCALSOCKETSTATE(2),
-                                     HB_ISNIL(3) ? QIODevice::ReadWrite
-                                                 : PQIODEVICE_OPENMODE(3)));
+                                     HB_ISNIL(3) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

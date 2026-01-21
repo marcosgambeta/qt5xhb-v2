@@ -281,9 +281,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDROUNDEDRECT)
     auto obj = static_cast<QPainterPath *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->addRoundedRect(*PQRECTF(1), PQREAL(2), PQREAL(3),
-                          HB_ISNIL(4) ? Qt::AbsoluteSize
-                                      : PQT_SIZEMODE(4));
+      obj->addRoundedRect(*PQRECTF(1), PQREAL(2), PQREAL(3), HB_ISNIL(4) ? Qt::AbsoluteSize : PQT_SIZEMODE(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -297,8 +295,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDROUNDEDRECT)
 
     if (obj != nullptr) {
       obj->addRoundedRect(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6),
-                          HB_ISNIL(7) ? Qt::AbsoluteSize
-                                      : PQT_SIZEMODE(7));
+                          HB_ISNIL(7) ? Qt::AbsoluteSize : PQT_SIZEMODE(7));
     }
 
     hb_itemReturn(hb_stackSelfItem());

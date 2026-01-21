@@ -273,8 +273,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CONNECTTOSERVICE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     if (obj != nullptr) {
       obj->connectToService(*PQBLUETOOTHADDRESS(1), *PQBLUETOOTHUUID(2),
-                            HB_ISNIL(3) ? QIODevice::ReadWrite
-                                        : PQIODEVICE_OPENMODE(3));
+                            HB_ISNIL(3) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -287,8 +286,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CONNECTTOSERVICE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     if (obj != nullptr) {
       obj->connectToService(*PQBLUETOOTHADDRESS(1), PQUINT16(2),
-                            HB_ISNIL(3) ? QIODevice::ReadWrite
-                                        : PQIODEVICE_OPENMODE(3));
+                            HB_ISNIL(3) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -473,8 +471,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_SETSOCKETDESCRIPTOR)
                                      HB_ISNIL(3)
                                          ? static_cast<QBluetoothSocket::SocketState>(QBluetoothSocket::ConnectedState)
                                          : PQBLUETOOTHSOCKET_SOCKETSTATE(3),
-                                     HB_ISNIL(4) ? QIODevice::ReadWrite
-                                                 : PQIODEVICE_OPENMODE(4)));
+                                     HB_ISNIL(4) ? QIODevice::ReadWrite : PQIODEVICE_OPENMODE(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

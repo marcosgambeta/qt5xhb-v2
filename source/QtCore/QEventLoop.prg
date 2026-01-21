@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QEVENTLOOP_EXEC)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RINT(obj->exec(HB_ISNIL(1) ? QEventLoop::AllEvents
-                                 : PQEVENTLOOP_PROCESSEVENTSFLAGS(1)));
+      RINT(obj->exec(HB_ISNIL(1) ? QEventLoop::AllEvents : PQEVENTLOOP_PROCESSEVENTSFLAGS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -148,8 +147,7 @@ HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
     auto obj = qobject_cast<QEventLoop *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      RBOOL(obj->processEvents(HB_ISNIL(1) ? QEventLoop::AllEvents
-                                           : PQEVENTLOOP_PROCESSEVENTSFLAGS(1)));
+      RBOOL(obj->processEvents(HB_ISNIL(1) ? QEventLoop::AllEvents : PQEVENTLOOP_PROCESSEVENTSFLAGS(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*

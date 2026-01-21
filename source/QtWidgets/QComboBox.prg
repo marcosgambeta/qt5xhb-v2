@@ -313,8 +313,7 @@ HB_FUNC_STATIC(QCOMBOBOX_FINDDATA)
     if (ISBETWEEN(1, 3) && ISQVARIANT(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       RINT(obj->findData(*PQVARIANT(1), OPINT(2, Qt::UserRole),
-                         HB_ISNIL(3) ? Qt::MatchExactly | Qt::MatchCaseSensitive
-                                     : PQT_MATCHFLAGS(3)));
+                         HB_ISNIL(3) ? Qt::MatchExactly | Qt::MatchCaseSensitive : PQT_MATCHFLAGS(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -596,7 +596,8 @@ HB_FUNC_STATIC(QCAMERA_SETVIEWFINDERSETTINGS)
 #endif
 }
 
-// QList<QCameraViewfinderSettings> supportedViewfinderSettings(const QCameraViewfinderSettings &settings = QCameraViewfinderSettings()) const
+// QList<QCameraViewfinderSettings> supportedViewfinderSettings(const QCameraViewfinderSettings &settings =
+// QCameraViewfinderSettings()) const
 HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERSETTINGS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
@@ -639,7 +640,8 @@ HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERSETTINGS)
 #endif
 }
 
-// QList<QSize> supportedViewfinderResolutions(const QCameraViewfinderSettings &settings = QCameraViewfinderSettings()) const
+// QList<QSize> supportedViewfinderResolutions(const QCameraViewfinderSettings &settings = QCameraViewfinderSettings())
+// const
 HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
@@ -682,9 +684,11 @@ HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS)
 #endif
 }
 
-// QList<FrameRateRange> supportedViewfinderFrameRateRanges(const QCameraViewfinderSettings &settings = QCameraViewfinderSettings()) const
+// QList<FrameRateRange> supportedViewfinderFrameRateRanges(const QCameraViewfinderSettings &settings =
+// QCameraViewfinderSettings()) const
 
-// QList<QVideoFrame::PixelFormat> supportedViewfinderPixelFormats(const QCameraViewfinderSettings &settings = QCameraViewfinderSettings()) const
+// QList<QVideoFrame::PixelFormat> supportedViewfinderPixelFormats(const QCameraViewfinderSettings &settings =
+// QCameraViewfinderSettings()) const
 HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERPIXELFORMATS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))

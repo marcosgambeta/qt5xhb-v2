@@ -115,9 +115,8 @@ RETURN
 HB_FUNC_STATIC(QGRAPHICSWIDGET_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQGRAPHICSITEMORNIL(1) && ISNUMORNIL(2)) {
-    auto obj =
-        new QGraphicsWidget(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(1)),
-                            HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
+    auto obj = new QGraphicsWidget(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(1)),
+                                   HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -283,8 +282,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_GRABSHORTCUT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && ISNUMORNIL(2)) {
 #endif
-      RINT(obj->grabShortcut(*PQKEYSEQUENCE(1), HB_ISNIL(2) ? Qt::WindowShortcut
-                                                            : PQT_SHORTCUTCONTEXT(2)));
+      RINT(obj->grabShortcut(*PQKEYSEQUENCE(1), HB_ISNIL(2) ? Qt::WindowShortcut : PQT_SHORTCUTCONTEXT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

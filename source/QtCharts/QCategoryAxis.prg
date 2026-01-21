@@ -66,7 +66,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtCharts;
+using namespace QtCharts;
 
 /*
 QCategoryAxis(QObject * parent = nullptr)

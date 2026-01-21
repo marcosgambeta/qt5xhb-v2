@@ -68,8 +68,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_NEW)
 
   } else if (ISBETWEEN(3, 4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQSTATEORNIL(4)) {
     // QMouseEventTransition(QObject *object, QEvent::Type type, Qt::MouseButton button, QState *sourceState = nullptr)
-    auto obj = new QMouseEventTransition(PQOBJECT(1), PQEVENT_TYPE(2),
-                                         PQT_MOUSEBUTTON(3), OPQSTATE(4, nullptr));
+    auto obj = new QMouseEventTransition(PQOBJECT(1), PQEVENT_TYPE(2), PQT_MOUSEBUTTON(3), OPQSTATE(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   } else {

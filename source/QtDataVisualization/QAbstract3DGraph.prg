@@ -132,7 +132,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 #include <QtDataVisualization/QAbstract3DAxis>
 #include <QtDataVisualization/QCustom3DItem>

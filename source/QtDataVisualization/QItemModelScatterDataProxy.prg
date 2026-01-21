@@ -95,7 +95,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 HB_FUNC_STATIC(QITEMMODELSCATTERDATAPROXY_NEW)
 {

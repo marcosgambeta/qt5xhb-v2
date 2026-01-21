@@ -72,7 +72,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtCharts;
+using namespace QtCharts;
 
 #include <QtCharts/QBoxPlotSeries>
 #include <QtCore/QAbstractItemModel>

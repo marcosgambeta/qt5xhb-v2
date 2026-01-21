@@ -66,8 +66,7 @@ HB_FUNC_STATIC(QTILERULES_NEW)
 
   } else if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // QTileRules(Qt::TileRule rule = Qt::StretchTile)
-    auto obj = new QTileRules(HB_ISNIL(1) ? Qt::StretchTile
-                                          : PQT_TILERULE(1));
+    auto obj = new QTileRules(HB_ISNIL(1) ? Qt::StretchTile : PQT_TILERULE(1));
     Qt5xHb::returnNewObject(obj, true);
 
   } else {

@@ -56,7 +56,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 /*
 Q3DLight(QObject * parent = nullptr)

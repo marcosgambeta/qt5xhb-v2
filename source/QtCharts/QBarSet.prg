@@ -96,7 +96,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtCharts;
+using namespace QtCharts;
 
 /*
 QBarSet(const QString label, QObject * parent = nullptr)

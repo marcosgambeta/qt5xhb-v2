@@ -122,7 +122,7 @@ RETURN
 #endif
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 HB_FUNC_STATIC(Q3DTHEME_NEW)
 {

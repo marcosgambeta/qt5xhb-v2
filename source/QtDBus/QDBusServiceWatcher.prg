@@ -76,11 +76,10 @@ RETURN
     QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, QDBusServiceWatcher::WatchMode
     watchMode = QDBusServiceWatcher::WatchForOwnerChange, QObject * parent = nullptr)
     */
-    auto obj = new QDBusServiceWatcher(
-        PQSTRING(1), *PQDBUSCONNECTION(2),
-        HB_ISNIL(3) ? QDBusServiceWatcher::WatchForOwnerChange
-                    : PQDBUSSERVICEWATCHER_WATCHMODE(3),
-        OPQOBJECT(4, nullptr));
+    auto obj = new QDBusServiceWatcher(PQSTRING(1), *PQDBUSCONNECTION(2),
+                                       HB_ISNIL(3) ? QDBusServiceWatcher::WatchForOwnerChange
+                                                   : PQDBUSSERVICEWATCHER_WATCHMODE(3),
+                                       OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
