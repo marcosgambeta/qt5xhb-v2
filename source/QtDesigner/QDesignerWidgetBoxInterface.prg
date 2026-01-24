@@ -60,9 +60,7 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QString fileName() const = 0
-*/
+// virtual QString fileName() const = 0
 HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_FILENAME)
 {
   auto obj = qobject_cast<QDesignerWidgetBoxInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -80,9 +78,7 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_FILENAME)
   }
 }
 
-/*
-virtual bool load() = 0
-*/
+// virtual bool load() = 0
 HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_LOAD)
 {
   auto obj = qobject_cast<QDesignerWidgetBoxInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -100,9 +96,7 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_LOAD)
   }
 }
 
-/*
-virtual bool save() = 0
-*/
+// virtual bool save() = 0
 HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_SAVE)
 {
   auto obj = qobject_cast<QDesignerWidgetBoxInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -120,9 +114,7 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_SAVE)
   }
 }
 
-/*
-virtual void setFileName(const QString &fileName) = 0
-*/
+// virtual void setFileName(const QString &fileName) = 0
 HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_SETFILENAME)
 {
   auto obj = qobject_cast<QDesignerWidgetBoxInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());

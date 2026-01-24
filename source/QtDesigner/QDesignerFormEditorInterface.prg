@@ -73,9 +73,7 @@ RETURN
 #include <QtDesigner/QDesignerWidgetBoxInterface>
 #include <QtDesigner/QExtensionManager>
 
-    /*
-    QDesignerFormEditorInterface(QObject * parent = nullptr)
-    */
+    // QDesignerFormEditorInterface(QObject *parent = nullptr)
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -95,9 +93,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDesignerActionEditorInterface * actionEditor() const
-*/
+// QDesignerActionEditorInterface *actionEditor() const
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR)
 {
   auto obj = qobject_cast<QDesignerFormEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -116,9 +112,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR)
   }
 }
 
-/*
-QExtensionManager * extensionManager() const
-*/
+// QExtensionManager *extensionManager() const
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER)
 {
   auto obj = qobject_cast<QDesignerFormEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -137,9 +131,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER)
   }
 }
 
-/*
-QDesignerFormWindowManagerInterface * formWindowManager() const
-*/
+// QDesignerFormWindowManagerInterface *formWindowManager() const
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER)
 {
   auto obj = qobject_cast<QDesignerFormEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -158,9 +150,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER)
   }
 }
 
-/*
-QDesignerObjectInspectorInterface * objectInspector() const
-*/
+// QDesignerObjectInspectorInterface *objectInspector() const
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR)
 {
   auto obj = qobject_cast<QDesignerFormEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -179,9 +169,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR)
   }
 }
 
-/*
-QDesignerPropertyEditorInterface * propertyEditor() const
-*/
+// QDesignerPropertyEditorInterface *propertyEditor() const
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR)
 {
   auto obj = qobject_cast<QDesignerFormEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -200,9 +188,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR)
   }
 }
 
-/*
-void setActionEditor(QDesignerActionEditorInterface * actionEditor)
-*/
+// void setActionEditor(QDesignerActionEditorInterface *actionEditor)
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETACTIONEDITOR)
 {
   auto obj = qobject_cast<QDesignerFormEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -222,9 +208,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETACTIONEDITOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setObjectInspector(QDesignerObjectInspectorInterface * objectInspector)
-*/
+// void setObjectInspector(QDesignerObjectInspectorInterface *objectInspector)
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETOBJECTINSPECTOR)
 {
   auto obj = qobject_cast<QDesignerFormEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -244,9 +228,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETOBJECTINSPECTOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPropertyEditor(QDesignerPropertyEditorInterface * propertyEditor)
-*/
+// void setPropertyEditor(QDesignerPropertyEditorInterface *propertyEditor)
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETPROPERTYEDITOR)
 {
   auto obj = qobject_cast<QDesignerFormEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -266,9 +248,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETPROPERTYEDITOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWidgetBox(QDesignerWidgetBoxInterface * widgetBox)
-*/
+// void setWidgetBox(QDesignerWidgetBoxInterface *widgetBox)
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETWIDGETBOX)
 {
   auto obj = qobject_cast<QDesignerFormEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -288,9 +268,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETWIDGETBOX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget * topLevel() const
-*/
+// QWidget *topLevel() const
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_TOPLEVEL)
 {
   auto obj = qobject_cast<QDesignerFormEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -309,9 +287,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_TOPLEVEL)
   }
 }
 
-/*
-QDesignerWidgetBoxInterface * widgetBox() const
-*/
+// QDesignerWidgetBoxInterface *widgetBox() const
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_WIDGETBOX)
 {
   auto obj = qobject_cast<QDesignerFormEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());

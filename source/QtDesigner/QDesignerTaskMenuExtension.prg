@@ -68,9 +68,7 @@ HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QAction * preferredEditAction() const
-*/
+// virtual QAction *preferredEditAction() const
 HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION)
 {
   auto obj = static_cast<QDesignerTaskMenuExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -89,9 +87,7 @@ HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION)
   }
 }
 
-/*
-virtual QList<QAction*> taskActions() const = 0
-*/
+// virtual QList<QAction*> taskActions() const = 0
 HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_TASKACTIONS)
 {
   auto obj = static_cast<QDesignerTaskMenuExtension *>(Qt5xHb::itemGetPtrStackSelfItem());

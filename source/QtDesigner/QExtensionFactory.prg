@@ -54,9 +54,7 @@ RETURN
 
 #include <QtDesigner/QExtensionManager>
 
-    /*
-    QExtensionFactory(QExtensionManager * parent = nullptr)
-    */
+    // QExtensionFactory(QExtensionManager *parent = nullptr)
 HB_FUNC_STATIC(QEXTENSIONFACTORY_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQEXTENSIONMANAGERORNIL(1)) {
@@ -76,9 +74,7 @@ HB_FUNC_STATIC(QEXTENSIONFACTORY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QExtensionManager * extensionManager() const
-*/
+// QExtensionManager *extensionManager() const
 HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSIONMANAGER)
 {
   auto obj = qobject_cast<QExtensionFactory *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -97,9 +93,7 @@ HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSIONMANAGER)
   }
 }
 
-/*
-virtual QObject * extension(QObject * object, const QString &iid) const
-*/
+// virtual QObject *extension(QObject *object, const QString &iid) const
 HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSION)
 {
   auto obj = qobject_cast<QExtensionFactory *>(Qt5xHb::getQObjectPointerFromSelfItem());

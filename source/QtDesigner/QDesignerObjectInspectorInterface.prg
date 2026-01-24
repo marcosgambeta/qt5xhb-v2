@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QDesignerFormEditorInterface * core() const
-*/
+// virtual QDesignerFormEditorInterface *core() const
 HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_CORE)
 {
   auto obj = qobject_cast<QDesignerObjectInspectorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -82,9 +80,7 @@ HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_CORE)
   }
 }
 
-/*
-virtual void setFormWindow(QDesignerFormWindowInterface * formWindow) = 0
-*/
+// virtual void setFormWindow(QDesignerFormWindowInterface *formWindow) = 0
 HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_SETFORMWINDOW)
 {
   auto obj = qobject_cast<QDesignerObjectInspectorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());

@@ -92,9 +92,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QAction * actionAdjustSize() const
-*/
+// virtual QAction *actionAdjustSize() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONADJUSTSIZE)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONADJUSTSIZE)
   }
 }
 
-/*
-virtual QAction * actionBreakLayout() const
-*/
+// virtual QAction *actionBreakLayout() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONBREAKLAYOUT)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -134,9 +130,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONBREAKLAYOUT)
   }
 }
 
-/*
-virtual QAction * actionCopy() const
-*/
+// virtual QAction *actionCopy() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCOPY)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -155,9 +149,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCOPY)
   }
 }
 
-/*
-virtual QAction * actionCut() const
-*/
+// virtual QAction *actionCut() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCUT)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -176,9 +168,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCUT)
   }
 }
 
-/*
-virtual QAction * actionDelete() const
-*/
+// virtual QAction *actionDelete() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONDELETE)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -197,9 +187,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONDELETE)
   }
 }
 
-/*
-QAction * actionFormLayout() const
-*/
+// QAction *actionFormLayout() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONFORMLAYOUT)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -218,9 +206,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONFORMLAYOUT)
   }
 }
 
-/*
-virtual QAction * actionGridLayout() const
-*/
+// virtual QAction *actionGridLayout() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONGRIDLAYOUT)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -239,9 +225,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONGRIDLAYOUT)
   }
 }
 
-/*
-virtual QAction * actionHorizontalLayout() const
-*/
+// virtual QAction *actionHorizontalLayout() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONHORIZONTALLAYOUT)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -260,9 +244,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONHORIZONTALLAYOUT)
   }
 }
 
-/*
-virtual QAction * actionLower() const
-*/
+// virtual QAction *actionLower() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONLOWER)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -281,9 +263,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONLOWER)
   }
 }
 
-/*
-virtual QAction * actionPaste() const
-*/
+// virtual QAction *actionPaste() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONPASTE)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -302,9 +282,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONPASTE)
   }
 }
 
-/*
-virtual QAction * actionRaise() const
-*/
+// virtual QAction *actionRaise() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONRAISE)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -323,9 +301,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONRAISE)
   }
 }
 
-/*
-virtual QAction * actionRedo() const
-*/
+// virtual QAction *actionRedo() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONREDO)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -344,9 +320,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONREDO)
   }
 }
 
-/*
-virtual QAction * actionSelectAll() const
-*/
+// virtual QAction *actionSelectAll() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSELECTALL)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -365,9 +339,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSELECTALL)
   }
 }
 
-/*
-QAction * actionSimplifyLayout() const
-*/
+// QAction *actionSimplifyLayout() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSIMPLIFYLAYOUT)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -386,9 +358,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSIMPLIFYLAYOUT)
   }
 }
 
-/*
-virtual QAction * actionSplitHorizontal() const
-*/
+// virtual QAction *actionSplitHorizontal() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITHORIZONTAL)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -407,9 +377,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITHORIZONTAL)
   }
 }
 
-/*
-virtual QAction * actionSplitVertical() const
-*/
+// virtual QAction *actionSplitVertical() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITVERTICAL)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -428,9 +396,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITVERTICAL)
   }
 }
 
-/*
-virtual QAction * actionUndo() const
-*/
+// virtual QAction *actionUndo() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONUNDO)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -449,9 +415,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONUNDO)
   }
 }
 
-/*
-virtual QAction * actionVerticalLayout() const
-*/
+// virtual QAction *actionVerticalLayout() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONVERTICALLAYOUT)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -470,9 +434,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONVERTICALLAYOUT)
   }
 }
 
-/*
-virtual QDesignerFormWindowInterface * activeFormWindow() const
-*/
+// virtual QDesignerFormWindowInterface *activeFormWindow() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIVEFORMWINDOW)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -491,9 +453,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIVEFORMWINDOW)
   }
 }
 
-/*
-virtual QDesignerFormEditorInterface * core() const
-*/
+// virtual QDesignerFormEditorInterface *core() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_CORE)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -512,9 +472,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_CORE)
   }
 }
 
-/*
-virtual QDesignerFormWindowInterface * createFormWindow(QWidget * parent = nullptr, Qt::WindowFlags flags = 0)
-*/
+// virtual QDesignerFormWindowInterface *createFormWindow(QWidget *parent = nullptr, Qt::WindowFlags flags = 0)
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -534,9 +492,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW)
   }
 }
 
-/*
-virtual QDesignerFormWindowInterface * formWindow(int index) const
-*/
+// virtual QDesignerFormWindowInterface *formWindow(int index) const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOW)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -555,9 +511,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOW)
   }
 }
 
-/*
-virtual int formWindowCount() const
-*/
+// virtual int formWindowCount() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOWCOUNT)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -575,9 +529,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOWCOUNT)
   }
 }
 
-/*
-virtual void addFormWindow(QDesignerFormWindowInterface * formWindow)
-*/
+// virtual void addFormWindow(QDesignerFormWindowInterface *formWindow)
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ADDFORMWINDOW)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -597,9 +549,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ADDFORMWINDOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void removeFormWindow(QDesignerFormWindowInterface * formWindow)
-*/
+// virtual void removeFormWindow(QDesignerFormWindowInterface *formWindow)
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_REMOVEFORMWINDOW)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -619,9 +569,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_REMOVEFORMWINDOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setActiveFormWindow(QDesignerFormWindowInterface * formWindow)
-*/
+// virtual void setActiveFormWindow(QDesignerFormWindowInterface *formWindow)
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_SETACTIVEFORMWINDOW)
 {
   auto obj = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -641,9 +589,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_SETACTIVEFORMWINDOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void activeFormWindowChanged(QDesignerFormWindowInterface * formWindow)
-*/
+// void activeFormWindowChanged(QDesignerFormWindowInterface *formWindow)
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED)
 {
   auto sender = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -686,9 +632,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED)
   hb_retl(result);
 }
 
-/*
-void formWindowAdded(QDesignerFormWindowInterface * formWindow)
-*/
+// void formWindowAdded(QDesignerFormWindowInterface *formWindow)
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED)
 {
   auto sender = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -731,9 +675,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED)
   hb_retl(result);
 }
 
-/*
-void formWindowRemoved(QDesignerFormWindowInterface * formWindow)
-*/
+// void formWindowRemoved(QDesignerFormWindowInterface *formWindow)
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED)
 {
   auto sender = qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());

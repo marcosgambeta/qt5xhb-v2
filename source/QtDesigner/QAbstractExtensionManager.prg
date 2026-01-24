@@ -67,9 +67,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QObject * extension(QObject * object, const QString &iid) const = 0
-*/
+// virtual QObject *extension(QObject *object, const QString &iid) const = 0
 HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_EXTENSION)
 {
   auto obj = static_cast<QAbstractExtensionManager *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -88,9 +86,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_EXTENSION)
   }
 }
 
-/*
-virtual void registerExtensions(QAbstractExtensionFactory * factory, const QString &iid) = 0
-*/
+// virtual void registerExtensions(QAbstractExtensionFactory *factory, const QString &iid) = 0
 HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS)
 {
   auto obj = static_cast<QAbstractExtensionManager *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -110,9 +106,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void unregisterExtensions(QAbstractExtensionFactory * factory, const QString &iid) = 0
-*/
+// virtual void unregisterExtensions(QAbstractExtensionFactory *factory, const QString &iid) = 0
 HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS)
 {
   auto obj = static_cast<QAbstractExtensionManager *>(Qt5xHb::itemGetPtrStackSelfItem());

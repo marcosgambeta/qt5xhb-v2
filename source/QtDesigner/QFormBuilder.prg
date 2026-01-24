@@ -52,9 +52,7 @@ RETURN
 #include <QtDesigner/QFormBuilder>
 #endif
 
-    /*
-    QFormBuilder()
-    */
+    // QFormBuilder()
 HB_FUNC_STATIC(QFORMBUILDER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -74,9 +72,7 @@ HB_FUNC_STATIC(QFORMBUILDER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addPluginPath(const QString &pluginPath)
-*/
+// void addPluginPath(const QString &pluginPath)
 HB_FUNC_STATIC(QFORMBUILDER_ADDPLUGINPATH)
 {
   auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -96,9 +92,7 @@ HB_FUNC_STATIC(QFORMBUILDER_ADDPLUGINPATH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearPluginPaths()
-*/
+// void clearPluginPaths()
 HB_FUNC_STATIC(QFORMBUILDER_CLEARPLUGINPATHS)
 {
   auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -118,9 +112,7 @@ HB_FUNC_STATIC(QFORMBUILDER_CLEARPLUGINPATHS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QDesignerCustomWidgetInterface*> customWidgets() const
-*/
+// QList<QDesignerCustomWidgetInterface*> customWidgets() const
 HB_FUNC_STATIC(QFORMBUILDER_CUSTOMWIDGETS)
 {
   auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -157,9 +149,7 @@ HB_FUNC_STATIC(QFORMBUILDER_CUSTOMWIDGETS)
   }
 }
 
-/*
-QStringList pluginPaths() const
-*/
+// QStringList pluginPaths() const
 HB_FUNC_STATIC(QFORMBUILDER_PLUGINPATHS)
 {
   auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -177,9 +167,7 @@ HB_FUNC_STATIC(QFORMBUILDER_PLUGINPATHS)
   }
 }
 
-/*
-void setPluginPath(const QStringList &pluginPaths)
-*/
+// void setPluginPath(const QStringList &pluginPaths)
 HB_FUNC_STATIC(QFORMBUILDER_SETPLUGINPATH)
 {
   auto obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());

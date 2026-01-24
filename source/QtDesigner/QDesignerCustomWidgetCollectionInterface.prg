@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QList<QDesignerCustomWidgetInterface*> customWidgets() const = 0
-*/
+// virtual QList<QDesignerCustomWidgetInterface*> customWidgets() const = 0
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS)
 {
   auto obj = static_cast<QDesignerCustomWidgetCollectionInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
