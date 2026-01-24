@@ -64,9 +64,7 @@ RETURN
 
 #include <QtGui/QWindow>
 
-    /*
-    QWinThumbnailToolBar(QObject * parent = nullptr)
-    */
+    // QWinThumbnailToolBar(QObject *parent = nullptr)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_DELETE)
 #endif
 }
 
-/*
-QWindow * window() const
-*/
+// QWindow *window() const
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_WINDOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -113,9 +109,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_WINDOW)
 #endif
 }
 
-/*
-void setWindow(QWindow * window)
-*/
+// void setWindow(QWindow *window)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_SETWINDOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -137,9 +131,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_SETWINDOW)
 #endif
 }
 
-/*
-void addButton(QWinThumbnailToolButton * button)
-*/
+// void addButton(QWinThumbnailToolButton *button)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_ADDBUTTON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -161,9 +153,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_ADDBUTTON)
 #endif
 }
 
-/*
-void removeButton(QWinThumbnailToolButton * button)
-*/
+// void removeButton(QWinThumbnailToolButton *button)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_REMOVEBUTTON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -185,9 +175,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_REMOVEBUTTON)
 #endif
 }
 
-/*
-void setButtons(const QList<QWinThumbnailToolButton*> &buttons)
-*/
+// void setButtons(const QList<QWinThumbnailToolButton*> &buttons)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_SETBUTTONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -216,9 +204,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_SETBUTTONS)
 #endif
 }
 
-/*
-QList<QWinThumbnailToolButton*> buttons() const
-*/
+// QList<QWinThumbnailToolButton*> buttons() const
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_BUTTONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -257,9 +243,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_BUTTONS)
 #endif
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -279,9 +263,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_COUNT)
 #endif
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

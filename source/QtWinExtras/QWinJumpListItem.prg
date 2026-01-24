@@ -74,9 +74,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QWinJumpListItem(QWinJumpListItem::Type type)
-    */
+    // QWinJumpListItem(QWinJumpListItem::Type type)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -100,9 +98,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_DELETE)
 #endif
 }
 
-/*
-QWinJumpListItem::Type type() const
-*/
+// QWinJumpListItem::Type type() const
 HB_FUNC_STATIC(QWINJUMPLISTITEM_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -122,9 +118,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_TYPE)
 #endif
 }
 
-/*
-void setType(QWinJumpListItem::Type type)
-*/
+// void setType(QWinJumpListItem::Type type)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -146,9 +140,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETTYPE)
 #endif
 }
 
-/*
-QString filePath() const
-*/
+// QString filePath() const
 HB_FUNC_STATIC(QWINJUMPLISTITEM_FILEPATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -168,9 +160,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_FILEPATH)
 #endif
 }
 
-/*
-void setFilePath(const QString &filePath)
-*/
+// void setFilePath(const QString &filePath)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETFILEPATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -192,9 +182,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETFILEPATH)
 #endif
 }
 
-/*
-QString workingDirectory() const
-*/
+// QString workingDirectory() const
 HB_FUNC_STATIC(QWINJUMPLISTITEM_WORKINGDIRECTORY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -214,9 +202,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_WORKINGDIRECTORY)
 #endif
 }
 
-/*
-void setWorkingDirectory(const QString &workingDirectory)
-*/
+// void setWorkingDirectory(const QString &workingDirectory)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETWORKINGDIRECTORY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -238,9 +224,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETWORKINGDIRECTORY)
 #endif
 }
 
-/*
-QIcon icon() const
-*/
+// QIcon icon() const
 HB_FUNC_STATIC(QWINJUMPLISTITEM_ICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -260,9 +244,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_ICON)
 #endif
 }
 
-/*
-void setIcon(const QIcon &icon)
-*/
+// void setIcon(const QIcon &icon)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -284,9 +266,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETICON)
 #endif
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QWINJUMPLISTITEM_TITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -306,9 +286,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_TITLE)
 #endif
 }
 
-/*
-void setTitle(const QString &title)
-*/
+// void setTitle(const QString &title)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETTITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -330,9 +308,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETTITLE)
 #endif
 }
 
-/*
-QString description() const
-*/
+// QString description() const
 HB_FUNC_STATIC(QWINJUMPLISTITEM_DESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -352,9 +328,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_DESCRIPTION)
 #endif
 }
 
-/*
-void setDescription(const QString &description)
-*/
+// void setDescription(const QString &description)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETDESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -376,9 +350,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETDESCRIPTION)
 #endif
 }
 
-/*
-QStringList arguments() const
-*/
+// QStringList arguments() const
 HB_FUNC_STATIC(QWINJUMPLISTITEM_ARGUMENTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -398,9 +370,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_ARGUMENTS)
 #endif
 }
 
-/*
-void setArguments(const QStringList &arguments)
-*/
+// void setArguments(const QStringList &arguments)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETARGUMENTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

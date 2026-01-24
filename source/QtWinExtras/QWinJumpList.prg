@@ -61,9 +61,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QWinJumpList(QObject * parent = nullptr)
-    */
+    // QWinJumpList(QObject *parent = nullptr)
 HB_FUNC_STATIC(QWINJUMPLIST_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_DELETE)
 #endif
 }
 
-/*
-QString identifier() const
-*/
+// QString identifier() const
 HB_FUNC_STATIC(QWINJUMPLIST_IDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -109,9 +105,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_IDENTIFIER)
 #endif
 }
 
-/*
-void setIdentifier(const QString &identifier)
-*/
+// void setIdentifier(const QString &identifier)
 HB_FUNC_STATIC(QWINJUMPLIST_SETIDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -133,9 +127,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_SETIDENTIFIER)
 #endif
 }
 
-/*
-QWinJumpListCategory * recent() const
-*/
+// QWinJumpListCategory *recent() const
 HB_FUNC_STATIC(QWINJUMPLIST_RECENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -156,9 +148,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_RECENT)
 #endif
 }
 
-/*
-QWinJumpListCategory * frequent() const
-*/
+// QWinJumpListCategory *frequent() const
 HB_FUNC_STATIC(QWINJUMPLIST_FREQUENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -179,9 +169,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_FREQUENT)
 #endif
 }
 
-/*
-QWinJumpListCategory * tasks() const
-*/
+// QWinJumpListCategory *tasks() const
 HB_FUNC_STATIC(QWINJUMPLIST_TASKS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -202,9 +190,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_TASKS)
 #endif
 }
 
-/*
-QList<QWinJumpListCategory*> categories() const
-*/
+// QList<QWinJumpListCategory*> categories() const
 HB_FUNC_STATIC(QWINJUMPLIST_CATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -246,9 +232,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_CATEGORIES)
 HB_FUNC_STATIC(QWINJUMPLIST_ADDCATEGORY)
 {
   if (ISNUMPAR(1) && ISQWINJUMPLISTCATEGORY(1)) {
-    /*
-    void addCategory(QWinJumpListCategory * category)
-    */
+    // void addCategory(QWinJumpListCategory *category)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = qobject_cast<QWinJumpList *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -263,9 +247,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_ADDCATEGORY)
   }
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QWINJUMPLIST_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

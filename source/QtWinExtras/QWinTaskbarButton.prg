@@ -67,9 +67,7 @@ RETURN
 #include <QtGui/QWindow>
 #include <QtWinExtras/QWinTaskbarProgress>
 
-    /*
-    QWinTaskbarButton(QObject * parent = nullptr)
-    */
+    // QWinTaskbarButton(QObject *parent = nullptr)
 HB_FUNC_STATIC(QWINTASKBARBUTTON_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_DELETE)
 #endif
 }
 
-/*
-QWindow * window() const
-*/
+// QWindow *window() const
 HB_FUNC_STATIC(QWINTASKBARBUTTON_WINDOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -116,9 +112,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_WINDOW)
 #endif
 }
 
-/*
-void setWindow(QWindow * window)
-*/
+// void setWindow(QWindow *window)
 HB_FUNC_STATIC(QWINTASKBARBUTTON_SETWINDOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -140,9 +134,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_SETWINDOW)
 #endif
 }
 
-/*
-QIcon overlayIcon() const
-*/
+// QIcon overlayIcon() const
 HB_FUNC_STATIC(QWINTASKBARBUTTON_OVERLAYICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -162,9 +154,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_OVERLAYICON)
 #endif
 }
 
-/*
-void setOverlayIcon(const QIcon &icon)
-*/
+// void setOverlayIcon(const QIcon &icon)
 HB_FUNC_STATIC(QWINTASKBARBUTTON_SETOVERLAYICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -186,9 +176,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_SETOVERLAYICON)
 #endif
 }
 
-/*
-void clearOverlayIcon()
-*/
+// void clearOverlayIcon()
 HB_FUNC_STATIC(QWINTASKBARBUTTON_CLEAROVERLAYICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -210,9 +198,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_CLEAROVERLAYICON)
 #endif
 }
 
-/*
-QString overlayAccessibleDescription() const
-*/
+// QString overlayAccessibleDescription() const
 HB_FUNC_STATIC(QWINTASKBARBUTTON_OVERLAYACCESSIBLEDESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -232,9 +218,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_OVERLAYACCESSIBLEDESCRIPTION)
 #endif
 }
 
-/*
-void setOverlayAccessibleDescription(const QString &description)
-*/
+// void setOverlayAccessibleDescription(const QString &description)
 HB_FUNC_STATIC(QWINTASKBARBUTTON_SETOVERLAYACCESSIBLEDESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -256,9 +240,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_SETOVERLAYACCESSIBLEDESCRIPTION)
 #endif
 }
 
-/*
-QWinTaskbarProgress * progress() const
-*/
+// QWinTaskbarProgress *progress() const
 HB_FUNC_STATIC(QWINTASKBARBUTTON_PROGRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -279,9 +261,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_PROGRESS)
 #endif
 }
 
-/*
-bool eventFilter(QObject *, QEvent *)
-*/
+// bool eventFilter(QObject *, QEvent *)
 HB_FUNC_STATIC(QWINTASKBARBUTTON_EVENTFILTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

@@ -52,9 +52,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QWinColorizationChangeEvent(QRgb color, bool opaque)
-    */
+    // QWinColorizationChangeEvent(QRgb color, bool opaque)
 HB_FUNC_STATIC(QWINCOLORIZATIONCHANGEEVENT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -78,9 +76,7 @@ HB_FUNC_STATIC(QWINCOLORIZATIONCHANGEEVENT_DELETE)
 #endif
 }
 
-/*
-QRgb color() const
-*/
+// QRgb color() const
 HB_FUNC_STATIC(QWINCOLORIZATIONCHANGEEVENT_COLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -100,9 +96,7 @@ HB_FUNC_STATIC(QWINCOLORIZATIONCHANGEEVENT_COLOR)
 #endif
 }
 
-/*
-bool opaqueBlend() const
-*/
+// bool opaqueBlend() const
 HB_FUNC_STATIC(QWINCOLORIZATIONCHANGEEVENT_OPAQUEBLEND)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

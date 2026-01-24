@@ -71,9 +71,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QWinThumbnailToolButton(QObject * parent = nullptr)
-    */
+    // QWinThumbnailToolButton(QObject *parent = nullptr)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -97,9 +95,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_DELETE)
 #endif
 }
 
-/*
-QString toolTip() const
-*/
+// QString toolTip() const
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_TOOLTIP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -119,9 +115,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_TOOLTIP)
 #endif
 }
 
-/*
-void setToolTip(const QString &toolTip)
-*/
+// void setToolTip(const QString &toolTip)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETTOOLTIP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -143,9 +137,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETTOOLTIP)
 #endif
 }
 
-/*
-QIcon icon() const
-*/
+// QIcon icon() const
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -165,9 +157,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ICON)
 #endif
 }
 
-/*
-void setIcon(const QIcon &icon)
-*/
+// void setIcon(const QIcon &icon)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -189,9 +179,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETICON)
 #endif
 }
 
-/*
-bool isEnabled() const
-*/
+// bool isEnabled() const
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ISENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -211,9 +199,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ISENABLED)
 #endif
 }
 
-/*
-void setEnabled(bool enabled)
-*/
+// void setEnabled(bool enabled)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -235,9 +221,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETENABLED)
 #endif
 }
 
-/*
-bool isInteractive() const
-*/
+// bool isInteractive() const
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ISINTERACTIVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -257,9 +241,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ISINTERACTIVE)
 #endif
 }
 
-/*
-void setInteractive(bool interactive)
-*/
+// void setInteractive(bool interactive)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETINTERACTIVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -281,9 +263,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETINTERACTIVE)
 #endif
 }
 
-/*
-bool isVisible() const
-*/
+// bool isVisible() const
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ISVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -303,9 +283,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ISVISIBLE)
 #endif
 }
 
-/*
-void setVisible(bool visible)
-*/
+// void setVisible(bool visible)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -327,9 +305,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETVISIBLE)
 #endif
 }
 
-/*
-bool dismissOnClick() const
-*/
+// bool dismissOnClick() const
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_DISMISSONCLICK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -349,9 +325,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_DISMISSONCLICK)
 #endif
 }
 
-/*
-void setDismissOnClick(bool dismiss)
-*/
+// void setDismissOnClick(bool dismiss)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETDISMISSONCLICK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -373,9 +347,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETDISMISSONCLICK)
 #endif
 }
 
-/*
-bool isFlat() const
-*/
+// bool isFlat() const
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ISFLAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -395,9 +367,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ISFLAT)
 #endif
 }
 
-/*
-void setFlat(bool flat)
-*/
+// void setFlat(bool flat)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETFLAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -419,9 +389,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETFLAT)
 #endif
 }
 
-/*
-void click()
-*/
+// void click()
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_CLICK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -443,9 +411,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_CLICK)
 #endif
 }
 
-/*
-void clicked()
-*/
+// void clicked()
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ONCLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -487,9 +453,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ONCLICKED)
 #endif
 }
 
-/*
-void changed()
-*/
+// void changed()
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

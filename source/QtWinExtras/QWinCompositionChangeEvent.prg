@@ -51,9 +51,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QWinCompositionChangeEvent(bool enabled)
-    */
+    // QWinCompositionChangeEvent(bool enabled)
 HB_FUNC_STATIC(QWINCOMPOSITIONCHANGEEVENT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -77,9 +75,7 @@ HB_FUNC_STATIC(QWINCOMPOSITIONCHANGEEVENT_DELETE)
 #endif
 }
 
-/*
-bool isCompositionEnabled() const
-*/
+// bool isCompositionEnabled() const
 HB_FUNC_STATIC(QWINCOMPOSITIONCHANGEEVENT_ISCOMPOSITIONENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

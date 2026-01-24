@@ -50,9 +50,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QWinEvent(int type)
-    */
+    // QWinEvent(int type)
 HB_FUNC_STATIC(QWINEVENT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

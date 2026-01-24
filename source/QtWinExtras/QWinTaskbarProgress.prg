@@ -77,9 +77,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QWinTaskbarProgress(QObject * parent = nullptr)
-    */
+    // QWinTaskbarProgress(QObject *parent = nullptr)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -103,9 +101,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_DELETE)
 #endif
 }
 
-/*
-int value() const
-*/
+// int value() const
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_VALUE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -125,9 +121,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_VALUE)
 #endif
 }
 
-/*
-void setValue(int value)
-*/
+// void setValue(int value)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETVALUE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -149,9 +143,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETVALUE)
 #endif
 }
 
-/*
-int minimum() const
-*/
+// int minimum() const
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_MINIMUM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -171,9 +163,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_MINIMUM)
 #endif
 }
 
-/*
-void setMinimum(int minimum)
-*/
+// void setMinimum(int minimum)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETMINIMUM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -195,9 +185,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETMINIMUM)
 #endif
 }
 
-/*
-int maximum() const
-*/
+// int maximum() const
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_MAXIMUM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -217,9 +205,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_MAXIMUM)
 #endif
 }
 
-/*
-void setMaximum(int maximum)
-*/
+// void setMaximum(int maximum)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETMAXIMUM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -241,9 +227,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETMAXIMUM)
 #endif
 }
 
-/*
-bool isVisible() const
-*/
+// bool isVisible() const
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ISVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -263,9 +247,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ISVISIBLE)
 #endif
 }
 
-/*
-void setVisible(bool visible)
-*/
+// void setVisible(bool visible)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -287,9 +269,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETVISIBLE)
 #endif
 }
 
-/*
-bool isPaused() const
-*/
+// bool isPaused() const
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ISPAUSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -309,9 +289,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ISPAUSED)
 #endif
 }
 
-/*
-void setPaused(bool paused)
-*/
+// void setPaused(bool paused)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETPAUSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -333,9 +311,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETPAUSED)
 #endif
 }
 
-/*
-bool isStopped() const
-*/
+// bool isStopped() const
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ISSTOPPED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -355,9 +331,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ISSTOPPED)
 #endif
 }
 
-/*
-void setRange(int minimum, int maximum)
-*/
+// void setRange(int minimum, int maximum)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -379,9 +353,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETRANGE)
 #endif
 }
 
-/*
-void reset()
-*/
+// void reset()
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_RESET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -403,9 +375,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_RESET)
 #endif
 }
 
-/*
-void show()
-*/
+// void show()
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_SHOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -427,9 +397,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SHOW)
 #endif
 }
 
-/*
-void hide()
-*/
+// void hide()
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_HIDE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -451,9 +419,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_HIDE)
 #endif
 }
 
-/*
-void pause()
-*/
+// void pause()
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_PAUSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -475,9 +441,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_PAUSE)
 #endif
 }
 
-/*
-void resume()
-*/
+// void resume()
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_RESUME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -499,9 +463,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_RESUME)
 #endif
 }
 
-/*
-void stop()
-*/
+// void stop()
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_STOP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -523,9 +485,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_STOP)
 #endif
 }
 
-/*
-void valueChanged(int value)
-*/
+// void valueChanged(int value)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONVALUECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -570,9 +530,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONVALUECHANGED)
 #endif
 }
 
-/*
-void minimumChanged(int minimum)
-*/
+// void minimumChanged(int minimum)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONMINIMUMCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -617,9 +575,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONMINIMUMCHANGED)
 #endif
 }
 
-/*
-void maximumChanged(int maximum)
-*/
+// void maximumChanged(int maximum)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONMAXIMUMCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -664,9 +620,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONMAXIMUMCHANGED)
 #endif
 }
 
-/*
-void visibilityChanged(bool visible)
-*/
+// void visibilityChanged(bool visible)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONVISIBILITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -711,9 +665,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONVISIBILITYCHANGED)
 #endif
 }
 
-/*
-void pausedChanged(bool paused)
-*/
+// void pausedChanged(bool paused)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONPAUSEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -758,9 +710,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONPAUSEDCHANGED)
 #endif
 }
 
-/*
-void stoppedChanged(bool stopped)
-*/
+// void stoppedChanged(bool stopped)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONSTOPPEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
