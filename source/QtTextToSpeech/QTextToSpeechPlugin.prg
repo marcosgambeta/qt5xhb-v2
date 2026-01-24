@@ -58,9 +58,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    virtual ~QTextToSpeechPlugin()
-    */
+    // virtual ~QTextToSpeechPlugin()
 HB_FUNC_STATIC(QTEXTTOSPEECHPLUGIN_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))

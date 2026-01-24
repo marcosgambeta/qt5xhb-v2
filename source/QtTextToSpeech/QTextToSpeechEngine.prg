@@ -76,9 +76,7 @@ RETURN
 #include <QtCore/QVector>
 #include <QtTextToSpeech/QVoice>
 
-    /*
-    ~QTextToSpeechEngine()
-    */
+    // ~QTextToSpeechEngine()
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_DELETE)
 #endif
 }
 
-/*
-virtual QVector<QLocale> availableLocales() const = 0
-*/
+// virtual QVector<QLocale> availableLocales() const = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_AVAILABLELOCALES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -134,9 +130,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_AVAILABLELOCALES)
 #endif
 }
 
-/*
-virtual QVector<QVoice> availableVoices() const = 0
-*/
+// virtual QVector<QVoice> availableVoices() const = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_AVAILABLEVOICES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -178,9 +172,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_AVAILABLEVOICES)
 #endif
 }
 
-/*
-virtual void say(const QString &text) = 0
-*/
+// virtual void say(const QString &text) = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SAY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -202,9 +194,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SAY)
 #endif
 }
 
-/*
-virtual void stop() = 0
-*/
+// virtual void stop() = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_STOP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -226,9 +216,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_STOP)
 #endif
 }
 
-/*
-virtual void pause() = 0
-*/
+// virtual void pause() = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_PAUSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -250,9 +238,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_PAUSE)
 #endif
 }
 
-/*
-virtual void resume() = 0
-*/
+// virtual void resume() = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_RESUME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -274,9 +260,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_RESUME)
 #endif
 }
 
-/*
-virtual double rate() const = 0
-*/
+// virtual double rate() const = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_RATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -296,9 +280,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_RATE)
 #endif
 }
 
-/*
-virtual bool setRate(double rate) = 0
-*/
+// virtual bool setRate(double rate) = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETRATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -318,9 +300,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETRATE)
 #endif
 }
 
-/*
-virtual double pitch() const = 0
-*/
+// virtual double pitch() const = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_PITCH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -340,9 +320,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_PITCH)
 #endif
 }
 
-/*
-virtual bool setPitch(double pitch) = 0
-*/
+// virtual bool setPitch(double pitch) = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETPITCH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -362,9 +340,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETPITCH)
 #endif
 }
 
-/*
-virtual QLocale locale() const = 0
-*/
+// virtual QLocale locale() const = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_LOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -384,9 +360,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_LOCALE)
 #endif
 }
 
-/*
-virtual bool setLocale(const QLocale &locale) = 0
-*/
+// virtual bool setLocale(const QLocale &locale) = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETLOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -406,9 +380,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETLOCALE)
 #endif
 }
 
-/*
-virtual double volume() const = 0
-*/
+// virtual double volume() const = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_VOLUME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -428,9 +400,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_VOLUME)
 #endif
 }
 
-/*
-virtual bool setVolume(double volume) = 0
-*/
+// virtual bool setVolume(double volume) = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETVOLUME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -450,9 +420,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETVOLUME)
 #endif
 }
 
-/*
-virtual QVoice voice() const = 0
-*/
+// virtual QVoice voice() const = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_VOICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -472,9 +440,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_VOICE)
 #endif
 }
 
-/*
-virtual bool setVoice(const QVoice &voice) = 0
-*/
+// virtual bool setVoice(const QVoice &voice) = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETVOICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -494,9 +460,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETVOICE)
 #endif
 }
 
-/*
-virtual QTextToSpeech::State state() const = 0
-*/
+// virtual QTextToSpeech::State state() const = 0
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_STATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -516,9 +480,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_STATE)
 #endif
 }
 
-/*
-void stateChanged(QTextToSpeech::State state)
-*/
+// void stateChanged(QTextToSpeech::State state)
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_ONSTATECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))

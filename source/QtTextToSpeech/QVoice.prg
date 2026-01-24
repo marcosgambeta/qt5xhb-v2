@@ -67,17 +67,13 @@ RETURN
 HB_FUNC_STATIC(QVOICE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QVoice()
-    */
+    // QVoice()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QVoice();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQVOICE(1)) {
-    /*
-    QVoice(const QVoice &other)
-    */
+    // QVoice(const QVoice &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QVoice(*PQVOICE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -87,9 +83,7 @@ HB_FUNC_STATIC(QVOICE_NEW)
   }
 }
 
-/*
-~QVoice()
-*/
+// ~QVoice()
 HB_FUNC_STATIC(QVOICE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -101,9 +95,7 @@ HB_FUNC_STATIC(QVOICE_DELETE)
 #endif
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QVOICE_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -123,9 +115,7 @@ HB_FUNC_STATIC(QVOICE_NAME)
 #endif
 }
 
-/*
-QVoice::Gender gender() const
-*/
+// QVoice::Gender gender() const
 HB_FUNC_STATIC(QVOICE_GENDER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -145,9 +135,7 @@ HB_FUNC_STATIC(QVOICE_GENDER)
 #endif
 }
 
-/*
-QVoice::Age age() const
-*/
+// QVoice::Age age() const
 HB_FUNC_STATIC(QVOICE_AGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -167,9 +155,7 @@ HB_FUNC_STATIC(QVOICE_AGE)
 #endif
 }
 
-/*
-static QString genderName(QVoice::Gender gender)
-*/
+// static QString genderName(QVoice::Gender gender)
 HB_FUNC_STATIC(QVOICE_GENDERNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -185,9 +171,7 @@ HB_FUNC_STATIC(QVOICE_GENDERNAME)
 #endif
 }
 
-/*
-static QString ageName(QVoice::Age age)
-*/
+// static QString ageName(QVoice::Age age)
 HB_FUNC_STATIC(QVOICE_AGENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
