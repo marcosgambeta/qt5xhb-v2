@@ -70,9 +70,7 @@ HB_FUNC_STATIC(QPRINTENGINE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool abort() = 0
-*/
+// virtual bool abort() = 0
 HB_FUNC_STATIC(QPRINTENGINE_ABORT)
 {
   auto obj = static_cast<QPrintEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QPRINTENGINE_ABORT)
   }
 }
 
-/*
-virtual int metric(QPaintDevice::PaintDeviceMetric id) const = 0
-*/
+// virtual int metric(QPaintDevice::PaintDeviceMetric id) const = 0
 HB_FUNC_STATIC(QPRINTENGINE_METRIC)
 {
   auto obj = static_cast<QPrintEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -110,9 +106,7 @@ HB_FUNC_STATIC(QPRINTENGINE_METRIC)
   }
 }
 
-/*
-virtual bool newPage() = 0
-*/
+// virtual bool newPage() = 0
 HB_FUNC_STATIC(QPRINTENGINE_NEWPAGE)
 {
   auto obj = static_cast<QPrintEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -130,9 +124,7 @@ HB_FUNC_STATIC(QPRINTENGINE_NEWPAGE)
   }
 }
 
-/*
-virtual QPrinter::PrinterState printerState() const = 0
-*/
+// virtual QPrinter::PrinterState printerState() const = 0
 HB_FUNC_STATIC(QPRINTENGINE_PRINTERSTATE)
 {
   auto obj = static_cast<QPrintEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -150,9 +142,7 @@ HB_FUNC_STATIC(QPRINTENGINE_PRINTERSTATE)
   }
 }
 
-/*
-virtual QVariant property(QPrintEngine::PrintEnginePropertyKey key) const = 0
-*/
+// virtual QVariant property(QPrintEngine::PrintEnginePropertyKey key) const = 0
 HB_FUNC_STATIC(QPRINTENGINE_PROPERTY)
 {
   auto obj = static_cast<QPrintEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -170,9 +160,7 @@ HB_FUNC_STATIC(QPRINTENGINE_PROPERTY)
   }
 }
 
-/*
-virtual void setProperty(QPrintEngine::PrintEnginePropertyKey key, const QVariant &value) = 0
-*/
+// virtual void setProperty(QPrintEngine::PrintEnginePropertyKey key, const QVariant &value) = 0
 HB_FUNC_STATIC(QPRINTENGINE_SETPROPERTY)
 {
   auto obj = static_cast<QPrintEngine *>(Qt5xHb::itemGetPtrStackSelfItem());

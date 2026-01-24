@@ -57,15 +57,11 @@ RETURN
 HB_FUNC_STATIC(QPAGESETUPDIALOG_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQPRINTER(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QPageSetupDialog(QPrinter * printer, QWidget * parent = nullptr)
-    */
+    // QPageSetupDialog(QPrinter *printer, QWidget *parent = nullptr)
     auto obj = new QPageSetupDialog(PQPRINTER(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
-    /*
-    QPageSetupDialog(QWidget * parent = nullptr)
-    */
+    // QPageSetupDialog(QWidget *parent = nullptr)
     auto obj = new QPageSetupDialog(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -82,9 +78,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void open( QObject * receiver, const char * member)
-*/
+// void open(QObject *receiver, const char *member)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_OPEN)
 {
   auto obj = qobject_cast<QPageSetupDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -104,9 +98,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_OPEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPrinter * printer()
-*/
+// QPrinter *printer()
 HB_FUNC_STATIC(QPAGESETUPDIALOG_PRINTER)
 {
   auto obj = qobject_cast<QPageSetupDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -125,9 +117,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_PRINTER)
   }
 }
 
-/*
-virtual void setVisible(bool visible)
-*/
+// virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_SETVISIBLE)
 {
   auto obj = qobject_cast<QPageSetupDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -147,9 +137,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int exec()
-*/
+// virtual int exec()
 HB_FUNC_STATIC(QPAGESETUPDIALOG_EXEC)
 {
   auto obj = qobject_cast<QPageSetupDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -167,9 +155,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_EXEC)
   }
 }
 
-/*
-void done(int result)
-*/
+// void done(int result)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_DONE)
 {
   auto obj = qobject_cast<QPageSetupDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());

@@ -83,21 +83,15 @@ RETURN
 HB_FUNC_STATIC(QPRINTERINFO_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPrinterInfo()
-    */
+    // QPrinterInfo()
     auto obj = new QPrinterInfo();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQPRINTERINFO(1)) {
-    /*
-    QPrinterInfo(const QPrinterInfo &src)
-    */
+    // QPrinterInfo(const QPrinterInfo &src)
     auto obj = new QPrinterInfo(*PQPRINTERINFO(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQPRINTER(1)) {
-    /*
-    QPrinterInfo(const QPrinter &printer)
-    */
+    // QPrinterInfo(const QPrinter &printer)
     auto obj = new QPrinterInfo(*PQPRINTER(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -114,9 +108,7 @@ HB_FUNC_STATIC(QPRINTERINFO_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isDefault() const
-*/
+// bool isDefault() const
 HB_FUNC_STATIC(QPRINTERINFO_ISDEFAULT)
 {
   auto obj = static_cast<QPrinterInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -134,9 +126,7 @@ HB_FUNC_STATIC(QPRINTERINFO_ISDEFAULT)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QPRINTERINFO_ISNULL)
 {
   auto obj = static_cast<QPrinterInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -154,9 +144,7 @@ HB_FUNC_STATIC(QPRINTERINFO_ISNULL)
   }
 }
 
-/*
-QString printerName() const
-*/
+// QString printerName() const
 HB_FUNC_STATIC(QPRINTERINFO_PRINTERNAME)
 {
   auto obj = static_cast<QPrinterInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -174,9 +162,7 @@ HB_FUNC_STATIC(QPRINTERINFO_PRINTERNAME)
   }
 }
 
-/*
-QList<QPrinter::PaperSize> supportedPaperSizes() const
-*/
+// QList<QPrinter::PaperSize> supportedPaperSizes() const
 HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDPAPERSIZES)
 {
   auto obj = static_cast<QPrinterInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -201,9 +187,7 @@ HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDPAPERSIZES)
   }
 }
 
-/*
-static QList<QPrinterInfo> availablePrinters()
-*/
+// static QList<QPrinterInfo> availablePrinters()
 HB_FUNC_STATIC(QPRINTERINFO_AVAILABLEPRINTERS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,9 +223,7 @@ HB_FUNC_STATIC(QPRINTERINFO_AVAILABLEPRINTERS)
 #endif
 }
 
-/*
-static QPrinterInfo defaultPrinter()
-*/
+// static QPrinterInfo defaultPrinter()
 HB_FUNC_STATIC(QPRINTERINFO_DEFAULTPRINTER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,9 +237,7 @@ HB_FUNC_STATIC(QPRINTERINFO_DEFAULTPRINTER)
 #endif
 }
 
-/*
-QString description() const
-*/
+// QString description() const
 HB_FUNC_STATIC(QPRINTERINFO_DESCRIPTION)
 {
   auto obj = static_cast<QPrinterInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -275,9 +255,7 @@ HB_FUNC_STATIC(QPRINTERINFO_DESCRIPTION)
   }
 }
 
-/*
-QString location() const
-*/
+// QString location() const
 HB_FUNC_STATIC(QPRINTERINFO_LOCATION)
 {
   auto obj = static_cast<QPrinterInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -295,9 +273,7 @@ HB_FUNC_STATIC(QPRINTERINFO_LOCATION)
   }
 }
 
-/*
-QString makeAndModel() const
-*/
+// QString makeAndModel() const
 HB_FUNC_STATIC(QPRINTERINFO_MAKEANDMODEL)
 {
   auto obj = static_cast<QPrinterInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -315,9 +291,7 @@ HB_FUNC_STATIC(QPRINTERINFO_MAKEANDMODEL)
   }
 }
 
-/*
-bool isRemote() const
-*/
+// bool isRemote() const
 HB_FUNC_STATIC(QPRINTERINFO_ISREMOTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -337,9 +311,7 @@ HB_FUNC_STATIC(QPRINTERINFO_ISREMOTE)
 #endif
 }
 
-/*
-QPrinter::PrinterState state() const
-*/
+// QPrinter::PrinterState state() const
 HB_FUNC_STATIC(QPRINTERINFO_STATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -359,9 +331,7 @@ HB_FUNC_STATIC(QPRINTERINFO_STATE)
 #endif
 }
 
-/*
-QList<QPageSize> supportedPageSizes() const
-*/
+// QList<QPageSize> supportedPageSizes() const
 HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDPAGESIZES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -403,9 +373,7 @@ HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDPAGESIZES)
 #endif
 }
 
-/*
-QPageSize defaultPageSize() const
-*/
+// QPageSize defaultPageSize() const
 HB_FUNC_STATIC(QPRINTERINFO_DEFAULTPAGESIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -425,9 +393,7 @@ HB_FUNC_STATIC(QPRINTERINFO_DEFAULTPAGESIZE)
 #endif
 }
 
-/*
-bool supportsCustomPageSizes() const
-*/
+// bool supportsCustomPageSizes() const
 HB_FUNC_STATIC(QPRINTERINFO_SUPPORTSCUSTOMPAGESIZES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -447,9 +413,7 @@ HB_FUNC_STATIC(QPRINTERINFO_SUPPORTSCUSTOMPAGESIZES)
 #endif
 }
 
-/*
-QPageSize minimumPhysicalPageSize() const
-*/
+// QPageSize minimumPhysicalPageSize() const
 HB_FUNC_STATIC(QPRINTERINFO_MINIMUMPHYSICALPAGESIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -469,9 +433,7 @@ HB_FUNC_STATIC(QPRINTERINFO_MINIMUMPHYSICALPAGESIZE)
 #endif
 }
 
-/*
-QPageSize maximumPhysicalPageSize() const
-*/
+// QPageSize maximumPhysicalPageSize() const
 HB_FUNC_STATIC(QPRINTERINFO_MAXIMUMPHYSICALPAGESIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -491,9 +453,7 @@ HB_FUNC_STATIC(QPRINTERINFO_MAXIMUMPHYSICALPAGESIZE)
 #endif
 }
 
-/*
-QList<int> supportedResolutions() const
-*/
+// QList<int> supportedResolutions() const
 HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDRESOLUTIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -514,9 +474,7 @@ HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDRESOLUTIONS)
 #endif
 }
 
-/*
-static QStringList availablePrinterNames()
-*/
+// static QStringList availablePrinterNames()
 HB_FUNC_STATIC(QPRINTERINFO_AVAILABLEPRINTERNAMES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -532,9 +490,7 @@ HB_FUNC_STATIC(QPRINTERINFO_AVAILABLEPRINTERNAMES)
 #endif
 }
 
-/*
-static QString defaultPrinterName()
-*/
+// static QString defaultPrinterName()
 HB_FUNC_STATIC(QPRINTERINFO_DEFAULTPRINTERNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -550,9 +506,7 @@ HB_FUNC_STATIC(QPRINTERINFO_DEFAULTPRINTERNAME)
 #endif
 }
 
-/*
-static QPrinterInfo printerInfo(const QString &printerName)
-*/
+// static QPrinterInfo printerInfo(const QString &printerName)
 HB_FUNC_STATIC(QPRINTERINFO_PRINTERINFO)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -566,9 +520,7 @@ HB_FUNC_STATIC(QPRINTERINFO_PRINTERINFO)
 #endif
 }
 
-/*
-QPrinter::DuplexMode defaultDuplexMode() const
-*/
+// QPrinter::DuplexMode defaultDuplexMode() const
 HB_FUNC_STATIC(QPRINTERINFO_DEFAULTDUPLEXMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -588,9 +540,7 @@ HB_FUNC_STATIC(QPRINTERINFO_DEFAULTDUPLEXMODE)
 #endif
 }
 
-/*
-QList<QPrinter::DuplexMode> supportedDuplexModes() const
-*/
+// QList<QPrinter::DuplexMode> supportedDuplexModes() const
 HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDDUPLEXMODES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

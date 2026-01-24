@@ -60,16 +60,12 @@ RETURN
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_NEW)
 {
   if (ISBETWEEN(1, 3) && ISQPRINTER(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
-    /*
-    QPrintPreviewDialog(QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0)
-    */
+    // QPrintPreviewDialog(QPrinter *printer, QWidget *parent = nullptr, Qt::WindowFlags flags = 0)
     auto obj = new QPrintPreviewDialog(PQPRINTER(1), OPQWIDGET(2, nullptr),
                                        HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(3));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
-    /*
-    QPrintPreviewDialog(QWidget * parent = nullptr, Qt::WindowFlags flags = 0)
-    */
+    // QPrintPreviewDialog(QWidget *parent = nullptr, Qt::WindowFlags flags = 0)
     auto obj = new QPrintPreviewDialog(OPQWIDGET(1, nullptr),
                                        HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
@@ -87,9 +83,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void open(QObject * receiver, const char * member)
-*/
+// void open(QObject *receiver, const char *member)
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_OPEN)
 {
   auto obj = qobject_cast<QPrintPreviewDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -109,9 +103,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_OPEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPrinter * printer()
-*/
+// QPrinter *printer()
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_PRINTER)
 {
   auto obj = qobject_cast<QPrintPreviewDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -130,9 +122,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_PRINTER)
   }
 }
 
-/*
-virtual void done(int result)
-*/
+// virtual void done(int result)
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_DONE)
 {
   auto obj = qobject_cast<QPrintPreviewDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -152,9 +142,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_DONE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setVisible(bool visible)
-*/
+// virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_SETVISIBLE)
 {
   auto obj = qobject_cast<QPrintPreviewDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -174,9 +162,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void paintRequested(QPrinter * printer)
-*/
+// void paintRequested(QPrinter *printer)
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_ONPAINTREQUESTED)
 {
   auto sender = qobject_cast<QPrintPreviewDialog *>(Qt5xHb::getQObjectPointerFromSelfItem());
