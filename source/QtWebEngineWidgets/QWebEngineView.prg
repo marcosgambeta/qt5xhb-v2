@@ -88,9 +88,7 @@ RETURN
 
 #include <QtWidgets/QAction>
 
-    /*
-    QWebEngineView(QWidget * parent = nullptr)
-    */
+    // QWebEngineView(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QWEBENGINEVIEW_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -114,9 +112,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_DELETE)
 #endif
 }
 
-/*
-QWebEnginePage * page() const
-*/
+// QWebEnginePage *page() const
 HB_FUNC_STATIC(QWEBENGINEVIEW_PAGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -137,9 +133,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_PAGE)
 #endif
 }
 
-/*
-void setPage(QWebEnginePage * page)
-*/
+// void setPage(QWebEnginePage *page)
 HB_FUNC_STATIC(QWEBENGINEVIEW_SETPAGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -161,9 +155,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETPAGE)
 #endif
 }
 
-/*
-void load(const QUrl &url)
-*/
+// void load(const QUrl &url)
 HB_FUNC_STATIC(QWEBENGINEVIEW_LOAD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -185,9 +177,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_LOAD)
 #endif
 }
 
-/*
-void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
-*/
+// void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
 HB_FUNC_STATIC(QWEBENGINEVIEW_SETHTML)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -209,9 +199,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETHTML)
 #endif
 }
 
-/*
-void setContent(const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl())
-*/
+// void setContent(const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl())
 HB_FUNC_STATIC(QWEBENGINEVIEW_SETCONTENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -234,9 +222,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETCONTENT)
 #endif
 }
 
-/*
-QWebEngineHistory * history() const
-*/
+// QWebEngineHistory *history() const
 HB_FUNC_STATIC(QWEBENGINEVIEW_HISTORY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -257,9 +243,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_HISTORY)
 #endif
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QWEBENGINEVIEW_TITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -279,9 +263,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_TITLE)
 #endif
 }
 
-/*
-QUrl url() const
-*/
+// QUrl url() const
 HB_FUNC_STATIC(QWEBENGINEVIEW_URL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -301,9 +283,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_URL)
 #endif
 }
 
-/*
-void setUrl(const QUrl &url)
-*/
+// void setUrl(const QUrl &url)
 HB_FUNC_STATIC(QWEBENGINEVIEW_SETURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -325,9 +305,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETURL)
 #endif
 }
 
-/*
-QUrl iconUrl() const
-*/
+// QUrl iconUrl() const
 HB_FUNC_STATIC(QWEBENGINEVIEW_ICONURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -347,9 +325,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_ICONURL)
 #endif
 }
 
-/*
-bool hasSelection() const
-*/
+// bool hasSelection() const
 HB_FUNC_STATIC(QWEBENGINEVIEW_HASSELECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -369,9 +345,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_HASSELECTION)
 #endif
 }
 
-/*
-QString selectedText() const
-*/
+// QString selectedText() const
 HB_FUNC_STATIC(QWEBENGINEVIEW_SELECTEDTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -391,9 +365,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SELECTEDTEXT)
 #endif
 }
 
-/*
-QAction* pageAction(QWebEnginePage::WebAction action) const
-*/
+// QAction* pageAction(QWebEnginePage::WebAction action) const
 HB_FUNC_STATIC(QWEBENGINEVIEW_PAGEACTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -416,9 +388,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_PAGEACTION)
 #endif
 }
 
-/*
-void triggerPageAction(QWebEnginePage::WebAction action, bool checked = false)
-*/
+// void triggerPageAction(QWebEnginePage::WebAction action, bool checked = false)
 HB_FUNC_STATIC(QWEBENGINEVIEW_TRIGGERPAGEACTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -440,9 +410,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_TRIGGERPAGEACTION)
 #endif
 }
 
-/*
-qreal zoomFactor() const
-*/
+// qreal zoomFactor() const
 HB_FUNC_STATIC(QWEBENGINEVIEW_ZOOMFACTOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -462,9 +430,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_ZOOMFACTOR)
 #endif
 }
 
-/*
-void setZoomFactor(qreal factor)
-*/
+// void setZoomFactor(qreal factor)
 HB_FUNC_STATIC(QWEBENGINEVIEW_SETZOOMFACTOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -486,9 +452,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETZOOMFACTOR)
 #endif
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QWEBENGINEVIEW_SIZEHINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -508,9 +472,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SIZEHINT)
 #endif
 }
 
-/*
-void stop()
-*/
+// void stop()
 HB_FUNC_STATIC(QWEBENGINEVIEW_STOP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -532,9 +494,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_STOP)
 #endif
 }
 
-/*
-void back()
-*/
+// void back()
 HB_FUNC_STATIC(QWEBENGINEVIEW_BACK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -556,9 +516,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_BACK)
 #endif
 }
 
-/*
-void forward()
-*/
+// void forward()
 HB_FUNC_STATIC(QWEBENGINEVIEW_FORWARD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -580,9 +538,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_FORWARD)
 #endif
 }
 
-/*
-void reload()
-*/
+// void reload()
 HB_FUNC_STATIC(QWEBENGINEVIEW_RELOAD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -604,9 +560,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_RELOAD)
 #endif
 }
 
-/*
-void loadStarted()
-*/
+// void loadStarted()
 HB_FUNC_STATIC(QWEBENGINEVIEW_ONLOADSTARTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -648,9 +602,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_ONLOADSTARTED)
 #endif
 }
 
-/*
-void loadProgress(int progress)
-*/
+// void loadProgress(int progress)
 HB_FUNC_STATIC(QWEBENGINEVIEW_ONLOADPROGRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -694,9 +646,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_ONLOADPROGRESS)
 #endif
 }
 
-/*
-void loadFinished(bool b)
-*/
+// void loadFinished(bool b)
 HB_FUNC_STATIC(QWEBENGINEVIEW_ONLOADFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -741,9 +691,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_ONLOADFINISHED)
 #endif
 }
 
-/*
-void titleChanged(const QString &title)
-*/
+// void titleChanged(const QString &title)
 HB_FUNC_STATIC(QWEBENGINEVIEW_ONTITLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -788,9 +736,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_ONTITLECHANGED)
 #endif
 }
 
-/*
-void selectionChanged()
-*/
+// void selectionChanged()
 HB_FUNC_STATIC(QWEBENGINEVIEW_ONSELECTIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -832,9 +778,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_ONSELECTIONCHANGED)
 #endif
 }
 
-/*
-void urlChanged(const QUrl &url)
-*/
+// void urlChanged(const QUrl &url)
 HB_FUNC_STATIC(QWEBENGINEVIEW_ONURLCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -879,9 +823,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_ONURLCHANGED)
 #endif
 }
 
-/*
-void iconUrlChanged(const QUrl &url)
-*/
+// void iconUrlChanged(const QUrl &url)
 HB_FUNC_STATIC(QWEBENGINEVIEW_ONICONURLCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

@@ -64,9 +64,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QWebEngineCertificateError(int error, QUrl url, bool overridable, QString errorDescription)
-    */
+    // QWebEngineCertificateError(int error, QUrl url, bool overridable, QString errorDescription)
 HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_DELETE)
 #endif
 }
 
-/*
-QWebEngineCertificateError::Error error() const
-*/
+// QWebEngineCertificateError::Error error() const
 HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -112,9 +108,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_ERROR)
 #endif
 }
 
-/*
-QUrl url() const
-*/
+// QUrl url() const
 HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_URL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -134,9 +128,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_URL)
 #endif
 }
 
-/*
-bool isOverridable() const
-*/
+// bool isOverridable() const
 HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_ISOVERRIDABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -156,9 +148,7 @@ HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_ISOVERRIDABLE)
 #endif
 }
 
-/*
-QString errorDescription() const
-*/
+// QString errorDescription() const
 HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_ERRORDESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

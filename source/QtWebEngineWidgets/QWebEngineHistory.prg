@@ -73,9 +73,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    void clear()
-    */
+    // void clear()
 HB_FUNC_STATIC(QWEBENGINEHISTORY_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -97,9 +95,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_CLEAR)
 #endif
 }
 
-/*
-QList<QWebEngineHistoryItem> items() const
-*/
+// QList<QWebEngineHistoryItem> items() const
 HB_FUNC_STATIC(QWEBENGINEHISTORY_ITEMS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -141,9 +137,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_ITEMS)
 #endif
 }
 
-/*
-QList<QWebEngineHistoryItem> backItems(int maxItems) const
-*/
+// QList<QWebEngineHistoryItem> backItems(int maxItems) const
 HB_FUNC_STATIC(QWEBENGINEHISTORY_BACKITEMS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -185,9 +179,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_BACKITEMS)
 #endif
 }
 
-/*
-QList<QWebEngineHistoryItem> forwardItems(int maxItems) const
-*/
+// QList<QWebEngineHistoryItem> forwardItems(int maxItems) const
 HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARDITEMS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -229,9 +221,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARDITEMS)
 #endif
 }
 
-/*
-bool canGoBack() const
-*/
+// bool canGoBack() const
 HB_FUNC_STATIC(QWEBENGINEHISTORY_CANGOBACK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -251,9 +241,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_CANGOBACK)
 #endif
 }
 
-/*
-bool canGoForward() const
-*/
+// bool canGoForward() const
 HB_FUNC_STATIC(QWEBENGINEHISTORY_CANGOFORWARD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -273,9 +261,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_CANGOFORWARD)
 #endif
 }
 
-/*
-void back()
-*/
+// void back()
 HB_FUNC_STATIC(QWEBENGINEHISTORY_BACK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -297,9 +283,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_BACK)
 #endif
 }
 
-/*
-void forward()
-*/
+// void forward()
 HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -321,9 +305,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARD)
 #endif
 }
 
-/*
-void goToItem(const QWebEngineHistoryItem &item)
-*/
+// void goToItem(const QWebEngineHistoryItem &item)
 HB_FUNC_STATIC(QWEBENGINEHISTORY_GOTOITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -345,9 +327,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_GOTOITEM)
 #endif
 }
 
-/*
-QWebEngineHistoryItem backItem() const
-*/
+// QWebEngineHistoryItem backItem() const
 HB_FUNC_STATIC(QWEBENGINEHISTORY_BACKITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -367,9 +347,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_BACKITEM)
 #endif
 }
 
-/*
-QWebEngineHistoryItem currentItem() const
-*/
+// QWebEngineHistoryItem currentItem() const
 HB_FUNC_STATIC(QWEBENGINEHISTORY_CURRENTITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -389,9 +367,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_CURRENTITEM)
 #endif
 }
 
-/*
-QWebEngineHistoryItem forwardItem() const
-*/
+// QWebEngineHistoryItem forwardItem() const
 HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARDITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -411,9 +387,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARDITEM)
 #endif
 }
 
-/*
-QWebEngineHistoryItem itemAt(int i) const
-*/
+// QWebEngineHistoryItem itemAt(int i) const
 HB_FUNC_STATIC(QWEBENGINEHISTORY_ITEMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -433,9 +407,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_ITEMAT)
 #endif
 }
 
-/*
-int currentItemIndex() const
-*/
+// int currentItemIndex() const
 HB_FUNC_STATIC(QWEBENGINEHISTORY_CURRENTITEMINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -455,9 +427,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_CURRENTITEMINDEX)
 #endif
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QWEBENGINEHISTORY_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

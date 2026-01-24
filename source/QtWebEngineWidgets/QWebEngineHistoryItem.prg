@@ -67,9 +67,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QWebEngineHistoryItem(const QWebEngineHistoryItem &other)
-    */
+    // QWebEngineHistoryItem(const QWebEngineHistoryItem &other)
 HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_DELETE)
 #endif
 }
 
-/*
-QUrl originalUrl() const
-*/
+// QUrl originalUrl() const
 HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_ORIGINALURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -115,9 +111,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_ORIGINALURL)
 #endif
 }
 
-/*
-QUrl url() const
-*/
+// QUrl url() const
 HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_URL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -137,9 +131,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_URL)
 #endif
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_TITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -159,9 +151,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_TITLE)
 #endif
 }
 
-/*
-QDateTime lastVisited() const
-*/
+// QDateTime lastVisited() const
 HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_LASTVISITED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -181,9 +171,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_LASTVISITED)
 #endif
 }
 
-/*
-QUrl iconUrl() const
-*/
+// QUrl iconUrl() const
 HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_ICONURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -203,9 +191,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_ICONURL)
 #endif
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

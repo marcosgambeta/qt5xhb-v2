@@ -98,9 +98,7 @@ RETURN
 #include <QtWidgets/QAction>
 #include <QtWidgets/QMenu>
 
-    /*
-    QWebEnginePage(QObject * parent = nullptr)
-    */
+    // QWebEnginePage(QObject *parent = nullptr)
 HB_FUNC_STATIC(QWEBENGINEPAGE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -124,9 +122,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_DELETE)
 #endif
 }
 
-/*
-QWebEngineHistory * history() const
-*/
+// QWebEngineHistory *history() const
 HB_FUNC_STATIC(QWEBENGINEPAGE_HISTORY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -147,9 +143,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_HISTORY)
 #endif
 }
 
-/*
-QWidget * view() const
-*/
+// QWidget *view() const
 HB_FUNC_STATIC(QWEBENGINEPAGE_VIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -170,9 +164,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_VIEW)
 #endif
 }
 
-/*
-void setView(QWidget * view)
-*/
+// void setView(QWidget *view)
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETVIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -194,9 +186,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETVIEW)
 #endif
 }
 
-/*
-bool hasSelection() const
-*/
+// bool hasSelection() const
 HB_FUNC_STATIC(QWEBENGINEPAGE_HASSELECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -216,9 +206,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_HASSELECTION)
 #endif
 }
 
-/*
-QString selectedText() const
-*/
+// QString selectedText() const
 HB_FUNC_STATIC(QWEBENGINEPAGE_SELECTEDTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -238,9 +226,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SELECTEDTEXT)
 #endif
 }
 
-/*
-QAction * action(QWebEnginePage::WebAction action) const
-*/
+// QAction *action(QWebEnginePage::WebAction action) const
 HB_FUNC_STATIC(QWEBENGINEPAGE_ACTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -261,9 +247,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ACTION)
 #endif
 }
 
-/*
-virtual void triggerAction(QWebEnginePage::WebAction action, bool checked = false)
-*/
+// virtual void triggerAction(QWebEnginePage::WebAction action, bool checked = false)
 HB_FUNC_STATIC(QWEBENGINEPAGE_TRIGGERACTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -285,9 +269,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_TRIGGERACTION)
 #endif
 }
 
-/*
-virtual bool event(QEvent *)
-*/
+// virtual bool event(QEvent *)
 HB_FUNC_STATIC(QWEBENGINEPAGE_EVENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -307,9 +289,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_EVENT)
 #endif
 }
 
-/*
-QMenu * createStandardContextMenu()
-*/
+// QMenu *createStandardContextMenu()
 HB_FUNC_STATIC(QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -330,10 +310,8 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU)
 #endif
 }
 
-/*
-void setFeaturePermission(const QUrl &securityOrigin, QWebEnginePage::Feature feature, QWebEnginePage::PermissionPolicy
-policy)
-*/
+// void setFeaturePermission(const QUrl &securityOrigin, QWebEnginePage::Feature feature, QWebEnginePage::PermissionPolicy
+// policy)
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETFEATUREPERMISSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -355,9 +333,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETFEATUREPERMISSION)
 #endif
 }
 
-/*
-void load(const QUrl &url)
-*/
+// void load(const QUrl &url)
 HB_FUNC_STATIC(QWEBENGINEPAGE_LOAD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -379,9 +355,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_LOAD)
 #endif
 }
 
-/*
-void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
-*/
+// void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETHTML)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -403,9 +377,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETHTML)
 #endif
 }
 
-/*
-void setContent(const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl())
-*/
+// void setContent(const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl())
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETCONTENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -428,9 +400,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETCONTENT)
 #endif
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QWEBENGINEPAGE_TITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -450,9 +420,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_TITLE)
 #endif
 }
 
-/*
-QUrl url() const
-*/
+// QUrl url() const
 HB_FUNC_STATIC(QWEBENGINEPAGE_URL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -472,9 +440,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_URL)
 #endif
 }
 
-/*
-void setUrl(const QUrl &url)
-*/
+// void setUrl(const QUrl &url)
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -496,9 +462,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETURL)
 #endif
 }
 
-/*
-QUrl requestedUrl() const
-*/
+// QUrl requestedUrl() const
 HB_FUNC_STATIC(QWEBENGINEPAGE_REQUESTEDURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -518,9 +482,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_REQUESTEDURL)
 #endif
 }
 
-/*
-QUrl iconUrl() const
-*/
+// QUrl iconUrl() const
 HB_FUNC_STATIC(QWEBENGINEPAGE_ICONURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -540,9 +502,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ICONURL)
 #endif
 }
 
-/*
-qreal zoomFactor() const
-*/
+// qreal zoomFactor() const
 HB_FUNC_STATIC(QWEBENGINEPAGE_ZOOMFACTOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -562,9 +522,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ZOOMFACTOR)
 #endif
 }
 
-/*
-void setZoomFactor(qreal factor)
-*/
+// void setZoomFactor(qreal factor)
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETZOOMFACTOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -586,9 +544,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETZOOMFACTOR)
 #endif
 }
 
-/*
-void runJavaScript(const QString &scriptSource)
-*/
+// void runJavaScript(const QString &scriptSource)
 HB_FUNC_STATIC(QWEBENGINEPAGE_RUNJAVASCRIPT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -610,9 +566,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_RUNJAVASCRIPT)
 #endif
 }
 
-/*
-QWebEngineSettings * settings() const
-*/
+// QWebEngineSettings *settings() const
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETTINGS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -633,9 +587,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETTINGS)
 #endif
 }
 
-/*
-void loadStarted()
-*/
+// void loadStarted()
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONLOADSTARTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -677,9 +629,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONLOADSTARTED)
 #endif
 }
 
-/*
-void loadProgress(int progress)
-*/
+// void loadProgress(int progress)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONLOADPROGRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -723,9 +673,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONLOADPROGRESS)
 #endif
 }
 
-/*
-void loadFinished(bool ok)
-*/
+// void loadFinished(bool ok)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONLOADFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -770,9 +718,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONLOADFINISHED)
 #endif
 }
 
-/*
-void linkHovered(const QString &url)
-*/
+// void linkHovered(const QString &url)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONLINKHOVERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -817,9 +763,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONLINKHOVERED)
 #endif
 }
 
-/*
-void selectionChanged()
-*/
+// void selectionChanged()
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONSELECTIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -861,9 +805,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONSELECTIONCHANGED)
 #endif
 }
 
-/*
-void geometryChangeRequested(const QRect &geom)
-*/
+// void geometryChangeRequested(const QRect &geom)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -908,9 +850,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED)
 #endif
 }
 
-/*
-void windowCloseRequested()
-*/
+// void windowCloseRequested()
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -952,9 +892,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED)
 #endif
 }
 
-/*
-void featurePermissionRequested(const QUrl &securityOrigin, QWebEnginePage::Feature feature)
-*/
+// void featurePermissionRequested(const QUrl &securityOrigin, QWebEnginePage::Feature feature)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -1002,9 +940,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED)
 #endif
 }
 
-/*
-void featurePermissionRequestCanceled(const QUrl &securityOrigin, QWebEnginePage::Feature feature)
-*/
+// void featurePermissionRequestCanceled(const QUrl &securityOrigin, QWebEnginePage::Feature feature)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -1052,9 +988,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED)
 #endif
 }
 
-/*
-void authenticationRequired(const QUrl &requestUrl, QAuthenticator * authenticator)
-*/
+// void authenticationRequired(const QUrl &requestUrl, QAuthenticator *authenticator)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -1102,9 +1036,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED)
 #endif
 }
 
-/*
-void proxyAuthenticationRequired(const QUrl &requestUrl, QAuthenticator * authenticator, const QString &proxyHost)
-*/
+// void proxyAuthenticationRequired(const QUrl &requestUrl, QAuthenticator *authenticator, const QString &proxyHost)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -1155,9 +1087,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED)
 #endif
 }
 
-/*
-void titleChanged(const QString &title)
-*/
+// void titleChanged(const QString &title)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONTITLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -1202,9 +1132,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONTITLECHANGED)
 #endif
 }
 
-/*
-void urlChanged(const QUrl &url)
-*/
+// void urlChanged(const QUrl &url)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONURLCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -1249,9 +1177,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_ONURLCHANGED)
 #endif
 }
 
-/*
-void iconUrlChanged(const QUrl &url)
-*/
+// void iconUrlChanged(const QUrl &url)
 HB_FUNC_STATIC(QWEBENGINEPAGE_ONICONURLCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

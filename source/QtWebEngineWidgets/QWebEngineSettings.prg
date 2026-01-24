@@ -69,9 +69,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    static QWebEngineSettings * globalSettings()
-    */
+    // static QWebEngineSettings *globalSettings()
 HB_FUNC_STATIC(QWEBENGINESETTINGS_GLOBALSETTINGS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -88,9 +86,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_GLOBALSETTINGS)
 #endif
 }
 
-/*
-QString fontFamily(QWebEngineSettings::FontFamily which) const
-*/
+// QString fontFamily(QWebEngineSettings::FontFamily which) const
 HB_FUNC_STATIC(QWEBENGINESETTINGS_FONTFAMILY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -110,9 +106,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_FONTFAMILY)
 #endif
 }
 
-/*
-void setFontFamily(QWebEngineSettings::FontFamily which, const QString &family)
-*/
+// void setFontFamily(QWebEngineSettings::FontFamily which, const QString &family)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_SETFONTFAMILY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -134,9 +128,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_SETFONTFAMILY)
 #endif
 }
 
-/*
-void resetFontFamily(QWebEngineSettings::FontFamily which)
-*/
+// void resetFontFamily(QWebEngineSettings::FontFamily which)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETFONTFAMILY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -158,9 +150,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETFONTFAMILY)
 #endif
 }
 
-/*
-int fontSize(QWebEngineSettings::FontSize type) const
-*/
+// int fontSize(QWebEngineSettings::FontSize type) const
 HB_FUNC_STATIC(QWEBENGINESETTINGS_FONTSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -180,9 +170,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_FONTSIZE)
 #endif
 }
 
-/*
-void setFontSize(QWebEngineSettings::FontSize type, int size)
-*/
+// void setFontSize(QWebEngineSettings::FontSize type, int size)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_SETFONTSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -204,9 +192,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_SETFONTSIZE)
 #endif
 }
 
-/*
-void resetFontSize(QWebEngineSettings::FontSize type)
-*/
+// void resetFontSize(QWebEngineSettings::FontSize type)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETFONTSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -228,9 +214,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETFONTSIZE)
 #endif
 }
 
-/*
-void setAttribute(QWebEngineSettings::WebAttribute attr, bool on)
-*/
+// void setAttribute(QWebEngineSettings::WebAttribute attr, bool on)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_SETATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -252,9 +236,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_SETATTRIBUTE)
 #endif
 }
 
-/*
-bool testAttribute(QWebEngineSettings::WebAttribute attr) const
-*/
+// bool testAttribute(QWebEngineSettings::WebAttribute attr) const
 HB_FUNC_STATIC(QWEBENGINESETTINGS_TESTATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -274,9 +256,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_TESTATTRIBUTE)
 #endif
 }
 
-/*
-void resetAttribute(QWebEngineSettings::WebAttribute attr)
-*/
+// void resetAttribute(QWebEngineSettings::WebAttribute attr)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -298,9 +278,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETATTRIBUTE)
 #endif
 }
 
-/*
-QString defaultTextEncoding() const
-*/
+// QString defaultTextEncoding() const
 HB_FUNC_STATIC(QWEBENGINESETTINGS_DEFAULTTEXTENCODING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -320,9 +298,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_DEFAULTTEXTENCODING)
 #endif
 }
 
-/*
-void setDefaultTextEncoding(const QString &encoding)
-*/
+// void setDefaultTextEncoding(const QString &encoding)
 HB_FUNC_STATIC(QWEBENGINESETTINGS_SETDEFAULTTEXTENCODING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
