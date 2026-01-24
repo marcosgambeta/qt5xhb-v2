@@ -70,17 +70,13 @@ using namespace QtDataVisualization;
 HB_FUNC_STATIC(QBAR3DSERIES_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QBar3DSeries(QObject * parent = nullptr)
-    */
+    // QBar3DSeries(QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QBar3DSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(1, 2) && ISQBARDATAPROXY(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QBar3DSeries(QBarDataProxy * dataProxy, QObject * parent = nullptr)
-    */
+    // QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QBar3DSeries(PQBARDATAPROXY(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -90,9 +86,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_NEW)
   }
 }
 
-/*
-virtual ~QBar3DSeries()
-*/
+// virtual ~QBar3DSeries()
 HB_FUNC_STATIC(QBAR3DSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -104,9 +98,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_DELETE)
 #endif
 }
 
-/*
-QBarDataProxy * dataProxy() const
-*/
+// QBarDataProxy *dataProxy() const
 HB_FUNC_STATIC(QBAR3DSERIES_DATAPROXY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -127,9 +119,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_DATAPROXY)
 #endif
 }
 
-/*
-void setDataProxy(QBarDataProxy * proxy)
-*/
+// void setDataProxy(QBarDataProxy *proxy)
 HB_FUNC_STATIC(QBAR3DSERIES_SETDATAPROXY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -151,9 +141,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_SETDATAPROXY)
 #endif
 }
 
-/*
-QPoint selectedBar() const
-*/
+// QPoint selectedBar() const
 HB_FUNC_STATIC(QBAR3DSERIES_SELECTEDBAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -173,9 +161,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_SELECTEDBAR)
 #endif
 }
 
-/*
-void setSelectedBar(const QPoint &position)
-*/
+// void setSelectedBar(const QPoint &position)
 HB_FUNC_STATIC(QBAR3DSERIES_SETSELECTEDBAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -197,9 +183,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_SETSELECTEDBAR)
 #endif
 }
 
-/*
-float meshAngle() const
-*/
+// float meshAngle() const
 HB_FUNC_STATIC(QBAR3DSERIES_MESHANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -219,9 +203,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_MESHANGLE)
 #endif
 }
 
-/*
-void setMeshAngle(float angle)
-*/
+// void setMeshAngle(float angle)
 HB_FUNC_STATIC(QBAR3DSERIES_SETMESHANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -243,9 +225,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_SETMESHANGLE)
 #endif
 }
 
-/*
-static QPoint invalidSelectionPosition()
-*/
+// static QPoint invalidSelectionPosition()
 HB_FUNC_STATIC(QBAR3DSERIES_INVALIDSELECTIONPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -261,9 +241,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_INVALIDSELECTIONPOSITION)
 #endif
 }
 
-/*
-void dataProxyChanged(QBarDataProxy * proxy)
-*/
+// void dataProxyChanged(QBarDataProxy *proxy)
 HB_FUNC_STATIC(QBAR3DSERIES_ONDATAPROXYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -308,9 +286,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_ONDATAPROXYCHANGED)
 #endif
 }
 
-/*
-void selectedBarChanged(const QPoint &position)
-*/
+// void selectedBarChanged(const QPoint &position)
 HB_FUNC_STATIC(QBAR3DSERIES_ONSELECTEDBARCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -355,9 +331,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_ONSELECTEDBARCHANGED)
 #endif
 }
 
-/*
-void meshAngleChanged(float angle)
-*/
+// void meshAngleChanged(float angle)
 HB_FUNC_STATIC(QBAR3DSERIES_ONMESHANGLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

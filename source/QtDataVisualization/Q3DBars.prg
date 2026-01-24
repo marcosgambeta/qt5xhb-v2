@@ -96,9 +96,7 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-Q3DBars(const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr)
-*/
+// Q3DBars(const QSurfaceFormat *format = nullptr, QWindow *parent = nullptr)
 HB_FUNC_STATIC(Q3DBARS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -112,9 +110,7 @@ HB_FUNC_STATIC(Q3DBARS_NEW)
 #endif
 }
 
-/*
-virtual ~Q3DBars()
-*/
+// virtual ~Q3DBars()
 HB_FUNC_STATIC(Q3DBARS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -126,9 +122,7 @@ HB_FUNC_STATIC(Q3DBARS_DELETE)
 #endif
 }
 
-/*
-bool isMultiSeriesUniform() const
-*/
+// bool isMultiSeriesUniform() const
 HB_FUNC_STATIC(Q3DBARS_ISMULTISERIESUNIFORM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -148,9 +142,7 @@ HB_FUNC_STATIC(Q3DBARS_ISMULTISERIESUNIFORM)
 #endif
 }
 
-/*
-void setMultiSeriesUniform(bool uniform)
-*/
+// void setMultiSeriesUniform(bool uniform)
 HB_FUNC_STATIC(Q3DBARS_SETMULTISERIESUNIFORM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -172,9 +164,7 @@ HB_FUNC_STATIC(Q3DBARS_SETMULTISERIESUNIFORM)
 #endif
 }
 
-/*
-float barThickness() const
-*/
+// float barThickness() const
 HB_FUNC_STATIC(Q3DBARS_BARTHICKNESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -194,9 +184,7 @@ HB_FUNC_STATIC(Q3DBARS_BARTHICKNESS)
 #endif
 }
 
-/*
-void setBarThickness(float thicknessRatio)
-*/
+// void setBarThickness(float thicknessRatio)
 HB_FUNC_STATIC(Q3DBARS_SETBARTHICKNESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -218,9 +206,7 @@ HB_FUNC_STATIC(Q3DBARS_SETBARTHICKNESS)
 #endif
 }
 
-/*
-QSizeF barSpacing() const
-*/
+// QSizeF barSpacing() const
 HB_FUNC_STATIC(Q3DBARS_BARSPACING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -240,9 +226,7 @@ HB_FUNC_STATIC(Q3DBARS_BARSPACING)
 #endif
 }
 
-/*
-void setBarSpacing(const QSizeF &spacing)
-*/
+// void setBarSpacing(const QSizeF &spacing)
 HB_FUNC_STATIC(Q3DBARS_SETBARSPACING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -264,9 +248,7 @@ HB_FUNC_STATIC(Q3DBARS_SETBARSPACING)
 #endif
 }
 
-/*
-bool isBarSpacingRelative() const
-*/
+// bool isBarSpacingRelative() const
 HB_FUNC_STATIC(Q3DBARS_ISBARSPACINGRELATIVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -286,9 +268,7 @@ HB_FUNC_STATIC(Q3DBARS_ISBARSPACINGRELATIVE)
 #endif
 }
 
-/*
-void setBarSpacingRelative(bool relative)
-*/
+// void setBarSpacingRelative(bool relative)
 HB_FUNC_STATIC(Q3DBARS_SETBARSPACINGRELATIVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -310,9 +290,7 @@ HB_FUNC_STATIC(Q3DBARS_SETBARSPACINGRELATIVE)
 #endif
 }
 
-/*
-QCategory3DAxis * rowAxis() const
-*/
+// QCategory3DAxis *rowAxis() const
 HB_FUNC_STATIC(Q3DBARS_ROWAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -333,9 +311,7 @@ HB_FUNC_STATIC(Q3DBARS_ROWAXIS)
 #endif
 }
 
-/*
-void setRowAxis(QCategory3DAxis * axis)
-*/
+// void setRowAxis(QCategory3DAxis *axis)
 HB_FUNC_STATIC(Q3DBARS_SETROWAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -357,9 +333,7 @@ HB_FUNC_STATIC(Q3DBARS_SETROWAXIS)
 #endif
 }
 
-/*
-QCategory3DAxis * columnAxis() const
-*/
+// QCategory3DAxis *columnAxis() const
 HB_FUNC_STATIC(Q3DBARS_COLUMNAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -380,9 +354,7 @@ HB_FUNC_STATIC(Q3DBARS_COLUMNAXIS)
 #endif
 }
 
-/*
-void setColumnAxis(QCategory3DAxis * axis)
-*/
+// void setColumnAxis(QCategory3DAxis *axis)
 HB_FUNC_STATIC(Q3DBARS_SETCOLUMNAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -404,9 +376,7 @@ HB_FUNC_STATIC(Q3DBARS_SETCOLUMNAXIS)
 #endif
 }
 
-/*
-QValue3DAxis * valueAxis() const
-*/
+// QValue3DAxis *valueAxis() const
 HB_FUNC_STATIC(Q3DBARS_VALUEAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -427,9 +397,7 @@ HB_FUNC_STATIC(Q3DBARS_VALUEAXIS)
 #endif
 }
 
-/*
-void setValueAxis(QValue3DAxis * axis)
-*/
+// void setValueAxis(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DBARS_SETVALUEAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -451,9 +419,7 @@ HB_FUNC_STATIC(Q3DBARS_SETVALUEAXIS)
 #endif
 }
 
-/*
-QBar3DSeries * primarySeries() const
-*/
+// QBar3DSeries *primarySeries() const
 HB_FUNC_STATIC(Q3DBARS_PRIMARYSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -474,9 +440,7 @@ HB_FUNC_STATIC(Q3DBARS_PRIMARYSERIES)
 #endif
 }
 
-/*
-void setPrimarySeries(QBar3DSeries * series)
-*/
+// void setPrimarySeries(QBar3DSeries *series)
 HB_FUNC_STATIC(Q3DBARS_SETPRIMARYSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -498,9 +462,7 @@ HB_FUNC_STATIC(Q3DBARS_SETPRIMARYSERIES)
 #endif
 }
 
-/*
-QBar3DSeries * selectedSeries() const
-*/
+// QBar3DSeries *selectedSeries() const
 HB_FUNC_STATIC(Q3DBARS_SELECTEDSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -521,9 +483,7 @@ HB_FUNC_STATIC(Q3DBARS_SELECTEDSERIES)
 #endif
 }
 
-/*
-float floorLevel() const
-*/
+// float floorLevel() const
 HB_FUNC_STATIC(Q3DBARS_FLOORLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -543,9 +503,7 @@ HB_FUNC_STATIC(Q3DBARS_FLOORLEVEL)
 #endif
 }
 
-/*
-void setFloorLevel(float level)
-*/
+// void setFloorLevel(float level)
 HB_FUNC_STATIC(Q3DBARS_SETFLOORLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -567,9 +525,7 @@ HB_FUNC_STATIC(Q3DBARS_SETFLOORLEVEL)
 #endif
 }
 
-/*
-void addSeries(QBar3DSeries * series)
-*/
+// void addSeries(QBar3DSeries *series)
 HB_FUNC_STATIC(Q3DBARS_ADDSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -591,9 +547,7 @@ HB_FUNC_STATIC(Q3DBARS_ADDSERIES)
 #endif
 }
 
-/*
-void removeSeries(QBar3DSeries * series)
-*/
+// void removeSeries(QBar3DSeries *series)
 HB_FUNC_STATIC(Q3DBARS_REMOVESERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -615,9 +569,7 @@ HB_FUNC_STATIC(Q3DBARS_REMOVESERIES)
 #endif
 }
 
-/*
-void insertSeries(int index, QBar3DSeries * series)
-*/
+// void insertSeries(int index, QBar3DSeries *series)
 HB_FUNC_STATIC(Q3DBARS_INSERTSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -639,9 +591,7 @@ HB_FUNC_STATIC(Q3DBARS_INSERTSERIES)
 #endif
 }
 
-/*
-QList<QBar3DSeries*> seriesList() const
-*/
+// QList<QBar3DSeries*> seriesList() const
 HB_FUNC_STATIC(Q3DBARS_SERIESLIST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -680,9 +630,7 @@ HB_FUNC_STATIC(Q3DBARS_SERIESLIST)
 #endif
 }
 
-/*
-void addAxis(QAbstract3DAxis * axis)
-*/
+// void addAxis(QAbstract3DAxis *axis)
 HB_FUNC_STATIC(Q3DBARS_ADDAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -704,9 +652,7 @@ HB_FUNC_STATIC(Q3DBARS_ADDAXIS)
 #endif
 }
 
-/*
-void releaseAxis(QAbstract3DAxis * axis)
-*/
+// void releaseAxis(QAbstract3DAxis *axis)
 HB_FUNC_STATIC(Q3DBARS_RELEASEAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -728,9 +674,7 @@ HB_FUNC_STATIC(Q3DBARS_RELEASEAXIS)
 #endif
 }
 
-/*
-QList<QAbstract3DAxis*> axes() const
-*/
+// QList<QAbstract3DAxis*> axes() const
 HB_FUNC_STATIC(Q3DBARS_AXES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -769,9 +713,7 @@ HB_FUNC_STATIC(Q3DBARS_AXES)
 #endif
 }
 
-/*
-void multiSeriesUniformChanged(bool uniform)
-*/
+// void multiSeriesUniformChanged(bool uniform)
 HB_FUNC_STATIC(Q3DBARS_ONMULTISERIESUNIFORMCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -816,9 +758,7 @@ HB_FUNC_STATIC(Q3DBARS_ONMULTISERIESUNIFORMCHANGED)
 #endif
 }
 
-/*
-void barThicknessChanged(float thicknessRatio)
-*/
+// void barThicknessChanged(float thicknessRatio)
 HB_FUNC_STATIC(Q3DBARS_ONBARTHICKNESSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -863,9 +803,7 @@ HB_FUNC_STATIC(Q3DBARS_ONBARTHICKNESSCHANGED)
 #endif
 }
 
-/*
-void barSpacingChanged(const QSizeF &spacing)
-*/
+// void barSpacingChanged(const QSizeF &spacing)
 HB_FUNC_STATIC(Q3DBARS_ONBARSPACINGCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -910,9 +848,7 @@ HB_FUNC_STATIC(Q3DBARS_ONBARSPACINGCHANGED)
 #endif
 }
 
-/*
-void barSpacingRelativeChanged(bool relative)
-*/
+// void barSpacingRelativeChanged(bool relative)
 HB_FUNC_STATIC(Q3DBARS_ONBARSPACINGRELATIVECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -957,9 +893,7 @@ HB_FUNC_STATIC(Q3DBARS_ONBARSPACINGRELATIVECHANGED)
 #endif
 }
 
-/*
-void rowAxisChanged(QCategory3DAxis * axis)
-*/
+// void rowAxisChanged(QCategory3DAxis *axis)
 HB_FUNC_STATIC(Q3DBARS_ONROWAXISCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1004,9 +938,7 @@ HB_FUNC_STATIC(Q3DBARS_ONROWAXISCHANGED)
 #endif
 }
 
-/*
-void columnAxisChanged(QCategory3DAxis * axis)
-*/
+// void columnAxisChanged(QCategory3DAxis *axis)
 HB_FUNC_STATIC(Q3DBARS_ONCOLUMNAXISCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1051,9 +983,7 @@ HB_FUNC_STATIC(Q3DBARS_ONCOLUMNAXISCHANGED)
 #endif
 }
 
-/*
-void valueAxisChanged(QValue3DAxis * axis)
-*/
+// void valueAxisChanged(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DBARS_ONVALUEAXISCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1098,9 +1028,7 @@ HB_FUNC_STATIC(Q3DBARS_ONVALUEAXISCHANGED)
 #endif
 }
 
-/*
-void primarySeriesChanged(QBar3DSeries * series)
-*/
+// void primarySeriesChanged(QBar3DSeries *series)
 HB_FUNC_STATIC(Q3DBARS_ONPRIMARYSERIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1145,9 +1073,7 @@ HB_FUNC_STATIC(Q3DBARS_ONPRIMARYSERIESCHANGED)
 #endif
 }
 
-/*
-void selectedSeriesChanged(QBar3DSeries * series)
-*/
+// void selectedSeriesChanged(QBar3DSeries *series)
 HB_FUNC_STATIC(Q3DBARS_ONSELECTEDSERIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1192,9 +1118,7 @@ HB_FUNC_STATIC(Q3DBARS_ONSELECTEDSERIESCHANGED)
 #endif
 }
 
-/*
-void floorLevelChanged(float level)
-*/
+// void floorLevelChanged(float level)
 HB_FUNC_STATIC(Q3DBARS_ONFLOORLEVELCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

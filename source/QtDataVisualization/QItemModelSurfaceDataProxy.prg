@@ -129,35 +129,27 @@ using namespace QtDataVisualization;
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QItemModelSurfaceDataProxy(QObject * parent = nullptr)
-    */
+    // QItemModelSurfaceDataProxy(QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QItemModelSurfaceDataProxy(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QItemModelSurfaceDataProxy(QAbstractItemModel * itemModel, QObject * parent = nullptr)
-    */
+    // QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(2, 3) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && ISQOBJECTORNIL(3)) {
-    /*
-    QItemModelSurfaceDataProxy(QAbstractItemModel * itemModel, const QString &yPosRole, QObject * parent = nullptr)
-    */
+    // QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &yPosRole, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(4, 5) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
              ISQOBJECTORNIL(5)) {
-    /*
-    QItemModelSurfaceDataProxy(QAbstractItemModel * itemModel, const QString &rowRole, const QString &columnRole,
-    const QString &yPosRole, QObject * parent = nullptr)
-    */
+    // QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole,
+    // const QString &yPosRole, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4),
                                               OPQOBJECT(5, nullptr));
@@ -165,10 +157,8 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_NEW)
 #endif
   } else if (ISBETWEEN(6, 7) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
              HB_ISCHAR(5) && HB_ISCHAR(6) && ISQOBJECTORNIL(7)) {
-    /*
-    QItemModelSurfaceDataProxy(QAbstractItemModel * itemModel, const QString &rowRole, const QString &columnRole,
-    const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, QObject * parent = nullptr)
-    */
+    // QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole,
+    // const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4),
                                               PQSTRING(5), PQSTRING(6), OPQOBJECT(7, nullptr));
@@ -176,11 +166,9 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_NEW)
 #endif
   } else if (ISBETWEEN(6, 7) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
              HB_ISARRAY(5) && HB_ISARRAY(6) && ISQOBJECTORNIL(7)) {
-    /*
-    QItemModelSurfaceDataProxy(QAbstractItemModel * itemModel, const QString &rowRole, const QString &columnRole,
-    const QString &yPosRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject * parent
-    = nullptr)
-    */
+    // QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole,
+    // const QString &yPosRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent
+    // = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4),
                                               PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT(7, nullptr));
@@ -188,11 +176,9 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_NEW)
 #endif
   } else if (ISBETWEEN(8, 9) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
              HB_ISCHAR(5) && HB_ISCHAR(6) && HB_ISARRAY(7) && HB_ISARRAY(8) && ISQOBJECTORNIL(9)) {
-    /*
-    QItemModelSurfaceDataProxy(QAbstractItemModel * itemModel, const QString &rowRole, const QString &columnRole,
-    const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QStringList &rowCategories,
-    const QStringList &columnCategories, QObject * parent = nullptr)
-    */
+    // QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole,
+    // const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QStringList &rowCategories,
+    // const QStringList &columnCategories, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj =
         new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5),
@@ -204,9 +190,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_NEW)
   }
 }
 
-/*
-virtual ~QItemModelSurfaceDataProxy()
-*/
+// virtual ~QItemModelSurfaceDataProxy()
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -218,9 +202,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_DELETE)
 #endif
 }
 
-/*
-QAbstractItemModel * itemModel() const
-*/
+// QAbstractItemModel *itemModel() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ITEMMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -241,9 +223,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ITEMMODEL)
 #endif
 }
 
-/*
-void setItemModel(QAbstractItemModel * itemModel)
-*/
+// void setItemModel(QAbstractItemModel *itemModel)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETITEMMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -265,9 +245,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETITEMMODEL)
 #endif
 }
 
-/*
-QString rowRole() const
-*/
+// QString rowRole() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -287,9 +265,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLE)
 #endif
 }
 
-/*
-void setRowRole(const QString &role)
-*/
+// void setRowRole(const QString &role)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -311,9 +287,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLE)
 #endif
 }
 
-/*
-QString columnRole() const
-*/
+// QString columnRole() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -333,9 +307,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLE)
 #endif
 }
 
-/*
-void setColumnRole(const QString &role)
-*/
+// void setColumnRole(const QString &role)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -357,9 +329,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLE)
 #endif
 }
 
-/*
-QString xPosRole() const
-*/
+// QString xPosRole() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -379,9 +349,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLE)
 #endif
 }
 
-/*
-void setXPosRole(const QString &role)
-*/
+// void setXPosRole(const QString &role)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -403,9 +371,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLE)
 #endif
 }
 
-/*
-QString yPosRole() const
-*/
+// QString yPosRole() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -425,9 +391,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLE)
 #endif
 }
 
-/*
-void setYPosRole(const QString &role)
-*/
+// void setYPosRole(const QString &role)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -449,9 +413,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLE)
 #endif
 }
 
-/*
-QString zPosRole() const
-*/
+// QString zPosRole() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -471,9 +433,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLE)
 #endif
 }
 
-/*
-void setZPosRole(const QString &role)
-*/
+// void setZPosRole(const QString &role)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -495,9 +455,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLE)
 #endif
 }
 
-/*
-QStringList rowCategories() const
-*/
+// QStringList rowCategories() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -517,9 +475,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWCATEGORIES)
 #endif
 }
 
-/*
-void setRowCategories(const QStringList &categories)
-*/
+// void setRowCategories(const QStringList &categories)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -541,9 +497,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWCATEGORIES)
 #endif
 }
 
-/*
-QStringList columnCategories() const
-*/
+// QStringList columnCategories() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -563,9 +517,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORIES)
 #endif
 }
 
-/*
-void setColumnCategories(const QStringList &categories)
-*/
+// void setColumnCategories(const QStringList &categories)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -587,9 +539,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNCATEGORIES)
 #endif
 }
 
-/*
-bool useModelCategories() const
-*/
+// bool useModelCategories() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_USEMODELCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -609,9 +559,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_USEMODELCATEGORIES)
 #endif
 }
 
-/*
-void setUseModelCategories(bool enable)
-*/
+// void setUseModelCategories(bool enable)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETUSEMODELCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -633,9 +581,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETUSEMODELCATEGORIES)
 #endif
 }
 
-/*
-bool autoRowCategories() const
-*/
+// bool autoRowCategories() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_AUTOROWCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -655,9 +601,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_AUTOROWCATEGORIES)
 #endif
 }
 
-/*
-void setAutoRowCategories(bool enable)
-*/
+// void setAutoRowCategories(bool enable)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETAUTOROWCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -679,9 +623,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETAUTOROWCATEGORIES)
 #endif
 }
 
-/*
-bool autoColumnCategories() const
-*/
+// bool autoColumnCategories() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_AUTOCOLUMNCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -701,9 +643,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_AUTOCOLUMNCATEGORIES)
 #endif
 }
 
-/*
-void setAutoColumnCategories(bool enable)
-*/
+// void setAutoColumnCategories(bool enable)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETAUTOCOLUMNCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -725,9 +665,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETAUTOCOLUMNCATEGORIES)
 #endif
 }
 
-/*
-QRegExp rowRolePattern() const
-*/
+// QRegExp rowRolePattern() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -747,9 +685,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLEPATTERN)
 #endif
 }
 
-/*
-void setRowRolePattern(const QRegExp &pattern)
-*/
+// void setRowRolePattern(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -771,9 +707,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLEPATTERN)
 #endif
 }
 
-/*
-QRegExp columnRolePattern() const
-*/
+// QRegExp columnRolePattern() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -793,9 +727,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLEPATTERN)
 #endif
 }
 
-/*
-void setColumnRolePattern(const QRegExp &pattern)
-*/
+// void setColumnRolePattern(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -817,9 +749,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEPATTERN)
 #endif
 }
 
-/*
-QRegExp xPosRolePattern() const
-*/
+// QRegExp xPosRolePattern() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -839,9 +769,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLEPATTERN)
 #endif
 }
 
-/*
-void setXPosRolePattern(const QRegExp &pattern)
-*/
+// void setXPosRolePattern(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -863,9 +791,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLEPATTERN)
 #endif
 }
 
-/*
-QRegExp yPosRolePattern() const
-*/
+// QRegExp yPosRolePattern() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -885,9 +811,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLEPATTERN)
 #endif
 }
 
-/*
-void setYPosRolePattern(const QRegExp &pattern)
-*/
+// void setYPosRolePattern(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -909,9 +833,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLEPATTERN)
 #endif
 }
 
-/*
-QRegExp zPosRolePattern() const
-*/
+// QRegExp zPosRolePattern() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -931,9 +853,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLEPATTERN)
 #endif
 }
 
-/*
-void setZPosRolePattern(const QRegExp &pattern)
-*/
+// void setZPosRolePattern(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -955,9 +875,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLEPATTERN)
 #endif
 }
 
-/*
-QString rowRoleReplace() const
-*/
+// QString rowRoleReplace() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -977,9 +895,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLEREPLACE)
 #endif
 }
 
-/*
-void setRowRoleReplace(const QString &replace)
-*/
+// void setRowRoleReplace(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1001,9 +917,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLEREPLACE)
 #endif
 }
 
-/*
-QString columnRoleReplace() const
-*/
+// QString columnRoleReplace() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1023,9 +937,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLEREPLACE)
 #endif
 }
 
-/*
-void setColumnRoleReplace(const QString &replace)
-*/
+// void setColumnRoleReplace(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1047,9 +959,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEREPLACE)
 #endif
 }
 
-/*
-QString xPosRoleReplace() const
-*/
+// QString xPosRoleReplace() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1069,9 +979,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLEREPLACE)
 #endif
 }
 
-/*
-void setXPosRoleReplace(const QString &replace)
-*/
+// void setXPosRoleReplace(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1093,9 +1001,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLEREPLACE)
 #endif
 }
 
-/*
-QString yPosRoleReplace() const
-*/
+// QString yPosRoleReplace() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1115,9 +1021,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLEREPLACE)
 #endif
 }
 
-/*
-void setYPosRoleReplace(const QString &replace)
-*/
+// void setYPosRoleReplace(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1139,9 +1043,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLEREPLACE)
 #endif
 }
 
-/*
-QString zPosRoleReplace() const
-*/
+// QString zPosRoleReplace() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1161,9 +1063,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLEREPLACE)
 #endif
 }
 
-/*
-void setZPosRoleReplace(const QString &replace)
-*/
+// void setZPosRoleReplace(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1185,9 +1085,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLEREPLACE)
 #endif
 }
 
-/*
-QItemModelSurfaceDataProxy::MultiMatchBehavior multiMatchBehavior() const
-*/
+// QItemModelSurfaceDataProxy::MultiMatchBehavior multiMatchBehavior() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_MULTIMATCHBEHAVIOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1207,9 +1105,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_MULTIMATCHBEHAVIOR)
 #endif
 }
 
-/*
-void setMultiMatchBehavior(QItemModelSurfaceDataProxy::MultiMatchBehavior behavior)
-*/
+// void setMultiMatchBehavior(QItemModelSurfaceDataProxy::MultiMatchBehavior behavior)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETMULTIMATCHBEHAVIOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1231,10 +1127,8 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETMULTIMATCHBEHAVIOR)
 #endif
 }
 
-/*
-void remap(const QString &rowRole, const QString &columnRole, const QString &xPosRole, const QString &yPosRole,
-const QString &zPosRole, const QStringList &rowCategories, const QStringList &columnCategories)
-*/
+// void remap(const QString &rowRole, const QString &columnRole, const QString &xPosRole, const QString &yPosRole,
+// const QString &zPosRole, const QStringList &rowCategories, const QStringList &columnCategories)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_REMAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1257,9 +1151,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_REMAP)
 #endif
 }
 
-/*
-Q_INVOKABLE int rowCategoryIndex(const QString &category)
-*/
+// Q_INVOKABLE int rowCategoryIndex(const QString &category)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWCATEGORYINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1279,9 +1171,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWCATEGORYINDEX)
 #endif
 }
 
-/*
-Q_INVOKABLE int columnCategoryIndex(const QString &category)
-*/
+// Q_INVOKABLE int columnCategoryIndex(const QString &category)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORYINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1301,9 +1191,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORYINDEX)
 #endif
 }
 
-/*
-void autoColumnCategoriesChanged(bool enable)
-*/
+// void autoColumnCategoriesChanged(bool enable)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1348,9 +1236,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED)
 #endif
 }
 
-/*
-void autoRowCategoriesChanged(bool enable)
-*/
+// void autoRowCategoriesChanged(bool enable)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONAUTOROWCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1395,9 +1281,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONAUTOROWCATEGORIESCHANGED)
 #endif
 }
 
-/*
-void columnCategoriesChanged()
-*/
+// void columnCategoriesChanged()
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONCOLUMNCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1440,9 +1324,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONCOLUMNCATEGORIESCHANGED)
 #endif
 }
 
-/*
-void columnRoleChanged(const QString &role)
-*/
+// void columnRoleChanged(const QString &role)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1487,9 +1369,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLECHANGED)
 #endif
 }
 
-/*
-void columnRolePatternChanged(const QRegExp &pattern)
-*/
+// void columnRolePatternChanged(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1535,9 +1415,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEPATTERNCHANGED)
 #endif
 }
 
-/*
-void columnRoleReplaceChanged(const QString &replace)
-*/
+// void columnRoleReplaceChanged(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1583,9 +1461,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEREPLACECHANGED)
 #endif
 }
 
-/*
-void itemModelChanged(const QAbstractItemModel * itemModel)
-*/
+// void itemModelChanged(const QAbstractItemModel *itemModel)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONITEMMODELCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1632,9 +1508,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONITEMMODELCHANGED)
 #endif
 }
 
-/*
-void multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior behavior)
-*/
+// void multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior behavior)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1681,9 +1555,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED)
 #endif
 }
 
-/*
-void rowCategoriesChanged()
-*/
+// void rowCategoriesChanged()
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONROWCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1726,9 +1598,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONROWCATEGORIESCHANGED)
 #endif
 }
 
-/*
-void rowRoleChanged(const QString &role)
-*/
+// void rowRoleChanged(const QString &role)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONROWROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1773,9 +1643,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONROWROLECHANGED)
 #endif
 }
 
-/*
-void rowRolePatternChanged(const QRegExp &pattern)
-*/
+// void rowRolePatternChanged(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONROWROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1821,9 +1689,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONROWROLEPATTERNCHANGED)
 #endif
 }
 
-/*
-void rowRoleReplaceChanged(const QString &replace)
-*/
+// void rowRoleReplaceChanged(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONROWROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1869,9 +1735,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONROWROLEREPLACECHANGED)
 #endif
 }
 
-/*
-void useModelCategoriesChanged(bool enable)
-*/
+// void useModelCategoriesChanged(bool enable)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONUSEMODELCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1916,9 +1780,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONUSEMODELCATEGORIESCHANGED)
 #endif
 }
 
-/*
-void xPosRoleChanged(const QString &role)
-*/
+// void xPosRoleChanged(const QString &role)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONXPOSROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1963,9 +1825,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONXPOSROLECHANGED)
 #endif
 }
 
-/*
-void xPosRolePatternChanged(const QRegExp &pattern)
-*/
+// void xPosRolePatternChanged(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONXPOSROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -2011,9 +1871,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONXPOSROLEPATTERNCHANGED)
 #endif
 }
 
-/*
-void xPosRoleReplaceChanged(const QString &replace)
-*/
+// void xPosRoleReplaceChanged(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONXPOSROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -2059,9 +1917,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONXPOSROLEREPLACECHANGED)
 #endif
 }
 
-/*
-void yPosRoleChanged(const QString &role)
-*/
+// void yPosRoleChanged(const QString &role)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONYPOSROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -2106,9 +1962,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONYPOSROLECHANGED)
 #endif
 }
 
-/*
-void yPosRolePatternChanged(const QRegExp &pattern)
-*/
+// void yPosRolePatternChanged(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONYPOSROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -2154,9 +2008,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONYPOSROLEPATTERNCHANGED)
 #endif
 }
 
-/*
-void yPosRoleReplaceChanged(const QString &replace)
-*/
+// void yPosRoleReplaceChanged(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONYPOSROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -2202,9 +2054,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONYPOSROLEREPLACECHANGED)
 #endif
 }
 
-/*
-void zPosRoleChanged(const QString &role)
-*/
+// void zPosRoleChanged(const QString &role)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONZPOSROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -2249,9 +2099,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONZPOSROLECHANGED)
 #endif
 }
 
-/*
-void zPosRolePatternChanged(const QRegExp &pattern)
-*/
+// void zPosRolePatternChanged(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONZPOSROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -2297,9 +2145,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONZPOSROLEPATTERNCHANGED)
 #endif
 }
 
-/*
-void zPosRoleReplaceChanged(const QString &replace)
-*/
+// void zPosRoleReplaceChanged(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ONZPOSROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

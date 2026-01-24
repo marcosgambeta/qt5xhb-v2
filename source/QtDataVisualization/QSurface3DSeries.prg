@@ -82,17 +82,13 @@ using namespace QtDataVisualization;
 HB_FUNC_STATIC(QSURFACE3DSERIES_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QSurface3DSeries(QObject * parent = nullptr)
-    */
+    // QSurface3DSeries(QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QSurface3DSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(1, 2) && ISQSURFACEDATAPROXY(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QSurface3DSeries(QSurfaceDataProxy * dataProxy, QObject * parent = nullptr)
-    */
+    // QSurface3DSeries(QSurfaceDataProxy *dataProxy, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QSurface3DSeries(PQSURFACEDATAPROXY(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -102,9 +98,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_NEW)
   }
 }
 
-/*
-virtual ~QSurface3DSeries()
-*/
+// virtual ~QSurface3DSeries()
 HB_FUNC_STATIC(QSURFACE3DSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -116,9 +110,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_DELETE)
 #endif
 }
 
-/*
-QSurfaceDataProxy * dataProxy() const
-*/
+// QSurfaceDataProxy *dataProxy() const
 HB_FUNC_STATIC(QSURFACE3DSERIES_DATAPROXY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -139,9 +131,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_DATAPROXY)
 #endif
 }
 
-/*
-void setDataProxy(QSurfaceDataProxy * proxy)
-*/
+// void setDataProxy(QSurfaceDataProxy *proxy)
 HB_FUNC_STATIC(QSURFACE3DSERIES_SETDATAPROXY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -163,9 +153,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SETDATAPROXY)
 #endif
 }
 
-/*
-QPoint selectedPoint() const
-*/
+// QPoint selectedPoint() const
 HB_FUNC_STATIC(QSURFACE3DSERIES_SELECTEDPOINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -185,9 +173,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SELECTEDPOINT)
 #endif
 }
 
-/*
-void setSelectedPoint(const QPoint &position)
-*/
+// void setSelectedPoint(const QPoint &position)
 HB_FUNC_STATIC(QSURFACE3DSERIES_SETSELECTEDPOINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -209,9 +195,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SETSELECTEDPOINT)
 #endif
 }
 
-/*
-bool isFlatShadingEnabled() const
-*/
+// bool isFlatShadingEnabled() const
 HB_FUNC_STATIC(QSURFACE3DSERIES_ISFLATSHADINGENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -231,9 +215,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ISFLATSHADINGENABLED)
 #endif
 }
 
-/*
-void setFlatShadingEnabled(bool enabled)
-*/
+// void setFlatShadingEnabled(bool enabled)
 HB_FUNC_STATIC(QSURFACE3DSERIES_SETFLATSHADINGENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -255,9 +237,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SETFLATSHADINGENABLED)
 #endif
 }
 
-/*
-bool isFlatShadingSupported() const
-*/
+// bool isFlatShadingSupported() const
 HB_FUNC_STATIC(QSURFACE3DSERIES_ISFLATSHADINGSUPPORTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -277,9 +257,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ISFLATSHADINGSUPPORTED)
 #endif
 }
 
-/*
-QSurface3DSeries::DrawFlags drawMode() const
-*/
+// QSurface3DSeries::DrawFlags drawMode() const
 HB_FUNC_STATIC(QSURFACE3DSERIES_DRAWMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -299,9 +277,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_DRAWMODE)
 #endif
 }
 
-/*
-void setDrawMode(QSurface3DSeries::DrawFlags mode)
-*/
+// void setDrawMode(QSurface3DSeries::DrawFlags mode)
 HB_FUNC_STATIC(QSURFACE3DSERIES_SETDRAWMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -323,9 +299,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SETDRAWMODE)
 #endif
 }
 
-/*
-QImage texture() const
-*/
+// QImage texture() const
 HB_FUNC_STATIC(QSURFACE3DSERIES_TEXTURE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -345,9 +319,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_TEXTURE)
 #endif
 }
 
-/*
-void setTexture(const QImage &texture)
-*/
+// void setTexture(const QImage &texture)
 HB_FUNC_STATIC(QSURFACE3DSERIES_SETTEXTURE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -369,9 +341,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SETTEXTURE)
 #endif
 }
 
-/*
-QString textureFile() const
-*/
+// QString textureFile() const
 HB_FUNC_STATIC(QSURFACE3DSERIES_TEXTUREFILE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -391,9 +361,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_TEXTUREFILE)
 #endif
 }
 
-/*
-void setTextureFile(const QString &filename)
-*/
+// void setTextureFile(const QString &filename)
 HB_FUNC_STATIC(QSURFACE3DSERIES_SETTEXTUREFILE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -415,9 +383,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SETTEXTUREFILE)
 #endif
 }
 
-/*
-static QPoint invalidSelectionPosition()
-*/
+// static QPoint invalidSelectionPosition()
 HB_FUNC_STATIC(QSURFACE3DSERIES_INVALIDSELECTIONPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -433,9 +399,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_INVALIDSELECTIONPOSITION)
 #endif
 }
 
-/*
-void dataProxyChanged(QSurfaceDataProxy * proxy)
-*/
+// void dataProxyChanged(QSurfaceDataProxy *proxy)
 HB_FUNC_STATIC(QSURFACE3DSERIES_ONDATAPROXYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -480,9 +444,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONDATAPROXYCHANGED)
 #endif
 }
 
-/*
-void drawModeChanged(QSurface3DSeries::DrawFlags mode)
-*/
+// void drawModeChanged(QSurface3DSeries::DrawFlags mode)
 HB_FUNC_STATIC(QSURFACE3DSERIES_ONDRAWMODECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -527,9 +489,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONDRAWMODECHANGED)
 #endif
 }
 
-/*
-void flatShadingEnabledChanged(bool enable)
-*/
+// void flatShadingEnabledChanged(bool enable)
 HB_FUNC_STATIC(QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -574,9 +534,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONFLATSHADINGENABLEDCHANGED)
 #endif
 }
 
-/*
-void flatShadingSupportedChanged(bool enable)
-*/
+// void flatShadingSupportedChanged(bool enable)
 HB_FUNC_STATIC(QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -621,9 +579,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONFLATSHADINGSUPPORTEDCHANGED)
 #endif
 }
 
-/*
-void selectedPointChanged(const QPoint &position)
-*/
+// void selectedPointChanged(const QPoint &position)
 HB_FUNC_STATIC(QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -668,9 +624,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONSELECTEDPOINTCHANGED)
 #endif
 }
 
-/*
-void textureChanged(const QImage &image)
-*/
+// void textureChanged(const QImage &image)
 HB_FUNC_STATIC(QSURFACE3DSERIES_ONTEXTURECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -715,9 +669,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_ONTEXTURECHANGED)
 #endif
 }
 
-/*
-void textureFileChanged(const QString &filename)
-*/
+// void textureFileChanged(const QString &filename)
 HB_FUNC_STATIC(QSURFACE3DSERIES_ONTEXTUREFILECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

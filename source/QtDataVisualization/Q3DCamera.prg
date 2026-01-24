@@ -85,9 +85,7 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-Q3DCamera(QObject * parent = nullptr)
-*/
+// Q3DCamera(QObject *parent = nullptr)
 HB_FUNC_STATIC(Q3DCAMERA_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -100,9 +98,7 @@ HB_FUNC_STATIC(Q3DCAMERA_NEW)
 #endif
 }
 
-/*
-virtual ~Q3DCamera()
-*/
+// virtual ~Q3DCamera()
 HB_FUNC_STATIC(Q3DCAMERA_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -114,9 +110,7 @@ HB_FUNC_STATIC(Q3DCAMERA_DELETE)
 #endif
 }
 
-/*
-float xRotation() const
-*/
+// float xRotation() const
 HB_FUNC_STATIC(Q3DCAMERA_XROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -136,9 +130,7 @@ HB_FUNC_STATIC(Q3DCAMERA_XROTATION)
 #endif
 }
 
-/*
-void setXRotation(float rotation)
-*/
+// void setXRotation(float rotation)
 HB_FUNC_STATIC(Q3DCAMERA_SETXROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -160,9 +152,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETXROTATION)
 #endif
 }
 
-/*
-float yRotation() const
-*/
+// float yRotation() const
 HB_FUNC_STATIC(Q3DCAMERA_YROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -182,9 +172,7 @@ HB_FUNC_STATIC(Q3DCAMERA_YROTATION)
 #endif
 }
 
-/*
-void setYRotation(float rotation)
-*/
+// void setYRotation(float rotation)
 HB_FUNC_STATIC(Q3DCAMERA_SETYROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -206,9 +194,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETYROTATION)
 #endif
 }
 
-/*
-float zoomLevel() const
-*/
+// float zoomLevel() const
 HB_FUNC_STATIC(Q3DCAMERA_ZOOMLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -228,9 +214,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ZOOMLEVEL)
 #endif
 }
 
-/*
-void setZoomLevel(float zoomLevel)
-*/
+// void setZoomLevel(float zoomLevel)
 HB_FUNC_STATIC(Q3DCAMERA_SETZOOMLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -252,9 +236,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETZOOMLEVEL)
 #endif
 }
 
-/*
-Q3DCamera::CameraPreset cameraPreset() const
-*/
+// Q3DCamera::CameraPreset cameraPreset() const
 HB_FUNC_STATIC(Q3DCAMERA_CAMERAPRESET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -274,9 +256,7 @@ HB_FUNC_STATIC(Q3DCAMERA_CAMERAPRESET)
 #endif
 }
 
-/*
-void setCameraPreset(Q3DCamera::CameraPreset preset)
-*/
+// void setCameraPreset(Q3DCamera::CameraPreset preset)
 HB_FUNC_STATIC(Q3DCAMERA_SETCAMERAPRESET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -298,9 +278,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETCAMERAPRESET)
 #endif
 }
 
-/*
-bool wrapXRotation() const
-*/
+// bool wrapXRotation() const
 HB_FUNC_STATIC(Q3DCAMERA_WRAPXROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -320,9 +298,7 @@ HB_FUNC_STATIC(Q3DCAMERA_WRAPXROTATION)
 #endif
 }
 
-/*
-void setWrapXRotation(bool isEnabled)
-*/
+// void setWrapXRotation(bool isEnabled)
 HB_FUNC_STATIC(Q3DCAMERA_SETWRAPXROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -344,9 +320,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETWRAPXROTATION)
 #endif
 }
 
-/*
-bool wrapYRotation() const
-*/
+// bool wrapYRotation() const
 HB_FUNC_STATIC(Q3DCAMERA_WRAPYROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -366,9 +340,7 @@ HB_FUNC_STATIC(Q3DCAMERA_WRAPYROTATION)
 #endif
 }
 
-/*
-void setWrapYRotation(bool isEnabled)
-*/
+// void setWrapYRotation(bool isEnabled)
 HB_FUNC_STATIC(Q3DCAMERA_SETWRAPYROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -390,9 +362,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETWRAPYROTATION)
 #endif
 }
 
-/*
-QVector3D target() const
-*/
+// QVector3D target() const
 HB_FUNC_STATIC(Q3DCAMERA_TARGET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -412,9 +382,7 @@ HB_FUNC_STATIC(Q3DCAMERA_TARGET)
 #endif
 }
 
-/*
-void setTarget(const QVector3D &target)
-*/
+// void setTarget(const QVector3D &target)
 HB_FUNC_STATIC(Q3DCAMERA_SETTARGET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -436,9 +404,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETTARGET)
 #endif
 }
 
-/*
-float minZoomLevel() const
-*/
+// float minZoomLevel() const
 HB_FUNC_STATIC(Q3DCAMERA_MINZOOMLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -458,9 +424,7 @@ HB_FUNC_STATIC(Q3DCAMERA_MINZOOMLEVEL)
 #endif
 }
 
-/*
-void setMinZoomLevel(float zoomLevel)
-*/
+// void setMinZoomLevel(float zoomLevel)
 HB_FUNC_STATIC(Q3DCAMERA_SETMINZOOMLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -482,9 +446,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETMINZOOMLEVEL)
 #endif
 }
 
-/*
-float maxZoomLevel() const
-*/
+// float maxZoomLevel() const
 HB_FUNC_STATIC(Q3DCAMERA_MAXZOOMLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -504,9 +466,7 @@ HB_FUNC_STATIC(Q3DCAMERA_MAXZOOMLEVEL)
 #endif
 }
 
-/*
-void setMaxZoomLevel(float zoomLevel)
-*/
+// void setMaxZoomLevel(float zoomLevel)
 HB_FUNC_STATIC(Q3DCAMERA_SETMAXZOOMLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -528,9 +488,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETMAXZOOMLEVEL)
 #endif
 }
 
-/*
-virtual void copyValuesFrom(const Q3DObject &source)
-*/
+// virtual void copyValuesFrom(const Q3DObject &source)
 HB_FUNC_STATIC(Q3DCAMERA_COPYVALUESFROM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -552,9 +510,7 @@ HB_FUNC_STATIC(Q3DCAMERA_COPYVALUESFROM)
 #endif
 }
 
-/*
-void setCameraPosition(float horizontal, float vertical, float zoom = 100.0f)
-*/
+// void setCameraPosition(float horizontal, float vertical, float zoom = 100.0f)
 HB_FUNC_STATIC(Q3DCAMERA_SETCAMERAPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -576,9 +532,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETCAMERAPOSITION)
 #endif
 }
 
-/*
-void cameraPresetChanged(Q3DCamera::CameraPreset preset)
-*/
+// void cameraPresetChanged(Q3DCamera::CameraPreset preset)
 HB_FUNC_STATIC(Q3DCAMERA_ONCAMERAPRESETCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -623,9 +577,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONCAMERAPRESETCHANGED)
 #endif
 }
 
-/*
-void maxZoomLevelChanged(float zoomLevel)
-*/
+// void maxZoomLevelChanged(float zoomLevel)
 HB_FUNC_STATIC(Q3DCAMERA_ONMAXZOOMLEVELCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -670,9 +622,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONMAXZOOMLEVELCHANGED)
 #endif
 }
 
-/*
-void minZoomLevelChanged(float zoomLevel)
-*/
+// void minZoomLevelChanged(float zoomLevel)
 HB_FUNC_STATIC(Q3DCAMERA_ONMINZOOMLEVELCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -717,9 +667,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONMINZOOMLEVELCHANGED)
 #endif
 }
 
-/*
-void targetChanged(const QVector3D &target)
-*/
+// void targetChanged(const QVector3D &target)
 HB_FUNC_STATIC(Q3DCAMERA_ONTARGETCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -764,9 +712,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONTARGETCHANGED)
 #endif
 }
 
-/*
-void wrapXRotationChanged(bool isEnabled)
-*/
+// void wrapXRotationChanged(bool isEnabled)
 HB_FUNC_STATIC(Q3DCAMERA_ONWRAPXROTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -811,9 +757,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONWRAPXROTATIONCHANGED)
 #endif
 }
 
-/*
-void wrapYRotationChanged(bool isEnabled)
-*/
+// void wrapYRotationChanged(bool isEnabled)
 HB_FUNC_STATIC(Q3DCAMERA_ONWRAPYROTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -858,9 +802,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONWRAPYROTATIONCHANGED)
 #endif
 }
 
-/*
-void xRotationChanged(float rotation)
-*/
+// void xRotationChanged(float rotation)
 HB_FUNC_STATIC(Q3DCAMERA_ONXROTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -905,9 +847,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONXROTATIONCHANGED)
 #endif
 }
 
-/*
-void yRotationChanged(float rotation)
-*/
+// void yRotationChanged(float rotation)
 HB_FUNC_STATIC(Q3DCAMERA_ONYROTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -952,9 +892,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ONYROTATIONCHANGED)
 #endif
 }
 
-/*
-void zoomLevelChanged(float zoomLevel)
-*/
+// void zoomLevelChanged(float zoomLevel)
 HB_FUNC_STATIC(Q3DCAMERA_ONZOOMLEVELCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

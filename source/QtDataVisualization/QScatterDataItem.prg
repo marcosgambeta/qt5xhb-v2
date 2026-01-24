@@ -76,33 +76,25 @@ using namespace QtDataVisualization;
 HB_FUNC_STATIC(QSCATTERDATAITEM_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QScatterDataItem()
-    */
+    // QScatterDataItem()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QScatterDataItem();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
-    /*
-    QScatterDataItem(const QVector3D &position)
-    */
+    // QScatterDataItem(const QVector3D &position)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QScatterDataItem(*PQVECTOR3D(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(2) && ISQVECTOR3D(1) && ISQQUATERNION(2)) {
-    /*
-    QScatterDataItem(const QVector3D &position, const QQuaternion &rotation)
-    */
+    // QScatterDataItem(const QVector3D &position, const QQuaternion &rotation)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QScatterDataItem(*PQVECTOR3D(1), *PQQUATERNION(2));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQSCATTERDATAITEM(1)) {
-    /*
-    QScatterDataItem(const QScatterDataItem &other)
-    */
+    // QScatterDataItem(const QScatterDataItem &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QScatterDataItem(*PQSCATTERDATAITEM(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -112,9 +104,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_NEW)
   }
 }
 
-/*
-~QScatterDataItem()
-*/
+// ~QScatterDataItem()
 HB_FUNC_STATIC(QSCATTERDATAITEM_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -126,9 +116,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_DELETE)
 #endif
 }
 
-/*
-void setPosition(const QVector3D &pos)
-*/
+// void setPosition(const QVector3D &pos)
 HB_FUNC_STATIC(QSCATTERDATAITEM_SETPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -150,9 +138,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETPOSITION)
 #endif
 }
 
-/*
-QVector3D position() const
-*/
+// QVector3D position() const
 HB_FUNC_STATIC(QSCATTERDATAITEM_POSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -172,9 +158,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_POSITION)
 #endif
 }
 
-/*
-void setRotation(const QQuaternion &rot)
-*/
+// void setRotation(const QQuaternion &rot)
 HB_FUNC_STATIC(QSCATTERDATAITEM_SETROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -196,9 +180,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETROTATION)
 #endif
 }
 
-/*
-QQuaternion rotation() const
-*/
+// QQuaternion rotation() const
 HB_FUNC_STATIC(QSCATTERDATAITEM_ROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -218,9 +200,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_ROTATION)
 #endif
 }
 
-/*
-void setX(float value)
-*/
+// void setX(float value)
 HB_FUNC_STATIC(QSCATTERDATAITEM_SETX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -242,9 +222,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETX)
 #endif
 }
 
-/*
-void setY(float value)
-*/
+// void setY(float value)
 HB_FUNC_STATIC(QSCATTERDATAITEM_SETY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -266,9 +244,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETY)
 #endif
 }
 
-/*
-void setZ(float value)
-*/
+// void setZ(float value)
 HB_FUNC_STATIC(QSCATTERDATAITEM_SETZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -290,9 +266,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETZ)
 #endif
 }
 
-/*
-float x() const
-*/
+// float x() const
 HB_FUNC_STATIC(QSCATTERDATAITEM_X)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -312,9 +286,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_X)
 #endif
 }
 
-/*
-float y() const
-*/
+// float y() const
 HB_FUNC_STATIC(QSCATTERDATAITEM_Y)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -334,9 +306,7 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_Y)
 #endif
 }
 
-/*
-float z() const
-*/
+// float z() const
 HB_FUNC_STATIC(QSCATTERDATAITEM_Z)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

@@ -106,9 +106,7 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-virtual ~QAbstract3DSeries()
-*/
+// virtual ~QAbstract3DSeries()
 HB_FUNC_STATIC(QABSTRACT3DSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -120,9 +118,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_DELETE)
 #endif
 }
 
-/*
-QAbstract3DSeries::SeriesType type() const
-*/
+// QAbstract3DSeries::SeriesType type() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -142,9 +138,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_TYPE)
 #endif
 }
 
-/*
-QString itemLabelFormat() const
-*/
+// QString itemLabelFormat() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ITEMLABELFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -164,9 +158,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ITEMLABELFORMAT)
 #endif
 }
 
-/*
-void setItemLabelFormat(const QString &format)
-*/
+// void setItemLabelFormat(const QString &format)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETITEMLABELFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -188,9 +180,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETITEMLABELFORMAT)
 #endif
 }
 
-/*
-bool isVisible() const
-*/
+// bool isVisible() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ISVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -210,9 +200,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ISVISIBLE)
 #endif
 }
 
-/*
-void setVisible(bool visible)
-*/
+// void setVisible(bool visible)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -234,9 +222,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETVISIBLE)
 #endif
 }
 
-/*
-QAbstract3DSeries::Mesh mesh() const
-*/
+// QAbstract3DSeries::Mesh mesh() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_MESH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -256,9 +242,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MESH)
 #endif
 }
 
-/*
-void setMesh(QAbstract3DSeries::Mesh mesh)
-*/
+// void setMesh(QAbstract3DSeries::Mesh mesh)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -280,9 +264,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESH)
 #endif
 }
 
-/*
-bool isMeshSmooth() const
-*/
+// bool isMeshSmooth() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ISMESHSMOOTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -302,9 +284,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ISMESHSMOOTH)
 #endif
 }
 
-/*
-void setMeshSmooth(bool enable)
-*/
+// void setMeshSmooth(bool enable)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHSMOOTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -326,9 +306,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHSMOOTH)
 #endif
 }
 
-/*
-QQuaternion meshRotation() const
-*/
+// QQuaternion meshRotation() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_MESHROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -348,9 +326,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MESHROTATION)
 #endif
 }
 
-/*
-void setMeshRotation(const QQuaternion &rotation)
-*/
+// void setMeshRotation(const QQuaternion &rotation)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -372,9 +348,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHROTATION)
 #endif
 }
 
-/*
-QString userDefinedMesh() const
-*/
+// QString userDefinedMesh() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_USERDEFINEDMESH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -394,9 +368,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_USERDEFINEDMESH)
 #endif
 }
 
-/*
-void setUserDefinedMesh(const QString &fileName)
-*/
+// void setUserDefinedMesh(const QString &fileName)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETUSERDEFINEDMESH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -418,9 +390,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETUSERDEFINEDMESH)
 #endif
 }
 
-/*
-Q3DTheme::ColorStyle colorStyle() const
-*/
+// Q3DTheme::ColorStyle colorStyle() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_COLORSTYLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -440,9 +410,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_COLORSTYLE)
 #endif
 }
 
-/*
-void setColorStyle(Q3DTheme::ColorStyle style)
-*/
+// void setColorStyle(Q3DTheme::ColorStyle style)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETCOLORSTYLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -464,9 +432,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETCOLORSTYLE)
 #endif
 }
 
-/*
-QColor baseColor() const
-*/
+// QColor baseColor() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_BASECOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -486,9 +452,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_BASECOLOR)
 #endif
 }
 
-/*
-void setBaseColor(const QColor &color)
-*/
+// void setBaseColor(const QColor &color)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETBASECOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -510,9 +474,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETBASECOLOR)
 #endif
 }
 
-/*
-QLinearGradient baseGradient() const
-*/
+// QLinearGradient baseGradient() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_BASEGRADIENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -532,9 +494,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_BASEGRADIENT)
 #endif
 }
 
-/*
-void setBaseGradient(const QLinearGradient &gradient)
-*/
+// void setBaseGradient(const QLinearGradient &gradient)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETBASEGRADIENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -556,9 +516,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETBASEGRADIENT)
 #endif
 }
 
-/*
-QColor singleHighlightColor() const
-*/
+// QColor singleHighlightColor() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -578,9 +536,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR)
 #endif
 }
 
-/*
-void setSingleHighlightColor(const QColor &color)
-*/
+// void setSingleHighlightColor(const QColor &color)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -602,9 +558,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTCOLOR)
 #endif
 }
 
-/*
-QLinearGradient singleHighlightGradient() const
-*/
+// QLinearGradient singleHighlightGradient() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTGRADIENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -624,9 +578,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTGRADIENT)
 #endif
 }
 
-/*
-void setSingleHighlightGradient(const QLinearGradient &gradient)
-*/
+// void setSingleHighlightGradient(const QLinearGradient &gradient)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTGRADIENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -648,9 +600,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTGRADIENT)
 #endif
 }
 
-/*
-QColor multiHighlightColor() const
-*/
+// QColor multiHighlightColor() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -670,9 +620,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR)
 #endif
 }
 
-/*
-void setMultiHighlightColor(const QColor &color)
-*/
+// void setMultiHighlightColor(const QColor &color)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMULTIHIGHLIGHTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -694,9 +642,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMULTIHIGHLIGHTCOLOR)
 #endif
 }
 
-/*
-QLinearGradient multiHighlightGradient() const
-*/
+// QLinearGradient multiHighlightGradient() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTGRADIENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -716,9 +662,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTGRADIENT)
 #endif
 }
 
-/*
-void setMultiHighlightGradient(const QLinearGradient &gradient)
-*/
+// void setMultiHighlightGradient(const QLinearGradient &gradient)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMULTIHIGHLIGHTGRADIENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -740,9 +684,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMULTIHIGHLIGHTGRADIENT)
 #endif
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -762,9 +704,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_NAME)
 #endif
 }
 
-/*
-void setName(const QString &name)
-*/
+// void setName(const QString &name)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -786,9 +726,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETNAME)
 #endif
 }
 
-/*
-QString itemLabel() const
-*/
+// QString itemLabel() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ITEMLABEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -808,9 +746,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ITEMLABEL)
 #endif
 }
 
-/*
-bool isItemLabelVisible() const
-*/
+// bool isItemLabelVisible() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ISITEMLABELVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -830,9 +766,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ISITEMLABELVISIBLE)
 #endif
 }
 
-/*
-void setItemLabelVisible(bool visible)
-*/
+// void setItemLabelVisible(bool visible)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETITEMLABELVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -854,9 +788,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETITEMLABELVISIBLE)
 #endif
 }
 
-/*
-Q_INVOKABLE void setMeshAxisAndAngle(const QVector3D &axis, float angle)
-*/
+// Q_INVOKABLE void setMeshAxisAndAngle(const QVector3D &axis, float angle)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHAXISANDANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -878,9 +810,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHAXISANDANGLE)
 #endif
 }
 
-/*
-void baseColorChanged(const QColor &color)
-*/
+// void baseColorChanged(const QColor &color)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONBASECOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -925,9 +855,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONBASECOLORCHANGED)
 #endif
 }
 
-/*
-void baseGradientChanged(const QLinearGradient &gradient)
-*/
+// void baseGradientChanged(const QLinearGradient &gradient)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -972,9 +900,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED)
 #endif
 }
 
-/*
-void colorStyleChanged(Q3DTheme::ColorStyle style)
-*/
+// void colorStyleChanged(Q3DTheme::ColorStyle style)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONCOLORSTYLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1019,9 +945,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONCOLORSTYLECHANGED)
 #endif
 }
 
-/*
-void itemLabelChanged(const QString &label)
-*/
+// void itemLabelChanged(const QString &label)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1066,9 +990,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELCHANGED)
 #endif
 }
 
-/*
-void itemLabelFormatChanged(const QString &format)
-*/
+// void itemLabelFormatChanged(const QString &format)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1113,9 +1035,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED)
 #endif
 }
 
-/*
-void itemLabelVisibilityChanged(bool visible)
-*/
+// void itemLabelVisibilityChanged(bool visible)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1160,9 +1080,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED)
 #endif
 }
 
-/*
-void meshChanged(QAbstract3DSeries::Mesh mesh)
-*/
+// void meshChanged(QAbstract3DSeries::Mesh mesh)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1207,9 +1125,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHCHANGED)
 #endif
 }
 
-/*
-void meshRotationChanged(const QQuaternion &rotation)
-*/
+// void meshRotationChanged(const QQuaternion &rotation)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHROTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1254,9 +1170,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHROTATIONCHANGED)
 #endif
 }
 
-/*
-void meshSmoothChanged(bool enabled)
-*/
+// void meshSmoothChanged(bool enabled)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1301,9 +1215,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED)
 #endif
 }
 
-/*
-void multiHighlightColorChanged(const QColor &color)
-*/
+// void multiHighlightColorChanged(const QColor &color)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1348,9 +1260,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED)
 #endif
 }
 
-/*
-void multiHighlightGradientChanged(const QLinearGradient &gradient)
-*/
+// void multiHighlightGradientChanged(const QLinearGradient &gradient)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1396,9 +1306,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED)
 #endif
 }
 
-/*
-void nameChanged(const QString &name)
-*/
+// void nameChanged(const QString &name)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONNAMECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1443,9 +1351,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONNAMECHANGED)
 #endif
 }
 
-/*
-void singleHighlightColorChanged(const QColor &color)
-*/
+// void singleHighlightColorChanged(const QColor &color)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1490,9 +1396,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED)
 #endif
 }
 
-/*
-void singleHighlightGradientChanged(const QLinearGradient &gradient)
-*/
+// void singleHighlightGradientChanged(const QLinearGradient &gradient)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1538,9 +1442,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED)
 #endif
 }
 
-/*
-void userDefinedMeshChanged(const QString &fileName)
-*/
+// void userDefinedMeshChanged(const QString &fileName)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1585,9 +1487,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED)
 #endif
 }
 
-/*
-void visibilityChanged(bool visible)
-*/
+// void visibilityChanged(bool visible)
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONVISIBILITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

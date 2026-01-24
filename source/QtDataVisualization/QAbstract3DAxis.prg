@@ -83,9 +83,7 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-virtual ~QAbstract3DAxis()
-*/
+// virtual ~QAbstract3DAxis()
 HB_FUNC_STATIC(QABSTRACT3DAXIS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -97,9 +95,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_DELETE)
 #endif
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_TITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -119,9 +115,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_TITLE)
 #endif
 }
 
-/*
-void setTitle(const QString &title)
-*/
+// void setTitle(const QString &title)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -143,9 +137,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLE)
 #endif
 }
 
-/*
-QStringList labels() const
-*/
+// QStringList labels() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -165,9 +157,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELS)
 #endif
 }
 
-/*
-void setLabels(const QStringList &labels)
-*/
+// void setLabels(const QStringList &labels)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -189,9 +179,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELS)
 #endif
 }
 
-/*
-QAbstract3DAxis::AxisOrientation orientation() const
-*/
+// QAbstract3DAxis::AxisOrientation orientation() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -211,9 +199,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ORIENTATION)
 #endif
 }
 
-/*
-QAbstract3DAxis::AxisType type() const
-*/
+// QAbstract3DAxis::AxisType type() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -233,9 +219,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_TYPE)
 #endif
 }
 
-/*
-float min() const
-*/
+// float min() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_MIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -255,9 +239,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_MIN)
 #endif
 }
 
-/*
-void setMin(float min)
-*/
+// void setMin(float min)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETMIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -279,9 +261,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETMIN)
 #endif
 }
 
-/*
-float max() const
-*/
+// float max() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_MAX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -301,9 +281,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_MAX)
 #endif
 }
 
-/*
-void setMax(float max)
-*/
+// void setMax(float max)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETMAX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -325,9 +303,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETMAX)
 #endif
 }
 
-/*
-bool isAutoAdjustRange() const
-*/
+// bool isAutoAdjustRange() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ISAUTOADJUSTRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -347,9 +323,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ISAUTOADJUSTRANGE)
 #endif
 }
 
-/*
-void setAutoAdjustRange(bool autoAdjust)
-*/
+// void setAutoAdjustRange(bool autoAdjust)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETAUTOADJUSTRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -371,9 +345,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETAUTOADJUSTRANGE)
 #endif
 }
 
-/*
-float labelAutoRotation() const
-*/
+// float labelAutoRotation() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELAUTOROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -393,9 +365,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELAUTOROTATION)
 #endif
 }
 
-/*
-void setLabelAutoRotation(float angle)
-*/
+// void setLabelAutoRotation(float angle)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELAUTOROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -417,9 +387,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELAUTOROTATION)
 #endif
 }
 
-/*
-bool isTitleVisible() const
-*/
+// bool isTitleVisible() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -439,9 +407,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEVISIBLE)
 #endif
 }
 
-/*
-void setTitleVisible(bool visible)
-*/
+// void setTitleVisible(bool visible)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -463,9 +429,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEVISIBLE)
 #endif
 }
 
-/*
-bool isTitleFixed() const
-*/
+// bool isTitleFixed() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEFIXED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -485,9 +449,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEFIXED)
 #endif
 }
 
-/*
-void setTitleFixed(bool fixed)
-*/
+// void setTitleFixed(bool fixed)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEFIXED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -509,9 +471,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEFIXED)
 #endif
 }
 
-/*
-void setRange(float min, float max)
-*/
+// void setRange(float min, float max)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -533,9 +493,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETRANGE)
 #endif
 }
 
-/*
-void titleChanged(const QString &newTitle)
-*/
+// void titleChanged(const QString &newTitle)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONTITLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -580,9 +538,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ONTITLECHANGED)
 #endif
 }
 
-/*
-void labelsChanged()
-*/
+// void labelsChanged()
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONLABELSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -624,9 +580,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ONLABELSCHANGED)
 #endif
 }
 
-/*
-void orientationChanged(QAbstract3DAxis::AxisOrientation orientation)
-*/
+// void orientationChanged(QAbstract3DAxis::AxisOrientation orientation)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONORIENTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -671,9 +625,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ONORIENTATIONCHANGED)
 #endif
 }
 
-/*
-void minChanged(float value)
-*/
+// void minChanged(float value)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONMINCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -718,9 +670,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ONMINCHANGED)
 #endif
 }
 
-/*
-void maxChanged(float value)
-*/
+// void maxChanged(float value)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONMAXCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -765,9 +715,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ONMAXCHANGED)
 #endif
 }
 
-/*
-void rangeChanged(float min, float max)
-*/
+// void rangeChanged(float min, float max)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONRANGECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -814,9 +762,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ONRANGECHANGED)
 #endif
 }
 
-/*
-void autoAdjustRangeChanged(bool autoAdjust)
-*/
+// void autoAdjustRangeChanged(bool autoAdjust)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -861,9 +807,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED)
 #endif
 }
 
-/*
-void labelAutoRotationChanged(float angle)
-*/
+// void labelAutoRotationChanged(float angle)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -908,9 +852,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED)
 #endif
 }
 
-/*
-void titleVisibilityChanged(bool visible)
-*/
+// void titleVisibilityChanged(bool visible)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -955,9 +897,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED)
 #endif
 }
 
-/*
-void titleFixedChanged(bool fixed)
-*/
+// void titleFixedChanged(bool fixed)
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

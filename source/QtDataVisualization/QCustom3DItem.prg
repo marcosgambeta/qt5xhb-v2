@@ -89,19 +89,15 @@ using namespace QtDataVisualization;
 HB_FUNC_STATIC(QCUSTOM3DITEM_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QCustom3DItem(QObject * parent = nullptr)
-    */
+    // QCustom3DItem(QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QCustom3DItem(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(5, 6) && HB_ISCHAR(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3) && ISQQUATERNION(4) && ISQIMAGE(5) &&
              ISQOBJECTORNIL(6)) {
-    /*
-    QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &
-    rotation, const QImage &texture, QObject * parent = nullptr)
-    */
+    // QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &
+    // rotation, const QImage &texture, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QCustom3DItem(PQSTRING(1), *PQVECTOR3D(2), *PQVECTOR3D(3), *PQQUATERNION(4), *PQIMAGE(5),
                                  OPQOBJECT(6, nullptr));
@@ -112,9 +108,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_NEW)
   }
 }
 
-/*
-virtual ~QCustom3DItem()
-*/
+// virtual ~QCustom3DItem()
 HB_FUNC_STATIC(QCUSTOM3DITEM_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -126,9 +120,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_DELETE)
 #endif
 }
 
-/*
-QString meshFile() const
-*/
+// QString meshFile() const
 HB_FUNC_STATIC(QCUSTOM3DITEM_MESHFILE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -148,9 +140,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_MESHFILE)
 #endif
 }
 
-/*
-void setMeshFile(const QString &meshFile)
-*/
+// void setMeshFile(const QString &meshFile)
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETMESHFILE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -172,9 +162,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETMESHFILE)
 #endif
 }
 
-/*
-QString textureFile() const
-*/
+// QString textureFile() const
 HB_FUNC_STATIC(QCUSTOM3DITEM_TEXTUREFILE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -194,9 +182,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_TEXTUREFILE)
 #endif
 }
 
-/*
-void setTextureFile(const QString &textureFile)
-*/
+// void setTextureFile(const QString &textureFile)
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETTEXTUREFILE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -218,9 +204,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETTEXTUREFILE)
 #endif
 }
 
-/*
-QVector3D position() const
-*/
+// QVector3D position() const
 HB_FUNC_STATIC(QCUSTOM3DITEM_POSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -240,9 +224,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_POSITION)
 #endif
 }
 
-/*
-void setPosition(const QVector3D &position)
-*/
+// void setPosition(const QVector3D &position)
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -264,9 +246,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETPOSITION)
 #endif
 }
 
-/*
-bool isPositionAbsolute() const
-*/
+// bool isPositionAbsolute() const
 HB_FUNC_STATIC(QCUSTOM3DITEM_ISPOSITIONABSOLUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -286,9 +266,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ISPOSITIONABSOLUTE)
 #endif
 }
 
-/*
-void setPositionAbsolute(bool positionAbsolute)
-*/
+// void setPositionAbsolute(bool positionAbsolute)
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETPOSITIONABSOLUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -310,9 +288,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETPOSITIONABSOLUTE)
 #endif
 }
 
-/*
-QVector3D scaling() const
-*/
+// QVector3D scaling() const
 HB_FUNC_STATIC(QCUSTOM3DITEM_SCALING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -332,9 +308,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SCALING)
 #endif
 }
 
-/*
-void setScaling(const QVector3D &scaling)
-*/
+// void setScaling(const QVector3D &scaling)
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETSCALING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -356,9 +330,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETSCALING)
 #endif
 }
 
-/*
-QQuaternion rotation()
-*/
+// QQuaternion rotation()
 HB_FUNC_STATIC(QCUSTOM3DITEM_ROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -378,9 +350,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ROTATION)
 #endif
 }
 
-/*
-void setRotation(const QQuaternion &rotation)
-*/
+// void setRotation(const QQuaternion &rotation)
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETROTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -402,9 +372,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETROTATION)
 #endif
 }
 
-/*
-bool isVisible() const
-*/
+// bool isVisible() const
 HB_FUNC_STATIC(QCUSTOM3DITEM_ISVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -424,9 +392,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ISVISIBLE)
 #endif
 }
 
-/*
-void setVisible(bool visible)
-*/
+// void setVisible(bool visible)
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -448,9 +414,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETVISIBLE)
 #endif
 }
 
-/*
-bool isShadowCasting() const
-*/
+// bool isShadowCasting() const
 HB_FUNC_STATIC(QCUSTOM3DITEM_ISSHADOWCASTING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -470,9 +434,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ISSHADOWCASTING)
 #endif
 }
 
-/*
-void setShadowCasting(bool enabled)
-*/
+// void setShadowCasting(bool enabled)
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETSHADOWCASTING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -494,9 +456,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETSHADOWCASTING)
 #endif
 }
 
-/*
-bool isScalingAbsolute() const
-*/
+// bool isScalingAbsolute() const
 HB_FUNC_STATIC(QCUSTOM3DITEM_ISSCALINGABSOLUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -516,9 +476,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ISSCALINGABSOLUTE)
 #endif
 }
 
-/*
-void setScalingAbsolute(bool scalingAbsolute)
-*/
+// void setScalingAbsolute(bool scalingAbsolute)
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETSCALINGABSOLUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -540,9 +498,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETSCALINGABSOLUTE)
 #endif
 }
 
-/*
-Q_INVOKABLE void setRotationAxisAndAngle(const QVector3D &axis, float angle)
-*/
+// Q_INVOKABLE void setRotationAxisAndAngle(const QVector3D &axis, float angle)
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETROTATIONAXISANDANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -564,9 +520,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETROTATIONAXISANDANGLE)
 #endif
 }
 
-/*
-void setTextureImage(const QImage &textureImage)
-*/
+// void setTextureImage(const QImage &textureImage)
 HB_FUNC_STATIC(QCUSTOM3DITEM_SETTEXTUREIMAGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -588,9 +542,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_SETTEXTUREIMAGE)
 #endif
 }
 
-/*
-void meshFileChanged(const QString &meshFile)
-*/
+// void meshFileChanged(const QString &meshFile)
 HB_FUNC_STATIC(QCUSTOM3DITEM_ONMESHFILECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -635,9 +587,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONMESHFILECHANGED)
 #endif
 }
 
-/*
-void positionAbsoluteChanged(bool positionAbsolute)
-*/
+// void positionAbsoluteChanged(bool positionAbsolute)
 HB_FUNC_STATIC(QCUSTOM3DITEM_ONPOSITIONABSOLUTECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -682,9 +632,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONPOSITIONABSOLUTECHANGED)
 #endif
 }
 
-/*
-void positionChanged(const QVector3D &position)
-*/
+// void positionChanged(const QVector3D &position)
 HB_FUNC_STATIC(QCUSTOM3DITEM_ONPOSITIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -729,9 +677,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONPOSITIONCHANGED)
 #endif
 }
 
-/*
-void rotationChanged(const QQuaternion &rotation)
-*/
+// void rotationChanged(const QQuaternion &rotation)
 HB_FUNC_STATIC(QCUSTOM3DITEM_ONROTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -776,9 +722,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONROTATIONCHANGED)
 #endif
 }
 
-/*
-void scalingAbsoluteChanged(bool scalingAbsolute)
-*/
+// void scalingAbsoluteChanged(bool scalingAbsolute)
 HB_FUNC_STATIC(QCUSTOM3DITEM_ONSCALINGABSOLUTECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -823,9 +767,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONSCALINGABSOLUTECHANGED)
 #endif
 }
 
-/*
-void scalingChanged(const QVector3D &scaling)
-*/
+// void scalingChanged(const QVector3D &scaling)
 HB_FUNC_STATIC(QCUSTOM3DITEM_ONSCALINGCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -870,9 +812,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONSCALINGCHANGED)
 #endif
 }
 
-/*
-void shadowCastingChanged(bool shadowCasting)
-*/
+// void shadowCastingChanged(bool shadowCasting)
 HB_FUNC_STATIC(QCUSTOM3DITEM_ONSHADOWCASTINGCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -917,9 +857,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONSHADOWCASTINGCHANGED)
 #endif
 }
 
-/*
-void textureFileChanged(const QString &textureFile)
-*/
+// void textureFileChanged(const QString &textureFile)
 HB_FUNC_STATIC(QCUSTOM3DITEM_ONTEXTUREFILECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -964,9 +902,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_ONTEXTUREFILECHANGED)
 #endif
 }
 
-/*
-void visibleChanged(bool visible)
-*/
+// void visibleChanged(bool visible)
 HB_FUNC_STATIC(QCUSTOM3DITEM_ONVISIBLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

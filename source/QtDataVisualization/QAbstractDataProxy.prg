@@ -54,9 +54,7 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-virtual ~QAbstractDataProxy()
-*/
+// virtual ~QAbstractDataProxy()
 HB_FUNC_STATIC(QABSTRACTDATAPROXY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -68,9 +66,7 @@ HB_FUNC_STATIC(QABSTRACTDATAPROXY_DELETE)
 #endif
 }
 
-/*
-QAbstractDataProxy::DataType type() const
-*/
+// QAbstractDataProxy::DataType type() const
 HB_FUNC_STATIC(QABSTRACTDATAPROXY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

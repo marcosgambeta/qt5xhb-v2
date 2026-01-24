@@ -120,35 +120,27 @@ using namespace QtDataVisualization;
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QItemModelBarDataProxy(QObject * parent = nullptr)
-    */
+    // QItemModelBarDataProxy(QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QItemModelBarDataProxy(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QItemModelBarDataProxy(QAbstractItemModel * itemModel, QObject * parent = nullptr)
-    */
+    // QItemModelBarDataProxy(QAbstractItemModel *itemModel, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QItemModelBarDataProxy(PQABSTRACTITEMMODEL(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(2, 3) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && ISQOBJECTORNIL(3)) {
-    /*
-    QItemModelBarDataProxy(QAbstractItemModel * itemModel, const QString &valueRole, QObject * parent = nullptr)
-    */
+    // QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &valueRole, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QItemModelBarDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(4, 5) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
              ISQOBJECTORNIL(5)) {
-    /*
-    QItemModelBarDataProxy(QAbstractItemModel * itemModel, const QString &rowRole, const QString &columnRole, const
-    QString &valueRole, QObject * parent = nullptr)
-    */
+    // QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const
+    // QString &valueRole, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QItemModelBarDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4),
                                           OPQOBJECT(5, nullptr));
@@ -156,10 +148,8 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_NEW)
 #endif
   } else if (ISBETWEEN(5, 6) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
              HB_ISCHAR(5) && ISQOBJECTORNIL(6)) {
-    /*
-    QItemModelBarDataProxy(QAbstractItemModel * itemModel, const QString &rowRole, const QString &columnRole, const
-    QString &valueRole, const QString &rotationRole, QObject * parent = nullptr)
-    */
+    // QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const
+    // QString &valueRole, const QString &rotationRole, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QItemModelBarDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5),
                                           OPQOBJECT(6, nullptr));
@@ -167,11 +157,9 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_NEW)
 #endif
   } else if (ISBETWEEN(6, 7) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
              HB_ISARRAY(5) && HB_ISARRAY(6) && ISQOBJECTORNIL(7)) {
-    /*
-    QItemModelBarDataProxy(QAbstractItemModel * itemModel, const QString &rowRole, const QString &columnRole, const
-    QString &valueRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject * parent =
-    nullptr)
-    */
+    // QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const
+    // QString &valueRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent =
+    // nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QItemModelBarDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4),
                                           PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT(7, nullptr));
@@ -179,11 +167,9 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_NEW)
 #endif
   } else if (ISBETWEEN(7, 8) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
              HB_ISCHAR(5) && HB_ISARRAY(6) && HB_ISARRAY(7) && ISQOBJECTORNIL(8)) {
-    /*
-    QItemModelBarDataProxy(QAbstractItemModel * itemModel, const QString &rowRole, const QString &columnRole, const
-    QString &valueRole, const QString &rotationRole, const QStringList &rowCategories, const QStringList &
-    columnCategories, QObject * parent = nullptr)
-    */
+    // QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const
+    // QString &valueRole, const QString &rotationRole, const QStringList &rowCategories, const QStringList &
+    // columnCategories, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QItemModelBarDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5),
                                           PQSTRINGLIST(6), PQSTRINGLIST(7), OPQOBJECT(8, nullptr));
@@ -194,9 +180,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_NEW)
   }
 }
 
-/*
-virtual ~QItemModelBarDataProxy()
-*/
+// virtual ~QItemModelBarDataProxy()
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -208,9 +192,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_DELETE)
 #endif
 }
 
-/*
-QAbstractItemModel * itemModel() const
-*/
+// QAbstractItemModel *itemModel() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ITEMMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -231,9 +213,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ITEMMODEL)
 #endif
 }
 
-/*
-void setItemModel(QAbstractItemModel * itemModel)
-*/
+// void setItemModel(QAbstractItemModel *itemModel)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETITEMMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -255,9 +235,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETITEMMODEL)
 #endif
 }
 
-/*
-QString rowRole() const
-*/
+// QString rowRole() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -277,9 +255,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWROLE)
 #endif
 }
 
-/*
-void setRowRole(const QString &role)
-*/
+// void setRowRole(const QString &role)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROWROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -301,9 +277,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROWROLE)
 #endif
 }
 
-/*
-QString columnRole() const
-*/
+// QString columnRole() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -323,9 +297,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNROLE)
 #endif
 }
 
-/*
-void setColumnRole(const QString &role)
-*/
+// void setColumnRole(const QString &role)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETCOLUMNROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -347,9 +319,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETCOLUMNROLE)
 #endif
 }
 
-/*
-QString valueRole() const
-*/
+// QString valueRole() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_VALUEROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -369,9 +339,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_VALUEROLE)
 #endif
 }
 
-/*
-void setValueRole(const QString &role)
-*/
+// void setValueRole(const QString &role)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETVALUEROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -393,9 +361,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETVALUEROLE)
 #endif
 }
 
-/*
-QString rotationRole() const
-*/
+// QString rotationRole() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROTATIONROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -415,9 +381,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROTATIONROLE)
 #endif
 }
 
-/*
-void setRotationRole(const QString &role)
-*/
+// void setRotationRole(const QString &role)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROTATIONROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -439,9 +403,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROTATIONROLE)
 #endif
 }
 
-/*
-QStringList rowCategories() const
-*/
+// QStringList rowCategories() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -461,9 +423,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWCATEGORIES)
 #endif
 }
 
-/*
-void setRowCategories(const QStringList &categories)
-*/
+// void setRowCategories(const QStringList &categories)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROWCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -485,9 +445,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROWCATEGORIES)
 #endif
 }
 
-/*
-QStringList columnCategories() const
-*/
+// QStringList columnCategories() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -507,9 +465,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNCATEGORIES)
 #endif
 }
 
-/*
-void setColumnCategories(const QStringList &categories)
-*/
+// void setColumnCategories(const QStringList &categories)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETCOLUMNCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -531,9 +487,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETCOLUMNCATEGORIES)
 #endif
 }
 
-/*
-bool useModelCategories() const
-*/
+// bool useModelCategories() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_USEMODELCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -553,9 +507,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_USEMODELCATEGORIES)
 #endif
 }
 
-/*
-void setUseModelCategories(bool enable)
-*/
+// void setUseModelCategories(bool enable)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETUSEMODELCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -577,9 +529,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETUSEMODELCATEGORIES)
 #endif
 }
 
-/*
-bool autoRowCategories() const
-*/
+// bool autoRowCategories() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_AUTOROWCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -599,9 +549,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_AUTOROWCATEGORIES)
 #endif
 }
 
-/*
-void setAutoRowCategories(bool enable)
-*/
+// void setAutoRowCategories(bool enable)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETAUTOROWCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -623,9 +571,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETAUTOROWCATEGORIES)
 #endif
 }
 
-/*
-bool autoColumnCategories() const
-*/
+// bool autoColumnCategories() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_AUTOCOLUMNCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -645,9 +591,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_AUTOCOLUMNCATEGORIES)
 #endif
 }
 
-/*
-void setAutoColumnCategories(bool enable)
-*/
+// void setAutoColumnCategories(bool enable)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETAUTOCOLUMNCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -669,9 +613,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETAUTOCOLUMNCATEGORIES)
 #endif
 }
 
-/*
-QRegExp rowRolePattern() const
-*/
+// QRegExp rowRolePattern() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -691,9 +633,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWROLEPATTERN)
 #endif
 }
 
-/*
-void setRowRolePattern(const QRegExp &pattern)
-*/
+// void setRowRolePattern(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROWROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -715,9 +655,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROWROLEPATTERN)
 #endif
 }
 
-/*
-QRegExp columnRolePattern() const
-*/
+// QRegExp columnRolePattern() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -737,9 +675,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNROLEPATTERN)
 #endif
 }
 
-/*
-void setColumnRolePattern(const QRegExp &pattern)
-*/
+// void setColumnRolePattern(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETCOLUMNROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -761,9 +697,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETCOLUMNROLEPATTERN)
 #endif
 }
 
-/*
-QRegExp valueRolePattern() const
-*/
+// QRegExp valueRolePattern() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_VALUEROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -783,9 +717,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_VALUEROLEPATTERN)
 #endif
 }
 
-/*
-void setValueRolePattern(const QRegExp &pattern)
-*/
+// void setValueRolePattern(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETVALUEROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -807,9 +739,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETVALUEROLEPATTERN)
 #endif
 }
 
-/*
-QRegExp rotationRolePattern() const
-*/
+// QRegExp rotationRolePattern() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROTATIONROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -829,9 +759,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROTATIONROLEPATTERN)
 #endif
 }
 
-/*
-void setRotationRolePattern(const QRegExp &pattern)
-*/
+// void setRotationRolePattern(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROTATIONROLEPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -853,9 +781,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROTATIONROLEPATTERN)
 #endif
 }
 
-/*
-QString rowRoleReplace() const
-*/
+// QString rowRoleReplace() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -875,9 +801,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWROLEREPLACE)
 #endif
 }
 
-/*
-void setRowRoleReplace(const QString &replace)
-*/
+// void setRowRoleReplace(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROWROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -899,9 +823,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROWROLEREPLACE)
 #endif
 }
 
-/*
-QString columnRoleReplace() const
-*/
+// QString columnRoleReplace() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -921,9 +843,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNROLEREPLACE)
 #endif
 }
 
-/*
-void setColumnRoleReplace(const QString &replace)
-*/
+// void setColumnRoleReplace(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETCOLUMNROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -945,9 +865,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETCOLUMNROLEREPLACE)
 #endif
 }
 
-/*
-QString valueRoleReplace() const
-*/
+// QString valueRoleReplace() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_VALUEROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -967,9 +885,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_VALUEROLEREPLACE)
 #endif
 }
 
-/*
-void setValueRoleReplace(const QString &replace)
-*/
+// void setValueRoleReplace(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETVALUEROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -991,9 +907,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETVALUEROLEREPLACE)
 #endif
 }
 
-/*
-QString rotationRoleReplace() const
-*/
+// QString rotationRoleReplace() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROTATIONROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1013,9 +927,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROTATIONROLEREPLACE)
 #endif
 }
 
-/*
-void setRotationRoleReplace(const QString &replace)
-*/
+// void setRotationRoleReplace(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROTATIONROLEREPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1037,9 +949,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETROTATIONROLEREPLACE)
 #endif
 }
 
-/*
-QItemModelBarDataProxy::MultiMatchBehavior multiMatchBehavior() const
-*/
+// QItemModelBarDataProxy::MultiMatchBehavior multiMatchBehavior() const
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_MULTIMATCHBEHAVIOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1059,9 +969,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_MULTIMATCHBEHAVIOR)
 #endif
 }
 
-/*
-void setMultiMatchBehavior(QItemModelBarDataProxy::MultiMatchBehavior behavior)
-*/
+// void setMultiMatchBehavior(QItemModelBarDataProxy::MultiMatchBehavior behavior)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETMULTIMATCHBEHAVIOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1083,10 +991,8 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_SETMULTIMATCHBEHAVIOR)
 #endif
 }
 
-/*
-void remap(const QString &rowRole, const QString &columnRole, const QString &valueRole, const QString &rotationRole,
-const QStringList &rowCategories, const QStringList &columnCategories)
-*/
+// void remap(const QString &rowRole, const QString &columnRole, const QString &valueRole, const QString &rotationRole,
+// const QStringList &rowCategories, const QStringList &columnCategories)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_REMAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1108,9 +1014,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_REMAP)
 #endif
 }
 
-/*
-Q_INVOKABLE int rowCategoryIndex(const QString &category)
-*/
+// Q_INVOKABLE int rowCategoryIndex(const QString &category)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWCATEGORYINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1130,9 +1034,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ROWCATEGORYINDEX)
 #endif
 }
 
-/*
-Q_INVOKABLE int columnCategoryIndex(const QString &category)
-*/
+// Q_INVOKABLE int columnCategoryIndex(const QString &category)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNCATEGORYINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1152,9 +1054,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_COLUMNCATEGORYINDEX)
 #endif
 }
 
-/*
-void autoColumnCategoriesChanged(bool enable)
-*/
+// void autoColumnCategoriesChanged(bool enable)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1199,9 +1099,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED)
 #endif
 }
 
-/*
-void autoRowCategoriesChanged(bool enable)
-*/
+// void autoRowCategoriesChanged(bool enable)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1246,9 +1144,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED)
 #endif
 }
 
-/*
-void columnCategoriesChanged()
-*/
+// void columnCategoriesChanged()
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1291,9 +1187,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED)
 #endif
 }
 
-/*
-void columnRoleChanged(const QString &role)
-*/
+// void columnRoleChanged(const QString &role)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1338,9 +1232,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED)
 #endif
 }
 
-/*
-void columnRolePatternChanged(const QRegExp &pattern)
-*/
+// void columnRolePatternChanged(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1385,9 +1277,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED)
 #endif
 }
 
-/*
-void columnRoleReplaceChanged(const QString &replace)
-*/
+// void columnRoleReplaceChanged(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1432,9 +1322,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED)
 #endif
 }
 
-/*
-void itemModelChanged(const QAbstractItemModel * itemModel)
-*/
+// void itemModelChanged(const QAbstractItemModel *itemModel)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1481,9 +1369,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED)
 #endif
 }
 
-/*
-void multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior behavior)
-*/
+// void multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior behavior)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1530,9 +1416,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED)
 #endif
 }
 
-/*
-void rotationRoleChanged(const QString &role)
-*/
+// void rotationRoleChanged(const QString &role)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1577,9 +1461,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED)
 #endif
 }
 
-/*
-void rotationRolePatternChanged(const QRegExp &pattern)
-*/
+// void rotationRolePatternChanged(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1625,9 +1507,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED)
 #endif
 }
 
-/*
-void rotationRoleReplaceChanged(const QString &replace)
-*/
+// void rotationRoleReplaceChanged(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1673,9 +1553,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED)
 #endif
 }
 
-/*
-void rowCategoriesChanged()
-*/
+// void rowCategoriesChanged()
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1718,9 +1596,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED)
 #endif
 }
 
-/*
-void rowRoleChanged(const QString &role)
-*/
+// void rowRoleChanged(const QString &role)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1765,9 +1641,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLECHANGED)
 #endif
 }
 
-/*
-void rowRolePatternChanged(const QRegExp &pattern)
-*/
+// void rowRolePatternChanged(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1812,9 +1686,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED)
 #endif
 }
 
-/*
-void rowRoleReplaceChanged(const QString &replace)
-*/
+// void rowRoleReplaceChanged(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1859,9 +1731,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED)
 #endif
 }
 
-/*
-void useModelCategoriesChanged(bool enable)
-*/
+// void useModelCategoriesChanged(bool enable)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1906,9 +1776,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED)
 #endif
 }
 
-/*
-void valueRoleChanged(const QString &role)
-*/
+// void valueRoleChanged(const QString &role)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1953,9 +1821,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED)
 #endif
 }
 
-/*
-void valueRolePatternChanged(const QRegExp &pattern)
-*/
+// void valueRolePatternChanged(const QRegExp &pattern)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -2000,9 +1866,7 @@ HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED)
 #endif
 }
 
-/*
-void valueRoleReplaceChanged(const QString &replace)
-*/
+// void valueRoleReplaceChanged(const QString &replace)
 HB_FUNC_STATIC(QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

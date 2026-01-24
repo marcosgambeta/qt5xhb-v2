@@ -71,9 +71,7 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-QValue3DAxis(QObject * parent = nullptr)
-*/
+// QValue3DAxis(QObject *parent = nullptr)
 HB_FUNC_STATIC(QVALUE3DAXIS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_NEW)
 #endif
 }
 
-/*
-virtual ~QValue3DAxis()
-*/
+// virtual ~QValue3DAxis()
 HB_FUNC_STATIC(QVALUE3DAXIS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -100,9 +96,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_DELETE)
 #endif
 }
 
-/*
-int segmentCount() const
-*/
+// int segmentCount() const
 HB_FUNC_STATIC(QVALUE3DAXIS_SEGMENTCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -122,9 +116,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SEGMENTCOUNT)
 #endif
 }
 
-/*
-void setSegmentCount(int count)
-*/
+// void setSegmentCount(int count)
 HB_FUNC_STATIC(QVALUE3DAXIS_SETSEGMENTCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -146,9 +138,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETSEGMENTCOUNT)
 #endif
 }
 
-/*
-int subSegmentCount() const
-*/
+// int subSegmentCount() const
 HB_FUNC_STATIC(QVALUE3DAXIS_SUBSEGMENTCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -168,9 +158,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SUBSEGMENTCOUNT)
 #endif
 }
 
-/*
-void setSubSegmentCount(int count)
-*/
+// void setSubSegmentCount(int count)
 HB_FUNC_STATIC(QVALUE3DAXIS_SETSUBSEGMENTCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -192,9 +180,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETSUBSEGMENTCOUNT)
 #endif
 }
 
-/*
-QString labelFormat() const
-*/
+// QString labelFormat() const
 HB_FUNC_STATIC(QVALUE3DAXIS_LABELFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -214,9 +200,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_LABELFORMAT)
 #endif
 }
 
-/*
-void setLabelFormat(const QString &format)
-*/
+// void setLabelFormat(const QString &format)
 HB_FUNC_STATIC(QVALUE3DAXIS_SETLABELFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -238,9 +222,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETLABELFORMAT)
 #endif
 }
 
-/*
-QValue3DAxisFormatter * formatter() const
-*/
+// QValue3DAxisFormatter *formatter() const
 HB_FUNC_STATIC(QVALUE3DAXIS_FORMATTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -261,9 +243,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_FORMATTER)
 #endif
 }
 
-/*
-void setFormatter(QValue3DAxisFormatter * formatter)
-*/
+// void setFormatter(QValue3DAxisFormatter *formatter)
 HB_FUNC_STATIC(QVALUE3DAXIS_SETFORMATTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -285,9 +265,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETFORMATTER)
 #endif
 }
 
-/*
-bool reversed() const
-*/
+// bool reversed() const
 HB_FUNC_STATIC(QVALUE3DAXIS_REVERSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -307,9 +285,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_REVERSED)
 #endif
 }
 
-/*
-void setReversed(bool enable)
-*/
+// void setReversed(bool enable)
 HB_FUNC_STATIC(QVALUE3DAXIS_SETREVERSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -331,9 +307,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETREVERSED)
 #endif
 }
 
-/*
-void formatterChanged(QValue3DAxisFormatter * formatter)
-*/
+// void formatterChanged(QValue3DAxisFormatter *formatter)
 HB_FUNC_STATIC(QVALUE3DAXIS_ONFORMATTERCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -378,9 +352,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONFORMATTERCHANGED)
 #endif
 }
 
-/*
-void labelFormatChanged(const QString &format)
-*/
+// void labelFormatChanged(const QString &format)
 HB_FUNC_STATIC(QVALUE3DAXIS_ONLABELFORMATCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -425,9 +397,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONLABELFORMATCHANGED)
 #endif
 }
 
-/*
-void reversedChanged(bool enable)
-*/
+// void reversedChanged(bool enable)
 HB_FUNC_STATIC(QVALUE3DAXIS_ONREVERSEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -472,9 +442,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONREVERSEDCHANGED)
 #endif
 }
 
-/*
-void segmentCountChanged(int count)
-*/
+// void segmentCountChanged(int count)
 HB_FUNC_STATIC(QVALUE3DAXIS_ONSEGMENTCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -519,9 +487,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_ONSEGMENTCOUNTCHANGED)
 #endif
 }
 
-/*
-void subSegmentCountChanged(int count)
-*/
+// void subSegmentCountChanged(int count)
 HB_FUNC_STATIC(QVALUE3DAXIS_ONSUBSEGMENTCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

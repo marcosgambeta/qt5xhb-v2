@@ -67,9 +67,7 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-Q3DInputHandler(QObject * parent = nullptr)
-*/
+// Q3DInputHandler(QObject *parent = nullptr)
 HB_FUNC_STATIC(Q3DINPUTHANDLER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -82,9 +80,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_NEW)
 #endif
 }
 
-/*
-virtual ~Q3DInputHandler()
-*/
+// virtual ~Q3DInputHandler()
 HB_FUNC_STATIC(Q3DINPUTHANDLER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -96,9 +92,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_DELETE)
 #endif
 }
 
-/*
-bool isRotationEnabled() const
-*/
+// bool isRotationEnabled() const
 HB_FUNC_STATIC(Q3DINPUTHANDLER_ISROTATIONENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -118,9 +112,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ISROTATIONENABLED)
 #endif
 }
 
-/*
-void setRotationEnabled(bool enable)
-*/
+// void setRotationEnabled(bool enable)
 HB_FUNC_STATIC(Q3DINPUTHANDLER_SETROTATIONENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -142,9 +134,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_SETROTATIONENABLED)
 #endif
 }
 
-/*
-bool isZoomEnabled() const
-*/
+// bool isZoomEnabled() const
 HB_FUNC_STATIC(Q3DINPUTHANDLER_ISZOOMENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -164,9 +154,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ISZOOMENABLED)
 #endif
 }
 
-/*
-void setZoomEnabled(bool enable)
-*/
+// void setZoomEnabled(bool enable)
 HB_FUNC_STATIC(Q3DINPUTHANDLER_SETZOOMENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -188,9 +176,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_SETZOOMENABLED)
 #endif
 }
 
-/*
-bool isSelectionEnabled() const
-*/
+// bool isSelectionEnabled() const
 HB_FUNC_STATIC(Q3DINPUTHANDLER_ISSELECTIONENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -210,9 +196,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ISSELECTIONENABLED)
 #endif
 }
 
-/*
-void setSelectionEnabled(bool enable)
-*/
+// void setSelectionEnabled(bool enable)
 HB_FUNC_STATIC(Q3DINPUTHANDLER_SETSELECTIONENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -234,9 +218,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_SETSELECTIONENABLED)
 #endif
 }
 
-/*
-bool isZoomAtTargetEnabled() const
-*/
+// bool isZoomAtTargetEnabled() const
 HB_FUNC_STATIC(Q3DINPUTHANDLER_ISZOOMATTARGETENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -256,9 +238,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ISZOOMATTARGETENABLED)
 #endif
 }
 
-/*
-void setZoomAtTargetEnabled(bool enable)
-*/
+// void setZoomAtTargetEnabled(bool enable)
 HB_FUNC_STATIC(Q3DINPUTHANDLER_SETZOOMATTARGETENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -280,25 +260,15 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_SETZOOMATTARGETENABLED)
 #endif
 }
 
-/*
-virtual void mousePressEvent(QMouseEvent *event, const QPoint &mousePos)
-*/
+// virtual void mousePressEvent(QMouseEvent *event, const QPoint &mousePos)
 
-/*
-virtual void mouseReleaseEvent(QMouseEvent *event, const QPoint &mousePos)
-*/
+// virtual void mouseReleaseEvent(QMouseEvent *event, const QPoint &mousePos)
 
-/*
-virtual void mouseMoveEvent(QMouseEvent *event, const QPoint &mousePos)
-*/
+// virtual void mouseMoveEvent(QMouseEvent *event, const QPoint &mousePos)
 
-/*
-virtual void wheelEvent(QWheelEvent *event)
-*/
+// virtual void wheelEvent(QWheelEvent *event)
 
-/*
-void rotationEnabledChanged(bool enable)
-*/
+// void rotationEnabledChanged(bool enable)
 HB_FUNC_STATIC(Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -343,9 +313,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED)
 #endif
 }
 
-/*
-void selectionEnabledChanged(bool enable)
-*/
+// void selectionEnabledChanged(bool enable)
 HB_FUNC_STATIC(Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -390,9 +358,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED)
 #endif
 }
 
-/*
-void zoomAtTargetEnabledChanged(bool enable)
-*/
+// void zoomAtTargetEnabledChanged(bool enable)
 HB_FUNC_STATIC(Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -437,9 +403,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED)
 #endif
 }
 
-/*
-void zoomEnabledChanged(bool enable)
-*/
+// void zoomEnabledChanged(bool enable)
 HB_FUNC_STATIC(Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

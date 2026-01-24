@@ -58,9 +58,7 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-Q3DLight(QObject * parent = nullptr)
-*/
+// Q3DLight(QObject *parent = nullptr)
 HB_FUNC_STATIC(Q3DLIGHT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -73,9 +71,7 @@ HB_FUNC_STATIC(Q3DLIGHT_NEW)
 #endif
 }
 
-/*
-virtual ~Q3DLight()
-*/
+// virtual ~Q3DLight()
 HB_FUNC_STATIC(Q3DLIGHT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -87,9 +83,7 @@ HB_FUNC_STATIC(Q3DLIGHT_DELETE)
 #endif
 }
 
-/*
-void setAutoPosition(bool enabled)
-*/
+// void setAutoPosition(bool enabled)
 HB_FUNC_STATIC(Q3DLIGHT_SETAUTOPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -111,9 +105,7 @@ HB_FUNC_STATIC(Q3DLIGHT_SETAUTOPOSITION)
 #endif
 }
 
-/*
-bool isAutoPosition()
-*/
+// bool isAutoPosition()
 HB_FUNC_STATIC(Q3DLIGHT_ISAUTOPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -133,9 +125,7 @@ HB_FUNC_STATIC(Q3DLIGHT_ISAUTOPOSITION)
 #endif
 }
 
-/*
-void autoPositionChanged(bool autoPosition)
-*/
+// void autoPositionChanged(bool autoPosition)
 HB_FUNC_STATIC(Q3DLIGHT_ONAUTOPOSITIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))

@@ -73,9 +73,7 @@ using namespace QtDataVisualization;
 
 #include <QtDataVisualization/QScatter3DSeries>
 
-/*
-QScatterDataProxy(QObject * parent = nullptr)
-*/
+// QScatterDataProxy(QObject *parent = nullptr)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -88,9 +86,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_NEW)
 #endif
 }
 
-/*
-virtual ~QScatterDataProxy()
-*/
+// virtual ~QScatterDataProxy()
 HB_FUNC_STATIC(QSCATTERDATAPROXY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -102,9 +98,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_DELETE)
 #endif
 }
 
-/*
-int itemCount() const
-*/
+// int itemCount() const
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ITEMCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -124,9 +118,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ITEMCOUNT)
 #endif
 }
 
-/*
-QScatter3DSeries * series() const
-*/
+// QScatter3DSeries *series() const
 HB_FUNC_STATIC(QSCATTERDATAPROXY_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -147,12 +139,8 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_SERIES)
 #endif
 }
 
-/*
-const QScatterDataArray *array() const
-*/
-/*
-const QScatterDataItem * itemAt(int index) const
-*/
+// const QScatterDataArray *array() const
+// const QScatterDataItem *itemAt(int index) const
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ITEMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -173,12 +161,8 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ITEMAT)
 #endif
 }
 
-/*
-void resetArray(QScatterDataArray *newArray)
-*/
-/*
-void setItem(int index, const QScatterDataItem &item)
-*/
+// void resetArray(QScatterDataArray *newArray)
+// void setItem(int index, const QScatterDataItem &item)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_SETITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -200,12 +184,8 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_SETITEM)
 #endif
 }
 
-/*
-void setItems(int index, const QScatterDataArray &items)
-*/
-/*
-int addItem(const QScatterDataItem &item)
-*/
+// void setItems(int index, const QScatterDataArray &items)
+// int addItem(const QScatterDataItem &item)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ADDITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -225,12 +205,8 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ADDITEM)
 #endif
 }
 
-/*
-int addItems(const QScatterDataArray &items)
-*/
-/*
-void insertItem(int index, const QScatterDataItem &item)
-*/
+// int addItems(const QScatterDataArray &items)
+// void insertItem(int index, const QScatterDataItem &item)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_INSERTITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -252,12 +228,8 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_INSERTITEM)
 #endif
 }
 
-/*
-void insertItems(int index, const QScatterDataArray &items)
-*/
-/*
-void removeItems(int index, int removeCount)
-*/
+// void insertItems(int index, const QScatterDataArray &items)
+// void removeItems(int index, int removeCount)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_REMOVEITEMS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -279,9 +251,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_REMOVEITEMS)
 #endif
 }
 
-/*
-void arrayReset()
-*/
+// void arrayReset()
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ONARRAYRESET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -323,9 +293,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONARRAYRESET)
 #endif
 }
 
-/*
-void itemCountChanged(int count)
-*/
+// void itemCountChanged(int count)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -370,9 +338,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMCOUNTCHANGED)
 #endif
 }
 
-/*
-void itemsAdded(int startIndex, int count)
-*/
+// void itemsAdded(int startIndex, int count)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSADDED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -419,9 +385,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSADDED)
 #endif
 }
 
-/*
-void itemsChanged(int startIndex, int count)
-*/
+// void itemsChanged(int startIndex, int count)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -468,9 +432,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSCHANGED)
 #endif
 }
 
-/*
-void itemsInserted(int startIndex, int count)
-*/
+// void itemsInserted(int startIndex, int count)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSINSERTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -517,9 +479,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSINSERTED)
 #endif
 }
 
-/*
-void itemsRemoved(int startIndex, int count)
-*/
+// void itemsRemoved(int startIndex, int count)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSREMOVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -566,9 +526,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ONITEMSREMOVED)
 #endif
 }
 
-/*
-void seriesChanged(QScatter3DSeries * series)
-*/
+// void seriesChanged(QScatter3DSeries *series)
 HB_FUNC_STATIC(QSCATTERDATAPROXY_ONSERIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

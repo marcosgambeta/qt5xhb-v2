@@ -137,9 +137,7 @@ using namespace QtDataVisualization;
 #include <QtDataVisualization/QAbstract3DAxis>
 #include <QtDataVisualization/QCustom3DItem>
 
-/*
-virtual ~QAbstract3DGraph()
-*/
+// virtual ~QAbstract3DGraph()
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -151,9 +149,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_DELETE)
 #endif
 }
 
-/*
-QAbstract3DInputHandler * activeInputHandler() const
-*/
+// QAbstract3DInputHandler *activeInputHandler() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ACTIVEINPUTHANDLER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -174,9 +170,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ACTIVEINPUTHANDLER)
 #endif
 }
 
-/*
-void setActiveInputHandler(QAbstract3DInputHandler * inputHandler)
-*/
+// void setActiveInputHandler(QAbstract3DInputHandler *inputHandler)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETACTIVEINPUTHANDLER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -198,9 +192,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETACTIVEINPUTHANDLER)
 #endif
 }
 
-/*
-Q3DTheme * activeTheme() const
-*/
+// Q3DTheme *activeTheme() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ACTIVETHEME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -221,9 +213,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ACTIVETHEME)
 #endif
 }
 
-/*
-void setActiveTheme(Q3DTheme * theme)
-*/
+// void setActiveTheme(Q3DTheme *theme)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETACTIVETHEME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -245,9 +235,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETACTIVETHEME)
 #endif
 }
 
-/*
-QAbstract3DGraph::SelectionFlags selectionMode() const
-*/
+// QAbstract3DGraph::SelectionFlags selectionMode() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTIONMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -267,9 +255,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTIONMODE)
 #endif
 }
 
-/*
-void setSelectionMode(QAbstract3DGraph::SelectionFlags mode)
-*/
+// void setSelectionMode(QAbstract3DGraph::SelectionFlags mode)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETSELECTIONMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -291,9 +277,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETSELECTIONMODE)
 #endif
 }
 
-/*
-QAbstract3DGraph::ShadowQuality shadowQuality() const
-*/
+// QAbstract3DGraph::ShadowQuality shadowQuality() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SHADOWQUALITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -313,9 +297,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SHADOWQUALITY)
 #endif
 }
 
-/*
-void setShadowQuality(QAbstract3DGraph::ShadowQuality quality)
-*/
+// void setShadowQuality(QAbstract3DGraph::ShadowQuality quality)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETSHADOWQUALITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -337,9 +319,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETSHADOWQUALITY)
 #endif
 }
 
-/*
-Q3DScene * scene() const
-*/
+// Q3DScene *scene() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SCENE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -360,9 +340,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SCENE)
 #endif
 }
 
-/*
-bool measureFps() const
-*/
+// bool measureFps() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_MEASUREFPS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -382,9 +360,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_MEASUREFPS)
 #endif
 }
 
-/*
-void setMeasureFps(bool enable)
-*/
+// void setMeasureFps(bool enable)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETMEASUREFPS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -406,9 +382,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETMEASUREFPS)
 #endif
 }
 
-/*
-qreal currentFps() const
-*/
+// qreal currentFps() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_CURRENTFPS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -428,9 +402,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_CURRENTFPS)
 #endif
 }
 
-/*
-bool isOrthoProjection() const
-*/
+// bool isOrthoProjection() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ISORTHOPROJECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -450,9 +422,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ISORTHOPROJECTION)
 #endif
 }
 
-/*
-void setOrthoProjection(bool enable)
-*/
+// void setOrthoProjection(bool enable)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETORTHOPROJECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -474,9 +444,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETORTHOPROJECTION)
 #endif
 }
 
-/*
-QAbstract3DGraph::ElementType selectedElement() const
-*/
+// QAbstract3DGraph::ElementType selectedElement() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDELEMENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -496,9 +464,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDELEMENT)
 #endif
 }
 
-/*
-qreal aspectRatio() const
-*/
+// qreal aspectRatio() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ASPECTRATIO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -518,9 +484,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ASPECTRATIO)
 #endif
 }
 
-/*
-void setAspectRatio(qreal ratio)
-*/
+// void setAspectRatio(qreal ratio)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETASPECTRATIO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -542,9 +506,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETASPECTRATIO)
 #endif
 }
 
-/*
-QAbstract3DGraph::OptimizationHints optimizationHints() const
-*/
+// QAbstract3DGraph::OptimizationHints optimizationHints() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_OPTIMIZATIONHINTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -564,9 +526,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_OPTIMIZATIONHINTS)
 #endif
 }
 
-/*
-void setOptimizationHints(QAbstract3DGraph::OptimizationHints hints)
-*/
+// void setOptimizationHints(QAbstract3DGraph::OptimizationHints hints)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETOPTIMIZATIONHINTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -588,9 +548,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETOPTIMIZATIONHINTS)
 #endif
 }
 
-/*
-bool isPolar() const
-*/
+// bool isPolar() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ISPOLAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -610,9 +568,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ISPOLAR)
 #endif
 }
 
-/*
-void setPolar(bool enable)
-*/
+// void setPolar(bool enable)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETPOLAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -634,9 +590,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETPOLAR)
 #endif
 }
 
-/*
-float radialLabelOffset() const
-*/
+// float radialLabelOffset() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_RADIALLABELOFFSET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -656,9 +610,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RADIALLABELOFFSET)
 #endif
 }
 
-/*
-void setRadialLabelOffset(float offset)
-*/
+// void setRadialLabelOffset(float offset)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETRADIALLABELOFFSET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -680,9 +632,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETRADIALLABELOFFSET)
 #endif
 }
 
-/*
-qreal horizontalAspectRatio() const
-*/
+// qreal horizontalAspectRatio() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_HORIZONTALASPECTRATIO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -702,9 +652,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_HORIZONTALASPECTRATIO)
 #endif
 }
 
-/*
-void setHorizontalAspectRatio(qreal ratio)
-*/
+// void setHorizontalAspectRatio(qreal ratio)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETHORIZONTALASPECTRATIO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -726,9 +674,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETHORIZONTALASPECTRATIO)
 #endif
 }
 
-/*
-bool isReflection() const
-*/
+// bool isReflection() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ISREFLECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -748,9 +694,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ISREFLECTION)
 #endif
 }
 
-/*
-void setReflection(bool enable)
-*/
+// void setReflection(bool enable)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETREFLECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -772,9 +716,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETREFLECTION)
 #endif
 }
 
-/*
-qreal reflectivity() const
-*/
+// qreal reflectivity() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_REFLECTIVITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -794,9 +736,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_REFLECTIVITY)
 #endif
 }
 
-/*
-void setReflectivity(qreal reflectivity)
-*/
+// void setReflectivity(qreal reflectivity)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETREFLECTIVITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -818,9 +758,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETREFLECTIVITY)
 #endif
 }
 
-/*
-QLocale locale() const
-*/
+// QLocale locale() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_LOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -840,9 +778,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_LOCALE)
 #endif
 }
 
-/*
-void setLocale(const QLocale &locale)
-*/
+// void setLocale(const QLocale &locale)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETLOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -864,9 +800,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETLOCALE)
 #endif
 }
 
-/*
-QVector3D queriedGraphPosition() const
-*/
+// QVector3D queriedGraphPosition() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_QUERIEDGRAPHPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -886,9 +820,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_QUERIEDGRAPHPOSITION)
 #endif
 }
 
-/*
-qreal margin() const
-*/
+// qreal margin() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_MARGIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -908,9 +840,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_MARGIN)
 #endif
 }
 
-/*
-void setMargin(qreal margin)
-*/
+// void setMargin(qreal margin)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETMARGIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -932,9 +862,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETMARGIN)
 #endif
 }
 
-/*
-void addInputHandler(QAbstract3DInputHandler * inputHandler)
-*/
+// void addInputHandler(QAbstract3DInputHandler *inputHandler)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ADDINPUTHANDLER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -956,9 +884,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ADDINPUTHANDLER)
 #endif
 }
 
-/*
-void releaseInputHandler(QAbstract3DInputHandler * inputHandler)
-*/
+// void releaseInputHandler(QAbstract3DInputHandler *inputHandler)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_RELEASEINPUTHANDLER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -980,9 +906,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RELEASEINPUTHANDLER)
 #endif
 }
 
-/*
-QList<QAbstract3DInputHandler*> inputHandlers() const
-*/
+// QList<QAbstract3DInputHandler*> inputHandlers() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_INPUTHANDLERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1021,9 +945,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_INPUTHANDLERS)
 #endif
 }
 
-/*
-void addTheme(Q3DTheme * theme)
-*/
+// void addTheme(Q3DTheme *theme)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ADDTHEME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1045,9 +967,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ADDTHEME)
 #endif
 }
 
-/*
-void releaseTheme(Q3DTheme * theme)
-*/
+// void releaseTheme(Q3DTheme *theme)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_RELEASETHEME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1069,9 +989,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RELEASETHEME)
 #endif
 }
 
-/*
-QList<Q3DTheme*> themes() const
-*/
+// QList<Q3DTheme*> themes() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_THEMES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1110,9 +1028,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_THEMES)
 #endif
 }
 
-/*
-virtual bool shadowsSupported() const
-*/
+// virtual bool shadowsSupported() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SHADOWSSUPPORTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1132,9 +1048,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SHADOWSSUPPORTED)
 #endif
 }
 
-/*
-void clearSelection()
-*/
+// void clearSelection()
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_CLEARSELECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1156,9 +1070,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_CLEARSELECTION)
 #endif
 }
 
-/*
-int addCustomItem(QCustom3DItem * item)
-*/
+// int addCustomItem(QCustom3DItem *item)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ADDCUSTOMITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1178,9 +1090,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ADDCUSTOMITEM)
 #endif
 }
 
-/*
-void removeCustomItems()
-*/
+// void removeCustomItems()
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEMS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1202,9 +1112,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEMS)
 #endif
 }
 
-/*
-void removeCustomItem(QCustom3DItem * item)
-*/
+// void removeCustomItem(QCustom3DItem *item)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1226,9 +1134,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEM)
 #endif
 }
 
-/*
-void removeCustomItemAt(const QVector3D &position)
-*/
+// void removeCustomItemAt(const QVector3D &position)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1250,9 +1156,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEMAT)
 #endif
 }
 
-/*
-void releaseCustomItem(QCustom3DItem * item)
-*/
+// void releaseCustomItem(QCustom3DItem *item)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_RELEASECUSTOMITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1274,9 +1178,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RELEASECUSTOMITEM)
 #endif
 }
 
-/*
-QList<QCustom3DItem*> customItems() const
-*/
+// QList<QCustom3DItem*> customItems() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_CUSTOMITEMS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1315,9 +1217,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_CUSTOMITEMS)
 #endif
 }
 
-/*
-QAbstract3DAxis * selectedAxis() const
-*/
+// QAbstract3DAxis *selectedAxis() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1338,9 +1238,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDAXIS)
 #endif
 }
 
-/*
-int selectedLabelIndex() const
-*/
+// int selectedLabelIndex() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDLABELINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1360,9 +1258,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDLABELINDEX)
 #endif
 }
 
-/*
-int selectedCustomItemIndex() const
-*/
+// int selectedCustomItemIndex() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDCUSTOMITEMINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1382,9 +1278,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDCUSTOMITEMINDEX)
 #endif
 }
 
-/*
-QCustom3DItem * selectedCustomItem() const
-*/
+// QCustom3DItem *selectedCustomItem() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDCUSTOMITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1405,9 +1299,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDCUSTOMITEM)
 #endif
 }
 
-/*
-QImage renderToImage(int msaaSamples = 0, const QSize &imageSize = QSize())
-*/
+// QImage renderToImage(int msaaSamples = 0, const QSize &imageSize = QSize())
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_RENDERTOIMAGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1427,9 +1319,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RENDERTOIMAGE)
 #endif
 }
 
-/*
-bool hasContext() const
-*/
+// bool hasContext() const
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_HASCONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1449,9 +1339,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_HASCONTEXT)
 #endif
 }
 
-/*
-void activeInputHandlerChanged(QAbstract3DInputHandler * inputHandler)
-*/
+// void activeInputHandlerChanged(QAbstract3DInputHandler *inputHandler)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1497,9 +1385,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED)
 #endif
 }
 
-/*
-void activeThemeChanged(Q3DTheme * theme)
-*/
+// void activeThemeChanged(Q3DTheme *theme)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1544,9 +1430,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED)
 #endif
 }
 
-/*
-void aspectRatioChanged(qreal ratio)
-*/
+// void aspectRatioChanged(qreal ratio)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1591,9 +1475,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED)
 #endif
 }
 
-/*
-void currentFpsChanged(qreal fps)
-*/
+// void currentFpsChanged(qreal fps)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1638,9 +1520,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED)
 #endif
 }
 
-/*
-void horizontalAspectRatioChanged(qreal ratio)
-*/
+// void horizontalAspectRatioChanged(qreal ratio)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1685,9 +1565,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED)
 #endif
 }
 
-/*
-void localeChanged(const QLocale &locale)
-*/
+// void localeChanged(const QLocale &locale)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONLOCALECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1732,9 +1610,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONLOCALECHANGED)
 #endif
 }
 
-/*
-void marginChanged(qreal margin)
-*/
+// void marginChanged(qreal margin)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONMARGINCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1779,9 +1655,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONMARGINCHANGED)
 #endif
 }
 
-/*
-void measureFpsChanged(bool enabled)
-*/
+// void measureFpsChanged(bool enabled)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1826,9 +1700,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED)
 #endif
 }
 
-/*
-void optimizationHintsChanged(QAbstract3DGraph::OptimizationHints hints)
-*/
+// void optimizationHintsChanged(QAbstract3DGraph::OptimizationHints hints)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1875,9 +1747,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED)
 #endif
 }
 
-/*
-void orthoProjectionChanged(bool enabled)
-*/
+// void orthoProjectionChanged(bool enabled)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1922,9 +1792,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED)
 #endif
 }
 
-/*
-void polarChanged(bool enabled)
-*/
+// void polarChanged(bool enabled)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONPOLARCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1969,9 +1837,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONPOLARCHANGED)
 #endif
 }
 
-/*
-void queriedGraphPositionChanged(const QVector3D &data)
-*/
+// void queriedGraphPositionChanged(const QVector3D &data)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -2016,9 +1882,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED)
 #endif
 }
 
-/*
-void radialLabelOffsetChanged(float offset)
-*/
+// void radialLabelOffsetChanged(float offset)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -2063,9 +1927,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED)
 #endif
 }
 
-/*
-void reflectionChanged(bool enabled)
-*/
+// void reflectionChanged(bool enabled)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONREFLECTIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -2110,9 +1972,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONREFLECTIONCHANGED)
 #endif
 }
 
-/*
-void reflectivityChanged(qreal reflectivity)
-*/
+// void reflectivityChanged(qreal reflectivity)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -2157,9 +2017,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED)
 #endif
 }
 
-/*
-void selectedElementChanged(QAbstract3DGraph::ElementType type)
-*/
+// void selectedElementChanged(QAbstract3DGraph::ElementType type)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -2205,9 +2063,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED)
 #endif
 }
 
-/*
-void selectionModeChanged(QAbstract3DGraph::SelectionFlags mode)
-*/
+// void selectionModeChanged(QAbstract3DGraph::SelectionFlags mode)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -2253,9 +2109,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED)
 #endif
 }
 
-/*
-void shadowQualityChanged(QAbstract3DGraph::ShadowQuality quality)
-*/
+// void shadowQualityChanged(QAbstract3DGraph::ShadowQuality quality)
 HB_FUNC_STATIC(QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

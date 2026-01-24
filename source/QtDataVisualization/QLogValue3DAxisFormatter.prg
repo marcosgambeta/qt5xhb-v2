@@ -64,9 +64,7 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-QLogValue3DAxisFormatter(QObject * parent = nullptr)
-*/
+// QLogValue3DAxisFormatter(QObject *parent = nullptr)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -79,9 +77,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_NEW)
 #endif
 }
 
-/*
-virtual ~QLogValue3DAxisFormatter()
-*/
+// virtual ~QLogValue3DAxisFormatter()
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -93,9 +89,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_DELETE)
 #endif
 }
 
-/*
-qreal base() const
-*/
+// qreal base() const
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_BASE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -115,9 +109,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_BASE)
 #endif
 }
 
-/*
-void setBase(qreal base)
-*/
+// void setBase(qreal base)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETBASE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -139,9 +131,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETBASE)
 #endif
 }
 
-/*
-bool autoSubGrid() const
-*/
+// bool autoSubGrid() const
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -161,9 +151,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID)
 #endif
 }
 
-/*
-void setAutoSubGrid(bool enabled)
-*/
+// void setAutoSubGrid(bool enabled)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -185,9 +173,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID)
 #endif
 }
 
-/*
-bool showEdgeLabels() const
-*/
+// bool showEdgeLabels() const
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -207,9 +193,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS)
 #endif
 }
 
-/*
-void setShowEdgeLabels(bool enabled)
-*/
+// void setShowEdgeLabels(bool enabled)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -231,9 +215,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS)
 #endif
 }
 
-/*
-void autoSubGridChanged(bool enabled)
-*/
+// void autoSubGridChanged(bool enabled)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -278,9 +260,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED)
 #endif
 }
 
-/*
-void baseChanged(qreal base)
-*/
+// void baseChanged(qreal base)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_ONBASECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -325,9 +305,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_ONBASECHANGED)
 #endif
 }
 
-/*
-void showEdgeLabelsChanged(bool enabled)
-*/
+// void showEdgeLabelsChanged(bool enabled)
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

@@ -58,9 +58,7 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-QCategory3DAxis(QObject * parent = nullptr)
-*/
+// QCategory3DAxis(QObject *parent = nullptr)
 HB_FUNC_STATIC(QCATEGORY3DAXIS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -73,9 +71,7 @@ HB_FUNC_STATIC(QCATEGORY3DAXIS_NEW)
 #endif
 }
 
-/*
-virtual ~QCategory3DAxis()
-*/
+// virtual ~QCategory3DAxis()
 HB_FUNC_STATIC(QCATEGORY3DAXIS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -87,9 +83,7 @@ HB_FUNC_STATIC(QCATEGORY3DAXIS_DELETE)
 #endif
 }
 
-/*
-QStringList labels() const
-*/
+// QStringList labels() const
 HB_FUNC_STATIC(QCATEGORY3DAXIS_LABELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -109,9 +103,7 @@ HB_FUNC_STATIC(QCATEGORY3DAXIS_LABELS)
 #endif
 }
 
-/*
-void setLabels(const QStringList &labels)
-*/
+// void setLabels(const QStringList &labels)
 HB_FUNC_STATIC(QCATEGORY3DAXIS_SETLABELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -133,9 +125,7 @@ HB_FUNC_STATIC(QCATEGORY3DAXIS_SETLABELS)
 #endif
 }
 
-/*
-void labelsChanged()
-*/
+// void labelsChanged()
 HB_FUNC_STATIC(QCATEGORY3DAXIS_ONLABELSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

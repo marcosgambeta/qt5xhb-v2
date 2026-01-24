@@ -74,9 +74,7 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-Q3DScatter(const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr)
-*/
+// Q3DScatter(const QSurfaceFormat *format = nullptr, QWindow *parent = nullptr)
 HB_FUNC_STATIC(Q3DSCATTER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(Q3DSCATTER_NEW)
 #endif
 }
 
-/*
-virtual ~Q3DScatter()
-*/
+// virtual ~Q3DScatter()
 HB_FUNC_STATIC(Q3DSCATTER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -104,9 +100,7 @@ HB_FUNC_STATIC(Q3DSCATTER_DELETE)
 #endif
 }
 
-/*
-QValue3DAxis * axisX() const
-*/
+// QValue3DAxis *axisX() const
 HB_FUNC_STATIC(Q3DSCATTER_AXISX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -127,9 +121,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXISX)
 #endif
 }
 
-/*
-void setAxisX(QValue3DAxis * axis)
-*/
+// void setAxisX(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DSCATTER_SETAXISX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -151,9 +143,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SETAXISX)
 #endif
 }
 
-/*
-QValue3DAxis * axisY() const
-*/
+// QValue3DAxis *axisY() const
 HB_FUNC_STATIC(Q3DSCATTER_AXISY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -174,9 +164,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXISY)
 #endif
 }
 
-/*
-void setAxisY(QValue3DAxis * axis)
-*/
+// void setAxisY(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DSCATTER_SETAXISY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -198,9 +186,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SETAXISY)
 #endif
 }
 
-/*
-QValue3DAxis * axisZ() const
-*/
+// QValue3DAxis *axisZ() const
 HB_FUNC_STATIC(Q3DSCATTER_AXISZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -221,9 +207,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXISZ)
 #endif
 }
 
-/*
-void setAxisZ(QValue3DAxis * axis)
-*/
+// void setAxisZ(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DSCATTER_SETAXISZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -245,9 +229,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SETAXISZ)
 #endif
 }
 
-/*
-QScatter3DSeries * selectedSeries() const
-*/
+// QScatter3DSeries *selectedSeries() const
 HB_FUNC_STATIC(Q3DSCATTER_SELECTEDSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -268,9 +250,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SELECTEDSERIES)
 #endif
 }
 
-/*
-void addSeries(QScatter3DSeries * series)
-*/
+// void addSeries(QScatter3DSeries *series)
 HB_FUNC_STATIC(Q3DSCATTER_ADDSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -292,9 +272,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ADDSERIES)
 #endif
 }
 
-/*
-void removeSeries(QScatter3DSeries * series)
-*/
+// void removeSeries(QScatter3DSeries *series)
 HB_FUNC_STATIC(Q3DSCATTER_REMOVESERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -316,9 +294,7 @@ HB_FUNC_STATIC(Q3DSCATTER_REMOVESERIES)
 #endif
 }
 
-/*
-QList<QScatter3DSeries*> seriesList() const
-*/
+// QList<QScatter3DSeries*> seriesList() const
 HB_FUNC_STATIC(Q3DSCATTER_SERIESLIST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -357,9 +333,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SERIESLIST)
 #endif
 }
 
-/*
-void addAxis(QValue3DAxis * axis)
-*/
+// void addAxis(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DSCATTER_ADDAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -381,9 +355,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ADDAXIS)
 #endif
 }
 
-/*
-void releaseAxis(QValue3DAxis * axis)
-*/
+// void releaseAxis(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DSCATTER_RELEASEAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -405,9 +377,7 @@ HB_FUNC_STATIC(Q3DSCATTER_RELEASEAXIS)
 #endif
 }
 
-/*
-QList<QValue3DAxis*> axes() const
-*/
+// QList<QValue3DAxis*> axes() const
 HB_FUNC_STATIC(Q3DSCATTER_AXES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -446,9 +416,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXES)
 #endif
 }
 
-/*
-void axisXChanged(QValue3DAxis * axis)
-*/
+// void axisXChanged(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DSCATTER_ONAXISXCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -493,9 +461,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ONAXISXCHANGED)
 #endif
 }
 
-/*
-void axisYChanged(QValue3DAxis * axis)
-*/
+// void axisYChanged(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DSCATTER_ONAXISYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -540,9 +506,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ONAXISYCHANGED)
 #endif
 }
 
-/*
-void axisZChanged(QValue3DAxis * axis)
-*/
+// void axisZChanged(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DSCATTER_ONAXISZCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -587,9 +551,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ONAXISZCHANGED)
 #endif
 }
 
-/*
-void selectedSeriesChanged(QScatter3DSeries * series)
-*/
+// void selectedSeriesChanged(QScatter3DSeries *series)
 HB_FUNC_STATIC(Q3DSCATTER_ONSELECTEDSERIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

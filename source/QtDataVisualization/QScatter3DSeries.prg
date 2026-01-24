@@ -69,17 +69,13 @@ using namespace QtDataVisualization;
 HB_FUNC_STATIC(QSCATTER3DSERIES_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QScatter3DSeries(QObject * parent = nullptr)
-    */
+    // QScatter3DSeries(QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QScatter3DSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(1, 2) && ISQSCATTERDATAPROXY(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QScatter3DSeries(QScatterDataProxy * dataProxy, QObject * parent = nullptr)
-    */
+    // QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QScatter3DSeries(PQSCATTERDATAPROXY(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -89,9 +85,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_NEW)
   }
 }
 
-/*
-virtual ~QScatter3DSeries()
-*/
+// virtual ~QScatter3DSeries()
 HB_FUNC_STATIC(QSCATTER3DSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -103,9 +97,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_DELETE)
 #endif
 }
 
-/*
-QScatterDataProxy * dataProxy() const
-*/
+// QScatterDataProxy *dataProxy() const
 HB_FUNC_STATIC(QSCATTER3DSERIES_DATAPROXY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -126,9 +118,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_DATAPROXY)
 #endif
 }
 
-/*
-void setDataProxy(QScatterDataProxy * proxy)
-*/
+// void setDataProxy(QScatterDataProxy *proxy)
 HB_FUNC_STATIC(QSCATTER3DSERIES_SETDATAPROXY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -150,9 +140,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETDATAPROXY)
 #endif
 }
 
-/*
-int selectedItem() const
-*/
+// int selectedItem() const
 HB_FUNC_STATIC(QSCATTER3DSERIES_SELECTEDITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -172,9 +160,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SELECTEDITEM)
 #endif
 }
 
-/*
-void setSelectedItem(int index)
-*/
+// void setSelectedItem(int index)
 HB_FUNC_STATIC(QSCATTER3DSERIES_SETSELECTEDITEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -196,9 +182,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETSELECTEDITEM)
 #endif
 }
 
-/*
-float itemSize() const
-*/
+// float itemSize() const
 HB_FUNC_STATIC(QSCATTER3DSERIES_ITEMSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -218,9 +202,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ITEMSIZE)
 #endif
 }
 
-/*
-void setItemSize(float size)
-*/
+// void setItemSize(float size)
 HB_FUNC_STATIC(QSCATTER3DSERIES_SETITEMSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -242,9 +224,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETITEMSIZE)
 #endif
 }
 
-/*
-static int invalidSelectionIndex()
-*/
+// static int invalidSelectionIndex()
 HB_FUNC_STATIC(QSCATTER3DSERIES_INVALIDSELECTIONINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -260,9 +240,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_INVALIDSELECTIONINDEX)
 #endif
 }
 
-/*
-void dataProxyChanged(QScatterDataProxy * proxy)
-*/
+// void dataProxyChanged(QScatterDataProxy *proxy)
 HB_FUNC_STATIC(QSCATTER3DSERIES_ONDATAPROXYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -307,9 +285,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ONDATAPROXYCHANGED)
 #endif
 }
 
-/*
-void itemSizeChanged(float size)
-*/
+// void itemSizeChanged(float size)
 HB_FUNC_STATIC(QSCATTER3DSERIES_ONITEMSIZECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -354,9 +330,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ONITEMSIZECHANGED)
 #endif
 }
 
-/*
-void selectedItemChanged(int index)
-*/
+// void selectedItemChanged(int index)
 HB_FUNC_STATIC(QSCATTER3DSERIES_ONSELECTEDITEMCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

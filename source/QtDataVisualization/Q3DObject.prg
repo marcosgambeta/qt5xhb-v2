@@ -64,9 +64,7 @@ using namespace QtDataVisualization;
 
 #include <QtDataVisualization/Q3DScene>
 
-/*
-Q3DObject(QObject * parent = nullptr)
-*/
+// Q3DObject(QObject *parent = nullptr)
 HB_FUNC_STATIC(Q3DOBJECT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -79,9 +77,7 @@ HB_FUNC_STATIC(Q3DOBJECT_NEW)
 #endif
 }
 
-/*
-virtual ~Q3DObject()
-*/
+// virtual ~Q3DObject()
 HB_FUNC_STATIC(Q3DOBJECT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -93,9 +89,7 @@ HB_FUNC_STATIC(Q3DOBJECT_DELETE)
 #endif
 }
 
-/*
-Q3DScene * parentScene()
-*/
+// Q3DScene *parentScene()
 HB_FUNC_STATIC(Q3DOBJECT_PARENTSCENE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -116,9 +110,7 @@ HB_FUNC_STATIC(Q3DOBJECT_PARENTSCENE)
 #endif
 }
 
-/*
-QVector3D position() const
-*/
+// QVector3D position() const
 HB_FUNC_STATIC(Q3DOBJECT_POSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -138,9 +130,7 @@ HB_FUNC_STATIC(Q3DOBJECT_POSITION)
 #endif
 }
 
-/*
-void setPosition(const QVector3D &position)
-*/
+// void setPosition(const QVector3D &position)
 HB_FUNC_STATIC(Q3DOBJECT_SETPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -162,9 +152,7 @@ HB_FUNC_STATIC(Q3DOBJECT_SETPOSITION)
 #endif
 }
 
-/*
-virtual void copyValuesFrom(const Q3DObject &source)
-*/
+// virtual void copyValuesFrom(const Q3DObject &source)
 HB_FUNC_STATIC(Q3DOBJECT_COPYVALUESFROM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -186,9 +174,7 @@ HB_FUNC_STATIC(Q3DOBJECT_COPYVALUESFROM)
 #endif
 }
 
-/*
-void positionChanged(const QVector3D &position)
-*/
+// void positionChanged(const QVector3D &position)
 HB_FUNC_STATIC(Q3DOBJECT_ONPOSITIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

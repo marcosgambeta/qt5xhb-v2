@@ -73,25 +73,19 @@ using namespace QtDataVisualization;
 HB_FUNC_STATIC(QSURFACEDATAITEM_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QSurfaceDataItem()
-    */
+    // QSurfaceDataItem()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QSurfaceDataItem();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
-    /*
-    QSurfaceDataItem(const QVector3D &position)
-    */
+    // QSurfaceDataItem(const QVector3D &position)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QSurfaceDataItem(*PQVECTOR3D(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQSURFACEDATAITEM(1)) {
-    /*
-    QSurfaceDataItem(const QSurfaceDataItem &other)
-    */
+    // QSurfaceDataItem(const QSurfaceDataItem &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QSurfaceDataItem(*PQSURFACEDATAITEM(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -101,9 +95,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_NEW)
   }
 }
 
-/*
-~QSurfaceDataItem()
-*/
+// ~QSurfaceDataItem()
 HB_FUNC_STATIC(QSURFACEDATAITEM_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -115,9 +107,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_DELETE)
 #endif
 }
 
-/*
-void setPosition(const QVector3D &pos)
-*/
+// void setPosition(const QVector3D &pos)
 HB_FUNC_STATIC(QSURFACEDATAITEM_SETPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -139,9 +129,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETPOSITION)
 #endif
 }
 
-/*
-QVector3D position() const
-*/
+// QVector3D position() const
 HB_FUNC_STATIC(QSURFACEDATAITEM_POSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -161,9 +149,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_POSITION)
 #endif
 }
 
-/*
-void setX(float value)
-*/
+// void setX(float value)
 HB_FUNC_STATIC(QSURFACEDATAITEM_SETX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -185,9 +171,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETX)
 #endif
 }
 
-/*
-void setY(float value)
-*/
+// void setY(float value)
 HB_FUNC_STATIC(QSURFACEDATAITEM_SETY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -209,9 +193,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETY)
 #endif
 }
 
-/*
-void setZ(float value)
-*/
+// void setZ(float value)
 HB_FUNC_STATIC(QSURFACEDATAITEM_SETZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -233,9 +215,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETZ)
 #endif
 }
 
-/*
-float x() const
-*/
+// float x() const
 HB_FUNC_STATIC(QSURFACEDATAITEM_X)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -255,9 +235,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_X)
 #endif
 }
 
-/*
-float y() const
-*/
+// float y() const
 HB_FUNC_STATIC(QSURFACEDATAITEM_Y)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -277,9 +255,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_Y)
 #endif
 }
 
-/*
-float z() const
-*/
+// float z() const
 HB_FUNC_STATIC(QSURFACEDATAITEM_Z)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

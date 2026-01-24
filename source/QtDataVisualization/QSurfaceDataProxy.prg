@@ -74,9 +74,7 @@ using namespace QtDataVisualization;
 
 #include <QtDataVisualization/QSurface3DSeries>
 
-/*
-QSurfaceDataProxy(QObject * parent = nullptr)
-*/
+// QSurfaceDataProxy(QObject *parent = nullptr)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -89,9 +87,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_NEW)
 #endif
 }
 
-/*
-virtual ~QSurfaceDataProxy()
-*/
+// virtual ~QSurfaceDataProxy()
 HB_FUNC_STATIC(QSURFACEDATAPROXY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -103,9 +99,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_DELETE)
 #endif
 }
 
-/*
-int rowCount() const
-*/
+// int rowCount() const
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -125,9 +119,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ROWCOUNT)
 #endif
 }
 
-/*
-int columnCount() const
-*/
+// int columnCount() const
 HB_FUNC_STATIC(QSURFACEDATAPROXY_COLUMNCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -147,9 +139,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_COLUMNCOUNT)
 #endif
 }
 
-/*
-QSurface3DSeries * series() const
-*/
+// QSurface3DSeries *series() const
 HB_FUNC_STATIC(QSURFACEDATAPROXY_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -173,9 +163,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_SERIES)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ITEMAT)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    const QSurfaceDataItem * itemAt(int rowIndex, int columnIndex) const
-    */
+    // const QSurfaceDataItem *itemAt(int rowIndex, int columnIndex) const
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -185,9 +173,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ITEMAT)
     }
 #endif
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
-    /*
-    const QSurfaceDataItem * itemAt(const QPoint &position) const
-    */
+    // const QSurfaceDataItem *itemAt(const QPoint &position) const
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -204,9 +190,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ITEMAT)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_SETITEM)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQSURFACEDATAITEM(3)) {
-    /*
-    void setItem(int rowIndex, int columnIndex, const QSurfaceDataItem &item)
-    */
+    // void setItem(int rowIndex, int columnIndex, const QSurfaceDataItem &item)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -217,9 +201,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_SETITEM)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(2) && ISQPOINT(1) && ISQSURFACEDATAITEM(2)) {
-    /*
-    void setItem(const QPoint &position, const QSurfaceDataItem &item)
-    */
+    // void setItem(const QPoint &position, const QSurfaceDataItem &item)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -234,9 +216,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_SETITEM)
   }
 }
 
-/*
-void removeRows(int rowIndex, int removeCount)
-*/
+// void removeRows(int rowIndex, int removeCount)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_REMOVEROWS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -258,9 +238,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_REMOVEROWS)
 #endif
 }
 
-/*
-void arrayReset()
-*/
+// void arrayReset()
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONARRAYRESET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -302,9 +280,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONARRAYRESET)
 #endif
 }
 
-/*
-void columnCountChanged(int count)
-*/
+// void columnCountChanged(int count)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -349,9 +325,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED)
 #endif
 }
 
-/*
-void itemChanged(int rowIndex, int columnIndex)
-*/
+// void itemChanged(int rowIndex, int columnIndex)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONITEMCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -398,9 +372,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONITEMCHANGED)
 #endif
 }
 
-/*
-void rowCountChanged(int count)
-*/
+// void rowCountChanged(int count)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -445,9 +417,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWCOUNTCHANGED)
 #endif
 }
 
-/*
-void rowsAdded(int startIndex, int count)
-*/
+// void rowsAdded(int startIndex, int count)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSADDED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -494,9 +464,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSADDED)
 #endif
 }
 
-/*
-void rowsChanged(int startIndex, int count)
-*/
+// void rowsChanged(int startIndex, int count)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -543,9 +511,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSCHANGED)
 #endif
 }
 
-/*
-void rowsInserted(int startIndex, int count)
-*/
+// void rowsInserted(int startIndex, int count)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSINSERTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -592,9 +558,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSINSERTED)
 #endif
 }
 
-/*
-void rowsRemoved(int startIndex, int count)
-*/
+// void rowsRemoved(int startIndex, int count)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSREMOVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -641,9 +605,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ONROWSREMOVED)
 #endif
 }
 
-/*
-void seriesChanged(QSurface3DSeries * series)
-*/
+// void seriesChanged(QSurface3DSeries *series)
 HB_FUNC_STATIC(QSURFACEDATAPROXY_ONSERIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

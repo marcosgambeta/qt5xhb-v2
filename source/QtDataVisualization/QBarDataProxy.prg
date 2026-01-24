@@ -78,9 +78,7 @@ using namespace QtDataVisualization;
 
 #include <QtDataVisualization/QBar3DSeries>
 
-/*
-QBarDataProxy(QObject * parent = nullptr)
-*/
+// QBarDataProxy(QObject *parent = nullptr)
 HB_FUNC_STATIC(QBARDATAPROXY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_NEW)
 #endif
 }
 
-/*
-virtual ~QBarDataProxy()
-*/
+// virtual ~QBarDataProxy()
 HB_FUNC_STATIC(QBARDATAPROXY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_DELETE)
 #endif
 }
 
-/*
-int rowCount() const
-*/
+// int rowCount() const
 HB_FUNC_STATIC(QBARDATAPROXY_ROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -129,9 +123,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ROWCOUNT)
 #endif
 }
 
-/*
-QStringList rowLabels() const
-*/
+// QStringList rowLabels() const
 HB_FUNC_STATIC(QBARDATAPROXY_ROWLABELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -151,9 +143,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ROWLABELS)
 #endif
 }
 
-/*
-void setRowLabels(const QStringList &labels)
-*/
+// void setRowLabels(const QStringList &labels)
 HB_FUNC_STATIC(QBARDATAPROXY_SETROWLABELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -175,9 +165,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_SETROWLABELS)
 #endif
 }
 
-/*
-QStringList columnLabels() const
-*/
+// QStringList columnLabels() const
 HB_FUNC_STATIC(QBARDATAPROXY_COLUMNLABELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -197,9 +185,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_COLUMNLABELS)
 #endif
 }
 
-/*
-void setColumnLabels(const QStringList &labels)
-*/
+// void setColumnLabels(const QStringList &labels)
 HB_FUNC_STATIC(QBARDATAPROXY_SETCOLUMNLABELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -221,9 +207,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_SETCOLUMNLABELS)
 #endif
 }
 
-/*
-QBar3DSeries * series() const
-*/
+// QBar3DSeries *series() const
 HB_FUNC_STATIC(QBARDATAPROXY_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -244,20 +228,14 @@ HB_FUNC_STATIC(QBARDATAPROXY_SERIES)
 #endif
 }
 
-/*
-const QBarDataArray *array() const
-*/
+// const QBarDataArray *array() const
 
-/*
-const QBarDataRow *rowAt(int rowIndex) const
-*/
+// const QBarDataRow *rowAt(int rowIndex) const
 
 HB_FUNC_STATIC(QBARDATAPROXY_ITEMAT)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    const QBarDataItem * itemAt(int rowIndex, int columnIndex) const
-    */
+    // const QBarDataItem *itemAt(int rowIndex, int columnIndex) const
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -267,9 +245,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ITEMAT)
     }
 #endif
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
-    /*
-    const QBarDataItem * itemAt(const QPoint &position) const
-    */
+    // const QBarDataItem *itemAt(const QPoint &position) const
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -286,9 +262,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ITEMAT)
 HB_FUNC_STATIC(QBARDATAPROXY_SETITEM)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQBARDATAITEM(3)) {
-    /*
-    void setItem(int rowIndex, int columnIndex, const QBarDataItem &item)
-    */
+    // void setItem(int rowIndex, int columnIndex, const QBarDataItem &item)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -299,9 +273,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_SETITEM)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(2) && ISQPOINT(1) && ISQBARDATAITEM(2)) {
-    /*
-    void setItem(const QPoint &position, const QBarDataItem &item)
-    */
+    // void setItem(const QPoint &position, const QBarDataItem &item)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -316,9 +288,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_SETITEM)
   }
 }
 
-/*
-void removeRows(int rowIndex, int removeCount, bool removeLabels = true)
-*/
+// void removeRows(int rowIndex, int removeCount, bool removeLabels = true)
 HB_FUNC_STATIC(QBARDATAPROXY_REMOVEROWS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -340,9 +310,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_REMOVEROWS)
 #endif
 }
 
-/*
-void arrayReset()
-*/
+// void arrayReset()
 HB_FUNC_STATIC(QBARDATAPROXY_ONARRAYRESET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -384,9 +352,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ONARRAYRESET)
 #endif
 }
 
-/*
-void columnLabelsChanged()
-*/
+// void columnLabelsChanged()
 HB_FUNC_STATIC(QBARDATAPROXY_ONCOLUMNLABELSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -428,9 +394,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ONCOLUMNLABELSCHANGED)
 #endif
 }
 
-/*
-void itemChanged(int rowIndex, int columnIndex)
-*/
+// void itemChanged(int rowIndex, int columnIndex)
 HB_FUNC_STATIC(QBARDATAPROXY_ONITEMCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -477,9 +441,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ONITEMCHANGED)
 #endif
 }
 
-/*
-void rowCountChanged(int count)
-*/
+// void rowCountChanged(int count)
 HB_FUNC_STATIC(QBARDATAPROXY_ONROWCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -524,9 +486,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ONROWCOUNTCHANGED)
 #endif
 }
 
-/*
-void rowLabelsChanged()
-*/
+// void rowLabelsChanged()
 HB_FUNC_STATIC(QBARDATAPROXY_ONROWLABELSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -568,9 +528,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ONROWLABELSCHANGED)
 #endif
 }
 
-/*
-void rowsAdded(int startIndex, int count)
-*/
+// void rowsAdded(int startIndex, int count)
 HB_FUNC_STATIC(QBARDATAPROXY_ONROWSADDED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -617,9 +575,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ONROWSADDED)
 #endif
 }
 
-/*
-void rowsChanged(int startIndex, int count)
-*/
+// void rowsChanged(int startIndex, int count)
 HB_FUNC_STATIC(QBARDATAPROXY_ONROWSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -666,9 +622,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ONROWSCHANGED)
 #endif
 }
 
-/*
-void rowsInserted(int startIndex, int count)
-*/
+// void rowsInserted(int startIndex, int count)
 HB_FUNC_STATIC(QBARDATAPROXY_ONROWSINSERTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -715,9 +669,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ONROWSINSERTED)
 #endif
 }
 
-/*
-void rowsRemoved(int startIndex, int count)
-*/
+// void rowsRemoved(int startIndex, int count)
 HB_FUNC_STATIC(QBARDATAPROXY_ONROWSREMOVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -764,9 +716,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ONROWSREMOVED)
 #endif
 }
 
-/*
-void seriesChanged(QBar3DSeries * series)
-*/
+// void seriesChanged(QBar3DSeries *series)
 HB_FUNC_STATIC(QBARDATAPROXY_ONSERIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

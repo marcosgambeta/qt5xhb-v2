@@ -65,9 +65,7 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-virtual ~QAbstract3DInputHandler()
-*/
+// virtual ~QAbstract3DInputHandler()
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -79,9 +77,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_DELETE)
 #endif
 }
 
-/*
-QAbstract3DInputHandler::InputView inputView() const
-*/
+// QAbstract3DInputHandler::InputView inputView() const
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTVIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -101,9 +97,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTVIEW)
 #endif
 }
 
-/*
-void setInputView(QAbstract3DInputHandler::InputView inputView)
-*/
+// void setInputView(QAbstract3DInputHandler::InputView inputView)
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTVIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -125,9 +119,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTVIEW)
 #endif
 }
 
-/*
-QPoint inputPosition() const
-*/
+// QPoint inputPosition() const
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -147,9 +139,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTPOSITION)
 #endif
 }
 
-/*
-void setInputPosition(const QPoint &position)
-*/
+// void setInputPosition(const QPoint &position)
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -171,9 +161,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION)
 #endif
 }
 
-/*
-Q3DScene * scene() const
-*/
+// Q3DScene *scene() const
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SCENE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -194,9 +182,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SCENE)
 #endif
 }
 
-/*
-void setScene(Q3DScene * scene)
-*/
+// void setScene(Q3DScene *scene)
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETSCENE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -218,28 +204,14 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETSCENE)
 #endif
 }
 
-/*
-virtual void mouseDoubleClickEvent(QMouseEvent *event)
-*/
-/*
-virtual void touchEvent(QTouchEvent *event)
-*/
-/*
-virtual void mousePressEvent(QMouseEvent *event, const QPoint &mousePos)
-*/
-/*
-virtual void mouseReleaseEvent(QMouseEvent *event, const QPoint &mousePos)
-*/
-/*
-virtual void mouseMoveEvent(QMouseEvent *event, const QPoint &mousePos)
-*/
-/*
-virtual void wheelEvent(QWheelEvent *event)
-*/
+// virtual void mouseDoubleClickEvent(QMouseEvent *event)
+// virtual void touchEvent(QTouchEvent *event)
+// virtual void mousePressEvent(QMouseEvent *event, const QPoint &mousePos)
+// virtual void mouseReleaseEvent(QMouseEvent *event, const QPoint &mousePos)
+// virtual void mouseMoveEvent(QMouseEvent *event, const QPoint &mousePos)
+// virtual void wheelEvent(QWheelEvent *event)
 
-/*
-void inputViewChanged(QAbstract3DInputHandler::InputView view)
-*/
+// void inputViewChanged(QAbstract3DInputHandler::InputView view)
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -285,9 +257,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED)
 #endif
 }
 
-/*
-void positionChanged(const QPoint &position)
-*/
+// void positionChanged(const QPoint &position)
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -332,9 +302,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED)
 #endif
 }
 
-/*
-void sceneChanged(Q3DScene * scene)
-*/
+// void sceneChanged(Q3DScene *scene)
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONSCENECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

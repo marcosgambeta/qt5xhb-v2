@@ -77,9 +77,7 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-Q3DSurface(const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr)
-*/
+// Q3DSurface(const QSurfaceFormat *format = nullptr, QWindow *parent = nullptr)
 HB_FUNC_STATIC(Q3DSURFACE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(Q3DSURFACE_NEW)
 #endif
 }
 
-/*
-virtual ~Q3DSurface()
-*/
+// virtual ~Q3DSurface()
 HB_FUNC_STATIC(Q3DSURFACE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(Q3DSURFACE_DELETE)
 #endif
 }
 
-/*
-QValue3DAxis * axisX() const
-*/
+// QValue3DAxis *axisX() const
 HB_FUNC_STATIC(Q3DSURFACE_AXISX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -130,9 +124,7 @@ HB_FUNC_STATIC(Q3DSURFACE_AXISX)
 #endif
 }
 
-/*
-void setAxisX(QValue3DAxis * axis)
-*/
+// void setAxisX(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DSURFACE_SETAXISX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -154,9 +146,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SETAXISX)
 #endif
 }
 
-/*
-QValue3DAxis * axisY() const
-*/
+// QValue3DAxis *axisY() const
 HB_FUNC_STATIC(Q3DSURFACE_AXISY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -177,9 +167,7 @@ HB_FUNC_STATIC(Q3DSURFACE_AXISY)
 #endif
 }
 
-/*
-void setAxisY(QValue3DAxis * axis)
-*/
+// void setAxisY(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DSURFACE_SETAXISY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -201,9 +189,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SETAXISY)
 #endif
 }
 
-/*
-QValue3DAxis * axisZ() const
-*/
+// QValue3DAxis *axisZ() const
 HB_FUNC_STATIC(Q3DSURFACE_AXISZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -224,9 +210,7 @@ HB_FUNC_STATIC(Q3DSURFACE_AXISZ)
 #endif
 }
 
-/*
-void setAxisZ(QValue3DAxis * axis)
-*/
+// void setAxisZ(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DSURFACE_SETAXISZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -248,9 +232,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SETAXISZ)
 #endif
 }
 
-/*
-QSurface3DSeries * selectedSeries() const
-*/
+// QSurface3DSeries *selectedSeries() const
 HB_FUNC_STATIC(Q3DSURFACE_SELECTEDSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -271,9 +253,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SELECTEDSERIES)
 #endif
 }
 
-/*
-bool flipHorizontalGrid() const
-*/
+// bool flipHorizontalGrid() const
 HB_FUNC_STATIC(Q3DSURFACE_FLIPHORIZONTALGRID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -293,9 +273,7 @@ HB_FUNC_STATIC(Q3DSURFACE_FLIPHORIZONTALGRID)
 #endif
 }
 
-/*
-void setFlipHorizontalGrid(bool flip)
-*/
+// void setFlipHorizontalGrid(bool flip)
 HB_FUNC_STATIC(Q3DSURFACE_SETFLIPHORIZONTALGRID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -317,9 +295,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SETFLIPHORIZONTALGRID)
 #endif
 }
 
-/*
-void addSeries(QSurface3DSeries * series)
-*/
+// void addSeries(QSurface3DSeries *series)
 HB_FUNC_STATIC(Q3DSURFACE_ADDSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -341,9 +317,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ADDSERIES)
 #endif
 }
 
-/*
-void removeSeries(QSurface3DSeries * series)
-*/
+// void removeSeries(QSurface3DSeries *series)
 HB_FUNC_STATIC(Q3DSURFACE_REMOVESERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -365,9 +339,7 @@ HB_FUNC_STATIC(Q3DSURFACE_REMOVESERIES)
 #endif
 }
 
-/*
-QList<QSurface3DSeries*> seriesList() const
-*/
+// QList<QSurface3DSeries*> seriesList() const
 HB_FUNC_STATIC(Q3DSURFACE_SERIESLIST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -406,9 +378,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SERIESLIST)
 #endif
 }
 
-/*
-void addAxis(QValue3DAxis * axis)
-*/
+// void addAxis(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DSURFACE_ADDAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -430,9 +400,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ADDAXIS)
 #endif
 }
 
-/*
-void releaseAxis(QValue3DAxis * axis)
-*/
+// void releaseAxis(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DSURFACE_RELEASEAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -454,9 +422,7 @@ HB_FUNC_STATIC(Q3DSURFACE_RELEASEAXIS)
 #endif
 }
 
-/*
-QList<QValue3DAxis*> axes() const
-*/
+// QList<QValue3DAxis*> axes() const
 HB_FUNC_STATIC(Q3DSURFACE_AXES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -495,9 +461,7 @@ HB_FUNC_STATIC(Q3DSURFACE_AXES)
 #endif
 }
 
-/*
-void axisXChanged(QValue3DAxis * axis)
-*/
+// void axisXChanged(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DSURFACE_ONAXISXCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -542,9 +506,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ONAXISXCHANGED)
 #endif
 }
 
-/*
-void axisYChanged(QValue3DAxis * axis)
-*/
+// void axisYChanged(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DSURFACE_ONAXISYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -589,9 +551,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ONAXISYCHANGED)
 #endif
 }
 
-/*
-void axisZChanged(QValue3DAxis * axis)
-*/
+// void axisZChanged(QValue3DAxis *axis)
 HB_FUNC_STATIC(Q3DSURFACE_ONAXISZCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -636,9 +596,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ONAXISZCHANGED)
 #endif
 }
 
-/*
-void flipHorizontalGridChanged(bool flip)
-*/
+// void flipHorizontalGridChanged(bool flip)
 HB_FUNC_STATIC(Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -683,9 +641,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED)
 #endif
 }
 
-/*
-void selectedSeriesChanged(QSurface3DSeries * series)
-*/
+// void selectedSeriesChanged(QSurface3DSeries *series)
 HB_FUNC_STATIC(Q3DSURFACE_ONSELECTEDSERIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

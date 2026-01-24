@@ -81,19 +81,15 @@ using namespace QtDataVisualization;
 HB_FUNC_STATIC(QCUSTOM3DLABEL_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QCustom3DLabel(QObject * parent = nullptr)
-    */
+    // QCustom3DLabel(QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QCustom3DLabel(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(5, 6) && HB_ISCHAR(1) && ISQFONT(2) && ISQVECTOR3D(3) && ISQVECTOR3D(4) && ISQQUATERNION(5) &&
              ISQOBJECTORNIL(6)) {
-    /*
-    QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling,
-    const QQuaternion &rotation, QObject * parent = nullptr)
-    */
+    // QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling,
+    // const QQuaternion &rotation, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QCustom3DLabel(PQSTRING(1), *PQFONT(2), *PQVECTOR3D(3), *PQVECTOR3D(4), *PQQUATERNION(5),
                                   OPQOBJECT(6, nullptr));
@@ -104,9 +100,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_NEW)
   }
 }
 
-/*
-virtual ~QCustom3DLabel()
-*/
+// virtual ~QCustom3DLabel()
 HB_FUNC_STATIC(QCUSTOM3DLABEL_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -118,9 +112,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_DELETE)
 #endif
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -140,9 +132,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXT)
 #endif
 }
 
-/*
-void setText(const QString &text)
-*/
+// void setText(const QString &text)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -164,9 +154,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXT)
 #endif
 }
 
-/*
-QFont font() const
-*/
+// QFont font() const
 HB_FUNC_STATIC(QCUSTOM3DLABEL_FONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -186,9 +174,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_FONT)
 #endif
 }
 
-/*
-void setFont(const QFont &font)
-*/
+// void setFont(const QFont &font)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -210,9 +196,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFONT)
 #endif
 }
 
-/*
-QColor textColor() const
-*/
+// QColor textColor() const
 HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -232,9 +216,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXTCOLOR)
 #endif
 }
 
-/*
-void setTextColor(const QColor &color)
-*/
+// void setTextColor(const QColor &color)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXTCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -256,9 +238,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXTCOLOR)
 #endif
 }
 
-/*
-QColor backgroundColor() const
-*/
+// QColor backgroundColor() const
 HB_FUNC_STATIC(QCUSTOM3DLABEL_BACKGROUNDCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -278,9 +258,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_BACKGROUNDCOLOR)
 #endif
 }
 
-/*
-void setBackgroundColor(const QColor &color)
-*/
+// void setBackgroundColor(const QColor &color)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -302,9 +280,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDCOLOR)
 #endif
 }
 
-/*
-bool isBorderEnabled() const
-*/
+// bool isBorderEnabled() const
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBORDERENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -324,9 +300,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBORDERENABLED)
 #endif
 }
 
-/*
-void setBorderEnabled(bool enabled)
-*/
+// void setBorderEnabled(bool enabled)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBORDERENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -348,9 +322,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBORDERENABLED)
 #endif
 }
 
-/*
-bool isBackgroundEnabled() const
-*/
+// bool isBackgroundEnabled() const
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBACKGROUNDENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -370,9 +342,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBACKGROUNDENABLED)
 #endif
 }
 
-/*
-void setBackgroundEnabled(bool enabled)
-*/
+// void setBackgroundEnabled(bool enabled)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -394,9 +364,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDENABLED)
 #endif
 }
 
-/*
-bool isFacingCamera() const
-*/
+// bool isFacingCamera() const
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ISFACINGCAMERA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -416,9 +384,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ISFACINGCAMERA)
 #endif
 }
 
-/*
-void setFacingCamera(bool enabled)
-*/
+// void setFacingCamera(bool enabled)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFACINGCAMERA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -440,9 +406,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFACINGCAMERA)
 #endif
 }
 
-/*
-void backgroundColorChanged(const QColor &color)
-*/
+// void backgroundColorChanged(const QColor &color)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -487,9 +451,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED)
 #endif
 }
 
-/*
-void backgroundEnabledChanged(bool enabled)
-*/
+// void backgroundEnabledChanged(bool enabled)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -534,9 +496,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED)
 #endif
 }
 
-/*
-void borderEnabledChanged(bool enabled)
-*/
+// void borderEnabledChanged(bool enabled)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -581,9 +541,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED)
 #endif
 }
 
-/*
-void facingCameraChanged(bool enabled)
-*/
+// void facingCameraChanged(bool enabled)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONFACINGCAMERACHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -628,9 +586,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONFACINGCAMERACHANGED)
 #endif
 }
 
-/*
-void fontChanged(const QFont &font)
-*/
+// void fontChanged(const QFont &font)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONFONTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -675,9 +631,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONFONTCHANGED)
 #endif
 }
 
-/*
-void textChanged(const QString &text)
-*/
+// void textChanged(const QString &text)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONTEXTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -722,9 +676,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ONTEXTCHANGED)
 #endif
 }
 
-/*
-void textColorChanged(const QColor &color)
-*/
+// void textColorChanged(const QColor &color)
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ONTEXTCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
