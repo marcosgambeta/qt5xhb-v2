@@ -50,9 +50,7 @@ RETURN
 #include <QtMultimediaWidgets/QCameraViewfinder>
 #endif
 
-    /*
-    QCameraViewfinder(QWidget * parent = nullptr)
-    */
+    // QCameraViewfinder(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QCAMERAVIEWFINDER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -72,9 +70,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QMediaObject * mediaObject() const
-*/
+// virtual QMediaObject *mediaObject() const
 HB_FUNC_STATIC(QCAMERAVIEWFINDER_MEDIAOBJECT)
 {
   auto obj = qobject_cast<QCameraViewfinder *>(Qt5xHb::getQObjectPointerFromSelfItem());

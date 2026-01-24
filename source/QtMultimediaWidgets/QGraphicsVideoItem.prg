@@ -64,9 +64,7 @@ RETURN
 #include <QtMultimediaWidgets/QGraphicsVideoItem>
 #endif
 
-    /*
-    QGraphicsVideoItem(QGraphicsItem * parent = nullptr)
-    */
+    // QGraphicsVideoItem(QGraphicsItem *parent = nullptr)
 HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQGRAPHICSITEMORNIL(1)) {
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QMediaObject * mediaObject() const
-*/
+// QMediaObject *mediaObject() const
 HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_MEDIAOBJECT)
 {
   auto obj = qobject_cast<QGraphicsVideoItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_MEDIAOBJECT)
   }
 }
 
-/*
-Qt::AspectRatioMode aspectRatioMode() const
-*/
+// Qt::AspectRatioMode aspectRatioMode() const
 HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_ASPECTRATIOMODE)
 {
   auto obj = qobject_cast<QGraphicsVideoItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -127,9 +121,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_ASPECTRATIOMODE)
   }
 }
 
-/*
-void setAspectRatioMode(Qt::AspectRatioMode mode)
-*/
+// void setAspectRatioMode(Qt::AspectRatioMode mode)
 HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_SETASPECTRATIOMODE)
 {
   auto obj = qobject_cast<QGraphicsVideoItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -149,9 +141,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_SETASPECTRATIOMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPointF offset() const
-*/
+// QPointF offset() const
 HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_OFFSET)
 {
   auto obj = qobject_cast<QGraphicsVideoItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -169,9 +159,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_OFFSET)
   }
 }
 
-/*
-void setOffset(const QPointF &offset)
-*/
+// void setOffset(const QPointF &offset)
 HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_SETOFFSET)
 {
   auto obj = qobject_cast<QGraphicsVideoItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -191,9 +179,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_SETOFFSET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSizeF size() const
-*/
+// QSizeF size() const
 HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_SIZE)
 {
   auto obj = qobject_cast<QGraphicsVideoItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -211,9 +197,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_SIZE)
   }
 }
 
-/*
-void setSize(const QSizeF &size)
-*/
+// void setSize(const QSizeF &size)
 HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_SETSIZE)
 {
   auto obj = qobject_cast<QGraphicsVideoItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -233,9 +217,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_SETSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSizeF nativeSize() const
-*/
+// QSizeF nativeSize() const
 HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_NATIVESIZE)
 {
   auto obj = qobject_cast<QGraphicsVideoItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -253,9 +235,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_NATIVESIZE)
   }
 }
 
-/*
-QRectF boundingRect() const
-*/
+// QRectF boundingRect() const
 HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_BOUNDINGRECT)
 {
   auto obj = qobject_cast<QGraphicsVideoItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -273,9 +253,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_BOUNDINGRECT)
   }
 }
 
-/*
-void paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr)
-*/
+// void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr)
 HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_PAINT)
 {
   auto obj = qobject_cast<QGraphicsVideoItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -295,9 +273,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_PAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void nativeSizeChanged(const QSizeF &size)
-*/
+// void nativeSizeChanged(const QSizeF &size)
 HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_ONNATIVESIZECHANGED)
 {
   auto sender = qobject_cast<QGraphicsVideoItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
