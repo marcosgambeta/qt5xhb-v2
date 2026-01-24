@@ -104,9 +104,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QGamepad(int deviceId = 0, QObject * parent = nullptr)
-    */
+    // QGamepad(int deviceId = 0, QObject *parent = nullptr)
 HB_FUNC_STATIC(QGAMEPAD_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -119,9 +117,7 @@ HB_FUNC_STATIC(QGAMEPAD_NEW)
 #endif
 }
 
-/*
-~QGamepad()
-*/
+// ~QGamepad()
 HB_FUNC_STATIC(QGAMEPAD_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -133,9 +129,7 @@ HB_FUNC_STATIC(QGAMEPAD_DELETE)
 #endif
 }
 
-/*
-int deviceId() const
-*/
+// int deviceId() const
 HB_FUNC_STATIC(QGAMEPAD_DEVICEID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -155,9 +149,7 @@ HB_FUNC_STATIC(QGAMEPAD_DEVICEID)
 #endif
 }
 
-/*
-void setDeviceId(int number)
-*/
+// void setDeviceId(int number)
 HB_FUNC_STATIC(QGAMEPAD_SETDEVICEID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -179,9 +171,7 @@ HB_FUNC_STATIC(QGAMEPAD_SETDEVICEID)
 #endif
 }
 
-/*
-bool isConnected() const
-*/
+// bool isConnected() const
 HB_FUNC_STATIC(QGAMEPAD_ISCONNECTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -201,9 +191,7 @@ HB_FUNC_STATIC(QGAMEPAD_ISCONNECTED)
 #endif
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QGAMEPAD_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -223,9 +211,7 @@ HB_FUNC_STATIC(QGAMEPAD_NAME)
 #endif
 }
 
-/*
-double axisLeftX() const
-*/
+// double axisLeftX() const
 HB_FUNC_STATIC(QGAMEPAD_AXISLEFTX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -245,9 +231,7 @@ HB_FUNC_STATIC(QGAMEPAD_AXISLEFTX)
 #endif
 }
 
-/*
-double axisLeftY() const
-*/
+// double axisLeftY() const
 HB_FUNC_STATIC(QGAMEPAD_AXISLEFTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -267,9 +251,7 @@ HB_FUNC_STATIC(QGAMEPAD_AXISLEFTY)
 #endif
 }
 
-/*
-double axisRightX() const
-*/
+// double axisRightX() const
 HB_FUNC_STATIC(QGAMEPAD_AXISRIGHTX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -289,9 +271,7 @@ HB_FUNC_STATIC(QGAMEPAD_AXISRIGHTX)
 #endif
 }
 
-/*
-double axisRightY() const
-*/
+// double axisRightY() const
 HB_FUNC_STATIC(QGAMEPAD_AXISRIGHTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -311,9 +291,7 @@ HB_FUNC_STATIC(QGAMEPAD_AXISRIGHTY)
 #endif
 }
 
-/*
-bool buttonA() const
-*/
+// bool buttonA() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -333,9 +311,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONA)
 #endif
 }
 
-/*
-bool buttonB() const
-*/
+// bool buttonB() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONB)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -355,9 +331,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONB)
 #endif
 }
 
-/*
-bool buttonX() const
-*/
+// bool buttonX() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -377,9 +351,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONX)
 #endif
 }
 
-/*
-bool buttonY() const
-*/
+// bool buttonY() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -399,9 +371,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONY)
 #endif
 }
 
-/*
-bool buttonL1() const
-*/
+// bool buttonL1() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONL1)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -421,9 +391,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONL1)
 #endif
 }
 
-/*
-bool buttonR1() const
-*/
+// bool buttonR1() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONR1)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -443,9 +411,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONR1)
 #endif
 }
 
-/*
-double buttonL2() const
-*/
+// double buttonL2() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONL2)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -465,9 +431,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONL2)
 #endif
 }
 
-/*
-double buttonR2() const
-*/
+// double buttonR2() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONR2)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -487,9 +451,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONR2)
 #endif
 }
 
-/*
-bool buttonSelect() const
-*/
+// bool buttonSelect() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONSELECT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -509,9 +471,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONSELECT)
 #endif
 }
 
-/*
-bool buttonStart() const
-*/
+// bool buttonStart() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONSTART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -531,9 +491,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONSTART)
 #endif
 }
 
-/*
-bool buttonL3() const
-*/
+// bool buttonL3() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONL3)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -553,9 +511,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONL3)
 #endif
 }
 
-/*
-bool buttonR3() const
-*/
+// bool buttonR3() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONR3)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -575,9 +531,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONR3)
 #endif
 }
 
-/*
-bool buttonUp() const
-*/
+// bool buttonUp() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONUP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -597,9 +551,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONUP)
 #endif
 }
 
-/*
-bool buttonDown() const
-*/
+// bool buttonDown() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONDOWN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -619,9 +571,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONDOWN)
 #endif
 }
 
-/*
-bool buttonLeft() const
-*/
+// bool buttonLeft() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONLEFT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -641,9 +591,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONLEFT)
 #endif
 }
 
-/*
-bool buttonRight() const
-*/
+// bool buttonRight() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONRIGHT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -663,9 +611,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONRIGHT)
 #endif
 }
 
-/*
-bool buttonCenter() const
-*/
+// bool buttonCenter() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONCENTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -685,9 +631,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONCENTER)
 #endif
 }
 
-/*
-bool buttonGuide() const
-*/
+// bool buttonGuide() const
 HB_FUNC_STATIC(QGAMEPAD_BUTTONGUIDE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -707,9 +651,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONGUIDE)
 #endif
 }
 
-/*
-void axisLeftXChanged(double value)
-*/
+// void axisLeftXChanged(double value)
 HB_FUNC_STATIC(QGAMEPAD_ONAXISLEFTXCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -754,9 +696,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONAXISLEFTXCHANGED)
 #endif
 }
 
-/*
-void axisLeftYChanged(double value)
-*/
+// void axisLeftYChanged(double value)
 HB_FUNC_STATIC(QGAMEPAD_ONAXISLEFTYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -801,9 +741,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONAXISLEFTYCHANGED)
 #endif
 }
 
-/*
-void axisRightXChanged(double value)
-*/
+// void axisRightXChanged(double value)
 HB_FUNC_STATIC(QGAMEPAD_ONAXISRIGHTXCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -848,9 +786,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONAXISRIGHTXCHANGED)
 #endif
 }
 
-/*
-void axisRightYChanged(double value)
-*/
+// void axisRightYChanged(double value)
 HB_FUNC_STATIC(QGAMEPAD_ONAXISRIGHTYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -895,9 +831,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONAXISRIGHTYCHANGED)
 #endif
 }
 
-/*
-void buttonAChanged(bool value)
-*/
+// void buttonAChanged(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONACHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -941,9 +875,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONACHANGED)
 #endif
 }
 
-/*
-void buttonBChanged(bool value)
-*/
+// void buttonBChanged(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONBCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -987,9 +919,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONBCHANGED)
 #endif
 }
 
-/*
-void buttonCenterChanged(bool value)
-*/
+// void buttonCenterChanged(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONCENTERCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1034,9 +964,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONCENTERCHANGED)
 #endif
 }
 
-/*
-void buttonDownChanged(bool value)
-*/
+// void buttonDownChanged(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONDOWNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1080,9 +1008,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONDOWNCHANGED)
 #endif
 }
 
-/*
-void buttonGuideChanged(bool value)
-*/
+// void buttonGuideChanged(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONGUIDECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1127,9 +1053,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONGUIDECHANGED)
 #endif
 }
 
-/*
-void buttonL1Changed(bool value)
-*/
+// void buttonL1Changed(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONL1CHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1173,9 +1097,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONL1CHANGED)
 #endif
 }
 
-/*
-void buttonL2Changed(double value)
-*/
+// void buttonL2Changed(double value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONL2CHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1219,9 +1141,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONL2CHANGED)
 #endif
 }
 
-/*
-void buttonL3Changed(bool value)
-*/
+// void buttonL3Changed(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONL3CHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1265,9 +1185,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONL3CHANGED)
 #endif
 }
 
-/*
-void buttonLeftChanged(bool value)
-*/
+// void buttonLeftChanged(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONLEFTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1311,9 +1229,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONLEFTCHANGED)
 #endif
 }
 
-/*
-void buttonR1Changed(bool value)
-*/
+// void buttonR1Changed(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONR1CHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1357,9 +1273,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONR1CHANGED)
 #endif
 }
 
-/*
-void buttonR2Changed(double value)
-*/
+// void buttonR2Changed(double value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONR2CHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1403,9 +1317,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONR2CHANGED)
 #endif
 }
 
-/*
-void buttonR3Changed(bool value)
-*/
+// void buttonR3Changed(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONR3CHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1449,9 +1361,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONR3CHANGED)
 #endif
 }
 
-/*
-void buttonRightChanged(bool value)
-*/
+// void buttonRightChanged(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONRIGHTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1496,9 +1406,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONRIGHTCHANGED)
 #endif
 }
 
-/*
-void buttonSelectChanged(bool value)
-*/
+// void buttonSelectChanged(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONSELECTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1543,9 +1451,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONSELECTCHANGED)
 #endif
 }
 
-/*
-void buttonStartChanged(bool value)
-*/
+// void buttonStartChanged(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONSTARTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1590,9 +1496,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONSTARTCHANGED)
 #endif
 }
 
-/*
-void buttonUpChanged(bool value)
-*/
+// void buttonUpChanged(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONUPCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1636,9 +1540,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONUPCHANGED)
 #endif
 }
 
-/*
-void buttonXChanged(bool value)
-*/
+// void buttonXChanged(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONXCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1682,9 +1584,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONXCHANGED)
 #endif
 }
 
-/*
-void buttonYChanged(bool value)
-*/
+// void buttonYChanged(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONBUTTONYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1728,9 +1628,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONBUTTONYCHANGED)
 #endif
 }
 
-/*
-void connectedChanged(bool value)
-*/
+// void connectedChanged(bool value)
 HB_FUNC_STATIC(QGAMEPAD_ONCONNECTEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1774,9 +1672,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONCONNECTEDCHANGED)
 #endif
 }
 
-/*
-void deviceIdChanged(int value)
-*/
+// void deviceIdChanged(int value)
 HB_FUNC_STATIC(QGAMEPAD_ONDEVICEIDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1820,9 +1716,7 @@ HB_FUNC_STATIC(QGAMEPAD_ONDEVICEIDCHANGED)
 #endif
 }
 
-/*
-void nameChanged(QString value)
-*/
+// void nameChanged(QString value)
 HB_FUNC_STATIC(QGAMEPAD_ONNAMECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
