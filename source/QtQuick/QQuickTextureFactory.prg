@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSGTexture * createTexture(QQuickWindow * window) const = 0
-*/
+// virtual QSGTexture *createTexture(QQuickWindow *window) const = 0
 HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_CREATETEXTURE)
 {
   auto obj = static_cast<QQuickTextureFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_CREATETEXTURE)
   }
 }
 
-/*
-virtual QImage image() const
-*/
+// virtual QImage image() const
 HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_IMAGE)
 {
   auto obj = static_cast<QQuickTextureFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -106,9 +102,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_IMAGE)
   }
 }
 
-/*
-virtual int textureByteCount() const = 0
-*/
+// virtual int textureByteCount() const = 0
 HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT)
 {
   auto obj = static_cast<QQuickTextureFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -126,9 +120,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT)
   }
 }
 
-/*
-virtual QSize textureSize() const = 0
-*/
+// virtual QSize textureSize() const = 0
 HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_TEXTURESIZE)
 {
   auto obj = static_cast<QQuickTextureFactory *>(Qt5xHb::itemGetPtrStackSelfItem());

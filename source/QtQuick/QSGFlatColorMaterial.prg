@@ -49,9 +49,7 @@ RETURN
 #include <QtQuick/QSGFlatColorMaterial>
 #endif
 
-    /*
-    QSGFlatColorMaterial()
-    */
+    // QSGFlatColorMaterial()
 HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -71,9 +69,7 @@ HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QColor &color() const
-*/
+// const QColor &color() const
 HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_COLOR)
 {
   auto obj = static_cast<QSGFlatColorMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -92,9 +88,7 @@ HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_COLOR)
   }
 }
 
-/*
-void setColor(const QColor &color)
-*/
+// void setColor(const QColor &color)
 HB_FUNC_STATIC(QSGFLATCOLORMATERIAL_SETCOLOR)
 {
   auto obj = static_cast<QSGFlatColorMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());

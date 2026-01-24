@@ -85,9 +85,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool antialiasing() const
-*/
+// bool antialiasing() const
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_ANTIALIASING)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -105,9 +103,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_ANTIALIASING)
   }
 }
 
-/*
-QRectF contentsBoundingRect() const
-*/
+// QRectF contentsBoundingRect() const
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_CONTENTSBOUNDINGRECT)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -125,9 +121,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_CONTENTSBOUNDINGRECT)
   }
 }
 
-/*
-qreal contentsScale() const
-*/
+// qreal contentsScale() const
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_CONTENTSSCALE)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -145,9 +139,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_CONTENTSSCALE)
   }
 }
 
-/*
-QSize contentsSize() const
-*/
+// QSize contentsSize() const
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_CONTENTSSIZE)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -165,9 +157,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_CONTENTSSIZE)
   }
 }
 
-/*
-QColor fillColor() const
-*/
+// QColor fillColor() const
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_FILLCOLOR)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -185,9 +175,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_FILLCOLOR)
   }
 }
 
-/*
-bool mipmap() const
-*/
+// bool mipmap() const
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_MIPMAP)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -205,9 +193,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_MIPMAP)
   }
 }
 
-/*
-bool opaquePainting() const
-*/
+// bool opaquePainting() const
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_OPAQUEPAINTING)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -225,9 +211,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_OPAQUEPAINTING)
   }
 }
 
-/*
-virtual void paint(QPainter * painter) = 0
-*/
+// virtual void paint(QPainter *painter) = 0
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_PAINT)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -247,9 +231,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_PAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QQuickPaintedItem::PerformanceHints performanceHints() const
-*/
+// QQuickPaintedItem::PerformanceHints performanceHints() const
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_PERFORMANCEHINTS)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -267,9 +249,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_PERFORMANCEHINTS)
   }
 }
 
-/*
-QQuickPaintedItem::RenderTarget renderTarget() const
-*/
+// QQuickPaintedItem::RenderTarget renderTarget() const
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_RENDERTARGET)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -287,9 +267,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_RENDERTARGET)
   }
 }
 
-/*
-void resetContentsSize()
-*/
+// void resetContentsSize()
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_RESETCONTENTSSIZE)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -309,9 +287,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_RESETCONTENTSSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAntialiasing(bool enable)
-*/
+// void setAntialiasing(bool enable)
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETANTIALIASING)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -331,9 +307,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETANTIALIASING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setContentsScale(qreal)
-*/
+// void setContentsScale(qreal)
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETCONTENTSSCALE)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -353,9 +327,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETCONTENTSSCALE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setContentsSize(const QSize &)
-*/
+// void setContentsSize(const QSize &)
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETCONTENTSSIZE)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -375,9 +347,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETCONTENTSSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFillColor(const QColor &)
-*/
+// void setFillColor(const QColor &)
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETFILLCOLOR)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -397,9 +367,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETFILLCOLOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMipmap(bool enable)
-*/
+// void setMipmap(bool enable)
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETMIPMAP)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -419,9 +387,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETMIPMAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOpaquePainting(bool opaque)
-*/
+// void setOpaquePainting(bool opaque)
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETOPAQUEPAINTING)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -441,9 +407,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETOPAQUEPAINTING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPerformanceHint(QQuickPaintedItem::PerformanceHint hint, bool enabled = true)
-*/
+// void setPerformanceHint(QQuickPaintedItem::PerformanceHint hint, bool enabled = true)
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETPERFORMANCEHINT)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -463,9 +427,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETPERFORMANCEHINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPerformanceHints(QQuickPaintedItem::PerformanceHints hints)
-*/
+// void setPerformanceHints(QQuickPaintedItem::PerformanceHints hints)
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETPERFORMANCEHINTS)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -485,9 +447,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETPERFORMANCEHINTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRenderTarget(QQuickPaintedItem::RenderTarget target)
-*/
+// void setRenderTarget(QQuickPaintedItem::RenderTarget target)
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETRENDERTARGET)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -507,9 +467,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETRENDERTARGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void update(const QRect &rect = QRect())
-*/
+// void update(const QRect &rect = QRect())
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_UPDATE)
 {
   auto obj = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -529,9 +487,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_UPDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void contentsScaleChanged()
-*/
+// void contentsScaleChanged()
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_ONCONTENTSSCALECHANGED)
 {
   auto sender = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -570,9 +526,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_ONCONTENTSSCALECHANGED)
   hb_retl(result);
 }
 
-/*
-void contentsSizeChanged()
-*/
+// void contentsSizeChanged()
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_ONCONTENTSSIZECHANGED)
 {
   auto sender = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -611,9 +565,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_ONCONTENTSSIZECHANGED)
   hb_retl(result);
 }
 
-/*
-void fillColorChanged()
-*/
+// void fillColorChanged()
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_ONFILLCOLORCHANGED)
 {
   auto sender = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -651,9 +603,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_ONFILLCOLORCHANGED)
   hb_retl(result);
 }
 
-/*
-void renderTargetChanged()
-*/
+// void renderTargetChanged()
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_ONRENDERTARGETCHANGED)
 {
   auto sender = qobject_cast<QQuickPaintedItem *>(Qt5xHb::getQObjectPointerFromSelfItem());

@@ -57,9 +57,7 @@ HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSGGeometry * geometry()
-*/
+// QSGGeometry *geometry()
 HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_GEOMETRY)
 {
   auto obj = static_cast<QSGBasicGeometryNode *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -78,9 +76,7 @@ HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_GEOMETRY)
   }
 }
 
-/*
-void setGeometry(QSGGeometry * geometry)
-*/
+// void setGeometry(QSGGeometry *geometry)
 HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_SETGEOMETRY)
 {
   auto obj = static_cast<QSGBasicGeometryNode *>(Qt5xHb::itemGetPtrStackSelfItem());

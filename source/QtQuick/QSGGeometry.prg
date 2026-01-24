@@ -82,9 +82,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void allocate(int vertexCount, int indexCount = 0)
-*/
+// void allocate(int vertexCount, int indexCount = 0)
 HB_FUNC_STATIC(QSGGEOMETRY_ALLOCATE)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -104,9 +102,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_ALLOCATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int attributeCount() const
-*/
+// int attributeCount() const
 HB_FUNC_STATIC(QSGGEOMETRY_ATTRIBUTECOUNT)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -124,9 +120,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_ATTRIBUTECOUNT)
   }
 }
 
-/*
-GLenum drawingMode() const
-*/
+// GLenum drawingMode() const
 HB_FUNC_STATIC(QSGGEOMETRY_DRAWINGMODE)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -144,9 +138,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_DRAWINGMODE)
   }
 }
 
-/*
-int indexCount() const
-*/
+// int indexCount() const
 HB_FUNC_STATIC(QSGGEOMETRY_INDEXCOUNT)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -164,9 +156,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXCOUNT)
   }
 }
 
-/*
-QSGGeometry::DataPattern indexDataPattern() const
-*/
+// QSGGeometry::DataPattern indexDataPattern() const
 HB_FUNC_STATIC(QSGGEOMETRY_INDEXDATAPATTERN)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -184,9 +174,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXDATAPATTERN)
   }
 }
 
-/*
-int indexType() const
-*/
+// int indexType() const
 HB_FUNC_STATIC(QSGGEOMETRY_INDEXTYPE)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -204,9 +192,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXTYPE)
   }
 }
 
-/*
-float lineWidth() const
-*/
+// float lineWidth() const
 HB_FUNC_STATIC(QSGGEOMETRY_LINEWIDTH)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -224,9 +210,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_LINEWIDTH)
   }
 }
 
-/*
-void markIndexDataDirty()
-*/
+// void markIndexDataDirty()
 HB_FUNC_STATIC(QSGGEOMETRY_MARKINDEXDATADIRTY)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -246,9 +230,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_MARKINDEXDATADIRTY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void markVertexDataDirty()
-*/
+// void markVertexDataDirty()
 HB_FUNC_STATIC(QSGGEOMETRY_MARKVERTEXDATADIRTY)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -268,9 +250,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_MARKVERTEXDATADIRTY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDrawingMode(GLenum mode)
-*/
+// void setDrawingMode(GLenum mode)
 HB_FUNC_STATIC(QSGGEOMETRY_SETDRAWINGMODE)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -290,9 +270,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETDRAWINGMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setIndexDataPattern(QSGGeometry::DataPattern p)
-*/
+// void setIndexDataPattern(QSGGeometry::DataPattern p)
 HB_FUNC_STATIC(QSGGEOMETRY_SETINDEXDATAPATTERN)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -312,9 +290,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETINDEXDATAPATTERN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setLineWidth(float width)
-*/
+// void setLineWidth(float width)
 HB_FUNC_STATIC(QSGGEOMETRY_SETLINEWIDTH)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -334,9 +310,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETLINEWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVertexDataPattern(QSGGeometry::DataPattern p)
-*/
+// void setVertexDataPattern(QSGGeometry::DataPattern p)
 HB_FUNC_STATIC(QSGGEOMETRY_SETVERTEXDATAPATTERN)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -356,9 +330,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETVERTEXDATAPATTERN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int sizeOfIndex() const
-*/
+// int sizeOfIndex() const
 HB_FUNC_STATIC(QSGGEOMETRY_SIZEOFINDEX)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -376,9 +348,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SIZEOFINDEX)
   }
 }
 
-/*
-int sizeOfVertex() const
-*/
+// int sizeOfVertex() const
 HB_FUNC_STATIC(QSGGEOMETRY_SIZEOFVERTEX)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -396,9 +366,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SIZEOFVERTEX)
   }
 }
 
-/*
-int vertexCount() const
-*/
+// int vertexCount() const
 HB_FUNC_STATIC(QSGGEOMETRY_VERTEXCOUNT)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -416,9 +384,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_VERTEXCOUNT)
   }
 }
 
-/*
-QSGGeometry::DataPattern vertexDataPattern() const
-*/
+// QSGGeometry::DataPattern vertexDataPattern() const
 HB_FUNC_STATIC(QSGGEOMETRY_VERTEXDATAPATTERN)
 {
   auto obj = static_cast<QSGGeometry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -436,9 +402,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_VERTEXDATAPATTERN)
   }
 }
 
-/*
-static void updateRectGeometry(QSGGeometry * g, const QRectF &rect)
-*/
+// static void updateRectGeometry(QSGGeometry *g, const QRectF &rect)
 HB_FUNC_STATIC(QSGGEOMETRY_UPDATERECTGEOMETRY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -454,9 +418,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_UPDATERECTGEOMETRY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void updateTexturedRectGeometry(QSGGeometry * g, const QRectF &rect, const QRectF &textureRect)
-*/
+// static void updateTexturedRectGeometry(QSGGeometry *g, const QRectF &rect, const QRectF &textureRect)
 HB_FUNC_STATIC(QSGGEOMETRY_UPDATETEXTUREDRECTGEOMETRY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

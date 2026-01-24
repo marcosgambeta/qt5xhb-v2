@@ -48,9 +48,7 @@ RETURN
 #include <QtQuick/QSGOpacityNode>
 #endif
 
-    /*
-    QSGOpacityNode()
-    */
+    // QSGOpacityNode()
 HB_FUNC_STATIC(QSGOPACITYNODE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -70,9 +68,7 @@ HB_FUNC_STATIC(QSGOPACITYNODE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal opacity() const
-*/
+// qreal opacity() const
 HB_FUNC_STATIC(QSGOPACITYNODE_OPACITY)
 {
   auto obj = static_cast<QSGOpacityNode *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -90,9 +86,7 @@ HB_FUNC_STATIC(QSGOPACITYNODE_OPACITY)
   }
 }
 
-/*
-void setOpacity(qreal opacity)
-*/
+// void setOpacity(qreal opacity)
 HB_FUNC_STATIC(QSGOPACITYNODE_SETOPACITY)
 {
   auto obj = static_cast<QSGOpacityNode *>(Qt5xHb::itemGetPtrStackSelfItem());

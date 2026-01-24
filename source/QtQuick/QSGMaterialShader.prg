@@ -67,9 +67,7 @@ HB_FUNC_STATIC(QSGMATERIALSHADER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void activate()
-*/
+// virtual void activate()
 HB_FUNC_STATIC(QSGMATERIALSHADER_ACTIVATE)
 {
   auto obj = static_cast<QSGMaterialShader *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -89,9 +87,7 @@ HB_FUNC_STATIC(QSGMATERIALSHADER_ACTIVATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void deactivate()
-*/
+// virtual void deactivate()
 HB_FUNC_STATIC(QSGMATERIALSHADER_DEACTIVATE)
 {
   auto obj = static_cast<QSGMaterialShader *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -111,9 +107,7 @@ HB_FUNC_STATIC(QSGMATERIALSHADER_DEACTIVATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QOpenGLShaderProgram * program()
-*/
+// QOpenGLShaderProgram *program()
 HB_FUNC_STATIC(QSGMATERIALSHADER_PROGRAM)
 {
   auto obj = static_cast<QSGMaterialShader *>(Qt5xHb::itemGetPtrStackSelfItem());

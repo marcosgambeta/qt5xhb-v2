@@ -70,9 +70,7 @@ HB_FUNC_STATIC(QSGMATERIAL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int compare(const QSGMaterial * other) const
-*/
+// virtual int compare(const QSGMaterial *other) const
 HB_FUNC_STATIC(QSGMATERIAL_COMPARE)
 {
   auto obj = static_cast<QSGMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QSGMATERIAL_COMPARE)
   }
 }
 
-/*
-virtual QSGMaterialShader * createShader() const = 0
-*/
+// virtual QSGMaterialShader *createShader() const = 0
 HB_FUNC_STATIC(QSGMATERIAL_CREATESHADER)
 {
   auto obj = static_cast<QSGMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -111,9 +107,7 @@ HB_FUNC_STATIC(QSGMATERIAL_CREATESHADER)
   }
 }
 
-/*
-QSGMaterial::Flags flags() const
-*/
+// QSGMaterial::Flags flags() const
 HB_FUNC_STATIC(QSGMATERIAL_FLAGS)
 {
   auto obj = static_cast<QSGMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -131,9 +125,7 @@ HB_FUNC_STATIC(QSGMATERIAL_FLAGS)
   }
 }
 
-/*
-void setFlag(QSGMaterial::Flags flags, bool on = true)
-*/
+// void setFlag(QSGMaterial::Flags flags, bool on = true)
 HB_FUNC_STATIC(QSGMATERIAL_SETFLAG)
 {
   auto obj = static_cast<QSGMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -153,9 +145,7 @@ HB_FUNC_STATIC(QSGMATERIAL_SETFLAG)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSGMaterialType * type() const = 0
-*/
+// virtual QSGMaterialType *type() const = 0
 HB_FUNC_STATIC(QSGMATERIAL_TYPE)
 {
   auto obj = static_cast<QSGMaterial *>(Qt5xHb::itemGetPtrStackSelfItem());

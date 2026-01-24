@@ -76,9 +76,7 @@ HB_FUNC_STATIC(QSGTEXTURE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void bind() = 0
-*/
+// virtual void bind() = 0
 HB_FUNC_STATIC(QSGTEXTURE_BIND)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -98,9 +96,7 @@ HB_FUNC_STATIC(QSGTEXTURE_BIND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRectF convertToNormalizedSourceRect(const QRectF &rect) const
-*/
+// QRectF convertToNormalizedSourceRect(const QRectF &rect) const
 HB_FUNC_STATIC(QSGTEXTURE_CONVERTTONORMALIZEDSOURCERECT)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -118,9 +114,7 @@ HB_FUNC_STATIC(QSGTEXTURE_CONVERTTONORMALIZEDSOURCERECT)
   }
 }
 
-/*
-QSGTexture::Filtering filtering() const
-*/
+// QSGTexture::Filtering filtering() const
 HB_FUNC_STATIC(QSGTEXTURE_FILTERING)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -138,9 +132,7 @@ HB_FUNC_STATIC(QSGTEXTURE_FILTERING)
   }
 }
 
-/*
-virtual bool hasAlphaChannel() const = 0
-*/
+// virtual bool hasAlphaChannel() const = 0
 HB_FUNC_STATIC(QSGTEXTURE_HASALPHACHANNEL)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -158,9 +150,7 @@ HB_FUNC_STATIC(QSGTEXTURE_HASALPHACHANNEL)
   }
 }
 
-/*
-virtual bool hasMipmaps() const = 0
-*/
+// virtual bool hasMipmaps() const = 0
 HB_FUNC_STATIC(QSGTEXTURE_HASMIPMAPS)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -178,9 +168,7 @@ HB_FUNC_STATIC(QSGTEXTURE_HASMIPMAPS)
   }
 }
 
-/*
-QSGTexture::WrapMode horizontalWrapMode() const
-*/
+// QSGTexture::WrapMode horizontalWrapMode() const
 HB_FUNC_STATIC(QSGTEXTURE_HORIZONTALWRAPMODE)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -198,9 +186,7 @@ HB_FUNC_STATIC(QSGTEXTURE_HORIZONTALWRAPMODE)
   }
 }
 
-/*
-virtual bool isAtlasTexture() const
-*/
+// virtual bool isAtlasTexture() const
 HB_FUNC_STATIC(QSGTEXTURE_ISATLASTEXTURE)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -218,9 +204,7 @@ HB_FUNC_STATIC(QSGTEXTURE_ISATLASTEXTURE)
   }
 }
 
-/*
-QSGTexture::Filtering mipmapFiltering() const
-*/
+// QSGTexture::Filtering mipmapFiltering() const
 HB_FUNC_STATIC(QSGTEXTURE_MIPMAPFILTERING)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -238,9 +222,7 @@ HB_FUNC_STATIC(QSGTEXTURE_MIPMAPFILTERING)
   }
 }
 
-/*
-virtual QRectF normalizedTextureSubRect() const
-*/
+// virtual QRectF normalizedTextureSubRect() const
 HB_FUNC_STATIC(QSGTEXTURE_NORMALIZEDTEXTURESUBRECT)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -258,9 +240,7 @@ HB_FUNC_STATIC(QSGTEXTURE_NORMALIZEDTEXTURESUBRECT)
   }
 }
 
-/*
-virtual QSGTexture * removedFromAtlas() const
-*/
+// virtual QSGTexture *removedFromAtlas() const
 HB_FUNC_STATIC(QSGTEXTURE_REMOVEDFROMATLAS)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -279,9 +259,7 @@ HB_FUNC_STATIC(QSGTEXTURE_REMOVEDFROMATLAS)
   }
 }
 
-/*
-void setFiltering(QSGTexture::Filtering filter)
-*/
+// void setFiltering(QSGTexture::Filtering filter)
 HB_FUNC_STATIC(QSGTEXTURE_SETFILTERING)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -301,9 +279,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETFILTERING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHorizontalWrapMode(QSGTexture::WrapMode hwrap)
-*/
+// void setHorizontalWrapMode(QSGTexture::WrapMode hwrap)
 HB_FUNC_STATIC(QSGTEXTURE_SETHORIZONTALWRAPMODE)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -323,9 +299,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETHORIZONTALWRAPMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMipmapFiltering(QSGTexture::Filtering filter)
-*/
+// void setMipmapFiltering(QSGTexture::Filtering filter)
 HB_FUNC_STATIC(QSGTEXTURE_SETMIPMAPFILTERING)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -345,9 +319,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETMIPMAPFILTERING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalWrapMode(QSGTexture::WrapMode vwrap)
-*/
+// void setVerticalWrapMode(QSGTexture::WrapMode vwrap)
 HB_FUNC_STATIC(QSGTEXTURE_SETVERTICALWRAPMODE)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -367,9 +339,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETVERTICALWRAPMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int textureId() const = 0
-*/
+// virtual int textureId() const = 0
 HB_FUNC_STATIC(QSGTEXTURE_TEXTUREID)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -387,9 +357,7 @@ HB_FUNC_STATIC(QSGTEXTURE_TEXTUREID)
   }
 }
 
-/*
-virtual QSize textureSize() const = 0
-*/
+// virtual QSize textureSize() const = 0
 HB_FUNC_STATIC(QSGTEXTURE_TEXTURESIZE)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -407,9 +375,7 @@ HB_FUNC_STATIC(QSGTEXTURE_TEXTURESIZE)
   }
 }
 
-/*
-void updateBindOptions(bool force = false)
-*/
+// void updateBindOptions(bool force = false)
 HB_FUNC_STATIC(QSGTEXTURE_UPDATEBINDOPTIONS)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -429,9 +395,7 @@ HB_FUNC_STATIC(QSGTEXTURE_UPDATEBINDOPTIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSGTexture::WrapMode verticalWrapMode() const
-*/
+// QSGTexture::WrapMode verticalWrapMode() const
 HB_FUNC_STATIC(QSGTEXTURE_VERTICALWRAPMODE)
 {
   auto obj = qobject_cast<QSGTexture *>(Qt5xHb::getQObjectPointerFromSelfItem());

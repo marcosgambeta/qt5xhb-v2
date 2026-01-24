@@ -54,9 +54,7 @@ RETURN
 #include <QtQuick/QQuickImageProvider>
 #endif
 
-    /*
-    QQuickImageProvider(QQmlImageProviderBase::ImageType type, QQmlImageProviderBase::Flags flags = 0)
-    */
+    // QQuickImageProvider(QQmlImageProviderBase::ImageType type, QQmlImageProviderBase::Flags flags = 0)
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
@@ -78,9 +76,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QQmlImageProviderBase::Flags flags() const = 0
-*/
+// virtual QQmlImageProviderBase::Flags flags() const = 0
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_FLAGS)
 {
   auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -98,9 +94,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_FLAGS)
   }
 }
 
-/*
-virtual QQmlImageProviderBase::ImageType imageType() const = 0
-*/
+// virtual QQmlImageProviderBase::ImageType imageType() const = 0
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_IMAGETYPE)
 {
   auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -118,9 +112,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_IMAGETYPE)
   }
 }
 
-/*
-virtual QImage requestImage(const QString &id, QSize * size, const QSize &requestedSize)
-*/
+// virtual QImage requestImage(const QString &id, QSize *size, const QSize &requestedSize)
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTIMAGE)
 {
   auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -138,9 +130,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTIMAGE)
   }
 }
 
-/*
-virtual QPixmap requestPixmap(const QString &id, QSize * size, const QSize &requestedSize)
-*/
+// virtual QPixmap requestPixmap(const QString &id, QSize *size, const QSize &requestedSize)
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTPIXMAP)
 {
   auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -158,9 +148,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTPIXMAP)
   }
 }
 
-/*
-virtual QQuickTextureFactory * requestTexture(const QString &id, QSize * size, const QSize &requestedSize)
-*/
+// virtual QQuickTextureFactory *requestTexture(const QString &id, QSize *size, const QSize &requestedSize)
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTTEXTURE)
 {
   auto obj = static_cast<QQuickImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());

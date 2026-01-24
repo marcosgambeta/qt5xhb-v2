@@ -46,9 +46,7 @@ RETURN
 #include <QtQuick/QSGVertexColorMaterial>
 #endif
 
-    /*
-    QSGVertexColorMaterial()
-    */
+    // QSGVertexColorMaterial()
 HB_FUNC_STATIC(QSGVERTEXCOLORMATERIAL_NEW)
 {
   if (ISNUMPAR(0)) {

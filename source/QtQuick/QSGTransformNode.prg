@@ -46,9 +46,7 @@ RETURN
 #include <QtQuick/QSGTransformNode>
 #endif
 
-    /*
-    QSGTransformNode()
-    */
+    // QSGTransformNode()
 HB_FUNC_STATIC(QSGTRANSFORMNODE_NEW)
 {
   if (ISNUMPAR(0)) {

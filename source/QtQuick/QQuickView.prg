@@ -72,21 +72,15 @@ RETURN
 HB_FUNC_STATIC(QQUICKVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWINDOWORNIL(1)) {
-    /*
-    QQuickView(QWindow * parent = nullptr)
-    */
+    // QQuickView(QWindow *parent = nullptr)
     auto obj = new QQuickView(OPQWINDOW(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(2) && ISQQMLENGINE(1) && ISQWINDOW(2)) {
-    /*
-    QQuickView(QQmlEngine * engine, QWindow * parent)
-    */
+    // QQuickView(QQmlEngine *engine, QWindow *parent)
     auto obj = new QQuickView(PQQMLENGINE(1), PQWINDOW(2));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && ISQURL(1) && ISQWINDOWORNIL(2)) {
-    /*
-    QQuickView(const QUrl &source, QWindow * parent = nullptr)
-    */
+    // QQuickView(const QUrl &source, QWindow *parent = nullptr)
     auto obj = new QQuickView(*PQURL(1), OPQWINDOW(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -103,9 +97,7 @@ HB_FUNC_STATIC(QQUICKVIEW_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QQmlEngine * engine() const
-*/
+// QQmlEngine *engine() const
 HB_FUNC_STATIC(QQUICKVIEW_ENGINE)
 {
   auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -124,9 +116,7 @@ HB_FUNC_STATIC(QQUICKVIEW_ENGINE)
   }
 }
 
-/*
-QSize initialSize() const
-*/
+// QSize initialSize() const
 HB_FUNC_STATIC(QQUICKVIEW_INITIALSIZE)
 {
   auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -144,9 +134,7 @@ HB_FUNC_STATIC(QQUICKVIEW_INITIALSIZE)
   }
 }
 
-/*
-QQuickView::ResizeMode resizeMode() const
-*/
+// QQuickView::ResizeMode resizeMode() const
 HB_FUNC_STATIC(QQUICKVIEW_RESIZEMODE)
 {
   auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -164,9 +152,7 @@ HB_FUNC_STATIC(QQUICKVIEW_RESIZEMODE)
   }
 }
 
-/*
-QQmlContext * rootContext() const
-*/
+// QQmlContext *rootContext() const
 HB_FUNC_STATIC(QQUICKVIEW_ROOTCONTEXT)
 {
   auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -185,9 +171,7 @@ HB_FUNC_STATIC(QQUICKVIEW_ROOTCONTEXT)
   }
 }
 
-/*
-QQuickItem * rootObject() const
-*/
+// QQuickItem *rootObject() const
 HB_FUNC_STATIC(QQUICKVIEW_ROOTOBJECT)
 {
   auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -206,9 +190,7 @@ HB_FUNC_STATIC(QQUICKVIEW_ROOTOBJECT)
   }
 }
 
-/*
-void setResizeMode(QQuickView::ResizeMode)
-*/
+// void setResizeMode(QQuickView::ResizeMode)
 HB_FUNC_STATIC(QQUICKVIEW_SETRESIZEMODE)
 {
   auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -228,9 +210,7 @@ HB_FUNC_STATIC(QQUICKVIEW_SETRESIZEMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QUrl source() const
-*/
+// QUrl source() const
 HB_FUNC_STATIC(QQUICKVIEW_SOURCE)
 {
   auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -248,9 +228,7 @@ HB_FUNC_STATIC(QQUICKVIEW_SOURCE)
   }
 }
 
-/*
-QQuickView::Status status() const
-*/
+// QQuickView::Status status() const
 HB_FUNC_STATIC(QQUICKVIEW_STATUS)
 {
   auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -268,9 +246,7 @@ HB_FUNC_STATIC(QQUICKVIEW_STATUS)
   }
 }
 
-/*
-void setSource(const QUrl &url)
-*/
+// void setSource(const QUrl &url)
 HB_FUNC_STATIC(QQUICKVIEW_SETSOURCE)
 {
   auto obj = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -290,9 +266,7 @@ HB_FUNC_STATIC(QQUICKVIEW_SETSOURCE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void statusChanged(QQuickView::Status status)
-*/
+// void statusChanged(QQuickView::Status status)
 HB_FUNC_STATIC(QQUICKVIEW_ONSTATUSCHANGED)
 {
   auto sender = qobject_cast<QQuickView *>(Qt5xHb::getQObjectPointerFromSelfItem());
