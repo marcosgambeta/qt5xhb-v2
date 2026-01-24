@@ -62,9 +62,7 @@ RETURN
 
 #include <QtQml/QQmlEngine>
 
-    /*
-    QQmlIncubationController()
-    */
+    // QQmlIncubationController()
 HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QQmlEngine * engine() const
-*/
+// QQmlEngine *engine() const
 HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_ENGINE)
 {
   auto obj = static_cast<QQmlIncubationController *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -105,9 +101,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_ENGINE)
   }
 }
 
-/*
-void incubateFor(int msecs)
-*/
+// void incubateFor(int msecs)
 HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_INCUBATEFOR)
 {
   auto obj = static_cast<QQmlIncubationController *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -127,9 +121,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_INCUBATEFOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void incubateWhile(volatile bool * flag, int msecs = 0)
-*/
+// void incubateWhile(volatile bool *flag, int msecs = 0)
 HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_INCUBATEWHILE)
 {
   auto obj = static_cast<QQmlIncubationController *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -151,9 +143,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_INCUBATEWHILE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int incubatingObjectCount() const
-*/
+// int incubatingObjectCount() const
 HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_INCUBATINGOBJECTCOUNT)
 {
   auto obj = static_cast<QQmlIncubationController *>(Qt5xHb::itemGetPtrStackSelfItem());

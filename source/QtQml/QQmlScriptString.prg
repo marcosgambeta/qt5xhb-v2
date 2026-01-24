@@ -64,15 +64,11 @@ RETURN
 HB_FUNC_STATIC(QQMLSCRIPTSTRING_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QQmlScriptString()
-    */
+    // QQmlScriptString()
     auto obj = new QQmlScriptString();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQQMLSCRIPTSTRING(1)) {
-    /*
-    QQmlScriptString(const QQmlScriptString &other)
-    */
+    // QQmlScriptString(const QQmlScriptString &other)
     auto obj = new QQmlScriptString(*PQQMLSCRIPTSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -89,9 +85,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool booleanLiteral(bool * ok) const
-*/
+// bool booleanLiteral(bool *ok) const
 HB_FUNC_STATIC(QQMLSCRIPTSTRING_BOOLEANLITERAL)
 {
   auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -111,9 +105,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_BOOLEANLITERAL)
   }
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISEMPTY)
 {
   auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -131,9 +123,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISEMPTY)
   }
 }
 
-/*
-bool isNullLiteral() const
-*/
+// bool isNullLiteral() const
 HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISNULLLITERAL)
 {
   auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -151,9 +141,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISNULLLITERAL)
   }
 }
 
-/*
-bool isUndefinedLiteral() const
-*/
+// bool isUndefinedLiteral() const
 HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL)
 {
   auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -171,9 +159,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL)
   }
 }
 
-/*
-qreal numberLiteral(bool * ok) const
-*/
+// qreal numberLiteral(bool *ok) const
 HB_FUNC_STATIC(QQMLSCRIPTSTRING_NUMBERLITERAL)
 {
   auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -193,9 +179,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_NUMBERLITERAL)
   }
 }
 
-/*
-QString stringLiteral() const
-*/
+// QString stringLiteral() const
 HB_FUNC_STATIC(QQMLSCRIPTSTRING_STRINGLITERAL)
 {
   auto obj = static_cast<QQmlScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());

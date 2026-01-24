@@ -76,23 +76,17 @@ RETURN
 HB_FUNC_STATIC(QQMLEXPRESSION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QQmlExpression()
-    */
+    // QQmlExpression()
     auto obj = new QQmlExpression();
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(3, 4) && ISQQMLCONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && ISQOBJECTORNIL(4)) {
-    /*
-    QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString &expression, QObject * parent = nullptr)
-    */
+    // QQmlExpression(QQmlContext *ctxt, QObject *scope, const QString &expression, QObject *parent = nullptr)
     auto obj = new QQmlExpression(PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 4) && ISQQMLSCRIPTSTRING(1) && ISQQMLCONTEXTORNIL(2) && ISQOBJECTORNIL(3) &&
              ISQOBJECTORNIL(4)) {
-    /*
-    QQmlExpression(const QQmlScriptString &script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject *
-    parent = nullptr)
-    */
+    // QQmlExpression(const QQmlScriptString &script, QQmlContext *ctxt = nullptr, QObject *scope = nullptr, QObject *
+    // parent = nullptr)
     auto obj = new QQmlExpression(*PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT(2, nullptr), OPQOBJECT(3, nullptr),
                                   OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -110,9 +104,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearError()
-*/
+// void clearError()
 HB_FUNC_STATIC(QQMLEXPRESSION_CLEARERROR)
 {
   auto obj = qobject_cast<QQmlExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -132,9 +124,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_CLEARERROR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int columnNumber() const
-*/
+// int columnNumber() const
 HB_FUNC_STATIC(QQMLEXPRESSION_COLUMNNUMBER)
 {
   auto obj = qobject_cast<QQmlExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -152,9 +142,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_COLUMNNUMBER)
   }
 }
 
-/*
-QQmlContext * context() const
-*/
+// QQmlContext *context() const
 HB_FUNC_STATIC(QQMLEXPRESSION_CONTEXT)
 {
   auto obj = qobject_cast<QQmlExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -173,9 +161,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_CONTEXT)
   }
 }
 
-/*
-QQmlEngine * engine() const
-*/
+// QQmlEngine *engine() const
 HB_FUNC_STATIC(QQMLEXPRESSION_ENGINE)
 {
   auto obj = qobject_cast<QQmlExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -194,9 +180,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_ENGINE)
   }
 }
 
-/*
-QQmlError error() const
-*/
+// QQmlError error() const
 HB_FUNC_STATIC(QQMLEXPRESSION_ERROR)
 {
   auto obj = qobject_cast<QQmlExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -214,9 +198,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_ERROR)
   }
 }
 
-/*
-QVariant evaluate(bool * valueIsUndefined = nullptr)
-*/
+// QVariant evaluate(bool *valueIsUndefined = nullptr)
 HB_FUNC_STATIC(QQMLEXPRESSION_EVALUATE)
 {
   auto obj = qobject_cast<QQmlExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -236,9 +218,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_EVALUATE)
   }
 }
 
-/*
-QString expression() const
-*/
+// QString expression() const
 HB_FUNC_STATIC(QQMLEXPRESSION_EXPRESSION)
 {
   auto obj = qobject_cast<QQmlExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -256,9 +236,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_EXPRESSION)
   }
 }
 
-/*
-bool hasError() const
-*/
+// bool hasError() const
 HB_FUNC_STATIC(QQMLEXPRESSION_HASERROR)
 {
   auto obj = qobject_cast<QQmlExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -276,9 +254,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_HASERROR)
   }
 }
 
-/*
-int lineNumber() const
-*/
+// int lineNumber() const
 HB_FUNC_STATIC(QQMLEXPRESSION_LINENUMBER)
 {
   auto obj = qobject_cast<QQmlExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -296,9 +272,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_LINENUMBER)
   }
 }
 
-/*
-bool notifyOnValueChanged() const
-*/
+// bool notifyOnValueChanged() const
 HB_FUNC_STATIC(QQMLEXPRESSION_NOTIFYONVALUECHANGED)
 {
   auto obj = qobject_cast<QQmlExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -316,9 +290,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_NOTIFYONVALUECHANGED)
   }
 }
 
-/*
-QObject * scopeObject() const
-*/
+// QObject *scopeObject() const
 HB_FUNC_STATIC(QQMLEXPRESSION_SCOPEOBJECT)
 {
   auto obj = qobject_cast<QQmlExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -337,9 +309,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SCOPEOBJECT)
   }
 }
 
-/*
-void setExpression(const QString &expression)
-*/
+// void setExpression(const QString &expression)
 HB_FUNC_STATIC(QQMLEXPRESSION_SETEXPRESSION)
 {
   auto obj = qobject_cast<QQmlExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -359,9 +329,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETEXPRESSION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setNotifyOnValueChanged(bool notifyOnChange)
-*/
+// void setNotifyOnValueChanged(bool notifyOnChange)
 HB_FUNC_STATIC(QQMLEXPRESSION_SETNOTIFYONVALUECHANGED)
 {
   auto obj = qobject_cast<QQmlExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -381,9 +349,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETNOTIFYONVALUECHANGED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSourceLocation(const QString &url, int line, int column = 0)
-*/
+// void setSourceLocation(const QString &url, int line, int column = 0)
 HB_FUNC_STATIC(QQMLEXPRESSION_SETSOURCELOCATION)
 {
   auto obj = qobject_cast<QQmlExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -403,9 +369,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETSOURCELOCATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString sourceFile() const
-*/
+// QString sourceFile() const
 HB_FUNC_STATIC(QQMLEXPRESSION_SOURCEFILE)
 {
   auto obj = qobject_cast<QQmlExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -423,9 +387,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SOURCEFILE)
   }
 }
 
-/*
-void valueChanged()
-*/
+// void valueChanged()
 HB_FUNC_STATIC(QQMLEXPRESSION_ONVALUECHANGED)
 {
   auto sender = qobject_cast<QQmlExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());

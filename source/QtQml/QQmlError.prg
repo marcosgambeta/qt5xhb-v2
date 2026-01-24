@@ -69,15 +69,11 @@ RETURN
 HB_FUNC_STATIC(QQMLERROR_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QQmlError()
-    */
+    // QQmlError()
     auto obj = new QQmlError();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQQMLERROR(1)) {
-    /*
-    QQmlError(const QQmlError &other)
-    */
+    // QQmlError(const QQmlError &other)
     auto obj = new QQmlError(*PQQMLERROR(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -94,9 +90,7 @@ HB_FUNC_STATIC(QQMLERROR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int column() const
-*/
+// int column() const
 HB_FUNC_STATIC(QQMLERROR_COLUMN)
 {
   auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -114,9 +108,7 @@ HB_FUNC_STATIC(QQMLERROR_COLUMN)
   }
 }
 
-/*
-QString description() const
-*/
+// QString description() const
 HB_FUNC_STATIC(QQMLERROR_DESCRIPTION)
 {
   auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -134,9 +126,7 @@ HB_FUNC_STATIC(QQMLERROR_DESCRIPTION)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QQMLERROR_ISVALID)
 {
   auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -154,9 +144,7 @@ HB_FUNC_STATIC(QQMLERROR_ISVALID)
   }
 }
 
-/*
-int line() const
-*/
+// int line() const
 HB_FUNC_STATIC(QQMLERROR_LINE)
 {
   auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -174,9 +162,7 @@ HB_FUNC_STATIC(QQMLERROR_LINE)
   }
 }
 
-/*
-void setColumn(int column)
-*/
+// void setColumn(int column)
 HB_FUNC_STATIC(QQMLERROR_SETCOLUMN)
 {
   auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -196,9 +182,7 @@ HB_FUNC_STATIC(QQMLERROR_SETCOLUMN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDescription(const QString &description)
-*/
+// void setDescription(const QString &description)
 HB_FUNC_STATIC(QQMLERROR_SETDESCRIPTION)
 {
   auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -218,9 +202,7 @@ HB_FUNC_STATIC(QQMLERROR_SETDESCRIPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setLine(int line)
-*/
+// void setLine(int line)
 HB_FUNC_STATIC(QQMLERROR_SETLINE)
 {
   auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -240,9 +222,7 @@ HB_FUNC_STATIC(QQMLERROR_SETLINE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUrl(const QUrl &url)
-*/
+// void setUrl(const QUrl &url)
 HB_FUNC_STATIC(QQMLERROR_SETURL)
 {
   auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -262,9 +242,7 @@ HB_FUNC_STATIC(QQMLERROR_SETURL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString toString() const
-*/
+// QString toString() const
 HB_FUNC_STATIC(QQMLERROR_TOSTRING)
 {
   auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -282,9 +260,7 @@ HB_FUNC_STATIC(QQMLERROR_TOSTRING)
   }
 }
 
-/*
-QUrl url() const
-*/
+// QUrl url() const
 HB_FUNC_STATIC(QQMLERROR_URL)
 {
   auto obj = static_cast<QQmlError *>(Qt5xHb::itemGetPtrStackSelfItem());

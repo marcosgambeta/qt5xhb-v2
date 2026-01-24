@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QQMLPARSERSTATUS_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void classBegin() = 0
-*/
+// virtual void classBegin() = 0
 HB_FUNC_STATIC(QQMLPARSERSTATUS_CLASSBEGIN)
 {
   auto obj = static_cast<QQmlParserStatus *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QQMLPARSERSTATUS_CLASSBEGIN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void componentComplete() = 0
-*/
+// virtual void componentComplete() = 0
 HB_FUNC_STATIC(QQMLPARSERSTATUS_COMPONENTCOMPLETE)
 {
   auto obj = static_cast<QQmlParserStatus *>(Qt5xHb::itemGetPtrStackSelfItem());

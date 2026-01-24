@@ -58,15 +58,11 @@ RETURN
 HB_FUNC_STATIC(QJSENGINE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QJSEngine()
-    */
+    // QJSEngine()
     auto obj = new QJSEngine();
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
-    /*
-    QJSEngine(QObject * parent)
-    */
+    // QJSEngine(QObject *parent)
     auto obj = new QJSEngine(PQOBJECT(1));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -83,9 +79,7 @@ HB_FUNC_STATIC(QJSENGINE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void collectGarbage()
-*/
+// void collectGarbage()
 HB_FUNC_STATIC(QJSENGINE_COLLECTGARBAGE)
 {
   auto obj = qobject_cast<QJSEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -105,9 +99,7 @@ HB_FUNC_STATIC(QJSENGINE_COLLECTGARBAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QJSValue evaluate(const QString &program, const QString &fileName = QString(), int lineNumber = 1)
-*/
+// QJSValue evaluate(const QString &program, const QString &fileName = QString(), int lineNumber = 1)
 HB_FUNC_STATIC(QJSENGINE_EVALUATE)
 {
   auto obj = qobject_cast<QJSEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -125,9 +117,7 @@ HB_FUNC_STATIC(QJSENGINE_EVALUATE)
   }
 }
 
-/*
-QJSValue globalObject() const
-*/
+// QJSValue globalObject() const
 HB_FUNC_STATIC(QJSENGINE_GLOBALOBJECT)
 {
   auto obj = qobject_cast<QJSEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -145,9 +135,7 @@ HB_FUNC_STATIC(QJSENGINE_GLOBALOBJECT)
   }
 }
 
-/*
-QJSValue newArray(uint length = 0)
-*/
+// QJSValue newArray(uint length = 0)
 HB_FUNC_STATIC(QJSENGINE_NEWARRAY)
 {
   auto obj = qobject_cast<QJSEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -165,9 +153,7 @@ HB_FUNC_STATIC(QJSENGINE_NEWARRAY)
   }
 }
 
-/*
-QJSValue newObject()
-*/
+// QJSValue newObject()
 HB_FUNC_STATIC(QJSENGINE_NEWOBJECT)
 {
   auto obj = qobject_cast<QJSEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -185,9 +171,7 @@ HB_FUNC_STATIC(QJSENGINE_NEWOBJECT)
   }
 }
 
-/*
-QJSValue newQObject(QObject * object)
-*/
+// QJSValue newQObject(QObject *object)
 HB_FUNC_STATIC(QJSENGINE_NEWQOBJECT)
 {
   auto obj = qobject_cast<QJSEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());

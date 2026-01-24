@@ -58,9 +58,7 @@ HB_FUNC_STATIC(QQMLEXTENSIONPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void initializeEngine(QQmlEngine * engine, const char * uri)
-*/
+// virtual void initializeEngine(QQmlEngine *engine, const char *uri)
 HB_FUNC_STATIC(QQMLEXTENSIONPLUGIN_INITIALIZEENGINE)
 {
   auto obj = qobject_cast<QQmlExtensionPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -80,9 +78,7 @@ HB_FUNC_STATIC(QQMLEXTENSIONPLUGIN_INITIALIZEENGINE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void registerTypes(const char * uri) = 0
-*/
+// virtual void registerTypes(const char *uri) = 0
 HB_FUNC_STATIC(QQMLEXTENSIONPLUGIN_REGISTERTYPES)
 {
   auto obj = qobject_cast<QQmlExtensionPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());

@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QQMLPROPERTYVALUESOURCE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setTarget(const QQmlProperty &property) = 0
-*/
+// virtual void setTarget(const QQmlProperty &property) = 0
 HB_FUNC_STATIC(QQMLPROPERTYVALUESOURCE_SETTARGET)
 {
   auto obj = static_cast<QQmlPropertyValueSource *>(Qt5xHb::itemGetPtrStackSelfItem());

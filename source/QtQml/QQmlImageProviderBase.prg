@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QQMLIMAGEPROVIDERBASE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QQmlImageProviderBase::Flags flags() const = 0
-*/
+// virtual QQmlImageProviderBase::Flags flags() const = 0
 HB_FUNC_STATIC(QQMLIMAGEPROVIDERBASE_FLAGS)
 {
   auto obj = static_cast<QQmlImageProviderBase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -85,9 +83,7 @@ HB_FUNC_STATIC(QQMLIMAGEPROVIDERBASE_FLAGS)
   }
 }
 
-/*
-virtual QQmlImageProviderBase::ImageType imageType() const = 0
-*/
+// virtual QQmlImageProviderBase::ImageType imageType() const = 0
 HB_FUNC_STATIC(QQMLIMAGEPROVIDERBASE_IMAGETYPE)
 {
   auto obj = static_cast<QQmlImageProviderBase *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -54,13 +54,9 @@ RETURN
 #include <QtQml/QQmlListProperty>
 #endif
 
-    /*
-    QQmlListProperty(QObject * object, QList<T*> &list)
-    */
-    /*
-    QQmlListProperty(QObject * object, void * data, AppendFunction append, CountFunction count = 0, AtFunction at = 0,
-    ClearFunction clear = 0)
-    */
+    // QQmlListProperty(QObject *object, QList<T*> &list)
+    // QQmlListProperty(QObject *object, void *data, AppendFunction append, CountFunction count = 0, AtFunction at = 0,
+    // ClearFunction clear = 0)
 
 HB_FUNC_STATIC(QQMLLISTPROPERTY_NEW)
 {

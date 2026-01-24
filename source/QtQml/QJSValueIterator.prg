@@ -60,9 +60,7 @@ RETURN
 #include <QtQml/QJSValueIterator>
 #endif
 
-    /*
-    QJSValueIterator(const QJSValue &object)
-    */
+    // QJSValueIterator(const QJSValue &object)
 HB_FUNC_STATIC(QJSVALUEITERATOR_NEW)
 {
   if (ISNUMPAR(1) && ISQJSVALUE(1)) {
@@ -82,9 +80,7 @@ HB_FUNC_STATIC(QJSVALUEITERATOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool hasNext() const
-*/
+// bool hasNext() const
 HB_FUNC_STATIC(QJSVALUEITERATOR_HASNEXT)
 {
   auto obj = static_cast<QJSValueIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -102,9 +98,7 @@ HB_FUNC_STATIC(QJSVALUEITERATOR_HASNEXT)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QJSVALUEITERATOR_NAME)
 {
   auto obj = static_cast<QJSValueIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -122,9 +116,7 @@ HB_FUNC_STATIC(QJSVALUEITERATOR_NAME)
   }
 }
 
-/*
-bool next()
-*/
+// bool next()
 HB_FUNC_STATIC(QJSVALUEITERATOR_NEXT)
 {
   auto obj = static_cast<QJSValueIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -142,9 +134,7 @@ HB_FUNC_STATIC(QJSVALUEITERATOR_NEXT)
   }
 }
 
-/*
-QJSValue value() const
-*/
+// QJSValue value() const
 HB_FUNC_STATIC(QJSVALUEITERATOR_VALUE)
 {
   auto obj = static_cast<QJSValueIterator *>(Qt5xHb::itemGetPtrStackSelfItem());

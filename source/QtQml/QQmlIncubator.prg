@@ -65,9 +65,7 @@ RETURN
 #include <QtQml/QQmlIncubator>
 #endif
 
-    /*
-    QQmlIncubator(QQmlIncubator::IncubationMode mode = QQmlIncubator::Asynchronous)
-    */
+    // QQmlIncubator(QQmlIncubator::IncubationMode mode = QQmlIncubator::Asynchronous)
 HB_FUNC_STATIC(QQMLINCUBATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QQMLINCUBATOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QQMLINCUBATOR_CLEAR)
 {
   auto obj = static_cast<QQmlIncubator *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -109,9 +105,7 @@ HB_FUNC_STATIC(QQMLINCUBATOR_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void forceCompletion()
-*/
+// void forceCompletion()
 HB_FUNC_STATIC(QQMLINCUBATOR_FORCECOMPLETION)
 {
   auto obj = static_cast<QQmlIncubator *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -131,9 +125,7 @@ HB_FUNC_STATIC(QQMLINCUBATOR_FORCECOMPLETION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QQmlIncubator::IncubationMode incubationMode() const
-*/
+// QQmlIncubator::IncubationMode incubationMode() const
 HB_FUNC_STATIC(QQMLINCUBATOR_INCUBATIONMODE)
 {
   auto obj = static_cast<QQmlIncubator *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -151,9 +143,7 @@ HB_FUNC_STATIC(QQMLINCUBATOR_INCUBATIONMODE)
   }
 }
 
-/*
-bool isError() const
-*/
+// bool isError() const
 HB_FUNC_STATIC(QQMLINCUBATOR_ISERROR)
 {
   auto obj = static_cast<QQmlIncubator *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -171,9 +161,7 @@ HB_FUNC_STATIC(QQMLINCUBATOR_ISERROR)
   }
 }
 
-/*
-bool isLoading() const
-*/
+// bool isLoading() const
 HB_FUNC_STATIC(QQMLINCUBATOR_ISLOADING)
 {
   auto obj = static_cast<QQmlIncubator *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -191,9 +179,7 @@ HB_FUNC_STATIC(QQMLINCUBATOR_ISLOADING)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QQMLINCUBATOR_ISNULL)
 {
   auto obj = static_cast<QQmlIncubator *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -211,9 +197,7 @@ HB_FUNC_STATIC(QQMLINCUBATOR_ISNULL)
   }
 }
 
-/*
-bool isReady() const
-*/
+// bool isReady() const
 HB_FUNC_STATIC(QQMLINCUBATOR_ISREADY)
 {
   auto obj = static_cast<QQmlIncubator *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -231,9 +215,7 @@ HB_FUNC_STATIC(QQMLINCUBATOR_ISREADY)
   }
 }
 
-/*
-QObject * object() const
-*/
+// QObject *object() const
 HB_FUNC_STATIC(QQMLINCUBATOR_OBJECT)
 {
   auto obj = static_cast<QQmlIncubator *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -252,9 +234,7 @@ HB_FUNC_STATIC(QQMLINCUBATOR_OBJECT)
   }
 }
 
-/*
-QQmlIncubator::Status status() const
-*/
+// QQmlIncubator::Status status() const
 HB_FUNC_STATIC(QQMLINCUBATOR_STATUS)
 {
   auto obj = static_cast<QQmlIncubator *>(Qt5xHb::itemGetPtrStackSelfItem());

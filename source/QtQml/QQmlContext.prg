@@ -68,15 +68,11 @@ RETURN
 HB_FUNC_STATIC(QQMLCONTEXT_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQQMLENGINE(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QQmlContext(QQmlEngine * engine, QObject * parent = nullptr)
-    */
+    // QQmlContext(QQmlEngine *engine, QObject *parent = nullptr)
     auto obj = new QQmlContext(PQQMLENGINE(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && ISQQMLCONTEXT(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QQmlContext(QQmlContext * parentContext, QObject * parent = nullptr)
-    */
+    // QQmlContext(QQmlContext *parentContext, QObject *parent = nullptr)
     auto obj = new QQmlContext(PQQMLCONTEXT(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -93,9 +89,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QUrl baseUrl() const
-*/
+// QUrl baseUrl() const
 HB_FUNC_STATIC(QQMLCONTEXT_BASEURL)
 {
   auto obj = qobject_cast<QQmlContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -113,9 +107,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_BASEURL)
   }
 }
 
-/*
-QObject * contextObject() const
-*/
+// QObject *contextObject() const
 HB_FUNC_STATIC(QQMLCONTEXT_CONTEXTOBJECT)
 {
   auto obj = qobject_cast<QQmlContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -134,9 +126,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_CONTEXTOBJECT)
   }
 }
 
-/*
-QVariant contextProperty(const QString &name) const
-*/
+// QVariant contextProperty(const QString &name) const
 HB_FUNC_STATIC(QQMLCONTEXT_CONTEXTPROPERTY)
 {
   auto obj = qobject_cast<QQmlContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -154,9 +144,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_CONTEXTPROPERTY)
   }
 }
 
-/*
-QQmlEngine * engine() const
-*/
+// QQmlEngine *engine() const
 HB_FUNC_STATIC(QQMLCONTEXT_ENGINE)
 {
   auto obj = qobject_cast<QQmlContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -175,9 +163,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_ENGINE)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QQMLCONTEXT_ISVALID)
 {
   auto obj = qobject_cast<QQmlContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -195,9 +181,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_ISVALID)
   }
 }
 
-/*
-QString nameForObject(QObject * object) const
-*/
+// QString nameForObject(QObject *object) const
 HB_FUNC_STATIC(QQMLCONTEXT_NAMEFOROBJECT)
 {
   auto obj = qobject_cast<QQmlContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -215,9 +199,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_NAMEFOROBJECT)
   }
 }
 
-/*
-QQmlContext * parentContext() const
-*/
+// QQmlContext *parentContext() const
 HB_FUNC_STATIC(QQMLCONTEXT_PARENTCONTEXT)
 {
   auto obj = qobject_cast<QQmlContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -236,9 +218,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_PARENTCONTEXT)
   }
 }
 
-/*
-QUrl resolvedUrl(const QUrl &src)
-*/
+// QUrl resolvedUrl(const QUrl &src)
 HB_FUNC_STATIC(QQMLCONTEXT_RESOLVEDURL)
 {
   auto obj = qobject_cast<QQmlContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -256,9 +236,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_RESOLVEDURL)
   }
 }
 
-/*
-void setBaseUrl(const QUrl &baseUrl)
-*/
+// void setBaseUrl(const QUrl &baseUrl)
 HB_FUNC_STATIC(QQMLCONTEXT_SETBASEURL)
 {
   auto obj = qobject_cast<QQmlContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -278,9 +256,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_SETBASEURL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setContextObject(QObject * object)
-*/
+// void setContextObject(QObject *object)
 HB_FUNC_STATIC(QQMLCONTEXT_SETCONTEXTOBJECT)
 {
   auto obj = qobject_cast<QQmlContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -303,9 +279,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_SETCONTEXTOBJECT)
 HB_FUNC_STATIC(QQMLCONTEXT_SETCONTEXTPROPERTY)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2)) {
-    /*
-    void setContextProperty(const QString &name, QObject * value)
-    */
+    // void setContextProperty(const QString &name, QObject *value)
     auto obj = qobject_cast<QQmlContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -314,9 +288,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_SETCONTEXTPROPERTY)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
-    /*
-    void setContextProperty(const QString &name, const QVariant &value)
-    */
+    // void setContextProperty(const QString &name, const QVariant &value)
     auto obj = qobject_cast<QQmlContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
