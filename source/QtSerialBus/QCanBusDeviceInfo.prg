@@ -66,9 +66,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QCanBusDeviceInfo(const QCanBusDeviceInfo &other)
-    */
+    // QCanBusDeviceInfo(const QCanBusDeviceInfo &other)
 HB_FUNC_STATIC(QCANBUSDEVICEINFO_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -81,9 +79,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_NEW)
 #endif
 }
 
-/*
-~QCanBusDeviceInfo()
-*/
+// ~QCanBusDeviceInfo()
 HB_FUNC_STATIC(QCANBUSDEVICEINFO_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -95,9 +91,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_DELETE)
 #endif
 }
 
-/*
-void swap(QCanBusDeviceInfo &other) Q_DECL_NOTHROW
-*/
+// void swap(QCanBusDeviceInfo &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCANBUSDEVICEINFO_SWAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -119,9 +113,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_SWAP)
 #endif
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QCANBUSDEVICEINFO_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -141,9 +133,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_NAME)
 #endif
 }
 
-/*
-bool hasFlexibleDataRate() const
-*/
+// bool hasFlexibleDataRate() const
 HB_FUNC_STATIC(QCANBUSDEVICEINFO_HASFLEXIBLEDATARATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -163,9 +153,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_HASFLEXIBLEDATARATE)
 #endif
 }
 
-/*
-bool isVirtual() const
-*/
+// bool isVirtual() const
 HB_FUNC_STATIC(QCANBUSDEVICEINFO_ISVIRTUAL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -185,9 +173,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_ISVIRTUAL)
 #endif
 }
 
-/*
-int channel() const
-*/
+// int channel() const
 HB_FUNC_STATIC(QCANBUSDEVICEINFO_CHANNEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 11, 0))
@@ -207,9 +193,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_CHANNEL)
 #endif
 }
 
-/*
-QString description() const
-*/
+// QString description() const
 HB_FUNC_STATIC(QCANBUSDEVICEINFO_DESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 11, 0))
@@ -229,9 +213,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_DESCRIPTION)
 #endif
 }
 
-/*
-QString serialNumber() const
-*/
+// QString serialNumber() const
 HB_FUNC_STATIC(QCANBUSDEVICEINFO_SERIALNUMBER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 11, 0))

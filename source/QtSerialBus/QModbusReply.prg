@@ -63,9 +63,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QModbusReply(QModbusReply::ReplyType type, int serverAddress, QObject * parent = nullptr)
-    */
+    // QModbusReply(QModbusReply::ReplyType type, int serverAddress, QObject *parent = nullptr)
 HB_FUNC_STATIC(QMODBUSREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -78,9 +76,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_NEW)
 #endif
 }
 
-/*
-QModbusReply::ReplyType type() const
-*/
+// QModbusReply::ReplyType type() const
 HB_FUNC_STATIC(QMODBUSREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -100,9 +96,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_TYPE)
 #endif
 }
 
-/*
-int serverAddress() const
-*/
+// int serverAddress() const
 HB_FUNC_STATIC(QMODBUSREPLY_SERVERADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -122,9 +116,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_SERVERADDRESS)
 #endif
 }
 
-/*
-bool isFinished() const
-*/
+// bool isFinished() const
 HB_FUNC_STATIC(QMODBUSREPLY_ISFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -144,9 +136,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_ISFINISHED)
 #endif
 }
 
-/*
-QModbusDataUnit result() const
-*/
+// QModbusDataUnit result() const
 HB_FUNC_STATIC(QMODBUSREPLY_RESULT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -167,9 +157,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_RESULT)
 #endif
 }
 
-/*
-QModbusResponse rawResult() const
-*/
+// QModbusResponse rawResult() const
 HB_FUNC_STATIC(QMODBUSREPLY_RAWRESULT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -190,9 +178,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_RAWRESULT)
 #endif
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QMODBUSREPLY_ERRORSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -212,9 +198,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_ERRORSTRING)
 #endif
 }
 
-/*
-QModbusDevice::Error error() const
-*/
+// QModbusDevice::Error error() const
 HB_FUNC_STATIC(QMODBUSREPLY_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -234,22 +218,12 @@ HB_FUNC_STATIC(QMODBUSREPLY_ERROR)
 #endif
 }
 
-/*
-void setResult(const QModbusDataUnit &unit)
-*/
-/*
-void setRawResult(const QModbusResponse &unit)
-*/
-/*
-void setFinished(bool isFinished)
-*/
-/*
-void setError(QModbusDevice::Error error, const QString &errorText)
-*/
+// void setResult(const QModbusDataUnit &unit)
+// void setRawResult(const QModbusResponse &unit)
+// void setFinished(bool isFinished)
+// void setError(QModbusDevice::Error error, const QString &errorText)
 
-/*
-void finished()
-*/
+// void finished()
 HB_FUNC_STATIC(QMODBUSREPLY_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -291,9 +265,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_ONFINISHED)
 #endif
 }
 
-/*
-void errorOccurred(QModbusDevice::Error error)
-*/
+// void errorOccurred(QModbusDevice::Error error)
 HB_FUNC_STATIC(QMODBUSREPLY_ONERROROCCURRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

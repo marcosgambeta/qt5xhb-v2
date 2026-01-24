@@ -83,17 +83,13 @@ RETURN
 HB_FUNC_STATIC(QCANBUSFRAME_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    /*
-    QCanBusFrame(QCanBusFrame::FrameType type = QCanBusFrame::DataFrame) Q_DECL_NOTHROW
-    */
+    // QCanBusFrame(QCanBusFrame::FrameType type = QCanBusFrame::DataFrame) Q_DECL_NOTHROW
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     auto obj = new QCanBusFrame(HB_ISNIL(1) ? QCanBusFrame::DataFrame : PQCANBUSFRAME_FRAMETYPE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2)) {
-    /*
-    QCanBusFrame(quint32 identifier, const QByteArray &data)
-    */
+    // QCanBusFrame(quint32 identifier, const QByteArray &data)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     auto obj = new QCanBusFrame(PQUINT32(1), *PQBYTEARRAY(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -114,9 +110,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_DELETE)
 #endif
 }
 
-/*
-bool isValid() const Q_DECL_NOTHROW
-*/
+// bool isValid() const Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCANBUSFRAME_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -136,9 +130,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_ISVALID)
 #endif
 }
 
-/*
-QCanBusFrame::FrameType frameType() const Q_DECL_NOTHROW
-*/
+// QCanBusFrame::FrameType frameType() const Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCANBUSFRAME_FRAMETYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -158,9 +150,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_FRAMETYPE)
 #endif
 }
 
-/*
-void setFrameType(QCanBusFrame::FrameType newFormat) Q_DECL_NOTHROW
-*/
+// void setFrameType(QCanBusFrame::FrameType newFormat) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCANBUSFRAME_SETFRAMETYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -182,9 +172,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETFRAMETYPE)
 #endif
 }
 
-/*
-bool hasExtendedFrameFormat() const Q_DECL_NOTHROW
-*/
+// bool hasExtendedFrameFormat() const Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCANBUSFRAME_HASEXTENDEDFRAMEFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -204,9 +192,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_HASEXTENDEDFRAMEFORMAT)
 #endif
 }
 
-/*
-void setExtendedFrameFormat(bool isExtended) Q_DECL_NOTHROW
-*/
+// void setExtendedFrameFormat(bool isExtended) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCANBUSFRAME_SETEXTENDEDFRAMEFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -228,9 +214,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETEXTENDEDFRAMEFORMAT)
 #endif
 }
 
-/*
-quint32 frameId() const Q_DECL_NOTHROW
-*/
+// quint32 frameId() const Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCANBUSFRAME_FRAMEID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -250,9 +234,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_FRAMEID)
 #endif
 }
 
-/*
-void setFrameId(quint32 newFrameId)
-*/
+// void setFrameId(quint32 newFrameId)
 HB_FUNC_STATIC(QCANBUSFRAME_SETFRAMEID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -274,9 +256,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETFRAMEID)
 #endif
 }
 
-/*
-void setPayload(const QByteArray &data)
-*/
+// void setPayload(const QByteArray &data)
 HB_FUNC_STATIC(QCANBUSFRAME_SETPAYLOAD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -298,12 +278,8 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETPAYLOAD)
 #endif
 }
 
-/*
-void setTimeStamp(TimeStamp ts) Q_DECL_NOTHROW
-*/
-/*
-QByteArray payload() const
-*/
+// void setTimeStamp(TimeStamp ts) Q_DECL_NOTHROW
+// QByteArray payload() const
 HB_FUNC_STATIC(QCANBUSFRAME_PAYLOAD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -323,12 +299,8 @@ HB_FUNC_STATIC(QCANBUSFRAME_PAYLOAD)
 #endif
 }
 
-/*
-TimeStamp timeStamp() const Q_DECL_NOTHROW
-*/
-/*
-QCanBusFrame::FrameErrors error() const Q_DECL_NOTHROW
-*/
+// TimeStamp timeStamp() const Q_DECL_NOTHROW
+// QCanBusFrame::FrameErrors error() const Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCANBUSFRAME_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -348,9 +320,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_ERROR)
 #endif
 }
 
-/*
-void setError(QCanBusFrame::FrameErrors e)
-*/
+// void setError(QCanBusFrame::FrameErrors e)
 HB_FUNC_STATIC(QCANBUSFRAME_SETERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -372,9 +342,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETERROR)
 #endif
 }
 
-/*
-QString toString() const
-*/
+// QString toString() const
 HB_FUNC_STATIC(QCANBUSFRAME_TOSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -394,9 +362,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_TOSTRING)
 #endif
 }
 
-/*
-bool hasFlexibleDataRateFormat() const Q_DECL_NOTHROW
-*/
+// bool hasFlexibleDataRateFormat() const Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCANBUSFRAME_HASFLEXIBLEDATARATEFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -416,9 +382,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_HASFLEXIBLEDATARATEFORMAT)
 #endif
 }
 
-/*
-void setFlexibleDataRateFormat(bool isFlexibleData) Q_DECL_NOTHROW
-*/
+// void setFlexibleDataRateFormat(bool isFlexibleData) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCANBUSFRAME_SETFLEXIBLEDATARATEFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -440,9 +404,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETFLEXIBLEDATARATEFORMAT)
 #endif
 }
 
-/*
-bool hasBitrateSwitch() const Q_DECL_NOTHROW
-*/
+// bool hasBitrateSwitch() const Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCANBUSFRAME_HASBITRATESWITCH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -462,9 +424,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_HASBITRATESWITCH)
 #endif
 }
 
-/*
-void setBitrateSwitch(bool bitrateSwitch) Q_DECL_NOTHROW
-*/
+// void setBitrateSwitch(bool bitrateSwitch) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCANBUSFRAME_SETBITRATESWITCH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -486,9 +446,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETBITRATESWITCH)
 #endif
 }
 
-/*
-bool hasErrorStateIndicator() const Q_DECL_NOTHROW
-*/
+// bool hasErrorStateIndicator() const Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCANBUSFRAME_HASERRORSTATEINDICATOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -508,9 +466,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_HASERRORSTATEINDICATOR)
 #endif
 }
 
-/*
-void setErrorStateIndicator(bool errorStateIndicator) Q_DECL_NOTHROW
-*/
+// void setErrorStateIndicator(bool errorStateIndicator) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCANBUSFRAME_SETERRORSTATEINDICATOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -532,9 +488,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETERRORSTATEINDICATOR)
 #endif
 }
 
-/*
-bool hasLocalEcho() const Q_DECL_NOTHROW
-*/
+// bool hasLocalEcho() const Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCANBUSFRAME_HASLOCALECHO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -554,9 +508,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_HASLOCALECHO)
 #endif
 }
 
-/*
-void setLocalEcho(bool localEcho) Q_DECL_NOTHROW
-*/
+// void setLocalEcho(bool localEcho) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCANBUSFRAME_SETLOCALECHO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))

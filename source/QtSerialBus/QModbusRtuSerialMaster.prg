@@ -53,9 +53,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QModbusRtuSerialMaster(QObject * parent = nullptr)
-    */
+    // QModbusRtuSerialMaster(QObject *parent = nullptr)
 HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -68,9 +66,7 @@ HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_NEW)
 #endif
 }
 
-/*
-~QModbusRtuSerialMaster()
-*/
+// ~QModbusRtuSerialMaster()
 HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -82,9 +78,7 @@ HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_DELETE)
 #endif
 }
 
-/*
-int interFrameDelay() const
-*/
+// int interFrameDelay() const
 HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_INTERFRAMEDELAY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -104,8 +98,6 @@ HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_INTERFRAMEDELAY)
 #endif
 }
 
-/*
-void setInterFrameDelay(int microseconds)
-*/
+// void setInterFrameDelay(int microseconds)
 
 #pragma ENDDUMP

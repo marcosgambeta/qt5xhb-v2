@@ -59,9 +59,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    virtual QCanBusDevice * createDevice(const QString &interfaceName, QString * errorMessage) const = 0
-    */
+    // virtual QCanBusDevice *createDevice(const QString &interfaceName, QString *errorMessage) const = 0
 HB_FUNC_STATIC(QCANBUSFACTORY_CREATEDEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

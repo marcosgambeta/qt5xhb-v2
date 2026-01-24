@@ -52,9 +52,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QModbusTcpServer(QObject * parent = nullptr)
-    */
+    // QModbusTcpServer(QObject *parent = nullptr)
 HB_FUNC_STATIC(QMODBUSTCPSERVER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -67,9 +65,7 @@ HB_FUNC_STATIC(QMODBUSTCPSERVER_NEW)
 #endif
 }
 
-/*
-~QModbusTcpServer()
-*/
+// ~QModbusTcpServer()
 HB_FUNC_STATIC(QMODBUSTCPSERVER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

@@ -55,9 +55,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    ~QModbusServer()
-    */
+    // ~QModbusServer()
 HB_FUNC_STATIC(QMODBUSSERVER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -69,9 +67,7 @@ HB_FUNC_STATIC(QMODBUSSERVER_DELETE)
 #endif
 }
 
-/*
-int serverAddress() const
-*/
+// int serverAddress() const
 HB_FUNC_STATIC(QMODBUSSERVER_SERVERADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -91,15 +87,9 @@ HB_FUNC_STATIC(QMODBUSSERVER_SERVERADDRESS)
 #endif
 }
 
-/*
-void setServerAddress(int serverAddress)
-*/
-/*
-virtual bool setMap(const QModbusDataUnitMap &map)
-*/
-/*
-virtual bool processesBroadcast() const
-*/
+// void setServerAddress(int serverAddress)
+// virtual bool setMap(const QModbusDataUnitMap &map)
+// virtual bool processesBroadcast() const
 HB_FUNC_STATIC(QMODBUSSERVER_PROCESSESBROADCAST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -119,28 +109,14 @@ HB_FUNC_STATIC(QMODBUSSERVER_PROCESSESBROADCAST)
 #endif
 }
 
-/*
-virtual QVariant value(int option) const
-*/
-/*
-virtual bool setValue(int option, const QVariant &value)
-*/
-/*
-bool data(QModbusDataUnit *newData) const
-*/
-/*
-bool setData(const QModbusDataUnit &unit)
-*/
-/*
-bool setData(QModbusDataUnit::RegisterType table, quint16 address, quint16 data)
-*/
-/*
-bool data(QModbusDataUnit::RegisterType table, quint16 address, quint16 *data) const
-*/
+// virtual QVariant value(int option) const
+// virtual bool setValue(int option, const QVariant &value)
+// bool data(QModbusDataUnit *newData) const
+// bool setData(const QModbusDataUnit &unit)
+// bool setData(QModbusDataUnit::RegisterType table, quint16 address, quint16 data)
+// bool data(QModbusDataUnit::RegisterType table, quint16 address, quint16 *data) const
 
-/*
-void dataWritten(QModbusDataUnit::RegisterType table, int address, int size)
-*/
+// void dataWritten(QModbusDataUnit::RegisterType table, int address, int size)
 HB_FUNC_STATIC(QMODBUSSERVER_ONDATAWRITTEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

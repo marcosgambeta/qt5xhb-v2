@@ -55,9 +55,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    ~QModbusClient()
-    */
+    // ~QModbusClient()
 HB_FUNC_STATIC(QMODBUSCLIENT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -69,9 +67,7 @@ HB_FUNC_STATIC(QMODBUSCLIENT_DELETE)
 #endif
 }
 
-/*
-int timeout() const
-*/
+// int timeout() const
 HB_FUNC_STATIC(QMODBUSCLIENT_TIMEOUT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -91,25 +87,13 @@ HB_FUNC_STATIC(QMODBUSCLIENT_TIMEOUT)
 #endif
 }
 
-/*
-void setTimeout(int newTimeout)
-*/
+// void setTimeout(int newTimeout)
 
-/*
-QModbusReply *sendReadRequest(const QModbusDataUnit &read, int serverAddress)
-*/
-/*
-QModbusReply *sendWriteRequest(const QModbusDataUnit &write, int serverAddress)
-*/
-/*
-QModbusReply *sendReadWriteRequest(const QModbusDataUnit &read, const QModbusDataUnit &write, int serverAddress)
-*/
-/*
-QModbusReply *sendRawRequest(const QModbusRequest &request, int serverAddress)
-*/
-/*
-int numberOfRetries() const
-*/
+// QModbusReply *sendReadRequest(const QModbusDataUnit &read, int serverAddress)
+// QModbusReply *sendWriteRequest(const QModbusDataUnit &write, int serverAddress)
+// QModbusReply *sendReadWriteRequest(const QModbusDataUnit &read, const QModbusDataUnit &write, int serverAddress)
+// QModbusReply *sendRawRequest(const QModbusRequest &request, int serverAddress)
+// int numberOfRetries() const
 HB_FUNC_STATIC(QMODBUSCLIENT_NUMBEROFRETRIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -129,13 +113,9 @@ HB_FUNC_STATIC(QMODBUSCLIENT_NUMBEROFRETRIES)
 #endif
 }
 
-/*
-void setNumberOfRetries(int number)
-*/
+// void setNumberOfRetries(int number)
 
-/*
-void timeoutChanged(int newTimeout)
-*/
+// void timeoutChanged(int newTimeout)
 HB_FUNC_STATIC(QMODBUSCLIENT_ONTIMEOUTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

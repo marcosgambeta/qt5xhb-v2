@@ -52,9 +52,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    virtual QCanBusDevice * createDevice(const QString &interfaceName, QString * errorMessage) const = 0
-    */
+    // virtual QCanBusDevice *createDevice(const QString &interfaceName, QString *errorMessage) const = 0
 HB_FUNC_STATIC(QCANBUSFACTORYV2_CREATEDEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -75,9 +73,7 @@ HB_FUNC_STATIC(QCANBUSFACTORYV2_CREATEDEVICE)
 #endif
 }
 
-/*
-virtual QList<QCanBusDeviceInfo> availableDevices(QString * errorMessage) const = 0
-*/
+// virtual QList<QCanBusDeviceInfo> availableDevices(QString *errorMessage) const = 0
 HB_FUNC_STATIC(QCANBUSFACTORYV2_AVAILABLEDEVICES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))

@@ -59,9 +59,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    ~QModbusDevice()
-    */
+    // ~QModbusDevice()
 HB_FUNC_STATIC(QMODBUSDEVICE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -73,15 +71,9 @@ HB_FUNC_STATIC(QMODBUSDEVICE_DELETE)
 #endif
 }
 
-/*
-QVariant connectionParameter(int parameter) const
-*/
-/*
-void setConnectionParameter(int parameter, const QVariant &value)
-*/
-/*
-bool connectDevice()
-*/
+// QVariant connectionParameter(int parameter) const
+// void setConnectionParameter(int parameter, const QVariant &value)
+// bool connectDevice()
 HB_FUNC_STATIC(QMODBUSDEVICE_CONNECTDEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -101,9 +93,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_CONNECTDEVICE)
 #endif
 }
 
-/*
-void disconnectDevice()
-*/
+// void disconnectDevice()
 HB_FUNC_STATIC(QMODBUSDEVICE_DISCONNECTDEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -125,9 +115,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_DISCONNECTDEVICE)
 #endif
 }
 
-/*
-QModbusDevice::State state() const
-*/
+// QModbusDevice::State state() const
 HB_FUNC_STATIC(QMODBUSDEVICE_STATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -147,9 +135,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_STATE)
 #endif
 }
 
-/*
-QModbusDevice::Error error() const
-*/
+// QModbusDevice::Error error() const
 HB_FUNC_STATIC(QMODBUSDEVICE_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -169,9 +155,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_ERROR)
 #endif
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QMODBUSDEVICE_ERRORSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -191,9 +175,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_ERRORSTRING)
 #endif
 }
 
-/*
-void errorOccurred(QModbusDevice::Error error)
-*/
+// void errorOccurred(QModbusDevice::Error error)
 HB_FUNC_STATIC(QMODBUSDEVICE_ONERROROCCURRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -238,9 +220,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_ONERROROCCURRED)
 #endif
 }
 
-/*
-void stateChanged(QModbusDevice::State state)
-*/
+// void stateChanged(QModbusDevice::State state)
 HB_FUNC_STATIC(QMODBUSDEVICE_ONSTATECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

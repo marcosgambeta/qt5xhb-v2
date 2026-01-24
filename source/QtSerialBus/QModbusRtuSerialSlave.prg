@@ -53,9 +53,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QModbusRtuSerialSlave(QObject * parent = nullptr)
-    */
+    // QModbusRtuSerialSlave(QObject *parent = nullptr)
 HB_FUNC_STATIC(QMODBUSRTUSERIALSLAVE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -68,9 +66,7 @@ HB_FUNC_STATIC(QMODBUSRTUSERIALSLAVE_NEW)
 #endif
 }
 
-/*
-~QModbusRtuSerialSlave()
-*/
+// ~QModbusRtuSerialSlave()
 HB_FUNC_STATIC(QMODBUSRTUSERIALSLAVE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -82,9 +78,7 @@ HB_FUNC_STATIC(QMODBUSRTUSERIALSLAVE_DELETE)
 #endif
 }
 
-/*
-bool processesBroadcast() const override
-*/
+// bool processesBroadcast() const override
 HB_FUNC_STATIC(QMODBUSRTUSERIALSLAVE_PROCESSESBROADCAST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

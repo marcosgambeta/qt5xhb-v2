@@ -77,9 +77,7 @@ RETURN
 #include <QtCore/QVariant>
 #include <QtCore/QVector>
 
-    /*
-    virtual void setConfigurationParameter(int key, const QVariant &value)
-    */
+    // virtual void setConfigurationParameter(int key, const QVariant &value)
 HB_FUNC_STATIC(QCANBUSDEVICE_SETCONFIGURATIONPARAMETER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -101,9 +99,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_SETCONFIGURATIONPARAMETER)
 #endif
 }
 
-/*
-QVariant configurationParameter(int key) const
-*/
+// QVariant configurationParameter(int key) const
 HB_FUNC_STATIC(QCANBUSDEVICE_CONFIGURATIONPARAMETER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -123,9 +119,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_CONFIGURATIONPARAMETER)
 #endif
 }
 
-/*
-QVector<int> configurationKeys() const
-*/
+// QVector<int> configurationKeys() const
 HB_FUNC_STATIC(QCANBUSDEVICE_CONFIGURATIONKEYS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -152,9 +146,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_CONFIGURATIONKEYS)
 #endif
 }
 
-/*
-virtual bool writeFrame(const QCanBusFrame &frame) = 0
-*/
+// virtual bool writeFrame(const QCanBusFrame &frame) = 0
 HB_FUNC_STATIC(QCANBUSDEVICE_WRITEFRAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -174,9 +166,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_WRITEFRAME)
 #endif
 }
 
-/*
-QCanBusFrame readFrame()
-*/
+// QCanBusFrame readFrame()
 HB_FUNC_STATIC(QCANBUSDEVICE_READFRAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -197,9 +187,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_READFRAME)
 #endif
 }
 
-/*
-qint64 framesAvailable() const
-*/
+// qint64 framesAvailable() const
 HB_FUNC_STATIC(QCANBUSDEVICE_FRAMESAVAILABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -219,9 +207,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_FRAMESAVAILABLE)
 #endif
 }
 
-/*
-qint64 framesToWrite() const
-*/
+// qint64 framesToWrite() const
 HB_FUNC_STATIC(QCANBUSDEVICE_FRAMESTOWRITE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -241,9 +227,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_FRAMESTOWRITE)
 #endif
 }
 
-/*
-virtual bool waitForFramesWritten(int msecs)
-*/
+// virtual bool waitForFramesWritten(int msecs)
 HB_FUNC_STATIC(QCANBUSDEVICE_WAITFORFRAMESWRITTEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -263,9 +247,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_WAITFORFRAMESWRITTEN)
 #endif
 }
 
-/*
-virtual bool waitForFramesReceived(int msecs)
-*/
+// virtual bool waitForFramesReceived(int msecs)
 HB_FUNC_STATIC(QCANBUSDEVICE_WAITFORFRAMESRECEIVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -285,9 +267,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_WAITFORFRAMESRECEIVED)
 #endif
 }
 
-/*
-bool connectDevice()
-*/
+// bool connectDevice()
 HB_FUNC_STATIC(QCANBUSDEVICE_CONNECTDEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -307,9 +287,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_CONNECTDEVICE)
 #endif
 }
 
-/*
-void disconnectDevice()
-*/
+// void disconnectDevice()
 HB_FUNC_STATIC(QCANBUSDEVICE_DISCONNECTDEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -331,9 +309,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_DISCONNECTDEVICE)
 #endif
 }
 
-/*
-QCanBusDevice::CanBusDeviceState state() const
-*/
+// QCanBusDevice::CanBusDeviceState state() const
 HB_FUNC_STATIC(QCANBUSDEVICE_STATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -353,9 +329,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_STATE)
 #endif
 }
 
-/*
-QCanBusDevice::CanBusError error() const
-*/
+// QCanBusDevice::CanBusError error() const
 HB_FUNC_STATIC(QCANBUSDEVICE_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -375,9 +349,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ERROR)
 #endif
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QCANBUSDEVICE_ERRORSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -397,9 +369,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ERRORSTRING)
 #endif
 }
 
-/*
-virtual QString interpretErrorFrame(const QCanBusFrame &errorFrame) = 0
-*/
+// virtual QString interpretErrorFrame(const QCanBusFrame &errorFrame) = 0
 HB_FUNC_STATIC(QCANBUSDEVICE_INTERPRETERRORFRAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -419,9 +389,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_INTERPRETERRORFRAME)
 #endif
 }
 
-/*
-void clear(QCanBusDevice::Directions direction)
-*/
+// void clear(QCanBusDevice::Directions direction)
 HB_FUNC_STATIC(QCANBUSDEVICE_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
@@ -443,9 +411,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_CLEAR)
 #endif
 }
 
-/*
-QVector<QCanBusFrame> readAllFrames()
-*/
+// QVector<QCanBusFrame> readAllFrames()
 HB_FUNC_STATIC(QCANBUSDEVICE_READALLFRAMES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
@@ -487,9 +453,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_READALLFRAMES)
 #endif
 }
 
-/*
-void errorOccurred(QCanBusDevice::CanBusError)
-*/
+// void errorOccurred(QCanBusDevice::CanBusError)
 HB_FUNC_STATIC(QCANBUSDEVICE_ONERROROCCURRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -534,9 +498,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ONERROROCCURRED)
 #endif
 }
 
-/*
-void framesReceived()
-*/
+// void framesReceived()
 HB_FUNC_STATIC(QCANBUSDEVICE_ONFRAMESRECEIVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -578,9 +540,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ONFRAMESRECEIVED)
 #endif
 }
 
-/*
-void framesWritten(qint64 framesCount)
-*/
+// void framesWritten(qint64 framesCount)
 HB_FUNC_STATIC(QCANBUSDEVICE_ONFRAMESWRITTEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -625,9 +585,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ONFRAMESWRITTEN)
 #endif
 }
 
-/*
-void stateChanged(QCanBusDevice::CanBusDeviceState state)
-*/
+// void stateChanged(QCanBusDevice::CanBusDeviceState state)
 HB_FUNC_STATIC(QCANBUSDEVICE_ONSTATECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

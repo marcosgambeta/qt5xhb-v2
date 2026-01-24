@@ -56,9 +56,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    static QCanBus * instance()
-    */
+    // static QCanBus *instance()
 HB_FUNC_STATIC(QCANBUS_INSTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -75,9 +73,7 @@ HB_FUNC_STATIC(QCANBUS_INSTANCE)
 #endif
 }
 
-/*
-QStringList plugins() const
-*/
+// QStringList plugins() const
 HB_FUNC_STATIC(QCANBUS_PLUGINS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -97,9 +93,7 @@ HB_FUNC_STATIC(QCANBUS_PLUGINS)
 #endif
 }
 
-/*
-QList<QCanBusDeviceInfo> availableDevices(const QString &plugin, QString * errorMessage = nullptr) const
-*/
+// QList<QCanBusDeviceInfo> availableDevices(const QString &plugin, QString *errorMessage = nullptr) const
 HB_FUNC_STATIC(QCANBUS_AVAILABLEDEVICES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -141,10 +135,8 @@ HB_FUNC_STATIC(QCANBUS_AVAILABLEDEVICES)
 #endif
 }
 
-/*
-QCanBusDevice * createDevice(const QString &plugin, const QString &interfaceName, QString * errorMessage = nullptr)
-const
-*/
+// QCanBusDevice *createDevice(const QString &plugin, const QString &interfaceName, QString *errorMessage = nullptr)
+// const
 HB_FUNC_STATIC(QCANBUS_CREATEDEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
