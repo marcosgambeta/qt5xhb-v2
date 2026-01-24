@@ -22,13 +22,16 @@ rem Adjust the paths if necessary.
 rem Execute this script and execute the commands below:
 rem cd qt5xhb-v2 <ENTER>
 rem cd examples <ENTER>
-rem hbmk2 mainwindow ../qt5xhb_515_msys2.hbc -gc3 -gtgui <ENTER>
+rem hbmk2 mainwindow ../qt5xhb_515.hbc -gc3 -gtgui <ENTER>
 rem mainwindow <ENTER>
 
 rem Set Qt Framework paths.
 set QT_BIN_DIR=C:\msys64\mingw64\bin
 set QT_INC_DIR=C:\msys64\mingw64\include
 set QT_LIB_DIR=C:\msys64\mingw64\lib
+
+rem using Qt Framework installed inside MSYS ?
+set QTMSYS=yes
 
 rem Set Harbour paths.
 set HB_BIN_DIR=%CD%\hb34\bin
@@ -47,6 +50,7 @@ rem Clears the variables.
 set QT_BIN_DIR=
 set QT_INC_DIR=
 set QT_LIB_DIR=
+set QTMSYS=
 set HB_BIN_DIR=
 rem set HB_INC_DIR=
 set CPP_BIN_DIR=
