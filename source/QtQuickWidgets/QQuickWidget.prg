@@ -85,25 +85,19 @@ HB_FUNC_STATIC(QQUICKWIDGET_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
-    /*
-    QQuickWidget(QWidget * parent = nullptr)
-    */
+    // QQuickWidget(QWidget *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QQuickWidget(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISNUMPAR(2) && ISQQMLENGINE(1) && ISQWIDGET(2)) {
-    /*
-    QQuickWidget(QQmlEngine * engine, QWidget * parent)
-    */
+    // QQuickWidget(QQmlEngine *engine, QWidget *parent)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QQuickWidget(PQQMLENGINE(1), PQWIDGET(2));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(1, 2) && ISQURL(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QQuickWidget(const QUrl &source, QWidget * parent = nullptr)
-    */
+    // QQuickWidget(const QUrl &source, QWidget *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QQuickWidget(*PQURL(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -125,9 +119,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_DELETE)
 #endif
 }
 
-/*
-QUrl source() const
-*/
+// QUrl source() const
 HB_FUNC_STATIC(QQUICKWIDGET_SOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -147,9 +139,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_SOURCE)
 #endif
 }
 
-/*
-void setSource(const QUrl &)
-*/
+// void setSource(const QUrl &)
 HB_FUNC_STATIC(QQUICKWIDGET_SETSOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -171,9 +161,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_SETSOURCE)
 #endif
 }
 
-/*
-QQmlEngine * engine() const
-*/
+// QQmlEngine *engine() const
 HB_FUNC_STATIC(QQUICKWIDGET_ENGINE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -194,9 +182,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_ENGINE)
 #endif
 }
 
-/*
-QQmlContext * rootContext() const
-*/
+// QQmlContext *rootContext() const
 HB_FUNC_STATIC(QQUICKWIDGET_ROOTCONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -217,9 +203,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_ROOTCONTEXT)
 #endif
 }
 
-/*
-QQuickItem * rootObject() const
-*/
+// QQuickItem *rootObject() const
 HB_FUNC_STATIC(QQUICKWIDGET_ROOTOBJECT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -240,9 +224,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_ROOTOBJECT)
 #endif
 }
 
-/*
-QQuickWidget::ResizeMode resizeMode() const
-*/
+// QQuickWidget::ResizeMode resizeMode() const
 HB_FUNC_STATIC(QQUICKWIDGET_RESIZEMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -262,9 +244,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_RESIZEMODE)
 #endif
 }
 
-/*
-void setResizeMode(QQuickWidget::ResizeMode)
-*/
+// void setResizeMode(QQuickWidget::ResizeMode)
 HB_FUNC_STATIC(QQUICKWIDGET_SETRESIZEMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -286,9 +266,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_SETRESIZEMODE)
 #endif
 }
 
-/*
-QQuickWidget::Status status() const
-*/
+// QQuickWidget::Status status() const
 HB_FUNC_STATIC(QQUICKWIDGET_STATUS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -308,9 +286,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_STATUS)
 #endif
 }
 
-/*
-QList<QQmlError> errors() const
-*/
+// QList<QQmlError> errors() const
 HB_FUNC_STATIC(QQUICKWIDGET_ERRORS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -352,9 +328,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_ERRORS)
 #endif
 }
 
-/*
-QSize sizeHint() const
-*/
+// QSize sizeHint() const
 HB_FUNC_STATIC(QQUICKWIDGET_SIZEHINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -374,9 +348,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_SIZEHINT)
 #endif
 }
 
-/*
-QSize initialSize() const
-*/
+// QSize initialSize() const
 HB_FUNC_STATIC(QQUICKWIDGET_INITIALSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -396,9 +368,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_INITIALSIZE)
 #endif
 }
 
-/*
-void setContent(const QUrl &url, QQmlComponent * component, QObject * item)
-*/
+// void setContent(const QUrl &url, QQmlComponent *component, QObject *item)
 HB_FUNC_STATIC(QQUICKWIDGET_SETCONTENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -420,9 +390,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_SETCONTENT)
 #endif
 }
 
-/*
-QSurfaceFormat format() const
-*/
+// QSurfaceFormat format() const
 HB_FUNC_STATIC(QQUICKWIDGET_FORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -442,9 +410,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_FORMAT)
 #endif
 }
 
-/*
-void setFormat(const QSurfaceFormat &format)
-*/
+// void setFormat(const QSurfaceFormat &format)
 HB_FUNC_STATIC(QQUICKWIDGET_SETFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -466,9 +432,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_SETFORMAT)
 #endif
 }
 
-/*
-void statusChanged(QQuickWidget::Status status)
-*/
+// void statusChanged(QQuickWidget::Status status)
 HB_FUNC_STATIC(QQUICKWIDGET_ONSTATUSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -513,9 +477,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_ONSTATUSCHANGED)
 #endif
 }
 
-/*
-void sceneGraphError(QQuickWindow::SceneGraphError error, const QString &message)
-*/
+// void sceneGraphError(QQuickWindow::SceneGraphError error, const QString &message)
 HB_FUNC_STATIC(QQUICKWIDGET_ONSCENEGRAPHERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
