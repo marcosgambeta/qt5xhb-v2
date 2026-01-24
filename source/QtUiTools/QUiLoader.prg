@@ -73,9 +73,7 @@ RETURN
 #include <QtWidgets/QActionGroup>
 #include <QtWidgets/QLayout>
 
-    /*
-    QUiLoader(QObject * parent = nullptr)
-    */
+    // QUiLoader(QObject *parent = nullptr)
 HB_FUNC_STATIC(QUILOADER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -95,9 +93,7 @@ HB_FUNC_STATIC(QUILOADER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addPluginPath(const QString &path)
-*/
+// void addPluginPath(const QString &path)
 HB_FUNC_STATIC(QUILOADER_ADDPLUGINPATH)
 {
   auto obj = qobject_cast<QUiLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -117,9 +113,7 @@ HB_FUNC_STATIC(QUILOADER_ADDPLUGINPATH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringList availableLayouts() const
-*/
+// QStringList availableLayouts() const
 HB_FUNC_STATIC(QUILOADER_AVAILABLELAYOUTS)
 {
   auto obj = qobject_cast<QUiLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -137,9 +131,7 @@ HB_FUNC_STATIC(QUILOADER_AVAILABLELAYOUTS)
   }
 }
 
-/*
-QStringList availableWidgets() const
-*/
+// QStringList availableWidgets() const
 HB_FUNC_STATIC(QUILOADER_AVAILABLEWIDGETS)
 {
   auto obj = qobject_cast<QUiLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -157,9 +149,7 @@ HB_FUNC_STATIC(QUILOADER_AVAILABLEWIDGETS)
   }
 }
 
-/*
-void clearPluginPaths()
-*/
+// void clearPluginPaths()
 HB_FUNC_STATIC(QUILOADER_CLEARPLUGINPATHS)
 {
   auto obj = qobject_cast<QUiLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -179,9 +169,7 @@ HB_FUNC_STATIC(QUILOADER_CLEARPLUGINPATHS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QAction * createAction(QObject * parent = nullptr, const QString &name = QString())
-*/
+// virtual QAction *createAction(QObject *parent = nullptr, const QString &name = QString())
 HB_FUNC_STATIC(QUILOADER_CREATEACTION)
 {
   auto obj = qobject_cast<QUiLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -200,9 +188,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEACTION)
   }
 }
 
-/*
-virtual QActionGroup * createActionGroup(QObject * parent = nullptr, const QString &name = QString())
-*/
+// virtual QActionGroup *createActionGroup(QObject *parent = nullptr, const QString &name = QString())
 HB_FUNC_STATIC(QUILOADER_CREATEACTIONGROUP)
 {
   auto obj = qobject_cast<QUiLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -221,9 +207,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEACTIONGROUP)
   }
 }
 
-/*
-virtual QLayout * createLayout(const QString &className, QObject * parent = nullptr, const QString &name = QString())
-*/
+// virtual QLayout *createLayout(const QString &className, QObject *parent = nullptr, const QString &name = QString())
 HB_FUNC_STATIC(QUILOADER_CREATELAYOUT)
 {
   auto obj = qobject_cast<QUiLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -242,9 +226,7 @@ HB_FUNC_STATIC(QUILOADER_CREATELAYOUT)
   }
 }
 
-/*
-virtual QWidget * createWidget(const QString &className, QWidget * parent = nullptr, const QString &name = QString())
-*/
+// virtual QWidget *createWidget(const QString &className, QWidget *parent = nullptr, const QString &name = QString())
 HB_FUNC_STATIC(QUILOADER_CREATEWIDGET)
 {
   auto obj = qobject_cast<QUiLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -263,9 +245,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEWIDGET)
   }
 }
 
-/*
-bool isLanguageChangeEnabled() const
-*/
+// bool isLanguageChangeEnabled() const
 HB_FUNC_STATIC(QUILOADER_ISLANGUAGECHANGEENABLED)
 {
   auto obj = qobject_cast<QUiLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -283,9 +263,7 @@ HB_FUNC_STATIC(QUILOADER_ISLANGUAGECHANGEENABLED)
   }
 }
 
-/*
-QWidget * load(QIODevice * device, QWidget * parentWidget = nullptr)
-*/
+// QWidget *load(QIODevice *device, QWidget *parentWidget = nullptr)
 HB_FUNC_STATIC(QUILOADER_LOAD)
 {
   auto obj = qobject_cast<QUiLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -304,9 +282,7 @@ HB_FUNC_STATIC(QUILOADER_LOAD)
   }
 }
 
-/*
-QStringList pluginPaths() const
-*/
+// QStringList pluginPaths() const
 HB_FUNC_STATIC(QUILOADER_PLUGINPATHS)
 {
   auto obj = qobject_cast<QUiLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -324,9 +300,7 @@ HB_FUNC_STATIC(QUILOADER_PLUGINPATHS)
   }
 }
 
-/*
-void setLanguageChangeEnabled(bool enabled)
-*/
+// void setLanguageChangeEnabled(bool enabled)
 HB_FUNC_STATIC(QUILOADER_SETLANGUAGECHANGEENABLED)
 {
   auto obj = qobject_cast<QUiLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -346,9 +320,7 @@ HB_FUNC_STATIC(QUILOADER_SETLANGUAGECHANGEENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWorkingDirectory(const QDir &dir)
-*/
+// void setWorkingDirectory(const QDir &dir)
 HB_FUNC_STATIC(QUILOADER_SETWORKINGDIRECTORY)
 {
   auto obj = qobject_cast<QUiLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -368,9 +340,7 @@ HB_FUNC_STATIC(QUILOADER_SETWORKINGDIRECTORY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDir workingDirectory() const
-*/
+// QDir workingDirectory() const
 HB_FUNC_STATIC(QUILOADER_WORKINGDIRECTORY)
 {
   auto obj = qobject_cast<QUiLoader *>(Qt5xHb::getQObjectPointerFromSelfItem());

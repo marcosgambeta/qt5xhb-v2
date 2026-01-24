@@ -47,9 +47,7 @@ RETURN
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-    /*
-    HUiLoader(QObject *parent = nullptr)
-    */
+    // HUiLoader(QObject *parent = nullptr)
 HB_FUNC_STATIC(HUILOADER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -60,9 +58,7 @@ HB_FUNC_STATIC(HUILOADER_NEW)
   }
 }
 
-/*
-~HUiLoader()
-*/
+// ~HUiLoader()
 HB_FUNC_STATIC(HUILOADER_DELETE)
 {
   auto obj = (HUiLoader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -72,25 +68,15 @@ HB_FUNC_STATIC(HUILOADER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAction * createAction(QObject *parent = nullptr, const QString &name = QString())
-*/
+// QAction *createAction(QObject *parent = nullptr, const QString &name = QString())
 
-/*
-QActionGroup * createActionGroup(QObject *parent = nullptr, const QString &name = QString())
-*/
+// QActionGroup *createActionGroup(QObject *parent = nullptr, const QString &name = QString())
 
-/*
-QLayout * createLayout(const QString &className, QObject *parent = nullptr, const QString &name = QString())
-*/
+// QLayout *createLayout(const QString &className, QObject *parent = nullptr, const QString &name = QString())
 
-/*
-QWidget * createWidget(const QString &className, QWidget *parent = nullptr, const QString &name = QString())
-*/
+// QWidget *createWidget(const QString &className, QWidget *parent = nullptr, const QString &name = QString())
 
-/*
-void setCreateActionCB (PHB_ITEM block)
-*/
+// void setCreateActionCB (PHB_ITEM block)
 HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONCB)
 {
   auto obj = (HUiLoader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -110,9 +96,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONCB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCreateActionGroupCB (PHB_ITEM block)
-*/
+// void setCreateActionGroupCB (PHB_ITEM block)
 HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONGROUPCB)
 {
   auto obj = (HUiLoader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -132,9 +116,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONGROUPCB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCreateLayoutCB (PHB_ITEM block)
-*/
+// void setCreateLayoutCB (PHB_ITEM block)
 HB_FUNC_STATIC(HUILOADER_SETCREATELAYOUTCB)
 {
   auto obj = (HUiLoader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -154,9 +136,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATELAYOUTCB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCreateWidgetCB (PHB_ITEM block)
-*/
+// void setCreateWidgetCB (PHB_ITEM block)
 HB_FUNC_STATIC(HUILOADER_SETCREATEWIDGETCB)
 {
   auto obj = (HUiLoader *)Qt5xHb::itemGetPtrStackSelfItem();
