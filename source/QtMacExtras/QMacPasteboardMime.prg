@@ -68,9 +68,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QMacPasteboardMime(char)
-    */
+    // QMacPasteboardMime(char)
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -94,9 +92,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_DELETE)
 #endif
 }
 
-/*
-virtual QString convertorName() = 0
-*/
+// virtual QString convertorName() = 0
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_CONVERTORNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -116,9 +112,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_CONVERTORNAME)
 #endif
 }
 
-/*
-virtual bool canConvert(const QString &mime, QString flav) = 0
-*/
+// virtual bool canConvert(const QString &mime, QString flav) = 0
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_CANCONVERT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -138,9 +132,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_CANCONVERT)
 #endif
 }
 
-/*
-virtual QString mimeFor(QString flav) = 0
-*/
+// virtual QString mimeFor(QString flav) = 0
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_MIMEFOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -160,9 +152,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_MIMEFOR)
 #endif
 }
 
-/*
-virtual QString flavorFor(const QString &mime) = 0
-*/
+// virtual QString flavorFor(const QString &mime) = 0
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_FLAVORFOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -182,9 +172,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_FLAVORFOR)
 #endif
 }
 
-/*
-virtual QVariant convertToMime(const QString &mime, QList<QByteArray> data, QString flav) = 0
-*/
+// virtual QVariant convertToMime(const QString &mime, QList<QByteArray> data, QString flav) = 0
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_CONVERTTOMIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -211,9 +199,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_CONVERTTOMIME)
 #endif
 }
 
-/*
-virtual QList<QByteArray> convertFromMime(const QString &mime, QVariant data, QString flav) = 0
-*/
+// virtual QList<QByteArray> convertFromMime(const QString &mime, QVariant data, QString flav) = 0
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_CONVERTFROMMIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -255,9 +241,7 @@ HB_FUNC_STATIC(QMACPASTEBOARDMIME_CONVERTFROMMIME)
 #endif
 }
 
-/*
-virtual int count(QMimeData * mimeData)
-*/
+// virtual int count(QMimeData *mimeData)
 HB_FUNC_STATIC(QMACPASTEBOARDMIME_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
