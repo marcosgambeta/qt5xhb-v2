@@ -64,9 +64,7 @@ RETURN
 #include <QtWebEngineCore/QWebEngineUrlRequestInfo>
 #endif
 
-    /*
-    QWebEngineUrlRequestInfo::ResourceType resourceType() const
-    */
+    // QWebEngineUrlRequestInfo::ResourceType resourceType() const
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_RESOURCETYPE)
 {
   auto obj = static_cast<QWebEngineUrlRequestInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_RESOURCETYPE)
   }
 }
 
-/*
-QWebEngineUrlRequestInfo::NavigationType navigationType() const
-*/
+// QWebEngineUrlRequestInfo::NavigationType navigationType() const
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_NAVIGATIONTYPE)
 {
   auto obj = static_cast<QWebEngineUrlRequestInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -104,9 +100,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_NAVIGATIONTYPE)
   }
 }
 
-/*
-QUrl requestUrl() const
-*/
+// QUrl requestUrl() const
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_REQUESTURL)
 {
   auto obj = static_cast<QWebEngineUrlRequestInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -124,9 +118,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_REQUESTURL)
   }
 }
 
-/*
-QUrl firstPartyUrl() const
-*/
+// QUrl firstPartyUrl() const
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_FIRSTPARTYURL)
 {
   auto obj = static_cast<QWebEngineUrlRequestInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -144,9 +136,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_FIRSTPARTYURL)
   }
 }
 
-/*
-QByteArray requestMethod() const
-*/
+// QByteArray requestMethod() const
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_REQUESTMETHOD)
 {
   auto obj = static_cast<QWebEngineUrlRequestInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -164,9 +154,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_REQUESTMETHOD)
   }
 }
 
-/*
-bool changed() const
-*/
+// bool changed() const
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_CHANGED)
 {
   auto obj = static_cast<QWebEngineUrlRequestInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -184,9 +172,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_CHANGED)
   }
 }
 
-/*
-void block(bool shouldBlock)
-*/
+// void block(bool shouldBlock)
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_BLOCK)
 {
   auto obj = static_cast<QWebEngineUrlRequestInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -206,9 +192,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_BLOCK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void redirect(const QUrl &url)
-*/
+// void redirect(const QUrl &url)
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_REDIRECT)
 {
   auto obj = static_cast<QWebEngineUrlRequestInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -228,9 +212,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_REDIRECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHttpHeader(const QByteArray &name, const QByteArray &value)
-*/
+// void setHttpHeader(const QByteArray &name, const QByteArray &value)
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTINFO_SETHTTPHEADER)
 {
   auto obj = static_cast<QWebEngineUrlRequestInfo *>(Qt5xHb::itemGetPtrStackSelfItem());

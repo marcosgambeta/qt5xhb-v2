@@ -54,9 +54,7 @@ RETURN
 #include <QtWebEngineCore/QWebEngineUrlRequestJob>
 #endif
 
-    /*
-    ~QWebEngineUrlRequestJob()
-    */
+    // ~QWebEngineUrlRequestJob()
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_DELETE)
 {
   auto obj = qobject_cast<QWebEngineUrlRequestJob *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -66,9 +64,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QUrl requestUrl() const
-*/
+// QUrl requestUrl() const
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REQUESTURL)
 {
   auto obj = qobject_cast<QWebEngineUrlRequestJob *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -86,9 +82,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REQUESTURL)
   }
 }
 
-/*
-QByteArray requestMethod() const
-*/
+// QByteArray requestMethod() const
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REQUESTMETHOD)
 {
   auto obj = qobject_cast<QWebEngineUrlRequestJob *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -106,9 +100,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REQUESTMETHOD)
   }
 }
 
-/*
-void reply(const QByteArray &contentType, QIODevice * device)
-*/
+// void reply(const QByteArray &contentType, QIODevice *device)
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REPLY)
 {
   auto obj = qobject_cast<QWebEngineUrlRequestJob *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -128,9 +120,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REPLY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void fail(QWebEngineUrlRequestJob::Error error)
-*/
+// void fail(QWebEngineUrlRequestJob::Error error)
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_FAIL)
 {
   auto obj = qobject_cast<QWebEngineUrlRequestJob *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -150,9 +140,7 @@ HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_FAIL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void redirect(const QUrl &url)
-*/
+// void redirect(const QUrl &url)
 HB_FUNC_STATIC(QWEBENGINEURLREQUESTJOB_REDIRECT)
 {
   auto obj = qobject_cast<QWebEngineUrlRequestJob *>(Qt5xHb::getQObjectPointerFromSelfItem());
