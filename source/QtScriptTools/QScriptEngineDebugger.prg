@@ -71,9 +71,7 @@ RETURN
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QToolBar>
 
-    /*
-    QScriptEngineDebugger(QObject * parent = nullptr)
-    */
+    // QScriptEngineDebugger(QObject *parent = nullptr)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAction * action(QScriptEngineDebugger::DebuggerAction action) const
-*/
+// QAction *action(QScriptEngineDebugger::DebuggerAction action) const
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ACTION)
 {
   auto obj = qobject_cast<QScriptEngineDebugger *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -114,9 +110,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ACTION)
   }
 }
 
-/*
-void attachTo(QScriptEngine * engine)
-*/
+// void attachTo(QScriptEngine *engine)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ATTACHTO)
 {
   auto obj = qobject_cast<QScriptEngineDebugger *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -136,9 +130,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ATTACHTO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool autoShowStandardWindow() const
-*/
+// bool autoShowStandardWindow() const
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW)
 {
   auto obj = qobject_cast<QScriptEngineDebugger *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -156,9 +148,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW)
   }
 }
 
-/*
-QMenu * createStandardMenu(QWidget * parent = nullptr)
-*/
+// QMenu *createStandardMenu(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU)
 {
   auto obj = qobject_cast<QScriptEngineDebugger *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -177,9 +167,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU)
   }
 }
 
-/*
-QToolBar * createStandardToolBar(QWidget * parent = nullptr)
-*/
+// QToolBar *createStandardToolBar(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR)
 {
   auto obj = qobject_cast<QScriptEngineDebugger *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -198,9 +186,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR)
   }
 }
 
-/*
-void detach()
-*/
+// void detach()
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_DETACH)
 {
   auto obj = qobject_cast<QScriptEngineDebugger *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -220,9 +206,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_DETACH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAutoShowStandardWindow(bool autoShow)
-*/
+// void setAutoShowStandardWindow(bool autoShow)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW)
 {
   auto obj = qobject_cast<QScriptEngineDebugger *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -242,9 +226,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QMainWindow * standardWindow() const
-*/
+// QMainWindow *standardWindow() const
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_STANDARDWINDOW)
 {
   auto obj = qobject_cast<QScriptEngineDebugger *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -263,9 +245,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_STANDARDWINDOW)
   }
 }
 
-/*
-QScriptEngineDebugger::DebuggerState state() const
-*/
+// QScriptEngineDebugger::DebuggerState state() const
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_STATE)
 {
   auto obj = qobject_cast<QScriptEngineDebugger *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -283,9 +263,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_STATE)
   }
 }
 
-/*
-QWidget * widget(QScriptEngineDebugger::DebuggerWidget widget) const
-*/
+// QWidget *widget(QScriptEngineDebugger::DebuggerWidget widget) const
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_WIDGET)
 {
   auto obj = qobject_cast<QScriptEngineDebugger *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -304,9 +282,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_WIDGET)
   }
 }
 
-/*
-void evaluationResumed()
-*/
+// void evaluationResumed()
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED)
 {
   auto sender = qobject_cast<QScriptEngineDebugger *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -345,9 +321,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED)
   hb_retl(result);
 }
 
-/*
-void evaluationSuspended()
-*/
+// void evaluationSuspended()
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED)
 {
   auto sender = qobject_cast<QScriptEngineDebugger *>(Qt5xHb::getQObjectPointerFromSelfItem());
