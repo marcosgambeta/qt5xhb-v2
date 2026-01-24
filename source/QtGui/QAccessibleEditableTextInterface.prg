@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void deleteText(int startOffset, int endOffset) = 0
-*/
+// virtual void deleteText(int startOffset, int endOffset) = 0
 HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_DELETETEXT)
 {
   auto obj = static_cast<QAccessibleEditableTextInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -88,9 +86,7 @@ HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_DELETETEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void insertText(int offset, const QString &text) = 0
-*/
+// virtual void insertText(int offset, const QString &text) = 0
 HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_INSERTTEXT)
 {
   auto obj = static_cast<QAccessibleEditableTextInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -110,9 +106,7 @@ HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_INSERTTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void replaceText(int startOffset, int endOffset, const QString &text) = 0
-*/
+// virtual void replaceText(int startOffset, int endOffset, const QString &text) = 0
 HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_REPLACETEXT)
 {
   auto obj = static_cast<QAccessibleEditableTextInterface *>(Qt5xHb::itemGetPtrStackSelfItem());

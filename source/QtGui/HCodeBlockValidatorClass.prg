@@ -40,15 +40,11 @@ RETURN
 HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    explicit HCodeBlockValidator(QObject *parent = nullptr)
-    */
+    // explicit HCodeBlockValidator(QObject *parent = nullptr)
     auto obj = new HCodeBlockValidator(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && ISQOBJECTORNIL(2)) {
-    /*
-    HCodeBlockValidator(PHB_ITEM codeblock, QObject *parent = nullptr)
-    */
+    // HCodeBlockValidator(PHB_ITEM codeblock, QObject *parent = nullptr)
     auto obj = new HCodeBlockValidator(PBLOCKORSYMBOL(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -65,16 +61,12 @@ HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QValidator::State validate(QString &input, int &pos) const
-*/
+// QValidator::State validate(QString &input, int &pos) const
 HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_VALIDATE)
 {
 }
 
-/*
-void fixup(QString &input) const
-*/
+// void fixup(QString &input) const
 HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_FIXUP)
 {
 }

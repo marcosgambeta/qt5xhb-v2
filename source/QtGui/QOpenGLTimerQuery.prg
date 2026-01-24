@@ -62,9 +62,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QOpenGLTimerQuery(QObject *parent = nullptr)
-    */
+    // QOpenGLTimerQuery(QObject *parent = nullptr)
 HB_FUNC_STATIC(QOPENGLTIMERQUERY_NEW)
 {
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_DELETE)
 #endif
 }
 
-/*
-bool create()
-*/
+// bool create()
 HB_FUNC_STATIC(QOPENGLTIMERQUERY_CREATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -114,9 +110,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_CREATE)
 #endif
 }
 
-/*
-void destroy()
-*/
+// void destroy()
 HB_FUNC_STATIC(QOPENGLTIMERQUERY_DESTROY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -140,9 +134,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_DESTROY)
 #endif
 }
 
-/*
-bool isCreated() const
-*/
+// bool isCreated() const
 HB_FUNC_STATIC(QOPENGLTIMERQUERY_ISCREATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -164,9 +156,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_ISCREATED)
 #endif
 }
 
-/*
-GLuint objectId() const
-*/
+// GLuint objectId() const
 HB_FUNC_STATIC(QOPENGLTIMERQUERY_OBJECTID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -188,9 +178,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_OBJECTID)
 #endif
 }
 
-/*
-void begin()
-*/
+// void begin()
 HB_FUNC_STATIC(QOPENGLTIMERQUERY_BEGIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -214,9 +202,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_BEGIN)
 #endif
 }
 
-/*
-void end()
-*/
+// void end()
 HB_FUNC_STATIC(QOPENGLTIMERQUERY_END)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -240,9 +226,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_END)
 #endif
 }
 
-/*
-GLuint64 waitForTimestamp() const
-*/
+// GLuint64 waitForTimestamp() const
 HB_FUNC_STATIC(QOPENGLTIMERQUERY_WAITFORTIMESTAMP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -264,9 +248,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_WAITFORTIMESTAMP)
 #endif
 }
 
-/*
-void recordTimestamp()
-*/
+// void recordTimestamp()
 HB_FUNC_STATIC(QOPENGLTIMERQUERY_RECORDTIMESTAMP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -290,9 +272,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_RECORDTIMESTAMP)
 #endif
 }
 
-/*
-bool isResultAvailable() const
-*/
+// bool isResultAvailable() const
 HB_FUNC_STATIC(QOPENGLTIMERQUERY_ISRESULTAVAILABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -314,9 +294,7 @@ HB_FUNC_STATIC(QOPENGLTIMERQUERY_ISRESULTAVAILABLE)
 #endif
 }
 
-/*
-GLuint64 waitForResult() const
-*/
+// GLuint64 waitForResult() const
 HB_FUNC_STATIC(QOPENGLTIMERQUERY_WAITFORRESULT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

@@ -69,9 +69,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QVariant currentValue() const = 0
-*/
+// virtual QVariant currentValue() const = 0
 HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_CURRENTVALUE)
 {
   auto obj = static_cast<QAccessibleValueInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -89,9 +87,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_CURRENTVALUE)
   }
 }
 
-/*
-virtual void setCurrentValue(const QVariant &value) = 0
-*/
+// virtual void setCurrentValue(const QVariant &value) = 0
 HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_SETCURRENTVALUE)
 {
   auto obj = static_cast<QAccessibleValueInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -111,9 +107,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_SETCURRENTVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QVariant maximumValue() const = 0
-*/
+// virtual QVariant maximumValue() const = 0
 HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_MAXIMUMVALUE)
 {
   auto obj = static_cast<QAccessibleValueInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -131,9 +125,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_MAXIMUMVALUE)
   }
 }
 
-/*
-virtual QVariant minimumValue() const = 0
-*/
+// virtual QVariant minimumValue() const = 0
 HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_MINIMUMVALUE)
 {
   auto obj = static_cast<QAccessibleValueInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -151,9 +143,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_MINIMUMVALUE)
   }
 }
 
-/*
-virtual QVariant minimumStepSize() const = 0
-*/
+// virtual QVariant minimumStepSize() const = 0
 HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_MINIMUMSTEPSIZE)
 {
   auto obj = static_cast<QAccessibleValueInterface *>(Qt5xHb::itemGetPtrStackSelfItem());

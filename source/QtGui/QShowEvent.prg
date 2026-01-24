@@ -46,9 +46,7 @@ RETURN
 #include <QtGui/QShowEvent>
 #endif
 
-    /*
-    QShowEvent()
-    */
+    // QShowEvent()
 HB_FUNC_STATIC(QSHOWEVENT_NEW)
 {
   if (ISNUMPAR(0)) {

@@ -69,9 +69,7 @@ HB_FUNC_STATIC(QSURFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSurface::SurfaceClass surfaceClass() const
-*/
+// QSurface::SurfaceClass surfaceClass() const
 HB_FUNC_STATIC(QSURFACE_SURFACECLASS)
 {
   auto obj = static_cast<QSurface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -89,9 +87,7 @@ HB_FUNC_STATIC(QSURFACE_SURFACECLASS)
   }
 }
 
-/*
-virtual QSurfaceFormat format() const = 0
-*/
+// virtual QSurfaceFormat format() const = 0
 HB_FUNC_STATIC(QSURFACE_FORMAT)
 {
   auto obj = static_cast<QSurface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -109,9 +105,7 @@ HB_FUNC_STATIC(QSURFACE_FORMAT)
   }
 }
 
-/*
-virtual QSurface::SurfaceType surfaceType() const = 0
-*/
+// virtual QSurface::SurfaceType surfaceType() const = 0
 HB_FUNC_STATIC(QSURFACE_SURFACETYPE)
 {
   auto obj = static_cast<QSurface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -129,9 +123,7 @@ HB_FUNC_STATIC(QSURFACE_SURFACETYPE)
   }
 }
 
-/*
-virtual QSize size() const = 0
-*/
+// virtual QSize size() const = 0
 HB_FUNC_STATIC(QSURFACE_SIZE)
 {
   auto obj = static_cast<QSurface *>(Qt5xHb::itemGetPtrStackSelfItem());

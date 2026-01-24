@@ -63,27 +63,19 @@ RETURN
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QTextDocumentFragment()
-    */
+    // QTextDocumentFragment()
     auto obj = new QTextDocumentFragment();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1)) {
-    /*
-    QTextDocumentFragment(const QTextDocument * document)
-    */
+    // QTextDocumentFragment(const QTextDocument *document)
     auto obj = new QTextDocumentFragment(PQTEXTDOCUMENT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
-    /*
-    QTextDocumentFragment(const QTextCursor &range)
-    */
+    // QTextDocumentFragment(const QTextCursor &range)
     auto obj = new QTextDocumentFragment(*PQTEXTCURSOR(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1)) {
-    /*
-    QTextDocumentFragment(const QTextDocumentFragment &rhs)
-    */
+    // QTextDocumentFragment(const QTextDocumentFragment &rhs)
     auto obj = new QTextDocumentFragment(*PQTEXTDOCUMENTFRAGMENT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -100,9 +92,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_ISEMPTY)
 {
   auto obj = static_cast<QTextDocumentFragment *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -120,9 +110,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_ISEMPTY)
   }
 }
 
-/*
-QString toPlainText() const
-*/
+// QString toPlainText() const
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT)
 {
   auto obj = static_cast<QTextDocumentFragment *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -140,9 +128,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT)
   }
 }
 
-/*
-QString toHtml(const QByteArray &encoding = QByteArray()) const
-*/
+// QString toHtml(const QByteArray &encoding = QByteArray()) const
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOHTML)
 {
   auto obj = static_cast<QTextDocumentFragment *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -160,9 +146,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOHTML)
   }
 }
 
-/*
-static QTextDocumentFragment fromPlainText(const QString &plainText)
-*/
+// static QTextDocumentFragment fromPlainText(const QString &plainText)
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,14 +163,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT)
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMHTML)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    static QTextDocumentFragment fromHtml(const QString &html)
-    */
+    // static QTextDocumentFragment fromHtml(const QString &html)
     RQTEXTDOCUMENTFRAGMENT(QTextDocumentFragment::fromHtml(PQSTRING(1)));
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQTEXTDOCUMENT(2)) {
-    /*
-    static QTextDocumentFragment fromHtml(const QString &html, const QTextDocument * resourceProvider)
-    */
+    // static QTextDocumentFragment fromHtml(const QString &html, const QTextDocument *resourceProvider)
     RQTEXTDOCUMENTFRAGMENT(QTextDocumentFragment::fromHtml(PQSTRING(1), PQTEXTDOCUMENT(2)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

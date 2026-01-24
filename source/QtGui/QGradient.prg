@@ -69,9 +69,7 @@ HB_FUNC_STATIC(QGRADIENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QGradient::CoordinateMode coordinateMode() const
-*/
+// QGradient::CoordinateMode coordinateMode() const
 HB_FUNC_STATIC(QGRADIENT_COORDINATEMODE)
 {
   auto obj = static_cast<QGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -89,9 +87,7 @@ HB_FUNC_STATIC(QGRADIENT_COORDINATEMODE)
   }
 }
 
-/*
-void setColorAt(qreal position, const QColor &color)
-*/
+// void setColorAt(qreal position, const QColor &color)
 HB_FUNC_STATIC(QGRADIENT_SETCOLORAT)
 {
   auto obj = static_cast<QGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -111,9 +107,7 @@ HB_FUNC_STATIC(QGRADIENT_SETCOLORAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCoordinateMode(QGradient::CoordinateMode mode)
-*/
+// void setCoordinateMode(QGradient::CoordinateMode mode)
 HB_FUNC_STATIC(QGRADIENT_SETCOORDINATEMODE)
 {
   auto obj = static_cast<QGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -133,9 +127,7 @@ HB_FUNC_STATIC(QGRADIENT_SETCOORDINATEMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSpread(QGradient::Spread method)
-*/
+// void setSpread(QGradient::Spread method)
 HB_FUNC_STATIC(QGRADIENT_SETSPREAD)
 {
   auto obj = static_cast<QGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -155,9 +147,7 @@ HB_FUNC_STATIC(QGRADIENT_SETSPREAD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QGradient::Spread spread() const
-*/
+// QGradient::Spread spread() const
 HB_FUNC_STATIC(QGRADIENT_SPREAD)
 {
   auto obj = static_cast<QGradient *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -175,9 +165,7 @@ HB_FUNC_STATIC(QGRADIENT_SPREAD)
   }
 }
 
-/*
-QGradient::Type type() const
-*/
+// QGradient::Type type() const
 HB_FUNC_STATIC(QGRADIENT_TYPE)
 {
   auto obj = static_cast<QGradient *>(Qt5xHb::itemGetPtrStackSelfItem());

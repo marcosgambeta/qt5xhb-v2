@@ -55,9 +55,7 @@ HB_FUNC_STATIC(QINPUTEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::KeyboardModifiers modifiers() const
-*/
+// Qt::KeyboardModifiers modifiers() const
 HB_FUNC_STATIC(QINPUTEVENT_MODIFIERS)
 {
   auto obj = static_cast<QInputEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

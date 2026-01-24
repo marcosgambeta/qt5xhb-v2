@@ -55,9 +55,7 @@ RETURN
 #include <QtGui/QTextImageFormat>
 #endif
 
-    /*
-    QTextImageFormat()
-    */
+    // QTextImageFormat()
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -77,9 +75,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_ISVALID)
 {
   auto obj = static_cast<QTextImageFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -97,9 +93,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_ISVALID)
   }
 }
 
-/*
-void setName(const QString &name)
-*/
+// void setName(const QString &name)
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETNAME)
 {
   auto obj = static_cast<QTextImageFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -119,9 +113,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_NAME)
 {
   auto obj = static_cast<QTextImageFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -139,9 +131,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_NAME)
   }
 }
 
-/*
-void setWidth(qreal width)
-*/
+// void setWidth(qreal width)
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETWIDTH)
 {
   auto obj = static_cast<QTextImageFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -161,9 +151,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal width() const
-*/
+// qreal width() const
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_WIDTH)
 {
   auto obj = static_cast<QTextImageFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -181,9 +169,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_WIDTH)
   }
 }
 
-/*
-void setHeight(qreal height)
-*/
+// void setHeight(qreal height)
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETHEIGHT)
 {
   auto obj = static_cast<QTextImageFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -203,9 +189,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETHEIGHT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal height() const
-*/
+// qreal height() const
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_HEIGHT)
 {
   auto obj = static_cast<QTextImageFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -223,9 +207,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_HEIGHT)
   }
 }
 
-/*
-int quality() const
-*/
+// int quality() const
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_QUALITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
@@ -245,9 +227,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_QUALITY)
 #endif
 }
 
-/*
-void setQuality(int quality = 100)
-*/
+// void setQuality(int quality = 100)
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETQUALITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))

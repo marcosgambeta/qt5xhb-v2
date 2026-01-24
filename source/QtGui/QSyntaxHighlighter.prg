@@ -54,9 +54,7 @@ RETURN
 
 #include <QtGui/QTextDocument>
 
-    /*
-    virtual ~QSyntaxHighlighter()
-    */
+    // virtual ~QSyntaxHighlighter()
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DELETE)
 {
   auto obj = qobject_cast<QSyntaxHighlighter *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -66,9 +64,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDocument(QTextDocument * doc)
-*/
+// void setDocument(QTextDocument *doc)
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_SETDOCUMENT)
 {
   auto obj = qobject_cast<QSyntaxHighlighter *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -88,9 +84,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_SETDOCUMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTextDocument * document() const
-*/
+// QTextDocument *document() const
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DOCUMENT)
 {
   auto obj = qobject_cast<QSyntaxHighlighter *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -109,9 +103,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DOCUMENT)
   }
 }
 
-/*
-void rehighlight()
-*/
+// void rehighlight()
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHT)
 {
   auto obj = qobject_cast<QSyntaxHighlighter *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -131,9 +123,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void rehighlightBlock(const QTextBlock &block)
-*/
+// void rehighlightBlock(const QTextBlock &block)
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK)
 {
   auto obj = qobject_cast<QSyntaxHighlighter *>(Qt5xHb::getQObjectPointerFromSelfItem());

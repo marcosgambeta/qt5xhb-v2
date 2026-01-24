@@ -52,9 +52,7 @@ RETURN
 #include <QtGui/QAccessibleObject>
 #endif
 
-    /*
-    bool isValid() const
-    */
+    // bool isValid() const
 HB_FUNC_STATIC(QACCESSIBLEOBJECT_ISVALID)
 {
   auto obj = static_cast<QAccessibleObject *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -72,9 +70,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_ISVALID)
   }
 }
 
-/*
-QObject * object() const
-*/
+// QObject *object() const
 HB_FUNC_STATIC(QACCESSIBLEOBJECT_OBJECT)
 {
   auto obj = static_cast<QAccessibleObject *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -93,9 +89,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_OBJECT)
   }
 }
 
-/*
-QRect rect() const
-*/
+// QRect rect() const
 HB_FUNC_STATIC(QACCESSIBLEOBJECT_RECT)
 {
   auto obj = static_cast<QAccessibleObject *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -113,9 +107,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_RECT)
   }
 }
 
-/*
-void setText(QAccessible::Text t, const QString &text)
-*/
+// void setText(QAccessible::Text t, const QString &text)
 HB_FUNC_STATIC(QACCESSIBLEOBJECT_SETTEXT)
 {
   auto obj = static_cast<QAccessibleObject *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -135,9 +127,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAccessibleInterface * childAt(int x, int y) const
-*/
+// QAccessibleInterface *childAt(int x, int y) const
 HB_FUNC_STATIC(QACCESSIBLEOBJECT_CHILDAT)
 {
   auto obj = static_cast<QAccessibleObject *>(Qt5xHb::itemGetPtrStackSelfItem());

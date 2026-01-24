@@ -51,9 +51,7 @@ RETURN
 
 #include <QtWidgets/QAction>
 
-    /*
-    QActionEvent(int type, QAction * action, QAction * before = nullptr)
-    */
+    // QActionEvent(int type, QAction *action, QAction *before = nullptr)
 HB_FUNC_STATIC(QACTIONEVENT_NEW)
 {
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQACTION(2) && ISQACTIONORNIL(3)) {
@@ -73,9 +71,7 @@ HB_FUNC_STATIC(QACTIONEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAction * action() const
-*/
+// QAction *action() const
 HB_FUNC_STATIC(QACTIONEVENT_ACTION)
 {
   auto obj = static_cast<QActionEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -94,9 +90,7 @@ HB_FUNC_STATIC(QACTIONEVENT_ACTION)
   }
 }
 
-/*
-QAction * before() const
-*/
+// QAction *before() const
 HB_FUNC_STATIC(QACTIONEVENT_BEFORE)
 {
   auto obj = static_cast<QActionEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

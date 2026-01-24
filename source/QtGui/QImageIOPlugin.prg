@@ -59,9 +59,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QImageIOPlugin::Capabilities capabilities(QIODevice * device, const QByteArray &format) const = 0
-*/
+// virtual QImageIOPlugin::Capabilities capabilities(QIODevice *device, const QByteArray &format) const = 0
 HB_FUNC_STATIC(QIMAGEIOPLUGIN_CAPABILITIES)
 {
   auto obj = qobject_cast<QImageIOPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -79,9 +77,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_CAPABILITIES)
   }
 }
 
-/*
-virtual QImageIOHandler * create(QIODevice * device, const QByteArray &format = QByteArray()) const = 0
-*/
+// virtual QImageIOHandler *create(QIODevice *device, const QByteArray &format = QByteArray()) const = 0
 HB_FUNC_STATIC(QIMAGEIOPLUGIN_CREATE)
 {
   auto obj = qobject_cast<QImageIOPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());

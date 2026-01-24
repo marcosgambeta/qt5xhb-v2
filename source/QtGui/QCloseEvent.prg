@@ -46,9 +46,7 @@ RETURN
 #include <QtGui/QCloseEvent>
 #endif
 
-    /*
-    QCloseEvent()
-    */
+    // QCloseEvent()
 HB_FUNC_STATIC(QCLOSEEVENT_NEW)
 {
   if (ISNUMPAR(0)) {

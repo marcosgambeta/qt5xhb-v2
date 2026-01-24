@@ -64,28 +64,22 @@ RETURN
 HB_FUNC_STATIC(QWHEELEVENT_NEW)
 {
   if (ISBETWEEN(4, 5) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
-    /*
-    QWheelEvent(const QPointF &pos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,
-    Qt::Orientation orient = Qt::Vertical)
-    */
+    // QWheelEvent(const QPointF &pos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,
+    // Qt::Orientation orient = Qt::Vertical)
     auto obj = new QWheelEvent(*PQPOINTF(1), PINT(2), PQT_MOUSEBUTTONS(3), PQT_KEYBOARDMODIFIERS(4),
                                HB_ISNIL(5) ? Qt::Vertical : PQT_ORIENTATION(5));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(5, 6) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
              ISNUMORNIL(6)) {
-    /*
-    QWheelEvent(const QPointF &pos, const QPointF &globalPos, int delta, Qt::MouseButtons buttons,
-    Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical)
-    */
+    // QWheelEvent(const QPointF &pos, const QPointF &globalPos, int delta, Qt::MouseButtons buttons,
+    // Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical)
     auto obj = new QWheelEvent(*PQPOINTF(1), *PQPOINTF(2), PINT(3), PQT_MOUSEBUTTONS(4), PQT_KEYBOARDMODIFIERS(5),
                                HB_ISNIL(6) ? Qt::Vertical : PQT_ORIENTATION(6));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(8) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINT(3) && ISQPOINT(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
              HB_ISNUM(7) && HB_ISNUM(8)) {
-    /*
-    QWheelEvent(const QPointF &pos, const QPointF &globalPos, QPoint pixelDelta, QPoint angleDelta, int qt4Delta,
-    Qt::Orientation qt4Orientation, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
-    */
+    // QWheelEvent(const QPointF &pos, const QPointF &globalPos, QPoint pixelDelta, QPoint angleDelta, int qt4Delta,
+    // Qt::Orientation qt4Orientation, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
     auto obj = new QWheelEvent(*PQPOINTF(1), *PQPOINTF(2), *PQPOINT(3), *PQPOINT(4), PINT(5), PQT_ORIENTATION(6),
                                PQT_MOUSEBUTTONS(7), PQT_KEYBOARDMODIFIERS(8));
     Qt5xHb::returnNewObject(obj, false);
@@ -103,9 +97,7 @@ HB_FUNC_STATIC(QWHEELEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPoint pixelDelta() const
-*/
+// QPoint pixelDelta() const
 HB_FUNC_STATIC(QWHEELEVENT_PIXELDELTA)
 {
   auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -123,9 +115,7 @@ HB_FUNC_STATIC(QWHEELEVENT_PIXELDELTA)
   }
 }
 
-/*
-QPoint angleDelta() const
-*/
+// QPoint angleDelta() const
 HB_FUNC_STATIC(QWHEELEVENT_ANGLEDELTA)
 {
   auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -143,9 +133,7 @@ HB_FUNC_STATIC(QWHEELEVENT_ANGLEDELTA)
   }
 }
 
-/*
-int delta() const
-*/
+// int delta() const
 HB_FUNC_STATIC(QWHEELEVENT_DELTA)
 {
   auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -163,9 +151,7 @@ HB_FUNC_STATIC(QWHEELEVENT_DELTA)
   }
 }
 
-/*
-Qt::Orientation orientation() const
-*/
+// Qt::Orientation orientation() const
 HB_FUNC_STATIC(QWHEELEVENT_ORIENTATION)
 {
   auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -183,9 +169,7 @@ HB_FUNC_STATIC(QWHEELEVENT_ORIENTATION)
   }
 }
 
-/*
-QPoint pos() const
-*/
+// QPoint pos() const
 HB_FUNC_STATIC(QWHEELEVENT_POS)
 {
   auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -203,9 +187,7 @@ HB_FUNC_STATIC(QWHEELEVENT_POS)
   }
 }
 
-/*
-QPoint globalPos() const
-*/
+// QPoint globalPos() const
 HB_FUNC_STATIC(QWHEELEVENT_GLOBALPOS)
 {
   auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -223,9 +205,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALPOS)
   }
 }
 
-/*
-int x() const
-*/
+// int x() const
 HB_FUNC_STATIC(QWHEELEVENT_X)
 {
   auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -243,9 +223,7 @@ HB_FUNC_STATIC(QWHEELEVENT_X)
   }
 }
 
-/*
-int y() const
-*/
+// int y() const
 HB_FUNC_STATIC(QWHEELEVENT_Y)
 {
   auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -263,9 +241,7 @@ HB_FUNC_STATIC(QWHEELEVENT_Y)
   }
 }
 
-/*
-int globalX() const
-*/
+// int globalX() const
 HB_FUNC_STATIC(QWHEELEVENT_GLOBALX)
 {
   auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -283,9 +259,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALX)
   }
 }
 
-/*
-int globalY() const
-*/
+// int globalY() const
 HB_FUNC_STATIC(QWHEELEVENT_GLOBALY)
 {
   auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -303,9 +277,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALY)
   }
 }
 
-/*
-const QPointF &posF() const
-*/
+// const QPointF &posF() const
 HB_FUNC_STATIC(QWHEELEVENT_POSF)
 {
   auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -324,9 +296,7 @@ HB_FUNC_STATIC(QWHEELEVENT_POSF)
   }
 }
 
-/*
-const QPointF &globalPosF() const
-*/
+// const QPointF &globalPosF() const
 HB_FUNC_STATIC(QWHEELEVENT_GLOBALPOSF)
 {
   auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -345,9 +315,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALPOSF)
   }
 }
 
-/*
-Qt::MouseButtons buttons() const
-*/
+// Qt::MouseButtons buttons() const
 HB_FUNC_STATIC(QWHEELEVENT_BUTTONS)
 {
   auto obj = static_cast<QWheelEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

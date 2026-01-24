@@ -54,9 +54,7 @@ RETURN
 #include <QtGui/QOpenGLVertexArrayObject>
 #endif
 
-    /*
-    QOpenGLVertexArrayObject(QObject * parent = nullptr)
-    */
+    // QOpenGLVertexArrayObject(QObject *parent = nullptr)
 HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -76,9 +74,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool create()
-*/
+// bool create()
 HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_CREATE)
 {
   auto obj = qobject_cast<QOpenGLVertexArrayObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -96,9 +92,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_CREATE)
   }
 }
 
-/*
-void destroy()
-*/
+// void destroy()
 HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_DESTROY)
 {
   auto obj = qobject_cast<QOpenGLVertexArrayObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -118,9 +112,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_DESTROY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isCreated() const
-*/
+// bool isCreated() const
 HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_ISCREATED)
 {
   auto obj = qobject_cast<QOpenGLVertexArrayObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -138,9 +130,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_ISCREATED)
   }
 }
 
-/*
-GLuint objectId() const
-*/
+// GLuint objectId() const
 HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_OBJECTID)
 {
   auto obj = qobject_cast<QOpenGLVertexArrayObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -158,9 +148,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_OBJECTID)
   }
 }
 
-/*
-void bind()
-*/
+// void bind()
 HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_BIND)
 {
   auto obj = qobject_cast<QOpenGLVertexArrayObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -180,9 +168,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_BIND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void release()
-*/
+// void release()
 HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_RELEASE)
 {
   auto obj = qobject_cast<QOpenGLVertexArrayObject *>(Qt5xHb::getQObjectPointerFromSelfItem());

@@ -58,9 +58,7 @@ HB_FUNC_STATIC(QACCESSIBLEPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QAccessibleInterface * create(const QString &key, QObject * object) = 0
-*/
+// virtual QAccessibleInterface *create(const QString &key, QObject *object) = 0
 HB_FUNC_STATIC(QACCESSIBLEPLUGIN_CREATE)
 {
   auto obj = qobject_cast<QAccessiblePlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());

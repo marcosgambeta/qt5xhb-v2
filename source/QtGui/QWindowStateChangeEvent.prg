@@ -48,9 +48,7 @@ RETURN
 #include <QtGui/QWindowStateChangeEvent>
 #endif
 
-    /*
-    QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride = false)
-    */
+    // QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride = false)
 HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
@@ -70,9 +68,7 @@ HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::WindowStates oldState() const
-*/
+// Qt::WindowStates oldState() const
 HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_OLDSTATE)
 {
   auto obj = static_cast<QWindowStateChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -90,9 +86,7 @@ HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_OLDSTATE)
   }
 }
 
-/*
-bool isOverride() const
-*/
+// bool isOverride() const
 HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_ISOVERRIDE)
 {
   auto obj = static_cast<QWindowStateChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -53,15 +53,11 @@ RETURN
 HB_FUNC_STATIC(QPAINTEVENT_NEW)
 {
   if (ISNUMPAR(1) && ISQREGION(1)) {
-    /*
-    QPaintEvent(const QRegion &paintRegion)
-    */
+    // QPaintEvent(const QRegion &paintRegion)
     auto obj = new QPaintEvent(*PQREGION(1));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(1) && ISQRECT(1)) {
-    /*
-    QPaintEvent(const QRect &paintRect)
-    */
+    // QPaintEvent(const QRect &paintRect)
     auto obj = new QPaintEvent(*PQRECT(1));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -78,9 +74,7 @@ HB_FUNC_STATIC(QPAINTEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QRect &rect() const
-*/
+// const QRect &rect() const
 HB_FUNC_STATIC(QPAINTEVENT_RECT)
 {
   auto obj = static_cast<QPaintEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -99,9 +93,7 @@ HB_FUNC_STATIC(QPAINTEVENT_RECT)
   }
 }
 
-/*
-const QRegion &region() const
-*/
+// const QRegion &region() const
 HB_FUNC_STATIC(QPAINTEVENT_REGION)
 {
   auto obj = static_cast<QPaintEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

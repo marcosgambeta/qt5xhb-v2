@@ -70,9 +70,7 @@ HB_FUNC_STATIC(QTEXTITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal descent() const
-*/
+// qreal descent() const
 HB_FUNC_STATIC(QTEXTITEM_DESCENT)
 {
   auto obj = static_cast<QTextItem *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QTEXTITEM_DESCENT)
   }
 }
 
-/*
-qreal ascent() const
-*/
+// qreal ascent() const
 HB_FUNC_STATIC(QTEXTITEM_ASCENT)
 {
   auto obj = static_cast<QTextItem *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -110,9 +106,7 @@ HB_FUNC_STATIC(QTEXTITEM_ASCENT)
   }
 }
 
-/*
-qreal width() const
-*/
+// qreal width() const
 HB_FUNC_STATIC(QTEXTITEM_WIDTH)
 {
   auto obj = static_cast<QTextItem *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -130,9 +124,7 @@ HB_FUNC_STATIC(QTEXTITEM_WIDTH)
   }
 }
 
-/*
-QTextItem::RenderFlags renderFlags() const
-*/
+// QTextItem::RenderFlags renderFlags() const
 HB_FUNC_STATIC(QTEXTITEM_RENDERFLAGS)
 {
   auto obj = static_cast<QTextItem *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -150,9 +142,7 @@ HB_FUNC_STATIC(QTEXTITEM_RENDERFLAGS)
   }
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QTEXTITEM_TEXT)
 {
   auto obj = static_cast<QTextItem *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -170,9 +160,7 @@ HB_FUNC_STATIC(QTEXTITEM_TEXT)
   }
 }
 
-/*
-QFont font() const
-*/
+// QFont font() const
 HB_FUNC_STATIC(QTEXTITEM_FONT)
 {
   auto obj = static_cast<QTextItem *>(Qt5xHb::itemGetPtrStackSelfItem());

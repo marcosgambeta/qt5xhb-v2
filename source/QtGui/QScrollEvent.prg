@@ -50,9 +50,7 @@ RETURN
 #include <QtGui/QScrollEvent>
 #endif
 
-    /*
-    QScrollEvent(const QPointF &contentPos, const QPointF &overshoot, QScrollEvent::ScrollState scrollState)
-    */
+    // QScrollEvent(const QPointF &contentPos, const QPointF &overshoot, QScrollEvent::ScrollState scrollState)
 HB_FUNC_STATIC(QSCROLLEVENT_NEW)
 {
   if (ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3)) {
@@ -72,9 +70,7 @@ HB_FUNC_STATIC(QSCROLLEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPointF contentPos() const
-*/
+// QPointF contentPos() const
 HB_FUNC_STATIC(QSCROLLEVENT_CONTENTPOS)
 {
   auto obj = static_cast<QScrollEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -92,9 +88,7 @@ HB_FUNC_STATIC(QSCROLLEVENT_CONTENTPOS)
   }
 }
 
-/*
-QPointF overshootDistance() const
-*/
+// QPointF overshootDistance() const
 HB_FUNC_STATIC(QSCROLLEVENT_OVERSHOOTDISTANCE)
 {
   auto obj = static_cast<QScrollEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -112,9 +106,7 @@ HB_FUNC_STATIC(QSCROLLEVENT_OVERSHOOTDISTANCE)
   }
 }
 
-/*
-QScrollEvent::ScrollState scrollState() const
-*/
+// QScrollEvent::ScrollState scrollState() const
 HB_FUNC_STATIC(QSCROLLEVENT_SCROLLSTATE)
 {
   auto obj = static_cast<QScrollEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

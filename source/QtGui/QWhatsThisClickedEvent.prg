@@ -47,9 +47,7 @@ RETURN
 #include <QtGui/QWhatsThisClickedEvent>
 #endif
 
-    /*
-    QWhatsThisClickedEvent(const QString &href)
-    */
+    // QWhatsThisClickedEvent(const QString &href)
 HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
@@ -69,9 +67,7 @@ HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString href() const
-*/
+// QString href() const
 HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_HREF)
 {
   auto obj = static_cast<QWhatsThisClickedEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

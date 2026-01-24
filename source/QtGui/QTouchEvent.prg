@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QTOUCHEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWindow * window() const
-*/
+// QWindow *window() const
 HB_FUNC_STATIC(QTOUCHEVENT_WINDOW)
 {
   auto obj = static_cast<QTouchEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -85,9 +83,7 @@ HB_FUNC_STATIC(QTOUCHEVENT_WINDOW)
   }
 }
 
-/*
-QObject * target() const
-*/
+// QObject *target() const
 HB_FUNC_STATIC(QTOUCHEVENT_TARGET)
 {
   auto obj = static_cast<QTouchEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -106,9 +102,7 @@ HB_FUNC_STATIC(QTOUCHEVENT_TARGET)
   }
 }
 
-/*
-Qt::TouchPointStates touchPointStates() const
-*/
+// Qt::TouchPointStates touchPointStates() const
 HB_FUNC_STATIC(QTOUCHEVENT_TOUCHPOINTSTATES)
 {
   auto obj = static_cast<QTouchEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -126,9 +120,7 @@ HB_FUNC_STATIC(QTOUCHEVENT_TOUCHPOINTSTATES)
   }
 }
 
-/*
-QTouchDevice * device() const
-*/
+// QTouchDevice *device() const
 HB_FUNC_STATIC(QTOUCHEVENT_DEVICE)
 {
   auto obj = static_cast<QTouchEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

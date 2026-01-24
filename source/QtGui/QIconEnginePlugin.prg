@@ -58,9 +58,7 @@ HB_FUNC_STATIC(QICONENGINEPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QIconEngine * create(const QString &filename = QString()) = 0
-*/
+// virtual QIconEngine *create(const QString &filename = QString()) = 0
 HB_FUNC_STATIC(QICONENGINEPLUGIN_CREATE)
 {
   auto obj = qobject_cast<QIconEnginePlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());

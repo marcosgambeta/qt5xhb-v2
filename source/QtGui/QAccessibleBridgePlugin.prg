@@ -58,9 +58,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGEPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QAccessibleBridge * create(const QString &key) = 0
-*/
+// virtual QAccessibleBridge *create(const QString &key) = 0
 HB_FUNC_STATIC(QACCESSIBLEBRIDGEPLUGIN_CREATE)
 {
   auto obj = qobject_cast<QAccessibleBridgePlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());

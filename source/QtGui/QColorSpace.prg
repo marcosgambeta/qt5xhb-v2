@@ -73,17 +73,13 @@ RETURN
 HB_FUNC_STATIC(QCOLORSPACE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QColorSpace()
-    */
+    // QColorSpace()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
     auto obj = new QColorSpace();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QColorSpace(QColorSpace::NamedColorSpace namedColorSpace)
-    */
+    // QColorSpace(QColorSpace::NamedColorSpace namedColorSpace)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
     auto obj = new QColorSpace(PQCOLORSPACE_NAMEDCOLORSPACE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -139,9 +135,7 @@ HB_FUNC_STATIC(QCOLORSPACE_NEW)
   }
 }
 
-/*
-~QColorSpace()
-*/
+// ~QColorSpace()
 HB_FUNC_STATIC(QCOLORSPACE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -153,9 +147,7 @@ HB_FUNC_STATIC(QCOLORSPACE_DELETE)
 #endif
 }
 
-/*
-void swap(QColorSpace &colorSpace) noexcept
-*/
+// void swap(QColorSpace &colorSpace) noexcept
 HB_FUNC_STATIC(QCOLORSPACE_SWAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -177,9 +169,7 @@ HB_FUNC_STATIC(QCOLORSPACE_SWAP)
 #endif
 }
 
-/*
-QColorSpace::Primaries primaries() const noexcept
-*/
+// QColorSpace::Primaries primaries() const noexcept
 HB_FUNC_STATIC(QCOLORSPACE_PRIMARIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -199,9 +189,7 @@ HB_FUNC_STATIC(QCOLORSPACE_PRIMARIES)
 #endif
 }
 
-/*
-QColorSpace::TransferFunction transferFunction() const noexcept
-*/
+// QColorSpace::TransferFunction transferFunction() const noexcept
 HB_FUNC_STATIC(QCOLORSPACE_TRANSFERFUNCTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -221,9 +209,7 @@ HB_FUNC_STATIC(QCOLORSPACE_TRANSFERFUNCTION)
 #endif
 }
 
-/*
-float gamma() const noexcept
-*/
+// float gamma() const noexcept
 HB_FUNC_STATIC(QCOLORSPACE_GAMMA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -243,9 +229,7 @@ HB_FUNC_STATIC(QCOLORSPACE_GAMMA)
 #endif
 }
 
-/*
-void setTransferFunction(QColorSpace::TransferFunction transferFunction, float gamma = 0.0f)
-*/
+// void setTransferFunction(QColorSpace::TransferFunction transferFunction, float gamma = 0.0f)
 HB_FUNC_STATIC(QCOLORSPACE_SETTRANSFERFUNCTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -267,9 +251,7 @@ HB_FUNC_STATIC(QCOLORSPACE_SETTRANSFERFUNCTION)
 #endif
 }
 
-/*
-QColorSpace withTransferFunction(QColorSpace::TransferFunction transferFunction, float gamma = 0.0f) const
-*/
+// QColorSpace withTransferFunction(QColorSpace::TransferFunction transferFunction, float gamma = 0.0f) const
 HB_FUNC_STATIC(QCOLORSPACE_WITHTRANSFERFUNCTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -292,9 +274,7 @@ HB_FUNC_STATIC(QCOLORSPACE_WITHTRANSFERFUNCTION)
 HB_FUNC_STATIC(QCOLORSPACE_SETPRIMARIES)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    void setPrimaries(QColorSpace::Primaries primariesId)
-    */
+    // void setPrimaries(QColorSpace::Primaries primariesId)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
     auto obj = static_cast<QColorSpace *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -305,10 +285,8 @@ HB_FUNC_STATIC(QCOLORSPACE_SETPRIMARIES)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(4) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4)) {
-    /*
-    void setPrimaries(const QPointF &whitePoint, const QPointF &redPoint, const QPointF &greenPoint, const QPointF &
-    bluePoint)
-    */
+    // void setPrimaries(const QPointF &whitePoint, const QPointF &redPoint, const QPointF &greenPoint, const QPointF &
+    // bluePoint)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
     auto obj = static_cast<QColorSpace *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -323,9 +301,7 @@ HB_FUNC_STATIC(QCOLORSPACE_SETPRIMARIES)
   }
 }
 
-/*
-bool isValid() const noexcept
-*/
+// bool isValid() const noexcept
 HB_FUNC_STATIC(QCOLORSPACE_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -345,9 +321,7 @@ HB_FUNC_STATIC(QCOLORSPACE_ISVALID)
 #endif
 }
 
-/*
-static QColorSpace fromIccProfile(const QByteArray &iccProfile)
-*/
+// static QColorSpace fromIccProfile(const QByteArray &iccProfile)
 HB_FUNC_STATIC(QCOLORSPACE_FROMICCPROFILE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -363,9 +337,7 @@ HB_FUNC_STATIC(QCOLORSPACE_FROMICCPROFILE)
 #endif
 }
 
-/*
-QByteArray iccProfile() const
-*/
+// QByteArray iccProfile() const
 HB_FUNC_STATIC(QCOLORSPACE_ICCPROFILE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))

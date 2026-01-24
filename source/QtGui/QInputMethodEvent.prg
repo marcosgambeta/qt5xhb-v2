@@ -54,15 +54,11 @@ RETURN
 HB_FUNC_STATIC(QINPUTMETHODEVENT_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QInputMethodEvent()
-    */
+    // QInputMethodEvent()
     auto obj = new QInputMethodEvent();
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(1) && ISQINPUTMETHODEVENT(1)) {
-    /*
-    QInputMethodEvent(const QInputMethodEvent &other)
-    */
+    // QInputMethodEvent(const QInputMethodEvent &other)
     auto obj = new QInputMethodEvent(*PQINPUTMETHODEVENT(1));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -79,9 +75,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QString &commitString() const
-*/
+// const QString &commitString() const
 HB_FUNC_STATIC(QINPUTMETHODEVENT_COMMITSTRING)
 {
   auto obj = static_cast<QInputMethodEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -99,9 +93,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_COMMITSTRING)
   }
 }
 
-/*
-const QString &preeditString() const
-*/
+// const QString &preeditString() const
 HB_FUNC_STATIC(QINPUTMETHODEVENT_PREEDITSTRING)
 {
   auto obj = static_cast<QInputMethodEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -119,9 +111,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_PREEDITSTRING)
   }
 }
 
-/*
-int replacementLength() const
-*/
+// int replacementLength() const
 HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTLENGTH)
 {
   auto obj = static_cast<QInputMethodEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -139,9 +129,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTLENGTH)
   }
 }
 
-/*
-int replacementStart() const
-*/
+// int replacementStart() const
 HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTSTART)
 {
   auto obj = static_cast<QInputMethodEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -159,9 +147,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTSTART)
   }
 }
 
-/*
-void setCommitString(const QString &commitString, int replaceFrom = 0, int replaceLength = 0)
-*/
+// void setCommitString(const QString &commitString, int replaceFrom = 0, int replaceLength = 0)
 HB_FUNC_STATIC(QINPUTMETHODEVENT_SETCOMMITSTRING)
 {
   auto obj = static_cast<QInputMethodEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

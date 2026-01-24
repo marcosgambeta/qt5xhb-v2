@@ -49,9 +49,7 @@ RETURN
 #include <QtGui/QResizeEvent>
 #endif
 
-    /*
-    QResizeEvent(const QSize &size, const QSize &oldSize)
-    */
+    // QResizeEvent(const QSize &size, const QSize &oldSize)
 HB_FUNC_STATIC(QRESIZEEVENT_NEW)
 {
   if (ISNUMPAR(2) && ISQSIZE(1) && ISQSIZE(2)) {
@@ -71,9 +69,7 @@ HB_FUNC_STATIC(QRESIZEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QSize &size() const
-*/
+// const QSize &size() const
 HB_FUNC_STATIC(QRESIZEEVENT_SIZE)
 {
   auto obj = static_cast<QResizeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -92,9 +88,7 @@ HB_FUNC_STATIC(QRESIZEEVENT_SIZE)
   }
 }
 
-/*
-const QSize &oldSize() const
-*/
+// const QSize &oldSize() const
 HB_FUNC_STATIC(QRESIZEEVENT_OLDSIZE)
 {
   auto obj = static_cast<QResizeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

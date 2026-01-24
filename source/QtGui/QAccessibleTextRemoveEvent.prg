@@ -48,9 +48,7 @@ RETURN
 #include <QtGui/QAccessibleTextRemoveEvent>
 #endif
 
-    /*
-    QAccessibleTextRemoveEvent(QObject * obj, int position, const QString &text)
-    */
+    // QAccessibleTextRemoveEvent(QObject *obj, int position, const QString &text)
 HB_FUNC_STATIC(QACCESSIBLETEXTREMOVEEVENT_NEW)
 {
   if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
@@ -70,9 +68,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTREMOVEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString textRemoved() const
-*/
+// QString textRemoved() const
 HB_FUNC_STATIC(QACCESSIBLETEXTREMOVEEVENT_TEXTREMOVED)
 {
   auto obj = static_cast<QAccessibleTextRemoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -90,9 +86,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTREMOVEEVENT_TEXTREMOVED)
   }
 }
 
-/*
-int changePosition() const
-*/
+// int changePosition() const
 HB_FUNC_STATIC(QACCESSIBLETEXTREMOVEEVENT_CHANGEPOSITION)
 {
   auto obj = static_cast<QAccessibleTextRemoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

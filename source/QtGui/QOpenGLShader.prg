@@ -60,9 +60,7 @@ RETURN
 #include <QtGui/QOpenGLShader>
 #endif
 
-    /*
-    QOpenGLShader(QOpenGLShader::ShaderType type, QObject * parent = nullptr)
-    */
+    // QOpenGLShader(QOpenGLShader::ShaderType type, QObject *parent = nullptr)
 HB_FUNC_STATIC(QOPENGLSHADER_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2)) {
@@ -82,9 +80,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QOpenGLShader::ShaderType shaderType() const
-*/
+// QOpenGLShader::ShaderType shaderType() const
 HB_FUNC_STATIC(QOPENGLSHADER_SHADERTYPE)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -102,9 +98,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_SHADERTYPE)
   }
 }
 
-/*
-bool compileSourceCode(const char * source)
-*/
+// bool compileSourceCode(const char *source)
 HB_FUNC_STATIC(QOPENGLSHADER_COMPILESOURCECODE1)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -122,9 +116,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_COMPILESOURCECODE1)
   }
 }
 
-/*
-bool compileSourceCode(const QByteArray &source)
-*/
+// bool compileSourceCode(const QByteArray &source)
 HB_FUNC_STATIC(QOPENGLSHADER_COMPILESOURCECODE2)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -142,9 +134,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_COMPILESOURCECODE2)
   }
 }
 
-/*
-bool compileSourceCode(const QString &source)
-*/
+// bool compileSourceCode(const QString &source)
 HB_FUNC_STATIC(QOPENGLSHADER_COMPILESOURCECODE3)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -175,9 +165,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_COMPILESOURCECODE)
   }
 }
 
-/*
-bool compileSourceFile(const QString &fileName)
-*/
+// bool compileSourceFile(const QString &fileName)
 HB_FUNC_STATIC(QOPENGLSHADER_COMPILESOURCEFILE)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -195,9 +183,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_COMPILESOURCEFILE)
   }
 }
 
-/*
-QByteArray sourceCode() const
-*/
+// QByteArray sourceCode() const
 HB_FUNC_STATIC(QOPENGLSHADER_SOURCECODE)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -215,9 +201,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_SOURCECODE)
   }
 }
 
-/*
-bool isCompiled() const
-*/
+// bool isCompiled() const
 HB_FUNC_STATIC(QOPENGLSHADER_ISCOMPILED)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -235,9 +219,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_ISCOMPILED)
   }
 }
 
-/*
-QString log() const
-*/
+// QString log() const
 HB_FUNC_STATIC(QOPENGLSHADER_LOG)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -255,9 +237,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_LOG)
   }
 }
 
-/*
-GLuint shaderId() const
-*/
+// GLuint shaderId() const
 HB_FUNC_STATIC(QOPENGLSHADER_SHADERID)
 {
   auto obj = qobject_cast<QOpenGLShader *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -275,9 +255,7 @@ HB_FUNC_STATIC(QOPENGLSHADER_SHADERID)
   }
 }
 
-/*
-static bool hasOpenGLShaders(QOpenGLShader::ShaderType type, QOpenGLContext * context = nullptr)
-*/
+// static bool hasOpenGLShaders(QOpenGLShader::ShaderType type, QOpenGLContext *context = nullptr)
 HB_FUNC_STATIC(QOPENGLSHADER_HASOPENGLSHADERS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

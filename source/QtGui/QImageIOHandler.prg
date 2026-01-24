@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool canRead() const = 0
-*/
+// virtual bool canRead() const = 0
 HB_FUNC_STATIC(QIMAGEIOHANDLER_CANREAD)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -107,9 +105,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_CANREAD)
   }
 }
 
-/*
-virtual int currentImageNumber() const
-*/
+// virtual int currentImageNumber() const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_CURRENTIMAGENUMBER)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -127,9 +123,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_CURRENTIMAGENUMBER)
   }
 }
 
-/*
-virtual QRect currentImageRect() const
-*/
+// virtual QRect currentImageRect() const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_CURRENTIMAGERECT)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -147,9 +141,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_CURRENTIMAGERECT)
   }
 }
 
-/*
-QIODevice * device() const
-*/
+// QIODevice *device() const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_DEVICE)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -168,9 +160,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_DEVICE)
   }
 }
 
-/*
-QByteArray format() const
-*/
+// QByteArray format() const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_FORMAT)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -188,9 +178,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_FORMAT)
   }
 }
 
-/*
-virtual int imageCount() const
-*/
+// virtual int imageCount() const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_IMAGECOUNT)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -208,9 +196,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_IMAGECOUNT)
   }
 }
 
-/*
-virtual bool jumpToImage(int imageNumber)
-*/
+// virtual bool jumpToImage(int imageNumber)
 HB_FUNC_STATIC(QIMAGEIOHANDLER_JUMPTOIMAGE)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -228,9 +214,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_JUMPTOIMAGE)
   }
 }
 
-/*
-virtual bool jumpToNextImage()
-*/
+// virtual bool jumpToNextImage()
 HB_FUNC_STATIC(QIMAGEIOHANDLER_JUMPTONEXTIMAGE)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -248,9 +232,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_JUMPTONEXTIMAGE)
   }
 }
 
-/*
-virtual int loopCount() const
-*/
+// virtual int loopCount() const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_LOOPCOUNT)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -268,9 +250,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_LOOPCOUNT)
   }
 }
 
-/*
-virtual int nextImageDelay() const
-*/
+// virtual int nextImageDelay() const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_NEXTIMAGEDELAY)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -288,9 +268,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_NEXTIMAGEDELAY)
   }
 }
 
-/*
-virtual QVariant option(QImageIOHandler::ImageOption option) const
-*/
+// virtual QVariant option(QImageIOHandler::ImageOption option) const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_OPTION)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -308,9 +286,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_OPTION)
   }
 }
 
-/*
-virtual bool read(QImage * image) = 0
-*/
+// virtual bool read(QImage *image) = 0
 HB_FUNC_STATIC(QIMAGEIOHANDLER_READ)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -328,9 +304,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_READ)
   }
 }
 
-/*
-void setDevice(QIODevice * device)
-*/
+// void setDevice(QIODevice *device)
 HB_FUNC_STATIC(QIMAGEIOHANDLER_SETDEVICE)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -350,9 +324,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_SETDEVICE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFormat(const QByteArray &format)
-*/
+// void setFormat(const QByteArray &format)
 HB_FUNC_STATIC(QIMAGEIOHANDLER_SETFORMAT)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -372,9 +344,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_SETFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setOption(QImageIOHandler::ImageOption option, const QVariant &value)
-*/
+// virtual void setOption(QImageIOHandler::ImageOption option, const QVariant &value)
 HB_FUNC_STATIC(QIMAGEIOHANDLER_SETOPTION)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -394,9 +364,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_SETOPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool supportsOption(QImageIOHandler::ImageOption option) const
-*/
+// virtual bool supportsOption(QImageIOHandler::ImageOption option) const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_SUPPORTSOPTION)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -414,9 +382,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_SUPPORTSOPTION)
   }
 }
 
-/*
-virtual bool write(const QImage &image)
-*/
+// virtual bool write(const QImage &image)
 HB_FUNC_STATIC(QIMAGEIOHANDLER_WRITE)
 {
   auto obj = static_cast<QImageIOHandler *>(Qt5xHb::itemGetPtrStackSelfItem());

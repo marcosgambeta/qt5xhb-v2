@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QABSTRACTUNDOITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void undo() = 0
-*/
+// virtual void undo() = 0
 HB_FUNC_STATIC(QABSTRACTUNDOITEM_UNDO)
 {
   auto obj = static_cast<QAbstractUndoItem *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QABSTRACTUNDOITEM_UNDO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void redo() = 0
-*/
+// virtual void redo() = 0
 HB_FUNC_STATIC(QABSTRACTUNDOITEM_REDO)
 {
   auto obj = static_cast<QAbstractUndoItem *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -62,9 +62,7 @@ RETURN
 
 #include <QtCore/QVector>
 
-    /*
-    QOpenGLTimeMonitor(QObject *parent = nullptr)
-    */
+    // QOpenGLTimeMonitor(QObject *parent = nullptr)
 HB_FUNC_STATIC(QOPENGLTIMEMONITOR_NEW)
 {
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_DELETE)
 #endif
 }
 
-/*
-int sampleCount() const
-*/
+// int sampleCount() const
 HB_FUNC_STATIC(QOPENGLTIMEMONITOR_SAMPLECOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -114,9 +110,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_SAMPLECOUNT)
 #endif
 }
 
-/*
-void setSampleCount(int sampleCount)
-*/
+// void setSampleCount(int sampleCount)
 HB_FUNC_STATIC(QOPENGLTIMEMONITOR_SETSAMPLECOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -140,9 +134,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_SETSAMPLECOUNT)
 #endif
 }
 
-/*
-bool create()
-*/
+// bool create()
 HB_FUNC_STATIC(QOPENGLTIMEMONITOR_CREATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -164,9 +156,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_CREATE)
 #endif
 }
 
-/*
-void destroy()
-*/
+// void destroy()
 HB_FUNC_STATIC(QOPENGLTIMEMONITOR_DESTROY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -190,9 +180,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_DESTROY)
 #endif
 }
 
-/*
-bool isCreated() const
-*/
+// bool isCreated() const
 HB_FUNC_STATIC(QOPENGLTIMEMONITOR_ISCREATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -214,13 +202,9 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_ISCREATED)
 #endif
 }
 
-/*
-QVector<GLuint> objectIds() const
-*/
+// QVector<GLuint> objectIds() const
 
-/*
-int recordSample()
-*/
+// int recordSample()
 HB_FUNC_STATIC(QOPENGLTIMEMONITOR_RECORDSAMPLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -242,9 +226,7 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_RECORDSAMPLE)
 #endif
 }
 
-/*
-bool isResultAvailable() const
-*/
+// bool isResultAvailable() const
 HB_FUNC_STATIC(QOPENGLTIMEMONITOR_ISRESULTAVAILABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -266,17 +248,11 @@ HB_FUNC_STATIC(QOPENGLTIMEMONITOR_ISRESULTAVAILABLE)
 #endif
 }
 
-/*
-QVector<GLuint64> waitForSamples() const
-*/
+// QVector<GLuint64> waitForSamples() const
 
-/*
-QVector<GLuint64> waitForIntervals() const
-*/
+// QVector<GLuint64> waitForIntervals() const
 
-/*
-void reset()
-*/
+// void reset()
 HB_FUNC_STATIC(QOPENGLTIMEMONITOR_RESET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

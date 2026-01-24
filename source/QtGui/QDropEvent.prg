@@ -59,10 +59,8 @@ RETURN
 
 #include <QtCore/QMimeData>
 
-    /*
-    QDropEvent(const QPoint &pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons,
-    Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::Drop)
-    */
+    // QDropEvent(const QPoint &pos, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
+    // Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::Drop)
 HB_FUNC_STATIC(QDROPEVENT_NEW)
 {
   if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) && ISNUMORNIL(6)) {
@@ -83,9 +81,7 @@ HB_FUNC_STATIC(QDROPEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void acceptProposedAction()
-*/
+// void acceptProposedAction()
 HB_FUNC_STATIC(QDROPEVENT_ACCEPTPROPOSEDACTION)
 {
   auto obj = static_cast<QDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -105,9 +101,7 @@ HB_FUNC_STATIC(QDROPEVENT_ACCEPTPROPOSEDACTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::DropAction dropAction() const
-*/
+// Qt::DropAction dropAction() const
 HB_FUNC_STATIC(QDROPEVENT_DROPACTION)
 {
   auto obj = static_cast<QDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -125,9 +119,7 @@ HB_FUNC_STATIC(QDROPEVENT_DROPACTION)
   }
 }
 
-/*
-Qt::KeyboardModifiers keyboardModifiers() const
-*/
+// Qt::KeyboardModifiers keyboardModifiers() const
 HB_FUNC_STATIC(QDROPEVENT_KEYBOARDMODIFIERS)
 {
   auto obj = static_cast<QDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -145,9 +137,7 @@ HB_FUNC_STATIC(QDROPEVENT_KEYBOARDMODIFIERS)
   }
 }
 
-/*
-const QMimeData * mimeData() const
-*/
+// const QMimeData *mimeData() const
 HB_FUNC_STATIC(QDROPEVENT_MIMEDATA)
 {
   auto obj = static_cast<QDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -166,9 +156,7 @@ HB_FUNC_STATIC(QDROPEVENT_MIMEDATA)
   }
 }
 
-/*
-Qt::MouseButtons mouseButtons() const
-*/
+// Qt::MouseButtons mouseButtons() const
 HB_FUNC_STATIC(QDROPEVENT_MOUSEBUTTONS)
 {
   auto obj = static_cast<QDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -186,9 +174,7 @@ HB_FUNC_STATIC(QDROPEVENT_MOUSEBUTTONS)
   }
 }
 
-/*
-Qt::DropActions possibleActions() const
-*/
+// Qt::DropActions possibleActions() const
 HB_FUNC_STATIC(QDROPEVENT_POSSIBLEACTIONS)
 {
   auto obj = static_cast<QDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -206,9 +192,7 @@ HB_FUNC_STATIC(QDROPEVENT_POSSIBLEACTIONS)
   }
 }
 
-/*
-Qt::DropAction proposedAction() const
-*/
+// Qt::DropAction proposedAction() const
 HB_FUNC_STATIC(QDROPEVENT_PROPOSEDACTION)
 {
   auto obj = static_cast<QDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -226,9 +210,7 @@ HB_FUNC_STATIC(QDROPEVENT_PROPOSEDACTION)
   }
 }
 
-/*
-void setDropAction(Qt::DropAction action)
-*/
+// void setDropAction(Qt::DropAction action)
 HB_FUNC_STATIC(QDROPEVENT_SETDROPACTION)
 {
   auto obj = static_cast<QDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -248,9 +230,7 @@ HB_FUNC_STATIC(QDROPEVENT_SETDROPACTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QObject * source() const
-*/
+// QObject *source() const
 HB_FUNC_STATIC(QDROPEVENT_SOURCE)
 {
   auto obj = static_cast<QDropEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

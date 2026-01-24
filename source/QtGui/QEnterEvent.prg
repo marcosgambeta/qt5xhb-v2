@@ -57,9 +57,7 @@ RETURN
 #include <QtGui/QEnterEvent>
 #endif
 
-    /*
-    QEnterEvent(const QPointF &localPos, const QPointF &windowPos, const QPointF &screenPos)
-    */
+    // QEnterEvent(const QPointF &localPos, const QPointF &windowPos, const QPointF &screenPos)
 HB_FUNC_STATIC(QENTEREVENT_NEW)
 {
   if (ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3)) {
@@ -79,9 +77,7 @@ HB_FUNC_STATIC(QENTEREVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPoint pos() const
-*/
+// QPoint pos() const
 HB_FUNC_STATIC(QENTEREVENT_POS)
 {
   auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -99,9 +95,7 @@ HB_FUNC_STATIC(QENTEREVENT_POS)
   }
 }
 
-/*
-QPoint globalPos() const
-*/
+// QPoint globalPos() const
 HB_FUNC_STATIC(QENTEREVENT_GLOBALPOS)
 {
   auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -119,9 +113,7 @@ HB_FUNC_STATIC(QENTEREVENT_GLOBALPOS)
   }
 }
 
-/*
-int x() const
-*/
+// int x() const
 HB_FUNC_STATIC(QENTEREVENT_X)
 {
   auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -139,9 +131,7 @@ HB_FUNC_STATIC(QENTEREVENT_X)
   }
 }
 
-/*
-int y() const
-*/
+// int y() const
 HB_FUNC_STATIC(QENTEREVENT_Y)
 {
   auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -159,9 +149,7 @@ HB_FUNC_STATIC(QENTEREVENT_Y)
   }
 }
 
-/*
-int globalX() const
-*/
+// int globalX() const
 HB_FUNC_STATIC(QENTEREVENT_GLOBALX)
 {
   auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -179,9 +167,7 @@ HB_FUNC_STATIC(QENTEREVENT_GLOBALX)
   }
 }
 
-/*
-int globalY() const
-*/
+// int globalY() const
 HB_FUNC_STATIC(QENTEREVENT_GLOBALY)
 {
   auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -199,9 +185,7 @@ HB_FUNC_STATIC(QENTEREVENT_GLOBALY)
   }
 }
 
-/*
-const QPointF &localPos() const
-*/
+// const QPointF &localPos() const
 HB_FUNC_STATIC(QENTEREVENT_LOCALPOS)
 {
   auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -220,9 +204,7 @@ HB_FUNC_STATIC(QENTEREVENT_LOCALPOS)
   }
 }
 
-/*
-const QPointF &windowPos() const
-*/
+// const QPointF &windowPos() const
 HB_FUNC_STATIC(QENTEREVENT_WINDOWPOS)
 {
   auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -241,9 +223,7 @@ HB_FUNC_STATIC(QENTEREVENT_WINDOWPOS)
   }
 }
 
-/*
-const QPointF &screenPos() const
-*/
+// const QPointF &screenPos() const
 HB_FUNC_STATIC(QENTEREVENT_SCREENPOS)
 {
   auto obj = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

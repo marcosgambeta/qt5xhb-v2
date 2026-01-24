@@ -74,9 +74,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QStringList actionNames() const = 0
-*/
+// virtual QStringList actionNames() const = 0
 HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_ACTIONNAMES)
 {
   auto obj = static_cast<QAccessibleActionInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -94,9 +92,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_ACTIONNAMES)
   }
 }
 
-/*
-virtual QString localizedActionName(const QString &name) const
-*/
+// virtual QString localizedActionName(const QString &name) const
 HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONNAME)
 {
   auto obj = static_cast<QAccessibleActionInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -114,9 +110,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONNAME)
   }
 }
 
-/*
-virtual QString localizedActionDescription(const QString &name) const
-*/
+// virtual QString localizedActionDescription(const QString &name) const
 HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONDESCRIPTION)
 {
   auto obj = static_cast<QAccessibleActionInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -134,9 +128,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONDESCRIPTION)
   }
 }
 
-/*
-virtual void doAction(const QString &actionName) = 0
-*/
+// virtual void doAction(const QString &actionName) = 0
 HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_DOACTION)
 {
   auto obj = static_cast<QAccessibleActionInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -156,9 +148,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_DOACTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QStringList keyBindingsForAction(const QString &actionName) const = 0
-*/
+// virtual QStringList keyBindingsForAction(const QString &actionName) const = 0
 HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_KEYBINDINGSFORACTION)
 {
   auto obj = static_cast<QAccessibleActionInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -176,9 +166,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_KEYBINDINGSFORACTION)
   }
 }
 
-/*
-static const QString &pressAction()
-*/
+// static const QString &pressAction()
 HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_PRESSACTION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,9 +180,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_PRESSACTION)
 #endif
 }
 
-/*
-static const QString &increaseAction()
-*/
+// static const QString &increaseAction()
 HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_INCREASEACTION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,9 +194,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_INCREASEACTION)
 #endif
 }
 
-/*
-static const QString &decreaseAction()
-*/
+// static const QString &decreaseAction()
 HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_DECREASEACTION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,9 +208,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_DECREASEACTION)
 #endif
 }
 
-/*
-static const QString &showMenuAction()
-*/
+// static const QString &showMenuAction()
 HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_SHOWMENUACTION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,9 +222,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_SHOWMENUACTION)
 #endif
 }
 
-/*
-static const QString &setFocusAction()
-*/
+// static const QString &setFocusAction()
 HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_SETFOCUSACTION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -256,9 +236,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_SETFOCUSACTION)
 #endif
 }
 
-/*
-static const QString &toggleAction()
-*/
+// static const QString &toggleAction()
 HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_TOGGLEACTION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

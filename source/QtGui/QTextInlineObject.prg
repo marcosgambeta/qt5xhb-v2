@@ -70,9 +70,7 @@ RETURN
 #include <QtGui/QTextInlineObject>
 #endif
 
-    /*
-    QTextInlineObject()
-    */
+    // QTextInlineObject()
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -92,9 +90,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_ISVALID)
 {
   auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -112,9 +108,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_ISVALID)
   }
 }
 
-/*
-QRectF rect() const
-*/
+// QRectF rect() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_RECT)
 {
   auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -132,9 +126,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_RECT)
   }
 }
 
-/*
-qreal width() const
-*/
+// qreal width() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_WIDTH)
 {
   auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -152,9 +144,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_WIDTH)
   }
 }
 
-/*
-qreal ascent() const
-*/
+// qreal ascent() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_ASCENT)
 {
   auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -172,9 +162,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_ASCENT)
   }
 }
 
-/*
-qreal descent() const
-*/
+// qreal descent() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_DESCENT)
 {
   auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -192,9 +180,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_DESCENT)
   }
 }
 
-/*
-qreal height() const
-*/
+// qreal height() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_HEIGHT)
 {
   auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -212,9 +198,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_HEIGHT)
   }
 }
 
-/*
-Qt::LayoutDirection textDirection() const
-*/
+// Qt::LayoutDirection textDirection() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_TEXTDIRECTION)
 {
   auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -232,9 +216,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_TEXTDIRECTION)
   }
 }
 
-/*
-void setWidth(qreal w)
-*/
+// void setWidth(qreal w)
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETWIDTH)
 {
   auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -254,9 +236,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAscent(qreal a)
-*/
+// void setAscent(qreal a)
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETASCENT)
 {
   auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -276,9 +256,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETASCENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDescent(qreal d)
-*/
+// void setDescent(qreal d)
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETDESCENT)
 {
   auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -298,9 +276,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETDESCENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int textPosition() const
-*/
+// int textPosition() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_TEXTPOSITION)
 {
   auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -318,9 +294,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_TEXTPOSITION)
   }
 }
 
-/*
-int formatIndex() const
-*/
+// int formatIndex() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_FORMATINDEX)
 {
   auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -338,9 +312,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_FORMATINDEX)
   }
 }
 
-/*
-QTextFormat format() const
-*/
+// QTextFormat format() const
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_FORMAT)
 {
   auto obj = static_cast<QTextInlineObject *>(Qt5xHb::itemGetPtrStackSelfItem());

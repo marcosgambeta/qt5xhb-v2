@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QGENERICPLUGINFACTORY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QObject * create(const QString &key, const QString &specification)
-*/
+// QObject *create(const QString &key, const QString &specification)
 HB_FUNC_STATIC(QGENERICPLUGINFACTORY_CREATE)
 {
   auto obj = static_cast<QGenericPluginFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QGENERICPLUGINFACTORY_CREATE)
   }
 }
 
-/*
-QStringList keys()
-*/
+// QStringList keys()
 HB_FUNC_STATIC(QGENERICPLUGINFACTORY_KEYS)
 {
   auto obj = static_cast<QGenericPluginFactory *>(Qt5xHb::itemGetPtrStackSelfItem());

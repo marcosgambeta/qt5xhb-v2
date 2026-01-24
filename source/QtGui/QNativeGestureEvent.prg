@@ -55,10 +55,8 @@ RETURN
 #include <QtGui/QNativeGestureEvent>
 #endif
 
-    /*
-    QNativeGestureEvent(Qt::NativeGestureType type, const QPointF &localPos, const QPointF &windowPos, const QPointF &
-    screenPos, qreal value, ulong sequenceId, quint64 intArgument)
-    */
+    // QNativeGestureEvent(Qt::NativeGestureType type, const QPointF &localPos, const QPointF &windowPos, const QPointF &
+    // screenPos, qreal value, ulong sequenceId, quint64 intArgument)
 HB_FUNC_STATIC(QNATIVEGESTUREEVENT_NEW)
 {
   if (ISNUMPAR(7) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
@@ -80,9 +78,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::NativeGestureType gestureType() const
-*/
+// Qt::NativeGestureType gestureType() const
 HB_FUNC_STATIC(QNATIVEGESTUREEVENT_GESTURETYPE)
 {
   auto obj = static_cast<QNativeGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -100,9 +96,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_GESTURETYPE)
   }
 }
 
-/*
-qreal value() const
-*/
+// qreal value() const
 HB_FUNC_STATIC(QNATIVEGESTUREEVENT_VALUE)
 {
   auto obj = static_cast<QNativeGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -120,9 +114,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_VALUE)
   }
 }
 
-/*
-const QPoint pos() const
-*/
+// const QPoint pos() const
 HB_FUNC_STATIC(QNATIVEGESTUREEVENT_POS)
 {
   auto obj = static_cast<QNativeGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -140,9 +132,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_POS)
   }
 }
 
-/*
-const QPoint globalPos() const
-*/
+// const QPoint globalPos() const
 HB_FUNC_STATIC(QNATIVEGESTUREEVENT_GLOBALPOS)
 {
   auto obj = static_cast<QNativeGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -160,9 +150,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_GLOBALPOS)
   }
 }
 
-/*
-const QPointF &localPos() const
-*/
+// const QPointF &localPos() const
 HB_FUNC_STATIC(QNATIVEGESTUREEVENT_LOCALPOS)
 {
   auto obj = static_cast<QNativeGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -181,9 +169,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_LOCALPOS)
   }
 }
 
-/*
-const QPointF &windowPos() const
-*/
+// const QPointF &windowPos() const
 HB_FUNC_STATIC(QNATIVEGESTUREEVENT_WINDOWPOS)
 {
   auto obj = static_cast<QNativeGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -202,9 +188,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_WINDOWPOS)
   }
 }
 
-/*
-const QPointF &screenPos() const
-*/
+// const QPointF &screenPos() const
 HB_FUNC_STATIC(QNATIVEGESTUREEVENT_SCREENPOS)
 {
   auto obj = static_cast<QNativeGestureEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -47,9 +47,7 @@ RETURN
 #include <QtGui/QToolBarChangeEvent>
 #endif
 
-    /*
-    QToolBarChangeEvent(bool t)
-    */
+    // QToolBarChangeEvent(bool t)
 HB_FUNC_STATIC(QTOOLBARCHANGEEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISLOG(1)) {
@@ -69,9 +67,7 @@ HB_FUNC_STATIC(QTOOLBARCHANGEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool toggle() const
-*/
+// bool toggle() const
 HB_FUNC_STATIC(QTOOLBARCHANGEEVENT_TOGGLE)
 {
   auto obj = static_cast<QToolBarChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -48,9 +48,7 @@ RETURN
 #include <QtGui/QExposeEvent>
 #endif
 
-    /*
-    QExposeEvent(const QRegion &rgn)
-    */
+    // QExposeEvent(const QRegion &rgn)
 HB_FUNC_STATIC(QEXPOSEEVENT_NEW)
 {
   if (ISNUMPAR(1) && ISQREGION(1)) {
@@ -70,9 +68,7 @@ HB_FUNC_STATIC(QEXPOSEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QRegion &region() const
-*/
+// const QRegion &region() const
 HB_FUNC_STATIC(QEXPOSEEVENT_REGION)
 {
   auto obj = static_cast<QExposeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

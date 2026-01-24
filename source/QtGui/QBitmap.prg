@@ -57,33 +57,23 @@ RETURN
 HB_FUNC_STATIC(QBITMAP_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QBitmap()
-    */
+    // QBitmap()
     auto obj = new QBitmap();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQPIXMAP(1)) {
-    /*
-    QBitmap(const QPixmap &pixmap)
-    */
+    // QBitmap(const QPixmap &pixmap)
     auto obj = new QBitmap(*PQPIXMAP(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    QBitmap(int width, int height)
-    */
+    // QBitmap(int width, int height)
     auto obj = new QBitmap(PINT(1), PINT(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSIZE(1)) {
-    /*
-    QBitmap(const QSize &size)
-    */
+    // QBitmap(const QSize &size)
     auto obj = new QBitmap(*PQSIZE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
-    /*
-    QBitmap(const QString &fileName, const char * format = nullptr)
-    */
+    // QBitmap(const QString &fileName, const char *format = nullptr)
     auto obj = new QBitmap(PQSTRING(1), OPCONSTCHAR(2, nullptr));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -100,9 +90,7 @@ HB_FUNC_STATIC(QBITMAP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QBITMAP_CLEAR)
 {
   auto obj = static_cast<QBitmap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -122,9 +110,7 @@ HB_FUNC_STATIC(QBITMAP_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QBitmap transformed(const QTransform &matrix) const
-*/
+// QBitmap transformed(const QTransform &matrix) const
 HB_FUNC_STATIC(QBITMAP_TRANSFORMED)
 {
   auto obj = static_cast<QBitmap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -142,9 +128,7 @@ HB_FUNC_STATIC(QBITMAP_TRANSFORMED)
   }
 }
 
-/*
-static QBitmap fromData(const QSize &size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB)
-*/
+// static QBitmap fromData(const QSize &size, const uchar *bits, QImage::Format monoFormat = QImage::Format_MonoLSB)
 HB_FUNC_STATIC(QBITMAP_FROMDATA)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,9 +142,7 @@ HB_FUNC_STATIC(QBITMAP_FROMDATA)
 #endif
 }
 
-/*
-static QBitmap fromImage(const QImage &image, Qt::ImageConversionFlags flags = Qt::AutoColor)
-*/
+// static QBitmap fromImage(const QImage &image, Qt::ImageConversionFlags flags = Qt::AutoColor)
 HB_FUNC_STATIC(QBITMAP_FROMIMAGE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

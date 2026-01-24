@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSizeF intrinsicSize(QTextDocument * doc, int posInDocument, const QTextFormat &format) = 0
-*/
+// virtual QSizeF intrinsicSize(QTextDocument *doc, int posInDocument, const QTextFormat &format) = 0
 HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_INTRINSICSIZE)
 {
   auto obj = static_cast<QTextObjectInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -86,10 +84,8 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_INTRINSICSIZE)
   }
 }
 
-/*
-virtual void drawObject(QPainter * painter, const QRectF &rect, QTextDocument * doc, int posInDocument, const
-QTextFormat &format) = 0
-*/
+// virtual void drawObject(QPainter *painter, const QRectF &rect, QTextDocument *doc, int posInDocument, const
+// QTextFormat &format) = 0
 HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DRAWOBJECT)
 {
   auto obj = static_cast<QTextObjectInterface *>(Qt5xHb::itemGetPtrStackSelfItem());

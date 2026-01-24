@@ -48,9 +48,7 @@ RETURN
 #include <QtGui/QAccessibleTextInsertEvent>
 #endif
 
-    /*
-    QAccessibleTextInsertEvent(QObject * obj, int position, const QString &text)
-    */
+    // QAccessibleTextInsertEvent(QObject *obj, int position, const QString &text)
 HB_FUNC_STATIC(QACCESSIBLETEXTINSERTEVENT_NEW)
 {
   if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
@@ -70,9 +68,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINSERTEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString textInserted() const
-*/
+// QString textInserted() const
 HB_FUNC_STATIC(QACCESSIBLETEXTINSERTEVENT_TEXTINSERTED)
 {
   auto obj = static_cast<QAccessibleTextInsertEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -90,9 +86,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINSERTEVENT_TEXTINSERTED)
   }
 }
 
-/*
-int changePosition() const
-*/
+// int changePosition() const
 HB_FUNC_STATIC(QACCESSIBLETEXTINSERTEVENT_CHANGEPOSITION)
 {
   auto obj = static_cast<QAccessibleTextInsertEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

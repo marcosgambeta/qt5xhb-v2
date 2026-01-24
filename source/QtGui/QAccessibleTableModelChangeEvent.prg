@@ -56,9 +56,7 @@ RETURN
 #include <QtGui/QAccessibleTableModelChangeEvent>
 #endif
 
-    /*
-    QAccessibleTableModelChangeEvent(QObject * obj, QAccessibleTableModelChangeEvent::ModelChangeType changeType)
-    */
+    // QAccessibleTableModelChangeEvent(QObject *obj, QAccessibleTableModelChangeEvent::ModelChangeType changeType)
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_NEW)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
@@ -78,9 +76,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setModelChangeType(QAccessibleTableModelChangeEvent::ModelChangeType changeType)
-*/
+// void setModelChangeType(QAccessibleTableModelChangeEvent::ModelChangeType changeType)
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETMODELCHANGETYPE)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -100,9 +96,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETMODELCHANGETYPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAccessibleTableModelChangeEvent::ModelChangeType modelChangeType() const
-*/
+// QAccessibleTableModelChangeEvent::ModelChangeType modelChangeType() const
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_MODELCHANGETYPE)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -120,9 +114,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_MODELCHANGETYPE)
   }
 }
 
-/*
-void setFirstRow(int row)
-*/
+// void setFirstRow(int row)
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTROW)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -142,9 +134,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTROW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFirstColumn(int col)
-*/
+// void setFirstColumn(int col)
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTCOLUMN)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -164,9 +154,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTCOLUMN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setLastRow(int row)
-*/
+// void setLastRow(int row)
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTROW)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -186,9 +174,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTROW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setLastColumn(int col)
-*/
+// void setLastColumn(int col)
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTCOLUMN)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -208,9 +194,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTCOLUMN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int firstRow() const
-*/
+// int firstRow() const
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTROW)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -228,9 +212,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTROW)
   }
 }
 
-/*
-int firstColumn() const
-*/
+// int firstColumn() const
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTCOLUMN)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -248,9 +230,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTCOLUMN)
   }
 }
 
-/*
-int lastRow() const
-*/
+// int lastRow() const
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_LASTROW)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -268,9 +248,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_LASTROW)
   }
 }
 
-/*
-int lastColumn() const
-*/
+// int lastColumn() const
 HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_LASTCOLUMN)
 {
   auto obj = static_cast<QAccessibleTableModelChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -67,11 +67,9 @@ RETURN
 #include <QtGui/QTabletEvent>
 #endif
 
-    /*
-    QTabletEvent(QEvent::Type type, const QPointF &pos, const QPointF &globalPos, int device, int pointerType, qreal
-    pressure, int xTilt, int yTilt, qreal tangentialPressure, qreal rotation, int z, Qt::KeyboardModifiers keyState,
-    qint64 uniqueID)
-    */
+    // QTabletEvent(QEvent::Type type, const QPointF &pos, const QPointF &globalPos, int device, int pointerType, qreal
+    // pressure, int xTilt, int yTilt, qreal tangentialPressure, qreal rotation, int z, Qt::KeyboardModifiers keyState,
+    // qint64 uniqueID)
 HB_FUNC_STATIC(QTABLETEVENT_NEW)
 {
   if (ISNUMPAR(13) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QTABLETEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTabletEvent::TabletDevice device() const
-*/
+// QTabletEvent::TabletDevice device() const
 HB_FUNC_STATIC(QTABLETEVENT_DEVICE)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -113,9 +109,7 @@ HB_FUNC_STATIC(QTABLETEVENT_DEVICE)
   }
 }
 
-/*
-const QPoint globalPos() const
-*/
+// const QPoint globalPos() const
 HB_FUNC_STATIC(QTABLETEVENT_GLOBALPOS)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -133,9 +127,7 @@ HB_FUNC_STATIC(QTABLETEVENT_GLOBALPOS)
   }
 }
 
-/*
-const QPointF &globalPosF() const
-*/
+// const QPointF &globalPosF() const
 HB_FUNC_STATIC(QTABLETEVENT_GLOBALPOSF)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -154,9 +146,7 @@ HB_FUNC_STATIC(QTABLETEVENT_GLOBALPOSF)
   }
 }
 
-/*
-int globalX() const
-*/
+// int globalX() const
 HB_FUNC_STATIC(QTABLETEVENT_GLOBALX)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -174,9 +164,7 @@ HB_FUNC_STATIC(QTABLETEVENT_GLOBALX)
   }
 }
 
-/*
-int globalY() const
-*/
+// int globalY() const
 HB_FUNC_STATIC(QTABLETEVENT_GLOBALY)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -194,9 +182,7 @@ HB_FUNC_STATIC(QTABLETEVENT_GLOBALY)
   }
 }
 
-/*
-qreal hiResGlobalX() const
-*/
+// qreal hiResGlobalX() const
 HB_FUNC_STATIC(QTABLETEVENT_HIRESGLOBALX)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -214,9 +200,7 @@ HB_FUNC_STATIC(QTABLETEVENT_HIRESGLOBALX)
   }
 }
 
-/*
-qreal hiResGlobalY() const
-*/
+// qreal hiResGlobalY() const
 HB_FUNC_STATIC(QTABLETEVENT_HIRESGLOBALY)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -234,9 +218,7 @@ HB_FUNC_STATIC(QTABLETEVENT_HIRESGLOBALY)
   }
 }
 
-/*
-QTabletEvent::PointerType pointerType() const
-*/
+// QTabletEvent::PointerType pointerType() const
 HB_FUNC_STATIC(QTABLETEVENT_POINTERTYPE)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -254,9 +236,7 @@ HB_FUNC_STATIC(QTABLETEVENT_POINTERTYPE)
   }
 }
 
-/*
-const QPoint pos() const
-*/
+// const QPoint pos() const
 HB_FUNC_STATIC(QTABLETEVENT_POS)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -274,9 +254,7 @@ HB_FUNC_STATIC(QTABLETEVENT_POS)
   }
 }
 
-/*
-const QPointF &posF() const
-*/
+// const QPointF &posF() const
 HB_FUNC_STATIC(QTABLETEVENT_POSF)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -295,9 +273,7 @@ HB_FUNC_STATIC(QTABLETEVENT_POSF)
   }
 }
 
-/*
-qreal pressure() const
-*/
+// qreal pressure() const
 HB_FUNC_STATIC(QTABLETEVENT_PRESSURE)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -315,9 +291,7 @@ HB_FUNC_STATIC(QTABLETEVENT_PRESSURE)
   }
 }
 
-/*
-qreal rotation() const
-*/
+// qreal rotation() const
 HB_FUNC_STATIC(QTABLETEVENT_ROTATION)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -335,9 +309,7 @@ HB_FUNC_STATIC(QTABLETEVENT_ROTATION)
   }
 }
 
-/*
-qreal tangentialPressure() const
-*/
+// qreal tangentialPressure() const
 HB_FUNC_STATIC(QTABLETEVENT_TANGENTIALPRESSURE)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -355,9 +327,7 @@ HB_FUNC_STATIC(QTABLETEVENT_TANGENTIALPRESSURE)
   }
 }
 
-/*
-qint64 uniqueId() const
-*/
+// qint64 uniqueId() const
 HB_FUNC_STATIC(QTABLETEVENT_UNIQUEID)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -375,9 +345,7 @@ HB_FUNC_STATIC(QTABLETEVENT_UNIQUEID)
   }
 }
 
-/*
-int x() const
-*/
+// int x() const
 HB_FUNC_STATIC(QTABLETEVENT_X)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -395,9 +363,7 @@ HB_FUNC_STATIC(QTABLETEVENT_X)
   }
 }
 
-/*
-int xTilt() const
-*/
+// int xTilt() const
 HB_FUNC_STATIC(QTABLETEVENT_XTILT)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -415,9 +381,7 @@ HB_FUNC_STATIC(QTABLETEVENT_XTILT)
   }
 }
 
-/*
-int y() const
-*/
+// int y() const
 HB_FUNC_STATIC(QTABLETEVENT_Y)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -435,9 +399,7 @@ HB_FUNC_STATIC(QTABLETEVENT_Y)
   }
 }
 
-/*
-int yTilt() const
-*/
+// int yTilt() const
 HB_FUNC_STATIC(QTABLETEVENT_YTILT)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -455,9 +417,7 @@ HB_FUNC_STATIC(QTABLETEVENT_YTILT)
   }
 }
 
-/*
-int z() const
-*/
+// int z() const
 HB_FUNC_STATIC(QTABLETEVENT_Z)
 {
   auto obj = static_cast<QTabletEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -70,9 +70,7 @@ RETURN
 #include <QtGui/QBackingStore>
 #endif
 
-    /*
-    QBackingStore(QWindow * window)
-    */
+    // QBackingStore(QWindow *window)
 HB_FUNC_STATIC(QBACKINGSTORE_NEW)
 {
   if (ISNUMPAR(1) && ISQWINDOW(1)) {
@@ -92,9 +90,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void beginPaint(const QRegion &region)
-*/
+// void beginPaint(const QRegion &region)
 HB_FUNC_STATIC(QBACKINGSTORE_BEGINPAINT)
 {
   auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -114,9 +110,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_BEGINPAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void endPaint()
-*/
+// void endPaint()
 HB_FUNC_STATIC(QBACKINGSTORE_ENDPAINT)
 {
   auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -136,9 +130,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_ENDPAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void flush(const QRegion &region, QWindow * win = nullptr, const QPoint &offset = QPoint())
-*/
+// void flush(const QRegion &region, QWindow *win = nullptr, const QPoint &offset = QPoint())
 HB_FUNC_STATIC(QBACKINGSTORE_FLUSH)
 {
   auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -159,9 +151,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_FLUSH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool hasStaticContents() const
-*/
+// bool hasStaticContents() const
 HB_FUNC_STATIC(QBACKINGSTORE_HASSTATICCONTENTS)
 {
   auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -179,9 +169,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_HASSTATICCONTENTS)
   }
 }
 
-/*
-QPaintDevice * paintDevice()
-*/
+// QPaintDevice *paintDevice()
 HB_FUNC_STATIC(QBACKINGSTORE_PAINTDEVICE)
 {
   auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -200,9 +188,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_PAINTDEVICE)
   }
 }
 
-/*
-void resize(const QSize &size)
-*/
+// void resize(const QSize &size)
 HB_FUNC_STATIC(QBACKINGSTORE_RESIZE)
 {
   auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -222,9 +208,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_RESIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool scroll(const QRegion &area, int dx, int dy)
-*/
+// bool scroll(const QRegion &area, int dx, int dy)
 HB_FUNC_STATIC(QBACKINGSTORE_SCROLL)
 {
   auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -242,9 +226,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_SCROLL)
   }
 }
 
-/*
-void setStaticContents(const QRegion &region)
-*/
+// void setStaticContents(const QRegion &region)
 HB_FUNC_STATIC(QBACKINGSTORE_SETSTATICCONTENTS)
 {
   auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -264,9 +246,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_SETSTATICCONTENTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize size() const
-*/
+// QSize size() const
 HB_FUNC_STATIC(QBACKINGSTORE_SIZE)
 {
   auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -284,9 +264,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_SIZE)
   }
 }
 
-/*
-QRegion staticContents() const
-*/
+// QRegion staticContents() const
 HB_FUNC_STATIC(QBACKINGSTORE_STATICCONTENTS)
 {
   auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -304,9 +282,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_STATICCONTENTS)
   }
 }
 
-/*
-QWindow * window() const
-*/
+// QWindow *window() const
 HB_FUNC_STATIC(QBACKINGSTORE_WINDOW)
 {
   auto obj = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem());

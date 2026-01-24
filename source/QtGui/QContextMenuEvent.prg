@@ -57,22 +57,16 @@ RETURN
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_NEW)
 {
   if (ISNUMPAR(4) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && HB_ISNUM(4)) {
-    /*
-    QContextMenuEvent(QContextMenuEvent::Reason reason, const QPoint &pos, const QPoint &globalPos,
-    Qt::KeyboardModifiers modifiers)
-    */
+    // QContextMenuEvent(QContextMenuEvent::Reason reason, const QPoint &pos, const QPoint &globalPos,
+    // Qt::KeyboardModifiers modifiers)
     auto obj = new QContextMenuEvent(PQCONTEXTMENUEVENT_REASON(1), *PQPOINT(2), *PQPOINT(3), PQT_KEYBOARDMODIFIERS(4));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3)) {
-    /*
-    QContextMenuEvent(QContextMenuEvent::Reason reason, const QPoint &pos, const QPoint &globalPos)
-    */
+    // QContextMenuEvent(QContextMenuEvent::Reason reason, const QPoint &pos, const QPoint &globalPos)
     auto obj = new QContextMenuEvent(PQCONTEXTMENUEVENT_REASON(1), *PQPOINT(2), *PQPOINT(3));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINT(2)) {
-    /*
-    QContextMenuEvent(QContextMenuEvent::Reason reason, const QPoint &pos)
-    */
+    // QContextMenuEvent(QContextMenuEvent::Reason reason, const QPoint &pos)
     auto obj = new QContextMenuEvent(PQCONTEXTMENUEVENT_REASON(1), *PQPOINT(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -89,9 +83,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QPoint &globalPos() const
-*/
+// const QPoint &globalPos() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALPOS)
 {
   auto obj = static_cast<QContextMenuEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -110,9 +102,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALPOS)
   }
 }
 
-/*
-int globalX() const
-*/
+// int globalX() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALX)
 {
   auto obj = static_cast<QContextMenuEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -130,9 +120,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALX)
   }
 }
 
-/*
-int globalY() const
-*/
+// int globalY() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALY)
 {
   auto obj = static_cast<QContextMenuEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -150,9 +138,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALY)
   }
 }
 
-/*
-const QPoint &pos() const
-*/
+// const QPoint &pos() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_POS)
 {
   auto obj = static_cast<QContextMenuEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -171,9 +157,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_POS)
   }
 }
 
-/*
-QContextMenuEvent::Reason reason() const
-*/
+// QContextMenuEvent::Reason reason() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_REASON)
 {
   auto obj = static_cast<QContextMenuEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -191,9 +175,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_REASON)
   }
 }
 
-/*
-int x() const
-*/
+// int x() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_X)
 {
   auto obj = static_cast<QContextMenuEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -211,9 +193,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_X)
   }
 }
 
-/*
-int y() const
-*/
+// int y() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_Y)
 {
   auto obj = static_cast<QContextMenuEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

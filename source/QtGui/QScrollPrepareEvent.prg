@@ -56,9 +56,7 @@ RETURN
 #include <QtGui/QScrollPrepareEvent>
 #endif
 
-    /*
-    QScrollPrepareEvent(const QPointF &startPos)
-    */
+    // QScrollPrepareEvent(const QPointF &startPos)
 HB_FUNC_STATIC(QSCROLLPREPAREEVENT_NEW)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1)) {
@@ -78,9 +76,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPointF startPos() const
-*/
+// QPointF startPos() const
 HB_FUNC_STATIC(QSCROLLPREPAREEVENT_STARTPOS)
 {
   auto obj = static_cast<QScrollPrepareEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -98,9 +94,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_STARTPOS)
   }
 }
 
-/*
-QSizeF viewportSize() const
-*/
+// QSizeF viewportSize() const
 HB_FUNC_STATIC(QSCROLLPREPAREEVENT_VIEWPORTSIZE)
 {
   auto obj = static_cast<QScrollPrepareEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -118,9 +112,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_VIEWPORTSIZE)
   }
 }
 
-/*
-QRectF contentPosRange() const
-*/
+// QRectF contentPosRange() const
 HB_FUNC_STATIC(QSCROLLPREPAREEVENT_CONTENTPOSRANGE)
 {
   auto obj = static_cast<QScrollPrepareEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -138,9 +130,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_CONTENTPOSRANGE)
   }
 }
 
-/*
-QPointF contentPos() const
-*/
+// QPointF contentPos() const
 HB_FUNC_STATIC(QSCROLLPREPAREEVENT_CONTENTPOS)
 {
   auto obj = static_cast<QScrollPrepareEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -158,9 +148,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_CONTENTPOS)
   }
 }
 
-/*
-void setViewportSize(const QSizeF &size)
-*/
+// void setViewportSize(const QSizeF &size)
 HB_FUNC_STATIC(QSCROLLPREPAREEVENT_SETVIEWPORTSIZE)
 {
   auto obj = static_cast<QScrollPrepareEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -180,9 +168,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_SETVIEWPORTSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setContentPosRange(const QRectF &rect)
-*/
+// void setContentPosRange(const QRectF &rect)
 HB_FUNC_STATIC(QSCROLLPREPAREEVENT_SETCONTENTPOSRANGE)
 {
   auto obj = static_cast<QScrollPrepareEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -202,9 +188,7 @@ HB_FUNC_STATIC(QSCROLLPREPAREEVENT_SETCONTENTPOSRANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setContentPos(const QPointF &pos)
-*/
+// void setContentPos(const QPointF &pos)
 HB_FUNC_STATIC(QSCROLLPREPAREEVENT_SETCONTENTPOS)
 {
   auto obj = static_cast<QScrollPrepareEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

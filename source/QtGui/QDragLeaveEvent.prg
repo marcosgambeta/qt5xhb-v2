@@ -46,9 +46,7 @@ RETURN
 #include <QtGui/QDragLeaveEvent>
 #endif
 
-    /*
-    QDragLeaveEvent()
-    */
+    // QDragLeaveEvent()
 HB_FUNC_STATIC(QDRAGLEAVEEVENT_NEW)
 {
   if (ISNUMPAR(0)) {

@@ -82,27 +82,19 @@ RETURN
 HB_FUNC_STATIC(QQUATERNION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QQuaternion()
-    */
+    // QQuaternion()
     auto obj = new QQuaternion();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
-    /*
-    QQuaternion(float scalar, float xpos, float ypos, float zpos)
-    */
+    // QQuaternion(float scalar, float xpos, float ypos, float zpos)
     auto obj = new QQuaternion(PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISOBJECT(2)) {
-    /*
-    QQuaternion(float scalar, const QVector3D &vector)
-    */
+    // QQuaternion(float scalar, const QVector3D &vector)
     auto obj = new QQuaternion(PFLOAT(1), *PQVECTOR3D(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
-    /*
-    QQuaternion(const QVector4D &vector)
-    */
+    // QQuaternion(const QVector4D &vector)
     auto obj = new QQuaternion(*PQVECTOR4D(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -119,9 +111,7 @@ HB_FUNC_STATIC(QQUATERNION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QQUATERNION_ISNULL)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -139,9 +129,7 @@ HB_FUNC_STATIC(QQUATERNION_ISNULL)
   }
 }
 
-/*
-bool isIdentity() const
-*/
+// bool isIdentity() const
 HB_FUNC_STATIC(QQUATERNION_ISIDENTITY)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -159,9 +147,7 @@ HB_FUNC_STATIC(QQUATERNION_ISIDENTITY)
   }
 }
 
-/*
-QVector3D vector() const
-*/
+// QVector3D vector() const
 HB_FUNC_STATIC(QQUATERNION_VECTOR)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -182,9 +168,7 @@ HB_FUNC_STATIC(QQUATERNION_VECTOR)
 HB_FUNC_STATIC(QQUATERNION_SETVECTOR)
 {
   if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
-    /*
-    void setVector(const QVector3D &vector)
-    */
+    // void setVector(const QVector3D &vector)
     auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -193,9 +177,7 @@ HB_FUNC_STATIC(QQUATERNION_SETVECTOR)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
-    /*
-    void setVector(float x, float y, float z)
-    */
+    // void setVector(float x, float y, float z)
     auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -208,9 +190,7 @@ HB_FUNC_STATIC(QQUATERNION_SETVECTOR)
   }
 }
 
-/*
-float x() const
-*/
+// float x() const
 HB_FUNC_STATIC(QQUATERNION_X)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -228,9 +208,7 @@ HB_FUNC_STATIC(QQUATERNION_X)
   }
 }
 
-/*
-float y() const
-*/
+// float y() const
 HB_FUNC_STATIC(QQUATERNION_Y)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -248,9 +226,7 @@ HB_FUNC_STATIC(QQUATERNION_Y)
   }
 }
 
-/*
-float z() const
-*/
+// float z() const
 HB_FUNC_STATIC(QQUATERNION_Z)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -268,9 +244,7 @@ HB_FUNC_STATIC(QQUATERNION_Z)
   }
 }
 
-/*
-float scalar() const
-*/
+// float scalar() const
 HB_FUNC_STATIC(QQUATERNION_SCALAR)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -288,9 +262,7 @@ HB_FUNC_STATIC(QQUATERNION_SCALAR)
   }
 }
 
-/*
-void setX(float x)
-*/
+// void setX(float x)
 HB_FUNC_STATIC(QQUATERNION_SETX)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -310,9 +282,7 @@ HB_FUNC_STATIC(QQUATERNION_SETX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setY(float y)
-*/
+// void setY(float y)
 HB_FUNC_STATIC(QQUATERNION_SETY)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -332,9 +302,7 @@ HB_FUNC_STATIC(QQUATERNION_SETY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setZ(float z)
-*/
+// void setZ(float z)
 HB_FUNC_STATIC(QQUATERNION_SETZ)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -354,9 +322,7 @@ HB_FUNC_STATIC(QQUATERNION_SETZ)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setScalar(float scalar)
-*/
+// void setScalar(float scalar)
 HB_FUNC_STATIC(QQUATERNION_SETSCALAR)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -376,9 +342,7 @@ HB_FUNC_STATIC(QQUATERNION_SETSCALAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-float length() const
-*/
+// float length() const
 HB_FUNC_STATIC(QQUATERNION_LENGTH)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -396,9 +360,7 @@ HB_FUNC_STATIC(QQUATERNION_LENGTH)
   }
 }
 
-/*
-float lengthSquared() const
-*/
+// float lengthSquared() const
 HB_FUNC_STATIC(QQUATERNION_LENGTHSQUARED)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -416,9 +378,7 @@ HB_FUNC_STATIC(QQUATERNION_LENGTHSQUARED)
   }
 }
 
-/*
-QQuaternion normalized() const
-*/
+// QQuaternion normalized() const
 HB_FUNC_STATIC(QQUATERNION_NORMALIZED)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -436,9 +396,7 @@ HB_FUNC_STATIC(QQUATERNION_NORMALIZED)
   }
 }
 
-/*
-void normalize()
-*/
+// void normalize()
 HB_FUNC_STATIC(QQUATERNION_NORMALIZE)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -458,9 +416,7 @@ HB_FUNC_STATIC(QQUATERNION_NORMALIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QQuaternion conjugate() const
-*/
+// QQuaternion conjugate() const
 HB_FUNC_STATIC(QQUATERNION_CONJUGATE)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -478,9 +434,7 @@ HB_FUNC_STATIC(QQUATERNION_CONJUGATE)
   }
 }
 
-/*
-QVector3D rotatedVector(const QVector3D &vector) const
-*/
+// QVector3D rotatedVector(const QVector3D &vector) const
 HB_FUNC_STATIC(QQUATERNION_ROTATEDVECTOR)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -498,9 +452,7 @@ HB_FUNC_STATIC(QQUATERNION_ROTATEDVECTOR)
   }
 }
 
-/*
-QVector4D toVector4D() const
-*/
+// QVector4D toVector4D() const
 HB_FUNC_STATIC(QQUATERNION_TOVECTOR4D)
 {
   auto obj = static_cast<QQuaternion *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -521,23 +473,17 @@ HB_FUNC_STATIC(QQUATERNION_TOVECTOR4D)
 HB_FUNC_STATIC(QQUATERNION_FROMAXISANDANGLE)
 {
   if (ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2)) {
-    /*
-    static QQuaternion fromAxisAndAngle(const QVector3D &axis, float angle)
-    */
+    // static QQuaternion fromAxisAndAngle(const QVector3D &axis, float angle)
     RQQUATERNION(QQuaternion::fromAxisAndAngle(*PQVECTOR3D(1), PFLOAT(2)));
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
-    /*
-    static QQuaternion fromAxisAndAngle(float x, float y, float z, float angle)
-    */
+    // static QQuaternion fromAxisAndAngle(float x, float y, float z, float angle)
     RQQUATERNION(QQuaternion::fromAxisAndAngle(PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-static QQuaternion slerp(const QQuaternion &q1, const QQuaternion &q2, float t)
-*/
+// static QQuaternion slerp(const QQuaternion &q1, const QQuaternion &q2, float t)
 HB_FUNC_STATIC(QQUATERNION_SLERP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -551,9 +497,7 @@ HB_FUNC_STATIC(QQUATERNION_SLERP)
 #endif
 }
 
-/*
-static QQuaternion nlerp(const QQuaternion &q1, const QQuaternion &q2, float t)
-*/
+// static QQuaternion nlerp(const QQuaternion &q1, const QQuaternion &q2, float t)
 HB_FUNC_STATIC(QQUATERNION_NLERP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

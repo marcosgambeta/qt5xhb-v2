@@ -59,9 +59,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QOpenGLContext*> shares() const
-*/
+// QList<QOpenGLContext*> shares() const
 HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_SHARES)
 {
   auto obj = qobject_cast<QOpenGLContextGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -98,9 +96,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_SHARES)
   }
 }
 
-/*
-static QOpenGLContextGroup * currentContextGroup()
-*/
+// static QOpenGLContextGroup *currentContextGroup()
 HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_CURRENTCONTEXTGROUP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

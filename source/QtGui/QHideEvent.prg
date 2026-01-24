@@ -46,9 +46,7 @@ RETURN
 #include <QtGui/QHideEvent>
 #endif
 
-    /*
-    QHideEvent()
-    */
+    // QHideEvent()
 HB_FUNC_STATIC(QHIDEEVENT_NEW)
 {
   if (ISNUMPAR(0)) {

@@ -60,17 +60,13 @@ RETURN
 HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QRegularExpressionValidator(QObject * parent = nullptr)
-    */
+    // QRegularExpressionValidator(QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = new QRegularExpressionValidator(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(1, 2) && ISQREGULAREXPRESSION(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QRegularExpressionValidator(const QRegularExpression &re, QObject * parent = nullptr)
-    */
+    // QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = new QRegularExpressionValidator(*PQREGULAREXPRESSION(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -91,9 +87,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_DELETE)
 #endif
 }
 
-/*
-QRegularExpression regularExpression() const
-*/
+// QRegularExpression regularExpression() const
 HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -113,9 +107,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION)
 #endif
 }
 
-/*
-void setRegularExpression(const QRegularExpression &re)
-*/
+// void setRegularExpression(const QRegularExpression &re)
 HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -137,9 +129,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION)
 #endif
 }
 
-/*
-void regularExpressionChanged(const QRegularExpression &re)
-*/
+// void regularExpressionChanged(const QRegularExpression &re)
 HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

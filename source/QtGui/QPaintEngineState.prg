@@ -91,9 +91,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QBrush backgroundBrush() const
-*/
+// QBrush backgroundBrush() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_BACKGROUNDBRUSH)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -111,9 +109,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_BACKGROUNDBRUSH)
   }
 }
 
-/*
-Qt::BGMode backgroundMode() const
-*/
+// Qt::BGMode backgroundMode() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_BACKGROUNDMODE)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -131,9 +127,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_BACKGROUNDMODE)
   }
 }
 
-/*
-QBrush brush() const
-*/
+// QBrush brush() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_BRUSH)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -151,9 +145,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_BRUSH)
   }
 }
 
-/*
-bool brushNeedsResolving() const
-*/
+// bool brushNeedsResolving() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_BRUSHNEEDSRESOLVING)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -171,9 +163,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_BRUSHNEEDSRESOLVING)
   }
 }
 
-/*
-QPointF brushOrigin() const
-*/
+// QPointF brushOrigin() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_BRUSHORIGIN)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -191,9 +181,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_BRUSHORIGIN)
   }
 }
 
-/*
-Qt::ClipOperation clipOperation() const
-*/
+// Qt::ClipOperation clipOperation() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPOPERATION)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -211,9 +199,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPOPERATION)
   }
 }
 
-/*
-QPainterPath clipPath() const
-*/
+// QPainterPath clipPath() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPPATH)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -231,9 +217,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPPATH)
   }
 }
 
-/*
-QRegion clipRegion() const
-*/
+// QRegion clipRegion() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPREGION)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -251,9 +235,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPREGION)
   }
 }
 
-/*
-QPainter::CompositionMode compositionMode() const
-*/
+// QPainter::CompositionMode compositionMode() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_COMPOSITIONMODE)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -271,9 +253,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_COMPOSITIONMODE)
   }
 }
 
-/*
-QFont font() const
-*/
+// QFont font() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_FONT)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -291,9 +271,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_FONT)
   }
 }
 
-/*
-bool isClipEnabled() const
-*/
+// bool isClipEnabled() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_ISCLIPENABLED)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -311,9 +289,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_ISCLIPENABLED)
   }
 }
 
-/*
-qreal opacity() const
-*/
+// qreal opacity() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_OPACITY)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -331,9 +307,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_OPACITY)
   }
 }
 
-/*
-QPainter * painter() const
-*/
+// QPainter *painter() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_PAINTER)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -352,9 +326,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_PAINTER)
   }
 }
 
-/*
-QPen pen() const
-*/
+// QPen pen() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_PEN)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -372,9 +344,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_PEN)
   }
 }
 
-/*
-bool penNeedsResolving() const
-*/
+// bool penNeedsResolving() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_PENNEEDSRESOLVING)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -392,9 +362,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_PENNEEDSRESOLVING)
   }
 }
 
-/*
-QPainter::RenderHints renderHints() const
-*/
+// QPainter::RenderHints renderHints() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_RENDERHINTS)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -412,9 +380,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_RENDERHINTS)
   }
 }
 
-/*
-QPaintEngine::DirtyFlags state() const
-*/
+// QPaintEngine::DirtyFlags state() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_STATE)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -432,9 +398,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_STATE)
   }
 }
 
-/*
-QTransform transform() const
-*/
+// QTransform transform() const
 HB_FUNC_STATIC(QPAINTENGINESTATE_TRANSFORM)
 {
   auto obj = static_cast<QPaintEngineState *>(Qt5xHb::itemGetPtrStackSelfItem());

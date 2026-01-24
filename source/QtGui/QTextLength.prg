@@ -61,15 +61,11 @@ RETURN
 HB_FUNC_STATIC(QTEXTLENGTH_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QTextLength()
-    */
+    // QTextLength()
     auto obj = new QTextLength();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    QTextLength(QTextLength::Type type, qreal value)
-    */
+    // QTextLength(QTextLength::Type type, qreal value)
     auto obj = new QTextLength(PQTEXTLENGTH_TYPE(1), PQREAL(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -86,9 +82,7 @@ HB_FUNC_STATIC(QTEXTLENGTH_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTextLength::Type type() const
-*/
+// QTextLength::Type type() const
 HB_FUNC_STATIC(QTEXTLENGTH_TYPE)
 {
   auto obj = static_cast<QTextLength *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -106,9 +100,7 @@ HB_FUNC_STATIC(QTEXTLENGTH_TYPE)
   }
 }
 
-/*
-qreal value(qreal maximumLength) const
-*/
+// qreal value(qreal maximumLength) const
 HB_FUNC_STATIC(QTEXTLENGTH_VALUE)
 {
   auto obj = static_cast<QTextLength *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -126,9 +118,7 @@ HB_FUNC_STATIC(QTEXTLENGTH_VALUE)
   }
 }
 
-/*
-qreal rawValue() const
-*/
+// qreal rawValue() const
 HB_FUNC_STATIC(QTEXTLENGTH_RAWVALUE)
 {
   auto obj = static_cast<QTextLength *>(Qt5xHb::itemGetPtrStackSelfItem());

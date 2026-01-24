@@ -60,9 +60,7 @@ HB_FUNC_STATIC(QFILEOPENEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString file() const
-*/
+// QString file() const
 HB_FUNC_STATIC(QFILEOPENEVENT_FILE)
 {
   auto obj = static_cast<QFileOpenEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -80,9 +78,7 @@ HB_FUNC_STATIC(QFILEOPENEVENT_FILE)
   }
 }
 
-/*
-bool openFile(QFile &file, QIODevice::OpenMode flags) const
-*/
+// bool openFile(QFile &file, QIODevice::OpenMode flags) const
 HB_FUNC_STATIC(QFILEOPENEVENT_OPENFILE)
 {
   auto obj = static_cast<QFileOpenEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -100,9 +96,7 @@ HB_FUNC_STATIC(QFILEOPENEVENT_OPENFILE)
   }
 }
 
-/*
-QUrl url() const
-*/
+// QUrl url() const
 HB_FUNC_STATIC(QFILEOPENEVENT_URL)
 {
   auto obj = static_cast<QFileOpenEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

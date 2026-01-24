@@ -82,84 +82,58 @@ RETURN
 HB_FUNC_STATIC(QBRUSH_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QBrush()
-    */
+    // QBrush()
     auto obj = new QBrush();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QBrush(Qt::BrushStyle style)
-    */
+    // QBrush(Qt::BrushStyle style)
     auto obj = new QBrush(PQT_BRUSHSTYLE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISNUMORNIL(2)) {
-    /*
-    QBrush(const QColor &color, Qt::BrushStyle style = Qt::SolidPattern)
-    */
+    // QBrush(const QColor &color, Qt::BrushStyle style = Qt::SolidPattern)
     auto obj = new QBrush(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)),
                           HB_ISNIL(2) ? Qt::SolidPattern : PQT_BRUSHSTYLE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
-    /*
-    QBrush(Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern)
-    */
+    // QBrush(Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern)
     auto obj =
         new QBrush(PQT_GLOBALCOLOR(1), HB_ISNIL(2) ? static_cast<Qt::BrushStyle>(Qt::SolidPattern) : PQT_BRUSHSTYLE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISQPIXMAP(2)) {
-    /*
-    QBrush(const QColor &color, const QPixmap &pixmap)
-    */
+    // QBrush(const QColor &color, const QPixmap &pixmap)
     auto obj =
         new QBrush(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)), *PQPIXMAP(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2)) {
-    /*
-    QBrush(Qt::GlobalColor color, const QPixmap &pixmap)
-    */
+    // QBrush(Qt::GlobalColor color, const QPixmap &pixmap)
     auto obj = new QBrush(PQT_GLOBALCOLOR(1), *PQPIXMAP(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQPIXMAP(1)) {
-    /*
-    QBrush(const QPixmap &pixmap)
-    */
+    // QBrush(const QPixmap &pixmap)
     auto obj = new QBrush(*PQPIXMAP(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQIMAGE(1)) {
-    /*
-    QBrush(const QImage &image)
-    */
+    // QBrush(const QImage &image)
     auto obj = new QBrush(*PQIMAGE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQBRUSH(1)) {
-    /*
-    QBrush(const QBrush &other)
-    */
+    // QBrush(const QBrush &other)
     auto obj = new QBrush(*PQBRUSH(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQGRADIENT(1)) {
-    /*
-    QBrush(const QGradient &gradient)
-    */
+    // QBrush(const QGradient &gradient)
     auto obj = new QBrush(*PQGRADIENT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQCONICALGRADIENT(1)) {
-    /*
-    QBrush(const QGradient &gradient)
-    */
+    // QBrush(const QGradient &gradient)
     auto obj = new QBrush(*PQGRADIENT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQLINEARGRADIENT(1)) {
-    /*
-    QBrush(const QGradient &gradient)
-    */
+    // QBrush(const QGradient &gradient)
     auto obj = new QBrush(*PQGRADIENT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQRADIALGRADIENT(1)) {
-    /*
-    QBrush(const QGradient &gradient)
-    */
+    // QBrush(const QGradient &gradient)
     auto obj = new QBrush(*PQGRADIENT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -176,9 +150,7 @@ HB_FUNC_STATIC(QBRUSH_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QColor &color() const
-*/
+// const QColor &color() const
 HB_FUNC_STATIC(QBRUSH_COLOR)
 {
   auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -197,9 +169,7 @@ HB_FUNC_STATIC(QBRUSH_COLOR)
   }
 }
 
-/*
-const QGradient * gradient() const
-*/
+// const QGradient *gradient() const
 HB_FUNC_STATIC(QBRUSH_GRADIENT)
 {
   auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -218,9 +188,7 @@ HB_FUNC_STATIC(QBRUSH_GRADIENT)
   }
 }
 
-/*
-bool isOpaque() const
-*/
+// bool isOpaque() const
 HB_FUNC_STATIC(QBRUSH_ISOPAQUE)
 {
   auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -238,9 +206,7 @@ HB_FUNC_STATIC(QBRUSH_ISOPAQUE)
   }
 }
 
-/*
-const QMatrix &matrix() const
-*/
+// const QMatrix &matrix() const
 HB_FUNC_STATIC(QBRUSH_MATRIX)
 {
   auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -262,9 +228,7 @@ HB_FUNC_STATIC(QBRUSH_MATRIX)
 HB_FUNC_STATIC(QBRUSH_SETCOLOR)
 {
   if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
-    /*
-    void setColor(const QColor &color)
-    */
+    // void setColor(const QColor &color)
     auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -273,9 +237,7 @@ HB_FUNC_STATIC(QBRUSH_SETCOLOR)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    void setColor(Qt::GlobalColor color)
-    */
+    // void setColor(Qt::GlobalColor color)
     auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -288,9 +250,7 @@ HB_FUNC_STATIC(QBRUSH_SETCOLOR)
   }
 }
 
-/*
-void setMatrix(const QMatrix &matrix)
-*/
+// void setMatrix(const QMatrix &matrix)
 HB_FUNC_STATIC(QBRUSH_SETMATRIX)
 {
   auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -310,9 +270,7 @@ HB_FUNC_STATIC(QBRUSH_SETMATRIX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStyle(Qt::BrushStyle style)
-*/
+// void setStyle(Qt::BrushStyle style)
 HB_FUNC_STATIC(QBRUSH_SETSTYLE)
 {
   auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -332,9 +290,7 @@ HB_FUNC_STATIC(QBRUSH_SETSTYLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTexture(const QPixmap &pixmap)
-*/
+// void setTexture(const QPixmap &pixmap)
 HB_FUNC_STATIC(QBRUSH_SETTEXTURE)
 {
   auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -354,9 +310,7 @@ HB_FUNC_STATIC(QBRUSH_SETTEXTURE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTextureImage(const QImage &image)
-*/
+// void setTextureImage(const QImage &image)
 HB_FUNC_STATIC(QBRUSH_SETTEXTUREIMAGE)
 {
   auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -376,9 +330,7 @@ HB_FUNC_STATIC(QBRUSH_SETTEXTUREIMAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTransform(const QTransform &matrix)
-*/
+// void setTransform(const QTransform &matrix)
 HB_FUNC_STATIC(QBRUSH_SETTRANSFORM)
 {
   auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -398,9 +350,7 @@ HB_FUNC_STATIC(QBRUSH_SETTRANSFORM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::BrushStyle style() const
-*/
+// Qt::BrushStyle style() const
 HB_FUNC_STATIC(QBRUSH_STYLE)
 {
   auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -418,9 +368,7 @@ HB_FUNC_STATIC(QBRUSH_STYLE)
   }
 }
 
-/*
-QPixmap texture() const
-*/
+// QPixmap texture() const
 HB_FUNC_STATIC(QBRUSH_TEXTURE)
 {
   auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -438,9 +386,7 @@ HB_FUNC_STATIC(QBRUSH_TEXTURE)
   }
 }
 
-/*
-QImage textureImage() const
-*/
+// QImage textureImage() const
 HB_FUNC_STATIC(QBRUSH_TEXTUREIMAGE)
 {
   auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -458,9 +404,7 @@ HB_FUNC_STATIC(QBRUSH_TEXTUREIMAGE)
   }
 }
 
-/*
-QTransform transform() const
-*/
+// QTransform transform() const
 HB_FUNC_STATIC(QBRUSH_TRANSFORM)
 {
   auto obj = static_cast<QBrush *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -72,9 +72,7 @@ RETURN
 #include <QtGui/QImage>
 #include <QtGui/QPixmap>
 
-    /*
-    void clear(QClipboard::Mode mode = QClipboard::Clipboard)
-    */
+    // void clear(QClipboard::Mode mode = QClipboard::Clipboard)
 HB_FUNC_STATIC(QCLIPBOARD_CLEAR)
 {
   auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -94,9 +92,7 @@ HB_FUNC_STATIC(QCLIPBOARD_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QImage image(QClipboard::Mode mode = QClipboard::Clipboard) const
-*/
+// QImage image(QClipboard::Mode mode = QClipboard::Clipboard) const
 HB_FUNC_STATIC(QCLIPBOARD_IMAGE)
 {
   auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -114,9 +110,7 @@ HB_FUNC_STATIC(QCLIPBOARD_IMAGE)
   }
 }
 
-/*
-const QMimeData * mimeData(QClipboard::Mode mode = QClipboard::Clipboard) const
-*/
+// const QMimeData *mimeData(QClipboard::Mode mode = QClipboard::Clipboard) const
 HB_FUNC_STATIC(QCLIPBOARD_MIMEDATA)
 {
   auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -135,9 +129,7 @@ HB_FUNC_STATIC(QCLIPBOARD_MIMEDATA)
   }
 }
 
-/*
-bool ownsClipboard() const
-*/
+// bool ownsClipboard() const
 HB_FUNC_STATIC(QCLIPBOARD_OWNSCLIPBOARD)
 {
   auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -155,9 +147,7 @@ HB_FUNC_STATIC(QCLIPBOARD_OWNSCLIPBOARD)
   }
 }
 
-/*
-bool ownsFindBuffer() const
-*/
+// bool ownsFindBuffer() const
 HB_FUNC_STATIC(QCLIPBOARD_OWNSFINDBUFFER)
 {
   auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -175,9 +165,7 @@ HB_FUNC_STATIC(QCLIPBOARD_OWNSFINDBUFFER)
   }
 }
 
-/*
-bool ownsSelection() const
-*/
+// bool ownsSelection() const
 HB_FUNC_STATIC(QCLIPBOARD_OWNSSELECTION)
 {
   auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -195,9 +183,7 @@ HB_FUNC_STATIC(QCLIPBOARD_OWNSSELECTION)
   }
 }
 
-/*
-QPixmap pixmap(QClipboard::Mode mode = QClipboard::Clipboard) const
-*/
+// QPixmap pixmap(QClipboard::Mode mode = QClipboard::Clipboard) const
 HB_FUNC_STATIC(QCLIPBOARD_PIXMAP)
 {
   auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -215,9 +201,7 @@ HB_FUNC_STATIC(QCLIPBOARD_PIXMAP)
   }
 }
 
-/*
-void setImage(const QImage &image, QClipboard::Mode mode = QClipboard::Clipboard)
-*/
+// void setImage(const QImage &image, QClipboard::Mode mode = QClipboard::Clipboard)
 HB_FUNC_STATIC(QCLIPBOARD_SETIMAGE)
 {
   auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -237,9 +221,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETIMAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMimeData(QMimeData * src, QClipboard::Mode mode = QClipboard::Clipboard)
-*/
+// void setMimeData(QMimeData *src, QClipboard::Mode mode = QClipboard::Clipboard)
 HB_FUNC_STATIC(QCLIPBOARD_SETMIMEDATA)
 {
   auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -259,9 +241,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETMIMEDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPixmap(const QPixmap &pixmap, QClipboard::Mode mode = QClipboard::Clipboard)
-*/
+// void setPixmap(const QPixmap &pixmap, QClipboard::Mode mode = QClipboard::Clipboard)
 HB_FUNC_STATIC(QCLIPBOARD_SETPIXMAP)
 {
   auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -281,9 +261,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETPIXMAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setText(const QString &text, QClipboard::Mode mode = QClipboard::Clipboard)
-*/
+// void setText(const QString &text, QClipboard::Mode mode = QClipboard::Clipboard)
 HB_FUNC_STATIC(QCLIPBOARD_SETTEXT)
 {
   auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -303,9 +281,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool supportsFindBuffer() const
-*/
+// bool supportsFindBuffer() const
 HB_FUNC_STATIC(QCLIPBOARD_SUPPORTSFINDBUFFER)
 {
   auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -323,9 +299,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SUPPORTSFINDBUFFER)
   }
 }
 
-/*
-bool supportsSelection() const
-*/
+// bool supportsSelection() const
 HB_FUNC_STATIC(QCLIPBOARD_SUPPORTSSELECTION)
 {
   auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -346,18 +320,14 @@ HB_FUNC_STATIC(QCLIPBOARD_SUPPORTSSELECTION)
 HB_FUNC_STATIC(QCLIPBOARD_TEXT)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    /*
-    QString text(QClipboard::Mode mode = QClipboard::Clipboard) const
-    */
+    // QString text(QClipboard::Mode mode = QClipboard::Clipboard) const
     auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
       RQSTRING(obj->text(HB_ISNIL(1) ? QClipboard::Clipboard : PQCLIPBOARD_MODE(1)));
     }
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
-    /*
-    QString text(QString &subtype, QClipboard::Mode mode = QClipboard::Clipboard) const
-    */
+    // QString text(QString &subtype, QClipboard::Mode mode = QClipboard::Clipboard) const
     auto obj = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -370,9 +340,7 @@ HB_FUNC_STATIC(QCLIPBOARD_TEXT)
   }
 }
 
-/*
-void changed(QClipboard::Mode mode)
-*/
+// void changed(QClipboard::Mode mode)
 HB_FUNC_STATIC(QCLIPBOARD_ONCHANGED)
 {
   auto sender = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -413,9 +381,7 @@ HB_FUNC_STATIC(QCLIPBOARD_ONCHANGED)
   hb_retl(result);
 }
 
-/*
-void dataChanged()
-*/
+// void dataChanged()
 HB_FUNC_STATIC(QCLIPBOARD_ONDATACHANGED)
 {
   auto sender = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -453,9 +419,7 @@ HB_FUNC_STATIC(QCLIPBOARD_ONDATACHANGED)
   hb_retl(result);
 }
 
-/*
-void findBufferChanged()
-*/
+// void findBufferChanged()
 HB_FUNC_STATIC(QCLIPBOARD_ONFINDBUFFERCHANGED)
 {
   auto sender = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -493,9 +457,7 @@ HB_FUNC_STATIC(QCLIPBOARD_ONFINDBUFFERCHANGED)
   hb_retl(result);
 }
 
-/*
-void selectionChanged()
-*/
+// void selectionChanged()
 HB_FUNC_STATIC(QCLIPBOARD_ONSELECTIONCHANGED)
 {
   auto sender = qobject_cast<QClipboard *>(Qt5xHb::getQObjectPointerFromSelfItem());

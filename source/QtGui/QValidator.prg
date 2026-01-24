@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QVALIDATOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void fixup(QString &input) const
-*/
+// virtual void fixup(QString &input) const
 HB_FUNC_STATIC(QVALIDATOR_FIXUP)
 {
   auto obj = qobject_cast<QValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -85,9 +83,7 @@ HB_FUNC_STATIC(QVALIDATOR_FIXUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QLocale locale() const
-*/
+// QLocale locale() const
 HB_FUNC_STATIC(QVALIDATOR_LOCALE)
 {
   auto obj = qobject_cast<QValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -105,9 +101,7 @@ HB_FUNC_STATIC(QVALIDATOR_LOCALE)
   }
 }
 
-/*
-void setLocale(const QLocale &locale)
-*/
+// void setLocale(const QLocale &locale)
 HB_FUNC_STATIC(QVALIDATOR_SETLOCALE)
 {
   auto obj = qobject_cast<QValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -127,9 +121,7 @@ HB_FUNC_STATIC(QVALIDATOR_SETLOCALE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QValidator::State validate(QString &input, int &pos) const = 0
-*/
+// virtual QValidator::State validate(QString &input, int &pos) const = 0
 HB_FUNC_STATIC(QVALIDATOR_VALIDATE)
 {
   auto obj = qobject_cast<QValidator *>(Qt5xHb::getQObjectPointerFromSelfItem());

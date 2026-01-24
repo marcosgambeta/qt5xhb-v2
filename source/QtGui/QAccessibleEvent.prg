@@ -62,9 +62,7 @@ RETURN
 #include <QtGui/QAccessibleEvent>
 #endif
 
-    /*
-    QAccessibleEvent(QObject * obj, QAccessible::Event typ)
-    */
+    // QAccessibleEvent(QObject *obj, QAccessible::Event typ)
 HB_FUNC_STATIC(QACCESSIBLEEVENT_NEW)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAccessible::Event type() const
-*/
+// QAccessible::Event type() const
 HB_FUNC_STATIC(QACCESSIBLEEVENT_TYPE)
 {
   auto obj = static_cast<QAccessibleEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -104,9 +100,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_TYPE)
   }
 }
 
-/*
-QObject * object() const
-*/
+// QObject *object() const
 HB_FUNC_STATIC(QACCESSIBLEEVENT_OBJECT)
 {
   auto obj = static_cast<QAccessibleEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -125,9 +119,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_OBJECT)
   }
 }
 
-/*
-void setChild(int chld)
-*/
+// void setChild(int chld)
 HB_FUNC_STATIC(QACCESSIBLEEVENT_SETCHILD)
 {
   auto obj = static_cast<QAccessibleEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -147,9 +139,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_SETCHILD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int child() const
-*/
+// int child() const
 HB_FUNC_STATIC(QACCESSIBLEEVENT_CHILD)
 {
   auto obj = static_cast<QAccessibleEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -167,9 +157,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_CHILD)
   }
 }
 
-/*
-virtual QAccessibleInterface * accessibleInterface() const
-*/
+// virtual QAccessibleInterface *accessibleInterface() const
 HB_FUNC_STATIC(QACCESSIBLEEVENT_ACCESSIBLEINTERFACE)
 {
   auto obj = static_cast<QAccessibleEvent *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -65,9 +65,7 @@ RETURN
 
 #include <QtGui/QScreen>
 
-    /*
-    QOffscreenSurface(QScreen * screen = nullptr)
-    */
+    // QOffscreenSurface(QScreen *screen = nullptr)
 HB_FUNC_STATIC(QOFFSCREENSURFACE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQSCREENORNIL(1)) {
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSurface::SurfaceType surfaceType() const
-*/
+// QSurface::SurfaceType surfaceType() const
 HB_FUNC_STATIC(QOFFSCREENSURFACE_SURFACETYPE)
 {
   auto obj = qobject_cast<QOffscreenSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_SURFACETYPE)
   }
 }
 
-/*
-void create()
-*/
+// void create()
 HB_FUNC_STATIC(QOFFSCREENSURFACE_CREATE)
 {
   auto obj = qobject_cast<QOffscreenSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -129,9 +123,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_CREATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void destroy()
-*/
+// void destroy()
 HB_FUNC_STATIC(QOFFSCREENSURFACE_DESTROY)
 {
   auto obj = qobject_cast<QOffscreenSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -151,9 +143,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_DESTROY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QOFFSCREENSURFACE_ISVALID)
 {
   auto obj = qobject_cast<QOffscreenSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -171,9 +161,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_ISVALID)
   }
 }
 
-/*
-void setFormat(const QSurfaceFormat &format)
-*/
+// void setFormat(const QSurfaceFormat &format)
 HB_FUNC_STATIC(QOFFSCREENSURFACE_SETFORMAT)
 {
   auto obj = qobject_cast<QOffscreenSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -193,9 +181,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_SETFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSurfaceFormat format() const
-*/
+// QSurfaceFormat format() const
 HB_FUNC_STATIC(QOFFSCREENSURFACE_FORMAT)
 {
   auto obj = qobject_cast<QOffscreenSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -213,9 +199,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_FORMAT)
   }
 }
 
-/*
-QSurfaceFormat requestedFormat() const
-*/
+// QSurfaceFormat requestedFormat() const
 HB_FUNC_STATIC(QOFFSCREENSURFACE_REQUESTEDFORMAT)
 {
   auto obj = qobject_cast<QOffscreenSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -233,9 +217,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_REQUESTEDFORMAT)
   }
 }
 
-/*
-QSize size() const
-*/
+// QSize size() const
 HB_FUNC_STATIC(QOFFSCREENSURFACE_SIZE)
 {
   auto obj = qobject_cast<QOffscreenSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -253,9 +235,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_SIZE)
   }
 }
 
-/*
-QScreen * screen() const
-*/
+// QScreen *screen() const
 HB_FUNC_STATIC(QOFFSCREENSURFACE_SCREEN)
 {
   auto obj = qobject_cast<QOffscreenSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -274,9 +254,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_SCREEN)
   }
 }
 
-/*
-void setScreen(QScreen * screen)
-*/
+// void setScreen(QScreen *screen)
 HB_FUNC_STATIC(QOFFSCREENSURFACE_SETSCREEN)
 {
   auto obj = qobject_cast<QOffscreenSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -296,9 +274,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_SETSCREEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void screenChanged(QScreen * screen)
-*/
+// void screenChanged(QScreen *screen)
 HB_FUNC_STATIC(QOFFSCREENSURFACE_ONSCREENCHANGED)
 {
   auto sender = qobject_cast<QOffscreenSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());

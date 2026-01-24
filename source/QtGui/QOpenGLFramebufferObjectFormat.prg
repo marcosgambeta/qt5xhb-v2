@@ -68,15 +68,11 @@ RETURN
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QOpenGLFramebufferObjectFormat()
-    */
+    // QOpenGLFramebufferObjectFormat()
     auto obj = new QOpenGLFramebufferObjectFormat();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQOPENGLFRAMEBUFFEROBJECTFORMAT(1)) {
-    /*
-    QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat &other)
-    */
+    // QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat &other)
     auto obj = new QOpenGLFramebufferObjectFormat(*PQOPENGLFRAMEBUFFEROBJECTFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -93,9 +89,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSamples(int samples)
-*/
+// void setSamples(int samples)
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES)
 {
   auto obj = static_cast<QOpenGLFramebufferObjectFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -115,9 +109,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int samples() const
-*/
+// int samples() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_SAMPLES)
 {
   auto obj = static_cast<QOpenGLFramebufferObjectFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -135,9 +127,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_SAMPLES)
   }
 }
 
-/*
-void setMipmap(bool enabled)
-*/
+// void setMipmap(bool enabled)
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_SETMIPMAP)
 {
   auto obj = static_cast<QOpenGLFramebufferObjectFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -157,9 +147,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_SETMIPMAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool mipmap() const
-*/
+// bool mipmap() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_MIPMAP)
 {
   auto obj = static_cast<QOpenGLFramebufferObjectFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -177,9 +165,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_MIPMAP)
   }
 }
 
-/*
-void setAttachment(QOpenGLFramebufferObject::Attachment attachment)
-*/
+// void setAttachment(QOpenGLFramebufferObject::Attachment attachment)
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT)
 {
   auto obj = static_cast<QOpenGLFramebufferObjectFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -199,9 +185,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QOpenGLFramebufferObject::Attachment attachment() const
-*/
+// QOpenGLFramebufferObject::Attachment attachment() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT)
 {
   auto obj = static_cast<QOpenGLFramebufferObjectFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -219,9 +203,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT)
   }
 }
 
-/*
-void setTextureTarget(GLenum target)
-*/
+// void setTextureTarget(GLenum target)
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET)
 {
   auto obj = static_cast<QOpenGLFramebufferObjectFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -241,9 +223,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-GLenum textureTarget() const
-*/
+// GLenum textureTarget() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET)
 {
   auto obj = static_cast<QOpenGLFramebufferObjectFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -261,9 +241,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET)
   }
 }
 
-/*
-void setInternalTextureFormat(GLenum internalTextureFormat)
-*/
+// void setInternalTextureFormat(GLenum internalTextureFormat)
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT)
 {
   auto obj = static_cast<QOpenGLFramebufferObjectFormat *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -283,9 +261,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-GLenum internalTextureFormat() const
-*/
+// GLenum internalTextureFormat() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT)
 {
   auto obj = static_cast<QOpenGLFramebufferObjectFormat *>(Qt5xHb::itemGetPtrStackSelfItem());

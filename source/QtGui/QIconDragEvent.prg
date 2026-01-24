@@ -46,9 +46,7 @@ RETURN
 #include <QtGui/QIconDragEvent>
 #endif
 
-    /*
-    QIconDragEvent()
-    */
+    // QIconDragEvent()
 HB_FUNC_STATIC(QICONDRAGEVENT_NEW)
 {
   if (ISNUMPAR(0)) {

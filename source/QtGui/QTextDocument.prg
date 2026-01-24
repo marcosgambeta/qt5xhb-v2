@@ -146,15 +146,11 @@ RETURN
 HB_FUNC_STATIC(QTEXTDOCUMENT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QTextDocument(QObject * parent = nullptr)
-    */
+    // QTextDocument(QObject *parent = nullptr)
     auto obj = new QTextDocument(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QTextDocument(const QString &text, QObject * parent = nullptr)
-    */
+    // QTextDocument(const QString &text, QObject *parent = nullptr)
     auto obj = new QTextDocument(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -171,9 +167,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTextDocument * clone(QObject * parent = nullptr) const
-*/
+// QTextDocument *clone(QObject *parent = nullptr) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_CLONE)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -192,9 +186,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLONE)
   }
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_ISEMPTY)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -212,9 +204,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ISEMPTY)
   }
 }
 
-/*
-virtual void clear()
-*/
+// virtual void clear()
 HB_FUNC_STATIC(QTEXTDOCUMENT_CLEAR)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -234,9 +224,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUndoRedoEnabled(bool enable)
-*/
+// void setUndoRedoEnabled(bool enable)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETUNDOREDOENABLED)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -256,9 +244,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETUNDOREDOENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isUndoRedoEnabled() const
-*/
+// bool isUndoRedoEnabled() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_ISUNDOREDOENABLED)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -276,9 +262,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ISUNDOREDOENABLED)
   }
 }
 
-/*
-bool isUndoAvailable() const
-*/
+// bool isUndoAvailable() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_ISUNDOAVAILABLE)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -296,9 +280,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ISUNDOAVAILABLE)
   }
 }
 
-/*
-bool isRedoAvailable() const
-*/
+// bool isRedoAvailable() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_ISREDOAVAILABLE)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -316,9 +298,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ISREDOAVAILABLE)
   }
 }
 
-/*
-int availableUndoSteps() const
-*/
+// int availableUndoSteps() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_AVAILABLEUNDOSTEPS)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -336,9 +316,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_AVAILABLEUNDOSTEPS)
   }
 }
 
-/*
-int availableRedoSteps() const
-*/
+// int availableRedoSteps() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_AVAILABLEREDOSTEPS)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -356,9 +334,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_AVAILABLEREDOSTEPS)
   }
 }
 
-/*
-int revision() const
-*/
+// int revision() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_REVISION)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -376,9 +352,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_REVISION)
   }
 }
 
-/*
-void setDocumentLayout(QAbstractTextDocumentLayout * layout)
-*/
+// void setDocumentLayout(QAbstractTextDocumentLayout *layout)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETDOCUMENTLAYOUT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -398,9 +372,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDOCUMENTLAYOUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractTextDocumentLayout * documentLayout() const
-*/
+// QAbstractTextDocumentLayout *documentLayout() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_DOCUMENTLAYOUT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -419,9 +391,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DOCUMENTLAYOUT)
   }
 }
 
-/*
-void setMetaInformation(QTextDocument::MetaInformation info, const QString &)
-*/
+// void setMetaInformation(QTextDocument::MetaInformation info, const QString &)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETMETAINFORMATION)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -441,9 +411,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETMETAINFORMATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString metaInformation(QTextDocument::MetaInformation info) const
-*/
+// QString metaInformation(QTextDocument::MetaInformation info) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_METAINFORMATION)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -461,9 +429,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_METAINFORMATION)
   }
 }
 
-/*
-QString toHtml(const QByteArray &encoding = QByteArray()) const
-*/
+// QString toHtml(const QByteArray &encoding = QByteArray()) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_TOHTML)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -481,9 +447,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_TOHTML)
   }
 }
 
-/*
-void setHtml(const QString &html)
-*/
+// void setHtml(const QString &html)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETHTML)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -503,9 +467,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETHTML)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString toPlainText() const
-*/
+// QString toPlainText() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_TOPLAINTEXT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -523,9 +485,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_TOPLAINTEXT)
   }
 }
 
-/*
-void setPlainText(const QString &text)
-*/
+// void setPlainText(const QString &text)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETPLAINTEXT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -545,9 +505,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETPLAINTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QChar characterAt(int pos) const
-*/
+// QChar characterAt(int pos) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_CHARACTERAT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -568,9 +526,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CHARACTERAT)
 HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
 {
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
-    /*
-    QTextCursor find(const QString &subString, int from = 0, QTextDocument::FindFlags options = 0) const
-    */
+    // QTextCursor find(const QString &subString, int from = 0, QTextDocument::FindFlags options = 0) const
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -578,9 +534,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
                     HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0) : PQTEXTDOCUMENT_FINDFLAGS(3)));
     }
   } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQTEXTCURSOR(2) && ISNUMORNIL(3)) {
-    /*
-    QTextCursor find(const QString &subString, const QTextCursor &from, QTextDocument::FindFlags options = 0) const
-    */
+    // QTextCursor find(const QString &subString, const QTextCursor &from, QTextDocument::FindFlags options = 0) const
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -588,9 +542,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
                     HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0) : PQTEXTDOCUMENT_FINDFLAGS(3)));
     }
   } else if (ISBETWEEN(1, 3) && ISQREGEXP(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
-    /*
-    QTextCursor find(const QRegExp &expr, int from = 0, QTextDocument::FindFlags options = 0) const
-    */
+    // QTextCursor find(const QRegExp &expr, int from = 0, QTextDocument::FindFlags options = 0) const
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -598,9 +550,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
                     HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0) : PQTEXTDOCUMENT_FINDFLAGS(3)));
     }
   } else if (ISBETWEEN(2, 3) && ISQREGEXP(1) && ISQTEXTCURSOR(2) && ISNUMORNIL(3)) {
-    /*
-    QTextCursor find(const QRegExp &expr, const QTextCursor &from, QTextDocument::FindFlags options = 0) const
-    */
+    // QTextCursor find(const QRegExp &expr, const QTextCursor &from, QTextDocument::FindFlags options = 0) const
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -612,9 +562,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
   }
 }
 
-/*
-QTextFrame * frameAt(int pos) const
-*/
+// QTextFrame *frameAt(int pos) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_FRAMEAT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -633,9 +581,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FRAMEAT)
   }
 }
 
-/*
-QTextFrame * rootFrame() const
-*/
+// QTextFrame *rootFrame() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_ROOTFRAME)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -654,9 +600,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ROOTFRAME)
   }
 }
 
-/*
-QTextObject * object(int objectIndex) const
-*/
+// QTextObject *object(int objectIndex) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -675,9 +619,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECT)
   }
 }
 
-/*
-QTextObject * objectForFormat(const QTextFormat &) const
-*/
+// QTextObject *objectForFormat(const QTextFormat &) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECTFORFORMAT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -696,9 +638,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECTFORFORMAT)
   }
 }
 
-/*
-QTextBlock findBlock(int pos) const
-*/
+// QTextBlock findBlock(int pos) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCK)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -716,9 +656,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCK)
   }
 }
 
-/*
-QTextBlock findBlockByNumber(int blockNumber) const
-*/
+// QTextBlock findBlockByNumber(int blockNumber) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCKBYNUMBER)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -736,9 +674,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCKBYNUMBER)
   }
 }
 
-/*
-QTextBlock findBlockByLineNumber(int blockNumber) const
-*/
+// QTextBlock findBlockByLineNumber(int blockNumber) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCKBYLINENUMBER)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -756,9 +692,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCKBYLINENUMBER)
   }
 }
 
-/*
-QTextBlock begin() const
-*/
+// QTextBlock begin() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_BEGIN)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -776,9 +710,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_BEGIN)
   }
 }
 
-/*
-QTextBlock end() const
-*/
+// QTextBlock end() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_END)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -796,9 +728,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_END)
   }
 }
 
-/*
-QTextBlock firstBlock() const
-*/
+// QTextBlock firstBlock() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_FIRSTBLOCK)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -816,9 +746,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIRSTBLOCK)
   }
 }
 
-/*
-QTextBlock lastBlock() const
-*/
+// QTextBlock lastBlock() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_LASTBLOCK)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -836,9 +764,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_LASTBLOCK)
   }
 }
 
-/*
-void setPageSize(const QSizeF &size)
-*/
+// void setPageSize(const QSizeF &size)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETPAGESIZE)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -858,9 +784,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETPAGESIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSizeF pageSize() const
-*/
+// QSizeF pageSize() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_PAGESIZE)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -878,9 +802,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_PAGESIZE)
   }
 }
 
-/*
-void setDefaultFont(const QFont &font)
-*/
+// void setDefaultFont(const QFont &font)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTFONT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -900,9 +822,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTFONT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QFont defaultFont() const
-*/
+// QFont defaultFont() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTFONT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -920,9 +840,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTFONT)
   }
 }
 
-/*
-int pageCount() const
-*/
+// int pageCount() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_PAGECOUNT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -940,9 +858,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_PAGECOUNT)
   }
 }
 
-/*
-bool isModified() const
-*/
+// bool isModified() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_ISMODIFIED)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -960,9 +876,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ISMODIFIED)
   }
 }
 
-/*
-void print(QPagedPaintDevice * printer) const
-*/
+// void print(QPagedPaintDevice *printer) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_PRINT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -982,9 +896,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_PRINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant resource(int type, const QUrl &name) const
-*/
+// QVariant resource(int type, const QUrl &name) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_RESOURCE)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1002,9 +914,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_RESOURCE)
   }
 }
 
-/*
-void addResource(int type, const QUrl &name, const QVariant &resource)
-*/
+// void addResource(int type, const QUrl &name, const QVariant &resource)
 HB_FUNC_STATIC(QTEXTDOCUMENT_ADDRESOURCE)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1024,9 +934,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ADDRESOURCE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void markContentsDirty(int from, int length)
-*/
+// void markContentsDirty(int from, int length)
 HB_FUNC_STATIC(QTEXTDOCUMENT_MARKCONTENTSDIRTY)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1046,9 +954,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_MARKCONTENTSDIRTY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUseDesignMetrics(bool b)
-*/
+// void setUseDesignMetrics(bool b)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETUSEDESIGNMETRICS)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1068,9 +974,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETUSEDESIGNMETRICS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool useDesignMetrics() const
-*/
+// bool useDesignMetrics() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_USEDESIGNMETRICS)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1088,9 +992,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_USEDESIGNMETRICS)
   }
 }
 
-/*
-void drawContents(QPainter * painter, const QRectF &rect = QRectF())
-*/
+// void drawContents(QPainter *painter, const QRectF &rect = QRectF())
 HB_FUNC_STATIC(QTEXTDOCUMENT_DRAWCONTENTS)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1110,9 +1012,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DRAWCONTENTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTextWidth(qreal width)
-*/
+// void setTextWidth(qreal width)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETTEXTWIDTH)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1132,9 +1032,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETTEXTWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal textWidth() const
-*/
+// qreal textWidth() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_TEXTWIDTH)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1152,9 +1050,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_TEXTWIDTH)
   }
 }
 
-/*
-qreal idealWidth() const
-*/
+// qreal idealWidth() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_IDEALWIDTH)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1172,9 +1068,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_IDEALWIDTH)
   }
 }
 
-/*
-qreal indentWidth() const
-*/
+// qreal indentWidth() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_INDENTWIDTH)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1192,9 +1086,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_INDENTWIDTH)
   }
 }
 
-/*
-void setIndentWidth(qreal width)
-*/
+// void setIndentWidth(qreal width)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETINDENTWIDTH)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1214,9 +1106,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETINDENTWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal documentMargin() const
-*/
+// qreal documentMargin() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_DOCUMENTMARGIN)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1234,9 +1124,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DOCUMENTMARGIN)
   }
 }
 
-/*
-void setDocumentMargin(qreal margin)
-*/
+// void setDocumentMargin(qreal margin)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETDOCUMENTMARGIN)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1256,9 +1144,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDOCUMENTMARGIN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void adjustSize()
-*/
+// void adjustSize()
 HB_FUNC_STATIC(QTEXTDOCUMENT_ADJUSTSIZE)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1278,9 +1164,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ADJUSTSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSizeF size() const
-*/
+// QSizeF size() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_SIZE)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1298,9 +1182,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SIZE)
   }
 }
 
-/*
-int blockCount() const
-*/
+// int blockCount() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_BLOCKCOUNT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1318,9 +1200,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_BLOCKCOUNT)
   }
 }
 
-/*
-int lineCount() const
-*/
+// int lineCount() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_LINECOUNT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1338,9 +1218,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_LINECOUNT)
   }
 }
 
-/*
-int characterCount() const
-*/
+// int characterCount() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_CHARACTERCOUNT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1358,9 +1236,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CHARACTERCOUNT)
   }
 }
 
-/*
-void setDefaultStyleSheet(const QString &sheet)
-*/
+// void setDefaultStyleSheet(const QString &sheet)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTSTYLESHEET)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1380,9 +1256,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTSTYLESHEET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString defaultStyleSheet() const
-*/
+// QString defaultStyleSheet() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTSTYLESHEET)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1400,9 +1274,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTSTYLESHEET)
   }
 }
 
-/*
-void clearUndoRedoStacks(QTextDocument::Stacks historyToClear = QTextDocument::UndoAndRedoStacks)
-*/
+// void clearUndoRedoStacks(QTextDocument::Stacks historyToClear = QTextDocument::UndoAndRedoStacks)
 HB_FUNC_STATIC(QTEXTDOCUMENT_CLEARUNDOREDOSTACKS)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1422,9 +1294,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLEARUNDOREDOSTACKS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int maximumBlockCount() const
-*/
+// int maximumBlockCount() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_MAXIMUMBLOCKCOUNT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1442,9 +1312,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_MAXIMUMBLOCKCOUNT)
   }
 }
 
-/*
-void setMaximumBlockCount(int maximum)
-*/
+// void setMaximumBlockCount(int maximum)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETMAXIMUMBLOCKCOUNT)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1464,9 +1332,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETMAXIMUMBLOCKCOUNT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTextOption defaultTextOption() const
-*/
+// QTextOption defaultTextOption() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTTEXTOPTION)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1484,9 +1350,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTTEXTOPTION)
   }
 }
 
-/*
-void setDefaultTextOption(const QTextOption &option)
-*/
+// void setDefaultTextOption(const QTextOption &option)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTTEXTOPTION)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1506,9 +1370,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTTEXTOPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::CursorMoveStyle defaultCursorMoveStyle() const
-*/
+// Qt::CursorMoveStyle defaultCursorMoveStyle() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTCURSORMOVESTYLE)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1526,9 +1388,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTCURSORMOVESTYLE)
   }
 }
 
-/*
-void setDefaultCursorMoveStyle(Qt::CursorMoveStyle style)
-*/
+// void setDefaultCursorMoveStyle(Qt::CursorMoveStyle style)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1551,9 +1411,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE)
 HB_FUNC_STATIC(QTEXTDOCUMENT_UNDO)
 {
   if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
-    /*
-    void undo(QTextCursor * cursor)
-    */
+    // void undo(QTextCursor *cursor)
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -1562,9 +1420,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_UNDO)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(0)) {
-    /*
-    void undo()
-    */
+    // void undo()
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -1580,9 +1436,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_UNDO)
 HB_FUNC_STATIC(QTEXTDOCUMENT_REDO)
 {
   if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
-    /*
-    void redo(QTextCursor * cursor)
-    */
+    // void redo(QTextCursor *cursor)
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -1591,9 +1445,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_REDO)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(0)) {
-    /*
-    void redo()
-    */
+    // void redo()
     auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -1606,9 +1458,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_REDO)
   }
 }
 
-/*
-void setModified(bool m = true)
-*/
+// void setModified(bool m = true)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETMODIFIED)
 {
   auto obj = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1628,10 +1478,8 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETMODIFIED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMarkdown(const QString &markdown, QTextDocument::MarkdownFeatures features =
-QTextDocument::MarkdownDialectGitHub)
-*/
+// void setMarkdown(const QString &markdown, QTextDocument::MarkdownFeatures features =
+// QTextDocument::MarkdownDialectGitHub)
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETMARKDOWN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -1654,9 +1502,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETMARKDOWN)
 #endif
 }
 
-/*
-QString toMarkdown(QTextDocument::MarkdownFeatures features = QTextDocument::MarkdownDialectGitHub) const
-*/
+// QString toMarkdown(QTextDocument::MarkdownFeatures features = QTextDocument::MarkdownDialectGitHub) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_TOMARKDOWN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -1678,9 +1524,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_TOMARKDOWN)
 #endif
 }
 
-/*
-void contentsChange(int from, int charsRemoves, int charsAdded)
-*/
+// void contentsChange(int from, int charsRemoves, int charsAdded)
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONCONTENTSCHANGE)
 {
   auto sender = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1725,9 +1569,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONCONTENTSCHANGE)
   hb_retl(result);
 }
 
-/*
-void contentsChanged()
-*/
+// void contentsChanged()
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONCONTENTSCHANGED)
 {
   auto sender = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1765,9 +1607,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONCONTENTSCHANGED)
   hb_retl(result);
 }
 
-/*
-void undoAvailable(bool b)
-*/
+// void undoAvailable(bool b)
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONUNDOAVAILABLE)
 {
   auto sender = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1808,9 +1648,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONUNDOAVAILABLE)
   hb_retl(result);
 }
 
-/*
-void redoAvailable(bool b)
-*/
+// void redoAvailable(bool b)
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONREDOAVAILABLE)
 {
   auto sender = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1851,9 +1689,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONREDOAVAILABLE)
   hb_retl(result);
 }
 
-/*
-void undoCommandAdded()
-*/
+// void undoCommandAdded()
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONUNDOCOMMANDADDED)
 {
   auto sender = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1891,9 +1727,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONUNDOCOMMANDADDED)
   hb_retl(result);
 }
 
-/*
-void modificationChanged(bool m)
-*/
+// void modificationChanged(bool m)
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONMODIFICATIONCHANGED)
 {
   auto sender = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1934,9 +1768,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONMODIFICATIONCHANGED)
   hb_retl(result);
 }
 
-/*
-void cursorPositionChanged(const QTextCursor &cursor)
-*/
+// void cursorPositionChanged(const QTextCursor &cursor)
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED)
 {
   auto sender = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1977,9 +1809,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED)
   hb_retl(result);
 }
 
-/*
-void blockCountChanged(int newBlockCount)
-*/
+// void blockCountChanged(int newBlockCount)
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED)
 {
   auto sender = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2020,9 +1850,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED)
   hb_retl(result);
 }
 
-/*
-void documentLayoutChanged()
-*/
+// void documentLayoutChanged()
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED)
 {
   auto sender = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem());

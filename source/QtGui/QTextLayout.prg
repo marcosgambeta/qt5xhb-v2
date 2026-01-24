@@ -100,28 +100,20 @@ RETURN
 HB_FUNC_STATIC(QTEXTLAYOUT_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QTextLayout()
-    */
+    // QTextLayout()
     auto obj = new QTextLayout();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QTextLayout(const QString &text)
-    */
+    // QTextLayout(const QString &text)
     auto obj = new QTextLayout(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQFONT(2) && ISOBJECTORNIL(3)) {
-    /*
-    QTextLayout(const QString &text, const QFont &font, QPaintDevice * paintdevice = nullptr)
-    */
+    // QTextLayout(const QString &text, const QFont &font, QPaintDevice *paintdevice = nullptr)
     auto obj = new QTextLayout(PQSTRING(1), *PQFONT(2),
                                HB_ISNIL(3) ? nullptr : static_cast<QPaintDevice *>(Qt5xHb::itemGetPtr(3)));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQTEXTBLOCK(1)) {
-    /*
-    QTextLayout(const QTextBlock &b)
-    */
+    // QTextLayout(const QTextBlock &b)
     auto obj = new QTextLayout(*PQTEXTBLOCK(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -138,9 +130,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFont(const QFont &f)
-*/
+// void setFont(const QFont &f)
 HB_FUNC_STATIC(QTEXTLAYOUT_SETFONT)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -160,9 +150,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETFONT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QFont font() const
-*/
+// QFont font() const
 HB_FUNC_STATIC(QTEXTLAYOUT_FONT)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -180,9 +168,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_FONT)
   }
 }
 
-/*
-void setRawFont(const QRawFont &rawFont)
-*/
+// void setRawFont(const QRawFont &rawFont)
 HB_FUNC_STATIC(QTEXTLAYOUT_SETRAWFONT)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -202,9 +188,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETRAWFONT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setText(const QString &string)
-*/
+// void setText(const QString &string)
 HB_FUNC_STATIC(QTEXTLAYOUT_SETTEXT)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -224,9 +208,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QTEXTLAYOUT_TEXT)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -244,9 +226,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_TEXT)
   }
 }
 
-/*
-void setTextOption(const QTextOption &option)
-*/
+// void setTextOption(const QTextOption &option)
 HB_FUNC_STATIC(QTEXTLAYOUT_SETTEXTOPTION)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -266,9 +246,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETTEXTOPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QTextOption &textOption() const
-*/
+// const QTextOption &textOption() const
 HB_FUNC_STATIC(QTEXTLAYOUT_TEXTOPTION)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -287,9 +265,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_TEXTOPTION)
   }
 }
 
-/*
-void setPreeditArea(int position, const QString &text)
-*/
+// void setPreeditArea(int position, const QString &text)
 HB_FUNC_STATIC(QTEXTLAYOUT_SETPREEDITAREA)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -309,9 +285,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETPREEDITAREA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int preeditAreaPosition() const
-*/
+// int preeditAreaPosition() const
 HB_FUNC_STATIC(QTEXTLAYOUT_PREEDITAREAPOSITION)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -329,9 +303,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_PREEDITAREAPOSITION)
   }
 }
 
-/*
-QString preeditAreaText() const
-*/
+// QString preeditAreaText() const
 HB_FUNC_STATIC(QTEXTLAYOUT_PREEDITAREATEXT)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -349,9 +321,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_PREEDITAREATEXT)
   }
 }
 
-/*
-void clearAdditionalFormats()
-*/
+// void clearAdditionalFormats()
 HB_FUNC_STATIC(QTEXTLAYOUT_CLEARADDITIONALFORMATS)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -371,9 +341,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_CLEARADDITIONALFORMATS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCacheEnabled(bool enable)
-*/
+// void setCacheEnabled(bool enable)
 HB_FUNC_STATIC(QTEXTLAYOUT_SETCACHEENABLED)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -393,9 +361,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETCACHEENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool cacheEnabled() const
-*/
+// bool cacheEnabled() const
 HB_FUNC_STATIC(QTEXTLAYOUT_CACHEENABLED)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -413,9 +379,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_CACHEENABLED)
   }
 }
 
-/*
-void setCursorMoveStyle(Qt::CursorMoveStyle style)
-*/
+// void setCursorMoveStyle(Qt::CursorMoveStyle style)
 HB_FUNC_STATIC(QTEXTLAYOUT_SETCURSORMOVESTYLE)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -435,9 +399,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETCURSORMOVESTYLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::CursorMoveStyle cursorMoveStyle() const
-*/
+// Qt::CursorMoveStyle cursorMoveStyle() const
 HB_FUNC_STATIC(QTEXTLAYOUT_CURSORMOVESTYLE)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -455,9 +417,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_CURSORMOVESTYLE)
   }
 }
 
-/*
-void beginLayout()
-*/
+// void beginLayout()
 HB_FUNC_STATIC(QTEXTLAYOUT_BEGINLAYOUT)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -477,9 +437,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_BEGINLAYOUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void endLayout()
-*/
+// void endLayout()
 HB_FUNC_STATIC(QTEXTLAYOUT_ENDLAYOUT)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -499,9 +457,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_ENDLAYOUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearLayout()
-*/
+// void clearLayout()
 HB_FUNC_STATIC(QTEXTLAYOUT_CLEARLAYOUT)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -521,9 +477,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_CLEARLAYOUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTextLine createLine()
-*/
+// QTextLine createLine()
 HB_FUNC_STATIC(QTEXTLAYOUT_CREATELINE)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -541,9 +495,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_CREATELINE)
   }
 }
 
-/*
-int lineCount() const
-*/
+// int lineCount() const
 HB_FUNC_STATIC(QTEXTLAYOUT_LINECOUNT)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -561,9 +513,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_LINECOUNT)
   }
 }
 
-/*
-QTextLine lineAt(int i) const
-*/
+// QTextLine lineAt(int i) const
 HB_FUNC_STATIC(QTEXTLAYOUT_LINEAT)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -581,9 +531,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_LINEAT)
   }
 }
 
-/*
-QTextLine lineForTextPosition(int pos) const
-*/
+// QTextLine lineForTextPosition(int pos) const
 HB_FUNC_STATIC(QTEXTLAYOUT_LINEFORTEXTPOSITION)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -601,9 +549,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_LINEFORTEXTPOSITION)
   }
 }
 
-/*
-bool isValidCursorPosition(int pos) const
-*/
+// bool isValidCursorPosition(int pos) const
 HB_FUNC_STATIC(QTEXTLAYOUT_ISVALIDCURSORPOSITION)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -621,9 +567,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_ISVALIDCURSORPOSITION)
   }
 }
 
-/*
-int nextCursorPosition(int oldPos, QTextLayout::CursorMode mode = QTextLayout::SkipCharacters) const
-*/
+// int nextCursorPosition(int oldPos, QTextLayout::CursorMode mode = QTextLayout::SkipCharacters) const
 HB_FUNC_STATIC(QTEXTLAYOUT_NEXTCURSORPOSITION)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -643,9 +587,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_NEXTCURSORPOSITION)
   }
 }
 
-/*
-int previousCursorPosition(int oldPos, QTextLayout::CursorMode mode = QTextLayout::SkipCharacters) const
-*/
+// int previousCursorPosition(int oldPos, QTextLayout::CursorMode mode = QTextLayout::SkipCharacters) const
 HB_FUNC_STATIC(QTEXTLAYOUT_PREVIOUSCURSORPOSITION)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -665,9 +607,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_PREVIOUSCURSORPOSITION)
   }
 }
 
-/*
-int leftCursorPosition(int oldPos) const
-*/
+// int leftCursorPosition(int oldPos) const
 HB_FUNC_STATIC(QTEXTLAYOUT_LEFTCURSORPOSITION)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -685,9 +625,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_LEFTCURSORPOSITION)
   }
 }
 
-/*
-int rightCursorPosition(int oldPos) const
-*/
+// int rightCursorPosition(int oldPos) const
 HB_FUNC_STATIC(QTEXTLAYOUT_RIGHTCURSORPOSITION)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -708,9 +646,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_RIGHTCURSORPOSITION)
 HB_FUNC_STATIC(QTEXTLAYOUT_DRAWCURSOR)
 {
   if (ISNUMPAR(3) && ISQPAINTER(1) && ISQPOINTF(2) && HB_ISNUM(3)) {
-    /*
-    void drawCursor(QPainter * p, const QPointF &pos, int cursorPosition) const
-    */
+    // void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition) const
     auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -719,9 +655,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_DRAWCURSOR)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(4) && ISQPAINTER(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
-    /*
-    void drawCursor(QPainter * p, const QPointF &pos, int cursorPosition, int width) const
-    */
+    // void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition, int width) const
     auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -734,9 +668,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_DRAWCURSOR)
   }
 }
 
-/*
-QPointF position() const
-*/
+// QPointF position() const
 HB_FUNC_STATIC(QTEXTLAYOUT_POSITION)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -754,9 +686,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_POSITION)
   }
 }
 
-/*
-void setPosition(const QPointF &p)
-*/
+// void setPosition(const QPointF &p)
 HB_FUNC_STATIC(QTEXTLAYOUT_SETPOSITION)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -776,9 +706,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETPOSITION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRectF boundingRect() const
-*/
+// QRectF boundingRect() const
 HB_FUNC_STATIC(QTEXTLAYOUT_BOUNDINGRECT)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -796,9 +724,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_BOUNDINGRECT)
   }
 }
 
-/*
-qreal minimumWidth() const
-*/
+// qreal minimumWidth() const
 HB_FUNC_STATIC(QTEXTLAYOUT_MINIMUMWIDTH)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -816,9 +742,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_MINIMUMWIDTH)
   }
 }
 
-/*
-qreal maximumWidth() const
-*/
+// qreal maximumWidth() const
 HB_FUNC_STATIC(QTEXTLAYOUT_MAXIMUMWIDTH)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -836,9 +760,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_MAXIMUMWIDTH)
   }
 }
 
-/*
-void setFlags(int flags)
-*/
+// void setFlags(int flags)
 HB_FUNC_STATIC(QTEXTLAYOUT_SETFLAGS)
 {
   auto obj = static_cast<QTextLayout *>(Qt5xHb::itemGetPtrStackSelfItem());

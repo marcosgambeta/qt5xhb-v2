@@ -67,15 +67,11 @@ RETURN
 HB_FUNC_STATIC(QPDFWRITER_NEW)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QPdfWriter(const QString &filename)
-    */
+    // QPdfWriter(const QString &filename)
     auto obj = new QPdfWriter(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
-    /*
-    QPdfWriter(QIODevice * device)
-    */
+    // QPdfWriter(QIODevice *device)
     auto obj = new QPdfWriter(PQIODEVICE(1));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -92,9 +88,7 @@ HB_FUNC_STATIC(QPDFWRITER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QPDFWRITER_TITLE)
 {
   auto obj = qobject_cast<QPdfWriter *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -112,9 +106,7 @@ HB_FUNC_STATIC(QPDFWRITER_TITLE)
   }
 }
 
-/*
-void setTitle(const QString &title)
-*/
+// void setTitle(const QString &title)
 HB_FUNC_STATIC(QPDFWRITER_SETTITLE)
 {
   auto obj = qobject_cast<QPdfWriter *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -134,9 +126,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETTITLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString creator() const
-*/
+// QString creator() const
 HB_FUNC_STATIC(QPDFWRITER_CREATOR)
 {
   auto obj = qobject_cast<QPdfWriter *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -154,9 +144,7 @@ HB_FUNC_STATIC(QPDFWRITER_CREATOR)
   }
 }
 
-/*
-void setCreator(const QString &creator)
-*/
+// void setCreator(const QString &creator)
 HB_FUNC_STATIC(QPDFWRITER_SETCREATOR)
 {
   auto obj = qobject_cast<QPdfWriter *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -176,9 +164,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETCREATOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool newPage()
-*/
+// bool newPage()
 HB_FUNC_STATIC(QPDFWRITER_NEWPAGE)
 {
   auto obj = qobject_cast<QPdfWriter *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -199,9 +185,7 @@ HB_FUNC_STATIC(QPDFWRITER_NEWPAGE)
 HB_FUNC_STATIC(QPDFWRITER_SETPAGESIZE)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    void setPageSize(QPagedPaintDevice::PageSize size)
-    */
+    // void setPageSize(QPagedPaintDevice::PageSize size)
     auto obj = qobject_cast<QPdfWriter *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -210,9 +194,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETPAGESIZE)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQPAGESIZE(1)) {
-    /*
-    bool setPageSize(const QPageSize &pageSize)
-    */
+    // bool setPageSize(const QPageSize &pageSize)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = qobject_cast<QPdfWriter *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -225,9 +207,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETPAGESIZE)
   }
 }
 
-/*
-void setPageSizeMM(const QSizeF &size)
-*/
+// void setPageSizeMM(const QSizeF &size)
 HB_FUNC_STATIC(QPDFWRITER_SETPAGESIZEMM)
 {
   auto obj = qobject_cast<QPdfWriter *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -247,9 +227,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETPAGESIZEMM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int resolution() const
-*/
+// int resolution() const
 HB_FUNC_STATIC(QPDFWRITER_RESOLUTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -269,9 +247,7 @@ HB_FUNC_STATIC(QPDFWRITER_RESOLUTION)
 #endif
 }
 
-/*
-void setResolution(int resolution)
-*/
+// void setResolution(int resolution)
 HB_FUNC_STATIC(QPDFWRITER_SETRESOLUTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -293,9 +269,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETRESOLUTION)
 #endif
 }
 
-/*
-QPageLayout pageLayout() const
-*/
+// QPageLayout pageLayout() const
 HB_FUNC_STATIC(QPDFWRITER_PAGELAYOUT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -315,9 +289,7 @@ HB_FUNC_STATIC(QPDFWRITER_PAGELAYOUT)
 #endif
 }
 
-/*
-bool setPageLayout(const QPageLayout &newPageLayout)
-*/
+// bool setPageLayout(const QPageLayout &newPageLayout)
 HB_FUNC_STATIC(QPDFWRITER_SETPAGELAYOUT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -337,9 +309,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETPAGELAYOUT)
 #endif
 }
 
-/*
-QPagedPaintDevice::PdfVersion pdfVersion() const
-*/
+// QPagedPaintDevice::PdfVersion pdfVersion() const
 HB_FUNC_STATIC(QPDFWRITER_PDFVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -362,9 +332,7 @@ HB_FUNC_STATIC(QPDFWRITER_PDFVERSION)
 HB_FUNC_STATIC(QPDFWRITER_SETPAGEMARGINS)
 {
   if (ISNUMPAR(1) && ISQMARGINSF(1)) {
-    /*
-    bool setPageMargins(const QMarginsF &margins)
-    */
+    // bool setPageMargins(const QMarginsF &margins)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = qobject_cast<QPdfWriter *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -373,9 +341,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETPAGEMARGINS)
     }
 #endif
   } else if (ISNUMPAR(2) && ISQMARGINSF(1) && HB_ISNUM(2)) {
-    /*
-    bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
-    */
+    // bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = qobject_cast<QPdfWriter *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -388,9 +354,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETPAGEMARGINS)
   }
 }
 
-/*
-bool setPageOrientation(QPageLayout::Orientation orientation)
-*/
+// bool setPageOrientation(QPageLayout::Orientation orientation)
 HB_FUNC_STATIC(QPDFWRITER_SETPAGEORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -410,9 +374,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETPAGEORIENTATION)
 #endif
 }
 
-/*
-void setPdfVersion(QPagedPaintDevice::PdfVersion version)
-*/
+// void setPdfVersion(QPagedPaintDevice::PdfVersion version)
 HB_FUNC_STATIC(QPDFWRITER_SETPDFVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -434,8 +396,6 @@ HB_FUNC_STATIC(QPDFWRITER_SETPDFVERSION)
 #endif
 }
 
-/*
-virtual void setMargins(const Margins &m) override (obsolete)
-*/
+// virtual void setMargins(const Margins &m) override (obsolete)
 
 #pragma ENDDUMP

@@ -57,9 +57,7 @@ RETURN
 
 #include <QtGui/QWindow>
 
-    /*
-    QAccessibleApplication()
-    */
+    // QAccessibleApplication()
 HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -70,9 +68,7 @@ HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_NEW)
   }
 }
 
-/*
-QWindow * window() const
-*/
+// QWindow *window() const
 HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_WINDOW)
 {
   auto obj = static_cast<QAccessibleApplication *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -91,9 +87,7 @@ HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_WINDOW)
   }
 }
 
-/*
-int childCount() const
-*/
+// int childCount() const
 HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_CHILDCOUNT)
 {
   auto obj = static_cast<QAccessibleApplication *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -111,9 +105,7 @@ HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_CHILDCOUNT)
   }
 }
 
-/*
-int indexOfChild(const QAccessibleInterface *) const
-*/
+// int indexOfChild(const QAccessibleInterface *) const
 HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_INDEXOFCHILD)
 {
   auto obj = static_cast<QAccessibleApplication *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -131,9 +123,7 @@ HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_INDEXOFCHILD)
   }
 }
 
-/*
-QAccessibleInterface * focusChild() const
-*/
+// QAccessibleInterface *focusChild() const
 HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_FOCUSCHILD)
 {
   auto obj = static_cast<QAccessibleApplication *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -152,9 +142,7 @@ HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_FOCUSCHILD)
   }
 }
 
-/*
-QAccessibleInterface * parent() const
-*/
+// QAccessibleInterface *parent() const
 HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_PARENT)
 {
   auto obj = static_cast<QAccessibleApplication *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -173,9 +161,7 @@ HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_PARENT)
   }
 }
 
-/*
-QAccessibleInterface * child(int index) const
-*/
+// QAccessibleInterface *child(int index) const
 HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_CHILD)
 {
   auto obj = static_cast<QAccessibleApplication *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -194,9 +180,7 @@ HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_CHILD)
   }
 }
 
-/*
-QString text(QAccessible::Text t) const
-*/
+// QString text(QAccessible::Text t) const
 HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_TEXT)
 {
   auto obj = static_cast<QAccessibleApplication *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -214,9 +198,7 @@ HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_TEXT)
   }
 }
 
-/*
-QAccessible::Role role() const
-*/
+// QAccessible::Role role() const
 HB_FUNC_STATIC(QACCESSIBLEAPPLICATION_ROLE)
 {
   auto obj = static_cast<QAccessibleApplication *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -96,15 +96,11 @@ RETURN
 HB_FUNC_STATIC(QTEXTBLOCK_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QTextBlock()
-    */
+    // QTextBlock()
     auto obj = new QTextBlock();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQTEXTBLOCK(1)) {
-    /*
-    QTextBlock(const QTextBlock &o)
-    */
+    // QTextBlock(const QTextBlock &o)
     auto obj = new QTextBlock(*PQTEXTBLOCK(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -121,9 +117,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QTEXTBLOCK_ISVALID)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -141,9 +135,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_ISVALID)
   }
 }
 
-/*
-int position() const
-*/
+// int position() const
 HB_FUNC_STATIC(QTEXTBLOCK_POSITION)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -161,9 +153,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_POSITION)
   }
 }
 
-/*
-int length() const
-*/
+// int length() const
 HB_FUNC_STATIC(QTEXTBLOCK_LENGTH)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -181,9 +171,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_LENGTH)
   }
 }
 
-/*
-bool contains(int position) const
-*/
+// bool contains(int position) const
 HB_FUNC_STATIC(QTEXTBLOCK_CONTAINS)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -201,9 +189,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_CONTAINS)
   }
 }
 
-/*
-QTextLayout * layout() const
-*/
+// QTextLayout *layout() const
 HB_FUNC_STATIC(QTEXTBLOCK_LAYOUT)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -222,9 +208,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_LAYOUT)
   }
 }
 
-/*
-void clearLayout()
-*/
+// void clearLayout()
 HB_FUNC_STATIC(QTEXTBLOCK_CLEARLAYOUT)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -244,9 +228,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_CLEARLAYOUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTextBlockFormat blockFormat() const
-*/
+// QTextBlockFormat blockFormat() const
 HB_FUNC_STATIC(QTEXTBLOCK_BLOCKFORMAT)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -264,9 +246,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_BLOCKFORMAT)
   }
 }
 
-/*
-int blockFormatIndex() const
-*/
+// int blockFormatIndex() const
 HB_FUNC_STATIC(QTEXTBLOCK_BLOCKFORMATINDEX)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -284,9 +264,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_BLOCKFORMATINDEX)
   }
 }
 
-/*
-QTextCharFormat charFormat() const
-*/
+// QTextCharFormat charFormat() const
 HB_FUNC_STATIC(QTEXTBLOCK_CHARFORMAT)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -304,9 +282,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_CHARFORMAT)
   }
 }
 
-/*
-int charFormatIndex() const
-*/
+// int charFormatIndex() const
 HB_FUNC_STATIC(QTEXTBLOCK_CHARFORMATINDEX)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -324,9 +300,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_CHARFORMATINDEX)
   }
 }
 
-/*
-Qt::LayoutDirection textDirection() const
-*/
+// Qt::LayoutDirection textDirection() const
 HB_FUNC_STATIC(QTEXTBLOCK_TEXTDIRECTION)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -344,9 +318,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_TEXTDIRECTION)
   }
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QTEXTBLOCK_TEXT)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -364,9 +336,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_TEXT)
   }
 }
 
-/*
-const QTextDocument * document() const
-*/
+// const QTextDocument *document() const
 HB_FUNC_STATIC(QTEXTBLOCK_DOCUMENT)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -385,9 +355,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_DOCUMENT)
   }
 }
 
-/*
-QTextList * textList() const
-*/
+// QTextList *textList() const
 HB_FUNC_STATIC(QTEXTBLOCK_TEXTLIST)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -406,9 +374,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_TEXTLIST)
   }
 }
 
-/*
-QTextBlockUserData * userData() const
-*/
+// QTextBlockUserData *userData() const
 HB_FUNC_STATIC(QTEXTBLOCK_USERDATA)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -427,9 +393,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_USERDATA)
   }
 }
 
-/*
-void setUserData(QTextBlockUserData * data)
-*/
+// void setUserData(QTextBlockUserData *data)
 HB_FUNC_STATIC(QTEXTBLOCK_SETUSERDATA)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -449,9 +413,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETUSERDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int userState() const
-*/
+// int userState() const
 HB_FUNC_STATIC(QTEXTBLOCK_USERSTATE)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -469,9 +431,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_USERSTATE)
   }
 }
 
-/*
-void setUserState(int state)
-*/
+// void setUserState(int state)
 HB_FUNC_STATIC(QTEXTBLOCK_SETUSERSTATE)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -491,9 +451,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETUSERSTATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int revision() const
-*/
+// int revision() const
 HB_FUNC_STATIC(QTEXTBLOCK_REVISION)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -511,9 +469,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_REVISION)
   }
 }
 
-/*
-void setRevision(int rev)
-*/
+// void setRevision(int rev)
 HB_FUNC_STATIC(QTEXTBLOCK_SETREVISION)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -533,9 +489,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETREVISION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isVisible() const
-*/
+// bool isVisible() const
 HB_FUNC_STATIC(QTEXTBLOCK_ISVISIBLE)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -553,9 +507,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_ISVISIBLE)
   }
 }
 
-/*
-void setVisible(bool visible)
-*/
+// void setVisible(bool visible)
 HB_FUNC_STATIC(QTEXTBLOCK_SETVISIBLE)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -575,9 +527,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int blockNumber() const
-*/
+// int blockNumber() const
 HB_FUNC_STATIC(QTEXTBLOCK_BLOCKNUMBER)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -595,9 +545,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_BLOCKNUMBER)
   }
 }
 
-/*
-int firstLineNumber() const
-*/
+// int firstLineNumber() const
 HB_FUNC_STATIC(QTEXTBLOCK_FIRSTLINENUMBER)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -615,9 +563,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_FIRSTLINENUMBER)
   }
 }
 
-/*
-void setLineCount(int count)
-*/
+// void setLineCount(int count)
 HB_FUNC_STATIC(QTEXTBLOCK_SETLINECOUNT)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -637,9 +583,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETLINECOUNT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int lineCount() const
-*/
+// int lineCount() const
 HB_FUNC_STATIC(QTEXTBLOCK_LINECOUNT)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -657,9 +601,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_LINECOUNT)
   }
 }
 
-/*
-QTextBlock next() const
-*/
+// QTextBlock next() const
 HB_FUNC_STATIC(QTEXTBLOCK_NEXT)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -677,9 +619,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_NEXT)
   }
 }
 
-/*
-QTextBlock previous() const
-*/
+// QTextBlock previous() const
 HB_FUNC_STATIC(QTEXTBLOCK_PREVIOUS)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -697,9 +637,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_PREVIOUS)
   }
 }
 
-/*
-int fragmentIndex() const
-*/
+// int fragmentIndex() const
 HB_FUNC_STATIC(QTEXTBLOCK_FRAGMENTINDEX)
 {
   auto obj = static_cast<QTextBlock *>(Qt5xHb::itemGetPtrStackSelfItem());

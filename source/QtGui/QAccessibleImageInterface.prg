@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QACCESSIBLEIMAGEINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QString imageDescription() const = 0
-*/
+// virtual QString imageDescription() const = 0
 HB_FUNC_STATIC(QACCESSIBLEIMAGEINTERFACE_IMAGEDESCRIPTION)
 {
   auto obj = static_cast<QAccessibleImageInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QACCESSIBLEIMAGEINTERFACE_IMAGEDESCRIPTION)
   }
 }
 
-/*
-virtual QSize imageSize() const = 0
-*/
+// virtual QSize imageSize() const = 0
 HB_FUNC_STATIC(QACCESSIBLEIMAGEINTERFACE_IMAGESIZE)
 {
   auto obj = static_cast<QAccessibleImageInterface *>(Qt5xHb::itemGetPtrStackSelfItem());

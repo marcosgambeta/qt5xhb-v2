@@ -69,9 +69,7 @@ RETURN
 
 #include <QtGui/QTextCursor>
 
-    /*
-    QTextTable(QTextDocument * doc)
-    */
+    // QTextTable(QTextDocument *doc)
 HB_FUNC_STATIC(QTEXTTABLE_NEW)
 {
   if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1)) {
@@ -91,9 +89,7 @@ HB_FUNC_STATIC(QTEXTTABLE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void resize(int rows, int cols)
-*/
+// void resize(int rows, int cols)
 HB_FUNC_STATIC(QTEXTTABLE_RESIZE)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -113,9 +109,7 @@ HB_FUNC_STATIC(QTEXTTABLE_RESIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void insertRows(int pos, int num)
-*/
+// void insertRows(int pos, int num)
 HB_FUNC_STATIC(QTEXTTABLE_INSERTROWS)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -135,9 +129,7 @@ HB_FUNC_STATIC(QTEXTTABLE_INSERTROWS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void insertColumns(int pos, int num)
-*/
+// void insertColumns(int pos, int num)
 HB_FUNC_STATIC(QTEXTTABLE_INSERTCOLUMNS)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -157,9 +149,7 @@ HB_FUNC_STATIC(QTEXTTABLE_INSERTCOLUMNS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void appendRows(int count)
-*/
+// void appendRows(int count)
 HB_FUNC_STATIC(QTEXTTABLE_APPENDROWS)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -179,9 +169,7 @@ HB_FUNC_STATIC(QTEXTTABLE_APPENDROWS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void appendColumns(int count)
-*/
+// void appendColumns(int count)
 HB_FUNC_STATIC(QTEXTTABLE_APPENDCOLUMNS)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -201,9 +189,7 @@ HB_FUNC_STATIC(QTEXTTABLE_APPENDCOLUMNS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void removeRows(int pos, int num)
-*/
+// void removeRows(int pos, int num)
 HB_FUNC_STATIC(QTEXTTABLE_REMOVEROWS)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -223,9 +209,7 @@ HB_FUNC_STATIC(QTEXTTABLE_REMOVEROWS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void removeColumns(int pos, int num)
-*/
+// void removeColumns(int pos, int num)
 HB_FUNC_STATIC(QTEXTTABLE_REMOVECOLUMNS)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -248,9 +232,7 @@ HB_FUNC_STATIC(QTEXTTABLE_REMOVECOLUMNS)
 HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
 {
   if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
-    /*
-    void mergeCells(int row, int col, int numRows, int numCols)
-    */
+    // void mergeCells(int row, int col, int numRows, int numCols)
     auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -259,9 +241,7 @@ HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
-    /*
-    void mergeCells(const QTextCursor &cursor)
-    */
+    // void mergeCells(const QTextCursor &cursor)
     auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -274,9 +254,7 @@ HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
   }
 }
 
-/*
-void splitCell(int row, int col, int numRows, int numCols)
-*/
+// void splitCell(int row, int col, int numRows, int numCols)
 HB_FUNC_STATIC(QTEXTTABLE_SPLITCELL)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -296,9 +274,7 @@ HB_FUNC_STATIC(QTEXTTABLE_SPLITCELL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int rows() const
-*/
+// int rows() const
 HB_FUNC_STATIC(QTEXTTABLE_ROWS)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -316,9 +292,7 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWS)
   }
 }
 
-/*
-int columns() const
-*/
+// int columns() const
 HB_FUNC_STATIC(QTEXTTABLE_COLUMNS)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -339,27 +313,21 @@ HB_FUNC_STATIC(QTEXTTABLE_COLUMNS)
 HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    QTextTableCell cellAt(int row, int col) const
-    */
+    // QTextTableCell cellAt(int row, int col) const
     auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
       RQTEXTTABLECELL(obj->cellAt(PINT(1), PINT(2)));
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QTextTableCell cellAt(int position) const
-    */
+    // QTextTableCell cellAt(int position) const
     auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
       RQTEXTTABLECELL(obj->cellAt(PINT(1)));
     }
   } else if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
-    /*
-    QTextTableCell cellAt(const QTextCursor &c) const
-    */
+    // QTextTableCell cellAt(const QTextCursor &c) const
     auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -370,9 +338,7 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
   }
 }
 
-/*
-QTextCursor rowStart(const QTextCursor &c) const
-*/
+// QTextCursor rowStart(const QTextCursor &c) const
 HB_FUNC_STATIC(QTEXTTABLE_ROWSTART)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -390,9 +356,7 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWSTART)
   }
 }
 
-/*
-QTextCursor rowEnd(const QTextCursor &c) const
-*/
+// QTextCursor rowEnd(const QTextCursor &c) const
 HB_FUNC_STATIC(QTEXTTABLE_ROWEND)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -410,9 +374,7 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWEND)
   }
 }
 
-/*
-void setFormat(const QTextTableFormat &format)
-*/
+// void setFormat(const QTextTableFormat &format)
 HB_FUNC_STATIC(QTEXTTABLE_SETFORMAT)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -432,9 +394,7 @@ HB_FUNC_STATIC(QTEXTTABLE_SETFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTextTableFormat format() const
-*/
+// QTextTableFormat format() const
 HB_FUNC_STATIC(QTEXTTABLE_FORMAT)
 {
   auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
