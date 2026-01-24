@@ -84,9 +84,7 @@ HB_FUNC_STATIC(QX11INFO_DELETE)
 #endif
 }
 
-/*
-static bool isPlatformX11()
-*/
+// static bool isPlatformX11()
 HB_FUNC_STATIC(QX11INFO_ISPLATFORMX11)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -102,9 +100,7 @@ HB_FUNC_STATIC(QX11INFO_ISPLATFORMX11)
 #endif
 }
 
-/*
-static int appDpiX(int screen = -1)
-*/
+// static int appDpiX(int screen = -1)
 HB_FUNC_STATIC(QX11INFO_APPDPIX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -120,9 +116,7 @@ HB_FUNC_STATIC(QX11INFO_APPDPIX)
 #endif
 }
 
-/*
-static int appDpiY(int screen = -1)
-*/
+// static int appDpiY(int screen = -1)
 HB_FUNC_STATIC(QX11INFO_APPDPIY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -138,9 +132,7 @@ HB_FUNC_STATIC(QX11INFO_APPDPIY)
 #endif
 }
 
-/*
-static unsigned long appRootWindow(int screen = -1)
-*/
+// static unsigned long appRootWindow(int screen = -1)
 HB_FUNC_STATIC(QX11INFO_APPROOTWINDOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -156,9 +148,7 @@ HB_FUNC_STATIC(QX11INFO_APPROOTWINDOW)
 #endif
 }
 
-/*
-static int appScreen()
-*/
+// static int appScreen()
 HB_FUNC_STATIC(QX11INFO_APPSCREEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -174,9 +164,7 @@ HB_FUNC_STATIC(QX11INFO_APPSCREEN)
 #endif
 }
 
-/*
-static unsigned long appTime()
-*/
+// static unsigned long appTime()
 HB_FUNC_STATIC(QX11INFO_APPTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -192,9 +180,7 @@ HB_FUNC_STATIC(QX11INFO_APPTIME)
 #endif
 }
 
-/*
-static unsigned long appUserTime()
-*/
+// static unsigned long appUserTime()
 HB_FUNC_STATIC(QX11INFO_APPUSERTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -210,9 +196,7 @@ HB_FUNC_STATIC(QX11INFO_APPUSERTIME)
 #endif
 }
 
-/*
-static void setAppTime(unsigned long time)
-*/
+// static void setAppTime(unsigned long time)
 HB_FUNC_STATIC(QX11INFO_SETAPPTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -230,9 +214,7 @@ HB_FUNC_STATIC(QX11INFO_SETAPPTIME)
 #endif
 }
 
-/*
-static void setAppUserTime(unsigned long time)
-*/
+// static void setAppUserTime(unsigned long time)
 HB_FUNC_STATIC(QX11INFO_SETAPPUSERTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -250,9 +232,7 @@ HB_FUNC_STATIC(QX11INFO_SETAPPUSERTIME)
 #endif
 }
 
-/*
-static unsigned long getTimestamp()
-*/
+// static unsigned long getTimestamp()
 HB_FUNC_STATIC(QX11INFO_GETTIMESTAMP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -268,9 +248,7 @@ HB_FUNC_STATIC(QX11INFO_GETTIMESTAMP)
 #endif
 }
 
-/*
-static Display * display()
-*/
+// static Display *display()
 HB_FUNC_STATIC(QX11INFO_DISPLAY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -286,9 +264,7 @@ HB_FUNC_STATIC(QX11INFO_DISPLAY)
 #endif
 }
 
-/*
-static xcb_connection_t * connection()
-*/
+// static xcb_connection_t *connection()
 HB_FUNC_STATIC(QX11INFO_CONNECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -304,9 +280,7 @@ HB_FUNC_STATIC(QX11INFO_CONNECTION)
 #endif
 }
 
-/*
-static QByteArray nextStartupId()
-*/
+// static QByteArray nextStartupId()
 HB_FUNC_STATIC(QX11INFO_NEXTSTARTUPID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -322,9 +296,7 @@ HB_FUNC_STATIC(QX11INFO_NEXTSTARTUPID)
 #endif
 }
 
-/*
-static void setNextStartupId(const QByteArray &id)
-*/
+// static void setNextStartupId(const QByteArray &id)
 HB_FUNC_STATIC(QX11INFO_SETNEXTSTARTUPID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
