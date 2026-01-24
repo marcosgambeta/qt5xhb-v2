@@ -81,9 +81,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_DELETE)
 #endif
 }
 
-/*
-QString managerName() const
-*/
+// QString managerName() const
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_MANAGERNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -103,9 +101,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_MANAGERNAME)
 #endif
 }
 
-/*
-int managerVersion() const
-*/
+// int managerVersion() const
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_MANAGERVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -125,9 +121,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_MANAGERVERSION)
 #endif
 }
 
-/*
-QGeoRouteReply * calculateRoute(const QGeoRouteRequest &request)
-*/
+// QGeoRouteReply *calculateRoute(const QGeoRouteRequest &request)
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_CALCULATEROUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -148,9 +142,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_CALCULATEROUTE)
 #endif
 }
 
-/*
-QGeoRouteReply * updateRoute(const QGeoRoute &route, const QGeoCoordinate &position)
-*/
+// QGeoRouteReply *updateRoute(const QGeoRoute &route, const QGeoCoordinate &position)
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_UPDATEROUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -171,9 +163,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_UPDATEROUTE)
 #endif
 }
 
-/*
-QGeoRouteRequest::TravelModes supportedTravelModes() const
-*/
+// QGeoRouteRequest::TravelModes supportedTravelModes() const
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_SUPPORTEDTRAVELMODES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -193,9 +183,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_SUPPORTEDTRAVELMODES)
 #endif
 }
 
-/*
-QGeoRouteRequest::FeatureTypes supportedFeatureTypes() const
-*/
+// QGeoRouteRequest::FeatureTypes supportedFeatureTypes() const
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_SUPPORTEDFEATURETYPES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -215,9 +203,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_SUPPORTEDFEATURETYPES)
 #endif
 }
 
-/*
-QGeoRouteRequest::FeatureWeights supportedFeatureWeights() const
-*/
+// QGeoRouteRequest::FeatureWeights supportedFeatureWeights() const
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_SUPPORTEDFEATUREWEIGHTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -237,9 +223,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_SUPPORTEDFEATUREWEIGHTS)
 #endif
 }
 
-/*
-QGeoRouteRequest::RouteOptimizations supportedRouteOptimizations() const
-*/
+// QGeoRouteRequest::RouteOptimizations supportedRouteOptimizations() const
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_SUPPORTEDROUTEOPTIMIZATIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -259,9 +243,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_SUPPORTEDROUTEOPTIMIZATIONS)
 #endif
 }
 
-/*
-QGeoRouteRequest::SegmentDetails supportedSegmentDetails() const
-*/
+// QGeoRouteRequest::SegmentDetails supportedSegmentDetails() const
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_SUPPORTEDSEGMENTDETAILS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -281,9 +263,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_SUPPORTEDSEGMENTDETAILS)
 #endif
 }
 
-/*
-QGeoRouteRequest::ManeuverDetails supportedManeuverDetails() const
-*/
+// QGeoRouteRequest::ManeuverDetails supportedManeuverDetails() const
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_SUPPORTEDMANEUVERDETAILS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -303,9 +283,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_SUPPORTEDMANEUVERDETAILS)
 #endif
 }
 
-/*
-void setLocale(const QLocale &locale)
-*/
+// void setLocale(const QLocale &locale)
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_SETLOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -327,9 +305,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_SETLOCALE)
 #endif
 }
 
-/*
-QLocale locale() const
-*/
+// QLocale locale() const
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_LOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -349,9 +325,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_LOCALE)
 #endif
 }
 
-/*
-void setMeasurementSystem(QLocale::MeasurementSystem system)
-*/
+// void setMeasurementSystem(QLocale::MeasurementSystem system)
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_SETMEASUREMENTSYSTEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -373,9 +347,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_SETMEASUREMENTSYSTEM)
 #endif
 }
 
-/*
-QLocale::MeasurementSystem measurementSystem() const
-*/
+// QLocale::MeasurementSystem measurementSystem() const
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_MEASUREMENTSYSTEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -395,9 +367,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_MEASUREMENTSYSTEM)
 #endif
 }
 
-/*
-void finished(QGeoRouteReply * reply)
-*/
+// void finished(QGeoRouteReply *reply)
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -442,9 +412,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_ONFINISHED)
 #endif
 }
 
-/*
-void error(QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorString = QString())
-*/
+// void error(QGeoRouteReply *reply, QGeoRouteReply::Error error, QString errorString = QString())
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

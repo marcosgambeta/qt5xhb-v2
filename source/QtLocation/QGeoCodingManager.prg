@@ -75,9 +75,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_DELETE)
 #endif
 }
 
-/*
-QString managerName() const
-*/
+// QString managerName() const
 HB_FUNC_STATIC(QGEOCODINGMANAGER_MANAGERNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -97,9 +95,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_MANAGERNAME)
 #endif
 }
 
-/*
-int managerVersion() const
-*/
+// int managerVersion() const
 HB_FUNC_STATIC(QGEOCODINGMANAGER_MANAGERVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -122,9 +118,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_MANAGERVERSION)
 HB_FUNC_STATIC(QGEOCODINGMANAGER_GEOCODE)
 {
   if (ISBETWEEN(1, 2) && ISQGEOADDRESS(1) && ISQGEOSHAPEORNIL(2)) {
-    /*
-    QGeoCodeReply * geocode(const QGeoAddress &address, const QGeoShape &bounds = QGeoShape())
-    */
+    // QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds = QGeoShape())
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = qobject_cast<QGeoCodingManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -135,10 +129,8 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_GEOCODE)
     }
 #endif
   } else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISQGEOSHAPEORNIL(4)) {
-    /*
-    QGeoCodeReply * geocode(const QString &searchString, int limit = -1, int offset = 0, const QGeoShape &bounds =
-    QGeoShape())
-    */
+    // QGeoCodeReply *geocode(const QString &searchString, int limit = -1, int offset = 0, const QGeoShape &bounds =
+    // QGeoShape())
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = qobject_cast<QGeoCodingManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -153,9 +145,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_GEOCODE)
   }
 }
 
-/*
-QGeoCodeReply * reverseGeocode(const QGeoCoordinate &coordinate, const QGeoShape &bounds = QGeoShape())
-*/
+// QGeoCodeReply *reverseGeocode(const QGeoCoordinate &coordinate, const QGeoShape &bounds = QGeoShape())
 HB_FUNC_STATIC(QGEOCODINGMANAGER_REVERSEGEOCODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -177,9 +167,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_REVERSEGEOCODE)
 #endif
 }
 
-/*
-void setLocale(const QLocale &locale)
-*/
+// void setLocale(const QLocale &locale)
 HB_FUNC_STATIC(QGEOCODINGMANAGER_SETLOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -201,9 +189,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_SETLOCALE)
 #endif
 }
 
-/*
-QLocale locale() const
-*/
+// QLocale locale() const
 HB_FUNC_STATIC(QGEOCODINGMANAGER_LOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -223,9 +209,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_LOCALE)
 #endif
 }
 
-/*
-void finished(QGeoCodeReply * reply)
-*/
+// void finished(QGeoCodeReply *reply)
 HB_FUNC_STATIC(QGEOCODINGMANAGER_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -270,9 +254,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_ONFINISHED)
 #endif
 }
 
-/*
-void error(QGeoCodeReply * reply, QGeoCodeReply::Error error, QString errorString = QString())
-*/
+// void error(QGeoCodeReply *reply, QGeoCodeReply::Error error, QString errorString = QString())
 HB_FUNC_STATIC(QGEOCODINGMANAGER_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

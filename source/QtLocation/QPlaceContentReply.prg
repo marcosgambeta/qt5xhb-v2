@@ -58,9 +58,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QPlaceContentReply(QObject * parent = nullptr)
-    */
+    // QPlaceContentReply(QObject *parent = nullptr)
 HB_FUNC_STATIC(QPLACECONTENTREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_DELETE)
 #endif
 }
 
-/*
-QPlaceReply::Type type() const
-*/
+// QPlaceReply::Type type() const
 HB_FUNC_STATIC(QPLACECONTENTREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -106,9 +102,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_TYPE)
 #endif
 }
 
-/*
-int totalCount() const
-*/
+// int totalCount() const
 HB_FUNC_STATIC(QPLACECONTENTREPLY_TOTALCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -128,9 +122,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_TOTALCOUNT)
 #endif
 }
 
-/*
-QPlaceContentRequest request() const
-*/
+// QPlaceContentRequest request() const
 HB_FUNC_STATIC(QPLACECONTENTREPLY_REQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -150,9 +142,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_REQUEST)
 #endif
 }
 
-/*
-QPlaceContentRequest previousPageRequest() const
-*/
+// QPlaceContentRequest previousPageRequest() const
 HB_FUNC_STATIC(QPLACECONTENTREPLY_PREVIOUSPAGEREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -172,9 +162,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_PREVIOUSPAGEREQUEST)
 #endif
 }
 
-/*
-QPlaceContentRequest nextPageRequest() const
-*/
+// QPlaceContentRequest nextPageRequest() const
 HB_FUNC_STATIC(QPLACECONTENTREPLY_NEXTPAGEREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

@@ -55,9 +55,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QPlaceIdReply(QPlaceIdReply::OperationType operationType, QObject * parent = nullptr)
-    */
+    // QPlaceIdReply(QPlaceIdReply::OperationType operationType, QObject *parent = nullptr)
 HB_FUNC_STATIC(QPLACEIDREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -81,9 +79,7 @@ HB_FUNC_STATIC(QPLACEIDREPLY_DELETE)
 #endif
 }
 
-/*
-QPlaceReply::Type type() const
-*/
+// QPlaceReply::Type type() const
 HB_FUNC_STATIC(QPLACEIDREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -103,9 +99,7 @@ HB_FUNC_STATIC(QPLACEIDREPLY_TYPE)
 #endif
 }
 
-/*
-QPlaceIdReply::OperationType operationType() const
-*/
+// QPlaceIdReply::OperationType operationType() const
 HB_FUNC_STATIC(QPLACEIDREPLY_OPERATIONTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -125,9 +119,7 @@ HB_FUNC_STATIC(QPLACEIDREPLY_OPERATIONTYPE)
 #endif
 }
 
-/*
-QString id() const
-*/
+// QString id() const
 HB_FUNC_STATIC(QPLACEIDREPLY_ID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

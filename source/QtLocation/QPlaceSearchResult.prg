@@ -70,17 +70,13 @@ RETURN
 HB_FUNC_STATIC(QPLACESEARCHRESULT_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPlaceSearchResult()
-    */
+    // QPlaceSearchResult()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceSearchResult();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPLACESEARCHRESULT(1)) {
-    /*
-    QPlaceSearchResult(const QPlaceSearchResult &other)
-    */
+    // QPlaceSearchResult(const QPlaceSearchResult &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceSearchResult(*PQPLACESEARCHRESULT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -101,9 +97,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_DELETE)
 #endif
 }
 
-/*
-QPlaceSearchResult::SearchResultType type() const
-*/
+// QPlaceSearchResult::SearchResultType type() const
 HB_FUNC_STATIC(QPLACESEARCHRESULT_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -123,9 +117,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_TYPE)
 #endif
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QPLACESEARCHRESULT_TITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -145,9 +137,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_TITLE)
 #endif
 }
 
-/*
-void setTitle(const QString &title)
-*/
+// void setTitle(const QString &title)
 HB_FUNC_STATIC(QPLACESEARCHRESULT_SETTITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -169,9 +159,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_SETTITLE)
 #endif
 }
 
-/*
-QPlaceIcon icon() const
-*/
+// QPlaceIcon icon() const
 HB_FUNC_STATIC(QPLACESEARCHRESULT_ICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -191,9 +179,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_ICON)
 #endif
 }
 
-/*
-void setIcon(const QPlaceIcon &icon)
-*/
+// void setIcon(const QPlaceIcon &icon)
 HB_FUNC_STATIC(QPLACESEARCHRESULT_SETICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

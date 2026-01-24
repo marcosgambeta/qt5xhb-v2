@@ -57,9 +57,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QPlaceResult()
-    */
+    // QPlaceResult()
 HB_FUNC_STATIC(QPLACERESULT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -83,9 +81,7 @@ HB_FUNC_STATIC(QPLACERESULT_DELETE)
 #endif
 }
 
-/*
-qreal distance() const
-*/
+// qreal distance() const
 HB_FUNC_STATIC(QPLACERESULT_DISTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -105,9 +101,7 @@ HB_FUNC_STATIC(QPLACERESULT_DISTANCE)
 #endif
 }
 
-/*
-void setDistance(qreal distance)
-*/
+// void setDistance(qreal distance)
 HB_FUNC_STATIC(QPLACERESULT_SETDISTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -129,9 +123,7 @@ HB_FUNC_STATIC(QPLACERESULT_SETDISTANCE)
 #endif
 }
 
-/*
-QPlace place() const
-*/
+// QPlace place() const
 HB_FUNC_STATIC(QPLACERESULT_PLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -151,9 +143,7 @@ HB_FUNC_STATIC(QPLACERESULT_PLACE)
 #endif
 }
 
-/*
-void setPlace(const QPlace &place)
-*/
+// void setPlace(const QPlace &place)
 HB_FUNC_STATIC(QPLACERESULT_SETPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -175,9 +165,7 @@ HB_FUNC_STATIC(QPLACERESULT_SETPLACE)
 #endif
 }
 
-/*
-bool isSponsored() const
-*/
+// bool isSponsored() const
 HB_FUNC_STATIC(QPLACERESULT_ISSPONSORED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -197,9 +185,7 @@ HB_FUNC_STATIC(QPLACERESULT_ISSPONSORED)
 #endif
 }
 
-/*
-void setSponsored(bool sponsored)
-*/
+// void setSponsored(bool sponsored)
 HB_FUNC_STATIC(QPLACERESULT_SETSPONSORED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

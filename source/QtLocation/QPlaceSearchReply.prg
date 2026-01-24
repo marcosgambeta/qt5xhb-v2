@@ -61,9 +61,7 @@ RETURN
 
 #include <QtLocation/QPlaceSearchRequest>
 
-    /*
-    QPlaceSearchReply(QObject * parent = nullptr)
-    */
+    // QPlaceSearchReply(QObject *parent = nullptr)
 HB_FUNC_STATIC(QPLACESEARCHREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_DELETE)
 #endif
 }
 
-/*
-QPlaceReply::Type type() const
-*/
+// QPlaceReply::Type type() const
 HB_FUNC_STATIC(QPLACESEARCHREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -109,9 +105,7 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_TYPE)
 #endif
 }
 
-/*
-QList<QPlaceSearchResult> results() const
-*/
+// QList<QPlaceSearchResult> results() const
 HB_FUNC_STATIC(QPLACESEARCHREPLY_RESULTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -153,9 +147,7 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_RESULTS)
 #endif
 }
 
-/*
-QPlaceSearchRequest request() const
-*/
+// QPlaceSearchRequest request() const
 HB_FUNC_STATIC(QPLACESEARCHREPLY_REQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -175,9 +167,7 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_REQUEST)
 #endif
 }
 
-/*
-QPlaceSearchRequest previousPageRequest() const
-*/
+// QPlaceSearchRequest previousPageRequest() const
 HB_FUNC_STATIC(QPLACESEARCHREPLY_PREVIOUSPAGEREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -197,9 +187,7 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_PREVIOUSPAGEREQUEST)
 #endif
 }
 
-/*
-QPlaceSearchRequest nextPageRequest() const
-*/
+// QPlaceSearchRequest nextPageRequest() const
 HB_FUNC_STATIC(QPLACESEARCHREPLY_NEXTPAGEREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

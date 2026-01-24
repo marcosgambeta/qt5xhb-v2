@@ -66,17 +66,13 @@ RETURN
 HB_FUNC_STATIC(QPLACEUSER_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPlaceUser()
-    */
+    // QPlaceUser()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceUser();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPLACEUSER(1)) {
-    /*
-    QPlaceUser(const QPlaceUser &other)
-    */
+    // QPlaceUser(const QPlaceUser &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceUser(*PQPLACEUSER(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -97,9 +93,7 @@ HB_FUNC_STATIC(QPLACEUSER_DELETE)
 #endif
 }
 
-/*
-QString userId() const
-*/
+// QString userId() const
 HB_FUNC_STATIC(QPLACEUSER_USERID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -119,9 +113,7 @@ HB_FUNC_STATIC(QPLACEUSER_USERID)
 #endif
 }
 
-/*
-void setUserId(const QString &identifier)
-*/
+// void setUserId(const QString &identifier)
 HB_FUNC_STATIC(QPLACEUSER_SETUSERID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -143,9 +135,7 @@ HB_FUNC_STATIC(QPLACEUSER_SETUSERID)
 #endif
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QPLACEUSER_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -165,9 +155,7 @@ HB_FUNC_STATIC(QPLACEUSER_NAME)
 #endif
 }
 
-/*
-void setName(const QString &name)
-*/
+// void setName(const QString &name)
 HB_FUNC_STATIC(QPLACEUSER_SETNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

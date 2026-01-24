@@ -73,17 +73,13 @@ RETURN
 HB_FUNC_STATIC(QPLACESUPPLIER_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPlaceSupplier()
-    */
+    // QPlaceSupplier()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceSupplier();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPLACESUPPLIER(1)) {
-    /*
-    QPlaceSupplier(const QPlaceSupplier &other)
-    */
+    // QPlaceSupplier(const QPlaceSupplier &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceSupplier(*PQPLACESUPPLIER(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -104,9 +100,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_DELETE)
 #endif
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QPLACESUPPLIER_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -126,9 +120,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_NAME)
 #endif
 }
 
-/*
-void setName(const QString &data)
-*/
+// void setName(const QString &data)
 HB_FUNC_STATIC(QPLACESUPPLIER_SETNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -150,9 +142,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_SETNAME)
 #endif
 }
 
-/*
-QString supplierId() const
-*/
+// QString supplierId() const
 HB_FUNC_STATIC(QPLACESUPPLIER_SUPPLIERID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -172,9 +162,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_SUPPLIERID)
 #endif
 }
 
-/*
-void setSupplierId(const QString &identifier)
-*/
+// void setSupplierId(const QString &identifier)
 HB_FUNC_STATIC(QPLACESUPPLIER_SETSUPPLIERID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -196,9 +184,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_SETSUPPLIERID)
 #endif
 }
 
-/*
-QUrl url() const
-*/
+// QUrl url() const
 HB_FUNC_STATIC(QPLACESUPPLIER_URL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -218,9 +204,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_URL)
 #endif
 }
 
-/*
-void setUrl(const QUrl &data)
-*/
+// void setUrl(const QUrl &data)
 HB_FUNC_STATIC(QPLACESUPPLIER_SETURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -242,9 +226,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_SETURL)
 #endif
 }
 
-/*
-QPlaceIcon icon() const
-*/
+// QPlaceIcon icon() const
 HB_FUNC_STATIC(QPLACESUPPLIER_ICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -264,9 +246,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_ICON)
 #endif
 }
 
-/*
-void setIcon(const QPlaceIcon &icon)
-*/
+// void setIcon(const QPlaceIcon &icon)
 HB_FUNC_STATIC(QPLACESUPPLIER_SETICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -288,9 +268,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_SETICON)
 #endif
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QPLACESUPPLIER_ISEMPTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

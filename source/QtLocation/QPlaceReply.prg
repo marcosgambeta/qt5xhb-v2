@@ -60,9 +60,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QPlaceReply(QObject * parent = nullptr)
-    */
+    // QPlaceReply(QObject *parent = nullptr)
 HB_FUNC_STATIC(QPLACEREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QPLACEREPLY_DELETE)
 #endif
 }
 
-/*
-bool isFinished() const
-*/
+// bool isFinished() const
 HB_FUNC_STATIC(QPLACEREPLY_ISFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -108,9 +104,7 @@ HB_FUNC_STATIC(QPLACEREPLY_ISFINISHED)
 #endif
 }
 
-/*
-virtual QPlaceReply::Type type() const
-*/
+// virtual QPlaceReply::Type type() const
 HB_FUNC_STATIC(QPLACEREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -130,9 +124,7 @@ HB_FUNC_STATIC(QPLACEREPLY_TYPE)
 #endif
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QPLACEREPLY_ERRORSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -152,9 +144,7 @@ HB_FUNC_STATIC(QPLACEREPLY_ERRORSTRING)
 #endif
 }
 
-/*
-QPlaceReply::Error error() const
-*/
+// QPlaceReply::Error error() const
 HB_FUNC_STATIC(QPLACEREPLY_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -174,9 +164,7 @@ HB_FUNC_STATIC(QPLACEREPLY_ERROR)
 #endif
 }
 
-/*
-virtual void abort()
-*/
+// virtual void abort()
 HB_FUNC_STATIC(QPLACEREPLY_ABORT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -198,9 +186,7 @@ HB_FUNC_STATIC(QPLACEREPLY_ABORT)
 #endif
 }
 
-/*
-void finished()
-*/
+// void finished()
 HB_FUNC_STATIC(QPLACEREPLY_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -242,9 +228,7 @@ HB_FUNC_STATIC(QPLACEREPLY_ONFINISHED)
 #endif
 }
 
-/*
-void error(QPlaceReply::Error error, const QString &errorString = QString())
-*/
+// void error(QPlaceReply::Error error, const QString &errorString = QString())
 HB_FUNC_STATIC(QPLACEREPLY_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

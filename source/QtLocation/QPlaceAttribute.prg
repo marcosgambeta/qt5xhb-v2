@@ -67,17 +67,13 @@ RETURN
 HB_FUNC_STATIC(QPLACEATTRIBUTE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPlaceAttribute()
-    */
+    // QPlaceAttribute()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceAttribute();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPLACEATTRIBUTE(1)) {
-    /*
-    QPlaceAttribute(const QPlaceAttribute &other)
-    */
+    // QPlaceAttribute(const QPlaceAttribute &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceAttribute(*PQPLACEATTRIBUTE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -98,9 +94,7 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_DELETE)
 #endif
 }
 
-/*
-QString label() const
-*/
+// QString label() const
 HB_FUNC_STATIC(QPLACEATTRIBUTE_LABEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -120,9 +114,7 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_LABEL)
 #endif
 }
 
-/*
-void setLabel(const QString &label)
-*/
+// void setLabel(const QString &label)
 HB_FUNC_STATIC(QPLACEATTRIBUTE_SETLABEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -144,9 +136,7 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_SETLABEL)
 #endif
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QPLACEATTRIBUTE_TEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -166,9 +156,7 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_TEXT)
 #endif
 }
 
-/*
-void setText(const QString &text)
-*/
+// void setText(const QString &text)
 HB_FUNC_STATIC(QPLACEATTRIBUTE_SETTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -190,9 +178,7 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_SETTEXT)
 #endif
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QPLACEATTRIBUTE_ISEMPTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

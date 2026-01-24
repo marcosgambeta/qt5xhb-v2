@@ -55,9 +55,7 @@ RETURN
 
 #include <QtLocation/QPlaceSearchRequest>
 
-    /*
-    QPlaceProposedSearchResult()
-    */
+    // QPlaceProposedSearchResult()
 HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -81,9 +79,7 @@ HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_DELETE)
 #endif
 }
 
-/*
-QPlaceSearchRequest searchRequest() const
-*/
+// QPlaceSearchRequest searchRequest() const
 HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_SEARCHREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -103,9 +99,7 @@ HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_SEARCHREQUEST)
 #endif
 }
 
-/*
-void setSearchRequest(const QPlaceSearchRequest &request)
-*/
+// void setSearchRequest(const QPlaceSearchRequest &request)
 HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_SETSEARCHREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

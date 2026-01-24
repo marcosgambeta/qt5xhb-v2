@@ -104,9 +104,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_DELETE)
 #endif
 }
 
-/*
-QString managerName() const
-*/
+// QString managerName() const
 HB_FUNC_STATIC(QPLACEMANAGER_MANAGERNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -126,9 +124,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_MANAGERNAME)
 #endif
 }
 
-/*
-int managerVersion() const
-*/
+// int managerVersion() const
 HB_FUNC_STATIC(QPLACEMANAGER_MANAGERVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -148,9 +144,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_MANAGERVERSION)
 #endif
 }
 
-/*
-QPlaceDetailsReply * getPlaceDetails(const QString &placeId) const
-*/
+// QPlaceDetailsReply *getPlaceDetails(const QString &placeId) const
 HB_FUNC_STATIC(QPLACEMANAGER_GETPLACEDETAILS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -171,9 +165,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_GETPLACEDETAILS)
 #endif
 }
 
-/*
-QPlaceContentReply * getPlaceContent(const QPlaceContentRequest &request) const
-*/
+// QPlaceContentReply *getPlaceContent(const QPlaceContentRequest &request) const
 HB_FUNC_STATIC(QPLACEMANAGER_GETPLACECONTENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -194,9 +186,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_GETPLACECONTENT)
 #endif
 }
 
-/*
-QPlaceSearchReply * search(const QPlaceSearchRequest &query) const
-*/
+// QPlaceSearchReply *search(const QPlaceSearchRequest &query) const
 HB_FUNC_STATIC(QPLACEMANAGER_SEARCH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -217,9 +207,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_SEARCH)
 #endif
 }
 
-/*
-QPlaceSearchSuggestionReply * searchSuggestions(const QPlaceSearchRequest &request) const
-*/
+// QPlaceSearchSuggestionReply *searchSuggestions(const QPlaceSearchRequest &request) const
 HB_FUNC_STATIC(QPLACEMANAGER_SEARCHSUGGESTIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -240,9 +228,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_SEARCHSUGGESTIONS)
 #endif
 }
 
-/*
-QPlaceIdReply * savePlace(const QPlace &place)
-*/
+// QPlaceIdReply *savePlace(const QPlace &place)
 HB_FUNC_STATIC(QPLACEMANAGER_SAVEPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -263,9 +249,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_SAVEPLACE)
 #endif
 }
 
-/*
-QPlaceIdReply * removePlace(const QString &placeId)
-*/
+// QPlaceIdReply *removePlace(const QString &placeId)
 HB_FUNC_STATIC(QPLACEMANAGER_REMOVEPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -286,9 +270,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_REMOVEPLACE)
 #endif
 }
 
-/*
-QPlaceIdReply * saveCategory(const QPlaceCategory &category, const QString &parentId = QString())
-*/
+// QPlaceIdReply *saveCategory(const QPlaceCategory &category, const QString &parentId = QString())
 HB_FUNC_STATIC(QPLACEMANAGER_SAVECATEGORY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -309,9 +291,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_SAVECATEGORY)
 #endif
 }
 
-/*
-QPlaceIdReply * removeCategory(const QString &categoryId)
-*/
+// QPlaceIdReply *removeCategory(const QString &categoryId)
 HB_FUNC_STATIC(QPLACEMANAGER_REMOVECATEGORY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -332,9 +312,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_REMOVECATEGORY)
 #endif
 }
 
-/*
-QPlaceReply * initializeCategories()
-*/
+// QPlaceReply *initializeCategories()
 HB_FUNC_STATIC(QPLACEMANAGER_INITIALIZECATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -355,9 +333,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_INITIALIZECATEGORIES)
 #endif
 }
 
-/*
-QString parentCategoryId(const QString &categoryId) const
-*/
+// QString parentCategoryId(const QString &categoryId) const
 HB_FUNC_STATIC(QPLACEMANAGER_PARENTCATEGORYID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -377,9 +353,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_PARENTCATEGORYID)
 #endif
 }
 
-/*
-QStringList childCategoryIds(const QString &parentId = QString()) const
-*/
+// QStringList childCategoryIds(const QString &parentId = QString()) const
 HB_FUNC_STATIC(QPLACEMANAGER_CHILDCATEGORYIDS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -399,9 +373,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_CHILDCATEGORYIDS)
 #endif
 }
 
-/*
-QPlaceCategory category(const QString &categoryId) const
-*/
+// QPlaceCategory category(const QString &categoryId) const
 HB_FUNC_STATIC(QPLACEMANAGER_CATEGORY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -421,9 +393,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_CATEGORY)
 #endif
 }
 
-/*
-QList<QPlaceCategory> childCategories(const QString &parentId = QString()) const
-*/
+// QList<QPlaceCategory> childCategories(const QString &parentId = QString()) const
 HB_FUNC_STATIC(QPLACEMANAGER_CHILDCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -465,9 +435,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_CHILDCATEGORIES)
 #endif
 }
 
-/*
-QList<QLocale> locales() const
-*/
+// QList<QLocale> locales() const
 HB_FUNC_STATIC(QPLACEMANAGER_LOCALES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -509,9 +477,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_LOCALES)
 #endif
 }
 
-/*
-void setLocales(const QList<QLocale> &locale)
-*/
+// void setLocales(const QList<QLocale> &locale)
 HB_FUNC_STATIC(QPLACEMANAGER_SETLOCALES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -539,9 +505,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_SETLOCALES)
 #endif
 }
 
-/*
-void setLocale(const QLocale &locale)
-*/
+// void setLocale(const QLocale &locale)
 HB_FUNC_STATIC(QPLACEMANAGER_SETLOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -563,9 +527,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_SETLOCALE)
 #endif
 }
 
-/*
-QPlace compatiblePlace(const QPlace &place)
-*/
+// QPlace compatiblePlace(const QPlace &place)
 HB_FUNC_STATIC(QPLACEMANAGER_COMPATIBLEPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -585,9 +547,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_COMPATIBLEPLACE)
 #endif
 }
 
-/*
-QPlaceMatchReply * matchingPlaces(const QPlaceMatchRequest &request) const
-*/
+// QPlaceMatchReply *matchingPlaces(const QPlaceMatchRequest &request) const
 HB_FUNC_STATIC(QPLACEMANAGER_MATCHINGPLACES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -608,9 +568,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_MATCHINGPLACES)
 #endif
 }
 
-/*
-void finished(QPlaceReply * reply)
-*/
+// void finished(QPlaceReply *reply)
 HB_FUNC_STATIC(QPLACEMANAGER_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -655,9 +613,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_ONFINISHED)
 #endif
 }
 
-/*
-void error(QPlaceReply * reply, QPlaceReply::Error error, const QString &errorString = QString())
-*/
+// void error(QPlaceReply *reply, QPlaceReply::Error error, const QString &errorString = QString())
 HB_FUNC_STATIC(QPLACEMANAGER_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -707,9 +663,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_ONERROR)
 #endif
 }
 
-/*
-void placeAdded(const QString &placeId)
-*/
+// void placeAdded(const QString &placeId)
 HB_FUNC_STATIC(QPLACEMANAGER_ONPLACEADDED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -754,9 +708,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_ONPLACEADDED)
 #endif
 }
 
-/*
-void placeUpdated(const QString &placeId)
-*/
+// void placeUpdated(const QString &placeId)
 HB_FUNC_STATIC(QPLACEMANAGER_ONPLACEUPDATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -801,9 +753,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_ONPLACEUPDATED)
 #endif
 }
 
-/*
-void placeRemoved(const QString &placeId)
-*/
+// void placeRemoved(const QString &placeId)
 HB_FUNC_STATIC(QPLACEMANAGER_ONPLACEREMOVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -848,9 +798,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_ONPLACEREMOVED)
 #endif
 }
 
-/*
-void categoryAdded(const QPlaceCategory &category, const QString &parentId)
-*/
+// void categoryAdded(const QPlaceCategory &category, const QString &parentId)
 HB_FUNC_STATIC(QPLACEMANAGER_ONCATEGORYADDED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -898,9 +846,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_ONCATEGORYADDED)
 #endif
 }
 
-/*
-void categoryUpdated(const QPlaceCategory &category, const QString &parentId)
-*/
+// void categoryUpdated(const QPlaceCategory &category, const QString &parentId)
 HB_FUNC_STATIC(QPLACEMANAGER_ONCATEGORYUPDATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -948,9 +894,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_ONCATEGORYUPDATED)
 #endif
 }
 
-/*
-void categoryRemoved(const QString &categoryId, const QString &parentId)
-*/
+// void categoryRemoved(const QString &categoryId, const QString &parentId)
 HB_FUNC_STATIC(QPLACEMANAGER_ONCATEGORYREMOVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -997,9 +941,7 @@ HB_FUNC_STATIC(QPLACEMANAGER_ONCATEGORYREMOVED)
 #endif
 }
 
-/*
-void dataChanged()
-*/
+// void dataChanged()
 HB_FUNC_STATIC(QPLACEMANAGER_ONDATACHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

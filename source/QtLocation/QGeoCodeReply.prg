@@ -67,9 +67,7 @@ RETURN
 
 #include <QtPositioning/QGeoShape>
 
-    /*
-    QGeoCodeReply(QGeoCodeReply::Error error, const QString &errorString, QObject * parent = nullptr)
-    */
+    // QGeoCodeReply(QGeoCodeReply::Error error, const QString &errorString, QObject *parent = nullptr)
 HB_FUNC_STATIC(QGEOCODEREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_DELETE)
 #endif
 }
 
-/*
-bool isFinished() const
-*/
+// bool isFinished() const
 HB_FUNC_STATIC(QGEOCODEREPLY_ISFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -115,9 +111,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_ISFINISHED)
 #endif
 }
 
-/*
-QGeoCodeReply::Error error() const
-*/
+// QGeoCodeReply::Error error() const
 HB_FUNC_STATIC(QGEOCODEREPLY_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -137,9 +131,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_ERROR)
 #endif
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QGEOCODEREPLY_ERRORSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -159,9 +151,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_ERRORSTRING)
 #endif
 }
 
-/*
-QGeoShape viewport() const
-*/
+// QGeoShape viewport() const
 HB_FUNC_STATIC(QGEOCODEREPLY_VIEWPORT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -181,9 +171,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_VIEWPORT)
 #endif
 }
 
-/*
-QList<QGeoLocation> locations() const
-*/
+// QList<QGeoLocation> locations() const
 HB_FUNC_STATIC(QGEOCODEREPLY_LOCATIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -225,9 +213,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_LOCATIONS)
 #endif
 }
 
-/*
-int limit() const
-*/
+// int limit() const
 HB_FUNC_STATIC(QGEOCODEREPLY_LIMIT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -247,9 +233,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_LIMIT)
 #endif
 }
 
-/*
-int offset() const
-*/
+// int offset() const
 HB_FUNC_STATIC(QGEOCODEREPLY_OFFSET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -269,9 +253,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_OFFSET)
 #endif
 }
 
-/*
-virtual void abort()
-*/
+// virtual void abort()
 HB_FUNC_STATIC(QGEOCODEREPLY_ABORT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -293,9 +275,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_ABORT)
 #endif
 }
 
-/*
-void finished()
-*/
+// void finished()
 HB_FUNC_STATIC(QGEOCODEREPLY_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -337,9 +317,7 @@ HB_FUNC_STATIC(QGEOCODEREPLY_ONFINISHED)
 #endif
 }
 
-/*
-void error(QGeoCodeReply::Error error, const QString &errorString = QString())
-*/
+// void error(QGeoCodeReply::Error error, const QString &errorString = QString())
 HB_FUNC_STATIC(QGEOCODEREPLY_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

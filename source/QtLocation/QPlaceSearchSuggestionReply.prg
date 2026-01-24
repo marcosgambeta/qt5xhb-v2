@@ -54,9 +54,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QPlaceSearchSuggestionReply(QObject * parent = nullptr)
-    */
+    // QPlaceSearchSuggestionReply(QObject *parent = nullptr)
 HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -80,9 +78,7 @@ HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_DELETE)
 #endif
 }
 
-/*
-QStringList suggestions() const
-*/
+// QStringList suggestions() const
 HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_SUGGESTIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -102,9 +98,7 @@ HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_SUGGESTIONS)
 #endif
 }
 
-/*
-QPlaceReply::Type type() const
-*/
+// QPlaceReply::Type type() const
 HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

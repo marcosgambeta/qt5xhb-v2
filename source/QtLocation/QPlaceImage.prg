@@ -60,17 +60,13 @@ RETURN
 HB_FUNC_STATIC(QPLACEIMAGE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPlaceImage()
-    */
+    // QPlaceImage()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceImage();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPLACECONTENT(1)) {
-    /*
-    QPlaceImage(const QPlaceContent &other)
-    */
+    // QPlaceImage(const QPlaceContent &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceImage(*PQPLACECONTENT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -91,9 +87,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_DELETE)
 #endif
 }
 
-/*
-QUrl url() const
-*/
+// QUrl url() const
 HB_FUNC_STATIC(QPLACEIMAGE_URL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -113,9 +107,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_URL)
 #endif
 }
 
-/*
-void setUrl(const QUrl &url)
-*/
+// void setUrl(const QUrl &url)
 HB_FUNC_STATIC(QPLACEIMAGE_SETURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -137,9 +129,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_SETURL)
 #endif
 }
 
-/*
-QString imageId() const
-*/
+// QString imageId() const
 HB_FUNC_STATIC(QPLACEIMAGE_IMAGEID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -159,9 +149,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_IMAGEID)
 #endif
 }
 
-/*
-void setImageId(const QString &identifier)
-*/
+// void setImageId(const QString &identifier)
 HB_FUNC_STATIC(QPLACEIMAGE_SETIMAGEID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -183,9 +171,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_SETIMAGEID)
 #endif
 }
 
-/*
-QString mimeType() const
-*/
+// QString mimeType() const
 HB_FUNC_STATIC(QPLACEIMAGE_MIMETYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -205,9 +191,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_MIMETYPE)
 #endif
 }
 
-/*
-void setMimeType(const QString &data)
-*/
+// void setMimeType(const QString &data)
 HB_FUNC_STATIC(QPLACEIMAGE_SETMIMETYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

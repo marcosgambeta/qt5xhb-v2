@@ -81,9 +81,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_DELETE)
 #endif
 }
 
-/*
-static QStringList availableServiceProviders()
-*/
+// static QStringList availableServiceProviders()
 HB_FUNC_STATIC(QGEOSERVICEPROVIDER_AVAILABLESERVICEPROVIDERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -99,9 +97,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_AVAILABLESERVICEPROVIDERS)
 #endif
 }
 
-/*
-QGeoServiceProvider::RoutingFeatures routingFeatures() const
-*/
+// QGeoServiceProvider::RoutingFeatures routingFeatures() const
 HB_FUNC_STATIC(QGEOSERVICEPROVIDER_ROUTINGFEATURES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -121,9 +117,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_ROUTINGFEATURES)
 #endif
 }
 
-/*
-QGeoServiceProvider::GeocodingFeatures geocodingFeatures() const
-*/
+// QGeoServiceProvider::GeocodingFeatures geocodingFeatures() const
 HB_FUNC_STATIC(QGEOSERVICEPROVIDER_GEOCODINGFEATURES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -143,9 +137,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_GEOCODINGFEATURES)
 #endif
 }
 
-/*
-QGeoServiceProvider::MappingFeatures mappingFeatures() const
-*/
+// QGeoServiceProvider::MappingFeatures mappingFeatures() const
 HB_FUNC_STATIC(QGEOSERVICEPROVIDER_MAPPINGFEATURES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -165,9 +157,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_MAPPINGFEATURES)
 #endif
 }
 
-/*
-QGeoServiceProvider::PlacesFeatures placesFeatures() const
-*/
+// QGeoServiceProvider::PlacesFeatures placesFeatures() const
 HB_FUNC_STATIC(QGEOSERVICEPROVIDER_PLACESFEATURES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -187,9 +177,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_PLACESFEATURES)
 #endif
 }
 
-/*
-QGeoCodingManager * geocodingManager() const
-*/
+// QGeoCodingManager *geocodingManager() const
 HB_FUNC_STATIC(QGEOSERVICEPROVIDER_GEOCODINGMANAGER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -210,12 +198,8 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_GEOCODINGMANAGER)
 #endif
 }
 
-/*
-QGeoMappingManager *mappingManager() const
-*/
-/*
-QGeoRoutingManager * routingManager() const
-*/
+// QGeoMappingManager *mappingManager() const
+// QGeoRoutingManager *routingManager() const
 HB_FUNC_STATIC(QGEOSERVICEPROVIDER_ROUTINGMANAGER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -236,9 +220,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_ROUTINGMANAGER)
 #endif
 }
 
-/*
-QPlaceManager * placeManager() const
-*/
+// QPlaceManager *placeManager() const
 HB_FUNC_STATIC(QGEOSERVICEPROVIDER_PLACEMANAGER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -259,9 +241,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_PLACEMANAGER)
 #endif
 }
 
-/*
-QGeoServiceProvider::Error error() const
-*/
+// QGeoServiceProvider::Error error() const
 HB_FUNC_STATIC(QGEOSERVICEPROVIDER_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -281,9 +261,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_ERROR)
 #endif
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QGEOSERVICEPROVIDER_ERRORSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -303,9 +281,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_ERRORSTRING)
 #endif
 }
 
-/*
-void setLocale(const QLocale &locale)
-*/
+// void setLocale(const QLocale &locale)
 HB_FUNC_STATIC(QGEOSERVICEPROVIDER_SETLOCALE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -327,9 +303,7 @@ HB_FUNC_STATIC(QGEOSERVICEPROVIDER_SETLOCALE)
 #endif
 }
 
-/*
-void setAllowExperimental(bool allow)
-*/
+// void setAllowExperimental(bool allow)
 HB_FUNC_STATIC(QGEOSERVICEPROVIDER_SETALLOWEXPERIMENTAL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

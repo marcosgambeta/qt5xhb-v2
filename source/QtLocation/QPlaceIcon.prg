@@ -70,17 +70,13 @@ RETURN
 HB_FUNC_STATIC(QPLACEICON_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPlaceIcon()
-    */
+    // QPlaceIcon()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceIcon();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPLACEICON(1)) {
-    /*
-    QPlaceIcon(const QPlaceIcon &other)
-    */
+    // QPlaceIcon(const QPlaceIcon &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceIcon(*PQPLACEICON(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -101,9 +97,7 @@ HB_FUNC_STATIC(QPLACEICON_DELETE)
 #endif
 }
 
-/*
-QUrl url(const QSize &size = QSize()) const
-*/
+// QUrl url(const QSize &size = QSize()) const
 HB_FUNC_STATIC(QPLACEICON_URL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -123,9 +117,7 @@ HB_FUNC_STATIC(QPLACEICON_URL)
 #endif
 }
 
-/*
-QPlaceManager * manager() const
-*/
+// QPlaceManager *manager() const
 HB_FUNC_STATIC(QPLACEICON_MANAGER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -146,9 +138,7 @@ HB_FUNC_STATIC(QPLACEICON_MANAGER)
 #endif
 }
 
-/*
-void setManager(QPlaceManager * manager)
-*/
+// void setManager(QPlaceManager *manager)
 HB_FUNC_STATIC(QPLACEICON_SETMANAGER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -170,9 +160,7 @@ HB_FUNC_STATIC(QPLACEICON_SETMANAGER)
 #endif
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QPLACEICON_ISEMPTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

@@ -86,17 +86,13 @@ RETURN
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPlaceSearchRequest()
-    */
+    // QPlaceSearchRequest()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceSearchRequest();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1)) {
-    /*
-    QPlaceSearchRequest(const QPlaceSearchRequest &other)
-    */
+    // QPlaceSearchRequest(const QPlaceSearchRequest &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceSearchRequest(*PQPLACESEARCHREQUEST(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -117,9 +113,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_DELETE)
 #endif
 }
 
-/*
-QString searchTerm() const
-*/
+// QString searchTerm() const
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHTERM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -139,9 +133,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHTERM)
 #endif
 }
 
-/*
-void setSearchTerm(const QString &term)
-*/
+// void setSearchTerm(const QString &term)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHTERM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -163,9 +155,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHTERM)
 #endif
 }
 
-/*
-QList<QPlaceCategory> categories() const
-*/
+// QList<QPlaceCategory> categories() const
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_CATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -207,9 +197,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_CATEGORIES)
 #endif
 }
 
-/*
-void setCategory(const QPlaceCategory &category)
-*/
+// void setCategory(const QPlaceCategory &category)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETCATEGORY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -231,9 +219,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETCATEGORY)
 #endif
 }
 
-/*
-void setCategories(const QList<QPlaceCategory> &categories)
-*/
+// void setCategories(const QList<QPlaceCategory> &categories)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -262,9 +248,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETCATEGORIES)
 #endif
 }
 
-/*
-QGeoShape searchArea() const
-*/
+// QGeoShape searchArea() const
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHAREA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -284,9 +268,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHAREA)
 #endif
 }
 
-/*
-void setSearchArea(const QGeoShape &area)
-*/
+// void setSearchArea(const QGeoShape &area)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHAREA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -308,9 +290,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHAREA)
 #endif
 }
 
-/*
-QString recommendationId() const
-*/
+// QString recommendationId() const
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_RECOMMENDATIONID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -330,9 +310,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_RECOMMENDATIONID)
 #endif
 }
 
-/*
-void setRecommendationId(const QString &recommendationId)
-*/
+// void setRecommendationId(const QString &recommendationId)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETRECOMMENDATIONID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -354,9 +332,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETRECOMMENDATIONID)
 #endif
 }
 
-/*
-QVariant searchContext() const
-*/
+// QVariant searchContext() const
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHCONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -376,9 +352,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHCONTEXT)
 #endif
 }
 
-/*
-void setSearchContext(const QVariant &context)
-*/
+// void setSearchContext(const QVariant &context)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHCONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -400,9 +374,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHCONTEXT)
 #endif
 }
 
-/*
-QLocation::VisibilityScope visibilityScope() const
-*/
+// QLocation::VisibilityScope visibilityScope() const
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_VISIBILITYSCOPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -422,9 +394,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_VISIBILITYSCOPE)
 #endif
 }
 
-/*
-void setVisibilityScope(QLocation::VisibilityScope visibilityScopes)
-*/
+// void setVisibilityScope(QLocation::VisibilityScope visibilityScopes)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETVISIBILITYSCOPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -446,9 +416,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETVISIBILITYSCOPE)
 #endif
 }
 
-/*
-QPlaceSearchRequest::RelevanceHint relevanceHint() const
-*/
+// QPlaceSearchRequest::RelevanceHint relevanceHint() const
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_RELEVANCEHINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -468,9 +436,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_RELEVANCEHINT)
 #endif
 }
 
-/*
-void setRelevanceHint(QPlaceSearchRequest::RelevanceHint hint)
-*/
+// void setRelevanceHint(QPlaceSearchRequest::RelevanceHint hint)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETRELEVANCEHINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -492,9 +458,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETRELEVANCEHINT)
 #endif
 }
 
-/*
-int limit() const
-*/
+// int limit() const
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_LIMIT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -514,9 +478,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_LIMIT)
 #endif
 }
 
-/*
-void setLimit(int limit)
-*/
+// void setLimit(int limit)
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETLIMIT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -538,9 +500,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETLIMIT)
 #endif
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

@@ -63,9 +63,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QGeoRouteReply(QGeoRouteReply::Error error, const QString &errorString, QObject * parent = nullptr)
-    */
+    // QGeoRouteReply(QGeoRouteReply::Error error, const QString &errorString, QObject *parent = nullptr)
 HB_FUNC_STATIC(QGEOROUTEREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -89,9 +87,7 @@ HB_FUNC_STATIC(QGEOROUTEREPLY_DELETE)
 #endif
 }
 
-/*
-bool isFinished() const
-*/
+// bool isFinished() const
 HB_FUNC_STATIC(QGEOROUTEREPLY_ISFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -111,9 +107,7 @@ HB_FUNC_STATIC(QGEOROUTEREPLY_ISFINISHED)
 #endif
 }
 
-/*
-QGeoRouteReply::Error error() const
-*/
+// QGeoRouteReply::Error error() const
 HB_FUNC_STATIC(QGEOROUTEREPLY_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -133,9 +127,7 @@ HB_FUNC_STATIC(QGEOROUTEREPLY_ERROR)
 #endif
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QGEOROUTEREPLY_ERRORSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -155,9 +147,7 @@ HB_FUNC_STATIC(QGEOROUTEREPLY_ERRORSTRING)
 #endif
 }
 
-/*
-QGeoRouteRequest request() const
-*/
+// QGeoRouteRequest request() const
 HB_FUNC_STATIC(QGEOROUTEREPLY_REQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -177,9 +167,7 @@ HB_FUNC_STATIC(QGEOROUTEREPLY_REQUEST)
 #endif
 }
 
-/*
-QList<QGeoRoute> routes() const
-*/
+// QList<QGeoRoute> routes() const
 HB_FUNC_STATIC(QGEOROUTEREPLY_ROUTES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -221,9 +209,7 @@ HB_FUNC_STATIC(QGEOROUTEREPLY_ROUTES)
 #endif
 }
 
-/*
-virtual void abort()
-*/
+// virtual void abort()
 HB_FUNC_STATIC(QGEOROUTEREPLY_ABORT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -245,9 +231,7 @@ HB_FUNC_STATIC(QGEOROUTEREPLY_ABORT)
 #endif
 }
 
-/*
-void finished()
-*/
+// void finished()
 HB_FUNC_STATIC(QGEOROUTEREPLY_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -289,9 +273,7 @@ HB_FUNC_STATIC(QGEOROUTEREPLY_ONFINISHED)
 #endif
 }
 
-/*
-void error(QGeoRouteReply::Error error, const QString &errorString = QString())
-*/
+// void error(QGeoRouteReply::Error error, const QString &errorString = QString())
 HB_FUNC_STATIC(QGEOROUTEREPLY_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

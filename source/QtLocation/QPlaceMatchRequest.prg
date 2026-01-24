@@ -67,17 +67,13 @@ RETURN
 HB_FUNC_STATIC(QPLACEMATCHREQUEST_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPlaceMatchRequest()
-    */
+    // QPlaceMatchRequest()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceMatchRequest();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPLACEMATCHREQUEST(1)) {
-    /*
-    QPlaceMatchRequest(const QPlaceMatchRequest &other)
-    */
+    // QPlaceMatchRequest(const QPlaceMatchRequest &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceMatchRequest(*PQPLACEMATCHREQUEST(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -98,9 +94,7 @@ HB_FUNC_STATIC(QPLACEMATCHREQUEST_DELETE)
 #endif
 }
 
-/*
-QList<QPlace> places() const
-*/
+// QList<QPlace> places() const
 HB_FUNC_STATIC(QPLACEMATCHREQUEST_PLACES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -142,9 +136,7 @@ HB_FUNC_STATIC(QPLACEMATCHREQUEST_PLACES)
 #endif
 }
 
-/*
-void setPlaces(const QList<QPlace> places)
-*/
+// void setPlaces(const QList<QPlace> places)
 HB_FUNC_STATIC(QPLACEMATCHREQUEST_SETPLACES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -172,9 +164,7 @@ HB_FUNC_STATIC(QPLACEMATCHREQUEST_SETPLACES)
 #endif
 }
 
-/*
-void setResults(const QList<QPlaceSearchResult> &results)
-*/
+// void setResults(const QList<QPlaceSearchResult> &results)
 HB_FUNC_STATIC(QPLACEMATCHREQUEST_SETRESULTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -203,9 +193,7 @@ HB_FUNC_STATIC(QPLACEMATCHREQUEST_SETRESULTS)
 #endif
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QPLACEMATCHREQUEST_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

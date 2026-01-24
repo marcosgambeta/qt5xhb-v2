@@ -74,17 +74,13 @@ RETURN
 HB_FUNC_STATIC(QPLACECATEGORY_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPlaceCategory()
-    */
+    // QPlaceCategory()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceCategory();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPLACECATEGORY(1)) {
-    /*
-    QPlaceCategory(const QPlaceCategory &other)
-    */
+    // QPlaceCategory(const QPlaceCategory &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QPlaceCategory(*PQPLACECATEGORY(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -105,9 +101,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_DELETE)
 #endif
 }
 
-/*
-QString categoryId() const
-*/
+// QString categoryId() const
 HB_FUNC_STATIC(QPLACECATEGORY_CATEGORYID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -127,9 +121,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_CATEGORYID)
 #endif
 }
 
-/*
-void setCategoryId(const QString &identifier)
-*/
+// void setCategoryId(const QString &identifier)
 HB_FUNC_STATIC(QPLACECATEGORY_SETCATEGORYID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -151,9 +143,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_SETCATEGORYID)
 #endif
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QPLACECATEGORY_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -173,9 +163,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_NAME)
 #endif
 }
 
-/*
-void setName(const QString &name)
-*/
+// void setName(const QString &name)
 HB_FUNC_STATIC(QPLACECATEGORY_SETNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -197,9 +185,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_SETNAME)
 #endif
 }
 
-/*
-QLocation::Visibility visibility() const
-*/
+// QLocation::Visibility visibility() const
 HB_FUNC_STATIC(QPLACECATEGORY_VISIBILITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -219,9 +205,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_VISIBILITY)
 #endif
 }
 
-/*
-void setVisibility(QLocation::Visibility visibility)
-*/
+// void setVisibility(QLocation::Visibility visibility)
 HB_FUNC_STATIC(QPLACECATEGORY_SETVISIBILITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -243,9 +227,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_SETVISIBILITY)
 #endif
 }
 
-/*
-QPlaceIcon icon() const
-*/
+// QPlaceIcon icon() const
 HB_FUNC_STATIC(QPLACECATEGORY_ICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -265,9 +247,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_ICON)
 #endif
 }
 
-/*
-void setIcon(const QPlaceIcon &icon)
-*/
+// void setIcon(const QPlaceIcon &icon)
 HB_FUNC_STATIC(QPLACECATEGORY_SETICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -289,9 +269,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_SETICON)
 #endif
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QPLACECATEGORY_ISEMPTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
