@@ -59,9 +59,7 @@ RETURN
 
 #include <QtPurchasing/QInAppProduct>
 
-    /*
-    ~QInAppTransaction()
-    */
+    // ~QInAppTransaction()
 HB_FUNC_STATIC(QINAPPTRANSACTION_DELETE)
 {
   auto obj = qobject_cast<QInAppTransaction *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -71,9 +69,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QInAppTransaction::TransactionStatus status() const
-*/
+// QInAppTransaction::TransactionStatus status() const
 HB_FUNC_STATIC(QINAPPTRANSACTION_STATUS)
 {
   auto obj = qobject_cast<QInAppTransaction *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -91,9 +87,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_STATUS)
   }
 }
 
-/*
-QInAppProduct * product() const
-*/
+// QInAppProduct *product() const
 HB_FUNC_STATIC(QINAPPTRANSACTION_PRODUCT)
 {
   auto obj = qobject_cast<QInAppTransaction *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -112,9 +106,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_PRODUCT)
   }
 }
 
-/*
-virtual QString orderId() const
-*/
+// virtual QString orderId() const
 HB_FUNC_STATIC(QINAPPTRANSACTION_ORDERID)
 {
   auto obj = qobject_cast<QInAppTransaction *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -132,9 +124,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_ORDERID)
   }
 }
 
-/*
-virtual QInAppTransaction::FailureReason failureReason() const
-*/
+// virtual QInAppTransaction::FailureReason failureReason() const
 HB_FUNC_STATIC(QINAPPTRANSACTION_FAILUREREASON)
 {
   auto obj = qobject_cast<QInAppTransaction *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -152,9 +142,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_FAILUREREASON)
   }
 }
 
-/*
-virtual QString errorString() const
-*/
+// virtual QString errorString() const
 HB_FUNC_STATIC(QINAPPTRANSACTION_ERRORSTRING)
 {
   auto obj = qobject_cast<QInAppTransaction *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -172,9 +160,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_ERRORSTRING)
   }
 }
 
-/*
-virtual QDateTime timestamp() const
-*/
+// virtual QDateTime timestamp() const
 HB_FUNC_STATIC(QINAPPTRANSACTION_TIMESTAMP)
 {
   auto obj = qobject_cast<QInAppTransaction *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -192,9 +178,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_TIMESTAMP)
   }
 }
 
-/*
-Q_INVOKABLE virtual void finalize() = 0
-*/
+// Q_INVOKABLE virtual void finalize() = 0
 HB_FUNC_STATIC(QINAPPTRANSACTION_FINALIZE)
 {
   auto obj = qobject_cast<QInAppTransaction *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -214,9 +198,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_FINALIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Q_INVOKABLE virtual QString platformProperty(const QString &propertyName) const
-*/
+// Q_INVOKABLE virtual QString platformProperty(const QString &propertyName) const
 HB_FUNC_STATIC(QINAPPTRANSACTION_PLATFORMPROPERTY)
 {
   auto obj = qobject_cast<QInAppTransaction *>(Qt5xHb::getQObjectPointerFromSelfItem());

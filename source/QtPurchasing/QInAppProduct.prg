@@ -53,9 +53,7 @@ RETURN
 #include <QtPurchasing/QInAppProduct>
 #endif
 
-    /*
-    ~QInAppProduct()
-    */
+    // ~QInAppProduct()
 HB_FUNC_STATIC(QINAPPPRODUCT_DELETE)
 {
   auto obj = qobject_cast<QInAppProduct *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -65,9 +63,7 @@ HB_FUNC_STATIC(QINAPPPRODUCT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString identifier() const
-*/
+// QString identifier() const
 HB_FUNC_STATIC(QINAPPPRODUCT_IDENTIFIER)
 {
   auto obj = qobject_cast<QInAppProduct *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -85,9 +81,7 @@ HB_FUNC_STATIC(QINAPPPRODUCT_IDENTIFIER)
   }
 }
 
-/*
-QInAppProduct::ProductType productType() const
-*/
+// QInAppProduct::ProductType productType() const
 HB_FUNC_STATIC(QINAPPPRODUCT_PRODUCTTYPE)
 {
   auto obj = qobject_cast<QInAppProduct *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -105,9 +99,7 @@ HB_FUNC_STATIC(QINAPPPRODUCT_PRODUCTTYPE)
   }
 }
 
-/*
-QString price() const
-*/
+// QString price() const
 HB_FUNC_STATIC(QINAPPPRODUCT_PRICE)
 {
   auto obj = qobject_cast<QInAppProduct *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -125,9 +117,7 @@ HB_FUNC_STATIC(QINAPPPRODUCT_PRICE)
   }
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QINAPPPRODUCT_TITLE)
 {
   auto obj = qobject_cast<QInAppProduct *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -145,9 +135,7 @@ HB_FUNC_STATIC(QINAPPPRODUCT_TITLE)
   }
 }
 
-/*
-QString description() const
-*/
+// QString description() const
 HB_FUNC_STATIC(QINAPPPRODUCT_DESCRIPTION)
 {
   auto obj = qobject_cast<QInAppProduct *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -165,9 +153,7 @@ HB_FUNC_STATIC(QINAPPPRODUCT_DESCRIPTION)
   }
 }
 
-/*
-Q_INVOKABLE virtual void purchase() = 0
-*/
+// Q_INVOKABLE virtual void purchase() = 0
 HB_FUNC_STATIC(QINAPPPRODUCT_PURCHASE)
 {
   auto obj = qobject_cast<QInAppProduct *>(Qt5xHb::getQObjectPointerFromSelfItem());
