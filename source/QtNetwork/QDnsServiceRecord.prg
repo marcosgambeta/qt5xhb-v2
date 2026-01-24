@@ -65,15 +65,11 @@ RETURN
 HB_FUNC_STATIC(QDNSSERVICERECORD_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QDnsServiceRecord()
-    */
+    // QDnsServiceRecord()
     auto obj = new QDnsServiceRecord();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDNSSERVICERECORD(1)) {
-    /*
-    QDnsServiceRecord(const QDnsServiceRecord &other)
-    */
+    // QDnsServiceRecord(const QDnsServiceRecord &other)
     auto obj = new QDnsServiceRecord(*PQDNSSERVICERECORD(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -81,9 +77,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_NEW)
   }
 }
 
-/*
-~QDnsServiceRecord()
-*/
+// ~QDnsServiceRecord()
 HB_FUNC_STATIC(QDNSSERVICERECORD_DELETE)
 {
   auto obj = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -93,9 +87,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QDNSSERVICERECORD_NAME)
 {
   auto obj = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -113,9 +105,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_NAME)
   }
 }
 
-/*
-quint16 port() const
-*/
+// quint16 port() const
 HB_FUNC_STATIC(QDNSSERVICERECORD_PORT)
 {
   auto obj = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -133,9 +123,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_PORT)
   }
 }
 
-/*
-quint16 priority() const
-*/
+// quint16 priority() const
 HB_FUNC_STATIC(QDNSSERVICERECORD_PRIORITY)
 {
   auto obj = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -153,9 +141,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_PRIORITY)
   }
 }
 
-/*
-void swap(QDnsServiceRecord &other) Q_DECL_NOTHROW
-*/
+// void swap(QDnsServiceRecord &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QDNSSERVICERECORD_SWAP)
 {
   auto obj = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -175,9 +161,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString target() const
-*/
+// QString target() const
 HB_FUNC_STATIC(QDNSSERVICERECORD_TARGET)
 {
   auto obj = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -195,9 +179,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_TARGET)
   }
 }
 
-/*
-quint32 timeToLive() const
-*/
+// quint32 timeToLive() const
 HB_FUNC_STATIC(QDNSSERVICERECORD_TIMETOLIVE)
 {
   auto obj = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -215,9 +197,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_TIMETOLIVE)
   }
 }
 
-/*
-quint16 weight() const
-*/
+// quint16 weight() const
 HB_FUNC_STATIC(QDNSSERVICERECORD_WEIGHT)
 {
   auto obj = static_cast<QDnsServiceRecord *>(Qt5xHb::itemGetPtrStackSelfItem());

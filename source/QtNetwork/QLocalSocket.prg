@@ -77,9 +77,7 @@ RETURN
 #include <QtNetwork/QLocalSocket>
 #endif
 
-    /*
-    QLocalSocket(QObject * parent = nullptr)
-    */
+    // QLocalSocket(QObject *parent = nullptr)
 HB_FUNC_STATIC(QLOCALSOCKET_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_NEW)
   }
 }
 
-/*
-~QLocalSocket()
-*/
+// ~QLocalSocket()
 HB_FUNC_STATIC(QLOCALSOCKET_DELETE)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -105,9 +101,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_DELETE)
 HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    /*
-    void connectToServer(QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-    */
+    // void connectToServer(QIODevice::OpenMode openMode = QIODevice::ReadWrite)
     auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -116,9 +110,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
-    /*
-    void connectToServer(const QString &name, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-    */
+    // void connectToServer(const QString &name, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
     auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -131,9 +123,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
   }
 }
 
-/*
-void disconnectFromServer()
-*/
+// void disconnectFromServer()
 HB_FUNC_STATIC(QLOCALSOCKET_DISCONNECTFROMSERVER)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -153,9 +143,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_DISCONNECTFROMSERVER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setServerName(const QString &name)
-*/
+// void setServerName(const QString &name)
 HB_FUNC_STATIC(QLOCALSOCKET_SETSERVERNAME)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -175,9 +163,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SETSERVERNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString serverName() const
-*/
+// QString serverName() const
 HB_FUNC_STATIC(QLOCALSOCKET_SERVERNAME)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -195,9 +181,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SERVERNAME)
   }
 }
 
-/*
-QString fullServerName() const
-*/
+// QString fullServerName() const
 HB_FUNC_STATIC(QLOCALSOCKET_FULLSERVERNAME)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -215,9 +199,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_FULLSERVERNAME)
   }
 }
 
-/*
-void abort()
-*/
+// void abort()
 HB_FUNC_STATIC(QLOCALSOCKET_ABORT)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -237,9 +219,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ABORT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool isSequential() const Q_DECL_OVERRIDE
-*/
+// virtual bool isSequential() const Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QLOCALSOCKET_ISSEQUENTIAL)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -257,9 +237,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ISSEQUENTIAL)
   }
 }
 
-/*
-virtual qint64 bytesAvailable() const Q_DECL_OVERRIDE
-*/
+// virtual qint64 bytesAvailable() const Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QLOCALSOCKET_BYTESAVAILABLE)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -277,9 +255,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_BYTESAVAILABLE)
   }
 }
 
-/*
-virtual qint64 bytesToWrite() const Q_DECL_OVERRIDE
-*/
+// virtual qint64 bytesToWrite() const Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QLOCALSOCKET_BYTESTOWRITE)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -297,9 +273,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_BYTESTOWRITE)
   }
 }
 
-/*
-virtual bool canReadLine() const Q_DECL_OVERRIDE
-*/
+// virtual bool canReadLine() const Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QLOCALSOCKET_CANREADLINE)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -317,9 +291,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CANREADLINE)
   }
 }
 
-/*
-virtual bool open(QIODevice::OpenMode openMode = QIODevice::ReadWrite) Q_DECL_OVERRIDE
-*/
+// virtual bool open(QIODevice::OpenMode openMode = QIODevice::ReadWrite) Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QLOCALSOCKET_OPEN)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -337,9 +309,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_OPEN)
   }
 }
 
-/*
-virtual void close() Q_DECL_OVERRIDE
-*/
+// virtual void close() Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QLOCALSOCKET_CLOSE)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -359,9 +329,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CLOSE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QLocalSocket::LocalSocketError error() const
-*/
+// QLocalSocket::LocalSocketError error() const
 HB_FUNC_STATIC(QLOCALSOCKET_ERROR)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -379,9 +347,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ERROR)
   }
 }
 
-/*
-bool flush()
-*/
+// bool flush()
 HB_FUNC_STATIC(QLOCALSOCKET_FLUSH)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -399,9 +365,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_FLUSH)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QLOCALSOCKET_ISVALID)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -419,9 +383,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ISVALID)
   }
 }
 
-/*
-qint64 readBufferSize() const
-*/
+// qint64 readBufferSize() const
 HB_FUNC_STATIC(QLOCALSOCKET_READBUFFERSIZE)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -439,9 +401,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_READBUFFERSIZE)
   }
 }
 
-/*
-void setReadBufferSize(qint64 size)
-*/
+// void setReadBufferSize(qint64 size)
 HB_FUNC_STATIC(QLOCALSOCKET_SETREADBUFFERSIZE)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -461,10 +421,8 @@ HB_FUNC_STATIC(QLOCALSOCKET_SETREADBUFFERSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool setSocketDescriptor(qintptr socketDescriptor, QLocalSocket::LocalSocketState socketState =
-QLocalSocket::ConnectedState, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-*/
+// bool setSocketDescriptor(qintptr socketDescriptor, QLocalSocket::LocalSocketState socketState =
+// QLocalSocket::ConnectedState, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 HB_FUNC_STATIC(QLOCALSOCKET_SETSOCKETDESCRIPTOR)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -486,9 +444,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SETSOCKETDESCRIPTOR)
   }
 }
 
-/*
-qintptr socketDescriptor() const
-*/
+// qintptr socketDescriptor() const
 HB_FUNC_STATIC(QLOCALSOCKET_SOCKETDESCRIPTOR)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -506,9 +462,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SOCKETDESCRIPTOR)
   }
 }
 
-/*
-QLocalSocket::LocalSocketState state() const
-*/
+// QLocalSocket::LocalSocketState state() const
 HB_FUNC_STATIC(QLOCALSOCKET_STATE)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -526,9 +480,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_STATE)
   }
 }
 
-/*
-bool waitForBytesWritten(int msecs = 30000) Q_DECL_OVERRIDE
-*/
+// bool waitForBytesWritten(int msecs = 30000) Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QLOCALSOCKET_WAITFORBYTESWRITTEN)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -546,9 +498,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORBYTESWRITTEN)
   }
 }
 
-/*
-bool waitForConnected(int msecs = 30000)
-*/
+// bool waitForConnected(int msecs = 30000)
 HB_FUNC_STATIC(QLOCALSOCKET_WAITFORCONNECTED)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -566,9 +516,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORCONNECTED)
   }
 }
 
-/*
-bool waitForDisconnected(int msecs = 30000)
-*/
+// bool waitForDisconnected(int msecs = 30000)
 HB_FUNC_STATIC(QLOCALSOCKET_WAITFORDISCONNECTED)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -586,9 +534,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORDISCONNECTED)
   }
 }
 
-/*
-bool waitForReadyRead(int msecs = 30000) Q_DECL_OVERRIDE
-*/
+// bool waitForReadyRead(int msecs = 30000) Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QLOCALSOCKET_WAITFORREADYREAD)
 {
   auto obj = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -606,9 +552,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORREADYREAD)
   }
 }
 
-/*
-void connected()
-*/
+// void connected()
 HB_FUNC_STATIC(QLOCALSOCKET_ONCONNECTED)
 {
   auto sender = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -646,9 +590,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ONCONNECTED)
   hb_retl(result);
 }
 
-/*
-void disconnected()
-*/
+// void disconnected()
 HB_FUNC_STATIC(QLOCALSOCKET_ONDISCONNECTED)
 {
   auto sender = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -686,9 +628,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ONDISCONNECTED)
   hb_retl(result);
 }
 
-/*
-void error(QLocalSocket::LocalSocketError socketError)
-*/
+// void error(QLocalSocket::LocalSocketError socketError)
 HB_FUNC_STATIC(QLOCALSOCKET_ONERROR)
 {
   auto sender = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -729,9 +669,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ONERROR)
   hb_retl(result);
 }
 
-/*
-void stateChanged(QLocalSocket::LocalSocketState socketState)
-*/
+// void stateChanged(QLocalSocket::LocalSocketState socketState)
 HB_FUNC_STATIC(QLOCALSOCKET_ONSTATECHANGED)
 {
   auto sender = qobject_cast<QLocalSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());

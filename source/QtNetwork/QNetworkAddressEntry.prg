@@ -68,15 +68,11 @@ RETURN
 HB_FUNC_STATIC(QNETWORKADDRESSENTRY_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QNetworkAddressEntry()
-    */
+    // QNetworkAddressEntry()
     auto obj = new QNetworkAddressEntry();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQNETWORKADDRESSENTRY(1)) {
-    /*
-    QNetworkAddressEntry(const QNetworkAddressEntry &other)
-    */
+    // QNetworkAddressEntry(const QNetworkAddressEntry &other)
     auto obj = new QNetworkAddressEntry(*PQNETWORKADDRESSENTRY(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -84,9 +80,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_NEW)
   }
 }
 
-/*
-~QNetworkAddressEntry()
-*/
+// ~QNetworkAddressEntry()
 HB_FUNC_STATIC(QNETWORKADDRESSENTRY_DELETE)
 {
   auto obj = static_cast<QNetworkAddressEntry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -96,9 +90,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QHostAddress broadcast() const
-*/
+// QHostAddress broadcast() const
 HB_FUNC_STATIC(QNETWORKADDRESSENTRY_BROADCAST)
 {
   auto obj = static_cast<QNetworkAddressEntry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -116,9 +108,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_BROADCAST)
   }
 }
 
-/*
-QHostAddress ip() const
-*/
+// QHostAddress ip() const
 HB_FUNC_STATIC(QNETWORKADDRESSENTRY_IP)
 {
   auto obj = static_cast<QNetworkAddressEntry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -136,9 +126,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_IP)
   }
 }
 
-/*
-QHostAddress netmask() const
-*/
+// QHostAddress netmask() const
 HB_FUNC_STATIC(QNETWORKADDRESSENTRY_NETMASK)
 {
   auto obj = static_cast<QNetworkAddressEntry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -156,9 +144,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_NETMASK)
   }
 }
 
-/*
-int prefixLength() const
-*/
+// int prefixLength() const
 HB_FUNC_STATIC(QNETWORKADDRESSENTRY_PREFIXLENGTH)
 {
   auto obj = static_cast<QNetworkAddressEntry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -176,9 +162,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_PREFIXLENGTH)
   }
 }
 
-/*
-void setBroadcast(const QHostAddress &newBroadcast)
-*/
+// void setBroadcast(const QHostAddress &newBroadcast)
 HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETBROADCAST)
 {
   auto obj = static_cast<QNetworkAddressEntry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -198,9 +182,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETBROADCAST)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setIp(const QHostAddress &newIp)
-*/
+// void setIp(const QHostAddress &newIp)
 HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETIP)
 {
   auto obj = static_cast<QNetworkAddressEntry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -220,9 +202,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETIP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setNetmask(const QHostAddress &newNetmask)
-*/
+// void setNetmask(const QHostAddress &newNetmask)
 HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETNETMASK)
 {
   auto obj = static_cast<QNetworkAddressEntry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -242,9 +222,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETNETMASK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPrefixLength(int length)
-*/
+// void setPrefixLength(int length)
 HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETPREFIXLENGTH)
 {
   auto obj = static_cast<QNetworkAddressEntry *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -264,9 +242,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETPREFIXLENGTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void swap(QNetworkAddressEntry &other) Q_DECL_NOTHROW
-*/
+// void swap(QNetworkAddressEntry &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SWAP)
 {
   auto obj = static_cast<QNetworkAddressEntry *>(Qt5xHb::itemGetPtrStackSelfItem());

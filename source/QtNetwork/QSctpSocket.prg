@@ -60,9 +60,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QSctpSocket(QObject *parent = nullptr)
-    */
+    // QSctpSocket(QObject *parent = nullptr)
 HB_FUNC_STATIC(QSCTPSOCKET_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -77,9 +75,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_NEW)
 #endif
 }
 
-/*
-virtual ~QSctpSocket()
-*/
+// virtual ~QSctpSocket()
 HB_FUNC_STATIC(QSCTPSOCKET_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -93,9 +89,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_DELETE)
 #endif
 }
 
-/*
-void close() Q_DECL_OVERRIDE
-*/
+// void close() Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QSCTPSOCKET_CLOSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -119,9 +113,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_CLOSE)
 #endif
 }
 
-/*
-void disconnectFromHost() Q_DECL_OVERRIDE
-*/
+// void disconnectFromHost() Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QSCTPSOCKET_DISCONNECTFROMHOST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -145,9 +137,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_DISCONNECTFROMHOST)
 #endif
 }
 
-/*
-void setMaximumChannelCount(int count)
-*/
+// void setMaximumChannelCount(int count)
 HB_FUNC_STATIC(QSCTPSOCKET_SETMAXIMUMCHANNELCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -171,9 +161,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_SETMAXIMUMCHANNELCOUNT)
 #endif
 }
 
-/*
-int maximumChannelCount() const
-*/
+// int maximumChannelCount() const
 HB_FUNC_STATIC(QSCTPSOCKET_MAXIMUMCHANNELCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -195,9 +183,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_MAXIMUMCHANNELCOUNT)
 #endif
 }
 
-/*
-bool isInDatagramMode() const
-*/
+// bool isInDatagramMode() const
 HB_FUNC_STATIC(QSCTPSOCKET_ISINDATAGRAMMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -219,9 +205,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_ISINDATAGRAMMODE)
 #endif
 }
 
-/*
-QNetworkDatagram readDatagram()
-*/
+// QNetworkDatagram readDatagram()
 HB_FUNC_STATIC(QSCTPSOCKET_READDATAGRAM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -243,9 +227,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_READDATAGRAM)
 #endif
 }
 
-/*
-bool writeDatagram(const QNetworkDatagram &datagram)
-*/
+// bool writeDatagram(const QNetworkDatagram &datagram)
 HB_FUNC_STATIC(QSCTPSOCKET_WRITEDATAGRAM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

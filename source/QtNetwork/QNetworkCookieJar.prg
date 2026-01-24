@@ -56,9 +56,7 @@ RETURN
 
 #include <QtNetwork/QNetworkCookie>
 
-    /*
-    QNetworkCookieJar(QObject * parent = nullptr)
-    */
+    // QNetworkCookieJar(QObject *parent = nullptr)
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -69,9 +67,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_NEW)
   }
 }
 
-/*
-virtual ~QNetworkCookieJar()
-*/
+// virtual ~QNetworkCookieJar()
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_DELETE)
 {
   auto obj = qobject_cast<QNetworkCookieJar *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -81,9 +77,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QList<QNetworkCookie> cookiesForUrl(const QUrl &url) const
-*/
+// virtual QList<QNetworkCookie> cookiesForUrl(const QUrl &url) const
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_COOKIESFORURL)
 {
   auto obj = qobject_cast<QNetworkCookieJar *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -123,9 +117,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_COOKIESFORURL)
   }
 }
 
-/*
-virtual bool setCookiesFromUrl(const QList<QNetworkCookie> &cookieList, const QUrl &url)
-*/
+// virtual bool setCookiesFromUrl(const QList<QNetworkCookie> &cookieList, const QUrl &url)
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_SETCOOKIESFROMURL)
 {
   auto obj = qobject_cast<QNetworkCookieJar *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -150,9 +142,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_SETCOOKIESFROMURL)
   }
 }
 
-/*
-virtual bool insertCookie(const QNetworkCookie &cookie)
-*/
+// virtual bool insertCookie(const QNetworkCookie &cookie)
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_INSERTCOOKIE)
 {
   auto obj = qobject_cast<QNetworkCookieJar *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -170,9 +160,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_INSERTCOOKIE)
   }
 }
 
-/*
-virtual bool updateCookie(const QNetworkCookie &cookie)
-*/
+// virtual bool updateCookie(const QNetworkCookie &cookie)
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_UPDATECOOKIE)
 {
   auto obj = qobject_cast<QNetworkCookieJar *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -190,9 +178,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_UPDATECOOKIE)
   }
 }
 
-/*
-virtual bool deleteCookie(const QNetworkCookie &cookie)
-*/
+// virtual bool deleteCookie(const QNetworkCookie &cookie)
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_DELETECOOKIE)
 {
   auto obj = qobject_cast<QNetworkCookieJar *>(Qt5xHb::getQObjectPointerFromSelfItem());

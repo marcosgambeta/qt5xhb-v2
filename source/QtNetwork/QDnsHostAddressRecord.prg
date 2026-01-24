@@ -65,15 +65,11 @@ RETURN
 HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QDnsHostAddressRecord()
-    */
+    // QDnsHostAddressRecord()
     auto obj = new QDnsHostAddressRecord();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDNSHOSTADDRESSRECORD(1)) {
-    /*
-    QDnsHostAddressRecord(const QDnsHostAddressRecord &other)
-    */
+    // QDnsHostAddressRecord(const QDnsHostAddressRecord &other)
     auto obj = new QDnsHostAddressRecord(*PQDNSHOSTADDRESSRECORD(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -81,9 +77,7 @@ HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_NEW)
   }
 }
 
-/*
-~QDnsHostAddressRecord()
-*/
+// ~QDnsHostAddressRecord()
 HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_DELETE)
 {
   auto obj = static_cast<QDnsHostAddressRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -93,9 +87,7 @@ HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_NAME)
 {
   auto obj = static_cast<QDnsHostAddressRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -113,9 +105,7 @@ HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_NAME)
   }
 }
 
-/*
-void swap(QDnsHostAddressRecord &other) Q_DECL_NOTHROW
-*/
+// void swap(QDnsHostAddressRecord &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_SWAP)
 {
   auto obj = static_cast<QDnsHostAddressRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -135,9 +125,7 @@ HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-quint32 timeToLive() const
-*/
+// quint32 timeToLive() const
 HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_TIMETOLIVE)
 {
   auto obj = static_cast<QDnsHostAddressRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -155,9 +143,7 @@ HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_TIMETOLIVE)
   }
 }
 
-/*
-QHostAddress value() const
-*/
+// QHostAddress value() const
 HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_VALUE)
 {
   auto obj = static_cast<QDnsHostAddressRecord *>(Qt5xHb::itemGetPtrStackSelfItem());

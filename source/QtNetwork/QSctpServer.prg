@@ -62,9 +62,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QSctpServer(QObject *parent = nullptr)
-    */
+    // QSctpServer(QObject *parent = nullptr)
 HB_FUNC_STATIC(QSCTPSERVER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -79,9 +77,7 @@ HB_FUNC_STATIC(QSCTPSERVER_NEW)
 #endif
 }
 
-/*
-virtual ~QSctpServer()
-*/
+// virtual ~QSctpServer()
 HB_FUNC_STATIC(QSCTPSERVER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -95,9 +91,7 @@ HB_FUNC_STATIC(QSCTPSERVER_DELETE)
 #endif
 }
 
-/*
-void setMaximumChannelCount(int count)
-*/
+// void setMaximumChannelCount(int count)
 HB_FUNC_STATIC(QSCTPSERVER_SETMAXIMUMCHANNELCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -121,9 +115,7 @@ HB_FUNC_STATIC(QSCTPSERVER_SETMAXIMUMCHANNELCOUNT)
 #endif
 }
 
-/*
-int maximumChannelCount() const
-*/
+// int maximumChannelCount() const
 HB_FUNC_STATIC(QSCTPSERVER_MAXIMUMCHANNELCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -145,9 +137,7 @@ HB_FUNC_STATIC(QSCTPSERVER_MAXIMUMCHANNELCOUNT)
 #endif
 }
 
-/*
-QSctpSocket *nextPendingDatagramConnection()
-*/
+// QSctpSocket *nextPendingDatagramConnection()
 HB_FUNC_STATIC(QSCTPSERVER_NEXTPENDINGDATAGRAMCONNECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

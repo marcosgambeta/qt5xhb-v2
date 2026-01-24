@@ -63,15 +63,11 @@ RETURN
 HB_FUNC_STATIC(QHTTPPART_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QHttpPart()
-    */
+    // QHttpPart()
     auto obj = new QHttpPart();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQHTTPPART(1)) {
-    /*
-    QHttpPart(const QHttpPart &other)
-    */
+    // QHttpPart(const QHttpPart &other)
     auto obj = new QHttpPart(*PQHTTPPART(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -79,9 +75,7 @@ HB_FUNC_STATIC(QHTTPPART_NEW)
   }
 }
 
-/*
-~QHttpPart()
-*/
+// ~QHttpPart()
 HB_FUNC_STATIC(QHTTPPART_DELETE)
 {
   auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -91,9 +85,7 @@ HB_FUNC_STATIC(QHTTPPART_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setBody(const QByteArray &body)
-*/
+// void setBody(const QByteArray &body)
 HB_FUNC_STATIC(QHTTPPART_SETBODY)
 {
   auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -113,9 +105,7 @@ HB_FUNC_STATIC(QHTTPPART_SETBODY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setBodyDevice(QIODevice * device)
-*/
+// void setBodyDevice(QIODevice *device)
 HB_FUNC_STATIC(QHTTPPART_SETBODYDEVICE)
 {
   auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -135,9 +125,7 @@ HB_FUNC_STATIC(QHTTPPART_SETBODYDEVICE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value)
-*/
+// void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value)
 HB_FUNC_STATIC(QHTTPPART_SETHEADER)
 {
   auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -157,9 +145,7 @@ HB_FUNC_STATIC(QHTTPPART_SETHEADER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRawHeader(const QByteArray &headerName, const QByteArray &headerValue)
-*/
+// void setRawHeader(const QByteArray &headerName, const QByteArray &headerValue)
 HB_FUNC_STATIC(QHTTPPART_SETRAWHEADER)
 {
   auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -179,9 +165,7 @@ HB_FUNC_STATIC(QHTTPPART_SETRAWHEADER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void swap(QHttpPart &other) Q_DECL_NOTHROW
-*/
+// void swap(QHttpPart &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QHTTPPART_SWAP)
 {
   auto obj = static_cast<QHttpPart *>(Qt5xHb::itemGetPtrStackSelfItem());

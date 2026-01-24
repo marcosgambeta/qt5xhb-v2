@@ -61,13 +61,9 @@ RETURN
 #include <QtNetwork/QNetworkProxyFactory>
 #endif
 
-    /*
-    QNetworkProxyFactory() [ABSTRACT]
-    */
+    // QNetworkProxyFactory() [ABSTRACT]
 
-    /*
-    virtual ~QNetworkProxyFactory()
-    */
+    // virtual ~QNetworkProxyFactory()
 HB_FUNC_STATIC(QNETWORKPROXYFACTORY_DELETE)
 {
   auto obj = static_cast<QNetworkProxyFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -77,9 +73,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QList<QNetworkProxy> queryProxy(const QNetworkProxyQuery &query = QNetworkProxyQuery()) = 0
-*/
+// virtual QList<QNetworkProxy> queryProxy(const QNetworkProxyQuery &query = QNetworkProxyQuery()) = 0
 HB_FUNC_STATIC(QNETWORKPROXYFACTORY_QUERYPROXY)
 {
   auto obj = static_cast<QNetworkProxyFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -120,9 +114,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_QUERYPROXY)
   }
 }
 
-/*
-static QList<QNetworkProxy> proxyForQuery(const QNetworkProxyQuery &query)
-*/
+// static QList<QNetworkProxy> proxyForQuery(const QNetworkProxyQuery &query)
 HB_FUNC_STATIC(QNETWORKPROXYFACTORY_PROXYFORQUERY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,9 +150,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_PROXYFORQUERY)
 #endif
 }
 
-/*
-static void setApplicationProxyFactory(QNetworkProxyFactory * factory)
-*/
+// static void setApplicationProxyFactory(QNetworkProxyFactory *factory)
 HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,9 +166,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void setUseSystemConfiguration(bool enable)
-*/
+// static void setUseSystemConfiguration(bool enable)
 HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SETUSESYSTEMCONFIGURATION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,9 +182,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SETUSESYSTEMCONFIGURATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QList<QNetworkProxy> systemProxyForQuery(const QNetworkProxyQuery &query = QNetworkProxyQuery())
-*/
+// static QList<QNetworkProxy> systemProxyForQuery(const QNetworkProxyQuery &query = QNetworkProxyQuery())
 HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,9 +219,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY)
 #endif
 }
 
-/*
-static bool usesSystemConfiguration()
-*/
+// static bool usesSystemConfiguration()
 HB_FUNC_STATIC(QNETWORKPROXYFACTORY_USESSYSTEMCONFIGURATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

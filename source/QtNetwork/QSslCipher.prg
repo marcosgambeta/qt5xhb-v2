@@ -68,29 +68,21 @@ RETURN
 HB_FUNC_STATIC(QSSLCIPHER_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QSslCipher()
-    */
+    // QSslCipher()
     auto obj = new QSslCipher();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QSslCipher(const QString &name)
-    */
+    // QSslCipher(const QString &name)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QSslCipher(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
-    /*
-    QSslCipher(const QString &name, QSsl::SslProtocol protocol)
-    */
+    // QSslCipher(const QString &name, QSsl::SslProtocol protocol)
     auto obj = new QSslCipher(PQSTRING(1), PQSSL_SSLPROTOCOL(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSSLCIPHER(1)) {
-    /*
-    QSslCipher(const QSslCipher &other)
-    */
+    // QSslCipher(const QSslCipher &other)
     auto obj = new QSslCipher(*PQSSLCIPHER(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -98,9 +90,7 @@ HB_FUNC_STATIC(QSSLCIPHER_NEW)
   }
 }
 
-/*
-~QSslCipher()
-*/
+// ~QSslCipher()
 HB_FUNC_STATIC(QSSLCIPHER_DELETE)
 {
   auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -110,9 +100,7 @@ HB_FUNC_STATIC(QSSLCIPHER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString authenticationMethod() const
-*/
+// QString authenticationMethod() const
 HB_FUNC_STATIC(QSSLCIPHER_AUTHENTICATIONMETHOD)
 {
   auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -130,9 +118,7 @@ HB_FUNC_STATIC(QSSLCIPHER_AUTHENTICATIONMETHOD)
   }
 }
 
-/*
-QString encryptionMethod() const
-*/
+// QString encryptionMethod() const
 HB_FUNC_STATIC(QSSLCIPHER_ENCRYPTIONMETHOD)
 {
   auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -150,9 +136,7 @@ HB_FUNC_STATIC(QSSLCIPHER_ENCRYPTIONMETHOD)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QSSLCIPHER_ISNULL)
 {
   auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -170,9 +154,7 @@ HB_FUNC_STATIC(QSSLCIPHER_ISNULL)
   }
 }
 
-/*
-QString keyExchangeMethod() const
-*/
+// QString keyExchangeMethod() const
 HB_FUNC_STATIC(QSSLCIPHER_KEYEXCHANGEMETHOD)
 {
   auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -190,9 +172,7 @@ HB_FUNC_STATIC(QSSLCIPHER_KEYEXCHANGEMETHOD)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QSSLCIPHER_NAME)
 {
   auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -210,9 +190,7 @@ HB_FUNC_STATIC(QSSLCIPHER_NAME)
   }
 }
 
-/*
-QSsl::SslProtocol protocol() const
-*/
+// QSsl::SslProtocol protocol() const
 HB_FUNC_STATIC(QSSLCIPHER_PROTOCOL)
 {
   auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -230,9 +208,7 @@ HB_FUNC_STATIC(QSSLCIPHER_PROTOCOL)
   }
 }
 
-/*
-QString protocolString() const
-*/
+// QString protocolString() const
 HB_FUNC_STATIC(QSSLCIPHER_PROTOCOLSTRING)
 {
   auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -250,9 +226,7 @@ HB_FUNC_STATIC(QSSLCIPHER_PROTOCOLSTRING)
   }
 }
 
-/*
-int supportedBits() const
-*/
+// int supportedBits() const
 HB_FUNC_STATIC(QSSLCIPHER_SUPPORTEDBITS)
 {
   auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -270,9 +244,7 @@ HB_FUNC_STATIC(QSSLCIPHER_SUPPORTEDBITS)
   }
 }
 
-/*
-int usedBits() const
-*/
+// int usedBits() const
 HB_FUNC_STATIC(QSSLCIPHER_USEDBITS)
 {
   auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -290,9 +262,7 @@ HB_FUNC_STATIC(QSSLCIPHER_USEDBITS)
   }
 }
 
-/*
-void swap(QSslCipher &other) Q_DECL_NOTHROW
-*/
+// void swap(QSslCipher &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QSSLCIPHER_SWAP)
 {
   auto obj = static_cast<QSslCipher *>(Qt5xHb::itemGetPtrStackSelfItem());

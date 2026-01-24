@@ -65,15 +65,11 @@ RETURN
 HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QSslCertificateExtension()
-    */
+    // QSslCertificateExtension()
     auto obj = new QSslCertificateExtension();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSSLCERTIFICATEEXTENSION(1)) {
-    /*
-    QSslCertificateExtension(const QSslCertificateExtension &other)
-    */
+    // QSslCertificateExtension(const QSslCertificateExtension &other)
     auto obj = new QSslCertificateExtension(*PQSSLCERTIFICATEEXTENSION(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -81,9 +77,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_NEW)
   }
 }
 
-/*
-~QSslCertificateExtension()
-*/
+// ~QSslCertificateExtension()
 HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_DELETE)
 {
   auto obj = static_cast<QSslCertificateExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -93,9 +87,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void swap(QSslCertificateExtension &other) Q_DECL_NOTHROW
-*/
+// void swap(QSslCertificateExtension &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_SWAP)
 {
   auto obj = static_cast<QSslCertificateExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -115,9 +107,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString oid() const
-*/
+// QString oid() const
 HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_OID)
 {
   auto obj = static_cast<QSslCertificateExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -135,9 +125,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_OID)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_NAME)
 {
   auto obj = static_cast<QSslCertificateExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -155,9 +143,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_NAME)
   }
 }
 
-/*
-QVariant value() const
-*/
+// QVariant value() const
 HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_VALUE)
 {
   auto obj = static_cast<QSslCertificateExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -175,9 +161,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_VALUE)
   }
 }
 
-/*
-bool isCritical() const
-*/
+// bool isCritical() const
 HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_ISCRITICAL)
 {
   auto obj = static_cast<QSslCertificateExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -195,9 +179,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_ISCRITICAL)
   }
 }
 
-/*
-bool isSupported() const
-*/
+// bool isSupported() const
 HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_ISSUPPORTED)
 {
   auto obj = static_cast<QSslCertificateExtension *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -82,21 +82,15 @@ RETURN
 HB_FUNC_STATIC(QDNSLOOKUP_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QDnsLookup(QObject * parent = nullptr)
-    */
+    // QDnsLookup(QObject *parent = nullptr)
     auto obj = new QDnsLookup(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQOBJECTORNIL(3)) {
-    /*
-    QDnsLookup(QDnsLookup::Type type, const QString &name, QObject * parent = nullptr)
-    */
+    // QDnsLookup(QDnsLookup::Type type, const QString &name, QObject *parent = nullptr)
     auto obj = new QDnsLookup(PQDNSLOOKUP_TYPE(1), PQSTRING(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQHOSTADDRESS(3) && ISQOBJECTORNIL(4)) {
-    /*
-    QDnsLookup(QDnsLookup::Type type, const QString &name, const QHostAddress &nameserver, QObject * parent = nullptr)
-    */
+    // QDnsLookup(QDnsLookup::Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QDnsLookup(PQDNSLOOKUP_TYPE(1), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -106,9 +100,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NEW)
   }
 }
 
-/*
-~QDnsLookup()
-*/
+// ~QDnsLookup()
 HB_FUNC_STATIC(QDNSLOOKUP_DELETE)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -118,9 +110,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDnsLookup::Error error() const
-*/
+// QDnsLookup::Error error() const
 HB_FUNC_STATIC(QDNSLOOKUP_ERROR)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -138,9 +128,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ERROR)
   }
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QDNSLOOKUP_ERRORSTRING)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -158,9 +146,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ERRORSTRING)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QDNSLOOKUP_NAME)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -178,9 +164,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NAME)
   }
 }
 
-/*
-void setName(const QString &name)
-*/
+// void setName(const QString &name)
 HB_FUNC_STATIC(QDNSLOOKUP_SETNAME)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -200,9 +184,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SETNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDnsLookup::Type type() const
-*/
+// QDnsLookup::Type type() const
 HB_FUNC_STATIC(QDNSLOOKUP_TYPE)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -220,9 +202,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_TYPE)
   }
 }
 
-/*
-void setType(QDnsLookup::Type)
-*/
+// void setType(QDnsLookup::Type)
 HB_FUNC_STATIC(QDNSLOOKUP_SETTYPE)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -242,9 +222,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SETTYPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QHostAddress nameserver() const
-*/
+// QHostAddress nameserver() const
 HB_FUNC_STATIC(QDNSLOOKUP_NAMESERVER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -264,9 +242,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NAMESERVER)
 #endif
 }
 
-/*
-void setNameserver(const QHostAddress &nameserver)
-*/
+// void setNameserver(const QHostAddress &nameserver)
 HB_FUNC_STATIC(QDNSLOOKUP_SETNAMESERVER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -288,9 +264,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SETNAMESERVER)
 #endif
 }
 
-/*
-bool isFinished() const
-*/
+// bool isFinished() const
 HB_FUNC_STATIC(QDNSLOOKUP_ISFINISHED)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -308,9 +282,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ISFINISHED)
   }
 }
 
-/*
-QList<QDnsDomainNameRecord> canonicalNameRecords() const
-*/
+// QList<QDnsDomainNameRecord> canonicalNameRecords() const
 HB_FUNC_STATIC(QDNSLOOKUP_CANONICALNAMERECORDS)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -350,9 +322,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_CANONICALNAMERECORDS)
   }
 }
 
-/*
-QList<QDnsHostAddressRecord> hostAddressRecords() const
-*/
+// QList<QDnsHostAddressRecord> hostAddressRecords() const
 HB_FUNC_STATIC(QDNSLOOKUP_HOSTADDRESSRECORDS)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -392,9 +362,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_HOSTADDRESSRECORDS)
   }
 }
 
-/*
-QList<QDnsMailExchangeRecord> mailExchangeRecords() const
-*/
+// QList<QDnsMailExchangeRecord> mailExchangeRecords() const
 HB_FUNC_STATIC(QDNSLOOKUP_MAILEXCHANGERECORDS)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -434,9 +402,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_MAILEXCHANGERECORDS)
   }
 }
 
-/*
-QList<QDnsDomainNameRecord> nameServerRecords() const
-*/
+// QList<QDnsDomainNameRecord> nameServerRecords() const
 HB_FUNC_STATIC(QDNSLOOKUP_NAMESERVERRECORDS)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -476,9 +442,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NAMESERVERRECORDS)
   }
 }
 
-/*
-QList<QDnsDomainNameRecord> pointerRecords() const
-*/
+// QList<QDnsDomainNameRecord> pointerRecords() const
 HB_FUNC_STATIC(QDNSLOOKUP_POINTERRECORDS)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -518,9 +482,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_POINTERRECORDS)
   }
 }
 
-/*
-QList<QDnsServiceRecord> serviceRecords() const
-*/
+// QList<QDnsServiceRecord> serviceRecords() const
 HB_FUNC_STATIC(QDNSLOOKUP_SERVICERECORDS)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -560,9 +522,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SERVICERECORDS)
   }
 }
 
-/*
-QList<QDnsTextRecord> textRecords() const
-*/
+// QList<QDnsTextRecord> textRecords() const
 HB_FUNC_STATIC(QDNSLOOKUP_TEXTRECORDS)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -602,9 +562,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_TEXTRECORDS)
   }
 }
 
-/*
-void abort()
-*/
+// void abort()
 HB_FUNC_STATIC(QDNSLOOKUP_ABORT)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -624,9 +582,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ABORT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void lookup()
-*/
+// void lookup()
 HB_FUNC_STATIC(QDNSLOOKUP_LOOKUP)
 {
   auto obj = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -646,9 +602,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_LOOKUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void finished()
-*/
+// void finished()
 HB_FUNC_STATIC(QDNSLOOKUP_ONFINISHED)
 {
   auto sender = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -686,9 +640,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ONFINISHED)
   hb_retl(result);
 }
 
-/*
-void nameChanged(const QString &name)
-*/
+// void nameChanged(const QString &name)
 HB_FUNC_STATIC(QDNSLOOKUP_ONNAMECHANGED)
 {
   auto sender = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -729,9 +681,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ONNAMECHANGED)
   hb_retl(result);
 }
 
-/*
-void nameserverChanged(const QHostAddress &nameserver)
-*/
+// void nameserverChanged(const QHostAddress &nameserver)
 HB_FUNC_STATIC(QDNSLOOKUP_ONNAMESERVERCHANGED)
 {
   auto sender = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -772,9 +722,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ONNAMESERVERCHANGED)
   hb_retl(result);
 }
 
-/*
-void typeChanged(QDnsLookup::Type type)
-*/
+// void typeChanged(QDnsLookup::Type type)
 HB_FUNC_STATIC(QDNSLOOKUP_ONTYPECHANGED)
 {
   auto sender = qobject_cast<QDnsLookup *>(Qt5xHb::getQObjectPointerFromSelfItem());

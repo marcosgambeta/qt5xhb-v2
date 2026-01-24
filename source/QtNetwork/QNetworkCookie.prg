@@ -82,16 +82,12 @@ RETURN
 HB_FUNC_STATIC(QNETWORKCOOKIE_NEW)
 {
   if (ISBETWEEN(0, 2) && ISOPTQBYTEARRAY(1) && ISOPTQBYTEARRAY(2)) {
-    /*
-    QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())
-    */
+    // QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())
     auto obj = new QNetworkCookie(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(1)),
                                   HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(2)));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1)) {
-    /*
-    QNetworkCookie(const QNetworkCookie &other)
-    */
+    // QNetworkCookie(const QNetworkCookie &other)
     auto obj = new QNetworkCookie(*PQNETWORKCOOKIE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -99,9 +95,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NEW)
   }
 }
 
-/*
-~QNetworkCookie()
-*/
+// ~QNetworkCookie()
 HB_FUNC_STATIC(QNETWORKCOOKIE_DELETE)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -111,9 +105,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString domain() const
-*/
+// QString domain() const
 HB_FUNC_STATIC(QNETWORKCOOKIE_DOMAIN)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -131,9 +123,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_DOMAIN)
   }
 }
 
-/*
-QDateTime expirationDate() const
-*/
+// QDateTime expirationDate() const
 HB_FUNC_STATIC(QNETWORKCOOKIE_EXPIRATIONDATE)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -151,9 +141,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_EXPIRATIONDATE)
   }
 }
 
-/*
-bool isHttpOnly() const
-*/
+// bool isHttpOnly() const
 HB_FUNC_STATIC(QNETWORKCOOKIE_ISHTTPONLY)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -171,9 +159,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_ISHTTPONLY)
   }
 }
 
-/*
-bool isSecure() const
-*/
+// bool isSecure() const
 HB_FUNC_STATIC(QNETWORKCOOKIE_ISSECURE)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -191,9 +177,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_ISSECURE)
   }
 }
 
-/*
-bool isSessionCookie() const
-*/
+// bool isSessionCookie() const
 HB_FUNC_STATIC(QNETWORKCOOKIE_ISSESSIONCOOKIE)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -211,9 +195,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_ISSESSIONCOOKIE)
   }
 }
 
-/*
-QByteArray name() const
-*/
+// QByteArray name() const
 HB_FUNC_STATIC(QNETWORKCOOKIE_NAME)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -231,9 +213,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NAME)
   }
 }
 
-/*
-QString path() const
-*/
+// QString path() const
 HB_FUNC_STATIC(QNETWORKCOOKIE_PATH)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -251,9 +231,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_PATH)
   }
 }
 
-/*
-void setDomain(const QString &domain)
-*/
+// void setDomain(const QString &domain)
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETDOMAIN)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -273,9 +251,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETDOMAIN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setExpirationDate(const QDateTime &date)
-*/
+// void setExpirationDate(const QDateTime &date)
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETEXPIRATIONDATE)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -295,9 +271,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETEXPIRATIONDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHttpOnly(bool enable)
-*/
+// void setHttpOnly(bool enable)
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETHTTPONLY)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -317,9 +291,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETHTTPONLY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setName(const QByteArray &cookieName)
-*/
+// void setName(const QByteArray &cookieName)
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETNAME)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -339,9 +311,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPath(const QString &path)
-*/
+// void setPath(const QString &path)
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETPATH)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -361,9 +331,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETPATH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSecure(bool enable)
-*/
+// void setSecure(bool enable)
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETSECURE)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -383,9 +351,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETSECURE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setValue(const QByteArray &value)
-*/
+// void setValue(const QByteArray &value)
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETVALUE)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -405,9 +371,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QByteArray toRawForm(QNetworkCookie::RawForm form = QNetworkCookie::Full) const
-*/
+// QByteArray toRawForm(QNetworkCookie::RawForm form = QNetworkCookie::Full) const
 HB_FUNC_STATIC(QNETWORKCOOKIE_TORAWFORM)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -425,9 +389,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_TORAWFORM)
   }
 }
 
-/*
-QByteArray value() const
-*/
+// QByteArray value() const
 HB_FUNC_STATIC(QNETWORKCOOKIE_VALUE)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -445,9 +407,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_VALUE)
   }
 }
 
-/*
-static QList<QNetworkCookie> parseCookies(const QByteArray &cookieString)
-*/
+// static QList<QNetworkCookie> parseCookies(const QByteArray &cookieString)
 HB_FUNC_STATIC(QNETWORKCOOKIE_PARSECOOKIES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -483,9 +443,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_PARSECOOKIES)
 #endif
 }
 
-/*
-void swap(QNetworkCookie &other) Q_DECL_NOTHROW
-*/
+// void swap(QNetworkCookie &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QNETWORKCOOKIE_SWAP)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -505,9 +463,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool hasSameIdentifier(const QNetworkCookie &other) const
-*/
+// bool hasSameIdentifier(const QNetworkCookie &other) const
 HB_FUNC_STATIC(QNETWORKCOOKIE_HASSAMEIDENTIFIER)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -525,9 +481,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_HASSAMEIDENTIFIER)
   }
 }
 
-/*
-void normalize(const QUrl &url)
-*/
+// void normalize(const QUrl &url)
 HB_FUNC_STATIC(QNETWORKCOOKIE_NORMALIZE)
 {
   auto obj = static_cast<QNetworkCookie *>(Qt5xHb::itemGetPtrStackSelfItem());

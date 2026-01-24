@@ -75,9 +75,7 @@ RETURN
 #include <QtNetwork/QNetworkProxy>
 #include <QtNetwork/QTcpSocket>
 
-    /*
-    QTcpServer(QObject * parent = nullptr)
-    */
+    // QTcpServer(QObject *parent = nullptr)
 HB_FUNC_STATIC(QTCPSERVER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -88,9 +86,7 @@ HB_FUNC_STATIC(QTCPSERVER_NEW)
   }
 }
 
-/*
-virtual ~QTcpServer()
-*/
+// virtual ~QTcpServer()
 HB_FUNC_STATIC(QTCPSERVER_DELETE)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -100,9 +96,7 @@ HB_FUNC_STATIC(QTCPSERVER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
-*/
+// bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
 HB_FUNC_STATIC(QTCPSERVER_LISTEN)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -121,9 +115,7 @@ HB_FUNC_STATIC(QTCPSERVER_LISTEN)
   }
 }
 
-/*
-void close()
-*/
+// void close()
 HB_FUNC_STATIC(QTCPSERVER_CLOSE)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -143,9 +135,7 @@ HB_FUNC_STATIC(QTCPSERVER_CLOSE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isListening() const
-*/
+// bool isListening() const
 HB_FUNC_STATIC(QTCPSERVER_ISLISTENING)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -163,9 +153,7 @@ HB_FUNC_STATIC(QTCPSERVER_ISLISTENING)
   }
 }
 
-/*
-void setMaxPendingConnections(int numConnections)
-*/
+// void setMaxPendingConnections(int numConnections)
 HB_FUNC_STATIC(QTCPSERVER_SETMAXPENDINGCONNECTIONS)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -185,9 +173,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETMAXPENDINGCONNECTIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int maxPendingConnections() const
-*/
+// int maxPendingConnections() const
 HB_FUNC_STATIC(QTCPSERVER_MAXPENDINGCONNECTIONS)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -205,9 +191,7 @@ HB_FUNC_STATIC(QTCPSERVER_MAXPENDINGCONNECTIONS)
   }
 }
 
-/*
-quint16 serverPort() const
-*/
+// quint16 serverPort() const
 HB_FUNC_STATIC(QTCPSERVER_SERVERPORT)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -225,9 +209,7 @@ HB_FUNC_STATIC(QTCPSERVER_SERVERPORT)
   }
 }
 
-/*
-QHostAddress serverAddress() const
-*/
+// QHostAddress serverAddress() const
 HB_FUNC_STATIC(QTCPSERVER_SERVERADDRESS)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -245,9 +227,7 @@ HB_FUNC_STATIC(QTCPSERVER_SERVERADDRESS)
   }
 }
 
-/*
-qintptr socketDescriptor() const
-*/
+// qintptr socketDescriptor() const
 HB_FUNC_STATIC(QTCPSERVER_SOCKETDESCRIPTOR)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -265,9 +245,7 @@ HB_FUNC_STATIC(QTCPSERVER_SOCKETDESCRIPTOR)
   }
 }
 
-/*
-bool setSocketDescriptor(qintptr socketDescriptor)
-*/
+// bool setSocketDescriptor(qintptr socketDescriptor)
 HB_FUNC_STATIC(QTCPSERVER_SETSOCKETDESCRIPTOR)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -285,9 +263,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETSOCKETDESCRIPTOR)
   }
 }
 
-/*
-bool waitForNewConnection(int msec = 0, bool * timedOut = nullptr)
-*/
+// bool waitForNewConnection(int msec = 0, bool *timedOut = nullptr)
 HB_FUNC_STATIC(QTCPSERVER_WAITFORNEWCONNECTION)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -307,9 +283,7 @@ HB_FUNC_STATIC(QTCPSERVER_WAITFORNEWCONNECTION)
   }
 }
 
-/*
-virtual bool hasPendingConnections() const
-*/
+// virtual bool hasPendingConnections() const
 HB_FUNC_STATIC(QTCPSERVER_HASPENDINGCONNECTIONS)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -327,9 +301,7 @@ HB_FUNC_STATIC(QTCPSERVER_HASPENDINGCONNECTIONS)
   }
 }
 
-/*
-virtual QTcpSocket * nextPendingConnection()
-*/
+// virtual QTcpSocket *nextPendingConnection()
 HB_FUNC_STATIC(QTCPSERVER_NEXTPENDINGCONNECTION)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -348,9 +320,7 @@ HB_FUNC_STATIC(QTCPSERVER_NEXTPENDINGCONNECTION)
   }
 }
 
-/*
-QAbstractSocket::SocketError serverError() const
-*/
+// QAbstractSocket::SocketError serverError() const
 HB_FUNC_STATIC(QTCPSERVER_SERVERERROR)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -368,9 +338,7 @@ HB_FUNC_STATIC(QTCPSERVER_SERVERERROR)
   }
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QTCPSERVER_ERRORSTRING)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -388,9 +356,7 @@ HB_FUNC_STATIC(QTCPSERVER_ERRORSTRING)
   }
 }
 
-/*
-void pauseAccepting()
-*/
+// void pauseAccepting()
 HB_FUNC_STATIC(QTCPSERVER_PAUSEACCEPTING)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -410,9 +376,7 @@ HB_FUNC_STATIC(QTCPSERVER_PAUSEACCEPTING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void resumeAccepting()
-*/
+// void resumeAccepting()
 HB_FUNC_STATIC(QTCPSERVER_RESUMEACCEPTING)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -432,9 +396,7 @@ HB_FUNC_STATIC(QTCPSERVER_RESUMEACCEPTING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setProxy(const QNetworkProxy &networkProxy)
-*/
+// void setProxy(const QNetworkProxy &networkProxy)
 HB_FUNC_STATIC(QTCPSERVER_SETPROXY)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -454,9 +416,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETPROXY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QNetworkProxy proxy() const
-*/
+// QNetworkProxy proxy() const
 HB_FUNC_STATIC(QTCPSERVER_PROXY)
 {
   auto obj = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -474,9 +434,7 @@ HB_FUNC_STATIC(QTCPSERVER_PROXY)
   }
 }
 
-/*
-void acceptError(QAbstractSocket::SocketError socketError)
-*/
+// void acceptError(QAbstractSocket::SocketError socketError)
 HB_FUNC_STATIC(QTCPSERVER_ONACCEPTERROR)
 {
   auto sender = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -517,9 +475,7 @@ HB_FUNC_STATIC(QTCPSERVER_ONACCEPTERROR)
   hb_retl(result);
 }
 
-/*
-void newConnection()
-*/
+// void newConnection()
 HB_FUNC_STATIC(QTCPSERVER_ONNEWCONNECTION)
 {
   auto sender = qobject_cast<QTcpServer *>(Qt5xHb::getQObjectPointerFromSelfItem());

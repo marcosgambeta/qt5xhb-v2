@@ -65,9 +65,7 @@ RETURN
 
 #include <QtCore/QIODevice>
 
-    /*
-    QNetworkDiskCache(QObject * parent = nullptr)
-    */
+    // QNetworkDiskCache(QObject *parent = nullptr)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -78,9 +76,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_NEW)
   }
 }
 
-/*
-~QNetworkDiskCache()
-*/
+// ~QNetworkDiskCache()
 HB_FUNC_STATIC(QNETWORKDISKCACHE_DELETE)
 {
   auto obj = qobject_cast<QNetworkDiskCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -90,9 +86,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString cacheDirectory() const
-*/
+// QString cacheDirectory() const
 HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHEDIRECTORY)
 {
   auto obj = qobject_cast<QNetworkDiskCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -110,9 +104,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHEDIRECTORY)
   }
 }
 
-/*
-void setCacheDirectory(const QString &cacheDir)
-*/
+// void setCacheDirectory(const QString &cacheDir)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_SETCACHEDIRECTORY)
 {
   auto obj = qobject_cast<QNetworkDiskCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -132,9 +124,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_SETCACHEDIRECTORY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qint64 maximumCacheSize() const
-*/
+// qint64 maximumCacheSize() const
 HB_FUNC_STATIC(QNETWORKDISKCACHE_MAXIMUMCACHESIZE)
 {
   auto obj = qobject_cast<QNetworkDiskCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -152,9 +142,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_MAXIMUMCACHESIZE)
   }
 }
 
-/*
-void setMaximumCacheSize(qint64 size)
-*/
+// void setMaximumCacheSize(qint64 size)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE)
 {
   auto obj = qobject_cast<QNetworkDiskCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -174,9 +162,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qint64 cacheSize() const Q_DECL_OVERRIDE
-*/
+// qint64 cacheSize() const Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHESIZE)
 {
   auto obj = qobject_cast<QNetworkDiskCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -194,9 +180,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHESIZE)
   }
 }
 
-/*
-QNetworkCacheMetaData metaData(const QUrl &url) Q_DECL_OVERRIDE
-*/
+// QNetworkCacheMetaData metaData(const QUrl &url) Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QNETWORKDISKCACHE_METADATA)
 {
   auto obj = qobject_cast<QNetworkDiskCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -214,9 +198,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_METADATA)
   }
 }
 
-/*
-void updateMetaData(const QNetworkCacheMetaData &metaData) Q_DECL_OVERRIDE
-*/
+// void updateMetaData(const QNetworkCacheMetaData &metaData) Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QNETWORKDISKCACHE_UPDATEMETADATA)
 {
   auto obj = qobject_cast<QNetworkDiskCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -236,9 +218,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_UPDATEMETADATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QIODevice * data(const QUrl &url) Q_DECL_OVERRIDE
-*/
+// QIODevice *data(const QUrl &url) Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QNETWORKDISKCACHE_DATA)
 {
   auto obj = qobject_cast<QNetworkDiskCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -257,9 +237,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_DATA)
   }
 }
 
-/*
-bool remove(const QUrl &url) Q_DECL_OVERRIDE
-*/
+// bool remove(const QUrl &url) Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QNETWORKDISKCACHE_REMOVE)
 {
   auto obj = qobject_cast<QNetworkDiskCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -277,9 +255,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_REMOVE)
   }
 }
 
-/*
-QIODevice * prepare(const QNetworkCacheMetaData &metaData) Q_DECL_OVERRIDE
-*/
+// QIODevice *prepare(const QNetworkCacheMetaData &metaData) Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QNETWORKDISKCACHE_PREPARE)
 {
   auto obj = qobject_cast<QNetworkDiskCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -298,9 +274,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_PREPARE)
   }
 }
 
-/*
-void insert(QIODevice * device) Q_DECL_OVERRIDE
-*/
+// void insert(QIODevice *device) Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QNETWORKDISKCACHE_INSERT)
 {
   auto obj = qobject_cast<QNetworkDiskCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -320,9 +294,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_INSERT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QNetworkCacheMetaData fileMetaData(const QString &fileName) const
-*/
+// QNetworkCacheMetaData fileMetaData(const QString &fileName) const
 HB_FUNC_STATIC(QNETWORKDISKCACHE_FILEMETADATA)
 {
   auto obj = qobject_cast<QNetworkDiskCache *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -340,9 +312,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_FILEMETADATA)
   }
 }
 
-/*
-void clear() Q_DECL_OVERRIDE
-*/
+// void clear() Q_DECL_OVERRIDE
 HB_FUNC_STATIC(QNETWORKDISKCACHE_CLEAR)
 {
   auto obj = qobject_cast<QNetworkDiskCache *>(Qt5xHb::getQObjectPointerFromSelfItem());

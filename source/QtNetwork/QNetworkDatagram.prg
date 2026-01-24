@@ -81,18 +81,14 @@ RETURN
 HB_FUNC_STATIC(QNETWORKDATAGRAM_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QNetworkDatagram()
-    */
+    // QNetworkDatagram()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     auto obj = new QNetworkDatagram();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && ISQHOSTADDRESSORNIL(2) && ISNUMORNIL(3)) {
-    /*
-    QNetworkDatagram(const QByteArray &data, const QHostAddress &destinationAddress = QHostAddress(), quint16 port =
-    0) [IMPLICIT]
-    */
+    // QNetworkDatagram(const QByteArray &data, const QHostAddress &destinationAddress = QHostAddress(), quint16 port =
+    // 0) [IMPLICIT]
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     auto obj = new QNetworkDatagram(*PQBYTEARRAY(1),
                                     HB_ISNIL(2) ? QHostAddress() : *static_cast<QHostAddress *>(Qt5xHb::itemGetPtr(2)),
@@ -100,9 +96,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_NEW)
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQNETWORKDATAGRAM(1)) {
-    /*
-    QNetworkDatagram(const QNetworkDatagram &other)
-    */
+    // QNetworkDatagram(const QNetworkDatagram &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     auto obj = new QNetworkDatagram(*PQNETWORKDATAGRAM(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -112,9 +106,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_NEW)
   }
 }
 
-/*
-~QNetworkDatagram()
-*/
+// ~QNetworkDatagram()
 HB_FUNC_STATIC(QNETWORKDATAGRAM_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -126,9 +118,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_DELETE)
 #endif
 }
 
-/*
-void swap(QNetworkDatagram &other) Q_DECL_NOTHROW
-*/
+// void swap(QNetworkDatagram &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QNETWORKDATAGRAM_SWAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -150,9 +140,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SWAP)
 #endif
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QNETWORKDATAGRAM_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -174,9 +162,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_CLEAR)
 #endif
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QNETWORKDATAGRAM_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -196,9 +182,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_ISVALID)
 #endif
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QNETWORKDATAGRAM_ISNULL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -218,9 +202,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_ISNULL)
 #endif
 }
 
-/*
-uint interfaceIndex() const
-*/
+// uint interfaceIndex() const
 HB_FUNC_STATIC(QNETWORKDATAGRAM_INTERFACEINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -240,9 +222,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_INTERFACEINDEX)
 #endif
 }
 
-/*
-void setInterfaceIndex(uint index)
-*/
+// void setInterfaceIndex(uint index)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_SETINTERFACEINDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -264,9 +244,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SETINTERFACEINDEX)
 #endif
 }
 
-/*
-QHostAddress senderAddress() const
-*/
+// QHostAddress senderAddress() const
 HB_FUNC_STATIC(QNETWORKDATAGRAM_SENDERADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -286,9 +264,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SENDERADDRESS)
 #endif
 }
 
-/*
-QHostAddress destinationAddress() const
-*/
+// QHostAddress destinationAddress() const
 HB_FUNC_STATIC(QNETWORKDATAGRAM_DESTINATIONADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -308,9 +284,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_DESTINATIONADDRESS)
 #endif
 }
 
-/*
-int senderPort() const
-*/
+// int senderPort() const
 HB_FUNC_STATIC(QNETWORKDATAGRAM_SENDERPORT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -330,9 +304,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SENDERPORT)
 #endif
 }
 
-/*
-int destinationPort() const
-*/
+// int destinationPort() const
 HB_FUNC_STATIC(QNETWORKDATAGRAM_DESTINATIONPORT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -352,9 +324,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_DESTINATIONPORT)
 #endif
 }
 
-/*
-void setSender(const QHostAddress &address, quint16 port = 0)
-*/
+// void setSender(const QHostAddress &address, quint16 port = 0)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_SETSENDER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -376,9 +346,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SETSENDER)
 #endif
 }
 
-/*
-void setDestination(const QHostAddress &address, quint16 port)
-*/
+// void setDestination(const QHostAddress &address, quint16 port)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_SETDESTINATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -400,9 +368,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SETDESTINATION)
 #endif
 }
 
-/*
-int hopLimit() const
-*/
+// int hopLimit() const
 HB_FUNC_STATIC(QNETWORKDATAGRAM_HOPLIMIT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -422,9 +388,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_HOPLIMIT)
 #endif
 }
 
-/*
-void setHopLimit(int count)
-*/
+// void setHopLimit(int count)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_SETHOPLIMIT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -446,9 +410,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SETHOPLIMIT)
 #endif
 }
 
-/*
-QByteArray data() const
-*/
+// QByteArray data() const
 HB_FUNC_STATIC(QNETWORKDATAGRAM_DATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -468,9 +430,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_DATA)
 #endif
 }
 
-/*
-void setData(const QByteArray &data)
-*/
+// void setData(const QByteArray &data)
 HB_FUNC_STATIC(QNETWORKDATAGRAM_SETDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -492,9 +452,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SETDATA)
 #endif
 }
 
-/*
-QNetworkDatagram makeReply(const QByteArray &paylaod) const
-*/
+// QNetworkDatagram makeReply(const QByteArray &paylaod) const
 HB_FUNC_STATIC(QNETWORKDATAGRAM_MAKEREPLY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

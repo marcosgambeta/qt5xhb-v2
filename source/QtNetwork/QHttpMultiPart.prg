@@ -56,15 +56,11 @@ RETURN
 HB_FUNC_STATIC(QHTTPMULTIPART_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QHttpMultiPart(QObject * parent = nullptr)
-    */
+    // QHttpMultiPart(QObject *parent = nullptr)
     auto obj = new QHttpMultiPart(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QHttpMultiPart(QHttpMultiPart::ContentType contentType, QObject * parent = nullptr)
-    */
+    // QHttpMultiPart(QHttpMultiPart::ContentType contentType, QObject *parent = nullptr)
     auto obj = new QHttpMultiPart(PQHTTPMULTIPART_CONTENTTYPE(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -72,9 +68,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_NEW)
   }
 }
 
-/*
-~QHttpMultiPart()
-*/
+// ~QHttpMultiPart()
 HB_FUNC_STATIC(QHTTPMULTIPART_DELETE)
 {
   auto obj = qobject_cast<QHttpMultiPart *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -84,9 +78,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void append(const QHttpPart &httpPart)
-*/
+// void append(const QHttpPart &httpPart)
 HB_FUNC_STATIC(QHTTPMULTIPART_APPEND)
 {
   auto obj = qobject_cast<QHttpMultiPart *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -106,9 +98,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_APPEND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QByteArray boundary() const
-*/
+// QByteArray boundary() const
 HB_FUNC_STATIC(QHTTPMULTIPART_BOUNDARY)
 {
   auto obj = qobject_cast<QHttpMultiPart *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -126,9 +116,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_BOUNDARY)
   }
 }
 
-/*
-void setBoundary(const QByteArray &boundary)
-*/
+// void setBoundary(const QByteArray &boundary)
 HB_FUNC_STATIC(QHTTPMULTIPART_SETBOUNDARY)
 {
   auto obj = qobject_cast<QHttpMultiPart *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -148,9 +136,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_SETBOUNDARY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setContentType(QHttpMultiPart::ContentType contentType)
-*/
+// void setContentType(QHttpMultiPart::ContentType contentType)
 HB_FUNC_STATIC(QHTTPMULTIPART_SETCONTENTTYPE)
 {
   auto obj = qobject_cast<QHttpMultiPart *>(Qt5xHb::getQObjectPointerFromSelfItem());

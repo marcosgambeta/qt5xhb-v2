@@ -72,15 +72,11 @@ RETURN
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QNetworkConfiguration()
-    */
+    // QNetworkConfiguration()
     auto obj = new QNetworkConfiguration();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1)) {
-    /*
-    QNetworkConfiguration(const QNetworkConfiguration &other)
-    */
+    // QNetworkConfiguration(const QNetworkConfiguration &other)
     auto obj = new QNetworkConfiguration(*PQNETWORKCONFIGURATION(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -88,9 +84,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_NEW)
   }
 }
 
-/*
-~QNetworkConfiguration()
-*/
+// ~QNetworkConfiguration()
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_DELETE)
 {
   auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -100,9 +94,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QNetworkConfiguration::BearerType bearerType() const
-*/
+// QNetworkConfiguration::BearerType bearerType() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPE)
 {
   auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -120,9 +112,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPE)
   }
 }
 
-/*
-QNetworkConfiguration::BearerType bearerTypeFamily() const
-*/
+// QNetworkConfiguration::BearerType bearerTypeFamily() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPEFAMILY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -142,9 +132,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPEFAMILY)
 #endif
 }
 
-/*
-QString bearerTypeName() const
-*/
+// QString bearerTypeName() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPENAME)
 {
   auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -162,9 +150,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPENAME)
   }
 }
 
-/*
-QList<QNetworkConfiguration> children() const
-*/
+// QList<QNetworkConfiguration> children() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_CHILDREN)
 {
   auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -204,9 +190,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_CHILDREN)
   }
 }
 
-/*
-QString identifier() const
-*/
+// QString identifier() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_IDENTIFIER)
 {
   auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -224,9 +208,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_IDENTIFIER)
   }
 }
 
-/*
-bool isRoamingAvailable() const
-*/
+// bool isRoamingAvailable() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_ISROAMINGAVAILABLE)
 {
   auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -244,9 +226,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_ISROAMINGAVAILABLE)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_ISVALID)
 {
   auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -264,9 +244,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_ISVALID)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_NAME)
 {
   auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -284,9 +262,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_NAME)
   }
 }
 
-/*
-QNetworkConfiguration::Purpose purpose() const
-*/
+// QNetworkConfiguration::Purpose purpose() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_PURPOSE)
 {
   auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -304,9 +280,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_PURPOSE)
   }
 }
 
-/*
-QNetworkConfiguration::StateFlags state() const
-*/
+// QNetworkConfiguration::StateFlags state() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_STATE)
 {
   auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -324,9 +298,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_STATE)
   }
 }
 
-/*
-QNetworkConfiguration::Type type() const
-*/
+// QNetworkConfiguration::Type type() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_TYPE)
 {
   auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -344,9 +316,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_TYPE)
   }
 }
 
-/*
-void swap(QNetworkConfiguration &other) Q_DECL_NOTHROW
-*/
+// void swap(QNetworkConfiguration &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_SWAP)
 {
   auto obj = static_cast<QNetworkConfiguration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -366,9 +336,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int connectTimeout() const
-*/
+// int connectTimeout() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_CONNECTTIMEOUT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -388,9 +356,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_CONNECTTIMEOUT)
 #endif
 }
 
-/*
-bool setConnectTimeout(int timeout)
-*/
+// bool setConnectTimeout(int timeout)
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_SETCONNECTTIMEOUT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))

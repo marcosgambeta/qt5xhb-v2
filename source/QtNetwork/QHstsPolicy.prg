@@ -73,27 +73,21 @@ RETURN
 HB_FUNC_STATIC(QHSTSPOLICY_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QHstsPolicy()
-    */
+    // QHstsPolicy()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     auto obj = new QHstsPolicy();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISBETWEEN(3, 4) && ISQDATETIME(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISNUMORNIL(4)) {
-    /*
-    QHstsPolicy(const QDateTime &expiry, QHstsPolicy::PolicyFlags flags, const QString &host, QUrl::ParsingMode mode =
-    QUrl::DecodedMode)
-    */
+    // QHstsPolicy(const QDateTime &expiry, QHstsPolicy::PolicyFlags flags, const QString &host, QUrl::ParsingMode mode =
+    // QUrl::DecodedMode)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     auto obj = new QHstsPolicy(*PQDATETIME(1), PQHSTSPOLICY_POLICYFLAGS(2), PQSTRING(3),
                                HB_ISNIL(4) ? QUrl::DecodedMode : PQURL_PARSINGMODE(4));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQHSTSPOLICY(1)) {
-    /*
-    QHstsPolicy(const QHstsPolicy &rhs)
-    */
+    // QHstsPolicy(const QHstsPolicy &rhs)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     auto obj = new QHstsPolicy(*PQHSTSPOLICY(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -103,9 +97,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_NEW)
   }
 }
 
-/*
-~QHstsPolicy()
-*/
+// ~QHstsPolicy()
 HB_FUNC_STATIC(QHSTSPOLICY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -117,9 +109,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_DELETE)
 #endif
 }
 
-/*
-void swap(QHstsPolicy &other) Q_DECL_NOTHROW
-*/
+// void swap(QHstsPolicy &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QHSTSPOLICY_SWAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -141,9 +131,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SWAP)
 #endif
 }
 
-/*
-void setHost(const QString &host, QUrl::ParsingMode mode = QUrl::DecodedMode)
-*/
+// void setHost(const QString &host, QUrl::ParsingMode mode = QUrl::DecodedMode)
 HB_FUNC_STATIC(QHSTSPOLICY_SETHOST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -165,9 +153,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SETHOST)
 #endif
 }
 
-/*
-QString host(QUrl::ComponentFormattingOptions options = QUrl::FullyDecoded) const
-*/
+// QString host(QUrl::ComponentFormattingOptions options = QUrl::FullyDecoded) const
 HB_FUNC_STATIC(QHSTSPOLICY_HOST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -187,9 +173,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_HOST)
 #endif
 }
 
-/*
-void setExpiry(const QDateTime &expiry)
-*/
+// void setExpiry(const QDateTime &expiry)
 HB_FUNC_STATIC(QHSTSPOLICY_SETEXPIRY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -211,9 +195,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SETEXPIRY)
 #endif
 }
 
-/*
-QDateTime expiry() const
-*/
+// QDateTime expiry() const
 HB_FUNC_STATIC(QHSTSPOLICY_EXPIRY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -233,9 +215,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_EXPIRY)
 #endif
 }
 
-/*
-void setIncludesSubDomains(bool include)
-*/
+// void setIncludesSubDomains(bool include)
 HB_FUNC_STATIC(QHSTSPOLICY_SETINCLUDESSUBDOMAINS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -257,9 +237,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SETINCLUDESSUBDOMAINS)
 #endif
 }
 
-/*
-bool includesSubDomains() const
-*/
+// bool includesSubDomains() const
 HB_FUNC_STATIC(QHSTSPOLICY_INCLUDESSUBDOMAINS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -279,9 +257,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_INCLUDESSUBDOMAINS)
 #endif
 }
 
-/*
-bool isExpired() const
-*/
+// bool isExpired() const
 HB_FUNC_STATIC(QHSTSPOLICY_ISEXPIRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))

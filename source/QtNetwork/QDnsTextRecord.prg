@@ -63,15 +63,11 @@ RETURN
 HB_FUNC_STATIC(QDNSTEXTRECORD_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QDnsTextRecord()
-    */
+    // QDnsTextRecord()
     auto obj = new QDnsTextRecord();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDNSTEXTRECORD(1)) {
-    /*
-    QDnsTextRecord(const QDnsTextRecord &other)
-    */
+    // QDnsTextRecord(const QDnsTextRecord &other)
     auto obj = new QDnsTextRecord(*PQDNSTEXTRECORD(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -79,9 +75,7 @@ HB_FUNC_STATIC(QDNSTEXTRECORD_NEW)
   }
 }
 
-/*
-~QDnsTextRecord()
-*/
+// ~QDnsTextRecord()
 HB_FUNC_STATIC(QDNSTEXTRECORD_DELETE)
 {
   auto obj = static_cast<QDnsTextRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -91,9 +85,7 @@ HB_FUNC_STATIC(QDNSTEXTRECORD_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QDNSTEXTRECORD_NAME)
 {
   auto obj = static_cast<QDnsTextRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -111,9 +103,7 @@ HB_FUNC_STATIC(QDNSTEXTRECORD_NAME)
   }
 }
 
-/*
-void swap(QDnsTextRecord &other) Q_DECL_NOTHROW
-*/
+// void swap(QDnsTextRecord &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QDNSTEXTRECORD_SWAP)
 {
   auto obj = static_cast<QDnsTextRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -133,9 +123,7 @@ HB_FUNC_STATIC(QDNSTEXTRECORD_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-quint32 timeToLive() const
-*/
+// quint32 timeToLive() const
 HB_FUNC_STATIC(QDNSTEXTRECORD_TIMETOLIVE)
 {
   auto obj = static_cast<QDnsTextRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -153,9 +141,7 @@ HB_FUNC_STATIC(QDNSTEXTRECORD_TIMETOLIVE)
   }
 }
 
-/*
-QList<QByteArray> values() const
-*/
+// QList<QByteArray> values() const
 HB_FUNC_STATIC(QDNSTEXTRECORD_VALUES)
 {
   auto obj = static_cast<QDnsTextRecord *>(Qt5xHb::itemGetPtrStackSelfItem());
