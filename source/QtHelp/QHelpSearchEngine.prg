@@ -67,9 +67,7 @@ RETURN
 #include <QtHelp/QHelpSearchQueryWidget>
 #include <QtHelp/QHelpSearchResultWidget>
 
-    /*
-    QHelpSearchEngine(QHelpEngineCore * helpEngine, QObject * parent = nullptr)
-    */
+    // QHelpSearchEngine(QHelpEngineCore *helpEngine, QObject *parent = nullptr)
 HB_FUNC_STATIC(QHELPSEARCHENGINE_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQHELPENGINECORE(1) && ISQOBJECTORNIL(2)) {
@@ -89,9 +87,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int hitCount() const
-*/
+// int hitCount() const
 HB_FUNC_STATIC(QHELPSEARCHENGINE_HITCOUNT)
 {
   auto obj = qobject_cast<QHelpSearchEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -109,9 +105,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_HITCOUNT)
   }
 }
 
-/*
-QList<QHelpSearchQuery> query() const
-*/
+// QList<QHelpSearchQuery> query() const
 HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERY)
 {
   auto obj = qobject_cast<QHelpSearchEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -151,9 +145,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERY)
   }
 }
 
-/*
-QHelpSearchQueryWidget * queryWidget()
-*/
+// QHelpSearchQueryWidget *queryWidget()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERYWIDGET)
 {
   auto obj = qobject_cast<QHelpSearchEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -172,9 +164,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERYWIDGET)
   }
 }
 
-/*
-QHelpSearchResultWidget * resultWidget()
-*/
+// QHelpSearchResultWidget *resultWidget()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_RESULTWIDGET)
 {
   auto obj = qobject_cast<QHelpSearchEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -193,9 +183,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_RESULTWIDGET)
   }
 }
 
-/*
-void cancelIndexing()
-*/
+// void cancelIndexing()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELINDEXING)
 {
   auto obj = qobject_cast<QHelpSearchEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -215,9 +203,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELINDEXING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void cancelSearching()
-*/
+// void cancelSearching()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELSEARCHING)
 {
   auto obj = qobject_cast<QHelpSearchEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -237,9 +223,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELSEARCHING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void reindexDocumentation()
-*/
+// void reindexDocumentation()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_REINDEXDOCUMENTATION)
 {
   auto obj = qobject_cast<QHelpSearchEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -259,9 +243,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_REINDEXDOCUMENTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void search(const QList<QHelpSearchQuery> &queryList)
-*/
+// void search(const QList<QHelpSearchQuery> &queryList)
 HB_FUNC_STATIC(QHELPSEARCHENGINE_SEARCH)
 {
   auto obj = qobject_cast<QHelpSearchEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -288,9 +270,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_SEARCH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void indexingFinished()
-*/
+// void indexingFinished()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_ONINDEXINGFINISHED)
 {
   auto sender = qobject_cast<QHelpSearchEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -328,9 +308,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_ONINDEXINGFINISHED)
   hb_retl(result);
 }
 
-/*
-void indexingStarted()
-*/
+// void indexingStarted()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_ONINDEXINGSTARTED)
 {
   auto sender = qobject_cast<QHelpSearchEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -368,9 +346,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_ONINDEXINGSTARTED)
   hb_retl(result);
 }
 
-/*
-void searchingFinished(int hits)
-*/
+// void searchingFinished(int hits)
 HB_FUNC_STATIC(QHELPSEARCHENGINE_ONSEARCHINGFINISHED)
 {
   auto sender = qobject_cast<QHelpSearchEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -411,9 +387,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_ONSEARCHINGFINISHED)
   hb_retl(result);
 }
 
-/*
-void searchingStarted()
-*/
+// void searchingStarted()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_ONSEARCHINGSTARTED)
 {
   auto sender = qobject_cast<QHelpSearchEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());

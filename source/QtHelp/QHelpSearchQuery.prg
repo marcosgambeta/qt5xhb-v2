@@ -58,15 +58,11 @@ RETURN
 HB_FUNC_STATIC(QHELPSEARCHQUERY_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QHelpSearchQuery()
-    */
+    // QHelpSearchQuery()
     auto obj = new QHelpSearchQuery();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2)) {
-    /*
-    QHelpSearchQuery(QHelpSearchQuery::FieldName field, const QStringList &wordList)
-    */
+    // QHelpSearchQuery(QHelpSearchQuery::FieldName field, const QStringList &wordList)
     auto obj = new QHelpSearchQuery(PQHELPSEARCHQUERY_FIELDNAME(1), PQSTRINGLIST(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {

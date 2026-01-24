@@ -70,17 +70,13 @@ RETURN
 HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QCompressedHelpInfo()
-    */
+    // QCompressedHelpInfo()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
     auto obj = new QCompressedHelpInfo();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQCOMPRESSEDHELPINFO(1)) {
-    /*
-    QCompressedHelpInfo(const QCompressedHelpInfo &other)
-    */
+    // QCompressedHelpInfo(const QCompressedHelpInfo &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
     auto obj = new QCompressedHelpInfo(*PQCOMPRESSEDHELPINFO(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -90,9 +86,7 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_NEW)
   }
 }
 
-/*
-~QCompressedHelpInfo()
-*/
+// ~QCompressedHelpInfo()
 HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -104,9 +98,7 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_DELETE)
 #endif
 }
 
-/*
-void swap(QCompressedHelpInfo &other) Q_DECL_NOTHROW
-*/
+// void swap(QCompressedHelpInfo &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_SWAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -128,9 +120,7 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_SWAP)
 #endif
 }
 
-/*
-QString namespaceName() const
-*/
+// QString namespaceName() const
 HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_NAMESPACENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -150,9 +140,7 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_NAMESPACENAME)
 #endif
 }
 
-/*
-QString component() const
-*/
+// QString component() const
 HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_COMPONENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -172,9 +160,7 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_COMPONENT)
 #endif
 }
 
-/*
-QVersionNumber version() const
-*/
+// QVersionNumber version() const
 HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_VERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -194,9 +180,7 @@ HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_VERSION)
 #endif
 }
 
-/*
-static QCompressedHelpInfo fromCompressedHelpFile(const QString &documentationFileName)
-*/
+// static QCompressedHelpInfo fromCompressedHelpFile(const QString &documentationFileName)
 HB_FUNC_STATIC(QCOMPRESSEDHELPINFO_FROMCOMPRESSEDHELPFILE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))

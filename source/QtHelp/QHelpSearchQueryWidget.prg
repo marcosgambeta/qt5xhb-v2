@@ -52,9 +52,7 @@ RETURN
 #include <QtHelp/QHelpSearchQueryWidget>
 #endif
 
-    /*
-    QHelpSearchQueryWidget(QWidget * parent = nullptr)
-    */
+    // QHelpSearchQueryWidget(QWidget *parent = nullptr)
 HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -74,9 +72,7 @@ HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QHelpSearchQuery> query() const
-*/
+// QList<QHelpSearchQuery> query() const
 HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_QUERY)
 {
   auto obj = qobject_cast<QHelpSearchQueryWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -116,9 +112,7 @@ HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_QUERY)
   }
 }
 
-/*
-void search()
-*/
+// void search()
 HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_ONSEARCH)
 {
   auto sender = qobject_cast<QHelpSearchQueryWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());

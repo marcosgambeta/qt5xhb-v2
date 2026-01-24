@@ -53,9 +53,7 @@ RETURN
 #include <QtHelp/QHelpIndexModel>
 #endif
 
-    /*
-    void createIndex(const QString &customFilterName)
-    */
+    // void createIndex(const QString &customFilterName)
 HB_FUNC_STATIC(QHELPINDEXMODEL_CREATEINDEX)
 {
   auto obj = qobject_cast<QHelpIndexModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -75,9 +73,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_CREATEINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QModelIndex filter(const QString &filter, const QString &wildcard = QString())
-*/
+// QModelIndex filter(const QString &filter, const QString &wildcard = QString())
 HB_FUNC_STATIC(QHELPINDEXMODEL_FILTER)
 {
   auto obj = qobject_cast<QHelpIndexModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -95,9 +91,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_FILTER)
   }
 }
 
-/*
-bool isCreatingIndex() const
-*/
+// bool isCreatingIndex() const
 HB_FUNC_STATIC(QHELPINDEXMODEL_ISCREATINGINDEX)
 {
   auto obj = qobject_cast<QHelpIndexModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -115,9 +109,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_ISCREATINGINDEX)
   }
 }
 
-/*
-void indexCreated()
-*/
+// void indexCreated()
 HB_FUNC_STATIC(QHELPINDEXMODEL_ONINDEXCREATED)
 {
   auto sender = qobject_cast<QHelpIndexModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -155,9 +147,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_ONINDEXCREATED)
   hb_retl(result);
 }
 
-/*
-void indexCreationStarted()
-*/
+// void indexCreationStarted()
 HB_FUNC_STATIC(QHELPINDEXMODEL_ONINDEXCREATIONSTARTED)
 {
   auto sender = qobject_cast<QHelpIndexModel *>(Qt5xHb::getQObjectPointerFromSelfItem());

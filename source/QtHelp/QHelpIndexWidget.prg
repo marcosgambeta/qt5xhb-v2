@@ -60,9 +60,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void activateCurrentItem()
-*/
+// void activateCurrentItem()
 HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
 {
   auto obj = qobject_cast<QHelpIndexWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -82,9 +80,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void filterIndices(const QString &filter, const QString &wildcard = QString())
-*/
+// void filterIndices(const QString &filter, const QString &wildcard = QString())
 HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
 {
   auto obj = qobject_cast<QHelpIndexWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -104,9 +100,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void linkActivated(const QUrl &link, const QString &keyword)
-*/
+// void linkActivated(const QUrl &link, const QString &keyword)
 HB_FUNC_STATIC(QHELPINDEXWIDGET_ONLINKACTIVATED)
 {
   auto sender = qobject_cast<QHelpIndexWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());

@@ -62,9 +62,7 @@ HB_FUNC_STATIC(QHELPCONTENTWIDGET_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QModelIndex indexOf(const QUrl &link)
-*/
+// QModelIndex indexOf(const QUrl &link)
 HB_FUNC_STATIC(QHELPCONTENTWIDGET_INDEXOF)
 {
   auto obj = qobject_cast<QHelpContentWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -82,9 +80,7 @@ HB_FUNC_STATIC(QHELPCONTENTWIDGET_INDEXOF)
   }
 }
 
-/*
-void linkActivated(const QUrl &link)
-*/
+// void linkActivated(const QUrl &link)
 HB_FUNC_STATIC(QHELPCONTENTWIDGET_ONLINKACTIVATED)
 {
   auto sender = qobject_cast<QHelpContentWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());

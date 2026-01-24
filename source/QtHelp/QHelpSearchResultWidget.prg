@@ -60,9 +60,7 @@ HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QUrl linkAt(const QPoint &point)
-*/
+// QUrl linkAt(const QPoint &point)
 HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_LINKAT)
 {
   auto obj = qobject_cast<QHelpSearchResultWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -80,9 +78,7 @@ HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_LINKAT)
   }
 }
 
-/*
-void requestShowLink(const QUrl &link)
-*/
+// void requestShowLink(const QUrl &link)
 HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK)
 {
   auto sender = qobject_cast<QHelpSearchResultWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
