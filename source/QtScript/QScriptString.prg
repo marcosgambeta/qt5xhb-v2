@@ -60,15 +60,11 @@ RETURN
 HB_FUNC_STATIC(QSCRIPTSTRING_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QScriptString()
-    */
+    // QScriptString()
     auto obj = new QScriptString();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSCRIPTSTRING(1)) {
-    /*
-    QScriptString(const QScriptString &other)
-    */
+    // QScriptString(const QScriptString &other)
     auto obj = new QScriptString(*PQSCRIPTSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -85,9 +81,7 @@ HB_FUNC_STATIC(QSCRIPTSTRING_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QSCRIPTSTRING_ISVALID)
 {
   auto obj = static_cast<QScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -105,9 +99,7 @@ HB_FUNC_STATIC(QSCRIPTSTRING_ISVALID)
   }
 }
 
-/*
-QString toString() const
-*/
+// QString toString() const
 HB_FUNC_STATIC(QSCRIPTSTRING_TOSTRING)
 {
   auto obj = static_cast<QScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());

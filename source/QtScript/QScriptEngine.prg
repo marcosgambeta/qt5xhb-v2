@@ -96,15 +96,11 @@ RETURN
 HB_FUNC_STATIC(QSCRIPTENGINE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QScriptEngine()
-    */
+    // QScriptEngine()
     auto obj = new QScriptEngine();
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
-    /*
-    QScriptEngine(QObject * parent)
-    */
+    // QScriptEngine(QObject *parent)
     auto obj = new QScriptEngine(PQOBJECT(1));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -121,9 +117,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void abortEvaluation(const QScriptValue &result = QScriptValue())
-*/
+// void abortEvaluation(const QScriptValue &result = QScriptValue())
 HB_FUNC_STATIC(QSCRIPTENGINE_ABORTEVALUATION)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -143,9 +137,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_ABORTEVALUATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QScriptEngineAgent * agent() const
-*/
+// QScriptEngineAgent *agent() const
 HB_FUNC_STATIC(QSCRIPTENGINE_AGENT)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -164,9 +156,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_AGENT)
   }
 }
 
-/*
-QStringList availableExtensions() const
-*/
+// QStringList availableExtensions() const
 HB_FUNC_STATIC(QSCRIPTENGINE_AVAILABLEEXTENSIONS)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -184,9 +174,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_AVAILABLEEXTENSIONS)
   }
 }
 
-/*
-void clearExceptions()
-*/
+// void clearExceptions()
 HB_FUNC_STATIC(QSCRIPTENGINE_CLEAREXCEPTIONS)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -206,9 +194,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_CLEAREXCEPTIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void collectGarbage()
-*/
+// void collectGarbage()
 HB_FUNC_STATIC(QSCRIPTENGINE_COLLECTGARBAGE)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -228,9 +214,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_COLLECTGARBAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QScriptContext * currentContext() const
-*/
+// QScriptContext *currentContext() const
 HB_FUNC_STATIC(QSCRIPTENGINE_CURRENTCONTEXT)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -249,9 +233,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_CURRENTCONTEXT)
   }
 }
 
-/*
-QScriptValue defaultPrototype(int metaTypeId) const
-*/
+// QScriptValue defaultPrototype(int metaTypeId) const
 HB_FUNC_STATIC(QSCRIPTENGINE_DEFAULTPROTOTYPE)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -272,18 +254,14 @@ HB_FUNC_STATIC(QSCRIPTENGINE_DEFAULTPROTOTYPE)
 HB_FUNC_STATIC(QSCRIPTENGINE_EVALUATE)
 {
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
-    /*
-    QScriptValue evaluate(const QString &program, const QString &fileName = QString(), int lineNumber = 1)
-    */
+    // QScriptValue evaluate(const QString &program, const QString &fileName = QString(), int lineNumber = 1)
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
       RQSCRIPTVALUE(obj->evaluate(PQSTRING(1), OPQSTRING(2, QString()), OPINT(3, 1)));
     }
   } else if (ISNUMPAR(1) && ISQSCRIPTPROGRAM(1)) {
-    /*
-    QScriptValue evaluate(const QScriptProgram &program)
-    */
+    // QScriptValue evaluate(const QScriptProgram &program)
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -294,9 +272,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_EVALUATE)
   }
 }
 
-/*
-QScriptValue globalObject() const
-*/
+// QScriptValue globalObject() const
 HB_FUNC_STATIC(QSCRIPTENGINE_GLOBALOBJECT)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -314,9 +290,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_GLOBALOBJECT)
   }
 }
 
-/*
-bool hasUncaughtException() const
-*/
+// bool hasUncaughtException() const
 HB_FUNC_STATIC(QSCRIPTENGINE_HASUNCAUGHTEXCEPTION)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -334,9 +308,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_HASUNCAUGHTEXCEPTION)
   }
 }
 
-/*
-QScriptValue importExtension(const QString &extension)
-*/
+// QScriptValue importExtension(const QString &extension)
 HB_FUNC_STATIC(QSCRIPTENGINE_IMPORTEXTENSION)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -354,9 +326,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_IMPORTEXTENSION)
   }
 }
 
-/*
-QStringList importedExtensions() const
-*/
+// QStringList importedExtensions() const
 HB_FUNC_STATIC(QSCRIPTENGINE_IMPORTEDEXTENSIONS)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -374,9 +344,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_IMPORTEDEXTENSIONS)
   }
 }
 
-/*
-void installTranslatorFunctions(const QScriptValue &object = QScriptValue())
-*/
+// void installTranslatorFunctions(const QScriptValue &object = QScriptValue())
 HB_FUNC_STATIC(QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -397,9 +365,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isEvaluating() const
-*/
+// bool isEvaluating() const
 HB_FUNC_STATIC(QSCRIPTENGINE_ISEVALUATING)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -417,9 +383,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_ISEVALUATING)
   }
 }
 
-/*
-QScriptValue newArray(uint length = 0)
-*/
+// QScriptValue newArray(uint length = 0)
 HB_FUNC_STATIC(QSCRIPTENGINE_NEWARRAY)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -437,9 +401,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWARRAY)
   }
 }
 
-/*
-QScriptValue newDate(const QDateTime &value)
-*/
+// QScriptValue newDate(const QDateTime &value)
 HB_FUNC_STATIC(QSCRIPTENGINE_NEWDATE)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -460,18 +422,14 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWDATE)
 HB_FUNC_STATIC(QSCRIPTENGINE_NEWOBJECT)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QScriptValue newObject()
-    */
+    // QScriptValue newObject()
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
       RQSCRIPTVALUE(obj->newObject());
     }
   } else if (ISBETWEEN(1, 2) && ISQSCRIPTCLASS(1) && ISQSCRIPTVALUEORNIL(2)) {
-    /*
-    QScriptValue newObject(QScriptClass * scriptClass, const QScriptValue &data = QScriptValue())
-    */
+    // QScriptValue newObject(QScriptClass *scriptClass, const QScriptValue &data = QScriptValue())
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -483,9 +441,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWOBJECT)
   }
 }
 
-/*
-QScriptValue newQMetaObject(const QMetaObject * metaObject, const QScriptValue &ctor = QScriptValue())
-*/
+// QScriptValue newQMetaObject(const QMetaObject *metaObject, const QScriptValue &ctor = QScriptValue())
 HB_FUNC_STATIC(QSCRIPTENGINE_NEWQMETAOBJECT)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -507,18 +463,14 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWQMETAOBJECT)
 HB_FUNC_STATIC(QSCRIPTENGINE_NEWREGEXP)
 {
   if (ISNUMPAR(1) && ISQREGEXP(1)) {
-    /*
-    QScriptValue newRegExp(const QRegExp &regexp)
-    */
+    // QScriptValue newRegExp(const QRegExp &regexp)
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
       RQSCRIPTVALUE(obj->newRegExp(*PQREGEXP(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    /*
-    QScriptValue newRegExp(const QString &pattern, const QString &flags)
-    */
+    // QScriptValue newRegExp(const QString &pattern, const QString &flags)
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -532,18 +484,14 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWREGEXP)
 HB_FUNC_STATIC(QSCRIPTENGINE_NEWVARIANT)
 {
   if (ISNUMPAR(1) && ISQVARIANT(1)) {
-    /*
-    QScriptValue newVariant(const QVariant &value)
-    */
+    // QScriptValue newVariant(const QVariant &value)
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
       RQSCRIPTVALUE(obj->newVariant(*PQVARIANT(1)));
     }
   } else if (ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQVARIANT(2)) {
-    /*
-    QScriptValue newVariant(const QScriptValue &object, const QVariant &value)
-    */
+    // QScriptValue newVariant(const QScriptValue &object, const QVariant &value)
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -554,9 +502,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWVARIANT)
   }
 }
 
-/*
-QScriptValue nullValue()
-*/
+// QScriptValue nullValue()
 HB_FUNC_STATIC(QSCRIPTENGINE_NULLVALUE)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -574,9 +520,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NULLVALUE)
   }
 }
 
-/*
-void popContext()
-*/
+// void popContext()
 HB_FUNC_STATIC(QSCRIPTENGINE_POPCONTEXT)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -596,9 +540,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_POPCONTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int processEventsInterval() const
-*/
+// int processEventsInterval() const
 HB_FUNC_STATIC(QSCRIPTENGINE_PROCESSEVENTSINTERVAL)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -616,9 +558,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_PROCESSEVENTSINTERVAL)
   }
 }
 
-/*
-QScriptContext * pushContext()
-*/
+// QScriptContext *pushContext()
 HB_FUNC_STATIC(QSCRIPTENGINE_PUSHCONTEXT)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -637,9 +577,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_PUSHCONTEXT)
   }
 }
 
-/*
-void reportAdditionalMemoryCost(int size)
-*/
+// void reportAdditionalMemoryCost(int size)
 HB_FUNC_STATIC(QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -659,9 +597,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAgent(QScriptEngineAgent * agent)
-*/
+// void setAgent(QScriptEngineAgent *agent)
 HB_FUNC_STATIC(QSCRIPTENGINE_SETAGENT)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -681,9 +617,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETAGENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDefaultPrototype(int metaTypeId, const QScriptValue &prototype)
-*/
+// void setDefaultPrototype(int metaTypeId, const QScriptValue &prototype)
 HB_FUNC_STATIC(QSCRIPTENGINE_SETDEFAULTPROTOTYPE)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -703,9 +637,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETDEFAULTPROTOTYPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setGlobalObject(const QScriptValue &object)
-*/
+// void setGlobalObject(const QScriptValue &object)
 HB_FUNC_STATIC(QSCRIPTENGINE_SETGLOBALOBJECT)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -725,9 +657,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETGLOBALOBJECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setProcessEventsInterval(int interval)
-*/
+// void setProcessEventsInterval(int interval)
 HB_FUNC_STATIC(QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -747,9 +677,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QScriptValue toObject(const QScriptValue &value)
-*/
+// QScriptValue toObject(const QScriptValue &value)
 HB_FUNC_STATIC(QSCRIPTENGINE_TOOBJECT)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -767,9 +695,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_TOOBJECT)
   }
 }
 
-/*
-QScriptString toStringHandle(const QString &str)
-*/
+// QScriptString toStringHandle(const QString &str)
 HB_FUNC_STATIC(QSCRIPTENGINE_TOSTRINGHANDLE)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -787,9 +713,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_TOSTRINGHANDLE)
   }
 }
 
-/*
-QScriptValue uncaughtException() const
-*/
+// QScriptValue uncaughtException() const
 HB_FUNC_STATIC(QSCRIPTENGINE_UNCAUGHTEXCEPTION)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -807,9 +731,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_UNCAUGHTEXCEPTION)
   }
 }
 
-/*
-QStringList uncaughtExceptionBacktrace() const
-*/
+// QStringList uncaughtExceptionBacktrace() const
 HB_FUNC_STATIC(QSCRIPTENGINE_UNCAUGHTEXCEPTIONBACKTRACE)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -827,9 +749,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_UNCAUGHTEXCEPTIONBACKTRACE)
   }
 }
 
-/*
-int uncaughtExceptionLineNumber() const
-*/
+// int uncaughtExceptionLineNumber() const
 HB_FUNC_STATIC(QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -847,9 +767,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER)
   }
 }
 
-/*
-QScriptValue undefinedValue()
-*/
+// QScriptValue undefinedValue()
 HB_FUNC_STATIC(QSCRIPTENGINE_UNDEFINEDVALUE)
 {
   auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -867,9 +785,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_UNDEFINEDVALUE)
   }
 }
 
-/*
-static QScriptSyntaxCheckResult checkSyntax(const QString &program)
-*/
+// static QScriptSyntaxCheckResult checkSyntax(const QString &program)
 HB_FUNC_STATIC(QSCRIPTENGINE_CHECKSYNTAX)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -883,9 +799,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_CHECKSYNTAX)
 #endif
 }
 
-/*
-void signalHandlerException(const QScriptValue &exception)
-*/
+// void signalHandlerException(const QScriptValue &exception)
 HB_FUNC_STATIC(QSCRIPTENGINE_ONSIGNALHANDLEREXCEPTION)
 {
   auto sender = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());

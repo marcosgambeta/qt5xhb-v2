@@ -74,9 +74,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QScriptValue argument(int index) const
-*/
+// QScriptValue argument(int index) const
 HB_FUNC_STATIC(QSCRIPTABLE_ARGUMENT)
 {
   auto obj = static_cast<QScriptable *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -94,9 +92,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_ARGUMENT)
   }
 }
 
-/*
-int argumentCount() const
-*/
+// int argumentCount() const
 HB_FUNC_STATIC(QSCRIPTABLE_ARGUMENTCOUNT)
 {
   auto obj = static_cast<QScriptable *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -114,9 +110,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_ARGUMENTCOUNT)
   }
 }
 
-/*
-QScriptContext * context() const
-*/
+// QScriptContext *context() const
 HB_FUNC_STATIC(QSCRIPTABLE_CONTEXT)
 {
   auto obj = static_cast<QScriptable *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -135,9 +129,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_CONTEXT)
   }
 }
 
-/*
-QScriptEngine * engine() const
-*/
+// QScriptEngine *engine() const
 HB_FUNC_STATIC(QSCRIPTABLE_ENGINE)
 {
   auto obj = static_cast<QScriptable *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -156,9 +148,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_ENGINE)
   }
 }
 
-/*
-QScriptValue thisObject() const
-*/
+// QScriptValue thisObject() const
 HB_FUNC_STATIC(QSCRIPTABLE_THISOBJECT)
 {
   auto obj = static_cast<QScriptable *>(Qt5xHb::itemGetPtrStackSelfItem());

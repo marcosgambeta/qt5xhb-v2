@@ -62,21 +62,15 @@ RETURN
 HB_FUNC_STATIC(QSCRIPTPROGRAM_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QScriptProgram()
-    */
+    // QScriptProgram()
     auto obj = new QScriptProgram();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
-    /*
-    QScriptProgram(const QString &sourceCode, const QString fileName = QString(), int firstLineNumber = 1)
-    */
+    // QScriptProgram(const QString &sourceCode, const QString fileName = QString(), int firstLineNumber = 1)
     auto obj = new QScriptProgram(PQSTRING(1), OPQSTRING(2, QString()), OPINT(3, 1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSCRIPTPROGRAM(1)) {
-    /*
-    QScriptProgram(const QScriptProgram &other)
-    */
+    // QScriptProgram(const QScriptProgram &other)
     auto obj = new QScriptProgram(*PQSCRIPTPROGRAM(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -93,9 +87,7 @@ HB_FUNC_STATIC(QSCRIPTPROGRAM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString fileName() const
-*/
+// QString fileName() const
 HB_FUNC_STATIC(QSCRIPTPROGRAM_FILENAME)
 {
   auto obj = static_cast<QScriptProgram *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -113,9 +105,7 @@ HB_FUNC_STATIC(QSCRIPTPROGRAM_FILENAME)
   }
 }
 
-/*
-int firstLineNumber() const
-*/
+// int firstLineNumber() const
 HB_FUNC_STATIC(QSCRIPTPROGRAM_FIRSTLINENUMBER)
 {
   auto obj = static_cast<QScriptProgram *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -133,9 +123,7 @@ HB_FUNC_STATIC(QSCRIPTPROGRAM_FIRSTLINENUMBER)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QSCRIPTPROGRAM_ISNULL)
 {
   auto obj = static_cast<QScriptProgram *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -153,9 +141,7 @@ HB_FUNC_STATIC(QSCRIPTPROGRAM_ISNULL)
   }
 }
 
-/*
-QString sourceCode() const
-*/
+// QString sourceCode() const
 HB_FUNC_STATIC(QSCRIPTPROGRAM_SOURCECODE)
 {
   auto obj = static_cast<QScriptProgram *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -70,9 +70,7 @@ RETURN
 
 #include <QtScript/QScriptEngine>
 
-    /*
-    QScriptClass(QScriptEngine * engine)
-    */
+    // QScriptClass(QScriptEngine *engine)
 HB_FUNC_STATIC(QSCRIPTCLASS_NEW)
 {
   if (ISNUMPAR(1) && ISQSCRIPTENGINE(1)) {
@@ -92,9 +90,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QScriptEngine * engine() const
-*/
+// QScriptEngine *engine() const
 HB_FUNC_STATIC(QSCRIPTCLASS_ENGINE)
 {
   auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -113,9 +109,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_ENGINE)
   }
 }
 
-/*
-virtual QVariant extension(QScriptClass::Extension extension, const QVariant &argument = QVariant())
-*/
+// virtual QVariant extension(QScriptClass::Extension extension, const QVariant &argument = QVariant())
 HB_FUNC_STATIC(QSCRIPTCLASS_EXTENSION)
 {
   auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -134,9 +128,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_EXTENSION)
   }
 }
 
-/*
-virtual QString name() const
-*/
+// virtual QString name() const
 HB_FUNC_STATIC(QSCRIPTCLASS_NAME)
 {
   auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -154,9 +146,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_NAME)
   }
 }
 
-/*
-virtual QScriptClassPropertyIterator * newIterator(const QScriptValue &object)
-*/
+// virtual QScriptClassPropertyIterator *newIterator(const QScriptValue &object)
 HB_FUNC_STATIC(QSCRIPTCLASS_NEWITERATOR)
 {
   auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -175,9 +165,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_NEWITERATOR)
   }
 }
 
-/*
-virtual QScriptValue property(const QScriptValue &object, const QScriptString &name, uint id)
-*/
+// virtual QScriptValue property(const QScriptValue &object, const QScriptString &name, uint id)
 HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTY)
 {
   auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -195,9 +183,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTY)
   }
 }
 
-/*
-virtual QScriptValue::PropertyFlags propertyFlags(const QScriptValue &object, const QScriptString &name, uint id)
-*/
+// virtual QScriptValue::PropertyFlags propertyFlags(const QScriptValue &object, const QScriptString &name, uint id)
 HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTYFLAGS)
 {
   auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -215,9 +201,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTYFLAGS)
   }
 }
 
-/*
-virtual QScriptValue prototype() const
-*/
+// virtual QScriptValue prototype() const
 HB_FUNC_STATIC(QSCRIPTCLASS_PROTOTYPE)
 {
   auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -235,12 +219,8 @@ HB_FUNC_STATIC(QSCRIPTCLASS_PROTOTYPE)
   }
 }
 
-/*
-virtual QueryFlags queryProperty(const QScriptValue &object, const QScriptString &name, QueryFlags flags, uint * id)
-*/
-/*
-virtual void setProperty(QScriptValue &object, const QScriptString &name, uint id, const QScriptValue &value)
-*/
+// virtual QueryFlags queryProperty(const QScriptValue &object, const QScriptString &name, QueryFlags flags, uint *id)
+// virtual void setProperty(QScriptValue &object, const QScriptString &name, uint id, const QScriptValue &value)
 HB_FUNC_STATIC(QSCRIPTCLASS_SETPROPERTY)
 {
   auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -260,9 +240,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_SETPROPERTY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool supportsExtension(QScriptClass::Extension extension) const
-*/
+// virtual bool supportsExtension(QScriptClass::Extension extension) const
 HB_FUNC_STATIC(QSCRIPTCLASS_SUPPORTSEXTENSION)
 {
   auto obj = static_cast<QScriptClass *>(Qt5xHb::itemGetPtrStackSelfItem());
