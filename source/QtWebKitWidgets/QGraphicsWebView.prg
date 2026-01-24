@@ -102,9 +102,7 @@ RETURN
 
 #include <QtWidgets/QAction>
 
-    /*
-    QGraphicsWebView(QGraphicsItem * parent = nullptr)
-    */
+    // QGraphicsWebView(QGraphicsItem *parent = nullptr)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQGRAPHICSITEMORNIL(1)) {
@@ -115,9 +113,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_NEW)
   }
 }
 
-/*
-~QGraphicsWebView()
-*/
+// ~QGraphicsWebView()
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_DELETE)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -127,9 +123,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_TITLE)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -147,9 +141,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_TITLE)
   }
 }
 
-/*
-QIcon icon() const
-*/
+// QIcon icon() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ICON)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -167,9 +159,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ICON)
   }
 }
 
-/*
-qreal zoomFactor() const
-*/
+// qreal zoomFactor() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ZOOMFACTOR)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -187,9 +177,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ZOOMFACTOR)
   }
 }
 
-/*
-void setZoomFactor(qreal)
-*/
+// void setZoomFactor(qreal)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETZOOMFACTOR)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -209,9 +197,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETZOOMFACTOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QUrl url() const
-*/
+// QUrl url() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_URL)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -229,9 +215,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_URL)
   }
 }
 
-/*
-void setUrl(const QUrl &)
-*/
+// void setUrl(const QUrl &)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETURL)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -251,9 +235,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETURL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isModified() const
-*/
+// bool isModified() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ISMODIFIED)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -271,9 +253,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ISMODIFIED)
   }
 }
 
-/*
-bool resizesToContents() const
-*/
+// bool resizesToContents() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RESIZESTOCONTENTS)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -291,9 +271,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RESIZESTOCONTENTS)
   }
 }
 
-/*
-void setResizesToContents(bool enabled)
-*/
+// void setResizesToContents(bool enabled)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -313,9 +291,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isTiledBackingStoreFrozen() const
-*/
+// bool isTiledBackingStoreFrozen() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -333,9 +309,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN)
   }
 }
 
-/*
-void setTiledBackingStoreFrozen(bool frozen)
-*/
+// void setTiledBackingStoreFrozen(bool frozen)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -355,9 +329,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPainter::RenderHints renderHints() const
-*/
+// QPainter::RenderHints renderHints() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RENDERHINTS)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -375,9 +347,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RENDERHINTS)
   }
 }
 
-/*
-void setRenderHints(QPainter::RenderHints)
-*/
+// void setRenderHints(QPainter::RenderHints)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETRENDERHINTS)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -397,9 +367,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETRENDERHINTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool findText(const QString &subString, QWebPage::FindFlags options = 0)
-*/
+// bool findText(const QString &subString, QWebPage::FindFlags options = 0)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_FINDTEXT)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -417,9 +385,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_FINDTEXT)
   }
 }
 
-/*
-QWebHistory * history() const
-*/
+// QWebHistory *history() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_HISTORY)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -441,9 +407,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_HISTORY)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_LOAD)
 {
   if (ISNUMPAR(1) && ISQURL(1)) {
-    /*
-    void load(const QUrl &url)
-    */
+    // void load(const QUrl &url)
     auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -452,10 +416,8 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_LOAD)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && ISNUMORNIL(2) && ISOPTQBYTEARRAY(3)) {
-    /*
-    void load(const QNetworkRequest &request, QNetworkAccessManager::Operation operation =
-    QNetworkAccessManager::GetOperation, const QByteArray &body = QByteArray())
-    */
+    // void load(const QNetworkRequest &request, QNetworkAccessManager::Operation operation =
+    // QNetworkAccessManager::GetOperation, const QByteArray &body = QByteArray())
     auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -470,9 +432,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_LOAD)
   }
 }
 
-/*
-QWebPage * page() const
-*/
+// QWebPage *page() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAGE)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -491,9 +451,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAGE)
   }
 }
 
-/*
-QAction * pageAction(QWebPage::WebAction action) const
-*/
+// QAction *pageAction(QWebPage::WebAction action) const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAGEACTION)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -512,9 +470,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAGEACTION)
   }
 }
 
-/*
-void setContent(const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl())
-*/
+// void setContent(const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl())
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETCONTENT)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -535,9 +491,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETCONTENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
-*/
+// void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETHTML)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -557,9 +511,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETHTML)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPage(QWebPage * page)
-*/
+// void setPage(QWebPage *page)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETPAGE)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -579,9 +531,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETPAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWebSettings * settings() const
-*/
+// QWebSettings *settings() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETTINGS)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -600,9 +550,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETTINGS)
   }
 }
 
-/*
-void triggerPageAction(QWebPage::WebAction action, bool checked = false)
-*/
+// void triggerPageAction(QWebPage::WebAction action, bool checked = false)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_TRIGGERPAGEACTION)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -622,9 +570,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_TRIGGERPAGEACTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void back()
-*/
+// void back()
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_BACK)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -644,9 +590,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_BACK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void forward()
-*/
+// void forward()
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_FORWARD)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -666,9 +610,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_FORWARD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void reload()
-*/
+// void reload()
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RELOAD)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -688,9 +630,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RELOAD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void stop()
-*/
+// void stop()
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_STOP)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -710,9 +650,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_STOP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setGeometry(const QRectF &rect)
-*/
+// virtual void setGeometry(const QRectF &rect)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETGEOMETRY)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -732,9 +670,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETGEOMETRY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void updateGeometry()
-*/
+// virtual void updateGeometry()
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_UPDATEGEOMETRY)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -754,9 +690,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_UPDATEGEOMETRY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void paint(QPainter *, const QStyleOptionGraphicsItem * options, QWidget * widget = nullptr)
-*/
+// virtual void paint(QPainter *, const QStyleOptionGraphicsItem *options, QWidget *widget = nullptr)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAINT)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -776,9 +710,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QVariant itemChange(QGraphicsItem::GraphicsItemChange change, const QVariant &value)
-*/
+// virtual QVariant itemChange(QGraphicsItem::GraphicsItemChange change, const QVariant &value)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ITEMCHANGE)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -796,9 +728,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ITEMCHANGE)
   }
 }
 
-/*
-virtual bool event(QEvent *)
-*/
+// virtual bool event(QEvent *)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_EVENT)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -816,9 +746,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_EVENT)
   }
 }
 
-/*
-virtual QSizeF sizeHint(Qt::SizeHint which, const QSizeF &constraint) const
-*/
+// virtual QSizeF sizeHint(Qt::SizeHint which, const QSizeF &constraint) const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SIZEHINT)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -836,9 +764,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SIZEHINT)
   }
 }
 
-/*
-virtual QVariant inputMethodQuery(Qt::InputMethodQuery query) const
-*/
+// virtual QVariant inputMethodQuery(Qt::InputMethodQuery query) const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_INPUTMETHODQUERY)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -856,9 +782,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_INPUTMETHODQUERY)
   }
 }
 
-/*
-void setRenderHint(QPainter::RenderHint, bool enabled = true)
-*/
+// void setRenderHint(QPainter::RenderHint, bool enabled = true)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETRENDERHINT)
 {
   auto obj = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -878,9 +802,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETRENDERHINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void iconChanged()
-*/
+// void iconChanged()
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONICONCHANGED)
 {
   auto sender = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -918,9 +840,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONICONCHANGED)
   hb_retl(result);
 }
 
-/*
-void linkClicked(const QUrl &url)
-*/
+// void linkClicked(const QUrl &url)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONLINKCLICKED)
 {
   auto sender = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -961,9 +881,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONLINKCLICKED)
   hb_retl(result);
 }
 
-/*
-void loadFinished(bool ok)
-*/
+// void loadFinished(bool ok)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONLOADFINISHED)
 {
   auto sender = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1004,9 +922,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONLOADFINISHED)
   hb_retl(result);
 }
 
-/*
-void loadProgress(int progress)
-*/
+// void loadProgress(int progress)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONLOADPROGRESS)
 {
   auto sender = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1047,9 +963,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONLOADPROGRESS)
   hb_retl(result);
 }
 
-/*
-void loadStarted()
-*/
+// void loadStarted()
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONLOADSTARTED)
 {
   auto sender = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1087,9 +1001,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONLOADSTARTED)
   hb_retl(result);
 }
 
-/*
-void statusBarMessage(const QString &text)
-*/
+// void statusBarMessage(const QString &text)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONSTATUSBARMESSAGE)
 {
   auto sender = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1130,9 +1042,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONSTATUSBARMESSAGE)
   hb_retl(result);
 }
 
-/*
-void titleChanged(const QString &title)
-*/
+// void titleChanged(const QString &title)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONTITLECHANGED)
 {
   auto sender = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1173,9 +1083,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONTITLECHANGED)
   hb_retl(result);
 }
 
-/*
-void urlChanged(const QUrl &url)
-*/
+// void urlChanged(const QUrl &url)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONURLCHANGED)
 {
   auto sender = qobject_cast<QGraphicsWebView *>(Qt5xHb::getQObjectPointerFromSelfItem());

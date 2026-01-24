@@ -142,9 +142,7 @@ RETURN
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QUndoStack>
 
-    /*
-    QWebPage(QObject * parent = nullptr)
-    */
+    // QWebPage(QObject *parent = nullptr)
 HB_FUNC_STATIC(QWEBPAGE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -155,9 +153,7 @@ HB_FUNC_STATIC(QWEBPAGE_NEW)
   }
 }
 
-/*
-~QWebPage()
-*/
+// ~QWebPage()
 HB_FUNC_STATIC(QWEBPAGE_DELETE)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -167,9 +163,7 @@ HB_FUNC_STATIC(QWEBPAGE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isModified() const
-*/
+// bool isModified() const
 HB_FUNC_STATIC(QWEBPAGE_ISMODIFIED)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -187,9 +181,7 @@ HB_FUNC_STATIC(QWEBPAGE_ISMODIFIED)
   }
 }
 
-/*
-QString selectedText() const
-*/
+// QString selectedText() const
 HB_FUNC_STATIC(QWEBPAGE_SELECTEDTEXT)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -207,9 +199,7 @@ HB_FUNC_STATIC(QWEBPAGE_SELECTEDTEXT)
   }
 }
 
-/*
-QString selectedHtml() const
-*/
+// QString selectedHtml() const
 HB_FUNC_STATIC(QWEBPAGE_SELECTEDHTML)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -227,9 +217,7 @@ HB_FUNC_STATIC(QWEBPAGE_SELECTEDHTML)
   }
 }
 
-/*
-bool hasSelection() const
-*/
+// bool hasSelection() const
 HB_FUNC_STATIC(QWEBPAGE_HASSELECTION)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -247,9 +235,7 @@ HB_FUNC_STATIC(QWEBPAGE_HASSELECTION)
   }
 }
 
-/*
-QSize viewportSize() const
-*/
+// QSize viewportSize() const
 HB_FUNC_STATIC(QWEBPAGE_VIEWPORTSIZE)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -267,9 +253,7 @@ HB_FUNC_STATIC(QWEBPAGE_VIEWPORTSIZE)
   }
 }
 
-/*
-void setViewportSize(const QSize &size) const
-*/
+// void setViewportSize(const QSize &size) const
 HB_FUNC_STATIC(QWEBPAGE_SETVIEWPORTSIZE)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -289,9 +273,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETVIEWPORTSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize preferredContentsSize() const
-*/
+// QSize preferredContentsSize() const
 HB_FUNC_STATIC(QWEBPAGE_PREFERREDCONTENTSSIZE)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -309,9 +291,7 @@ HB_FUNC_STATIC(QWEBPAGE_PREFERREDCONTENTSSIZE)
   }
 }
 
-/*
-void setPreferredContentsSize(const QSize &size) const
-*/
+// void setPreferredContentsSize(const QSize &size) const
 HB_FUNC_STATIC(QWEBPAGE_SETPREFERREDCONTENTSSIZE)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -331,9 +311,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETPREFERREDCONTENTSSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool forwardUnsupportedContent() const
-*/
+// bool forwardUnsupportedContent() const
 HB_FUNC_STATIC(QWEBPAGE_FORWARDUNSUPPORTEDCONTENT)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -351,9 +329,7 @@ HB_FUNC_STATIC(QWEBPAGE_FORWARDUNSUPPORTEDCONTENT)
   }
 }
 
-/*
-void setForwardUnsupportedContent(bool forward)
-*/
+// void setForwardUnsupportedContent(bool forward)
 HB_FUNC_STATIC(QWEBPAGE_SETFORWARDUNSUPPORTEDCONTENT)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -373,9 +349,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETFORWARDUNSUPPORTEDCONTENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWebPage::LinkDelegationPolicy linkDelegationPolicy() const
-*/
+// QWebPage::LinkDelegationPolicy linkDelegationPolicy() const
 HB_FUNC_STATIC(QWEBPAGE_LINKDELEGATIONPOLICY)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -393,9 +367,7 @@ HB_FUNC_STATIC(QWEBPAGE_LINKDELEGATIONPOLICY)
   }
 }
 
-/*
-void setLinkDelegationPolicy(QWebPage::LinkDelegationPolicy policy)
-*/
+// void setLinkDelegationPolicy(QWebPage::LinkDelegationPolicy policy)
 HB_FUNC_STATIC(QWEBPAGE_SETLINKDELEGATIONPOLICY)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -415,9 +387,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETLINKDELEGATIONPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPalette palette() const
-*/
+// QPalette palette() const
 HB_FUNC_STATIC(QWEBPAGE_PALETTE)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -435,9 +405,7 @@ HB_FUNC_STATIC(QWEBPAGE_PALETTE)
   }
 }
 
-/*
-void setPalette(const QPalette &palette)
-*/
+// void setPalette(const QPalette &palette)
 HB_FUNC_STATIC(QWEBPAGE_SETPALETTE)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -457,9 +425,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETPALETTE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isContentEditable() const
-*/
+// bool isContentEditable() const
 HB_FUNC_STATIC(QWEBPAGE_ISCONTENTEDITABLE)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -477,9 +443,7 @@ HB_FUNC_STATIC(QWEBPAGE_ISCONTENTEDITABLE)
   }
 }
 
-/*
-void setContentEditable(bool editable)
-*/
+// void setContentEditable(bool editable)
 HB_FUNC_STATIC(QWEBPAGE_SETCONTENTEDITABLE)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -499,9 +463,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETCONTENTEDITABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWebPage::VisibilityState visibilityState() const
-*/
+// QWebPage::VisibilityState visibilityState() const
 HB_FUNC_STATIC(QWEBPAGE_VISIBILITYSTATE)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -519,9 +481,7 @@ HB_FUNC_STATIC(QWEBPAGE_VISIBILITYSTATE)
   }
 }
 
-/*
-void setVisibilityState(QWebPage::VisibilityState)
-*/
+// void setVisibilityState(QWebPage::VisibilityState)
 HB_FUNC_STATIC(QWEBPAGE_SETVISIBILITYSTATE)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -541,9 +501,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETVISIBILITYSTATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAction * action (WebAction action) const
-*/
+// QAction *action (WebAction action) const
 HB_FUNC_STATIC(QWEBPAGE_ACTION)
 {
 #ifndef QT_NO_ACTION
@@ -564,9 +522,7 @@ HB_FUNC_STATIC(QWEBPAGE_ACTION)
 #endif
 }
 
-/*
-quint64 bytesReceived() const
-*/
+// quint64 bytesReceived() const
 HB_FUNC_STATIC(QWEBPAGE_BYTESRECEIVED)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -584,9 +540,7 @@ HB_FUNC_STATIC(QWEBPAGE_BYTESRECEIVED)
   }
 }
 
-/*
-QMenu * createStandardContextMenu()
-*/
+// QMenu *createStandardContextMenu()
 HB_FUNC_STATIC(QWEBPAGE_CREATESTANDARDCONTEXTMENU)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -605,9 +559,7 @@ HB_FUNC_STATIC(QWEBPAGE_CREATESTANDARDCONTEXTMENU)
   }
 }
 
-/*
-QWebFrame * currentFrame() const
-*/
+// QWebFrame *currentFrame() const
 HB_FUNC_STATIC(QWEBPAGE_CURRENTFRAME)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -626,13 +578,9 @@ HB_FUNC_STATIC(QWEBPAGE_CURRENTFRAME)
   }
 }
 
-/*
-virtual bool extension (Extension extension, const ExtensionOption * option = nullptr, ExtensionReturn * output =
-nullptr)
-*/
-/*
-bool findText(const QString &subString, QWebPage::FindFlags options = 0)
-*/
+// virtual bool extension (Extension extension, const ExtensionOption *option = nullptr, ExtensionReturn *output =
+// nullptr)
+// bool findText(const QString &subString, QWebPage::FindFlags options = 0)
 HB_FUNC_STATIC(QWEBPAGE_FINDTEXT)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -650,9 +598,7 @@ HB_FUNC_STATIC(QWEBPAGE_FINDTEXT)
   }
 }
 
-/*
-bool focusNextPrevChild(bool next)
-*/
+// bool focusNextPrevChild(bool next)
 HB_FUNC_STATIC(QWEBPAGE_FOCUSNEXTPREVCHILD)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -670,9 +616,7 @@ HB_FUNC_STATIC(QWEBPAGE_FOCUSNEXTPREVCHILD)
   }
 }
 
-/*
-QWebFrame * frameAt(const QPoint &pos) const
-*/
+// QWebFrame *frameAt(const QPoint &pos) const
 HB_FUNC_STATIC(QWEBPAGE_FRAMEAT)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -691,9 +635,7 @@ HB_FUNC_STATIC(QWEBPAGE_FRAMEAT)
   }
 }
 
-/*
-QWebHistory * history() const
-*/
+// QWebHistory *history() const
 HB_FUNC_STATIC(QWEBPAGE_HISTORY)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -712,9 +654,7 @@ HB_FUNC_STATIC(QWEBPAGE_HISTORY)
   }
 }
 
-/*
-QVariant inputMethodQuery(Qt::InputMethodQuery property) const
-*/
+// QVariant inputMethodQuery(Qt::InputMethodQuery property) const
 HB_FUNC_STATIC(QWEBPAGE_INPUTMETHODQUERY)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -732,9 +672,7 @@ HB_FUNC_STATIC(QWEBPAGE_INPUTMETHODQUERY)
   }
 }
 
-/*
-QWebFrame * mainFrame() const
-*/
+// QWebFrame *mainFrame() const
 HB_FUNC_STATIC(QWEBPAGE_MAINFRAME)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -753,9 +691,7 @@ HB_FUNC_STATIC(QWEBPAGE_MAINFRAME)
   }
 }
 
-/*
-QNetworkAccessManager * networkAccessManager() const
-*/
+// QNetworkAccessManager *networkAccessManager() const
 HB_FUNC_STATIC(QWEBPAGE_NETWORKACCESSMANAGER)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -774,9 +710,7 @@ HB_FUNC_STATIC(QWEBPAGE_NETWORKACCESSMANAGER)
   }
 }
 
-/*
-QWebPluginFactory * pluginFactory() const
-*/
+// QWebPluginFactory *pluginFactory() const
 HB_FUNC_STATIC(QWEBPAGE_PLUGINFACTORY)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -795,9 +729,7 @@ HB_FUNC_STATIC(QWEBPAGE_PLUGINFACTORY)
   }
 }
 
-/*
-void setNetworkAccessManager(QNetworkAccessManager * manager)
-*/
+// void setNetworkAccessManager(QNetworkAccessManager *manager)
 HB_FUNC_STATIC(QWEBPAGE_SETNETWORKACCESSMANAGER)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -817,9 +749,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETNETWORKACCESSMANAGER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPluginFactory(QWebPluginFactory * factory)
-*/
+// void setPluginFactory(QWebPluginFactory *factory)
 HB_FUNC_STATIC(QWEBPAGE_SETPLUGINFACTORY)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -839,9 +769,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETPLUGINFACTORY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setView(QWidget * view)
-*/
+// void setView(QWidget *view)
 HB_FUNC_STATIC(QWEBPAGE_SETVIEW)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -861,9 +789,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETVIEW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWebSettings * settings() const
-*/
+// QWebSettings *settings() const
 HB_FUNC_STATIC(QWEBPAGE_SETTINGS)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -882,12 +808,8 @@ HB_FUNC_STATIC(QWEBPAGE_SETTINGS)
   }
 }
 
-/*
-virtual bool supportsExtension (Extension extension) const
-*/
-/*
-bool swallowContextMenuEvent (QContextMenuEvent * event)
-*/
+// virtual bool supportsExtension (Extension extension) const
+// bool swallowContextMenuEvent (QContextMenuEvent *event)
 HB_FUNC_STATIC(QWEBPAGE_SWALLOWCONTEXTMENUEVENT)
 {
 #ifndef QT_NO_CONTEXTMENU
@@ -907,9 +829,7 @@ HB_FUNC_STATIC(QWEBPAGE_SWALLOWCONTEXTMENUEVENT)
 #endif
 }
 
-/*
-quint64 totalBytes() const
-*/
+// quint64 totalBytes() const
 HB_FUNC_STATIC(QWEBPAGE_TOTALBYTES)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -927,9 +847,7 @@ HB_FUNC_STATIC(QWEBPAGE_TOTALBYTES)
   }
 }
 
-/*
-virtual void triggerAction(QWebPage::WebAction action, bool checked = false)
-*/
+// virtual void triggerAction(QWebPage::WebAction action, bool checked = false)
 HB_FUNC_STATIC(QWEBPAGE_TRIGGERACTION)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -949,9 +867,7 @@ HB_FUNC_STATIC(QWEBPAGE_TRIGGERACTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QUndoStack * undoStack () const
-*/
+// QUndoStack *undoStack () const
 HB_FUNC_STATIC(QWEBPAGE_UNDOSTACK)
 {
 #ifndef QT_NO_UNDOSTACK
@@ -972,9 +888,7 @@ HB_FUNC_STATIC(QWEBPAGE_UNDOSTACK)
 #endif
 }
 
-/*
-void updatePositionDependentActions(const QPoint &pos)
-*/
+// void updatePositionDependentActions(const QPoint &pos)
 HB_FUNC_STATIC(QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -994,9 +908,7 @@ HB_FUNC_STATIC(QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget * view() const
-*/
+// QWidget *view() const
 HB_FUNC_STATIC(QWEBPAGE_VIEW)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1015,9 +927,7 @@ HB_FUNC_STATIC(QWEBPAGE_VIEW)
   }
 }
 
-/*
-virtual bool event(QEvent * ev)
-*/
+// virtual bool event(QEvent *ev)
 HB_FUNC_STATIC(QWEBPAGE_EVENT)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1035,9 +945,7 @@ HB_FUNC_STATIC(QWEBPAGE_EVENT)
   }
 }
 
-/*
-bool shouldInterruptJavaScript()
-*/
+// bool shouldInterruptJavaScript()
 HB_FUNC_STATIC(QWEBPAGE_SHOULDINTERRUPTJAVASCRIPT)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1055,12 +963,8 @@ HB_FUNC_STATIC(QWEBPAGE_SHOULDINTERRUPTJAVASCRIPT)
   }
 }
 
-/*
-ViewportAttributes viewportAttributesForSize(const QSize& availableSize) const
-*/
-/*
-void setActualVisibleContentRect(const QRect &rect) const
-*/
+// ViewportAttributes viewportAttributesForSize(const QSize& availableSize) const
+// void setActualVisibleContentRect(const QRect &rect) const
 HB_FUNC_STATIC(QWEBPAGE_SETACTUALVISIBLECONTENTRECT)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1080,9 +984,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETACTUALVISIBLECONTENTRECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFeaturePermission(QWebFrame * frame, QWebPage::Feature feature, QWebPage::PermissionPolicy policy)
-*/
+// void setFeaturePermission(QWebFrame *frame, QWebPage::Feature feature, QWebPage::PermissionPolicy policy)
 HB_FUNC_STATIC(QWEBPAGE_SETFEATUREPERMISSION)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1102,9 +1004,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETFEATUREPERMISSION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringList supportedContentTypes() const
-*/
+// QStringList supportedContentTypes() const
 HB_FUNC_STATIC(QWEBPAGE_SUPPORTEDCONTENTTYPES)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1122,9 +1022,7 @@ HB_FUNC_STATIC(QWEBPAGE_SUPPORTEDCONTENTTYPES)
   }
 }
 
-/*
-bool supportsContentType(const QString &mimeType) const
-*/
+// bool supportsContentType(const QString &mimeType) const
 HB_FUNC_STATIC(QWEBPAGE_SUPPORTSCONTENTTYPE)
 {
   auto obj = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1142,13 +1040,9 @@ HB_FUNC_STATIC(QWEBPAGE_SUPPORTSCONTENTTYPE)
   }
 }
 
-/*
-QWebPageAdapter* handle() const
-*/
+// QWebPageAdapter* handle() const
 
-/*
-void applicationCacheQuotaExceeded(QWebSecurityOrigin * origin, quint64 defaultOriginQuota, quint64 totalSpaceNeeded)
-*/
+// void applicationCacheQuotaExceeded(QWebSecurityOrigin *origin, quint64 defaultOriginQuota, quint64 totalSpaceNeeded)
 HB_FUNC_STATIC(QWEBPAGE_ONAPPLICATIONCACHEQUOTAEXCEEDED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1195,9 +1089,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONAPPLICATIONCACHEQUOTAEXCEEDED)
   hb_retl(result);
 }
 
-/*
-void contentsChanged()
-*/
+// void contentsChanged()
 HB_FUNC_STATIC(QWEBPAGE_ONCONTENTSCHANGED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1235,9 +1127,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONCONTENTSCHANGED)
   hb_retl(result);
 }
 
-/*
-void databaseQuotaExceeded(QWebFrame * frame, QString databaseName)
-*/
+// void databaseQuotaExceeded(QWebFrame *frame, QString databaseName)
 HB_FUNC_STATIC(QWEBPAGE_ONDATABASEQUOTAEXCEEDED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1280,9 +1170,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONDATABASEQUOTAEXCEEDED)
   hb_retl(result);
 }
 
-/*
-void downloadRequested(const QNetworkRequest &request)
-*/
+// void downloadRequested(const QNetworkRequest &request)
 HB_FUNC_STATIC(QWEBPAGE_ONDOWNLOADREQUESTED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1323,9 +1211,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONDOWNLOADREQUESTED)
   hb_retl(result);
 }
 
-/*
-void featurePermissionRequestCanceled(QWebFrame * frame, QWebPage::Feature feature)
-*/
+// void featurePermissionRequestCanceled(QWebFrame *frame, QWebPage::Feature feature)
 HB_FUNC_STATIC(QWEBPAGE_ONFEATUREPERMISSIONREQUESTCANCELED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1369,9 +1255,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONFEATUREPERMISSIONREQUESTCANCELED)
   hb_retl(result);
 }
 
-/*
-void featurePermissionRequested(QWebFrame * frame, QWebPage::Feature feature)
-*/
+// void featurePermissionRequested(QWebFrame *frame, QWebPage::Feature feature)
 HB_FUNC_STATIC(QWEBPAGE_ONFEATUREPERMISSIONREQUESTED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1415,9 +1299,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONFEATUREPERMISSIONREQUESTED)
   hb_retl(result);
 }
 
-/*
-void frameCreated(QWebFrame * frame)
-*/
+// void frameCreated(QWebFrame *frame)
 HB_FUNC_STATIC(QWEBPAGE_ONFRAMECREATED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1458,9 +1340,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONFRAMECREATED)
   hb_retl(result);
 }
 
-/*
-void geometryChangeRequested(const QRect &geom)
-*/
+// void geometryChangeRequested(const QRect &geom)
 HB_FUNC_STATIC(QWEBPAGE_ONGEOMETRYCHANGEREQUESTED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1501,9 +1381,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONGEOMETRYCHANGEREQUESTED)
   hb_retl(result);
 }
 
-/*
-void linkClicked(const QUrl &url)
-*/
+// void linkClicked(const QUrl &url)
 HB_FUNC_STATIC(QWEBPAGE_ONLINKCLICKED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1544,9 +1422,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONLINKCLICKED)
   hb_retl(result);
 }
 
-/*
-void linkHovered(const QString &link, const QString &title, const QString &textContent)
-*/
+// void linkHovered(const QString &link, const QString &title, const QString &textContent)
 HB_FUNC_STATIC(QWEBPAGE_ONLINKHOVERED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1592,9 +1468,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONLINKHOVERED)
   hb_retl(result);
 }
 
-/*
-void loadFinished(bool ok)
-*/
+// void loadFinished(bool ok)
 HB_FUNC_STATIC(QWEBPAGE_ONLOADFINISHED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1634,9 +1508,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONLOADFINISHED)
   hb_retl(result);
 }
 
-/*
-void loadProgress(int progress)
-*/
+// void loadProgress(int progress)
 HB_FUNC_STATIC(QWEBPAGE_ONLOADPROGRESS)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1676,9 +1548,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONLOADPROGRESS)
   hb_retl(result);
 }
 
-/*
-void loadStarted()
-*/
+// void loadStarted()
 HB_FUNC_STATIC(QWEBPAGE_ONLOADSTARTED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1716,9 +1586,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONLOADSTARTED)
   hb_retl(result);
 }
 
-/*
-void menuBarVisibilityChangeRequested(bool visible)
-*/
+// void menuBarVisibilityChangeRequested(bool visible)
 HB_FUNC_STATIC(QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1759,9 +1627,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED)
   hb_retl(result);
 }
 
-/*
-void microFocusChanged()
-*/
+// void microFocusChanged()
 HB_FUNC_STATIC(QWEBPAGE_ONMICROFOCUSCHANGED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1799,9 +1665,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONMICROFOCUSCHANGED)
   hb_retl(result);
 }
 
-/*
-void printRequested(QWebFrame * frame)
-*/
+// void printRequested(QWebFrame *frame)
 HB_FUNC_STATIC(QWEBPAGE_ONPRINTREQUESTED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1842,9 +1706,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONPRINTREQUESTED)
   hb_retl(result);
 }
 
-/*
-void repaintRequested(const QRect &dirtyRect)
-*/
+// void repaintRequested(const QRect &dirtyRect)
 HB_FUNC_STATIC(QWEBPAGE_ONREPAINTREQUESTED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1885,9 +1747,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONREPAINTREQUESTED)
   hb_retl(result);
 }
 
-/*
-void restoreFrameStateRequested(QWebFrame * frame)
-*/
+// void restoreFrameStateRequested(QWebFrame *frame)
 HB_FUNC_STATIC(QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1928,9 +1788,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED)
   hb_retl(result);
 }
 
-/*
-void saveFrameStateRequested(QWebFrame * frame, QWebHistoryItem * item)
-*/
+// void saveFrameStateRequested(QWebFrame *frame, QWebHistoryItem *item)
 HB_FUNC_STATIC(QWEBPAGE_ONSAVEFRAMESTATEREQUESTED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1974,9 +1832,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONSAVEFRAMESTATEREQUESTED)
   hb_retl(result);
 }
 
-/*
-void scrollRequested(int dx, int dy, const QRect &rectToScroll)
-*/
+// void scrollRequested(int dx, int dy, const QRect &rectToScroll)
 HB_FUNC_STATIC(QWEBPAGE_ONSCROLLREQUESTED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2021,9 +1877,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONSCROLLREQUESTED)
   hb_retl(result);
 }
 
-/*
-void selectionChanged()
-*/
+// void selectionChanged()
 HB_FUNC_STATIC(QWEBPAGE_ONSELECTIONCHANGED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2061,9 +1915,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONSELECTIONCHANGED)
   hb_retl(result);
 }
 
-/*
-void statusBarMessage(const QString &text)
-*/
+// void statusBarMessage(const QString &text)
 HB_FUNC_STATIC(QWEBPAGE_ONSTATUSBARMESSAGE)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2104,9 +1956,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONSTATUSBARMESSAGE)
   hb_retl(result);
 }
 
-/*
-void statusBarVisibilityChangeRequested(bool visible)
-*/
+// void statusBarVisibilityChangeRequested(bool visible)
 HB_FUNC_STATIC(QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2147,9 +1997,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED)
   hb_retl(result);
 }
 
-/*
-void toolBarVisibilityChangeRequested(bool visible)
-*/
+// void toolBarVisibilityChangeRequested(bool visible)
 HB_FUNC_STATIC(QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2190,9 +2038,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED)
   hb_retl(result);
 }
 
-/*
-void unsupportedContent(QNetworkReply * reply)
-*/
+// void unsupportedContent(QNetworkReply *reply)
 HB_FUNC_STATIC(QWEBPAGE_ONUNSUPPORTEDCONTENT)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2233,9 +2079,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONUNSUPPORTEDCONTENT)
   hb_retl(result);
 }
 
-/*
-void viewportChangeRequested()
-*/
+// void viewportChangeRequested()
 HB_FUNC_STATIC(QWEBPAGE_ONVIEWPORTCHANGEREQUESTED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2273,9 +2117,7 @@ HB_FUNC_STATIC(QWEBPAGE_ONVIEWPORTCHANGEREQUESTED)
   hb_retl(result);
 }
 
-/*
-void windowCloseRequested()
-*/
+// void windowCloseRequested()
 HB_FUNC_STATIC(QWEBPAGE_ONWINDOWCLOSEREQUESTED)
 {
   auto sender = qobject_cast<QWebPage *>(Qt5xHb::getQObjectPointerFromSelfItem());
