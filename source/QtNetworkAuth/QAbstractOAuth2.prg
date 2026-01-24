@@ -72,9 +72,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    ~QAbstractOAuth2()
-    */
+    // ~QAbstractOAuth2()
 HB_FUNC_STATIC(QABSTRACTOAUTH2_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_DELETE)
 #endif
 }
 
-/*
-QString scope() const
-*/
+// QString scope() const
 HB_FUNC_STATIC(QABSTRACTOAUTH2_SCOPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -108,9 +104,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_SCOPE)
 #endif
 }
 
-/*
-void setScope(const QString &scope)
-*/
+// void setScope(const QString &scope)
 HB_FUNC_STATIC(QABSTRACTOAUTH2_SETSCOPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -132,9 +126,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_SETSCOPE)
 #endif
 }
 
-/*
-QString userAgent() const
-*/
+// QString userAgent() const
 HB_FUNC_STATIC(QABSTRACTOAUTH2_USERAGENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -154,9 +146,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_USERAGENT)
 #endif
 }
 
-/*
-void setUserAgent(const QString &userAgent)
-*/
+// void setUserAgent(const QString &userAgent)
 HB_FUNC_STATIC(QABSTRACTOAUTH2_SETUSERAGENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -178,9 +168,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_SETUSERAGENT)
 #endif
 }
 
-/*
-QString clientIdentifierSharedKey() const
-*/
+// QString clientIdentifierSharedKey() const
 HB_FUNC_STATIC(QABSTRACTOAUTH2_CLIENTIDENTIFIERSHAREDKEY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -200,9 +188,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_CLIENTIDENTIFIERSHAREDKEY)
 #endif
 }
 
-/*
-void setClientIdentifierSharedKey(const QString &clientIdentifierSharedKey)
-*/
+// void setClientIdentifierSharedKey(const QString &clientIdentifierSharedKey)
 HB_FUNC_STATIC(QABSTRACTOAUTH2_SETCLIENTIDENTIFIERSHAREDKEY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -224,9 +210,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_SETCLIENTIDENTIFIERSHAREDKEY)
 #endif
 }
 
-/*
-QString state() const
-*/
+// QString state() const
 HB_FUNC_STATIC(QABSTRACTOAUTH2_STATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -246,9 +230,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_STATE)
 #endif
 }
 
-/*
-void setState(const QString &state)
-*/
+// void setState(const QString &state)
 HB_FUNC_STATIC(QABSTRACTOAUTH2_SETSTATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -270,9 +252,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_SETSTATE)
 #endif
 }
 
-/*
-QDateTime expirationAt() const
-*/
+// QDateTime expirationAt() const
 HB_FUNC_STATIC(QABSTRACTOAUTH2_EXPIRATIONAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -292,9 +272,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_EXPIRATIONAT)
 #endif
 }
 
-/*
-QString responseType() const
-*/
+// QString responseType() const
 HB_FUNC_STATIC(QABSTRACTOAUTH2_RESPONSETYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -314,9 +292,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_RESPONSETYPE)
 #endif
 }
 
-/*
-QString refreshToken() const
-*/
+// QString refreshToken() const
 HB_FUNC_STATIC(QABSTRACTOAUTH2_REFRESHTOKEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -336,9 +312,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_REFRESHTOKEN)
 #endif
 }
 
-/*
-void setRefreshToken(const QString &refreshToken)
-*/
+// void setRefreshToken(const QString &refreshToken)
 HB_FUNC_STATIC(QABSTRACTOAUTH2_SETREFRESHTOKEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -360,9 +334,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_SETREFRESHTOKEN)
 #endif
 }
 
-/*
-void clientIdentifierSharedKeyChanged(const QString &clientIdentifierSharedKey)
-*/
+// void clientIdentifierSharedKeyChanged(const QString &clientIdentifierSharedKey)
 HB_FUNC_STATIC(QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -407,9 +379,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED)
 #endif
 }
 
-/*
-void error(const QString &error, const QString &errorDescription, const QUrl &uri)
-*/
+// void error(const QString &error, const QString &errorDescription, const QUrl &uri)
 HB_FUNC_STATIC(QABSTRACTOAUTH2_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -459,9 +429,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_ONERROR)
 #endif
 }
 
-/*
-void expirationAtChanged(const QDateTime &expiration)
-*/
+// void expirationAtChanged(const QDateTime &expiration)
 HB_FUNC_STATIC(QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -506,9 +474,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED)
 #endif
 }
 
-/*
-void responseTypeChanged(const QString &responseType)
-*/
+// void responseTypeChanged(const QString &responseType)
 HB_FUNC_STATIC(QABSTRACTOAUTH2_ONRESPONSETYPECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -553,9 +519,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_ONRESPONSETYPECHANGED)
 #endif
 }
 
-/*
-void scopeChanged(const QString &scope)
-*/
+// void scopeChanged(const QString &scope)
 HB_FUNC_STATIC(QABSTRACTOAUTH2_ONSCOPECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -600,9 +564,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_ONSCOPECHANGED)
 #endif
 }
 
-/*
-void stateChanged(const QString &state)
-*/
+// void stateChanged(const QString &state)
 HB_FUNC_STATIC(QABSTRACTOAUTH2_ONSTATECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -647,9 +609,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_ONSTATECHANGED)
 #endif
 }
 
-/*
-void userAgentChanged(const QString &userAgent)
-*/
+// void userAgentChanged(const QString &userAgent)
 HB_FUNC_STATIC(QABSTRACTOAUTH2_ONUSERAGENTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))

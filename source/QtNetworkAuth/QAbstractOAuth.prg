@@ -83,9 +83,7 @@ RETURN
 #include <QtNetwork/QNetworkReply>
 #include <QtNetworkAuth/QAbstractOAuthReplyHandler>
 
-    /*
-    virtual ~QAbstractOAuth()
-    */
+    // virtual ~QAbstractOAuth()
 HB_FUNC_STATIC(QABSTRACTOAUTH_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -97,9 +95,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_DELETE)
 #endif
 }
 
-/*
-QString clientIdentifier() const
-*/
+// QString clientIdentifier() const
 HB_FUNC_STATIC(QABSTRACTOAUTH_CLIENTIDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -119,9 +115,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_CLIENTIDENTIFIER)
 #endif
 }
 
-/*
-void setClientIdentifier(const QString &clientIdentifier)
-*/
+// void setClientIdentifier(const QString &clientIdentifier)
 HB_FUNC_STATIC(QABSTRACTOAUTH_SETCLIENTIDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -143,9 +137,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETCLIENTIDENTIFIER)
 #endif
 }
 
-/*
-QString token() const
-*/
+// QString token() const
 HB_FUNC_STATIC(QABSTRACTOAUTH_TOKEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -165,9 +157,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_TOKEN)
 #endif
 }
 
-/*
-void setToken(const QString &token)
-*/
+// void setToken(const QString &token)
 HB_FUNC_STATIC(QABSTRACTOAUTH_SETTOKEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -189,9 +179,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETTOKEN)
 #endif
 }
 
-/*
-QAbstractOAuth::Status status() const
-*/
+// QAbstractOAuth::Status status() const
 HB_FUNC_STATIC(QABSTRACTOAUTH_STATUS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -211,9 +199,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_STATUS)
 #endif
 }
 
-/*
-QUrl authorizationUrl() const
-*/
+// QUrl authorizationUrl() const
 HB_FUNC_STATIC(QABSTRACTOAUTH_AUTHORIZATIONURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -233,9 +219,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_AUTHORIZATIONURL)
 #endif
 }
 
-/*
-void setAuthorizationUrl(const QUrl &url)
-*/
+// void setAuthorizationUrl(const QUrl &url)
 HB_FUNC_STATIC(QABSTRACTOAUTH_SETAUTHORIZATIONURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -257,9 +241,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETAUTHORIZATIONURL)
 #endif
 }
 
-/*
-QAbstractOAuth::ContentType contentType() const
-*/
+// QAbstractOAuth::ContentType contentType() const
 HB_FUNC_STATIC(QABSTRACTOAUTH_CONTENTTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -279,9 +261,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_CONTENTTYPE)
 #endif
 }
 
-/*
-void setContentType(QAbstractOAuth::ContentType contentType)
-*/
+// void setContentType(QAbstractOAuth::ContentType contentType)
 HB_FUNC_STATIC(QABSTRACTOAUTH_SETCONTENTTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -303,9 +283,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETCONTENTTYPE)
 #endif
 }
 
-/*
-QNetworkAccessManager * networkAccessManager() const
-*/
+// QNetworkAccessManager *networkAccessManager() const
 HB_FUNC_STATIC(QABSTRACTOAUTH_NETWORKACCESSMANAGER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -326,9 +304,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_NETWORKACCESSMANAGER)
 #endif
 }
 
-/*
-void setNetworkAccessManager(QNetworkAccessManager * networkAccessManager)
-*/
+// void setNetworkAccessManager(QNetworkAccessManager *networkAccessManager)
 HB_FUNC_STATIC(QABSTRACTOAUTH_SETNETWORKACCESSMANAGER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -350,9 +326,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETNETWORKACCESSMANAGER)
 #endif
 }
 
-/*
-QAbstractOAuthReplyHandler * replyHandler() const
-*/
+// QAbstractOAuthReplyHandler *replyHandler() const
 HB_FUNC_STATIC(QABSTRACTOAUTH_REPLYHANDLER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -373,9 +347,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_REPLYHANDLER)
 #endif
 }
 
-/*
-void setReplyHandler(QAbstractOAuthReplyHandler * handler)
-*/
+// void setReplyHandler(QAbstractOAuthReplyHandler *handler)
 HB_FUNC_STATIC(QABSTRACTOAUTH_SETREPLYHANDLER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -397,9 +369,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETREPLYHANDLER)
 #endif
 }
 
-/*
-virtual void grant() = 0
-*/
+// virtual void grant() = 0
 HB_FUNC_STATIC(QABSTRACTOAUTH_GRANT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -421,9 +391,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_GRANT)
 #endif
 }
 
-/*
-void clientIdentifierChanged(const QString &clientIdentifier)
-*/
+// void clientIdentifierChanged(const QString &clientIdentifier)
 HB_FUNC_STATIC(QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -468,9 +436,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED)
 #endif
 }
 
-/*
-void tokenChanged(const QString &token)
-*/
+// void tokenChanged(const QString &token)
 HB_FUNC_STATIC(QABSTRACTOAUTH_ONTOKENCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -515,9 +481,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONTOKENCHANGED)
 #endif
 }
 
-/*
-void statusChanged(QAbstractOAuth::Status status)
-*/
+// void statusChanged(QAbstractOAuth::Status status)
 HB_FUNC_STATIC(QABSTRACTOAUTH_ONSTATUSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -562,9 +526,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONSTATUSCHANGED)
 #endif
 }
 
-/*
-void authorizationUrlChanged(const QUrl &url)
-*/
+// void authorizationUrlChanged(const QUrl &url)
 HB_FUNC_STATIC(QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -609,9 +571,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED)
 #endif
 }
 
-/*
-void contentTypeChanged(QAbstractOAuth::ContentType contentType)
-*/
+// void contentTypeChanged(QAbstractOAuth::ContentType contentType)
 HB_FUNC_STATIC(QABSTRACTOAUTH_ONCONTENTTYPECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -656,9 +616,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONCONTENTTYPECHANGED)
 #endif
 }
 
-/*
-void requestFailed(const QAbstractOAuth::Error error)
-*/
+// void requestFailed(const QAbstractOAuth::Error error)
 HB_FUNC_STATIC(QABSTRACTOAUTH_ONREQUESTFAILED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -703,9 +661,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONREQUESTFAILED)
 #endif
 }
 
-/*
-void authorizeWithBrowser(const QUrl &url)
-*/
+// void authorizeWithBrowser(const QUrl &url)
 HB_FUNC_STATIC(QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -750,9 +706,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER)
 #endif
 }
 
-/*
-void granted()
-*/
+// void granted()
 HB_FUNC_STATIC(QABSTRACTOAUTH_ONGRANTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -794,9 +748,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONGRANTED)
 #endif
 }
 
-/*
-void finished(QNetworkReply * reply)
-*/
+// void finished(QNetworkReply *reply)
 HB_FUNC_STATIC(QABSTRACTOAUTH_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -841,9 +793,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_ONFINISHED)
 #endif
 }
 
-/*
-void replyDataReceived(const QByteArray &data)
-*/
+// void replyDataReceived(const QByteArray &data)
 HB_FUNC_STATIC(QABSTRACTOAUTH_ONREPLYDATARECEIVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))

@@ -75,26 +75,20 @@ RETURN
 HB_FUNC_STATIC(QOAUTH1_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QOAuth1(QObject * parent = nullptr)
-    */
+    // QOAuth1(QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QOAuth1(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(1, 2) && ISQNETWORKACCESSMANAGER(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QOAuth1(QNetworkAccessManager * manager, QObject * parent = nullptr)
-    */
+    // QOAuth1(QNetworkAccessManager *manager, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QOAuth1(PQNETWORKACCESSMANAGER(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISQNETWORKACCESSMANAGER(3) && ISQOBJECTORNIL(4)) {
-    /*
-    QOAuth1(const QString &clientIdentifier, const QString &clientSharedSecret, QNetworkAccessManager * manager,
-    QObject * parent = nullptr)
-    */
+    // QOAuth1(const QString &clientIdentifier, const QString &clientSharedSecret, QNetworkAccessManager *manager,
+    // QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QOAuth1(PQSTRING(1), PQSTRING(2), PQNETWORKACCESSMANAGER(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -115,9 +109,7 @@ HB_FUNC_STATIC(QOAUTH1_DELETE)
 #endif
 }
 
-/*
-QString clientSharedSecret() const
-*/
+// QString clientSharedSecret() const
 HB_FUNC_STATIC(QOAUTH1_CLIENTSHAREDSECRET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -137,9 +129,7 @@ HB_FUNC_STATIC(QOAUTH1_CLIENTSHAREDSECRET)
 #endif
 }
 
-/*
-void setClientSharedSecret(const QString &clientSharedSecret)
-*/
+// void setClientSharedSecret(const QString &clientSharedSecret)
 HB_FUNC_STATIC(QOAUTH1_SETCLIENTSHAREDSECRET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -161,9 +151,7 @@ HB_FUNC_STATIC(QOAUTH1_SETCLIENTSHAREDSECRET)
 #endif
 }
 
-/*
-void setClientCredentials(const QString &clientIdentifier, const QString &clientSharedSecret)
-*/
+// void setClientCredentials(const QString &clientIdentifier, const QString &clientSharedSecret)
 HB_FUNC_STATIC(QOAUTH1_SETCLIENTCREDENTIALS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -185,9 +173,7 @@ HB_FUNC_STATIC(QOAUTH1_SETCLIENTCREDENTIALS)
 #endif
 }
 
-/*
-QString tokenSecret() const
-*/
+// QString tokenSecret() const
 HB_FUNC_STATIC(QOAUTH1_TOKENSECRET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -207,9 +193,7 @@ HB_FUNC_STATIC(QOAUTH1_TOKENSECRET)
 #endif
 }
 
-/*
-void setTokenSecret(const QString &tokenSecret)
-*/
+// void setTokenSecret(const QString &tokenSecret)
 HB_FUNC_STATIC(QOAUTH1_SETTOKENSECRET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -231,9 +215,7 @@ HB_FUNC_STATIC(QOAUTH1_SETTOKENSECRET)
 #endif
 }
 
-/*
-void setTokenCredentials(const QString &token, const QString &tokenSecret)
-*/
+// void setTokenCredentials(const QString &token, const QString &tokenSecret)
 HB_FUNC_STATIC(QOAUTH1_SETTOKENCREDENTIALS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -255,9 +237,7 @@ HB_FUNC_STATIC(QOAUTH1_SETTOKENCREDENTIALS)
 #endif
 }
 
-/*
-QUrl temporaryCredentialsUrl() const
-*/
+// QUrl temporaryCredentialsUrl() const
 HB_FUNC_STATIC(QOAUTH1_TEMPORARYCREDENTIALSURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -277,9 +257,7 @@ HB_FUNC_STATIC(QOAUTH1_TEMPORARYCREDENTIALSURL)
 #endif
 }
 
-/*
-void setTemporaryCredentialsUrl(const QUrl &url)
-*/
+// void setTemporaryCredentialsUrl(const QUrl &url)
 HB_FUNC_STATIC(QOAUTH1_SETTEMPORARYCREDENTIALSURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -301,9 +279,7 @@ HB_FUNC_STATIC(QOAUTH1_SETTEMPORARYCREDENTIALSURL)
 #endif
 }
 
-/*
-QUrl tokenCredentialsUrl() const
-*/
+// QUrl tokenCredentialsUrl() const
 HB_FUNC_STATIC(QOAUTH1_TOKENCREDENTIALSURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -323,9 +299,7 @@ HB_FUNC_STATIC(QOAUTH1_TOKENCREDENTIALSURL)
 #endif
 }
 
-/*
-void setTokenCredentialsUrl(const QUrl &url)
-*/
+// void setTokenCredentialsUrl(const QUrl &url)
 HB_FUNC_STATIC(QOAUTH1_SETTOKENCREDENTIALSURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -347,9 +321,7 @@ HB_FUNC_STATIC(QOAUTH1_SETTOKENCREDENTIALSURL)
 #endif
 }
 
-/*
-void setSignatureMethod(QOAuth1::SignatureMethod value)
-*/
+// void setSignatureMethod(QOAuth1::SignatureMethod value)
 HB_FUNC_STATIC(QOAUTH1_SETSIGNATUREMETHOD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -371,9 +343,7 @@ HB_FUNC_STATIC(QOAUTH1_SETSIGNATUREMETHOD)
 #endif
 }
 
-/*
-void grant() override
-*/
+// void grant() override
 HB_FUNC_STATIC(QOAUTH1_GRANT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -395,9 +365,7 @@ HB_FUNC_STATIC(QOAUTH1_GRANT)
 #endif
 }
 
-/*
-void continueGrantWithVerifier(const QString &verifier)
-*/
+// void continueGrantWithVerifier(const QString &verifier)
 HB_FUNC_STATIC(QOAUTH1_CONTINUEGRANTWITHVERIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -419,9 +387,7 @@ HB_FUNC_STATIC(QOAUTH1_CONTINUEGRANTWITHVERIFIER)
 #endif
 }
 
-/*
-void clientSharedSecretChanged(const QString &credential)
-*/
+// void clientSharedSecretChanged(const QString &credential)
 HB_FUNC_STATIC(QOAUTH1_ONCLIENTSHAREDSECRETCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -466,9 +432,7 @@ HB_FUNC_STATIC(QOAUTH1_ONCLIENTSHAREDSECRETCHANGED)
 #endif
 }
 
-/*
-void signatureMethodChanged(QOAuth1::SignatureMethod method)
-*/
+// void signatureMethodChanged(QOAuth1::SignatureMethod method)
 HB_FUNC_STATIC(QOAUTH1_ONSIGNATUREMETHODCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -513,9 +477,7 @@ HB_FUNC_STATIC(QOAUTH1_ONSIGNATUREMETHODCHANGED)
 #endif
 }
 
-/*
-void temporaryCredentialsUrlChanged(const QUrl &url)
-*/
+// void temporaryCredentialsUrlChanged(const QUrl &url)
 HB_FUNC_STATIC(QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -560,9 +522,7 @@ HB_FUNC_STATIC(QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED)
 #endif
 }
 
-/*
-void tokenCredentialsUrlChanged(const QUrl &url)
-*/
+// void tokenCredentialsUrlChanged(const QUrl &url)
 HB_FUNC_STATIC(QOAUTH1_ONTOKENCREDENTIALSURLCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -607,9 +567,7 @@ HB_FUNC_STATIC(QOAUTH1_ONTOKENCREDENTIALSURLCHANGED)
 #endif
 }
 
-/*
-void tokenSecretChanged(const QString &token)
-*/
+// void tokenSecretChanged(const QString &token)
 HB_FUNC_STATIC(QOAUTH1_ONTOKENSECRETCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))

@@ -64,25 +64,19 @@ RETURN
 HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QOAuthHttpServerReplyHandler(QObject * parent = nullptr)
-    */
+    // QOAuthHttpServerReplyHandler(QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QOAuthHttpServerReplyHandler(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QOAuthHttpServerReplyHandler(quint16 port, QObject * parent = nullptr)
-    */
+    // QOAuthHttpServerReplyHandler(quint16 port, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QOAuthHttpServerReplyHandler(PQUINT16(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(2, 3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3)) {
-    /*
-    QOAuthHttpServerReplyHandler(const QHostAddress &address, quint16 port, QObject * parent = nullptr)
-    */
+    // QOAuthHttpServerReplyHandler(const QHostAddress &address, quint16 port, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QOAuthHttpServerReplyHandler(*PQHOSTADDRESS(1), PQUINT16(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -92,9 +86,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_NEW)
   }
 }
 
-/*
-~QOAuthHttpServerReplyHandler()
-*/
+// ~QOAuthHttpServerReplyHandler()
 HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -106,9 +98,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_DELETE)
 #endif
 }
 
-/*
-QString callback() const override
-*/
+// QString callback() const override
 HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_CALLBACK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -128,9 +118,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_CALLBACK)
 #endif
 }
 
-/*
-QString callbackPath() const
-*/
+// QString callbackPath() const
 HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKPATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -150,9 +138,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKPATH)
 #endif
 }
 
-/*
-void setCallbackPath(const QString &path)
-*/
+// void setCallbackPath(const QString &path)
 HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKPATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -174,9 +160,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKPATH)
 #endif
 }
 
-/*
-QString callbackText() const
-*/
+// QString callbackText() const
 HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -196,9 +180,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKTEXT)
 #endif
 }
 
-/*
-void setCallbackText(const QString &text)
-*/
+// void setCallbackText(const QString &text)
 HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -220,9 +202,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKTEXT)
 #endif
 }
 
-/*
-quint16 port() const
-*/
+// quint16 port() const
 HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_PORT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -242,9 +222,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_PORT)
 #endif
 }
 
-/*
-bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
-*/
+// bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
 HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_LISTEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -265,9 +243,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_LISTEN)
 #endif
 }
 
-/*
-void close()
-*/
+// void close()
 HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_CLOSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -289,9 +265,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_CLOSE)
 #endif
 }
 
-/*
-bool isListening() const
-*/
+// bool isListening() const
 HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_ISLISTENING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))

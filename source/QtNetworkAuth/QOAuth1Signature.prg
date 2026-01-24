@@ -81,9 +81,7 @@ RETURN
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_NEW)
 {
   if (ISNUMPAR(1) && ISQOAUTH1SIGNATURE(1)) {
-    /*
-    QOAuth1Signature(const QOAuth1Signature &other)
-    */
+    // QOAuth1Signature(const QOAuth1Signature &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = new QOAuth1Signature(*PQOAUTH1SIGNATURE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_NEW)
   }
 }
 
-/*
-~QOAuth1Signature()
-*/
+// ~QOAuth1Signature()
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_DELETE)
 #endif
 }
 
-/*
-void setHttpRequestMethod(QOAuth1Signature::HttpRequestMethod method)
-*/
+// void setHttpRequestMethod(QOAuth1Signature::HttpRequestMethod method)
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETHTTPREQUESTMETHOD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -131,9 +125,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETHTTPREQUESTMETHOD)
 #endif
 }
 
-/*
-QUrl url() const
-*/
+// QUrl url() const
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_URL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -153,9 +145,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_URL)
 #endif
 }
 
-/*
-void setUrl(const QUrl &url)
-*/
+// void setUrl(const QUrl &url)
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETURL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -177,9 +167,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETURL)
 #endif
 }
 
-/*
-void addRequestBody(const QUrlQuery &body)
-*/
+// void addRequestBody(const QUrlQuery &body)
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_ADDREQUESTBODY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -201,9 +189,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_ADDREQUESTBODY)
 #endif
 }
 
-/*
-void insert(const QString &key, const QVariant &value)
-*/
+// void insert(const QString &key, const QVariant &value)
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_INSERT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -225,9 +211,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_INSERT)
 #endif
 }
 
-/*
-QList<QString> keys() const
-*/
+// QList<QString> keys() const
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_KEYS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -254,9 +238,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_KEYS)
 #endif
 }
 
-/*
-QVariant take(const QString &key)
-*/
+// QVariant take(const QString &key)
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_TAKE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -276,9 +258,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_TAKE)
 #endif
 }
 
-/*
-QVariant value(const QString &key, const QVariant &defaultValue = QVariant()) const
-*/
+// QVariant value(const QString &key, const QVariant &defaultValue = QVariant()) const
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_VALUE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -298,9 +278,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_VALUE)
 #endif
 }
 
-/*
-QString clientSharedKey() const
-*/
+// QString clientSharedKey() const
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_CLIENTSHAREDKEY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -320,9 +298,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_CLIENTSHAREDKEY)
 #endif
 }
 
-/*
-void setClientSharedKey(const QString &secret)
-*/
+// void setClientSharedKey(const QString &secret)
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETCLIENTSHAREDKEY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -344,9 +320,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETCLIENTSHAREDKEY)
 #endif
 }
 
-/*
-QString tokenSecret() const
-*/
+// QString tokenSecret() const
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_TOKENSECRET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -366,9 +340,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_TOKENSECRET)
 #endif
 }
 
-/*
-void setTokenSecret(const QString &secret)
-*/
+// void setTokenSecret(const QString &secret)
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETTOKENSECRET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -390,9 +362,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETTOKENSECRET)
 #endif
 }
 
-/*
-QByteArray hmacSha1() const
-*/
+// QByteArray hmacSha1() const
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_HMACSHA1)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -412,9 +382,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_HMACSHA1)
 #endif
 }
 
-/*
-QByteArray rsaSha1() const
-*/
+// QByteArray rsaSha1() const
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_RSASHA1)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -437,9 +405,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_RSASHA1)
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_PLAINTEXT)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QByteArray plainText() const
-    */
+    // QByteArray plainText() const
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     auto obj = static_cast<QOAuth1Signature *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -448,9 +414,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_PLAINTEXT)
     }
 #endif
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    /*
-    static QByteArray plainText(const QString &clientSharedSecret, const QString &tokenSecret)
-    */
+    // static QByteArray plainText(const QString &clientSharedSecret, const QString &tokenSecret)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 
     RQBYTEARRAY(QOAuth1Signature::plainText(PQSTRING(1), PQSTRING(2)));
@@ -460,9 +424,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_PLAINTEXT)
   }
 }
 
-/*
-void swap(QOAuth1Signature &other)
-*/
+// void swap(QOAuth1Signature &other)
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_SWAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))

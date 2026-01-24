@@ -53,9 +53,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QOAuthOobReplyHandler(QObject * parent = nullptr)
-    */
+    // QOAuthOobReplyHandler(QObject *parent = nullptr)
 HB_FUNC_STATIC(QOAUTHOOBREPLYHANDLER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -79,9 +77,7 @@ HB_FUNC_STATIC(QOAUTHOOBREPLYHANDLER_DELETE)
 #endif
 }
 
-/*
-QString callback() const override
-*/
+// QString callback() const override
 HB_FUNC_STATIC(QOAUTHOOBREPLYHANDLER_CALLBACK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))

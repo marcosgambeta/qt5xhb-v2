@@ -56,9 +56,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    virtual ~QAbstractOAuthReplyHandler()
-    */
+    // virtual ~QAbstractOAuthReplyHandler()
 HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -70,9 +68,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_DELETE)
 #endif
 }
 
-/*
-virtual QString callback() const = 0
-*/
+// virtual QString callback() const = 0
 HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_CALLBACK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -92,9 +88,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_CALLBACK)
 #endif
 }
 
-/*
-virtual void networkReplyFinished(QNetworkReply * reply) = 0
-*/
+// virtual void networkReplyFinished(QNetworkReply *reply) = 0
 HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -116,9 +110,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED)
 #endif
 }
 
-/*
-void callbackDataReceived(const QByteArray &data)
-*/
+// void callbackDataReceived(const QByteArray &data)
 HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -164,9 +156,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED)
 #endif
 }
 
-/*
-void replyDataReceived(const QByteArray &data)
-*/
+// void replyDataReceived(const QByteArray &data)
 HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
