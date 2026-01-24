@@ -66,15 +66,11 @@ RETURN
 HB_FUNC_STATIC(QGLCOLORMAP_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QGLColormap()
-    */
+    // QGLColormap()
     auto obj = new QGLColormap();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQGLCOLORMAP(1)) {
-    /*
-    QGLColormap(const QGLColormap &map)
-    */
+    // QGLColormap(const QGLColormap &map)
     auto obj = new QGLColormap(*PQGLCOLORMAP(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -91,9 +87,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QColor entryColor(int idx) const
-*/
+// QColor entryColor(int idx) const
 HB_FUNC_STATIC(QGLCOLORMAP_ENTRYCOLOR)
 {
   auto obj = static_cast<QGLColormap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -111,9 +105,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_ENTRYCOLOR)
   }
 }
 
-/*
-QRgb entryRgb(int idx) const
-*/
+// QRgb entryRgb(int idx) const
 HB_FUNC_STATIC(QGLCOLORMAP_ENTRYRGB)
 {
   auto obj = static_cast<QGLColormap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -131,9 +123,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_ENTRYRGB)
   }
 }
 
-/*
-int find(QRgb color) const
-*/
+// int find(QRgb color) const
 HB_FUNC_STATIC(QGLCOLORMAP_FIND)
 {
   auto obj = static_cast<QGLColormap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -151,9 +141,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_FIND)
   }
 }
 
-/*
-int findNearest(QRgb color) const
-*/
+// int findNearest(QRgb color) const
 HB_FUNC_STATIC(QGLCOLORMAP_FINDNEAREST)
 {
   auto obj = static_cast<QGLColormap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -171,9 +159,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_FINDNEAREST)
   }
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QGLCOLORMAP_ISEMPTY)
 {
   auto obj = static_cast<QGLColormap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -191,16 +177,12 @@ HB_FUNC_STATIC(QGLCOLORMAP_ISEMPTY)
   }
 }
 
-/*
-void setEntries (int count, const QRgb * colors, int base = 0)
-*/
+// void setEntries (int count, const QRgb *colors, int base = 0)
 
 HB_FUNC_STATIC(QGLCOLORMAP_SETENTRY)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    void setEntry(int idx, QRgb color)
-    */
+    // void setEntry(int idx, QRgb color)
     auto obj = static_cast<QGLColormap *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -209,9 +191,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_SETENTRY)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2))) {
-    /*
-    void setEntry(int idx, const QColor &color)
-    */
+    // void setEntry(int idx, const QColor &color)
     auto obj = static_cast<QGLColormap *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -224,9 +204,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_SETENTRY)
   }
 }
 
-/*
-int size() const
-*/
+// int size() const
 HB_FUNC_STATIC(QGLCOLORMAP_SIZE)
 {
   auto obj = static_cast<QGLColormap *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -73,21 +73,15 @@ RETURN
 HB_FUNC_STATIC(QGLBUFFER_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QGLBuffer()
-    */
+    // QGLBuffer()
     auto obj = new QGLBuffer();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QGLBuffer(QGLBuffer::Type type)
-    */
+    // QGLBuffer(QGLBuffer::Type type)
     auto obj = new QGLBuffer(PQGLBUFFER_TYPE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQGLBUFFER(1)) {
-    /*
-    QGLBuffer(const QGLBuffer &other)
-    */
+    // QGLBuffer(const QGLBuffer &other)
     auto obj = new QGLBuffer(*PQGLBUFFER(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -107,9 +101,7 @@ HB_FUNC_STATIC(QGLBUFFER_DELETE)
 HB_FUNC_STATIC(QGLBUFFER_ALLOCATE)
 {
   if (ISNUMPAR(2) && HB_ISPOINTER(1) && HB_ISNUM(2)) {
-    /*
-    void allocate(const void * data, int count)
-    */
+    // void allocate(const void *data, int count)
     auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -118,9 +110,7 @@ HB_FUNC_STATIC(QGLBUFFER_ALLOCATE)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    void allocate(int count)
-    */
+    // void allocate(int count)
     auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -133,9 +123,7 @@ HB_FUNC_STATIC(QGLBUFFER_ALLOCATE)
   }
 }
 
-/*
-bool bind()
-*/
+// bool bind()
 HB_FUNC_STATIC(QGLBUFFER_BIND)
 {
   auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -153,9 +141,7 @@ HB_FUNC_STATIC(QGLBUFFER_BIND)
   }
 }
 
-/*
-GLuint bufferId() const
-*/
+// GLuint bufferId() const
 HB_FUNC_STATIC(QGLBUFFER_BUFFERID)
 {
   auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -173,9 +159,7 @@ HB_FUNC_STATIC(QGLBUFFER_BUFFERID)
   }
 }
 
-/*
-bool create()
-*/
+// bool create()
 HB_FUNC_STATIC(QGLBUFFER_CREATE)
 {
   auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -193,9 +177,7 @@ HB_FUNC_STATIC(QGLBUFFER_CREATE)
   }
 }
 
-/*
-void destroy()
-*/
+// void destroy()
 HB_FUNC_STATIC(QGLBUFFER_DESTROY)
 {
   auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -215,9 +197,7 @@ HB_FUNC_STATIC(QGLBUFFER_DESTROY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isCreated() const
-*/
+// bool isCreated() const
 HB_FUNC_STATIC(QGLBUFFER_ISCREATED)
 {
   auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -235,9 +215,7 @@ HB_FUNC_STATIC(QGLBUFFER_ISCREATED)
   }
 }
 
-/*
-void * map(QGLBuffer::Access access)
-*/
+// void *map(QGLBuffer::Access access)
 HB_FUNC_STATIC(QGLBUFFER_MAP)
 {
   auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -255,9 +233,7 @@ HB_FUNC_STATIC(QGLBUFFER_MAP)
   }
 }
 
-/*
-bool read(int offset, void * data, int count)
-*/
+// bool read(int offset, void *data, int count)
 HB_FUNC_STATIC(QGLBUFFER_READ)
 {
   auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -278,9 +254,7 @@ HB_FUNC_STATIC(QGLBUFFER_READ)
 HB_FUNC_STATIC(QGLBUFFER_RELEASE)
 {
   if (ISNUMPAR(0)) {
-    /*
-    void release()
-    */
+    // void release()
     auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -289,9 +263,7 @@ HB_FUNC_STATIC(QGLBUFFER_RELEASE)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    static void release(QGLBuffer::Type type)
-    */
+    // static void release(QGLBuffer::Type type)
 
     QGLBuffer::release(PQGLBUFFER_TYPE(1));
 
@@ -301,9 +273,7 @@ HB_FUNC_STATIC(QGLBUFFER_RELEASE)
   }
 }
 
-/*
-void setUsagePattern(QGLBuffer::UsagePattern value)
-*/
+// void setUsagePattern(QGLBuffer::UsagePattern value)
 HB_FUNC_STATIC(QGLBUFFER_SETUSAGEPATTERN)
 {
   auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -323,9 +293,7 @@ HB_FUNC_STATIC(QGLBUFFER_SETUSAGEPATTERN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int size() const
-*/
+// int size() const
 HB_FUNC_STATIC(QGLBUFFER_SIZE)
 {
   auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -343,9 +311,7 @@ HB_FUNC_STATIC(QGLBUFFER_SIZE)
   }
 }
 
-/*
-QGLBuffer::Type type() const
-*/
+// QGLBuffer::Type type() const
 HB_FUNC_STATIC(QGLBUFFER_TYPE)
 {
   auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -363,9 +329,7 @@ HB_FUNC_STATIC(QGLBUFFER_TYPE)
   }
 }
 
-/*
-bool unmap()
-*/
+// bool unmap()
 HB_FUNC_STATIC(QGLBUFFER_UNMAP)
 {
   auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -383,9 +347,7 @@ HB_FUNC_STATIC(QGLBUFFER_UNMAP)
   }
 }
 
-/*
-QGLBuffer::UsagePattern usagePattern() const
-*/
+// QGLBuffer::UsagePattern usagePattern() const
 HB_FUNC_STATIC(QGLBUFFER_USAGEPATTERN)
 {
   auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -403,9 +365,7 @@ HB_FUNC_STATIC(QGLBUFFER_USAGEPATTERN)
   }
 }
 
-/*
-void write(int offset, const void * data, int count)
-*/
+// void write(int offset, const void *data, int count)
 HB_FUNC_STATIC(QGLBUFFER_WRITE)
 {
   auto obj = static_cast<QGLBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());

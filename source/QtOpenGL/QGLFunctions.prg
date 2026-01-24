@@ -113,15 +113,11 @@ RETURN
 HB_FUNC_STATIC(QGLFUNCTIONS_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QGLFunctions()
-    */
+    // QGLFunctions()
     auto obj = new QGLFunctions();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQGLCONTEXT(1)) {
-    /*
-    QGLFunctions(const QGLContext * context)
-    */
+    // QGLFunctions(const QGLContext *context)
     auto obj = new QGLFunctions(PQGLCONTEXT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -138,9 +134,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glActiveTexture(GLenum texture)
-*/
+// void glActiveTexture(GLenum texture)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLACTIVETEXTURE)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -160,9 +154,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLACTIVETEXTURE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glAttachShader(GLuint program, GLuint shader)
-*/
+// void glAttachShader(GLuint program, GLuint shader)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLATTACHSHADER)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -182,9 +174,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLATTACHSHADER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glBindAttribLocation(GLuint program, GLuint index, const char * name)
-*/
+// void glBindAttribLocation(GLuint program, GLuint index, const char *name)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDATTRIBLOCATION)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -204,9 +194,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDATTRIBLOCATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glBindBuffer(GLenum target, GLuint buffer)
-*/
+// void glBindBuffer(GLenum target, GLuint buffer)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDBUFFER)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -226,9 +214,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDBUFFER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glBindFramebuffer(GLenum target, GLuint framebuffer)
-*/
+// void glBindFramebuffer(GLenum target, GLuint framebuffer)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDFRAMEBUFFER)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -248,9 +234,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDFRAMEBUFFER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glBindRenderbuffer(GLenum target, GLuint renderbuffer)
-*/
+// void glBindRenderbuffer(GLenum target, GLuint renderbuffer)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDRENDERBUFFER)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -270,9 +254,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDRENDERBUFFER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha)
-*/
+// void glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDCOLOR)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -292,9 +274,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDCOLOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glBlendEquation(GLenum mode)
-*/
+// void glBlendEquation(GLenum mode)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDEQUATION)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -314,9 +294,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDEQUATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha)
-*/
+// void glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDEQUATIONSEPARATE)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -336,9 +314,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDEQUATIONSEPARATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glBlendFuncSeparate(GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha)
-*/
+// void glBlendFuncSeparate(GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDFUNCSEPARATE)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -358,9 +334,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDFUNCSEPARATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-GLenum glCheckFramebufferStatus(GLenum target)
-*/
+// GLenum glCheckFramebufferStatus(GLenum target)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCHECKFRAMEBUFFERSTATUS)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -378,9 +352,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCHECKFRAMEBUFFERSTATUS)
   }
 }
 
-/*
-void glClearDepthf(GLclampf depth)
-*/
+// void glClearDepthf(GLclampf depth)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCLEARDEPTHF)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -400,9 +372,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCLEARDEPTHF)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glCompileShader(GLuint shader)
-*/
+// void glCompileShader(GLuint shader)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPILESHADER)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -422,9 +392,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPILESHADER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-GLuint glCreateProgram()
-*/
+// GLuint glCreateProgram()
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCREATEPROGRAM)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -442,9 +410,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCREATEPROGRAM)
   }
 }
 
-/*
-GLuint glCreateShader(GLenum type)
-*/
+// GLuint glCreateShader(GLenum type)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCREATESHADER)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -462,15 +428,9 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCREATESHADER)
   }
 }
 
-/*
-void glDeleteBuffers(GLsizei n, const GLuint * buffers)
-*/
-/*
-void glDeleteFramebuffers(GLsizei n, const GLuint * framebuffers)
-*/
-/*
-void glDeleteProgram(GLuint program)
-*/
+// void glDeleteBuffers(GLsizei n, const GLuint *buffers)
+// void glDeleteFramebuffers(GLsizei n, const GLuint *framebuffers)
+// void glDeleteProgram(GLuint program)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETEPROGRAM)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -490,12 +450,8 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETEPROGRAM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glDeleteRenderbuffers(GLsizei n, const GLuint * renderbuffers)
-*/
-/*
-void glDeleteShader(GLuint shader)
-*/
+// void glDeleteRenderbuffers(GLsizei n, const GLuint *renderbuffers)
+// void glDeleteShader(GLuint shader)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETESHADER)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -515,9 +471,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETESHADER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glDepthRangef(GLclampf zNear, GLclampf zFar)
-*/
+// void glDepthRangef(GLclampf zNear, GLclampf zFar)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDEPTHRANGEF)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -537,9 +491,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDEPTHRANGEF)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glDetachShader(GLuint program, GLuint shader)
-*/
+// void glDetachShader(GLuint program, GLuint shader)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDETACHSHADER)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -559,9 +511,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDETACHSHADER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glDisableVertexAttribArray(GLuint index)
-*/
+// void glDisableVertexAttribArray(GLuint index)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDISABLEVERTEXATTRIBARRAY)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -581,9 +531,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDISABLEVERTEXATTRIBARRAY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glEnableVertexAttribArray(GLuint index)
-*/
+// void glEnableVertexAttribArray(GLuint index)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLENABLEVERTEXATTRIBARRAY)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -603,9 +551,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLENABLEVERTEXATTRIBARRAY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glFramebufferRenderbuffer(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer)
-*/
+// void glFramebufferRenderbuffer(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERRENDERBUFFER)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -625,9 +571,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERRENDERBUFFER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glFramebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level)
-*/
+// void glFramebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERTEXTURE2D)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -647,18 +591,10 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERTEXTURE2D)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glGenBuffers(GLsizei n, GLuint * buffers)
-*/
-/*
-void glGenFramebuffers(GLsizei n, GLuint * framebuffers)
-*/
-/*
-void glGenRenderbuffers(GLsizei n, GLuint * renderbuffers)
-*/
-/*
-void glGenerateMipmap(GLenum target)
-*/
+// void glGenBuffers(GLsizei n, GLuint *buffers)
+// void glGenFramebuffers(GLsizei n, GLuint *framebuffers)
+// void glGenRenderbuffers(GLsizei n, GLuint *renderbuffers)
+// void glGenerateMipmap(GLenum target)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLGENERATEMIPMAP)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -678,20 +614,12 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGENERATEMIPMAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glGetActiveAttrib(GLuint program, GLuint index, GLsizei bufsize, GLsizei * length, GLint * size, GLenum * type,
-char * name)
-*/
-/*
-void glGetActiveUniform(GLuint program, GLuint index, GLsizei bufsize, GLsizei * length, GLint * size, GLenum * type,
-char * name)
-*/
-/*
-void glGetAttachedShaders(GLuint program, GLsizei maxcount, GLsizei * count, GLuint * shaders)
-*/
-/*
-int glGetAttribLocation(GLuint program, const char * name)
-*/
+// void glGetActiveAttrib(GLuint program, GLuint index, GLsizei bufsize, GLsizei *length, GLint *size, GLenum *type,
+// char *name)
+// void glGetActiveUniform(GLuint program, GLuint index, GLsizei bufsize, GLsizei *length, GLint *size, GLenum *type,
+// char *name)
+// void glGetAttachedShaders(GLuint program, GLsizei maxcount, GLsizei *count, GLuint *shaders)
+// int glGetAttribLocation(GLuint program, const char *name)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLGETATTRIBLOCATION)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -709,36 +637,16 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGETATTRIBLOCATION)
   }
 }
 
-/*
-void glGetBufferParameteriv(GLenum target, GLenum pname, GLint * params)
-*/
-/*
-void glGetFramebufferAttachmentParameteriv(GLenum target, GLenum attachment, GLenum pname, GLint * params)
-*/
-/*
-void glGetProgramInfoLog(GLuint program, GLsizei bufsize, GLsizei * length, char * infolog)
-*/
-/*
-void glGetProgramiv(GLuint program, GLenum pname, GLint * params)
-*/
-/*
-void glGetRenderbufferParameteriv(GLenum target, GLenum pname, GLint * params)
-*/
-/*
-void glGetShaderInfoLog(GLuint shader, GLsizei bufsize, GLsizei * length, char * infolog)
-*/
-/*
-void glGetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype, GLint * range, GLint * precision)
-*/
-/*
-void glGetShaderSource(GLuint shader, GLsizei bufsize, GLsizei * length, char * source)
-*/
-/*
-void glGetShaderiv(GLuint shader, GLenum pname, GLint * params)
-*/
-/*
-int glGetUniformLocation(GLuint program, const char * name)
-*/
+// void glGetBufferParameteriv(GLenum target, GLenum pname, GLint *params)
+// void glGetFramebufferAttachmentParameteriv(GLenum target, GLenum attachment, GLenum pname, GLint *params)
+// void glGetProgramInfoLog(GLuint program, GLsizei bufsize, GLsizei *length, char *infolog)
+// void glGetProgramiv(GLuint program, GLenum pname, GLint *params)
+// void glGetRenderbufferParameteriv(GLenum target, GLenum pname, GLint *params)
+// void glGetShaderInfoLog(GLuint shader, GLsizei bufsize, GLsizei *length, char *infolog)
+// void glGetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype, GLint *range, GLint *precision)
+// void glGetShaderSource(GLuint shader, GLsizei bufsize, GLsizei *length, char *source)
+// void glGetShaderiv(GLuint shader, GLenum pname, GLint *params)
+// int glGetUniformLocation(GLuint program, const char *name)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLGETUNIFORMLOCATION)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -756,21 +664,11 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGETUNIFORMLOCATION)
   }
 }
 
-/*
-void glGetUniformfv(GLuint program, GLint location, GLfloat * params)
-*/
-/*
-void glGetUniformiv(GLuint program, GLint location, GLint * params)
-*/
-/*
-void glGetVertexAttribfv(GLuint index, GLenum pname, GLfloat * params)
-*/
-/*
-void glGetVertexAttribiv(GLuint index, GLenum pname, GLint * params)
-*/
-/*
-GLboolean glIsBuffer(GLuint buffer)
-*/
+// void glGetUniformfv(GLuint program, GLint location, GLfloat *params)
+// void glGetUniformiv(GLuint program, GLint location, GLint *params)
+// void glGetVertexAttribfv(GLuint index, GLenum pname, GLfloat *params)
+// void glGetVertexAttribiv(GLuint index, GLenum pname, GLint *params)
+// GLboolean glIsBuffer(GLuint buffer)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLISBUFFER)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -788,9 +686,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISBUFFER)
   }
 }
 
-/*
-GLboolean glIsFramebuffer(GLuint framebuffer)
-*/
+// GLboolean glIsFramebuffer(GLuint framebuffer)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLISFRAMEBUFFER)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -808,9 +704,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISFRAMEBUFFER)
   }
 }
 
-/*
-GLboolean glIsProgram(GLuint program)
-*/
+// GLboolean glIsProgram(GLuint program)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLISPROGRAM)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -828,9 +722,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISPROGRAM)
   }
 }
 
-/*
-GLboolean glIsRenderbuffer(GLuint renderbuffer)
-*/
+// GLboolean glIsRenderbuffer(GLuint renderbuffer)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLISRENDERBUFFER)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -848,9 +740,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISRENDERBUFFER)
   }
 }
 
-/*
-GLboolean glIsShader(GLuint shader)
-*/
+// GLboolean glIsShader(GLuint shader)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLISSHADER)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -868,9 +758,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISSHADER)
   }
 }
 
-/*
-void glLinkProgram(GLuint program)
-*/
+// void glLinkProgram(GLuint program)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLLINKPROGRAM)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -890,9 +778,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLLINKPROGRAM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glReleaseShaderCompiler()
-*/
+// void glReleaseShaderCompiler()
 HB_FUNC_STATIC(QGLFUNCTIONS_GLRELEASESHADERCOMPILER)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -912,9 +798,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLRELEASESHADERCOMPILER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glRenderbufferStorage(GLenum target, GLenum internalformat, GLsizei width, GLsizei height)
-*/
+// void glRenderbufferStorage(GLenum target, GLenum internalformat, GLsizei width, GLsizei height)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLRENDERBUFFERSTORAGE)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -934,9 +818,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLRENDERBUFFERSTORAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glSampleCoverage(GLclampf value, GLboolean invert)
-*/
+// void glSampleCoverage(GLclampf value, GLboolean invert)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLSAMPLECOVERAGE)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -956,9 +838,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSAMPLECOVERAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glStencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask)
-*/
+// void glStencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILFUNCSEPARATE)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -978,9 +858,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILFUNCSEPARATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glStencilMaskSeparate(GLenum face, GLuint mask)
-*/
+// void glStencilMaskSeparate(GLenum face, GLuint mask)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILMASKSEPARATE)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1000,9 +878,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILMASKSEPARATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glStencilOpSeparate(GLenum face, GLenum fail, GLenum zfail, GLenum zpass)
-*/
+// void glStencilOpSeparate(GLenum face, GLenum fail, GLenum zfail, GLenum zpass)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILOPSEPARATE)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1022,9 +898,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILOPSEPARATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glUniform1f(GLint location, GLfloat x)
-*/
+// void glUniform1f(GLint location, GLfloat x)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM1F)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1044,9 +918,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM1F)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glUniform1i(GLint location, GLint x)
-*/
+// void glUniform1i(GLint location, GLint x)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM1I)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1066,9 +938,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM1I)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glUniform2f(GLint location, GLfloat x, GLfloat y)
-*/
+// void glUniform2f(GLint location, GLfloat x, GLfloat y)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM2F)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1088,9 +958,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM2F)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glUniform2i(GLint location, GLint x, GLint y)
-*/
+// void glUniform2i(GLint location, GLint x, GLint y)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM2I)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1110,9 +978,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM2I)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glUniform3f(GLint location, GLfloat x, GLfloat y, GLfloat z)
-*/
+// void glUniform3f(GLint location, GLfloat x, GLfloat y, GLfloat z)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM3F)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1132,9 +998,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM3F)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glUniform3i(GLint location, GLint x, GLint y, GLint z)
-*/
+// void glUniform3i(GLint location, GLint x, GLint y, GLint z)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM3I)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1154,9 +1018,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM3I)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glUniform4f(GLint location, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
-*/
+// void glUniform4f(GLint location, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM4F)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1176,9 +1038,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM4F)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glUniform4i(GLint location, GLint x, GLint y, GLint z, GLint w)
-*/
+// void glUniform4i(GLint location, GLint x, GLint y, GLint z, GLint w)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM4I)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1198,9 +1058,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM4I)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glUseProgram(GLuint program)
-*/
+// void glUseProgram(GLuint program)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUSEPROGRAM)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1220,9 +1078,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUSEPROGRAM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glValidateProgram(GLuint program)
-*/
+// void glValidateProgram(GLuint program)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVALIDATEPROGRAM)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1242,9 +1098,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVALIDATEPROGRAM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glVertexAttrib1f(GLuint indx, GLfloat x)
-*/
+// void glVertexAttrib1f(GLuint indx, GLfloat x)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB1F)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1264,9 +1118,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB1F)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glVertexAttrib2f(GLuint indx, GLfloat x, GLfloat y)
-*/
+// void glVertexAttrib2f(GLuint indx, GLfloat x, GLfloat y)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB2F)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1286,9 +1138,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB2F)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glVertexAttrib3f(GLuint indx, GLfloat x, GLfloat y, GLfloat z)
-*/
+// void glVertexAttrib3f(GLuint indx, GLfloat x, GLfloat y, GLfloat z)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB3F)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1308,9 +1158,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB3F)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void glVertexAttrib4f(GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
-*/
+// void glVertexAttrib4f(GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB4F)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1330,9 +1178,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB4F)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool hasOpenGLFeature(QGLFunctions::OpenGLFeature feature) const
-*/
+// bool hasOpenGLFeature(QGLFunctions::OpenGLFeature feature) const
 HB_FUNC_STATIC(QGLFUNCTIONS_HASOPENGLFEATURE)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1350,9 +1196,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_HASOPENGLFEATURE)
   }
 }
 
-/*
-void initializeGLFunctions(const QGLContext * context = nullptr)
-*/
+// void initializeGLFunctions(const QGLContext *context = nullptr)
 HB_FUNC_STATIC(QGLFUNCTIONS_INITIALIZEGLFUNCTIONS)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1372,9 +1216,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_INITIALIZEGLFUNCTIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QGLFunctions::OpenGLFeatures openGLFeatures() const
-*/
+// QGLFunctions::OpenGLFeatures openGLFeatures() const
 HB_FUNC_STATIC(QGLFUNCTIONS_OPENGLFEATURES)
 {
   auto obj = static_cast<QGLFunctions *>(Qt5xHb::itemGetPtrStackSelfItem());
