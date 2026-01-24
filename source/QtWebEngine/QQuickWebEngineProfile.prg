@@ -104,9 +104,7 @@ RETURN
 #include <QtWebEngine/QWebEngineUrlSchemeHandler>
 #endif
 
-    /*
-    QQuickWebEngineProfile(QObject * parent = nullptr)
-    */
+    // QQuickWebEngineProfile(QObject *parent = nullptr)
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -119,9 +117,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_NEW)
 #endif
 }
 
-/*
-~QQuickWebEngineProfile()
-*/
+// ~QQuickWebEngineProfile()
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -133,9 +129,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_DELETE)
 #endif
 }
 
-/*
-QString storageName() const
-*/
+// QString storageName() const
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_STORAGENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -155,9 +149,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_STORAGENAME)
 #endif
 }
 
-/*
-void setStorageName(const QString &name)
-*/
+// void setStorageName(const QString &name)
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETSTORAGENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -179,9 +171,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETSTORAGENAME)
 #endif
 }
 
-/*
-bool isOffTheRecord() const
-*/
+// bool isOffTheRecord() const
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ISOFFTHERECORD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -201,9 +191,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ISOFFTHERECORD)
 #endif
 }
 
-/*
-void setOffTheRecord(bool offTheRecord)
-*/
+// void setOffTheRecord(bool offTheRecord)
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETOFFTHERECORD)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -225,9 +213,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETOFFTHERECORD)
 #endif
 }
 
-/*
-QString persistentStoragePath() const
-*/
+// QString persistentStoragePath() const
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_PERSISTENTSTORAGEPATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -247,9 +233,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_PERSISTENTSTORAGEPATH)
 #endif
 }
 
-/*
-void setPersistentStoragePath(const QString &path)
-*/
+// void setPersistentStoragePath(const QString &path)
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETPERSISTENTSTORAGEPATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -271,9 +255,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETPERSISTENTSTORAGEPATH)
 #endif
 }
 
-/*
-QString cachePath() const
-*/
+// QString cachePath() const
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_CACHEPATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -293,9 +275,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_CACHEPATH)
 #endif
 }
 
-/*
-void setCachePath(const QString &path)
-*/
+// void setCachePath(const QString &path)
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETCACHEPATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -317,9 +297,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETCACHEPATH)
 #endif
 }
 
-/*
-QString httpUserAgent() const
-*/
+// QString httpUserAgent() const
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_HTTPUSERAGENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -339,9 +317,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_HTTPUSERAGENT)
 #endif
 }
 
-/*
-void setHttpUserAgent(const QString &userAgent)
-*/
+// void setHttpUserAgent(const QString &userAgent)
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETHTTPUSERAGENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -363,9 +339,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETHTTPUSERAGENT)
 #endif
 }
 
-/*
-QQuickWebEngineProfile::HttpCacheType httpCacheType() const
-*/
+// QQuickWebEngineProfile::HttpCacheType httpCacheType() const
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_HTTPCACHETYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -385,9 +359,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_HTTPCACHETYPE)
 #endif
 }
 
-/*
-void setHttpCacheType(QQuickWebEngineProfile::HttpCacheType)
-*/
+// void setHttpCacheType(QQuickWebEngineProfile::HttpCacheType)
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETHTTPCACHETYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -409,9 +381,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETHTTPCACHETYPE)
 #endif
 }
 
-/*
-QString httpAcceptLanguage() const
-*/
+// QString httpAcceptLanguage() const
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_HTTPACCEPTLANGUAGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -431,9 +401,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_HTTPACCEPTLANGUAGE)
 #endif
 }
 
-/*
-void setHttpAcceptLanguage(const QString &httpAcceptLanguage)
-*/
+// void setHttpAcceptLanguage(const QString &httpAcceptLanguage)
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETHTTPACCEPTLANGUAGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -455,9 +423,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETHTTPACCEPTLANGUAGE)
 #endif
 }
 
-/*
-QQuickWebEngineProfile::PersistentCookiesPolicy persistentCookiesPolicy() const
-*/
+// QQuickWebEngineProfile::PersistentCookiesPolicy persistentCookiesPolicy() const
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_PERSISTENTCOOKIESPOLICY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -477,9 +443,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_PERSISTENTCOOKIESPOLICY)
 #endif
 }
 
-/*
-void setPersistentCookiesPolicy(QQuickWebEngineProfile::PersistentCookiesPolicy)
-*/
+// void setPersistentCookiesPolicy(QQuickWebEngineProfile::PersistentCookiesPolicy)
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETPERSISTENTCOOKIESPOLICY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -501,9 +465,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETPERSISTENTCOOKIESPOLICY)
 #endif
 }
 
-/*
-int httpCacheMaximumSize() const
-*/
+// int httpCacheMaximumSize() const
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_HTTPCACHEMAXIMUMSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -523,9 +485,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_HTTPCACHEMAXIMUMSIZE)
 #endif
 }
 
-/*
-void setHttpCacheMaximumSize(int maxSize)
-*/
+// void setHttpCacheMaximumSize(int maxSize)
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETHTTPCACHEMAXIMUMSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -547,9 +507,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETHTTPCACHEMAXIMUMSIZE)
 #endif
 }
 
-/*
-QStringList spellCheckLanguages() const
-*/
+// QStringList spellCheckLanguages() const
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SPELLCHECKLANGUAGES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -569,9 +527,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SPELLCHECKLANGUAGES)
 #endif
 }
 
-/*
-void setSpellCheckLanguages(const QStringList &languages)
-*/
+// void setSpellCheckLanguages(const QStringList &languages)
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETSPELLCHECKLANGUAGES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -593,9 +549,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETSPELLCHECKLANGUAGES)
 #endif
 }
 
-/*
-bool isSpellCheckEnabled() const
-*/
+// bool isSpellCheckEnabled() const
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ISSPELLCHECKENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -615,9 +569,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ISSPELLCHECKENABLED)
 #endif
 }
 
-/*
-void setSpellCheckEnabled(bool enabled)
-*/
+// void setSpellCheckEnabled(bool enabled)
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETSPELLCHECKENABLED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -639,9 +591,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETSPELLCHECKENABLED)
 #endif
 }
 
-/*
-QWebEngineCookieStore * cookieStore() const
-*/
+// QWebEngineCookieStore *cookieStore() const
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_COOKIESTORE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -662,9 +612,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_COOKIESTORE)
 #endif
 }
 
-/*
-void setRequestInterceptor(QWebEngineUrlRequestInterceptor * interceptor)
-*/
+// void setRequestInterceptor(QWebEngineUrlRequestInterceptor *interceptor)
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETREQUESTINTERCEPTOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -686,9 +634,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETREQUESTINTERCEPTOR)
 #endif
 }
 
-/*
-const QWebEngineUrlSchemeHandler * urlSchemeHandler(const QByteArray &) const
-*/
+// const QWebEngineUrlSchemeHandler *urlSchemeHandler(const QByteArray &) const
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_URLSCHEMEHANDLER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -709,9 +655,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_URLSCHEMEHANDLER)
 #endif
 }
 
-/*
-void installUrlSchemeHandler(const QByteArray &scheme, QWebEngineUrlSchemeHandler *)
-*/
+// void installUrlSchemeHandler(const QByteArray &scheme, QWebEngineUrlSchemeHandler *)
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_INSTALLURLSCHEMEHANDLER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -733,9 +677,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_INSTALLURLSCHEMEHANDLER)
 #endif
 }
 
-/*
-void removeUrlScheme(const QByteArray &scheme)
-*/
+// void removeUrlScheme(const QByteArray &scheme)
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_REMOVEURLSCHEME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -757,9 +699,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_REMOVEURLSCHEME)
 #endif
 }
 
-/*
-void removeUrlSchemeHandler(QWebEngineUrlSchemeHandler *)
-*/
+// void removeUrlSchemeHandler(QWebEngineUrlSchemeHandler *)
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_REMOVEURLSCHEMEHANDLER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -781,9 +721,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_REMOVEURLSCHEMEHANDLER)
 #endif
 }
 
-/*
-void removeAllUrlSchemeHandlers()
-*/
+// void removeAllUrlSchemeHandlers()
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_REMOVEALLURLSCHEMEHANDLERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -805,9 +743,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_REMOVEALLURLSCHEMEHANDLERS)
 #endif
 }
 
-/*
-Q_REVISION(2) Q_INVOKABLE void clearHttpCache()
-*/
+// Q_REVISION(2) Q_INVOKABLE void clearHttpCache()
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_CLEARHTTPCACHE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -829,9 +765,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_CLEARHTTPCACHE)
 #endif
 }
 
-/*
-static QQuickWebEngineProfile * defaultProfile()
-*/
+// static QQuickWebEngineProfile *defaultProfile()
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_DEFAULTPROFILE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -848,9 +782,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_DEFAULTPROFILE)
 #endif
 }
 
-/*
-void cachePathChanged()
-*/
+// void cachePathChanged()
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -893,9 +825,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED)
 #endif
 }
 
-/*
-void httpAcceptLanguageChanged()
-*/
+// void httpAcceptLanguageChanged()
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -938,9 +868,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED)
 #endif
 }
 
-/*
-void httpCacheMaximumSizeChanged()
-*/
+// void httpCacheMaximumSizeChanged()
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -983,9 +911,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED)
 #endif
 }
 
-/*
-void httpCacheTypeChanged()
-*/
+// void httpCacheTypeChanged()
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -1028,9 +954,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED)
 #endif
 }
 
-/*
-void httpUserAgentChanged()
-*/
+// void httpUserAgentChanged()
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -1073,9 +997,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED)
 #endif
 }
 
-/*
-void offTheRecordChanged()
-*/
+// void offTheRecordChanged()
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -1118,9 +1040,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED)
 #endif
 }
 
-/*
-void persistentCookiesPolicyChanged()
-*/
+// void persistentCookiesPolicyChanged()
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -1163,9 +1083,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED)
 #endif
 }
 
-/*
-void persistentStoragePathChanged()
-*/
+// void persistentStoragePathChanged()
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -1208,9 +1126,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED)
 #endif
 }
 
-/*
-void spellCheckEnabledChanged()
-*/
+// void spellCheckEnabledChanged()
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -1253,9 +1169,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED)
 #endif
 }
 
-/*
-void spellCheckLanguagesChanged()
-*/
+// void spellCheckLanguagesChanged()
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -1298,9 +1212,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED)
 #endif
 }
 
-/*
-void storageNameChanged()
-*/
+// void storageNameChanged()
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))

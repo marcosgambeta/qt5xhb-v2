@@ -54,9 +54,7 @@ RETURN
 #include <QtWebEngine/QtWebEngine>
 #endif
 
-    /*
-    static void initialize()
-    */
+    // static void initialize()
 HB_FUNC_STATIC(QTWEBENGINE_INITIALIZE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
