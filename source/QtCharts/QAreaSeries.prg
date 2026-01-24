@@ -103,17 +103,13 @@ using namespace QtCharts;
 HB_FUNC_STATIC(QAREASERIES_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QAreaSeries(QObject * parent = nullptr)
-    */
+    // QAreaSeries(QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QAreaSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(1, 2) && ISQLINESERIES(1) && ISQLINESERIESORNIL(2)) {
-    /*
-    QAreaSeries(QLineSeries * upperSeries, QLineSeries * lowerSeries = nullptr)
-    */
+    // QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QAreaSeries(PQLINESERIES(1), OPQLINESERIES(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -123,9 +119,7 @@ HB_FUNC_STATIC(QAREASERIES_NEW)
   }
 }
 
-/*
-~QAreaSeries()
-*/
+// ~QAreaSeries()
 HB_FUNC_STATIC(QAREASERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -137,9 +131,7 @@ HB_FUNC_STATIC(QAREASERIES_DELETE)
 #endif
 }
 
-/*
-QLineSeries * upperSeries() const
-*/
+// QLineSeries *upperSeries() const
 HB_FUNC_STATIC(QAREASERIES_UPPERSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -160,9 +152,7 @@ HB_FUNC_STATIC(QAREASERIES_UPPERSERIES)
 #endif
 }
 
-/*
-QLineSeries * lowerSeries() const
-*/
+// QLineSeries *lowerSeries() const
 HB_FUNC_STATIC(QAREASERIES_LOWERSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -183,9 +173,7 @@ HB_FUNC_STATIC(QAREASERIES_LOWERSERIES)
 #endif
 }
 
-/*
-QColor color() const
-*/
+// QColor color() const
 HB_FUNC_STATIC(QAREASERIES_COLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -205,9 +193,7 @@ HB_FUNC_STATIC(QAREASERIES_COLOR)
 #endif
 }
 
-/*
-void setColor(const QColor &color)
-*/
+// void setColor(const QColor &color)
 HB_FUNC_STATIC(QAREASERIES_SETCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -229,9 +215,7 @@ HB_FUNC_STATIC(QAREASERIES_SETCOLOR)
 #endif
 }
 
-/*
-QColor borderColor() const
-*/
+// QColor borderColor() const
 HB_FUNC_STATIC(QAREASERIES_BORDERCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -251,9 +235,7 @@ HB_FUNC_STATIC(QAREASERIES_BORDERCOLOR)
 #endif
 }
 
-/*
-void setBorderColor(const QColor &color)
-*/
+// void setBorderColor(const QColor &color)
 HB_FUNC_STATIC(QAREASERIES_SETBORDERCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -275,9 +257,7 @@ HB_FUNC_STATIC(QAREASERIES_SETBORDERCOLOR)
 #endif
 }
 
-/*
-QString pointLabelsFormat() const
-*/
+// QString pointLabelsFormat() const
 HB_FUNC_STATIC(QAREASERIES_POINTLABELSFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -297,9 +277,7 @@ HB_FUNC_STATIC(QAREASERIES_POINTLABELSFORMAT)
 #endif
 }
 
-/*
-void setPointLabelsFormat(const QString &format)
-*/
+// void setPointLabelsFormat(const QString &format)
 HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -321,9 +299,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSFORMAT)
 #endif
 }
 
-/*
-bool pointLabelsVisible() const
-*/
+// bool pointLabelsVisible() const
 HB_FUNC_STATIC(QAREASERIES_POINTLABELSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -343,9 +319,7 @@ HB_FUNC_STATIC(QAREASERIES_POINTLABELSVISIBLE)
 #endif
 }
 
-/*
-void setPointLabelsVisible(bool visible = true)
-*/
+// void setPointLabelsVisible(bool visible = true)
 HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -367,9 +341,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSVISIBLE)
 #endif
 }
 
-/*
-QFont pointLabelsFont() const
-*/
+// QFont pointLabelsFont() const
 HB_FUNC_STATIC(QAREASERIES_POINTLABELSFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -389,9 +361,7 @@ HB_FUNC_STATIC(QAREASERIES_POINTLABELSFONT)
 #endif
 }
 
-/*
-void setPointLabelsFont(const QFont &font)
-*/
+// void setPointLabelsFont(const QFont &font)
 HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -413,9 +383,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSFONT)
 #endif
 }
 
-/*
-QColor pointLabelsColor() const
-*/
+// QColor pointLabelsColor() const
 HB_FUNC_STATIC(QAREASERIES_POINTLABELSCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -435,9 +403,7 @@ HB_FUNC_STATIC(QAREASERIES_POINTLABELSCOLOR)
 #endif
 }
 
-/*
-void setPointLabelsColor(const QColor &color)
-*/
+// void setPointLabelsColor(const QColor &color)
 HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -459,9 +425,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSCOLOR)
 #endif
 }
 
-/*
-bool pointLabelsClipping() const
-*/
+// bool pointLabelsClipping() const
 HB_FUNC_STATIC(QAREASERIES_POINTLABELSCLIPPING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -481,9 +445,7 @@ HB_FUNC_STATIC(QAREASERIES_POINTLABELSCLIPPING)
 #endif
 }
 
-/*
-void setPointLabelsClipping(bool enabled = true)
-*/
+// void setPointLabelsClipping(bool enabled = true)
 HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSCLIPPING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -505,9 +467,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSCLIPPING)
 #endif
 }
 
-/*
-QAbstractSeries::SeriesType type() const
-*/
+// QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC(QAREASERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -527,9 +487,7 @@ HB_FUNC_STATIC(QAREASERIES_TYPE)
 #endif
 }
 
-/*
-void setUpperSeries(QLineSeries * series)
-*/
+// void setUpperSeries(QLineSeries *series)
 HB_FUNC_STATIC(QAREASERIES_SETUPPERSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -551,9 +509,7 @@ HB_FUNC_STATIC(QAREASERIES_SETUPPERSERIES)
 #endif
 }
 
-/*
-void setLowerSeries(QLineSeries * series)
-*/
+// void setLowerSeries(QLineSeries *series)
 HB_FUNC_STATIC(QAREASERIES_SETLOWERSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -575,9 +531,7 @@ HB_FUNC_STATIC(QAREASERIES_SETLOWERSERIES)
 #endif
 }
 
-/*
-void setPen(const QPen &pen)
-*/
+// void setPen(const QPen &pen)
 HB_FUNC_STATIC(QAREASERIES_SETPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -599,9 +553,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPEN)
 #endif
 }
 
-/*
-QPen pen() const
-*/
+// QPen pen() const
 HB_FUNC_STATIC(QAREASERIES_PEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -621,9 +573,7 @@ HB_FUNC_STATIC(QAREASERIES_PEN)
 #endif
 }
 
-/*
-void setBrush(const QBrush &brush)
-*/
+// void setBrush(const QBrush &brush)
 HB_FUNC_STATIC(QAREASERIES_SETBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -645,9 +595,7 @@ HB_FUNC_STATIC(QAREASERIES_SETBRUSH)
 #endif
 }
 
-/*
-QBrush brush() const
-*/
+// QBrush brush() const
 HB_FUNC_STATIC(QAREASERIES_BRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -667,9 +615,7 @@ HB_FUNC_STATIC(QAREASERIES_BRUSH)
 #endif
 }
 
-/*
-void setPointsVisible(bool visible = true)
-*/
+// void setPointsVisible(bool visible = true)
 HB_FUNC_STATIC(QAREASERIES_SETPOINTSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -691,9 +637,7 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTSVISIBLE)
 #endif
 }
 
-/*
-bool pointsVisible() const
-*/
+// bool pointsVisible() const
 HB_FUNC_STATIC(QAREASERIES_POINTSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -713,9 +657,7 @@ HB_FUNC_STATIC(QAREASERIES_POINTSVISIBLE)
 #endif
 }
 
-/*
-void borderColorChanged(QColor color)
-*/
+// void borderColorChanged(QColor color)
 HB_FUNC_STATIC(QAREASERIES_ONBORDERCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -760,9 +702,7 @@ HB_FUNC_STATIC(QAREASERIES_ONBORDERCOLORCHANGED)
 #endif
 }
 
-/*
-void clicked(const QPointF &point)
-*/
+// void clicked(const QPointF &point)
 HB_FUNC_STATIC(QAREASERIES_ONCLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -807,9 +747,7 @@ HB_FUNC_STATIC(QAREASERIES_ONCLICKED)
 #endif
 }
 
-/*
-void colorChanged(QColor color)
-*/
+// void colorChanged(QColor color)
 HB_FUNC_STATIC(QAREASERIES_ONCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -853,9 +791,7 @@ HB_FUNC_STATIC(QAREASERIES_ONCOLORCHANGED)
 #endif
 }
 
-/*
-void doubleClicked(const QPointF &point)
-*/
+// void doubleClicked(const QPointF &point)
 HB_FUNC_STATIC(QAREASERIES_ONDOUBLECLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -900,9 +836,7 @@ HB_FUNC_STATIC(QAREASERIES_ONDOUBLECLICKED)
 #endif
 }
 
-/*
-void hovered(const QPointF &point, bool state)
-*/
+// void hovered(const QPointF &point, bool state)
 HB_FUNC_STATIC(QAREASERIES_ONHOVERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -949,9 +883,7 @@ HB_FUNC_STATIC(QAREASERIES_ONHOVERED)
 #endif
 }
 
-/*
-void pointLabelsClippingChanged(bool clipping)
-*/
+// void pointLabelsClippingChanged(bool clipping)
 HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -996,9 +928,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED)
 #endif
 }
 
-/*
-void pointLabelsColorChanged(const QColor &color)
-*/
+// void pointLabelsColorChanged(const QColor &color)
 HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1043,9 +973,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSCOLORCHANGED)
 #endif
 }
 
-/*
-void pointLabelsFontChanged(const QFont &font)
-*/
+// void pointLabelsFontChanged(const QFont &font)
 HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSFONTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1090,9 +1018,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSFONTCHANGED)
 #endif
 }
 
-/*
-void pointLabelsFormatChanged(const QString &format)
-*/
+// void pointLabelsFormatChanged(const QString &format)
 HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSFORMATCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1137,9 +1063,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSFORMATCHANGED)
 #endif
 }
 
-/*
-void pointLabelsVisibilityChanged(bool visible)
-*/
+// void pointLabelsVisibilityChanged(bool visible)
 HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1184,9 +1108,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED)
 #endif
 }
 
-/*
-void pressed(const QPointF &point)
-*/
+// void pressed(const QPointF &point)
 HB_FUNC_STATIC(QAREASERIES_ONPRESSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1231,9 +1153,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPRESSED)
 #endif
 }
 
-/*
-void released(const QPointF &point)
-*/
+// void released(const QPointF &point)
 HB_FUNC_STATIC(QAREASERIES_ONRELEASED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1278,9 +1198,7 @@ HB_FUNC_STATIC(QAREASERIES_ONRELEASED)
 #endif
 }
 
-/*
-void selected()
-*/
+// void selected()
 HB_FUNC_STATIC(QAREASERIES_ONSELECTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

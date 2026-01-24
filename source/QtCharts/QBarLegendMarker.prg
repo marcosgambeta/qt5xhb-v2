@@ -59,9 +59,7 @@ RETURN
 
 using namespace QtCharts;
 
-/*
-QBarLegendMarker(QAbstractBarSeries * series, QBarSet * barset, QLegend * legend, QObject * parent = nullptr)
-*/
+// QBarLegendMarker(QAbstractBarSeries *series, QBarSet *barset, QLegend *legend, QObject *parent = nullptr)
 HB_FUNC_STATIC(QBARLEGENDMARKER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -74,9 +72,7 @@ HB_FUNC_STATIC(QBARLEGENDMARKER_NEW)
 #endif
 }
 
-/*
-virtual ~QBarLegendMarker()
-*/
+// virtual ~QBarLegendMarker()
 HB_FUNC_STATIC(QBARLEGENDMARKER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -88,9 +84,7 @@ HB_FUNC_STATIC(QBARLEGENDMARKER_DELETE)
 #endif
 }
 
-/*
-virtual QLegendMarker::LegendMarkerType type()
-*/
+// virtual QLegendMarker::LegendMarkerType type()
 HB_FUNC_STATIC(QBARLEGENDMARKER_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -110,9 +104,7 @@ HB_FUNC_STATIC(QBARLEGENDMARKER_TYPE)
 #endif
 }
 
-/*
-virtual QAbstractBarSeries * series()
-*/
+// virtual QAbstractBarSeries *series()
 HB_FUNC_STATIC(QBARLEGENDMARKER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -133,9 +125,7 @@ HB_FUNC_STATIC(QBARLEGENDMARKER_SERIES)
 #endif
 }
 
-/*
-QBarSet * barset()
-*/
+// QBarSet *barset()
 HB_FUNC_STATIC(QBARLEGENDMARKER_BARSET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

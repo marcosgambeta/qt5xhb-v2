@@ -86,9 +86,7 @@ using namespace QtCharts;
 
 #include <QtCharts/QBarSet>
 
-/*
-virtual ~QAbstractBarSeries()
-*/
+// virtual ~QAbstractBarSeries()
 HB_FUNC_STATIC(QABSTRACTBARSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -100,9 +98,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_DELETE)
 #endif
 }
 
-/*
-qreal barWidth() const
-*/
+// qreal barWidth() const
 HB_FUNC_STATIC(QABSTRACTBARSERIES_BARWIDTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -122,9 +118,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_BARWIDTH)
 #endif
 }
 
-/*
-void setBarWidth(qreal width)
-*/
+// void setBarWidth(qreal width)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_SETBARWIDTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -146,9 +140,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_SETBARWIDTH)
 #endif
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QABSTRACTBARSERIES_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -168,9 +160,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_COUNT)
 #endif
 }
 
-/*
-bool isLabelsVisible() const
-*/
+// bool isLabelsVisible() const
 HB_FUNC_STATIC(QABSTRACTBARSERIES_ISLABELSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -190,9 +180,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_ISLABELSVISIBLE)
 #endif
 }
 
-/*
-void setLabelsVisible(bool visible = true)
-*/
+// void setLabelsVisible(bool visible = true)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_SETLABELSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -214,9 +202,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_SETLABELSVISIBLE)
 #endif
 }
 
-/*
-QString labelsFormat() const
-*/
+// QString labelsFormat() const
 HB_FUNC_STATIC(QABSTRACTBARSERIES_LABELSFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -236,9 +222,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_LABELSFORMAT)
 #endif
 }
 
-/*
-void setLabelsFormat(const QString &format)
-*/
+// void setLabelsFormat(const QString &format)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_SETLABELSFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -260,9 +244,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_SETLABELSFORMAT)
 #endif
 }
 
-/*
-qreal labelsAngle() const
-*/
+// qreal labelsAngle() const
 HB_FUNC_STATIC(QABSTRACTBARSERIES_LABELSANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -282,9 +264,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_LABELSANGLE)
 #endif
 }
 
-/*
-void setLabelsAngle(qreal angle)
-*/
+// void setLabelsAngle(qreal angle)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_SETLABELSANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -306,9 +286,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_SETLABELSANGLE)
 #endif
 }
 
-/*
-QAbstractBarSeries::LabelsPosition labelsPosition() const
-*/
+// QAbstractBarSeries::LabelsPosition labelsPosition() const
 HB_FUNC_STATIC(QABSTRACTBARSERIES_LABELSPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -328,9 +306,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_LABELSPOSITION)
 #endif
 }
 
-/*
-void setLabelsPosition(QAbstractBarSeries::LabelsPosition position)
-*/
+// void setLabelsPosition(QAbstractBarSeries::LabelsPosition position)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_SETLABELSPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -357,18 +333,14 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_APPEND)
   auto obj = qobject_cast<QAbstractBarSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (ISNUMPAR(1) && ISQBARSET(1)) {
-    /*
-    bool append(QBarSet * set)
-    */
+    // bool append(QBarSet *set)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       RBOOL(obj->append(PQBARSET(1)));
     }
 #endif
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
-    /*
-    bool append(QList<QBarSet*> sets)
-    */
+    // bool append(QList<QBarSet*> sets)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       QList<QBarSet *> par1;
@@ -385,9 +357,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_APPEND)
   }
 }
 
-/*
-bool remove(QBarSet * set)
-*/
+// bool remove(QBarSet *set)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_REMOVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -407,9 +377,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_REMOVE)
 #endif
 }
 
-/*
-bool take(QBarSet * set)
-*/
+// bool take(QBarSet *set)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_TAKE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -429,9 +397,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_TAKE)
 #endif
 }
 
-/*
-bool insert(int index, QBarSet * set)
-*/
+// bool insert(int index, QBarSet *set)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_INSERT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -451,9 +417,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_INSERT)
 #endif
 }
 
-/*
-QList<QBarSet*> barSets() const
-*/
+// QList<QBarSet*> barSets() const
 HB_FUNC_STATIC(QABSTRACTBARSERIES_BARSETS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -492,9 +456,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_BARSETS)
 #endif
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QABSTRACTBARSERIES_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -516,9 +478,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_CLEAR)
 #endif
 }
 
-/*
-void barsetsAdded(QList<QBarSet*> sets)
-*/
+// void barsetsAdded(QList<QBarSet*> sets)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_ONBARSETSADDED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -580,9 +540,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_ONBARSETSADDED)
 #endif
 }
 
-/*
-void barsetsRemoved(QList<QBarSet*> sets)
-*/
+// void barsetsRemoved(QList<QBarSet*> sets)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_ONBARSETSREMOVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -644,9 +602,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_ONBARSETSREMOVED)
 #endif
 }
 
-/*
-void clicked(int index, QBarSet * barset)
-*/
+// void clicked(int index, QBarSet *barset)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_ONCLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -693,9 +649,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_ONCLICKED)
 #endif
 }
 
-/*
-void countChanged()
-*/
+// void countChanged()
 HB_FUNC_STATIC(QABSTRACTBARSERIES_ONCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -737,9 +691,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_ONCOUNTCHANGED)
 #endif
 }
 
-/*
-void doubleClicked(int index, QBarSet * barset)
-*/
+// void doubleClicked(int index, QBarSet *barset)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_ONDOUBLECLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -786,9 +738,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_ONDOUBLECLICKED)
 #endif
 }
 
-/*
-void hovered(bool status, int index, QBarSet * barset)
-*/
+// void hovered(bool status, int index, QBarSet *barset)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_ONHOVERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -837,9 +787,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_ONHOVERED)
 #endif
 }
 
-/*
-void labelsAngleChanged(qreal angle)
-*/
+// void labelsAngleChanged(qreal angle)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_ONLABELSANGLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -884,9 +832,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_ONLABELSANGLECHANGED)
 #endif
 }
 
-/*
-void labelsFormatChanged(const QString &format)
-*/
+// void labelsFormatChanged(const QString &format)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_ONLABELSFORMATCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -931,9 +877,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_ONLABELSFORMATCHANGED)
 #endif
 }
 
-/*
-void labelsPositionChanged(QAbstractBarSeries::LabelsPosition position)
-*/
+// void labelsPositionChanged(QAbstractBarSeries::LabelsPosition position)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_ONLABELSPOSITIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -980,9 +924,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_ONLABELSPOSITIONCHANGED)
 #endif
 }
 
-/*
-void labelsVisibleChanged()
-*/
+// void labelsVisibleChanged()
 HB_FUNC_STATIC(QABSTRACTBARSERIES_ONLABELSVISIBLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1025,9 +967,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_ONLABELSVISIBLECHANGED)
 #endif
 }
 
-/*
-void pressed(int index, QBarSet * barset)
-*/
+// void pressed(int index, QBarSet *barset)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_ONPRESSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1074,9 +1014,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_ONPRESSED)
 #endif
 }
 
-/*
-void released(int index, QBarSet * barset)
-*/
+// void released(int index, QBarSet *barset)
 HB_FUNC_STATIC(QABSTRACTBARSERIES_ONRELEASED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

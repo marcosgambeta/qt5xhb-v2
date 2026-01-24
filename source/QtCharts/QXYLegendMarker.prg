@@ -57,9 +57,7 @@ RETURN
 
 using namespace QtCharts;
 
-/*
-QXYLegendMarker(QXYSeries * series, QLegend * legend, QObject * parent = nullptr)
-*/
+// QXYLegendMarker(QXYSeries *series, QLegend *legend, QObject *parent = nullptr)
 HB_FUNC_STATIC(QXYLEGENDMARKER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -72,9 +70,7 @@ HB_FUNC_STATIC(QXYLEGENDMARKER_NEW)
 #endif
 }
 
-/*
-virtual ~QXYLegendMarker()
-*/
+// virtual ~QXYLegendMarker()
 HB_FUNC_STATIC(QXYLEGENDMARKER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -86,9 +82,7 @@ HB_FUNC_STATIC(QXYLEGENDMARKER_DELETE)
 #endif
 }
 
-/*
-virtual QLegendMarker::LegendMarkerType type()
-*/
+// virtual QLegendMarker::LegendMarkerType type()
 HB_FUNC_STATIC(QXYLEGENDMARKER_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -108,9 +102,7 @@ HB_FUNC_STATIC(QXYLEGENDMARKER_TYPE)
 #endif
 }
 
-/*
-virtual QXYSeries * series()
-*/
+// virtual QXYSeries *series()
 HB_FUNC_STATIC(QXYLEGENDMARKER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

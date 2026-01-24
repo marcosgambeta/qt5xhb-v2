@@ -77,9 +77,7 @@ using namespace QtCharts;
 #include <QtCharts/QXYSeries>
 #include <QtCore/QAbstractItemModel>
 
-/*
-QHXYModelMapper(QObject * parent = nullptr)
-*/
+// QHXYModelMapper(QObject *parent = nullptr)
 HB_FUNC_STATIC(QHXYMODELMAPPER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -92,9 +90,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_NEW)
 #endif
 }
 
-/*
-QXYSeries * series() const
-*/
+// QXYSeries *series() const
 HB_FUNC_STATIC(QHXYMODELMAPPER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -115,9 +111,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SERIES)
 #endif
 }
 
-/*
-void setSeries(QXYSeries * series)
-*/
+// void setSeries(QXYSeries *series)
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -139,9 +133,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETSERIES)
 #endif
 }
 
-/*
-QAbstractItemModel * model() const
-*/
+// QAbstractItemModel *model() const
 HB_FUNC_STATIC(QHXYMODELMAPPER_MODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -162,9 +154,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_MODEL)
 #endif
 }
 
-/*
-void setModel(QAbstractItemModel * model)
-*/
+// void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -186,9 +176,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETMODEL)
 #endif
 }
 
-/*
-int xRow() const
-*/
+// int xRow() const
 HB_FUNC_STATIC(QHXYMODELMAPPER_XROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -208,9 +196,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_XROW)
 #endif
 }
 
-/*
-void setXRow(int xRow)
-*/
+// void setXRow(int xRow)
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETXROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -232,9 +218,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETXROW)
 #endif
 }
 
-/*
-int yRow() const
-*/
+// int yRow() const
 HB_FUNC_STATIC(QHXYMODELMAPPER_YROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -254,9 +238,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_YROW)
 #endif
 }
 
-/*
-void setYRow(int yRow)
-*/
+// void setYRow(int yRow)
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETYROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -278,9 +260,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETYROW)
 #endif
 }
 
-/*
-int firstColumn() const
-*/
+// int firstColumn() const
 HB_FUNC_STATIC(QHXYMODELMAPPER_FIRSTCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -300,9 +280,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_FIRSTCOLUMN)
 #endif
 }
 
-/*
-void setFirstColumn(int firstColumn)
-*/
+// void setFirstColumn(int firstColumn)
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETFIRSTCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -324,9 +302,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETFIRSTCOLUMN)
 #endif
 }
 
-/*
-int columnCount() const
-*/
+// int columnCount() const
 HB_FUNC_STATIC(QHXYMODELMAPPER_COLUMNCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -346,9 +322,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_COLUMNCOUNT)
 #endif
 }
 
-/*
-void setColumnCount(int columnCount)
-*/
+// void setColumnCount(int columnCount)
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETCOLUMNCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -370,9 +344,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETCOLUMNCOUNT)
 #endif
 }
 
-/*
-void columnCountChanged()
-*/
+// void columnCountChanged()
 HB_FUNC_STATIC(QHXYMODELMAPPER_ONCOLUMNCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -414,9 +386,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONCOLUMNCOUNTCHANGED)
 #endif
 }
 
-/*
-void firstColumnChanged()
-*/
+// void firstColumnChanged()
 HB_FUNC_STATIC(QHXYMODELMAPPER_ONFIRSTCOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -458,9 +428,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONFIRSTCOLUMNCHANGED)
 #endif
 }
 
-/*
-void modelReplaced()
-*/
+// void modelReplaced()
 HB_FUNC_STATIC(QHXYMODELMAPPER_ONMODELREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -502,9 +470,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONMODELREPLACED)
 #endif
 }
 
-/*
-void seriesReplaced()
-*/
+// void seriesReplaced()
 HB_FUNC_STATIC(QHXYMODELMAPPER_ONSERIESREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -546,9 +512,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONSERIESREPLACED)
 #endif
 }
 
-/*
-void xRowChanged()
-*/
+// void xRowChanged()
 HB_FUNC_STATIC(QHXYMODELMAPPER_ONXROWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -590,9 +554,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONXROWCHANGED)
 #endif
 }
 
-/*
-void yRowChanged()
-*/
+// void yRowChanged()
 HB_FUNC_STATIC(QHXYMODELMAPPER_ONYROWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

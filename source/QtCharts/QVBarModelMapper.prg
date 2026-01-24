@@ -77,9 +77,7 @@ using namespace QtCharts;
 #include <QtCharts/QAbstractBarSeries>
 #include <QtCore/QAbstractItemModel>
 
-/*
-QVBarModelMapper(QObject * parent = nullptr)
-*/
+// QVBarModelMapper(QObject *parent = nullptr)
 HB_FUNC_STATIC(QVBARMODELMAPPER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -92,9 +90,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_NEW)
 #endif
 }
 
-/*
-QAbstractBarSeries * series() const
-*/
+// QAbstractBarSeries *series() const
 HB_FUNC_STATIC(QVBARMODELMAPPER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -115,9 +111,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_SERIES)
 #endif
 }
 
-/*
-void setSeries(QAbstractBarSeries * series)
-*/
+// void setSeries(QAbstractBarSeries *series)
 HB_FUNC_STATIC(QVBARMODELMAPPER_SETSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -139,9 +133,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_SETSERIES)
 #endif
 }
 
-/*
-QAbstractItemModel * model() const
-*/
+// QAbstractItemModel *model() const
 HB_FUNC_STATIC(QVBARMODELMAPPER_MODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -162,9 +154,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_MODEL)
 #endif
 }
 
-/*
-void setModel(QAbstractItemModel * model)
-*/
+// void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC(QVBARMODELMAPPER_SETMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -186,9 +176,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_SETMODEL)
 #endif
 }
 
-/*
-int firstBarSetColumn() const
-*/
+// int firstBarSetColumn() const
 HB_FUNC_STATIC(QVBARMODELMAPPER_FIRSTBARSETCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -208,9 +196,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_FIRSTBARSETCOLUMN)
 #endif
 }
 
-/*
-void setFirstBarSetColumn(int firstBarSetColumn)
-*/
+// void setFirstBarSetColumn(int firstBarSetColumn)
 HB_FUNC_STATIC(QVBARMODELMAPPER_SETFIRSTBARSETCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -232,9 +218,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_SETFIRSTBARSETCOLUMN)
 #endif
 }
 
-/*
-int lastBarSetColumn() const
-*/
+// int lastBarSetColumn() const
 HB_FUNC_STATIC(QVBARMODELMAPPER_LASTBARSETCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -254,9 +238,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_LASTBARSETCOLUMN)
 #endif
 }
 
-/*
-void setLastBarSetColumn(int lastBarSetColumn)
-*/
+// void setLastBarSetColumn(int lastBarSetColumn)
 HB_FUNC_STATIC(QVBARMODELMAPPER_SETLASTBARSETCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -278,9 +260,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_SETLASTBARSETCOLUMN)
 #endif
 }
 
-/*
-int firstRow() const
-*/
+// int firstRow() const
 HB_FUNC_STATIC(QVBARMODELMAPPER_FIRSTROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -300,9 +280,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_FIRSTROW)
 #endif
 }
 
-/*
-void setFirstRow(int firstRow)
-*/
+// void setFirstRow(int firstRow)
 HB_FUNC_STATIC(QVBARMODELMAPPER_SETFIRSTROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -324,9 +302,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_SETFIRSTROW)
 #endif
 }
 
-/*
-int rowCount() const
-*/
+// int rowCount() const
 HB_FUNC_STATIC(QVBARMODELMAPPER_ROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -346,9 +322,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_ROWCOUNT)
 #endif
 }
 
-/*
-void setRowCount(int rowCount)
-*/
+// void setRowCount(int rowCount)
 HB_FUNC_STATIC(QVBARMODELMAPPER_SETROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -370,9 +344,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_SETROWCOUNT)
 #endif
 }
 
-/*
-void firstBarSetColumnChanged()
-*/
+// void firstBarSetColumnChanged()
 HB_FUNC_STATIC(QVBARMODELMAPPER_ONFIRSTBARSETCOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -415,9 +387,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_ONFIRSTBARSETCOLUMNCHANGED)
 #endif
 }
 
-/*
-void firstRowChanged()
-*/
+// void firstRowChanged()
 HB_FUNC_STATIC(QVBARMODELMAPPER_ONFIRSTROWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -459,9 +429,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_ONFIRSTROWCHANGED)
 #endif
 }
 
-/*
-void lastBarSetColumnChanged()
-*/
+// void lastBarSetColumnChanged()
 HB_FUNC_STATIC(QVBARMODELMAPPER_ONLASTBARSETCOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -504,9 +472,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_ONLASTBARSETCOLUMNCHANGED)
 #endif
 }
 
-/*
-void modelReplaced()
-*/
+// void modelReplaced()
 HB_FUNC_STATIC(QVBARMODELMAPPER_ONMODELREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -548,9 +514,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_ONMODELREPLACED)
 #endif
 }
 
-/*
-void rowCountChanged()
-*/
+// void rowCountChanged()
 HB_FUNC_STATIC(QVBARMODELMAPPER_ONROWCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -592,9 +556,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_ONROWCOUNTCHANGED)
 #endif
 }
 
-/*
-void seriesReplaced()
-*/
+// void seriesReplaced()
 HB_FUNC_STATIC(QVBARMODELMAPPER_ONSERIESREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

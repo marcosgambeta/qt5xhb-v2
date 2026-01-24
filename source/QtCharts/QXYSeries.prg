@@ -104,9 +104,7 @@ RETURN
 
 using namespace QtCharts;
 
-/*
-~QXYSeries()
-*/
+// ~QXYSeries()
 HB_FUNC_STATIC(QXYSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -118,9 +116,7 @@ HB_FUNC_STATIC(QXYSERIES_DELETE)
 #endif
 }
 
-/*
-bool pointsVisible() const
-*/
+// bool pointsVisible() const
 HB_FUNC_STATIC(QXYSERIES_POINTSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -140,9 +136,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTSVISIBLE)
 #endif
 }
 
-/*
-void setPointsVisible(bool visible = true)
-*/
+// void setPointsVisible(bool visible = true)
 HB_FUNC_STATIC(QXYSERIES_SETPOINTSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -164,9 +158,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTSVISIBLE)
 #endif
 }
 
-/*
-virtual QColor color() const
-*/
+// virtual QColor color() const
 HB_FUNC_STATIC(QXYSERIES_COLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -186,9 +178,7 @@ HB_FUNC_STATIC(QXYSERIES_COLOR)
 #endif
 }
 
-/*
-virtual void setColor(const QColor &color)
-*/
+// virtual void setColor(const QColor &color)
 HB_FUNC_STATIC(QXYSERIES_SETCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -210,9 +200,7 @@ HB_FUNC_STATIC(QXYSERIES_SETCOLOR)
 #endif
 }
 
-/*
-QString pointLabelsFormat() const
-*/
+// QString pointLabelsFormat() const
 HB_FUNC_STATIC(QXYSERIES_POINTLABELSFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -232,9 +220,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSFORMAT)
 #endif
 }
 
-/*
-void setPointLabelsFormat(const QString &format)
-*/
+// void setPointLabelsFormat(const QString &format)
 HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -256,9 +242,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSFORMAT)
 #endif
 }
 
-/*
-bool pointLabelsVisible() const
-*/
+// bool pointLabelsVisible() const
 HB_FUNC_STATIC(QXYSERIES_POINTLABELSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -278,9 +262,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSVISIBLE)
 #endif
 }
 
-/*
-void setPointLabelsVisible(bool visible = true)
-*/
+// void setPointLabelsVisible(bool visible = true)
 HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -302,9 +284,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSVISIBLE)
 #endif
 }
 
-/*
-QFont pointLabelsFont() const
-*/
+// QFont pointLabelsFont() const
 HB_FUNC_STATIC(QXYSERIES_POINTLABELSFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -324,9 +304,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSFONT)
 #endif
 }
 
-/*
-void setPointLabelsFont(const QFont &font)
-*/
+// void setPointLabelsFont(const QFont &font)
 HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -348,9 +326,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSFONT)
 #endif
 }
 
-/*
-QColor pointLabelsColor() const
-*/
+// QColor pointLabelsColor() const
 HB_FUNC_STATIC(QXYSERIES_POINTLABELSCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -370,9 +346,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSCOLOR)
 #endif
 }
 
-/*
-void setPointLabelsColor(const QColor &color)
-*/
+// void setPointLabelsColor(const QColor &color)
 HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -394,9 +368,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSCOLOR)
 #endif
 }
 
-/*
-bool pointLabelsClipping() const
-*/
+// bool pointLabelsClipping() const
 HB_FUNC_STATIC(QXYSERIES_POINTLABELSCLIPPING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -416,9 +388,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSCLIPPING)
 #endif
 }
 
-/*
-void setPointLabelsClipping(bool enabled = true)
-*/
+// void setPointLabelsClipping(bool enabled = true)
 HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSCLIPPING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -445,9 +415,7 @@ HB_FUNC_STATIC(QXYSERIES_APPEND)
   auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    void append(qreal x, qreal y)
-    */
+    // void append(qreal x, qreal y)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       obj->append(PQREAL(1), PQREAL(2));
@@ -456,9 +424,7 @@ HB_FUNC_STATIC(QXYSERIES_APPEND)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
-    /*
-    void append(const QPointF &point)
-    */
+    // void append(const QPointF &point)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       obj->append(*PQPOINTF(1));
@@ -467,9 +433,7 @@ HB_FUNC_STATIC(QXYSERIES_APPEND)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
-    /*
-    void append(const QList<QPointF> &points)
-    */
+    // void append(const QList<QPointF> &points)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       QList<QPointF> par1;
@@ -493,9 +457,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
   auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
-    /*
-    void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
-    */
+    // void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       obj->replace(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
@@ -504,9 +466,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2)) {
-    /*
-    void replace(const QPointF &oldPoint, const QPointF &newPoint)
-    */
+    // void replace(const QPointF &oldPoint, const QPointF &newPoint)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       obj->replace(*PQPOINTF(1), *PQPOINTF(2));
@@ -515,9 +475,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
-    /*
-    void replace(int index, qreal newX, qreal newY)
-    */
+    // void replace(int index, qreal newX, qreal newY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       obj->replace(PINT(1), PQREAL(2), PQREAL(3));
@@ -526,9 +484,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINTF(2)) {
-    /*
-    void replace(int index, const QPointF &newPoint)
-    */
+    // void replace(int index, const QPointF &newPoint)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       obj->replace(PINT(1), *PQPOINTF(2));
@@ -537,9 +493,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
-    /*
-    void replace(QList<QPointF> points)
-    */
+    // void replace(QList<QPointF> points)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       QList<QPointF> par1;
@@ -554,9 +508,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
-    /*
-    void replace(QVector<QPointF> points)
-    */
+    // void replace(QVector<QPointF> points)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       QVector<QPointF> par1;
@@ -580,9 +532,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVE)
   auto obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    void remove(qreal x, qreal y)
-    */
+    // void remove(qreal x, qreal y)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       obj->remove(PQREAL(1), PQREAL(2));
@@ -591,9 +541,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVE)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
-    /*
-    void remove(const QPointF &point)
-    */
+    // void remove(const QPointF &point)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       obj->remove(*PQPOINTF(1));
@@ -602,9 +550,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVE)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    void remove(int index)
-    */
+    // void remove(int index)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       obj->remove(PINT(1));
@@ -617,9 +563,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVE)
   }
 }
 
-/*
-void removePoints(int index, int count)
-*/
+// void removePoints(int index, int count)
 HB_FUNC_STATIC(QXYSERIES_REMOVEPOINTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -641,9 +585,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVEPOINTS)
 #endif
 }
 
-/*
-void insert(int index, const QPointF &point)
-*/
+// void insert(int index, const QPointF &point)
 HB_FUNC_STATIC(QXYSERIES_INSERT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -665,9 +607,7 @@ HB_FUNC_STATIC(QXYSERIES_INSERT)
 #endif
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QXYSERIES_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -689,9 +629,7 @@ HB_FUNC_STATIC(QXYSERIES_CLEAR)
 #endif
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QXYSERIES_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -711,9 +649,7 @@ HB_FUNC_STATIC(QXYSERIES_COUNT)
 #endif
 }
 
-/*
-QList<QPointF> points() const
-*/
+// QList<QPointF> points() const
 HB_FUNC_STATIC(QXYSERIES_POINTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -755,9 +691,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTS)
 #endif
 }
 
-/*
-QVector<QPointF> pointsVector() const
-*/
+// QVector<QPointF> pointsVector() const
 HB_FUNC_STATIC(QXYSERIES_POINTSVECTOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -799,9 +733,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTSVECTOR)
 #endif
 }
 
-/*
-const QPointF &at(int index) const
-*/
+// const QPointF &at(int index) const
 HB_FUNC_STATIC(QXYSERIES_AT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -822,9 +754,7 @@ HB_FUNC_STATIC(QXYSERIES_AT)
 #endif
 }
 
-/*
-virtual void setPen(const QPen &pen)
-*/
+// virtual void setPen(const QPen &pen)
 HB_FUNC_STATIC(QXYSERIES_SETPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -846,9 +776,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPEN)
 #endif
 }
 
-/*
-QPen pen() const
-*/
+// QPen pen() const
 HB_FUNC_STATIC(QXYSERIES_PEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -868,9 +796,7 @@ HB_FUNC_STATIC(QXYSERIES_PEN)
 #endif
 }
 
-/*
-virtual void setBrush(const QBrush &brush)
-*/
+// virtual void setBrush(const QBrush &brush)
 HB_FUNC_STATIC(QXYSERIES_SETBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -892,9 +818,7 @@ HB_FUNC_STATIC(QXYSERIES_SETBRUSH)
 #endif
 }
 
-/*
-QBrush brush() const
-*/
+// QBrush brush() const
 HB_FUNC_STATIC(QXYSERIES_BRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -914,9 +838,7 @@ HB_FUNC_STATIC(QXYSERIES_BRUSH)
 #endif
 }
 
-/*
-void clicked(const QPointF &point)
-*/
+// void clicked(const QPointF &point)
 HB_FUNC_STATIC(QXYSERIES_ONCLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -961,9 +883,7 @@ HB_FUNC_STATIC(QXYSERIES_ONCLICKED)
 #endif
 }
 
-/*
-void colorChanged(QColor color)
-*/
+// void colorChanged(QColor color)
 HB_FUNC_STATIC(QXYSERIES_ONCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1007,9 +927,7 @@ HB_FUNC_STATIC(QXYSERIES_ONCOLORCHANGED)
 #endif
 }
 
-/*
-void doubleClicked(const QPointF &point)
-*/
+// void doubleClicked(const QPointF &point)
 HB_FUNC_STATIC(QXYSERIES_ONDOUBLECLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1054,9 +972,7 @@ HB_FUNC_STATIC(QXYSERIES_ONDOUBLECLICKED)
 #endif
 }
 
-/*
-void hovered(const QPointF &point, bool state)
-*/
+// void hovered(const QPointF &point, bool state)
 HB_FUNC_STATIC(QXYSERIES_ONHOVERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1103,9 +1019,7 @@ HB_FUNC_STATIC(QXYSERIES_ONHOVERED)
 #endif
 }
 
-/*
-void penChanged(const QPen &pen)
-*/
+// void penChanged(const QPen &pen)
 HB_FUNC_STATIC(QXYSERIES_ONPENCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1150,9 +1064,7 @@ HB_FUNC_STATIC(QXYSERIES_ONPENCHANGED)
 #endif
 }
 
-/*
-void pointAdded(int index)
-*/
+// void pointAdded(int index)
 HB_FUNC_STATIC(QXYSERIES_ONPOINTADDED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1196,9 +1108,7 @@ HB_FUNC_STATIC(QXYSERIES_ONPOINTADDED)
 #endif
 }
 
-/*
-void pointLabelsClippingChanged(bool clipping)
-*/
+// void pointLabelsClippingChanged(bool clipping)
 HB_FUNC_STATIC(QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1243,9 +1153,7 @@ HB_FUNC_STATIC(QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED)
 #endif
 }
 
-/*
-void pointLabelsColorChanged(const QColor &color)
-*/
+// void pointLabelsColorChanged(const QColor &color)
 HB_FUNC_STATIC(QXYSERIES_ONPOINTLABELSCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1290,9 +1198,7 @@ HB_FUNC_STATIC(QXYSERIES_ONPOINTLABELSCOLORCHANGED)
 #endif
 }
 
-/*
-void pointLabelsFontChanged(const QFont &font)
-*/
+// void pointLabelsFontChanged(const QFont &font)
 HB_FUNC_STATIC(QXYSERIES_ONPOINTLABELSFONTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1337,9 +1243,7 @@ HB_FUNC_STATIC(QXYSERIES_ONPOINTLABELSFONTCHANGED)
 #endif
 }
 
-/*
-void pointLabelsFormatChanged(const QString &format)
-*/
+// void pointLabelsFormatChanged(const QString &format)
 HB_FUNC_STATIC(QXYSERIES_ONPOINTLABELSFORMATCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1384,9 +1288,7 @@ HB_FUNC_STATIC(QXYSERIES_ONPOINTLABELSFORMATCHANGED)
 #endif
 }
 
-/*
-void pointLabelsVisibilityChanged(bool visible)
-*/
+// void pointLabelsVisibilityChanged(bool visible)
 HB_FUNC_STATIC(QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1431,9 +1333,7 @@ HB_FUNC_STATIC(QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED)
 #endif
 }
 
-/*
-void pointRemoved(int index)
-*/
+// void pointRemoved(int index)
 HB_FUNC_STATIC(QXYSERIES_ONPOINTREMOVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1477,9 +1377,7 @@ HB_FUNC_STATIC(QXYSERIES_ONPOINTREMOVED)
 #endif
 }
 
-/*
-void pointReplaced(int index)
-*/
+// void pointReplaced(int index)
 HB_FUNC_STATIC(QXYSERIES_ONPOINTREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1523,9 +1421,7 @@ HB_FUNC_STATIC(QXYSERIES_ONPOINTREPLACED)
 #endif
 }
 
-/*
-void pointsRemoved(int index, int count)
-*/
+// void pointsRemoved(int index, int count)
 HB_FUNC_STATIC(QXYSERIES_ONPOINTSREMOVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1572,9 +1468,7 @@ HB_FUNC_STATIC(QXYSERIES_ONPOINTSREMOVED)
 #endif
 }
 
-/*
-void pointsReplaced()
-*/
+// void pointsReplaced()
 HB_FUNC_STATIC(QXYSERIES_ONPOINTSREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1616,9 +1510,7 @@ HB_FUNC_STATIC(QXYSERIES_ONPOINTSREPLACED)
 #endif
 }
 
-/*
-void pressed(const QPointF &point)
-*/
+// void pressed(const QPointF &point)
 HB_FUNC_STATIC(QXYSERIES_ONPRESSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1663,9 +1555,7 @@ HB_FUNC_STATIC(QXYSERIES_ONPRESSED)
 #endif
 }
 
-/*
-void released(const QPointF &point)
-*/
+// void released(const QPointF &point)
 HB_FUNC_STATIC(QXYSERIES_ONRELEASED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

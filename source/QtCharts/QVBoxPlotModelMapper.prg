@@ -77,9 +77,7 @@ using namespace QtCharts;
 #include <QtCharts/QBoxPlotSeries>
 #include <QtCore/QAbstractItemModel>
 
-/*
-QVBoxPlotModelMapper(QObject * parent = nullptr)
-*/
+// QVBoxPlotModelMapper(QObject *parent = nullptr)
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -92,9 +90,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_NEW)
 #endif
 }
 
-/*
-QBoxPlotSeries * series() const
-*/
+// QBoxPlotSeries *series() const
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -115,9 +111,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_SERIES)
 #endif
 }
 
-/*
-void setSeries(QBoxPlotSeries * series)
-*/
+// void setSeries(QBoxPlotSeries *series)
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_SETSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -139,9 +133,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_SETSERIES)
 #endif
 }
 
-/*
-QAbstractItemModel * model() const
-*/
+// QAbstractItemModel *model() const
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_MODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -162,9 +154,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_MODEL)
 #endif
 }
 
-/*
-void setModel(QAbstractItemModel * model)
-*/
+// void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_SETMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -186,9 +176,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_SETMODEL)
 #endif
 }
 
-/*
-int firstBoxSetColumn() const
-*/
+// int firstBoxSetColumn() const
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_FIRSTBOXSETCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -208,9 +196,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_FIRSTBOXSETCOLUMN)
 #endif
 }
 
-/*
-void setFirstBoxSetColumn(int firstBoxSetColumn)
-*/
+// void setFirstBoxSetColumn(int firstBoxSetColumn)
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_SETFIRSTBOXSETCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -232,9 +218,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_SETFIRSTBOXSETCOLUMN)
 #endif
 }
 
-/*
-int lastBoxSetColumn() const
-*/
+// int lastBoxSetColumn() const
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_LASTBOXSETCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -254,9 +238,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_LASTBOXSETCOLUMN)
 #endif
 }
 
-/*
-void setLastBoxSetColumn(int lastBoxSetColumn)
-*/
+// void setLastBoxSetColumn(int lastBoxSetColumn)
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_SETLASTBOXSETCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -278,9 +260,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_SETLASTBOXSETCOLUMN)
 #endif
 }
 
-/*
-int firstRow() const
-*/
+// int firstRow() const
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_FIRSTROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -300,9 +280,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_FIRSTROW)
 #endif
 }
 
-/*
-void setFirstRow(int firstRow)
-*/
+// void setFirstRow(int firstRow)
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_SETFIRSTROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -324,9 +302,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_SETFIRSTROW)
 #endif
 }
 
-/*
-int rowCount() const
-*/
+// int rowCount() const
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_ROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -346,9 +322,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_ROWCOUNT)
 #endif
 }
 
-/*
-void setRowCount(int rowCount)
-*/
+// void setRowCount(int rowCount)
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_SETROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -370,9 +344,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_SETROWCOUNT)
 #endif
 }
 
-/*
-void firstBoxSetColumnChanged()
-*/
+// void firstBoxSetColumnChanged()
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_ONFIRSTBOXSETCOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -415,9 +387,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_ONFIRSTBOXSETCOLUMNCHANGED)
 #endif
 }
 
-/*
-void firstRowChanged()
-*/
+// void firstRowChanged()
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_ONFIRSTROWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -460,9 +430,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_ONFIRSTROWCHANGED)
 #endif
 }
 
-/*
-void lastBoxSetColumnChanged()
-*/
+// void lastBoxSetColumnChanged()
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_ONLASTBOXSETCOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -505,9 +473,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_ONLASTBOXSETCOLUMNCHANGED)
 #endif
 }
 
-/*
-void modelReplaced()
-*/
+// void modelReplaced()
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_ONMODELREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -549,9 +515,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_ONMODELREPLACED)
 #endif
 }
 
-/*
-void rowCountChanged()
-*/
+// void rowCountChanged()
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_ONROWCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -594,9 +558,7 @@ HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_ONROWCOUNTCHANGED)
 #endif
 }
 
-/*
-void seriesReplaced()
-*/
+// void seriesReplaced()
 HB_FUNC_STATIC(QVBOXPLOTMODELMAPPER_ONSERIESREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

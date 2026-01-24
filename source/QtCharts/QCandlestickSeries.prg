@@ -111,9 +111,7 @@ using namespace QtCharts;
 #include <QtCharts/QCandlestickSet>
 #endif
 
-/*
-QCandlestickSeries(QObject * parent = nullptr)
-*/
+// QCandlestickSeries(QObject *parent = nullptr)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -126,9 +124,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_NEW)
 #endif
 }
 
-/*
-~QCandlestickSeries()
-*/
+// ~QCandlestickSeries()
 HB_FUNC_STATIC(QCANDLESTICKSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -140,9 +136,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_DELETE)
 #endif
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QCANDLESTICKSERIES_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -162,9 +156,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_COUNT)
 #endif
 }
 
-/*
-qreal maximumColumnWidth() const
-*/
+// qreal maximumColumnWidth() const
 HB_FUNC_STATIC(QCANDLESTICKSERIES_MAXIMUMCOLUMNWIDTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -184,9 +176,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_MAXIMUMCOLUMNWIDTH)
 #endif
 }
 
-/*
-void setMaximumColumnWidth(qreal maximumColumnWidth)
-*/
+// void setMaximumColumnWidth(qreal maximumColumnWidth)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_SETMAXIMUMCOLUMNWIDTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -208,9 +198,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_SETMAXIMUMCOLUMNWIDTH)
 #endif
 }
 
-/*
-qreal minimumColumnWidth() const
-*/
+// qreal minimumColumnWidth() const
 HB_FUNC_STATIC(QCANDLESTICKSERIES_MINIMUMCOLUMNWIDTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -230,9 +218,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_MINIMUMCOLUMNWIDTH)
 #endif
 }
 
-/*
-void setMinimumColumnWidth(qreal minimumColumnWidth)
-*/
+// void setMinimumColumnWidth(qreal minimumColumnWidth)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_SETMINIMUMCOLUMNWIDTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -254,9 +240,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_SETMINIMUMCOLUMNWIDTH)
 #endif
 }
 
-/*
-qreal bodyWidth() const
-*/
+// qreal bodyWidth() const
 HB_FUNC_STATIC(QCANDLESTICKSERIES_BODYWIDTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -276,9 +260,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_BODYWIDTH)
 #endif
 }
 
-/*
-void setBodyWidth(qreal bodyWidth)
-*/
+// void setBodyWidth(qreal bodyWidth)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_SETBODYWIDTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -300,9 +282,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_SETBODYWIDTH)
 #endif
 }
 
-/*
-bool bodyOutlineVisible() const
-*/
+// bool bodyOutlineVisible() const
 HB_FUNC_STATIC(QCANDLESTICKSERIES_BODYOUTLINEVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -322,9 +302,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_BODYOUTLINEVISIBLE)
 #endif
 }
 
-/*
-void setBodyOutlineVisible(bool bodyOutlineVisible)
-*/
+// void setBodyOutlineVisible(bool bodyOutlineVisible)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_SETBODYOUTLINEVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -346,9 +324,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_SETBODYOUTLINEVISIBLE)
 #endif
 }
 
-/*
-qreal capsWidth() const
-*/
+// qreal capsWidth() const
 HB_FUNC_STATIC(QCANDLESTICKSERIES_CAPSWIDTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -368,9 +344,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_CAPSWIDTH)
 #endif
 }
 
-/*
-void setCapsWidth(qreal capsWidth)
-*/
+// void setCapsWidth(qreal capsWidth)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_SETCAPSWIDTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -392,9 +366,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_SETCAPSWIDTH)
 #endif
 }
 
-/*
-bool capsVisible() const
-*/
+// bool capsVisible() const
 HB_FUNC_STATIC(QCANDLESTICKSERIES_CAPSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -414,9 +386,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_CAPSVISIBLE)
 #endif
 }
 
-/*
-void setCapsVisible(bool capsVisible)
-*/
+// void setCapsVisible(bool capsVisible)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_SETCAPSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -438,9 +408,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_SETCAPSVISIBLE)
 #endif
 }
 
-/*
-QColor increasingColor() const
-*/
+// QColor increasingColor() const
 HB_FUNC_STATIC(QCANDLESTICKSERIES_INCREASINGCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -460,9 +428,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_INCREASINGCOLOR)
 #endif
 }
 
-/*
-void setIncreasingColor(const QColor &increasingColor)
-*/
+// void setIncreasingColor(const QColor &increasingColor)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_SETINCREASINGCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -484,9 +450,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_SETINCREASINGCOLOR)
 #endif
 }
 
-/*
-QColor decreasingColor() const
-*/
+// QColor decreasingColor() const
 HB_FUNC_STATIC(QCANDLESTICKSERIES_DECREASINGCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -506,9 +470,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_DECREASINGCOLOR)
 #endif
 }
 
-/*
-void setDecreasingColor(const QColor &decreasingColor)
-*/
+// void setDecreasingColor(const QColor &decreasingColor)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_SETDECREASINGCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -530,9 +492,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_SETDECREASINGCOLOR)
 #endif
 }
 
-/*
-QBrush brush() const
-*/
+// QBrush brush() const
 HB_FUNC_STATIC(QCANDLESTICKSERIES_BRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -552,9 +512,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_BRUSH)
 #endif
 }
 
-/*
-void setBrush(const QBrush &brush)
-*/
+// void setBrush(const QBrush &brush)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_SETBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -576,9 +534,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_SETBRUSH)
 #endif
 }
 
-/*
-QPen pen() const
-*/
+// QPen pen() const
 HB_FUNC_STATIC(QCANDLESTICKSERIES_PEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -598,9 +554,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_PEN)
 #endif
 }
 
-/*
-void setPen(const QPen &pen)
-*/
+// void setPen(const QPen &pen)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_SETPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -627,18 +581,14 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_APPEND)
   auto obj = qobject_cast<QCandlestickSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (ISNUMPAR(1) && ISQCANDLESTICKSET(1)) {
-    /*
-    bool append(QCandlestickSet * set)
-    */
+    // bool append(QCandlestickSet *set)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     if (obj != nullptr) {
       RBOOL(obj->append(PQCANDLESTICKSET(1)));
     }
 #endif
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
-    /*
-    bool append(const QList<QCandlestickSet*> &sets)
-    */
+    // bool append(const QList<QCandlestickSet*> &sets)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     if (obj != nullptr) {
       QList<QCandlestickSet *> par1;
@@ -661,18 +611,14 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_REMOVE)
   auto obj = qobject_cast<QCandlestickSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (ISNUMPAR(1) && ISQCANDLESTICKSET(1)) {
-    /*
-    bool remove(QCandlestickSet * set)
-    */
+    // bool remove(QCandlestickSet *set)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     if (obj != nullptr) {
       RBOOL(obj->remove(PQCANDLESTICKSET(1)));
     }
 #endif
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
-    /*
-    bool remove(const QList<QCandlestickSet*> &sets)
-    */
+    // bool remove(const QList<QCandlestickSet*> &sets)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     if (obj != nullptr) {
       QList<QCandlestickSet *> par1;
@@ -690,9 +636,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_REMOVE)
   }
 }
 
-/*
-bool insert(int index, QCandlestickSet * set)
-*/
+// bool insert(int index, QCandlestickSet *set)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_INSERT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -712,9 +656,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_INSERT)
 #endif
 }
 
-/*
-bool take(QCandlestickSet * set)
-*/
+// bool take(QCandlestickSet *set)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_TAKE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -734,9 +676,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_TAKE)
 #endif
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QCANDLESTICKSERIES_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -758,9 +698,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_CLEAR)
 #endif
 }
 
-/*
-QList<QCandlestickSet*> sets() const
-*/
+// QList<QCandlestickSet*> sets() const
 HB_FUNC_STATIC(QCANDLESTICKSERIES_SETS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -799,9 +737,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_SETS)
 #endif
 }
 
-/*
-QAbstractSeries::SeriesType type() const
-*/
+// QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC(QCANDLESTICKSERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -821,9 +757,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_TYPE)
 #endif
 }
 
-/*
-void bodyOutlineVisibilityChanged()
-*/
+// void bodyOutlineVisibilityChanged()
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONBODYOUTLINEVISIBILITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -866,9 +800,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONBODYOUTLINEVISIBILITYCHANGED)
 #endif
 }
 
-/*
-void bodyWidthChanged()
-*/
+// void bodyWidthChanged()
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONBODYWIDTHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -910,9 +842,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONBODYWIDTHCHANGED)
 #endif
 }
 
-/*
-void brushChanged()
-*/
+// void brushChanged()
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONBRUSHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -954,9 +884,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONBRUSHCHANGED)
 #endif
 }
 
-/*
-void candlestickSetsAdded(const QList<QCandlestickSet*> &sets)
-*/
+// void candlestickSetsAdded(const QList<QCandlestickSet*> &sets)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -1019,9 +947,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED)
 #endif
 }
 
-/*
-void candlestickSetsRemoved(const QList<QCandlestickSet*> &sets)
-*/
+// void candlestickSetsRemoved(const QList<QCandlestickSet*> &sets)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -1084,9 +1010,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED)
 #endif
 }
 
-/*
-void capsVisibilityChanged()
-*/
+// void capsVisibilityChanged()
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCAPSVISIBILITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -1129,9 +1053,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCAPSVISIBILITYCHANGED)
 #endif
 }
 
-/*
-void capsWidthChanged()
-*/
+// void capsWidthChanged()
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCAPSWIDTHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -1173,9 +1095,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCAPSWIDTHCHANGED)
 #endif
 }
 
-/*
-void clicked(QCandlestickSet * set)
-*/
+// void clicked(QCandlestickSet *set)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -1220,9 +1140,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCLICKED)
 #endif
 }
 
-/*
-void countChanged()
-*/
+// void countChanged()
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -1264,9 +1182,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONCOUNTCHANGED)
 #endif
 }
 
-/*
-void decreasingColorChanged()
-*/
+// void decreasingColorChanged()
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONDECREASINGCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -1309,9 +1225,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONDECREASINGCOLORCHANGED)
 #endif
 }
 
-/*
-void doubleClicked(QCandlestickSet * set)
-*/
+// void doubleClicked(QCandlestickSet *set)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONDOUBLECLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -1356,9 +1270,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONDOUBLECLICKED)
 #endif
 }
 
-/*
-void hovered(bool status, QCandlestickSet * set)
-*/
+// void hovered(bool status, QCandlestickSet *set)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONHOVERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -1405,9 +1317,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONHOVERED)
 #endif
 }
 
-/*
-void increasingColorChanged()
-*/
+// void increasingColorChanged()
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONINCREASINGCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -1450,9 +1360,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONINCREASINGCOLORCHANGED)
 #endif
 }
 
-/*
-void maximumColumnWidthChanged()
-*/
+// void maximumColumnWidthChanged()
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONMAXIMUMCOLUMNWIDTHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -1495,9 +1403,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONMAXIMUMCOLUMNWIDTHCHANGED)
 #endif
 }
 
-/*
-void minimumColumnWidthChanged()
-*/
+// void minimumColumnWidthChanged()
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONMINIMUMCOLUMNWIDTHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -1540,9 +1446,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONMINIMUMCOLUMNWIDTHCHANGED)
 #endif
 }
 
-/*
-void penChanged()
-*/
+// void penChanged()
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONPENCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -1584,9 +1488,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONPENCHANGED)
 #endif
 }
 
-/*
-void pressed(QCandlestickSet * set)
-*/
+// void pressed(QCandlestickSet *set)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONPRESSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -1631,9 +1533,7 @@ HB_FUNC_STATIC(QCANDLESTICKSERIES_ONPRESSED)
 #endif
 }
 
-/*
-void released(QCandlestickSet * set)
-*/
+// void released(QCandlestickSet *set)
 HB_FUNC_STATIC(QCANDLESTICKSERIES_ONRELEASED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

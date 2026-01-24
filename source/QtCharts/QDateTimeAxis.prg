@@ -73,9 +73,7 @@ using namespace QtCharts;
 
 #include <QtCore/QDateTime>
 
-/*
-QDateTimeAxis(QObject * parent = nullptr)
-*/
+// QDateTimeAxis(QObject *parent = nullptr)
 HB_FUNC_STATIC(QDATETIMEAXIS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -88,9 +86,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_NEW)
 #endif
 }
 
-/*
-~QDateTimeAxis()
-*/
+// ~QDateTimeAxis()
 HB_FUNC_STATIC(QDATETIMEAXIS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -102,9 +98,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_DELETE)
 #endif
 }
 
-/*
-QDateTime min() const
-*/
+// QDateTime min() const
 HB_FUNC_STATIC(QDATETIMEAXIS_MIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -124,9 +118,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_MIN)
 #endif
 }
 
-/*
-void setMin(QDateTime min)
-*/
+// void setMin(QDateTime min)
 HB_FUNC_STATIC(QDATETIMEAXIS_SETMIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -148,9 +140,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_SETMIN)
 #endif
 }
 
-/*
-QDateTime max() const
-*/
+// QDateTime max() const
 HB_FUNC_STATIC(QDATETIMEAXIS_MAX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -170,9 +160,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_MAX)
 #endif
 }
 
-/*
-void setMax(QDateTime max)
-*/
+// void setMax(QDateTime max)
 HB_FUNC_STATIC(QDATETIMEAXIS_SETMAX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -194,9 +182,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_SETMAX)
 #endif
 }
 
-/*
-QString format() const
-*/
+// QString format() const
 HB_FUNC_STATIC(QDATETIMEAXIS_FORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -216,9 +202,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_FORMAT)
 #endif
 }
 
-/*
-void setFormat(QString format)
-*/
+// void setFormat(QString format)
 HB_FUNC_STATIC(QDATETIMEAXIS_SETFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -240,9 +224,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_SETFORMAT)
 #endif
 }
 
-/*
-int tickCount() const
-*/
+// int tickCount() const
 HB_FUNC_STATIC(QDATETIMEAXIS_TICKCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -262,9 +244,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_TICKCOUNT)
 #endif
 }
 
-/*
-void setTickCount(int count)
-*/
+// void setTickCount(int count)
 HB_FUNC_STATIC(QDATETIMEAXIS_SETTICKCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -286,9 +266,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_SETTICKCOUNT)
 #endif
 }
 
-/*
-QAbstractAxis::AxisType type() const
-*/
+// QAbstractAxis::AxisType type() const
 HB_FUNC_STATIC(QDATETIMEAXIS_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -308,9 +286,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_TYPE)
 #endif
 }
 
-/*
-void setRange(QDateTime min, QDateTime max)
-*/
+// void setRange(QDateTime min, QDateTime max)
 HB_FUNC_STATIC(QDATETIMEAXIS_SETRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -332,9 +308,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_SETRANGE)
 #endif
 }
 
-/*
-void formatChanged(QString format)
-*/
+// void formatChanged(QString format)
 HB_FUNC_STATIC(QDATETIMEAXIS_ONFORMATCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -379,9 +353,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_ONFORMATCHANGED)
 #endif
 }
 
-/*
-void maxChanged(QDateTime max)
-*/
+// void maxChanged(QDateTime max)
 HB_FUNC_STATIC(QDATETIMEAXIS_ONMAXCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -426,9 +398,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_ONMAXCHANGED)
 #endif
 }
 
-/*
-void minChanged(QDateTime min)
-*/
+// void minChanged(QDateTime min)
 HB_FUNC_STATIC(QDATETIMEAXIS_ONMINCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -473,9 +443,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_ONMINCHANGED)
 #endif
 }
 
-/*
-void rangeChanged(QDateTime min, QDateTime max)
-*/
+// void rangeChanged(QDateTime min, QDateTime max)
 HB_FUNC_STATIC(QDATETIMEAXIS_ONRANGECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -522,9 +490,7 @@ HB_FUNC_STATIC(QDATETIMEAXIS_ONRANGECHANGED)
 #endif
 }
 
-/*
-void tickCountChanged(int tick)
-*/
+// void tickCountChanged(int tick)
 HB_FUNC_STATIC(QDATETIMEAXIS_ONTICKCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

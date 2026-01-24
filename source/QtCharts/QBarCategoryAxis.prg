@@ -75,9 +75,7 @@ RETURN
 
 using namespace QtCharts;
 
-/*
-QBarCategoryAxis(QObject * parent = nullptr)
-*/
+// QBarCategoryAxis(QObject *parent = nullptr)
 HB_FUNC_STATIC(QBARCATEGORYAXIS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_NEW)
 #endif
 }
 
-/*
-~QBarCategoryAxis()
-*/
+// ~QBarCategoryAxis()
 HB_FUNC_STATIC(QBARCATEGORYAXIS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -104,9 +100,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_DELETE)
 #endif
 }
 
-/*
-QStringList categories()
-*/
+// QStringList categories()
 HB_FUNC_STATIC(QBARCATEGORYAXIS_CATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -126,9 +120,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_CATEGORIES)
 #endif
 }
 
-/*
-void setCategories(const QStringList &categories)
-*/
+// void setCategories(const QStringList &categories)
 HB_FUNC_STATIC(QBARCATEGORYAXIS_SETCATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -150,9 +142,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_SETCATEGORIES)
 #endif
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QBARCATEGORYAXIS_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -172,9 +162,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_COUNT)
 #endif
 }
 
-/*
-QString min() const
-*/
+// QString min() const
 HB_FUNC_STATIC(QBARCATEGORYAXIS_MIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -194,9 +182,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_MIN)
 #endif
 }
 
-/*
-void setMin(const QString &minCategory)
-*/
+// void setMin(const QString &minCategory)
 HB_FUNC_STATIC(QBARCATEGORYAXIS_SETMIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -218,9 +204,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_SETMIN)
 #endif
 }
 
-/*
-QString max() const
-*/
+// QString max() const
 HB_FUNC_STATIC(QBARCATEGORYAXIS_MAX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -240,9 +224,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_MAX)
 #endif
 }
 
-/*
-void setMax(const QString &maxCategory)
-*/
+// void setMax(const QString &maxCategory)
 HB_FUNC_STATIC(QBARCATEGORYAXIS_SETMAX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -264,9 +246,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_SETMAX)
 #endif
 }
 
-/*
-QAbstractAxis::AxisType type() const
-*/
+// QAbstractAxis::AxisType type() const
 HB_FUNC_STATIC(QBARCATEGORYAXIS_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -291,9 +271,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_APPEND)
   auto obj = qobject_cast<QBarCategoryAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (ISNUMPAR(1) && HB_ISARRAY(1)) {
-    /*
-    void append(const QStringList &categories)
-    */
+    // void append(const QStringList &categories)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       obj->append(PQSTRINGLIST(1));
@@ -302,9 +280,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_APPEND)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    void append(const QString &category)
-    */
+    // void append(const QString &category)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       obj->append(PQSTRING(1));
@@ -317,9 +293,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_APPEND)
   }
 }
 
-/*
-void remove(const QString &category)
-*/
+// void remove(const QString &category)
 HB_FUNC_STATIC(QBARCATEGORYAXIS_REMOVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -341,9 +315,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_REMOVE)
 #endif
 }
 
-/*
-void insert(int index, const QString &category)
-*/
+// void insert(int index, const QString &category)
 HB_FUNC_STATIC(QBARCATEGORYAXIS_INSERT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -365,9 +337,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_INSERT)
 #endif
 }
 
-/*
-void replace(const QString &oldCategory, const QString &newCategory)
-*/
+// void replace(const QString &oldCategory, const QString &newCategory)
 HB_FUNC_STATIC(QBARCATEGORYAXIS_REPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -389,9 +359,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_REPLACE)
 #endif
 }
 
-/*
-Q_INVOKABLE void clear()
-*/
+// Q_INVOKABLE void clear()
 HB_FUNC_STATIC(QBARCATEGORYAXIS_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -413,9 +381,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_CLEAR)
 #endif
 }
 
-/*
-QString at(int index) const
-*/
+// QString at(int index) const
 HB_FUNC_STATIC(QBARCATEGORYAXIS_AT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -435,9 +401,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_AT)
 #endif
 }
 
-/*
-void setRange(const QString &minCategory, const QString &maxCategory)
-*/
+// void setRange(const QString &minCategory, const QString &maxCategory)
 HB_FUNC_STATIC(QBARCATEGORYAXIS_SETRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -459,9 +423,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_SETRANGE)
 #endif
 }
 
-/*
-void categoriesChanged()
-*/
+// void categoriesChanged()
 HB_FUNC_STATIC(QBARCATEGORYAXIS_ONCATEGORIESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -503,9 +465,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_ONCATEGORIESCHANGED)
 #endif
 }
 
-/*
-void countChanged()
-*/
+// void countChanged()
 HB_FUNC_STATIC(QBARCATEGORYAXIS_ONCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -547,9 +507,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_ONCOUNTCHANGED)
 #endif
 }
 
-/*
-void maxChanged(const QString &max)
-*/
+// void maxChanged(const QString &max)
 HB_FUNC_STATIC(QBARCATEGORYAXIS_ONMAXCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -594,9 +552,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_ONMAXCHANGED)
 #endif
 }
 
-/*
-void minChanged(const QString &min)
-*/
+// void minChanged(const QString &min)
 HB_FUNC_STATIC(QBARCATEGORYAXIS_ONMINCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -641,9 +597,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_ONMINCHANGED)
 #endif
 }
 
-/*
-void rangeChanged(const QString &min, const QString &max)
-*/
+// void rangeChanged(const QString &min, const QString &max)
 HB_FUNC_STATIC(QBARCATEGORYAXIS_ONRANGECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

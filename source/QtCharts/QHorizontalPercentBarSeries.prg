@@ -55,9 +55,7 @@ RETURN
 
 using namespace QtCharts;
 
-/*
-QHorizontalPercentBarSeries(QObject * parent = nullptr)
-*/
+// QHorizontalPercentBarSeries(QObject *parent = nullptr)
 HB_FUNC_STATIC(QHORIZONTALPERCENTBARSERIES_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -70,9 +68,7 @@ HB_FUNC_STATIC(QHORIZONTALPERCENTBARSERIES_NEW)
 #endif
 }
 
-/*
-~QHorizontalPercentBarSeries()
-*/
+// ~QHorizontalPercentBarSeries()
 HB_FUNC_STATIC(QHORIZONTALPERCENTBARSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -84,9 +80,7 @@ HB_FUNC_STATIC(QHORIZONTALPERCENTBARSERIES_DELETE)
 #endif
 }
 
-/*
-QAbstractSeries::SeriesType type() const
-*/
+// QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC(QHORIZONTALPERCENTBARSERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

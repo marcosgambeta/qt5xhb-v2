@@ -96,9 +96,7 @@ RETURN
 
 using namespace QtCharts;
 
-/*
-~QLegend()
-*/
+// ~QLegend()
 HB_FUNC_STATIC(QLEGEND_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -110,9 +108,7 @@ HB_FUNC_STATIC(QLEGEND_DELETE)
 #endif
 }
 
-/*
-Qt::Alignment alignment() const
-*/
+// Qt::Alignment alignment() const
 HB_FUNC_STATIC(QLEGEND_ALIGNMENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -132,9 +128,7 @@ HB_FUNC_STATIC(QLEGEND_ALIGNMENT)
 #endif
 }
 
-/*
-bool isBackgroundVisible() const
-*/
+// bool isBackgroundVisible() const
 HB_FUNC_STATIC(QLEGEND_ISBACKGROUNDVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -154,9 +148,7 @@ HB_FUNC_STATIC(QLEGEND_ISBACKGROUNDVISIBLE)
 #endif
 }
 
-/*
-void setBackgroundVisible(bool visible = true)
-*/
+// void setBackgroundVisible(bool visible = true)
 HB_FUNC_STATIC(QLEGEND_SETBACKGROUNDVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -178,9 +170,7 @@ HB_FUNC_STATIC(QLEGEND_SETBACKGROUNDVISIBLE)
 #endif
 }
 
-/*
-QColor color()
-*/
+// QColor color()
 HB_FUNC_STATIC(QLEGEND_COLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -200,9 +190,7 @@ HB_FUNC_STATIC(QLEGEND_COLOR)
 #endif
 }
 
-/*
-void setColor(QColor color)
-*/
+// void setColor(QColor color)
 HB_FUNC_STATIC(QLEGEND_SETCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -224,9 +212,7 @@ HB_FUNC_STATIC(QLEGEND_SETCOLOR)
 #endif
 }
 
-/*
-QColor borderColor()
-*/
+// QColor borderColor()
 HB_FUNC_STATIC(QLEGEND_BORDERCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -246,9 +232,7 @@ HB_FUNC_STATIC(QLEGEND_BORDERCOLOR)
 #endif
 }
 
-/*
-void setBorderColor(QColor color)
-*/
+// void setBorderColor(QColor color)
 HB_FUNC_STATIC(QLEGEND_SETBORDERCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -270,9 +254,7 @@ HB_FUNC_STATIC(QLEGEND_SETBORDERCOLOR)
 #endif
 }
 
-/*
-QFont font() const
-*/
+// QFont font() const
 HB_FUNC_STATIC(QLEGEND_FONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -292,9 +274,7 @@ HB_FUNC_STATIC(QLEGEND_FONT)
 #endif
 }
 
-/*
-void setFont(const QFont &font)
-*/
+// void setFont(const QFont &font)
 HB_FUNC_STATIC(QLEGEND_SETFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -316,9 +296,7 @@ HB_FUNC_STATIC(QLEGEND_SETFONT)
 #endif
 }
 
-/*
-QColor labelColor() const
-*/
+// QColor labelColor() const
 HB_FUNC_STATIC(QLEGEND_LABELCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -338,9 +316,7 @@ HB_FUNC_STATIC(QLEGEND_LABELCOLOR)
 #endif
 }
 
-/*
-void setLabelColor(QColor color)
-*/
+// void setLabelColor(QColor color)
 HB_FUNC_STATIC(QLEGEND_SETLABELCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -362,9 +338,7 @@ HB_FUNC_STATIC(QLEGEND_SETLABELCOLOR)
 #endif
 }
 
-/*
-bool reverseMarkers()
-*/
+// bool reverseMarkers()
 HB_FUNC_STATIC(QLEGEND_REVERSEMARKERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -384,9 +358,7 @@ HB_FUNC_STATIC(QLEGEND_REVERSEMARKERS)
 #endif
 }
 
-/*
-void setReverseMarkers(bool reverseMarkers = true)
-*/
+// void setReverseMarkers(bool reverseMarkers = true)
 HB_FUNC_STATIC(QLEGEND_SETREVERSEMARKERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -408,9 +380,7 @@ HB_FUNC_STATIC(QLEGEND_SETREVERSEMARKERS)
 #endif
 }
 
-/*
-bool showToolTips() const
-*/
+// bool showToolTips() const
 HB_FUNC_STATIC(QLEGEND_SHOWTOOLTIPS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -430,9 +400,7 @@ HB_FUNC_STATIC(QLEGEND_SHOWTOOLTIPS)
 #endif
 }
 
-/*
-void setShowToolTips(bool show)
-*/
+// void setShowToolTips(bool show)
 HB_FUNC_STATIC(QLEGEND_SETSHOWTOOLTIPS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -454,9 +422,7 @@ HB_FUNC_STATIC(QLEGEND_SETSHOWTOOLTIPS)
 #endif
 }
 
-/*
-QLegend::MarkerShape markerShape() const
-*/
+// QLegend::MarkerShape markerShape() const
 HB_FUNC_STATIC(QLEGEND_MARKERSHAPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -476,9 +442,7 @@ HB_FUNC_STATIC(QLEGEND_MARKERSHAPE)
 #endif
 }
 
-/*
-void setMarkerShape(QLegend::MarkerShape shape)
-*/
+// void setMarkerShape(QLegend::MarkerShape shape)
 HB_FUNC_STATIC(QLEGEND_SETMARKERSHAPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -500,9 +464,7 @@ HB_FUNC_STATIC(QLEGEND_SETMARKERSHAPE)
 #endif
 }
 
-/*
-void paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr)
-*/
+// void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr)
 HB_FUNC_STATIC(QLEGEND_PAINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -524,9 +486,7 @@ HB_FUNC_STATIC(QLEGEND_PAINT)
 #endif
 }
 
-/*
-void setBrush(const QBrush &brush)
-*/
+// void setBrush(const QBrush &brush)
 HB_FUNC_STATIC(QLEGEND_SETBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -548,9 +508,7 @@ HB_FUNC_STATIC(QLEGEND_SETBRUSH)
 #endif
 }
 
-/*
-QBrush brush() const
-*/
+// QBrush brush() const
 HB_FUNC_STATIC(QLEGEND_BRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -570,9 +528,7 @@ HB_FUNC_STATIC(QLEGEND_BRUSH)
 #endif
 }
 
-/*
-void setPen(const QPen &pen)
-*/
+// void setPen(const QPen &pen)
 HB_FUNC_STATIC(QLEGEND_SETPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -594,9 +550,7 @@ HB_FUNC_STATIC(QLEGEND_SETPEN)
 #endif
 }
 
-/*
-QPen pen() const
-*/
+// QPen pen() const
 HB_FUNC_STATIC(QLEGEND_PEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -616,9 +570,7 @@ HB_FUNC_STATIC(QLEGEND_PEN)
 #endif
 }
 
-/*
-void setLabelBrush(const QBrush &brush)
-*/
+// void setLabelBrush(const QBrush &brush)
 HB_FUNC_STATIC(QLEGEND_SETLABELBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -640,9 +592,7 @@ HB_FUNC_STATIC(QLEGEND_SETLABELBRUSH)
 #endif
 }
 
-/*
-QBrush labelBrush() const
-*/
+// QBrush labelBrush() const
 HB_FUNC_STATIC(QLEGEND_LABELBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -662,9 +612,7 @@ HB_FUNC_STATIC(QLEGEND_LABELBRUSH)
 #endif
 }
 
-/*
-void setAlignment(Qt::Alignment alignment)
-*/
+// void setAlignment(Qt::Alignment alignment)
 HB_FUNC_STATIC(QLEGEND_SETALIGNMENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -686,9 +634,7 @@ HB_FUNC_STATIC(QLEGEND_SETALIGNMENT)
 #endif
 }
 
-/*
-void detachFromChart()
-*/
+// void detachFromChart()
 HB_FUNC_STATIC(QLEGEND_DETACHFROMCHART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -710,9 +656,7 @@ HB_FUNC_STATIC(QLEGEND_DETACHFROMCHART)
 #endif
 }
 
-/*
-void attachToChart()
-*/
+// void attachToChart()
 HB_FUNC_STATIC(QLEGEND_ATTACHTOCHART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -734,9 +678,7 @@ HB_FUNC_STATIC(QLEGEND_ATTACHTOCHART)
 #endif
 }
 
-/*
-bool isAttachedToChart()
-*/
+// bool isAttachedToChart()
 HB_FUNC_STATIC(QLEGEND_ISATTACHEDTOCHART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -756,9 +698,7 @@ HB_FUNC_STATIC(QLEGEND_ISATTACHEDTOCHART)
 #endif
 }
 
-/*
-QList<QLegendMarker*> markers(QAbstractSeries * series = nullptr) const
-*/
+// QList<QLegendMarker*> markers(QAbstractSeries *series = nullptr) const
 HB_FUNC_STATIC(QLEGEND_MARKERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -797,9 +737,7 @@ HB_FUNC_STATIC(QLEGEND_MARKERS)
 #endif
 }
 
-/*
-void backgroundVisibleChanged(bool visible)
-*/
+// void backgroundVisibleChanged(bool visible)
 HB_FUNC_STATIC(QLEGEND_ONBACKGROUNDVISIBLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -844,9 +782,7 @@ HB_FUNC_STATIC(QLEGEND_ONBACKGROUNDVISIBLECHANGED)
 #endif
 }
 
-/*
-void borderColorChanged(QColor color)
-*/
+// void borderColorChanged(QColor color)
 HB_FUNC_STATIC(QLEGEND_ONBORDERCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -891,9 +827,7 @@ HB_FUNC_STATIC(QLEGEND_ONBORDERCOLORCHANGED)
 #endif
 }
 
-/*
-void colorChanged(QColor color)
-*/
+// void colorChanged(QColor color)
 HB_FUNC_STATIC(QLEGEND_ONCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -937,9 +871,7 @@ HB_FUNC_STATIC(QLEGEND_ONCOLORCHANGED)
 #endif
 }
 
-/*
-void fontChanged(QFont font)
-*/
+// void fontChanged(QFont font)
 HB_FUNC_STATIC(QLEGEND_ONFONTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -983,9 +915,7 @@ HB_FUNC_STATIC(QLEGEND_ONFONTCHANGED)
 #endif
 }
 
-/*
-void labelColorChanged(QColor color)
-*/
+// void labelColorChanged(QColor color)
 HB_FUNC_STATIC(QLEGEND_ONLABELCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1030,9 +960,7 @@ HB_FUNC_STATIC(QLEGEND_ONLABELCOLORCHANGED)
 #endif
 }
 
-/*
-void markerShapeChanged(QLegend::MarkerShape shape)
-*/
+// void markerShapeChanged(QLegend::MarkerShape shape)
 HB_FUNC_STATIC(QLEGEND_ONMARKERSHAPECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -1077,9 +1005,7 @@ HB_FUNC_STATIC(QLEGEND_ONMARKERSHAPECHANGED)
 #endif
 }
 
-/*
-void reverseMarkersChanged(bool reverseMarkers)
-*/
+// void reverseMarkersChanged(bool reverseMarkers)
 HB_FUNC_STATIC(QLEGEND_ONREVERSEMARKERSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -1124,9 +1050,7 @@ HB_FUNC_STATIC(QLEGEND_ONREVERSEMARKERSCHANGED)
 #endif
 }
 
-/*
-void showToolTipsChanged(bool showToolTips)
-*/
+// void showToolTipsChanged(bool showToolTips)
 HB_FUNC_STATIC(QLEGEND_ONSHOWTOOLTIPSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

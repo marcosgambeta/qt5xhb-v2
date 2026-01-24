@@ -69,13 +69,9 @@ using namespace QtCharts;
 #endif
 #include <QtCore/QAbstractItemModel>
 
-/*
-QCandlestickModelMapper(QObject *parent = nullptr) [ABSTRACT]
-*/
+// QCandlestickModelMapper(QObject *parent = nullptr) [ABSTRACT]
 
-/*
-QAbstractItemModel * model() const
-*/
+// QAbstractItemModel *model() const
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_MODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -96,9 +92,7 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_MODEL)
 #endif
 }
 
-/*
-void setModel(QAbstractItemModel * model)
-*/
+// void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SETMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -120,9 +114,7 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SETMODEL)
 #endif
 }
 
-/*
-QCandlestickSeries * series() const
-*/
+// QCandlestickSeries *series() const
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -143,9 +135,7 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SERIES)
 #endif
 }
 
-/*
-void setSeries(QCandlestickSeries * series)
-*/
+// void setSeries(QCandlestickSeries *series)
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SETSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -167,9 +157,7 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SETSERIES)
 #endif
 }
 
-/*
-virtual Qt::Orientation orientation() const = 0
-*/
+// virtual Qt::Orientation orientation() const = 0
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -189,9 +177,7 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ORIENTATION)
 #endif
 }
 
-/*
-void modelReplaced()
-*/
+// void modelReplaced()
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ONMODELREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -234,9 +220,7 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ONMODELREPLACED)
 #endif
 }
 
-/*
-void seriesReplaced()
-*/
+// void seriesReplaced()
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ONSERIESREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

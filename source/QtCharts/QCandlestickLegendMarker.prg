@@ -59,9 +59,7 @@ RETURN
 using namespace QtCharts;
 #endif
 
-/*
-QCandlestickLegendMarker(QCandlestickSeries * series, QLegend * legend, QObject * parent = nullptr)
-*/
+// QCandlestickLegendMarker(QCandlestickSeries *series, QLegend *legend, QObject *parent = nullptr)
 HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -74,9 +72,7 @@ HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_NEW)
 #endif
 }
 
-/*
-virtual ~QCandlestickLegendMarker()
-*/
+// virtual ~QCandlestickLegendMarker()
 HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -88,9 +84,7 @@ HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_DELETE)
 #endif
 }
 
-/*
-virtual QLegendMarker::LegendMarkerType type()
-*/
+// virtual QLegendMarker::LegendMarkerType type()
 HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -110,9 +104,7 @@ HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_TYPE)
 #endif
 }
 
-/*
-virtual QCandlestickSeries * series()
-*/
+// virtual QCandlestickSeries *series()
 HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

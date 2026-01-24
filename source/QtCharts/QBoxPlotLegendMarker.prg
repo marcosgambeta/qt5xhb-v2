@@ -57,9 +57,7 @@ RETURN
 
 using namespace QtCharts;
 
-/*
-QBoxPlotLegendMarker(QBoxPlotSeries * series, QLegend * legend, QObject * parent = nullptr)
-*/
+// QBoxPlotLegendMarker(QBoxPlotSeries *series, QLegend *legend, QObject *parent = nullptr)
 HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -72,9 +70,7 @@ HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_NEW)
 #endif
 }
 
-/*
-virtual ~QBoxPlotLegendMarker()
-*/
+// virtual ~QBoxPlotLegendMarker()
 HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -86,9 +82,7 @@ HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_DELETE)
 #endif
 }
 
-/*
-virtual QLegendMarker::LegendMarkerType type()
-*/
+// virtual QLegendMarker::LegendMarkerType type()
 HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -108,9 +102,7 @@ HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_TYPE)
 #endif
 }
 
-/*
-virtual QBoxPlotSeries * series()
-*/
+// virtual QBoxPlotSeries *series()
 HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

@@ -77,9 +77,7 @@ using namespace QtCharts;
 #include <QtCharts/QPieSeries>
 #include <QtCore/QAbstractItemModel>
 
-/*
-QVPieModelMapper(QObject * parent = nullptr)
-*/
+// QVPieModelMapper(QObject *parent = nullptr)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -92,9 +90,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_NEW)
 #endif
 }
 
-/*
-QPieSeries * series() const
-*/
+// QPieSeries *series() const
 HB_FUNC_STATIC(QVPIEMODELMAPPER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -115,9 +111,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_SERIES)
 #endif
 }
 
-/*
-void setSeries(QPieSeries * series)
-*/
+// void setSeries(QPieSeries *series)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_SETSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -139,9 +133,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_SETSERIES)
 #endif
 }
 
-/*
-QAbstractItemModel * model() const
-*/
+// QAbstractItemModel *model() const
 HB_FUNC_STATIC(QVPIEMODELMAPPER_MODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -162,9 +154,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_MODEL)
 #endif
 }
 
-/*
-void setModel(QAbstractItemModel * model)
-*/
+// void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_SETMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -186,9 +176,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_SETMODEL)
 #endif
 }
 
-/*
-int valuesColumn() const
-*/
+// int valuesColumn() const
 HB_FUNC_STATIC(QVPIEMODELMAPPER_VALUESCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -208,9 +196,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_VALUESCOLUMN)
 #endif
 }
 
-/*
-void setValuesColumn(int valuesColumn)
-*/
+// void setValuesColumn(int valuesColumn)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_SETVALUESCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -232,9 +218,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_SETVALUESCOLUMN)
 #endif
 }
 
-/*
-int labelsColumn() const
-*/
+// int labelsColumn() const
 HB_FUNC_STATIC(QVPIEMODELMAPPER_LABELSCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -254,9 +238,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_LABELSCOLUMN)
 #endif
 }
 
-/*
-void setLabelsColumn(int labelsColumn)
-*/
+// void setLabelsColumn(int labelsColumn)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_SETLABELSCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -278,9 +260,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_SETLABELSCOLUMN)
 #endif
 }
 
-/*
-int firstRow() const
-*/
+// int firstRow() const
 HB_FUNC_STATIC(QVPIEMODELMAPPER_FIRSTROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -300,9 +280,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_FIRSTROW)
 #endif
 }
 
-/*
-void setFirstRow(int firstRow)
-*/
+// void setFirstRow(int firstRow)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_SETFIRSTROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -324,9 +302,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_SETFIRSTROW)
 #endif
 }
 
-/*
-int rowCount() const
-*/
+// int rowCount() const
 HB_FUNC_STATIC(QVPIEMODELMAPPER_ROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -346,9 +322,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_ROWCOUNT)
 #endif
 }
 
-/*
-void setRowCount(int rowCount)
-*/
+// void setRowCount(int rowCount)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_SETROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -370,9 +344,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_SETROWCOUNT)
 #endif
 }
 
-/*
-void firstRowChanged()
-*/
+// void firstRowChanged()
 HB_FUNC_STATIC(QVPIEMODELMAPPER_ONFIRSTROWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -414,9 +386,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_ONFIRSTROWCHANGED)
 #endif
 }
 
-/*
-void labelsColumnChanged()
-*/
+// void labelsColumnChanged()
 HB_FUNC_STATIC(QVPIEMODELMAPPER_ONLABELSCOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -459,9 +429,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_ONLABELSCOLUMNCHANGED)
 #endif
 }
 
-/*
-void modelReplaced()
-*/
+// void modelReplaced()
 HB_FUNC_STATIC(QVPIEMODELMAPPER_ONMODELREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -503,9 +471,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_ONMODELREPLACED)
 #endif
 }
 
-/*
-void rowCountChanged()
-*/
+// void rowCountChanged()
 HB_FUNC_STATIC(QVPIEMODELMAPPER_ONROWCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -547,9 +513,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_ONROWCOUNTCHANGED)
 #endif
 }
 
-/*
-void seriesReplaced()
-*/
+// void seriesReplaced()
 HB_FUNC_STATIC(QVPIEMODELMAPPER_ONSERIESREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -591,9 +555,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_ONSERIESREPLACED)
 #endif
 }
 
-/*
-void valuesColumnChanged()
-*/
+// void valuesColumnChanged()
 HB_FUNC_STATIC(QVPIEMODELMAPPER_ONVALUESCOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

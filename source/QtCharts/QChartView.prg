@@ -61,17 +61,13 @@ using namespace QtCharts;
 HB_FUNC_STATIC(QCHARTVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
-    /*
-    QChartView(QWidget * parent = nullptr)
-    */
+    // QChartView(QWidget *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QChartView(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(1, 2) && ISQCHART(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QChartView(QChart * chart, QWidget * parent = nullptr)
-    */
+    // QChartView(QChart *chart, QWidget *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QChartView(PQCHART(1), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -81,9 +77,7 @@ HB_FUNC_STATIC(QCHARTVIEW_NEW)
   }
 }
 
-/*
-~QChartView()
-*/
+// ~QChartView()
 HB_FUNC_STATIC(QCHARTVIEW_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -95,12 +89,8 @@ HB_FUNC_STATIC(QCHARTVIEW_DELETE)
 #endif
 }
 
-/*
-void setRubberBand(const RubberBands &rubberBands)
-*/
-/*
-QChartView::RubberBands rubberBand() const
-*/
+// void setRubberBand(const RubberBands &rubberBands)
+// QChartView::RubberBands rubberBand() const
 HB_FUNC_STATIC(QCHARTVIEW_RUBBERBAND)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -120,9 +110,7 @@ HB_FUNC_STATIC(QCHARTVIEW_RUBBERBAND)
 #endif
 }
 
-/*
-QChart * chart() const
-*/
+// QChart *chart() const
 HB_FUNC_STATIC(QCHARTVIEW_CHART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -143,9 +131,7 @@ HB_FUNC_STATIC(QCHARTVIEW_CHART)
 #endif
 }
 
-/*
-void setChart(QChart * chart)
-*/
+// void setChart(QChart *chart)
 HB_FUNC_STATIC(QCHARTVIEW_SETCHART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

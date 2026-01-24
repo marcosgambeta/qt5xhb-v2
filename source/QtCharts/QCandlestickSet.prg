@@ -88,18 +88,14 @@ using namespace QtCharts;
 HB_FUNC_STATIC(QCANDLESTICKSET_NEW)
 {
   if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QCandlestickSet(qreal timestamp = 0.0, QObject * parent = nullptr)
-    */
+    // QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     auto obj = new QCandlestickSet(OPQREAL(1, 0.0), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5) &&
              ISQOBJECTORNIL(6)) {
-    /*
-    QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject * parent = nullptr)
-    */
+    // QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     auto obj = new QCandlestickSet(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5, 0.0), OPQOBJECT(6, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -109,9 +105,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_NEW)
   }
 }
 
-/*
-virtual ~QCandlestickSet()
-*/
+// virtual ~QCandlestickSet()
 HB_FUNC_STATIC(QCANDLESTICKSET_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -123,9 +117,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_DELETE)
 #endif
 }
 
-/*
-qreal timestamp() const
-*/
+// qreal timestamp() const
 HB_FUNC_STATIC(QCANDLESTICKSET_TIMESTAMP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -145,9 +137,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_TIMESTAMP)
 #endif
 }
 
-/*
-void setTimestamp(qreal timestamp)
-*/
+// void setTimestamp(qreal timestamp)
 HB_FUNC_STATIC(QCANDLESTICKSET_SETTIMESTAMP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -169,9 +159,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETTIMESTAMP)
 #endif
 }
 
-/*
-qreal open() const
-*/
+// qreal open() const
 HB_FUNC_STATIC(QCANDLESTICKSET_OPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -191,9 +179,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_OPEN)
 #endif
 }
 
-/*
-void setOpen(qreal open)
-*/
+// void setOpen(qreal open)
 HB_FUNC_STATIC(QCANDLESTICKSET_SETOPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -215,9 +201,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETOPEN)
 #endif
 }
 
-/*
-qreal high() const
-*/
+// qreal high() const
 HB_FUNC_STATIC(QCANDLESTICKSET_HIGH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -237,9 +221,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_HIGH)
 #endif
 }
 
-/*
-void setHigh(qreal high)
-*/
+// void setHigh(qreal high)
 HB_FUNC_STATIC(QCANDLESTICKSET_SETHIGH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -261,9 +243,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETHIGH)
 #endif
 }
 
-/*
-qreal low() const
-*/
+// qreal low() const
 HB_FUNC_STATIC(QCANDLESTICKSET_LOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -283,9 +263,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_LOW)
 #endif
 }
 
-/*
-void setLow(qreal low)
-*/
+// void setLow(qreal low)
 HB_FUNC_STATIC(QCANDLESTICKSET_SETLOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -307,9 +285,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETLOW)
 #endif
 }
 
-/*
-qreal close() const
-*/
+// qreal close() const
 HB_FUNC_STATIC(QCANDLESTICKSET_CLOSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -329,9 +305,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_CLOSE)
 #endif
 }
 
-/*
-void setClose(qreal close)
-*/
+// void setClose(qreal close)
 HB_FUNC_STATIC(QCANDLESTICKSET_SETCLOSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -353,9 +327,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETCLOSE)
 #endif
 }
 
-/*
-QBrush brush() const
-*/
+// QBrush brush() const
 HB_FUNC_STATIC(QCANDLESTICKSET_BRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -375,9 +347,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_BRUSH)
 #endif
 }
 
-/*
-void setBrush(const QBrush &brush)
-*/
+// void setBrush(const QBrush &brush)
 HB_FUNC_STATIC(QCANDLESTICKSET_SETBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -399,9 +369,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETBRUSH)
 #endif
 }
 
-/*
-QPen pen() const
-*/
+// QPen pen() const
 HB_FUNC_STATIC(QCANDLESTICKSET_PEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -421,9 +389,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_PEN)
 #endif
 }
 
-/*
-void setPen(const QPen &pen)
-*/
+// void setPen(const QPen &pen)
 HB_FUNC_STATIC(QCANDLESTICKSET_SETPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -445,9 +411,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_SETPEN)
 #endif
 }
 
-/*
-void brushChanged()
-*/
+// void brushChanged()
 HB_FUNC_STATIC(QCANDLESTICKSET_ONBRUSHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -489,9 +453,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONBRUSHCHANGED)
 #endif
 }
 
-/*
-void clicked()
-*/
+// void clicked()
 HB_FUNC_STATIC(QCANDLESTICKSET_ONCLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -533,9 +495,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONCLICKED)
 #endif
 }
 
-/*
-void closeChanged()
-*/
+// void closeChanged()
 HB_FUNC_STATIC(QCANDLESTICKSET_ONCLOSECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -577,9 +537,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONCLOSECHANGED)
 #endif
 }
 
-/*
-void doubleClicked()
-*/
+// void doubleClicked()
 HB_FUNC_STATIC(QCANDLESTICKSET_ONDOUBLECLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -621,9 +579,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONDOUBLECLICKED)
 #endif
 }
 
-/*
-void highChanged()
-*/
+// void highChanged()
 HB_FUNC_STATIC(QCANDLESTICKSET_ONHIGHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -665,9 +621,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONHIGHCHANGED)
 #endif
 }
 
-/*
-void hovered(bool status)
-*/
+// void hovered(bool status)
 HB_FUNC_STATIC(QCANDLESTICKSET_ONHOVERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -711,9 +665,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONHOVERED)
 #endif
 }
 
-/*
-void lowChanged()
-*/
+// void lowChanged()
 HB_FUNC_STATIC(QCANDLESTICKSET_ONLOWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -755,9 +707,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONLOWCHANGED)
 #endif
 }
 
-/*
-void openChanged()
-*/
+// void openChanged()
 HB_FUNC_STATIC(QCANDLESTICKSET_ONOPENCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -799,9 +749,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONOPENCHANGED)
 #endif
 }
 
-/*
-void penChanged()
-*/
+// void penChanged()
 HB_FUNC_STATIC(QCANDLESTICKSET_ONPENCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -843,9 +791,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONPENCHANGED)
 #endif
 }
 
-/*
-void pressed()
-*/
+// void pressed()
 HB_FUNC_STATIC(QCANDLESTICKSET_ONPRESSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -887,9 +833,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONPRESSED)
 #endif
 }
 
-/*
-void released()
-*/
+// void released()
 HB_FUNC_STATIC(QCANDLESTICKSET_ONRELEASED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -931,9 +875,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_ONRELEASED)
 #endif
 }
 
-/*
-void timestampChanged()
-*/
+// void timestampChanged()
 HB_FUNC_STATIC(QCANDLESTICKSET_ONTIMESTAMPCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

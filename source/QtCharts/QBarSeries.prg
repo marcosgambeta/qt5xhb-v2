@@ -55,9 +55,7 @@ RETURN
 
 using namespace QtCharts;
 
-/*
-QBarSeries(QObject * parent = nullptr)
-*/
+// QBarSeries(QObject *parent = nullptr)
 HB_FUNC_STATIC(QBARSERIES_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -70,9 +68,7 @@ HB_FUNC_STATIC(QBARSERIES_NEW)
 #endif
 }
 
-/*
-~QBarSeries()
-*/
+// ~QBarSeries()
 HB_FUNC_STATIC(QBARSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -84,9 +80,7 @@ HB_FUNC_STATIC(QBARSERIES_DELETE)
 #endif
 }
 
-/*
-QAbstractSeries::SeriesType type() const
-*/
+// QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC(QBARSERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))

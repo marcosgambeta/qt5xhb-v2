@@ -81,19 +81,15 @@ using namespace QtCharts;
 HB_FUNC_STATIC(QBOXSET_NEW)
 {
   if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QBoxSet(const QString label = QString(), QObject * parent = nullptr)
-    */
+    // QBoxSet(const QString label = QString(), QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QBoxSet(OPQSTRING(1, QString()), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(5, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
              ISCHARORNIL(6) && ISQOBJECTORNIL(7)) {
-    /*
-    QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label =
-    QString(), QObject * parent = nullptr)
-    */
+    // QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label =
+    // QString(), QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     auto obj = new QBoxSet(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), OPQSTRING(6, QString()),
                            OPQOBJECT(7, nullptr));
@@ -104,9 +100,7 @@ HB_FUNC_STATIC(QBOXSET_NEW)
   }
 }
 
-/*
-virtual ~QBoxSet()
-*/
+// virtual ~QBoxSet()
 HB_FUNC_STATIC(QBOXSET_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -118,9 +112,7 @@ HB_FUNC_STATIC(QBOXSET_DELETE)
 #endif
 }
 
-/*
-QPen pen() const
-*/
+// QPen pen() const
 HB_FUNC_STATIC(QBOXSET_PEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -140,9 +132,7 @@ HB_FUNC_STATIC(QBOXSET_PEN)
 #endif
 }
 
-/*
-void setPen(const QPen &pen)
-*/
+// void setPen(const QPen &pen)
 HB_FUNC_STATIC(QBOXSET_SETPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -164,9 +154,7 @@ HB_FUNC_STATIC(QBOXSET_SETPEN)
 #endif
 }
 
-/*
-QBrush brush() const
-*/
+// QBrush brush() const
 HB_FUNC_STATIC(QBOXSET_BRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -186,9 +174,7 @@ HB_FUNC_STATIC(QBOXSET_BRUSH)
 #endif
 }
 
-/*
-void setBrush(const QBrush &brush)
-*/
+// void setBrush(const QBrush &brush)
 HB_FUNC_STATIC(QBOXSET_SETBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -215,9 +201,7 @@ HB_FUNC_STATIC(QBOXSET_APPEND)
   auto obj = qobject_cast<QBoxSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    void append(const qreal value)
-    */
+    // void append(const qreal value)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       obj->append(PQREAL(1));
@@ -226,9 +210,7 @@ HB_FUNC_STATIC(QBOXSET_APPEND)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
-    /*
-    void append(const QList<qreal> &values)
-    */
+    // void append(const QList<qreal> &values)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     if (obj != nullptr) {
       QList<qreal> par1;
@@ -249,9 +231,7 @@ HB_FUNC_STATIC(QBOXSET_APPEND)
   }
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QBOXSET_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -273,9 +253,7 @@ HB_FUNC_STATIC(QBOXSET_CLEAR)
 #endif
 }
 
-/*
-void setLabel(const QString label)
-*/
+// void setLabel(const QString label)
 HB_FUNC_STATIC(QBOXSET_SETLABEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -297,9 +275,7 @@ HB_FUNC_STATIC(QBOXSET_SETLABEL)
 #endif
 }
 
-/*
-QString label() const
-*/
+// QString label() const
 HB_FUNC_STATIC(QBOXSET_LABEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -319,9 +295,7 @@ HB_FUNC_STATIC(QBOXSET_LABEL)
 #endif
 }
 
-/*
-void setValue(const int index, const qreal value)
-*/
+// void setValue(const int index, const qreal value)
 HB_FUNC_STATIC(QBOXSET_SETVALUE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -343,9 +317,7 @@ HB_FUNC_STATIC(QBOXSET_SETVALUE)
 #endif
 }
 
-/*
-qreal at(const int index) const
-*/
+// qreal at(const int index) const
 HB_FUNC_STATIC(QBOXSET_AT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -365,9 +337,7 @@ HB_FUNC_STATIC(QBOXSET_AT)
 #endif
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QBOXSET_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -387,9 +357,7 @@ HB_FUNC_STATIC(QBOXSET_COUNT)
 #endif
 }
 
-/*
-void brushChanged()
-*/
+// void brushChanged()
 HB_FUNC_STATIC(QBOXSET_ONBRUSHCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -431,9 +399,7 @@ HB_FUNC_STATIC(QBOXSET_ONBRUSHCHANGED)
 #endif
 }
 
-/*
-void cleared()
-*/
+// void cleared()
 HB_FUNC_STATIC(QBOXSET_ONCLEARED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -475,9 +441,7 @@ HB_FUNC_STATIC(QBOXSET_ONCLEARED)
 #endif
 }
 
-/*
-void clicked()
-*/
+// void clicked()
 HB_FUNC_STATIC(QBOXSET_ONCLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -519,9 +483,7 @@ HB_FUNC_STATIC(QBOXSET_ONCLICKED)
 #endif
 }
 
-/*
-void doubleClicked()
-*/
+// void doubleClicked()
 HB_FUNC_STATIC(QBOXSET_ONDOUBLECLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -563,9 +525,7 @@ HB_FUNC_STATIC(QBOXSET_ONDOUBLECLICKED)
 #endif
 }
 
-/*
-void hovered(bool status)
-*/
+// void hovered(bool status)
 HB_FUNC_STATIC(QBOXSET_ONHOVERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -609,9 +569,7 @@ HB_FUNC_STATIC(QBOXSET_ONHOVERED)
 #endif
 }
 
-/*
-void penChanged()
-*/
+// void penChanged()
 HB_FUNC_STATIC(QBOXSET_ONPENCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -653,9 +611,7 @@ HB_FUNC_STATIC(QBOXSET_ONPENCHANGED)
 #endif
 }
 
-/*
-void pressed()
-*/
+// void pressed()
 HB_FUNC_STATIC(QBOXSET_ONPRESSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -697,9 +653,7 @@ HB_FUNC_STATIC(QBOXSET_ONPRESSED)
 #endif
 }
 
-/*
-void released()
-*/
+// void released()
 HB_FUNC_STATIC(QBOXSET_ONRELEASED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -741,9 +695,7 @@ HB_FUNC_STATIC(QBOXSET_ONRELEASED)
 #endif
 }
 
-/*
-void valueChanged(int index)
-*/
+// void valueChanged(int index)
 HB_FUNC_STATIC(QBOXSET_ONVALUECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -787,9 +739,7 @@ HB_FUNC_STATIC(QBOXSET_ONVALUECHANGED)
 #endif
 }
 
-/*
-void valuesChanged()
-*/
+// void valuesChanged()
 HB_FUNC_STATIC(QBOXSET_ONVALUESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
