@@ -54,9 +54,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QAltimeter(QObject * parent = nullptr)
-    */
+    // QAltimeter(QObject *parent = nullptr)
 HB_FUNC_STATIC(QALTIMETER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -80,9 +78,7 @@ HB_FUNC_STATIC(QALTIMETER_DELETE)
 #endif
 }
 
-/*
-QAltimeterReading * reading() const
-*/
+// QAltimeterReading *reading() const
 HB_FUNC_STATIC(QALTIMETER_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

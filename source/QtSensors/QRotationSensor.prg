@@ -58,9 +58,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QRotationSensor(QObject * parent = nullptr)
-    */
+    // QRotationSensor(QObject *parent = nullptr)
 HB_FUNC_STATIC(QROTATIONSENSOR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(QROTATIONSENSOR_DELETE)
 #endif
 }
 
-/*
-QRotationReading * reading() const
-*/
+// QRotationReading *reading() const
 HB_FUNC_STATIC(QROTATIONSENSOR_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QROTATIONSENSOR_READING)
 #endif
 }
 
-/*
-bool hasZ() const
-*/
+// bool hasZ() const
 HB_FUNC_STATIC(QROTATIONSENSOR_HASZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -129,9 +123,7 @@ HB_FUNC_STATIC(QROTATIONSENSOR_HASZ)
 #endif
 }
 
-/*
-void setHasZ(bool hasZ)
-*/
+// void setHasZ(bool hasZ)
 HB_FUNC_STATIC(QROTATIONSENSOR_SETHASZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -153,9 +145,7 @@ HB_FUNC_STATIC(QROTATIONSENSOR_SETHASZ)
 #endif
 }
 
-/*
-void hasZChanged(bool hasZ)
-*/
+// void hasZChanged(bool hasZ)
 HB_FUNC_STATIC(QROTATIONSENSOR_ONHASZCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

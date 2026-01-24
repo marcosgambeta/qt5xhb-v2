@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QIRPROXIMITYREADING_DELETE)
 #endif
 }
 
-/*
-qreal reflectance() const
-*/
+// qreal reflectance() const
 HB_FUNC_STATIC(QIRPROXIMITYREADING_REFLECTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QIRPROXIMITYREADING_REFLECTANCE)
 #endif
 }
 
-/*
-void setReflectance(qreal reflectance)
-*/
+// void setReflectance(qreal reflectance)
 HB_FUNC_STATIC(QIRPROXIMITYREADING_SETREFLECTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

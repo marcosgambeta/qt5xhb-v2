@@ -58,9 +58,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QMagnetometer(QObject * parent = nullptr)
-    */
+    // QMagnetometer(QObject *parent = nullptr)
 HB_FUNC_STATIC(QMAGNETOMETER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(QMAGNETOMETER_DELETE)
 #endif
 }
 
-/*
-QMagnetometerReading * reading() const
-*/
+// QMagnetometerReading *reading() const
 HB_FUNC_STATIC(QMAGNETOMETER_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QMAGNETOMETER_READING)
 #endif
 }
 
-/*
-bool returnGeoValues() const
-*/
+// bool returnGeoValues() const
 HB_FUNC_STATIC(QMAGNETOMETER_RETURNGEOVALUES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -129,9 +123,7 @@ HB_FUNC_STATIC(QMAGNETOMETER_RETURNGEOVALUES)
 #endif
 }
 
-/*
-void setReturnGeoValues(bool returnGeoValues)
-*/
+// void setReturnGeoValues(bool returnGeoValues)
 HB_FUNC_STATIC(QMAGNETOMETER_SETRETURNGEOVALUES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -153,9 +145,7 @@ HB_FUNC_STATIC(QMAGNETOMETER_SETRETURNGEOVALUES)
 #endif
 }
 
-/*
-void returnGeoValuesChanged(bool returnGeoValues)
-*/
+// void returnGeoValuesChanged(bool returnGeoValues)
 HB_FUNC_STATIC(QMAGNETOMETER_ONRETURNGEOVALUESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

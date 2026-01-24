@@ -58,9 +58,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QSensorGesture(const QStringList &ids, QObject * parent = nullptr)
-    */
+    // QSensorGesture(const QStringList &ids, QObject *parent = nullptr)
 HB_FUNC_STATIC(QSENSORGESTURE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_DELETE)
 #endif
 }
 
-/*
-bool isActive()
-*/
+// bool isActive()
 HB_FUNC_STATIC(QSENSORGESTURE_ISACTIVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -106,9 +102,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_ISACTIVE)
 #endif
 }
 
-/*
-QStringList validIds() const
-*/
+// QStringList validIds() const
 HB_FUNC_STATIC(QSENSORGESTURE_VALIDIDS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -128,9 +122,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_VALIDIDS)
 #endif
 }
 
-/*
-QStringList invalidIds() const
-*/
+// QStringList invalidIds() const
 HB_FUNC_STATIC(QSENSORGESTURE_INVALIDIDS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -150,9 +142,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_INVALIDIDS)
 #endif
 }
 
-/*
-QStringList gestureSignals() const
-*/
+// QStringList gestureSignals() const
 HB_FUNC_STATIC(QSENSORGESTURE_GESTURESIGNALS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -172,9 +162,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_GESTURESIGNALS)
 #endif
 }
 
-/*
-void startDetection()
-*/
+// void startDetection()
 HB_FUNC_STATIC(QSENSORGESTURE_STARTDETECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -196,9 +184,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_STARTDETECTION)
 #endif
 }
 
-/*
-void stopDetection()
-*/
+// void stopDetection()
 HB_FUNC_STATIC(QSENSORGESTURE_STOPDETECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -220,8 +206,6 @@ HB_FUNC_STATIC(QSENSORGESTURE_STOPDETECTION)
 #endif
 }
 
-/*
-void detected(QString s)
-*/
+// void detected(QString s)
 
 #pragma ENDDUMP

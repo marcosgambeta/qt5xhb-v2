@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QORIENTATIONREADING_DELETE)
 #endif
 }
 
-/*
-QOrientationReading::Orientation orientation() const
-*/
+// QOrientationReading::Orientation orientation() const
 HB_FUNC_STATIC(QORIENTATIONREADING_ORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QORIENTATIONREADING_ORIENTATION)
 #endif
 }
 
-/*
-void setOrientation(QOrientationReading::Orientation orientation)
-*/
+// void setOrientation(QOrientationReading::Orientation orientation)
 HB_FUNC_STATIC(QORIENTATIONREADING_SETORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

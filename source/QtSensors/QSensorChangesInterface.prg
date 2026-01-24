@@ -58,9 +58,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    virtual void sensorsChanged() = 0
-    */
+    // virtual void sensorsChanged() = 0
 HB_FUNC_STATIC(QSENSORCHANGESINTERFACE_SENSORSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

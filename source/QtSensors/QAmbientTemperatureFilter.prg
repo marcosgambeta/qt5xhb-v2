@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QAMBIENTTEMPERATUREFILTER_DELETE)
 #endif
 }
 
-/*
-virtual bool filter(QAmbientTemperatureReading * reading) = 0
-*/
+// virtual bool filter(QAmbientTemperatureReading *reading) = 0
 HB_FUNC_STATIC(QAMBIENTTEMPERATUREFILTER_FILTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

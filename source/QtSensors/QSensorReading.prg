@@ -67,9 +67,7 @@ HB_FUNC_STATIC(QSENSORREADING_DELETE)
 #endif
 }
 
-/*
-quint64 timestamp() const
-*/
+// quint64 timestamp() const
 HB_FUNC_STATIC(QSENSORREADING_TIMESTAMP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -89,9 +87,7 @@ HB_FUNC_STATIC(QSENSORREADING_TIMESTAMP)
 #endif
 }
 
-/*
-void setTimestamp(quint64 timestamp)
-*/
+// void setTimestamp(quint64 timestamp)
 HB_FUNC_STATIC(QSENSORREADING_SETTIMESTAMP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -113,9 +109,7 @@ HB_FUNC_STATIC(QSENSORREADING_SETTIMESTAMP)
 #endif
 }
 
-/*
-int valueCount() const
-*/
+// int valueCount() const
 HB_FUNC_STATIC(QSENSORREADING_VALUECOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -135,9 +129,7 @@ HB_FUNC_STATIC(QSENSORREADING_VALUECOUNT)
 #endif
 }
 
-/*
-QVariant value(int index) const
-*/
+// QVariant value(int index) const
 HB_FUNC_STATIC(QSENSORREADING_VALUE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

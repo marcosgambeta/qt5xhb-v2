@@ -55,9 +55,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QTiltSensor(QObject * parent = nullptr)
-    */
+    // QTiltSensor(QObject *parent = nullptr)
 HB_FUNC_STATIC(QTILTSENSOR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -81,9 +79,7 @@ HB_FUNC_STATIC(QTILTSENSOR_DELETE)
 #endif
 }
 
-/*
-QTiltReading * reading() const
-*/
+// QTiltReading *reading() const
 HB_FUNC_STATIC(QTILTSENSOR_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -104,9 +100,7 @@ HB_FUNC_STATIC(QTILTSENSOR_READING)
 #endif
 }
 
-/*
-void calibrate()
-*/
+// void calibrate()
 HB_FUNC_STATIC(QTILTSENSOR_CALIBRATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

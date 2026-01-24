@@ -68,9 +68,7 @@ HB_FUNC_STATIC(QGYROSCOPEREADING_DELETE)
 #endif
 }
 
-/*
-qreal x() const
-*/
+// qreal x() const
 HB_FUNC_STATIC(QGYROSCOPEREADING_X)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QGYROSCOPEREADING_X)
 #endif
 }
 
-/*
-void setX(qreal x)
-*/
+// void setX(qreal x)
 HB_FUNC_STATIC(QGYROSCOPEREADING_SETX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -114,9 +110,7 @@ HB_FUNC_STATIC(QGYROSCOPEREADING_SETX)
 #endif
 }
 
-/*
-qreal y() const
-*/
+// qreal y() const
 HB_FUNC_STATIC(QGYROSCOPEREADING_Y)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -136,9 +130,7 @@ HB_FUNC_STATIC(QGYROSCOPEREADING_Y)
 #endif
 }
 
-/*
-void setY(qreal y)
-*/
+// void setY(qreal y)
 HB_FUNC_STATIC(QGYROSCOPEREADING_SETY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -160,9 +152,7 @@ HB_FUNC_STATIC(QGYROSCOPEREADING_SETY)
 #endif
 }
 
-/*
-qreal z() const
-*/
+// qreal z() const
 HB_FUNC_STATIC(QGYROSCOPEREADING_Z)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -182,9 +172,7 @@ HB_FUNC_STATIC(QGYROSCOPEREADING_Z)
 #endif
 }
 
-/*
-void setZ(qreal z)
-*/
+// void setZ(qreal z)
 HB_FUNC_STATIC(QGYROSCOPEREADING_SETZ)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

@@ -77,9 +77,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_DELETE)
 #endif
 }
 
-/*
-virtual void start() = 0
-*/
+// virtual void start() = 0
 HB_FUNC_STATIC(QSENSORBACKEND_START)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -101,9 +99,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_START)
 #endif
 }
 
-/*
-virtual void stop() = 0
-*/
+// virtual void stop() = 0
 HB_FUNC_STATIC(QSENSORBACKEND_STOP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -125,9 +121,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_STOP)
 #endif
 }
 
-/*
-virtual bool isFeatureSupported(QSensor::Feature feature) const
-*/
+// virtual bool isFeatureSupported(QSensor::Feature feature) const
 HB_FUNC_STATIC(QSENSORBACKEND_ISFEATURESUPPORTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -147,9 +141,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_ISFEATURESUPPORTED)
 #endif
 }
 
-/*
-void addDataRate(qreal min, qreal max)
-*/
+// void addDataRate(qreal min, qreal max)
 HB_FUNC_STATIC(QSENSORBACKEND_ADDDATARATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -171,9 +163,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_ADDDATARATE)
 #endif
 }
 
-/*
-void setDataRates(const QSensor * otherSensor)
-*/
+// void setDataRates(const QSensor *otherSensor)
 HB_FUNC_STATIC(QSENSORBACKEND_SETDATARATES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -195,9 +185,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_SETDATARATES)
 #endif
 }
 
-/*
-void addOutputRange(qreal min, qreal max, qreal accuracy)
-*/
+// void addOutputRange(qreal min, qreal max, qreal accuracy)
 HB_FUNC_STATIC(QSENSORBACKEND_ADDOUTPUTRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -219,9 +207,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_ADDOUTPUTRANGE)
 #endif
 }
 
-/*
-void setDescription(const QString &description)
-*/
+// void setDescription(const QString &description)
 HB_FUNC_STATIC(QSENSORBACKEND_SETDESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -243,9 +229,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_SETDESCRIPTION)
 #endif
 }
 
-/*
-QSensorReading * reading() const
-*/
+// QSensorReading *reading() const
 HB_FUNC_STATIC(QSENSORBACKEND_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -266,9 +250,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_READING)
 #endif
 }
 
-/*
-QSensor * sensor() const
-*/
+// QSensor *sensor() const
 HB_FUNC_STATIC(QSENSORBACKEND_SENSOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -289,9 +271,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_SENSOR)
 #endif
 }
 
-/*
-void newReadingAvailable()
-*/
+// void newReadingAvailable()
 HB_FUNC_STATIC(QSENSORBACKEND_NEWREADINGAVAILABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -313,9 +293,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_NEWREADINGAVAILABLE)
 #endif
 }
 
-/*
-void sensorStopped()
-*/
+// void sensorStopped()
 HB_FUNC_STATIC(QSENSORBACKEND_SENSORSTOPPED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -337,9 +315,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_SENSORSTOPPED)
 #endif
 }
 
-/*
-void sensorBusy()
-*/
+// void sensorBusy()
 HB_FUNC_STATIC(QSENSORBACKEND_SENSORBUSY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -361,9 +337,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_SENSORBUSY)
 #endif
 }
 
-/*
-void sensorError(int error)
-*/
+// void sensorError(int error)
 HB_FUNC_STATIC(QSENSORBACKEND_SENSORERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QAMBIENTTEMPERATUREREADING_DELETE)
 #endif
 }
 
-/*
-qreal temperature() const
-*/
+// qreal temperature() const
 HB_FUNC_STATIC(QAMBIENTTEMPERATUREREADING_TEMPERATURE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QAMBIENTTEMPERATUREREADING_TEMPERATURE)
 #endif
 }
 
-/*
-void setTemperature(qreal temperature)
-*/
+// void setTemperature(qreal temperature)
 HB_FUNC_STATIC(QAMBIENTTEMPERATUREREADING_SETTEMPERATURE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

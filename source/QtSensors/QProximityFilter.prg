@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QPROXIMITYFILTER_DELETE)
 #endif
 }
 
-/*
-virtual bool filter(QProximityReading * reading) = 0
-*/
+// virtual bool filter(QProximityReading *reading) = 0
 HB_FUNC_STATIC(QPROXIMITYFILTER_FILTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

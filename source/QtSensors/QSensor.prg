@@ -110,9 +110,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QSensor(const QByteArray &type, QObject * parent = nullptr)
-    */
+    // QSensor(const QByteArray &type, QObject *parent = nullptr)
 HB_FUNC_STATIC(QSENSOR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -136,9 +134,7 @@ HB_FUNC_STATIC(QSENSOR_DELETE)
 #endif
 }
 
-/*
-QByteArray identifier() const
-*/
+// QByteArray identifier() const
 HB_FUNC_STATIC(QSENSOR_IDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -158,9 +154,7 @@ HB_FUNC_STATIC(QSENSOR_IDENTIFIER)
 #endif
 }
 
-/*
-void setIdentifier(const QByteArray &identifier)
-*/
+// void setIdentifier(const QByteArray &identifier)
 HB_FUNC_STATIC(QSENSOR_SETIDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -182,9 +176,7 @@ HB_FUNC_STATIC(QSENSOR_SETIDENTIFIER)
 #endif
 }
 
-/*
-QByteArray type() const
-*/
+// QByteArray type() const
 HB_FUNC_STATIC(QSENSOR_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -204,9 +196,7 @@ HB_FUNC_STATIC(QSENSOR_TYPE)
 #endif
 }
 
-/*
-bool connectToBackend()
-*/
+// bool connectToBackend()
 HB_FUNC_STATIC(QSENSOR_CONNECTTOBACKEND)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -226,9 +216,7 @@ HB_FUNC_STATIC(QSENSOR_CONNECTTOBACKEND)
 #endif
 }
 
-/*
-bool isConnectedToBackend() const
-*/
+// bool isConnectedToBackend() const
 HB_FUNC_STATIC(QSENSOR_ISCONNECTEDTOBACKEND)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -248,9 +236,7 @@ HB_FUNC_STATIC(QSENSOR_ISCONNECTEDTOBACKEND)
 #endif
 }
 
-/*
-bool isBusy() const
-*/
+// bool isBusy() const
 HB_FUNC_STATIC(QSENSOR_ISBUSY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -270,9 +256,7 @@ HB_FUNC_STATIC(QSENSOR_ISBUSY)
 #endif
 }
 
-/*
-void setActive(bool active)
-*/
+// void setActive(bool active)
 HB_FUNC_STATIC(QSENSOR_SETACTIVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -294,9 +278,7 @@ HB_FUNC_STATIC(QSENSOR_SETACTIVE)
 #endif
 }
 
-/*
-bool isActive() const
-*/
+// bool isActive() const
 HB_FUNC_STATIC(QSENSOR_ISACTIVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -316,9 +298,7 @@ HB_FUNC_STATIC(QSENSOR_ISACTIVE)
 #endif
 }
 
-/*
-bool isAlwaysOn() const
-*/
+// bool isAlwaysOn() const
 HB_FUNC_STATIC(QSENSOR_ISALWAYSON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -338,9 +318,7 @@ HB_FUNC_STATIC(QSENSOR_ISALWAYSON)
 #endif
 }
 
-/*
-void setAlwaysOn(bool alwaysOn)
-*/
+// void setAlwaysOn(bool alwaysOn)
 HB_FUNC_STATIC(QSENSOR_SETALWAYSON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -362,9 +340,7 @@ HB_FUNC_STATIC(QSENSOR_SETALWAYSON)
 #endif
 }
 
-/*
-bool skipDuplicates() const
-*/
+// bool skipDuplicates() const
 HB_FUNC_STATIC(QSENSOR_SKIPDUPLICATES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -384,9 +360,7 @@ HB_FUNC_STATIC(QSENSOR_SKIPDUPLICATES)
 #endif
 }
 
-/*
-void setSkipDuplicates(bool skipDuplicates)
-*/
+// void setSkipDuplicates(bool skipDuplicates)
 HB_FUNC_STATIC(QSENSOR_SETSKIPDUPLICATES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -408,12 +382,8 @@ HB_FUNC_STATIC(QSENSOR_SETSKIPDUPLICATES)
 #endif
 }
 
-/*
-qrangelist availableDataRates() const
-*/
-/*
-int dataRate() const
-*/
+// qrangelist availableDataRates() const
+// int dataRate() const
 HB_FUNC_STATIC(QSENSOR_DATARATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -433,9 +403,7 @@ HB_FUNC_STATIC(QSENSOR_DATARATE)
 #endif
 }
 
-/*
-void setDataRate(int rate)
-*/
+// void setDataRate(int rate)
 HB_FUNC_STATIC(QSENSOR_SETDATARATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -457,12 +425,8 @@ HB_FUNC_STATIC(QSENSOR_SETDATARATE)
 #endif
 }
 
-/*
-qoutputrangelist outputRanges() const
-*/
-/*
-int outputRange() const
-*/
+// qoutputrangelist outputRanges() const
+// int outputRange() const
 HB_FUNC_STATIC(QSENSOR_OUTPUTRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -482,9 +446,7 @@ HB_FUNC_STATIC(QSENSOR_OUTPUTRANGE)
 #endif
 }
 
-/*
-void setOutputRange(int index)
-*/
+// void setOutputRange(int index)
 HB_FUNC_STATIC(QSENSOR_SETOUTPUTRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -506,9 +468,7 @@ HB_FUNC_STATIC(QSENSOR_SETOUTPUTRANGE)
 #endif
 }
 
-/*
-QString description() const
-*/
+// QString description() const
 HB_FUNC_STATIC(QSENSOR_DESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -528,9 +488,7 @@ HB_FUNC_STATIC(QSENSOR_DESCRIPTION)
 #endif
 }
 
-/*
-int error() const
-*/
+// int error() const
 HB_FUNC_STATIC(QSENSOR_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -550,9 +508,7 @@ HB_FUNC_STATIC(QSENSOR_ERROR)
 #endif
 }
 
-/*
-void addFilter(QSensorFilter * filter)
-*/
+// void addFilter(QSensorFilter *filter)
 HB_FUNC_STATIC(QSENSOR_ADDFILTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -574,9 +530,7 @@ HB_FUNC_STATIC(QSENSOR_ADDFILTER)
 #endif
 }
 
-/*
-void removeFilter(QSensorFilter * filter)
-*/
+// void removeFilter(QSensorFilter *filter)
 HB_FUNC_STATIC(QSENSOR_REMOVEFILTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -598,9 +552,7 @@ HB_FUNC_STATIC(QSENSOR_REMOVEFILTER)
 #endif
 }
 
-/*
-QList<QSensorFilter*> filters() const
-*/
+// QList<QSensorFilter*> filters() const
 HB_FUNC_STATIC(QSENSOR_FILTERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -639,9 +591,7 @@ HB_FUNC_STATIC(QSENSOR_FILTERS)
 #endif
 }
 
-/*
-QSensorReading * reading() const
-*/
+// QSensorReading *reading() const
 HB_FUNC_STATIC(QSENSOR_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -662,9 +612,7 @@ HB_FUNC_STATIC(QSENSOR_READING)
 #endif
 }
 
-/*
-bool isFeatureSupported(QSensor::Feature feature) const
-*/
+// bool isFeatureSupported(QSensor::Feature feature) const
 HB_FUNC_STATIC(QSENSOR_ISFEATURESUPPORTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -684,9 +632,7 @@ HB_FUNC_STATIC(QSENSOR_ISFEATURESUPPORTED)
 #endif
 }
 
-/*
-QSensor::AxesOrientationMode axesOrientationMode() const
-*/
+// QSensor::AxesOrientationMode axesOrientationMode() const
 HB_FUNC_STATIC(QSENSOR_AXESORIENTATIONMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -706,9 +652,7 @@ HB_FUNC_STATIC(QSENSOR_AXESORIENTATIONMODE)
 #endif
 }
 
-/*
-void setAxesOrientationMode(QSensor::AxesOrientationMode axesOrientationMode)
-*/
+// void setAxesOrientationMode(QSensor::AxesOrientationMode axesOrientationMode)
 HB_FUNC_STATIC(QSENSOR_SETAXESORIENTATIONMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -730,9 +674,7 @@ HB_FUNC_STATIC(QSENSOR_SETAXESORIENTATIONMODE)
 #endif
 }
 
-/*
-int currentOrientation() const
-*/
+// int currentOrientation() const
 HB_FUNC_STATIC(QSENSOR_CURRENTORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -752,9 +694,7 @@ HB_FUNC_STATIC(QSENSOR_CURRENTORIENTATION)
 #endif
 }
 
-/*
-void setCurrentOrientation(int currentOrientation)
-*/
+// void setCurrentOrientation(int currentOrientation)
 HB_FUNC_STATIC(QSENSOR_SETCURRENTORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -776,9 +716,7 @@ HB_FUNC_STATIC(QSENSOR_SETCURRENTORIENTATION)
 #endif
 }
 
-/*
-int userOrientation() const
-*/
+// int userOrientation() const
 HB_FUNC_STATIC(QSENSOR_USERORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -798,9 +736,7 @@ HB_FUNC_STATIC(QSENSOR_USERORIENTATION)
 #endif
 }
 
-/*
-void setUserOrientation(int userOrientation)
-*/
+// void setUserOrientation(int userOrientation)
 HB_FUNC_STATIC(QSENSOR_SETUSERORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -822,9 +758,7 @@ HB_FUNC_STATIC(QSENSOR_SETUSERORIENTATION)
 #endif
 }
 
-/*
-int maxBufferSize() const
-*/
+// int maxBufferSize() const
 HB_FUNC_STATIC(QSENSOR_MAXBUFFERSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -844,9 +778,7 @@ HB_FUNC_STATIC(QSENSOR_MAXBUFFERSIZE)
 #endif
 }
 
-/*
-void setMaxBufferSize(int maxBufferSize)
-*/
+// void setMaxBufferSize(int maxBufferSize)
 HB_FUNC_STATIC(QSENSOR_SETMAXBUFFERSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -868,9 +800,7 @@ HB_FUNC_STATIC(QSENSOR_SETMAXBUFFERSIZE)
 #endif
 }
 
-/*
-int efficientBufferSize() const
-*/
+// int efficientBufferSize() const
 HB_FUNC_STATIC(QSENSOR_EFFICIENTBUFFERSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -890,9 +820,7 @@ HB_FUNC_STATIC(QSENSOR_EFFICIENTBUFFERSIZE)
 #endif
 }
 
-/*
-void setEfficientBufferSize(int efficientBufferSize)
-*/
+// void setEfficientBufferSize(int efficientBufferSize)
 HB_FUNC_STATIC(QSENSOR_SETEFFICIENTBUFFERSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -914,9 +842,7 @@ HB_FUNC_STATIC(QSENSOR_SETEFFICIENTBUFFERSIZE)
 #endif
 }
 
-/*
-int bufferSize() const
-*/
+// int bufferSize() const
 HB_FUNC_STATIC(QSENSOR_BUFFERSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -936,9 +862,7 @@ HB_FUNC_STATIC(QSENSOR_BUFFERSIZE)
 #endif
 }
 
-/*
-void setBufferSize(int bufferSize)
-*/
+// void setBufferSize(int bufferSize)
 HB_FUNC_STATIC(QSENSOR_SETBUFFERSIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -960,9 +884,7 @@ HB_FUNC_STATIC(QSENSOR_SETBUFFERSIZE)
 #endif
 }
 
-/*
-bool start()
-*/
+// bool start()
 HB_FUNC_STATIC(QSENSOR_START)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -982,9 +904,7 @@ HB_FUNC_STATIC(QSENSOR_START)
 #endif
 }
 
-/*
-void stop()
-*/
+// void stop()
 HB_FUNC_STATIC(QSENSOR_STOP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1006,9 +926,7 @@ HB_FUNC_STATIC(QSENSOR_STOP)
 #endif
 }
 
-/*
-static QList<QByteArray> sensorTypes()
-*/
+// static QList<QByteArray> sensorTypes()
 HB_FUNC_STATIC(QSENSOR_SENSORTYPES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1046,9 +964,7 @@ HB_FUNC_STATIC(QSENSOR_SENSORTYPES)
 #endif
 }
 
-/*
-static QList<QByteArray> sensorsForType(const QByteArray &type)
-*/
+// static QList<QByteArray> sensorsForType(const QByteArray &type)
 HB_FUNC_STATIC(QSENSOR_SENSORSFORTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1086,9 +1002,7 @@ HB_FUNC_STATIC(QSENSOR_SENSORSFORTYPE)
 #endif
 }
 
-/*
-static QByteArray defaultSensorForType(const QByteArray &type)
-*/
+// static QByteArray defaultSensorForType(const QByteArray &type)
 HB_FUNC_STATIC(QSENSOR_DEFAULTSENSORFORTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1104,9 +1018,7 @@ HB_FUNC_STATIC(QSENSOR_DEFAULTSENSORFORTYPE)
 #endif
 }
 
-/*
-void busyChanged()
-*/
+// void busyChanged()
 HB_FUNC_STATIC(QSENSOR_ONBUSYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1148,9 +1060,7 @@ HB_FUNC_STATIC(QSENSOR_ONBUSYCHANGED)
 #endif
 }
 
-/*
-void activeChanged()
-*/
+// void activeChanged()
 HB_FUNC_STATIC(QSENSOR_ONACTIVECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1192,9 +1102,7 @@ HB_FUNC_STATIC(QSENSOR_ONACTIVECHANGED)
 #endif
 }
 
-/*
-void readingChanged()
-*/
+// void readingChanged()
 HB_FUNC_STATIC(QSENSOR_ONREADINGCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1236,9 +1144,7 @@ HB_FUNC_STATIC(QSENSOR_ONREADINGCHANGED)
 #endif
 }
 
-/*
-void sensorError(int error)
-*/
+// void sensorError(int error)
 HB_FUNC_STATIC(QSENSOR_ONSENSORERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1282,9 +1188,7 @@ HB_FUNC_STATIC(QSENSOR_ONSENSORERROR)
 #endif
 }
 
-/*
-void availableSensorsChanged()
-*/
+// void availableSensorsChanged()
 HB_FUNC_STATIC(QSENSOR_ONAVAILABLESENSORSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1326,9 +1230,7 @@ HB_FUNC_STATIC(QSENSOR_ONAVAILABLESENSORSCHANGED)
 #endif
 }
 
-/*
-void alwaysOnChanged()
-*/
+// void alwaysOnChanged()
 HB_FUNC_STATIC(QSENSOR_ONALWAYSONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1370,9 +1272,7 @@ HB_FUNC_STATIC(QSENSOR_ONALWAYSONCHANGED)
 #endif
 }
 
-/*
-void dataRateChanged()
-*/
+// void dataRateChanged()
 HB_FUNC_STATIC(QSENSOR_ONDATARATECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1414,9 +1314,7 @@ HB_FUNC_STATIC(QSENSOR_ONDATARATECHANGED)
 #endif
 }
 
-/*
-void skipDuplicatesChanged(bool skipDuplicates)
-*/
+// void skipDuplicatesChanged(bool skipDuplicates)
 HB_FUNC_STATIC(QSENSOR_ONSKIPDUPLICATESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1461,9 +1359,7 @@ HB_FUNC_STATIC(QSENSOR_ONSKIPDUPLICATESCHANGED)
 #endif
 }
 
-/*
-void axesOrientationModeChanged(QSensor::AxesOrientationMode axesOrientationMode)
-*/
+// void axesOrientationModeChanged(QSensor::AxesOrientationMode axesOrientationMode)
 HB_FUNC_STATIC(QSENSOR_ONAXESORIENTATIONMODECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1509,9 +1405,7 @@ HB_FUNC_STATIC(QSENSOR_ONAXESORIENTATIONMODECHANGED)
 #endif
 }
 
-/*
-void currentOrientationChanged(int currentOrientation)
-*/
+// void currentOrientationChanged(int currentOrientation)
 HB_FUNC_STATIC(QSENSOR_ONCURRENTORIENTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1556,9 +1450,7 @@ HB_FUNC_STATIC(QSENSOR_ONCURRENTORIENTATIONCHANGED)
 #endif
 }
 
-/*
-void userOrientationChanged(int userOrientation)
-*/
+// void userOrientationChanged(int userOrientation)
 HB_FUNC_STATIC(QSENSOR_ONUSERORIENTATIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1603,9 +1495,7 @@ HB_FUNC_STATIC(QSENSOR_ONUSERORIENTATIONCHANGED)
 #endif
 }
 
-/*
-void maxBufferSizeChanged(int maxBufferSize)
-*/
+// void maxBufferSizeChanged(int maxBufferSize)
 HB_FUNC_STATIC(QSENSOR_ONMAXBUFFERSIZECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1650,9 +1540,7 @@ HB_FUNC_STATIC(QSENSOR_ONMAXBUFFERSIZECHANGED)
 #endif
 }
 
-/*
-void efficientBufferSizeChanged(int efficientBufferSize)
-*/
+// void efficientBufferSizeChanged(int efficientBufferSize)
 HB_FUNC_STATIC(QSENSOR_ONEFFICIENTBUFFERSIZECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -1697,9 +1585,7 @@ HB_FUNC_STATIC(QSENSOR_ONEFFICIENTBUFFERSIZECHANGED)
 #endif
 }
 
-/*
-void bufferSizeChanged(int bufferSize)
-*/
+// void bufferSizeChanged(int bufferSize)
 HB_FUNC_STATIC(QSENSOR_ONBUFFERSIZECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

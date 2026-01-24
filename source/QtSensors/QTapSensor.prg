@@ -58,9 +58,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QTapSensor(QObject * parent = nullptr)
-    */
+    // QTapSensor(QObject *parent = nullptr)
 HB_FUNC_STATIC(QTAPSENSOR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(QTAPSENSOR_DELETE)
 #endif
 }
 
-/*
-QTapReading * reading() const
-*/
+// QTapReading *reading() const
 HB_FUNC_STATIC(QTAPSENSOR_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QTAPSENSOR_READING)
 #endif
 }
 
-/*
-bool returnDoubleTapEvents() const
-*/
+// bool returnDoubleTapEvents() const
 HB_FUNC_STATIC(QTAPSENSOR_RETURNDOUBLETAPEVENTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -129,9 +123,7 @@ HB_FUNC_STATIC(QTAPSENSOR_RETURNDOUBLETAPEVENTS)
 #endif
 }
 
-/*
-void setReturnDoubleTapEvents(bool returnDoubleTapEvents)
-*/
+// void setReturnDoubleTapEvents(bool returnDoubleTapEvents)
 HB_FUNC_STATIC(QTAPSENSOR_SETRETURNDOUBLETAPEVENTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -153,9 +145,7 @@ HB_FUNC_STATIC(QTAPSENSOR_SETRETURNDOUBLETAPEVENTS)
 #endif
 }
 
-/*
-void returnDoubleTapEventsChanged(bool returnDoubleTapEvents)
-*/
+// void returnDoubleTapEventsChanged(bool returnDoubleTapEvents)
 HB_FUNC_STATIC(QTAPSENSOR_ONRETURNDOUBLETAPEVENTSCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

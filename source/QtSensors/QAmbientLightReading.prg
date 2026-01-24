@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QAMBIENTLIGHTREADING_DELETE)
 #endif
 }
 
-/*
-QAmbientLightReading::LightLevel lightLevel() const
-*/
+// QAmbientLightReading::LightLevel lightLevel() const
 HB_FUNC_STATIC(QAMBIENTLIGHTREADING_LIGHTLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QAMBIENTLIGHTREADING_LIGHTLEVEL)
 #endif
 }
 
-/*
-void setLightLevel(QAmbientLightReading::LightLevel lightLevel)
-*/
+// void setLightLevel(QAmbientLightReading::LightLevel lightLevel)
 HB_FUNC_STATIC(QAMBIENTLIGHTREADING_SETLIGHTLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QPROXIMITYREADING_DELETE)
 #endif
 }
 
-/*
-bool close() const
-*/
+// bool close() const
 HB_FUNC_STATIC(QPROXIMITYREADING_CLOSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QPROXIMITYREADING_CLOSE)
 #endif
 }
 
-/*
-void setClose(bool close)
-*/
+// void setClose(bool close)
 HB_FUNC_STATIC(QPROXIMITYREADING_SETCLOSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

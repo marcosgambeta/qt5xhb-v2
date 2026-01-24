@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QLIGHTREADING_DELETE)
 #endif
 }
 
-/*
-qreal lux() const
-*/
+// qreal lux() const
 HB_FUNC_STATIC(QLIGHTREADING_LUX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -83,9 +81,7 @@ HB_FUNC_STATIC(QLIGHTREADING_LUX)
 #endif
 }
 
-/*
-void setLux(qreal lux)
-*/
+// void setLux(qreal lux)
 HB_FUNC_STATIC(QLIGHTREADING_SETLUX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

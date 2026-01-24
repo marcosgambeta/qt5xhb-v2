@@ -54,9 +54,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QOrientationSensor(QObject * parent = nullptr)
-    */
+    // QOrientationSensor(QObject *parent = nullptr)
 HB_FUNC_STATIC(QORIENTATIONSENSOR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -80,9 +78,7 @@ HB_FUNC_STATIC(QORIENTATIONSENSOR_DELETE)
 #endif
 }
 
-/*
-QOrientationReading * reading() const
-*/
+// QOrientationReading *reading() const
 HB_FUNC_STATIC(QORIENTATIONSENSOR_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

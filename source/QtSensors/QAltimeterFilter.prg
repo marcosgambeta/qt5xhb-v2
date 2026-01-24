@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QALTIMETERFILTER_DELETE)
 #endif
 }
 
-/*
-virtual bool filter(QAltimeterReading * reading) = 0
-*/
+// virtual bool filter(QAltimeterReading *reading) = 0
 HB_FUNC_STATIC(QALTIMETERFILTER_FILTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

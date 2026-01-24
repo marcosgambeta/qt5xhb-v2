@@ -54,9 +54,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QCompass(QObject * parent = nullptr)
-    */
+    // QCompass(QObject *parent = nullptr)
 HB_FUNC_STATIC(QCOMPASS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -80,9 +78,7 @@ HB_FUNC_STATIC(QCOMPASS_DELETE)
 #endif
 }
 
-/*
-QCompassReading * reading() const
-*/
+// QCompassReading *reading() const
 HB_FUNC_STATIC(QCOMPASS_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

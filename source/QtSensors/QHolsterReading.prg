@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QHOLSTERREADING_DELETE)
 #endif
 }
 
-/*
-bool holstered() const
-*/
+// bool holstered() const
 HB_FUNC_STATIC(QHOLSTERREADING_HOLSTERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QHOLSTERREADING_HOLSTERED)
 #endif
 }
 
-/*
-void setHolstered(bool holstered)
-*/
+// void setHolstered(bool holstered)
 HB_FUNC_STATIC(QHOLSTERREADING_SETHOLSTERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

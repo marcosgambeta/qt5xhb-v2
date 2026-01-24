@@ -58,9 +58,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QLightSensor(QObject * parent = nullptr)
-    */
+    // QLightSensor(QObject *parent = nullptr)
 HB_FUNC_STATIC(QLIGHTSENSOR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(QLIGHTSENSOR_DELETE)
 #endif
 }
 
-/*
-QLightReading * reading() const
-*/
+// QLightReading *reading() const
 HB_FUNC_STATIC(QLIGHTSENSOR_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QLIGHTSENSOR_READING)
 #endif
 }
 
-/*
-qreal fieldOfView() const
-*/
+// qreal fieldOfView() const
 HB_FUNC_STATIC(QLIGHTSENSOR_FIELDOFVIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -129,9 +123,7 @@ HB_FUNC_STATIC(QLIGHTSENSOR_FIELDOFVIEW)
 #endif
 }
 
-/*
-void setFieldOfView(qreal fieldOfView)
-*/
+// void setFieldOfView(qreal fieldOfView)
 HB_FUNC_STATIC(QLIGHTSENSOR_SETFIELDOFVIEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -153,9 +145,7 @@ HB_FUNC_STATIC(QLIGHTSENSOR_SETFIELDOFVIEW)
 #endif
 }
 
-/*
-void fieldOfViewChanged(qreal fieldOfView)
-*/
+// void fieldOfViewChanged(qreal fieldOfView)
 HB_FUNC_STATIC(QLIGHTSENSOR_ONFIELDOFVIEWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

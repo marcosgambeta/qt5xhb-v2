@@ -73,9 +73,7 @@ HB_FUNC_STATIC(QSENSORGESTUREPLUGININTERFACE_DELETE)
 #endif
 }
 
-/*
-virtual QList<QSensorGestureRecognizer*> createRecognizers() = 0
-*/
+// virtual QList<QSensorGestureRecognizer*> createRecognizers() = 0
 HB_FUNC_STATIC(QSENSORGESTUREPLUGININTERFACE_CREATERECOGNIZERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -114,9 +112,7 @@ HB_FUNC_STATIC(QSENSORGESTUREPLUGININTERFACE_CREATERECOGNIZERS)
 #endif
 }
 
-/*
-virtual QStringList supportedIds() const = 0
-*/
+// virtual QStringList supportedIds() const = 0
 HB_FUNC_STATIC(QSENSORGESTUREPLUGININTERFACE_SUPPORTEDIDS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -136,9 +132,7 @@ HB_FUNC_STATIC(QSENSORGESTUREPLUGININTERFACE_SUPPORTEDIDS)
 #endif
 }
 
-/*
-virtual QString name() const = 0
-*/
+// virtual QString name() const = 0
 HB_FUNC_STATIC(QSENSORGESTUREPLUGININTERFACE_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

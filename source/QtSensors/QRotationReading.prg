@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QROTATIONREADING_DELETE)
 #endif
 }
 
-/*
-qreal x() const
-*/
+// qreal x() const
 HB_FUNC_STATIC(QROTATIONREADING_X)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -88,9 +86,7 @@ HB_FUNC_STATIC(QROTATIONREADING_X)
 #endif
 }
 
-/*
-qreal y() const
-*/
+// qreal y() const
 HB_FUNC_STATIC(QROTATIONREADING_Y)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -110,9 +106,7 @@ HB_FUNC_STATIC(QROTATIONREADING_Y)
 #endif
 }
 
-/*
-qreal z() const
-*/
+// qreal z() const
 HB_FUNC_STATIC(QROTATIONREADING_Z)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -132,9 +126,7 @@ HB_FUNC_STATIC(QROTATIONREADING_Z)
 #endif
 }
 
-/*
-void setFromEuler(qreal x, qreal y, qreal z)
-*/
+// void setFromEuler(qreal x, qreal y, qreal z)
 HB_FUNC_STATIC(QROTATIONREADING_SETFROMEULER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

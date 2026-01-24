@@ -54,9 +54,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QGyroscope(QObject * parent = nullptr)
-    */
+    // QGyroscope(QObject *parent = nullptr)
 HB_FUNC_STATIC(QGYROSCOPE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -80,9 +78,7 @@ HB_FUNC_STATIC(QGYROSCOPE_DELETE)
 #endif
 }
 
-/*
-QGyroscopeReading * reading() const
-*/
+// QGyroscopeReading *reading() const
 HB_FUNC_STATIC(QGYROSCOPE_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

@@ -54,9 +54,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QAmbientLightSensor(QObject * parent = nullptr)
-    */
+    // QAmbientLightSensor(QObject *parent = nullptr)
 HB_FUNC_STATIC(QAMBIENTLIGHTSENSOR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -80,9 +78,7 @@ HB_FUNC_STATIC(QAMBIENTLIGHTSENSOR_DELETE)
 #endif
 }
 
-/*
-QAmbientLightReading * reading() const
-*/
+// QAmbientLightReading *reading() const
 HB_FUNC_STATIC(QAMBIENTLIGHTSENSOR_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

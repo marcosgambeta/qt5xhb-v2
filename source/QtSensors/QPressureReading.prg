@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QPRESSUREREADING_DELETE)
 #endif
 }
 
-/*
-qreal pressure() const
-*/
+// qreal pressure() const
 HB_FUNC_STATIC(QPRESSUREREADING_PRESSURE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QPRESSUREREADING_PRESSURE)
 #endif
 }
 
-/*
-void setPressure(qreal pressure)
-*/
+// void setPressure(qreal pressure)
 HB_FUNC_STATIC(QPRESSUREREADING_SETPRESSURE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

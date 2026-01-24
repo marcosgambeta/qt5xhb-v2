@@ -58,9 +58,7 @@ HB_FUNC_STATIC(QLIGHTFILTER_DELETE)
 #endif
 }
 
-/*
-virtual bool filter(QLightReading * reading) = 0
-*/
+// virtual bool filter(QLightReading *reading) = 0
 HB_FUNC_STATIC(QLIGHTFILTER_FILTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QTAPREADING_DELETE)
 #endif
 }
 
-/*
-QTapReading::TapDirection tapDirection() const
-*/
+// QTapReading::TapDirection tapDirection() const
 HB_FUNC_STATIC(QTAPREADING_TAPDIRECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QTAPREADING_TAPDIRECTION)
 #endif
 }
 
-/*
-void setTapDirection(QTapReading::TapDirection tapDirection)
-*/
+// void setTapDirection(QTapReading::TapDirection tapDirection)
 HB_FUNC_STATIC(QTAPREADING_SETTAPDIRECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -111,9 +107,7 @@ HB_FUNC_STATIC(QTAPREADING_SETTAPDIRECTION)
 #endif
 }
 
-/*
-bool isDoubleTap() const
-*/
+// bool isDoubleTap() const
 HB_FUNC_STATIC(QTAPREADING_ISDOUBLETAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -133,9 +127,7 @@ HB_FUNC_STATIC(QTAPREADING_ISDOUBLETAP)
 #endif
 }
 
-/*
-void setDoubleTap(bool doubleTap)
-*/
+// void setDoubleTap(bool doubleTap)
 HB_FUNC_STATIC(QTAPREADING_SETDOUBLETAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

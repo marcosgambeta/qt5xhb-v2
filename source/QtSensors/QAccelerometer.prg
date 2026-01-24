@@ -58,9 +58,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QAccelerometer(QObject * parent = nullptr)
-    */
+    // QAccelerometer(QObject *parent = nullptr)
 HB_FUNC_STATIC(QACCELEROMETER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(QACCELEROMETER_DELETE)
 #endif
 }
 
-/*
-QAccelerometer::AccelerationMode accelerationMode() const
-*/
+// QAccelerometer::AccelerationMode accelerationMode() const
 HB_FUNC_STATIC(QACCELEROMETER_ACCELERATIONMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -106,9 +102,7 @@ HB_FUNC_STATIC(QACCELEROMETER_ACCELERATIONMODE)
 #endif
 }
 
-/*
-void setAccelerationMode(QAccelerometer::AccelerationMode accelerationMode)
-*/
+// void setAccelerationMode(QAccelerometer::AccelerationMode accelerationMode)
 HB_FUNC_STATIC(QACCELEROMETER_SETACCELERATIONMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -130,9 +124,7 @@ HB_FUNC_STATIC(QACCELEROMETER_SETACCELERATIONMODE)
 #endif
 }
 
-/*
-QAccelerometerReading * reading() const
-*/
+// QAccelerometerReading *reading() const
 HB_FUNC_STATIC(QACCELEROMETER_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -153,9 +145,7 @@ HB_FUNC_STATIC(QACCELEROMETER_READING)
 #endif
 }
 
-/*
-void accelerationModeChanged(QAccelerometer::AccelerationMode accelerationMode)
-*/
+// void accelerationModeChanged(QAccelerometer::AccelerationMode accelerationMode)
 HB_FUNC_STATIC(QACCELEROMETER_ONACCELERATIONMODECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

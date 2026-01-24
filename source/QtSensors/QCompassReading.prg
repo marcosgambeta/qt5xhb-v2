@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QCOMPASSREADING_DELETE)
 #endif
 }
 
-/*
-qreal azimuth() const
-*/
+// qreal azimuth() const
 HB_FUNC_STATIC(QCOMPASSREADING_AZIMUTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -88,9 +86,7 @@ HB_FUNC_STATIC(QCOMPASSREADING_AZIMUTH)
 #endif
 }
 
-/*
-void setAzimuth(qreal azimuth)
-*/
+// void setAzimuth(qreal azimuth)
 HB_FUNC_STATIC(QCOMPASSREADING_SETAZIMUTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -112,9 +108,7 @@ HB_FUNC_STATIC(QCOMPASSREADING_SETAZIMUTH)
 #endif
 }
 
-/*
-qreal calibrationLevel() const
-*/
+// qreal calibrationLevel() const
 HB_FUNC_STATIC(QCOMPASSREADING_CALIBRATIONLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -134,9 +128,7 @@ HB_FUNC_STATIC(QCOMPASSREADING_CALIBRATIONLEVEL)
 #endif
 }
 
-/*
-void setCalibrationLevel(qreal calibrationLevel)
-*/
+// void setCalibrationLevel(qreal calibrationLevel)
 HB_FUNC_STATIC(QCOMPASSREADING_SETCALIBRATIONLEVEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

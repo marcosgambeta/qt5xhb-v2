@@ -59,9 +59,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QSensorGestureManager(QObject * parent = nullptr)
-    */
+    // QSensorGestureManager(QObject *parent = nullptr)
 HB_FUNC_STATIC(QSENSORGESTUREMANAGER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -85,9 +83,7 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_DELETE)
 #endif
 }
 
-/*
-bool registerSensorGestureRecognizer(QSensorGestureRecognizer * recognizer)
-*/
+// bool registerSensorGestureRecognizer(QSensorGestureRecognizer *recognizer)
 HB_FUNC_STATIC(QSENSORGESTUREMANAGER_REGISTERSENSORGESTURERECOGNIZER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_REGISTERSENSORGESTURERECOGNIZER)
 #endif
 }
 
-/*
-QStringList gestureIds() const
-*/
+// QStringList gestureIds() const
 HB_FUNC_STATIC(QSENSORGESTUREMANAGER_GESTUREIDS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -129,9 +123,7 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_GESTUREIDS)
 #endif
 }
 
-/*
-QStringList recognizerSignals(const QString &recognizerId) const
-*/
+// QStringList recognizerSignals(const QString &recognizerId) const
 HB_FUNC_STATIC(QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -151,9 +143,7 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS)
 #endif
 }
 
-/*
-static QSensorGestureRecognizer * sensorGestureRecognizer(const QString &id)
-*/
+// static QSensorGestureRecognizer *sensorGestureRecognizer(const QString &id)
 HB_FUNC_STATIC(QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -170,9 +160,7 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER)
 #endif
 }
 
-/*
-void newSensorGestureAvailable()
-*/
+// void newSensorGestureAvailable()
 HB_FUNC_STATIC(QSENSORGESTUREMANAGER_ONNEWSENSORGESTUREAVAILABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

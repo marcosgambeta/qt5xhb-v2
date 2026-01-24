@@ -54,9 +54,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QPressureSensor(QObject * parent = nullptr)
-    */
+    // QPressureSensor(QObject *parent = nullptr)
 HB_FUNC_STATIC(QPRESSURESENSOR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -80,9 +78,7 @@ HB_FUNC_STATIC(QPRESSURESENSOR_DELETE)
 #endif
 }
 
-/*
-QPressureReading * reading() const
-*/
+// QPressureReading *reading() const
 HB_FUNC_STATIC(QPRESSURESENSOR_READING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

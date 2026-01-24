@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QTAPFILTER_DELETE)
 #endif
 }
 
-/*
-virtual bool filter(QTapReading * reading) = 0
-*/
+// virtual bool filter(QTapReading *reading) = 0
 HB_FUNC_STATIC(QTAPFILTER_FILTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

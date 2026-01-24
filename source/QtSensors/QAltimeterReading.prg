@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QALTIMETERREADING_DELETE)
 #endif
 }
 
-/*
-qreal altitude() const
-*/
+// qreal altitude() const
 HB_FUNC_STATIC(QALTIMETERREADING_ALTITUDE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QALTIMETERREADING_ALTITUDE)
 #endif
 }
 
-/*
-void setAltitude(qreal altitude)
-*/
+// void setAltitude(qreal altitude)
 HB_FUNC_STATIC(QALTIMETERREADING_SETALTITUDE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
