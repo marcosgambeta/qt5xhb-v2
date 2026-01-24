@@ -73,17 +73,13 @@ RETURN
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QBluetoothLocalDevice(QObject * parent = nullptr)
-    */
+    // QBluetoothLocalDevice(QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QBluetoothLocalDevice(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(1, 2) && ISQBLUETOOTHADDRESS(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QBluetoothLocalDevice(const QBluetoothAddress &address, QObject * parent = nullptr)
-    */
+    // QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QBluetoothLocalDevice(*PQBLUETOOTHADDRESS(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -104,9 +100,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_DELETE)
 #endif
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -126,9 +120,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ISVALID)
 #endif
 }
 
-/*
-void requestPairing(const QBluetoothAddress &address, QBluetoothLocalDevice::Pairing pairing)
-*/
+// void requestPairing(const QBluetoothAddress &address, QBluetoothLocalDevice::Pairing pairing)
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_REQUESTPAIRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -150,9 +142,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_REQUESTPAIRING)
 #endif
 }
 
-/*
-QBluetoothLocalDevice::Pairing pairingStatus(const QBluetoothAddress &address) const
-*/
+// QBluetoothLocalDevice::Pairing pairingStatus(const QBluetoothAddress &address) const
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_PAIRINGSTATUS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -172,9 +162,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_PAIRINGSTATUS)
 #endif
 }
 
-/*
-void setHostMode(QBluetoothLocalDevice::HostMode mode)
-*/
+// void setHostMode(QBluetoothLocalDevice::HostMode mode)
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_SETHOSTMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -196,9 +184,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_SETHOSTMODE)
 #endif
 }
 
-/*
-QBluetoothLocalDevice::HostMode hostMode() const
-*/
+// QBluetoothLocalDevice::HostMode hostMode() const
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_HOSTMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -218,9 +204,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_HOSTMODE)
 #endif
 }
 
-/*
-void powerOn()
-*/
+// void powerOn()
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_POWERON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -242,9 +226,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_POWERON)
 #endif
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -264,9 +246,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_NAME)
 #endif
 }
 
-/*
-QBluetoothAddress address() const
-*/
+// QBluetoothAddress address() const
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -286,9 +266,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ADDRESS)
 #endif
 }
 
-/*
-void pairingConfirmation(bool confirmation)
-*/
+// void pairingConfirmation(bool confirmation)
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_PAIRINGCONFIRMATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -310,9 +288,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_PAIRINGCONFIRMATION)
 #endif
 }
 
-/*
-static QList<QBluetoothHostInfo> allDevices()
-*/
+// static QList<QBluetoothHostInfo> allDevices()
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ALLDEVICES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -350,9 +326,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ALLDEVICES)
 #endif
 }
 
-/*
-void hostModeStateChanged(QBluetoothLocalDevice::HostMode state)
-*/
+// void hostModeStateChanged(QBluetoothLocalDevice::HostMode state)
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONHOSTMODESTATECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -398,9 +372,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONHOSTMODESTATECHANGED)
 #endif
 }
 
-/*
-void pairingFinished(const QBluetoothAddress &address, QBluetoothLocalDevice::Pairing pairing)
-*/
+// void pairingFinished(const QBluetoothAddress &address, QBluetoothLocalDevice::Pairing pairing)
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -449,9 +421,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGFINISHED)
 #endif
 }
 
-/*
-void pairingDisplayPinCode(const QBluetoothAddress &address, QString pin)
-*/
+// void pairingDisplayPinCode(const QBluetoothAddress &address, QString pin)
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYPINCODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -499,9 +469,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYPINCODE)
 #endif
 }
 
-/*
-void pairingDisplayConfirmation(const QBluetoothAddress &address, QString pin)
-*/
+// void pairingDisplayConfirmation(const QBluetoothAddress &address, QString pin)
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYCONFIRMATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -549,9 +517,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONPAIRINGDISPLAYCONFIRMATION)
 #endif
 }
 
-/*
-void error(QBluetoothLocalDevice::Error error)
-*/
+// void error(QBluetoothLocalDevice::Error error)
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

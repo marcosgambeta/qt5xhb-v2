@@ -66,33 +66,25 @@ RETURN
 HB_FUNC_STATIC(QBLUETOOTHADDRESS_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QBluetoothAddress()
-    */
+    // QBluetoothAddress()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QBluetoothAddress();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QBluetoothAddress(quint64 address)
-    */
+    // QBluetoothAddress(quint64 address)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QBluetoothAddress(PQUINT64(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QBluetoothAddress(const QString &address)
-    */
+    // QBluetoothAddress(const QString &address)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QBluetoothAddress(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQBLUETOOTHADDRESS(1)) {
-    /*
-    QBluetoothAddress(const QBluetoothAddress &other)
-    */
+    // QBluetoothAddress(const QBluetoothAddress &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QBluetoothAddress(*PQBLUETOOTHADDRESS(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -113,9 +105,7 @@ HB_FUNC_STATIC(QBLUETOOTHADDRESS_DELETE)
 #endif
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QBLUETOOTHADDRESS_ISNULL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -135,9 +125,7 @@ HB_FUNC_STATIC(QBLUETOOTHADDRESS_ISNULL)
 #endif
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QBLUETOOTHADDRESS_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -159,9 +147,7 @@ HB_FUNC_STATIC(QBLUETOOTHADDRESS_CLEAR)
 #endif
 }
 
-/*
-quint64 toUInt64() const
-*/
+// quint64 toUInt64() const
 HB_FUNC_STATIC(QBLUETOOTHADDRESS_TOUINT64)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -181,9 +167,7 @@ HB_FUNC_STATIC(QBLUETOOTHADDRESS_TOUINT64)
 #endif
 }
 
-/*
-QString toString() const
-*/
+// QString toString() const
 HB_FUNC_STATIC(QBLUETOOTHADDRESS_TOSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

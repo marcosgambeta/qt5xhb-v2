@@ -70,17 +70,13 @@ RETURN
 HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QBluetoothDeviceDiscoveryAgent(QObject * parent = nullptr)
-    */
+    // QBluetoothDeviceDiscoveryAgent(QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QBluetoothDeviceDiscoveryAgent(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(1, 2) && ISQBLUETOOTHADDRESS(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject * parent = nullptr)
-    */
+    // QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = nullptr)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QBluetoothDeviceDiscoveryAgent(*PQBLUETOOTHADDRESS(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -101,9 +97,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_DELETE)
 #endif
 }
 
-/*
-QBluetoothDeviceDiscoveryAgent::InquiryType inquiryType() const
-*/
+// QBluetoothDeviceDiscoveryAgent::InquiryType inquiryType() const
 HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_INQUIRYTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -123,9 +117,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_INQUIRYTYPE)
 #endif
 }
 
-/*
-void setInquiryType(QBluetoothDeviceDiscoveryAgent::InquiryType type)
-*/
+// void setInquiryType(QBluetoothDeviceDiscoveryAgent::InquiryType type)
 HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_SETINQUIRYTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -147,9 +139,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_SETINQUIRYTYPE)
 #endif
 }
 
-/*
-bool isActive() const
-*/
+// bool isActive() const
 HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ISACTIVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -169,9 +159,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ISACTIVE)
 #endif
 }
 
-/*
-QBluetoothDeviceDiscoveryAgent::Error error() const
-*/
+// QBluetoothDeviceDiscoveryAgent::Error error() const
 HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -191,9 +179,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ERROR)
 #endif
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ERRORSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -213,9 +199,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ERRORSTRING)
 #endif
 }
 
-/*
-QList<QBluetoothDeviceInfo> discoveredDevices() const
-*/
+// QList<QBluetoothDeviceInfo> discoveredDevices() const
 HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_DISCOVEREDDEVICES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -257,9 +241,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_DISCOVEREDDEVICES)
 #endif
 }
 
-/*
-void start()
-*/
+// void start()
 HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_START)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -281,9 +263,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_START)
 #endif
 }
 
-/*
-void stop()
-*/
+// void stop()
 HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_STOP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -305,9 +285,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_STOP)
 #endif
 }
 
-/*
-void deviceDiscovered(const QBluetoothDeviceInfo &info)
-*/
+// void deviceDiscovered(const QBluetoothDeviceInfo &info)
 HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEDISCOVERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -354,9 +332,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEDISCOVERED)
 #endif
 }
 
-/*
-void finished()
-*/
+// void finished()
 HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -399,9 +375,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONFINISHED)
 #endif
 }
 
-/*
-void error(QBluetoothDeviceDiscoveryAgent::Error error)
-*/
+// void error(QBluetoothDeviceDiscoveryAgent::Error error)
 HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -447,9 +421,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONERROR)
 #endif
 }
 
-/*
-void canceled()
-*/
+// void canceled()
 HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONCANCELED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -492,9 +464,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONCANCELED)
 #endif
 }
 
-/*
-void deviceUpdated(const QBluetoothDeviceInfo &info, QBluetoothDeviceInfo::Fields updatedFields)
-*/
+// void deviceUpdated(const QBluetoothDeviceInfo &info, QBluetoothDeviceInfo::Fields updatedFields)
 HB_FUNC_STATIC(QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEUPDATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

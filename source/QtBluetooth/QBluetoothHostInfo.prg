@@ -67,17 +67,13 @@ RETURN
 HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QBluetoothHostInfo()
-    */
+    // QBluetoothHostInfo()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QBluetoothHostInfo();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQBLUETOOTHHOSTINFO(1)) {
-    /*
-    QBluetoothHostInfo(const QBluetoothHostInfo &other)
-    */
+    // QBluetoothHostInfo(const QBluetoothHostInfo &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QBluetoothHostInfo(*PQBLUETOOTHHOSTINFO(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -98,9 +94,7 @@ HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_DELETE)
 #endif
 }
 
-/*
-QBluetoothAddress address() const
-*/
+// QBluetoothAddress address() const
 HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_ADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -120,9 +114,7 @@ HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_ADDRESS)
 #endif
 }
 
-/*
-void setAddress(const QBluetoothAddress &address)
-*/
+// void setAddress(const QBluetoothAddress &address)
 HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_SETADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -144,9 +136,7 @@ HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_SETADDRESS)
 #endif
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -166,9 +156,7 @@ HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_NAME)
 #endif
 }
 
-/*
-void setName(const QString &name)
-*/
+// void setName(const QString &name)
 HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_SETNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

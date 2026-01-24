@@ -58,9 +58,7 @@ RETURN
 
 #include <QtBluetooth/QBluetoothTransferReply>
 
-    /*
-    QBluetoothTransferManager(QObject * parent = nullptr)
-    */
+    // QBluetoothTransferManager(QObject *parent = nullptr)
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_DELETE)
 #endif
 }
 
-/*
-QBluetoothTransferReply * put(const QBluetoothTransferRequest &request, QIODevice * data)
-*/
+// QBluetoothTransferReply *put(const QBluetoothTransferRequest &request, QIODevice *data)
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_PUT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_PUT)
 #endif
 }
 
-/*
-void finished(QBluetoothTransferReply * reply)
-*/
+// void finished(QBluetoothTransferReply *reply)
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

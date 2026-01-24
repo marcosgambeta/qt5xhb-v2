@@ -93,17 +93,13 @@ RETURN
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QBluetoothServiceInfo()
-    */
+    // QBluetoothServiceInfo()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QBluetoothServiceInfo();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQBLUETOOTHSERVICEINFO(1)) {
-    /*
-    QBluetoothServiceInfo(const QBluetoothServiceInfo &other)
-    */
+    // QBluetoothServiceInfo(const QBluetoothServiceInfo &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QBluetoothServiceInfo(*PQBLUETOOTHSERVICEINFO(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -124,9 +120,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_DELETE)
 #endif
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -146,9 +140,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_ISVALID)
 #endif
 }
 
-/*
-bool isComplete() const
-*/
+// bool isComplete() const
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_ISCOMPLETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -168,9 +160,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_ISCOMPLETE)
 #endif
 }
 
-/*
-void setDevice(const QBluetoothDeviceInfo &info)
-*/
+// void setDevice(const QBluetoothDeviceInfo &info)
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETDEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -192,9 +182,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETDEVICE)
 #endif
 }
 
-/*
-QBluetoothDeviceInfo device() const
-*/
+// QBluetoothDeviceInfo device() const
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_DEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -217,9 +205,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_DEVICE)
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETATTRIBUTE)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2)) {
-    /*
-    void setAttribute(quint16 attributeId, const QVariant &value)
-    */
+    // void setAttribute(quint16 attributeId, const QVariant &value)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QBluetoothServiceInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -230,9 +216,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETATTRIBUTE)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBLUETOOTHUUID(2)) {
-    /*
-    void setAttribute(quint16 attributeId, const QBluetoothUuid &value)
-    */
+    // void setAttribute(quint16 attributeId, const QBluetoothUuid &value)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QBluetoothServiceInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -247,9 +231,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETATTRIBUTE)
   }
 }
 
-/*
-QVariant attribute(quint16 attributeId) const
-*/
+// QVariant attribute(quint16 attributeId) const
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_ATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -269,9 +251,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_ATTRIBUTE)
 #endif
 }
 
-/*
-QList<quint16> attributes() const
-*/
+// QList<quint16> attributes() const
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_ATTRIBUTES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -292,9 +272,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_ATTRIBUTES)
 #endif
 }
 
-/*
-bool contains(quint16 attributeId) const
-*/
+// bool contains(quint16 attributeId) const
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_CONTAINS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -314,9 +292,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_CONTAINS)
 #endif
 }
 
-/*
-void removeAttribute(quint16 attributeId)
-*/
+// void removeAttribute(quint16 attributeId)
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_REMOVEATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -338,9 +314,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_REMOVEATTRIBUTE)
 #endif
 }
 
-/*
-void setServiceName(const QString &name)
-*/
+// void setServiceName(const QString &name)
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETSERVICENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -362,9 +336,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETSERVICENAME)
 #endif
 }
 
-/*
-QString serviceName() const
-*/
+// QString serviceName() const
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -384,9 +356,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICENAME)
 #endif
 }
 
-/*
-void setServiceDescription(const QString &description)
-*/
+// void setServiceDescription(const QString &description)
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETSERVICEDESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -408,9 +378,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETSERVICEDESCRIPTION)
 #endif
 }
 
-/*
-QString serviceDescription() const
-*/
+// QString serviceDescription() const
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICEDESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -430,9 +398,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICEDESCRIPTION)
 #endif
 }
 
-/*
-void setServiceProvider(const QString &provider)
-*/
+// void setServiceProvider(const QString &provider)
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETSERVICEPROVIDER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -454,9 +420,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETSERVICEPROVIDER)
 #endif
 }
 
-/*
-QString serviceProvider() const
-*/
+// QString serviceProvider() const
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICEPROVIDER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -476,9 +440,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICEPROVIDER)
 #endif
 }
 
-/*
-QBluetoothServiceInfo::Protocol socketProtocol() const
-*/
+// QBluetoothServiceInfo::Protocol socketProtocol() const
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SOCKETPROTOCOL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -498,9 +460,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SOCKETPROTOCOL)
 #endif
 }
 
-/*
-int protocolServiceMultiplexer() const
-*/
+// int protocolServiceMultiplexer() const
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_PROTOCOLSERVICEMULTIPLEXER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -520,9 +480,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_PROTOCOLSERVICEMULTIPLEXER)
 #endif
 }
 
-/*
-int serverChannel() const
-*/
+// int serverChannel() const
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVERCHANNEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -542,9 +500,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVERCHANNEL)
 #endif
 }
 
-/*
-void setServiceAvailability(quint8 availability)
-*/
+// void setServiceAvailability(quint8 availability)
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETSERVICEAVAILABILITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -566,9 +522,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETSERVICEAVAILABILITY)
 #endif
 }
 
-/*
-quint8 serviceAvailability() const
-*/
+// quint8 serviceAvailability() const
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICEAVAILABILITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -588,9 +542,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICEAVAILABILITY)
 #endif
 }
 
-/*
-void setServiceUuid(const QBluetoothUuid &uuid)
-*/
+// void setServiceUuid(const QBluetoothUuid &uuid)
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETSERVICEUUID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -612,9 +564,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SETSERVICEUUID)
 #endif
 }
 
-/*
-QBluetoothUuid serviceUuid() const
-*/
+// QBluetoothUuid serviceUuid() const
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICEUUID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -634,9 +584,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICEUUID)
 #endif
 }
 
-/*
-QList<QBluetoothUuid> serviceClassUuids() const
-*/
+// QList<QBluetoothUuid> serviceClassUuids() const
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICECLASSUUIDS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -678,9 +626,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_SERVICECLASSUUIDS)
 #endif
 }
 
-/*
-bool isRegistered() const
-*/
+// bool isRegistered() const
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_ISREGISTERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -700,9 +646,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_ISREGISTERED)
 #endif
 }
 
-/*
-bool registerService(const QBluetoothAddress &localAdapter = QBluetoothAddress())
-*/
+// bool registerService(const QBluetoothAddress &localAdapter = QBluetoothAddress())
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_REGISTERSERVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -723,9 +667,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_REGISTERSERVICE)
 #endif
 }
 
-/*
-bool unregisterService()
-*/
+// bool unregisterService()
 HB_FUNC_STATIC(QBLUETOOTHSERVICEINFO_UNREGISTERSERVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

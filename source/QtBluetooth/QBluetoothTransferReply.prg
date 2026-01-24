@@ -74,9 +74,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_DELETE)
 #endif
 }
 
-/*
-virtual bool isFinished() const = 0
-*/
+// virtual bool isFinished() const = 0
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ISFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -96,9 +94,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ISFINISHED)
 #endif
 }
 
-/*
-virtual bool isRunning() const = 0
-*/
+// virtual bool isRunning() const = 0
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ISRUNNING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -118,9 +114,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ISRUNNING)
 #endif
 }
 
-/*
-QBluetoothTransferManager * manager() const
-*/
+// QBluetoothTransferManager *manager() const
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_MANAGER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -141,9 +135,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_MANAGER)
 #endif
 }
 
-/*
-virtual QBluetoothTransferReply::TransferError error() const = 0
-*/
+// virtual QBluetoothTransferReply::TransferError error() const = 0
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -163,9 +155,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ERROR)
 #endif
 }
 
-/*
-virtual QString errorString() const = 0
-*/
+// virtual QString errorString() const = 0
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ERRORSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -185,9 +175,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ERRORSTRING)
 #endif
 }
 
-/*
-QBluetoothTransferRequest request() const
-*/
+// QBluetoothTransferRequest request() const
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_REQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -207,9 +195,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_REQUEST)
 #endif
 }
 
-/*
-void abort()
-*/
+// void abort()
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ABORT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -231,9 +217,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ABORT)
 #endif
 }
 
-/*
-void finished(QBluetoothTransferReply * r)
-*/
+// void finished(QBluetoothTransferReply *r)
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -278,9 +262,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ONFINISHED)
 #endif
 }
 
-/*
-void transferProgress(qint64 bytesTransferred, qint64 bytesTotal)
-*/
+// void transferProgress(qint64 bytesTransferred, qint64 bytesTotal)
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ONTRANSFERPROGRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
