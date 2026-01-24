@@ -69,9 +69,7 @@ RETURN
 #include <QtDeclarative/QDeclarativeItem>
 #endif
 
-    /*
-    QDeclarativeItem(QDeclarativeItem * parent = nullptr)
-    */
+    // QDeclarativeItem(QDeclarativeItem *parent = nullptr)
 HB_FUNC_STATIC(QDECLARATIVEITEM_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQDECLARATIVEITEMORNIL(1)) {
@@ -91,9 +89,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal baselineOffset() const
-*/
+// qreal baselineOffset() const
 HB_FUNC_STATIC(QDECLARATIVEITEM_BASELINEOFFSET)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -111,9 +107,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_BASELINEOFFSET)
   }
 }
 
-/*
-QDeclarativeItem * childAt(qreal x, qreal y) const
-*/
+// QDeclarativeItem *childAt(qreal x, qreal y) const
 HB_FUNC_STATIC(QDECLARATIVEITEM_CHILDAT)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -132,9 +126,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_CHILDAT)
   }
 }
 
-/*
-QRectF childrenRect()
-*/
+// QRectF childrenRect()
 HB_FUNC_STATIC(QDECLARATIVEITEM_CHILDRENRECT)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -152,9 +144,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_CHILDRENRECT)
   }
 }
 
-/*
-bool clip() const
-*/
+// bool clip() const
 HB_FUNC_STATIC(QDECLARATIVEITEM_CLIP)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -172,9 +162,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_CLIP)
   }
 }
 
-/*
-void forceActiveFocus()
-*/
+// void forceActiveFocus()
 HB_FUNC_STATIC(QDECLARATIVEITEM_FORCEACTIVEFOCUS)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -194,9 +182,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_FORCEACTIVEFOCUS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal implicitHeight() const
-*/
+// qreal implicitHeight() const
 HB_FUNC_STATIC(QDECLARATIVEITEM_IMPLICITHEIGHT)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -214,9 +200,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_IMPLICITHEIGHT)
   }
 }
 
-/*
-qreal implicitWidth() const
-*/
+// qreal implicitWidth() const
 HB_FUNC_STATIC(QDECLARATIVEITEM_IMPLICITWIDTH)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -234,9 +218,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_IMPLICITWIDTH)
   }
 }
 
-/*
-bool keepMouseGrab() const
-*/
+// bool keepMouseGrab() const
 HB_FUNC_STATIC(QDECLARATIVEITEM_KEEPMOUSEGRAB)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -254,9 +236,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_KEEPMOUSEGRAB)
   }
 }
 
-/*
-QScriptValue mapFromItem(const QScriptValue &item, qreal x, qreal y) const
-*/
+// QScriptValue mapFromItem(const QScriptValue &item, qreal x, qreal y) const
 HB_FUNC_STATIC(QDECLARATIVEITEM_MAPFROMITEM)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -274,9 +254,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_MAPFROMITEM)
   }
 }
 
-/*
-QScriptValue mapToItem(const QScriptValue &item, qreal x, qreal y) const
-*/
+// QScriptValue mapToItem(const QScriptValue &item, qreal x, qreal y) const
 HB_FUNC_STATIC(QDECLARATIVEITEM_MAPTOITEM)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -294,9 +272,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_MAPTOITEM)
   }
 }
 
-/*
-QDeclarativeItem * parentItem() const
-*/
+// QDeclarativeItem *parentItem() const
 HB_FUNC_STATIC(QDECLARATIVEITEM_PARENTITEM)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -315,9 +291,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_PARENTITEM)
   }
 }
 
-/*
-void setBaselineOffset(qreal)
-*/
+// void setBaselineOffset(qreal)
 HB_FUNC_STATIC(QDECLARATIVEITEM_SETBASELINEOFFSET)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -337,9 +311,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETBASELINEOFFSET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setClip(bool)
-*/
+// void setClip(bool)
 HB_FUNC_STATIC(QDECLARATIVEITEM_SETCLIP)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -359,9 +331,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETCLIP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setKeepMouseGrab(bool keep)
-*/
+// void setKeepMouseGrab(bool keep)
 HB_FUNC_STATIC(QDECLARATIVEITEM_SETKEEPMOUSEGRAB)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -381,9 +351,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETKEEPMOUSEGRAB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setParentItem(QDeclarativeItem * parent)
-*/
+// void setParentItem(QDeclarativeItem *parent)
 HB_FUNC_STATIC(QDECLARATIVEITEM_SETPARENTITEM)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -403,9 +371,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETPARENTITEM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSmooth(bool smooth)
-*/
+// void setSmooth(bool smooth)
 HB_FUNC_STATIC(QDECLARATIVEITEM_SETSMOOTH)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -425,9 +391,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETSMOOTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTransformOrigin(QDeclarativeItem::TransformOrigin origin)
-*/
+// void setTransformOrigin(QDeclarativeItem::TransformOrigin origin)
 HB_FUNC_STATIC(QDECLARATIVEITEM_SETTRANSFORMORIGIN)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -447,9 +411,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETTRANSFORMORIGIN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool smooth() const
-*/
+// bool smooth() const
 HB_FUNC_STATIC(QDECLARATIVEITEM_SMOOTH)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -467,9 +429,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SMOOTH)
   }
 }
 
-/*
-QDeclarativeItem::TransformOrigin transformOrigin() const
-*/
+// QDeclarativeItem::TransformOrigin transformOrigin() const
 HB_FUNC_STATIC(QDECLARATIVEITEM_TRANSFORMORIGIN)
 {
   auto obj = qobject_cast<QDeclarativeItem *>(Qt5xHb::getQObjectPointerFromSelfItem());

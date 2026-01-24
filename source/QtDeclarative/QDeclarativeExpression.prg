@@ -75,16 +75,12 @@ RETURN
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QDeclarativeExpression()
-    */
+    // QDeclarativeExpression()
     auto obj = new QDeclarativeExpression();
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(3, 4) && ISQDECLARATIVECONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && ISQOBJECTORNIL(4)) {
-    /*
-    QDeclarativeExpression(QDeclarativeContext * ctxt, QObject * scope, const QString &expression, QObject * parent =
-    nullptr)
-    */
+    // QDeclarativeExpression(QDeclarativeContext *ctxt, QObject *scope, const QString &expression, QObject *parent =
+    // nullptr)
     auto obj = new QDeclarativeExpression(PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -101,9 +97,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearError()
-*/
+// void clearError()
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_CLEARERROR)
 {
   auto obj = qobject_cast<QDeclarativeExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -123,9 +117,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_CLEARERROR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDeclarativeContext * context() const
-*/
+// QDeclarativeContext *context() const
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_CONTEXT)
 {
   auto obj = qobject_cast<QDeclarativeExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -144,9 +136,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_CONTEXT)
   }
 }
 
-/*
-QDeclarativeEngine * engine() const
-*/
+// QDeclarativeEngine *engine() const
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_ENGINE)
 {
   auto obj = qobject_cast<QDeclarativeExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -165,9 +155,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_ENGINE)
   }
 }
 
-/*
-QDeclarativeError error() const
-*/
+// QDeclarativeError error() const
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_ERROR)
 {
   auto obj = qobject_cast<QDeclarativeExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -185,9 +173,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_ERROR)
   }
 }
 
-/*
-QVariant evaluate(bool * valueIsUndefined = nullptr)
-*/
+// QVariant evaluate(bool *valueIsUndefined = nullptr)
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_EVALUATE)
 {
   auto obj = qobject_cast<QDeclarativeExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -207,9 +193,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_EVALUATE)
   }
 }
 
-/*
-QString expression() const
-*/
+// QString expression() const
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_EXPRESSION)
 {
   auto obj = qobject_cast<QDeclarativeExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -227,9 +211,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_EXPRESSION)
   }
 }
 
-/*
-bool hasError() const
-*/
+// bool hasError() const
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_HASERROR)
 {
   auto obj = qobject_cast<QDeclarativeExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -247,9 +229,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_HASERROR)
   }
 }
 
-/*
-int lineNumber() const
-*/
+// int lineNumber() const
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_LINENUMBER)
 {
   auto obj = qobject_cast<QDeclarativeExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -267,9 +247,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_LINENUMBER)
   }
 }
 
-/*
-bool notifyOnValueChanged() const
-*/
+// bool notifyOnValueChanged() const
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED)
 {
   auto obj = qobject_cast<QDeclarativeExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -287,9 +265,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED)
   }
 }
 
-/*
-QObject * scopeObject() const
-*/
+// QObject *scopeObject() const
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SCOPEOBJECT)
 {
   auto obj = qobject_cast<QDeclarativeExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -308,9 +284,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SCOPEOBJECT)
   }
 }
 
-/*
-void setExpression(const QString &expression)
-*/
+// void setExpression(const QString &expression)
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETEXPRESSION)
 {
   auto obj = qobject_cast<QDeclarativeExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -330,9 +304,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETEXPRESSION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setNotifyOnValueChanged(bool notifyOnChange)
-*/
+// void setNotifyOnValueChanged(bool notifyOnChange)
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED)
 {
   auto obj = qobject_cast<QDeclarativeExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -352,9 +324,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSourceLocation(const QString &url, int line)
-*/
+// void setSourceLocation(const QString &url, int line)
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETSOURCELOCATION)
 {
   auto obj = qobject_cast<QDeclarativeExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -374,9 +344,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETSOURCELOCATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString sourceFile() const
-*/
+// QString sourceFile() const
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SOURCEFILE)
 {
   auto obj = qobject_cast<QDeclarativeExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -394,9 +362,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SOURCEFILE)
   }
 }
 
-/*
-void valueChanged()
-*/
+// void valueChanged()
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_ONVALUECHANGED)
 {
   auto sender = qobject_cast<QDeclarativeExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());

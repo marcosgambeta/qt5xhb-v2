@@ -68,15 +68,11 @@ RETURN
 HB_FUNC_STATIC(QDECLARATIVEERROR_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QDeclarativeError()
-    */
+    // QDeclarativeError()
     auto obj = new QDeclarativeError();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDECLARATIVEERROR(1)) {
-    /*
-    QDeclarativeError(const QDeclarativeError &other)
-    */
+    // QDeclarativeError(const QDeclarativeError &other)
     auto obj = new QDeclarativeError(*PQDECLARATIVEERROR(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -84,9 +80,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_NEW)
   }
 }
 
-/*
-int column() const
-*/
+// int column() const
 HB_FUNC_STATIC(QDECLARATIVEERROR_COLUMN)
 {
   auto obj = static_cast<QDeclarativeError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -104,9 +98,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_COLUMN)
   }
 }
 
-/*
-QString description() const
-*/
+// QString description() const
 HB_FUNC_STATIC(QDECLARATIVEERROR_DESCRIPTION)
 {
   auto obj = static_cast<QDeclarativeError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -124,9 +116,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_DESCRIPTION)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QDECLARATIVEERROR_ISVALID)
 {
   auto obj = static_cast<QDeclarativeError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -144,9 +134,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_ISVALID)
   }
 }
 
-/*
-int line() const
-*/
+// int line() const
 HB_FUNC_STATIC(QDECLARATIVEERROR_LINE)
 {
   auto obj = static_cast<QDeclarativeError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -164,9 +152,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_LINE)
   }
 }
 
-/*
-void setColumn(int column)
-*/
+// void setColumn(int column)
 HB_FUNC_STATIC(QDECLARATIVEERROR_SETCOLUMN)
 {
   auto obj = static_cast<QDeclarativeError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -186,9 +172,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETCOLUMN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDescription(const QString &description)
-*/
+// void setDescription(const QString &description)
 HB_FUNC_STATIC(QDECLARATIVEERROR_SETDESCRIPTION)
 {
   auto obj = static_cast<QDeclarativeError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -208,9 +192,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETDESCRIPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setLine(int line)
-*/
+// void setLine(int line)
 HB_FUNC_STATIC(QDECLARATIVEERROR_SETLINE)
 {
   auto obj = static_cast<QDeclarativeError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -230,9 +212,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETLINE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUrl(const QUrl &url)
-*/
+// void setUrl(const QUrl &url)
 HB_FUNC_STATIC(QDECLARATIVEERROR_SETURL)
 {
   auto obj = static_cast<QDeclarativeError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -252,9 +232,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETURL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString toString() const
-*/
+// QString toString() const
 HB_FUNC_STATIC(QDECLARATIVEERROR_TOSTRING)
 {
   auto obj = static_cast<QDeclarativeError *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -272,9 +250,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_TOSTRING)
   }
 }
 
-/*
-QUrl url() const
-*/
+// QUrl url() const
 HB_FUNC_STATIC(QDECLARATIVEERROR_URL)
 {
   auto obj = static_cast<QDeclarativeError *>(Qt5xHb::itemGetPtrStackSelfItem());

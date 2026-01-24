@@ -74,21 +74,15 @@ RETURN
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QDeclarativeComponent(QDeclarativeEngine * engine, QObject * parent = nullptr)
-    */
+    // QDeclarativeComponent(QDeclarativeEngine *engine, QObject *parent = nullptr)
     auto obj = new QDeclarativeComponent(PQDECLARATIVEENGINE(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && HB_ISCHAR(2) && ISQOBJECTORNIL(3)) {
-    /*
-    QDeclarativeComponent(QDeclarativeEngine * engine, const QString &fileName, QObject * parent = nullptr)
-    */
+    // QDeclarativeComponent(QDeclarativeEngine *engine, const QString &fileName, QObject *parent = nullptr)
     auto obj = new QDeclarativeComponent(PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && ISQOBJECTORNIL(3)) {
-    /*
-    QDeclarativeComponent(QDeclarativeEngine * engine, const QUrl &url, QObject * parent = nullptr)
-    */
+    // QDeclarativeComponent(QDeclarativeEngine *engine, const QUrl &url, QObject *parent = nullptr)
     auto obj = new QDeclarativeComponent(PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -105,9 +99,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QObject * beginCreate(QDeclarativeContext * context)
-*/
+// virtual QObject *beginCreate(QDeclarativeContext *context)
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_BEGINCREATE)
 {
   auto obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -126,9 +118,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_BEGINCREATE)
   }
 }
 
-/*
-virtual void completeCreate()
-*/
+// virtual void completeCreate()
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_COMPLETECREATE)
 {
   auto obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -148,9 +138,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_COMPLETECREATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QObject * create(QDeclarativeContext * context = nullptr)
-*/
+// virtual QObject *create(QDeclarativeContext *context = nullptr)
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATE)
 {
   auto obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -169,9 +157,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATE)
   }
 }
 
-/*
-QDeclarativeContext * creationContext() const
-*/
+// QDeclarativeContext *creationContext() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATIONCONTEXT)
 {
   auto obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -190,9 +176,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATIONCONTEXT)
   }
 }
 
-/*
-QList<QDeclarativeError> errors() const
-*/
+// QList<QDeclarativeError> errors() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ERRORS)
 {
   auto obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -232,9 +216,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ERRORS)
   }
 }
 
-/*
-bool isError() const
-*/
+// bool isError() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISERROR)
 {
   auto obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -252,9 +234,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISERROR)
   }
 }
 
-/*
-bool isLoading() const
-*/
+// bool isLoading() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISLOADING)
 {
   auto obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -272,9 +252,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISLOADING)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISNULL)
 {
   auto obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -292,9 +270,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISNULL)
   }
 }
 
-/*
-bool isReady() const
-*/
+// bool isReady() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISREADY)
 {
   auto obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -312,9 +288,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISREADY)
   }
 }
 
-/*
-void loadUrl(const QUrl &url)
-*/
+// void loadUrl(const QUrl &url)
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_LOADURL)
 {
   auto obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -334,9 +308,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_LOADURL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal progress() const
-*/
+// qreal progress() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_PROGRESS)
 {
   auto obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -354,9 +326,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_PROGRESS)
   }
 }
 
-/*
-void setData(const QByteArray &data, const QUrl &url)
-*/
+// void setData(const QByteArray &data, const QUrl &url)
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_SETDATA)
 {
   auto obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -376,9 +346,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_SETDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDeclarativeComponent::Status status() const
-*/
+// QDeclarativeComponent::Status status() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_STATUS)
 {
   auto obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -396,9 +364,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_STATUS)
   }
 }
 
-/*
-QUrl url() const
-*/
+// QUrl url() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_URL)
 {
   auto obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -416,9 +382,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_URL)
   }
 }
 
-/*
-void progressChanged(qreal progress)
-*/
+// void progressChanged(qreal progress)
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ONPROGRESSCHANGED)
 {
   auto sender = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -459,9 +423,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ONPROGRESSCHANGED)
   hb_retl(result);
 }
 
-/*
-void statusChanged(QDeclarativeComponent::Status status)
-*/
+// void statusChanged(QDeclarativeComponent::Status status)
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ONSTATUSCHANGED)
 {
   auto sender = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());

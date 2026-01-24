@@ -60,9 +60,7 @@ RETURN
 #include <QtDeclarative/QDeclarativeImageProvider>
 #endif
 
-    /*
-    QDeclarativeImageProvider(QDeclarativeImageProvider::ImageType type)
-    */
+    // QDeclarativeImageProvider(QDeclarativeImageProvider::ImageType type)
 HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -82,9 +80,7 @@ HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDeclarativeImageProvider::ImageType imageType() const
-*/
+// QDeclarativeImageProvider::ImageType imageType() const
 HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_IMAGETYPE)
 {
   auto obj = static_cast<QDeclarativeImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -102,9 +98,7 @@ HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_IMAGETYPE)
   }
 }
 
-/*
-virtual QImage requestImage(const QString &id, QSize * size, const QSize &requestedSize)
-*/
+// virtual QImage requestImage(const QString &id, QSize *size, const QSize &requestedSize)
 HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE)
 {
   auto obj = static_cast<QDeclarativeImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -122,9 +116,7 @@ HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE)
   }
 }
 
-/*
-virtual QPixmap requestPixmap(const QString &id, QSize * size, const QSize &requestedSize)
-*/
+// virtual QPixmap requestPixmap(const QString &id, QSize *size, const QSize &requestedSize)
 HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_REQUESTPIXMAP)
 {
   auto obj = static_cast<QDeclarativeImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());

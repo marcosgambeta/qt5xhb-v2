@@ -67,9 +67,7 @@ HB_FUNC_STATIC(QDECLARATIVENETWORKACCESSMANAGERFACTORY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QNetworkAccessManager * create(QObject * parent) = 0
-*/
+// virtual QNetworkAccessManager *create(QObject *parent) = 0
 HB_FUNC_STATIC(QDECLARATIVENETWORKACCESSMANAGERFACTORY_CREATE)
 {
   auto obj = static_cast<QDeclarativeNetworkAccessManagerFactory *>(Qt5xHb::itemGetPtrStackSelfItem());

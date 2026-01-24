@@ -67,15 +67,11 @@ RETURN
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QDeclarativeScriptString()
-    */
+    // QDeclarativeScriptString()
     auto obj = new QDeclarativeScriptString();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDECLARATIVESCRIPTSTRING(1)) {
-    /*
-    QDeclarativeScriptString(const QDeclarativeScriptString &other)
-    */
+    // QDeclarativeScriptString(const QDeclarativeScriptString &other)
     auto obj = new QDeclarativeScriptString(*PQDECLARATIVESCRIPTSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -83,9 +79,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_NEW)
   }
 }
 
-/*
-QDeclarativeContext * context() const
-*/
+// QDeclarativeContext *context() const
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_CONTEXT)
 {
   auto obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -104,9 +98,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_CONTEXT)
   }
 }
 
-/*
-QObject * scopeObject() const
-*/
+// QObject *scopeObject() const
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCOPEOBJECT)
 {
   auto obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -125,9 +117,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCOPEOBJECT)
   }
 }
 
-/*
-QString script() const
-*/
+// QString script() const
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCRIPT)
 {
   auto obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -145,9 +135,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCRIPT)
   }
 }
 
-/*
-void setContext(QDeclarativeContext * context)
-*/
+// void setContext(QDeclarativeContext *context)
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETCONTEXT)
 {
   auto obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -167,9 +155,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETCONTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setScopeObject(QObject * object)
-*/
+// void setScopeObject(QObject *object)
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT)
 {
   auto obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -189,9 +175,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setScript(const QString &script)
-*/
+// void setScript(const QString &script)
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCRIPT)
 {
   auto obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
