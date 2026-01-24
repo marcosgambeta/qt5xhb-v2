@@ -156,6 +156,8 @@
 // macros for return's
 #define RQSTRING(x)                                         hb_retc( (const char *) x.toLatin1().data() )
 //#define RQSTRING(x)                                         (const char *) x.toUtf8().data()
+#define RQSTRINGREF(x)                                      hb_retc( (const char *) x.toLatin1().data() )
+//#define RQSTRINGREF(x)                                      (const char *) x.toUtf8().data()
 #define RBOOL(x)                                            hb_retl(x)
 #define RSHORT(x)                                           hb_retni(x)
 #define RUSHORT(x)                                          hb_retni(x)
@@ -205,6 +207,9 @@
 #define RQPEN(exp)                                          Qt5xHb::createReturnClass(new QPen(exp), "QPEN", true)
 #define RQBRUSH(exp)                                        Qt5xHb::createReturnClass(new QBrush(exp), "QBRUSH", true)
 #endif
+
+// TODO: check
+#define RQMATRIX3X3(exp)                                    Qt5xHb::createReturnClass(new QMatrix3x3(exp), "QMATRIX3X3", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toLatin1().data()
