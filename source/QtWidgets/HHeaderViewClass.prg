@@ -44,9 +44,7 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = (HHeaderView *)Qt5xHb::itemGetPtrStackSelfItem()
 
-    /*
-    HHeaderView(Qt::Orientation orientation, QWidget *parent = nullptr)
-    */
+    // HHeaderView(Qt::Orientation orientation, QWidget *parent = nullptr)
 HB_FUNC_STATIC(HHEADERVIEW_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQWIDGETORNIL(2)) {
@@ -66,13 +64,9 @@ HB_FUNC_STATIC(HHEADERVIEW_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void paintSection(QPainter *painter, const QRect &rect, int logicalIndex) const
-*/
+// void paintSection(QPainter *painter, const QRect &rect, int logicalIndex) const
 
-/*
-void setPaintSectionCB(PHB_ITEM block)
-*/
+// void setPaintSectionCB(PHB_ITEM block)
 HB_FUNC_STATIC(HHEADERVIEW_SETPAINTSECTIONCB)
 {
   GET_PTR_FROM_SELF(obj);
