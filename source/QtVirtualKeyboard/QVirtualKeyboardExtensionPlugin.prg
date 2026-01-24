@@ -48,9 +48,7 @@ RETURN
 #include <QtVirtualKeyboard/QVirtualKeyboardExtensionPlugin>
 #endif
 
-    /*
-    virtual ~QVirtualKeyboardExtensionPlugin()
-    */
+    // virtual ~QVirtualKeyboardExtensionPlugin()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDEXTENSIONPLUGIN_DELETE)
 {
   auto obj = qobject_cast<QVirtualKeyboardExtensionPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -60,9 +58,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDEXTENSIONPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void registerTypes(const char * uri) const
-*/
+// virtual void registerTypes(const char *uri) const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDEXTENSIONPLUGIN_REGISTERTYPES)
 {
   auto obj = qobject_cast<QVirtualKeyboardExtensionPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());

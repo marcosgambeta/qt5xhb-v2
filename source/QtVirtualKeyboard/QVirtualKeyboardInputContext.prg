@@ -91,9 +91,7 @@ RETURN
 
 #include <QtVirtualKeyboard/QVirtualKeyboardInputEngine>
 
-    /*
-    QVirtualKeyboardInputContext(QObject * parent = nullptr)
-    */
+    // QVirtualKeyboardInputContext(QObject *parent = nullptr)
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -104,9 +102,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_NEW)
   }
 }
 
-/*
-~QVirtualKeyboardInputContext()
-*/
+// ~QVirtualKeyboardInputContext()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_DELETE)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -116,9 +112,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isShiftActive() const
-*/
+// bool isShiftActive() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ISSHIFTACTIVE)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -136,9 +130,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ISSHIFTACTIVE)
   }
 }
 
-/*
-bool isCapsLockActive() const
-*/
+// bool isCapsLockActive() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ISCAPSLOCKACTIVE)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -156,9 +148,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ISCAPSLOCKACTIVE)
   }
 }
 
-/*
-bool isUppercase() const
-*/
+// bool isUppercase() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ISUPPERCASE)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -176,9 +166,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ISUPPERCASE)
   }
 }
 
-/*
-int anchorPosition() const
-*/
+// int anchorPosition() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORPOSITION)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -196,9 +184,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORPOSITION)
   }
 }
 
-/*
-int cursorPosition() const
-*/
+// int cursorPosition() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_CURSORPOSITION)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -216,9 +202,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_CURSORPOSITION)
   }
 }
 
-/*
-Qt::InputMethodHints inputMethodHints() const
-*/
+// Qt::InputMethodHints inputMethodHints() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_INPUTMETHODHINTS)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -236,9 +220,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_INPUTMETHODHINTS)
   }
 }
 
-/*
-QString preeditText() const
-*/
+// QString preeditText() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_PREEDITTEXT)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -256,9 +238,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_PREEDITTEXT)
   }
 }
 
-/*
-QString surroundingText() const
-*/
+// QString surroundingText() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SURROUNDINGTEXT)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -276,9 +256,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SURROUNDINGTEXT)
   }
 }
 
-/*
-QString selectedText() const
-*/
+// QString selectedText() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SELECTEDTEXT)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -296,9 +274,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SELECTEDTEXT)
   }
 }
 
-/*
-QRectF anchorRectangle() const
-*/
+// QRectF anchorRectangle() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORRECTANGLE)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -316,9 +292,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORRECTANGLE)
   }
 }
 
-/*
-QRectF cursorRectangle() const
-*/
+// QRectF cursorRectangle() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_CURSORRECTANGLE)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -336,9 +310,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_CURSORRECTANGLE)
   }
 }
 
-/*
-bool isAnimating() const
-*/
+// bool isAnimating() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ISANIMATING)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -356,9 +328,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ISANIMATING)
   }
 }
 
-/*
-void setAnimating(bool isAnimating)
-*/
+// void setAnimating(bool isAnimating)
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SETANIMATING)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -378,9 +348,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SETANIMATING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString locale() const
-*/
+// QString locale() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_LOCALE)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -398,9 +366,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_LOCALE)
   }
 }
 
-/*
-QVirtualKeyboardInputEngine * inputEngine() const
-*/
+// QVirtualKeyboardInputEngine *inputEngine() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_INPUTENGINE)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -419,9 +385,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_INPUTENGINE)
   }
 }
 
-/*
-bool isSelectionControlVisible() const
-*/
+// bool isSelectionControlVisible() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ISSELECTIONCONTROLVISIBLE)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -439,9 +403,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ISSELECTIONCONTROLVISIBLE)
   }
 }
 
-/*
-bool anchorRectIntersectsClipRect() const
-*/
+// bool anchorRectIntersectsClipRect() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORRECTINTERSECTSCLIPRECT)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -459,9 +421,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORRECTINTERSECTSCLIPRECT)
   }
 }
 
-/*
-bool cursorRectIntersectsClipRect() const
-*/
+// bool cursorRectIntersectsClipRect() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_CURSORRECTINTERSECTSCLIPRECT)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -479,15 +439,9 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_CURSORRECTINTERSECTSCLIPRECT)
   }
 }
 
-/*
-QVirtualKeyboardInputContextPrivate *priv() const
-*/
-/*
-QList<QInputMethodEvent::Attribute> preeditTextAttributes() const
-*/
-/*
-Q_INVOKABLE void sendKeyClick(int key, const QString &text, int modifiers = 0)
-*/
+// QVirtualKeyboardInputContextPrivate *priv() const
+// QList<QInputMethodEvent::Attribute> preeditTextAttributes() const
+// Q_INVOKABLE void sendKeyClick(int key, const QString &text, int modifiers = 0)
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SENDKEYCLICK)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -510,9 +464,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SENDKEYCLICK)
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT)
 {
   if (ISNUMPAR(0)) {
-    /*
-    Q_INVOKABLE void commit()
-    */
+    // Q_INVOKABLE void commit()
     auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -521,9 +473,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
-    /*
-    Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int replaceLength = 0)
-    */
+    // Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int replaceLength = 0)
     auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -536,9 +486,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT)
   }
 }
 
-/*
-Q_INVOKABLE void clear()
-*/
+// Q_INVOKABLE void clear()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_CLEAR)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -558,9 +506,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Q_INVOKABLE void setSelectionOnFocusObject(const QPointF &anchorPos, const QPointF &cursorPos)
-*/
+// Q_INVOKABLE void setSelectionOnFocusObject(const QPointF &anchorPos, const QPointF &cursorPos)
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SETSELECTIONONFOCUSOBJECT)
 {
   auto obj = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -580,9 +526,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SETSELECTIONONFOCUSOBJECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void preeditTextChanged()
-*/
+// void preeditTextChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONPREEDITTEXTCHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -621,9 +565,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONPREEDITTEXTCHANGED)
   hb_retl(result);
 }
 
-/*
-void inputMethodHintsChanged()
-*/
+// void inputMethodHintsChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONINPUTMETHODHINTSCHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -662,9 +604,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONINPUTMETHODHINTSCHANGED)
   hb_retl(result);
 }
 
-/*
-void surroundingTextChanged()
-*/
+// void surroundingTextChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONSURROUNDINGTEXTCHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -703,9 +643,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONSURROUNDINGTEXTCHANGED)
   hb_retl(result);
 }
 
-/*
-void selectedTextChanged()
-*/
+// void selectedTextChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTEDTEXTCHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -744,9 +682,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTEDTEXTCHANGED)
   hb_retl(result);
 }
 
-/*
-void anchorPositionChanged()
-*/
+// void anchorPositionChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORPOSITIONCHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -785,9 +721,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORPOSITIONCHANGED)
   hb_retl(result);
 }
 
-/*
-void cursorPositionChanged()
-*/
+// void cursorPositionChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORPOSITIONCHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -826,9 +760,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORPOSITIONCHANGED)
   hb_retl(result);
 }
 
-/*
-void anchorRectangleChanged()
-*/
+// void anchorRectangleChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTANGLECHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -867,9 +799,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTANGLECHANGED)
   hb_retl(result);
 }
 
-/*
-void cursorRectangleChanged()
-*/
+// void cursorRectangleChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTANGLECHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -908,9 +838,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTANGLECHANGED)
   hb_retl(result);
 }
 
-/*
-void shiftActiveChanged()
-*/
+// void shiftActiveChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONSHIFTACTIVECHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -949,9 +877,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONSHIFTACTIVECHANGED)
   hb_retl(result);
 }
 
-/*
-void capsLockActiveChanged()
-*/
+// void capsLockActiveChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONCAPSLOCKACTIVECHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -990,9 +916,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONCAPSLOCKACTIVECHANGED)
   hb_retl(result);
 }
 
-/*
-void uppercaseChanged()
-*/
+// void uppercaseChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONUPPERCASECHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1031,9 +955,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONUPPERCASECHANGED)
   hb_retl(result);
 }
 
-/*
-void animatingChanged()
-*/
+// void animatingChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONANIMATINGCHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1072,9 +994,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONANIMATINGCHANGED)
   hb_retl(result);
 }
 
-/*
-void localeChanged()
-*/
+// void localeChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONLOCALECHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1113,9 +1033,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONLOCALECHANGED)
   hb_retl(result);
 }
 
-/*
-void selectionControlVisibleChanged()
-*/
+// void selectionControlVisibleChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTIONCONTROLVISIBLECHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1154,9 +1072,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTIONCONTROLVISIBLECHANGED)
   hb_retl(result);
 }
 
-/*
-void anchorRectIntersectsClipRectChanged()
-*/
+// void anchorRectIntersectsClipRectChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTINTERSECTSCLIPRECTCHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1195,9 +1111,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTINTERSECTSCLIPRECTCHANGE
   hb_retl(result);
 }
 
-/*
-void cursorRectIntersectsClipRectChanged()
-*/
+// void cursorRectIntersectsClipRectChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTINTERSECTSCLIPRECTCHANGED)
 {
   auto sender = qobject_cast<QVirtualKeyboardInputContext *>(Qt5xHb::getQObjectPointerFromSelfItem());
