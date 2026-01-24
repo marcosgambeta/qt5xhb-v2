@@ -65,21 +65,15 @@ RETURN
     HB_FUNC(QDBUSUNIXFILEDESCRIPTOR_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QDBusUnixFileDescriptor()
-    */
+    // QDBusUnixFileDescriptor()
     auto obj = new QDBusUnixFileDescriptor();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QDBusUnixFileDescriptor(int fileDescriptor)
-    */
+    // QDBusUnixFileDescriptor(int fileDescriptor)
     auto obj = new QDBusUnixFileDescriptor(PINT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDBUSUNIXFILEDESCRIPTOR(1)) {
-    /*
-    QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &other)
-    */
+    // QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &other)
     auto obj = new QDBusUnixFileDescriptor(*PQDBUSUNIXFILEDESCRIPTOR(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -96,9 +90,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void swap(QDBusUnixFileDescriptor &other)
-*/
+// void swap(QDBusUnixFileDescriptor &other)
 HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_SWAP)
 {
   auto obj = static_cast<QDBusUnixFileDescriptor *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -118,9 +110,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_ISVALID)
 {
   auto obj = static_cast<QDBusUnixFileDescriptor *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -138,9 +128,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_ISVALID)
   }
 }
 
-/*
-int fileDescriptor() const
-*/
+// int fileDescriptor() const
 HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_FILEDESCRIPTOR)
 {
   auto obj = static_cast<QDBusUnixFileDescriptor *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -158,9 +146,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_FILEDESCRIPTOR)
   }
 }
 
-/*
-void setFileDescriptor(int fileDescriptor)
-*/
+// void setFileDescriptor(int fileDescriptor)
 HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_SETFILEDESCRIPTOR)
 {
   auto obj = static_cast<QDBusUnixFileDescriptor *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -180,9 +166,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_SETFILEDESCRIPTOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void giveFileDescriptor(int fileDescriptor)
-*/
+// void giveFileDescriptor(int fileDescriptor)
 HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_GIVEFILEDESCRIPTOR)
 {
   auto obj = static_cast<QDBusUnixFileDescriptor *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -202,9 +186,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_GIVEFILEDESCRIPTOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int takeFileDescriptor()
-*/
+// int takeFileDescriptor()
 HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_TAKEFILEDESCRIPTOR)
 {
   auto obj = static_cast<QDBusUnixFileDescriptor *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -222,9 +204,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_TAKEFILEDESCRIPTOR)
   }
 }
 
-/*
-static bool isSupported()
-*/
+// static bool isSupported()
 HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_ISSUPPORTED)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

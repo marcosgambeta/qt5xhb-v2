@@ -65,9 +65,7 @@ RETURN
 
 #include <QtDBus/QDBusConnection>
 
-    /*
-    QDBusContext()
-    */
+    // QDBusContext()
 HB_FUNC_STATIC(QDBUSCONTEXT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool calledFromDBus() const
-*/
+// bool calledFromDBus() const
 HB_FUNC_STATIC(QDBUSCONTEXT_CALLEDFROMDBUS)
 {
   auto obj = static_cast<QDBusContext *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_CALLEDFROMDBUS)
   }
 }
 
-/*
-QDBusConnection connection() const
-*/
+// QDBusConnection connection() const
 HB_FUNC_STATIC(QDBUSCONTEXT_CONNECTION)
 {
   auto obj = static_cast<QDBusContext *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -127,9 +121,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_CONNECTION)
   }
 }
 
-/*
-const QDBusMessage &message() const
-*/
+// const QDBusMessage &message() const
 HB_FUNC_STATIC(QDBUSCONTEXT_MESSAGE)
 {
   auto obj = static_cast<QDBusContext *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -148,9 +140,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_MESSAGE)
   }
 }
 
-/*
-bool isDelayedReply() const
-*/
+// bool isDelayedReply() const
 HB_FUNC_STATIC(QDBUSCONTEXT_ISDELAYEDREPLY)
 {
   auto obj = static_cast<QDBusContext *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -168,9 +158,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_ISDELAYEDREPLY)
   }
 }
 
-/*
-void setDelayedReply(bool enable) const
-*/
+// void setDelayedReply(bool enable) const
 HB_FUNC_STATIC(QDBUSCONTEXT_SETDELAYEDREPLY)
 {
   auto obj = static_cast<QDBusContext *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -193,9 +181,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_SETDELAYEDREPLY)
 HB_FUNC_STATIC(QDBUSCONTEXT_SENDERRORREPLY)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
-    /*
-    void sendErrorReply(const QString &name, const QString &msg = QString()) const
-    */
+    // void sendErrorReply(const QString &name, const QString &msg = QString()) const
     auto obj = static_cast<QDBusContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -204,9 +190,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_SENDERRORREPLY)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2)) {
-    /*
-    void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
-    */
+    // void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
     auto obj = static_cast<QDBusContext *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {

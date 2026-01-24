@@ -51,9 +51,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    virtual ~QDBusVirtualObject()
-    */
+    // virtual ~QDBusVirtualObject()
 HB_FUNC_STATIC(QDBUSVIRTUALOBJECT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

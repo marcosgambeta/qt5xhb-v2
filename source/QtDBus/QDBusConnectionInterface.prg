@@ -50,9 +50,7 @@ RETURN
 #include <QtDBus/QDBusConnectionInterface>
 #endif
 
-    /*
-    void serviceRegistered(const QString &service)
-    */
+    // void serviceRegistered(const QString &service)
 HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED)
 {
   auto sender = qobject_cast<QDBusConnectionInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED)
   hb_retl(result);
 }
 
-/*
-void serviceUnregistered(const QString &service)
-*/
+// void serviceUnregistered(const QString &service)
 HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED)
 {
   auto sender = qobject_cast<QDBusConnectionInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -136,9 +132,7 @@ HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED)
   hb_retl(result);
 }
 
-/*
-void serviceOwnerChanged(const QString &name, const QString &oldOwner, const QString &newOwner)
-*/
+// void serviceOwnerChanged(const QString &name, const QString &oldOwner, const QString &newOwner)
 HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED)
 {
   auto sender = qobject_cast<QDBusConnectionInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -184,9 +178,7 @@ HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED)
   hb_retl(result);
 }
 
-/*
-void callWithCallbackFailed(const QDBusError &error, const QDBusMessage &call)
-*/
+// void callWithCallbackFailed(const QDBusError &error, const QDBusMessage &call)
 HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED)
 {
   auto sender = qobject_cast<QDBusConnectionInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());

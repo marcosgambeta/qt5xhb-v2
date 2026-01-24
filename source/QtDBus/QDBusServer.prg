@@ -59,15 +59,11 @@ RETURN
 HB_FUNC_STATIC(QDBUSSERVER_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QDBusServer(const QString &address, QObject * parent = nullptr)
-    */
+    // QDBusServer(const QString &address, QObject *parent = nullptr)
     auto obj = new QDBusServer(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QDBusServer(QObject * parent = nullptr)
-    */
+    // QDBusServer(QObject *parent = nullptr)
     auto obj = new QDBusServer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -84,9 +80,7 @@ HB_FUNC_STATIC(QDBUSSERVER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isConnected() const
-*/
+// bool isConnected() const
 HB_FUNC_STATIC(QDBUSSERVER_ISCONNECTED)
 {
   auto obj = qobject_cast<QDBusServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -104,9 +98,7 @@ HB_FUNC_STATIC(QDBUSSERVER_ISCONNECTED)
   }
 }
 
-/*
-QDBusError lastError() const
-*/
+// QDBusError lastError() const
 HB_FUNC_STATIC(QDBUSSERVER_LASTERROR)
 {
   auto obj = qobject_cast<QDBusServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -124,9 +116,7 @@ HB_FUNC_STATIC(QDBUSSERVER_LASTERROR)
   }
 }
 
-/*
-QString address() const
-*/
+// QString address() const
 HB_FUNC_STATIC(QDBUSSERVER_ADDRESS)
 {
   auto obj = qobject_cast<QDBusServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -144,9 +134,7 @@ HB_FUNC_STATIC(QDBUSSERVER_ADDRESS)
   }
 }
 
-/*
-void newConnection(const QDBusConnection &connection)
-*/
+// void newConnection(const QDBusConnection &connection)
 HB_FUNC_STATIC(QDBUSSERVER_ONNEWCONNECTION)
 {
   auto sender = qobject_cast<QDBusServer *>(Qt5xHb::getQObjectPointerFromSelfItem());

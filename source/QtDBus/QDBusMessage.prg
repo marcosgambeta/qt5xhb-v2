@@ -81,15 +81,11 @@ RETURN
 HB_FUNC_STATIC(QDBUSMESSAGE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QDBusMessage()
-    */
+    // QDBusMessage()
     auto obj = new QDBusMessage();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDBUSMESSAGE(1)) {
-    /*
-    QDBusMessage(const QDBusMessage &other)
-    */
+    // QDBusMessage(const QDBusMessage &other)
     auto obj = new QDBusMessage(*PQDBUSMESSAGE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -109,9 +105,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_DELETE)
 HB_FUNC_STATIC(QDBUSMESSAGE_CREATEREPLY)
 {
   if (ISNUMPAR(1) && HB_ISARRAY(1)) {
-    /*
-    QDBusMessage createReply(const QList<QVariant> &arguments = QList<QVariant>()) const
-    */
+    // QDBusMessage createReply(const QList<QVariant> &arguments = QList<QVariant>()) const
     auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -127,9 +121,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEREPLY)
       RQDBUSMESSAGE(obj->createReply(par1));
     }
   } else if (ISNUMPAR(1) && ISQVARIANT(1)) {
-    /*
-    QDBusMessage createReply(const QVariant &argument) const
-    */
+    // QDBusMessage createReply(const QVariant &argument) const
     auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -143,27 +135,21 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEREPLY)
 HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERRORREPLY)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    /*
-    QDBusMessage createErrorReply(const QString name, const QString &msg) const
-    */
+    // QDBusMessage createErrorReply(const QString name, const QString &msg) const
     auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RQDBUSMESSAGE(obj->createErrorReply(PQSTRING(1), PQSTRING(2)));
     }
   } else if (ISNUMPAR(1) && ISQDBUSERROR(1)) {
-    /*
-    QDBusMessage createErrorReply(const QDBusError &err) const
-    */
+    // QDBusMessage createErrorReply(const QDBusError &err) const
     auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RQDBUSMESSAGE(obj->createErrorReply(*PQDBUSERROR(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
-    /*
-    QDBusMessage createErrorReply(QDBusError::ErrorType type, const QString &msg) const
-    */
+    // QDBusMessage createErrorReply(QDBusError::ErrorType type, const QString &msg) const
     auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -174,9 +160,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERRORREPLY)
   }
 }
 
-/*
-QString service() const
-*/
+// QString service() const
 HB_FUNC_STATIC(QDBUSMESSAGE_SERVICE)
 {
   auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -194,9 +178,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_SERVICE)
   }
 }
 
-/*
-QString path() const
-*/
+// QString path() const
 HB_FUNC_STATIC(QDBUSMESSAGE_PATH)
 {
   auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -214,9 +196,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_PATH)
   }
 }
 
-/*
-QString interface() const
-*/
+// QString interface() const
 HB_FUNC_STATIC(QDBUSMESSAGE_INTERFACE)
 {
   auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -234,9 +214,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_INTERFACE)
   }
 }
 
-/*
-QString member() const
-*/
+// QString member() const
 HB_FUNC_STATIC(QDBUSMESSAGE_MEMBER)
 {
   auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -254,9 +232,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_MEMBER)
   }
 }
 
-/*
-QString errorName() const
-*/
+// QString errorName() const
 HB_FUNC_STATIC(QDBUSMESSAGE_ERRORNAME)
 {
   auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -274,9 +250,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ERRORNAME)
   }
 }
 
-/*
-QString errorMessage() const
-*/
+// QString errorMessage() const
 HB_FUNC_STATIC(QDBUSMESSAGE_ERRORMESSAGE)
 {
   auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -294,9 +268,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ERRORMESSAGE)
   }
 }
 
-/*
-QDBusMessage::MessageType type() const
-*/
+// QDBusMessage::MessageType type() const
 HB_FUNC_STATIC(QDBUSMESSAGE_TYPE)
 {
   auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -314,9 +286,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_TYPE)
   }
 }
 
-/*
-QString signature() const
-*/
+// QString signature() const
 HB_FUNC_STATIC(QDBUSMESSAGE_SIGNATURE)
 {
   auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -334,9 +304,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_SIGNATURE)
   }
 }
 
-/*
-bool isReplyRequired() const
-*/
+// bool isReplyRequired() const
 HB_FUNC_STATIC(QDBUSMESSAGE_ISREPLYREQUIRED)
 {
   auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -354,9 +322,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ISREPLYREQUIRED)
   }
 }
 
-/*
-void setDelayedReply(bool enable) const
-*/
+// void setDelayedReply(bool enable) const
 HB_FUNC_STATIC(QDBUSMESSAGE_SETDELAYEDREPLY)
 {
   auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -376,9 +342,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_SETDELAYEDREPLY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isDelayedReply() const
-*/
+// bool isDelayedReply() const
 HB_FUNC_STATIC(QDBUSMESSAGE_ISDELAYEDREPLY)
 {
   auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -396,9 +360,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ISDELAYEDREPLY)
   }
 }
 
-/*
-void setAutoStartService(bool enable)
-*/
+// void setAutoStartService(bool enable)
 HB_FUNC_STATIC(QDBUSMESSAGE_SETAUTOSTARTSERVICE)
 {
   auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -418,9 +380,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_SETAUTOSTARTSERVICE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool autoStartService() const
-*/
+// bool autoStartService() const
 HB_FUNC_STATIC(QDBUSMESSAGE_AUTOSTARTSERVICE)
 {
   auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -438,9 +398,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_AUTOSTARTSERVICE)
   }
 }
 
-/*
-void setArguments(const QList<QVariant> &arguments)
-*/
+// void setArguments(const QList<QVariant> &arguments)
 HB_FUNC_STATIC(QDBUSMESSAGE_SETARGUMENTS)
 {
   auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -467,9 +425,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_SETARGUMENTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QVariant> arguments() const
-*/
+// QList<QVariant> arguments() const
 HB_FUNC_STATIC(QDBUSMESSAGE_ARGUMENTS)
 {
   auto obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -487,9 +443,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ARGUMENTS)
   }
 }
 
-/*
-static QDBusMessage createSignal(const QString &path, const QString &interface, const QString &name)
-*/
+// static QDBusMessage createSignal(const QString &path, const QString &interface, const QString &name)
 HB_FUNC_STATIC(QDBUSMESSAGE_CREATESIGNAL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -503,10 +457,8 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATESIGNAL)
 #endif
 }
 
-/*
-static QDBusMessage createMethodCall(const QString &destination, const QString &path, const QString &interface, const
-QString &method)
-*/
+// static QDBusMessage createMethodCall(const QString &destination, const QString &path, const QString &interface, const
+// QString &method)
 HB_FUNC_STATIC(QDBUSMESSAGE_CREATEMETHODCALL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -523,28 +475,20 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEMETHODCALL)
 HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERROR)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    /*
-    static QDBusMessage createError(const QString &name, const QString &msg)
-    */
+    // static QDBusMessage createError(const QString &name, const QString &msg)
     RQDBUSMESSAGE(QDBusMessage::createError(PQSTRING(1), PQSTRING(2)));
   } else if (ISNUMPAR(1) && ISQDBUSERROR(1)) {
-    /*
-    static QDBusMessage createError(const QDBusError &err)
-    */
+    // static QDBusMessage createError(const QDBusError &err)
     RQDBUSMESSAGE(QDBusMessage::createError(*PQDBUSERROR(1)));
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
-    /*
-    static QDBusMessage createError(QDBusError::ErrorType type, const QString &msg)
-    */
+    // static QDBusMessage createError(QDBusError::ErrorType type, const QString &msg)
     RQDBUSMESSAGE(QDBusMessage::createError(PQDBUSERROR_ERRORTYPE(1), PQSTRING(2)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-bool isInteractiveAuthorizationAllowed() const
-*/
+// bool isInteractiveAuthorizationAllowed() const
 HB_FUNC_STATIC(QDBUSMESSAGE_ISINTERACTIVEAUTHORIZATIONALLOWED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
@@ -564,9 +508,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ISINTERACTIVEAUTHORIZATIONALLOWED)
 #endif
 }
 
-/*
-void setInteractiveAuthorizationAllowed(bool enable)
-*/
+// void setInteractiveAuthorizationAllowed(bool enable)
 HB_FUNC_STATIC(QDBUSMESSAGE_SETINTERACTIVEAUTHORIZATIONALLOWED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))

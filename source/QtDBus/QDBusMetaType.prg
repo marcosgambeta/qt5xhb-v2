@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QDBUSMETATYPE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static bool demarshall(const QDBusArgument &, int id, void * data)
-*/
+// static bool demarshall(const QDBusArgument &, int id, void *data)
 HB_FUNC_STATIC(QDBUSMETATYPE_DEMARSHALL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -82,9 +80,7 @@ HB_FUNC_STATIC(QDBUSMETATYPE_DEMARSHALL)
 #endif
 }
 
-/*
-static int signatureToType(const char * signature)
-*/
+// static int signatureToType(const char *signature)
 HB_FUNC_STATIC(QDBUSMETATYPE_SIGNATURETOTYPE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -98,9 +94,7 @@ HB_FUNC_STATIC(QDBUSMETATYPE_SIGNATURETOTYPE)
 #endif
 }
 
-/*
-static const char * typeToSignature(int type)
-*/
+// static const char *typeToSignature(int type)
 HB_FUNC_STATIC(QDBUSMETATYPE_TYPETOSIGNATURE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

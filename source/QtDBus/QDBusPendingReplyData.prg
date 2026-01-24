@@ -43,8 +43,6 @@ RETURN
 #include <QtDBus/QDBusPendingReplyData>
 #endif
 
-/*
-void setMetaTypes(int count, const int *metaTypes)
-*/
+// void setMetaTypes(int count, const int *metaTypes)
 
 #pragma ENDDUMP

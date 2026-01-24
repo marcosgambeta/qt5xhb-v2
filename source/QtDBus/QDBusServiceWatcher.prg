@@ -66,16 +66,12 @@ RETURN
     HB_FUNC(QDBUSSERVICEWATCHER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QDBusServiceWatcher(QObject * parent = nullptr)
-    */
+    // QDBusServiceWatcher(QObject *parent = nullptr)
     auto obj = new QDBusServiceWatcher(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && ISQDBUSCONNECTION(2) && ISNUMORNIL(3) && ISQOBJECTORNIL(4)) {
-    /*
-    QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, QDBusServiceWatcher::WatchMode
-    watchMode = QDBusServiceWatcher::WatchForOwnerChange, QObject * parent = nullptr)
-    */
+    // QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, QDBusServiceWatcher::WatchMode
+    // watchMode = QDBusServiceWatcher::WatchForOwnerChange, QObject *parent = nullptr)
     auto obj = new QDBusServiceWatcher(PQSTRING(1), *PQDBUSCONNECTION(2),
                                        HB_ISNIL(3) ? QDBusServiceWatcher::WatchForOwnerChange
                                                    : PQDBUSSERVICEWATCHER_WATCHMODE(3),
@@ -95,9 +91,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringList watchedServices() const
-*/
+// QStringList watchedServices() const
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_WATCHEDSERVICES)
 {
   auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -115,9 +109,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_WATCHEDSERVICES)
   }
 }
 
-/*
-void setWatchedServices(const QStringList &services)
-*/
+// void setWatchedServices(const QStringList &services)
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETWATCHEDSERVICES)
 {
   auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -137,9 +129,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETWATCHEDSERVICES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addWatchedService(const QString &newService)
-*/
+// void addWatchedService(const QString &newService)
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ADDWATCHEDSERVICE)
 {
   auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -159,9 +149,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ADDWATCHEDSERVICE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool removeWatchedService(const QString &service)
-*/
+// bool removeWatchedService(const QString &service)
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_REMOVEWATCHEDSERVICE)
 {
   auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -179,9 +167,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_REMOVEWATCHEDSERVICE)
   }
 }
 
-/*
-QDBusServiceWatcher::WatchMode watchMode() const
-*/
+// QDBusServiceWatcher::WatchMode watchMode() const
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_WATCHMODE)
 {
   auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -199,9 +185,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_WATCHMODE)
   }
 }
 
-/*
-void setWatchMode(QDBusServiceWatcher::WatchMode mode)
-*/
+// void setWatchMode(QDBusServiceWatcher::WatchMode mode)
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETWATCHMODE)
 {
   auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -221,9 +205,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETWATCHMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDBusConnection connection() const
-*/
+// QDBusConnection connection() const
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_CONNECTION)
 {
   auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -241,9 +223,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_CONNECTION)
   }
 }
 
-/*
-void setConnection(const QDBusConnection &connection)
-*/
+// void setConnection(const QDBusConnection &connection)
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETCONNECTION)
 {
   auto obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -263,9 +243,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETCONNECTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void serviceRegistered(const QString &service)
-*/
+// void serviceRegistered(const QString &service)
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEREGISTERED)
 {
   auto sender = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -306,9 +284,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEREGISTERED)
   hb_retl(result);
 }
 
-/*
-void serviceUnregistered(const QString &service)
-*/
+// void serviceUnregistered(const QString &service)
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEUNREGISTERED)
 {
   auto sender = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -349,9 +325,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEUNREGISTERED)
   hb_retl(result);
 }
 
-/*
-void serviceOwnerChanged(const QString &service, const QString &oldOwner, const QString &newOwner)
-*/
+// void serviceOwnerChanged(const QString &service, const QString &oldOwner, const QString &newOwner)
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ONSERVICEOWNERCHANGED)
 {
   auto sender = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());

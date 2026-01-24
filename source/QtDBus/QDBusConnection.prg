@@ -95,15 +95,11 @@ RETURN
 HB_FUNC_STATIC(QDBUSCONNECTION_NEW)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QDBusConnection(const QString &name)
-    */
+    // QDBusConnection(const QString &name)
     auto obj = new QDBusConnection(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDBUSCONNECTION(1)) {
-    /*
-    QDBusConnection(const QDBusConnection &other)
-    */
+    // QDBusConnection(const QDBusConnection &other)
     auto obj = new QDBusConnection(*PQDBUSCONNECTION(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -120,9 +116,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isConnected() const
-*/
+// bool isConnected() const
 HB_FUNC_STATIC(QDBUSCONNECTION_ISCONNECTED)
 {
   auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -140,9 +134,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_ISCONNECTED)
   }
 }
 
-/*
-QString baseService() const
-*/
+// QString baseService() const
 HB_FUNC_STATIC(QDBUSCONNECTION_BASESERVICE)
 {
   auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -160,9 +152,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_BASESERVICE)
   }
 }
 
-/*
-QDBusError lastError() const
-*/
+// QDBusError lastError() const
 HB_FUNC_STATIC(QDBUSCONNECTION_LASTERROR)
 {
   auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -180,9 +170,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_LASTERROR)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QDBUSCONNECTION_NAME)
 {
   auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -200,9 +188,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_NAME)
   }
 }
 
-/*
-QDBusConnection::ConnectionCapabilities connectionCapabilities() const
-*/
+// QDBusConnection::ConnectionCapabilities connectionCapabilities() const
 HB_FUNC_STATIC(QDBUSCONNECTION_CONNECTIONCAPABILITIES)
 {
   auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -220,9 +206,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECTIONCAPABILITIES)
   }
 }
 
-/*
-bool send(const QDBusMessage &message) const
-*/
+// bool send(const QDBusMessage &message) const
 HB_FUNC_STATIC(QDBUSCONNECTION_SEND)
 {
   auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -243,19 +227,15 @@ HB_FUNC_STATIC(QDBUSCONNECTION_SEND)
 HB_FUNC_STATIC(QDBUSCONNECTION_CALLWITHCALLBACK)
 {
   if (ISBETWEEN(4, 5) && ISQDBUSMESSAGE(1) && ISQOBJECT(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && ISNUMORNIL(5)) {
-    /*
-    bool callWithCallback(const QDBusMessage &message, QObject * receiver, const char * returnMethod, const char *
-    errorMethod, int timeout = -1) const
-    */
+    // bool callWithCallback(const QDBusMessage &message, QObject *receiver, const char *returnMethod, const char *
+    // errorMethod, int timeout = -1) const
     auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RBOOL(obj->callWithCallback(*PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), PCONSTCHAR(4), OPINT(5, -1)));
     }
   } else if (ISBETWEEN(3, 4) && ISQDBUSMESSAGE(1) && ISQOBJECT(2) && HB_ISCHAR(3) && ISNUMORNIL(4)) {
-    /*
-    bool callWithCallback(const QDBusMessage &message, QObject * receiver, const char * slot, int timeout = -1) const
-    */
+    // bool callWithCallback(const QDBusMessage &message, QObject *receiver, const char *slot, int timeout = -1) const
     auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -266,9 +246,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CALLWITHCALLBACK)
   }
 }
 
-/*
-QDBusMessage call(const QDBusMessage &message, QDBus::CallMode mode = QDBus::Block, int timeout = -1) const
-*/
+// QDBusMessage call(const QDBusMessage &message, QDBus::CallMode mode = QDBus::Block, int timeout = -1) const
 HB_FUNC_STATIC(QDBUSCONNECTION_CALL)
 {
   auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -286,9 +264,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CALL)
   }
 }
 
-/*
-QDBusPendingCall asyncCall(const QDBusMessage &message, int timeout = -1) const
-*/
+// QDBusPendingCall asyncCall(const QDBusMessage &message, int timeout = -1) const
 HB_FUNC_STATIC(QDBUSCONNECTION_ASYNCCALL)
 {
   auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -309,10 +285,8 @@ HB_FUNC_STATIC(QDBUSCONNECTION_ASYNCCALL)
 HB_FUNC_STATIC(QDBUSCONNECTION_CONNECT)
 {
   if (ISNUMPAR(6) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && ISQOBJECT(5) && HB_ISCHAR(6)) {
-    /*
-    bool connect(const QString &service, const QString &path, const QString &interface, const QString &name, QObject
-    * receiver, const char * slot)
-    */
+    // bool connect(const QString &service, const QString &path, const QString &interface, const QString &name, QObject
+    // * receiver, const char *slot)
     auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -320,10 +294,8 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECT)
     }
   } else if (ISNUMPAR(7) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISCHAR(5) &&
              ISQOBJECT(6) && HB_ISCHAR(7)) {
-    /*
-    bool connect(const QString &service, const QString &path, const QString &interface, const QString &name, const
-    QString &signature, QObject * receiver, const char * slot)
-    */
+    // bool connect(const QString &service, const QString &path, const QString &interface, const QString &name, const
+    // QString &signature, QObject *receiver, const char *slot)
     auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -331,10 +303,8 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECT)
     }
   } else if (ISNUMPAR(8) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISARRAY(5) &&
              HB_ISCHAR(6) && ISQOBJECT(7) && HB_ISCHAR(8)) {
-    /*
-    bool connect(const QString &service, const QString &path, const QString &interface, const QString &name, const
-    QStringList &argumentMatch, const QString &signature, QObject * receiver, const char * slot)
-    */
+    // bool connect(const QString &service, const QString &path, const QString &interface, const QString &name, const
+    // QStringList &argumentMatch, const QString &signature, QObject *receiver, const char *slot)
     auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -349,10 +319,8 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECT)
 HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECT)
 {
   if (ISNUMPAR(6) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && ISQOBJECT(5) && HB_ISCHAR(6)) {
-    /*
-    bool disconnect(const QString &service, const QString &path, const QString &interface, const QString &name,
-    QObject * receiver, const char * slot)
-    */
+    // bool disconnect(const QString &service, const QString &path, const QString &interface, const QString &name,
+    // QObject *receiver, const char *slot)
     auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -360,10 +328,8 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECT)
     }
   } else if (ISNUMPAR(7) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISCHAR(5) &&
              ISQOBJECT(6) && HB_ISCHAR(7)) {
-    /*
-    bool disconnect(const QString &service, const QString &path, const QString &interface, const QString &name,
-    const QString &signature, QObject * receiver, const char * slot)
-    */
+    // bool disconnect(const QString &service, const QString &path, const QString &interface, const QString &name,
+    // const QString &signature, QObject *receiver, const char *slot)
     auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -372,10 +338,8 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECT)
     }
   } else if (ISNUMPAR(8) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISARRAY(5) &&
              HB_ISCHAR(6) && ISQOBJECT(7) && HB_ISCHAR(8)) {
-    /*
-    bool disconnect(const QString &service, const QString &path, const QString &interface, const QString &name,
-    const QStringList &argumentMatch, const QString &signature, QObject * receiver, const char * slot)
-    */
+    // bool disconnect(const QString &service, const QString &path, const QString &interface, const QString &name,
+    // const QStringList &argumentMatch, const QString &signature, QObject *receiver, const char *slot)
     auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -387,10 +351,8 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECT)
   }
 }
 
-/*
-bool registerObject(const QString &path, QObject * object, QDBusConnection::RegisterOptions options =
-QDBusConnection::ExportAdaptors)
-*/
+// bool registerObject(const QString &path, QObject *object, QDBusConnection::RegisterOptions options =
+// QDBusConnection::ExportAdaptors)
 HB_FUNC_STATIC(QDBUSCONNECTION_REGISTEROBJECT)
 {
   auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -411,9 +373,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_REGISTEROBJECT)
   }
 }
 
-/*
-void unregisterObject(const QString &path, QDBusConnection::UnregisterMode mode = QDBusConnection::UnregisterNode)
-*/
+// void unregisterObject(const QString &path, QDBusConnection::UnregisterMode mode = QDBusConnection::UnregisterNode)
 HB_FUNC_STATIC(QDBUSCONNECTION_UNREGISTEROBJECT)
 {
   auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -434,9 +394,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_UNREGISTEROBJECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QObject * objectRegisteredAt(const QString &path) const
-*/
+// QObject *objectRegisteredAt(const QString &path) const
 HB_FUNC_STATIC(QDBUSCONNECTION_OBJECTREGISTEREDAT)
 {
   auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -455,9 +413,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_OBJECTREGISTEREDAT)
   }
 }
 
-/*
-bool registerService(const QString &serviceName)
-*/
+// bool registerService(const QString &serviceName)
 HB_FUNC_STATIC(QDBUSCONNECTION_REGISTERSERVICE)
 {
   auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -475,9 +431,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_REGISTERSERVICE)
   }
 }
 
-/*
-bool unregisterService(const QString &serviceName)
-*/
+// bool unregisterService(const QString &serviceName)
 HB_FUNC_STATIC(QDBUSCONNECTION_UNREGISTERSERVICE)
 {
   auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -495,9 +449,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_UNREGISTERSERVICE)
   }
 }
 
-/*
-QDBusConnectionInterface * interface() const
-*/
+// QDBusConnectionInterface *interface() const
 HB_FUNC_STATIC(QDBUSCONNECTION_INTERFACE)
 {
   auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -516,9 +468,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_INTERFACE)
   }
 }
 
-/*
-void * internalPointer() const
-*/
+// void *internalPointer() const
 HB_FUNC_STATIC(QDBUSCONNECTION_INTERNALPOINTER)
 {
   auto obj = static_cast<QDBusConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -539,23 +489,17 @@ HB_FUNC_STATIC(QDBUSCONNECTION_INTERNALPOINTER)
 HB_FUNC_STATIC(QDBUSCONNECTION_CONNECTTOBUS)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
-    /*
-    static QDBusConnection connectToBus(QDBusConnection::BusType type, const QString &name)
-    */
+    // static QDBusConnection connectToBus(QDBusConnection::BusType type, const QString &name)
     RQDBUSCONNECTION(QDBusConnection::connectToBus(PQDBUSCONNECTION_BUSTYPE(1), PQSTRING(2)));
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    /*
-    static QDBusConnection connectToBus(const QString &address, const QString &name)
-    */
+    // static QDBusConnection connectToBus(const QString &address, const QString &name)
     RQDBUSCONNECTION(QDBusConnection::connectToBus(PQSTRING(1), PQSTRING(2)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-static QDBusConnection connectToPeer(const QString &address, const QString &name)
-*/
+// static QDBusConnection connectToPeer(const QString &address, const QString &name)
 HB_FUNC_STATIC(QDBUSCONNECTION_CONNECTTOPEER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -569,9 +513,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CONNECTTOPEER)
 #endif
 }
 
-/*
-static void disconnectFromBus(const QString &name)
-*/
+// static void disconnectFromBus(const QString &name)
 HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECTFROMBUS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -587,9 +529,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECTFROMBUS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void disconnectFromPeer(const QString &name)
-*/
+// static void disconnectFromPeer(const QString &name)
 HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECTFROMPEER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -605,9 +545,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_DISCONNECTFROMPEER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QByteArray localMachineId()
-*/
+// static QByteArray localMachineId()
 HB_FUNC_STATIC(QDBUSCONNECTION_LOCALMACHINEID)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -621,9 +559,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_LOCALMACHINEID)
 #endif
 }
 
-/*
-static QDBusConnection sessionBus()
-*/
+// static QDBusConnection sessionBus()
 HB_FUNC_STATIC(QDBUSCONNECTION_SESSIONBUS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -637,9 +573,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_SESSIONBUS)
 #endif
 }
 
-/*
-static QDBusConnection systemBus()
-*/
+// static QDBusConnection systemBus()
 HB_FUNC_STATIC(QDBUSCONNECTION_SYSTEMBUS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -653,9 +587,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_SYSTEMBUS)
 #endif
 }
 
-/*
-static QDBusConnection sender()
-*/
+// static QDBusConnection sender()
 HB_FUNC_STATIC(QDBUSCONNECTION_SENDER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
