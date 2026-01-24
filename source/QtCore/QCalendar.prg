@@ -85,17 +85,13 @@ RETURN
 HB_FUNC_STATIC(QCALENDAR_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QCalendar()
-    */
+    // QCalendar()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
     auto obj = new QCalendar();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QCalendar(QCalendar::System system)
-    */
+    // QCalendar(QCalendar::System system)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
     auto obj = new QCalendar(PQCALENDAR_SYSTEM(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -116,9 +112,7 @@ HB_FUNC_STATIC(QCALENDAR_DELETE)
 #endif
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QCALENDAR_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -138,9 +132,7 @@ HB_FUNC_STATIC(QCALENDAR_ISVALID)
 #endif
 }
 
-/*
-int daysInYear(int year) const
-*/
+// int daysInYear(int year) const
 HB_FUNC_STATIC(QCALENDAR_DAYSINYEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -160,9 +152,7 @@ HB_FUNC_STATIC(QCALENDAR_DAYSINYEAR)
 #endif
 }
 
-/*
-int monthsInYear(int year) const
-*/
+// int monthsInYear(int year) const
 HB_FUNC_STATIC(QCALENDAR_MONTHSINYEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -182,9 +172,7 @@ HB_FUNC_STATIC(QCALENDAR_MONTHSINYEAR)
 #endif
 }
 
-/*
-bool isDateValid(int year, int month, int day) const
-*/
+// bool isDateValid(int year, int month, int day) const
 HB_FUNC_STATIC(QCALENDAR_ISDATEVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -204,9 +192,7 @@ HB_FUNC_STATIC(QCALENDAR_ISDATEVALID)
 #endif
 }
 
-/*
-bool isLeapYear(int year) const
-*/
+// bool isLeapYear(int year) const
 HB_FUNC_STATIC(QCALENDAR_ISLEAPYEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -226,9 +212,7 @@ HB_FUNC_STATIC(QCALENDAR_ISLEAPYEAR)
 #endif
 }
 
-/*
-bool isGregorian() const
-*/
+// bool isGregorian() const
 HB_FUNC_STATIC(QCALENDAR_ISGREGORIAN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -248,9 +232,7 @@ HB_FUNC_STATIC(QCALENDAR_ISGREGORIAN)
 #endif
 }
 
-/*
-bool isLunar() const
-*/
+// bool isLunar() const
 HB_FUNC_STATIC(QCALENDAR_ISLUNAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -270,9 +252,7 @@ HB_FUNC_STATIC(QCALENDAR_ISLUNAR)
 #endif
 }
 
-/*
-bool isLuniSolar() const
-*/
+// bool isLuniSolar() const
 HB_FUNC_STATIC(QCALENDAR_ISLUNISOLAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -292,9 +272,7 @@ HB_FUNC_STATIC(QCALENDAR_ISLUNISOLAR)
 #endif
 }
 
-/*
-bool isSolar() const
-*/
+// bool isSolar() const
 HB_FUNC_STATIC(QCALENDAR_ISSOLAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -314,9 +292,7 @@ HB_FUNC_STATIC(QCALENDAR_ISSOLAR)
 #endif
 }
 
-/*
-bool isProleptic() const
-*/
+// bool isProleptic() const
 HB_FUNC_STATIC(QCALENDAR_ISPROLEPTIC)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -336,9 +312,7 @@ HB_FUNC_STATIC(QCALENDAR_ISPROLEPTIC)
 #endif
 }
 
-/*
-bool hasYearZero() const
-*/
+// bool hasYearZero() const
 HB_FUNC_STATIC(QCALENDAR_HASYEARZERO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -358,9 +332,7 @@ HB_FUNC_STATIC(QCALENDAR_HASYEARZERO)
 #endif
 }
 
-/*
-int maximumDaysInMonth() const
-*/
+// int maximumDaysInMonth() const
 HB_FUNC_STATIC(QCALENDAR_MAXIMUMDAYSINMONTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -380,9 +352,7 @@ HB_FUNC_STATIC(QCALENDAR_MAXIMUMDAYSINMONTH)
 #endif
 }
 
-/*
-int minimumDaysInMonth() const
-*/
+// int minimumDaysInMonth() const
 HB_FUNC_STATIC(QCALENDAR_MINIMUMDAYSINMONTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -402,9 +372,7 @@ HB_FUNC_STATIC(QCALENDAR_MINIMUMDAYSINMONTH)
 #endif
 }
 
-/*
-int maximumMonthsInYear() const
-*/
+// int maximumMonthsInYear() const
 HB_FUNC_STATIC(QCALENDAR_MAXIMUMMONTHSINYEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -424,9 +392,7 @@ HB_FUNC_STATIC(QCALENDAR_MAXIMUMMONTHSINYEAR)
 #endif
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QCALENDAR_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -446,9 +412,7 @@ HB_FUNC_STATIC(QCALENDAR_NAME)
 #endif
 }
 
-/*
-QDate dateFromParts(int year, int month, int day) const
-*/
+// QDate dateFromParts(int year, int month, int day) const
 HB_FUNC_STATIC(QCALENDAR_DATEFROMPARTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -468,9 +432,7 @@ HB_FUNC_STATIC(QCALENDAR_DATEFROMPARTS)
 #endif
 }
 
-/*
-int dayOfWeek(QDate date) const
-*/
+// int dayOfWeek(QDate date) const
 HB_FUNC_STATIC(QCALENDAR_DAYOFWEEK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -490,9 +452,7 @@ HB_FUNC_STATIC(QCALENDAR_DAYOFWEEK)
 #endif
 }
 
-/*
-QString weekDayName(const QLocale &locale, int day, QLocale::FormatType format = QLocale::LongFormat) const
-*/
+// QString weekDayName(const QLocale &locale, int day, QLocale::FormatType format = QLocale::LongFormat) const
 HB_FUNC_STATIC(QCALENDAR_WEEKDAYNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -512,9 +472,7 @@ HB_FUNC_STATIC(QCALENDAR_WEEKDAYNAME)
 #endif
 }
 
-/*
-QString standaloneWeekDayName(const QLocale &locale, int day, QLocale::FormatType format=QLocale::LongFormat) const
-*/
+// QString standaloneWeekDayName(const QLocale &locale, int day, QLocale::FormatType format=QLocale::LongFormat) const
 HB_FUNC_STATIC(QCALENDAR_STANDALONEWEEKDAYNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
@@ -535,9 +493,7 @@ HB_FUNC_STATIC(QCALENDAR_STANDALONEWEEKDAYNAME)
 #endif
 }
 
-/*
-static QStringList availableCalendars()
-*/
+// static QStringList availableCalendars()
 HB_FUNC_STATIC(QCALENDAR_AVAILABLECALENDARS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))

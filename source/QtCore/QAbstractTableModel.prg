@@ -59,10 +59,8 @@ HB_FUNC_STATIC(QABSTRACTTABLEMODEL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool dropMimeData(const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex &
-parent)
-*/
+// virtual bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &
+// parent)
 HB_FUNC_STATIC(QABSTRACTTABLEMODEL_DROPMIMEDATA)
 {
   auto obj = qobject_cast<QAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -80,9 +78,7 @@ HB_FUNC_STATIC(QABSTRACTTABLEMODEL_DROPMIMEDATA)
   }
 }
 
-/*
-virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
-*/
+// virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QABSTRACTTABLEMODEL_INDEX)
 {
   auto obj = qobject_cast<QAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());

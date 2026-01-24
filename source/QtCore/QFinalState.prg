@@ -48,9 +48,7 @@ RETURN
 #include <QtCore/QFinalState>
 #endif
 
-    /*
-    QFinalState(QState * parent = nullptr)
-    */
+    // QFinalState(QState *parent = nullptr)
 HB_FUNC_STATIC(QFINALSTATE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQSTATEORNIL(1)) {

@@ -61,9 +61,7 @@ RETURN
 #include <QtCore/QMetaType>
 #endif
 
-    /*
-    static int registerTypedef(const char * typeName, int aliasId)
-    */
+    // static int registerTypedef(const char *typeName, int aliasId)
 HB_FUNC_STATIC(QMETATYPE_REGISTERTYPEDEF)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -77,9 +75,7 @@ HB_FUNC_STATIC(QMETATYPE_REGISTERTYPEDEF)
 #endif
 }
 
-/*
-static int type(const char * typeName)
-*/
+// static int type(const char *typeName)
 HB_FUNC_STATIC(QMETATYPE_TYPE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -93,9 +89,7 @@ HB_FUNC_STATIC(QMETATYPE_TYPE)
 #endif
 }
 
-/*
-static const char * typeName(int type)
-*/
+// static const char *typeName(int type)
 HB_FUNC_STATIC(QMETATYPE_TYPENAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,9 +103,7 @@ HB_FUNC_STATIC(QMETATYPE_TYPENAME)
 #endif
 }
 
-/*
-static bool isRegistered(int type)
-*/
+// static bool isRegistered(int type)
 HB_FUNC_STATIC(QMETATYPE_ISREGISTERED)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,9 +117,7 @@ HB_FUNC_STATIC(QMETATYPE_ISREGISTERED)
 #endif
 }
 
-/*
-static void * construct(int type, void * where, const void * copy)
-*/
+// static void *construct(int type, void *where, const void *copy)
 HB_FUNC_STATIC(QMETATYPE_CONSTRUCT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,9 +132,7 @@ HB_FUNC_STATIC(QMETATYPE_CONSTRUCT)
 #endif
 }
 
-/*
-static void destroy(int type, void * data)
-*/
+// static void destroy(int type, void *data)
 HB_FUNC_STATIC(QMETATYPE_DESTROY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,9 +148,7 @@ HB_FUNC_STATIC(QMETATYPE_DESTROY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static bool save(QDataStream &stream, int type, const void * data)
-*/
+// static bool save(QDataStream &stream, int type, const void *data)
 HB_FUNC_STATIC(QMETATYPE_SAVE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,9 +162,7 @@ HB_FUNC_STATIC(QMETATYPE_SAVE)
 #endif
 }
 
-/*
-static bool load(QDataStream &stream, int type, void * data)
-*/
+// static bool load(QDataStream &stream, int type, void *data)
 HB_FUNC_STATIC(QMETATYPE_LOAD)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

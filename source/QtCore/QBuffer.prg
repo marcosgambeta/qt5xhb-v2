@@ -65,15 +65,11 @@ RETURN
 HB_FUNC_STATIC(QBUFFER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QBuffer(QObject * parent = nullptr)
-    */
+    // QBuffer(QObject *parent = nullptr)
     auto obj = new QBuffer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QBuffer(QByteArray * byteArray, QObject * parent = nullptr)
-    */
+    // QBuffer(QByteArray *byteArray, QObject *parent = nullptr)
     auto obj = new QBuffer(PQBYTEARRAY(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -90,9 +86,7 @@ HB_FUNC_STATIC(QBUFFER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QByteArray &buffer()
-*/
+// QByteArray &buffer()
 HB_FUNC_STATIC(QBUFFER_BUFFER1)
 {
   auto obj = qobject_cast<QBuffer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -111,9 +105,7 @@ HB_FUNC_STATIC(QBUFFER_BUFFER1)
   }
 }
 
-/*
-const QByteArray &buffer() const
-*/
+// const QByteArray &buffer() const
 HB_FUNC_STATIC(QBUFFER_BUFFER2)
 {
   auto obj = qobject_cast<QBuffer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -137,9 +129,7 @@ HB_FUNC_STATIC(QBUFFER_BUFFER)
   HB_FUNC_EXEC(QBUFFER_BUFFER1);
 }
 
-/*
-const QByteArray &data() const
-*/
+// const QByteArray &data() const
 HB_FUNC_STATIC(QBUFFER_DATA)
 {
   auto obj = qobject_cast<QBuffer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -158,9 +148,7 @@ HB_FUNC_STATIC(QBUFFER_DATA)
   }
 }
 
-/*
-void setBuffer(QByteArray * byteArray)
-*/
+// void setBuffer(QByteArray *byteArray)
 HB_FUNC_STATIC(QBUFFER_SETBUFFER)
 {
   auto obj = qobject_cast<QBuffer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -183,9 +171,7 @@ HB_FUNC_STATIC(QBUFFER_SETBUFFER)
 HB_FUNC_STATIC(QBUFFER_SETDATA)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
-    /*
-    void setData(const QByteArray &data)
-    */
+    // void setData(const QByteArray &data)
     auto obj = qobject_cast<QBuffer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -194,9 +180,7 @@ HB_FUNC_STATIC(QBUFFER_SETDATA)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
-    /*
-    void setData(const char * data, int size)
-    */
+    // void setData(const char *data, int size)
     auto obj = qobject_cast<QBuffer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -209,9 +193,7 @@ HB_FUNC_STATIC(QBUFFER_SETDATA)
   }
 }
 
-/*
-virtual bool atEnd() const
-*/
+// virtual bool atEnd() const
 HB_FUNC_STATIC(QBUFFER_ATEND)
 {
   auto obj = qobject_cast<QBuffer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -229,9 +211,7 @@ HB_FUNC_STATIC(QBUFFER_ATEND)
   }
 }
 
-/*
-virtual bool canReadLine() const
-*/
+// virtual bool canReadLine() const
 HB_FUNC_STATIC(QBUFFER_CANREADLINE)
 {
   auto obj = qobject_cast<QBuffer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -249,9 +229,7 @@ HB_FUNC_STATIC(QBUFFER_CANREADLINE)
   }
 }
 
-/*
-virtual void close()
-*/
+// virtual void close()
 HB_FUNC_STATIC(QBUFFER_CLOSE)
 {
   auto obj = qobject_cast<QBuffer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -271,9 +249,7 @@ HB_FUNC_STATIC(QBUFFER_CLOSE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool open(QBuffer::OpenMode flags)
-*/
+// virtual bool open(QBuffer::OpenMode flags)
 HB_FUNC_STATIC(QBUFFER_OPEN)
 {
   auto obj = qobject_cast<QBuffer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -291,9 +267,7 @@ HB_FUNC_STATIC(QBUFFER_OPEN)
   }
 }
 
-/*
-virtual qint64 pos() const
-*/
+// virtual qint64 pos() const
 HB_FUNC_STATIC(QBUFFER_POS)
 {
   auto obj = qobject_cast<QBuffer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -311,9 +285,7 @@ HB_FUNC_STATIC(QBUFFER_POS)
   }
 }
 
-/*
-virtual bool seek(qint64 pos)
-*/
+// virtual bool seek(qint64 pos)
 HB_FUNC_STATIC(QBUFFER_SEEK)
 {
   auto obj = qobject_cast<QBuffer *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -331,9 +303,7 @@ HB_FUNC_STATIC(QBUFFER_SEEK)
   }
 }
 
-/*
-virtual qint64 size() const
-*/
+// virtual qint64 size() const
 HB_FUNC_STATIC(QBUFFER_SIZE)
 {
   auto obj = qobject_cast<QBuffer *>(Qt5xHb::getQObjectPointerFromSelfItem());

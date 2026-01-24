@@ -67,15 +67,11 @@ RETURN
 HB_FUNC_STATIC(QMARGINS_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QMargins()
-    */
+    // QMargins()
     auto obj = new QMargins();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
-    /*
-    QMargins(int left, int top, int right, int bottom)
-    */
+    // QMargins(int left, int top, int right, int bottom)
     auto obj = new QMargins(PINT(1), PINT(2), PINT(3), PINT(4));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -92,9 +88,7 @@ HB_FUNC_STATIC(QMARGINS_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QMARGINS_ISNULL)
 {
   auto obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -112,9 +106,7 @@ HB_FUNC_STATIC(QMARGINS_ISNULL)
   }
 }
 
-/*
-int left() const
-*/
+// int left() const
 HB_FUNC_STATIC(QMARGINS_LEFT)
 {
   auto obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -132,9 +124,7 @@ HB_FUNC_STATIC(QMARGINS_LEFT)
   }
 }
 
-/*
-int top() const
-*/
+// int top() const
 HB_FUNC_STATIC(QMARGINS_TOP)
 {
   auto obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -152,9 +142,7 @@ HB_FUNC_STATIC(QMARGINS_TOP)
   }
 }
 
-/*
-int right() const
-*/
+// int right() const
 HB_FUNC_STATIC(QMARGINS_RIGHT)
 {
   auto obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -172,9 +160,7 @@ HB_FUNC_STATIC(QMARGINS_RIGHT)
   }
 }
 
-/*
-int bottom() const
-*/
+// int bottom() const
 HB_FUNC_STATIC(QMARGINS_BOTTOM)
 {
   auto obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -192,9 +178,7 @@ HB_FUNC_STATIC(QMARGINS_BOTTOM)
   }
 }
 
-/*
-void setLeft(int left)
-*/
+// void setLeft(int left)
 HB_FUNC_STATIC(QMARGINS_SETLEFT)
 {
   auto obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -214,9 +198,7 @@ HB_FUNC_STATIC(QMARGINS_SETLEFT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTop(int top)
-*/
+// void setTop(int top)
 HB_FUNC_STATIC(QMARGINS_SETTOP)
 {
   auto obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -236,9 +218,7 @@ HB_FUNC_STATIC(QMARGINS_SETTOP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRight(int right)
-*/
+// void setRight(int right)
 HB_FUNC_STATIC(QMARGINS_SETRIGHT)
 {
   auto obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -258,9 +238,7 @@ HB_FUNC_STATIC(QMARGINS_SETRIGHT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setBottom(int bottom)
-*/
+// void setBottom(int bottom)
 HB_FUNC_STATIC(QMARGINS_SETBOTTOM)
 {
   auto obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());

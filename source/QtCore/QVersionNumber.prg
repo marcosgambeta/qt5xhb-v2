@@ -76,33 +76,25 @@ RETURN
     HB_FUNC(QVERSIONNUMBER_NEW)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
-    /*
-    QVersionNumber(int maj, int min, int mic)
-    */
+    // QVersionNumber(int maj, int min, int mic)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     auto obj = new QVersionNumber(PINT(1), PINT(2), PINT(3));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    QVersionNumber(int maj, int min)
-    */
+    // QVersionNumber(int maj, int min)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     auto obj = new QVersionNumber(PINT(1), PINT(2));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QVersionNumber(int maj)
-    */
+    // QVersionNumber(int maj)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     auto obj = new QVersionNumber(PINT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(0)) {
-    /*
-    QVersionNumber()
-    */
+    // QVersionNumber()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     auto obj = new QVersionNumber();
     Qt5xHb::returnNewObject(obj, true);
@@ -123,9 +115,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_DELETE)
 #endif
 }
 
-/*
-bool isNormalized() const
-*/
+// bool isNormalized() const
 HB_FUNC_STATIC(QVERSIONNUMBER_ISNORMALIZED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -145,9 +135,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_ISNORMALIZED)
 #endif
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QVERSIONNUMBER_ISNULL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -167,9 +155,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_ISNULL)
 #endif
 }
 
-/*
-bool isPrefixOf(const QVersionNumber &other) const
-*/
+// bool isPrefixOf(const QVersionNumber &other) const
 HB_FUNC_STATIC(QVERSIONNUMBER_ISPREFIXOF)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -189,9 +175,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_ISPREFIXOF)
 #endif
 }
 
-/*
-int majorVersion() const
-*/
+// int majorVersion() const
 HB_FUNC_STATIC(QVERSIONNUMBER_MAJORVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -211,9 +195,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_MAJORVERSION)
 #endif
 }
 
-/*
-int microVersion() const
-*/
+// int microVersion() const
 HB_FUNC_STATIC(QVERSIONNUMBER_MICROVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -233,9 +215,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_MICROVERSION)
 #endif
 }
 
-/*
-int minorVersion() const
-*/
+// int minorVersion() const
 HB_FUNC_STATIC(QVERSIONNUMBER_MINORVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -255,9 +235,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_MINORVERSION)
 #endif
 }
 
-/*
-QVersionNumber normalized() const
-*/
+// QVersionNumber normalized() const
 HB_FUNC_STATIC(QVERSIONNUMBER_NORMALIZED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -277,9 +255,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_NORMALIZED)
 #endif
 }
 
-/*
-int segmentAt(int index) const
-*/
+// int segmentAt(int index) const
 HB_FUNC_STATIC(QVERSIONNUMBER_SEGMENTAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -299,9 +275,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_SEGMENTAT)
 #endif
 }
 
-/*
-int segmentCount() const
-*/
+// int segmentCount() const
 HB_FUNC_STATIC(QVERSIONNUMBER_SEGMENTCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -321,9 +295,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_SEGMENTCOUNT)
 #endif
 }
 
-/*
-QVector<int> segments() const
-*/
+// QVector<int> segments() const
 HB_FUNC_STATIC(QVERSIONNUMBER_SEGMENTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -350,9 +322,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_SEGMENTS)
 #endif
 }
 
-/*
-QString toString() const
-*/
+// QString toString() const
 HB_FUNC_STATIC(QVERSIONNUMBER_TOSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -372,9 +342,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_TOSTRING)
 #endif
 }
 
-/*
-static QVersionNumber commonPrefix(const QVersionNumber &v1, const QVersionNumber &v2)
-*/
+// static QVersionNumber commonPrefix(const QVersionNumber &v1, const QVersionNumber &v2)
 HB_FUNC_STATIC(QVERSIONNUMBER_COMMONPREFIX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -390,9 +358,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_COMMONPREFIX)
 #endif
 }
 
-/*
-static int compare(const QVersionNumber &v1, const QVersionNumber &v2)
-*/
+// static int compare(const QVersionNumber &v1, const QVersionNumber &v2)
 HB_FUNC_STATIC(QVERSIONNUMBER_COMPARE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -408,9 +374,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_COMPARE)
 #endif
 }
 
-/*
-static QVersionNumber fromString(const QString &string, int * suffixIndex = nullptr)
-*/
+// static QVersionNumber fromString(const QString &string, int *suffixIndex = nullptr)
 HB_FUNC_STATIC(QVERSIONNUMBER_FROMSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))

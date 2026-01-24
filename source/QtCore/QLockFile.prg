@@ -67,9 +67,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QLockFile(const QString &fileName)
-    */
+    // QLockFile(const QString &fileName)
 HB_FUNC_STATIC(QLOCKFILE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QLOCKFILE_DELETE)
 #endif
 }
 
-/*
-bool lock()
-*/
+// bool lock()
 HB_FUNC_STATIC(QLOCKFILE_LOCK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -115,9 +111,7 @@ HB_FUNC_STATIC(QLOCKFILE_LOCK)
 #endif
 }
 
-/*
-bool tryLock(int timeout = 0)
-*/
+// bool tryLock(int timeout = 0)
 HB_FUNC_STATIC(QLOCKFILE_TRYLOCK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -137,9 +131,7 @@ HB_FUNC_STATIC(QLOCKFILE_TRYLOCK)
 #endif
 }
 
-/*
-void unlock()
-*/
+// void unlock()
 HB_FUNC_STATIC(QLOCKFILE_UNLOCK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -161,9 +153,7 @@ HB_FUNC_STATIC(QLOCKFILE_UNLOCK)
 #endif
 }
 
-/*
-void setStaleLockTime(int)
-*/
+// void setStaleLockTime(int)
 HB_FUNC_STATIC(QLOCKFILE_SETSTALELOCKTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -185,9 +175,7 @@ HB_FUNC_STATIC(QLOCKFILE_SETSTALELOCKTIME)
 #endif
 }
 
-/*
-int staleLockTime() const
-*/
+// int staleLockTime() const
 HB_FUNC_STATIC(QLOCKFILE_STALELOCKTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -207,9 +195,7 @@ HB_FUNC_STATIC(QLOCKFILE_STALELOCKTIME)
 #endif
 }
 
-/*
-bool isLocked() const
-*/
+// bool isLocked() const
 HB_FUNC_STATIC(QLOCKFILE_ISLOCKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -229,9 +215,7 @@ HB_FUNC_STATIC(QLOCKFILE_ISLOCKED)
 #endif
 }
 
-/*
-bool getLockInfo(qint64 * pid, QString * hostname, QString * appname) const
-*/
+// bool getLockInfo(qint64 *pid, QString *hostname, QString *appname) const
 HB_FUNC_STATIC(QLOCKFILE_GETLOCKINFO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -253,9 +237,7 @@ HB_FUNC_STATIC(QLOCKFILE_GETLOCKINFO)
 #endif
 }
 
-/*
-bool removeStaleLockFile()
-*/
+// bool removeStaleLockFile()
 HB_FUNC_STATIC(QLOCKFILE_REMOVESTALELOCKFILE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))

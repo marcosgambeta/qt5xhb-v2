@@ -61,9 +61,7 @@ RETURN
 #include <QtCore/QCryptographicHash>
 #endif
 
-    /*
-    QCryptographicHash(QCryptographicHash::Algorithm method)
-    */
+    // QCryptographicHash(QCryptographicHash::Algorithm method)
 HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -83,9 +81,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void reset()
-*/
+// void reset()
 HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_RESET)
 {
   auto obj = static_cast<QCryptographicHash *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -108,9 +104,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_RESET)
 HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_ADDDATA)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
-    /*
-    void addData(const char * data, int length)
-    */
+    // void addData(const char *data, int length)
     auto obj = static_cast<QCryptographicHash *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -119,9 +113,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_ADDDATA)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
-    /*
-    void addData(const QByteArray &data)
-    */
+    // void addData(const QByteArray &data)
     auto obj = static_cast<QCryptographicHash *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -130,9 +122,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_ADDDATA)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
-    /*
-    bool addData(QIODevice * device)
-    */
+    // bool addData(QIODevice *device)
     auto obj = static_cast<QCryptographicHash *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -143,9 +133,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_ADDDATA)
   }
 }
 
-/*
-QByteArray result() const
-*/
+// QByteArray result() const
 HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_RESULT)
 {
   auto obj = static_cast<QCryptographicHash *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -163,9 +151,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_RESULT)
   }
 }
 
-/*
-static QByteArray hash(const QByteArray &data, QCryptographicHash::Algorithm method)
-*/
+// static QByteArray hash(const QByteArray &data, QCryptographicHash::Algorithm method)
 HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_HASH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,9 +165,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_HASH)
 #endif
 }
 
-/*
-static int hashLength(QCryptographicHash::Algorithm method)
-*/
+// static int hashLength(QCryptographicHash::Algorithm method)
 HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_HASHLENGTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))

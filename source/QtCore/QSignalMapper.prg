@@ -64,9 +64,7 @@ RETURN
 
 #include <QtWidgets/QWidget>
 
-    /*
-    QSignalMapper(QObject * parent = nullptr)
-    */
+    // QSignalMapper(QObject *parent = nullptr)
 HB_FUNC_STATIC(QSIGNALMAPPER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -89,9 +87,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_DELETE)
 HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
-    /*
-    void setMapping(QObject * sender, int id)
-    */
+    // void setMapping(QObject *sender, int id)
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -100,9 +96,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
-    /*
-    void setMapping(QObject * sender, const QString &text)
-    */
+    // void setMapping(QObject *sender, const QString &text)
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -111,9 +105,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQWIDGET(2)) {
-    /*
-    void setMapping(QObject * sender, QWidget * widget)
-    */
+    // void setMapping(QObject *sender, QWidget *widget)
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -122,9 +114,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQOBJECT(2)) {
-    /*
-    void setMapping(QObject * sender, QObject * object)
-    */
+    // void setMapping(QObject *sender, QObject *object)
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -137,9 +127,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
   }
 }
 
-/*
-void removeMappings(QObject * sender)
-*/
+// void removeMappings(QObject *sender)
 HB_FUNC_STATIC(QSIGNALMAPPER_REMOVEMAPPINGS)
 {
   auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -162,9 +150,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_REMOVEMAPPINGS)
 HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QObject * mapping(int id) const
-    */
+    // QObject *mapping(int id) const
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -172,9 +158,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QObject * mapping(const QString &text) const
-    */
+    // QObject *mapping(const QString &text) const
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -182,9 +166,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
-    /*
-    QObject * mapping(QWidget * widget) const
-    */
+    // QObject *mapping(QWidget *widget) const
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -192,9 +174,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
   } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
-    /*
-    QObject * mapping(QObject * object) const
-    */
+    // QObject *mapping(QObject *object) const
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -209,9 +189,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
 HB_FUNC_STATIC(QSIGNALMAPPER_MAP)
 {
   if (ISNUMPAR(0)) {
-    /*
-    void map()
-    */
+    // void map()
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -220,9 +198,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAP)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
-    /*
-    void map(QObject * sender)
-    */
+    // void map(QObject *sender)
     auto obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -235,9 +211,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAP)
   }
 }
 
-/*
-void mapped(int arg)
-*/
+// void mapped(int arg)
 HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED1)
 {
   auto sender = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -278,9 +252,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED1)
   hb_retl(result);
 }
 
-/*
-void mapped(const QString &arg)
-*/
+// void mapped(const QString &arg)
 HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED2)
 {
   auto sender = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -321,9 +293,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED2)
   hb_retl(result);
 }
 
-/*
-void mapped(QWidget * arg)
-*/
+// void mapped(QWidget *arg)
 HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED3)
 {
   auto sender = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -364,9 +334,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED3)
   hb_retl(result);
 }
 
-/*
-void mapped(QObject * arg)
-*/
+// void mapped(QObject *arg)
 HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED4)
 {
   auto sender = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -407,9 +375,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPED4)
   hb_retl(result);
 }
 
-/*
-void mappedInt(int i)
-*/
+// void mappedInt(int i)
 HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
@@ -453,9 +419,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDINT)
 #endif
 }
 
-/*
-void mappedObject(QObject * object)
-*/
+// void mappedObject(QObject *object)
 HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDOBJECT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
@@ -500,9 +464,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDOBJECT)
 #endif
 }
 
-/*
-void mappedString(const QString &text)
-*/
+// void mappedString(const QString &text)
 HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
@@ -547,9 +509,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDSTRING)
 #endif
 }
 
-/*
-void mappedWidget(QWidget * widget)
-*/
+// void mappedWidget(QWidget *widget)
 HB_FUNC_STATIC(QSIGNALMAPPER_ONMAPPEDWIDGET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))

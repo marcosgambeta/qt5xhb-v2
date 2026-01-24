@@ -73,25 +73,19 @@ RETURN
 HB_FUNC_STATIC(QMARGINSF_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QMarginsF()
-    */
+    // QMarginsF()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QMarginsF();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
-    /*
-    QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
-    */
+    // QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QMarginsF(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQMARGINSF(1)) {
-    /*
-    QMarginsF(const QMargins &margins)
-    */
+    // QMarginsF(const QMargins &margins)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QMarginsF(*PQMARGINS(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -112,9 +106,7 @@ HB_FUNC_STATIC(QMARGINSF_DELETE)
 #endif
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QMARGINSF_ISNULL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -134,9 +126,7 @@ HB_FUNC_STATIC(QMARGINSF_ISNULL)
 #endif
 }
 
-/*
-qreal left() const
-*/
+// qreal left() const
 HB_FUNC_STATIC(QMARGINSF_LEFT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -156,9 +146,7 @@ HB_FUNC_STATIC(QMARGINSF_LEFT)
 #endif
 }
 
-/*
-qreal top() const
-*/
+// qreal top() const
 HB_FUNC_STATIC(QMARGINSF_TOP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -178,9 +166,7 @@ HB_FUNC_STATIC(QMARGINSF_TOP)
 #endif
 }
 
-/*
-qreal right() const
-*/
+// qreal right() const
 HB_FUNC_STATIC(QMARGINSF_RIGHT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -200,9 +186,7 @@ HB_FUNC_STATIC(QMARGINSF_RIGHT)
 #endif
 }
 
-/*
-qreal bottom() const
-*/
+// qreal bottom() const
 HB_FUNC_STATIC(QMARGINSF_BOTTOM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -222,9 +206,7 @@ HB_FUNC_STATIC(QMARGINSF_BOTTOM)
 #endif
 }
 
-/*
-void setLeft(qreal left)
-*/
+// void setLeft(qreal left)
 HB_FUNC_STATIC(QMARGINSF_SETLEFT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -246,9 +228,7 @@ HB_FUNC_STATIC(QMARGINSF_SETLEFT)
 #endif
 }
 
-/*
-void setTop(qreal top)
-*/
+// void setTop(qreal top)
 HB_FUNC_STATIC(QMARGINSF_SETTOP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -270,9 +250,7 @@ HB_FUNC_STATIC(QMARGINSF_SETTOP)
 #endif
 }
 
-/*
-void setRight(qreal right)
-*/
+// void setRight(qreal right)
 HB_FUNC_STATIC(QMARGINSF_SETRIGHT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -294,9 +272,7 @@ HB_FUNC_STATIC(QMARGINSF_SETRIGHT)
 #endif
 }
 
-/*
-void setBottom(qreal bottom)
-*/
+// void setBottom(qreal bottom)
 HB_FUNC_STATIC(QMARGINSF_SETBOTTOM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -318,9 +294,7 @@ HB_FUNC_STATIC(QMARGINSF_SETBOTTOM)
 #endif
 }
 
-/*
-QMargins toMargins() const
-*/
+// QMargins toMargins() const
 HB_FUNC_STATIC(QMARGINSF_TOMARGINS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))

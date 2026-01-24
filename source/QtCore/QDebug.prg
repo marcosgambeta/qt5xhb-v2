@@ -70,21 +70,15 @@ RETURN
 HB_FUNC_STATIC(QDEBUG_NEW)
 {
   if (ISNUMPAR(1) && ISQIODEVICE(1)) {
-    /*
-    QDebug(QIODevice * device)
-    */
+    // QDebug(QIODevice *device)
     auto obj = new QDebug(PQIODEVICE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QDebug(QtMsgType t)
-    */
+    // QDebug(QtMsgType t)
     auto obj = new QDebug(PQTMSGTYPE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDEBUG(1)) {
-    /*
-    QDebug(const QDebug &o)
-    */
+    // QDebug(const QDebug &o)
     auto obj = new QDebug(*PQDEBUG(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -101,9 +95,7 @@ HB_FUNC_STATIC(QDEBUG_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void swap(QDebug &other)
-*/
+// void swap(QDebug &other)
 HB_FUNC_STATIC(QDEBUG_SWAP)
 {
   auto obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -123,9 +115,7 @@ HB_FUNC_STATIC(QDEBUG_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDebug &space()
-*/
+// QDebug &space()
 HB_FUNC_STATIC(QDEBUG_SPACE)
 {
   auto obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -144,9 +134,7 @@ HB_FUNC_STATIC(QDEBUG_SPACE)
   }
 }
 
-/*
-QDebug &nospace()
-*/
+// QDebug &nospace()
 HB_FUNC_STATIC(QDEBUG_NOSPACE)
 {
   auto obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -165,9 +153,7 @@ HB_FUNC_STATIC(QDEBUG_NOSPACE)
   }
 }
 
-/*
-QDebug &maybeSpace()
-*/
+// QDebug &maybeSpace()
 HB_FUNC_STATIC(QDEBUG_MAYBESPACE)
 {
   auto obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -186,9 +172,7 @@ HB_FUNC_STATIC(QDEBUG_MAYBESPACE)
   }
 }
 
-/*
-bool autoInsertSpaces() const
-*/
+// bool autoInsertSpaces() const
 HB_FUNC_STATIC(QDEBUG_AUTOINSERTSPACES)
 {
   auto obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -206,9 +190,7 @@ HB_FUNC_STATIC(QDEBUG_AUTOINSERTSPACES)
   }
 }
 
-/*
-void setAutoInsertSpaces(bool b)
-*/
+// void setAutoInsertSpaces(bool b)
 HB_FUNC_STATIC(QDEBUG_SETAUTOINSERTSPACES)
 {
   auto obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -228,9 +210,7 @@ HB_FUNC_STATIC(QDEBUG_SETAUTOINSERTSPACES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDebug &maybeQuote(char c = '"')
-*/
+// QDebug &maybeQuote(char c = '"')
 HB_FUNC_STATIC(QDEBUG_MAYBEQUOTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -251,9 +231,7 @@ HB_FUNC_STATIC(QDEBUG_MAYBEQUOTE)
 #endif
 }
 
-/*
-QDebug &noquote()
-*/
+// QDebug &noquote()
 HB_FUNC_STATIC(QDEBUG_NOQUOTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -274,9 +252,7 @@ HB_FUNC_STATIC(QDEBUG_NOQUOTE)
 #endif
 }
 
-/*
-QDebug &quote()
-*/
+// QDebug &quote()
 HB_FUNC_STATIC(QDEBUG_QUOTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -297,9 +273,7 @@ HB_FUNC_STATIC(QDEBUG_QUOTE)
 #endif
 }
 
-/*
-QDebug &resetFormat()
-*/
+// QDebug &resetFormat()
 HB_FUNC_STATIC(QDEBUG_RESETFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -320,9 +294,7 @@ HB_FUNC_STATIC(QDEBUG_RESETFORMAT)
 #endif
 }
 
-/*
-void setVerbosity(int verbosityLevel)
-*/
+// void setVerbosity(int verbosityLevel)
 HB_FUNC_STATIC(QDEBUG_SETVERBOSITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -347,9 +319,7 @@ HB_FUNC_STATIC(QDEBUG_SETVERBOSITY)
 HB_FUNC_STATIC(QDEBUG_VERBOSITY)
 {
   if (ISNUMPAR(0)) {
-    /*
-    int verbosity() const
-    */
+    // int verbosity() const
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     auto obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -358,9 +328,7 @@ HB_FUNC_STATIC(QDEBUG_VERBOSITY)
     }
 #endif
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QDebug &verbosity(int verbosityLevel)
-    */
+    // QDebug &verbosity(int verbosityLevel)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
     auto obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
 

@@ -80,33 +80,25 @@ RETURN
 HB_FUNC_STATIC(QSTORAGEINFO_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QStorageInfo()
-    */
+    // QStorageInfo()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QStorageInfo();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QStorageInfo(const QString &path)
-    */
+    // QStorageInfo(const QString &path)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QStorageInfo(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQDIR(1)) {
-    /*
-    QStorageInfo(const QDir &dir)
-    */
+    // QStorageInfo(const QDir &dir)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QStorageInfo(*PQDIR(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQSTORAGEINFO(1)) {
-    /*
-    QStorageInfo(const QStorageInfo &other)
-    */
+    // QStorageInfo(const QStorageInfo &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     auto obj = new QStorageInfo(*PQSTORAGEINFO(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -127,9 +119,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_DELETE)
 #endif
 }
 
-/*
-void swap(QStorageInfo &other)
-*/
+// void swap(QStorageInfo &other)
 HB_FUNC_STATIC(QSTORAGEINFO_SWAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -151,9 +141,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_SWAP)
 #endif
 }
 
-/*
-void setPath(const QString &path)
-*/
+// void setPath(const QString &path)
 HB_FUNC_STATIC(QSTORAGEINFO_SETPATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -175,9 +163,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_SETPATH)
 #endif
 }
 
-/*
-QString rootPath() const
-*/
+// QString rootPath() const
 HB_FUNC_STATIC(QSTORAGEINFO_ROOTPATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -197,9 +183,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ROOTPATH)
 #endif
 }
 
-/*
-QByteArray device() const
-*/
+// QByteArray device() const
 HB_FUNC_STATIC(QSTORAGEINFO_DEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -219,9 +203,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_DEVICE)
 #endif
 }
 
-/*
-QByteArray fileSystemType() const
-*/
+// QByteArray fileSystemType() const
 HB_FUNC_STATIC(QSTORAGEINFO_FILESYSTEMTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -241,9 +223,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_FILESYSTEMTYPE)
 #endif
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QSTORAGEINFO_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -263,9 +243,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_NAME)
 #endif
 }
 
-/*
-QString displayName() const
-*/
+// QString displayName() const
 HB_FUNC_STATIC(QSTORAGEINFO_DISPLAYNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -285,9 +263,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_DISPLAYNAME)
 #endif
 }
 
-/*
-qint64 bytesTotal() const
-*/
+// qint64 bytesTotal() const
 HB_FUNC_STATIC(QSTORAGEINFO_BYTESTOTAL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -307,9 +283,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_BYTESTOTAL)
 #endif
 }
 
-/*
-qint64 bytesFree() const
-*/
+// qint64 bytesFree() const
 HB_FUNC_STATIC(QSTORAGEINFO_BYTESFREE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -329,9 +303,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_BYTESFREE)
 #endif
 }
 
-/*
-qint64 bytesAvailable() const
-*/
+// qint64 bytesAvailable() const
 HB_FUNC_STATIC(QSTORAGEINFO_BYTESAVAILABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -351,9 +323,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_BYTESAVAILABLE)
 #endif
 }
 
-/*
-bool isRoot() const
-*/
+// bool isRoot() const
 HB_FUNC_STATIC(QSTORAGEINFO_ISROOT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -373,9 +343,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ISROOT)
 #endif
 }
 
-/*
-bool isReadOnly() const
-*/
+// bool isReadOnly() const
 HB_FUNC_STATIC(QSTORAGEINFO_ISREADONLY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -395,9 +363,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ISREADONLY)
 #endif
 }
 
-/*
-bool isReady() const
-*/
+// bool isReady() const
 HB_FUNC_STATIC(QSTORAGEINFO_ISREADY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -417,9 +383,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ISREADY)
 #endif
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QSTORAGEINFO_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -439,9 +403,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ISVALID)
 #endif
 }
 
-/*
-void refresh()
-*/
+// void refresh()
 HB_FUNC_STATIC(QSTORAGEINFO_REFRESH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -463,9 +425,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_REFRESH)
 #endif
 }
 
-/*
-static QList<QStorageInfo> mountedVolumes()
-*/
+// static QList<QStorageInfo> mountedVolumes()
 HB_FUNC_STATIC(QSTORAGEINFO_MOUNTEDVOLUMES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -503,9 +463,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_MOUNTEDVOLUMES)
 #endif
 }
 
-/*
-static QStorageInfo root()
-*/
+// static QStorageInfo root()
 HB_FUNC_STATIC(QSTORAGEINFO_ROOT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

@@ -111,33 +111,23 @@ RETURN
 HB_FUNC_STATIC(QFILEINFO_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QFileInfo()
-    */
+    // QFileInfo()
     auto obj = new QFileInfo();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QFileInfo(const QString &file)
-    */
+    // QFileInfo(const QString &file)
     auto obj = new QFileInfo(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQFILE(1)) {
-    /*
-    QFileInfo(const QFile &file)
-    */
+    // QFileInfo(const QFile &file)
     auto obj = new QFileInfo(*PQFILE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && ISQDIR(1) && HB_ISCHAR(2)) {
-    /*
-    QFileInfo(const QDir &dir, const QString &file)
-    */
+    // QFileInfo(const QDir &dir, const QString &file)
     auto obj = new QFileInfo(*PQDIR(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQFILEINFO(1)) {
-    /*
-    QFileInfo(const QFileInfo &fileinfo)
-    */
+    // QFileInfo(const QFileInfo &fileinfo)
     auto obj = new QFileInfo(*PQFILEINFO(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -154,9 +144,7 @@ HB_FUNC_STATIC(QFILEINFO_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDir absoluteDir() const
-*/
+// QDir absoluteDir() const
 HB_FUNC_STATIC(QFILEINFO_ABSOLUTEDIR)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -174,9 +162,7 @@ HB_FUNC_STATIC(QFILEINFO_ABSOLUTEDIR)
   }
 }
 
-/*
-QString absoluteFilePath() const
-*/
+// QString absoluteFilePath() const
 HB_FUNC_STATIC(QFILEINFO_ABSOLUTEFILEPATH)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -194,9 +180,7 @@ HB_FUNC_STATIC(QFILEINFO_ABSOLUTEFILEPATH)
   }
 }
 
-/*
-QString absolutePath() const
-*/
+// QString absolutePath() const
 HB_FUNC_STATIC(QFILEINFO_ABSOLUTEPATH)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -214,9 +198,7 @@ HB_FUNC_STATIC(QFILEINFO_ABSOLUTEPATH)
   }
 }
 
-/*
-QString baseName() const
-*/
+// QString baseName() const
 HB_FUNC_STATIC(QFILEINFO_BASENAME)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -234,9 +216,7 @@ HB_FUNC_STATIC(QFILEINFO_BASENAME)
   }
 }
 
-/*
-QString bundleName() const
-*/
+// QString bundleName() const
 HB_FUNC_STATIC(QFILEINFO_BUNDLENAME)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -254,9 +234,7 @@ HB_FUNC_STATIC(QFILEINFO_BUNDLENAME)
   }
 }
 
-/*
-bool caching() const
-*/
+// bool caching() const
 HB_FUNC_STATIC(QFILEINFO_CACHING)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -274,9 +252,7 @@ HB_FUNC_STATIC(QFILEINFO_CACHING)
   }
 }
 
-/*
-QString canonicalFilePath() const
-*/
+// QString canonicalFilePath() const
 HB_FUNC_STATIC(QFILEINFO_CANONICALFILEPATH)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -294,9 +270,7 @@ HB_FUNC_STATIC(QFILEINFO_CANONICALFILEPATH)
   }
 }
 
-/*
-QString canonicalPath() const
-*/
+// QString canonicalPath() const
 HB_FUNC_STATIC(QFILEINFO_CANONICALPATH)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -314,9 +288,7 @@ HB_FUNC_STATIC(QFILEINFO_CANONICALPATH)
   }
 }
 
-/*
-QString completeBaseName() const
-*/
+// QString completeBaseName() const
 HB_FUNC_STATIC(QFILEINFO_COMPLETEBASENAME)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -334,9 +306,7 @@ HB_FUNC_STATIC(QFILEINFO_COMPLETEBASENAME)
   }
 }
 
-/*
-QString completeSuffix() const
-*/
+// QString completeSuffix() const
 HB_FUNC_STATIC(QFILEINFO_COMPLETESUFFIX)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -354,9 +324,7 @@ HB_FUNC_STATIC(QFILEINFO_COMPLETESUFFIX)
   }
 }
 
-/*
-QDateTime created() const
-*/
+// QDateTime created() const
 HB_FUNC_STATIC(QFILEINFO_CREATED)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -374,9 +342,7 @@ HB_FUNC_STATIC(QFILEINFO_CREATED)
   }
 }
 
-/*
-QDir dir() const
-*/
+// QDir dir() const
 HB_FUNC_STATIC(QFILEINFO_DIR)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -397,9 +363,7 @@ HB_FUNC_STATIC(QFILEINFO_DIR)
 HB_FUNC_STATIC(QFILEINFO_EXISTS)
 {
   if (ISNUMPAR(0)) {
-    /*
-    bool exists() const
-    */
+    // bool exists() const
     auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -408,9 +372,7 @@ HB_FUNC_STATIC(QFILEINFO_EXISTS)
   }
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    static bool exists(const QString &file)
-    */
+    // static bool exists(const QString &file)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 
     RBOOL(QFileInfo::exists(PQSTRING(1)));
@@ -422,9 +384,7 @@ HB_FUNC_STATIC(QFILEINFO_EXISTS)
   }
 }
 
-/*
-QString fileName() const
-*/
+// QString fileName() const
 HB_FUNC_STATIC(QFILEINFO_FILENAME)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -442,9 +402,7 @@ HB_FUNC_STATIC(QFILEINFO_FILENAME)
   }
 }
 
-/*
-QString filePath() const
-*/
+// QString filePath() const
 HB_FUNC_STATIC(QFILEINFO_FILEPATH)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -462,9 +420,7 @@ HB_FUNC_STATIC(QFILEINFO_FILEPATH)
   }
 }
 
-/*
-QString group() const
-*/
+// QString group() const
 HB_FUNC_STATIC(QFILEINFO_GROUP)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -482,9 +438,7 @@ HB_FUNC_STATIC(QFILEINFO_GROUP)
   }
 }
 
-/*
-uint groupId() const
-*/
+// uint groupId() const
 HB_FUNC_STATIC(QFILEINFO_GROUPID)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -502,9 +456,7 @@ HB_FUNC_STATIC(QFILEINFO_GROUPID)
   }
 }
 
-/*
-bool isAbsolute() const
-*/
+// bool isAbsolute() const
 HB_FUNC_STATIC(QFILEINFO_ISABSOLUTE)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -522,9 +474,7 @@ HB_FUNC_STATIC(QFILEINFO_ISABSOLUTE)
   }
 }
 
-/*
-bool isBundle() const
-*/
+// bool isBundle() const
 HB_FUNC_STATIC(QFILEINFO_ISBUNDLE)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -542,9 +492,7 @@ HB_FUNC_STATIC(QFILEINFO_ISBUNDLE)
   }
 }
 
-/*
-bool isDir() const
-*/
+// bool isDir() const
 HB_FUNC_STATIC(QFILEINFO_ISDIR)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -562,9 +510,7 @@ HB_FUNC_STATIC(QFILEINFO_ISDIR)
   }
 }
 
-/*
-bool isExecutable() const
-*/
+// bool isExecutable() const
 HB_FUNC_STATIC(QFILEINFO_ISEXECUTABLE)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -582,9 +528,7 @@ HB_FUNC_STATIC(QFILEINFO_ISEXECUTABLE)
   }
 }
 
-/*
-bool isFile() const
-*/
+// bool isFile() const
 HB_FUNC_STATIC(QFILEINFO_ISFILE)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -602,9 +546,7 @@ HB_FUNC_STATIC(QFILEINFO_ISFILE)
   }
 }
 
-/*
-bool isHidden() const
-*/
+// bool isHidden() const
 HB_FUNC_STATIC(QFILEINFO_ISHIDDEN)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -622,9 +564,7 @@ HB_FUNC_STATIC(QFILEINFO_ISHIDDEN)
   }
 }
 
-/*
-bool isNativePath() const
-*/
+// bool isNativePath() const
 HB_FUNC_STATIC(QFILEINFO_ISNATIVEPATH)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -642,9 +582,7 @@ HB_FUNC_STATIC(QFILEINFO_ISNATIVEPATH)
   }
 }
 
-/*
-bool isReadable() const
-*/
+// bool isReadable() const
 HB_FUNC_STATIC(QFILEINFO_ISREADABLE)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -662,9 +600,7 @@ HB_FUNC_STATIC(QFILEINFO_ISREADABLE)
   }
 }
 
-/*
-bool isRelative() const
-*/
+// bool isRelative() const
 HB_FUNC_STATIC(QFILEINFO_ISRELATIVE)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -682,9 +618,7 @@ HB_FUNC_STATIC(QFILEINFO_ISRELATIVE)
   }
 }
 
-/*
-bool isRoot() const
-*/
+// bool isRoot() const
 HB_FUNC_STATIC(QFILEINFO_ISROOT)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -702,9 +636,7 @@ HB_FUNC_STATIC(QFILEINFO_ISROOT)
   }
 }
 
-/*
-bool isSymLink() const
-*/
+// bool isSymLink() const
 HB_FUNC_STATIC(QFILEINFO_ISSYMLINK)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -722,9 +654,7 @@ HB_FUNC_STATIC(QFILEINFO_ISSYMLINK)
   }
 }
 
-/*
-bool isWritable() const
-*/
+// bool isWritable() const
 HB_FUNC_STATIC(QFILEINFO_ISWRITABLE)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -742,9 +672,7 @@ HB_FUNC_STATIC(QFILEINFO_ISWRITABLE)
   }
 }
 
-/*
-QDateTime lastModified() const
-*/
+// QDateTime lastModified() const
 HB_FUNC_STATIC(QFILEINFO_LASTMODIFIED)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -762,9 +690,7 @@ HB_FUNC_STATIC(QFILEINFO_LASTMODIFIED)
   }
 }
 
-/*
-QDateTime lastRead() const
-*/
+// QDateTime lastRead() const
 HB_FUNC_STATIC(QFILEINFO_LASTREAD)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -782,9 +708,7 @@ HB_FUNC_STATIC(QFILEINFO_LASTREAD)
   }
 }
 
-/*
-bool makeAbsolute()
-*/
+// bool makeAbsolute()
 HB_FUNC_STATIC(QFILEINFO_MAKEABSOLUTE)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -802,9 +726,7 @@ HB_FUNC_STATIC(QFILEINFO_MAKEABSOLUTE)
   }
 }
 
-/*
-QString owner() const
-*/
+// QString owner() const
 HB_FUNC_STATIC(QFILEINFO_OWNER)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -822,9 +744,7 @@ HB_FUNC_STATIC(QFILEINFO_OWNER)
   }
 }
 
-/*
-uint ownerId() const
-*/
+// uint ownerId() const
 HB_FUNC_STATIC(QFILEINFO_OWNERID)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -842,9 +762,7 @@ HB_FUNC_STATIC(QFILEINFO_OWNERID)
   }
 }
 
-/*
-QString path() const
-*/
+// QString path() const
 HB_FUNC_STATIC(QFILEINFO_PATH)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -862,9 +780,7 @@ HB_FUNC_STATIC(QFILEINFO_PATH)
   }
 }
 
-/*
-bool permission(QFile::Permissions permissions) const
-*/
+// bool permission(QFile::Permissions permissions) const
 HB_FUNC_STATIC(QFILEINFO_PERMISSION)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -882,9 +798,7 @@ HB_FUNC_STATIC(QFILEINFO_PERMISSION)
   }
 }
 
-/*
-QFile::Permissions permissions() const
-*/
+// QFile::Permissions permissions() const
 HB_FUNC_STATIC(QFILEINFO_PERMISSIONS)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -902,9 +816,7 @@ HB_FUNC_STATIC(QFILEINFO_PERMISSIONS)
   }
 }
 
-/*
-void refresh()
-*/
+// void refresh()
 HB_FUNC_STATIC(QFILEINFO_REFRESH)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -924,9 +836,7 @@ HB_FUNC_STATIC(QFILEINFO_REFRESH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCaching(bool enable)
-*/
+// void setCaching(bool enable)
 HB_FUNC_STATIC(QFILEINFO_SETCACHING)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -949,9 +859,7 @@ HB_FUNC_STATIC(QFILEINFO_SETCACHING)
 HB_FUNC_STATIC(QFILEINFO_SETFILE)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    void setFile(const QString &file)
-    */
+    // void setFile(const QString &file)
     auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -960,9 +868,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQFILE(1)) {
-    /*
-    void setFile(const QFile &file)
-    */
+    // void setFile(const QFile &file)
     auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -971,9 +877,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && ISQDIR(1) && HB_ISCHAR(2)) {
-    /*
-    void setFile(const QDir &dir, const QString &file)
-    */
+    // void setFile(const QDir &dir, const QString &file)
     auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -986,9 +890,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
   }
 }
 
-/*
-qint64 size() const
-*/
+// qint64 size() const
 HB_FUNC_STATIC(QFILEINFO_SIZE)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1006,9 +908,7 @@ HB_FUNC_STATIC(QFILEINFO_SIZE)
   }
 }
 
-/*
-QString suffix() const
-*/
+// QString suffix() const
 HB_FUNC_STATIC(QFILEINFO_SUFFIX)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1026,9 +926,7 @@ HB_FUNC_STATIC(QFILEINFO_SUFFIX)
   }
 }
 
-/*
-void swap(QFileInfo &other)
-*/
+// void swap(QFileInfo &other)
 HB_FUNC_STATIC(QFILEINFO_SWAP)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1048,9 +946,7 @@ HB_FUNC_STATIC(QFILEINFO_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString symLinkTarget() const
-*/
+// QString symLinkTarget() const
 HB_FUNC_STATIC(QFILEINFO_SYMLINKTARGET)
 {
   auto obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -1068,9 +964,7 @@ HB_FUNC_STATIC(QFILEINFO_SYMLINKTARGET)
   }
 }
 
-/*
-QDateTime birthTime() const
-*/
+// QDateTime birthTime() const
 HB_FUNC_STATIC(QFILEINFO_BIRTHTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -1090,9 +984,7 @@ HB_FUNC_STATIC(QFILEINFO_BIRTHTIME)
 #endif
 }
 
-/*
-QDateTime fileTime(QFile::FileTime time) const
-*/
+// QDateTime fileTime(QFile::FileTime time) const
 HB_FUNC_STATIC(QFILEINFO_FILETIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -1112,9 +1004,7 @@ HB_FUNC_STATIC(QFILEINFO_FILETIME)
 #endif
 }
 
-/*
-QDateTime metadataChangeTime() const
-*/
+// QDateTime metadataChangeTime() const
 HB_FUNC_STATIC(QFILEINFO_METADATACHANGETIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -1134,9 +1024,7 @@ HB_FUNC_STATIC(QFILEINFO_METADATACHANGETIME)
 #endif
 }
 
-/*
-bool isJunction() const
-*/
+// bool isJunction() const
 HB_FUNC_STATIC(QFILEINFO_ISJUNCTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))

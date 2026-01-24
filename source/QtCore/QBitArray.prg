@@ -71,21 +71,15 @@ RETURN
 HB_FUNC_STATIC(QBITARRAY_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QBitArray()
-    */
+    // QBitArray()
     auto obj = new QBitArray();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISOPTLOG(2)) {
-    /*
-    QBitArray(int size, bool value = false)
-    */
+    // QBitArray(int size, bool value = false)
     auto obj = new QBitArray(PINT(1), OPBOOL(2, false));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQBITARRAY(1)) {
-    /*
-    QBitArray(const QBitArray &other)
-    */
+    // QBitArray(const QBitArray &other)
     auto obj = new QBitArray(*PQBITARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -102,9 +96,7 @@ HB_FUNC_STATIC(QBITARRAY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool at(int i) const
-*/
+// bool at(int i) const
 HB_FUNC_STATIC(QBITARRAY_AT)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -122,9 +114,7 @@ HB_FUNC_STATIC(QBITARRAY_AT)
   }
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QBITARRAY_CLEAR)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -144,9 +134,7 @@ HB_FUNC_STATIC(QBITARRAY_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearBit(int i)
-*/
+// void clearBit(int i)
 HB_FUNC_STATIC(QBITARRAY_CLEARBIT)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -169,18 +157,14 @@ HB_FUNC_STATIC(QBITARRAY_CLEARBIT)
 HB_FUNC_STATIC(QBITARRAY_COUNT)
 {
   if (ISNUMPAR(0)) {
-    /*
-    int count() const
-    */
+    // int count() const
     auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RINT(obj->count());
     }
   } else if (ISNUMPAR(1) && HB_ISLOG(1)) {
-    /*
-    int count(bool on) const
-    */
+    // int count(bool on) const
     auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -194,18 +178,14 @@ HB_FUNC_STATIC(QBITARRAY_COUNT)
 HB_FUNC_STATIC(QBITARRAY_FILL)
 {
   if (ISBETWEEN(1, 2) && HB_ISLOG(1) && ISNUMORNIL(2)) {
-    /*
-    bool fill(bool value, int size = -1)
-    */
+    // bool fill(bool value, int size = -1)
     auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RBOOL(obj->fill(PBOOL(1), OPINT(2, -1)));
     }
   } else if (ISNUMPAR(3) && HB_ISLOG(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
-    /*
-    void fill(bool value, int begin, int end)
-    */
+    // void fill(bool value, int begin, int end)
     auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -218,9 +198,7 @@ HB_FUNC_STATIC(QBITARRAY_FILL)
   }
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QBITARRAY_ISEMPTY)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -238,9 +216,7 @@ HB_FUNC_STATIC(QBITARRAY_ISEMPTY)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QBITARRAY_ISNULL)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -258,9 +234,7 @@ HB_FUNC_STATIC(QBITARRAY_ISNULL)
   }
 }
 
-/*
-void resize(int size)
-*/
+// void resize(int size)
 HB_FUNC_STATIC(QBITARRAY_RESIZE)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -283,9 +257,7 @@ HB_FUNC_STATIC(QBITARRAY_RESIZE)
 HB_FUNC_STATIC(QBITARRAY_SETBIT)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    void setBit(int i)
-    */
+    // void setBit(int i)
     auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -294,9 +266,7 @@ HB_FUNC_STATIC(QBITARRAY_SETBIT)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
-    /*
-    void setBit(int i, bool value)
-    */
+    // void setBit(int i, bool value)
     auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -309,9 +279,7 @@ HB_FUNC_STATIC(QBITARRAY_SETBIT)
   }
 }
 
-/*
-int size() const
-*/
+// int size() const
 HB_FUNC_STATIC(QBITARRAY_SIZE)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -329,9 +297,7 @@ HB_FUNC_STATIC(QBITARRAY_SIZE)
   }
 }
 
-/*
-bool testBit(int i) const
-*/
+// bool testBit(int i) const
 HB_FUNC_STATIC(QBITARRAY_TESTBIT)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -349,9 +315,7 @@ HB_FUNC_STATIC(QBITARRAY_TESTBIT)
   }
 }
 
-/*
-bool toggleBit(int i)
-*/
+// bool toggleBit(int i)
 HB_FUNC_STATIC(QBITARRAY_TOGGLEBIT)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -369,9 +333,7 @@ HB_FUNC_STATIC(QBITARRAY_TOGGLEBIT)
   }
 }
 
-/*
-void truncate(int pos)
-*/
+// void truncate(int pos)
 HB_FUNC_STATIC(QBITARRAY_TRUNCATE)
 {
   auto obj = static_cast<QBitArray *>(Qt5xHb::itemGetPtrStackSelfItem());

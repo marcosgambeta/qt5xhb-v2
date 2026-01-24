@@ -73,21 +73,15 @@ RETURN
 HB_FUNC_STATIC(QPERSISTENTMODELINDEX_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPersistentModelIndex()
-    */
+    // QPersistentModelIndex()
     auto obj = new QPersistentModelIndex();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
-    /*
-    QPersistentModelIndex(const QModelIndex &index)
-    */
+    // QPersistentModelIndex(const QModelIndex &index)
     auto obj = new QPersistentModelIndex(*PQMODELINDEX(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQPERSISTENTMODELINDEX(1)) {
-    /*
-    QPersistentModelIndex(const QPersistentModelIndex &other)
-    */
+    // QPersistentModelIndex(const QPersistentModelIndex &other)
     auto obj = new QPersistentModelIndex(*PQPERSISTENTMODELINDEX(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -104,9 +98,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void swap(QPersistentModelIndex &other)
-*/
+// void swap(QPersistentModelIndex &other)
 HB_FUNC_STATIC(QPERSISTENTMODELINDEX_SWAP)
 {
   auto obj = static_cast<QPersistentModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -126,9 +118,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int row() const
-*/
+// int row() const
 HB_FUNC_STATIC(QPERSISTENTMODELINDEX_ROW)
 {
   auto obj = static_cast<QPersistentModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -146,9 +136,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_ROW)
   }
 }
 
-/*
-int column() const
-*/
+// int column() const
 HB_FUNC_STATIC(QPERSISTENTMODELINDEX_COLUMN)
 {
   auto obj = static_cast<QPersistentModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -166,9 +154,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_COLUMN)
   }
 }
 
-/*
-void * internalPointer() const
-*/
+// void *internalPointer() const
 HB_FUNC_STATIC(QPERSISTENTMODELINDEX_INTERNALPOINTER)
 {
   auto obj = static_cast<QPersistentModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -186,9 +172,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_INTERNALPOINTER)
   }
 }
 
-/*
-quintptr internalId() const
-*/
+// quintptr internalId() const
 HB_FUNC_STATIC(QPERSISTENTMODELINDEX_INTERNALID)
 {
   auto obj = static_cast<QPersistentModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -206,9 +190,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_INTERNALID)
   }
 }
 
-/*
-QModelIndex parent() const
-*/
+// QModelIndex parent() const
 HB_FUNC_STATIC(QPERSISTENTMODELINDEX_PARENT)
 {
   auto obj = static_cast<QPersistentModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -226,9 +208,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_PARENT)
   }
 }
 
-/*
-QModelIndex sibling(int row, int column) const
-*/
+// QModelIndex sibling(int row, int column) const
 HB_FUNC_STATIC(QPERSISTENTMODELINDEX_SIBLING)
 {
   auto obj = static_cast<QPersistentModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -246,9 +226,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_SIBLING)
   }
 }
 
-/*
-QModelIndex child(int row, int column) const
-*/
+// QModelIndex child(int row, int column) const
 HB_FUNC_STATIC(QPERSISTENTMODELINDEX_CHILD)
 {
   auto obj = static_cast<QPersistentModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -266,9 +244,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_CHILD)
   }
 }
 
-/*
-QVariant data(int role = Qt::DisplayRole) const
-*/
+// QVariant data(int role = Qt::DisplayRole) const
 HB_FUNC_STATIC(QPERSISTENTMODELINDEX_DATA)
 {
   auto obj = static_cast<QPersistentModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -286,9 +262,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_DATA)
   }
 }
 
-/*
-Qt::ItemFlags flags() const
-*/
+// Qt::ItemFlags flags() const
 HB_FUNC_STATIC(QPERSISTENTMODELINDEX_FLAGS)
 {
   auto obj = static_cast<QPersistentModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -306,9 +280,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_FLAGS)
   }
 }
 
-/*
-const QAbstractItemModel * model() const
-*/
+// const QAbstractItemModel *model() const
 HB_FUNC_STATIC(QPERSISTENTMODELINDEX_MODEL)
 {
   auto obj = static_cast<QPersistentModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -327,9 +299,7 @@ HB_FUNC_STATIC(QPERSISTENTMODELINDEX_MODEL)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QPERSISTENTMODELINDEX_ISVALID)
 {
   auto obj = static_cast<QPersistentModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());

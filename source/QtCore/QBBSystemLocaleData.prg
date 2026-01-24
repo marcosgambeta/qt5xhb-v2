@@ -58,9 +58,7 @@ RETURN
 #include <QtCore/QBBSystemLocaleData>
 #endif
 
-    /*
-    QBBSystemLocaleData()
-    */
+    // QBBSystemLocaleData()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -80,9 +78,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-uint measurementSystem()
-*/
+// uint measurementSystem()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_MEASUREMENTSYSTEM)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -100,9 +96,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_MEASUREMENTSYSTEM)
   }
 }
 
-/*
-QVariant timeFormat(QLocale::FormatType)
-*/
+// QVariant timeFormat(QLocale::FormatType)
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_TIMEFORMAT)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -120,9 +114,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_TIMEFORMAT)
   }
 }
 
-/*
-QVariant dateTimeFormat(QLocale::FormatType)
-*/
+// QVariant dateTimeFormat(QLocale::FormatType)
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_DATETIMEFORMAT)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -140,9 +132,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_DATETIMEFORMAT)
   }
 }
 
-/*
-QLocale languageLocale()
-*/
+// QLocale languageLocale()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_LANGUAGELOCALE)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -160,9 +150,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_LANGUAGELOCALE)
   }
 }
 
-/*
-QLocale regionLocale()
-*/
+// QLocale regionLocale()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_REGIONLOCALE)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -180,9 +168,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_REGIONLOCALE)
   }
 }
 
-/*
-void installSocketNotifiers()
-*/
+// void installSocketNotifiers()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_INSTALLSOCKETNOTIFIERS)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -202,9 +188,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_INSTALLSOCKETNOTIFIERS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void readLanguageLocale()
-*/
+// void readLanguageLocale()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READLANGUAGELOCALE)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -224,9 +208,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READLANGUAGELOCALE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void readRegionLocale()
-*/
+// void readRegionLocale()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READREGIONLOCALE)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -246,9 +228,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READREGIONLOCALE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void readMeasurementSystem()
-*/
+// void readMeasurementSystem()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READMEASUREMENTSYSTEM)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -268,9 +248,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READMEASUREMENTSYSTEM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void readHourFormat()
-*/
+// void readHourFormat()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READHOURFORMAT)
 {
   auto obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());

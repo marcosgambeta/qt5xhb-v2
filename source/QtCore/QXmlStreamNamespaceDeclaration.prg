@@ -61,21 +61,15 @@ RETURN
 HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QXmlStreamNamespaceDeclaration()
-    */
+    // QXmlStreamNamespaceDeclaration()
     auto obj = new QXmlStreamNamespaceDeclaration();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQXMLSTREAMNAMESPACEDECLARATION(1)) {
-    /*
-    QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration &other)
-    */
+    // QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration &other)
     auto obj = new QXmlStreamNamespaceDeclaration(*PQXMLSTREAMNAMESPACEDECLARATION(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    /*
-    QXmlStreamNamespaceDeclaration(const QString &prefix, const QString &namespaceUri)
-    */
+    // QXmlStreamNamespaceDeclaration(const QString &prefix, const QString &namespaceUri)
     auto obj = new QXmlStreamNamespaceDeclaration(PQSTRING(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -92,9 +86,7 @@ HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringRef namespaceUri() const
-*/
+// QStringRef namespaceUri() const
 HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI)
 {
   auto obj = static_cast<QXmlStreamNamespaceDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -112,9 +104,7 @@ HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI)
   }
 }
 
-/*
-QStringRef prefix() const
-*/
+// QStringRef prefix() const
 HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_PREFIX)
 {
   auto obj = static_cast<QXmlStreamNamespaceDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());

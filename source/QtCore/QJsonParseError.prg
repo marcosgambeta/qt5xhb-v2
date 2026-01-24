@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QJSONPARSEERROR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QJSONPARSEERROR_ERRORSTRING)
 {
   auto obj = static_cast<QJsonParseError *>(Qt5xHb::itemGetPtrStackSelfItem());

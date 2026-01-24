@@ -55,9 +55,7 @@ HB_FUNC_STATIC(QWINEVENTNOTIFIER_NEW)
 #ifdef Q_OS_WIN
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
 #ifdef Q_OS_WIN
-    /*
-    QWinEventNotifier(QObject * parent = nullptr)
-    */
+    // QWinEventNotifier(QObject *parent = nullptr)
     auto obj = new QWinEventNotifier(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
@@ -79,9 +77,7 @@ HB_FUNC_STATIC(QWINEVENTNOTIFIER_DELETE)
 #endif
 }
 
-/*
-bool isEnabled() const
-*/
+// bool isEnabled() const
 HB_FUNC_STATIC(QWINEVENTNOTIFIER_ISENABLED)
 {
 #ifdef Q_OS_WIN
@@ -101,9 +97,7 @@ HB_FUNC_STATIC(QWINEVENTNOTIFIER_ISENABLED)
 #endif
 }
 
-/*
-void setEnabled(bool enable)
-*/
+// void setEnabled(bool enable)
 HB_FUNC_STATIC(QWINEVENTNOTIFIER_SETENABLED)
 {
 #ifdef Q_OS_WIN

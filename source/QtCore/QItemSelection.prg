@@ -64,15 +64,11 @@ RETURN
 HB_FUNC_STATIC(QITEMSELECTION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QItemSelection()
-    */
+    // QItemSelection()
     auto obj = new QItemSelection();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2)) {
-    /*
-    QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
-    */
+    // QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
     auto obj = new QItemSelection(*PQMODELINDEX(1), *PQMODELINDEX(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -89,9 +85,7 @@ HB_FUNC_STATIC(QITEMSELECTION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void select(const QModelIndex &topLeft, const QModelIndex &bottomRight)
-*/
+// void select(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 HB_FUNC_STATIC(QITEMSELECTION_SELECT)
 {
   auto obj = static_cast<QItemSelection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -111,9 +105,7 @@ HB_FUNC_STATIC(QITEMSELECTION_SELECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool contains(const QModelIndex &index) const
-*/
+// bool contains(const QModelIndex &index) const
 HB_FUNC_STATIC(QITEMSELECTION_CONTAINS)
 {
   auto obj = static_cast<QItemSelection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -131,9 +123,7 @@ HB_FUNC_STATIC(QITEMSELECTION_CONTAINS)
   }
 }
 
-/*
-QModelIndexList indexes() const
-*/
+// QModelIndexList indexes() const
 HB_FUNC_STATIC(QITEMSELECTION_INDEXES)
 {
   auto obj = static_cast<QItemSelection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -173,9 +163,7 @@ HB_FUNC_STATIC(QITEMSELECTION_INDEXES)
   }
 }
 
-/*
-void merge(const QItemSelection &other, QItemSelectionModel::SelectionFlags command)
-*/
+// void merge(const QItemSelection &other, QItemSelectionModel::SelectionFlags command)
 HB_FUNC_STATIC(QITEMSELECTION_MERGE)
 {
   auto obj = static_cast<QItemSelection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -195,9 +183,7 @@ HB_FUNC_STATIC(QITEMSELECTION_MERGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void split(const QItemSelectionRange &range, const QItemSelectionRange &other, QItemSelection * result)
-*/
+// static void split(const QItemSelectionRange &range, const QItemSelectionRange &other, QItemSelection *result)
 HB_FUNC_STATIC(QITEMSELECTION_SPLIT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

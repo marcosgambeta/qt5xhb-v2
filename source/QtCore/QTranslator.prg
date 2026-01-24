@@ -51,9 +51,7 @@ RETURN
 #include <QtCore/QTranslator>
 #endif
 
-    /*
-    QTranslator(QObject * parent = nullptr)
-    */
+    // QTranslator(QObject *parent = nullptr)
 HB_FUNC_STATIC(QTRANSLATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -73,9 +71,7 @@ HB_FUNC_STATIC(QTRANSLATOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool isEmpty() const
-*/
+// virtual bool isEmpty() const
 HB_FUNC_STATIC(QTRANSLATOR_ISEMPTY)
 {
   auto obj = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -96,20 +92,16 @@ HB_FUNC_STATIC(QTRANSLATOR_ISEMPTY)
 HB_FUNC_STATIC(QTRANSLATOR_LOAD)
 {
   if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISCHARORNIL(3) && ISCHARORNIL(4)) {
-    /*
-    bool load(const QString &filename, const QString &directory = QString(), const QString &search_delimiters =
-    QString(), const QString &suffix = QString())
-    */
+    // bool load(const QString &filename, const QString &directory = QString(), const QString &search_delimiters =
+    // QString(), const QString &suffix = QString())
     auto obj = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
       RBOOL(obj->load(PQSTRING(1), OPQSTRING(2, QString()), OPQSTRING(3, QString()), OPQSTRING(4, QString())));
     }
   } else if (ISBETWEEN(2, 5) && ISQLOCALE(1) && HB_ISCHAR(2) && ISCHARORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5)) {
-    /*
-    bool load(const QLocale &locale, const QString &filename, const QString &prefix = QString(), const QString &
-    directory = QString(), const QString &suffix = QString())
-    */
+    // bool load(const QLocale &locale, const QString &filename, const QString &prefix = QString(), const QString &
+    // directory = QString(), const QString &suffix = QString())
     auto obj = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -117,9 +109,7 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
                       OPQSTRING(5, QString())));
     }
   } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISCHARORNIL(3)) {
-    /*
-    bool load(const uchar * data, int len, const QString &directory = QString())
-    */
+    // bool load(const uchar *data, int len, const QString &directory = QString())
     auto obj = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -130,10 +120,8 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
   }
 }
 
-/*
-virtual QString translate(const char * context, const char * sourceText, const char * disambiguation = nullptr, int n =
--1) const
-*/
+// virtual QString translate(const char *context, const char *sourceText, const char *disambiguation = nullptr, int n =
+// -1) const
 HB_FUNC_STATIC(QTRANSLATOR_TRANSLATE)
 {
   auto obj = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem());

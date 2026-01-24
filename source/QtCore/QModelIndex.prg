@@ -71,15 +71,11 @@ RETURN
 HB_FUNC_STATIC(QMODELINDEX_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QModelIndex()
-    */
+    // QModelIndex()
     auto obj = new QModelIndex();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
-    /*
-    QModelIndex(const QModelIndex &other)
-    */
+    // QModelIndex(const QModelIndex &other)
     auto obj = new QModelIndex(*PQMODELINDEX(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -96,9 +92,7 @@ HB_FUNC_STATIC(QMODELINDEX_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QModelIndex child(int row, int column) const
-*/
+// QModelIndex child(int row, int column) const
 HB_FUNC_STATIC(QMODELINDEX_CHILD)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -116,9 +110,7 @@ HB_FUNC_STATIC(QMODELINDEX_CHILD)
   }
 }
 
-/*
-int column() const
-*/
+// int column() const
 HB_FUNC_STATIC(QMODELINDEX_COLUMN)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -136,9 +128,7 @@ HB_FUNC_STATIC(QMODELINDEX_COLUMN)
   }
 }
 
-/*
-QVariant data(int role = Qt::DisplayRole) const
-*/
+// QVariant data(int role = Qt::DisplayRole) const
 HB_FUNC_STATIC(QMODELINDEX_DATA)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -156,9 +146,7 @@ HB_FUNC_STATIC(QMODELINDEX_DATA)
   }
 }
 
-/*
-Qt::ItemFlags flags() const
-*/
+// Qt::ItemFlags flags() const
 HB_FUNC_STATIC(QMODELINDEX_FLAGS)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -176,9 +164,7 @@ HB_FUNC_STATIC(QMODELINDEX_FLAGS)
   }
 }
 
-/*
-quintptr internalId() const
-*/
+// quintptr internalId() const
 HB_FUNC_STATIC(QMODELINDEX_INTERNALID)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -196,9 +182,7 @@ HB_FUNC_STATIC(QMODELINDEX_INTERNALID)
   }
 }
 
-/*
-void * internalPointer() const
-*/
+// void *internalPointer() const
 HB_FUNC_STATIC(QMODELINDEX_INTERNALPOINTER)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -216,9 +200,7 @@ HB_FUNC_STATIC(QMODELINDEX_INTERNALPOINTER)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QMODELINDEX_ISVALID)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -236,9 +218,7 @@ HB_FUNC_STATIC(QMODELINDEX_ISVALID)
   }
 }
 
-/*
-const QAbstractItemModel * model() const
-*/
+// const QAbstractItemModel *model() const
 HB_FUNC_STATIC(QMODELINDEX_MODEL)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -257,9 +237,7 @@ HB_FUNC_STATIC(QMODELINDEX_MODEL)
   }
 }
 
-/*
-QModelIndex parent() const
-*/
+// QModelIndex parent() const
 HB_FUNC_STATIC(QMODELINDEX_PARENT)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -277,9 +255,7 @@ HB_FUNC_STATIC(QMODELINDEX_PARENT)
   }
 }
 
-/*
-int row() const
-*/
+// int row() const
 HB_FUNC_STATIC(QMODELINDEX_ROW)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -297,9 +273,7 @@ HB_FUNC_STATIC(QMODELINDEX_ROW)
   }
 }
 
-/*
-QModelIndex sibling(int row, int column) const
-*/
+// QModelIndex sibling(int row, int column) const
 HB_FUNC_STATIC(QMODELINDEX_SIBLING)
 {
   auto obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());

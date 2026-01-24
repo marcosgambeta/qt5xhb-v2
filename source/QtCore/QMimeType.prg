@@ -75,15 +75,11 @@ RETURN
 HB_FUNC_STATIC(QMIMETYPE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QMimeType()
-    */
+    // QMimeType()
     auto obj = new QMimeType();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQMIMETYPE(1)) {
-    /*
-    QMimeType(const QMimeType &other)
-    */
+    // QMimeType(const QMimeType &other)
     auto obj = new QMimeType(*PQMIMETYPE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -100,9 +96,7 @@ HB_FUNC_STATIC(QMIMETYPE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void swap(QMimeType &other)
-*/
+// void swap(QMimeType &other)
 HB_FUNC_STATIC(QMIMETYPE_SWAP)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -122,9 +116,7 @@ HB_FUNC_STATIC(QMIMETYPE_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QMIMETYPE_ISVALID)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -142,9 +134,7 @@ HB_FUNC_STATIC(QMIMETYPE_ISVALID)
   }
 }
 
-/*
-bool isDefault() const
-*/
+// bool isDefault() const
 HB_FUNC_STATIC(QMIMETYPE_ISDEFAULT)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -162,9 +152,7 @@ HB_FUNC_STATIC(QMIMETYPE_ISDEFAULT)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QMIMETYPE_NAME)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -182,9 +170,7 @@ HB_FUNC_STATIC(QMIMETYPE_NAME)
   }
 }
 
-/*
-QString comment() const
-*/
+// QString comment() const
 HB_FUNC_STATIC(QMIMETYPE_COMMENT)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -202,9 +188,7 @@ HB_FUNC_STATIC(QMIMETYPE_COMMENT)
   }
 }
 
-/*
-QString genericIconName() const
-*/
+// QString genericIconName() const
 HB_FUNC_STATIC(QMIMETYPE_GENERICICONNAME)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -222,9 +206,7 @@ HB_FUNC_STATIC(QMIMETYPE_GENERICICONNAME)
   }
 }
 
-/*
-QString iconName() const
-*/
+// QString iconName() const
 HB_FUNC_STATIC(QMIMETYPE_ICONNAME)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -242,9 +224,7 @@ HB_FUNC_STATIC(QMIMETYPE_ICONNAME)
   }
 }
 
-/*
-QStringList globPatterns() const
-*/
+// QStringList globPatterns() const
 HB_FUNC_STATIC(QMIMETYPE_GLOBPATTERNS)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -262,9 +242,7 @@ HB_FUNC_STATIC(QMIMETYPE_GLOBPATTERNS)
   }
 }
 
-/*
-QStringList parentMimeTypes() const
-*/
+// QStringList parentMimeTypes() const
 HB_FUNC_STATIC(QMIMETYPE_PARENTMIMETYPES)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -282,9 +260,7 @@ HB_FUNC_STATIC(QMIMETYPE_PARENTMIMETYPES)
   }
 }
 
-/*
-QStringList allAncestors() const
-*/
+// QStringList allAncestors() const
 HB_FUNC_STATIC(QMIMETYPE_ALLANCESTORS)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -302,9 +278,7 @@ HB_FUNC_STATIC(QMIMETYPE_ALLANCESTORS)
   }
 }
 
-/*
-QStringList aliases() const
-*/
+// QStringList aliases() const
 HB_FUNC_STATIC(QMIMETYPE_ALIASES)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -322,9 +296,7 @@ HB_FUNC_STATIC(QMIMETYPE_ALIASES)
   }
 }
 
-/*
-QStringList suffixes() const
-*/
+// QStringList suffixes() const
 HB_FUNC_STATIC(QMIMETYPE_SUFFIXES)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -342,9 +314,7 @@ HB_FUNC_STATIC(QMIMETYPE_SUFFIXES)
   }
 }
 
-/*
-QString preferredSuffix() const
-*/
+// QString preferredSuffix() const
 HB_FUNC_STATIC(QMIMETYPE_PREFERREDSUFFIX)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -362,9 +332,7 @@ HB_FUNC_STATIC(QMIMETYPE_PREFERREDSUFFIX)
   }
 }
 
-/*
-bool inherits(const QString &mimeTypeName) const
-*/
+// bool inherits(const QString &mimeTypeName) const
 HB_FUNC_STATIC(QMIMETYPE_INHERITS)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -382,9 +350,7 @@ HB_FUNC_STATIC(QMIMETYPE_INHERITS)
   }
 }
 
-/*
-QString filterString() const
-*/
+// QString filterString() const
 HB_FUNC_STATIC(QMIMETYPE_FILTERSTRING)
 {
   auto obj = static_cast<QMimeType *>(Qt5xHb::itemGetPtrStackSelfItem());

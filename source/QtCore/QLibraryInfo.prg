@@ -69,9 +69,7 @@ HB_FUNC_STATIC(QLIBRARYINFO_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QString licensee()
-*/
+// static QString licensee()
 HB_FUNC_STATIC(QLIBRARYINFO_LICENSEE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -85,9 +83,7 @@ HB_FUNC_STATIC(QLIBRARYINFO_LICENSEE)
 #endif
 }
 
-/*
-static QString licensedProducts()
-*/
+// static QString licensedProducts()
 HB_FUNC_STATIC(QLIBRARYINFO_LICENSEDPRODUCTS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -101,9 +97,7 @@ HB_FUNC_STATIC(QLIBRARYINFO_LICENSEDPRODUCTS)
 #endif
 }
 
-/*
-static QDate buildDate()
-*/
+// static QDate buildDate()
 HB_FUNC_STATIC(QLIBRARYINFO_BUILDDATE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,9 +111,7 @@ HB_FUNC_STATIC(QLIBRARYINFO_BUILDDATE)
 #endif
 }
 
-/*
-static bool isDebugBuild()
-*/
+// static bool isDebugBuild()
 HB_FUNC_STATIC(QLIBRARYINFO_ISDEBUGBUILD)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,9 +125,7 @@ HB_FUNC_STATIC(QLIBRARYINFO_ISDEBUGBUILD)
 #endif
 }
 
-/*
-static QString location(QLibraryInfo::LibraryLocation)
-*/
+// static QString location(QLibraryInfo::LibraryLocation)
 HB_FUNC_STATIC(QLIBRARYINFO_LOCATION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

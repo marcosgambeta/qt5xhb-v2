@@ -67,10 +67,8 @@ RETURN
 #endif
 #endif
 
-    /*
-    Q_DECL_CONSTEXPR QOperatingSystemVersion(QOperatingSystemVersion::OSType osType, int vmajor, int vminor = -1, int
-    vmicro = -1)
-    */
+    // Q_DECL_CONSTEXPR QOperatingSystemVersion(QOperatingSystemVersion::OSType osType, int vmajor, int vminor = -1, int
+    // vmicro = -1)
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -94,9 +92,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_DELETE)
 #endif
 }
 
-/*
-static QOperatingSystemVersion current()
-*/
+// static QOperatingSystemVersion current()
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_CURRENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -112,9 +108,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_CURRENT)
 #endif
 }
 
-/*
-static Q_DECL_CONSTEXPR QOperatingSystemVersion::OSType currentType()
-*/
+// static Q_DECL_CONSTEXPR QOperatingSystemVersion::OSType currentType()
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_CURRENTTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -130,9 +124,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_CURRENTTYPE)
 #endif
 }
 
-/*
-Q_DECL_CONSTEXPR int majorVersion() const
-*/
+// Q_DECL_CONSTEXPR int majorVersion() const
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_MAJORVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -152,9 +144,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_MAJORVERSION)
 #endif
 }
 
-/*
-Q_DECL_CONSTEXPR int minorVersion() const
-*/
+// Q_DECL_CONSTEXPR int minorVersion() const
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_MINORVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -174,9 +164,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_MINORVERSION)
 #endif
 }
 
-/*
-Q_DECL_CONSTEXPR int microVersion() const
-*/
+// Q_DECL_CONSTEXPR int microVersion() const
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_MICROVERSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -196,9 +184,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_MICROVERSION)
 #endif
 }
 
-/*
-Q_DECL_CONSTEXPR int segmentCount() const
-*/
+// Q_DECL_CONSTEXPR int segmentCount() const
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_SEGMENTCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -218,12 +204,8 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_SEGMENTCOUNT)
 #endif
 }
 
-/*
-bool isAnyOfType(std::initializer_list<OSType> types) const
-*/
-/*
-Q_DECL_CONSTEXPR QOperatingSystemVersion::OSType type() const
-*/
+// bool isAnyOfType(std::initializer_list<OSType> types) const
+// Q_DECL_CONSTEXPR QOperatingSystemVersion::OSType type() const
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -243,9 +225,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_TYPE)
 #endif
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))

@@ -74,15 +74,11 @@ RETURN
 HB_FUNC_STATIC(QEASINGCURVE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    /*
-    QEasingCurve(QEasingCurve::Type type = QEasingCurve::Linear)
-    */
+    // QEasingCurve(QEasingCurve::Type type = QEasingCurve::Linear)
     auto obj = new QEasingCurve(HB_ISNIL(1) ? QEasingCurve::Linear : PQEASINGCURVE_TYPE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQEASINGCURVE(1)) {
-    /*
-    QEasingCurve(const QEasingCurve &other)
-    */
+    // QEasingCurve(const QEasingCurve &other)
     auto obj = new QEasingCurve(*PQEASINGCURVE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -99,9 +95,7 @@ HB_FUNC_STATIC(QEASINGCURVE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addCubicBezierSegment(const QPointF &c1, const QPointF &c2, const QPointF &endPoint)
-*/
+// void addCubicBezierSegment(const QPointF &c1, const QPointF &c2, const QPointF &endPoint)
 HB_FUNC_STATIC(QEASINGCURVE_ADDCUBICBEZIERSEGMENT)
 {
   auto obj = static_cast<QEasingCurve *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -121,9 +115,7 @@ HB_FUNC_STATIC(QEASINGCURVE_ADDCUBICBEZIERSEGMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addTCBSegment(const QPointF &nextPoint, qreal t, qreal c, qreal b)
-*/
+// void addTCBSegment(const QPointF &nextPoint, qreal t, qreal c, qreal b)
 HB_FUNC_STATIC(QEASINGCURVE_ADDTCBSEGMENT)
 {
   auto obj = static_cast<QEasingCurve *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -143,9 +135,7 @@ HB_FUNC_STATIC(QEASINGCURVE_ADDTCBSEGMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal amplitude() const
-*/
+// qreal amplitude() const
 HB_FUNC_STATIC(QEASINGCURVE_AMPLITUDE)
 {
   auto obj = static_cast<QEasingCurve *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -163,9 +153,7 @@ HB_FUNC_STATIC(QEASINGCURVE_AMPLITUDE)
   }
 }
 
-/*
-qreal overshoot() const
-*/
+// qreal overshoot() const
 HB_FUNC_STATIC(QEASINGCURVE_OVERSHOOT)
 {
   auto obj = static_cast<QEasingCurve *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -183,9 +171,7 @@ HB_FUNC_STATIC(QEASINGCURVE_OVERSHOOT)
   }
 }
 
-/*
-qreal period() const
-*/
+// qreal period() const
 HB_FUNC_STATIC(QEASINGCURVE_PERIOD)
 {
   auto obj = static_cast<QEasingCurve *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -203,9 +189,7 @@ HB_FUNC_STATIC(QEASINGCURVE_PERIOD)
   }
 }
 
-/*
-void setAmplitude(qreal amplitude)
-*/
+// void setAmplitude(qreal amplitude)
 HB_FUNC_STATIC(QEASINGCURVE_SETAMPLITUDE)
 {
   auto obj = static_cast<QEasingCurve *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -225,9 +209,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETAMPLITUDE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOvershoot(qreal overshoot)
-*/
+// void setOvershoot(qreal overshoot)
 HB_FUNC_STATIC(QEASINGCURVE_SETOVERSHOOT)
 {
   auto obj = static_cast<QEasingCurve *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -247,9 +229,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETOVERSHOOT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPeriod(qreal period)
-*/
+// void setPeriod(qreal period)
 HB_FUNC_STATIC(QEASINGCURVE_SETPERIOD)
 {
   auto obj = static_cast<QEasingCurve *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -269,9 +249,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETPERIOD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setType(QEasingCurve::Type type)
-*/
+// void setType(QEasingCurve::Type type)
 HB_FUNC_STATIC(QEASINGCURVE_SETTYPE)
 {
   auto obj = static_cast<QEasingCurve *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -291,9 +269,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETTYPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void swap(QEasingCurve &other)
-*/
+// void swap(QEasingCurve &other)
 HB_FUNC_STATIC(QEASINGCURVE_SWAP)
 {
   auto obj = static_cast<QEasingCurve *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -313,9 +289,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVector<QPointF> toCubicSpline() const
-*/
+// QVector<QPointF> toCubicSpline() const
 HB_FUNC_STATIC(QEASINGCURVE_TOCUBICSPLINE)
 {
   auto obj = static_cast<QEasingCurve *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -355,9 +329,7 @@ HB_FUNC_STATIC(QEASINGCURVE_TOCUBICSPLINE)
   }
 }
 
-/*
-QEasingCurve::Type type() const
-*/
+// QEasingCurve::Type type() const
 HB_FUNC_STATIC(QEASINGCURVE_TYPE)
 {
   auto obj = static_cast<QEasingCurve *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -375,9 +347,7 @@ HB_FUNC_STATIC(QEASINGCURVE_TYPE)
   }
 }
 
-/*
-qreal valueForProgress(qreal progress) const
-*/
+// qreal valueForProgress(qreal progress) const
 HB_FUNC_STATIC(QEASINGCURVE_VALUEFORPROGRESS)
 {
   auto obj = static_cast<QEasingCurve *>(Qt5xHb::itemGetPtrStackSelfItem());

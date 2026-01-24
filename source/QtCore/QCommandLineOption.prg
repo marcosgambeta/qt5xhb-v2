@@ -67,25 +67,19 @@ RETURN
 HB_FUNC_STATIC(QCOMMANDLINEOPTION_NEW)
 {
   if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISCHARORNIL(3) && ISCHARORNIL(4)) {
-    /*
-    QCommandLineOption(const QString &name, const QString &description = QString(), const QString &valueName =
-    QString(), const QString &defaultValue = QString())
-    */
+    // QCommandLineOption(const QString &name, const QString &description = QString(), const QString &valueName =
+    // QString(), const QString &defaultValue = QString())
     auto obj =
         new QCommandLineOption(PQSTRING(1), OPQSTRING(2, QString()), OPQSTRING(3, QString()), OPQSTRING(4, QString()));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 4) && HB_ISARRAY(1) && ISCHARORNIL(2) && ISCHARORNIL(3) && ISCHARORNIL(4)) {
-    /*
-    QCommandLineOption(const QStringList &names, const QString &description = QString(), const QString &valueName =
-    QString(), const QString &defaultValue = QString())
-    */
+    // QCommandLineOption(const QStringList &names, const QString &description = QString(), const QString &valueName =
+    // QString(), const QString &defaultValue = QString())
     auto obj = new QCommandLineOption(PQSTRINGLIST(1), OPQSTRING(2, QString()), OPQSTRING(3, QString()),
                                       OPQSTRING(4, QString()));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1)) {
-    /*
-    QCommandLineOption(const QCommandLineOption &other)
-    */
+    // QCommandLineOption(const QCommandLineOption &other)
     auto obj = new QCommandLineOption(*PQCOMMANDLINEOPTION(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -102,9 +96,7 @@ HB_FUNC_STATIC(QCOMMANDLINEOPTION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void swap(QCommandLineOption &other)
-*/
+// void swap(QCommandLineOption &other)
 HB_FUNC_STATIC(QCOMMANDLINEOPTION_SWAP)
 {
   auto obj = static_cast<QCommandLineOption *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -124,9 +116,7 @@ HB_FUNC_STATIC(QCOMMANDLINEOPTION_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringList names() const
-*/
+// QStringList names() const
 HB_FUNC_STATIC(QCOMMANDLINEOPTION_NAMES)
 {
   auto obj = static_cast<QCommandLineOption *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -144,9 +134,7 @@ HB_FUNC_STATIC(QCOMMANDLINEOPTION_NAMES)
   }
 }
 
-/*
-void setValueName(const QString &name)
-*/
+// void setValueName(const QString &name)
 HB_FUNC_STATIC(QCOMMANDLINEOPTION_SETVALUENAME)
 {
   auto obj = static_cast<QCommandLineOption *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -166,9 +154,7 @@ HB_FUNC_STATIC(QCOMMANDLINEOPTION_SETVALUENAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString valueName() const
-*/
+// QString valueName() const
 HB_FUNC_STATIC(QCOMMANDLINEOPTION_VALUENAME)
 {
   auto obj = static_cast<QCommandLineOption *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -186,9 +172,7 @@ HB_FUNC_STATIC(QCOMMANDLINEOPTION_VALUENAME)
   }
 }
 
-/*
-void setDescription(const QString &description)
-*/
+// void setDescription(const QString &description)
 HB_FUNC_STATIC(QCOMMANDLINEOPTION_SETDESCRIPTION)
 {
   auto obj = static_cast<QCommandLineOption *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -208,9 +192,7 @@ HB_FUNC_STATIC(QCOMMANDLINEOPTION_SETDESCRIPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString description() const
-*/
+// QString description() const
 HB_FUNC_STATIC(QCOMMANDLINEOPTION_DESCRIPTION)
 {
   auto obj = static_cast<QCommandLineOption *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -228,9 +210,7 @@ HB_FUNC_STATIC(QCOMMANDLINEOPTION_DESCRIPTION)
   }
 }
 
-/*
-void setDefaultValue(const QString &defaultValue)
-*/
+// void setDefaultValue(const QString &defaultValue)
 HB_FUNC_STATIC(QCOMMANDLINEOPTION_SETDEFAULTVALUE)
 {
   auto obj = static_cast<QCommandLineOption *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -250,9 +230,7 @@ HB_FUNC_STATIC(QCOMMANDLINEOPTION_SETDEFAULTVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDefaultValues(const QStringList &defaultValues)
-*/
+// void setDefaultValues(const QStringList &defaultValues)
 HB_FUNC_STATIC(QCOMMANDLINEOPTION_SETDEFAULTVALUES)
 {
   auto obj = static_cast<QCommandLineOption *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -272,9 +250,7 @@ HB_FUNC_STATIC(QCOMMANDLINEOPTION_SETDEFAULTVALUES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringList defaultValues() const
-*/
+// QStringList defaultValues() const
 HB_FUNC_STATIC(QCOMMANDLINEOPTION_DEFAULTVALUES)
 {
   auto obj = static_cast<QCommandLineOption *>(Qt5xHb::itemGetPtrStackSelfItem());

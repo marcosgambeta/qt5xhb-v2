@@ -57,15 +57,11 @@ RETURN
 HB_FUNC_STATIC(QPROPERTYANIMATION_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QPropertyAnimation(QObject * parent = nullptr)
-    */
+    // QPropertyAnimation(QObject *parent = nullptr)
     auto obj = new QPropertyAnimation(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && ISQBYTEARRAY(2) && ISQOBJECTORNIL(3)) {
-    /*
-    QPropertyAnimation(QObject * target, const QByteArray &propertyName, QObject * parent = nullptr)
-    */
+    // QPropertyAnimation(QObject *target, const QByteArray &propertyName, QObject *parent = nullptr)
     auto obj = new QPropertyAnimation(PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -82,9 +78,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QByteArray propertyName() const
-*/
+// QByteArray propertyName() const
 HB_FUNC_STATIC(QPROPERTYANIMATION_PROPERTYNAME)
 {
   auto obj = qobject_cast<QPropertyAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -102,9 +96,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_PROPERTYNAME)
   }
 }
 
-/*
-void setPropertyName(const QByteArray &propertyName)
-*/
+// void setPropertyName(const QByteArray &propertyName)
 HB_FUNC_STATIC(QPROPERTYANIMATION_SETPROPERTYNAME)
 {
   auto obj = qobject_cast<QPropertyAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -124,9 +116,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_SETPROPERTYNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTargetObject(QObject * target)
-*/
+// void setTargetObject(QObject *target)
 HB_FUNC_STATIC(QPROPERTYANIMATION_SETTARGETOBJECT)
 {
   auto obj = qobject_cast<QPropertyAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -146,9 +136,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_SETTARGETOBJECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QObject * targetObject() const
-*/
+// QObject *targetObject() const
 HB_FUNC_STATIC(QPROPERTYANIMATION_TARGETOBJECT)
 {
   auto obj = qobject_cast<QPropertyAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());

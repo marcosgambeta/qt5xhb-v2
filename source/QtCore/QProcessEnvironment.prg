@@ -68,15 +68,11 @@ RETURN
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QProcessEnvironment()
-    */
+    // QProcessEnvironment()
     auto obj = new QProcessEnvironment();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1)) {
-    /*
-    QProcessEnvironment(const QProcessEnvironment &other)
-    */
+    // QProcessEnvironment(const QProcessEnvironment &other)
     auto obj = new QProcessEnvironment(*PQPROCESSENVIRONMENT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -93,9 +89,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void swap(QProcessEnvironment &other)
-*/
+// void swap(QProcessEnvironment &other)
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_SWAP)
 {
   auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -115,9 +109,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_ISEMPTY)
 {
   auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -135,9 +127,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_ISEMPTY)
   }
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_CLEAR)
 {
   auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -157,9 +147,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool contains(const QString &name) const
-*/
+// bool contains(const QString &name) const
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_CONTAINS)
 {
   auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -180,9 +168,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_CONTAINS)
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_INSERT)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    /*
-    void insert(const QString &name, const QString &value)
-    */
+    // void insert(const QString &name, const QString &value)
     auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -191,9 +177,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_INSERT)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1)) {
-    /*
-    void insert(const QProcessEnvironment &e)
-    */
+    // void insert(const QProcessEnvironment &e)
     auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -206,9 +190,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_INSERT)
   }
 }
 
-/*
-void remove(const QString &name)
-*/
+// void remove(const QString &name)
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_REMOVE)
 {
   auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -228,9 +210,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_REMOVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString value(const QString &name, const QString &defaultValue = QString()) const
-*/
+// QString value(const QString &name, const QString &defaultValue = QString()) const
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_VALUE)
 {
   auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -248,9 +228,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_VALUE)
   }
 }
 
-/*
-QStringList toStringList() const
-*/
+// QStringList toStringList() const
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_TOSTRINGLIST)
 {
   auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -268,9 +246,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_TOSTRINGLIST)
   }
 }
 
-/*
-QStringList keys() const
-*/
+// QStringList keys() const
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_KEYS)
 {
   auto obj = static_cast<QProcessEnvironment *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -288,9 +264,7 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_KEYS)
   }
 }
 
-/*
-static QProcessEnvironment systemEnvironment()
-*/
+// static QProcessEnvironment systemEnvironment()
 HB_FUNC_STATIC(QPROCESSENVIRONMENT_SYSTEMENVIRONMENT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

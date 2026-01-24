@@ -65,15 +65,11 @@ RETURN
 HB_FUNC_STATIC(QSHAREDMEMORY_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QSharedMemory(QObject * parent = nullptr)
-    */
+    // QSharedMemory(QObject *parent = nullptr)
     auto obj = new QSharedMemory(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QSharedMemory(const QString &key, QObject * parent = nullptr)
-    */
+    // QSharedMemory(const QString &key, QObject *parent = nullptr)
     auto obj = new QSharedMemory(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -90,9 +86,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setKey(const QString &key)
-*/
+// void setKey(const QString &key)
 HB_FUNC_STATIC(QSHAREDMEMORY_SETKEY)
 {
   auto obj = qobject_cast<QSharedMemory *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -112,9 +106,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SETKEY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString key() const
-*/
+// QString key() const
 HB_FUNC_STATIC(QSHAREDMEMORY_KEY)
 {
   auto obj = qobject_cast<QSharedMemory *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -132,9 +124,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_KEY)
   }
 }
 
-/*
-void setNativeKey(const QString &key)
-*/
+// void setNativeKey(const QString &key)
 HB_FUNC_STATIC(QSHAREDMEMORY_SETNATIVEKEY)
 {
   auto obj = qobject_cast<QSharedMemory *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -154,9 +144,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SETNATIVEKEY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString nativeKey() const
-*/
+// QString nativeKey() const
 HB_FUNC_STATIC(QSHAREDMEMORY_NATIVEKEY)
 {
   auto obj = qobject_cast<QSharedMemory *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -174,9 +162,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_NATIVEKEY)
   }
 }
 
-/*
-bool create(int size, QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite)
-*/
+// bool create(int size, QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite)
 HB_FUNC_STATIC(QSHAREDMEMORY_CREATE)
 {
   auto obj = qobject_cast<QSharedMemory *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -194,9 +180,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_CREATE)
   }
 }
 
-/*
-int size() const
-*/
+// int size() const
 HB_FUNC_STATIC(QSHAREDMEMORY_SIZE)
 {
   auto obj = qobject_cast<QSharedMemory *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -214,9 +198,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SIZE)
   }
 }
 
-/*
-bool attach(QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite)
-*/
+// bool attach(QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite)
 HB_FUNC_STATIC(QSHAREDMEMORY_ATTACH)
 {
   auto obj = qobject_cast<QSharedMemory *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -234,9 +216,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_ATTACH)
   }
 }
 
-/*
-bool isAttached() const
-*/
+// bool isAttached() const
 HB_FUNC_STATIC(QSHAREDMEMORY_ISATTACHED)
 {
   auto obj = qobject_cast<QSharedMemory *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -254,9 +234,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_ISATTACHED)
   }
 }
 
-/*
-bool detach()
-*/
+// bool detach()
 HB_FUNC_STATIC(QSHAREDMEMORY_DETACH)
 {
   auto obj = qobject_cast<QSharedMemory *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -274,9 +252,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_DETACH)
   }
 }
 
-/*
-void * data()
-*/
+// void *data()
 HB_FUNC_STATIC(QSHAREDMEMORY_DATA)
 {
   auto obj = qobject_cast<QSharedMemory *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -294,9 +270,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_DATA)
   }
 }
 
-/*
-bool lock()
-*/
+// bool lock()
 HB_FUNC_STATIC(QSHAREDMEMORY_LOCK)
 {
   auto obj = qobject_cast<QSharedMemory *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -314,9 +288,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_LOCK)
   }
 }
 
-/*
-bool unlock()
-*/
+// bool unlock()
 HB_FUNC_STATIC(QSHAREDMEMORY_UNLOCK)
 {
   auto obj = qobject_cast<QSharedMemory *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -334,9 +306,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_UNLOCK)
   }
 }
 
-/*
-QSharedMemory::SharedMemoryError error() const
-*/
+// QSharedMemory::SharedMemoryError error() const
 HB_FUNC_STATIC(QSHAREDMEMORY_ERROR)
 {
   auto obj = qobject_cast<QSharedMemory *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -354,9 +324,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_ERROR)
   }
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QSHAREDMEMORY_ERRORSTRING)
 {
   auto obj = qobject_cast<QSharedMemory *>(Qt5xHb::getQObjectPointerFromSelfItem());

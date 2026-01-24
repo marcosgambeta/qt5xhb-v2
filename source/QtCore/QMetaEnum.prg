@@ -71,9 +71,7 @@ RETURN
 #include <QtCore/QMetaEnum>
 #endif
 
-    /*
-    QMetaEnum()
-    */
+    // QMetaEnum()
 HB_FUNC_STATIC(QMETAENUM_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QMETAENUM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const char * name() const
-*/
+// const char *name() const
 HB_FUNC_STATIC(QMETAENUM_NAME)
 {
   auto obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -113,9 +109,7 @@ HB_FUNC_STATIC(QMETAENUM_NAME)
   }
 }
 
-/*
-bool isFlag() const
-*/
+// bool isFlag() const
 HB_FUNC_STATIC(QMETAENUM_ISFLAG)
 {
   auto obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -133,9 +127,7 @@ HB_FUNC_STATIC(QMETAENUM_ISFLAG)
   }
 }
 
-/*
-int keyCount() const
-*/
+// int keyCount() const
 HB_FUNC_STATIC(QMETAENUM_KEYCOUNT)
 {
   auto obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -153,9 +145,7 @@ HB_FUNC_STATIC(QMETAENUM_KEYCOUNT)
   }
 }
 
-/*
-const char * key(int index) const
-*/
+// const char *key(int index) const
 HB_FUNC_STATIC(QMETAENUM_KEY)
 {
   auto obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -173,9 +163,7 @@ HB_FUNC_STATIC(QMETAENUM_KEY)
   }
 }
 
-/*
-int value(int index) const
-*/
+// int value(int index) const
 HB_FUNC_STATIC(QMETAENUM_VALUE)
 {
   auto obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -193,9 +181,7 @@ HB_FUNC_STATIC(QMETAENUM_VALUE)
   }
 }
 
-/*
-const char * scope() const
-*/
+// const char *scope() const
 HB_FUNC_STATIC(QMETAENUM_SCOPE)
 {
   auto obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -213,9 +199,7 @@ HB_FUNC_STATIC(QMETAENUM_SCOPE)
   }
 }
 
-/*
-int keyToValue(const char * key) const
-*/
+// int keyToValue(const char *key) const
 HB_FUNC_STATIC(QMETAENUM_KEYTOVALUE)
 {
   auto obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -233,9 +217,7 @@ HB_FUNC_STATIC(QMETAENUM_KEYTOVALUE)
   }
 }
 
-/*
-const char * valueToKey(int value) const
-*/
+// const char *valueToKey(int value) const
 HB_FUNC_STATIC(QMETAENUM_VALUETOKEY)
 {
   auto obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -253,9 +235,7 @@ HB_FUNC_STATIC(QMETAENUM_VALUETOKEY)
   }
 }
 
-/*
-int keysToValue(const char * keys) const
-*/
+// int keysToValue(const char *keys) const
 HB_FUNC_STATIC(QMETAENUM_KEYSTOVALUE)
 {
   auto obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -273,9 +253,7 @@ HB_FUNC_STATIC(QMETAENUM_KEYSTOVALUE)
   }
 }
 
-/*
-QByteArray valueToKeys(int value) const
-*/
+// QByteArray valueToKeys(int value) const
 HB_FUNC_STATIC(QMETAENUM_VALUETOKEYS)
 {
   auto obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -293,9 +271,7 @@ HB_FUNC_STATIC(QMETAENUM_VALUETOKEYS)
   }
 }
 
-/*
-const QMetaObject * enclosingMetaObject() const
-*/
+// const QMetaObject *enclosingMetaObject() const
 HB_FUNC_STATIC(QMETAENUM_ENCLOSINGMETAOBJECT)
 {
   auto obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -314,9 +290,7 @@ HB_FUNC_STATIC(QMETAENUM_ENCLOSINGMETAOBJECT)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QMETAENUM_ISVALID)
 {
   auto obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -334,9 +308,7 @@ HB_FUNC_STATIC(QMETAENUM_ISVALID)
   }
 }
 
-/*
-const char * enumName() const
-*/
+// const char *enumName() const
 HB_FUNC_STATIC(QMETAENUM_ENUMNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
@@ -356,9 +328,7 @@ HB_FUNC_STATIC(QMETAENUM_ENUMNAME)
 #endif
 }
 
-/*
-bool isScoped() const
-*/
+// bool isScoped() const
 HB_FUNC_STATIC(QMETAENUM_ISSCOPED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

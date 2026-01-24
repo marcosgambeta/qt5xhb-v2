@@ -56,15 +56,11 @@ RETURN
 HB_FUNC_STATIC(QEVENTTRANSITION_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQSTATEORNIL(1)) {
-    /*
-    QEventTransition(QState * sourceState = nullptr)
-    */
+    // QEventTransition(QState *sourceState = nullptr)
     auto obj = new QEventTransition(OPQSTATE(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISNUM(2) && ISQSTATEORNIL(3)) {
-    /*
-    QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = nullptr)
-    */
+    // QEventTransition(QObject *object, QEvent::Type type, QState *sourceState = nullptr)
     auto obj = new QEventTransition(PQOBJECT(1), PQEVENT_TYPE(2), OPQSTATE(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -81,9 +77,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QObject * eventSource() const
-*/
+// QObject *eventSource() const
 HB_FUNC_STATIC(QEVENTTRANSITION_EVENTSOURCE)
 {
   auto obj = qobject_cast<QEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -102,9 +96,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_EVENTSOURCE)
   }
 }
 
-/*
-QEvent::Type eventType() const
-*/
+// QEvent::Type eventType() const
 HB_FUNC_STATIC(QEVENTTRANSITION_EVENTTYPE)
 {
   auto obj = qobject_cast<QEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -122,9 +114,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_EVENTTYPE)
   }
 }
 
-/*
-void setEventSource(QObject * object)
-*/
+// void setEventSource(QObject *object)
 HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTSOURCE)
 {
   auto obj = qobject_cast<QEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -144,9 +134,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTSOURCE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEventType(QEvent::Type type)
-*/
+// void setEventType(QEvent::Type type)
 HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTTYPE)
 {
   auto obj = qobject_cast<QEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());

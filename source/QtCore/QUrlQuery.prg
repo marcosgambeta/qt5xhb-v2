@@ -77,27 +77,19 @@ RETURN
 HB_FUNC_STATIC(QURLQUERY_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QUrlQuery()
-    */
+    // QUrlQuery()
     auto obj = new QUrlQuery();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQURL(1)) {
-    /*
-    QUrlQuery(const QUrl &url)
-    */
+    // QUrlQuery(const QUrl &url)
     auto obj = new QUrlQuery(*PQURL(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QUrlQuery(const QString &queryString)
-    */
+    // QUrlQuery(const QString &queryString)
     auto obj = new QUrlQuery(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQURLQUERY(1)) {
-    /*
-    QUrlQuery(const QUrlQuery &other)
-    */
+    // QUrlQuery(const QUrlQuery &other)
     auto obj = new QUrlQuery(*PQURLQUERY(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -114,9 +106,7 @@ HB_FUNC_STATIC(QURLQUERY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addQueryItem(const QString &key, const QString &value)
-*/
+// void addQueryItem(const QString &key, const QString &value)
 HB_FUNC_STATIC(QURLQUERY_ADDQUERYITEM)
 {
   auto obj = static_cast<QUrlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -136,10 +126,8 @@ HB_FUNC_STATIC(QURLQUERY_ADDQUERYITEM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringList allQueryItemValues(const QString &key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded)
-const
-*/
+// QStringList allQueryItemValues(const QString &key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded)
+// const
 HB_FUNC_STATIC(QURLQUERY_ALLQUERYITEMVALUES)
 {
   auto obj = static_cast<QUrlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -158,9 +146,7 @@ HB_FUNC_STATIC(QURLQUERY_ALLQUERYITEMVALUES)
   }
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QURLQUERY_CLEAR)
 {
   auto obj = static_cast<QUrlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -180,9 +166,7 @@ HB_FUNC_STATIC(QURLQUERY_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool hasQueryItem(const QString &key) const
-*/
+// bool hasQueryItem(const QString &key) const
 HB_FUNC_STATIC(QURLQUERY_HASQUERYITEM)
 {
   auto obj = static_cast<QUrlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -200,9 +184,7 @@ HB_FUNC_STATIC(QURLQUERY_HASQUERYITEM)
   }
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QURLQUERY_ISEMPTY)
 {
   auto obj = static_cast<QUrlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -220,9 +202,7 @@ HB_FUNC_STATIC(QURLQUERY_ISEMPTY)
   }
 }
 
-/*
-QString query(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
-*/
+// QString query(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
 HB_FUNC_STATIC(QURLQUERY_QUERY)
 {
   auto obj = static_cast<QUrlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -240,9 +220,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERY)
   }
 }
 
-/*
-QString queryItemValue(const QString &key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
-*/
+// QString queryItemValue(const QString &key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
 HB_FUNC_STATIC(QURLQUERY_QUERYITEMVALUE)
 {
   auto obj = static_cast<QUrlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -262,9 +240,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERYITEMVALUE)
   }
 }
 
-/*
-QChar queryPairDelimiter() const
-*/
+// QChar queryPairDelimiter() const
 HB_FUNC_STATIC(QURLQUERY_QUERYPAIRDELIMITER)
 {
   auto obj = static_cast<QUrlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -282,9 +258,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERYPAIRDELIMITER)
   }
 }
 
-/*
-QChar queryValueDelimiter() const
-*/
+// QChar queryValueDelimiter() const
 HB_FUNC_STATIC(QURLQUERY_QUERYVALUEDELIMITER)
 {
   auto obj = static_cast<QUrlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -302,9 +276,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERYVALUEDELIMITER)
   }
 }
 
-/*
-void removeAllQueryItems(const QString &key)
-*/
+// void removeAllQueryItems(const QString &key)
 HB_FUNC_STATIC(QURLQUERY_REMOVEALLQUERYITEMS)
 {
   auto obj = static_cast<QUrlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -324,9 +296,7 @@ HB_FUNC_STATIC(QURLQUERY_REMOVEALLQUERYITEMS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void removeQueryItem(const QString &key)
-*/
+// void removeQueryItem(const QString &key)
 HB_FUNC_STATIC(QURLQUERY_REMOVEQUERYITEM)
 {
   auto obj = static_cast<QUrlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -346,9 +316,7 @@ HB_FUNC_STATIC(QURLQUERY_REMOVEQUERYITEM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setQuery(const QString &queryString)
-*/
+// void setQuery(const QString &queryString)
 HB_FUNC_STATIC(QURLQUERY_SETQUERY)
 {
   auto obj = static_cast<QUrlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -368,9 +336,7 @@ HB_FUNC_STATIC(QURLQUERY_SETQUERY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void swap(QUrlQuery &other)
-*/
+// void swap(QUrlQuery &other)
 HB_FUNC_STATIC(QURLQUERY_SWAP)
 {
   auto obj = static_cast<QUrlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -390,9 +356,7 @@ HB_FUNC_STATIC(QURLQUERY_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString toString(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
-*/
+// QString toString(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
 HB_FUNC_STATIC(QURLQUERY_TOSTRING)
 {
   auto obj = static_cast<QUrlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -410,9 +374,7 @@ HB_FUNC_STATIC(QURLQUERY_TOSTRING)
   }
 }
 
-/*
-static QChar defaultQueryPairDelimiter()
-*/
+// static QChar defaultQueryPairDelimiter()
 HB_FUNC_STATIC(QURLQUERY_DEFAULTQUERYPAIRDELIMITER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -426,9 +388,7 @@ HB_FUNC_STATIC(QURLQUERY_DEFAULTQUERYPAIRDELIMITER)
 #endif
 }
 
-/*
-static QChar defaultQueryValueDelimiter()
-*/
+// static QChar defaultQueryValueDelimiter()
 HB_FUNC_STATIC(QURLQUERY_DEFAULTQUERYVALUEDELIMITER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

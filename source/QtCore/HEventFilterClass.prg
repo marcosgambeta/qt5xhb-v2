@@ -40,9 +40,7 @@ RETURN
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-    /*
-    HEventFilter(QObject *parent = nullptr)
-    */
+    // HEventFilter(QObject *parent = nullptr)
 HB_FUNC_STATIC(HEVENTFILTER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -53,9 +51,7 @@ HB_FUNC_STATIC(HEVENTFILTER_NEW)
   }
 }
 
-/*
-~HEventFilter()
-*/
+// ~HEventFilter()
 HB_FUNC_STATIC(HEVENTFILTER_DELETE)
 {
   auto obj = qobject_cast<HEventFilter *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -65,9 +61,7 @@ HB_FUNC_STATIC(HEVENTFILTER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEventFilterCB (PHB_ITEM block)
-*/
+// void setEventFilterCB (PHB_ITEM block)
 HB_FUNC_STATIC(HEVENTFILTER_SETEVENTFILTERCB)
 {
   auto obj = qobject_cast<HEventFilter *>(Qt5xHb::getQObjectPointerFromSelfItem());

@@ -62,15 +62,11 @@ RETURN
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QXmlStreamNotationDeclaration()
-    */
+    // QXmlStreamNotationDeclaration()
     auto obj = new QXmlStreamNotationDeclaration();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQXMLSTREAMNOTATIONDECLARATION(1)) {
-    /*
-    QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration &other)
-    */
+    // QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration &other)
     auto obj = new QXmlStreamNotationDeclaration(*PQXMLSTREAMNOTATIONDECLARATION(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -87,9 +83,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringRef name() const
-*/
+// QStringRef name() const
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NAME)
 {
   auto obj = static_cast<QXmlStreamNotationDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -107,9 +101,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NAME)
   }
 }
 
-/*
-QStringRef publicId() const
-*/
+// QStringRef publicId() const
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_PUBLICID)
 {
   auto obj = static_cast<QXmlStreamNotationDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -127,9 +119,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_PUBLICID)
   }
 }
 
-/*
-QStringRef systemId() const
-*/
+// QStringRef systemId() const
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_SYSTEMID)
 {
   auto obj = static_cast<QXmlStreamNotationDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());

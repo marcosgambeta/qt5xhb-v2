@@ -57,13 +57,9 @@ RETURN
 #include <QtCore/QRunnable>
 #endif
 
-    /*
-    QRunnable()
-    */
+    // QRunnable()
 
-    /*
-    virtual ~QRunnable()
-    */
+    // virtual ~QRunnable()
 HB_FUNC_STATIC(QRUNNABLE_DELETE)
 {
   auto obj = static_cast<QRunnable *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -73,9 +69,7 @@ HB_FUNC_STATIC(QRUNNABLE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void run() = 0
-*/
+// virtual void run() = 0
 HB_FUNC_STATIC(QRUNNABLE_RUN)
 {
   auto obj = static_cast<QRunnable *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -95,9 +89,7 @@ HB_FUNC_STATIC(QRUNNABLE_RUN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool autoDelete() const
-*/
+// bool autoDelete() const
 HB_FUNC_STATIC(QRUNNABLE_AUTODELETE)
 {
   auto obj = static_cast<QRunnable *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -115,9 +107,7 @@ HB_FUNC_STATIC(QRUNNABLE_AUTODELETE)
   }
 }
 
-/*
-void setAutoDelete(bool _autoDelete)
-*/
+// void setAutoDelete(bool _autoDelete)
 HB_FUNC_STATIC(QRUNNABLE_SETAUTODELETE)
 {
   auto obj = static_cast<QRunnable *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -61,15 +61,11 @@ RETURN
 HB_FUNC_STATIC(QTEXTENCODER_NEW)
 {
   if (ISNUMPAR(1) && ISQTEXTCODEC(1)) {
-    /*
-    QTextEncoder(const QTextCodec * codec)
-    */
+    // QTextEncoder(const QTextCodec *codec)
     auto obj = new QTextEncoder(PQTEXTCODEC(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && ISQTEXTCODEC(1) && HB_ISNUM(2)) {
-    /*
-    QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
-    */
+    // QTextEncoder(const QTextCodec *codec, QTextCodec::ConversionFlags flags)
     auto obj = new QTextEncoder(PQTEXTCODEC(1), PQTEXTCODEC_CONVERSIONFLAGS(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -89,18 +85,14 @@ HB_FUNC_STATIC(QTEXTENCODER_DELETE)
 HB_FUNC_STATIC(QTEXTENCODER_FROMUNICODE)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QByteArray fromUnicode(const QString &str)
-    */
+    // QByteArray fromUnicode(const QString &str)
     auto obj = static_cast<QTextEncoder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RQBYTEARRAY(obj->fromUnicode(PQSTRING(1)));
     }
   } else if (ISNUMPAR(2) && ISQCHAR(1) && HB_ISNUM(2)) {
-    /*
-    QByteArray fromUnicode(const QChar * uc, int len)
-    */
+    // QByteArray fromUnicode(const QChar *uc, int len)
     auto obj = static_cast<QTextEncoder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -111,9 +103,7 @@ HB_FUNC_STATIC(QTEXTENCODER_FROMUNICODE)
   }
 }
 
-/*
-bool hasFailure() const
-*/
+// bool hasFailure() const
 HB_FUNC_STATIC(QTEXTENCODER_HASFAILURE)
 {
   auto obj = static_cast<QTextEncoder *>(Qt5xHb::itemGetPtrStackSelfItem());

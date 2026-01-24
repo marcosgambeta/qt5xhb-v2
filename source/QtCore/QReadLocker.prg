@@ -59,9 +59,7 @@ RETURN
 #include <QtCore/QReadLocker>
 #endif
 
-    /*
-    QReadLocker(QReadWriteLock * readWriteLock)
-    */
+    // QReadLocker(QReadWriteLock *readWriteLock)
 HB_FUNC_STATIC(QREADLOCKER_NEW)
 {
   if (ISNUMPAR(1) && ISQREADWRITELOCK(1)) {
@@ -81,9 +79,7 @@ HB_FUNC_STATIC(QREADLOCKER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void unlock()
-*/
+// void unlock()
 HB_FUNC_STATIC(QREADLOCKER_UNLOCK)
 {
   auto obj = static_cast<QReadLocker *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -103,9 +99,7 @@ HB_FUNC_STATIC(QREADLOCKER_UNLOCK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void relock()
-*/
+// void relock()
 HB_FUNC_STATIC(QREADLOCKER_RELOCK)
 {
   auto obj = static_cast<QReadLocker *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -125,9 +119,7 @@ HB_FUNC_STATIC(QREADLOCKER_RELOCK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QReadWriteLock * readWriteLock() const
-*/
+// QReadWriteLock *readWriteLock() const
 HB_FUNC_STATIC(QREADLOCKER_READWRITELOCK)
 {
   auto obj = static_cast<QReadLocker *>(Qt5xHb::itemGetPtrStackSelfItem());

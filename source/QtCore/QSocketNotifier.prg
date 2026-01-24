@@ -52,9 +52,7 @@ RETURN
 #include <QtCore/QSocketNotifier>
 #endif
 
-    /*
-    QSocketNotifier(qintptr socket, QSocketNotifier::Type, QObject * parent = nullptr)
-    */
+    // QSocketNotifier(qintptr socket, QSocketNotifier::Type, QObject *parent = nullptr)
 HB_FUNC_STATIC(QSOCKETNOTIFIER_NEW)
 {
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3)) {
@@ -74,9 +72,7 @@ HB_FUNC_STATIC(QSOCKETNOTIFIER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qintptr socket() const
-*/
+// qintptr socket() const
 HB_FUNC_STATIC(QSOCKETNOTIFIER_SOCKET)
 {
   auto obj = qobject_cast<QSocketNotifier *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -94,9 +90,7 @@ HB_FUNC_STATIC(QSOCKETNOTIFIER_SOCKET)
   }
 }
 
-/*
-QSocketNotifier::Type type() const
-*/
+// QSocketNotifier::Type type() const
 HB_FUNC_STATIC(QSOCKETNOTIFIER_TYPE)
 {
   auto obj = qobject_cast<QSocketNotifier *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -114,9 +108,7 @@ HB_FUNC_STATIC(QSOCKETNOTIFIER_TYPE)
   }
 }
 
-/*
-bool isEnabled() const
-*/
+// bool isEnabled() const
 HB_FUNC_STATIC(QSOCKETNOTIFIER_ISENABLED)
 {
   auto obj = qobject_cast<QSocketNotifier *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -134,9 +126,7 @@ HB_FUNC_STATIC(QSOCKETNOTIFIER_ISENABLED)
   }
 }
 
-/*
-void setEnabled(bool)
-*/
+// void setEnabled(bool)
 HB_FUNC_STATIC(QSOCKETNOTIFIER_SETENABLED)
 {
   auto obj = qobject_cast<QSocketNotifier *>(Qt5xHb::getQObjectPointerFromSelfItem());

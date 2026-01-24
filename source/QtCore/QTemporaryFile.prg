@@ -58,27 +58,19 @@ RETURN
 HB_FUNC_STATIC(QTEMPORARYFILE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QTemporaryFile()
-    */
+    // QTemporaryFile()
     auto obj = new QTemporaryFile();
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QTemporaryFile(const QString &templateName)
-    */
+    // QTemporaryFile(const QString &templateName)
     auto obj = new QTemporaryFile(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
-    /*
-    QTemporaryFile(QObject * parent)
-    */
+    // QTemporaryFile(QObject *parent)
     auto obj = new QTemporaryFile(PQOBJECT(1));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2)) {
-    /*
-    QTemporaryFile(const QString &templateName, QObject * parent)
-    */
+    // QTemporaryFile(const QString &templateName, QObject *parent)
     auto obj = new QTemporaryFile(PQSTRING(1), PQOBJECT(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -95,9 +87,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool autoRemove() const
-*/
+// bool autoRemove() const
 HB_FUNC_STATIC(QTEMPORARYFILE_AUTOREMOVE)
 {
   auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -115,9 +105,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_AUTOREMOVE)
   }
 }
 
-/*
-QString fileTemplate() const
-*/
+// QString fileTemplate() const
 HB_FUNC_STATIC(QTEMPORARYFILE_FILETEMPLATE)
 {
   auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -135,9 +123,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_FILETEMPLATE)
   }
 }
 
-/*
-bool open()
-*/
+// bool open()
 HB_FUNC_STATIC(QTEMPORARYFILE_OPEN)
 {
   auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -155,9 +141,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_OPEN)
   }
 }
 
-/*
-void setAutoRemove(bool b)
-*/
+// void setAutoRemove(bool b)
 HB_FUNC_STATIC(QTEMPORARYFILE_SETAUTOREMOVE)
 {
   auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -177,9 +161,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_SETAUTOREMOVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFileTemplate(const QString &name)
-*/
+// void setFileTemplate(const QString &name)
 HB_FUNC_STATIC(QTEMPORARYFILE_SETFILETEMPLATE)
 {
   auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -199,9 +181,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_SETFILETEMPLATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QString fileName() const
-*/
+// virtual QString fileName() const
 HB_FUNC_STATIC(QTEMPORARYFILE_FILENAME)
 {
   auto obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -222,16 +202,12 @@ HB_FUNC_STATIC(QTEMPORARYFILE_FILENAME)
 HB_FUNC_STATIC(QTEMPORARYFILE_CREATENATIVEFILE)
 {
   if (ISNUMPAR(1) && ISQFILE(1)) {
-    /*
-    static QTemporaryFile * createNativeFile(QFile &file)
-    */
+    // static QTemporaryFile *createNativeFile(QFile &file)
 
     auto ptr = QTemporaryFile::createNativeFile(*PQFILE(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QTEMPORARYFILE");
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    static QTemporaryFile * createNativeFile(const QString &fileName)
-    */
+    // static QTemporaryFile *createNativeFile(const QString &fileName)
 
     auto ptr = QTemporaryFile::createNativeFile(PQSTRING(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QTEMPORARYFILE");

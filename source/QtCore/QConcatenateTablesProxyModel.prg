@@ -78,9 +78,7 @@ RETURN
 #include <QtCore/QMimeData>
 #include <QtCore/QSize>
 
-    /*
-    QConcatenateTablesProxyModel(QObject * parent = nullptr)
-    */
+    // QConcatenateTablesProxyModel(QObject *parent = nullptr)
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_NEW)
 #endif
 }
 
-/*
-~QConcatenateTablesProxyModel()
-*/
+// ~QConcatenateTablesProxyModel()
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_DELETE)
 #endif
 }
 
-/*
-Q_SCRIPTABLE void addSourceModel(QAbstractItemModel * sourceModel)
-*/
+// Q_SCRIPTABLE void addSourceModel(QAbstractItemModel *sourceModel)
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_ADDSOURCEMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -131,9 +125,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_ADDSOURCEMODEL)
 #endif
 }
 
-/*
-Q_SCRIPTABLE void removeSourceModel(QAbstractItemModel * sourceModel)
-*/
+// Q_SCRIPTABLE void removeSourceModel(QAbstractItemModel *sourceModel)
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_REMOVESOURCEMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -155,9 +147,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_REMOVESOURCEMODEL)
 #endif
 }
 
-/*
-QModelIndex mapFromSource(const QModelIndex &sourceIndex) const
-*/
+// QModelIndex mapFromSource(const QModelIndex &sourceIndex) const
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MAPFROMSOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -177,9 +167,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MAPFROMSOURCE)
 #endif
 }
 
-/*
-QModelIndex mapToSource(const QModelIndex &proxyIndex) const
-*/
+// QModelIndex mapToSource(const QModelIndex &proxyIndex) const
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MAPTOSOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -199,9 +187,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MAPTOSOURCE)
 #endif
 }
 
-/*
-QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
-*/
+// QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_DATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -221,9 +207,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_DATA)
 #endif
 }
 
-/*
-bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override
-*/
+// bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_SETDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -243,9 +227,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_SETDATA)
 #endif
 }
 
-/*
-Qt::ItemFlags flags(const QModelIndex &index) const override
-*/
+// Qt::ItemFlags flags(const QModelIndex &index) const override
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_FLAGS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -265,9 +247,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_FLAGS)
 #endif
 }
 
-/*
-QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override
-*/
+// QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_INDEX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -288,9 +268,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_INDEX)
 #endif
 }
 
-/*
-QModelIndex parent(const QModelIndex &index) const override
-*/
+// QModelIndex parent(const QModelIndex &index) const override
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_PARENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -310,9 +288,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_PARENT)
 #endif
 }
 
-/*
-int rowCount(const QModelIndex &parent = QModelIndex()) const override
-*/
+// int rowCount(const QModelIndex &parent = QModelIndex()) const override
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_ROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -332,9 +308,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_ROWCOUNT)
 #endif
 }
 
-/*
-QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override
-*/
+// QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_HEADERDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -354,9 +328,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_HEADERDATA)
 #endif
 }
 
-/*
-int columnCount(const QModelIndex &parent = QModelIndex()) const override
-*/
+// int columnCount(const QModelIndex &parent = QModelIndex()) const override
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_COLUMNCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -376,9 +348,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_COLUMNCOUNT)
 #endif
 }
 
-/*
-QStringList mimeTypes() const override
-*/
+// QStringList mimeTypes() const override
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MIMETYPES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -398,9 +368,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MIMETYPES)
 #endif
 }
 
-/*
-QMimeData * mimeData(const QModelIndexList &indexes) const override
-*/
+// QMimeData *mimeData(const QModelIndexList &indexes) const override
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MIMEDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -428,10 +396,8 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_MIMEDATA)
 #endif
 }
 
-/*
-bool canDropMimeData(const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
-const override
-*/
+// bool canDropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
+// const override
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_CANDROPMIMEDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -451,10 +417,8 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_CANDROPMIMEDATA)
 #endif
 }
 
-/*
-bool dropMimeData(const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
-override
-*/
+// bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
+// override
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_DROPMIMEDATA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))
@@ -474,9 +438,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_DROPMIMEDATA)
 #endif
 }
 
-/*
-QList<QAbstractItemModel*> sourceModels() const
-*/
+// QList<QAbstractItemModel*> sourceModels() const
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_SOURCEMODELS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 15, 0))
@@ -515,9 +477,7 @@ HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_SOURCEMODELS)
 #endif
 }
 
-/*
-QSize span(const QModelIndex &index) const override
-*/
+// QSize span(const QModelIndex &index) const override
 HB_FUNC_STATIC(QCONCATENATETABLESPROXYMODEL_SPAN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 13, 0))

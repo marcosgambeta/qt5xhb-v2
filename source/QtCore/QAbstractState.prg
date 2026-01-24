@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStateMachine * machine() const
-*/
+// QStateMachine *machine() const
 HB_FUNC_STATIC(QABSTRACTSTATE_MACHINE)
 {
   auto obj = qobject_cast<QAbstractState *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_MACHINE)
   }
 }
 
-/*
-QState * parentState() const
-*/
+// QState *parentState() const
 HB_FUNC_STATIC(QABSTRACTSTATE_PARENTSTATE)
 {
   auto obj = qobject_cast<QAbstractState *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -108,9 +104,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_PARENTSTATE)
   }
 }
 
-/*
-void entered()
-*/
+// void entered()
 HB_FUNC_STATIC(QABSTRACTSTATE_ONENTERED)
 {
   auto sender = qobject_cast<QAbstractState *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -148,9 +142,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_ONENTERED)
   hb_retl(result);
 }
 
-/*
-void exited()
-*/
+// void exited()
 HB_FUNC_STATIC(QABSTRACTSTATE_ONEXITED)
 {
   auto sender = qobject_cast<QAbstractState *>(Qt5xHb::getQObjectPointerFromSelfItem());

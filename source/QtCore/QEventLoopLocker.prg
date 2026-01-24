@@ -58,21 +58,15 @@ RETURN
 HB_FUNC_STATIC(QEVENTLOOPLOCKER_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QEventLoopLocker()
-    */
+    // QEventLoopLocker()
     auto obj = new QEventLoopLocker();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQEVENTLOOP(1)) {
-    /*
-    QEventLoopLocker(QEventLoop * loop)
-    */
+    // QEventLoopLocker(QEventLoop *loop)
     auto obj = new QEventLoopLocker(PQEVENTLOOP(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQTHREAD(1)) {
-    /*
-    QEventLoopLocker(QThread * thread)
-    */
+    // QEventLoopLocker(QThread *thread)
     auto obj = new QEventLoopLocker(PQTHREAD(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {

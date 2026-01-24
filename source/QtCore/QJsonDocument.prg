@@ -82,27 +82,19 @@ RETURN
 HB_FUNC_STATIC(QJSONDOCUMENT_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QJsonDocument()
-    */
+    // QJsonDocument()
     auto obj = new QJsonDocument();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQJSONOBJECT(1)) {
-    /*
-    QJsonDocument(const QJsonObject &object)
-    */
+    // QJsonDocument(const QJsonObject &object)
     auto obj = new QJsonDocument(*PQJSONOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQJSONARRAY(1)) {
-    /*
-    QJsonDocument(const QJsonArray &array)
-    */
+    // QJsonDocument(const QJsonArray &array)
     auto obj = new QJsonDocument(*PQJSONARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQJSONDOCUMENT(1)) {
-    /*
-    QJsonDocument(const QJsonDocument &other)
-    */
+    // QJsonDocument(const QJsonDocument &other)
     auto obj = new QJsonDocument(*PQJSONDOCUMENT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -119,9 +111,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QJsonArray array() const
-*/
+// QJsonArray array() const
 HB_FUNC_STATIC(QJSONDOCUMENT_ARRAY)
 {
   auto obj = static_cast<QJsonDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -139,9 +129,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_ARRAY)
   }
 }
 
-/*
-bool isArray() const
-*/
+// bool isArray() const
 HB_FUNC_STATIC(QJSONDOCUMENT_ISARRAY)
 {
   auto obj = static_cast<QJsonDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -159,9 +147,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_ISARRAY)
   }
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QJSONDOCUMENT_ISEMPTY)
 {
   auto obj = static_cast<QJsonDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -179,9 +165,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_ISEMPTY)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QJSONDOCUMENT_ISNULL)
 {
   auto obj = static_cast<QJsonDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -199,9 +183,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_ISNULL)
   }
 }
 
-/*
-bool isObject() const
-*/
+// bool isObject() const
 HB_FUNC_STATIC(QJSONDOCUMENT_ISOBJECT)
 {
   auto obj = static_cast<QJsonDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -219,9 +201,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_ISOBJECT)
   }
 }
 
-/*
-QJsonObject object() const
-*/
+// QJsonObject object() const
 HB_FUNC_STATIC(QJSONDOCUMENT_OBJECT)
 {
   auto obj = static_cast<QJsonDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -239,9 +219,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_OBJECT)
   }
 }
 
-/*
-const char * rawData(int * size) const
-*/
+// const char *rawData(int *size) const
 HB_FUNC_STATIC(QJSONDOCUMENT_RAWDATA)
 {
   auto obj = static_cast<QJsonDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -261,9 +239,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_RAWDATA)
   }
 }
 
-/*
-void setArray(const QJsonArray &array)
-*/
+// void setArray(const QJsonArray &array)
 HB_FUNC_STATIC(QJSONDOCUMENT_SETARRAY)
 {
   auto obj = static_cast<QJsonDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -283,9 +259,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_SETARRAY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setObject(const QJsonObject &object)
-*/
+// void setObject(const QJsonObject &object)
 HB_FUNC_STATIC(QJSONDOCUMENT_SETOBJECT)
 {
   auto obj = static_cast<QJsonDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -305,9 +279,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_SETOBJECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QByteArray toBinaryData() const
-*/
+// QByteArray toBinaryData() const
 HB_FUNC_STATIC(QJSONDOCUMENT_TOBINARYDATA)
 {
   auto obj = static_cast<QJsonDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -325,9 +297,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_TOBINARYDATA)
   }
 }
 
-/*
-QByteArray toJson() const
-*/
+// QByteArray toJson() const
 HB_FUNC_STATIC(QJSONDOCUMENT_TOJSON)
 {
   auto obj = static_cast<QJsonDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -345,9 +315,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_TOJSON)
   }
 }
 
-/*
-QVariant toVariant() const
-*/
+// QVariant toVariant() const
 HB_FUNC_STATIC(QJSONDOCUMENT_TOVARIANT)
 {
   auto obj = static_cast<QJsonDocument *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -365,10 +333,8 @@ HB_FUNC_STATIC(QJSONDOCUMENT_TOVARIANT)
   }
 }
 
-/*
-static QJsonDocument fromBinaryData(const QByteArray &data, QJsonDocument::DataValidation validation =
-QJsonDocument::Validate)
-*/
+// static QJsonDocument fromBinaryData(const QByteArray &data, QJsonDocument::DataValidation validation =
+// QJsonDocument::Validate)
 HB_FUNC_STATIC(QJSONDOCUMENT_FROMBINARYDATA)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,9 +349,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_FROMBINARYDATA)
 #endif
 }
 
-/*
-static QJsonDocument fromJson(const QByteArray &json, QJsonParseError * error = nullptr)
-*/
+// static QJsonDocument fromJson(const QByteArray &json, QJsonParseError *error = nullptr)
 HB_FUNC_STATIC(QJSONDOCUMENT_FROMJSON)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -400,10 +364,8 @@ HB_FUNC_STATIC(QJSONDOCUMENT_FROMJSON)
 #endif
 }
 
-/*
-static QJsonDocument fromRawData(const char * data, int size, QJsonDocument::DataValidation validation =
-QJsonDocument::Validate)
-*/
+// static QJsonDocument fromRawData(const char *data, int size, QJsonDocument::DataValidation validation =
+// QJsonDocument::Validate)
 HB_FUNC_STATIC(QJSONDOCUMENT_FROMRAWDATA)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -418,9 +380,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_FROMRAWDATA)
 #endif
 }
 
-/*
-static QJsonDocument fromVariant(const QVariant &variant)
-*/
+// static QJsonDocument fromVariant(const QVariant &variant)
 HB_FUNC_STATIC(QJSONDOCUMENT_FROMVARIANT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

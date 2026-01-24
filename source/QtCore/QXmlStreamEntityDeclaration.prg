@@ -64,15 +64,11 @@ RETURN
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QXmlStreamEntityDeclaration()
-    */
+    // QXmlStreamEntityDeclaration()
     auto obj = new QXmlStreamEntityDeclaration();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQXMLSTREAMENTITYDECLARATION(1)) {
-    /*
-    QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration &other)
-    */
+    // QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration &other)
     auto obj = new QXmlStreamEntityDeclaration(*PQXMLSTREAMENTITYDECLARATION(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -89,9 +85,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringRef name() const
-*/
+// QStringRef name() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NAME)
 {
   auto obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -109,9 +103,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NAME)
   }
 }
 
-/*
-QStringRef notationName() const
-*/
+// QStringRef notationName() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NOTATIONNAME)
 {
   auto obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -129,9 +121,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NOTATIONNAME)
   }
 }
 
-/*
-QStringRef publicId() const
-*/
+// QStringRef publicId() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_PUBLICID)
 {
   auto obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -149,9 +139,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_PUBLICID)
   }
 }
 
-/*
-QStringRef systemId() const
-*/
+// QStringRef systemId() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_SYSTEMID)
 {
   auto obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -169,9 +157,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_SYSTEMID)
   }
 }
 
-/*
-QStringRef value() const
-*/
+// QStringRef value() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_VALUE)
 {
   auto obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());

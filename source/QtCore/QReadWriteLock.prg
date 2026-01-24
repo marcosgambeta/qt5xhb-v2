@@ -60,9 +60,7 @@ RETURN
 #include <QtCore/QReadWriteLock>
 #endif
 
-    /*
-    QReadWriteLock(QReadWriteLock::RecursionMode recursionMode = QReadWriteLock::NonRecursive)
-    */
+    // QReadWriteLock(QReadWriteLock::RecursionMode recursionMode = QReadWriteLock::NonRecursive)
 HB_FUNC_STATIC(QREADWRITELOCK_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
@@ -82,9 +80,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void lockForRead()
-*/
+// void lockForRead()
 HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORREAD)
 {
   auto obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -107,18 +103,14 @@ HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORREAD)
 HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORREAD)
 {
   if (ISNUMPAR(0)) {
-    /*
-    bool tryLockForRead()
-    */
+    // bool tryLockForRead()
     auto obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RBOOL(obj->tryLockForRead());
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    bool tryLockForRead(int timeout)
-    */
+    // bool tryLockForRead(int timeout)
     auto obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -129,9 +121,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORREAD)
   }
 }
 
-/*
-void lockForWrite()
-*/
+// void lockForWrite()
 HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORWRITE)
 {
   auto obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -154,18 +144,14 @@ HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORWRITE)
 HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORWRITE)
 {
   if (ISNUMPAR(0)) {
-    /*
-    bool tryLockForWrite()
-    */
+    // bool tryLockForWrite()
     auto obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RBOOL(obj->tryLockForWrite());
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    bool tryLockForWrite(int timeout)
-    */
+    // bool tryLockForWrite(int timeout)
     auto obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -176,9 +162,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORWRITE)
   }
 }
 
-/*
-void unlock()
-*/
+// void unlock()
 HB_FUNC_STATIC(QREADWRITELOCK_UNLOCK)
 {
   auto obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());

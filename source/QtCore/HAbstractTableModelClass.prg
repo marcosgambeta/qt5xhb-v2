@@ -89,9 +89,7 @@ ENDCLASS
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-    /*
-    HAbstractTableModel(QObject * parent = nullptr)
-    */
+    // HAbstractTableModel(QObject *parent = nullptr)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -102,9 +100,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_NEW)
   }
 }
 
-/*
-virtual ~HAbstractTableModel()
-*/
+// virtual ~HAbstractTableModel()
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_DELETE)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -116,9 +112,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_DELETE)
 
 // linhas e colunas
 
-/*
-void setRowCountCB(PHB_ITEM block)
-*/
+// void setRowCountCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETROWCOUNTCB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -138,9 +132,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETROWCOUNTCB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setColumnCountCB(PHB_ITEM block)
-*/
+// void setColumnCountCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETCOLUMNCOUNTCB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -162,9 +154,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETCOLUMNCOUNTCB)
 
 // células
 
-/*
-void setCB(int role, PHB_ITEM block)
-*/
+// void setCB(int role, PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETCB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -184,9 +174,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETCB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDisplayRoleCB(PHB_ITEM block)
-*/
+// void setDisplayRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETDISPLAYROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -206,9 +194,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETDISPLAYROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDecorationRoleCB(PHB_ITEM block)
-*/
+// void setDecorationRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETDECORATIONROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -228,9 +214,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETDECORATIONROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEditRoleCB(PHB_ITEM block)
-*/
+// void setEditRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETEDITROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -250,9 +234,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETEDITROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setToolTipRoleCB(PHB_ITEM block)
-*/
+// void setToolTipRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETTOOLTIPROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -272,9 +254,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETTOOLTIPROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStatusTipRoleCB(PHB_ITEM block)
-*/
+// void setStatusTipRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETSTATUSTIPROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -294,9 +274,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETSTATUSTIPROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWhatsThisRoleCB(PHB_ITEM block)
-*/
+// void setWhatsThisRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETWHATSTHISROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -316,9 +294,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETWHATSTHISROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSizeHintRoleCB(PHB_ITEM block)
-*/
+// void setSizeHintRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETSIZEHINTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -338,9 +314,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETSIZEHINTROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFontRoleCB(PHB_ITEM block)
-*/
+// void setFontRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETFONTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -360,9 +334,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETFONTROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTextAlignmentRoleCB(PHB_ITEM block)
-*/
+// void setTextAlignmentRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETTEXTALIGNMENTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -382,9 +354,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETTEXTALIGNMENTROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setBackgroundRoleCB(PHB_ITEM block)
-*/
+// void setBackgroundRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETBACKGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -404,9 +374,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETBACKGROUNDROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setForegroundRoleCB(PHB_ITEM block)
-*/
+// void setForegroundRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETFOREGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -426,9 +394,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETFOREGROUNDROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCheckStateRoleCB(PHB_ITEM block)
-*/
+// void setCheckStateRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETCHECKSTATEROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -448,9 +414,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETCHECKSTATEROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAccessibleTextRoleCB(PHB_ITEM block)
-*/
+// void setAccessibleTextRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETACCESSIBLETEXTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -470,9 +434,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETACCESSIBLETEXTROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAccessibleDescriptionRoleCB(PHB_ITEM block)
-*/
+// void setAccessibleDescriptionRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETACCESSIBLEDESCRIPTIONROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -494,9 +456,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETACCESSIBLEDESCRIPTIONROLECB)
 
 // horizontal header
 
-/*
-void setHorizontalHeaderCB(int role, PHB_ITEM block)
-*/
+// void setHorizontalHeaderCB(int role, PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERCB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -516,9 +476,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERCB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHorizontalHeaderDisplayRoleCB(PHB_ITEM block)
-*/
+// void setHorizontalHeaderDisplayRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERDISPLAYROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -538,9 +496,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERDISPLAYROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHorizontalHeaderDecorationRoleCB(PHB_ITEM block)
-*/
+// void setHorizontalHeaderDecorationRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERDECORATIONROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -560,9 +516,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERDECORATIONROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHorizontalHeaderToolTipRoleCB(PHB_ITEM block)
-*/
+// void setHorizontalHeaderToolTipRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERTOOLTIPROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -582,9 +536,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERTOOLTIPROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHorizontalHeaderSizeHintRoleCB(PHB_ITEM block)
-*/
+// void setHorizontalHeaderSizeHintRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERSIZEHINTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -604,9 +556,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERSIZEHINTROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHorizontalHeaderFontRoleCB(PHB_ITEM block)
-*/
+// void setHorizontalHeaderFontRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFONTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -626,9 +576,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFONTROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHorizontalHeaderTextAlignmentRoleCB(PHB_ITEM block)
-*/
+// void setHorizontalHeaderTextAlignmentRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERTEXTALIGNMENTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -648,9 +596,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERTEXTALIGNMENTROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHorizontalHeaderBackgroundRoleCB(PHB_ITEM block)
-*/
+// void setHorizontalHeaderBackgroundRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERBACKGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -670,9 +616,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERBACKGROUNDROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHorizontalHeaderForegroundRoleCB(PHB_ITEM block)
-*/
+// void setHorizontalHeaderForegroundRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -694,9 +638,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB)
 
 // vertical header
 
-/*
-void setVerticalHeaderCB(int role, PHB_ITEM block)
-*/
+// void setVerticalHeaderCB(int role, PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERCB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -716,9 +658,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERCB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalHeaderDisplayRoleCB(PHB_ITEM block)
-*/
+// void setVerticalHeaderDisplayRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERDISPLAYROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -738,9 +678,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERDISPLAYROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalHeaderDecorationRoleCB(PHB_ITEM block)
-*/
+// void setVerticalHeaderDecorationRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERDECORATIONROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -760,9 +698,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERDECORATIONROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalHeaderToolTipRoleCB(PHB_ITEM block)
-*/
+// void setVerticalHeaderToolTipRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERTOOLTIPROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -782,9 +718,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERTOOLTIPROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalHeaderSizeHintRoleCB(PHB_ITEM block)
-*/
+// void setVerticalHeaderSizeHintRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERSIZEHINTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -804,9 +738,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERSIZEHINTROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalHeaderFontRoleCB(PHB_ITEM block)
-*/
+// void setVerticalHeaderFontRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERFONTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -826,9 +758,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERFONTROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalHeaderTextAlignmentRoleCB(PHB_ITEM block)
-*/
+// void setVerticalHeaderTextAlignmentRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERTEXTALIGNMENTROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -848,9 +778,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERTEXTALIGNMENTROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalHeaderBackgroundRoleCB(PHB_ITEM block)
-*/
+// void setVerticalHeaderBackgroundRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERBACKGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -870,9 +798,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERBACKGROUNDROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalHeaderForegroundRoleCB(PHB_ITEM block)
-*/
+// void setVerticalHeaderForegroundRoleCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERFOREGROUNDROLECB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -892,9 +818,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETVERTICALHEADERFOREGROUNDROLECB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFlagsCB(PHB_ITEM block)
-*/
+// void setFlagsCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETFLAGSCB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -914,9 +838,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETFLAGSCB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSetDataCB(PHB_ITEM block)
-*/
+// void setSetDataCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETSETDATACB)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -936,33 +858,19 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_SETSETDATACB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
-*/
+// QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
 
-/*
-QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
-*/
+// QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
 
-/*
-int rowCount(const QModelIndex &parent = QModelIndex()) const
-*/
+// int rowCount(const QModelIndex &parent = QModelIndex()) const
 
-/*
-int columnCount(const QModelIndex &parent = QModelIndex()) const
-*/
+// int columnCount(const QModelIndex &parent = QModelIndex()) const
 
-/*
-Qt::ItemFlags flags(const QModelIndex &index) const
-*/
+// Qt::ItemFlags flags(const QModelIndex &index) const
 
-/*
-bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
-*/
+// bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
 
-/*
-void reloadData()
-*/
+// void reloadData()
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_RELOADDATA)
 {
   auto obj = qobject_cast<HAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());

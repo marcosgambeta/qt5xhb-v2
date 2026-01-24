@@ -75,15 +75,11 @@ RETURN
 HB_FUNC_STATIC(QTIME_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QTime()
-    */
+    // QTime()
     auto obj = new QTime();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
-    /*
-    QTime(int h, int m, int s = 0, int ms = 0)
-    */
+    // QTime(int h, int m, int s = 0, int ms = 0)
     auto obj = new QTime(PINT(1), PINT(2), OPINT(3, 0), OPINT(4, 0));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -100,9 +96,7 @@ HB_FUNC_STATIC(QTIME_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTime addMSecs(int ms) const
-*/
+// QTime addMSecs(int ms) const
 HB_FUNC_STATIC(QTIME_ADDMSECS)
 {
   auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -120,9 +114,7 @@ HB_FUNC_STATIC(QTIME_ADDMSECS)
   }
 }
 
-/*
-QTime addSecs(int s) const
-*/
+// QTime addSecs(int s) const
 HB_FUNC_STATIC(QTIME_ADDSECS)
 {
   auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -140,9 +132,7 @@ HB_FUNC_STATIC(QTIME_ADDSECS)
   }
 }
 
-/*
-int elapsed() const
-*/
+// int elapsed() const
 HB_FUNC_STATIC(QTIME_ELAPSED)
 {
   auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -160,9 +150,7 @@ HB_FUNC_STATIC(QTIME_ELAPSED)
   }
 }
 
-/*
-int hour() const
-*/
+// int hour() const
 HB_FUNC_STATIC(QTIME_HOUR)
 {
   auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -180,9 +168,7 @@ HB_FUNC_STATIC(QTIME_HOUR)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QTIME_ISNULL)
 {
   auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -203,18 +189,14 @@ HB_FUNC_STATIC(QTIME_ISNULL)
 HB_FUNC_STATIC(QTIME_ISVALID)
 {
   if (ISNUMPAR(0)) {
-    /*
-    bool isValid() const
-    */
+    // bool isValid() const
     auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RBOOL(obj->isValid());
     }
   } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
-    /*
-    static bool isValid(int h, int m, int s, int ms = 0)
-    */
+    // static bool isValid(int h, int m, int s, int ms = 0)
 
     RBOOL(QTime::isValid(PINT(1), PINT(2), PINT(3), OPINT(4, 0)));
   } else {
@@ -222,9 +204,7 @@ HB_FUNC_STATIC(QTIME_ISVALID)
   }
 }
 
-/*
-int minute() const
-*/
+// int minute() const
 HB_FUNC_STATIC(QTIME_MINUTE)
 {
   auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -242,9 +222,7 @@ HB_FUNC_STATIC(QTIME_MINUTE)
   }
 }
 
-/*
-int msec() const
-*/
+// int msec() const
 HB_FUNC_STATIC(QTIME_MSEC)
 {
   auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -262,9 +240,7 @@ HB_FUNC_STATIC(QTIME_MSEC)
   }
 }
 
-/*
-int msecsTo(const QTime &t) const
-*/
+// int msecsTo(const QTime &t) const
 HB_FUNC_STATIC(QTIME_MSECSTO)
 {
   auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -282,9 +258,7 @@ HB_FUNC_STATIC(QTIME_MSECSTO)
   }
 }
 
-/*
-int restart()
-*/
+// int restart()
 HB_FUNC_STATIC(QTIME_RESTART)
 {
   auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -302,9 +276,7 @@ HB_FUNC_STATIC(QTIME_RESTART)
   }
 }
 
-/*
-int second() const
-*/
+// int second() const
 HB_FUNC_STATIC(QTIME_SECOND)
 {
   auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -322,9 +294,7 @@ HB_FUNC_STATIC(QTIME_SECOND)
   }
 }
 
-/*
-int secsTo(const QTime &t) const
-*/
+// int secsTo(const QTime &t) const
 HB_FUNC_STATIC(QTIME_SECSTO)
 {
   auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -342,9 +312,7 @@ HB_FUNC_STATIC(QTIME_SECSTO)
   }
 }
 
-/*
-bool setHMS(int h, int m, int s, int ms = 0)
-*/
+// bool setHMS(int h, int m, int s, int ms = 0)
 HB_FUNC_STATIC(QTIME_SETHMS)
 {
   auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -362,9 +330,7 @@ HB_FUNC_STATIC(QTIME_SETHMS)
   }
 }
 
-/*
-void start()
-*/
+// void start()
 HB_FUNC_STATIC(QTIME_START)
 {
   auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -387,18 +353,14 @@ HB_FUNC_STATIC(QTIME_START)
 HB_FUNC_STATIC(QTIME_TOSTRING)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QString toString(const QString &format) const
-    */
+    // QString toString(const QString &format) const
     auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RQSTRING(obj->toString(PQSTRING(1)));
     }
   } else if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    /*
-    QString toString(Qt::DateFormat format = Qt::TextDate) const
-    */
+    // QString toString(Qt::DateFormat format = Qt::TextDate) const
     auto obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -409,9 +371,7 @@ HB_FUNC_STATIC(QTIME_TOSTRING)
   }
 }
 
-/*
-static QTime currentTime()
-*/
+// static QTime currentTime()
 HB_FUNC_STATIC(QTIME_CURRENTTIME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -428,14 +388,10 @@ HB_FUNC_STATIC(QTIME_CURRENTTIME)
 HB_FUNC_STATIC(QTIME_FROMSTRING)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
-    /*
-    static QTime fromString(const QString &string, Qt::DateFormat format = Qt::TextDate)
-    */
+    // static QTime fromString(const QString &string, Qt::DateFormat format = Qt::TextDate)
     RQTIME(QTime::fromString(PQSTRING(1), HB_ISNIL(2) ? Qt::TextDate : PQT_DATEFORMAT(2)));
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    /*
-    static QTime fromString(const QString &string, const QString &format)
-    */
+    // static QTime fromString(const QString &string, const QString &format)
     RQTIME(QTime::fromString(PQSTRING(1), PQSTRING(2)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -81,9 +81,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int currentLoop() const
-*/
+// int currentLoop() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_CURRENTLOOP)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -101,9 +99,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_CURRENTLOOP)
   }
 }
 
-/*
-int currentLoopTime() const
-*/
+// int currentLoopTime() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_CURRENTLOOPTIME)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -121,9 +117,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_CURRENTLOOPTIME)
   }
 }
 
-/*
-int currentTime() const
-*/
+// int currentTime() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_CURRENTTIME)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -141,9 +135,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_CURRENTTIME)
   }
 }
 
-/*
-void setCurrentTime(int msecs)
-*/
+// void setCurrentTime(int msecs)
 HB_FUNC_STATIC(QABSTRACTANIMATION_SETCURRENTTIME)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -163,9 +155,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_SETCURRENTTIME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractAnimation::Direction direction() const
-*/
+// QAbstractAnimation::Direction direction() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_DIRECTION)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -183,9 +173,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_DIRECTION)
   }
 }
 
-/*
-void setDirection(QAbstractAnimation::Direction direction)
-*/
+// void setDirection(QAbstractAnimation::Direction direction)
 HB_FUNC_STATIC(QABSTRACTANIMATION_SETDIRECTION)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -205,9 +193,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_SETDIRECTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int duration() const = 0
-*/
+// virtual int duration() const = 0
 HB_FUNC_STATIC(QABSTRACTANIMATION_DURATION)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -225,9 +211,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_DURATION)
   }
 }
 
-/*
-QAnimationGroup * group() const
-*/
+// QAnimationGroup *group() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_GROUP)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -246,9 +230,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_GROUP)
   }
 }
 
-/*
-int loopCount() const
-*/
+// int loopCount() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_LOOPCOUNT)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -266,9 +248,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_LOOPCOUNT)
   }
 }
 
-/*
-void setLoopCount(int loopCount)
-*/
+// void setLoopCount(int loopCount)
 HB_FUNC_STATIC(QABSTRACTANIMATION_SETLOOPCOUNT)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -288,9 +268,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_SETLOOPCOUNT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractAnimation::State state() const
-*/
+// QAbstractAnimation::State state() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_STATE)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -308,9 +286,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_STATE)
   }
 }
 
-/*
-int totalDuration() const
-*/
+// int totalDuration() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_TOTALDURATION)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -328,9 +304,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_TOTALDURATION)
   }
 }
 
-/*
-void pause()
-*/
+// void pause()
 HB_FUNC_STATIC(QABSTRACTANIMATION_PAUSE)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -350,9 +324,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_PAUSE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void resume()
-*/
+// void resume()
 HB_FUNC_STATIC(QABSTRACTANIMATION_RESUME)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -372,9 +344,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_RESUME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPaused(bool paused)
-*/
+// void setPaused(bool paused)
 HB_FUNC_STATIC(QABSTRACTANIMATION_SETPAUSED)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -394,9 +364,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_SETPAUSED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void start(QAbstractAnimation::DeletionPolicy policy = QAbstractAnimation::KeepWhenStopped)
-*/
+// void start(QAbstractAnimation::DeletionPolicy policy = QAbstractAnimation::KeepWhenStopped)
 HB_FUNC_STATIC(QABSTRACTANIMATION_START)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -416,9 +384,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_START)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void stop()
-*/
+// void stop()
 HB_FUNC_STATIC(QABSTRACTANIMATION_STOP)
 {
   auto obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -438,9 +404,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_STOP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void currentLoopChanged(int currentLoop)
-*/
+// void currentLoopChanged(int currentLoop)
 HB_FUNC_STATIC(QABSTRACTANIMATION_ONCURRENTLOOPCHANGED)
 {
   auto sender = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -481,9 +445,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_ONCURRENTLOOPCHANGED)
   hb_retl(result);
 }
 
-/*
-void directionChanged(QAbstractAnimation::Direction newDirection)
-*/
+// void directionChanged(QAbstractAnimation::Direction newDirection)
 HB_FUNC_STATIC(QABSTRACTANIMATION_ONDIRECTIONCHANGED)
 {
   auto sender = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -525,9 +487,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_ONDIRECTIONCHANGED)
   hb_retl(result);
 }
 
-/*
-void finished()
-*/
+// void finished()
 HB_FUNC_STATIC(QABSTRACTANIMATION_ONFINISHED)
 {
   auto sender = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -565,9 +525,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_ONFINISHED)
   hb_retl(result);
 }
 
-/*
-void stateChanged(QAbstractAnimation::State newState, QAbstractAnimation::State oldState)
-*/
+// void stateChanged(QAbstractAnimation::State newState, QAbstractAnimation::State oldState)
 HB_FUNC_STATIC(QABSTRACTANIMATION_ONSTATECHANGED)
 {
   auto sender = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
