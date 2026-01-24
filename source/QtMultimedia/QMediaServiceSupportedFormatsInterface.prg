@@ -56,9 +56,7 @@ RETURN
 #include <QtMultimedia/QMediaServiceSupportedFormatsInterface>
 #endif
 
-    /*
-    virtual ~QMediaServiceSupportedFormatsInterface()
-    */
+    // virtual ~QMediaServiceSupportedFormatsInterface()
 HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDFORMATSINTERFACE_DELETE)
 {
   auto obj = static_cast<QMediaServiceSupportedFormatsInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -68,9 +66,7 @@ HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDFORMATSINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QStringList &codecs) const = 0
-*/
+// virtual QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QStringList &codecs) const = 0
 HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDFORMATSINTERFACE_HASSUPPORT)
 {
   auto obj = static_cast<QMediaServiceSupportedFormatsInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -88,9 +84,7 @@ HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDFORMATSINTERFACE_HASSUPPORT)
   }
 }
 
-/*
-virtual QStringList supportedMimeTypes() const = 0
-*/
+// virtual QStringList supportedMimeTypes() const = 0
 HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDFORMATSINTERFACE_SUPPORTEDMIMETYPES)
 {
   auto obj = static_cast<QMediaServiceSupportedFormatsInterface *>(Qt5xHb::itemGetPtrStackSelfItem());

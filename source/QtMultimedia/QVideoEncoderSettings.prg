@@ -75,15 +75,11 @@ RETURN
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QVideoEncoderSettings()
-    */
+    // QVideoEncoderSettings()
     auto obj = new QVideoEncoderSettings();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQVIDEOENCODERSETTINGS(1)) {
-    /*
-    QVideoEncoderSettings(const QVideoEncoderSettings &other)
-    */
+    // QVideoEncoderSettings(const QVideoEncoderSettings &other)
     auto obj = new QVideoEncoderSettings(*PQVIDEOENCODERSETTINGS(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -91,9 +87,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_NEW)
   }
 }
 
-/*
-~QVideoEncoderSettings()
-*/
+// ~QVideoEncoderSettings()
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_DELETE)
 {
   auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -103,9 +97,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int bitRate() const
-*/
+// int bitRate() const
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_BITRATE)
 {
   auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -123,9 +115,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_BITRATE)
   }
 }
 
-/*
-QString codec() const
-*/
+// QString codec() const
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_CODEC)
 {
   auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -143,9 +133,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_CODEC)
   }
 }
 
-/*
-QMultimedia::EncodingMode encodingMode() const
-*/
+// QMultimedia::EncodingMode encodingMode() const
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_ENCODINGMODE)
 {
   auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -163,9 +151,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_ENCODINGMODE)
   }
 }
 
-/*
-QVariant encodingOption(const QString &option) const
-*/
+// QVariant encodingOption(const QString &option) const
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_ENCODINGOPTION)
 {
   auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -183,9 +169,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_ENCODINGOPTION)
   }
 }
 
-/*
-qreal frameRate() const
-*/
+// qreal frameRate() const
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_FRAMERATE)
 {
   auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -203,9 +187,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_FRAMERATE)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_ISNULL)
 {
   auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -223,9 +205,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_ISNULL)
   }
 }
 
-/*
-QMultimedia::EncodingQuality quality() const
-*/
+// QMultimedia::EncodingQuality quality() const
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_QUALITY)
 {
   auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -243,9 +223,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_QUALITY)
   }
 }
 
-/*
-QSize resolution() const
-*/
+// QSize resolution() const
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_RESOLUTION)
 {
   auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -263,9 +241,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_RESOLUTION)
   }
 }
 
-/*
-void setBitRate(int bitrate)
-*/
+// void setBitRate(int bitrate)
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETBITRATE)
 {
   auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -285,9 +261,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETBITRATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCodec(const QString &codec)
-*/
+// void setCodec(const QString &codec)
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETCODEC)
 {
   auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -307,9 +281,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETCODEC)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEncodingMode(QMultimedia::EncodingMode mode)
-*/
+// void setEncodingMode(QMultimedia::EncodingMode mode)
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETENCODINGMODE)
 {
   auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -329,9 +301,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETENCODINGMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEncodingOption(const QString &option, const QVariant &value)
-*/
+// void setEncodingOption(const QString &option, const QVariant &value)
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETENCODINGOPTION)
 {
   auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -351,9 +321,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETENCODINGOPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFrameRate(qreal rate)
-*/
+// void setFrameRate(qreal rate)
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETFRAMERATE)
 {
   auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -373,9 +341,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETFRAMERATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setQuality(QMultimedia::EncodingQuality quality)
-*/
+// void setQuality(QMultimedia::EncodingQuality quality)
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETQUALITY)
 {
   auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -398,9 +364,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETQUALITY)
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETRESOLUTION)
 {
   if (ISNUMPAR(1) && ISQSIZE(1)) {
-    /*
-    void setResolution(const QSize &resolution)
-    */
+    // void setResolution(const QSize &resolution)
     auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -409,9 +373,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGS_SETRESOLUTION)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    void setResolution(int width, int height)
-    */
+    // void setResolution(int width, int height)
     auto obj = static_cast<QVideoEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {

@@ -60,9 +60,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    virtual ~QVideoFilterRunnable()
-    */
+    // virtual ~QVideoFilterRunnable()
 HB_FUNC_STATIC(QVIDEOFILTERRUNNABLE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
@@ -74,10 +72,8 @@ HB_FUNC_STATIC(QVIDEOFILTERRUNNABLE_DELETE)
 #endif
 }
 
-/*
-virtual QVideoFrame run(QVideoFrame * input, const QVideoSurfaceFormat &surfaceFormat, QVideoFilterRunnable::RunFlags
-flags) = 0
-*/
+// virtual QVideoFrame run(QVideoFrame *input, const QVideoSurfaceFormat &surfaceFormat, QVideoFilterRunnable::RunFlags
+// flags) = 0
 HB_FUNC_STATIC(QVIDEOFILTERRUNNABLE_RUN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))

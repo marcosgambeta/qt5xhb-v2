@@ -52,9 +52,7 @@ RETURN
 
 #include <QtMultimedia/QVideoFrame>
 
-    /*
-    virtual ~QMediaVideoProbeControl()
-    */
+    // virtual ~QMediaVideoProbeControl()
 HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_DELETE)
 {
   auto obj = qobject_cast<QMediaVideoProbeControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -64,9 +62,7 @@ HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void flush()
-*/
+// void flush()
 HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_ONFLUSH)
 {
   auto sender = qobject_cast<QMediaVideoProbeControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -104,9 +100,7 @@ HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_ONFLUSH)
   hb_retl(result);
 }
 
-/*
-void videoFrameProbed(const QVideoFrame &frame)
-*/
+// void videoFrameProbed(const QVideoFrame &frame)
 HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED)
 {
   auto sender = qobject_cast<QMediaVideoProbeControl *>(Qt5xHb::getQObjectPointerFromSelfItem());

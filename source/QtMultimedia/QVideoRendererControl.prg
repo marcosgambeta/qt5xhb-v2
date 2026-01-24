@@ -52,9 +52,7 @@ RETURN
 
 #include <QtMultimedia/QAbstractVideoSurface>
 
-    /*
-    ~QVideoRendererControl()
-    */
+    // ~QVideoRendererControl()
 HB_FUNC_STATIC(QVIDEORENDERERCONTROL_DELETE)
 {
   auto obj = qobject_cast<QVideoRendererControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -64,9 +62,7 @@ HB_FUNC_STATIC(QVIDEORENDERERCONTROL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setSurface(QAbstractVideoSurface * surface) = 0
-*/
+// virtual void setSurface(QAbstractVideoSurface *surface) = 0
 HB_FUNC_STATIC(QVIDEORENDERERCONTROL_SETSURFACE)
 {
   auto obj = qobject_cast<QVideoRendererControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -86,9 +82,7 @@ HB_FUNC_STATIC(QVIDEORENDERERCONTROL_SETSURFACE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QAbstractVideoSurface * surface() const = 0
-*/
+// virtual QAbstractVideoSurface *surface() const = 0
 HB_FUNC_STATIC(QVIDEORENDERERCONTROL_SURFACE)
 {
   auto obj = qobject_cast<QVideoRendererControl *>(Qt5xHb::getQObjectPointerFromSelfItem());

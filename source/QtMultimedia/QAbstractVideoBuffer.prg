@@ -62,13 +62,9 @@ RETURN
 
 #include <QtCore/QVariant>
 
-    /*
-    QAbstractVideoBuffer(QAbstractVideoBuffer::HandleType type) [ABSTRACT]
-    */
+    // QAbstractVideoBuffer(QAbstractVideoBuffer::HandleType type) [ABSTRACT]
 
-    /*
-    virtual ~QAbstractVideoBuffer()
-    */
+    // virtual ~QAbstractVideoBuffer()
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_DELETE)
 {
   auto obj = static_cast<QAbstractVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -78,9 +74,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QVariant handle() const
-*/
+// virtual QVariant handle() const
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_HANDLE)
 {
   auto obj = static_cast<QAbstractVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -98,9 +92,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_HANDLE)
   }
 }
 
-/*
-QAbstractVideoBuffer::HandleType handleType() const
-*/
+// QAbstractVideoBuffer::HandleType handleType() const
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_HANDLETYPE)
 {
   auto obj = static_cast<QAbstractVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -118,9 +110,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_HANDLETYPE)
   }
 }
 
-/*
-virtual QAbstractVideoBuffer::MapMode mapMode() const = 0
-*/
+// virtual QAbstractVideoBuffer::MapMode mapMode() const = 0
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_MAPMODE)
 {
   auto obj = static_cast<QAbstractVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -138,9 +128,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_MAPMODE)
   }
 }
 
-/*
-virtual void unmap() = 0
-*/
+// virtual void unmap() = 0
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_UNMAP)
 {
   auto obj = static_cast<QAbstractVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -160,9 +148,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_UNMAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void release()
-*/
+// virtual void release()
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_RELEASE)
 {
   auto obj = static_cast<QAbstractVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());

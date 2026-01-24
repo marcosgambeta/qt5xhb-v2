@@ -55,9 +55,7 @@ RETURN
 #include <QtMultimedia/QVideoEncoderSettingsControl>
 #endif
 
-    /*
-    virtual ~QVideoEncoderSettingsControl()
-    */
+    // virtual ~QVideoEncoderSettingsControl()
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_DELETE)
 {
   auto obj = qobject_cast<QVideoEncoderSettingsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -67,9 +65,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setVideoSettings(const QVideoEncoderSettings &settings) = 0
-*/
+// virtual void setVideoSettings(const QVideoEncoderSettings &settings) = 0
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SETVIDEOSETTINGS)
 {
   auto obj = qobject_cast<QVideoEncoderSettingsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -89,9 +85,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SETVIDEOSETTINGS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QList<qreal> supportedFrameRates(const QVideoEncoderSettings &settings, bool * continuous = nullptr) const = 0
-*/
+// virtual QList<qreal> supportedFrameRates(const QVideoEncoderSettings &settings, bool *continuous = nullptr) const = 0
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES)
 {
   auto obj = qobject_cast<QVideoEncoderSettingsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -112,9 +106,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES)
   }
 }
 
-/*
-virtual QList<QSize> supportedResolutions(const QVideoEncoderSettings &settings, bool * continuous = nullptr) const = 0
-*/
+// virtual QList<QSize> supportedResolutions(const QVideoEncoderSettings &settings, bool *continuous = nullptr) const = 0
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS)
 {
   auto obj = qobject_cast<QVideoEncoderSettingsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -156,9 +148,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS)
   }
 }
 
-/*
-virtual QStringList supportedVideoCodecs() const = 0
-*/
+// virtual QStringList supportedVideoCodecs() const = 0
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDVIDEOCODECS)
 {
   auto obj = qobject_cast<QVideoEncoderSettingsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -176,9 +166,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDVIDEOCODECS)
   }
 }
 
-/*
-virtual QString videoCodecDescription(const QString &codecName) const = 0
-*/
+// virtual QString videoCodecDescription(const QString &codecName) const = 0
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_VIDEOCODECDESCRIPTION)
 {
   auto obj = qobject_cast<QVideoEncoderSettingsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -196,9 +184,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_VIDEOCODECDESCRIPTION)
   }
 }
 
-/*
-virtual QVideoEncoderSettings videoSettings() const = 0
-*/
+// virtual QVideoEncoderSettings videoSettings() const = 0
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_VIDEOSETTINGS)
 {
   auto obj = qobject_cast<QVideoEncoderSettingsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());

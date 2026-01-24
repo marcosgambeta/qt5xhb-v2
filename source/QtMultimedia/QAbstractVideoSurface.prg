@@ -65,13 +65,9 @@ RETURN
 
 #include <QtMultimedia/QVideoSurfaceFormat>
 
-    /*
-    QAbstractVideoSurface(QObject * parent = nullptr)
-    */
+    // QAbstractVideoSurface(QObject *parent = nullptr)
 
-    /*
-    ~QAbstractVideoSurface()
-    */
+    // ~QAbstractVideoSurface()
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_DELETE)
 {
   auto obj = qobject_cast<QAbstractVideoSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -81,9 +77,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize nativeResolution() const
-*/
+// QSize nativeResolution() const
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_NATIVERESOLUTION)
 {
   auto obj = qobject_cast<QAbstractVideoSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -101,9 +95,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_NATIVERESOLUTION)
   }
 }
 
-/*
-QAbstractVideoSurface::Error error() const
-*/
+// QAbstractVideoSurface::Error error() const
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ERROR)
 {
   auto obj = qobject_cast<QAbstractVideoSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -121,9 +113,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ERROR)
   }
 }
 
-/*
-bool isActive() const
-*/
+// bool isActive() const
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISACTIVE)
 {
   auto obj = qobject_cast<QAbstractVideoSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -141,9 +131,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISACTIVE)
   }
 }
 
-/*
-virtual bool isFormatSupported(const QVideoSurfaceFormat &format) const
-*/
+// virtual bool isFormatSupported(const QVideoSurfaceFormat &format) const
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED)
 {
   auto obj = qobject_cast<QAbstractVideoSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -161,9 +149,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED)
   }
 }
 
-/*
-virtual QVideoSurfaceFormat nearestFormat(const QVideoSurfaceFormat &format) const
-*/
+// virtual QVideoSurfaceFormat nearestFormat(const QVideoSurfaceFormat &format) const
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_NEARESTFORMAT)
 {
   auto obj = qobject_cast<QAbstractVideoSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -181,9 +167,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_NEARESTFORMAT)
   }
 }
 
-/*
-virtual bool present(const QVideoFrame &frame) = 0
-*/
+// virtual bool present(const QVideoFrame &frame) = 0
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_PRESENT)
 {
   auto obj = qobject_cast<QAbstractVideoSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -201,9 +185,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_PRESENT)
   }
 }
 
-/*
-virtual bool start(const QVideoSurfaceFormat &format)
-*/
+// virtual bool start(const QVideoSurfaceFormat &format)
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_START)
 {
   auto obj = qobject_cast<QAbstractVideoSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -221,9 +203,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_START)
   }
 }
 
-/*
-virtual void stop()
-*/
+// virtual void stop()
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_STOP)
 {
   auto obj = qobject_cast<QAbstractVideoSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -243,9 +223,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_STOP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVideoSurfaceFormat surfaceFormat() const
-*/
+// QVideoSurfaceFormat surfaceFormat() const
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SURFACEFORMAT)
 {
   auto obj = qobject_cast<QAbstractVideoSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -263,14 +241,10 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SURFACEFORMAT)
   }
 }
 
-/*
-virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats(QAbstractVideoBuffer::HandleType handleType =
-QAbstractVideoBuffer::NoHandle) const = 0
-*/
+// virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats(QAbstractVideoBuffer::HandleType handleType =
+// QAbstractVideoBuffer::NoHandle) const = 0
 
-/*
-void activeChanged(bool active)
-*/
+// void activeChanged(bool active)
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONACTIVECHANGED)
 {
   auto sender = qobject_cast<QAbstractVideoSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -311,9 +285,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONACTIVECHANGED)
   hb_retl(result);
 }
 
-/*
-void surfaceFormatChanged(const QVideoSurfaceFormat &format)
-*/
+// void surfaceFormatChanged(const QVideoSurfaceFormat &format)
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED)
 {
   auto sender = qobject_cast<QAbstractVideoSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -355,9 +327,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED)
   hb_retl(result);
 }
 
-/*
-void supportedFormatsChanged()
-*/
+// void supportedFormatsChanged()
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED)
 {
   auto sender = qobject_cast<QAbstractVideoSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -396,9 +366,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED)
   hb_retl(result);
 }
 
-/*
-void nativeResolutionChanged(const QSize &)
-*/
+// void nativeResolutionChanged(const QSize &)
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONNATIVERESOLUTIONCHANGED)
 {
   auto sender = qobject_cast<QAbstractVideoSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());

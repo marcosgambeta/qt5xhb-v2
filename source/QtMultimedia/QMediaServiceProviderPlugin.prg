@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QMediaService * create(const QString &key) override = 0
-*/
+// virtual QMediaService *create(const QString &key) override = 0
 HB_FUNC_STATIC(QMEDIASERVICEPROVIDERPLUGIN_CREATE)
 {
   auto obj = qobject_cast<QMediaServiceProviderPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -82,9 +80,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERPLUGIN_CREATE)
   }
 }
 
-/*
-virtual void release(QMediaService * service) override = 0
-*/
+// virtual void release(QMediaService *service) override = 0
 HB_FUNC_STATIC(QMEDIASERVICEPROVIDERPLUGIN_RELEASE)
 {
   auto obj = qobject_cast<QMediaServiceProviderPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());

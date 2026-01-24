@@ -56,9 +56,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    virtual ~QAudioRoleControl()
-    */
+    // virtual ~QAudioRoleControl()
 HB_FUNC_STATIC(QAUDIOROLECONTROL_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -70,9 +68,7 @@ HB_FUNC_STATIC(QAUDIOROLECONTROL_DELETE)
 #endif
 }
 
-/*
-virtual QAudio::Role audioRole() const = 0
-*/
+// virtual QAudio::Role audioRole() const = 0
 HB_FUNC_STATIC(QAUDIOROLECONTROL_AUDIOROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -92,9 +88,7 @@ HB_FUNC_STATIC(QAUDIOROLECONTROL_AUDIOROLE)
 #endif
 }
 
-/*
-virtual void setAudioRole(QAudio::Role role) = 0
-*/
+// virtual void setAudioRole(QAudio::Role role) = 0
 HB_FUNC_STATIC(QAUDIOROLECONTROL_SETAUDIOROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -116,9 +110,7 @@ HB_FUNC_STATIC(QAUDIOROLECONTROL_SETAUDIOROLE)
 #endif
 }
 
-/*
-virtual QList<QAudio::Role> supportedAudioRoles() const = 0
-*/
+// virtual QList<QAudio::Role> supportedAudioRoles() const = 0
 HB_FUNC_STATIC(QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
@@ -145,9 +137,7 @@ HB_FUNC_STATIC(QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES)
 #endif
 }
 
-/*
-void audioRoleChanged(QAudio::Role role)
-*/
+// void audioRoleChanged(QAudio::Role role)
 HB_FUNC_STATIC(QAUDIOROLECONTROL_ONAUDIOROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))

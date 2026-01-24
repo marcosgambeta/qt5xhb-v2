@@ -52,9 +52,7 @@ RETURN
 #include <QtMultimedia/QMediaNetworkAccessControl>
 #endif
 
-    /*
-    virtual ~QMediaNetworkAccessControl()
-    */
+    // virtual ~QMediaNetworkAccessControl()
 HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_DELETE)
 {
   auto obj = qobject_cast<QMediaNetworkAccessControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -64,9 +62,7 @@ HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QNetworkConfiguration currentConfiguration() const = 0
-*/
+// virtual QNetworkConfiguration currentConfiguration() const = 0
 HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION)
 {
   auto obj = qobject_cast<QMediaNetworkAccessControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -84,9 +80,7 @@ HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION)
   }
 }
 
-/*
-virtual void setConfigurations(const QList<QNetworkConfiguration> &configurations) = 0
-*/
+// virtual void setConfigurations(const QList<QNetworkConfiguration> &configurations) = 0
 HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS)
 {
   auto obj = qobject_cast<QMediaNetworkAccessControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -113,9 +107,7 @@ HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void configurationChanged(const QNetworkConfiguration &configuration)
-*/
+// void configurationChanged(const QNetworkConfiguration &configuration)
 HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED)
 {
   auto sender = qobject_cast<QMediaNetworkAccessControl *>(Qt5xHb::getQObjectPointerFromSelfItem());

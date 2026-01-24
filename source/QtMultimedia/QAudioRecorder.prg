@@ -56,9 +56,7 @@ RETURN
 #include <QtMultimedia/QAudioRecorder>
 #endif
 
-    /*
-    QAudioRecorder(QObject * parent = nullptr)
-    */
+    // QAudioRecorder(QObject *parent = nullptr)
 HB_FUNC_STATIC(QAUDIORECORDER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -69,9 +67,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_NEW)
   }
 }
 
-/*
-~QAudioRecorder()
-*/
+// ~QAudioRecorder()
 HB_FUNC_STATIC(QAUDIORECORDER_DELETE)
 {
   auto obj = qobject_cast<QAudioRecorder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -81,9 +77,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString audioInput() const
-*/
+// QString audioInput() const
 HB_FUNC_STATIC(QAUDIORECORDER_AUDIOINPUT)
 {
   auto obj = qobject_cast<QAudioRecorder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -101,9 +95,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_AUDIOINPUT)
   }
 }
 
-/*
-void setAudioInput(const QString &name)
-*/
+// void setAudioInput(const QString &name)
 HB_FUNC_STATIC(QAUDIORECORDER_SETAUDIOINPUT)
 {
   auto obj = qobject_cast<QAudioRecorder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -123,9 +115,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_SETAUDIOINPUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString audioInputDescription(const QString &name) const
-*/
+// QString audioInputDescription(const QString &name) const
 HB_FUNC_STATIC(QAUDIORECORDER_AUDIOINPUTDESCRIPTION)
 {
   auto obj = qobject_cast<QAudioRecorder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -143,9 +133,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_AUDIOINPUTDESCRIPTION)
   }
 }
 
-/*
-QStringList audioInputs() const
-*/
+// QStringList audioInputs() const
 HB_FUNC_STATIC(QAUDIORECORDER_AUDIOINPUTS)
 {
   auto obj = qobject_cast<QAudioRecorder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -163,9 +151,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_AUDIOINPUTS)
   }
 }
 
-/*
-QString defaultAudioInput() const
-*/
+// QString defaultAudioInput() const
 HB_FUNC_STATIC(QAUDIORECORDER_DEFAULTAUDIOINPUT)
 {
   auto obj = qobject_cast<QAudioRecorder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -183,9 +169,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_DEFAULTAUDIOINPUT)
   }
 }
 
-/*
-void audioInputChanged(const QString &name)
-*/
+// void audioInputChanged(const QString &name)
 HB_FUNC_STATIC(QAUDIORECORDER_ONAUDIOINPUTCHANGED)
 {
   auto sender = qobject_cast<QAudioRecorder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -226,9 +210,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_ONAUDIOINPUTCHANGED)
   hb_retl(result);
 }
 
-/*
-void availableAudioInputsChanged()
-*/
+// void availableAudioInputsChanged()
 HB_FUNC_STATIC(QAUDIORECORDER_ONAVAILABLEAUDIOINPUTSCHANGED)
 {
   auto sender = qobject_cast<QAudioRecorder *>(Qt5xHb::getQObjectPointerFromSelfItem());

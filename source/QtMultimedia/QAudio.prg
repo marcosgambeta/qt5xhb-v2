@@ -54,9 +54,7 @@ RETURN
 #include <QtMultimedia/QAudio>
 #endif
 
-    /*
-    static qreal convertVolume(qreal volume, QAudio::VolumeScale from, QAudio::VolumeScale to)
-    */
+    // static qreal convertVolume(qreal volume, QAudio::VolumeScale from, QAudio::VolumeScale to)
 HB_FUNC_STATIC(QAUDIO_CONVERTVOLUME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

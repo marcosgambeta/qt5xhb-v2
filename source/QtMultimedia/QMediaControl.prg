@@ -47,9 +47,7 @@ RETURN
 #include <QtMultimedia/QMediaControl>
 #endif
 
-    /*
-    ~QMediaControl()
-    */
+    // ~QMediaControl()
 HB_FUNC_STATIC(QMEDIACONTROL_DELETE)
 {
   auto obj = qobject_cast<QMediaControl *>(Qt5xHb::getQObjectPointerFromSelfItem());

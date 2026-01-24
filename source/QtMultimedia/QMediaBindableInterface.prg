@@ -56,9 +56,7 @@ RETURN
 #include <QtMultimedia/QMediaBindableInterface>
 #endif
 
-    /*
-    virtual ~QMediaBindableInterface()
-    */
+    // virtual ~QMediaBindableInterface()
 HB_FUNC_STATIC(QMEDIABINDABLEINTERFACE_DELETE)
 {
   auto obj = static_cast<QMediaBindableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -68,9 +66,7 @@ HB_FUNC_STATIC(QMEDIABINDABLEINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QMediaObject * mediaObject() const = 0
-*/
+// virtual QMediaObject *mediaObject() const = 0
 HB_FUNC_STATIC(QMEDIABINDABLEINTERFACE_MEDIAOBJECT)
 {
   auto obj = static_cast<QMediaBindableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());

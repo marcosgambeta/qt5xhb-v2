@@ -64,21 +64,15 @@ RETURN
 HB_FUNC_STATIC(QMEDIATIMEINTERVAL_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QMediaTimeInterval()
-    */
+    // QMediaTimeInterval()
     auto obj = new QMediaTimeInterval();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    QMediaTimeInterval(qint64 start, qint64 end)
-    */
+    // QMediaTimeInterval(qint64 start, qint64 end)
     auto obj = new QMediaTimeInterval(PQINT64(1), PQINT64(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQMEDIATIMEINTERVAL(1)) {
-    /*
-    QMediaTimeInterval(const QMediaTimeInterval &other)
-    */
+    // QMediaTimeInterval(const QMediaTimeInterval &other)
     auto obj = new QMediaTimeInterval(*PQMEDIATIMEINTERVAL(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -95,9 +89,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool contains(qint64 time) const
-*/
+// bool contains(qint64 time) const
 HB_FUNC_STATIC(QMEDIATIMEINTERVAL_CONTAINS)
 {
   auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -115,9 +107,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_CONTAINS)
   }
 }
 
-/*
-qint64 end() const
-*/
+// qint64 end() const
 HB_FUNC_STATIC(QMEDIATIMEINTERVAL_END)
 {
   auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -135,9 +125,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_END)
   }
 }
 
-/*
-bool isNormal() const
-*/
+// bool isNormal() const
 HB_FUNC_STATIC(QMEDIATIMEINTERVAL_ISNORMAL)
 {
   auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -155,9 +143,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_ISNORMAL)
   }
 }
 
-/*
-QMediaTimeInterval normalized() const
-*/
+// QMediaTimeInterval normalized() const
 HB_FUNC_STATIC(QMEDIATIMEINTERVAL_NORMALIZED)
 {
   auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -175,9 +161,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_NORMALIZED)
   }
 }
 
-/*
-qint64 start() const
-*/
+// qint64 start() const
 HB_FUNC_STATIC(QMEDIATIMEINTERVAL_START)
 {
   auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -195,9 +179,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_START)
   }
 }
 
-/*
-QMediaTimeInterval translated(qint64 offset) const
-*/
+// QMediaTimeInterval translated(qint64 offset) const
 HB_FUNC_STATIC(QMEDIATIMEINTERVAL_TRANSLATED)
 {
   auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());

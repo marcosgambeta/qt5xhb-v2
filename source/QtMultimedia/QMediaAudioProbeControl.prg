@@ -52,9 +52,7 @@ RETURN
 
 #include <QtMultimedia/QAudioBuffer>
 
-    /*
-    virtual ~QMediaAudioProbeControl()
-    */
+    // virtual ~QMediaAudioProbeControl()
 HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_DELETE)
 {
   auto obj = qobject_cast<QMediaAudioProbeControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -64,9 +62,7 @@ HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void audioBufferProbed(const QAudioBuffer &buffer)
-*/
+// void audioBufferProbed(const QAudioBuffer &buffer)
 HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED)
 {
   auto sender = qobject_cast<QMediaAudioProbeControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED)
   hb_retl(result);
 }
 
-/*
-void flush()
-*/
+// void flush()
 HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_ONFLUSH)
 {
   auto sender = qobject_cast<QMediaAudioProbeControl *>(Qt5xHb::getQObjectPointerFromSelfItem());

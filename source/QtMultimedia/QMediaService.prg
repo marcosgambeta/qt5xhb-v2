@@ -50,9 +50,7 @@ RETURN
 #include <QtMultimedia/QMediaService>
 #endif
 
-    /*
-    ~QMediaService()
-    */
+    // ~QMediaService()
 HB_FUNC_STATIC(QMEDIASERVICE_DELETE)
 {
   auto obj = qobject_cast<QMediaService *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -62,9 +60,7 @@ HB_FUNC_STATIC(QMEDIASERVICE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void releaseControl(QMediaControl * control) = 0
-*/
+// virtual void releaseControl(QMediaControl *control) = 0
 HB_FUNC_STATIC(QMEDIASERVICE_RELEASECONTROL)
 {
   auto obj = qobject_cast<QMediaService *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -84,9 +80,7 @@ HB_FUNC_STATIC(QMEDIASERVICE_RELEASECONTROL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QMediaControl * requestControl(const char * interface) = 0
-*/
+// virtual QMediaControl *requestControl(const char *interface) = 0
 HB_FUNC_STATIC(QMEDIASERVICE_REQUESTCONTROL)
 {
   auto obj = qobject_cast<QMediaService *>(Qt5xHb::getQObjectPointerFromSelfItem());

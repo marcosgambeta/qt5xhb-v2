@@ -69,9 +69,7 @@ RETURN
 
 #include <QtCore/QUrl>
 
-    /*
-    virtual ~QMediaRecorderControl()
-    */
+    // virtual ~QMediaRecorderControl()
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_DELETE)
 {
   auto obj = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -81,9 +79,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void applySettings() = 0
-*/
+// virtual void applySettings() = 0
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_APPLYSETTINGS)
 {
   auto obj = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -103,9 +99,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_APPLYSETTINGS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual qint64 duration() const = 0
-*/
+// virtual qint64 duration() const = 0
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_DURATION)
 {
   auto obj = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -123,9 +117,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_DURATION)
   }
 }
 
-/*
-virtual bool isMuted() const = 0
-*/
+// virtual bool isMuted() const = 0
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ISMUTED)
 {
   auto obj = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -143,9 +135,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ISMUTED)
   }
 }
 
-/*
-virtual QUrl outputLocation() const = 0
-*/
+// virtual QUrl outputLocation() const = 0
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_OUTPUTLOCATION)
 {
   auto obj = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -163,9 +153,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_OUTPUTLOCATION)
   }
 }
 
-/*
-virtual bool setOutputLocation(const QUrl &location) = 0
-*/
+// virtual bool setOutputLocation(const QUrl &location) = 0
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETOUTPUTLOCATION)
 {
   auto obj = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -183,9 +171,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETOUTPUTLOCATION)
   }
 }
 
-/*
-virtual QMediaRecorder::State state() const = 0
-*/
+// virtual QMediaRecorder::State state() const = 0
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_STATE)
 {
   auto obj = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -203,9 +189,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_STATE)
   }
 }
 
-/*
-virtual QMediaRecorder::Status status() const = 0
-*/
+// virtual QMediaRecorder::Status status() const = 0
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_STATUS)
 {
   auto obj = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -223,9 +207,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_STATUS)
   }
 }
 
-/*
-virtual qreal volume() const = 0
-*/
+// virtual qreal volume() const = 0
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_VOLUME)
 {
   auto obj = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -243,9 +225,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_VOLUME)
   }
 }
 
-/*
-virtual void setMuted(bool muted) = 0
-*/
+// virtual void setMuted(bool muted) = 0
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETMUTED)
 {
   auto obj = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -265,9 +245,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETMUTED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setState(QMediaRecorder::State state) = 0
-*/
+// virtual void setState(QMediaRecorder::State state) = 0
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETSTATE)
 {
   auto obj = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -287,9 +265,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETSTATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setVolume(qreal gain) = 0
-*/
+// virtual void setVolume(qreal gain) = 0
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETVOLUME)
 {
   auto obj = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -309,9 +285,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETVOLUME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void actualLocationChanged(const QUrl &location)
-*/
+// void actualLocationChanged(const QUrl &location)
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONACTUALLOCATIONCHANGED)
 {
   auto sender = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -352,9 +326,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONACTUALLOCATIONCHANGED)
   hb_retl(result);
 }
 
-/*
-void durationChanged(qint64 duration)
-*/
+// void durationChanged(qint64 duration)
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONDURATIONCHANGED)
 {
   auto sender = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -395,9 +367,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONDURATIONCHANGED)
   hb_retl(result);
 }
 
-/*
-void error(int error, const QString &errorString)
-*/
+// void error(int error, const QString &errorString)
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONERROR)
 {
   auto sender = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -440,9 +410,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONERROR)
   hb_retl(result);
 }
 
-/*
-void mutedChanged(bool muted)
-*/
+// void mutedChanged(bool muted)
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONMUTEDCHANGED)
 {
   auto sender = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -483,9 +451,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONMUTEDCHANGED)
   hb_retl(result);
 }
 
-/*
-void stateChanged(QMediaRecorder::State state)
-*/
+// void stateChanged(QMediaRecorder::State state)
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONSTATECHANGED)
 {
   auto sender = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -526,9 +492,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONSTATECHANGED)
   hb_retl(result);
 }
 
-/*
-void statusChanged(QMediaRecorder::Status status)
-*/
+// void statusChanged(QMediaRecorder::Status status)
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONSTATUSCHANGED)
 {
   auto sender = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -569,9 +533,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONSTATUSCHANGED)
   hb_retl(result);
 }
 
-/*
-void volumeChanged(qreal gain)
-*/
+// void volumeChanged(qreal gain)
 HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONVOLUMECHANGED)
 {
   auto sender = qobject_cast<QMediaRecorderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());

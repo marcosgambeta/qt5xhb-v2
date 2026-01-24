@@ -50,9 +50,7 @@ RETURN
 #include <QtMultimedia/QMediaAvailabilityControl>
 #endif
 
-    /*
-    ~QMediaAvailabilityControl()
-    */
+    // ~QMediaAvailabilityControl()
 HB_FUNC_STATIC(QMEDIAAVAILABILITYCONTROL_DELETE)
 {
   auto obj = qobject_cast<QMediaAvailabilityControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -62,9 +60,7 @@ HB_FUNC_STATIC(QMEDIAAVAILABILITYCONTROL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QMultimedia::AvailabilityStatus availability() const = 0
-*/
+// virtual QMultimedia::AvailabilityStatus availability() const = 0
 HB_FUNC_STATIC(QMEDIAAVAILABILITYCONTROL_AVAILABILITY)
 {
   auto obj = qobject_cast<QMediaAvailabilityControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -82,9 +78,7 @@ HB_FUNC_STATIC(QMEDIAAVAILABILITYCONTROL_AVAILABILITY)
   }
 }
 
-/*
-void availabilityChanged(QMultimedia::AvailabilityStatus availability)
-*/
+// void availabilityChanged(QMultimedia::AvailabilityStatus availability)
 HB_FUNC_STATIC(QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED)
 {
   auto sender = qobject_cast<QMediaAvailabilityControl *>(Qt5xHb::getQObjectPointerFromSelfItem());

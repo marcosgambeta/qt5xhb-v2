@@ -77,9 +77,7 @@ RETURN
 #include <QtMultimedia/QAudioDecoder>
 #endif
 
-    /*
-    QAudioDecoder(QObject * parent = nullptr)
-    */
+    // QAudioDecoder(QObject *parent = nullptr)
 HB_FUNC_STATIC(QAUDIODECODER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QAUDIODECODER_NEW)
   }
 }
 
-/*
-~QAudioDecoder()
-*/
+// ~QAudioDecoder()
 HB_FUNC_STATIC(QAUDIODECODER_DELETE)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -102,9 +98,7 @@ HB_FUNC_STATIC(QAUDIODECODER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString sourceFilename() const
-*/
+// QString sourceFilename() const
 HB_FUNC_STATIC(QAUDIODECODER_SOURCEFILENAME)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -122,9 +116,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SOURCEFILENAME)
   }
 }
 
-/*
-void setSourceFilename(const QString &fileName)
-*/
+// void setSourceFilename(const QString &fileName)
 HB_FUNC_STATIC(QAUDIODECODER_SETSOURCEFILENAME)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -144,9 +136,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SETSOURCEFILENAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAudioDecoder::State state() const
-*/
+// QAudioDecoder::State state() const
 HB_FUNC_STATIC(QAUDIODECODER_STATE)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -164,9 +154,7 @@ HB_FUNC_STATIC(QAUDIODECODER_STATE)
   }
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QAUDIODECODER_ERRORSTRING)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -184,9 +172,7 @@ HB_FUNC_STATIC(QAUDIODECODER_ERRORSTRING)
   }
 }
 
-/*
-bool bufferAvailable() const
-*/
+// bool bufferAvailable() const
 HB_FUNC_STATIC(QAUDIODECODER_BUFFERAVAILABLE)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -204,9 +190,7 @@ HB_FUNC_STATIC(QAUDIODECODER_BUFFERAVAILABLE)
   }
 }
 
-/*
-QAudioFormat audioFormat() const
-*/
+// QAudioFormat audioFormat() const
 HB_FUNC_STATIC(QAUDIODECODER_AUDIOFORMAT)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -224,9 +208,7 @@ HB_FUNC_STATIC(QAUDIODECODER_AUDIOFORMAT)
   }
 }
 
-/*
-void setAudioFormat(const QAudioFormat &format)
-*/
+// void setAudioFormat(const QAudioFormat &format)
 HB_FUNC_STATIC(QAUDIODECODER_SETAUDIOFORMAT)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -246,9 +228,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SETAUDIOFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qint64 duration() const
-*/
+// qint64 duration() const
 HB_FUNC_STATIC(QAUDIODECODER_DURATION)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -266,9 +246,7 @@ HB_FUNC_STATIC(QAUDIODECODER_DURATION)
   }
 }
 
-/*
-QAudioDecoder::Error error() const
-*/
+// QAudioDecoder::Error error() const
 HB_FUNC_STATIC(QAUDIODECODER_ERROR)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -286,9 +264,7 @@ HB_FUNC_STATIC(QAUDIODECODER_ERROR)
   }
 }
 
-/*
-qint64 position() const
-*/
+// qint64 position() const
 HB_FUNC_STATIC(QAUDIODECODER_POSITION)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -306,9 +282,7 @@ HB_FUNC_STATIC(QAUDIODECODER_POSITION)
   }
 }
 
-/*
-QAudioBuffer read() const
-*/
+// QAudioBuffer read() const
 HB_FUNC_STATIC(QAUDIODECODER_READ)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -326,9 +300,7 @@ HB_FUNC_STATIC(QAUDIODECODER_READ)
   }
 }
 
-/*
-QIODevice * sourceDevice() const
-*/
+// QIODevice *sourceDevice() const
 HB_FUNC_STATIC(QAUDIODECODER_SOURCEDEVICE)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -347,9 +319,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SOURCEDEVICE)
   }
 }
 
-/*
-void setSourceDevice(QIODevice * device)
-*/
+// void setSourceDevice(QIODevice *device)
 HB_FUNC_STATIC(QAUDIODECODER_SETSOURCEDEVICE)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -369,9 +339,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SETSOURCEDEVICE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void start()
-*/
+// void start()
 HB_FUNC_STATIC(QAUDIODECODER_START)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -391,9 +359,7 @@ HB_FUNC_STATIC(QAUDIODECODER_START)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void stop()
-*/
+// void stop()
 HB_FUNC_STATIC(QAUDIODECODER_STOP)
 {
   auto obj = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -413,9 +379,7 @@ HB_FUNC_STATIC(QAUDIODECODER_STOP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QStringList &codecs = QStringList())
-*/
+// static QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QStringList &codecs = QStringList())
 HB_FUNC_STATIC(QAUDIODECODER_HASSUPPORT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -429,16 +393,10 @@ HB_FUNC_STATIC(QAUDIODECODER_HASSUPPORT)
 #endif
 }
 
-/*
-bool bind(QObject *) override
-*/
-/*
-void unbind(QObject *) override
-*/
+// bool bind(QObject *) override
+// void unbind(QObject *) override
 
-/*
-void bufferAvailableChanged(bool available)
-*/
+// void bufferAvailableChanged(bool available)
 HB_FUNC_STATIC(QAUDIODECODER_ONBUFFERAVAILABLECHANGED)
 {
   auto sender = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -479,9 +437,7 @@ HB_FUNC_STATIC(QAUDIODECODER_ONBUFFERAVAILABLECHANGED)
   hb_retl(result);
 }
 
-/*
-void bufferReady()
-*/
+// void bufferReady()
 HB_FUNC_STATIC(QAUDIODECODER_ONBUFFERREADY)
 {
   auto sender = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -519,9 +475,7 @@ HB_FUNC_STATIC(QAUDIODECODER_ONBUFFERREADY)
   hb_retl(result);
 }
 
-/*
-void durationChanged(qint64 duration)
-*/
+// void durationChanged(qint64 duration)
 HB_FUNC_STATIC(QAUDIODECODER_ONDURATIONCHANGED)
 {
   auto sender = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -562,9 +516,7 @@ HB_FUNC_STATIC(QAUDIODECODER_ONDURATIONCHANGED)
   hb_retl(result);
 }
 
-/*
-void error(QAudioDecoder::Error error)
-*/
+// void error(QAudioDecoder::Error error)
 HB_FUNC_STATIC(QAUDIODECODER_ONERROR)
 {
   auto sender = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -605,9 +557,7 @@ HB_FUNC_STATIC(QAUDIODECODER_ONERROR)
   hb_retl(result);
 }
 
-/*
-void finished()
-*/
+// void finished()
 HB_FUNC_STATIC(QAUDIODECODER_ONFINISHED)
 {
   auto sender = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -645,9 +595,7 @@ HB_FUNC_STATIC(QAUDIODECODER_ONFINISHED)
   hb_retl(result);
 }
 
-/*
-void formatChanged(const QAudioFormat &format)
-*/
+// void formatChanged(const QAudioFormat &format)
 HB_FUNC_STATIC(QAUDIODECODER_ONFORMATCHANGED)
 {
   auto sender = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -688,9 +636,7 @@ HB_FUNC_STATIC(QAUDIODECODER_ONFORMATCHANGED)
   hb_retl(result);
 }
 
-/*
-void positionChanged(qint64 position)
-*/
+// void positionChanged(qint64 position)
 HB_FUNC_STATIC(QAUDIODECODER_ONPOSITIONCHANGED)
 {
   auto sender = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -731,9 +677,7 @@ HB_FUNC_STATIC(QAUDIODECODER_ONPOSITIONCHANGED)
   hb_retl(result);
 }
 
-/*
-void sourceChanged()
-*/
+// void sourceChanged()
 HB_FUNC_STATIC(QAUDIODECODER_ONSOURCECHANGED)
 {
   auto sender = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -771,9 +715,7 @@ HB_FUNC_STATIC(QAUDIODECODER_ONSOURCECHANGED)
   hb_retl(result);
 }
 
-/*
-void stateChanged(QAudioDecoder::State state)
-*/
+// void stateChanged(QAudioDecoder::State state)
 HB_FUNC_STATIC(QAUDIODECODER_ONSTATECHANGED)
 {
   auto sender = qobject_cast<QAudioDecoder *>(Qt5xHb::getQObjectPointerFromSelfItem());

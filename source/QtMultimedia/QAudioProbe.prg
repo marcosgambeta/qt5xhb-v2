@@ -53,9 +53,7 @@ RETURN
 #include <QtMultimedia/QAudioProbe>
 #endif
 
-    /*
-    QAudioProbe(QObject * parent = nullptr)
-    */
+    // QAudioProbe(QObject *parent = nullptr)
 HB_FUNC_STATIC(QAUDIOPROBE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -66,9 +64,7 @@ HB_FUNC_STATIC(QAUDIOPROBE_NEW)
   }
 }
 
-/*
-~QAudioProbe()
-*/
+// ~QAudioProbe()
 HB_FUNC_STATIC(QAUDIOPROBE_DELETE)
 {
   auto obj = qobject_cast<QAudioProbe *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -78,9 +74,7 @@ HB_FUNC_STATIC(QAUDIOPROBE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isActive() const
-*/
+// bool isActive() const
 HB_FUNC_STATIC(QAUDIOPROBE_ISACTIVE)
 {
   auto obj = qobject_cast<QAudioProbe *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -101,18 +95,14 @@ HB_FUNC_STATIC(QAUDIOPROBE_ISACTIVE)
 HB_FUNC_STATIC(QAUDIOPROBE_SETSOURCE)
 {
   if (ISNUMPAR(1) && ISQMEDIAOBJECT(1)) {
-    /*
-    bool setSource(QMediaObject * source)
-    */
+    // bool setSource(QMediaObject *source)
     auto obj = qobject_cast<QAudioProbe *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
       RBOOL(obj->setSource(PQMEDIAOBJECT(1)));
     }
   } else if (ISNUMPAR(1) && ISQMEDIARECORDER(1)) {
-    /*
-    bool setSource(QMediaRecorder * source)
-    */
+    // bool setSource(QMediaRecorder *source)
     auto obj = qobject_cast<QAudioProbe *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
@@ -123,9 +113,7 @@ HB_FUNC_STATIC(QAUDIOPROBE_SETSOURCE)
   }
 }
 
-/*
-void audioBufferProbed(const QAudioBuffer &buffer)
-*/
+// void audioBufferProbed(const QAudioBuffer &buffer)
 HB_FUNC_STATIC(QAUDIOPROBE_ONAUDIOBUFFERPROBED)
 {
   auto sender = qobject_cast<QAudioProbe *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -166,9 +154,7 @@ HB_FUNC_STATIC(QAUDIOPROBE_ONAUDIOBUFFERPROBED)
   hb_retl(result);
 }
 
-/*
-void flush()
-*/
+// void flush()
 HB_FUNC_STATIC(QAUDIOPROBE_ONFLUSH)
 {
   auto sender = qobject_cast<QAudioProbe *>(Qt5xHb::getQObjectPointerFromSelfItem());

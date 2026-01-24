@@ -55,13 +55,9 @@ RETURN
 #include <QtMultimedia/QAudioSystemPlugin>
 #endif
 
-    /*
-    QAudioSystemPlugin(QObject * parent = nullptr) [ABSTRACT]
-    */
+    // QAudioSystemPlugin(QObject *parent = nullptr) [ABSTRACT]
 
-    /*
-    ~QAudioSystemPlugin()
-    */
+    // ~QAudioSystemPlugin()
 HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_DELETE)
 {
   auto obj = qobject_cast<QAudioSystemPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -71,9 +67,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QList<QByteArray> availableDevices(QAudio::Mode) const override = 0
-*/
+// virtual QList<QByteArray> availableDevices(QAudio::Mode) const override = 0
 HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_AVAILABLEDEVICES)
 {
   auto obj = qobject_cast<QAudioSystemPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -113,9 +107,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_AVAILABLEDEVICES)
   }
 }
 
-/*
-virtual QAbstractAudioInput * createInput(const QByteArray &device) override = 0
-*/
+// virtual QAbstractAudioInput *createInput(const QByteArray &device) override = 0
 HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_CREATEINPUT)
 {
   auto obj = qobject_cast<QAudioSystemPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -134,9 +126,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_CREATEINPUT)
   }
 }
 
-/*
-virtual QAbstractAudioOutput * createOutput(const QByteArray &device) override = 0
-*/
+// virtual QAbstractAudioOutput *createOutput(const QByteArray &device) override = 0
 HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_CREATEOUTPUT)
 {
   auto obj = qobject_cast<QAudioSystemPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -155,9 +145,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_CREATEOUTPUT)
   }
 }
 
-/*
-virtual QAbstractAudioDeviceInfo * createDeviceInfo(const QByteArray &device, QAudio::Mode mode) override = 0
-*/
+// virtual QAbstractAudioDeviceInfo *createDeviceInfo(const QByteArray &device, QAudio::Mode mode) override = 0
 HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_CREATEDEVICEINFO)
 {
   auto obj = qobject_cast<QAudioSystemPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());

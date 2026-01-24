@@ -70,33 +70,23 @@ RETURN
 HB_FUNC_STATIC(QMEDIACONTENT_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QMediaContent()
-    */
+    // QMediaContent()
     auto obj = new QMediaContent();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQURL(1)) {
-    /*
-    QMediaContent(const QUrl &contentUrl)
-    */
+    // QMediaContent(const QUrl &contentUrl)
     auto obj = new QMediaContent(*PQURL(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQNETWORKREQUEST(1)) {
-    /*
-    QMediaContent(const QNetworkRequest &contentRequest)
-    */
+    // QMediaContent(const QNetworkRequest &contentRequest)
     auto obj = new QMediaContent(*PQNETWORKREQUEST(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQMEDIARESOURCE(1)) {
-    /*
-    QMediaContent(const QMediaResource &contentResource)
-    */
+    // QMediaContent(const QMediaResource &contentResource)
     auto obj = new QMediaContent(*PQMEDIARESOURCE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
-    /*
-    QMediaContent(const QMediaResourceList &resources)
-    */
+    // QMediaContent(const QMediaResourceList &resources)
     QMediaResourceList par1;
     auto aList1 = hb_param(1, HB_IT_ARRAY);
     int nLen1 = hb_arrayLen(aList1);
@@ -107,15 +97,11 @@ HB_FUNC_STATIC(QMEDIACONTENT_NEW)
     auto obj = new QMediaContent(par1);
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQMEDIACONTENT(1)) {
-    /*
-    QMediaContent(const QMediaContent &other)
-    */
+    // QMediaContent(const QMediaContent &other)
     auto obj = new QMediaContent(*PQMEDIACONTENT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 3) && ISQMEDIAPLAYLIST(1) && ISQURLORNIL(2) && ISOPTLOG(3)) {
-    /*
-    QMediaContent(QMediaPlaylist * playlist, const QUrl &contentUrl = QUrl(), bool takeOwnership = false)
-    */
+    // QMediaContent(QMediaPlaylist *playlist, const QUrl &contentUrl = QUrl(), bool takeOwnership = false)
     auto obj = new QMediaContent(PQMEDIAPLAYLIST(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2)),
                                  OPBOOL(3, false));
     Qt5xHb::returnNewObject(obj, true);
@@ -124,9 +110,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_NEW)
   }
 }
 
-/*
-~QMediaContent()
-*/
+// ~QMediaContent()
 HB_FUNC_STATIC(QMEDIACONTENT_DELETE)
 {
   auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -136,9 +120,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QNetworkRequest canonicalRequest() const
-*/
+// QNetworkRequest canonicalRequest() const
 HB_FUNC_STATIC(QMEDIACONTENT_CANONICALREQUEST)
 {
   auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -156,9 +138,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_CANONICALREQUEST)
   }
 }
 
-/*
-QMediaResource canonicalResource() const
-*/
+// QMediaResource canonicalResource() const
 HB_FUNC_STATIC(QMEDIACONTENT_CANONICALRESOURCE)
 {
   auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -176,9 +156,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_CANONICALRESOURCE)
   }
 }
 
-/*
-QUrl canonicalUrl() const
-*/
+// QUrl canonicalUrl() const
 HB_FUNC_STATIC(QMEDIACONTENT_CANONICALURL)
 {
   auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -196,9 +174,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_CANONICALURL)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QMEDIACONTENT_ISNULL)
 {
   auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -216,9 +192,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_ISNULL)
   }
 }
 
-/*
-QMediaPlaylist * playlist() const
-*/
+// QMediaPlaylist *playlist() const
 HB_FUNC_STATIC(QMEDIACONTENT_PLAYLIST)
 {
   auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -237,9 +211,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_PLAYLIST)
   }
 }
 
-/*
-QMediaResourceList resources() const
-*/
+// QMediaResourceList resources() const
 HB_FUNC_STATIC(QMEDIACONTENT_RESOURCES)
 {
   auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());

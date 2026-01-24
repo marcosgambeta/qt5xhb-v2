@@ -54,9 +54,7 @@ RETURN
 #include <QtMultimedia/QImageEncoderControl>
 #endif
 
-    /*
-    virtual ~QImageEncoderControl()
-    */
+    // virtual ~QImageEncoderControl()
 HB_FUNC_STATIC(QIMAGEENCODERCONTROL_DELETE)
 {
   auto obj = qobject_cast<QImageEncoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -66,9 +64,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QStringList supportedImageCodecs() const = 0
-*/
+// virtual QStringList supportedImageCodecs() const = 0
 HB_FUNC_STATIC(QIMAGEENCODERCONTROL_SUPPORTEDIMAGECODECS)
 {
   auto obj = qobject_cast<QImageEncoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -86,9 +82,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_SUPPORTEDIMAGECODECS)
   }
 }
 
-/*
-virtual QString imageCodecDescription(const QString &codecName) const = 0
-*/
+// virtual QString imageCodecDescription(const QString &codecName) const = 0
 HB_FUNC_STATIC(QIMAGEENCODERCONTROL_IMAGECODECDESCRIPTION)
 {
   auto obj = qobject_cast<QImageEncoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -106,9 +100,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_IMAGECODECDESCRIPTION)
   }
 }
 
-/*
-virtual QList<QSize> supportedResolutions(const QImageEncoderSettings &settings, bool * continuous = nullptr) const = 0
-*/
+// virtual QList<QSize> supportedResolutions(const QImageEncoderSettings &settings, bool *continuous = nullptr) const = 0
 HB_FUNC_STATIC(QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS)
 {
   auto obj = qobject_cast<QImageEncoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -150,9 +142,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS)
   }
 }
 
-/*
-virtual QImageEncoderSettings imageSettings() const = 0
-*/
+// virtual QImageEncoderSettings imageSettings() const = 0
 HB_FUNC_STATIC(QIMAGEENCODERCONTROL_IMAGESETTINGS)
 {
   auto obj = qobject_cast<QImageEncoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -170,9 +160,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_IMAGESETTINGS)
   }
 }
 
-/*
-virtual void setImageSettings(const QImageEncoderSettings &settings) = 0
-*/
+// virtual void setImageSettings(const QImageEncoderSettings &settings) = 0
 HB_FUNC_STATIC(QIMAGEENCODERCONTROL_SETIMAGESETTINGS)
 {
   auto obj = qobject_cast<QImageEncoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());

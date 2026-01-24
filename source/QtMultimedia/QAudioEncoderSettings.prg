@@ -74,15 +74,11 @@ RETURN
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QAudioEncoderSettings()
-    */
+    // QAudioEncoderSettings()
     auto obj = new QAudioEncoderSettings();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQAUDIOENCODERSETTINGS(1)) {
-    /*
-    QAudioEncoderSettings(const QAudioEncoderSettings &other)
-    */
+    // QAudioEncoderSettings(const QAudioEncoderSettings &other)
     auto obj = new QAudioEncoderSettings(*PQAUDIOENCODERSETTINGS(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -90,9 +86,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_NEW)
   }
 }
 
-/*
-~QAudioEncoderSettings()
-*/
+// ~QAudioEncoderSettings()
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_DELETE)
 {
   auto obj = static_cast<QAudioEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -102,9 +96,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int bitRate() const
-*/
+// int bitRate() const
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_BITRATE)
 {
   auto obj = static_cast<QAudioEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -122,9 +114,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_BITRATE)
   }
 }
 
-/*
-int channelCount() const
-*/
+// int channelCount() const
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_CHANNELCOUNT)
 {
   auto obj = static_cast<QAudioEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -142,9 +132,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_CHANNELCOUNT)
   }
 }
 
-/*
-QString codec() const
-*/
+// QString codec() const
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_CODEC)
 {
   auto obj = static_cast<QAudioEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -162,9 +150,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_CODEC)
   }
 }
 
-/*
-QMultimedia::EncodingMode encodingMode() const
-*/
+// QMultimedia::EncodingMode encodingMode() const
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_ENCODINGMODE)
 {
   auto obj = static_cast<QAudioEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -182,9 +168,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_ENCODINGMODE)
   }
 }
 
-/*
-QVariant encodingOption(const QString &option) const
-*/
+// QVariant encodingOption(const QString &option) const
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_ENCODINGOPTION)
 {
   auto obj = static_cast<QAudioEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -202,9 +186,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_ENCODINGOPTION)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_ISNULL)
 {
   auto obj = static_cast<QAudioEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -222,9 +204,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_ISNULL)
   }
 }
 
-/*
-QMultimedia::EncodingQuality quality() const
-*/
+// QMultimedia::EncodingQuality quality() const
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_QUALITY)
 {
   auto obj = static_cast<QAudioEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -242,9 +222,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_QUALITY)
   }
 }
 
-/*
-int sampleRate() const
-*/
+// int sampleRate() const
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SAMPLERATE)
 {
   auto obj = static_cast<QAudioEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -262,9 +240,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SAMPLERATE)
   }
 }
 
-/*
-void setBitRate(int bitrate)
-*/
+// void setBitRate(int bitrate)
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETBITRATE)
 {
   auto obj = static_cast<QAudioEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -284,9 +260,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETBITRATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setChannelCount(int channels)
-*/
+// void setChannelCount(int channels)
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETCHANNELCOUNT)
 {
   auto obj = static_cast<QAudioEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -306,9 +280,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETCHANNELCOUNT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCodec(const QString &codec)
-*/
+// void setCodec(const QString &codec)
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETCODEC)
 {
   auto obj = static_cast<QAudioEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -328,9 +300,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETCODEC)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEncodingMode(QMultimedia::EncodingMode mode)
-*/
+// void setEncodingMode(QMultimedia::EncodingMode mode)
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETENCODINGMODE)
 {
   auto obj = static_cast<QAudioEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -350,9 +320,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETENCODINGMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEncodingOption(const QString &option, const QVariant &value)
-*/
+// void setEncodingOption(const QString &option, const QVariant &value)
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETENCODINGOPTION)
 {
   auto obj = static_cast<QAudioEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -372,9 +340,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETENCODINGOPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setQuality(QMultimedia::EncodingQuality quality)
-*/
+// void setQuality(QMultimedia::EncodingQuality quality)
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETQUALITY)
 {
   auto obj = static_cast<QAudioEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -394,9 +360,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETQUALITY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSampleRate(int rate)
-*/
+// void setSampleRate(int rate)
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETSAMPLERATE)
 {
   auto obj = static_cast<QAudioEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());

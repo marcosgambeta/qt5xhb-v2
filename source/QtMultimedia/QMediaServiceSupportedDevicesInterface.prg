@@ -57,9 +57,7 @@ RETURN
 #include <QtMultimedia/QMediaServiceSupportedDevicesInterface>
 #endif
 
-    /*
-    virtual ~QMediaServiceSupportedDevicesInterface()
-    */
+    // virtual ~QMediaServiceSupportedDevicesInterface()
 HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DELETE)
 {
   auto obj = static_cast<QMediaServiceSupportedDevicesInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -69,9 +67,7 @@ HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QString deviceDescription(const QByteArray &service, const QByteArray &device) = 0
-*/
+// virtual QString deviceDescription(const QByteArray &service, const QByteArray &device) = 0
 HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICEDESCRIPTION)
 {
   auto obj = static_cast<QMediaServiceSupportedDevicesInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -89,9 +85,7 @@ HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICEDESCRIPTION)
   }
 }
 
-/*
-virtual QList<QByteArray> devices(const QByteArray &service) const = 0
-*/
+// virtual QList<QByteArray> devices(const QByteArray &service) const = 0
 HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICES)
 {
   auto obj = static_cast<QMediaServiceSupportedDevicesInterface *>(Qt5xHb::itemGetPtrStackSelfItem());

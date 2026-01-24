@@ -55,9 +55,7 @@ RETURN
 #include <QtMultimedia/QMediaServiceFeaturesInterface>
 #endif
 
-    /*
-    virtual ~QMediaServiceFeaturesInterface()
-    */
+    // virtual ~QMediaServiceFeaturesInterface()
 HB_FUNC_STATIC(QMEDIASERVICEFEATURESINTERFACE_DELETE)
 {
   auto obj = static_cast<QMediaServiceFeaturesInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -67,9 +65,7 @@ HB_FUNC_STATIC(QMEDIASERVICEFEATURESINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QMediaServiceProviderHint::Features supportedFeatures(const QByteArray &service) const = 0
-*/
+// virtual QMediaServiceProviderHint::Features supportedFeatures(const QByteArray &service) const = 0
 HB_FUNC_STATIC(QMEDIASERVICEFEATURESINTERFACE_SUPPORTEDFEATURES)
 {
   auto obj = static_cast<QMediaServiceFeaturesInterface *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -68,9 +68,7 @@ RETURN
 #include <QtMultimedia/QRadioData>
 #endif
 
-    /*
-    QRadioData(QMediaObject * mediaObject, QObject * parent = nullptr)
-    */
+    // QRadioData(QMediaObject *mediaObject, QObject *parent = nullptr)
 HB_FUNC_STATIC(QRADIODATA_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQMEDIAOBJECT(1) && ISQOBJECTORNIL(2)) {
@@ -81,9 +79,7 @@ HB_FUNC_STATIC(QRADIODATA_NEW)
   }
 }
 
-/*
-~QRadioData()
-*/
+// ~QRadioData()
 HB_FUNC_STATIC(QRADIODATA_DELETE)
 {
   auto obj = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -93,9 +89,7 @@ HB_FUNC_STATIC(QRADIODATA_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString stationId() const
-*/
+// QString stationId() const
 HB_FUNC_STATIC(QRADIODATA_STATIONID)
 {
   auto obj = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -113,9 +107,7 @@ HB_FUNC_STATIC(QRADIODATA_STATIONID)
   }
 }
 
-/*
-QRadioData::ProgramType programType() const
-*/
+// QRadioData::ProgramType programType() const
 HB_FUNC_STATIC(QRADIODATA_PROGRAMTYPE)
 {
   auto obj = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -133,9 +125,7 @@ HB_FUNC_STATIC(QRADIODATA_PROGRAMTYPE)
   }
 }
 
-/*
-QString programTypeName() const
-*/
+// QString programTypeName() const
 HB_FUNC_STATIC(QRADIODATA_PROGRAMTYPENAME)
 {
   auto obj = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -153,9 +143,7 @@ HB_FUNC_STATIC(QRADIODATA_PROGRAMTYPENAME)
   }
 }
 
-/*
-QString stationName() const
-*/
+// QString stationName() const
 HB_FUNC_STATIC(QRADIODATA_STATIONNAME)
 {
   auto obj = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -173,9 +161,7 @@ HB_FUNC_STATIC(QRADIODATA_STATIONNAME)
   }
 }
 
-/*
-QString radioText() const
-*/
+// QString radioText() const
 HB_FUNC_STATIC(QRADIODATA_RADIOTEXT)
 {
   auto obj = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -193,9 +179,7 @@ HB_FUNC_STATIC(QRADIODATA_RADIOTEXT)
   }
 }
 
-/*
-bool isAlternativeFrequenciesEnabled() const
-*/
+// bool isAlternativeFrequenciesEnabled() const
 HB_FUNC_STATIC(QRADIODATA_ISALTERNATIVEFREQUENCIESENABLED)
 {
   auto obj = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -213,9 +197,7 @@ HB_FUNC_STATIC(QRADIODATA_ISALTERNATIVEFREQUENCIESENABLED)
   }
 }
 
-/*
-void setAlternativeFrequenciesEnabled(bool enabled)
-*/
+// void setAlternativeFrequenciesEnabled(bool enabled)
 HB_FUNC_STATIC(QRADIODATA_SETALTERNATIVEFREQUENCIESENABLED)
 {
   auto obj = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -235,9 +217,7 @@ HB_FUNC_STATIC(QRADIODATA_SETALTERNATIVEFREQUENCIESENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QMultimedia::AvailabilityStatus availability() const
-*/
+// QMultimedia::AvailabilityStatus availability() const
 HB_FUNC_STATIC(QRADIODATA_AVAILABILITY)
 {
   auto obj = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -255,9 +235,7 @@ HB_FUNC_STATIC(QRADIODATA_AVAILABILITY)
   }
 }
 
-/*
-QMediaObject * mediaObject() const override
-*/
+// QMediaObject *mediaObject() const override
 HB_FUNC_STATIC(QRADIODATA_MEDIAOBJECT)
 {
   auto obj = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -276,9 +254,7 @@ HB_FUNC_STATIC(QRADIODATA_MEDIAOBJECT)
   }
 }
 
-/*
-QRadioData::Error error() const
-*/
+// QRadioData::Error error() const
 HB_FUNC_STATIC(QRADIODATA_ERROR)
 {
   auto obj = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -296,9 +272,7 @@ HB_FUNC_STATIC(QRADIODATA_ERROR)
   }
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QRADIODATA_ERRORSTRING)
 {
   auto obj = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -316,9 +290,7 @@ HB_FUNC_STATIC(QRADIODATA_ERRORSTRING)
   }
 }
 
-/*
-void stationIdChanged(QString stationId)
-*/
+// void stationIdChanged(QString stationId)
 HB_FUNC_STATIC(QRADIODATA_ONSTATIONIDCHANGED)
 {
   auto sender = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -359,9 +331,7 @@ HB_FUNC_STATIC(QRADIODATA_ONSTATIONIDCHANGED)
   hb_retl(result);
 }
 
-/*
-void programTypeChanged(QRadioData::ProgramType programType)
-*/
+// void programTypeChanged(QRadioData::ProgramType programType)
 HB_FUNC_STATIC(QRADIODATA_ONPROGRAMTYPECHANGED)
 {
   auto sender = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -402,9 +372,7 @@ HB_FUNC_STATIC(QRADIODATA_ONPROGRAMTYPECHANGED)
   hb_retl(result);
 }
 
-/*
-void programTypeNameChanged(QString programTypeName)
-*/
+// void programTypeNameChanged(QString programTypeName)
 HB_FUNC_STATIC(QRADIODATA_ONPROGRAMTYPENAMECHANGED)
 {
   auto sender = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -445,9 +413,7 @@ HB_FUNC_STATIC(QRADIODATA_ONPROGRAMTYPENAMECHANGED)
   hb_retl(result);
 }
 
-/*
-void stationNameChanged(QString stationName)
-*/
+// void stationNameChanged(QString stationName)
 HB_FUNC_STATIC(QRADIODATA_ONSTATIONNAMECHANGED)
 {
   auto sender = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -488,9 +454,7 @@ HB_FUNC_STATIC(QRADIODATA_ONSTATIONNAMECHANGED)
   hb_retl(result);
 }
 
-/*
-void radioTextChanged(QString radioText)
-*/
+// void radioTextChanged(QString radioText)
 HB_FUNC_STATIC(QRADIODATA_ONRADIOTEXTCHANGED)
 {
   auto sender = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -531,9 +495,7 @@ HB_FUNC_STATIC(QRADIODATA_ONRADIOTEXTCHANGED)
   hb_retl(result);
 }
 
-/*
-void alternativeFrequenciesEnabledChanged(bool enabled)
-*/
+// void alternativeFrequenciesEnabledChanged(bool enabled)
 HB_FUNC_STATIC(QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED)
 {
   auto sender = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -574,9 +536,7 @@ HB_FUNC_STATIC(QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED)
   hb_retl(result);
 }
 
-/*
-void error(QRadioData::Error error)
-*/
+// void error(QRadioData::Error error)
 HB_FUNC_STATIC(QRADIODATA_ONERROR)
 {
   auto sender = qobject_cast<QRadioData *>(Qt5xHb::getQObjectPointerFromSelfItem());

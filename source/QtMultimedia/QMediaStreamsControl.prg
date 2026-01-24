@@ -56,9 +56,7 @@ RETURN
 #include <QtMultimedia/QMediaStreamsControl>
 #endif
 
-    /*
-    virtual ~QMediaStreamsControl()
-    */
+    // virtual ~QMediaStreamsControl()
 HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_DELETE)
 {
   auto obj = qobject_cast<QMediaStreamsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -68,9 +66,7 @@ HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool isActive(int streamNumber) = 0
-*/
+// virtual bool isActive(int streamNumber) = 0
 HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_ISACTIVE)
 {
   auto obj = qobject_cast<QMediaStreamsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -88,9 +84,7 @@ HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_ISACTIVE)
   }
 }
 
-/*
-virtual QVariant metaData(int streamNumber, const QString &key) = 0
-*/
+// virtual QVariant metaData(int streamNumber, const QString &key) = 0
 HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_METADATA)
 {
   auto obj = qobject_cast<QMediaStreamsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -108,9 +102,7 @@ HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_METADATA)
   }
 }
 
-/*
-virtual void setActive(int streamNumber, bool state) = 0
-*/
+// virtual void setActive(int streamNumber, bool state) = 0
 HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_SETACTIVE)
 {
   auto obj = qobject_cast<QMediaStreamsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -130,9 +122,7 @@ HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_SETACTIVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int streamCount() = 0
-*/
+// virtual int streamCount() = 0
 HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_STREAMCOUNT)
 {
   auto obj = qobject_cast<QMediaStreamsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -150,9 +140,7 @@ HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_STREAMCOUNT)
   }
 }
 
-/*
-virtual QMediaStreamsControl::StreamType streamType(int streamNumber) = 0
-*/
+// virtual QMediaStreamsControl::StreamType streamType(int streamNumber) = 0
 HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_STREAMTYPE)
 {
   auto obj = qobject_cast<QMediaStreamsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -170,9 +158,7 @@ HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_STREAMTYPE)
   }
 }
 
-/*
-void activeStreamsChanged()
-*/
+// void activeStreamsChanged()
 HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_ONACTIVESTREAMSCHANGED)
 {
   auto sender = qobject_cast<QMediaStreamsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -211,9 +197,7 @@ HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_ONACTIVESTREAMSCHANGED)
   hb_retl(result);
 }
 
-/*
-void streamsChanged()
-*/
+// void streamsChanged()
 HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_ONSTREAMSCHANGED)
 {
   auto sender = qobject_cast<QMediaStreamsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
