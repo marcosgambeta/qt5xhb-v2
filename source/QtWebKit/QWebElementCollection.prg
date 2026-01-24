@@ -65,21 +65,15 @@ RETURN
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QWebElementCollection()
-    */
+    // QWebElementCollection()
     auto obj = new QWebElementCollection();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && ISQWEBELEMENT(1) && HB_ISCHAR(2)) {
-    /*
-    QWebElementCollection(const QWebElement &contextElement, const QString &query)
-    */
+    // QWebElementCollection(const QWebElement &contextElement, const QString &query)
     auto obj = new QWebElementCollection(*PQWEBELEMENT(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQWEBELEMENTCOLLECTION(1)) {
-    /*
-    QWebElementCollection(const QWebElementCollection &other)
-    */
+    // QWebElementCollection(const QWebElementCollection &other)
     auto obj = new QWebElementCollection(*PQWEBELEMENTCOLLECTION(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -96,9 +90,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void append(const QWebElementCollection &other)
-*/
+// void append(const QWebElementCollection &other)
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_APPEND)
 {
   auto obj = static_cast<QWebElementCollection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -118,9 +110,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_APPEND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWebElement at(int i) const
-*/
+// QWebElement at(int i) const
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_AT)
 {
   auto obj = static_cast<QWebElementCollection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -138,9 +128,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_AT)
   }
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_COUNT)
 {
   auto obj = static_cast<QWebElementCollection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -158,9 +146,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_COUNT)
   }
 }
 
-/*
-QWebElement first() const
-*/
+// QWebElement first() const
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_FIRST)
 {
   auto obj = static_cast<QWebElementCollection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -178,9 +164,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_FIRST)
   }
 }
 
-/*
-QWebElement last() const
-*/
+// QWebElement last() const
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_LAST)
 {
   auto obj = static_cast<QWebElementCollection *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -198,9 +182,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_LAST)
   }
 }
 
-/*
-QList<QWebElement> toList() const
-*/
+// QList<QWebElement> toList() const
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_TOLIST)
 {
   auto obj = static_cast<QWebElementCollection *>(Qt5xHb::itemGetPtrStackSelfItem());

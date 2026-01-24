@@ -66,9 +66,7 @@ RETURN
 
 #include <QtWebKit/QWebSecurityOrigin>
 
-    /*
-    QWebDatabase(const QWebDatabase &other)
-    */
+    // QWebDatabase(const QWebDatabase &other)
 HB_FUNC_STATIC(QWEBDATABASE_NEW)
 {
   if (ISNUMPAR(1) && ISQWEBDATABASE(1)) {
@@ -88,9 +86,7 @@ HB_FUNC_STATIC(QWEBDATABASE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString displayName() const
-*/
+// QString displayName() const
 HB_FUNC_STATIC(QWEBDATABASE_DISPLAYNAME)
 {
   auto obj = static_cast<QWebDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -108,9 +104,7 @@ HB_FUNC_STATIC(QWEBDATABASE_DISPLAYNAME)
   }
 }
 
-/*
-qint64 expectedSize() const
-*/
+// qint64 expectedSize() const
 HB_FUNC_STATIC(QWEBDATABASE_EXPECTEDSIZE)
 {
   auto obj = static_cast<QWebDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -128,9 +122,7 @@ HB_FUNC_STATIC(QWEBDATABASE_EXPECTEDSIZE)
   }
 }
 
-/*
-QString fileName() const
-*/
+// QString fileName() const
 HB_FUNC_STATIC(QWEBDATABASE_FILENAME)
 {
   auto obj = static_cast<QWebDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -148,9 +140,7 @@ HB_FUNC_STATIC(QWEBDATABASE_FILENAME)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QWEBDATABASE_NAME)
 {
   auto obj = static_cast<QWebDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -168,9 +158,7 @@ HB_FUNC_STATIC(QWEBDATABASE_NAME)
   }
 }
 
-/*
-QWebSecurityOrigin origin() const
-*/
+// QWebSecurityOrigin origin() const
 HB_FUNC_STATIC(QWEBDATABASE_ORIGIN)
 {
   auto obj = static_cast<QWebDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -188,9 +176,7 @@ HB_FUNC_STATIC(QWEBDATABASE_ORIGIN)
   }
 }
 
-/*
-qint64 size() const
-*/
+// qint64 size() const
 HB_FUNC_STATIC(QWEBDATABASE_SIZE)
 {
   auto obj = static_cast<QWebDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -208,9 +194,7 @@ HB_FUNC_STATIC(QWEBDATABASE_SIZE)
   }
 }
 
-/*
-static void removeAllDatabases()
-*/
+// static void removeAllDatabases()
 HB_FUNC_STATIC(QWEBDATABASE_REMOVEALLDATABASES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,9 +210,7 @@ HB_FUNC_STATIC(QWEBDATABASE_REMOVEALLDATABASES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void removeDatabase(const QWebDatabase &db)
-*/
+// static void removeDatabase(const QWebDatabase &db)
 HB_FUNC_STATIC(QWEBDATABASE_REMOVEDATABASE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -60,9 +60,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void addHistoryEntry(const QString &url) = 0
-*/
+// virtual void addHistoryEntry(const QString &url) = 0
 HB_FUNC_STATIC(QWEBHISTORYINTERFACE_ADDHISTORYENTRY)
 {
   auto obj = qobject_cast<QWebHistoryInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -82,9 +80,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_ADDHISTORYENTRY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool historyContains(const QString &url) const = 0
-*/
+// virtual bool historyContains(const QString &url) const = 0
 HB_FUNC_STATIC(QWEBHISTORYINTERFACE_HISTORYCONTAINS)
 {
   auto obj = qobject_cast<QWebHistoryInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -102,9 +98,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_HISTORYCONTAINS)
   }
 }
 
-/*
-static QWebHistoryInterface * defaultInterface()
-*/
+// static QWebHistoryInterface *defaultInterface()
 HB_FUNC_STATIC(QWEBHISTORYINTERFACE_DEFAULTINTERFACE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,9 +113,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_DEFAULTINTERFACE)
 #endif
 }
 
-/*
-static void setDefaultInterface(QWebHistoryInterface * defaultInterface)
-*/
+// static void setDefaultInterface(QWebHistoryInterface *defaultInterface)
 HB_FUNC_STATIC(QWEBHISTORYINTERFACE_SETDEFAULTINTERFACE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
