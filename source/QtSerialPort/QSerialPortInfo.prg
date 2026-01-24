@@ -79,33 +79,25 @@ HB_FUNC_STATIC(QSERIALPORTINFO_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   if (ISNUMPAR(0)) {
-    /*
-    QSerialPortInfo()
-    */
+    // QSerialPortInfo()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = new QSerialPortInfo();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQSERIALPORT(1)) {
-    /*
-    QSerialPortInfo(const QSerialPort &port)
-    */
+    // QSerialPortInfo(const QSerialPort &port)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = new QSerialPortInfo(*PQSERIALPORT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QSerialPortInfo(const QString &name)
-    */
+    // QSerialPortInfo(const QString &name)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = new QSerialPortInfo(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQSERIALPORTINFO(1)) {
-    /*
-    QSerialPortInfo(const QSerialPortInfo &other)
-    */
+    // QSerialPortInfo(const QSerialPortInfo &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     auto obj = new QSerialPortInfo(*PQSERIALPORTINFO(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -127,9 +119,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_DELETE)
 #endif
 }
 
-/*
-void swap(QSerialPortInfo &other)
-*/
+// void swap(QSerialPortInfo &other)
 HB_FUNC_STATIC(QSERIALPORTINFO_SWAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -151,9 +141,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_SWAP)
 #endif
 }
 
-/*
-QString portName() const
-*/
+// QString portName() const
 HB_FUNC_STATIC(QSERIALPORTINFO_PORTNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -173,9 +161,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_PORTNAME)
 #endif
 }
 
-/*
-QString systemLocation() const
-*/
+// QString systemLocation() const
 HB_FUNC_STATIC(QSERIALPORTINFO_SYSTEMLOCATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -195,9 +181,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_SYSTEMLOCATION)
 #endif
 }
 
-/*
-QString description() const
-*/
+// QString description() const
 HB_FUNC_STATIC(QSERIALPORTINFO_DESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -217,9 +201,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_DESCRIPTION)
 #endif
 }
 
-/*
-QString manufacturer() const
-*/
+// QString manufacturer() const
 HB_FUNC_STATIC(QSERIALPORTINFO_MANUFACTURER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -239,9 +221,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_MANUFACTURER)
 #endif
 }
 
-/*
-quint16 vendorIdentifier() const
-*/
+// quint16 vendorIdentifier() const
 HB_FUNC_STATIC(QSERIALPORTINFO_VENDORIDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -261,9 +241,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_VENDORIDENTIFIER)
 #endif
 }
 
-/*
-quint16 productIdentifier() const
-*/
+// quint16 productIdentifier() const
 HB_FUNC_STATIC(QSERIALPORTINFO_PRODUCTIDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -283,9 +261,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_PRODUCTIDENTIFIER)
 #endif
 }
 
-/*
-bool hasVendorIdentifier() const
-*/
+// bool hasVendorIdentifier() const
 HB_FUNC_STATIC(QSERIALPORTINFO_HASVENDORIDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -305,9 +281,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_HASVENDORIDENTIFIER)
 #endif
 }
 
-/*
-bool hasProductIdentifier() const
-*/
+// bool hasProductIdentifier() const
 HB_FUNC_STATIC(QSERIALPORTINFO_HASPRODUCTIDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -327,9 +301,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_HASPRODUCTIDENTIFIER)
 #endif
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QSERIALPORTINFO_ISNULL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -349,9 +321,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_ISNULL)
 #endif
 }
 
-/*
-bool isBusy() const
-*/
+// bool isBusy() const
 HB_FUNC_STATIC(QSERIALPORTINFO_ISBUSY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -371,9 +341,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_ISBUSY)
 #endif
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QSERIALPORTINFO_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -393,9 +361,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_ISVALID)
 #endif
 }
 
-/*
-static QList<qint32> standardBaudRates()
-*/
+// static QList<qint32> standardBaudRates()
 HB_FUNC_STATIC(QSERIALPORTINFO_STANDARDBAUDRATES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
@@ -412,9 +378,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_STANDARDBAUDRATES)
 #endif
 }
 
-/*
-static QList<QSerialPortInfo> availablePorts()
-*/
+// static QList<QSerialPortInfo> availablePorts()
 HB_FUNC_STATIC(QSERIALPORTINFO_AVAILABLEPORTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
