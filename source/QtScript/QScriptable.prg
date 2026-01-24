@@ -85,8 +85,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_ARGUMENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = new QScriptValue(obj->argument(PINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
+      RQSCRIPTVALUE(obj->argument(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -168,8 +167,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_THISOBJECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QScriptValue(obj->thisObject());
-      Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
+      RQSCRIPTVALUE(obj->thisObject());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

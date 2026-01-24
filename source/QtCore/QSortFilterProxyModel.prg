@@ -152,8 +152,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERREGEXP)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRegExp(obj->filterRegExp());
-      Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
+      RQREGEXP(obj->filterRegExp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -204,8 +203,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERREGULAREXPRESSION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRegularExpression(obj->filterRegularExpression());
-      Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSION", true);
+      RQREGULAREXPRESSION(obj->filterRegularExpression());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -666,8 +664,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPSELECTIONTOSOURCE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQITEMSELECTION(1)) {
 #endif
-      auto ptr = new QItemSelection(obj->mapSelectionToSource(*PQITEMSELECTION(1)));
-      Qt5xHb::createReturnClass(ptr, "QITEMSELECTION", true);
+      RQITEMSELECTION(obj->mapSelectionToSource(*PQITEMSELECTION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -687,8 +684,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPSELECTIONFROMSOURCE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQITEMSELECTION(1)) {
 #endif
-      auto ptr = new QItemSelection(obj->mapSelectionFromSource(*PQITEMSELECTION(1)));
-      Qt5xHb::createReturnClass(ptr, "QITEMSELECTION", true);
+      RQITEMSELECTION(obj->mapSelectionFromSource(*PQITEMSELECTION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

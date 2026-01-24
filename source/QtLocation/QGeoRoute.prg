@@ -198,8 +198,7 @@ HB_FUNC_STATIC(QGEOROUTE_REQUEST)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QGeoRouteRequest(obj->request());
-      Qt5xHb::createReturnClass(ptr, "QGEOROUTEREQUEST", true);
+      RQGEOROUTEREQUEST(obj->request());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -245,8 +244,7 @@ HB_FUNC_STATIC(QGEOROUTE_BOUNDS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QGeoRectangle(obj->bounds());
-      Qt5xHb::createReturnClass(ptr, "QGEORECTANGLE", true);
+      RQGEORECTANGLE(obj->bounds());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -292,8 +290,7 @@ HB_FUNC_STATIC(QGEOROUTE_FIRSTROUTESEGMENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QGeoRouteSegment(obj->firstRouteSegment());
-      Qt5xHb::createReturnClass(ptr, "QGEOROUTESEGMENT", true);
+      RQGEOROUTESEGMENT(obj->firstRouteSegment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

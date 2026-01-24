@@ -170,8 +170,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_FORMAT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QSurfaceFormat(obj->format());
-      Qt5xHb::createReturnClass(ptr, "QSURFACEFORMAT", true);
+      RQSURFACEFORMAT(obj->format());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QOPERATINGSYSTEMVERSION_CURRENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QOperatingSystemVersion(QOperatingSystemVersion::current());
-    Qt5xHb::createReturnClass(ptr, "QOPERATINGSYSTEMVERSION", true);
+    RQOPERATINGSYSTEMVERSION(QOperatingSystemVersion::current());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

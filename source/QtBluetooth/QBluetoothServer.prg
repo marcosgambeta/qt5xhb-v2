@@ -141,8 +141,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_LISTEN)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     if (obj != nullptr) {
-      auto ptr = new QBluetoothServiceInfo(obj->listen(*PQBLUETOOTHUUID(1), OPQSTRING(2, QString())));
-      Qt5xHb::createReturnClass(ptr, "QBLUETOOTHSERVICEINFO", true);
+      RQBLUETOOTHSERVICEINFO(obj->listen(*PQBLUETOOTHUUID(1), OPQSTRING(2, QString())));
     }
 #endif
   } else {
@@ -275,8 +274,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_SERVERADDRESS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QBluetoothAddress(obj->serverAddress());
-      Qt5xHb::createReturnClass(ptr, "QBLUETOOTHADDRESS", true);
+      RQBLUETOOTHADDRESS(obj->serverAddress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

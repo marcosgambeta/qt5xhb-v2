@@ -538,8 +538,7 @@ HB_FUNC_STATIC(QJSVALUE_PROPERTY)
     auto obj = static_cast<QJSValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QJSValue(obj->property(PQSTRING(1)));
-      Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
+      RQJSVALUE(obj->property(PQSTRING(1)));
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
@@ -548,8 +547,7 @@ HB_FUNC_STATIC(QJSVALUE_PROPERTY)
     auto obj = static_cast<QJSValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QJSValue(obj->property(PQUINT32(1)));
-      Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
+      RQJSVALUE(obj->property(PQUINT32(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -567,8 +565,7 @@ HB_FUNC_STATIC(QJSVALUE_PROTOTYPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QJSValue(obj->prototype());
-      Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
+      RQJSVALUE(obj->prototype());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -679,8 +676,7 @@ HB_FUNC_STATIC(QJSVALUE_TODATETIME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QDateTime(obj->toDateTime());
-      Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->toDateTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

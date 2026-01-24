@@ -276,8 +276,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_SENDERADDRESS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QHostAddress(obj->senderAddress());
-      Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
+      RQHOSTADDRESS(obj->senderAddress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -299,8 +298,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_DESTINATIONADDRESS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QHostAddress(obj->destinationAddress());
-      Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
+      RQHOSTADDRESS(obj->destinationAddress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -506,8 +504,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_MAKEREPLY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
-      auto ptr = new QNetworkDatagram(obj->makeReply(*PQBYTEARRAY(1)));
-      Qt5xHb::createReturnClass(ptr, "QNETWORKDATAGRAM", true);
+      RQNETWORKDATAGRAM(obj->makeReply(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -354,8 +354,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_LOCALADDRESS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QBluetoothAddress(obj->localAddress());
-      Qt5xHb::createReturnClass(ptr, "QBLUETOOTHADDRESS", true);
+      RQBLUETOOTHADDRESS(obj->localAddress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -421,8 +420,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_PEERADDRESS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QBluetoothAddress(obj->peerAddress());
-      Qt5xHb::createReturnClass(ptr, "QBLUETOOTHADDRESS", true);
+      RQBLUETOOTHADDRESS(obj->peerAddress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -350,8 +350,7 @@ HB_FUNC_STATIC(QLOCALE_DECIMALPOINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QChar(obj->decimalPoint());
-      Qt5xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->decimalPoint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -371,8 +370,7 @@ HB_FUNC_STATIC(QLOCALE_EXPONENTIAL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QChar(obj->exponential());
-      Qt5xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->exponential());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -412,8 +410,7 @@ HB_FUNC_STATIC(QLOCALE_GROUPSEPARATOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QChar(obj->groupSeparator());
-      Qt5xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->groupSeparator());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -553,8 +550,7 @@ HB_FUNC_STATIC(QLOCALE_NEGATIVESIGN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QChar(obj->negativeSign());
-      Qt5xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->negativeSign());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -594,8 +590,7 @@ HB_FUNC_STATIC(QLOCALE_PERCENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QChar(obj->percent());
-      Qt5xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->percent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -635,8 +630,7 @@ HB_FUNC_STATIC(QLOCALE_POSITIVESIGN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QChar(obj->positiveSign());
-      Qt5xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->positiveSign());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -962,8 +956,7 @@ HB_FUNC_STATIC(QLOCALE_TODATE)
     auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QDate(obj->toDate(PQSTRING(1), HB_ISNIL(2) ? QLocale::LongFormat : PQLOCALE_FORMATTYPE(2)));
-      Qt5xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->toDate(PQSTRING(1), HB_ISNIL(2) ? QLocale::LongFormat : PQLOCALE_FORMATTYPE(2)));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     /*
@@ -972,8 +965,7 @@ HB_FUNC_STATIC(QLOCALE_TODATE)
     auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QDate(obj->toDate(PQSTRING(1), PQSTRING(2)));
-      Qt5xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->toDate(PQSTRING(1), PQSTRING(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -989,9 +981,7 @@ HB_FUNC_STATIC(QLOCALE_TODATETIME)
     auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr =
-          new QDateTime(obj->toDateTime(PQSTRING(1), HB_ISNIL(2) ? QLocale::LongFormat : PQLOCALE_FORMATTYPE(2)));
-      Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->toDateTime(PQSTRING(1), HB_ISNIL(2) ? QLocale::LongFormat : PQLOCALE_FORMATTYPE(2)));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     /*
@@ -1000,8 +990,7 @@ HB_FUNC_STATIC(QLOCALE_TODATETIME)
     auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QDateTime(obj->toDateTime(PQSTRING(1), PQSTRING(2)));
-      Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->toDateTime(PQSTRING(1), PQSTRING(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1382,8 +1371,7 @@ HB_FUNC_STATIC(QLOCALE_TOTIME)
     auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QTime(obj->toTime(PQSTRING(1), HB_ISNIL(2) ? QLocale::LongFormat : PQLOCALE_FORMATTYPE(2)));
-      Qt5xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->toTime(PQSTRING(1), HB_ISNIL(2) ? QLocale::LongFormat : PQLOCALE_FORMATTYPE(2)));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     /*
@@ -1392,8 +1380,7 @@ HB_FUNC_STATIC(QLOCALE_TOTIME)
     auto obj = static_cast<QLocale *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QTime(obj->toTime(PQSTRING(1), PQSTRING(2)));
-      Qt5xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->toTime(PQSTRING(1), PQSTRING(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1478,8 +1465,7 @@ HB_FUNC_STATIC(QLOCALE_ZERODIGIT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QChar(obj->zeroDigit());
-      Qt5xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->zeroDigit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1496,8 +1482,7 @@ HB_FUNC_STATIC(QLOCALE_C)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QLocale(QLocale::c());
-    Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
+    RQLOCALE(QLocale::c());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1617,8 +1602,7 @@ HB_FUNC_STATIC(QLOCALE_SYSTEM)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QLocale(QLocale::system());
-    Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
+    RQLOCALE(QLocale::system());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

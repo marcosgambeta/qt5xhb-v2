@@ -398,8 +398,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_URL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QUrl(obj->url());
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->url());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -441,8 +440,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NETWORKCONFIGURATION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QNetworkConfiguration(obj->networkConfiguration());
-      Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
+      RQNETWORKCONFIGURATION(obj->networkConfiguration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

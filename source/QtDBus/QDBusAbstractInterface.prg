@@ -106,8 +106,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CONNECTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QDBusConnection(obj->connection());
-      Qt5xHb::createReturnClass(ptr, "QDBUSCONNECTION", true);
+      RQDBUSCONNECTION(obj->connection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -187,8 +186,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_LASTERROR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QDBusError(obj->lastError());
-      Qt5xHb::createReturnClass(ptr, "QDBUSERROR", true);
+      RQDBUSERROR(obj->lastError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -251,7 +249,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALL)
     auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QDBusMessage(
+      RQDBUSMESSAGE(
           obj->call(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2)),
                     HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)),
                     HB_ISNIL(4) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(4)),
@@ -260,7 +258,6 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALL)
                     HB_ISNIL(7) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(7)),
                     HB_ISNIL(8) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(8)),
                     HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(9))));
-      Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
     }
   } else if (ISBETWEEN(2, 10) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
              ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) &&
@@ -274,7 +271,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALL)
     auto obj = qobject_cast<QDBusAbstractInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QDBusMessage(obj->call(
+      RQDBUSMESSAGE(obj->call(
           PQDBUS_CALLMODE(1), PQSTRING(2), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)),
           HB_ISNIL(4) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(4)),
           HB_ISNIL(5) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(5)),
@@ -283,7 +280,6 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALL)
           HB_ISNIL(8) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(8)),
           HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(9)),
           HB_ISNIL(10) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(10))));
-      Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -308,8 +304,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST)
         par3 << *static_cast<QVariant *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList3, i3 + 1), "POINTER", 0)));
       }
-      auto ptr = new QDBusMessage(obj->callWithArgumentList(PQDBUS_CALLMODE(1), PQSTRING(2), par3));
-      Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
+      RQDBUSMESSAGE(obj->callWithArgumentList(PQDBUS_CALLMODE(1), PQSTRING(2), par3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -372,7 +367,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_ASYNCCALL)
     if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
         ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
 #endif
-      auto ptr = new QDBusPendingCall(
+      RQDBUSPENDINGCALL(
           obj->asyncCall(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2)),
                          HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)),
                          HB_ISNIL(4) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(4)),
@@ -381,7 +376,6 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_ASYNCCALL)
                          HB_ISNIL(7) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(7)),
                          HB_ISNIL(8) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(8)),
                          HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(9))));
-      Qt5xHb::createReturnClass(ptr, "QDBUSPENDINGCALL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -408,8 +402,7 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_ASYNCCALLWITHARGUMENTLIST)
         par2 << *static_cast<QVariant *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList2, i2 + 1), "POINTER", 0)));
       }
-      auto ptr = new QDBusPendingCall(obj->asyncCallWithArgumentList(PQSTRING(1), par2));
-      Qt5xHb::createReturnClass(ptr, "QDBUSPENDINGCALL", true);
+      RQDBUSPENDINGCALL(obj->asyncCallWithArgumentList(PQSTRING(1), par2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

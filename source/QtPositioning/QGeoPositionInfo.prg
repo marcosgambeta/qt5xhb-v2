@@ -170,8 +170,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFO_TIMESTAMP)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QDateTime(obj->timestamp());
-      Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->timestamp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -217,8 +216,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFO_COORDINATE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QGeoCoordinate(obj->coordinate());
-      Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
+      RQGEOCOORDINATE(obj->coordinate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

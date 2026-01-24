@@ -140,8 +140,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_REQUEST)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPlaceContentRequest(obj->request());
-      Qt5xHb::createReturnClass(ptr, "QPLACECONTENTREQUEST", true);
+      RQPLACECONTENTREQUEST(obj->request());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -163,8 +162,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_PREVIOUSPAGEREQUEST)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPlaceContentRequest(obj->previousPageRequest());
-      Qt5xHb::createReturnClass(ptr, "QPLACECONTENTREQUEST", true);
+      RQPLACECONTENTREQUEST(obj->previousPageRequest());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -186,8 +184,7 @@ HB_FUNC_STATIC(QPLACECONTENTREPLY_NEXTPAGEREQUEST)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPlaceContentRequest(obj->nextPageRequest());
-      Qt5xHb::createReturnClass(ptr, "QPLACECONTENTREQUEST", true);
+      RQPLACECONTENTREQUEST(obj->nextPageRequest());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

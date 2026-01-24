@@ -164,8 +164,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_TOPLEFT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QGeoCoordinate(obj->topLeft());
-      Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
+      RQGEOCOORDINATE(obj->topLeft());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -211,8 +210,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_TOPRIGHT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QGeoCoordinate(obj->topRight());
-      Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
+      RQGEOCOORDINATE(obj->topRight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -258,8 +256,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_BOTTOMLEFT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QGeoCoordinate(obj->bottomLeft());
-      Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
+      RQGEOCOORDINATE(obj->bottomLeft());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -305,8 +302,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_BOTTOMRIGHT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QGeoCoordinate(obj->bottomRight());
-      Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
+      RQGEOCOORDINATE(obj->bottomRight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -352,8 +348,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_CENTER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QGeoCoordinate(obj->center());
-      Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
+      RQGEOCOORDINATE(obj->center());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -542,8 +537,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_TRANSLATED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      auto ptr = new QGeoRectangle(obj->translated(PDOUBLE(1), PDOUBLE(2)));
-      Qt5xHb::createReturnClass(ptr, "QGEORECTANGLE", true);
+      RQGEORECTANGLE(obj->translated(PDOUBLE(1), PDOUBLE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -565,8 +559,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_UNITED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGEORECTANGLE(1)) {
 #endif
-      auto ptr = new QGeoRectangle(obj->united(*PQGEORECTANGLE(1)));
-      Qt5xHb::createReturnClass(ptr, "QGEORECTANGLE", true);
+      RQGEORECTANGLE(obj->united(*PQGEORECTANGLE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

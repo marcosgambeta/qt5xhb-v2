@@ -981,8 +981,7 @@ HB_FUNC_STATIC(QVARIANT_TOBITARRAY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QBitArray(obj->toBitArray());
-      Qt5xHb::createReturnClass(ptr, "QBITARRAY", true);
+      RQBITARRAY(obj->toBitArray());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1042,8 +1041,7 @@ HB_FUNC_STATIC(QVARIANT_TOCHAR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QChar(obj->toChar());
-      Qt5xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->toChar());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1063,8 +1061,7 @@ HB_FUNC_STATIC(QVARIANT_TODATE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QDate(obj->toDate());
-      Qt5xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->toDate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1084,8 +1081,7 @@ HB_FUNC_STATIC(QVARIANT_TOTIME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QTime(obj->toTime());
-      Qt5xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->toTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1105,8 +1101,7 @@ HB_FUNC_STATIC(QVARIANT_TODATETIME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QDateTime(obj->toDateTime());
-      Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->toDateTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1257,8 +1252,7 @@ HB_FUNC_STATIC(QVARIANT_TOSIZEF)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QSizeF(obj->toSizeF());
-      Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->toSizeF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1280,8 +1274,7 @@ HB_FUNC_STATIC(QVARIANT_TOLINE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QLine(obj->toLine());
-      Qt5xHb::createReturnClass(ptr, "QLINE", true);
+      RQLINE(obj->toLine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1303,8 +1296,7 @@ HB_FUNC_STATIC(QVARIANT_TOLINEF)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QLineF(obj->toLineF());
-      Qt5xHb::createReturnClass(ptr, "QLINEF", true);
+      RQLINEF(obj->toLineF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1325,8 +1317,7 @@ HB_FUNC_STATIC(QVARIANT_TOLOCALE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QLocale(obj->toLocale());
-      Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
+      RQLOCALE(obj->toLocale());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1347,8 +1338,7 @@ HB_FUNC_STATIC(QVARIANT_TOREGEXP)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRegExp(obj->toRegExp());
-      Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
+      RQREGEXP(obj->toRegExp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1370,8 +1360,7 @@ HB_FUNC_STATIC(QVARIANT_TOREGULAREXPRESSION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRegularExpression(obj->toRegularExpression());
-      Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSION", true);
+      RQREGULAREXPRESSION(obj->toRegularExpression());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1392,8 +1381,7 @@ HB_FUNC_STATIC(QVARIANT_TOURL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QUrl(obj->toUrl());
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->toUrl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1413,8 +1401,7 @@ HB_FUNC_STATIC(QVARIANT_TOEASINGCURVE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QEasingCurve(obj->toEasingCurve());
-      Qt5xHb::createReturnClass(ptr, "QEASINGCURVE", true);
+      RQEASINGCURVE(obj->toEasingCurve());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1434,8 +1421,7 @@ HB_FUNC_STATIC(QVARIANT_TOUUID)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QUuid(obj->toUuid());
-      Qt5xHb::createReturnClass(ptr, "QUUID", true);
+      RQUUID(obj->toUuid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1475,8 +1461,7 @@ HB_FUNC_STATIC(QVARIANT_TOJSONVALUE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QJsonValue(obj->toJsonValue());
-      Qt5xHb::createReturnClass(ptr, "QJSONVALUE", true);
+      RQJSONVALUE(obj->toJsonValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1496,8 +1481,7 @@ HB_FUNC_STATIC(QVARIANT_TOJSONOBJECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QJsonObject(obj->toJsonObject());
-      Qt5xHb::createReturnClass(ptr, "QJSONOBJECT", true);
+      RQJSONOBJECT(obj->toJsonObject());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1517,8 +1501,7 @@ HB_FUNC_STATIC(QVARIANT_TOJSONARRAY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QJsonArray(obj->toJsonArray());
-      Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
+      RQJSONARRAY(obj->toJsonArray());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1538,8 +1521,7 @@ HB_FUNC_STATIC(QVARIANT_TOJSONDOCUMENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QJsonDocument(obj->toJsonDocument());
-      Qt5xHb::createReturnClass(ptr, "QJSONDOCUMENT", true);
+      RQJSONDOCUMENT(obj->toJsonDocument());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

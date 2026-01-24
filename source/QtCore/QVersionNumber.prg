@@ -267,8 +267,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_NORMALIZED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QVersionNumber(obj->normalized());
-      Qt5xHb::createReturnClass(ptr, "QVERSIONNUMBER", true);
+      RQVERSIONNUMBER(obj->normalized());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -382,8 +381,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_COMMONPREFIX)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && ISQVERSIONNUMBER(1) && ISQVERSIONNUMBER(2)) {
 #endif
-    auto ptr = new QVersionNumber(QVersionNumber::commonPrefix(*PQVERSIONNUMBER(1), *PQVERSIONNUMBER(2)));
-    Qt5xHb::createReturnClass(ptr, "QVERSIONNUMBER", true);
+    RQVERSIONNUMBER(QVersionNumber::commonPrefix(*PQVERSIONNUMBER(1), *PQVERSIONNUMBER(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -420,8 +418,7 @@ HB_FUNC_STATIC(QVERSIONNUMBER_FROMSTRING)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
     int par2;
-    auto ptr = new QVersionNumber(QVersionNumber::fromString(PQSTRING(1), &par2));
-    Qt5xHb::createReturnClass(ptr, "QVERSIONNUMBER", true);
+    RQVERSIONNUMBER(QVersionNumber::fromString(PQSTRING(1), &par2));
     hb_storni(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {

@@ -241,8 +241,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READBINDER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QAndroidBinder(obj->readBinder());
-      Qt5xHb::createReturnClass(ptr, "QANDROIDBINDER", true);
+      RQANDROIDBINDER(obj->readBinder());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -282,8 +281,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_HANDLE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QAndroidJniObject(obj->handle());
-      Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
+      RQANDROIDJNIOBJECT(obj->handle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

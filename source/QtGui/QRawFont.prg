@@ -350,10 +350,9 @@ HB_FUNC_STATIC(QRAWFONT_ALPHAMAPFORGLYPH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISQTRANSFORMORNIL(3)) {
 #endif
-      auto ptr = new QImage(obj->alphaMapForGlyph(
+      RQIMAGE(obj->alphaMapForGlyph(
           PQUINT32(1), HB_ISNIL(2) ? QRawFont::SubPixelAntialiasing : PQRAWFONT_ANTIALIASINGTYPE(2),
           HB_ISNIL(3) ? QTransform() : *static_cast<QTransform *>(Qt5xHb::itemGetPtr(3))));
-      Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -373,8 +372,7 @@ HB_FUNC_STATIC(QRAWFONT_PATHFORGLYPH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = new QPainterPath(obj->pathForGlyph(PQUINT32(1)));
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->pathForGlyph(PQUINT32(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -769,9 +767,7 @@ HB_FUNC_STATIC(QRAWFONT_FROMFONT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(1, 2) && ISQFONT(1) && ISNUMORNIL(2)) {
 #endif
-    auto ptr = new QRawFont(
-        QRawFont::fromFont(*PQFONT(1), HB_ISNIL(2) ? QFontDatabase::Any : PQFONTDATABASE_WRITINGSYSTEM(2)));
-    Qt5xHb::createReturnClass(ptr, "QRAWFONT", true);
+    RQRAWFONT(QRawFont::fromFont(*PQFONT(1), HB_ISNIL(2) ? QFontDatabase::Any : PQFONTDATABASE_WRITINGSYSTEM(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

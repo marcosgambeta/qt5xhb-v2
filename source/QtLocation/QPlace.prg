@@ -252,8 +252,7 @@ HB_FUNC_STATIC(QPLACE_LOCATION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QGeoLocation(obj->location());
-      Qt5xHb::createReturnClass(ptr, "QGEOLOCATION", true);
+      RQGEOLOCATION(obj->location());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -299,8 +298,7 @@ HB_FUNC_STATIC(QPLACE_RATINGS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPlaceRatings(obj->ratings());
-      Qt5xHb::createReturnClass(ptr, "QPLACERATINGS", true);
+      RQPLACERATINGS(obj->ratings());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -346,8 +344,7 @@ HB_FUNC_STATIC(QPLACE_SUPPLIER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPlaceSupplier(obj->supplier());
-      Qt5xHb::createReturnClass(ptr, "QPLACESUPPLIER", true);
+      RQPLACESUPPLIER(obj->supplier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -439,8 +436,7 @@ HB_FUNC_STATIC(QPLACE_ICON)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPlaceIcon(obj->icon());
-      Qt5xHb::createReturnClass(ptr, "QPLACEICON", true);
+      RQPLACEICON(obj->icon());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -690,8 +686,7 @@ HB_FUNC_STATIC(QPLACE_PRIMARYWEBSITE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QUrl(obj->primaryWebsite());
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->primaryWebsite());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -781,8 +776,7 @@ HB_FUNC_STATIC(QPLACE_EXTENDEDATTRIBUTE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-      auto ptr = new QPlaceAttribute(obj->extendedAttribute(PQSTRING(1)));
-      Qt5xHb::createReturnClass(ptr, "QPLACEATTRIBUTE", true);
+      RQPLACEATTRIBUTE(obj->extendedAttribute(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

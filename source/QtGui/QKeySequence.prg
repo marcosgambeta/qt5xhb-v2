@@ -204,9 +204,8 @@ HB_FUNC_STATIC(QKEYSEQUENCE_FROMSTRING)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
-    auto ptr = new QKeySequence(QKeySequence::fromString(PQSTRING(1), HB_ISNIL(2) ? QKeySequence::PortableText
+    RQKEYSEQUENCE(QKeySequence::fromString(PQSTRING(1), HB_ISNIL(2) ? QKeySequence::PortableText
                                                                                   : PQKEYSEQUENCE_SEQUENCEFORMAT(2)));
-    Qt5xHb::createReturnClass(ptr, "QKEYSEQUENCE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -260,8 +259,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_MNEMONIC)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-    auto ptr = new QKeySequence(QKeySequence::mnemonic(PQSTRING(1)));
-    Qt5xHb::createReturnClass(ptr, "QKEYSEQUENCE", true);
+    RQKEYSEQUENCE(QKeySequence::mnemonic(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

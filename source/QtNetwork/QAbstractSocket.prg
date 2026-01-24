@@ -382,8 +382,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_LOCALADDRESS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QHostAddress(obj->localAddress());
-      Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
+      RQHOSTADDRESS(obj->localAddress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -423,8 +422,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_PEERADDRESS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QHostAddress(obj->peerAddress());
-      Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
+      RQHOSTADDRESS(obj->peerAddress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -859,8 +857,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_PROXY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QNetworkProxy(obj->proxy());
-      Qt5xHb::createReturnClass(ptr, "QNETWORKPROXY", true);
+      RQNETWORKPROXY(obj->proxy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

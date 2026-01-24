@@ -379,8 +379,7 @@ HB_FUNC_STATIC(QAREASERIES_POINTLABELSFONT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QFont(obj->pointLabelsFont());
-      Qt5xHb::createReturnClass(ptr, "QFONT", true);
+      RQFONT(obj->pointLabelsFont());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -394,8 +394,7 @@ HB_FUNC_STATIC(QLINEF_NORMALVECTOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QLineF(obj->normalVector());
-      Qt5xHb::createReturnClass(ptr, "QLINEF", true);
+      RQLINEF(obj->normalVector());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -567,8 +566,7 @@ HB_FUNC_STATIC(QLINEF_TOLINE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QLine(obj->toLine());
-      Qt5xHb::createReturnClass(ptr, "QLINE", true);
+      RQLINE(obj->toLine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -615,8 +613,7 @@ HB_FUNC_STATIC(QLINEF_TRANSLATED)
     auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QLineF(obj->translated(*PQPOINTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QLINEF", true);
+      RQLINEF(obj->translated(*PQPOINTF(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
@@ -625,8 +622,7 @@ HB_FUNC_STATIC(QLINEF_TRANSLATED)
     auto obj = static_cast<QLineF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QLineF(obj->translated(PQREAL(1), PQREAL(2)));
-      Qt5xHb::createReturnClass(ptr, "QLINEF", true);
+      RQLINEF(obj->translated(PQREAL(1), PQREAL(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -644,8 +640,7 @@ HB_FUNC_STATIC(QLINEF_UNITVECTOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QLineF(obj->unitVector());
-      Qt5xHb::createReturnClass(ptr, "QLINEF", true);
+      RQLINEF(obj->unitVector());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -662,8 +657,7 @@ HB_FUNC_STATIC(QLINEF_FROMPOLAR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-    auto ptr = new QLineF(QLineF::fromPolar(PQREAL(1), PQREAL(2)));
-    Qt5xHb::createReturnClass(ptr, "QLINEF", true);
+    RQLINEF(QLineF::fromPolar(PQREAL(1), PQREAL(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

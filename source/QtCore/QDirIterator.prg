@@ -120,8 +120,7 @@ HB_FUNC_STATIC(QDIRITERATOR_FILEINFO)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QFileInfo(obj->fileInfo());
-      Qt5xHb::createReturnClass(ptr, "QFILEINFO", true);
+      RQFILEINFO(obj->fileInfo());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

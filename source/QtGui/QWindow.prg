@@ -927,8 +927,7 @@ HB_FUNC_STATIC(QWINDOW_CURSOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QCursor(obj->cursor());
-      Qt5xHb::createReturnClass(ptr, "QCURSOR", true);
+      RQCURSOR(obj->cursor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1012,8 +1011,7 @@ HB_FUNC_STATIC(QWINDOW_FRAMEMARGINS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QMargins(obj->frameMargins());
-      Qt5xHb::createReturnClass(ptr, "QMARGINS", true);
+      RQMARGINS(obj->frameMargins());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1242,8 +1240,7 @@ HB_FUNC_STATIC(QWINDOW_REQUESTEDFORMAT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QSurfaceFormat(obj->requestedFormat());
-      Qt5xHb::createReturnClass(ptr, "QSURFACEFORMAT", true);
+      RQSURFACEFORMAT(obj->requestedFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1689,8 +1686,7 @@ HB_FUNC_STATIC(QWINDOW_FORMAT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QSurfaceFormat(obj->format());
-      Qt5xHb::createReturnClass(ptr, "QSURFACEFORMAT", true);
+      RQSURFACEFORMAT(obj->format());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2105,8 +2101,7 @@ HB_FUNC_STATIC(QWINDOW_MASK)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRegion(obj->mask());
-      Qt5xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->mask());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

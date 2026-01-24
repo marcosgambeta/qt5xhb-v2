@@ -458,8 +458,7 @@ HB_FUNC_STATIC(QURL_RESOLVED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
-      auto ptr = new QUrl(obj->resolved(*PQURL(1)));
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->resolved(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -879,16 +878,12 @@ HB_FUNC_STATIC(QURL_FROMENCODED)
     /*
     static QUrl fromEncoded(const QByteArray &input)
     */
-
-    auto ptr = new QUrl(QUrl::fromEncoded(*PQBYTEARRAY(1)));
-    Qt5xHb::createReturnClass(ptr, "QURL", true);
+    RQURL(QUrl::fromEncoded(*PQBYTEARRAY(1)));
   } else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2)) {
     /*
     static QUrl fromEncoded(const QByteArray &input, QUrl::ParsingMode parsingMode)
     */
-
-    auto ptr = new QUrl(QUrl::fromEncoded(*PQBYTEARRAY(1), PQURL_PARSINGMODE(2)));
-    Qt5xHb::createReturnClass(ptr, "QURL", true);
+    RQURL(QUrl::fromEncoded(*PQBYTEARRAY(1), PQURL_PARSINGMODE(2)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -902,8 +897,7 @@ HB_FUNC_STATIC(QURL_FROMLOCALFILE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-    auto ptr = new QUrl(QUrl::fromLocalFile(PQSTRING(1)));
-    Qt5xHb::createReturnClass(ptr, "QURL", true);
+    RQURL(QUrl::fromLocalFile(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -935,8 +929,7 @@ HB_FUNC_STATIC(QURL_FROMUSERINPUT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-    auto ptr = new QUrl(QUrl::fromUserInput(PQSTRING(1)));
-    Qt5xHb::createReturnClass(ptr, "QURL", true);
+    RQURL(QUrl::fromUserInput(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -255,8 +255,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_BLOCKFORMAT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QTextBlockFormat(obj->blockFormat());
-      Qt5xHb::createReturnClass(ptr, "QTEXTBLOCKFORMAT", true);
+      RQTEXTBLOCKFORMAT(obj->blockFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -296,8 +295,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_CHARFORMAT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QTextCharFormat(obj->charFormat());
-      Qt5xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
+      RQTEXTCHARFORMAT(obj->charFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -670,8 +668,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_NEXT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QTextBlock(obj->next());
-      Qt5xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
+      RQTEXTBLOCK(obj->next());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -691,8 +688,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_PREVIOUS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QTextBlock(obj->previous());
-      Qt5xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
+      RQTEXTBLOCK(obj->previous());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -437,8 +437,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_APPLICATIONPROXY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QNetworkProxy(QNetworkProxy::applicationProxy());
-    Qt5xHb::createReturnClass(ptr, "QNETWORKPROXY", true);
+    RQNETWORKPROXY(QNetworkProxy::applicationProxy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

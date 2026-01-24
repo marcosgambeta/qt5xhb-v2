@@ -78,8 +78,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->availableGeometry(OPINT(1, -1)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->availableGeometry(OPINT(1, -1)));
     }
 
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
@@ -87,8 +86,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->availableGeometry(PQWIDGET(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->availableGeometry(PQWIDGET(1)));
     }
 
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
@@ -96,8 +94,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->availableGeometry(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->availableGeometry(*PQPOINT(1)));
     }
 
   } else {
@@ -185,8 +182,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->screenGeometry(OPINT(1, -1)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->screenGeometry(OPINT(1, -1)));
     }
 
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
@@ -194,8 +190,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->screenGeometry(PQWIDGET(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->screenGeometry(PQWIDGET(1)));
     }
 
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
@@ -203,8 +198,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr = new QRect(obj->screenGeometry(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->screenGeometry(*PQPOINT(1)));
     }
 
   } else {

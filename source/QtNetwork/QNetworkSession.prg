@@ -175,8 +175,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_CONFIGURATION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QNetworkConfiguration(obj->configuration());
-      Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
+      RQNETWORKCONFIGURATION(obj->configuration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -236,8 +235,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_INTERFACE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QNetworkInterface(obj->interface());
-      Qt5xHb::createReturnClass(ptr, "QNETWORKINTERFACE", true);
+      RQNETWORKINTERFACE(obj->interface());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

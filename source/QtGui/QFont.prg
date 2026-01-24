@@ -588,8 +588,7 @@ HB_FUNC_STATIC(QFONT_RESOLVE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFONT(1)) {
 #endif
-      auto ptr = new QFont(obj->resolve(*PQFONT(1)));
-      Qt5xHb::createReturnClass(ptr, "QFONT", true);
+      RQFONT(obj->resolve(*PQFONT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

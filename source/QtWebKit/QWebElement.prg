@@ -313,8 +313,7 @@ HB_FUNC_STATIC(QWEBELEMENT_CLONE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QWebElement(obj->clone());
-      Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", true);
+      RQWEBELEMENT(obj->clone());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -334,8 +333,7 @@ HB_FUNC_STATIC(QWEBELEMENT_DOCUMENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QWebElement(obj->document());
-      Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", true);
+      RQWEBELEMENT(obj->document());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -433,8 +431,7 @@ HB_FUNC_STATIC(QWEBELEMENT_FINDALL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-      auto ptr = new QWebElementCollection(obj->findAll(PQSTRING(1)));
-      Qt5xHb::createReturnClass(ptr, "QWEBELEMENTCOLLECTION", true);
+      RQWEBELEMENTCOLLECTION(obj->findAll(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -454,8 +451,7 @@ HB_FUNC_STATIC(QWEBELEMENT_FINDFIRST)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-      auto ptr = new QWebElement(obj->findFirst(PQSTRING(1)));
-      Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", true);
+      RQWEBELEMENT(obj->findFirst(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -475,8 +471,7 @@ HB_FUNC_STATIC(QWEBELEMENT_FIRSTCHILD)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QWebElement(obj->firstChild());
-      Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", true);
+      RQWEBELEMENT(obj->firstChild());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -636,8 +631,7 @@ HB_FUNC_STATIC(QWEBELEMENT_LASTCHILD)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QWebElement(obj->lastChild());
-      Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", true);
+      RQWEBELEMENT(obj->lastChild());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -697,8 +691,7 @@ HB_FUNC_STATIC(QWEBELEMENT_NEXTSIBLING)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QWebElement(obj->nextSibling());
-      Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", true);
+      RQWEBELEMENT(obj->nextSibling());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -718,8 +711,7 @@ HB_FUNC_STATIC(QWEBELEMENT_PARENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QWebElement(obj->parent());
-      Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", true);
+      RQWEBELEMENT(obj->parent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -817,8 +809,7 @@ HB_FUNC_STATIC(QWEBELEMENT_PREVIOUSSIBLING)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QWebElement(obj->previousSibling());
-      Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", true);
+      RQWEBELEMENT(obj->previousSibling());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

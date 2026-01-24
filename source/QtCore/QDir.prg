@@ -947,8 +947,7 @@ HB_FUNC_STATIC(QDIR_CURRENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QDir(QDir::current());
-    Qt5xHb::createReturnClass(ptr, "QDIR", true);
+    RQDIR(QDir::current());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1034,8 +1033,7 @@ HB_FUNC_STATIC(QDIR_HOME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QDir(QDir::home());
-    Qt5xHb::createReturnClass(ptr, "QDIR", true);
+    RQDIR(QDir::home());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1118,8 +1116,7 @@ HB_FUNC_STATIC(QDIR_ROOT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QDir(QDir::root());
-    Qt5xHb::createReturnClass(ptr, "QDIR", true);
+    RQDIR(QDir::root());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1167,8 +1164,7 @@ HB_FUNC_STATIC(QDIR_SEPARATOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QChar(QDir::separator());
-    Qt5xHb::createReturnClass(ptr, "QCHAR", true);
+    RQCHAR(QDir::separator());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1218,8 +1214,7 @@ HB_FUNC_STATIC(QDIR_TEMP)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QDir(QDir::temp());
-    Qt5xHb::createReturnClass(ptr, "QDIR", true);
+    RQDIR(QDir::temp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

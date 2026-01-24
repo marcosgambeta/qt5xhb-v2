@@ -307,8 +307,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOARRAY)
     auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QJsonArray(obj->toArray(*PQJSONARRAY(1)));
-      Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
+      RQJSONARRAY(obj->toArray(*PQJSONARRAY(1)));
     }
   } else if (ISNUMPAR(0)) {
     /*
@@ -317,8 +316,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOARRAY)
     auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QJsonArray(obj->toArray());
-      Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
+      RQJSONARRAY(obj->toArray());
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -374,8 +372,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOOBJECT)
     auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QJsonObject(obj->toObject(*PQJSONOBJECT(1)));
-      Qt5xHb::createReturnClass(ptr, "QJSONOBJECT", true);
+      RQJSONOBJECT(obj->toObject(*PQJSONOBJECT(1)));
     }
   } else if (ISNUMPAR(0)) {
     /*
@@ -384,8 +381,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOOBJECT)
     auto obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QJsonObject(obj->toObject());
-      Qt5xHb::createReturnClass(ptr, "QJSONOBJECT", true);
+      RQJSONOBJECT(obj->toObject());
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -460,8 +456,7 @@ HB_FUNC_STATIC(QJSONVALUE_FROMVARIANT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQVARIANT(1)) {
 #endif
-    auto ptr = new QJsonValue(QJsonValue::fromVariant(*PQVARIANT(1)));
-    Qt5xHb::createReturnClass(ptr, "QJSONVALUE", true);
+    RQJSONVALUE(QJsonValue::fromVariant(*PQVARIANT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -163,8 +163,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_CURRENTMEDIA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QMediaContent(obj->currentMedia());
-      Qt5xHb::createReturnClass(ptr, "QMEDIACONTENT", true);
+      RQMEDIACONTENT(obj->currentMedia());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -430,8 +429,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_MEDIA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = new QMediaContent(obj->media(PINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QMEDIACONTENT", true);
+      RQMEDIACONTENT(obj->media(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

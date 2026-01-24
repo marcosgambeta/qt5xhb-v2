@@ -246,8 +246,7 @@ HB_FUNC_STATIC(QREGION_TRANSLATED)
     auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRegion(obj->translated(PINT(1), PINT(2)));
-      Qt5xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->translated(PINT(1), PINT(2)));
     }
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     /*
@@ -256,8 +255,7 @@ HB_FUNC_STATIC(QREGION_TRANSLATED)
     auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRegion(obj->translated(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->translated(*PQPOINT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -273,8 +271,7 @@ HB_FUNC_STATIC(QREGION_UNITED)
     auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRegion(obj->united(*PQREGION(1)));
-      Qt5xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->united(*PQREGION(1)));
     }
   } else if (ISNUMPAR(1) && ISQRECT(1)) {
     /*
@@ -283,8 +280,7 @@ HB_FUNC_STATIC(QREGION_UNITED)
     auto obj = static_cast<QRegion *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QRegion(obj->united(*PQRECT(1)));
-      Qt5xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->united(*PQRECT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -302,8 +298,7 @@ HB_FUNC_STATIC(QREGION_SUBTRACTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQREGION(1)) {
 #endif
-      auto ptr = new QRegion(obj->subtracted(*PQREGION(1)));
-      Qt5xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->subtracted(*PQREGION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -323,8 +318,7 @@ HB_FUNC_STATIC(QREGION_XORED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQREGION(1)) {
 #endif
-      auto ptr = new QRegion(obj->xored(*PQREGION(1)));
-      Qt5xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->xored(*PQREGION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -577,8 +577,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_WIDTH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QTextLength(obj->width());
-      Qt5xHb::createReturnClass(ptr, "QTEXTLENGTH", true);
+      RQTEXTLENGTH(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -627,8 +626,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_HEIGHT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QTextLength(obj->height());
-      Qt5xHb::createReturnClass(ptr, "QTEXTLENGTH", true);
+      RQTEXTLENGTH(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

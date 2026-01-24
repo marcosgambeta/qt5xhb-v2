@@ -222,11 +222,10 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_CREATEAPPLICATIONMESSAGE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
-    auto ptr = new QOpenGLDebugMessage(QOpenGLDebugMessage::createApplicationMessage(
+    RQOPENGLDEBUGMESSAGE(QOpenGLDebugMessage::createApplicationMessage(
         PQSTRING(1), OPGLUINT(2, 0),
         HB_ISNIL(3) ? QOpenGLDebugMessage::NotificationSeverity : PQOPENGLDEBUGMESSAGE_SEVERITY(3),
         HB_ISNIL(4) ? QOpenGLDebugMessage::OtherType : PQOPENGLDEBUGMESSAGE_TYPE(4)));
-    Qt5xHb::createReturnClass(ptr, "QOPENGLDEBUGMESSAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -243,11 +242,10 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_CREATETHIRDPARTYMESSAGE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
-    auto ptr = new QOpenGLDebugMessage(QOpenGLDebugMessage::createThirdPartyMessage(
+    RQOPENGLDEBUGMESSAGE(QOpenGLDebugMessage::createThirdPartyMessage(
         PQSTRING(1), OPGLUINT(2, 0),
         HB_ISNIL(3) ? QOpenGLDebugMessage::NotificationSeverity : PQOPENGLDEBUGMESSAGE_SEVERITY(3),
         HB_ISNIL(4) ? QOpenGLDebugMessage::OtherType : PQOPENGLDEBUGMESSAGE_TYPE(4)));
-    Qt5xHb::createReturnClass(ptr, "QOPENGLDEBUGMESSAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

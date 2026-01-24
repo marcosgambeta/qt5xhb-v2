@@ -353,8 +353,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_TOARRAY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QJsonArray(obj->toArray());
-      Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
+      RQJSONARRAY(obj->toArray());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -374,8 +373,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_TOOBJECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QJsonObject(obj->toObject());
-      Qt5xHb::createReturnClass(ptr, "QJSONOBJECT", true);
+      RQJSONOBJECT(obj->toObject());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

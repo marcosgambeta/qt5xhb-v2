@@ -160,10 +160,9 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_GLOBALMATCH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
-      auto ptr = new QRegularExpressionMatchIterator(obj->globalMatch(
+      RQREGULAREXPRESSIONMATCHITERATOR(obj->globalMatch(
           PQSTRING(1), OPINT(2, 0), HB_ISNIL(3) ? QRegularExpression::NormalMatch : PQREGULAREXPRESSION_MATCHTYPE(3),
           HB_ISNIL(4) ? QRegularExpression::NoMatchOption : PQREGULAREXPRESSION_MATCHOPTIONS(4)));
-      Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSIONMATCHITERATOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -205,10 +204,9 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_MATCH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
-      auto ptr = new QRegularExpressionMatch(obj->match(
+      RQREGULAREXPRESSIONMATCH(obj->match(
           PQSTRING(1), OPINT(2, 0), HB_ISNIL(3) ? QRegularExpression::NormalMatch : PQREGULAREXPRESSION_MATCHTYPE(3),
           HB_ISNIL(4) ? QRegularExpression::NoMatchOption : PQREGULAREXPRESSION_MATCHOPTIONS(4)));
-      Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSIONMATCH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

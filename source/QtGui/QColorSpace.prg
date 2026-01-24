@@ -279,8 +279,7 @@ HB_FUNC_STATIC(QCOLORSPACE_WITHTRANSFERFUNCTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      auto ptr = new QColorSpace(obj->withTransferFunction(PQCOLORSPACE_TRANSFERFUNCTION(1), OPFLOAT(2, 0.0f)));
-      Qt5xHb::createReturnClass(ptr, "QCOLORSPACE", true);
+      RQCOLORSPACE(obj->withTransferFunction(PQCOLORSPACE_TRANSFERFUNCTION(1), OPFLOAT(2, 0.0f)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -355,8 +354,7 @@ HB_FUNC_STATIC(QCOLORSPACE_FROMICCPROFILE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
-    auto ptr = new QColorSpace(QColorSpace::fromIccProfile(*PQBYTEARRAY(1)));
-    Qt5xHb::createReturnClass(ptr, "QCOLORSPACE", true);
+    RQCOLORSPACE(QColorSpace::fromIccProfile(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

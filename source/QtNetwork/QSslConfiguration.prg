@@ -385,8 +385,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_LOCALCERTIFICATE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QSslCertificate(obj->localCertificate());
-      Qt5xHb::createReturnClass(ptr, "QSSLCERTIFICATE", true);
+      RQSSLCERTIFICATE(obj->localCertificate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -428,8 +427,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PEERCERTIFICATE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QSslCertificate(obj->peerCertificate());
-      Qt5xHb::createReturnClass(ptr, "QSSLCERTIFICATE", true);
+      RQSSLCERTIFICATE(obj->peerCertificate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -491,8 +489,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SESSIONCIPHER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QSslCipher(obj->sessionCipher());
-      Qt5xHb::createReturnClass(ptr, "QSSLCIPHER", true);
+      RQSSLCIPHER(obj->sessionCipher());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -534,8 +531,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PRIVATEKEY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QSslKey(obj->privateKey());
-      Qt5xHb::createReturnClass(ptr, "QSSLKEY", true);
+      RQSSLKEY(obj->privateKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -910,8 +906,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_EPHEMERALSERVERKEY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QSslKey(obj->ephemeralServerKey());
-      Qt5xHb::createReturnClass(ptr, "QSSLKEY", true);
+      RQSSLKEY(obj->ephemeralServerKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -990,8 +985,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_DEFAULTCONFIGURATION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QSslConfiguration(QSslConfiguration::defaultConfiguration());
-    Qt5xHb::createReturnClass(ptr, "QSSLCONFIGURATION", true);
+    RQSSLCONFIGURATION(QSslConfiguration::defaultConfiguration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

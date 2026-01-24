@@ -143,8 +143,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_MEDIA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QMediaContent(obj->media());
-      Qt5xHb::createReturnClass(ptr, "QMEDIACONTENT", true);
+      RQMEDIACONTENT(obj->media());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -186,8 +185,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_CURRENTMEDIA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QMediaContent(obj->currentMedia());
-      Qt5xHb::createReturnClass(ptr, "QMEDIACONTENT", true);
+      RQMEDIACONTENT(obj->currentMedia());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -602,8 +600,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_CURRENTNETWORKCONFIGURATION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QNetworkConfiguration(obj->currentNetworkConfiguration());
-      Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
+      RQNETWORKCONFIGURATION(obj->currentNetworkConfiguration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

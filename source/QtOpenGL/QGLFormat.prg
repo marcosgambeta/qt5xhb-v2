@@ -1137,8 +1137,7 @@ HB_FUNC_STATIC(QGLFORMAT_DEFAULTFORMAT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QGLFormat(QGLFormat::defaultFormat());
-    Qt5xHb::createReturnClass(ptr, "QGLFORMAT", true);
+    RQGLFORMAT(QGLFormat::defaultFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1154,8 +1153,7 @@ HB_FUNC_STATIC(QGLFORMAT_DEFAULTOVERLAYFORMAT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QGLFormat(QGLFormat::defaultOverlayFormat());
-    Qt5xHb::createReturnClass(ptr, "QGLFORMAT", true);
+    RQGLFORMAT(QGLFormat::defaultOverlayFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

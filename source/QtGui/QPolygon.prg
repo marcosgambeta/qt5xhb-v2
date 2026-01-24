@@ -180,8 +180,7 @@ HB_FUNC_STATIC(QPOLYGON_TRANSLATED)
     auto obj = static_cast<QPolygon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPolygon(obj->translated(PINT(1), PINT(2)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->translated(PINT(1), PINT(2)));
     }
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     /*
@@ -190,8 +189,7 @@ HB_FUNC_STATIC(QPOLYGON_TRANSLATED)
     auto obj = static_cast<QPolygon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPolygon(obj->translated(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->translated(*PQPOINT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -331,8 +329,7 @@ HB_FUNC_STATIC(QPOLYGON_UNITED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGON(1)) {
 #endif
-      auto ptr = new QPolygon(obj->united(*PQPOLYGON(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->united(*PQPOLYGON(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -352,8 +349,7 @@ HB_FUNC_STATIC(QPOLYGON_INTERSECTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGON(1)) {
 #endif
-      auto ptr = new QPolygon(obj->intersected(*PQPOLYGON(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->intersected(*PQPOLYGON(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -373,8 +369,7 @@ HB_FUNC_STATIC(QPOLYGON_SUBTRACTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGON(1)) {
 #endif
-      auto ptr = new QPolygon(obj->subtracted(*PQPOLYGON(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->subtracted(*PQPOLYGON(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

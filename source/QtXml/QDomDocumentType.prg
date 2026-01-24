@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_ENTITIES)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QDomNamedNodeMap(obj->entities());
-      Qt5xHb::createReturnClass(ptr, "QDOMNAMEDNODEMAP", true);
+      RQDOMNAMEDNODEMAP(obj->entities());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -174,8 +173,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NOTATIONS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QDomNamedNodeMap(obj->notations());
-      Qt5xHb::createReturnClass(ptr, "QDOMNAMEDNODEMAP", true);
+      RQDOMNAMEDNODEMAP(obj->notations());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

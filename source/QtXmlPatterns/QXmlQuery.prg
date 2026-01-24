@@ -240,8 +240,7 @@ HB_FUNC_STATIC(QXMLQUERY_INITIALTEMPLATENAME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QXmlName(obj->initialTemplateName());
-      Qt5xHb::createReturnClass(ptr, "QXMLNAME", true);
+      RQXMLNAME(obj->initialTemplateName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -302,8 +301,7 @@ HB_FUNC_STATIC(QXMLQUERY_NAMEPOOL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QXmlNamePool(obj->namePool());
-      Qt5xHb::createReturnClass(ptr, "QXMLNAMEPOOL", true);
+      RQXMLNAMEPOOL(obj->namePool());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

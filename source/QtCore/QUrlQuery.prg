@@ -273,8 +273,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERYPAIRDELIMITER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QChar(obj->queryPairDelimiter());
-      Qt5xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->queryPairDelimiter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -294,8 +293,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERYVALUEDELIMITER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QChar(obj->queryValueDelimiter());
-      Qt5xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->queryValueDelimiter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -420,8 +418,7 @@ HB_FUNC_STATIC(QURLQUERY_DEFAULTQUERYPAIRDELIMITER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QChar(QUrlQuery::defaultQueryPairDelimiter());
-    Qt5xHb::createReturnClass(ptr, "QCHAR", true);
+    RQCHAR(QUrlQuery::defaultQueryPairDelimiter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -437,8 +434,7 @@ HB_FUNC_STATIC(QURLQUERY_DEFAULTQUERYVALUEDELIMITER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QChar(QUrlQuery::defaultQueryValueDelimiter());
-    Qt5xHb::createReturnClass(ptr, "QCHAR", true);
+    RQCHAR(QUrlQuery::defaultQueryValueDelimiter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

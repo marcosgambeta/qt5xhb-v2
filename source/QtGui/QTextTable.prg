@@ -345,8 +345,7 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
     auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QTextTableCell(obj->cellAt(PINT(1), PINT(2)));
-      Qt5xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
+      RQTEXTTABLECELL(obj->cellAt(PINT(1), PINT(2)));
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
@@ -355,8 +354,7 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
     auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QTextTableCell(obj->cellAt(PINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
+      RQTEXTTABLECELL(obj->cellAt(PINT(1)));
     }
   } else if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
     /*
@@ -365,8 +363,7 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
     auto obj = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QTextTableCell(obj->cellAt(*PQTEXTCURSOR(1)));
-      Qt5xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
+      RQTEXTTABLECELL(obj->cellAt(*PQTEXTCURSOR(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -384,8 +381,7 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWSTART)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
 #endif
-      auto ptr = new QTextCursor(obj->rowStart(*PQTEXTCURSOR(1)));
-      Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
+      RQTEXTCURSOR(obj->rowStart(*PQTEXTCURSOR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -405,8 +401,7 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWEND)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
 #endif
-      auto ptr = new QTextCursor(obj->rowEnd(*PQTEXTCURSOR(1)));
-      Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
+      RQTEXTCURSOR(obj->rowEnd(*PQTEXTCURSOR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -448,8 +443,7 @@ HB_FUNC_STATIC(QTEXTTABLE_FORMAT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QTextTableFormat(obj->format());
-      Qt5xHb::createReturnClass(ptr, "QTEXTTABLEFORMAT", true);
+      RQTEXTTABLEFORMAT(obj->format());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

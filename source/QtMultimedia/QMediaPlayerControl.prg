@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_AVAILABLEPLAYBACKRANGES)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QMediaTimeRange(obj->availablePlaybackRanges());
-      Qt5xHb::createReturnClass(ptr, "QMEDIATIMERANGE", true);
+      RQMEDIATIMERANGE(obj->availablePlaybackRanges());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -251,8 +250,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_MEDIA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QMediaContent(obj->media());
-      Qt5xHb::createReturnClass(ptr, "QMEDIACONTENT", true);
+      RQMEDIACONTENT(obj->media());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

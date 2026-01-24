@@ -94,8 +94,7 @@ HB_FUNC_STATIC(QXMLRESULTITEMS_CURRENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QXmlItem(obj->current());
-      Qt5xHb::createReturnClass(ptr, "QXMLITEM", true);
+      RQXMLITEM(obj->current());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -135,8 +134,7 @@ HB_FUNC_STATIC(QXMLRESULTITEMS_NEXT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QXmlItem(obj->next());
-      Qt5xHb::createReturnClass(ptr, "QXMLITEM", true);
+      RQXMLITEM(obj->next());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -170,8 +170,7 @@ HB_FUNC_STATIC(QQUATERNION_VECTOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QVector3D(obj->vector());
-      Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
+      RQVECTOR3D(obj->vector());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -428,8 +427,7 @@ HB_FUNC_STATIC(QQUATERNION_NORMALIZED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QQuaternion(obj->normalized());
-      Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
+      RQQUATERNION(obj->normalized());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -471,8 +469,7 @@ HB_FUNC_STATIC(QQUATERNION_CONJUGATE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QQuaternion(obj->conjugate());
-      Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
+      RQQUATERNION(obj->conjugate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -492,8 +489,7 @@ HB_FUNC_STATIC(QQUATERNION_ROTATEDVECTOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
 #endif
-      auto ptr = new QVector3D(obj->rotatedVector(*PQVECTOR3D(1)));
-      Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
+      RQVECTOR3D(obj->rotatedVector(*PQVECTOR3D(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -513,8 +509,7 @@ HB_FUNC_STATIC(QQUATERNION_TOVECTOR4D)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QVector4D(obj->toVector4D());
-      Qt5xHb::createReturnClass(ptr, "QVECTOR4D", true);
+      RQVECTOR4D(obj->toVector4D());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -529,16 +524,12 @@ HB_FUNC_STATIC(QQUATERNION_FROMAXISANDANGLE)
     /*
     static QQuaternion fromAxisAndAngle(const QVector3D &axis, float angle)
     */
-
-    auto ptr = new QQuaternion(QQuaternion::fromAxisAndAngle(*PQVECTOR3D(1), PFLOAT(2)));
-    Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
+    RQQUATERNION(QQuaternion::fromAxisAndAngle(*PQVECTOR3D(1), PFLOAT(2)));
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
     static QQuaternion fromAxisAndAngle(float x, float y, float z, float angle)
     */
-
-    auto ptr = new QQuaternion(QQuaternion::fromAxisAndAngle(PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4)));
-    Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
+    RQQUATERNION(QQuaternion::fromAxisAndAngle(PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -552,8 +543,7 @@ HB_FUNC_STATIC(QQUATERNION_SLERP)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(3) && ISQQUATERNION(1) && ISQQUATERNION(2) && HB_ISNUM(3)) {
 #endif
-    auto ptr = new QQuaternion(QQuaternion::slerp(*PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3)));
-    Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
+    RQQUATERNION(QQuaternion::slerp(*PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -569,8 +559,7 @@ HB_FUNC_STATIC(QQUATERNION_NLERP)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(3) && ISQQUATERNION(1) && ISQQUATERNION(2) && HB_ISNUM(3)) {
 #endif
-    auto ptr = new QQuaternion(QQuaternion::nlerp(*PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3)));
-    Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
+    RQQUATERNION(QQuaternion::nlerp(*PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

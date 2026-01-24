@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORNAME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-      auto ptr = new QMimeType(obj->mimeTypeForName(PQSTRING(1)));
-      Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
+      RQMIMETYPE(obj->mimeTypeForName(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -117,9 +116,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILE)
     auto obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QMimeType(
-          obj->mimeTypeForFile(PQSTRING(1), HB_ISNIL(2) ? QMimeDatabase::MatchDefault : PQMIMEDATABASE_MATCHMODE(2)));
-      Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
+      RQMIMETYPE(obj->mimeTypeForFile(PQSTRING(1), HB_ISNIL(2) ? QMimeDatabase::MatchDefault : PQMIMEDATABASE_MATCHMODE(2)));
     }
   } else if (ISBETWEEN(1, 2) && ISQFILEINFO(1) && ISNUMORNIL(2)) {
     /*
@@ -129,9 +126,8 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILE)
     auto obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QMimeType(obj->mimeTypeForFile(*PQFILEINFO(1), HB_ISNIL(2) ? QMimeDatabase::MatchDefault
+      RQMIMETYPE(obj->mimeTypeForFile(*PQFILEINFO(1), HB_ISNIL(2) ? QMimeDatabase::MatchDefault
                                                                                 : PQMIMEDATABASE_MATCHMODE(2)));
-      Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -189,8 +185,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORDATA)
     auto obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QMimeType(obj->mimeTypeForData(*PQBYTEARRAY(1)));
-      Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
+      RQMIMETYPE(obj->mimeTypeForData(*PQBYTEARRAY(1)));
     }
   } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
     /*
@@ -199,8 +194,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORDATA)
     auto obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QMimeType(obj->mimeTypeForData(PQIODEVICE(1)));
-      Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
+      RQMIMETYPE(obj->mimeTypeForData(PQIODEVICE(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -218,8 +212,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORURL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
-      auto ptr = new QMimeType(obj->mimeTypeForUrl(*PQURL(1)));
-      Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
+      RQMIMETYPE(obj->mimeTypeForUrl(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -237,8 +230,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA)
     auto obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QMimeType(obj->mimeTypeForFileNameAndData(PQSTRING(1), PQIODEVICE(2)));
-      Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
+      RQMIMETYPE(obj->mimeTypeForFileNameAndData(PQSTRING(1), PQIODEVICE(2)));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2)) {
     /*
@@ -247,8 +239,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA)
     auto obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QMimeType(obj->mimeTypeForFileNameAndData(PQSTRING(1), *PQBYTEARRAY(2)));
-      Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
+      RQMIMETYPE(obj->mimeTypeForFileNameAndData(PQSTRING(1), *PQBYTEARRAY(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -411,8 +411,7 @@ HB_FUNC_STATIC(QLINE_TRANSLATED)
     auto obj = static_cast<QLine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QLine(obj->translated(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QLINE", true);
+      RQLINE(obj->translated(*PQPOINT(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
@@ -421,8 +420,7 @@ HB_FUNC_STATIC(QLINE_TRANSLATED)
     auto obj = static_cast<QLine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QLine(obj->translated(PINT(1), PINT(2)));
-      Qt5xHb::createReturnClass(ptr, "QLINE", true);
+      RQLINE(obj->translated(PINT(1), PINT(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

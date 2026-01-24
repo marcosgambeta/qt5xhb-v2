@@ -144,8 +144,7 @@ HB_FUNC_STATIC(QJSONARRAY_AT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = new QJsonValue(obj->at(PINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QJSONVALUE", true);
+      RQJSONVALUE(obj->at(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -225,8 +224,7 @@ HB_FUNC_STATIC(QJSONARRAY_FIRST)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QJsonValue(obj->first());
-      Qt5xHb::createReturnClass(ptr, "QJSONVALUE", true);
+      RQJSONVALUE(obj->first());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -288,8 +286,7 @@ HB_FUNC_STATIC(QJSONARRAY_LAST)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QJsonValue(obj->last());
-      Qt5xHb::createReturnClass(ptr, "QJSONVALUE", true);
+      RQJSONVALUE(obj->last());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -527,8 +524,7 @@ HB_FUNC_STATIC(QJSONARRAY_TAKEAT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = new QJsonValue(obj->takeAt(PINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QJSONVALUE", true);
+      RQJSONVALUE(obj->takeAt(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -587,8 +583,7 @@ HB_FUNC_STATIC(QJSONARRAY_FROMSTRINGLIST)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
-    auto ptr = new QJsonArray(QJsonArray::fromStringList(PQSTRINGLIST(1)));
-    Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
+    RQJSONARRAY(QJsonArray::fromStringList(PQSTRINGLIST(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -610,8 +605,7 @@ HB_FUNC_STATIC(QJSONARRAY_FROMVARIANTLIST)
     for (auto i1 = 0; i1 < nLen1; i1++) {
       par1 << *static_cast<QVariant *>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
     }
-    auto ptr = new QJsonArray(QJsonArray::fromVariantList(par1));
-    Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
+    RQJSONARRAY(QJsonArray::fromVariantList(par1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

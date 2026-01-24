@@ -512,8 +512,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ROOT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    auto ptr = new QStorageInfo(QStorageInfo::root());
-    Qt5xHb::createReturnClass(ptr, "QSTORAGEINFO", true);
+    RQSTORAGEINFO(QStorageInfo::root());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -123,8 +123,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_CALLOBJECTMETHOD)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-      auto ptr = new QAndroidJniObject(obj->callObjectMethod(PCONSTCHAR(1)));
-      Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
+      RQANDROIDJNIOBJECT(obj->callObjectMethod(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -144,8 +143,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETOBJECTFIELD)
     auto obj = static_cast<QAndroidJniObject *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QAndroidJniObject(obj->getObjectField(PCONSTCHAR(1)));
-      Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
+      RQANDROIDJNIOBJECT(obj->getObjectField(PCONSTCHAR(1)));
     }
 #endif
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
@@ -154,8 +152,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETOBJECTFIELD)
     auto obj = static_cast<QAndroidJniObject *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QAndroidJniObject(obj->getObjectField(PCONSTCHAR(1), PCONSTCHAR(2)));
-      Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
+      RQANDROIDJNIOBJECT(obj->getObjectField(PCONSTCHAR(1), PCONSTCHAR(2)));
     }
 #endif
   } else {
@@ -218,16 +215,12 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_CALLSTATICOBJECTMETHOD)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // static QAndroidJniObject callStaticObjectMethod(const char * className, const char * methodName)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-
-    auto ptr = new QAndroidJniObject(QAndroidJniObject::callStaticObjectMethod(PCONSTCHAR(1), PCONSTCHAR(2)));
-    Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
+    RQANDROIDJNIOBJECT(QAndroidJniObject::callStaticObjectMethod(PCONSTCHAR(1), PCONSTCHAR(2)));
 #endif
   } else if (ISNUMPAR(2) && HB_ISPOINTER(1) && HB_ISCHAR(2)) {
     // static QAndroidJniObject callStaticObjectMethod(jclass clazz, const char * methodName)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-
-    auto ptr = new QAndroidJniObject(QAndroidJniObject::callStaticObjectMethod((jclass)hb_parptr(1), PCONSTCHAR(2)));
-    Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
+    RQANDROIDJNIOBJECT(QAndroidJniObject::callStaticObjectMethod((jclass)hb_parptr(1), PCONSTCHAR(2)));
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -241,8 +234,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_FROMLOCALREF)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    auto ptr = new QAndroidJniObject(QAndroidJniObject::fromLocalRef(PINT(1)));
-    Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
+    RQANDROIDJNIOBJECT(QAndroidJniObject::fromLocalRef(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -258,8 +250,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_FROMSTRING)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-    auto ptr = new QAndroidJniObject(QAndroidJniObject::fromString(PQSTRING(1)));
-    Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
+    RQANDROIDJNIOBJECT(QAndroidJniObject::fromString(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -281,8 +272,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
       if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
 #endif
-        auto ptr = new QAndroidJniObject(QAndroidJniObject::getStaticObjectField(PCONSTCHAR(1), PCONSTCHAR(2)));
-        Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
+        RQANDROIDJNIOBJECT(QAndroidJniObject::getStaticObjectField(PCONSTCHAR(1), PCONSTCHAR(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
       } else {
         hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -298,9 +288,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
       if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3)) {
 #endif
-        auto ptr =
-            new QAndroidJniObject(QAndroidJniObject::getStaticObjectField(PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3)));
-        Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
+        RQANDROIDJNIOBJECT(QAndroidJniObject::getStaticObjectField(PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
       } else {
         hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -316,8 +304,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
       if (ISNUMPAR(2) && HB_ISPOINTER(1) && HB_ISCHAR(2)) {
 #endif
-        auto ptr = new QAndroidJniObject(QAndroidJniObject::getStaticObjectField((jclass)hb_parptr(1), PCONSTCHAR(2)));
-        Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
+        RQANDROIDJNIOBJECT(QAndroidJniObject::getStaticObjectField((jclass)hb_parptr(1), PCONSTCHAR(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
       } else {
         hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -333,9 +320,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
       if (ISNUMPAR(3) && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISCHAR(3)) {
 #endif
-        auto ptr = new QAndroidJniObject(
-            QAndroidJniObject::getStaticObjectField((jclass)hb_parptr(1), PCONSTCHAR(2), PCONSTCHAR(3)));
-        Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
+        RQANDROIDJNIOBJECT(QAndroidJniObject::getStaticObjectField((jclass)hb_parptr(1), PCONSTCHAR(2), PCONSTCHAR(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
       } else {
         hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

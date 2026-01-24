@@ -164,8 +164,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ELEMENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QWebElement(obj->element());
-      Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", true);
+      RQWEBELEMENT(obj->element());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -185,8 +184,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QWebElement(obj->enclosingBlockElement());
-      Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", true);
+      RQWEBELEMENT(obj->enclosingBlockElement());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -227,8 +225,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_IMAGEURL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QUrl(obj->imageUrl());
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->imageUrl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -308,8 +305,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKELEMENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QWebElement(obj->linkElement());
-      Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", true);
+      RQWEBELEMENT(obj->linkElement());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -370,8 +366,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKTITLE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QUrl(obj->linkTitle());
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->linkTitle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -391,8 +386,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_LINKURL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QUrl(obj->linkUrl());
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->linkUrl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -412,8 +406,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_PIXMAP)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPixmap(obj->pixmap());
-      Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
+      RQPIXMAP(obj->pixmap());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -496,8 +489,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_MEDIAURL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QUrl(obj->mediaUrl());
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->mediaUrl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -215,8 +215,7 @@ HB_FUNC_STATIC(QAUDIODECODER_AUDIOFORMAT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QAudioFormat(obj->audioFormat());
-      Qt5xHb::createReturnClass(ptr, "QAUDIOFORMAT", true);
+      RQAUDIOFORMAT(obj->audioFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -318,8 +317,7 @@ HB_FUNC_STATIC(QAUDIODECODER_READ)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QAudioBuffer(obj->read());
-      Qt5xHb::createReturnClass(ptr, "QAUDIOBUFFER", true);
+      RQAUDIOBUFFER(obj->read());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -153,8 +153,7 @@ HB_FUNC_STATIC(QJSVALUEITERATOR_VALUE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QJSValue(obj->value());
-      Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
+      RQJSVALUE(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

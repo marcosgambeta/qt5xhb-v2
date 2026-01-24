@@ -185,8 +185,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATED)
     auto obj = static_cast<QPolygonF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPolygonF(obj->translated(PQREAL(1), PQREAL(2)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->translated(PQREAL(1), PQREAL(2)));
     }
   } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
     /*
@@ -195,8 +194,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATED)
     auto obj = static_cast<QPolygonF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPolygonF(obj->translated(*PQPOINTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->translated(*PQPOINTF(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -214,8 +212,7 @@ HB_FUNC_STATIC(QPOLYGONF_TOPOLYGON)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPolygon(obj->toPolygon());
-      Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->toPolygon());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -295,8 +292,7 @@ HB_FUNC_STATIC(QPOLYGONF_UNITED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
 #endif
-      auto ptr = new QPolygonF(obj->united(*PQPOLYGONF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->united(*PQPOLYGONF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -316,8 +312,7 @@ HB_FUNC_STATIC(QPOLYGONF_INTERSECTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
 #endif
-      auto ptr = new QPolygonF(obj->intersected(*PQPOLYGONF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->intersected(*PQPOLYGONF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -337,8 +332,7 @@ HB_FUNC_STATIC(QPOLYGONF_SUBTRACTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
 #endif
-      auto ptr = new QPolygonF(obj->subtracted(*PQPOLYGONF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->subtracted(*PQPOLYGONF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

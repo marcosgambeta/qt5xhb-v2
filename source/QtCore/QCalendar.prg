@@ -458,8 +458,7 @@ HB_FUNC_STATIC(QCALENDAR_DATEFROMPARTS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      auto ptr = new QDate(obj->dateFromParts(PINT(1), PINT(2), PINT(3)));
-      Qt5xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->dateFromParts(PINT(1), PINT(2), PINT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

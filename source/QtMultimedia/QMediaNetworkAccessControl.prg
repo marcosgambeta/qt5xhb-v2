@@ -75,8 +75,7 @@ HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QNetworkConfiguration(obj->currentConfiguration());
-      Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
+      RQNETWORKCONFIGURATION(obj->currentConfiguration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

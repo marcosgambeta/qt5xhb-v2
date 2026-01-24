@@ -115,8 +115,7 @@ HB_FUNC_STATIC(QPLACEDETAILSREPLY_PLACE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPlace(obj->place());
-      Qt5xHb::createReturnClass(ptr, "QPLACE", true);
+      RQPLACE(obj->place());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

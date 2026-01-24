@@ -332,9 +332,8 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPixmap(obj->pixmap(*PQSIZE(1), HB_ISNIL(2) ? QIcon::Normal : PQICON_MODE(2),
+      RQPIXMAP(obj->pixmap(*PQSIZE(1), HB_ISNIL(2) ? QIcon::Normal : PQICON_MODE(2),
                                          HB_ISNIL(3) ? QIcon::Off : PQICON_STATE(3)));
-      Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
     }
   } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     /*
@@ -343,9 +342,8 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPixmap(obj->pixmap(PINT(1), PINT(2), HB_ISNIL(3) ? QIcon::Normal : PQICON_MODE(3),
+      RQPIXMAP(obj->pixmap(PINT(1), PINT(2), HB_ISNIL(3) ? QIcon::Normal : PQICON_MODE(3),
                                          HB_ISNIL(4) ? QIcon::Off : PQICON_STATE(4)));
-      Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
     }
   } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     /*
@@ -354,9 +352,8 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     auto obj = static_cast<QIcon *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QPixmap(obj->pixmap(PINT(1), HB_ISNIL(2) ? QIcon::Normal : PQICON_MODE(2),
+      RQPIXMAP(obj->pixmap(PINT(1), HB_ISNIL(2) ? QIcon::Normal : PQICON_MODE(2),
                                          HB_ISNIL(3) ? QIcon::Off : PQICON_STATE(3)));
-      Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

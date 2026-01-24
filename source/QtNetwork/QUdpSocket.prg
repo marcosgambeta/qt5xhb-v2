@@ -149,8 +149,7 @@ HB_FUNC_STATIC(QUDPSOCKET_MULTICASTINTERFACE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QNetworkInterface(obj->multicastInterface());
-      Qt5xHb::createReturnClass(ptr, "QNETWORKINTERFACE", true);
+      RQNETWORKINTERFACE(obj->multicastInterface());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -233,8 +232,7 @@ HB_FUNC_STATIC(QUDPSOCKET_RECEIVEDATAGRAM)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      auto ptr = new QNetworkDatagram(obj->receiveDatagram(OPQINT64(1, -1)));
-      Qt5xHb::createReturnClass(ptr, "QNETWORKDATAGRAM", true);
+      RQNETWORKDATAGRAM(obj->receiveDatagram(OPQINT64(1, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

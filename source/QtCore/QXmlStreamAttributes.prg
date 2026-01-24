@@ -171,8 +171,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE1)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
 #endif
-      auto ptr = new QStringRef(obj->value(PQSTRING(1), PQSTRING(2)));
-      Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
+      RQSTRINGREF(obj->value(PQSTRING(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -192,8 +191,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE2)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQLATIN1STRING(2)) {
 #endif
-      auto ptr = new QStringRef(obj->value(PQSTRING(1), *PQLATIN1STRING(2)));
-      Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
+      RQSTRINGREF(obj->value(PQSTRING(1), *PQLATIN1STRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -213,8 +211,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE3)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQLATIN1STRING(1) && ISQLATIN1STRING(2)) {
 #endif
-      auto ptr = new QStringRef(obj->value(*PQLATIN1STRING(1), *PQLATIN1STRING(2)));
-      Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
+      RQSTRINGREF(obj->value(*PQLATIN1STRING(1), *PQLATIN1STRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -234,8 +231,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE4)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-      auto ptr = new QStringRef(obj->value(PQSTRING(1)));
-      Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
+      RQSTRINGREF(obj->value(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -255,8 +251,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE5)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQLATIN1STRING(1)) {
 #endif
-      auto ptr = new QStringRef(obj->value(*PQLATIN1STRING(1)));
-      Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
+      RQSTRINGREF(obj->value(*PQLATIN1STRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

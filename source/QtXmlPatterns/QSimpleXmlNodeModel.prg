@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_BASEURI)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1)) {
 #endif
-      auto ptr = new QUrl(obj->baseUri(*PQXMLNODEMODELINDEX(1)));
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->baseUri(*PQXMLNODEMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -119,8 +118,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_ELEMENTBYID)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNAME(1)) {
 #endif
-      auto ptr = new QXmlNodeModelIndex(obj->elementById(*PQXMLNAME(1)));
-      Qt5xHb::createReturnClass(ptr, "QXMLNODEMODELINDEX", true);
+      RQXMLNODEMODELINDEX(obj->elementById(*PQXMLNAME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

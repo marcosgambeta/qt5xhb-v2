@@ -212,8 +212,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ERROR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QDBusError(obj->error());
-      Qt5xHb::createReturnClass(ptr, "QDBUSERROR", true);
+      RQDBUSERROR(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -235,8 +234,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_REPLY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QDBusMessage(obj->reply());
-      Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
+      RQDBUSMESSAGE(obj->reply());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -254,8 +252,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_FROMERROR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQDBUSERROR(1)) {
 #endif
-    auto ptr = new QDBusPendingCall(QDBusPendingCall::fromError(*PQDBUSERROR(1)));
-    Qt5xHb::createReturnClass(ptr, "QDBUSPENDINGCALL", true);
+    RQDBUSPENDINGCALL(QDBusPendingCall::fromError(*PQDBUSERROR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -271,8 +268,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_FROMCOMPLETEDCALL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQDBUSMESSAGE(1)) {
 #endif
-    auto ptr = new QDBusPendingCall(QDBusPendingCall::fromCompletedCall(*PQDBUSMESSAGE(1)));
-    Qt5xHb::createReturnClass(ptr, "QDBUSPENDINGCALL", true);
+    RQDBUSPENDINGCALL(QDBusPendingCall::fromCompletedCall(*PQDBUSMESSAGE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

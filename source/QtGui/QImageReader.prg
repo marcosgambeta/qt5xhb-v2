@@ -508,8 +508,7 @@ HB_FUNC_STATIC(QIMAGEREADER_READ)
     auto obj = static_cast<QImageReader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QImage(obj->read());
-      Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->read());
     }
   } else if (ISNUMPAR(1) && ISQIMAGE(1)) {
     /*

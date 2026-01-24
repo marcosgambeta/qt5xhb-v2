@@ -330,8 +330,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_METHOD)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QMetaMethod(obj->method());
-      Qt5xHb::createReturnClass(ptr, "QMETAMETHOD", true);
+      RQMETAMETHOD(obj->method());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -412,8 +411,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QMetaProperty(obj->property());
-      Qt5xHb::createReturnClass(ptr, "QMETAPROPERTY", true);
+      RQMETAPROPERTY(obj->property());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

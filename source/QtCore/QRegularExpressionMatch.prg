@@ -177,8 +177,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_CAPTUREDREF)
     auto obj = static_cast<QRegularExpressionMatch *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QStringRef(obj->capturedRef(OPINT(1, 0)));
-      Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
+      RQSTRINGREF(obj->capturedRef(OPINT(1, 0)));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
@@ -187,8 +186,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_CAPTUREDREF)
     auto obj = static_cast<QRegularExpressionMatch *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QStringRef(obj->capturedRef(PQSTRING(1)));
-      Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
+      RQSTRINGREF(obj->capturedRef(PQSTRING(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -371,8 +369,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_REGULAREXPRESSION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QRegularExpression(obj->regularExpression());
-      Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSION", true);
+      RQREGULAREXPRESSION(obj->regularExpression());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

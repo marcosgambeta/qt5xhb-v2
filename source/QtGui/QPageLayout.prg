@@ -253,8 +253,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAGESIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QPageSize(obj->pageSize());
-      Qt5xHb::createReturnClass(ptr, "QPAGESIZE", true);
+      RQPAGESIZE(obj->pageSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -476,8 +475,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MARGINS)
     auto obj = static_cast<QPageLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QMarginsF(obj->margins());
-      Qt5xHb::createReturnClass(ptr, "QMARGINSF", true);
+      RQMARGINSF(obj->margins());
     }
 #endif
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -488,8 +486,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MARGINS)
     auto obj = static_cast<QPageLayout *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = new QMarginsF(obj->margins(PQPAGELAYOUT_UNIT(1)));
-      Qt5xHb::createReturnClass(ptr, "QMARGINSF", true);
+      RQMARGINSF(obj->margins(PQPAGELAYOUT_UNIT(1)));
     }
 #endif
   } else {
@@ -509,8 +506,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MARGINSPOINTS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QMargins(obj->marginsPoints());
-      Qt5xHb::createReturnClass(ptr, "QMARGINS", true);
+      RQMARGINS(obj->marginsPoints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -532,8 +528,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MARGINSPIXELS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      auto ptr = new QMargins(obj->marginsPixels(PINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QMARGINS", true);
+      RQMARGINS(obj->marginsPixels(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -579,8 +574,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MINIMUMMARGINS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QMarginsF(obj->minimumMargins());
-      Qt5xHb::createReturnClass(ptr, "QMARGINSF", true);
+      RQMARGINSF(obj->minimumMargins());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -602,8 +596,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MAXIMUMMARGINS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = new QMarginsF(obj->maximumMargins());
-      Qt5xHb::createReturnClass(ptr, "QMARGINSF", true);
+      RQMARGINSF(obj->maximumMargins());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
