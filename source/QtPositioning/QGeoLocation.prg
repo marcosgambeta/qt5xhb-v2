@@ -76,17 +76,13 @@ RETURN
 HB_FUNC_STATIC(QGEOLOCATION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QGeoLocation()
-    */
+    // QGeoLocation()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QGeoLocation();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQGEOLOCATION(1)) {
-    /*
-    QGeoLocation(const QGeoLocation &other)
-    */
+    // QGeoLocation(const QGeoLocation &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QGeoLocation(*PQGEOLOCATION(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QGEOLOCATION_DELETE)
 #endif
 }
 
-/*
-QGeoAddress address() const
-*/
+// QGeoAddress address() const
 HB_FUNC_STATIC(QGEOLOCATION_ADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -129,9 +123,7 @@ HB_FUNC_STATIC(QGEOLOCATION_ADDRESS)
 #endif
 }
 
-/*
-void setAddress(const QGeoAddress &address)
-*/
+// void setAddress(const QGeoAddress &address)
 HB_FUNC_STATIC(QGEOLOCATION_SETADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -153,9 +145,7 @@ HB_FUNC_STATIC(QGEOLOCATION_SETADDRESS)
 #endif
 }
 
-/*
-QGeoCoordinate coordinate() const
-*/
+// QGeoCoordinate coordinate() const
 HB_FUNC_STATIC(QGEOLOCATION_COORDINATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -175,9 +165,7 @@ HB_FUNC_STATIC(QGEOLOCATION_COORDINATE)
 #endif
 }
 
-/*
-void setCoordinate(const QGeoCoordinate &position)
-*/
+// void setCoordinate(const QGeoCoordinate &position)
 HB_FUNC_STATIC(QGEOLOCATION_SETCOORDINATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -199,9 +187,7 @@ HB_FUNC_STATIC(QGEOLOCATION_SETCOORDINATE)
 #endif
 }
 
-/*
-QGeoRectangle boundingBox() const
-*/
+// QGeoRectangle boundingBox() const
 HB_FUNC_STATIC(QGEOLOCATION_BOUNDINGBOX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -221,9 +207,7 @@ HB_FUNC_STATIC(QGEOLOCATION_BOUNDINGBOX)
 #endif
 }
 
-/*
-void setBoundingBox(const QGeoRectangle &box)
-*/
+// void setBoundingBox(const QGeoRectangle &box)
 HB_FUNC_STATIC(QGEOLOCATION_SETBOUNDINGBOX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -245,9 +229,7 @@ HB_FUNC_STATIC(QGEOLOCATION_SETBOUNDINGBOX)
 #endif
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QGEOLOCATION_ISEMPTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

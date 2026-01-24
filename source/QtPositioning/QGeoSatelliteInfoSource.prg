@@ -80,9 +80,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_DELETE)
 #endif
 }
 
-/*
-QString sourceName() const
-*/
+// QString sourceName() const
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_SOURCENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -102,9 +100,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_SOURCENAME)
 #endif
 }
 
-/*
-virtual void setUpdateInterval(int msec)
-*/
+// virtual void setUpdateInterval(int msec)
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_SETUPDATEINTERVAL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -126,9 +122,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_SETUPDATEINTERVAL)
 #endif
 }
 
-/*
-int updateInterval() const
-*/
+// int updateInterval() const
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_UPDATEINTERVAL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -148,9 +142,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_UPDATEINTERVAL)
 #endif
 }
 
-/*
-virtual int minimumUpdateInterval() const = 0
-*/
+// virtual int minimumUpdateInterval() const = 0
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_MINIMUMUPDATEINTERVAL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -170,9 +162,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_MINIMUMUPDATEINTERVAL)
 #endif
 }
 
-/*
-virtual QGeoSatelliteInfoSource::Error error() const = 0
-*/
+// virtual QGeoSatelliteInfoSource::Error error() const = 0
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -192,9 +182,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ERROR)
 #endif
 }
 
-/*
-virtual void startUpdates() = 0
-*/
+// virtual void startUpdates() = 0
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_STARTUPDATES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -216,9 +204,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_STARTUPDATES)
 #endif
 }
 
-/*
-virtual void stopUpdates() = 0
-*/
+// virtual void stopUpdates() = 0
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_STOPUPDATES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -240,9 +226,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_STOPUPDATES)
 #endif
 }
 
-/*
-virtual void requestUpdate(int timeout = 0) = 0
-*/
+// virtual void requestUpdate(int timeout = 0) = 0
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_REQUESTUPDATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -264,9 +248,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_REQUESTUPDATE)
 #endif
 }
 
-/*
-static QGeoSatelliteInfoSource * createDefaultSource(QObject * parent)
-*/
+// static QGeoSatelliteInfoSource *createDefaultSource(QObject *parent)
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_CREATEDEFAULTSOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -283,9 +265,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_CREATEDEFAULTSOURCE)
 #endif
 }
 
-/*
-static QGeoSatelliteInfoSource * createSource(const QString &sourceName, QObject * parent)
-*/
+// static QGeoSatelliteInfoSource *createSource(const QString &sourceName, QObject *parent)
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_CREATESOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -302,9 +282,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_CREATESOURCE)
 #endif
 }
 
-/*
-static QStringList availableSources()
-*/
+// static QStringList availableSources()
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_AVAILABLESOURCES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -320,9 +298,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_AVAILABLESOURCES)
 #endif
 }
 
-/*
-void satellitesInViewUpdated(const QList<QGeoSatelliteInfo> &satellites)
-*/
+// void satellitesInViewUpdated(const QList<QGeoSatelliteInfo> &satellites)
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -385,9 +361,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED)
 #endif
 }
 
-/*
-void satellitesInUseUpdated(const QList<QGeoSatelliteInfo> &satellites)
-*/
+// void satellitesInUseUpdated(const QList<QGeoSatelliteInfo> &satellites)
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -450,9 +424,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED)
 #endif
 }
 
-/*
-void requestTimeout()
-*/
+// void requestTimeout()
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONREQUESTTIMEOUT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -495,9 +467,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONREQUESTTIMEOUT)
 #endif
 }
 
-/*
-void error(QGeoSatelliteInfoSource::Error error)
-*/
+// void error(QGeoSatelliteInfoSource::Error error)
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

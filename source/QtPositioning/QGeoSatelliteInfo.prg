@@ -72,17 +72,13 @@ RETURN
 HB_FUNC_STATIC(QGEOSATELLITEINFO_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QGeoSatelliteInfo()
-    */
+    // QGeoSatelliteInfo()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QGeoSatelliteInfo();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQGEOSATELLITEINFO(1)) {
-    /*
-    QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
-    */
+    // QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QGeoSatelliteInfo(*PQGEOSATELLITEINFO(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -103,9 +99,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_DELETE)
 #endif
 }
 
-/*
-void setSatelliteSystem(QGeoSatelliteInfo::SatelliteSystem system)
-*/
+// void setSatelliteSystem(QGeoSatelliteInfo::SatelliteSystem system)
 HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSATELLITESYSTEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -127,9 +121,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSATELLITESYSTEM)
 #endif
 }
 
-/*
-QGeoSatelliteInfo::SatelliteSystem satelliteSystem() const
-*/
+// QGeoSatelliteInfo::SatelliteSystem satelliteSystem() const
 HB_FUNC_STATIC(QGEOSATELLITEINFO_SATELLITESYSTEM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -149,9 +141,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SATELLITESYSTEM)
 #endif
 }
 
-/*
-void setSatelliteIdentifier(int satId)
-*/
+// void setSatelliteIdentifier(int satId)
 HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSATELLITEIDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -173,9 +163,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSATELLITEIDENTIFIER)
 #endif
 }
 
-/*
-int satelliteIdentifier() const
-*/
+// int satelliteIdentifier() const
 HB_FUNC_STATIC(QGEOSATELLITEINFO_SATELLITEIDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -195,9 +183,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SATELLITEIDENTIFIER)
 #endif
 }
 
-/*
-void setSignalStrength(int signalStrength)
-*/
+// void setSignalStrength(int signalStrength)
 HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSIGNALSTRENGTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -219,9 +205,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSIGNALSTRENGTH)
 #endif
 }
 
-/*
-int signalStrength() const
-*/
+// int signalStrength() const
 HB_FUNC_STATIC(QGEOSATELLITEINFO_SIGNALSTRENGTH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -241,9 +225,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SIGNALSTRENGTH)
 #endif
 }
 
-/*
-void setAttribute(QGeoSatelliteInfo::Attribute attribute, qreal value)
-*/
+// void setAttribute(QGeoSatelliteInfo::Attribute attribute, qreal value)
 HB_FUNC_STATIC(QGEOSATELLITEINFO_SETATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -265,9 +247,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SETATTRIBUTE)
 #endif
 }
 
-/*
-qreal attribute(QGeoSatelliteInfo::Attribute attribute) const
-*/
+// qreal attribute(QGeoSatelliteInfo::Attribute attribute) const
 HB_FUNC_STATIC(QGEOSATELLITEINFO_ATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -287,9 +267,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_ATTRIBUTE)
 #endif
 }
 
-/*
-void removeAttribute(QGeoSatelliteInfo::Attribute attribute)
-*/
+// void removeAttribute(QGeoSatelliteInfo::Attribute attribute)
 HB_FUNC_STATIC(QGEOSATELLITEINFO_REMOVEATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -311,9 +289,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_REMOVEATTRIBUTE)
 #endif
 }
 
-/*
-bool hasAttribute(QGeoSatelliteInfo::Attribute attribute) const
-*/
+// bool hasAttribute(QGeoSatelliteInfo::Attribute attribute) const
 HB_FUNC_STATIC(QGEOSATELLITEINFO_HASATTRIBUTE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

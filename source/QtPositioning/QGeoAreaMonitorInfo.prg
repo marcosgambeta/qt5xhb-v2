@@ -76,17 +76,13 @@ RETURN
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_NEW)
 {
   if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
-    /*
-    QGeoAreaMonitorInfo(const QString &name = QString())
-    */
+    // QGeoAreaMonitorInfo(const QString &name = QString())
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QGeoAreaMonitorInfo(OPQSTRING(1, QString()));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQGEOAREAMONITORINFO(1)) {
-    /*
-    QGeoAreaMonitorInfo(const QGeoAreaMonitorInfo &other)
-    */
+    // QGeoAreaMonitorInfo(const QGeoAreaMonitorInfo &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QGeoAreaMonitorInfo(*PQGEOAREAMONITORINFO(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_DELETE)
 #endif
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -129,9 +123,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_NAME)
 #endif
 }
 
-/*
-void setName(const QString &name)
-*/
+// void setName(const QString &name)
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -153,9 +145,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETNAME)
 #endif
 }
 
-/*
-QString identifier() const
-*/
+// QString identifier() const
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_IDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -175,9 +165,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_IDENTIFIER)
 #endif
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -197,9 +185,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_ISVALID)
 #endif
 }
 
-/*
-QGeoShape area() const
-*/
+// QGeoShape area() const
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_AREA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -219,9 +205,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_AREA)
 #endif
 }
 
-/*
-void setArea(const QGeoShape &newShape)
-*/
+// void setArea(const QGeoShape &newShape)
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETAREA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -243,9 +227,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETAREA)
 #endif
 }
 
-/*
-QDateTime expiration() const
-*/
+// QDateTime expiration() const
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_EXPIRATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -265,9 +247,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_EXPIRATION)
 #endif
 }
 
-/*
-void setExpiration(const QDateTime &expiry)
-*/
+// void setExpiration(const QDateTime &expiry)
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETEXPIRATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -289,9 +269,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETEXPIRATION)
 #endif
 }
 
-/*
-bool isPersistent() const
-*/
+// bool isPersistent() const
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_ISPERSISTENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -311,9 +289,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_ISPERSISTENT)
 #endif
 }
 
-/*
-void setPersistent(bool isPersistent)
-*/
+// void setPersistent(bool isPersistent)
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETPERSISTENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

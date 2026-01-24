@@ -60,33 +60,25 @@ RETURN
 HB_FUNC_STATIC(QGEOCIRCLE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QGeoCircle()
-    */
+    // QGeoCircle()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QGeoCircle();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISBETWEEN(1, 2) && ISQGEOCOORDINATE(1) && ISNUMORNIL(2)) {
-    /*
-    QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
-    */
+    // QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QGeoCircle(*PQGEOCOORDINATE(1), OPQREAL(2, -1.0));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQGEOCIRCLE(1)) {
-    /*
-    QGeoCircle(const QGeoCircle &other)
-    */
+    // QGeoCircle(const QGeoCircle &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QGeoCircle(*PQGEOCIRCLE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQGEOSHAPE(1)) {
-    /*
-    QGeoCircle(const QGeoShape &other)
-    */
+    // QGeoCircle(const QGeoShape &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QGeoCircle(*PQGEOSHAPE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -107,9 +99,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_DELETE)
 #endif
 }
 
-/*
-void setCenter(const QGeoCoordinate &center)
-*/
+// void setCenter(const QGeoCoordinate &center)
 HB_FUNC_STATIC(QGEOCIRCLE_SETCENTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -131,9 +121,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_SETCENTER)
 #endif
 }
 
-/*
-QGeoCoordinate center() const
-*/
+// QGeoCoordinate center() const
 HB_FUNC_STATIC(QGEOCIRCLE_CENTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -153,9 +141,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_CENTER)
 #endif
 }
 
-/*
-void setRadius(qreal radius)
-*/
+// void setRadius(qreal radius)
 HB_FUNC_STATIC(QGEOCIRCLE_SETRADIUS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -177,9 +163,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_SETRADIUS)
 #endif
 }
 
-/*
-qreal radius() const
-*/
+// qreal radius() const
 HB_FUNC_STATIC(QGEOCIRCLE_RADIUS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -199,9 +183,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_RADIUS)
 #endif
 }
 
-/*
-void translate(double degreesLatitude, double degreesLongitude)
-*/
+// void translate(double degreesLatitude, double degreesLongitude)
 HB_FUNC_STATIC(QGEOCIRCLE_TRANSLATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -223,9 +205,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_TRANSLATE)
 #endif
 }
 
-/*
-QGeoCircle translated(double degreesLatitude, double degreesLongitude) const
-*/
+// QGeoCircle translated(double degreesLatitude, double degreesLongitude) const
 HB_FUNC_STATIC(QGEOCIRCLE_TRANSLATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

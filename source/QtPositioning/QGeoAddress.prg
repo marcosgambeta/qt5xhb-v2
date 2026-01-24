@@ -85,17 +85,13 @@ RETURN
 HB_FUNC_STATIC(QGEOADDRESS_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QGeoAddress()
-    */
+    // QGeoAddress()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QGeoAddress();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQGEOADDRESS(1)) {
-    /*
-    QGeoAddress(const QGeoAddress &other)
-    */
+    // QGeoAddress(const QGeoAddress &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QGeoAddress(*PQGEOADDRESS(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -116,9 +112,7 @@ HB_FUNC_STATIC(QGEOADDRESS_DELETE)
 #endif
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QGEOADDRESS_TEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -138,9 +132,7 @@ HB_FUNC_STATIC(QGEOADDRESS_TEXT)
 #endif
 }
 
-/*
-void setText(const QString &text)
-*/
+// void setText(const QString &text)
 HB_FUNC_STATIC(QGEOADDRESS_SETTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -162,9 +154,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETTEXT)
 #endif
 }
 
-/*
-QString country() const
-*/
+// QString country() const
 HB_FUNC_STATIC(QGEOADDRESS_COUNTRY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -184,9 +174,7 @@ HB_FUNC_STATIC(QGEOADDRESS_COUNTRY)
 #endif
 }
 
-/*
-void setCountry(const QString &country)
-*/
+// void setCountry(const QString &country)
 HB_FUNC_STATIC(QGEOADDRESS_SETCOUNTRY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -208,9 +196,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETCOUNTRY)
 #endif
 }
 
-/*
-QString countryCode() const
-*/
+// QString countryCode() const
 HB_FUNC_STATIC(QGEOADDRESS_COUNTRYCODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -230,9 +216,7 @@ HB_FUNC_STATIC(QGEOADDRESS_COUNTRYCODE)
 #endif
 }
 
-/*
-void setCountryCode(const QString &countryCode)
-*/
+// void setCountryCode(const QString &countryCode)
 HB_FUNC_STATIC(QGEOADDRESS_SETCOUNTRYCODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -254,9 +238,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETCOUNTRYCODE)
 #endif
 }
 
-/*
-QString state() const
-*/
+// QString state() const
 HB_FUNC_STATIC(QGEOADDRESS_STATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -276,9 +258,7 @@ HB_FUNC_STATIC(QGEOADDRESS_STATE)
 #endif
 }
 
-/*
-void setState(const QString &state)
-*/
+// void setState(const QString &state)
 HB_FUNC_STATIC(QGEOADDRESS_SETSTATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -300,9 +280,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETSTATE)
 #endif
 }
 
-/*
-QString county() const
-*/
+// QString county() const
 HB_FUNC_STATIC(QGEOADDRESS_COUNTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -322,9 +300,7 @@ HB_FUNC_STATIC(QGEOADDRESS_COUNTY)
 #endif
 }
 
-/*
-void setCounty(const QString &county)
-*/
+// void setCounty(const QString &county)
 HB_FUNC_STATIC(QGEOADDRESS_SETCOUNTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -346,9 +322,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETCOUNTY)
 #endif
 }
 
-/*
-QString city() const
-*/
+// QString city() const
 HB_FUNC_STATIC(QGEOADDRESS_CITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -368,9 +342,7 @@ HB_FUNC_STATIC(QGEOADDRESS_CITY)
 #endif
 }
 
-/*
-void setCity(const QString &city)
-*/
+// void setCity(const QString &city)
 HB_FUNC_STATIC(QGEOADDRESS_SETCITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -392,9 +364,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETCITY)
 #endif
 }
 
-/*
-QString district() const
-*/
+// QString district() const
 HB_FUNC_STATIC(QGEOADDRESS_DISTRICT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -414,9 +384,7 @@ HB_FUNC_STATIC(QGEOADDRESS_DISTRICT)
 #endif
 }
 
-/*
-void setDistrict(const QString &district)
-*/
+// void setDistrict(const QString &district)
 HB_FUNC_STATIC(QGEOADDRESS_SETDISTRICT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -438,9 +406,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETDISTRICT)
 #endif
 }
 
-/*
-QString postalCode() const
-*/
+// QString postalCode() const
 HB_FUNC_STATIC(QGEOADDRESS_POSTALCODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -460,9 +426,7 @@ HB_FUNC_STATIC(QGEOADDRESS_POSTALCODE)
 #endif
 }
 
-/*
-void setPostalCode(const QString &postalCode)
-*/
+// void setPostalCode(const QString &postalCode)
 HB_FUNC_STATIC(QGEOADDRESS_SETPOSTALCODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -484,9 +448,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETPOSTALCODE)
 #endif
 }
 
-/*
-QString street() const
-*/
+// QString street() const
 HB_FUNC_STATIC(QGEOADDRESS_STREET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -506,9 +468,7 @@ HB_FUNC_STATIC(QGEOADDRESS_STREET)
 #endif
 }
 
-/*
-void setStreet(const QString &street)
-*/
+// void setStreet(const QString &street)
 HB_FUNC_STATIC(QGEOADDRESS_SETSTREET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -530,9 +490,7 @@ HB_FUNC_STATIC(QGEOADDRESS_SETSTREET)
 #endif
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QGEOADDRESS_ISEMPTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -552,9 +510,7 @@ HB_FUNC_STATIC(QGEOADDRESS_ISEMPTY)
 #endif
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QGEOADDRESS_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -576,9 +532,7 @@ HB_FUNC_STATIC(QGEOADDRESS_CLEAR)
 #endif
 }
 
-/*
-bool isTextGenerated() const
-*/
+// bool isTextGenerated() const
 HB_FUNC_STATIC(QGEOADDRESS_ISTEXTGENERATED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

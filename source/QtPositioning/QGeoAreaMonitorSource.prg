@@ -81,9 +81,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_DELETE)
 #endif
 }
 
-/*
-virtual void setPositionInfoSource(QGeoPositionInfoSource * source)
-*/
+// virtual void setPositionInfoSource(QGeoPositionInfoSource *source)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SETPOSITIONINFOSOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -105,9 +103,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SETPOSITIONINFOSOURCE)
 #endif
 }
 
-/*
-virtual QGeoPositionInfoSource * positionInfoSource() const
-*/
+// virtual QGeoPositionInfoSource *positionInfoSource() const
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_POSITIONINFOSOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -128,9 +124,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_POSITIONINFOSOURCE)
 #endif
 }
 
-/*
-QString sourceName() const
-*/
+// QString sourceName() const
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SOURCENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -150,9 +144,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SOURCENAME)
 #endif
 }
 
-/*
-virtual QGeoAreaMonitorSource::Error error() const = 0
-*/
+// virtual QGeoAreaMonitorSource::Error error() const = 0
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -172,9 +164,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ERROR)
 #endif
 }
 
-/*
-virtual QGeoAreaMonitorSource::AreaMonitorFeatures supportedAreaMonitorFeatures() const = 0
-*/
+// virtual QGeoAreaMonitorSource::AreaMonitorFeatures supportedAreaMonitorFeatures() const = 0
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SUPPORTEDAREAMONITORFEATURES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -194,9 +184,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SUPPORTEDAREAMONITORFEATURES)
 #endif
 }
 
-/*
-virtual bool startMonitoring(const QGeoAreaMonitorInfo &monitor) = 0
-*/
+// virtual bool startMonitoring(const QGeoAreaMonitorInfo &monitor) = 0
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_STARTMONITORING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -216,9 +204,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_STARTMONITORING)
 #endif
 }
 
-/*
-virtual bool stopMonitoring(const QGeoAreaMonitorInfo &monitor) = 0
-*/
+// virtual bool stopMonitoring(const QGeoAreaMonitorInfo &monitor) = 0
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_STOPMONITORING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -238,9 +224,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_STOPMONITORING)
 #endif
 }
 
-/*
-virtual bool requestUpdate(const QGeoAreaMonitorInfo &monitor, const char * signal) = 0
-*/
+// virtual bool requestUpdate(const QGeoAreaMonitorInfo &monitor, const char *signal) = 0
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_REQUESTUPDATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -263,9 +247,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_REQUESTUPDATE)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ACTIVEMONITORS)
 {
   if (ISNUMPAR(0)) {
-    /*
-    virtual QList<QGeoAreaMonitorInfo> activeMonitors() const = 0
-    */
+    // virtual QList<QGeoAreaMonitorInfo> activeMonitors() const = 0
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -296,9 +278,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ACTIVEMONITORS)
     }
 #endif
   } else if (ISNUMPAR(1) && ISQGEOSHAPE(1)) {
-    /*
-    virtual QList<QGeoAreaMonitorInfo> activeMonitors(const QGeoShape &lookupArea) const = 0
-    */
+    // virtual QList<QGeoAreaMonitorInfo> activeMonitors(const QGeoShape &lookupArea) const = 0
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -333,9 +313,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ACTIVEMONITORS)
   }
 }
 
-/*
-static QGeoAreaMonitorSource * createDefaultSource(QObject * parent)
-*/
+// static QGeoAreaMonitorSource *createDefaultSource(QObject *parent)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_CREATEDEFAULTSOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -352,9 +330,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_CREATEDEFAULTSOURCE)
 #endif
 }
 
-/*
-static QGeoAreaMonitorSource * createSource(const QString &sourceName, QObject * parent)
-*/
+// static QGeoAreaMonitorSource *createSource(const QString &sourceName, QObject *parent)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_CREATESOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -371,9 +347,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_CREATESOURCE)
 #endif
 }
 
-/*
-static QStringList availableSources()
-*/
+// static QStringList availableSources()
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_AVAILABLESOURCES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -389,9 +363,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_AVAILABLESOURCES)
 #endif
 }
 
-/*
-void areaEntered(const QGeoAreaMonitorInfo &monitor, const QGeoPositionInfo &update)
-*/
+// void areaEntered(const QGeoAreaMonitorInfo &monitor, const QGeoPositionInfo &update)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAENTERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -439,9 +411,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAENTERED)
 #endif
 }
 
-/*
-void areaExited(const QGeoAreaMonitorInfo &monitor, const QGeoPositionInfo &update)
-*/
+// void areaExited(const QGeoAreaMonitorInfo &monitor, const QGeoPositionInfo &update)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAEXITED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -489,9 +459,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAEXITED)
 #endif
 }
 
-/*
-void monitorExpired(const QGeoAreaMonitorInfo &monitor)
-*/
+// void monitorExpired(const QGeoAreaMonitorInfo &monitor)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONMONITOREXPIRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -537,9 +505,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONMONITOREXPIRED)
 #endif
 }
 
-/*
-void error(QGeoAreaMonitorSource::Error error)
-*/
+// void error(QGeoAreaMonitorSource::Error error)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

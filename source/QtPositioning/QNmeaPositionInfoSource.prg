@@ -65,9 +65,7 @@ RETURN
 
 #include <QtCore/QIODevice>
 
-    /*
-    QNmeaPositionInfoSource(QNmeaPositionInfoSource::UpdateMode updateMode, QObject * parent = nullptr)
-    */
+    // QNmeaPositionInfoSource(QNmeaPositionInfoSource::UpdateMode updateMode, QObject *parent = nullptr)
 HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -91,9 +89,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_DELETE)
 #endif
 }
 
-/*
-QNmeaPositionInfoSource::UpdateMode updateMode() const
-*/
+// QNmeaPositionInfoSource::UpdateMode updateMode() const
 HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_UPDATEMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -113,9 +109,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_UPDATEMODE)
 #endif
 }
 
-/*
-void setDevice(QIODevice * source)
-*/
+// void setDevice(QIODevice *source)
 HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_SETDEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -137,9 +131,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_SETDEVICE)
 #endif
 }
 
-/*
-QIODevice * device() const
-*/
+// QIODevice *device() const
 HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_DEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -160,9 +152,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_DEVICE)
 #endif
 }
 
-/*
-void setUpdateInterval(int msec)
-*/
+// void setUpdateInterval(int msec)
 HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_SETUPDATEINTERVAL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -184,9 +174,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_SETUPDATEINTERVAL)
 #endif
 }
 
-/*
-QGeoPositionInfo lastKnownPosition(bool fromSatellitePositioningMethodsOnly = false) const
-*/
+// QGeoPositionInfo lastKnownPosition(bool fromSatellitePositioningMethodsOnly = false) const
 HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_LASTKNOWNPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -206,9 +194,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_LASTKNOWNPOSITION)
 #endif
 }
 
-/*
-QGeoPositionInfoSource::PositioningMethods supportedPositioningMethods() const
-*/
+// QGeoPositionInfoSource::PositioningMethods supportedPositioningMethods() const
 HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_SUPPORTEDPOSITIONINGMETHODS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -228,9 +214,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_SUPPORTEDPOSITIONINGMETHODS)
 #endif
 }
 
-/*
-int minimumUpdateInterval() const
-*/
+// int minimumUpdateInterval() const
 HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_MINIMUMUPDATEINTERVAL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -250,9 +234,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_MINIMUMUPDATEINTERVAL)
 #endif
 }
 
-/*
-QGeoPositionInfoSource::Error error() const
-*/
+// QGeoPositionInfoSource::Error error() const
 HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -272,9 +254,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_ERROR)
 #endif
 }
 
-/*
-void startUpdates()
-*/
+// void startUpdates()
 HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_STARTUPDATES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -296,9 +276,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_STARTUPDATES)
 #endif
 }
 
-/*
-void stopUpdates()
-*/
+// void stopUpdates()
 HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_STOPUPDATES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -320,9 +298,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_STOPUPDATES)
 #endif
 }
 
-/*
-void requestUpdate(int timeout = 0)
-*/
+// void requestUpdate(int timeout = 0)
 HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_REQUESTUPDATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

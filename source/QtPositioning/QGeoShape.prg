@@ -66,17 +66,13 @@ RETURN
 HB_FUNC_STATIC(QGEOSHAPE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QGeoShape()
-    */
+    // QGeoShape()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QGeoShape();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQGEOSHAPE(1)) {
-    /*
-    QGeoShape(const QGeoShape &other)
-    */
+    // QGeoShape(const QGeoShape &other)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QGeoShape(*PQGEOSHAPE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -97,9 +93,7 @@ HB_FUNC_STATIC(QGEOSHAPE_DELETE)
 #endif
 }
 
-/*
-QGeoShape::ShapeType type() const
-*/
+// QGeoShape::ShapeType type() const
 HB_FUNC_STATIC(QGEOSHAPE_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -119,9 +113,7 @@ HB_FUNC_STATIC(QGEOSHAPE_TYPE)
 #endif
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QGEOSHAPE_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -141,9 +133,7 @@ HB_FUNC_STATIC(QGEOSHAPE_ISVALID)
 #endif
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QGEOSHAPE_ISEMPTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -163,9 +153,7 @@ HB_FUNC_STATIC(QGEOSHAPE_ISEMPTY)
 #endif
 }
 
-/*
-bool contains(const QGeoCoordinate &coordinate) const
-*/
+// bool contains(const QGeoCoordinate &coordinate) const
 HB_FUNC_STATIC(QGEOSHAPE_CONTAINS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
