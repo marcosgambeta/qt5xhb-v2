@@ -60,9 +60,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QWebChannel(QObject * parent = nullptr)
-    */
+    // QWebChannel(QObject *parent = nullptr)
 HB_FUNC_STATIC(QWEBCHANNEL_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QWEBCHANNEL_DELETE)
 #endif
 }
 
-/*
-Q_INVOKABLE void registerObject(const QString &id, QObject * object)
-*/
+// Q_INVOKABLE void registerObject(const QString &id, QObject *object)
 HB_FUNC_STATIC(QWEBCHANNEL_REGISTEROBJECT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -110,9 +106,7 @@ HB_FUNC_STATIC(QWEBCHANNEL_REGISTEROBJECT)
 #endif
 }
 
-/*
-Q_INVOKABLE void deregisterObject(QObject * object)
-*/
+// Q_INVOKABLE void deregisterObject(QObject *object)
 HB_FUNC_STATIC(QWEBCHANNEL_DEREGISTEROBJECT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -134,9 +128,7 @@ HB_FUNC_STATIC(QWEBCHANNEL_DEREGISTEROBJECT)
 #endif
 }
 
-/*
-bool blockUpdates() const
-*/
+// bool blockUpdates() const
 HB_FUNC_STATIC(QWEBCHANNEL_BLOCKUPDATES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -156,9 +148,7 @@ HB_FUNC_STATIC(QWEBCHANNEL_BLOCKUPDATES)
 #endif
 }
 
-/*
-void setBlockUpdates(bool block)
-*/
+// void setBlockUpdates(bool block)
 HB_FUNC_STATIC(QWEBCHANNEL_SETBLOCKUPDATES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -180,9 +170,7 @@ HB_FUNC_STATIC(QWEBCHANNEL_SETBLOCKUPDATES)
 #endif
 }
 
-/*
-void connectTo(QWebChannelAbstractTransport * transport)
-*/
+// void connectTo(QWebChannelAbstractTransport *transport)
 HB_FUNC_STATIC(QWEBCHANNEL_CONNECTTO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -204,9 +192,7 @@ HB_FUNC_STATIC(QWEBCHANNEL_CONNECTTO)
 #endif
 }
 
-/*
-void disconnectFrom(QWebChannelAbstractTransport * transport)
-*/
+// void disconnectFrom(QWebChannelAbstractTransport *transport)
 HB_FUNC_STATIC(QWEBCHANNEL_DISCONNECTFROM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -228,9 +214,7 @@ HB_FUNC_STATIC(QWEBCHANNEL_DISCONNECTFROM)
 #endif
 }
 
-/*
-void blockUpdatesChanged(bool block)
-*/
+// void blockUpdatesChanged(bool block)
 HB_FUNC_STATIC(QWEBCHANNEL_ONBLOCKUPDATESCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

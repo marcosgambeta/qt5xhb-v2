@@ -54,9 +54,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QQmlWebChannel(QObject * parent = nullptr)
-    */
+    // QQmlWebChannel(QObject *parent = nullptr)
 HB_FUNC_STATIC(QQMLWEBCHANNEL_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -80,9 +78,7 @@ HB_FUNC_STATIC(QQMLWEBCHANNEL_DELETE)
 #endif
 }
 
-/*
-Q_INVOKABLE void connectTo(QObject * transport)
-*/
+// Q_INVOKABLE void connectTo(QObject *transport)
 HB_FUNC_STATIC(QQMLWEBCHANNEL_CONNECTTO)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -104,9 +100,7 @@ HB_FUNC_STATIC(QQMLWEBCHANNEL_CONNECTTO)
 #endif
 }
 
-/*
-Q_INVOKABLE void disconnectFrom(QObject * transport)
-*/
+// Q_INVOKABLE void disconnectFrom(QObject *transport)
 HB_FUNC_STATIC(QQMLWEBCHANNEL_DISCONNECTFROM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
