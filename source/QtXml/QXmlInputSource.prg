@@ -64,15 +64,11 @@ RETURN
 HB_FUNC_STATIC(QXMLINPUTSOURCE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QXmlInputSource()
-    */
+    // QXmlInputSource()
     auto obj = new QXmlInputSource();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
-    /*
-    QXmlInputSource(QIODevice * dev)
-    */
+    // QXmlInputSource(QIODevice *dev)
     auto obj = new QXmlInputSource(PQIODEVICE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -89,9 +85,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QString data() const
-*/
+// virtual QString data() const
 HB_FUNC_STATIC(QXMLINPUTSOURCE_DATA)
 {
   auto obj = static_cast<QXmlInputSource *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -109,9 +103,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_DATA)
   }
 }
 
-/*
-virtual void fetchData()
-*/
+// virtual void fetchData()
 HB_FUNC_STATIC(QXMLINPUTSOURCE_FETCHDATA)
 {
   auto obj = static_cast<QXmlInputSource *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -131,9 +123,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_FETCHDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QChar next()
-*/
+// virtual QChar next()
 HB_FUNC_STATIC(QXMLINPUTSOURCE_NEXT)
 {
   auto obj = static_cast<QXmlInputSource *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -151,9 +141,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_NEXT)
   }
 }
 
-/*
-virtual void reset()
-*/
+// virtual void reset()
 HB_FUNC_STATIC(QXMLINPUTSOURCE_RESET)
 {
   auto obj = static_cast<QXmlInputSource *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -176,9 +164,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_RESET)
 HB_FUNC_STATIC(QXMLINPUTSOURCE_SETDATA)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    virtual void setData(const QString &dat)
-    */
+    // virtual void setData(const QString &dat)
     auto obj = static_cast<QXmlInputSource *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -187,9 +173,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_SETDATA)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
-    /*
-    virtual void setData(const QByteArray &dat)
-    */
+    // virtual void setData(const QByteArray &dat)
     auto obj = static_cast<QXmlInputSource *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {

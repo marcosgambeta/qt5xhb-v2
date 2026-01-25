@@ -71,15 +71,11 @@ RETURN
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QDomNamedNodeMap()
-    */
+    // QDomNamedNodeMap()
     auto obj = new QDomNamedNodeMap();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDOMNAMEDNODEMAP(1)) {
-    /*
-    QDomNamedNodeMap(const QDomNamedNodeMap &n)
-    */
+    // QDomNamedNodeMap(const QDomNamedNodeMap &n)
     auto obj = new QDomNamedNodeMap(*PQDOMNAMEDNODEMAP(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -96,9 +92,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool contains(const QString &name) const
-*/
+// bool contains(const QString &name) const
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_CONTAINS)
 {
   auto obj = static_cast<QDomNamedNodeMap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -116,9 +110,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_CONTAINS)
   }
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_COUNT)
 {
   auto obj = static_cast<QDomNamedNodeMap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -136,9 +128,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_COUNT)
   }
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_ISEMPTY)
 {
   auto obj = static_cast<QDomNamedNodeMap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -156,9 +146,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_ISEMPTY)
   }
 }
 
-/*
-QDomNode item(int index) const
-*/
+// QDomNode item(int index) const
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_ITEM)
 {
   auto obj = static_cast<QDomNamedNodeMap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -176,9 +164,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_ITEM)
   }
 }
 
-/*
-uint length() const
-*/
+// uint length() const
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_LENGTH)
 {
   auto obj = static_cast<QDomNamedNodeMap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -196,9 +182,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_LENGTH)
   }
 }
 
-/*
-QDomNode namedItem(const QString &name) const
-*/
+// QDomNode namedItem(const QString &name) const
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_NAMEDITEM)
 {
   auto obj = static_cast<QDomNamedNodeMap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -216,9 +200,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_NAMEDITEM)
   }
 }
 
-/*
-QDomNode namedItemNS(const QString &nsURI, const QString &localName) const
-*/
+// QDomNode namedItemNS(const QString &nsURI, const QString &localName) const
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_NAMEDITEMNS)
 {
   auto obj = static_cast<QDomNamedNodeMap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -236,9 +218,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_NAMEDITEMNS)
   }
 }
 
-/*
-QDomNode removeNamedItem(const QString &name)
-*/
+// QDomNode removeNamedItem(const QString &name)
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_REMOVENAMEDITEM)
 {
   auto obj = static_cast<QDomNamedNodeMap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -256,9 +236,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_REMOVENAMEDITEM)
   }
 }
 
-/*
-QDomNode removeNamedItemNS(const QString &nsURI, const QString &localName)
-*/
+// QDomNode removeNamedItemNS(const QString &nsURI, const QString &localName)
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS)
 {
   auto obj = static_cast<QDomNamedNodeMap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -276,9 +254,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS)
   }
 }
 
-/*
-QDomNode setNamedItem(const QDomNode &newNode)
-*/
+// QDomNode setNamedItem(const QDomNode &newNode)
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_SETNAMEDITEM)
 {
   auto obj = static_cast<QDomNamedNodeMap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -296,9 +272,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_SETNAMEDITEM)
   }
 }
 
-/*
-QDomNode setNamedItemNS(const QDomNode &newNode)
-*/
+// QDomNode setNamedItemNS(const QDomNode &newNode)
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_SETNAMEDITEMNS)
 {
   auto obj = static_cast<QDomNamedNodeMap *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -316,9 +290,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_SETNAMEDITEMNS)
   }
 }
 
-/*
-int size() const
-*/
+// int size() const
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_SIZE)
 {
   auto obj = static_cast<QDomNamedNodeMap *>(Qt5xHb::itemGetPtrStackSelfItem());

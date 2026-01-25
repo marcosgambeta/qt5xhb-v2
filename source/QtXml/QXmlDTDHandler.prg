@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QXMLDTDHANDLER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QString errorString() const = 0
-*/
+// virtual QString errorString() const = 0
 HB_FUNC_STATIC(QXMLDTDHANDLER_ERRORSTRING)
 {
   auto obj = static_cast<QXmlDTDHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QXMLDTDHANDLER_ERRORSTRING)
   }
 }
 
-/*
-virtual bool notationDecl(const QString &name, const QString &publicId, const QString &systemId) = 0
-*/
+// virtual bool notationDecl(const QString &name, const QString &publicId, const QString &systemId) = 0
 HB_FUNC_STATIC(QXMLDTDHANDLER_NOTATIONDECL)
 {
   auto obj = static_cast<QXmlDTDHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -106,10 +102,8 @@ HB_FUNC_STATIC(QXMLDTDHANDLER_NOTATIONDECL)
   }
 }
 
-/*
-virtual bool unparsedEntityDecl(const QString &name, const QString &publicId, const QString &systemId, const QString
-& notationName) = 0
-*/
+// virtual bool unparsedEntityDecl(const QString &name, const QString &publicId, const QString &systemId, const QString
+// & notationName) = 0
 HB_FUNC_STATIC(QXMLDTDHANDLER_UNPARSEDENTITYDECL)
 {
   auto obj = static_cast<QXmlDTDHandler *>(Qt5xHb::itemGetPtrStackSelfItem());

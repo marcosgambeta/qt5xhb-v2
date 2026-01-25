@@ -48,9 +48,7 @@ RETURN
 #include <QtXml/QXmlSimpleReader>
 #endif
 
-    /*
-    QXmlSimpleReader()
-    */
+    // QXmlSimpleReader()
 HB_FUNC_STATIC(QXMLSIMPLEREADER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -70,9 +68,7 @@ HB_FUNC_STATIC(QXMLSIMPLEREADER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool parse(const QXmlInputSource * input, bool incremental)
-*/
+// virtual bool parse(const QXmlInputSource *input, bool incremental)
 HB_FUNC_STATIC(QXMLSIMPLEREADER_PARSE)
 {
   auto obj = static_cast<QXmlSimpleReader *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -90,9 +86,7 @@ HB_FUNC_STATIC(QXMLSIMPLEREADER_PARSE)
   }
 }
 
-/*
-virtual bool parseContinue()
-*/
+// virtual bool parseContinue()
 HB_FUNC_STATIC(QXMLSIMPLEREADER_PARSECONTINUE)
 {
   auto obj = static_cast<QXmlSimpleReader *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -53,15 +53,11 @@ RETURN
 HB_FUNC_STATIC(QDOMENTITY_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QDomEntity()
-    */
+    // QDomEntity()
     auto obj = new QDomEntity();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDOMENTITY(1)) {
-    /*
-    QDomEntity(const QDomEntity &x)
-    */
+    // QDomEntity(const QDomEntity &x)
     auto obj = new QDomEntity(*PQDOMENTITY(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -78,9 +74,7 @@ HB_FUNC_STATIC(QDOMENTITY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDomNode::NodeType nodeType() const
-*/
+// QDomNode::NodeType nodeType() const
 HB_FUNC_STATIC(QDOMENTITY_NODETYPE)
 {
   auto obj = static_cast<QDomEntity *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -98,9 +92,7 @@ HB_FUNC_STATIC(QDOMENTITY_NODETYPE)
   }
 }
 
-/*
-QString notationName() const
-*/
+// QString notationName() const
 HB_FUNC_STATIC(QDOMENTITY_NOTATIONNAME)
 {
   auto obj = static_cast<QDomEntity *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -118,9 +110,7 @@ HB_FUNC_STATIC(QDOMENTITY_NOTATIONNAME)
   }
 }
 
-/*
-QString publicId() const
-*/
+// QString publicId() const
 HB_FUNC_STATIC(QDOMENTITY_PUBLICID)
 {
   auto obj = static_cast<QDomEntity *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -138,9 +128,7 @@ HB_FUNC_STATIC(QDOMENTITY_PUBLICID)
   }
 }
 
-/*
-QString systemId() const
-*/
+// QString systemId() const
 HB_FUNC_STATIC(QDOMENTITY_SYSTEMID)
 {
   auto obj = static_cast<QDomEntity *>(Qt5xHb::itemGetPtrStackSelfItem());

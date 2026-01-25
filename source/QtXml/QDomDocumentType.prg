@@ -57,15 +57,11 @@ RETURN
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QDomDocumentType()
-    */
+    // QDomDocumentType()
     auto obj = new QDomDocumentType();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1)) {
-    /*
-    QDomDocumentType(const QDomDocumentType &n)
-    */
+    // QDomDocumentType(const QDomDocumentType &n)
     auto obj = new QDomDocumentType(*PQDOMDOCUMENTTYPE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -82,9 +78,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDomNamedNodeMap entities() const
-*/
+// QDomNamedNodeMap entities() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_ENTITIES)
 {
   auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -102,9 +96,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_ENTITIES)
   }
 }
 
-/*
-QString internalSubset() const
-*/
+// QString internalSubset() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_INTERNALSUBSET)
 {
   auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -122,9 +114,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_INTERNALSUBSET)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NAME)
 {
   auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -142,9 +132,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NAME)
   }
 }
 
-/*
-QDomNode::NodeType nodeType() const
-*/
+// QDomNode::NodeType nodeType() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NODETYPE)
 {
   auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -162,9 +150,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NODETYPE)
   }
 }
 
-/*
-QDomNamedNodeMap notations() const
-*/
+// QDomNamedNodeMap notations() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NOTATIONS)
 {
   auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -182,9 +168,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NOTATIONS)
   }
 }
 
-/*
-QString publicId() const
-*/
+// QString publicId() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_PUBLICID)
 {
   auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -202,9 +186,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_PUBLICID)
   }
 }
 
-/*
-QString systemId() const
-*/
+// QString systemId() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_SYSTEMID)
 {
   auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());

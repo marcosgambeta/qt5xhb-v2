@@ -66,15 +66,11 @@ RETURN
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QDomImplementation()
-    */
+    // QDomImplementation()
     auto obj = new QDomImplementation();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDOMIMPLEMENTATION(1)) {
-    /*
-    QDomImplementation(const QDomImplementation &x)
-    */
+    // QDomImplementation(const QDomImplementation &x)
     auto obj = new QDomImplementation(*PQDOMIMPLEMENTATION(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -91,9 +87,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDomDocument createDocument(const QString &nsURI, const QString &qName, const QDomDocumentType &doctype)
-*/
+// QDomDocument createDocument(const QString &nsURI, const QString &qName, const QDomDocumentType &doctype)
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_CREATEDOCUMENT)
 {
   auto obj = static_cast<QDomImplementation *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -111,9 +105,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_CREATEDOCUMENT)
   }
 }
 
-/*
-QDomDocumentType createDocumentType(const QString &qName, const QString &publicId, const QString &systemId)
-*/
+// QDomDocumentType createDocumentType(const QString &qName, const QString &publicId, const QString &systemId)
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE)
 {
   auto obj = static_cast<QDomImplementation *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -131,9 +123,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE)
   }
 }
 
-/*
-bool hasFeature(const QString &feature, const QString &version) const
-*/
+// bool hasFeature(const QString &feature, const QString &version) const
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_HASFEATURE)
 {
   auto obj = static_cast<QDomImplementation *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -151,9 +141,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_HASFEATURE)
   }
 }
 
-/*
-bool isNull()
-*/
+// bool isNull()
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_ISNULL)
 {
   auto obj = static_cast<QDomImplementation *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -171,9 +159,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_ISNULL)
   }
 }
 
-/*
-static QDomImplementation::InvalidDataPolicy invalidDataPolicy()
-*/
+// static QDomImplementation::InvalidDataPolicy invalidDataPolicy()
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_INVALIDDATAPOLICY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,9 +173,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_INVALIDDATAPOLICY)
 #endif
 }
 
-/*
-static void setInvalidDataPolicy(QDomImplementation::InvalidDataPolicy policy)
-*/
+// static void setInvalidDataPolicy(QDomImplementation::InvalidDataPolicy policy)
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

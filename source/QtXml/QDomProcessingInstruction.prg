@@ -53,15 +53,11 @@ RETURN
 HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QDomProcessingInstruction()
-    */
+    // QDomProcessingInstruction()
     auto obj = new QDomProcessingInstruction();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1)) {
-    /*
-    QDomProcessingInstruction(const QDomProcessingInstruction &x)
-    */
+    // QDomProcessingInstruction(const QDomProcessingInstruction &x)
     auto obj = new QDomProcessingInstruction(*PQDOMPROCESSINGINSTRUCTION(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -78,9 +74,7 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString data() const
-*/
+// QString data() const
 HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_DATA)
 {
   auto obj = static_cast<QDomProcessingInstruction *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -98,9 +92,7 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_DATA)
   }
 }
 
-/*
-QDomNode::NodeType nodeType() const
-*/
+// QDomNode::NodeType nodeType() const
 HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NODETYPE)
 {
   auto obj = static_cast<QDomProcessingInstruction *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -118,9 +110,7 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NODETYPE)
   }
 }
 
-/*
-void setData(const QString &d)
-*/
+// void setData(const QString &d)
 HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_SETDATA)
 {
   auto obj = static_cast<QDomProcessingInstruction *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -140,9 +130,7 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_SETDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString target() const
-*/
+// QString target() const
 HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_TARGET)
 {
   auto obj = static_cast<QDomProcessingInstruction *>(Qt5xHb::itemGetPtrStackSelfItem());

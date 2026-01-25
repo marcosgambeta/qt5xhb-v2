@@ -65,9 +65,7 @@ RETURN
 #include <QtXml/QXmlAttributes>
 #endif
 
-    /*
-    QXmlAttributes()
-    */
+    // QXmlAttributes()
 HB_FUNC_STATIC(QXMLATTRIBUTES_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void append(const QString &qName, const QString &uri, const QString &localPart, const QString &value)
-*/
+// void append(const QString &qName, const QString &uri, const QString &localPart, const QString &value)
 HB_FUNC_STATIC(QXMLATTRIBUTES_APPEND)
 {
   auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -109,9 +105,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_APPEND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QXMLATTRIBUTES_CLEAR)
 {
   auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -131,9 +125,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QXMLATTRIBUTES_COUNT)
 {
   auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -154,27 +146,21 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_COUNT)
 HB_FUNC_STATIC(QXMLATTRIBUTES_INDEX)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    int index(const QString &qName) const
-    */
+    // int index(const QString &qName) const
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RINT(obj->index(PQSTRING(1)));
     }
   } else if (ISNUMPAR(1) && ISQLATIN1STRING(1)) {
-    /*
-    int index(const QLatin1String &qName) const
-    */
+    // int index(const QLatin1String &qName) const
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RINT(obj->index(*PQLATIN1STRING(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    /*
-    int index(const QString &uri, const QString &localPart) const
-    */
+    // int index(const QString &uri, const QString &localPart) const
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -185,9 +171,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_INDEX)
   }
 }
 
-/*
-int length() const
-*/
+// int length() const
 HB_FUNC_STATIC(QXMLATTRIBUTES_LENGTH)
 {
   auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -205,9 +189,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_LENGTH)
   }
 }
 
-/*
-QString localName(int index) const
-*/
+// QString localName(int index) const
 HB_FUNC_STATIC(QXMLATTRIBUTES_LOCALNAME)
 {
   auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -225,9 +207,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_LOCALNAME)
   }
 }
 
-/*
-QString qName(int index) const
-*/
+// QString qName(int index) const
 HB_FUNC_STATIC(QXMLATTRIBUTES_QNAME)
 {
   auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -248,27 +228,21 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_QNAME)
 HB_FUNC_STATIC(QXMLATTRIBUTES_TYPE)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QString type(int index) const
-    */
+    // QString type(int index) const
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RQSTRING(obj->type(PINT(1)));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QString type(const QString &qName) const
-    */
+    // QString type(const QString &qName) const
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RQSTRING(obj->type(PQSTRING(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    /*
-    QString type(const QString &uri, const QString &localName) const
-    */
+    // QString type(const QString &uri, const QString &localName) const
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
@@ -279,9 +253,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_TYPE)
   }
 }
 
-/*
-QString uri(int index) const
-*/
+// QString uri(int index) const
 HB_FUNC_STATIC(QXMLATTRIBUTES_URI)
 {
   auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -302,36 +274,28 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_URI)
 HB_FUNC_STATIC(QXMLATTRIBUTES_VALUE)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QString value(int index) const
-    */
+    // QString value(int index) const
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RQSTRING(obj->value(PINT(1)));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QString value(const QString &qName) const
-    */
+    // QString value(const QString &qName) const
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RQSTRING(obj->value(PQSTRING(1)));
     }
   } else if (ISNUMPAR(1) && HB_ISOBJECT(1)) {
-    /*
-    QString value(const QLatin1String &qName) const
-    */
+    // QString value(const QLatin1String &qName) const
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
       RQSTRING(obj->value(*PQLATIN1STRING(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    /*
-    QString value(const QString &uri, const QString &localName) const
-    */
+    // QString value(const QString &uri, const QString &localName) const
     auto obj = static_cast<QXmlAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {

@@ -50,15 +50,11 @@ RETURN
 HB_FUNC_STATIC(QDOMCOMMENT_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QDomComment()
-    */
+    // QDomComment()
     auto obj = new QDomComment();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDOMCOMMENT(1)) {
-    /*
-    QDomComment(const QDomComment &x)
-    */
+    // QDomComment(const QDomComment &x)
     auto obj = new QDomComment(*PQDOMCOMMENT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -75,9 +71,7 @@ HB_FUNC_STATIC(QDOMCOMMENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDomNode::NodeType nodeType() cons
-*/
+// QDomNode::NodeType nodeType() cons
 HB_FUNC_STATIC(QDOMCOMMENT_NODETYPE)
 {
   auto obj = static_cast<QDomComment *>(Qt5xHb::itemGetPtrStackSelfItem());
