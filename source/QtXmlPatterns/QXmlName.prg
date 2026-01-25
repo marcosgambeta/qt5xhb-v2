@@ -65,16 +65,12 @@ RETURN
 HB_FUNC_STATIC(QXMLNAME_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QXmlName()
-    */
+    // QXmlName()
     auto obj = new QXmlName();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 4) && ISQXMLNAMEPOOL(1) && HB_ISCHAR(2) && ISCHARORNIL(3) && ISCHARORNIL(4)) {
-    /*
-    QXmlName(QXmlNamePool &namePool, const QString &localName, const QString &namespaceURI = QString(), const QString
-    &prefix = QString())
-    */
+    // QXmlName(QXmlNamePool &namePool, const QString &localName, const QString &namespaceURI = QString(), const QString
+    // &prefix = QString())
     auto obj = new QXmlName(*PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING(3, QString()), OPQSTRING(4, QString()));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -91,9 +87,7 @@ HB_FUNC_STATIC(QXMLNAME_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QXMLNAME_ISNULL)
 {
   auto obj = static_cast<QXmlName *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -111,9 +105,7 @@ HB_FUNC_STATIC(QXMLNAME_ISNULL)
   }
 }
 
-/*
-QString localName(const QXmlNamePool &namePool) const
-*/
+// QString localName(const QXmlNamePool &namePool) const
 HB_FUNC_STATIC(QXMLNAME_LOCALNAME)
 {
   auto obj = static_cast<QXmlName *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -131,9 +123,7 @@ HB_FUNC_STATIC(QXMLNAME_LOCALNAME)
   }
 }
 
-/*
-QString namespaceUri(const QXmlNamePool &namePool) const
-*/
+// QString namespaceUri(const QXmlNamePool &namePool) const
 HB_FUNC_STATIC(QXMLNAME_NAMESPACEURI)
 {
   auto obj = static_cast<QXmlName *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -151,9 +141,7 @@ HB_FUNC_STATIC(QXMLNAME_NAMESPACEURI)
   }
 }
 
-/*
-QString prefix(const QXmlNamePool &namePool) const
-*/
+// QString prefix(const QXmlNamePool &namePool) const
 HB_FUNC_STATIC(QXMLNAME_PREFIX)
 {
   auto obj = static_cast<QXmlName *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -171,9 +159,7 @@ HB_FUNC_STATIC(QXMLNAME_PREFIX)
   }
 }
 
-/*
-QString toClarkName(const QXmlNamePool &namePool) const
-*/
+// QString toClarkName(const QXmlNamePool &namePool) const
 HB_FUNC_STATIC(QXMLNAME_TOCLARKNAME)
 {
   auto obj = static_cast<QXmlName *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -191,9 +177,7 @@ HB_FUNC_STATIC(QXMLNAME_TOCLARKNAME)
   }
 }
 
-/*
-static QXmlName fromClarkName(const QString &clarkName, const QXmlNamePool &namePool)
-*/
+// static QXmlName fromClarkName(const QString &clarkName, const QXmlNamePool &namePool)
 HB_FUNC_STATIC(QXMLNAME_FROMCLARKNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,9 +191,7 @@ HB_FUNC_STATIC(QXMLNAME_FROMCLARKNAME)
 #endif
 }
 
-/*
-static bool isNCName(const QString &candidate)
-*/
+// static bool isNCName(const QString &candidate)
 HB_FUNC_STATIC(QXMLNAME_ISNCNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

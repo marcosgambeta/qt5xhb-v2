@@ -58,15 +58,11 @@ RETURN
 HB_FUNC_STATIC(QXMLNAMEPOOL_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QXmlNamePool()
-    */
+    // QXmlNamePool()
     auto obj = new QXmlNamePool();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQXMLNAMEPOOL(1)) {
-    /*
-    QXmlNamePool(const QXmlNamePool &other)
-    */
+    // QXmlNamePool(const QXmlNamePool &other)
     auto obj = new QXmlNamePool(*PQXMLNAMEPOOL(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {

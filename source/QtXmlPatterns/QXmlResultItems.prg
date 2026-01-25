@@ -61,9 +61,7 @@ RETURN
 
 #include <QtXmlPatterns/QXmlItem>
 
-    /*
-    QXmlResultItems()
-    */
+    // QXmlResultItems()
 HB_FUNC_STATIC(QXMLRESULTITEMS_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -83,9 +81,7 @@ HB_FUNC_STATIC(QXMLRESULTITEMS_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QXmlItem current() const
-*/
+// QXmlItem current() const
 HB_FUNC_STATIC(QXMLRESULTITEMS_CURRENT)
 {
   auto obj = static_cast<QXmlResultItems *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -103,9 +99,7 @@ HB_FUNC_STATIC(QXMLRESULTITEMS_CURRENT)
   }
 }
 
-/*
-bool hasError() const
-*/
+// bool hasError() const
 HB_FUNC_STATIC(QXMLRESULTITEMS_HASERROR)
 {
   auto obj = static_cast<QXmlResultItems *>(Qt5xHb::itemGetPtrStackSelfItem());
@@ -123,9 +117,7 @@ HB_FUNC_STATIC(QXMLRESULTITEMS_HASERROR)
   }
 }
 
-/*
-QXmlItem next()
-*/
+// QXmlItem next()
 HB_FUNC_STATIC(QXMLRESULTITEMS_NEXT)
 {
   auto obj = static_cast<QXmlResultItems *>(Qt5xHb::itemGetPtrStackSelfItem());

@@ -57,10 +57,8 @@ HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void message(QtMsgType type, const QString &description, const QUrl &identifier = QUrl(), const QSourceLocation &
-sourceLocation = QSourceLocation())
-*/
+// void message(QtMsgType type, const QString &description, const QUrl &identifier = QUrl(), const QSourceLocation &
+// sourceLocation = QSourceLocation())
 HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_MESSAGE)
 {
   auto obj = qobject_cast<QAbstractMessageHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
