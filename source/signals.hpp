@@ -63,6 +63,7 @@ public:
   bool disconnection(QObject *s, int signal);
   PHB_ITEM returnObject(void *ptr, const char *classname);
   PHB_ITEM returnQObject(QObject *ptr, const char *classname);
+  PHB_ITEM returnQObject(const QObject *ptr, const char *classname);
   bool storeConnection(int index, QMetaObject::Connection connection);
   QMetaObject::Connection getConnection(QObject *s, int signal);
   int size();

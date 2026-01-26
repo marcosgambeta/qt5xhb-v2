@@ -418,6 +418,11 @@ PHB_ITEM Signals_return_qobject(QObject *ptr, const char *classname)
   return s_signals->returnQObject(ptr, classname);
 }
 
+PHB_ITEM Signals_return_qobject(const QObject *ptr, const char *classname)
+{
+  return s_signals->returnQObject(ptr, classname);
+}
+
 bool Signals_store_connection(int index, QMetaObject::Connection connection)
 {
   return s_signals->storeConnection(index, connection);
