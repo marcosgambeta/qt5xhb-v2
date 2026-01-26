@@ -40,5 +40,6 @@ REQUEST QXmlNamespaceSupport
 REQUEST QXmlParseException
 REQUEST QXmlReader
 REQUEST QXmlSimpleReader
+REQUEST QtXml_Version
 
 #endif // QTXMLREQUESTS_CH
