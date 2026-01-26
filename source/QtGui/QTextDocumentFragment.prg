@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOHTML)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISQBYTEARRAYORNIL(1)) {
 #endif
-      RQSTRING(obj->toHtml(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(1))));
+      RQSTRING(obj->toHtml(HB_ISNIL(1) ? QByteArray() : *PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

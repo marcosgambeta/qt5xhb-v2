@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QCOLOR_NEW)
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQCOLOR(1)) {
     // QColor(const QColor &color)
-    auto obj = new QColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
+    auto obj = new QColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

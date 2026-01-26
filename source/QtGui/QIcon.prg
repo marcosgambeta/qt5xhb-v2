@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QICON_NEW)
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQICON(1)) {
     // QIcon(const QIcon &other)
-    auto obj = new QIcon(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)));
+    auto obj = new QIcon(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QIcon(const QString &fileName)
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QICON_ADDFILE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISQSIZEORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
-      obj->addFile(PQSTRING(1), HB_ISNIL(2) ? QSize() : *static_cast<QSize *>(Qt5xHb::itemGetPtr(2)),
+      obj->addFile(PQSTRING(1), HB_ISNIL(2) ? QSize() : *PQSIZE(2),
                    HB_ISNIL(3) ? QIcon::Normal : PQICON_MODE(3), HB_ISNIL(4) ? QIcon::Off : PQICON_STATE(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QICON_FROMTHEME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQICONORNIL(2)) {
 #endif
-    RQICON(QIcon::fromTheme(PQSTRING(1), HB_ISNIL(2) ? QIcon() : *static_cast<QIcon *>(Qt5xHb::itemGetPtr(2))));
+    RQICON(QIcon::fromTheme(PQSTRING(1), HB_ISNIL(2) ? QIcon() : *PQICON(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

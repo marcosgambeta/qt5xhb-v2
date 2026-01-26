@@ -866,7 +866,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TOFILLPOLYGON)
     auto obj = static_cast<QPainterPath *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RQPOLYGONF(obj->toFillPolygon(HB_ISNIL(1) ? QMatrix() : *static_cast<QMatrix *>(Qt5xHb::itemGetPtr(1))));
+      RQPOLYGONF(obj->toFillPolygon(HB_ISNIL(1) ? QMatrix() : *PQMATRIX(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

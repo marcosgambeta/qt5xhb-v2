@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_NEW)
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
     // QStandardItem(const QIcon &icon, const QString &text)
-    auto obj = new QStandardItem(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
+    auto obj = new QStandardItem(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)),
                                  PQSTRING(2));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETICON)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1))) {
 #endif
-      obj->setIcon(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)));
+      obj->setIcon(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_FLUSH)
     if (ISBETWEEN(1, 3) && ISQREGION(1) && ISQWINDOWORNIL(2) && ISQPOINTORNIL(3)) {
 #endif
       obj->flush(*PQREGION(1), OPQWINDOW(2, nullptr),
-                 HB_ISNIL(3) ? QPoint() : *static_cast<QPoint *>(Qt5xHb::itemGetPtr(3)));
+                 HB_ISNIL(3) ? QPoint() : *PQPOINT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

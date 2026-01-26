@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QPIXMAP_FILL)
     auto obj = static_cast<QPixmap *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->fill(HB_ISNIL(1) ? Qt::white : *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)));
+      obj->fill(HB_ISNIL(1) ? Qt::white : *PQCOLOR(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -453,7 +453,7 @@ HB_FUNC_STATIC(QPIXMAP_CREATEMASKFROMCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISNUMORNIL(2)) {
 #endif
-      RQBITMAP(obj->createMaskFromColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)),
+      RQBITMAP(obj->createMaskFromColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)),
                                    HB_ISNIL(2) ? Qt::MaskInColor : PQT_MASKMODE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -659,7 +659,7 @@ HB_FUNC_STATIC(QPIXMAP_COPY)
     auto obj = static_cast<QPixmap *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RQPIXMAP(obj->copy(HB_ISNIL(1) ? QRect() : *static_cast<QRect *>(Qt5xHb::itemGetPtr(1))));
+      RQPIXMAP(obj->copy(HB_ISNIL(1) ? QRect() : *PQRECT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -675,7 +675,7 @@ HB_FUNC_STATIC(QPIXMAP_SCROLL)
 
     if (obj != nullptr) {
       obj->scroll(PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PINT(6),
-                  HB_ISNIL(7) ? nullptr : static_cast<QRegion *>(Qt5xHb::itemGetPtr(7)));
+                  HB_ISNIL(7) ? nullptr : PQREGION(7));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -684,7 +684,7 @@ HB_FUNC_STATIC(QPIXMAP_SCROLL)
     auto obj = static_cast<QPixmap *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->scroll(PINT(1), PINT(2), *PQRECT(3), HB_ISNIL(4) ? nullptr : static_cast<QRegion *>(Qt5xHb::itemGetPtr(4)));
+      obj->scroll(PINT(1), PINT(2), *PQRECT(3), HB_ISNIL(4) ? nullptr : PQREGION(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());

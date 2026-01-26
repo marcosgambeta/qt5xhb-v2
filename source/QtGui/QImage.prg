@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QIMAGE_COPY)
     auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RQIMAGE(obj->copy(HB_ISNIL(1) ? QRect() : *static_cast<QRect *>(Qt5xHb::itemGetPtr(1))));
+      RQIMAGE(obj->copy(HB_ISNIL(1) ? QRect() : *PQRECT(1)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QImage copy(int x, int y, int width, int height) const
@@ -485,7 +485,7 @@ HB_FUNC_STATIC(QIMAGE_FILL)
     auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->fill(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
+      obj->fill(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1210,7 +1210,7 @@ HB_FUNC_STATIC(QIMAGE_SETPIXELCOLOR)
 
     if (obj != nullptr) {
       obj->setPixelColor(*PQPOINT(1),
-                         HB_ISOBJECT(2) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
+                         HB_ISOBJECT(2) ? *PQCOLOR(2) : QColor(hb_parc(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1222,7 +1222,7 @@ HB_FUNC_STATIC(QIMAGE_SETPIXELCOLOR)
 
     if (obj != nullptr) {
       obj->setPixelColor(PINT(1), PINT(2),
-                         HB_ISOBJECT(3) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(3)) : QColor(hb_parc(3)));
+                         HB_ISOBJECT(3) ? *PQCOLOR(3) : QColor(hb_parc(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());

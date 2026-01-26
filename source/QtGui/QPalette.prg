@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QPALETTE_NEW)
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
     // QPalette(const QColor &button)
-    auto obj = new QPalette(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
+    auto obj = new QPalette(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QPalette(Qt::GlobalColor button)
@@ -105,8 +105,8 @@ HB_FUNC_STATIC(QPALETTE_NEW)
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)) && (ISQCOLOR(2) || HB_ISCHAR(2))) {
     // QPalette(const QColor &button, const QColor &window)
-    auto obj = new QPalette(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)),
-                            HB_ISOBJECT(2) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
+    auto obj = new QPalette(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)),
+                            HB_ISOBJECT(2) ? *PQCOLOR(2) : QColor(hb_parc(2)));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(9) && ISQBRUSH(1) && ISQBRUSH(2) && ISQBRUSH(3) && ISQBRUSH(4) && ISQBRUSH(5) && ISQBRUSH(6) &&
              ISQBRUSH(7) && ISQBRUSH(8) && ISQBRUSH(9)) {
@@ -567,7 +567,7 @@ HB_FUNC_STATIC(QPALETTE_SETCOLOR)
 
     if (obj != nullptr) {
       obj->setColor(PQPALETTE_COLORGROUP(1), PQPALETTE_COLORROLE(2),
-                    HB_ISOBJECT(3) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(3)) : QColor(hb_parc(3)));
+                    HB_ISOBJECT(3) ? *PQCOLOR(3) : QColor(hb_parc(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -577,7 +577,7 @@ HB_FUNC_STATIC(QPALETTE_SETCOLOR)
 
     if (obj != nullptr) {
       obj->setColor(PQPALETTE_COLORROLE(1),
-                    HB_ISOBJECT(2) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
+                    HB_ISOBJECT(2) ? *PQCOLOR(2) : QColor(hb_parc(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());

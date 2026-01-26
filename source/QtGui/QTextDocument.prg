@@ -438,7 +438,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_TOHTML)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISQBYTEARRAYORNIL(1)) {
 #endif
-      RQSTRING(obj->toHtml(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(1))));
+      RQSTRING(obj->toHtml(HB_ISNIL(1) ? QByteArray() : *PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DRAWCONTENTS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQPAINTER(1) && ISQRECTFORNIL(2)) {
 #endif
-      obj->drawContents(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *static_cast<QRectF *>(Qt5xHb::itemGetPtr(2)));
+      obj->drawContents(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *PQRECTF(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

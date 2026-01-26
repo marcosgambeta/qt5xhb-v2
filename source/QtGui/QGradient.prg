@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QGRADIENT_SETCOLORAT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2))) {
 #endif
-      obj->setColorAt(PQREAL(1), HB_ISOBJECT(2) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
+      obj->setColorAt(PQREAL(1), HB_ISOBJECT(2) ? *PQCOLOR(2) : QColor(hb_parc(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
