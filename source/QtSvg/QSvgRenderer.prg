@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->render(PQPAINTER(1), PQSTRING(2), HB_ISNIL(3) ? QRectF() : *static_cast<QRectF *>(Qt5xHb::itemGetPtr(3)));
+      obj->render(PQPAINTER(1), PQSTRING(2), HB_ISNIL(3) ? QRectF() : *PQRECTF(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
