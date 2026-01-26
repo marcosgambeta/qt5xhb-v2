@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QCOLLATOR_NEW)
   if (ISBETWEEN(0, 1) && ISQLOCALEORNIL(1)) {
     // QCollator(const QLocale &locale = QLocale())
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = new QCollator(HB_ISNIL(1) ? QLocale() : *static_cast<QLocale *>(Qt5xHb::itemGetPtr(1)));
+    auto obj = new QCollator(HB_ISNIL(1) ? QLocale() : *PQLOCALE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQCOLLATOR(1)) {

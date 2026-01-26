@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_COLUMNCOUNT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1)) {
 #endif
-      RINT(obj->columnCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1))));
+      RINT(obj->columnCount(HB_ISNIL(1) ? QModelIndex() : *PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INDEX)
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
       RQMODELINDEX(obj->index(PINT(1), PINT(2),
-                              HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
+                              HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_ROWCOUNT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1)) {
 #endif
-      RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1))));
+      RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INSERTCOLUMNS)
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
       RBOOL(obj->insertColumns(PINT(1), PINT(2),
-                               HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
+                               HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -380,7 +380,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INSERTROWS)
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
       RBOOL(obj->insertRows(PINT(1), PINT(2),
-                            HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
+                            HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -399,7 +399,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_REMOVECOLUMNS)
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
       RBOOL(obj->removeColumns(PINT(1), PINT(2),
-                               HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
+                               HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_REMOVEROWS)
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
       RBOOL(obj->removeRows(PINT(1), PINT(2),
-                            HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
+                            HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

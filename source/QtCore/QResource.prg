@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QRESOURCE_NEW)
 {
   if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISQLOCALEORNIL(2)) {
     auto obj = new QResource(OPQSTRING(1, QString()),
-                             HB_ISNIL(2) ? QLocale() : *static_cast<QLocale *>(Qt5xHb::itemGetPtr(2)));
+                             HB_ISNIL(2) ? QLocale() : *PQLOCALE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

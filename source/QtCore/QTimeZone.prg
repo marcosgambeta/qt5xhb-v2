@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
 
     if (obj != nullptr) {
       RQSTRING(obj->displayName(*PQDATETIME(1), HB_ISNIL(2) ? QTimeZone::DefaultName : PQTIMEZONE_NAMETYPE(2),
-                                HB_ISNIL(3) ? QLocale() : *static_cast<QLocale *>(Qt5xHb::itemGetPtr(3))));
+                                HB_ISNIL(3) ? QLocale() : *PQLOCALE(3)));
     }
 #endif
   } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISQLOCALEORNIL(3)) {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
 
     if (obj != nullptr) {
       RQSTRING(obj->displayName(PQTIMEZONE_TIMETYPE(1), HB_ISNIL(2) ? QTimeZone::DefaultName : PQTIMEZONE_NAMETYPE(2),
-                                HB_ISNIL(3) ? QLocale() : *static_cast<QLocale *>(Qt5xHb::itemGetPtr(3))));
+                                HB_ISNIL(3) ? QLocale() : *PQLOCALE(3)));
     }
 #endif
   } else {

@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
       /*
       QVariant(QDataStream &s)
       */
-      QDataStream *par1 = (QDataStream *)Qt5xHb::itemGetPtr(1);
+      QDataStream *par1 = PQDATASTREAM(1);
       auto obj = new QVariant(*par1);
       Qt5xHb::returnNewObject(obj, true);
     }

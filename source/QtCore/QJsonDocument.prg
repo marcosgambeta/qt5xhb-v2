@@ -356,7 +356,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_FROMJSON)
   if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQJSONPARSEERRORORNIL(2)) {
 #endif
     RQJSONDOCUMENT(QJsonDocument::fromJson(
-        *PQBYTEARRAY(1), HB_ISNIL(2) ? nullptr : static_cast<QJsonParseError *>(Qt5xHb::itemGetPtr(2))));
+        *PQBYTEARRAY(1), HB_ISNIL(2) ? nullptr : PQJSONPARSEERROR(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
