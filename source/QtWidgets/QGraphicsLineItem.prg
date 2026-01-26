@@ -74,14 +74,13 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_NEW)
 
   } else if (ISBETWEEN(1, 2) && ISQLINEF(1) && ISQGRAPHICSITEMORNIL(2)) {
     // QGraphicsLineItem(const QLineF &line, QGraphicsItem *parent = nullptr)
-    auto obj =
-        new QGraphicsLineItem(*PQLINEF(1), HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
+    auto obj = new QGraphicsLineItem(*PQLINEF(1), HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
     Qt5xHb::returnNewObject(obj, true);
 
   } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQGRAPHICSITEMORNIL(5)) {
     // QGraphicsLineItem(qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem *parent = nullptr)
-    auto obj = new QGraphicsLineItem(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
-                                     HB_ISNIL(5) ? nullptr : PQGRAPHICSITEM(5));
+    auto obj =
+        new QGraphicsLineItem(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5) ? nullptr : PQGRAPHICSITEM(5));
     Qt5xHb::returnNewObject(obj, true);
 
   } else {

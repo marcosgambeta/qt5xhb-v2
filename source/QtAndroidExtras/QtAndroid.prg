@@ -109,8 +109,7 @@ HB_FUNC_STATIC(QTANDROID_STARTINTENTSENDER)
   if (ISBETWEEN(2, 3) && ISQANDROIDJNIOBJECT(1) && HB_ISNUM(2) && ISQANDROIDACTIVITYRESULTRECEIVERORNIL(3)) {
 #endif
     QtAndroid::startIntentSender(*PQANDROIDJNIOBJECT(1), PINT(2),
-                                 HB_ISNIL(3) ? nullptr
-                                             : PQANDROIDACTIVITYRESULTRECEIVER(3));
+                                 HB_ISNIL(3) ? nullptr : PQANDROIDACTIVITYRESULTRECEIVER(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -130,8 +129,7 @@ HB_FUNC_STATIC(QTANDROID_STARTACTIVITY)
   if (ISBETWEEN(2, 3) && ISQANDROIDJNIOBJECT(1) && HB_ISNUM(2) && ISQANDROIDACTIVITYRESULTRECEIVERORNIL(3)) {
 #endif
     QtAndroid::startActivity(*PQANDROIDJNIOBJECT(1), PINT(2),
-                             HB_ISNIL(3) ? nullptr
-                                         : PQANDROIDACTIVITYRESULTRECEIVER(3));
+                             HB_ISNIL(3) ? nullptr : PQANDROIDACTIVITYRESULTRECEIVER(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

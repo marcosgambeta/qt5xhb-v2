@@ -567,8 +567,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RENDER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && ISQPAINTER(1) && ISQRECTFORNIL(2) && ISQRECTORNIL(3) && ISNUMORNIL(4)) {
 #endif
-      obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *PQRECTF(2),
-                  HB_ISNIL(3) ? QRect() : *PQRECT(3),
+      obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *PQRECTF(2), HB_ISNIL(3) ? QRect() : *PQRECT(3),
                   HB_ISNIL(4) ? Qt::KeepAspectRatio : PQT_ASPECTRATIOMODE(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

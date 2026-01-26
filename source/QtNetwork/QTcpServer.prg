@@ -105,8 +105,7 @@ HB_FUNC_STATIC(QTCPSERVER_LISTEN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && ISQHOSTADDRESSORNIL(1) && ISNUMORNIL(2)) {
 #endif
-      RBOOL(obj->listen(HB_ISNIL(1) ? QHostAddress::Any : *PQHOSTADDRESS(1),
-                        OPQUINT16(2, 0)));
+      RBOOL(obj->listen(HB_ISNIL(1) ? QHostAddress::Any : *PQHOSTADDRESS(1), OPQUINT16(2, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

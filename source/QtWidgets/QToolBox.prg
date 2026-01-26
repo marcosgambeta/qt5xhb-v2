@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QTOOLBOX_ADDITEM)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RINT(obj->addItem(PQWIDGET(1), HB_ISOBJECT(2) ? *PQICON(2) : QIcon(hb_parc(2)),
-                        PQSTRING(3)));
+      RINT(obj->addItem(PQWIDGET(1), HB_ISOBJECT(2) ? *PQICON(2) : QIcon(hb_parc(2)), PQSTRING(3)));
     }
 
   } else if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2)) {
@@ -196,9 +195,7 @@ HB_FUNC_STATIC(QTOOLBOX_INSERTITEM)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RINT(obj->insertItem(PINT(1), PQWIDGET(2),
-                           HB_ISOBJECT(3) ? *PQICON(3) : QIcon(hb_parc(3)),
-                           PQSTRING(4)));
+      RINT(obj->insertItem(PINT(1), PQWIDGET(2), HB_ISOBJECT(3) ? *PQICON(3) : QIcon(hb_parc(3)), PQSTRING(4)));
     }
 
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3)) {

@@ -75,8 +75,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_NEW)
 
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQUNDOCOMMANDORNIL(2)) {
     // QUndoCommand(const QString &text, QUndoCommand *parent = nullptr)
-    auto obj =
-        new QUndoCommand(PQSTRING(1), HB_ISNIL(2) ? nullptr : PQUNDOCOMMAND(2));
+    auto obj = new QUndoCommand(PQSTRING(1), HB_ISNIL(2) ? nullptr : PQUNDOCOMMAND(2));
     Qt5xHb::returnNewObject(obj, false);
 
   } else {

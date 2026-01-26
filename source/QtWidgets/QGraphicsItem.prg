@@ -587,8 +587,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_ENSUREVISIBLE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->ensureVisible(HB_ISNIL(1) ? QRectF() : *PQRECTF(1), OPINT(2, 50),
-                         OPINT(3, 50));
+      obj->ensureVisible(HB_ISNIL(1) ? QRectF() : *PQRECTF(1), OPINT(2, 50), OPINT(3, 50));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2076,8 +2075,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SETCACHEMODE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSIZEORNIL(2)) {
 #endif
-      obj->setCacheMode(PQGRAPHICSITEM_CACHEMODE(1),
-                        HB_ISNIL(2) ? QSize() : *PQSIZE(2));
+      obj->setCacheMode(PQGRAPHICSITEM_CACHEMODE(1), HB_ISNIL(2) ? QSize() : *PQSIZE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

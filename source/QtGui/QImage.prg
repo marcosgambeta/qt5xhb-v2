@@ -790,7 +790,7 @@ HB_FUNC_STATIC(QIMAGE_SCALED)
 
     if (obj != nullptr) {
       RQIMAGE(obj->scaled(*PQSIZE(1), HB_ISNIL(2) ? Qt::IgnoreAspectRatio : PQT_ASPECTRATIOMODE(2),
-                                        HB_ISNIL(3) ? Qt::FastTransformation : PQT_TRANSFORMATIONMODE(3)));
+                          HB_ISNIL(3) ? Qt::FastTransformation : PQT_TRANSFORMATIONMODE(3)));
     }
   } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QImage scaled(int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio,
@@ -799,7 +799,7 @@ HB_FUNC_STATIC(QIMAGE_SCALED)
 
     if (obj != nullptr) {
       RQIMAGE(obj->scaled(PINT(1), PINT(2), HB_ISNIL(3) ? Qt::IgnoreAspectRatio : PQT_ASPECTRATIOMODE(3),
-                                        HB_ISNIL(4) ? Qt::FastTransformation : PQT_TRANSFORMATIONMODE(4)));
+                          HB_ISNIL(4) ? Qt::FastTransformation : PQT_TRANSFORMATIONMODE(4)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1209,8 +1209,7 @@ HB_FUNC_STATIC(QIMAGE_SETPIXELCOLOR)
     auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->setPixelColor(*PQPOINT(1),
-                         HB_ISOBJECT(2) ? *PQCOLOR(2) : QColor(hb_parc(2)));
+      obj->setPixelColor(*PQPOINT(1), HB_ISOBJECT(2) ? *PQCOLOR(2) : QColor(hb_parc(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1221,8 +1220,7 @@ HB_FUNC_STATIC(QIMAGE_SETPIXELCOLOR)
     auto obj = static_cast<QImage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->setPixelColor(PINT(1), PINT(2),
-                         HB_ISOBJECT(3) ? *PQCOLOR(3) : QColor(hb_parc(3)));
+      obj->setPixelColor(PINT(1), PINT(2), HB_ISOBJECT(3) ? *PQCOLOR(3) : QColor(hb_parc(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());

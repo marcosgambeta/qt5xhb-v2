@@ -322,9 +322,9 @@ HB_FUNC_STATIC(QRAWFONT_ALPHAMAPFORGLYPH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISQTRANSFORMORNIL(3)) {
 #endif
-      RQIMAGE(obj->alphaMapForGlyph(
-          PQUINT32(1), HB_ISNIL(2) ? QRawFont::SubPixelAntialiasing : PQRAWFONT_ANTIALIASINGTYPE(2),
-          HB_ISNIL(3) ? QTransform() : *PQTRANSFORM(3)));
+      RQIMAGE(obj->alphaMapForGlyph(PQUINT32(1),
+                                    HB_ISNIL(2) ? QRawFont::SubPixelAntialiasing : PQRAWFONT_ANTIALIASINGTYPE(2),
+                                    HB_ISNIL(3) ? QTransform() : *PQTRANSFORM(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -78,8 +78,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_NEW)
 
   } else if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISQWIDGETORNIL(2)) {
     // QColorDialog(const QColor &initial, QWidget *parent = nullptr)
-    auto obj = new QColorDialog(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)),
-                                OPQWIDGET(2, nullptr));
+    auto obj = new QColorDialog(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)), OPQWIDGET(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   } else {
@@ -328,10 +327,9 @@ HB_FUNC_STATIC(QCOLORDIALOG_GETCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(0, 4) && ISQCOLORORNIL(1) && ISQWIDGETORNIL(2) && ISCHARORNIL(3) && ISNUMORNIL(4)) {
 #endif
-    RQCOLOR(QColorDialog::getColor(HB_ISNIL(1) ? Qt::white : *PQCOLOR(1),
-                                   OPQWIDGET(2, nullptr), OPQSTRING(3, QString()),
-                                   HB_ISNIL(4) ? static_cast<QColorDialog::ColorDialogOptions>(0)
-                                               : PQCOLORDIALOG_COLORDIALOGOPTIONS(4)));
+    RQCOLOR(QColorDialog::getColor(
+        HB_ISNIL(1) ? Qt::white : *PQCOLOR(1), OPQWIDGET(2, nullptr), OPQSTRING(3, QString()),
+        HB_ISNIL(4) ? static_cast<QColorDialog::ColorDialogOptions>(0) : PQCOLORDIALOG_COLORDIALOGOPTIONS(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -110,7 +110,8 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILE)
     auto obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RQMIMETYPE(obj->mimeTypeForFile(PQSTRING(1), HB_ISNIL(2) ? QMimeDatabase::MatchDefault : PQMIMEDATABASE_MATCHMODE(2)));
+      RQMIMETYPE(
+          obj->mimeTypeForFile(PQSTRING(1), HB_ISNIL(2) ? QMimeDatabase::MatchDefault : PQMIMEDATABASE_MATCHMODE(2)));
     }
   } else if (ISBETWEEN(1, 2) && ISQFILEINFO(1) && ISNUMORNIL(2)) {
     // QMimeType mimeTypeForFile(const QFileInfo &fileInfo, QMimeDatabase::MatchMode mode = QMimeDatabase::MatchDefault)
@@ -118,8 +119,8 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILE)
     auto obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RQMIMETYPE(obj->mimeTypeForFile(*PQFILEINFO(1), HB_ISNIL(2) ? QMimeDatabase::MatchDefault
-                                                                                : PQMIMEDATABASE_MATCHMODE(2)));
+      RQMIMETYPE(obj->mimeTypeForFile(*PQFILEINFO(1),
+                                      HB_ISNIL(2) ? QMimeDatabase::MatchDefault : PQMIMEDATABASE_MATCHMODE(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

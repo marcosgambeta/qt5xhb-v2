@@ -112,8 +112,8 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_NEW)
 
   } else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
     // QTableWidgetItem(const QIcon &icon, const QString &text, int type = QTableWidgetItem::Type)
-    auto obj = new QTableWidgetItem(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)),
-                                    PQSTRING(2), OPINT(3, QTableWidgetItem::Type));
+    auto obj = new QTableWidgetItem(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), PQSTRING(2),
+                                    OPINT(3, QTableWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
 
   } else if (ISNUMPAR(1) && ISQTABLEWIDGETITEM(1)) {

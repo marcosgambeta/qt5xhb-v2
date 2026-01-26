@@ -103,8 +103,8 @@ HB_FUNC_STATIC(QMATRIX4X4_NEW)
   } else if (ISNUMPAR(16) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
              HB_ISNUM(7) && HB_ISNUM(8) && HB_ISNUM(9) && HB_ISNUM(10) && HB_ISNUM(11) && HB_ISNUM(12) &&
              HB_ISNUM(13) && HB_ISNUM(14) && HB_ISNUM(15) && HB_ISNUM(16)) {
-    // QMatrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float
-    // m32, float m33, float m34, float m41, float m42, float m43, float m44)
+    // QMatrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31,
+    // float m32, float m33, float m34, float m41, float m42, float m43, float m44)
     auto obj =
         new QMatrix4x4(PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4), PFLOAT(5), PFLOAT(6), PFLOAT(7), PFLOAT(8),
                        PFLOAT(9), PFLOAT(10), PFLOAT(11), PFLOAT(12), PFLOAT(13), PFLOAT(14), PFLOAT(15), PFLOAT(16));

@@ -2861,8 +2861,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->render(PQPAINTDEVICE(1), HB_ISNIL(2) ? QPoint() : *PQPOINT(2),
-                  HB_ISNIL(3) ? QRegion() : *PQREGION(3),
+      obj->render(PQPAINTDEVICE(1), HB_ISNIL(2) ? QPoint() : *PQPOINT(2), HB_ISNIL(3) ? QRegion() : *PQREGION(3),
                   HB_ISNIL(4) ? QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren)
                               : PQWIDGET_RENDERFLAGS(4));
     }
@@ -2875,8 +2874,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->render(PQPAINTER(1), HB_ISNIL(2) ? QPoint() : *PQPOINT(2),
-                  HB_ISNIL(3) ? QRegion() : *PQREGION(3),
+      obj->render(PQPAINTER(1), HB_ISNIL(2) ? QPoint() : *PQPOINT(2), HB_ISNIL(3) ? QRegion() : *PQREGION(3),
                   HB_ISNIL(4) ? QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren)
                               : PQWIDGET_RENDERFLAGS(4));
     }
@@ -4841,8 +4839,7 @@ HB_FUNC_STATIC(QWIDGET_GRAB)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISQRECTORNIL(1)) {
 #endif
-      RQPIXMAP(
-          obj->grab(HB_ISNIL(1) ? QRect(QPoint(0, 0), QSize(-1, -1)) : *PQRECT(1)));
+      RQPIXMAP(obj->grab(HB_ISNIL(1) ? QRect(QPoint(0, 0), QSize(-1, -1)) : *PQRECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

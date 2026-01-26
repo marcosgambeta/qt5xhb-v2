@@ -55,8 +55,8 @@ RETURN
 #include <QtGui/QNativeGestureEvent>
 #endif
 
-    // QNativeGestureEvent(Qt::NativeGestureType type, const QPointF &localPos, const QPointF &windowPos, const QPointF &
-    // screenPos, qreal value, ulong sequenceId, quint64 intArgument)
+    // QNativeGestureEvent(Qt::NativeGestureType type, const QPointF &localPos, const QPointF &windowPos, const QPointF
+    // & screenPos, qreal value, ulong sequenceId, quint64 intArgument)
 HB_FUNC_STATIC(QNATIVEGESTUREEVENT_NEW)
 {
   if (ISNUMPAR(7) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && HB_ISNUM(5) && HB_ISNUM(6) &&

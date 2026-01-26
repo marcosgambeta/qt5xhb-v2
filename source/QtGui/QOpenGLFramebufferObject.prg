@@ -501,8 +501,8 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(2, 4) && ISQOPENGLFRAMEBUFFEROBJECT(1) && ISQOPENGLFRAMEBUFFEROBJECT(2) && ISNUMORNIL(3) &&
              ISNUMORNIL(4)) {
-    // static void blitFramebuffer(QOpenGLFramebufferObject *target, QOpenGLFramebufferObject *source, GLbitfield buffers
-    // = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST)
+    // static void blitFramebuffer(QOpenGLFramebufferObject *target, QOpenGLFramebufferObject *source, GLbitfield
+    // buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST)
 
     QOpenGLFramebufferObject::blitFramebuffer(PQOPENGLFRAMEBUFFEROBJECT(1), PQOPENGLFRAMEBUFFEROBJECT(2),
                                               OPGLBITFIELD(3, GL_COLOR_BUFFER_BIT), OPGLENUM(4, GL_NEAREST));

@@ -454,7 +454,7 @@ HB_FUNC_STATIC(QPIXMAP_CREATEMASKFROMCOLOR)
     if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISNUMORNIL(2)) {
 #endif
       RQBITMAP(obj->createMaskFromColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)),
-                                   HB_ISNIL(2) ? Qt::MaskInColor : PQT_MASKMODE(2)));
+                                        HB_ISNIL(2) ? Qt::MaskInColor : PQT_MASKMODE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -466,22 +466,22 @@ HB_FUNC_STATIC(QPIXMAP_CREATEMASKFROMCOLOR)
 HB_FUNC_STATIC(QPIXMAP_SCALED)
 {
   if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
-    // QPixmap scaled(int w, int h, Qt::AspectRatioMode aspectMode = Qt::IgnoreAspectRatio, Qt::TransformationMode mode =
-    // Qt::FastTransformation) const
-    auto obj = static_cast<QPixmap *>(Qt5xHb::itemGetPtrStackSelfItem());
-
-    if (obj != nullptr) {
-      RQPIXMAP(obj->scaled(PINT(1), PINT(2), HB_ISNIL(3) ? Qt::IgnoreAspectRatio : PQT_ASPECTRATIOMODE(3),
-                                         HB_ISNIL(4) ? Qt::FastTransformation : PQT_TRANSFORMATIONMODE(4)));
-    }
-  } else if (ISBETWEEN(1, 3) && ISQSIZE(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
-    // QPixmap scaled(const QSize &s, Qt::AspectRatioMode aspectMode = Qt::IgnoreAspectRatio, Qt::TransformationMode mode
+    // QPixmap scaled(int w, int h, Qt::AspectRatioMode aspectMode = Qt::IgnoreAspectRatio, Qt::TransformationMode mode
     // = Qt::FastTransformation) const
     auto obj = static_cast<QPixmap *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
+      RQPIXMAP(obj->scaled(PINT(1), PINT(2), HB_ISNIL(3) ? Qt::IgnoreAspectRatio : PQT_ASPECTRATIOMODE(3),
+                           HB_ISNIL(4) ? Qt::FastTransformation : PQT_TRANSFORMATIONMODE(4)));
+    }
+  } else if (ISBETWEEN(1, 3) && ISQSIZE(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+    // QPixmap scaled(const QSize &s, Qt::AspectRatioMode aspectMode = Qt::IgnoreAspectRatio, Qt::TransformationMode
+    // mode = Qt::FastTransformation) const
+    auto obj = static_cast<QPixmap *>(Qt5xHb::itemGetPtrStackSelfItem());
+
+    if (obj != nullptr) {
       RQPIXMAP(obj->scaled(*PQSIZE(1), HB_ISNIL(2) ? Qt::IgnoreAspectRatio : PQT_ASPECTRATIOMODE(2),
-                                         HB_ISNIL(3) ? Qt::FastTransformation : PQT_TRANSFORMATIONMODE(3)));
+                           HB_ISNIL(3) ? Qt::FastTransformation : PQT_TRANSFORMATIONMODE(3)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -674,8 +674,7 @@ HB_FUNC_STATIC(QPIXMAP_SCROLL)
     auto obj = static_cast<QPixmap *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->scroll(PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PINT(6),
-                  HB_ISNIL(7) ? nullptr : PQREGION(7));
+      obj->scroll(PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PINT(6), HB_ISNIL(7) ? nullptr : PQREGION(7));
     }
 
     hb_itemReturn(hb_stackSelfItem());

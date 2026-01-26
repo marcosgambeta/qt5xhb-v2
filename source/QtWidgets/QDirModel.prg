@@ -123,8 +123,7 @@ HB_FUNC_STATIC(QDIRMODEL_INDEX)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RQMODELINDEX(obj->index(PINT(1), PINT(2),
-                              HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
+      RQMODELINDEX(obj->index(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
     }
 
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {

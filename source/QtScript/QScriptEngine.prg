@@ -353,8 +353,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISQSCRIPTVALUEORNIL(1)) {
 #endif
-      obj->installTranslatorFunctions(HB_ISNIL(1) ? QScriptValue()
-                                                  : *PQSCRIPTVALUE(1));
+      obj->installTranslatorFunctions(HB_ISNIL(1) ? QScriptValue() : *PQSCRIPTVALUE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -433,8 +432,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWOBJECT)
     auto obj = qobject_cast<QScriptEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      RQSCRIPTVALUE(obj->newObject(
-          PQSCRIPTCLASS(1), HB_ISNIL(2) ? QScriptValue() : *PQSCRIPTVALUE(2)));
+      RQSCRIPTVALUE(obj->newObject(PQSCRIPTCLASS(1), HB_ISNIL(2) ? QScriptValue() : *PQSCRIPTVALUE(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -450,8 +448,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWQMETAOBJECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQMETAOBJECT(1) && ISQSCRIPTVALUEORNIL(2)) {
 #endif
-      RQSCRIPTVALUE(obj->newQMetaObject(
-          PQMETAOBJECT(1), HB_ISNIL(2) ? QScriptValue() : *PQSCRIPTVALUE(2)));
+      RQSCRIPTVALUE(obj->newQMetaObject(PQMETAOBJECT(1), HB_ISNIL(2) ? QScriptValue() : *PQSCRIPTVALUE(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

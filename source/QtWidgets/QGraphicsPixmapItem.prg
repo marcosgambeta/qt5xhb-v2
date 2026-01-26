@@ -76,8 +76,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_NEW)
 
   } else if (ISBETWEEN(1, 2) && ISQPIXMAP(1) && ISQGRAPHICSITEMORNIL(2)) {
     // QGraphicsPixmapItem(const QPixmap &pixmap, QGraphicsItem *parent = nullptr)
-    auto obj = new QGraphicsPixmapItem(*PQPIXMAP(1),
-                                       HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
+    auto obj = new QGraphicsPixmapItem(*PQPIXMAP(1), HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
     Qt5xHb::returnNewObject(obj, true);
 
   } else {

@@ -101,8 +101,7 @@ HB_FUNC_STATIC(QBRUSH_NEW)
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISQPIXMAP(2)) {
     // QBrush(const QColor &color, const QPixmap &pixmap)
-    auto obj =
-        new QBrush(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)), *PQPIXMAP(2));
+    auto obj = new QBrush(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)), *PQPIXMAP(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2)) {
     // QBrush(Qt::GlobalColor color, const QPixmap &pixmap)

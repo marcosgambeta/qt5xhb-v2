@@ -242,14 +242,10 @@ HB_FUNC_STATIC(QAXOBJECT_DYNAMICCALL)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RQVARIANT(obj->dynamicCall(PCONSTCHAR(1),
-                                 HB_ISNIL(2) ? QVariant() : *PQVARIANT(2),
-                                 HB_ISNIL(3) ? QVariant() : *PQVARIANT(3),
-                                 HB_ISNIL(4) ? QVariant() : *PQVARIANT(4),
-                                 HB_ISNIL(5) ? QVariant() : *PQVARIANT(5),
-                                 HB_ISNIL(6) ? QVariant() : *PQVARIANT(6),
-                                 HB_ISNIL(7) ? QVariant() : *PQVARIANT(7),
-                                 HB_ISNIL(8) ? QVariant() : *PQVARIANT(8),
+      RQVARIANT(obj->dynamicCall(PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *PQVARIANT(2),
+                                 HB_ISNIL(3) ? QVariant() : *PQVARIANT(3), HB_ISNIL(4) ? QVariant() : *PQVARIANT(4),
+                                 HB_ISNIL(5) ? QVariant() : *PQVARIANT(5), HB_ISNIL(6) ? QVariant() : *PQVARIANT(6),
+                                 HB_ISNIL(7) ? QVariant() : *PQVARIANT(7), HB_ISNIL(8) ? QVariant() : *PQVARIANT(8),
                                  HB_ISNIL(9) ? QVariant() : *PQVARIANT(9)));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
@@ -329,15 +325,11 @@ HB_FUNC_STATIC(QAXOBJECT_QUERYSUBOBJECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr =
-          obj->querySubObject(PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *PQVARIANT(2),
-                              HB_ISNIL(3) ? QVariant() : *PQVARIANT(3),
-                              HB_ISNIL(4) ? QVariant() : *PQVARIANT(4),
-                              HB_ISNIL(5) ? QVariant() : *PQVARIANT(5),
-                              HB_ISNIL(6) ? QVariant() : *PQVARIANT(6),
-                              HB_ISNIL(7) ? QVariant() : *PQVARIANT(7),
-                              HB_ISNIL(8) ? QVariant() : *PQVARIANT(8),
-                              HB_ISNIL(9) ? QVariant() : *PQVARIANT(9));
+      auto ptr = obj->querySubObject(PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *PQVARIANT(2),
+                                     HB_ISNIL(3) ? QVariant() : *PQVARIANT(3), HB_ISNIL(4) ? QVariant() : *PQVARIANT(4),
+                                     HB_ISNIL(5) ? QVariant() : *PQVARIANT(5), HB_ISNIL(6) ? QVariant() : *PQVARIANT(6),
+                                     HB_ISNIL(7) ? QVariant() : *PQVARIANT(7), HB_ISNIL(8) ? QVariant() : *PQVARIANT(8),
+                                     HB_ISNIL(9) ? QVariant() : *PQVARIANT(9));
       Qt5xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {

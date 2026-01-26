@@ -716,9 +716,8 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_VERIFY)
 #endif
 }
 
-// static bool importPkcs12(QIODevice *device, QSslKey *key, QSslCertificate *cert, QList<QSslCertificate> *caCertificates
-// = nullptr, const QByteArray &passPhrase=QByteArray())
-// Qt::HANDLE handle() const
+// static bool importPkcs12(QIODevice *device, QSslKey *key, QSslCertificate *cert, QList<QSslCertificate>
+// *caCertificates = nullptr, const QByteArray &passPhrase=QByteArray()) Qt::HANDLE handle() const
 HB_FUNC_STATIC(QSSLCERTIFICATE_HANDLE)
 {
   auto obj = static_cast<QSslCertificate *>(Qt5xHb::itemGetPtrStackSelfItem());

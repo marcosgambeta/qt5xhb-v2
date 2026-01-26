@@ -415,8 +415,8 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->insertItem(PINT(1), HB_ISOBJECT(2) ? *PQICON(2) : QIcon(hb_parc(2)),
-                      PQSTRING(3), HB_ISNIL(4) ? QVariant() : *PQVARIANT(4));
+      obj->insertItem(PINT(1), HB_ISOBJECT(2) ? *PQICON(2) : QIcon(hb_parc(2)), PQSTRING(3),
+                      HB_ISNIL(4) ? QVariant() : *PQVARIANT(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());

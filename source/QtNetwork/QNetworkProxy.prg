@@ -87,8 +87,8 @@ HB_FUNC_STATIC(QNETWORKPROXY_NEW)
     auto obj = new QNetworkProxy();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 5) && HB_ISNUM(1) && ISCHARORNIL(2) && ISNUMORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5)) {
-    // QNetworkProxy(QNetworkProxy::ProxyType type, const QString &hostName = QString(), quint16 port = 0, const QString &
-    // user = QString(), const QString &password = QString())
+    // QNetworkProxy(QNetworkProxy::ProxyType type, const QString &hostName = QString(), quint16 port = 0, const QString
+    // & user = QString(), const QString &password = QString())
     auto obj = new QNetworkProxy(PQNETWORKPROXY_PROXYTYPE(1), OPQSTRING(2, QString()), OPQUINT16(3, 0),
                                  OPQSTRING(4, QString()), OPQSTRING(5, QString()));
     Qt5xHb::returnNewObject(obj, true);

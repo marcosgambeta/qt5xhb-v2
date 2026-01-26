@@ -108,8 +108,7 @@ HB_FUNC_STATIC(QSQLQUERY_NEW)
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && ISCHARORNIL(1) && ISQSQLDATABASEORNIL(2)) {
     // QSqlQuery(const QString &query = QString(), QSqlDatabase db = QSqlDatabase())
-    auto obj = new QSqlQuery(OPQSTRING(1, QString()),
-                             HB_ISNIL(2) ? QSqlDatabase() : *PQSQLDATABASE(2));
+    auto obj = new QSqlQuery(OPQSTRING(1, QString()), HB_ISNIL(2) ? QSqlDatabase() : *PQSQLDATABASE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSQLDATABASE(1)) {
     // QSqlQuery(QSqlDatabase db)

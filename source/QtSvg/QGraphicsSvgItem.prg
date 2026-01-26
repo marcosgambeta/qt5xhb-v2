@@ -72,8 +72,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_NEW)
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQGRAPHICSITEMORNIL(2)) {
     // QGraphicsSvgItem(const QString &fileName, QGraphicsItem *parent = nullptr)
-    auto obj =
-        new QGraphicsSvgItem(PQSTRING(1), HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
+    auto obj = new QGraphicsSvgItem(PQSTRING(1), HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

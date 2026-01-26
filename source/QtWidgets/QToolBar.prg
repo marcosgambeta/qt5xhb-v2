@@ -165,8 +165,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr = obj->addAction(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)),
-                                PQSTRING(2));
+      auto ptr = obj->addAction(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 
@@ -184,8 +183,8 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr = obj->addAction(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)),
-                                PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4));
+      auto ptr =
+          obj->addAction(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 

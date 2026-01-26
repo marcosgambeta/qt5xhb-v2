@@ -97,8 +97,7 @@ RETURN
 HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQGRAPHICSLAYOUTITEMORNIL(1)) {
-    auto obj =
-        new QGraphicsGridLayout(HB_ISNIL(1) ? nullptr : PQGRAPHICSLAYOUTITEM(1));
+    auto obj = new QGraphicsGridLayout(HB_ISNIL(1) ? nullptr : PQGRAPHICSLAYOUTITEM(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

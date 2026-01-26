@@ -1332,10 +1332,10 @@ HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILEURL)
   if (ISBETWEEN(0, 7) && ISQWIDGETORNIL(1) && ISCHARORNIL(2) && ISQURLORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5) &&
       ISNUMORNIL(6) && ISARRAYORNIL(7)) {
 #endif
-    RQURL(QFileDialog::getOpenFileUrl(
-        OPQWIDGET(1, nullptr), OPQSTRING(2, QString()),
-        HB_ISNIL(3) ? QUrl() : *PQURL(3), OPQSTRING(4, QString()), nullptr,
-        HB_ISNIL(6) ? static_cast<QFileDialog::Options>(0) : PQFILEDIALOG_OPTIONS(6), OPQSTRINGLIST(7, QStringList())));
+    RQURL(QFileDialog::getOpenFileUrl(OPQWIDGET(1, nullptr), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *PQURL(3),
+                                      OPQSTRING(4, QString()), nullptr,
+                                      HB_ISNIL(6) ? static_cast<QFileDialog::Options>(0) : PQFILEDIALOG_OPTIONS(6),
+                                      OPQSTRINGLIST(7, QStringList())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1352,10 +1352,10 @@ HB_FUNC_STATIC(QFILEDIALOG_GETSAVEFILEURL)
   if (ISBETWEEN(0, 7) && ISQWIDGETORNIL(1) && ISCHARORNIL(2) && ISQURLORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5) &&
       ISNUMORNIL(6) && ISARRAYORNIL(7)) {
 #endif
-    RQURL(QFileDialog::getSaveFileUrl(
-        OPQWIDGET(1, nullptr), OPQSTRING(2, QString()),
-        HB_ISNIL(3) ? QUrl() : *PQURL(3), OPQSTRING(4, QString()), nullptr,
-        HB_ISNIL(6) ? static_cast<QFileDialog::Options>(0) : PQFILEDIALOG_OPTIONS(6), OPQSTRINGLIST(7, QStringList())));
+    RQURL(QFileDialog::getSaveFileUrl(OPQWIDGET(1, nullptr), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *PQURL(3),
+                                      OPQSTRING(4, QString()), nullptr,
+                                      HB_ISNIL(6) ? static_cast<QFileDialog::Options>(0) : PQFILEDIALOG_OPTIONS(6),
+                                      OPQSTRINGLIST(7, QStringList())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1372,8 +1372,7 @@ HB_FUNC_STATIC(QFILEDIALOG_GETEXISTINGDIRECTORYURL)
   if (ISBETWEEN(0, 5) && ISQWIDGETORNIL(1) && ISCHARORNIL(2) && ISQURLORNIL(3) && ISNUMORNIL(4) && ISARRAYORNIL(5)) {
 #endif
     RQURL(QFileDialog::getExistingDirectoryUrl(
-        OPQWIDGET(1, nullptr), OPQSTRING(2, QString()),
-        HB_ISNIL(3) ? QUrl() : *PQURL(3),
+        OPQWIDGET(1, nullptr), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *PQURL(3),
         HB_ISNIL(4) ? static_cast<QFileDialog::Options>(QFileDialog::ShowDirsOnly) : PQFILEDIALOG_OPTIONS(4),
         OPQSTRINGLIST(5, QStringList())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1393,9 +1392,9 @@ HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILEURLS)
       ISNUMORNIL(6) && ISARRAYORNIL(7)) {
 #endif
     auto list = QFileDialog::getOpenFileUrls(
-        OPQWIDGET(1, nullptr), OPQSTRING(2, QString()),
-        HB_ISNIL(3) ? QUrl() : *PQURL(3), OPQSTRING(4, QString()), nullptr,
-        HB_ISNIL(6) ? static_cast<QFileDialog::Options>(0) : PQFILEDIALOG_OPTIONS(6), OPQSTRINGLIST(7, QStringList()));
+        OPQWIDGET(1, nullptr), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *PQURL(3), OPQSTRING(4, QString()),
+        nullptr, HB_ISNIL(6) ? static_cast<QFileDialog::Options>(0) : PQFILEDIALOG_OPTIONS(6),
+        OPQSTRINGLIST(7, QStringList()));
     auto pDynSym = hb_dynsymFindName("QURL");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr) {

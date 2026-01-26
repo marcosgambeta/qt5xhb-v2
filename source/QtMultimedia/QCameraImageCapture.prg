@@ -416,8 +416,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS)
     if (ISBETWEEN(0, 2) && ISQIMAGEENCODERSETTINGSORNIL(1) && ISLOGORNIL(2)) {
 #endif
       bool par2;
-      auto list = obj->supportedResolutions(
-          HB_ISNIL(1) ? QImageEncoderSettings() : *PQIMAGEENCODERSETTINGS(1), &par2);
+      auto list = obj->supportedResolutions(HB_ISNIL(1) ? QImageEncoderSettings() : *PQIMAGEENCODERSETTINGS(1), &par2);
       auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {

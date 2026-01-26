@@ -109,8 +109,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_NEW)
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQFONT(2) && ISOBJECTORNIL(3)) {
     // QTextLayout(const QString &text, const QFont &font, QPaintDevice *paintdevice = nullptr)
-    auto obj = new QTextLayout(PQSTRING(1), *PQFONT(2),
-                               HB_ISNIL(3) ? nullptr : PQPAINTDEVICE(3));
+    auto obj = new QTextLayout(PQSTRING(1), *PQFONT(2), HB_ISNIL(3) ? nullptr : PQPAINTDEVICE(3));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQTEXTBLOCK(1)) {
     // QTextLayout(const QTextBlock &b)

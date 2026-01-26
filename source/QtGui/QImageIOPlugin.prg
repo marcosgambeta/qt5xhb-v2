@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_CREATE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISQBYTEARRAYORNIL(2)) {
 #endif
-      auto ptr =
-          obj->create(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *PQBYTEARRAY(2));
+      auto ptr = obj->create(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *PQBYTEARRAY(2));
       Qt5xHb::createReturnClass(ptr, "QIMAGEIOHANDLER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

@@ -310,8 +310,8 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU)
 #endif
 }
 
-// void setFeaturePermission(const QUrl &securityOrigin, QWebEnginePage::Feature feature, QWebEnginePage::PermissionPolicy
-// policy)
+// void setFeaturePermission(const QUrl &securityOrigin, QWebEnginePage::Feature feature,
+// QWebEnginePage::PermissionPolicy policy)
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETFEATUREPERMISSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -387,8 +387,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETCONTENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && ISCHARORNIL(2) && ISQURLORNIL(3)) {
 #endif
-      obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString()),
-                      HB_ISNIL(3) ? QUrl() : *PQURL(3));
+      obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *PQURL(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

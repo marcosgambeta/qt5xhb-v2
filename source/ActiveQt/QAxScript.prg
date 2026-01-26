@@ -98,12 +98,9 @@ HB_FUNC_STATIC(QAXSCRIPT_CALL)
 
     if (obj != nullptr) {
       RQVARIANT(obj->call(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *PQVARIANT(2),
-                          HB_ISNIL(3) ? QVariant() : *PQVARIANT(3),
-                          HB_ISNIL(4) ? QVariant() : *PQVARIANT(4),
-                          HB_ISNIL(5) ? QVariant() : *PQVARIANT(5),
-                          HB_ISNIL(6) ? QVariant() : *PQVARIANT(6),
-                          HB_ISNIL(7) ? QVariant() : *PQVARIANT(7),
-                          HB_ISNIL(8) ? QVariant() : *PQVARIANT(8),
+                          HB_ISNIL(3) ? QVariant() : *PQVARIANT(3), HB_ISNIL(4) ? QVariant() : *PQVARIANT(4),
+                          HB_ISNIL(5) ? QVariant() : *PQVARIANT(5), HB_ISNIL(6) ? QVariant() : *PQVARIANT(6),
+                          HB_ISNIL(7) ? QVariant() : *PQVARIANT(7), HB_ISNIL(8) ? QVariant() : *PQVARIANT(8),
                           HB_ISNIL(9) ? QVariant() : *PQVARIANT(9)));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {

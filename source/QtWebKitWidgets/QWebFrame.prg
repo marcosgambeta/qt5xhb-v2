@@ -643,8 +643,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
     auto obj = qobject_cast<QWebFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      obj->render(PQPAINTER(1), PQWEBFRAME_RENDERLAYERS(2),
-                  HB_ISNIL(3) ? QRegion() : *PQREGION(3));
+      obj->render(PQPAINTER(1), PQWEBFRAME_RENDERLAYERS(2), HB_ISNIL(3) ? QRegion() : *PQREGION(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -810,8 +809,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETCONTENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && ISCHARORNIL(2) && ISQURLORNIL(3)) {
 #endif
-      obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString()),
-                      HB_ISNIL(3) ? QUrl() : *PQURL(3));
+      obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *PQURL(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

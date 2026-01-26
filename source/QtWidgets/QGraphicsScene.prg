@@ -222,8 +222,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDELLIPSE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr = obj->addEllipse(*PQRECTF(1), HB_ISNIL(2) ? QPen() : *PQPEN(2),
-                                 HB_ISNIL(3) ? QBrush() : *PQBRUSH(3));
+      auto ptr = obj->addEllipse(*PQRECTF(1), HB_ISNIL(2) ? QPen() : *PQPEN(2), HB_ISNIL(3) ? QBrush() : *PQBRUSH(3));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSELLIPSEITEM", false);
     }
 
@@ -234,8 +233,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDELLIPSE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr = obj->addEllipse(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
-                                 HB_ISNIL(5) ? QPen() : *PQPEN(5),
+      auto ptr = obj->addEllipse(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5) ? QPen() : *PQPEN(5),
                                  HB_ISNIL(6) ? QBrush() : *PQBRUSH(6));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSELLIPSEITEM", false);
     }
@@ -281,8 +279,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDLINE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr = obj->addLine(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
-                              HB_ISNIL(5) ? QPen() : *PQPEN(5));
+      auto ptr = obj->addLine(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5) ? QPen() : *PQPEN(5));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLINEITEM", false);
     }
 
@@ -300,8 +297,8 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPATH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQPAINTERPATH(1) && ISQPENORNIL(2) && ISQBRUSHORNIL(3)) {
 #endif
-      auto ptr = obj->addPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? QPen() : *PQPEN(2),
-                              HB_ISNIL(3) ? QBrush() : *PQBRUSH(3));
+      auto ptr =
+          obj->addPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? QPen() : *PQPEN(2), HB_ISNIL(3) ? QBrush() : *PQBRUSH(3));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSPATHITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -339,8 +336,8 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPOLYGON)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQPOLYGONF(1) && ISQPENORNIL(2) && ISQBRUSHORNIL(3)) {
 #endif
-      auto ptr = obj->addPolygon(*PQPOLYGONF(1), HB_ISNIL(2) ? QPen() : *PQPEN(2),
-                                 HB_ISNIL(3) ? QBrush() : *PQBRUSH(3));
+      auto ptr =
+          obj->addPolygon(*PQPOLYGONF(1), HB_ISNIL(2) ? QPen() : *PQPEN(2), HB_ISNIL(3) ? QBrush() : *PQBRUSH(3));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSPOLYGONITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -357,8 +354,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr = obj->addRect(*PQRECTF(1), HB_ISNIL(2) ? QPen() : *PQPEN(2),
-                              HB_ISNIL(3) ? QBrush() : *PQBRUSH(3));
+      auto ptr = obj->addRect(*PQRECTF(1), HB_ISNIL(2) ? QPen() : *PQPEN(2), HB_ISNIL(3) ? QBrush() : *PQBRUSH(3));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSRECTITEM", false);
     }
 
@@ -369,8 +365,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr = obj->addRect(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
-                              HB_ISNIL(5) ? QPen() : *PQPEN(5),
+      auto ptr = obj->addRect(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5) ? QPen() : *PQPEN(5),
                               HB_ISNIL(6) ? QBrush() : *PQBRUSH(6));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSRECTITEM", false);
     }
@@ -842,8 +837,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_RENDER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && ISQPAINTER(1) && ISQRECTFORNIL(2) && ISQRECTFORNIL(3) && ISNUMORNIL(4)) {
 #endif
-      obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *PQRECTF(2),
-                  HB_ISNIL(3) ? QRectF() : *PQRECTF(3),
+      obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *PQRECTF(2), HB_ISNIL(3) ? QRectF() : *PQRECTF(3),
                   HB_ISNIL(4) ? Qt::KeepAspectRatio : PQT_ASPECTRATIOMODE(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

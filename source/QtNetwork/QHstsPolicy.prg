@@ -79,8 +79,8 @@ HB_FUNC_STATIC(QHSTSPOLICY_NEW)
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISBETWEEN(3, 4) && ISQDATETIME(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISNUMORNIL(4)) {
-    // QHstsPolicy(const QDateTime &expiry, QHstsPolicy::PolicyFlags flags, const QString &host, QUrl::ParsingMode mode =
-    // QUrl::DecodedMode)
+    // QHstsPolicy(const QDateTime &expiry, QHstsPolicy::PolicyFlags flags, const QString &host, QUrl::ParsingMode mode
+    // = QUrl::DecodedMode)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     auto obj = new QHstsPolicy(*PQDATETIME(1), PQHSTSPOLICY_POLICYFLAGS(2), PQSTRING(3),
                                HB_ISNIL(4) ? QUrl::DecodedMode : PQURL_PARSINGMODE(4));

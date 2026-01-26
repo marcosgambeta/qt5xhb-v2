@@ -57,10 +57,9 @@ HB_FUNC_STATIC(QDBUSINTERFACE_NEW)
 {
   if (ISBETWEEN(2, 5) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3) && ISQDBUSCONNECTIONORNIL(4) &&
       ISQOBJECTORNIL(5)) {
-    auto obj = new QDBusInterface(PQSTRING(1), PQSTRING(2), OPQSTRING(3, QString()),
-                                  HB_ISNIL(4) ? QDBusConnection::sessionBus()
-                                              : *PQDBUSCONNECTION(4),
-                                  OPQOBJECT(5, nullptr));
+    auto obj =
+        new QDBusInterface(PQSTRING(1), PQSTRING(2), OPQSTRING(3, QString()),
+                           HB_ISNIL(4) ? QDBusConnection::sessionBus() : *PQDBUSCONNECTION(4), OPQOBJECT(5, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

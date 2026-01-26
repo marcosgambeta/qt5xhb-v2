@@ -75,16 +75,16 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
              ISOPTQBYTEARRAY(5)) {
     // QSslKey(const QByteArray &encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem,
     // QSsl::KeyType type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray())
-    auto obj = new QSslKey(*PQBYTEARRAY(1), PQSSL_KEYALGORITHM(2), HB_ISNIL(3) ? QSsl::Pem : PQSSL_ENCODINGFORMAT(3),
-                           HB_ISNIL(4) ? QSsl::PrivateKey : PQSSL_KEYTYPE(4),
-                           HB_ISNIL(5) ? QByteArray() : *PQBYTEARRAY(5));
+    auto obj =
+        new QSslKey(*PQBYTEARRAY(1), PQSSL_KEYALGORITHM(2), HB_ISNIL(3) ? QSsl::Pem : PQSSL_ENCODINGFORMAT(3),
+                    HB_ISNIL(4) ? QSsl::PrivateKey : PQSSL_KEYTYPE(4), HB_ISNIL(5) ? QByteArray() : *PQBYTEARRAY(5));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 5) && ISQIODEVICE(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4) && ISOPTQBYTEARRAY(5)) {
     // QSslKey(QIODevice *device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType
     // type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray())
-    auto obj = new QSslKey(PQIODEVICE(1), PQSSL_KEYALGORITHM(2), HB_ISNIL(3) ? QSsl::Pem : PQSSL_ENCODINGFORMAT(3),
-                           HB_ISNIL(4) ? QSsl::PrivateKey : PQSSL_KEYTYPE(4),
-                           HB_ISNIL(5) ? QByteArray() : *PQBYTEARRAY(5));
+    auto obj =
+        new QSslKey(PQIODEVICE(1), PQSSL_KEYALGORITHM(2), HB_ISNIL(3) ? QSsl::Pem : PQSSL_ENCODINGFORMAT(3),
+                    HB_ISNIL(4) ? QSsl::PrivateKey : PQSSL_KEYTYPE(4), HB_ISNIL(5) ? QByteArray() : *PQBYTEARRAY(5));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && HB_ISPOINTER(1) && ISNUMORNIL(2)) {
     // QSslKey(Qt::HANDLE handle, QSsl::KeyType type = QSsl::PrivateKey)

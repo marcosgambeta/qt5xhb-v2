@@ -68,8 +68,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_NEW)
 
   } else if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && ISQGRAPHICSITEMORNIL(2)) {
     // QGraphicsPathItem(const QPainterPath &path, QGraphicsItem *parent = nullptr)
-    auto obj = new QGraphicsPathItem(*PQPAINTERPATH(1),
-                                     HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
+    auto obj = new QGraphicsPathItem(*PQPAINTERPATH(1), HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
     Qt5xHb::returnNewObject(obj, true);
 
   } else {

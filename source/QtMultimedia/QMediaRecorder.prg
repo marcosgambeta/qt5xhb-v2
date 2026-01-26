@@ -581,8 +581,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SETENCODINGSETTINGS)
     if (ISBETWEEN(1, 3) && ISQAUDIOENCODERSETTINGS(1) && ISQVIDEOENCODERSETTINGSORNIL(2) && ISCHARORNIL(3)) {
 #endif
       obj->setEncodingSettings(*PQAUDIOENCODERSETTINGS(1),
-                               HB_ISNIL(2) ? QVideoEncoderSettings()
-                                           : *PQVIDEOENCODERSETTINGS(2),
+                               HB_ISNIL(2) ? QVideoEncoderSettings() : *PQVIDEOENCODERSETTINGS(2),
                                OPQSTRING(3, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -652,8 +651,8 @@ HB_FUNC_STATIC(QMEDIARECORDER_SUPPORTEDAUDIOCODECS)
   }
 }
 
-// QList<int> supportedAudioSampleRates(const QAudioEncoderSettings &settings = QAudioEncoderSettings(), bool *continuous
-// = nullptr) const
+// QList<int> supportedAudioSampleRates(const QAudioEncoderSettings &settings = QAudioEncoderSettings(), bool
+// *continuous = nullptr) const
 HB_FUNC_STATIC(QMEDIARECORDER_SUPPORTEDAUDIOSAMPLERATES)
 {
   auto obj = qobject_cast<QMediaRecorder *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -663,8 +662,8 @@ HB_FUNC_STATIC(QMEDIARECORDER_SUPPORTEDAUDIOSAMPLERATES)
     if (ISBETWEEN(0, 2) && ISQAUDIOENCODERSETTINGSORNIL(1) && ISLOGORNIL(2)) {
 #endif
       bool par2;
-      auto list = obj->supportedAudioSampleRates(
-          HB_ISNIL(1) ? QAudioEncoderSettings() : *PQAUDIOENCODERSETTINGS(1), &par2);
+      auto list =
+          obj->supportedAudioSampleRates(HB_ISNIL(1) ? QAudioEncoderSettings() : *PQAUDIOENCODERSETTINGS(1), &par2);
       Qt5xHb::convert_qlist_int_to_array(list);
       hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -704,8 +703,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SUPPORTEDFRAMERATES)
     if (ISBETWEEN(0, 2) && ISQVIDEOENCODERSETTINGSORNIL(1) && ISLOGORNIL(2)) {
 #endif
       bool par2;
-      auto list = obj->supportedFrameRates(
-          HB_ISNIL(1) ? QVideoEncoderSettings() : *PQVIDEOENCODERSETTINGS(1), &par2);
+      auto list = obj->supportedFrameRates(HB_ISNIL(1) ? QVideoEncoderSettings() : *PQVIDEOENCODERSETTINGS(1), &par2);
       Qt5xHb::convert_qlist_qreal_to_array(list);
       hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -727,8 +725,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SUPPORTEDRESOLUTIONS)
     if (ISBETWEEN(0, 2) && ISQVIDEOENCODERSETTINGSORNIL(1) && ISLOGORNIL(2)) {
 #endif
       bool par2;
-      auto list = obj->supportedResolutions(
-          HB_ISNIL(1) ? QVideoEncoderSettings() : *PQVIDEOENCODERSETTINGS(1), &par2);
+      auto list = obj->supportedResolutions(HB_ISNIL(1) ? QVideoEncoderSettings() : *PQVIDEOENCODERSETTINGS(1), &par2);
       auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {

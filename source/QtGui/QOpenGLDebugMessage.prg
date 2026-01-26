@@ -198,7 +198,8 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_MESSAGE)
 }
 
 // static QOpenGLDebugMessage createApplicationMessage(const QString &text, GLuint id = 0, QOpenGLDebugMessage::Severity
-// severity = QOpenGLDebugMessage::NotificationSeverity, QOpenGLDebugMessage::Type type = QOpenGLDebugMessage::OtherType)
+// severity = QOpenGLDebugMessage::NotificationSeverity, QOpenGLDebugMessage::Type type =
+// QOpenGLDebugMessage::OtherType)
 HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_CREATEAPPLICATIONMESSAGE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,7 +217,8 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_CREATEAPPLICATIONMESSAGE)
 }
 
 // static QOpenGLDebugMessage createThirdPartyMessage(const QString &text, GLuint id = 0, QOpenGLDebugMessage::Severity
-// severity = QOpenGLDebugMessage::NotificationSeverity, QOpenGLDebugMessage::Type type = QOpenGLDebugMessage::OtherType)
+// severity = QOpenGLDebugMessage::NotificationSeverity, QOpenGLDebugMessage::Type type =
+// QOpenGLDebugMessage::OtherType)
 HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_CREATETHIRDPARTYMESSAGE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

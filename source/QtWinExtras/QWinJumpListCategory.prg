@@ -343,8 +343,8 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDLINK)
     auto obj = static_cast<QWinJumpListCategory *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      auto ptr = obj->addLink(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)),
-                              PQSTRING(2), PQSTRING(3), OPQSTRINGLIST(4, QStringList()));
+      auto ptr = obj->addLink(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), PQSTRING(2), PQSTRING(3),
+                              OPQSTRINGLIST(4, QStringList()));
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTITEM", false);
     }
 #endif

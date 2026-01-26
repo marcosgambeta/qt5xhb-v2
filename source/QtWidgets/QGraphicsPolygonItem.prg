@@ -71,8 +71,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_NEW)
 
   } else if (ISBETWEEN(1, 2) && ISQPOLYGONF(1) && ISQGRAPHICSITEMORNIL(2)) {
     // QGraphicsPolygonItem(const QPolygonF &polygon, QGraphicsItem *parent = nullptr)
-    auto obj = new QGraphicsPolygonItem(*PQPOLYGONF(1),
-                                        HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
+    auto obj = new QGraphicsPolygonItem(*PQPOLYGONF(1), HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
     Qt5xHb::returnNewObject(obj, true);
 
   } else {

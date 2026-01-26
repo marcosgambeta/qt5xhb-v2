@@ -293,8 +293,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_INDEX)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RQMODELINDEX(obj->index(PINT(1), PINT(2),
-                              HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
+      RQMODELINDEX(obj->index(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
     }
 
   } else {

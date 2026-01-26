@@ -134,7 +134,8 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_NEW)
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISBETWEEN(1, 2) && ISQIMAGE(1) && ISNUMORNIL(2)) {
-    // QOpenGLTexture(const QImage &image, QOpenGLTexture::MipMapGeneration genMipMaps = QOpenGLTexture::GenerateMipMaps)
+    // QOpenGLTexture(const QImage &image, QOpenGLTexture::MipMapGeneration genMipMaps =
+    // QOpenGLTexture::GenerateMipMaps)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = new QOpenGLTexture(*PQIMAGE(1),
                                   HB_ISNIL(2) ? QOpenGLTexture::GenerateMipMaps : PQOPENGLTEXTURE_MIPMAPGENERATION(2));
@@ -849,8 +850,8 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_SETSWIZZLEMASK)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
-    // void setSwizzleMask(QOpenGLTexture::SwizzleValue r, QOpenGLTexture::SwizzleValue g, QOpenGLTexture::SwizzleValue b,
-    // QOpenGLTexture::SwizzleValue a)
+    // void setSwizzleMask(QOpenGLTexture::SwizzleValue r, QOpenGLTexture::SwizzleValue g, QOpenGLTexture::SwizzleValue
+    // b, QOpenGLTexture::SwizzleValue a)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     auto obj = static_cast<QOpenGLTexture *>(Qt5xHb::itemGetPtrStackSelfItem());
 

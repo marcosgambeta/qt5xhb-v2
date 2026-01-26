@@ -139,8 +139,8 @@ HB_FUNC_STATIC(QICON_ADDFILE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISQSIZEORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
-      obj->addFile(PQSTRING(1), HB_ISNIL(2) ? QSize() : *PQSIZE(2),
-                   HB_ISNIL(3) ? QIcon::Normal : PQICON_MODE(3), HB_ISNIL(4) ? QIcon::Off : PQICON_STATE(4));
+      obj->addFile(PQSTRING(1), HB_ISNIL(2) ? QSize() : *PQSIZE(2), HB_ISNIL(3) ? QIcon::Normal : PQICON_MODE(3),
+                   HB_ISNIL(4) ? QIcon::Off : PQICON_STATE(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
 
     if (obj != nullptr) {
       RQPIXMAP(obj->pixmap(*PQSIZE(1), HB_ISNIL(2) ? QIcon::Normal : PQICON_MODE(2),
-                                         HB_ISNIL(3) ? QIcon::Off : PQICON_STATE(3)));
+                           HB_ISNIL(3) ? QIcon::Off : PQICON_STATE(3)));
     }
   } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QPixmap pixmap(int w, int h, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
@@ -313,7 +313,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
 
     if (obj != nullptr) {
       RQPIXMAP(obj->pixmap(PINT(1), PINT(2), HB_ISNIL(3) ? QIcon::Normal : PQICON_MODE(3),
-                                         HB_ISNIL(4) ? QIcon::Off : PQICON_STATE(4)));
+                           HB_ISNIL(4) ? QIcon::Off : PQICON_STATE(4)));
     }
   } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // QPixmap pixmap(int extent, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
 
     if (obj != nullptr) {
       RQPIXMAP(obj->pixmap(PINT(1), HB_ISNIL(2) ? QIcon::Normal : PQICON_MODE(2),
-                                         HB_ISNIL(3) ? QIcon::Off : PQICON_STATE(3)));
+                           HB_ISNIL(3) ? QIcon::Off : PQICON_STATE(3)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -782,8 +782,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INDEX)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
-      RQMODELINDEX(obj->index(PINT(1), PINT(2),
-                              HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
+      RQMODELINDEX(obj->index(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -989,8 +988,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INSERTROWS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
-      RBOOL(obj->insertRows(PINT(1), PINT(2),
-                            HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
+      RBOOL(obj->insertRows(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1008,8 +1006,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INSERTCOLUMNS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
-      RBOOL(obj->insertColumns(PINT(1), PINT(2),
-                               HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
+      RBOOL(obj->insertColumns(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1027,8 +1024,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_REMOVEROWS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
-      RBOOL(obj->removeRows(PINT(1), PINT(2),
-                            HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
+      RBOOL(obj->removeRows(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1046,8 +1042,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_REMOVECOLUMNS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
-      RBOOL(obj->removeColumns(PINT(1), PINT(2),
-                               HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
+      RBOOL(obj->removeColumns(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

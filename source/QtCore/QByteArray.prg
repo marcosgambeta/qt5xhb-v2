@@ -1948,8 +1948,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOPERCENTENCODING)
         (HB_ISNUM(3) || HB_ISCHAR(3) || HB_ISNIL(3))) {
 #endif
       RQBYTEARRAY(obj->toPercentEncoding(HB_ISNIL(1) ? QByteArray() : *PQBYTEARRAY(1),
-                                         HB_ISNIL(2) ? QByteArray() : *PQBYTEARRAY(2),
-                                         OPCHAR(3, '%')));
+                                         HB_ISNIL(2) ? QByteArray() : *PQBYTEARRAY(2), OPCHAR(3, '%')));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

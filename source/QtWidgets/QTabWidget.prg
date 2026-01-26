@@ -142,8 +142,7 @@ HB_FUNC_STATIC(QTABWIDGET_ADDTAB)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RINT(obj->addTab(PQWIDGET(1), HB_ISOBJECT(2) ? *PQICON(2) : QIcon(hb_parc(2)),
-                       PQSTRING(3)));
+      RINT(obj->addTab(PQWIDGET(1), HB_ISOBJECT(2) ? *PQICON(2) : QIcon(hb_parc(2)), PQSTRING(3)));
     }
 
   } else {
@@ -452,9 +451,7 @@ HB_FUNC_STATIC(QTABWIDGET_INSERTTAB)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RINT(obj->insertTab(PINT(1), PQWIDGET(2),
-                          HB_ISOBJECT(3) ? *PQICON(3) : QIcon(hb_parc(3)),
-                          PQSTRING(4)));
+      RINT(obj->insertTab(PINT(1), PQWIDGET(2), HB_ISOBJECT(3) ? *PQICON(3) : QIcon(hb_parc(3)), PQSTRING(4)));
     }
 
   } else {

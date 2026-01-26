@@ -73,8 +73,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_NEW)
 
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQGRAPHICSITEMORNIL(2)) {
     // QGraphicsSimpleTextItem(const QString &text, QGraphicsItem *parent = nullptr)
-    auto obj = new QGraphicsSimpleTextItem(PQSTRING(1),
-                                           HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
+    auto obj = new QGraphicsSimpleTextItem(PQSTRING(1), HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
     Qt5xHb::returnNewObject(obj, true);
 
   } else {

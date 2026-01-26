@@ -106,7 +106,8 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES)
   }
 }
 
-// virtual QList<QSize> supportedResolutions(const QVideoEncoderSettings &settings, bool *continuous = nullptr) const = 0
+// virtual QList<QSize> supportedResolutions(const QVideoEncoderSettings &settings, bool *continuous = nullptr) const =
+// 0
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS)
 {
   auto obj = qobject_cast<QVideoEncoderSettingsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());

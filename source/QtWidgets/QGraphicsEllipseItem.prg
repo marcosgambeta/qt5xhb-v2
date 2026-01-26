@@ -72,14 +72,13 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_NEW)
 
   } else if (ISBETWEEN(1, 2) && ISQRECTF(1) && ISQGRAPHICSITEMORNIL(2)) {
     // QGraphicsEllipseItem(const QRectF &rect, QGraphicsItem *parent = nullptr)
-    auto obj = new QGraphicsEllipseItem(*PQRECTF(1),
-                                        HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
+    auto obj = new QGraphicsEllipseItem(*PQRECTF(1), HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
     Qt5xHb::returnNewObject(obj, true);
 
   } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQGRAPHICSITEMORNIL(5)) {
     // QGraphicsEllipseItem(qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent = nullptr)
-    auto obj = new QGraphicsEllipseItem(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
-                                        HB_ISNIL(5) ? nullptr : PQGRAPHICSITEM(5));
+    auto obj =
+        new QGraphicsEllipseItem(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5) ? nullptr : PQGRAPHICSITEM(5));
     Qt5xHb::returnNewObject(obj, true);
 
   } else {

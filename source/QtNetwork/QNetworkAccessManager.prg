@@ -763,8 +763,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CONNECTTOHOSTENCRYPTED)
     if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISQSSLCONFIGURATIONORNIL(3)) {
 #endif
       obj->connectToHostEncrypted(PQSTRING(1), OPQUINT16(2, 443),
-                                  HB_ISNIL(3) ? QSslConfiguration::defaultConfiguration()
-                                              : *PQSSLCONFIGURATION(3));
+                                  HB_ISNIL(3) ? QSslConfiguration::defaultConfiguration() : *PQSSLCONFIGURATION(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

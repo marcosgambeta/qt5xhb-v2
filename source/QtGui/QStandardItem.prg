@@ -150,8 +150,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_NEW)
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
     // QStandardItem(const QIcon &icon, const QString &text)
-    auto obj = new QStandardItem(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)),
-                                 PQSTRING(2));
+    auto obj = new QStandardItem(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     // QStandardItem(int rows, int columns = 1)

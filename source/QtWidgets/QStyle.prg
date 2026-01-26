@@ -283,8 +283,7 @@ HB_FUNC_STATIC(QSTYLE_LAYOUTSPACING)
     if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQSTYLEOPTIONORNIL(4) && ISQWIDGETORNIL(5)) {
 #endif
       RINT(obj->layoutSpacing(PQSIZEPOLICY_CONTROLTYPE(1), PQSIZEPOLICY_CONTROLTYPE(2), PQT_ORIENTATION(3),
-                              HB_ISNIL(4) ? nullptr : PQSTYLEOPTION(4),
-                              OPQWIDGET(5, nullptr)));
+                              HB_ISNIL(4) ? nullptr : PQSTYLEOPTION(4), OPQWIDGET(5, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -303,9 +302,7 @@ HB_FUNC_STATIC(QSTYLE_PIXELMETRIC)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3)) {
 #endif
-      RINT(obj->pixelMetric(PQSTYLE_PIXELMETRIC(1),
-                            HB_ISNIL(2) ? nullptr : PQSTYLEOPTION(2),
-                            OPQWIDGET(3, nullptr)));
+      RINT(obj->pixelMetric(PQSTYLE_PIXELMETRIC(1), HB_ISNIL(2) ? nullptr : PQSTYLEOPTION(2), OPQWIDGET(3, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -399,8 +396,7 @@ HB_FUNC_STATIC(QSTYLE_STANDARDICON)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3)) {
 #endif
-      RQICON(obj->standardIcon(PQSTYLE_STANDARDPIXMAP(1),
-                               HB_ISNIL(2) ? nullptr : PQSTYLEOPTION(2),
+      RQICON(obj->standardIcon(PQSTYLE_STANDARDPIXMAP(1), HB_ISNIL(2) ? nullptr : PQSTYLEOPTION(2),
                                OPQWIDGET(3, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -438,9 +434,8 @@ HB_FUNC_STATIC(QSTYLE_STYLEHINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3) && ISQSTYLEHINTRETURNORNIL(4)) {
 #endif
-      RINT(obj->styleHint(
-          PQSTYLE_STYLEHINT(1), HB_ISNIL(2) ? nullptr : PQSTYLEOPTION(2),
-          OPQWIDGET(3, nullptr), HB_ISNIL(4) ? nullptr : PQSTYLEHINTRETURN(4)));
+      RINT(obj->styleHint(PQSTYLE_STYLEHINT(1), HB_ISNIL(2) ? nullptr : PQSTYLEOPTION(2), OPQWIDGET(3, nullptr),
+                          HB_ISNIL(4) ? nullptr : PQSTYLEHINTRETURN(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

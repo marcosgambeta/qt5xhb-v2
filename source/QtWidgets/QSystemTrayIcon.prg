@@ -81,8 +81,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_NEW)
 
   } else if (ISBETWEEN(1, 2) && (ISQICON(1) || HB_ISCHAR(1)) && ISQOBJECTORNIL(2)) {
     // QSystemTrayIcon(const QIcon &icon, QObject *parent = nullptr)
-    auto obj = new QSystemTrayIcon(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)),
-                                   OPQOBJECT(2, nullptr));
+    auto obj = new QSystemTrayIcon(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 
   } else {

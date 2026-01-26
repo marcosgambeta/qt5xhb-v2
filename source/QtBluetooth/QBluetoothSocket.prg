@@ -248,8 +248,8 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CONNECTTOSERVICE)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISBETWEEN(2, 3) && ISQBLUETOOTHADDRESS(1) && ISQBLUETOOTHUUID(2) && ISNUMORNIL(3)) {
-    // void connectToService(const QBluetoothAddress &address, const QBluetoothUuid &uuid, QIODevice::OpenMode openMode =
-    // QIODevice::ReadWrite)
+    // void connectToService(const QBluetoothAddress &address, const QBluetoothUuid &uuid, QIODevice::OpenMode openMode
+    // = QIODevice::ReadWrite)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     if (obj != nullptr) {
       obj->connectToService(*PQBLUETOOTHADDRESS(1), *PQBLUETOOTHUUID(2),
@@ -416,8 +416,9 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_PEERPORT)
 #endif
 }
 
-// bool setSocketDescriptor(int socketDescriptor, QBluetoothServiceInfo::Protocol socketType, QBluetoothSocket::SocketState
-// socketState = QBluetoothSocket::ConnectedState, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
+// bool setSocketDescriptor(int socketDescriptor, QBluetoothServiceInfo::Protocol socketType,
+// QBluetoothSocket::SocketState socketState = QBluetoothSocket::ConnectedState, QIODevice::OpenMode openMode =
+// QIODevice::ReadWrite)
 HB_FUNC_STATIC(QBLUETOOTHSOCKET_SETSOCKETDESCRIPTOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

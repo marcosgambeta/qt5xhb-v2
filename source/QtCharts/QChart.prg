@@ -134,8 +134,8 @@ HB_FUNC_STATIC(QCHART_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   if (ISBETWEEN(0, 2) && ISQGRAPHICSITEMORNIL(1) && ISNUMORNIL(2)) {
-    auto obj = new QChart(HB_ISNIL(1) ? nullptr : PQGRAPHICSITEM(1),
-                          HB_ISNIL(2) ? Qt::WindowFlags() : PQT_WINDOWFLAGS(2));
+    auto obj =
+        new QChart(HB_ISNIL(1) ? nullptr : PQGRAPHICSITEM(1), HB_ISNIL(2) ? Qt::WindowFlags() : PQT_WINDOWFLAGS(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

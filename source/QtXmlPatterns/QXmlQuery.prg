@@ -95,8 +95,7 @@ HB_FUNC_STATIC(QXMLQUERY_NEW)
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQXMLNAMEPOOLORNIL(2)) {
     // QXmlQuery(QXmlQuery::QueryLanguage queryLanguage, const QXmlNamePool &np = QXmlNamePool())
-    auto obj = new QXmlQuery(PQXMLQUERY_QUERYLANGUAGE(1),
-                             HB_ISNIL(2) ? QXmlNamePool() : *PQXMLNAMEPOOL(2));
+    auto obj = new QXmlQuery(PQXMLQUERY_QUERYLANGUAGE(1), HB_ISNIL(2) ? QXmlNamePool() : *PQXMLNAMEPOOL(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

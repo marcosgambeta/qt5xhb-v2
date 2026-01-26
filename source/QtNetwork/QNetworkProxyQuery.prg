@@ -113,8 +113,8 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
                                       HB_ISNIL(5) ? QNetworkProxyQuery::TcpSocket : PQNETWORKPROXYQUERY_QUERYTYPE(5));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 4) && ISQNETWORKCONFIGURATION(1) && HB_ISNUM(2) && ISCHARORNIL(3) && ISNUMORNIL(4)) {
-    // QNetworkProxyQuery(const QNetworkConfiguration &networkConfiguration, quint16 bindPort, const QString &protocolTag
-    // = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpServer)
+    // QNetworkProxyQuery(const QNetworkConfiguration &networkConfiguration, quint16 bindPort, const QString
+    // &protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpServer)
     auto obj = new QNetworkProxyQuery(*PQNETWORKCONFIGURATION(1), PQUINT16(2), OPQSTRING(3, QString()),
                                       HB_ISNIL(4) ? QNetworkProxyQuery::TcpServer : PQNETWORKPROXYQUERY_QUERYTYPE(4));
     Qt5xHb::returnNewObject(obj, true);

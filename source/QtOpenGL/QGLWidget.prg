@@ -469,8 +469,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      obj->renderText(PINT(1), PINT(2), PQSTRING(3),
-                      HB_ISNIL(4) ? QFont() : *PQFONT(4));
+      obj->renderText(PINT(1), PINT(2), PQSTRING(3), HB_ISNIL(4) ? QFont() : *PQFONT(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -479,8 +478,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
     auto obj = qobject_cast<QGLWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      obj->renderText(PDOUBLE(1), PDOUBLE(2), PDOUBLE(3), PQSTRING(4),
-                      HB_ISNIL(5) ? QFont() : *PQFONT(5));
+      obj->renderText(PDOUBLE(1), PDOUBLE(2), PDOUBLE(3), PQSTRING(4), HB_ISNIL(5) ? QFont() : *PQFONT(5));
     }
 
     hb_itemReturn(hb_stackSelfItem());

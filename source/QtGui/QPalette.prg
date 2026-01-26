@@ -566,8 +566,7 @@ HB_FUNC_STATIC(QPALETTE_SETCOLOR)
     auto obj = static_cast<QPalette *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->setColor(PQPALETTE_COLORGROUP(1), PQPALETTE_COLORROLE(2),
-                    HB_ISOBJECT(3) ? *PQCOLOR(3) : QColor(hb_parc(3)));
+      obj->setColor(PQPALETTE_COLORGROUP(1), PQPALETTE_COLORROLE(2), HB_ISOBJECT(3) ? *PQCOLOR(3) : QColor(hb_parc(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -576,8 +575,7 @@ HB_FUNC_STATIC(QPALETTE_SETCOLOR)
     auto obj = static_cast<QPalette *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->setColor(PQPALETTE_COLORROLE(1),
-                    HB_ISOBJECT(2) ? *PQCOLOR(2) : QColor(hb_parc(2)));
+      obj->setColor(PQPALETTE_COLORROLE(1), HB_ISOBJECT(2) ? *PQCOLOR(2) : QColor(hb_parc(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());

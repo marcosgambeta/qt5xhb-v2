@@ -119,8 +119,8 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_NEW)
              ISNUMORNIL(4)) {
     // QListWidgetItem(const QIcon &icon, const QString &text, QListWidget *parent = nullptr, int type =
     // QListWidgetItem::Type)
-    auto obj = new QListWidgetItem(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)),
-                                   PQSTRING(2), OPQLISTWIDGET(3, nullptr), OPINT(4, QListWidgetItem::Type));
+    auto obj = new QListWidgetItem(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), PQSTRING(2),
+                                   OPQLISTWIDGET(3, nullptr), OPINT(4, QListWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
 
   } else if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1)) {

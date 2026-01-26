@@ -258,8 +258,8 @@ HB_FUNC_STATIC(QPAGESIZE_ID)
     RENUM(QPageSize::id(*PQSIZE(1), HB_ISNIL(2) ? QPageSize::FuzzyMatch : PQPAGESIZE_SIZEMATCHPOLICY(2)));
 #endif
   } else if (ISBETWEEN(2, 3) && ISQSIZEF(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
-    // static QPageSize::PageSizeId id(const QSizeF &size, QPageSize::Unit units, QPageSize::SizeMatchPolicy matchPolicy =
-    // QPageSize::FuzzyMatch)
+    // static QPageSize::PageSizeId id(const QSizeF &size, QPageSize::Unit units, QPageSize::SizeMatchPolicy matchPolicy
+    // = QPageSize::FuzzyMatch)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 
     RENUM(QPageSize::id(*PQSIZEF(1), PQPAGESIZE_UNIT(2),

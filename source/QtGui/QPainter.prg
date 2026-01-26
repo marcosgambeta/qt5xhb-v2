@@ -282,8 +282,7 @@ HB_FUNC_STATIC(QPAINTER_BOUNDINGRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RQRECTF(obj->boundingRect(*PQRECTF(1), PQSTRING(2),
-                                HB_ISNIL(3) ? QTextOption() : *PQTEXTOPTION(3)));
+      RQRECTF(obj->boundingRect(*PQRECTF(1), PQSTRING(2), HB_ISNIL(3) ? QTextOption() : *PQTEXTOPTION(3)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1164,8 +1163,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->drawText(*PQRECTF(1), PINT(2), PQSTRING(3),
-                    HB_ISNIL(4) ? nullptr : PQRECTF(4));
+      obj->drawText(*PQRECTF(1), PINT(2), PQSTRING(3), HB_ISNIL(4) ? nullptr : PQRECTF(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1174,8 +1172,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->drawText(*PQRECT(1), PINT(2), PQSTRING(3),
-                    HB_ISNIL(4) ? nullptr : PQRECT(4));
+      obj->drawText(*PQRECT(1), PINT(2), PQSTRING(3), HB_ISNIL(4) ? nullptr : PQRECT(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1195,8 +1192,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->drawText(PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6),
-                    HB_ISNIL(7) ? nullptr : PQRECT(7));
+      obj->drawText(PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6), HB_ISNIL(7) ? nullptr : PQRECT(7));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1205,8 +1201,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->drawText(*PQRECTF(1), PQSTRING(2),
-                    HB_ISNIL(3) ? QTextOption() : *PQTEXTOPTION(3));
+      obj->drawText(*PQRECTF(1), PQSTRING(2), HB_ISNIL(3) ? QTextOption() : *PQTEXTOPTION(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1222,8 +1217,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTILEDPIXMAP)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->drawTiledPixmap(*PQRECTF(1), *PQPIXMAP(2),
-                           HB_ISNIL(3) ? QPointF() : *PQPOINTF(3));
+      obj->drawTiledPixmap(*PQRECTF(1), *PQPIXMAP(2), HB_ISNIL(3) ? QPointF() : *PQPOINTF(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1232,8 +1226,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTILEDPIXMAP)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->drawTiledPixmap(*PQRECT(1), *PQPIXMAP(2),
-                           HB_ISNIL(3) ? QPoint() : *PQPOINT(3));
+      obj->drawTiledPixmap(*PQRECT(1), *PQPIXMAP(2), HB_ISNIL(3) ? QPoint() : *PQPOINT(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1423,8 +1416,7 @@ HB_FUNC_STATIC(QPAINTER_FILLRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->fillRect(PINT(1), PINT(2), PINT(3), PINT(4),
-                    HB_ISOBJECT(5) ? *PQCOLOR(5) : QColor(hb_parc(5)));
+      obj->fillRect(PINT(1), PINT(2), PINT(3), PINT(4), HB_ISOBJECT(5) ? *PQCOLOR(5) : QColor(hb_parc(5)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
