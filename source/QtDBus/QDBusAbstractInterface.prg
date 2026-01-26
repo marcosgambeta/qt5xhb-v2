@@ -232,14 +232,14 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALL)
 
     if (obj != nullptr) {
       RQDBUSMESSAGE(
-          obj->call(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2)),
-                    HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)),
-                    HB_ISNIL(4) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(4)),
-                    HB_ISNIL(5) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(5)),
-                    HB_ISNIL(6) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(6)),
-                    HB_ISNIL(7) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(7)),
-                    HB_ISNIL(8) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(8)),
-                    HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(9))));
+          obj->call(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *PQVARIANT(2),
+                    HB_ISNIL(3) ? QVariant() : *PQVARIANT(3),
+                    HB_ISNIL(4) ? QVariant() : *PQVARIANT(4),
+                    HB_ISNIL(5) ? QVariant() : *PQVARIANT(5),
+                    HB_ISNIL(6) ? QVariant() : *PQVARIANT(6),
+                    HB_ISNIL(7) ? QVariant() : *PQVARIANT(7),
+                    HB_ISNIL(8) ? QVariant() : *PQVARIANT(8),
+                    HB_ISNIL(9) ? QVariant() : *PQVARIANT(9)));
     }
   } else if (ISBETWEEN(2, 10) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
              ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) &&
@@ -252,14 +252,14 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_CALL)
 
     if (obj != nullptr) {
       RQDBUSMESSAGE(obj->call(
-          PQDBUS_CALLMODE(1), PQSTRING(2), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)),
-          HB_ISNIL(4) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(4)),
-          HB_ISNIL(5) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(5)),
-          HB_ISNIL(6) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(6)),
-          HB_ISNIL(7) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(7)),
-          HB_ISNIL(8) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(8)),
-          HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(9)),
-          HB_ISNIL(10) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(10))));
+          PQDBUS_CALLMODE(1), PQSTRING(2), HB_ISNIL(3) ? QVariant() : *PQVARIANT(3),
+          HB_ISNIL(4) ? QVariant() : *PQVARIANT(4),
+          HB_ISNIL(5) ? QVariant() : *PQVARIANT(5),
+          HB_ISNIL(6) ? QVariant() : *PQVARIANT(6),
+          HB_ISNIL(7) ? QVariant() : *PQVARIANT(7),
+          HB_ISNIL(8) ? QVariant() : *PQVARIANT(8),
+          HB_ISNIL(9) ? QVariant() : *PQVARIANT(9),
+          HB_ISNIL(10) ? QVariant() : *PQVARIANT(10)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -340,14 +340,14 @@ HB_FUNC_STATIC(QDBUSABSTRACTINTERFACE_ASYNCCALL)
         ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
 #endif
       RQDBUSPENDINGCALL(
-          obj->asyncCall(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2)),
-                         HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)),
-                         HB_ISNIL(4) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(4)),
-                         HB_ISNIL(5) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(5)),
-                         HB_ISNIL(6) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(6)),
-                         HB_ISNIL(7) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(7)),
-                         HB_ISNIL(8) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(8)),
-                         HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(9))));
+          obj->asyncCall(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *PQVARIANT(2),
+                         HB_ISNIL(3) ? QVariant() : *PQVARIANT(3),
+                         HB_ISNIL(4) ? QVariant() : *PQVARIANT(4),
+                         HB_ISNIL(5) ? QVariant() : *PQVARIANT(5),
+                         HB_ISNIL(6) ? QVariant() : *PQVARIANT(6),
+                         HB_ISNIL(7) ? QVariant() : *PQVARIANT(7),
+                         HB_ISNIL(8) ? QVariant() : *PQVARIANT(8),
+                         HB_ISNIL(9) ? QVariant() : *PQVARIANT(9)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

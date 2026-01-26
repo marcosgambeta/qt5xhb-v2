@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QDBUSINTERFACE_NEW)
       ISQOBJECTORNIL(5)) {
     auto obj = new QDBusInterface(PQSTRING(1), PQSTRING(2), OPQSTRING(3, QString()),
                                   HB_ISNIL(4) ? QDBusConnection::sessionBus()
-                                              : *static_cast<QDBusConnection *>(Qt5xHb::itemGetPtr(4)),
+                                              : *PQDBUSCONNECTION(4),
                                   OPQOBJECT(5, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
