@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_NEW)
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 3) && ISQMEDIAPLAYLIST(1) && ISQURLORNIL(2) && ISOPTLOG(3)) {
     // QMediaContent(QMediaPlaylist *playlist, const QUrl &contentUrl = QUrl(), bool takeOwnership = false)
-    auto obj = new QMediaContent(PQMEDIAPLAYLIST(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2)),
+    auto obj = new QMediaContent(PQMEDIAPLAYLIST(1), HB_ISNIL(2) ? QUrl() : *PQURL(2),
                                  OPBOOL(3, false));
     Qt5xHb::returnNewObject(obj, true);
   } else {

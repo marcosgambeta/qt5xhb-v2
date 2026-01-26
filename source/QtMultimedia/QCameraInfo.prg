@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QCAMERAINFO_NEW)
   if (ISBETWEEN(0, 1) && ISQBYTEARRAY(1)) {
     // QCameraInfo(const QByteArray &name = QByteArray())
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-    auto obj = new QCameraInfo(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(1)));
+    auto obj = new QCameraInfo(HB_ISNIL(1) ? QByteArray() : *PQBYTEARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQCAMERA(1)) {

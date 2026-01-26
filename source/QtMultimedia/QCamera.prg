@@ -608,7 +608,7 @@ HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERSETTINGS)
     if (ISBETWEEN(0, 1) && ISQCAMERAVIEWFINDERSETTINGSORNIL(1)) {
 #endif
       auto list = obj->supportedViewfinderSettings(
-          HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings *>(Qt5xHb::itemGetPtr(1)));
+          HB_ISNIL(1) ? QCameraViewfinderSettings() : *PQCAMERAVIEWFINDERSETTINGS(1));
       auto pDynSym = hb_dynsymFindName("QCAMERAVIEWFINDERSETTINGS");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
@@ -652,7 +652,7 @@ HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS)
     if (ISBETWEEN(0, 1) && ISQCAMERAVIEWFINDERSETTINGSORNIL(1)) {
 #endif
       auto list = obj->supportedViewfinderResolutions(
-          HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings *>(Qt5xHb::itemGetPtr(1)));
+          HB_ISNIL(1) ? QCameraViewfinderSettings() : *PQCAMERAVIEWFINDERSETTINGS(1));
       auto pDynSym = hb_dynsymFindName("QSIZE");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
@@ -699,7 +699,7 @@ HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERPIXELFORMATS)
     if (ISBETWEEN(0, 1) && ISQCAMERAVIEWFINDERSETTINGSORNIL(1)) {
 #endif
       auto list = obj->supportedViewfinderPixelFormats(
-          HB_ISNIL(1) ? QCameraViewfinderSettings() : *static_cast<QCameraViewfinderSettings *>(Qt5xHb::itemGetPtr(1)));
+          HB_ISNIL(1) ? QCameraViewfinderSettings() : *PQCAMERAVIEWFINDERSETTINGS(1));
       auto pArray = hb_itemArrayNew(0);
       for (const auto &item : list) {
         auto pItem = hb_itemPutNI(nullptr, static_cast<int>(item));
