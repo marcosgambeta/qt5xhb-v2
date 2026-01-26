@@ -79,7 +79,7 @@ HB_FUNC_STATIC(Q3DSCATTER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   if (ISBETWEEN(0, 2) && ISQSURFACEFORMATORNIL(1) && ISQWINDOWORNIL(2)) {
-    auto obj = new Q3DScatter(HB_ISNIL(1) ? nullptr : static_cast<QSurfaceFormat *>(Qt5xHb::itemGetPtr(1)),
+    auto obj = new Q3DScatter(HB_ISNIL(1) ? nullptr : PQSURFACEFORMAT(1),
                               OPQWINDOW(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
