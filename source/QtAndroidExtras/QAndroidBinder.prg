@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_TRANSACT)
     if (ISBETWEEN(2, 4) && HB_ISNUM(1) && ISQANDROIDPARCEL(2) && ISQANDROIDPARCELORNIL(3) && ISNUMORNIL(4)) {
 #endif
       RBOOL(obj->transact(PINT(1), *PQANDROIDPARCEL(2),
-                          HB_ISNIL(3) ? nullptr : static_cast<QAndroidParcel *>(Qt5xHb::itemGetPtr(3)),
+                          HB_ISNIL(3) ? nullptr : PQANDROIDPARCEL(3),
                           HB_ISNIL(4) ? CallType::Normal : PQANDROIDBINDER_CALLTYPE(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
