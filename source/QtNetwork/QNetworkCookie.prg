@@ -83,8 +83,8 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NEW)
 {
   if (ISBETWEEN(0, 2) && ISOPTQBYTEARRAY(1) && ISOPTQBYTEARRAY(2)) {
     // QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())
-    auto obj = new QNetworkCookie(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(1)),
-                                  HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(2)));
+    auto obj = new QNetworkCookie(HB_ISNIL(1) ? QByteArray() : *PQBYTEARRAY(1),
+                                  HB_ISNIL(2) ? QByteArray() : *PQBYTEARRAY(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1)) {
     // QNetworkCookie(const QNetworkCookie &other)

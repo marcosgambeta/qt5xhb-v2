@@ -764,7 +764,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CONNECTTOHOSTENCRYPTED)
 #endif
       obj->connectToHostEncrypted(PQSTRING(1), OPQUINT16(2, 443),
                                   HB_ISNIL(3) ? QSslConfiguration::defaultConfiguration()
-                                              : *static_cast<QSslConfiguration *>(Qt5xHb::itemGetPtr(3)));
+                                              : *PQSSLCONFIGURATION(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

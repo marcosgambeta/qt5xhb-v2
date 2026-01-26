@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_QUERYPROXY)
     if (ISBETWEEN(0, 1) && ISQNETWORKPROXYQUERYORNIL(1)) {
 #endif
       auto list = obj->queryProxy(HB_ISNIL(1) ? QNetworkProxyQuery()
-                                              : *static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtr(1)));
+                                              : *PQNETWORKPROXYQUERY(1));
       auto pDynSym = hb_dynsymFindName("QNETWORKPROXY");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY)
   if (ISBETWEEN(0, 1) && ISQNETWORKPROXYQUERYORNIL(1)) {
 #endif
     auto list = QNetworkProxyFactory::systemProxyForQuery(
-        HB_ISNIL(1) ? QNetworkProxyQuery() : *static_cast<QNetworkProxyQuery *>(Qt5xHb::itemGetPtr(1)));
+        HB_ISNIL(1) ? QNetworkProxyQuery() : *PQNETWORKPROXYQUERY(1));
     auto pDynSym = hb_dynsymFindName("QNETWORKPROXY");
     auto pArray = hb_itemArrayNew(0);
     if (pDynSym != nullptr) {

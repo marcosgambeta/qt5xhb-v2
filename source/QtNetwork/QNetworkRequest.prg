@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQURLORNIL(1)) {
     // QNetworkRequest(const QUrl &url = QUrl())
-    auto obj = new QNetworkRequest(HB_ISNIL(1) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(1)));
+    auto obj = new QNetworkRequest(HB_ISNIL(1) ? QUrl() : *PQURL(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQNETWORKREQUEST(1)) {
     // QNetworkRequest(const QNetworkRequest &other)
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_ATTRIBUTE)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQVARIANTORNIL(2)) {
 #endif
       RQVARIANT(obj->attribute(PQNETWORKREQUEST_ATTRIBUTE(1),
-                               HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2))));
+                               HB_ISNIL(2) ? QVariant() : *PQVARIANT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

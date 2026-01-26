@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_NEW)
     // 0) [IMPLICIT]
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     auto obj = new QNetworkDatagram(*PQBYTEARRAY(1),
-                                    HB_ISNIL(2) ? QHostAddress() : *static_cast<QHostAddress *>(Qt5xHb::itemGetPtr(2)),
+                                    HB_ISNIL(2) ? QHostAddress() : *PQHOSTADDRESS(2),
                                     OPQUINT16(3, 0));
     Qt5xHb::returnNewObject(obj, true);
 #endif

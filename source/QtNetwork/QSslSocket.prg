@@ -951,7 +951,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPRIVATEKEY)
     if (obj != nullptr) {
       obj->setPrivateKey(PQSTRING(1), HB_ISNIL(2) ? QSsl::Rsa : PQSSL_KEYALGORITHM(2),
                          HB_ISNIL(3) ? QSsl::Pem : PQSSL_ENCODINGFORMAT(3),
-                         HB_ISNIL(4) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(4)));
+                         HB_ISNIL(4) ? QByteArray() : *PQBYTEARRAY(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
