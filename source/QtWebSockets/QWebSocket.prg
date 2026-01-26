@@ -845,7 +845,7 @@ HB_FUNC_STATIC(QWEBSOCKET_PING)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISQBYTEARRAYORNIL(1)) {
 #endif
-      obj->ping(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(1)));
+      obj->ping(HB_ISNIL(1) ? QByteArray() : *PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
