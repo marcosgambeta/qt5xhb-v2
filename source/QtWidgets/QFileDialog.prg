@@ -1334,7 +1334,7 @@ HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILEURL)
 #endif
     RQURL(QFileDialog::getOpenFileUrl(
         OPQWIDGET(1, nullptr), OPQSTRING(2, QString()),
-        HB_ISNIL(3) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(3)), OPQSTRING(4, QString()), nullptr,
+        HB_ISNIL(3) ? QUrl() : *PQURL(3), OPQSTRING(4, QString()), nullptr,
         HB_ISNIL(6) ? static_cast<QFileDialog::Options>(0) : PQFILEDIALOG_OPTIONS(6), OPQSTRINGLIST(7, QStringList())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -1354,7 +1354,7 @@ HB_FUNC_STATIC(QFILEDIALOG_GETSAVEFILEURL)
 #endif
     RQURL(QFileDialog::getSaveFileUrl(
         OPQWIDGET(1, nullptr), OPQSTRING(2, QString()),
-        HB_ISNIL(3) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(3)), OPQSTRING(4, QString()), nullptr,
+        HB_ISNIL(3) ? QUrl() : *PQURL(3), OPQSTRING(4, QString()), nullptr,
         HB_ISNIL(6) ? static_cast<QFileDialog::Options>(0) : PQFILEDIALOG_OPTIONS(6), OPQSTRINGLIST(7, QStringList())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -1373,7 +1373,7 @@ HB_FUNC_STATIC(QFILEDIALOG_GETEXISTINGDIRECTORYURL)
 #endif
     RQURL(QFileDialog::getExistingDirectoryUrl(
         OPQWIDGET(1, nullptr), OPQSTRING(2, QString()),
-        HB_ISNIL(3) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(3)),
+        HB_ISNIL(3) ? QUrl() : *PQURL(3),
         HB_ISNIL(4) ? static_cast<QFileDialog::Options>(QFileDialog::ShowDirsOnly) : PQFILEDIALOG_OPTIONS(4),
         OPQSTRINGLIST(5, QStringList())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1394,7 +1394,7 @@ HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILEURLS)
 #endif
     auto list = QFileDialog::getOpenFileUrls(
         OPQWIDGET(1, nullptr), OPQSTRING(2, QString()),
-        HB_ISNIL(3) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(3)), OPQSTRING(4, QString()), nullptr,
+        HB_ISNIL(3) ? QUrl() : *PQURL(3), OPQSTRING(4, QString()), nullptr,
         HB_ISNIL(6) ? static_cast<QFileDialog::Options>(0) : PQFILEDIALOG_OPTIONS(6), OPQSTRINGLIST(7, QStringList()));
     auto pDynSym = hb_dynsymFindName("QURL");
     auto pArray = hb_itemArrayNew(0);

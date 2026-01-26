@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      auto ptr = obj->addAction(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
+      auto ptr = obj->addAction(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)),
                                 PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }

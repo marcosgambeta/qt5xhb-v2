@@ -587,7 +587,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_ENSUREVISIBLE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->ensureVisible(HB_ISNIL(1) ? QRectF() : *static_cast<QRectF *>(Qt5xHb::itemGetPtr(1)), OPINT(2, 50),
+      obj->ensureVisible(HB_ISNIL(1) ? QRectF() : *PQRECTF(1), OPINT(2, 50),
                          OPINT(3, 50));
     }
 
@@ -1936,7 +1936,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SCROLL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECTFORNIL(3)) {
 #endif
-      obj->scroll(PQREAL(1), PQREAL(2), HB_ISNIL(3) ? QRectF() : *static_cast<QRectF *>(Qt5xHb::itemGetPtr(3)));
+      obj->scroll(PQREAL(1), PQREAL(2), HB_ISNIL(3) ? QRectF() : *PQRECTF(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2077,7 +2077,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SETCACHEMODE)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSIZEORNIL(2)) {
 #endif
       obj->setCacheMode(PQGRAPHICSITEM_CACHEMODE(1),
-                        HB_ISNIL(2) ? QSize() : *static_cast<QSize *>(Qt5xHb::itemGetPtr(2)));
+                        HB_ISNIL(2) ? QSize() : *PQSIZE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2837,7 +2837,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_UPDATE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->update(HB_ISNIL(1) ? QRectF() : *static_cast<QRectF *>(Qt5xHb::itemGetPtr(1)));
+      obj->update(HB_ISNIL(1) ? QRectF() : *PQRECTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());

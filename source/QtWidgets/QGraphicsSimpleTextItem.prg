@@ -68,13 +68,13 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQGRAPHICSITEMORNIL(1)) {
     // QGraphicsSimpleTextItem(QGraphicsItem *parent = nullptr)
-    auto obj = new QGraphicsSimpleTextItem(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(1)));
+    auto obj = new QGraphicsSimpleTextItem(HB_ISNIL(1) ? nullptr : PQGRAPHICSITEM(1));
     Qt5xHb::returnNewObject(obj, true);
 
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQGRAPHICSITEMORNIL(2)) {
     // QGraphicsSimpleTextItem(const QString &text, QGraphicsItem *parent = nullptr)
     auto obj = new QGraphicsSimpleTextItem(PQSTRING(1),
-                                           HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(2)));
+                                           HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
     Qt5xHb::returnNewObject(obj, true);
 
   } else {

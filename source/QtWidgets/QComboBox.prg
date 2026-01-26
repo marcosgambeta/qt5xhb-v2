@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->addItem(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(2)));
+      obj->addItem(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *PQVARIANT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -180,8 +180,8 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->addItem(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2),
-                   HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)));
+      obj->addItem(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), PQSTRING(2),
+                   HB_ISNIL(3) ? QVariant() : *PQVARIANT(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->insertItem(PINT(1), PQSTRING(2), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(3)));
+      obj->insertItem(PINT(1), PQSTRING(2), HB_ISNIL(3) ? QVariant() : *PQVARIANT(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -415,8 +415,8 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->insertItem(PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(2)) : QIcon(hb_parc(2)),
-                      PQSTRING(3), HB_ISNIL(4) ? QVariant() : *static_cast<QVariant *>(Qt5xHb::itemGetPtr(4)));
+      obj->insertItem(PINT(1), HB_ISOBJECT(2) ? *PQICON(2) : QIcon(hb_parc(2)),
+                      PQSTRING(3), HB_ISNIL(4) ? QVariant() : *PQVARIANT(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -892,7 +892,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETITEMICON)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2))) {
 #endif
-      obj->setItemIcon(PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(2)) : QIcon(hb_parc(2)));
+      obj->setItemIcon(PINT(1), HB_ISOBJECT(2) ? *PQICON(2) : QIcon(hb_parc(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

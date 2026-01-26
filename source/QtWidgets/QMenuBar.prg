@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QMENUBAR_ADDMENU)
 
     if (obj != nullptr) {
       auto ptr =
-          obj->addMenu(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2));
+          obj->addMenu(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)), PQSTRING(2));
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
 

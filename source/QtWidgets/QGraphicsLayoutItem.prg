@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSIZEFORNIL(2)) {
 #endif
       RQSIZEF(obj->effectiveSizeHint(PQT_SIZEHINT(1),
-                                     HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF *>(Qt5xHb::itemGetPtr(2))));
+                                     HB_ISNIL(2) ? QSizeF() : *PQSIZEF(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQGRAPHICSLAYOUTITEMORNIL(1)) {
     auto obj =
-        new QGraphicsGridLayout(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsLayoutItem *>(Qt5xHb::itemGetPtr(1)));
+        new QGraphicsGridLayout(HB_ISNIL(1) ? nullptr : PQGRAPHICSLAYOUTITEM(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -943,7 +943,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SIZEHINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSIZEFORNIL(2)) {
 #endif
-      RQSIZEF(obj->sizeHint(PQT_SIZEHINT(1), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF *>(Qt5xHb::itemGetPtr(2))));
+      RQSIZEF(obj->sizeHint(PQT_SIZEHINT(1), HB_ISNIL(2) ? QSizeF() : *PQSIZEF(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

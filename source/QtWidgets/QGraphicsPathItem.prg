@@ -63,13 +63,13 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQGRAPHICSITEMORNIL(1)) {
     // QGraphicsPathItem(QGraphicsItem *parent = nullptr)
-    auto obj = new QGraphicsPathItem(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(1)));
+    auto obj = new QGraphicsPathItem(HB_ISNIL(1) ? nullptr : PQGRAPHICSITEM(1));
     Qt5xHb::returnNewObject(obj, true);
 
   } else if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && ISQGRAPHICSITEMORNIL(2)) {
     // QGraphicsPathItem(const QPainterPath &path, QGraphicsItem *parent = nullptr)
     auto obj = new QGraphicsPathItem(*PQPAINTERPATH(1),
-                                     HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(2)));
+                                     HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
     Qt5xHb::returnNewObject(obj, true);
 
   } else {

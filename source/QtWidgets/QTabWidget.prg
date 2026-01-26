@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QTABWIDGET_ADDTAB)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      RINT(obj->addTab(PQWIDGET(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(2)) : QIcon(hb_parc(2)),
+      RINT(obj->addTab(PQWIDGET(1), HB_ISOBJECT(2) ? *PQICON(2) : QIcon(hb_parc(2)),
                        PQSTRING(3)));
     }
 
@@ -453,7 +453,7 @@ HB_FUNC_STATIC(QTABWIDGET_INSERTTAB)
 
     if (obj != nullptr) {
       RINT(obj->insertTab(PINT(1), PQWIDGET(2),
-                          HB_ISOBJECT(3) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(3)) : QIcon(hb_parc(3)),
+                          HB_ISOBJECT(3) ? *PQICON(3) : QIcon(hb_parc(3)),
                           PQSTRING(4)));
     }
 
@@ -585,7 +585,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABICON)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2))) {
 #endif
-      obj->setTabIcon(PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(2)) : QIcon(hb_parc(2)));
+      obj->setTabIcon(PINT(1), HB_ISOBJECT(2) ? *PQICON(2) : QIcon(hb_parc(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

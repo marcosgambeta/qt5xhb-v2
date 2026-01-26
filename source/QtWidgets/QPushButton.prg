@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_NEW)
 
   } else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQWIDGETORNIL(3)) {
     // QPushButton(const QIcon &icon, const QString &text, QWidget *parent = nullptr)
-    auto obj = new QPushButton(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt5xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
+    auto obj = new QPushButton(HB_ISOBJECT(1) ? *PQICON(1) : QIcon(hb_parc(1)),
                                PQSTRING(2), OPQWIDGET(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 

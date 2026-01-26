@@ -95,13 +95,13 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQGRAPHICSITEMORNIL(1)) {
     // QGraphicsTextItem(QGraphicsItem *parent = nullptr)
-    auto obj = new QGraphicsTextItem(HB_ISNIL(1) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(1)));
+    auto obj = new QGraphicsTextItem(HB_ISNIL(1) ? nullptr : PQGRAPHICSITEM(1));
     Qt5xHb::returnNewObject(obj, false);
 
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQGRAPHICSITEMORNIL(2)) {
     // QGraphicsTextItem(const QString &text, QGraphicsItem *parent = nullptr)
     auto obj =
-        new QGraphicsTextItem(PQSTRING(1), HB_ISNIL(2) ? nullptr : static_cast<QGraphicsItem *>(Qt5xHb::itemGetPtr(2)));
+        new QGraphicsTextItem(PQSTRING(1), HB_ISNIL(2) ? nullptr : PQGRAPHICSITEM(2));
     Qt5xHb::returnNewObject(obj, false);
 
   } else {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
 #endif
-      obj->setDefaultTextColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
+      obj->setDefaultTextColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

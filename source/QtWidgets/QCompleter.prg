@@ -666,7 +666,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISQRECTORNIL(1)) {
 #endif
-      obj->complete(HB_ISNIL(1) ? QRect() : *static_cast<QRect *>(Qt5xHb::itemGetPtr(1)));
+      obj->complete(HB_ISNIL(1) ? QRect() : *PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
