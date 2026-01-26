@@ -71,14 +71,14 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_NEW)
     // QGLPixelBuffer(const QSize &size, const QGLFormat &format = QGLFormat::defaultFormat(), QGLWidget *shareWidget =
     // nullptr)
     auto obj = new QGLPixelBuffer(
-        *PQSIZE(1), HB_ISNIL(2) ? QGLFormat::defaultFormat() : *static_cast<QGLFormat *>(Qt5xHb::itemGetPtr(2)),
+        *PQSIZE(1), HB_ISNIL(2) ? QGLFormat::defaultFormat() : *PQGLFORMAT(2),
         OPQGLWIDGET(3, nullptr));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQGLFORMATORNIL(3) && ISQGLWIDGETORNIL(4)) {
     // QGLPixelBuffer(int width, int height, const QGLFormat &format = QGLFormat::defaultFormat(), QGLWidget *shareWidget
     // = nullptr)
     auto obj = new QGLPixelBuffer(
-        PINT(1), PINT(2), HB_ISNIL(3) ? QGLFormat::defaultFormat() : *static_cast<QGLFormat *>(Qt5xHb::itemGetPtr(3)),
+        PINT(1), PINT(2), HB_ISNIL(3) ? QGLFormat::defaultFormat() : *PQGLFORMAT(3),
         OPQGLWIDGET(4, nullptr));
     Qt5xHb::returnNewObject(obj, true);
   } else {

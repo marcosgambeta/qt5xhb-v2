@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QGLWIDGET_QGLCLEARCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
 #endif
-      obj->qglClearColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
+      obj->qglClearColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -433,7 +433,7 @@ HB_FUNC_STATIC(QGLWIDGET_QGLCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
 #endif
-      obj->qglColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
+      obj->qglColor(HB_ISOBJECT(1) ? *PQCOLOR(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -470,7 +470,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
 
     if (obj != nullptr) {
       obj->renderText(PINT(1), PINT(2), PQSTRING(3),
-                      HB_ISNIL(4) ? QFont() : *static_cast<QFont *>(Qt5xHb::itemGetPtr(4)));
+                      HB_ISNIL(4) ? QFont() : *PQFONT(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -480,7 +480,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
 
     if (obj != nullptr) {
       obj->renderText(PDOUBLE(1), PDOUBLE(2), PDOUBLE(3), PQSTRING(4),
-                      HB_ISNIL(5) ? QFont() : *static_cast<QFont *>(Qt5xHb::itemGetPtr(5)));
+                      HB_ISNIL(5) ? QFont() : *PQFONT(5));
     }
 
     hb_itemReturn(hb_stackSelfItem());

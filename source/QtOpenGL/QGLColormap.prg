@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_SETENTRY)
     auto obj = static_cast<QGLColormap *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->setEntry(PINT(1), HB_ISOBJECT(2) ? *static_cast<QColor *>(Qt5xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
+      obj->setEntry(PINT(1), HB_ISOBJECT(2) ? *PQCOLOR(2) : QColor(hb_parc(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
