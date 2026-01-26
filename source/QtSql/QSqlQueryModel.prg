@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_SETQUERY)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
-      obj->setQuery(PQSTRING(1), HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase *>(Qt5xHb::itemGetPtr(2)));
+      obj->setQuery(PQSTRING(1), HB_ISNIL(2) ? QSqlDatabase() : *PQSQLDATABASE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_CANFETCHMORE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1)) {
 #endif
-      RBOOL(obj->canFetchMore(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1))));
+      RBOOL(obj->canFetchMore(HB_ISNIL(1) ? QModelIndex() : *PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_COLUMNCOUNT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1)) {
 #endif
-      RINT(obj->columnCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1))));
+      RINT(obj->columnCount(HB_ISNIL(1) ? QModelIndex() : *PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_FETCHMORE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1)) {
 #endif
-      obj->fetchMore(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1)));
+      obj->fetchMore(HB_ISNIL(1) ? QModelIndex() : *PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_INSERTCOLUMNS)
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
       RBOOL(obj->insertColumns(PINT(1), PINT(2),
-                               HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
+                               HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_REMOVECOLUMNS)
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
       RBOOL(obj->removeColumns(PINT(1), PINT(2),
-                               HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(3))));
+                               HB_ISNIL(3) ? QModelIndex() : *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_ROWCOUNT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1)) {
 #endif
-      RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt5xHb::itemGetPtr(1))));
+      RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
