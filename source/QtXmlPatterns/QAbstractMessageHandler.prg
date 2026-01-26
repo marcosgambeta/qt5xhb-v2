@@ -67,8 +67,8 @@ HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_MESSAGE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQURLORNIL(3) && ISQSOURCELOCATIONORNIL(4)) {
 #endif
-      obj->message(PQTMSGTYPE(1), PQSTRING(2), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(3)),
-                   HB_ISNIL(4) ? QSourceLocation() : *static_cast<QSourceLocation *>(Qt5xHb::itemGetPtr(4)));
+      obj->message(PQTMSGTYPE(1), PQSTRING(2), HB_ISNIL(3) ? QUrl() : *PQURL(3),
+                   HB_ISNIL(4) ? QSourceLocation() : *PQSOURCELOCATION(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

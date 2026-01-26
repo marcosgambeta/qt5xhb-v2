@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QXMLQUERY_NEW)
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQXMLNAMEPOOLORNIL(2)) {
     // QXmlQuery(QXmlQuery::QueryLanguage queryLanguage, const QXmlNamePool &np = QXmlNamePool())
     auto obj = new QXmlQuery(PQXMLQUERY_QUERYLANGUAGE(1),
-                             HB_ISNIL(2) ? QXmlNamePool() : *static_cast<QXmlNamePool *>(Qt5xHb::itemGetPtr(2)));
+                             HB_ISNIL(2) ? QXmlNamePool() : *PQXMLNAMEPOOL(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -422,7 +422,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->setQuery(PQIODEVICE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2)));
+      obj->setQuery(PQIODEVICE(1), HB_ISNIL(2) ? QUrl() : *PQURL(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -431,7 +431,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->setQuery(*PQURL(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2)));
+      obj->setQuery(*PQURL(1), HB_ISNIL(2) ? QUrl() : *PQURL(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
     auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      obj->setQuery(PQSTRING(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2)));
+      obj->setQuery(PQSTRING(1), HB_ISNIL(2) ? QUrl() : *PQURL(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());

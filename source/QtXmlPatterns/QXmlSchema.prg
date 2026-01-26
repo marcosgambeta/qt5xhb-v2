@@ -148,14 +148,14 @@ HB_FUNC_STATIC(QXMLSCHEMA_LOAD)
     auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RBOOL(obj->load(PQIODEVICE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2))));
+      RBOOL(obj->load(PQIODEVICE(1), HB_ISNIL(2) ? QUrl() : *PQURL(2)));
     }
   } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQURLORNIL(2)) {
     // bool load(const QByteArray &data, const QUrl &documentUri = QUrl())
     auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != nullptr) {
-      RBOOL(obj->load(*PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2))));
+      RBOOL(obj->load(*PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *PQURL(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
