@@ -562,7 +562,7 @@ HB_FUNC_STATIC(QWEBFRAME_LOAD)
     if (obj != nullptr) {
       obj->load(*PQNETWORKREQUEST(1),
                 HB_ISNIL(2) ? QNetworkAccessManager::GetOperation : PQNETWORKACCESSMANAGER_OPERATION(2),
-                HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray *>(Qt5xHb::itemGetPtr(3)));
+                HB_ISNIL(3) ? QByteArray() : *PQBYTEARRAY(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -634,7 +634,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
     auto obj = qobject_cast<QWebFrame *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != nullptr) {
-      obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRegion() : *static_cast<QRegion *>(Qt5xHb::itemGetPtr(2)));
+      obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRegion() : *PQREGION(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -644,7 +644,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
 
     if (obj != nullptr) {
       obj->render(PQPAINTER(1), PQWEBFRAME_RENDERLAYERS(2),
-                  HB_ISNIL(3) ? QRegion() : *static_cast<QRegion *>(Qt5xHb::itemGetPtr(3)));
+                  HB_ISNIL(3) ? QRegion() : *PQREGION(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -811,7 +811,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETCONTENT)
     if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && ISCHARORNIL(2) && ISQURLORNIL(3)) {
 #endif
       obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString()),
-                      HB_ISNIL(3) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(3)));
+                      HB_ISNIL(3) ? QUrl() : *PQURL(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -851,7 +851,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETHTML)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQURLORNIL(2)) {
 #endif
-      obj->setHtml(PQSTRING(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2)));
+      obj->setHtml(PQSTRING(1), HB_ISNIL(2) ? QUrl() : *PQURL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
