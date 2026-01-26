@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QWEBENGINEHTTPREQUEST_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQURLORNIL(1) && ISNUMORNIL(2)) {
     // QWebEngineHttpRequest(const QUrl &url = QUrl(), QWebEngineHttpRequest::Method = QWebEngineHttpRequest::Get)
-    auto obj = new QWebEngineHttpRequest(HB_ISNIL(1) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(1)),
+    auto obj = new QWebEngineHttpRequest(HB_ISNIL(1) ? QUrl() : *PQURL(1),
                                          HB_ISNIL(2) ? QWebEngineHttpRequest::Get : PQWEBENGINEHTTPREQUEST_METHOD(2));
     Qt5xHb::returnNewObject(obj, true);
   }

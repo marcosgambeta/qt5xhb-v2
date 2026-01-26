@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_SETCOOKIE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQNETWORKCOOKIE(1) && ISQURLORNIL(2)) {
 #endif
-      obj->setCookie(*PQNETWORKCOOKIE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2)));
+      obj->setCookie(*PQNETWORKCOOKIE(1), HB_ISNIL(2) ? QUrl() : *PQURL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QWEBENGINECOOKIESTORE_DELETECOOKIE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQNETWORKCOOKIE(1) && ISQURLORNIL(2)) {
 #endif
-      obj->deleteCookie(*PQNETWORKCOOKIE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt5xHb::itemGetPtr(2)));
+      obj->deleteCookie(*PQNETWORKCOOKIE(1), HB_ISNIL(2) ? QUrl() : *PQURL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
