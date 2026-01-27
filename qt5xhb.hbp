@@ -1,7 +1,7 @@
 #
 # Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 #
-# Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
+# Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 #
 
 # Before use this file:
@@ -12,52 +12,126 @@
 -hbcontainer
 
 qt5xhb_qaxcontainer.hbp
+
 qt5xhb_qaxserver.hbp
+
+# QtAndroidExtras: module introduced in Qt 5.2
 #qt5xhb_qtandroidextras.hbp
+
+# QtBluetooth: module introduced in Qt 5.2
 qt5xhb_qtbluetooth.hbp
+
+# QtCharts: module introduced in Qt 5.7
 qt5xhb_qtcharts.hbp
+
 qt5xhb_qtcore.hbp
+
+# QtDataVisualization: module introduced in Qt 5.8
 qt5xhb_qtdatavisualization.hbp
+
+# QtDBus: module introduced in Qt 5.2
 qt5xhb_qtdbus.hbp
+
 #qt5xhb_qtdeclarative.hbp
+
 qt5xhb_qtdesigner.hbp
+
+# QtGamepad: module introduced in Qt 5.2
 qt5xhb_qtgamepad.hbp
+
 qt5xhb_qtgui.hbp
+
 qt5xhb_qthelp.hbp
+
+# QtLocation: module introduced in Qt 5.4
 qt5xhb_qtlocation.hbp
+
+# QtMacExtras: module introduced in Qt 5.2
 #qt5xhb_macextras.hbp
+
 qt5xhb_qtmultimedia.hbp
+
 qt5xhb_qtmultimediawidgets.hbp
+
 qt5xhb_qtnetwork.hbp
+
+# QtNetworkAuth: module introduced in Qt 5.10
 qt5xhb_qtnetworkauth.hbp
+
 qt5xhb_qtopengl.hbp
+
+# QtPositioning: module introduced in Qt 5.2
 qt5xhb_qtpositioning.hbp
+
 qt5xhb_qtprintsupport.hbp
+
 qt5xhb_qtpurchasing.hbp
+
 qt5xhb_qtqml.hbp
+
 qt5xhb_qtquick.hbp
+
+# QtQuickWidgets: module introduced in Qt 5.3
 qt5xhb_qtquickwidgets.hbp
+
 qt5xhb_qtscript.hbp
+
 qt5xhb_qtscripttools.hbp
+
+# QtSensors: module introduced in Qt 5.1
 qt5xhb_qtsensors.hbp
+
+# QtSerialBus: module introduced in Qt 5.8
 qt5xhb_qtserialbus.hbp
+
+# QtSerialPort: module introduced in Qt 5.1
 qt5xhb_qtserialport.hbp
+
 qt5xhb_qtsql.hbp
+
 qt5xhb_qtsvg.hbp
+
 #qt5xhb_qttest.hbp
+
+# QtTextToSpeech: module introduced in Qt 5.10
 qt5xhb_qttexttospeech.hbp
+
+# QtUiTools: module introduced in Qt 5.2
 qt5xhb_qtuitools.hbp
+
+# QtVirtualKeyboard: module introduced in Qt 5.8
 qt5xhb_qtvirtualkeyboard.hbp
+
+# QtWebChannel: module introduced in Qt 5.4
 qt5xhb_qtwebchannel.hbp
+
+# QtWebEngine: module introduced in Qt 5.4
 #qt5xhb_qtwebengine.hbp
+
+# QtWebEngineCore: module introduced in Qt 5.6
 #qt5xhb_qtwebenginecore.hbp
+
+# QtWebEngineWidgets: module introduced in Qt 5.4
 #qt5xhb_qtwebenginewidgets.hbp
+
 #qt5xhb_qtwebkit.hbp
+
 #qt5xhb_qtwebkitwidgets.hbp
+
+# QtWebSockets: module introduced in Qt 5.3
 qt5xhb_qtwebsockets.hbp
+
+# QtWebView: module introduced in Qt 5.4
 #qt5xhb_qtwebview.hbp
+
 qt5xhb_qtwidgets.hbp
+
+# QtWinExtras: module introduced in Qt 5.2
 qt5xhb_qtwinextras.hbp
+
+# QtX11Extras: module introduced in Qt 5.1
 #qt5xhb_qtx11extras.hbp
+
 qt5xhb_qtxml.hbp
+
 qt5xhb_qtxmlpatterns.hbp
