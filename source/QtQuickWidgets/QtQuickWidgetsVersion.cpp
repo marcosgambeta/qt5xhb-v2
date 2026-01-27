@@ -9,7 +9,7 @@
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #include <QtQuickWidgets/QtQuickWidgetsVersion>
 #endif
 #endif
@@ -19,7 +19,7 @@
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #include <QtQuickWidgets/QtQuickWidgetsVersion>
 #endif
 #endif
