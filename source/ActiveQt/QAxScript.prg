@@ -67,7 +67,7 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem())
 
-// QAxScript(const QString &name, QAxScriptManager * manager)
+// QAxScript(const QString &name, QAxScriptManager *manager)
 HB_FUNC_STATIC(QAXSCRIPT_NEW)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQAXSCRIPTMANAGER(2)) {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QAXSCRIPT_SCRIPTCODE)
   }
 }
 
-// QAxScriptEngine * scriptEngine() const
+// QAxScriptEngine *scriptEngine() const
 HB_FUNC_STATIC(QAXSCRIPT_SCRIPTENGINE)
 {
   GET_PTR_FROM_SELF(obj);
@@ -228,7 +228,6 @@ HB_FUNC_STATIC(QAXSCRIPT_ONENTERED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -276,7 +275,6 @@ HB_FUNC_STATIC(QAXSCRIPT_ONERROR)
                                  hb_itemRelease(pArg4);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -314,7 +312,6 @@ HB_FUNC_STATIC(QAXSCRIPT_ONFINISHED1)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -355,7 +352,6 @@ HB_FUNC_STATIC(QAXSCRIPT_ONFINISHED2)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -403,7 +399,6 @@ HB_FUNC_STATIC(QAXSCRIPT_ONFINISHED3)
                 hb_itemRelease(pArg4);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -443,7 +438,6 @@ HB_FUNC_STATIC(QAXSCRIPT_ONSTATECHANGED)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

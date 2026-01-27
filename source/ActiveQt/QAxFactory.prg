@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QAXFACTORY_CLASSID)
   }
 }
 
-// virtual QObject * createObject(const QString &key) = 0
+// virtual QObject *createObject(const QString &key) = 0
 HB_FUNC_STATIC(QAXFACTORY_CREATEOBJECT)
 {
   GET_PTR_FROM_SELF(obj);
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QAXFACTORY_ISSERVICE)
   }
 }
 
-// virtual const QMetaObject * metaObject(const QString &key) const = 0
+// virtual const QMetaObject *metaObject(const QString &key) const = 0
 HB_FUNC_STATIC(QAXFACTORY_METAOBJECT)
 {
   GET_PTR_FROM_SELF(obj);
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QAXFACTORY_METAOBJECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-      auto ptr = obj->metaObject(PQSTRING(1));
+      const auto ptr = obj->metaObject(PQSTRING(1));
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QAXFACTORY_METAOBJECT)
   }
 }
 
-// virtual void registerClass(const QString &key, QSettings * settings) const
+// virtual void registerClass(const QString &key, QSettings *settings) const
 HB_FUNC_STATIC(QAXFACTORY_REGISTERCLASS)
 {
   GET_PTR_FROM_SELF(obj);
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QAXFACTORY_TYPELIBID)
   }
 }
 
-// virtual void unregisterClass(const QString &key, QSettings * settings) const
+// virtual void unregisterClass(const QString &key, QSettings *settings) const
 HB_FUNC_STATIC(QAXFACTORY_UNREGISTERCLASS)
 {
   GET_PTR_FROM_SELF(obj);
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QAXFACTORY_ISSERVER)
 #endif
 }
 
-// static bool registerActiveObject(QObject * object)
+// static bool registerActiveObject(QObject *object)
 HB_FUNC_STATIC(QAXFACTORY_REGISTERACTIVEOBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

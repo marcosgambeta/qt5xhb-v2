@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QAXBINDABLE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// virtual QAxAggregated * createAggregate()
+// virtual QAxAggregated *createAggregate()
 HB_FUNC_STATIC(QAXBINDABLE_CREATEAGGREGATE)
 {
   GET_PTR_FROM_SELF(obj);
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QAXBINDABLE_CREATEAGGREGATE)
   }
 }
 
-// virtual bool readData(QIODevice * source, const QString &format)
+// virtual bool readData(QIODevice *source, const QString &format)
 HB_FUNC_STATIC(QAXBINDABLE_READDATA)
 {
   GET_PTR_FROM_SELF(obj);
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QAXBINDABLE_REPORTERROR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// virtual bool writeData(QIODevice * sink)
+// virtual bool writeData(QIODevice *sink)
 HB_FUNC_STATIC(QAXBINDABLE_WRITEDATA)
 {
   GET_PTR_FROM_SELF(obj);

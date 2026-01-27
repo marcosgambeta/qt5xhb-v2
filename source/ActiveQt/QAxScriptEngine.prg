@@ -56,7 +56,7 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = static_cast<QAxScriptEngine *>(Qt5xHb::itemGetPtrStackSelfItem())
 
-// QAxScriptEngine(const QString &language, QAxScript * script)
+// QAxScriptEngine(const QString &language, QAxScript *script)
 HB_FUNC_STATIC(QAXSCRIPTENGINE_NEW)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQAXSCRIPT(2)) {

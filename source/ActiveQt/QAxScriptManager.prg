@@ -64,7 +64,7 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAxScriptManager *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-// QAxScriptManager(QObject * parent = nullptr)
+// QAxScriptManager(QObject *parent = nullptr)
 HB_FUNC_STATIC(QAXSCRIPTMANAGER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -87,9 +87,8 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_DELETE)
 
 HB_FUNC_STATIC(QAXSCRIPTMANAGER_ADDOBJECT)
 {
-
   if (ISNUMPAR(1) && ISQAXBASE(1)) {
-    // void addObject(QAxBase * object)
+    // void addObject(QAxBase *object)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
@@ -98,7 +97,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_ADDOBJECT)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
-    // void addObject(QObject * object)
+    // void addObject(QObject *object)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
@@ -160,7 +159,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_FUNCTIONS)
 HB_FUNC_STATIC(QAXSCRIPTMANAGER_LOAD)
 {
   if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3)) {
-    // QAxScript * load(const QString &code, const QString &name, const QString &language)
+    // QAxScript *load(const QString &code, const QString &name, const QString &language)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
@@ -168,7 +167,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_LOAD)
       Qt5xHb::createReturnQObjectClass(ptr, "QAXSCRIPT");
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    // QAxScript * load(const QString &file, const QString &name)
+    // QAxScript *load(const QString &file, const QString &name)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
@@ -180,7 +179,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_LOAD)
   }
 }
 
-// QAxScript * script(const QString &name) const
+// QAxScript *script(const QString &name) const
 HB_FUNC_STATIC(QAXSCRIPTMANAGER_SCRIPT)
 {
   GET_PTR_FROM_SELF(obj);
@@ -245,7 +244,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_SCRIPTFILEFILTER)
 #endif
 }
 
-// void error(QAxScript * script, int code, const QString &description, int sourcePosition, const QString &sourceText)
+// void error(QAxScript *script, int code, const QString &description, int sourcePosition, const QString &sourceText)
 HB_FUNC_STATIC(QAXSCRIPTMANAGER_ONERROR)
 {
   GET_PTR_FROM_SELF(sender);
@@ -279,7 +278,6 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_ONERROR)
                 hb_itemRelease(pArg5);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

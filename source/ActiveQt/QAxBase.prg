@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
 {
   if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
       ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
-    // QVariant dynamicCall(const char * function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
+    // QVariant dynamicCall(const char *function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
     // const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
     // QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
     GET_PTR_FROM_SELF(obj);
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
                                  HB_ISNIL(9) ? QVariant() : *PQVARIANT(9)));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
-    // QVariant dynamicCall(const char * function, QList<QVariant> &vars)
+    // QVariant dynamicCall(const char *function, QList<QVariant> &vars)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QAXBASE_ISNULL)
   }
 }
 
-// virtual bool propertyWritable(const char * prop) const
+// virtual bool propertyWritable(const char *prop) const
 HB_FUNC_STATIC(QAXBASE_PROPERTYWRITABLE)
 {
   GET_PTR_FROM_SELF(obj);
@@ -288,10 +288,9 @@ HB_FUNC_STATIC(QAXBASE_QUERYSUBOBJECT)
 {
   if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
       ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
-    // QAxObject * querySubObject(const char * name, const QVariant &var1 = QVariant(), const QVariant &var2 =
-    // QVariant(), const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 =
-    // QVariant(), const QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 =
-    // QVariant())
+    // QAxObject *querySubObject(const char *name, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
+    // const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
+    // QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
@@ -303,7 +302,7 @@ HB_FUNC_STATIC(QAXBASE_QUERYSUBOBJECT)
       Qt5xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
-    // QAxObject * querySubObject(const char * name, QList<QVariant> &vars)
+    // QAxObject *querySubObject(const char *name, QList<QVariant> &vars)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
@@ -333,7 +332,7 @@ HB_FUNC_STATIC(QAXBASE_SETCONTROL)
   }
 }
 
-// virtual void setPropertyWritable(const char * prop, bool ok)
+// virtual void setPropertyWritable(const char *prop, bool ok)
 HB_FUNC_STATIC(QAXBASE_SETPROPERTYWRITABLE)
 {
   GET_PTR_FROM_SELF(obj);

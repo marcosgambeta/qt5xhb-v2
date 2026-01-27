@@ -52,7 +52,7 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAxSelect *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-// QAxSelect(QWidget * parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags())
+// QAxSelect(QWidget *parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags())
 HB_FUNC_STATIC(QAXSELECT_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
