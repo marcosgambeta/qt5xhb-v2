@@ -77,7 +77,9 @@ RETURN
 #endif
 #endif
 
-    // QWinTaskbarProgress(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QWinTaskbarProgress(QObject *parent = nullptr)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -93,7 +95,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_NEW)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
@@ -105,7 +107,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_DELETE)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_VALUE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +127,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_VALUE)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETVALUE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +149,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETVALUE)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_MINIMUM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +169,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_MINIMUM)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETMINIMUM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +191,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETMINIMUM)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_MAXIMUM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +211,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_MAXIMUM)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETMAXIMUM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +233,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETMAXIMUM)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ISVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,7 +253,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ISVISIBLE)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,7 +275,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETVISIBLE)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ISPAUSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,7 +295,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ISPAUSED)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETPAUSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,7 +317,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETPAUSED)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ISSTOPPED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +337,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ISSTOPPED)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -357,7 +359,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SETRANGE)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_RESET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -379,7 +381,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_RESET)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_SHOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -401,7 +403,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_SHOW)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_HIDE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -423,7 +425,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_HIDE)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_PAUSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -445,7 +447,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_PAUSE)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_RESUME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -467,7 +469,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_RESUME)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_STOP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -489,7 +491,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_STOP)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONVALUECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto sender = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -511,7 +513,6 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONVALUECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -534,7 +535,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONVALUECHANGED)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONMINIMUMCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto sender = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -556,7 +557,6 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONMINIMUMCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -579,7 +579,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONMINIMUMCHANGED)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONMAXIMUMCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto sender = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -601,7 +601,6 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONMAXIMUMCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -624,7 +623,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONMAXIMUMCHANGED)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONVISIBILITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto sender = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -646,7 +645,6 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONVISIBILITYCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -669,7 +667,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONVISIBILITYCHANGED)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONPAUSEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto sender = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -691,7 +689,6 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONPAUSEDCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -714,7 +711,7 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONPAUSEDCHANGED)
 HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONSTOPPEDCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto sender = qobject_cast<QWinTaskbarProgress *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -736,7 +733,6 @@ HB_FUNC_STATIC(QWINTASKBARPROGRESS_ONSTOPPEDCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

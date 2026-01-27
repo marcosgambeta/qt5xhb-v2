@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QICON
-REQUEST QWINDOW
-REQUEST QWINTASKBARPROGRESS
+REQUEST QIcon
+REQUEST QWinTaskbarProgress
+REQUEST QWindow
 #endif
 
 CLASS QWinTaskbarButton INHERIT QObject
@@ -67,7 +67,9 @@ RETURN
 #include <QtGui/QWindow>
 #include <QtWinExtras/QWinTaskbarProgress>
 
-    // QWinTaskbarButton(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWinTaskbarButton *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QWinTaskbarButton(QObject *parent = nullptr)
 HB_FUNC_STATIC(QWINTASKBARBUTTON_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -83,7 +85,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_NEW)
 HB_FUNC_STATIC(QWINTASKBARBUTTON_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
@@ -95,7 +97,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_DELETE)
 HB_FUNC_STATIC(QWINTASKBARBUTTON_WINDOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +118,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_WINDOW)
 HB_FUNC_STATIC(QWINTASKBARBUTTON_SETWINDOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +140,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_SETWINDOW)
 HB_FUNC_STATIC(QWINTASKBARBUTTON_OVERLAYICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +160,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_OVERLAYICON)
 HB_FUNC_STATIC(QWINTASKBARBUTTON_SETOVERLAYICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,7 +182,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_SETOVERLAYICON)
 HB_FUNC_STATIC(QWINTASKBARBUTTON_CLEAROVERLAYICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +204,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_CLEAROVERLAYICON)
 HB_FUNC_STATIC(QWINTASKBARBUTTON_OVERLAYACCESSIBLEDESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +224,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_OVERLAYACCESSIBLEDESCRIPTION)
 HB_FUNC_STATIC(QWINTASKBARBUTTON_SETOVERLAYACCESSIBLEDESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,7 +246,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_SETOVERLAYACCESSIBLEDESCRIPTION)
 HB_FUNC_STATIC(QWINTASKBARBUTTON_PROGRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,7 +267,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_PROGRESS)
 HB_FUNC_STATIC(QWINTASKBARBUTTON_EVENTFILTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinTaskbarButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

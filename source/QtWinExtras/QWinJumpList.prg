@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QWINJUMPLISTCATEGORY
+REQUEST QWinJumpListCategory
 #endif
 
 CLASS QWinJumpList INHERIT QObject
@@ -61,7 +61,9 @@ RETURN
 #endif
 #endif
 
-    // QWinJumpList(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWinJumpList *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QWinJumpList(QObject *parent = nullptr)
 HB_FUNC_STATIC(QWINJUMPLIST_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -77,7 +79,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_NEW)
 HB_FUNC_STATIC(QWINJUMPLIST_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinJumpList *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
@@ -89,7 +91,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_DELETE)
 HB_FUNC_STATIC(QWINJUMPLIST_IDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinJumpList *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +111,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_IDENTIFIER)
 HB_FUNC_STATIC(QWINJUMPLIST_SETIDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinJumpList *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +133,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_SETIDENTIFIER)
 HB_FUNC_STATIC(QWINJUMPLIST_RECENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinJumpList *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,7 +154,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_RECENT)
 HB_FUNC_STATIC(QWINJUMPLIST_FREQUENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinJumpList *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +175,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_FREQUENT)
 HB_FUNC_STATIC(QWINJUMPLIST_TASKS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinJumpList *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,11 +192,11 @@ HB_FUNC_STATIC(QWINJUMPLIST_TASKS)
 #endif
 }
 
-// QList<QWinJumpListCategory*> categories() const
+// QList<QWinJumpListCategory *> categories() const
 HB_FUNC_STATIC(QWINJUMPLIST_CATEGORIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinJumpList *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,29 +231,33 @@ HB_FUNC_STATIC(QWINJUMPLIST_CATEGORIES)
 #endif
 }
 
+// void addCategory(QWinJumpListCategory *category)
 HB_FUNC_STATIC(QWINJUMPLIST_ADDCATEGORY)
 {
-  if (ISNUMPAR(1) && ISQWINJUMPLISTCATEGORY(1)) {
-    // void addCategory(QWinJumpListCategory *category)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = qobject_cast<QWinJumpList *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
-    if (obj != nullptr) {
-      obj->addCategory(PQWINJUMPLISTCATEGORY(1));
-    }
-
-    hb_itemReturn(hb_stackSelfItem());
+  if (obj != nullptr) {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if (ISNUMPAR(1) && ISQWINJUMPLISTCATEGORY(1)) {
 #endif
-  } else {
-    hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+      obj->addCategory(PQWINJUMPLISTCATEGORY(1));
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    } else {
+      hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+    }
+#endif
   }
+
+  hb_itemReturn(hb_stackSelfItem());
+#endif
 }
 
 // void clear()
 HB_FUNC_STATIC(QWINJUMPLIST_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinJumpList *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,10 +11,10 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCOLOR
-REQUEST QIMAGE
-REQUEST QPIXMAP
-REQUEST QREGION
+REQUEST QColor
+REQUEST QImage
+REQUEST QPixmap
+REQUEST QRegion
 #endif
 
 CLASS QtWin
@@ -92,7 +92,9 @@ RETURN
 #endif
 #endif
 
-    // static HBITMAP createMask(const QBitmap &bitmap)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QtWin *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// static HBITMAP createMask(const QBitmap &bitmap)
 HB_FUNC_STATIC(QTWIN_CREATEMASK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -398,17 +400,13 @@ HB_FUNC_STATIC(QTWIN_EXTENDFRAMEINTOCLIENTAREA)
   if (ISNUMPAR(5) && ISQWINDOW(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     // static void extendFrameIntoClientArea(QWindow *window, int left, int top, int right, int bottom)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-
     QtWin::extendFrameIntoClientArea(PQWINDOW(1), PINT(2), PINT(3), PINT(4), PINT(5));
-
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(2) && ISQWINDOW(1) && ISQMARGINS(2)) {
     // static void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-
     QtWin::extendFrameIntoClientArea(PQWINDOW(1), *PQMARGINS(2));
-
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else {
@@ -436,20 +434,16 @@ HB_FUNC_STATIC(QTWIN_RESETEXTENDEDFRAME)
 
 HB_FUNC_STATIC(QTWIN_ENABLEBLURBEHINDWINDOW)
 {
-  if (ISNUMPAR(1) && ISQWINDOW(1) && ISQREGION(2)) {
+  if (ISNUMPAR(2) && ISQWINDOW(1) && ISQREGION(2)) {
     // static void enableBlurBehindWindow(QWindow *window, const QRegion &region)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-
     QtWin::enableBlurBehindWindow(PQWINDOW(1), *PQREGION(2));
-
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else if (ISNUMPAR(1) && ISQWINDOW(1)) {
     // static void enableBlurBehindWindow(QWindow *window)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-
     QtWin::enableBlurBehindWindow(PQWINDOW(1));
-
     hb_itemReturn(hb_stackSelfItem());
 #endif
   } else {

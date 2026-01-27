@@ -50,7 +50,9 @@ RETURN
 #endif
 #endif
 
-    // QWinEvent(int type)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QWinEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QWinEvent(int type)
 HB_FUNC_STATIC(QWINEVENT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -66,7 +68,7 @@ HB_FUNC_STATIC(QWINEVENT_NEW)
 HB_FUNC_STATIC(QWINEVENT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWinEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 

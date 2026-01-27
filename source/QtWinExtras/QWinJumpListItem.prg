@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QICON
+REQUEST QIcon
 #endif
 
 CLASS QWinJumpListItem
@@ -74,7 +74,9 @@ RETURN
 #endif
 #endif
 
-    // QWinJumpListItem(QWinJumpListItem::Type type)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QWinJumpListItem *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QWinJumpListItem(QWinJumpListItem::Type type)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -90,7 +92,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_NEW)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWinJumpListItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -102,7 +104,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_DELETE)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWinJumpListItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +124,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_TYPE)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWinJumpListItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +146,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETTYPE)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_FILEPATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWinJumpListItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +166,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_FILEPATH)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETFILEPATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWinJumpListItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +188,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETFILEPATH)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_WORKINGDIRECTORY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWinJumpListItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +208,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_WORKINGDIRECTORY)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETWORKINGDIRECTORY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWinJumpListItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +230,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETWORKINGDIRECTORY)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_ICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWinJumpListItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,7 +250,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_ICON)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWinJumpListItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,7 +272,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETICON)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_TITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWinJumpListItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -290,7 +292,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_TITLE)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETTITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWinJumpListItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -312,7 +314,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETTITLE)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_DESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWinJumpListItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -332,7 +334,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_DESCRIPTION)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETDESCRIPTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWinJumpListItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,7 +356,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_SETDESCRIPTION)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_ARGUMENTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWinJumpListItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -374,7 +376,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_ARGUMENTS)
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETARGUMENTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QWinJumpListItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

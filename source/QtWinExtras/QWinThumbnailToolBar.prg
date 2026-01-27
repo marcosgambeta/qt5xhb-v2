@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QWINDOW
-REQUEST QWINTHUMBNAILTOOLBUTTON
+REQUEST QWinThumbnailToolButton
+REQUEST QWindow
 #endif
 
 CLASS QWinThumbnailToolBar INHERIT QObject
@@ -64,7 +64,9 @@ RETURN
 
 #include <QtGui/QWindow>
 
-    // QWinThumbnailToolBar(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QWinThumbnailToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QWinThumbnailToolBar(QObject *parent = nullptr)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -80,7 +82,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_NEW)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinThumbnailToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
@@ -92,7 +94,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_DELETE)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_WINDOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinThumbnailToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +115,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_WINDOW)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_SETWINDOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinThumbnailToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_SETWINDOW)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_ADDBUTTON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinThumbnailToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,7 +159,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_ADDBUTTON)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_REMOVEBUTTON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinThumbnailToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,11 +177,11 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_REMOVEBUTTON)
 #endif
 }
 
-// void setButtons(const QList<QWinThumbnailToolButton*> &buttons)
+// void setButtons(const QList<QWinThumbnailToolButton *> &buttons)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_SETBUTTONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinThumbnailToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,11 +206,11 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_SETBUTTONS)
 #endif
 }
 
-// QList<QWinThumbnailToolButton*> buttons() const
+// QList<QWinThumbnailToolButton *> buttons() const
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_BUTTONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinThumbnailToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +249,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_BUTTONS)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinThumbnailToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,7 +269,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_COUNT)
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QWinThumbnailToolBar *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
