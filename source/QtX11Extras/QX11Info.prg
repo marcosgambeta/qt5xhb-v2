@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
+REQUEST QByteArray
 #endif
 
 CLASS QX11Info
@@ -73,10 +73,12 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QX11Info *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QX11INFO_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  auto obj = static_cast<QX11Info *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
