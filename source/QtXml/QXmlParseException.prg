@@ -60,9 +60,11 @@ RETURN
 #include <QtXml/QXmlParseException>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QXmlParseException *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEW)
 {
-  if (ISBETWEEN(0, 5) && ISCHARORNIL(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISCHARORNIL(4) && ISNUMORNIL(5)) {
+  if (ISBETWEEN(0, 5) && ISCHARORNIL(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5)) {
     // QXmlParseException(const QString &name = QString(), int c = -1, int l = -1, const QString &p = QString(), const
     // QString &s = QString())
     auto obj = new QXmlParseException(OPQSTRING(1, QString()), OPINT(2, -1), OPINT(3, -1), OPQSTRING(4, QString()),
@@ -79,7 +81,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEW)
 
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_DELETE)
 {
-  auto obj = static_cast<QXmlParseException *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -89,7 +91,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_DELETE)
 // int columnNumber() const
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_COLUMNNUMBER)
 {
-  auto obj = static_cast<QXmlParseException *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +109,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_COLUMNNUMBER)
 // int lineNumber() const
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_LINENUMBER)
 {
-  auto obj = static_cast<QXmlParseException *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +127,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_LINENUMBER)
 // QString message() const
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_MESSAGE)
 {
-  auto obj = static_cast<QXmlParseException *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +145,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_MESSAGE)
 // QString publicId() const
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_PUBLICID)
 {
-  auto obj = static_cast<QXmlParseException *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +163,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_PUBLICID)
 // QString systemId() const
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_SYSTEMID)
 {
-  auto obj = static_cast<QXmlParseException *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

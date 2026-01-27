@@ -50,6 +50,8 @@ RETURN
 #include <QtXml/QDomEntity>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDomEntity *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDOMENTITY_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -67,7 +69,7 @@ HB_FUNC_STATIC(QDOMENTITY_NEW)
 
 HB_FUNC_STATIC(QDOMENTITY_DELETE)
 {
-  auto obj = static_cast<QDomEntity *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -77,7 +79,7 @@ HB_FUNC_STATIC(QDOMENTITY_DELETE)
 // QDomNode::NodeType nodeType() const
 HB_FUNC_STATIC(QDOMENTITY_NODETYPE)
 {
-  auto obj = static_cast<QDomEntity *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -95,7 +97,7 @@ HB_FUNC_STATIC(QDOMENTITY_NODETYPE)
 // QString notationName() const
 HB_FUNC_STATIC(QDOMENTITY_NOTATIONNAME)
 {
-  auto obj = static_cast<QDomEntity *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +115,7 @@ HB_FUNC_STATIC(QDOMENTITY_NOTATIONNAME)
 // QString publicId() const
 HB_FUNC_STATIC(QDOMENTITY_PUBLICID)
 {
-  auto obj = static_cast<QDomEntity *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +133,7 @@ HB_FUNC_STATIC(QDOMENTITY_PUBLICID)
 // QString systemId() const
 HB_FUNC_STATIC(QDOMENTITY_SYSTEMID)
 {
-  auto obj = static_cast<QDomEntity *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

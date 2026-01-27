@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDOMNAMEDNODEMAP
+REQUEST QDomNamedNodeMap
 #endif
 
 CLASS QDomDocumentType INHERIT QDomNode
@@ -54,6 +54,8 @@ RETURN
 #include <QtXml/QDomDocumentType>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -71,7 +73,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NEW)
 
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_DELETE)
 {
-  auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -81,7 +83,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_DELETE)
 // QDomNamedNodeMap entities() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_ENTITIES)
 {
-  auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -99,7 +101,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_ENTITIES)
 // QString internalSubset() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_INTERNALSUBSET)
 {
-  auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +119,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_INTERNALSUBSET)
 // QString name() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NAME)
 {
-  auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NAME)
 // QDomNode::NodeType nodeType() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NODETYPE)
 {
-  auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +155,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NODETYPE)
 // QDomNamedNodeMap notations() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NOTATIONS)
 {
-  auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +173,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NOTATIONS)
 // QString publicId() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_PUBLICID)
 {
-  auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +191,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_PUBLICID)
 // QString systemId() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_SYSTEMID)
 {
-  auto obj = static_cast<QDomDocumentType *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

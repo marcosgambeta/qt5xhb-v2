@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCHAR
+REQUEST QChar
 #endif
 
 CLASS QXmlInputSource
@@ -61,6 +61,8 @@ RETURN
 #include <QtXml/QXmlInputSource>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QXmlInputSource *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLINPUTSOURCE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -78,7 +80,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_NEW)
 
 HB_FUNC_STATIC(QXMLINPUTSOURCE_DELETE)
 {
-  auto obj = static_cast<QXmlInputSource *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_DELETE)
 // virtual QString data() const
 HB_FUNC_STATIC(QXMLINPUTSOURCE_DATA)
 {
-  auto obj = static_cast<QXmlInputSource *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_DATA)
 // virtual void fetchData()
 HB_FUNC_STATIC(QXMLINPUTSOURCE_FETCHDATA)
 {
-  auto obj = static_cast<QXmlInputSource *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_FETCHDATA)
 // virtual QChar next()
 HB_FUNC_STATIC(QXMLINPUTSOURCE_NEXT)
 {
-  auto obj = static_cast<QXmlInputSource *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +146,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_NEXT)
 // virtual void reset()
 HB_FUNC_STATIC(QXMLINPUTSOURCE_RESET)
 {
-  auto obj = static_cast<QXmlInputSource *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,7 +167,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_SETDATA)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // virtual void setData(const QString &dat)
-    auto obj = static_cast<QXmlInputSource *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setData(PQSTRING(1));
@@ -174,7 +176,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_SETDATA)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // virtual void setData(const QByteArray &dat)
-    auto obj = static_cast<QXmlInputSource *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setData(*PQBYTEARRAY(1));

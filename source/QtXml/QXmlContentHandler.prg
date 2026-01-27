@@ -66,9 +66,11 @@ RETURN
 #include <QtXml/QXmlContentHandler>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QXmlContentHandler *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_DELETE)
 {
-  auto obj = static_cast<QXmlContentHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -78,7 +80,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_DELETE)
 // virtual bool characters(const QString &ch) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_CHARACTERS)
 {
-  auto obj = static_cast<QXmlContentHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -96,7 +98,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_CHARACTERS)
 // virtual bool endDocument() = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_ENDDOCUMENT)
 {
-  auto obj = static_cast<QXmlContentHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +116,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_ENDDOCUMENT)
 // virtual bool endElement(const QString &namespaceURI, const QString &localName, const QString &qName) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_ENDELEMENT)
 {
-  auto obj = static_cast<QXmlContentHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_ENDELEMENT)
 // virtual bool endPrefixMapping(const QString &prefix) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_ENDPREFIXMAPPING)
 {
-  auto obj = static_cast<QXmlContentHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +152,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_ENDPREFIXMAPPING)
 // virtual QString errorString() const = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_ERRORSTRING)
 {
-  auto obj = static_cast<QXmlContentHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +170,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_ERRORSTRING)
 // virtual bool ignorableWhitespace(const QString &ch) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_IGNORABLEWHITESPACE)
 {
-  auto obj = static_cast<QXmlContentHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +188,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_IGNORABLEWHITESPACE)
 // virtual bool processingInstruction(const QString &target, const QString &data) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_PROCESSINGINSTRUCTION)
 {
-  auto obj = static_cast<QXmlContentHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +206,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_PROCESSINGINSTRUCTION)
 // virtual void setDocumentLocator(QXmlLocator *locator) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_SETDOCUMENTLOCATOR)
 {
-  auto obj = static_cast<QXmlContentHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +226,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_SETDOCUMENTLOCATOR)
 // virtual bool skippedEntity(const QString &name) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_SKIPPEDENTITY)
 {
-  auto obj = static_cast<QXmlContentHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +244,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_SKIPPEDENTITY)
 // virtual bool startDocument() = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_STARTDOCUMENT)
 {
-  auto obj = static_cast<QXmlContentHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +263,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_STARTDOCUMENT)
 // QXmlAttributes &atts) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_STARTELEMENT)
 {
-  auto obj = static_cast<QXmlContentHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +281,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_STARTELEMENT)
 // virtual bool startPrefixMapping(const QString &prefix, const QString &uri) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_STARTPREFIXMAPPING)
 {
-  auto obj = static_cast<QXmlContentHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

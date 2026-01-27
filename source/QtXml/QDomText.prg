@@ -48,6 +48,8 @@ RETURN
 #include <QtXml/QDomText>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDomText *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDOMTEXT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -65,7 +67,7 @@ HB_FUNC_STATIC(QDOMTEXT_NEW)
 
 HB_FUNC_STATIC(QDOMTEXT_DELETE)
 {
-  auto obj = static_cast<QDomText *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -75,7 +77,7 @@ HB_FUNC_STATIC(QDOMTEXT_DELETE)
 // QDomNode::NodeType nodeType() const
 HB_FUNC_STATIC(QDOMTEXT_NODETYPE)
 {
-  auto obj = static_cast<QDomText *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -93,7 +95,7 @@ HB_FUNC_STATIC(QDOMTEXT_NODETYPE)
 // QDomText splitText(int offset)
 HB_FUNC_STATIC(QDOMTEXT_SPLITTEXT)
 {
-  auto obj = static_cast<QDomText *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

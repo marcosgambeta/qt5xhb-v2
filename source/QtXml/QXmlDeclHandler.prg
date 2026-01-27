@@ -58,20 +58,22 @@ RETURN
 #include <QtXml/QXmlDeclHandler>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QXmlDeclHandler *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLDECLHANDLER_DELETE)
 {
-  auto obj = static_cast<QXmlDeclHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// virtual bool attributeDecl(const QString &eName, const QString &aName, const QString &type, const QString &
-// valueDefault, const QString &value) = 0
+// virtual bool attributeDecl(const QString &eName, const QString &aName, const QString &type, const QString
+// &valueDefault, const QString &value) = 0
 HB_FUNC_STATIC(QXMLDECLHANDLER_ATTRIBUTEDECL)
 {
-  auto obj = static_cast<QXmlDeclHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -89,7 +91,7 @@ HB_FUNC_STATIC(QXMLDECLHANDLER_ATTRIBUTEDECL)
 // virtual QString errorString() const = 0
 HB_FUNC_STATIC(QXMLDECLHANDLER_ERRORSTRING)
 {
-  auto obj = static_cast<QXmlDeclHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +109,7 @@ HB_FUNC_STATIC(QXMLDECLHANDLER_ERRORSTRING)
 // virtual bool externalEntityDecl(const QString &name, const QString &publicId, const QString &systemId) = 0
 HB_FUNC_STATIC(QXMLDECLHANDLER_EXTERNALENTITYDECL)
 {
-  auto obj = static_cast<QXmlDeclHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +127,7 @@ HB_FUNC_STATIC(QXMLDECLHANDLER_EXTERNALENTITYDECL)
 // virtual bool internalEntityDecl(const QString &name, const QString &value) = 0
 HB_FUNC_STATIC(QXMLDECLHANDLER_INTERNALENTITYDECL)
 {
-  auto obj = static_cast<QXmlDeclHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

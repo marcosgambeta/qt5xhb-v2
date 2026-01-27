@@ -55,6 +55,8 @@ RETURN
 #include <QtXml/QDomCharacterData>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDomCharacterData *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDOMCHARACTERDATA_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -72,7 +74,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_NEW)
 
 HB_FUNC_STATIC(QDOMCHARACTERDATA_DELETE)
 {
-  auto obj = static_cast<QDomCharacterData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_DELETE)
 // void appendData(const QString &arg)
 HB_FUNC_STATIC(QDOMCHARACTERDATA_APPENDDATA)
 {
-  auto obj = static_cast<QDomCharacterData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -102,7 +104,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_APPENDDATA)
 // QString data() const
 HB_FUNC_STATIC(QDOMCHARACTERDATA_DATA)
 {
-  auto obj = static_cast<QDomCharacterData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +122,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_DATA)
 // void deleteData(unsigned long offset, unsigned long count)
 HB_FUNC_STATIC(QDOMCHARACTERDATA_DELETEDATA)
 {
-  auto obj = static_cast<QDomCharacterData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +142,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_DELETEDATA)
 // void insertData(unsigned long offset, const QString &arg)
 HB_FUNC_STATIC(QDOMCHARACTERDATA_INSERTDATA)
 {
-  auto obj = static_cast<QDomCharacterData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +162,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_INSERTDATA)
 // uint length() const
 HB_FUNC_STATIC(QDOMCHARACTERDATA_LENGTH)
 {
-  auto obj = static_cast<QDomCharacterData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +180,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_LENGTH)
 // QDomNode::NodeType nodeType() const
 HB_FUNC_STATIC(QDOMCHARACTERDATA_NODETYPE)
 {
-  auto obj = static_cast<QDomCharacterData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +198,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_NODETYPE)
 // void replaceData(unsigned long offset, unsigned long count, const QString &arg)
 HB_FUNC_STATIC(QDOMCHARACTERDATA_REPLACEDATA)
 {
-  auto obj = static_cast<QDomCharacterData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,7 +218,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_REPLACEDATA)
 // void setData(const QString &v)
 HB_FUNC_STATIC(QDOMCHARACTERDATA_SETDATA)
 {
-  auto obj = static_cast<QDomCharacterData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -236,7 +238,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_SETDATA)
 // QString substringData(unsigned long offset, unsigned long count)
 HB_FUNC_STATIC(QDOMCHARACTERDATA_SUBSTRINGDATA)
 {
-  auto obj = static_cast<QDomCharacterData *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

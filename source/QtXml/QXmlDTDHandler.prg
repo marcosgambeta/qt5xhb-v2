@@ -57,9 +57,11 @@ RETURN
 #include <QtXml/QXmlDTDHandler>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QXmlDTDHandler *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLDTDHANDLER_DELETE)
 {
-  auto obj = static_cast<QXmlDTDHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -69,7 +71,7 @@ HB_FUNC_STATIC(QXMLDTDHANDLER_DELETE)
 // virtual QString errorString() const = 0
 HB_FUNC_STATIC(QXMLDTDHANDLER_ERRORSTRING)
 {
-  auto obj = static_cast<QXmlDTDHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -87,7 +89,7 @@ HB_FUNC_STATIC(QXMLDTDHANDLER_ERRORSTRING)
 // virtual bool notationDecl(const QString &name, const QString &publicId, const QString &systemId) = 0
 HB_FUNC_STATIC(QXMLDTDHANDLER_NOTATIONDECL)
 {
-  auto obj = static_cast<QXmlDTDHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,10 +105,10 @@ HB_FUNC_STATIC(QXMLDTDHANDLER_NOTATIONDECL)
 }
 
 // virtual bool unparsedEntityDecl(const QString &name, const QString &publicId, const QString &systemId, const QString
-// & notationName) = 0
+// &notationName) = 0
 HB_FUNC_STATIC(QXMLDTDHANDLER_UNPARSEDENTITYDECL)
 {
-  auto obj = static_cast<QXmlDTDHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

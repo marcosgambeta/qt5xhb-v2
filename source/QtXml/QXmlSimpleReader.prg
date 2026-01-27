@@ -48,7 +48,9 @@ RETURN
 #include <QtXml/QXmlSimpleReader>
 #endif
 
-    // QXmlSimpleReader()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QXmlSimpleReader *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QXmlSimpleReader()
 HB_FUNC_STATIC(QXMLSIMPLEREADER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -61,7 +63,7 @@ HB_FUNC_STATIC(QXMLSIMPLEREADER_NEW)
 
 HB_FUNC_STATIC(QXMLSIMPLEREADER_DELETE)
 {
-  auto obj = static_cast<QXmlSimpleReader *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -71,7 +73,7 @@ HB_FUNC_STATIC(QXMLSIMPLEREADER_DELETE)
 // virtual bool parse(const QXmlInputSource *input, bool incremental)
 HB_FUNC_STATIC(QXMLSIMPLEREADER_PARSE)
 {
-  auto obj = static_cast<QXmlSimpleReader *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -89,7 +91,7 @@ HB_FUNC_STATIC(QXMLSIMPLEREADER_PARSE)
 // virtual bool parseContinue()
 HB_FUNC_STATIC(QXMLSIMPLEREADER_PARSECONTINUE)
 {
-  auto obj = static_cast<QXmlSimpleReader *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

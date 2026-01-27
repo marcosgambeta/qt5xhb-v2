@@ -58,9 +58,11 @@ RETURN
 #include <QtXml/QXmlErrorHandler>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QXmlErrorHandler *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLERRORHANDLER_DELETE)
 {
-  auto obj = static_cast<QXmlErrorHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -70,7 +72,7 @@ HB_FUNC_STATIC(QXMLERRORHANDLER_DELETE)
 // virtual bool error(const QXmlParseException &exception) = 0
 HB_FUNC_STATIC(QXMLERRORHANDLER_ERROR)
 {
-  auto obj = static_cast<QXmlErrorHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QXMLERRORHANDLER_ERROR)
 // virtual QString errorString() const = 0
 HB_FUNC_STATIC(QXMLERRORHANDLER_ERRORSTRING)
 {
-  auto obj = static_cast<QXmlErrorHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QXMLERRORHANDLER_ERRORSTRING)
 // virtual bool fatalError(const QXmlParseException &exception) = 0
 HB_FUNC_STATIC(QXMLERRORHANDLER_FATALERROR)
 {
-  auto obj = static_cast<QXmlErrorHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +126,7 @@ HB_FUNC_STATIC(QXMLERRORHANDLER_FATALERROR)
 // virtual bool warning(const QXmlParseException &exception) = 0
 HB_FUNC_STATIC(QXMLERRORHANDLER_WARNING)
 {
-  auto obj = static_cast<QXmlErrorHandler *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

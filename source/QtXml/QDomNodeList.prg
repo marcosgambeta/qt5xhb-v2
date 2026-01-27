@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDOMNODE
+REQUEST QDomNode
 #endif
 
 CLASS QDomNodeList
@@ -62,6 +62,8 @@ RETURN
 #include <QtXml/QDomNodeList>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDomNodeList *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDOMNODELIST_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -79,7 +81,7 @@ HB_FUNC_STATIC(QDOMNODELIST_NEW)
 
 HB_FUNC_STATIC(QDOMNODELIST_DELETE)
 {
-  auto obj = static_cast<QDomNodeList *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -89,7 +91,7 @@ HB_FUNC_STATIC(QDOMNODELIST_DELETE)
 // QDomNode at(int index) const
 HB_FUNC_STATIC(QDOMNODELIST_AT)
 {
-  auto obj = static_cast<QDomNodeList *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +109,7 @@ HB_FUNC_STATIC(QDOMNODELIST_AT)
 // int count() const
 HB_FUNC_STATIC(QDOMNODELIST_COUNT)
 {
-  auto obj = static_cast<QDomNodeList *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +127,7 @@ HB_FUNC_STATIC(QDOMNODELIST_COUNT)
 // bool isEmpty() const
 HB_FUNC_STATIC(QDOMNODELIST_ISEMPTY)
 {
-  auto obj = static_cast<QDomNodeList *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +145,7 @@ HB_FUNC_STATIC(QDOMNODELIST_ISEMPTY)
 // QDomNode item(int index) const
 HB_FUNC_STATIC(QDOMNODELIST_ITEM)
 {
-  auto obj = static_cast<QDomNodeList *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +163,7 @@ HB_FUNC_STATIC(QDOMNODELIST_ITEM)
 // uint length() const
 HB_FUNC_STATIC(QDOMNODELIST_LENGTH)
 {
-  auto obj = static_cast<QDomNodeList *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,7 +181,7 @@ HB_FUNC_STATIC(QDOMNODELIST_LENGTH)
 // int size() const
 HB_FUNC_STATIC(QDOMNODELIST_SIZE)
 {
-  auto obj = static_cast<QDomNodeList *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

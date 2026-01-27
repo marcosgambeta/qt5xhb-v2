@@ -56,9 +56,11 @@ RETURN
 #include <QtXml/QXmlLocator>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QXmlLocator *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLLOCATOR_DELETE)
 {
-  auto obj = static_cast<QXmlLocator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -68,7 +70,7 @@ HB_FUNC_STATIC(QXMLLOCATOR_DELETE)
 // virtual int columnNumber() const = 0
 HB_FUNC_STATIC(QXMLLOCATOR_COLUMNNUMBER)
 {
-  auto obj = static_cast<QXmlLocator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -86,7 +88,7 @@ HB_FUNC_STATIC(QXMLLOCATOR_COLUMNNUMBER)
 // virtual int lineNumber() const = 0
 HB_FUNC_STATIC(QXMLLOCATOR_LINENUMBER)
 {
-  auto obj = static_cast<QXmlLocator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

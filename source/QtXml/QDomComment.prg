@@ -47,6 +47,8 @@ RETURN
 #include <QtXml/QDomComment>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QDomComment *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDOMCOMMENT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -64,7 +66,7 @@ HB_FUNC_STATIC(QDOMCOMMENT_NEW)
 
 HB_FUNC_STATIC(QDOMCOMMENT_DELETE)
 {
-  auto obj = static_cast<QDomComment *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -74,7 +76,7 @@ HB_FUNC_STATIC(QDOMCOMMENT_DELETE)
 // QDomNode::NodeType nodeType() cons
 HB_FUNC_STATIC(QDOMCOMMENT_NODETYPE)
 {
-  auto obj = static_cast<QDomComment *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

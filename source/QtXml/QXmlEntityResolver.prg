@@ -55,9 +55,11 @@ RETURN
 #include <QtXml/QXmlEntityResolver>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QXmlEntityResolver *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLENTITYRESOLVER_DELETE)
 {
-  auto obj = static_cast<QXmlEntityResolver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -67,7 +69,7 @@ HB_FUNC_STATIC(QXMLENTITYRESOLVER_DELETE)
 // virtual QString errorString() const = 0
 HB_FUNC_STATIC(QXMLENTITYRESOLVER_ERRORSTRING)
 {
-  auto obj = static_cast<QXmlEntityResolver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
