@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
-REQUEST QXMLNODEMODELINDEX
+REQUEST QVariant
+REQUEST QXmlNodeModelIndex
 #endif
 
 CLASS QXmlItem
@@ -64,6 +64,8 @@ RETURN
 
 #include <QtCore/QVariant>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QXmlItem *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLITEM_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -89,7 +91,7 @@ HB_FUNC_STATIC(QXMLITEM_NEW)
 
 HB_FUNC_STATIC(QXMLITEM_DELETE)
 {
-  auto obj = static_cast<QXmlItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -99,7 +101,7 @@ HB_FUNC_STATIC(QXMLITEM_DELETE)
 // bool isAtomicValue() const
 HB_FUNC_STATIC(QXMLITEM_ISATOMICVALUE)
 {
-  auto obj = static_cast<QXmlItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +119,7 @@ HB_FUNC_STATIC(QXMLITEM_ISATOMICVALUE)
 // bool isNode() const
 HB_FUNC_STATIC(QXMLITEM_ISNODE)
 {
-  auto obj = static_cast<QXmlItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QXMLITEM_ISNODE)
 // bool isNull() const
 HB_FUNC_STATIC(QXMLITEM_ISNULL)
 {
-  auto obj = static_cast<QXmlItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +155,7 @@ HB_FUNC_STATIC(QXMLITEM_ISNULL)
 // QVariant toAtomicValue() const
 HB_FUNC_STATIC(QXMLITEM_TOATOMICVALUE)
 {
-  auto obj = static_cast<QXmlItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +173,7 @@ HB_FUNC_STATIC(QXMLITEM_TOATOMICVALUE)
 // QXmlNodeModelIndex toNodeModelIndex() const
 HB_FUNC_STATIC(QXMLITEM_TONODEMODELINDEX)
 {
-  auto obj = static_cast<QXmlItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

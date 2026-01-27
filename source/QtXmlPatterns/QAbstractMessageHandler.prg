@@ -48,20 +48,22 @@ RETURN
 #include <QtXmlPatterns/QAbstractMessageHandler>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAbstractMessageHandler *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_DELETE)
 {
-  auto obj = qobject_cast<QAbstractMessageHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_QOBJECT(obj);
 
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void message(QtMsgType type, const QString &description, const QUrl &identifier = QUrl(), const QSourceLocation &
-// sourceLocation = QSourceLocation())
+// void message(QtMsgType type, const QString &description, const QUrl &identifier = QUrl(), const QSourceLocation
+// &sourceLocation = QSourceLocation())
 HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_MESSAGE)
 {
-  auto obj = qobject_cast<QAbstractMessageHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

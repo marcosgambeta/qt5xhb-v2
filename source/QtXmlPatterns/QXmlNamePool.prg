@@ -55,6 +55,8 @@ RETURN
 #include <QtXmlPatterns/QXmlNamePool>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QXmlNamePool *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLNAMEPOOL_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -72,7 +74,7 @@ HB_FUNC_STATIC(QXMLNAMEPOOL_NEW)
 
 HB_FUNC_STATIC(QXMLNAMEPOOL_DELETE)
 {
-  auto obj = static_cast<QXmlNamePool *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 

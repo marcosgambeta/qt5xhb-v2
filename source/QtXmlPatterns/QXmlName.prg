@@ -62,6 +62,8 @@ RETURN
 #include <QtXmlPatterns/QXmlName>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QXmlName *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLNAME_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -80,7 +82,7 @@ HB_FUNC_STATIC(QXMLNAME_NEW)
 
 HB_FUNC_STATIC(QXMLNAME_DELETE)
 {
-  auto obj = static_cast<QXmlName *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -90,7 +92,7 @@ HB_FUNC_STATIC(QXMLNAME_DELETE)
 // bool isNull() const
 HB_FUNC_STATIC(QXMLNAME_ISNULL)
 {
-  auto obj = static_cast<QXmlName *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +110,7 @@ HB_FUNC_STATIC(QXMLNAME_ISNULL)
 // QString localName(const QXmlNamePool &namePool) const
 HB_FUNC_STATIC(QXMLNAME_LOCALNAME)
 {
-  auto obj = static_cast<QXmlName *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QXMLNAME_LOCALNAME)
 // QString namespaceUri(const QXmlNamePool &namePool) const
 HB_FUNC_STATIC(QXMLNAME_NAMESPACEURI)
 {
-  auto obj = static_cast<QXmlName *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +146,7 @@ HB_FUNC_STATIC(QXMLNAME_NAMESPACEURI)
 // QString prefix(const QXmlNamePool &namePool) const
 HB_FUNC_STATIC(QXMLNAME_PREFIX)
 {
-  auto obj = static_cast<QXmlName *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +164,7 @@ HB_FUNC_STATIC(QXMLNAME_PREFIX)
 // QString toClarkName(const QXmlNamePool &namePool) const
 HB_FUNC_STATIC(QXMLNAME_TOCLARKNAME)
 {
-  auto obj = static_cast<QXmlName *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,11 +11,11 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTMESSAGEHANDLER
-REQUEST QABSTRACTURIRESOLVER
-REQUEST QNETWORKACCESSMANAGER
-REQUEST QURL
-REQUEST QXMLNAMEPOOL
+REQUEST QAbstractMessageHandler
+REQUEST QAbstractUriResolver
+REQUEST QNetworkAccessManager
+REQUEST QUrl
+REQUEST QXmlNamePool
 #endif
 
 CLASS QXmlSchema
@@ -74,6 +74,8 @@ RETURN
 #include <QtXmlPatterns/QAbstractMessageHandler>
 #include <QtXmlPatterns/QAbstractUriResolver>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLSCHEMA_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -91,7 +93,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_NEW)
 
 HB_FUNC_STATIC(QXMLSCHEMA_DELETE)
 {
-  auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -101,7 +103,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_DELETE)
 // QUrl documentUri() const
 HB_FUNC_STATIC(QXMLSCHEMA_DOCUMENTURI)
 {
-  auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +121,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_DOCUMENTURI)
 // bool isValid() const
 HB_FUNC_STATIC(QXMLSCHEMA_ISVALID)
 {
-  auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,21 +140,21 @@ HB_FUNC_STATIC(QXMLSCHEMA_LOAD)
 {
   if (ISNUMPAR(1) && ISQURL(1)) {
     // bool load(const QUrl &source)
-    auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->load(*PQURL(1)));
     }
   } else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISQURLORNIL(2)) {
     // bool load(QIODevice *source, const QUrl &documentUri = QUrl())
-    auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->load(PQIODEVICE(1), HB_ISNIL(2) ? QUrl() : *PQURL(2)));
     }
   } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQURLORNIL(2)) {
     // bool load(const QByteArray &data, const QUrl &documentUri = QUrl())
-    auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->load(*PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *PQURL(2)));
@@ -165,7 +167,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_LOAD)
 // QAbstractMessageHandler *messageHandler() const
 HB_FUNC_STATIC(QXMLSCHEMA_MESSAGEHANDLER)
 {
-  auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +186,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_MESSAGEHANDLER)
 // QXmlNamePool namePool() const
 HB_FUNC_STATIC(QXMLSCHEMA_NAMEPOOL)
 {
-  auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +204,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_NAMEPOOL)
 // QNetworkAccessManager *networkAccessManager() const
 HB_FUNC_STATIC(QXMLSCHEMA_NETWORKACCESSMANAGER)
 {
-  auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,7 +223,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_NETWORKACCESSMANAGER)
 // void setMessageHandler(QAbstractMessageHandler *handler)
 HB_FUNC_STATIC(QXMLSCHEMA_SETMESSAGEHANDLER)
 {
-  auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,7 +243,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_SETMESSAGEHANDLER)
 // void setNetworkAccessManager(QNetworkAccessManager *manager)
 HB_FUNC_STATIC(QXMLSCHEMA_SETNETWORKACCESSMANAGER)
 {
-  auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +263,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_SETNETWORKACCESSMANAGER)
 // void setUriResolver(const QAbstractUriResolver *resolver)
 HB_FUNC_STATIC(QXMLSCHEMA_SETURIRESOLVER)
 {
-  auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,13 +283,13 @@ HB_FUNC_STATIC(QXMLSCHEMA_SETURIRESOLVER)
 // const QAbstractUriResolver *uriResolver() const
 HB_FUNC_STATIC(QXMLSCHEMA_URIRESOLVER)
 {
-  auto obj = static_cast<QXmlSchema *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = obj->uriResolver();
+      const auto ptr = obj->uriResolver();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTURIRESOLVER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

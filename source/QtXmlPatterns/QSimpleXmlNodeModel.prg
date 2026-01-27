@@ -11,10 +11,10 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QURL
-REQUEST QXMLNAME
-REQUEST QXMLNAMEPOOL
-REQUEST QXMLNODEMODELINDEX
+REQUEST QUrl
+REQUEST QXmlName
+REQUEST QXmlNamePool
+REQUEST QXmlNodeModelIndex
 #endif
 
 CLASS QSimpleXmlNodeModel INHERIT QAbstractXmlNodeModel
@@ -57,9 +57,11 @@ RETURN
 
 #include <QtCore/QVector>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QSimpleXmlNodeModel *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_DELETE)
 {
-  auto obj = static_cast<QSimpleXmlNodeModel *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -69,7 +71,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_DELETE)
 // QXmlNamePool &namePool() const
 HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_NAMEPOOL)
 {
-  auto obj = static_cast<QSimpleXmlNodeModel *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_NAMEPOOL)
 // virtual QUrl baseUri(const QXmlNodeModelIndex &node) const
 HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_BASEURI)
 {
-  auto obj = static_cast<QSimpleXmlNodeModel *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_BASEURI)
 // virtual QXmlNodeModelIndex elementById(const QXmlName &id) const
 HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_ELEMENTBYID)
 {
-  auto obj = static_cast<QSimpleXmlNodeModel *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +126,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_ELEMENTBYID)
 // virtual QVector<QXmlName> namespaceBindings(const QXmlNodeModelIndex &node) const
 HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS)
 {
-  auto obj = static_cast<QSimpleXmlNodeModel *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,7 +136,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS)
       auto pDynSym = hb_dynsymFindName("QXMLNAME");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
-        for (const auto &item : list) {
+        for (auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -164,7 +166,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS)
 // virtual QVector<QXmlNodeModelIndex> nodesByIdref(const QXmlName &idref) const
 HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_NODESBYIDREF)
 {
-  auto obj = static_cast<QSimpleXmlNodeModel *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +206,7 @@ HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_NODESBYIDREF)
 // virtual QString stringValue(const QXmlNodeModelIndex &node) const
 HB_FUNC_STATIC(QSIMPLEXMLNODEMODEL_STRINGVALUE)
 {
-  auto obj = static_cast<QSimpleXmlNodeModel *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

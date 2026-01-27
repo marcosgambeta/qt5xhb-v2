@@ -66,9 +66,11 @@ RETURN
 #include <QtXmlPatterns/QAbstractXmlReceiver>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_DELETE)
 {
-  auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -78,7 +80,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_DELETE)
 // virtual void atomicValue(const QVariant &value) = 0
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ATOMICVALUE)
 {
-  auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -98,7 +100,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ATOMICVALUE)
 // virtual void attribute(const QXmlName &name, const QStringRef &value) = 0
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ATTRIBUTE)
 {
-  auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +120,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ATTRIBUTE)
 // virtual void characters(const QStringRef &value) = 0
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_CHARACTERS)
 {
-  auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +140,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_CHARACTERS)
 // virtual void comment(const QString &value) = 0
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_COMMENT)
 {
-  auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +160,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_COMMENT)
 // virtual void endDocument() = 0
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ENDDOCUMENT)
 {
-  auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +180,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ENDDOCUMENT)
 // virtual void endElement() = 0
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ENDELEMENT)
 {
-  auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,7 +200,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ENDELEMENT)
 // virtual void endOfSequence() = 0
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ENDOFSEQUENCE)
 {
-  auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,7 +220,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ENDOFSEQUENCE)
 // virtual void namespaceBinding(const QXmlName &name) = 0
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_NAMESPACEBINDING)
 {
-  auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -238,7 +240,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_NAMESPACEBINDING)
 // virtual void processingInstruction(const QXmlName &target, const QString &value) = 0
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION)
 {
-  auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,7 +260,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION)
 // virtual void startDocument() = 0
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_STARTDOCUMENT)
 {
-  auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,7 +280,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_STARTDOCUMENT)
 // virtual void startElement(const QXmlName &name) = 0
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_STARTELEMENT)
 {
-  auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -298,7 +300,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_STARTELEMENT)
 // virtual void startOfSequence() = 0
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_STARTOFSEQUENCE)
 {
-  auto obj = static_cast<QAbstractXmlReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

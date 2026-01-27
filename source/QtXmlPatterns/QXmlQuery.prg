@@ -11,11 +11,11 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTMESSAGEHANDLER
-REQUEST QABSTRACTURIRESOLVER
-REQUEST QNETWORKACCESSMANAGER
-REQUEST QXMLNAME
-REQUEST QXMLNAMEPOOL
+REQUEST QAbstractMessageHandler
+REQUEST QAbstractUriResolver
+REQUEST QNetworkAccessManager
+REQUEST QXmlName
+REQUEST QXmlNamePool
 #endif
 
 CLASS QXmlQuery
@@ -79,6 +79,8 @@ RETURN
 #include <QtXmlPatterns/QAbstractMessageHandler>
 #include <QtXmlPatterns/QAbstractUriResolver>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLQUERY_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -104,7 +106,7 @@ HB_FUNC_STATIC(QXMLQUERY_NEW)
 
 HB_FUNC_STATIC(QXMLQUERY_DELETE)
 {
-  auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   DELETE_OBJECT(obj);
 
@@ -115,7 +117,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
 {
   if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQXMLITEM(2)) {
     // void bindVariable(const QXmlName &name, const QXmlItem &value)
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->bindVariable(*PQXMLNAME(1), *PQXMLITEM(2));
@@ -124,7 +126,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQIODEVICE(2)) {
     // void bindVariable(const QXmlName &name, QIODevice *device)
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->bindVariable(*PQXMLNAME(1), PQIODEVICE(2));
@@ -133,7 +135,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQXMLQUERY(2)) {
     // void bindVariable(const QXmlName &name, const QXmlQuery &query)
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->bindVariable(*PQXMLNAME(1), *PQXMLQUERY(2));
@@ -142,7 +144,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQXMLITEM(2)) {
     // void bindVariable(const QString &localName, const QXmlItem &value)
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->bindVariable(PQSTRING(1), *PQXMLITEM(2));
@@ -151,7 +153,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQIODEVICE(2)) {
     // void bindVariable(const QString &localName, QIODevice *device)
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->bindVariable(PQSTRING(1), PQIODEVICE(2));
@@ -160,7 +162,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQXMLQUERY(2)) {
     // void bindVariable(const QString &localName, const QXmlQuery &query)
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->bindVariable(PQSTRING(1), *PQXMLQUERY(2));
@@ -176,7 +178,7 @@ HB_FUNC_STATIC(QXMLQUERY_EVALUATETO)
 {
   if (ISNUMPAR(1) && ISQXMLRESULTITEMS(1)) {
     // void evaluateTo(QXmlResultItems *result) const
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->evaluateTo(PQXMLRESULTITEMS(1));
@@ -185,14 +187,14 @@ HB_FUNC_STATIC(QXMLQUERY_EVALUATETO)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQABSTRACTXMLRECEIVER(1)) {
     // bool evaluateTo(QAbstractXmlReceiver *callback) const
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->evaluateTo(PQABSTRACTXMLRECEIVER(1)));
     }
   } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
     // bool evaluateTo(QIODevice *target) const
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->evaluateTo(PQIODEVICE(1)));
@@ -205,7 +207,7 @@ HB_FUNC_STATIC(QXMLQUERY_EVALUATETO)
 // QXmlName initialTemplateName() const
 HB_FUNC_STATIC(QXMLQUERY_INITIALTEMPLATENAME)
 {
-  auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +225,7 @@ HB_FUNC_STATIC(QXMLQUERY_INITIALTEMPLATENAME)
 // bool isValid() const
 HB_FUNC_STATIC(QXMLQUERY_ISVALID)
 {
-  auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,7 +243,7 @@ HB_FUNC_STATIC(QXMLQUERY_ISVALID)
 // QAbstractMessageHandler *messageHandler() const
 HB_FUNC_STATIC(QXMLQUERY_MESSAGEHANDLER)
 {
-  auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,7 +262,7 @@ HB_FUNC_STATIC(QXMLQUERY_MESSAGEHANDLER)
 // QXmlNamePool namePool() const
 HB_FUNC_STATIC(QXMLQUERY_NAMEPOOL)
 {
-  auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,7 +280,7 @@ HB_FUNC_STATIC(QXMLQUERY_NAMEPOOL)
 // QNetworkAccessManager *networkAccessManager() const
 HB_FUNC_STATIC(QXMLQUERY_NETWORKACCESSMANAGER)
 {
-  auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,7 +299,7 @@ HB_FUNC_STATIC(QXMLQUERY_NETWORKACCESSMANAGER)
 // QXmlQuery::QueryLanguage queryLanguage() const
 HB_FUNC_STATIC(QXMLQUERY_QUERYLANGUAGE)
 {
-  auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -316,7 +318,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETFOCUS)
 {
   if (ISNUMPAR(1) && ISQXMLITEM(1)) {
     // void setFocus(const QXmlItem &item)
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setFocus(*PQXMLITEM(1));
@@ -325,21 +327,21 @@ HB_FUNC_STATIC(QXMLQUERY_SETFOCUS)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQURL(1)) {
     // bool setFocus(const QUrl &documentURI)
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->setFocus(*PQURL(1)));
     }
   } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
     // bool setFocus(QIODevice *document)
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->setFocus(PQIODEVICE(1)));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // bool setFocus(const QString &focus)
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->setFocus(PQSTRING(1)));
@@ -353,7 +355,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETINITIALTEMPLATENAME)
 {
   if (ISNUMPAR(1) && ISQXMLNAME(1)) {
     // void setInitialTemplateName(const QXmlName &name)
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setInitialTemplateName(*PQXMLNAME(1));
@@ -362,7 +364,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETINITIALTEMPLATENAME)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void setInitialTemplateName(const QString &localName)
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setInitialTemplateName(PQSTRING(1));
@@ -377,7 +379,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETINITIALTEMPLATENAME)
 // void setMessageHandler(QAbstractMessageHandler *aMessageHandler)
 HB_FUNC_STATIC(QXMLQUERY_SETMESSAGEHANDLER)
 {
-  auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -397,7 +399,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETMESSAGEHANDLER)
 // void setNetworkAccessManager(QNetworkAccessManager *newManager)
 HB_FUNC_STATIC(QXMLQUERY_SETNETWORKACCESSMANAGER)
 {
-  auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -418,7 +420,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
 {
   if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISQURLORNIL(2)) {
     // void setQuery(QIODevice *sourceCode, const QUrl &documentURI = QUrl())
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setQuery(PQIODEVICE(1), HB_ISNIL(2) ? QUrl() : *PQURL(2));
@@ -427,7 +429,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(1, 2) && ISQURL(1) && ISQURLORNIL(2)) {
     // void setQuery(const QUrl &queryURI, const QUrl &baseURI = QUrl())
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setQuery(*PQURL(1), HB_ISNIL(2) ? QUrl() : *PQURL(2));
@@ -436,7 +438,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQURLORNIL(2)) {
     // void setQuery(const QString &sourceCode, const QUrl &documentURI = QUrl())
-    auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setQuery(PQSTRING(1), HB_ISNIL(2) ? QUrl() : *PQURL(2));
@@ -451,7 +453,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
 // void setUriResolver(const QAbstractUriResolver *resolver)
 HB_FUNC_STATIC(QXMLQUERY_SETURIRESOLVER)
 {
-  auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -471,13 +473,13 @@ HB_FUNC_STATIC(QXMLQUERY_SETURIRESOLVER)
 // const QAbstractUriResolver *uriResolver() const
 HB_FUNC_STATIC(QXMLQUERY_URIRESOLVER)
 {
-  auto obj = static_cast<QXmlQuery *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = obj->uriResolver();
+      const auto ptr = obj->uriResolver();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTURIRESOLVER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
