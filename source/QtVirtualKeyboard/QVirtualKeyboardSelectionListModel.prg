@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
-REQUEST QVIRTUALKEYBOARDABSTRACTINPUTMETHOD
+REQUEST QVariant
+REQUEST QVirtualKeyboardAbstractInputMethod
 #endif
 
 CLASS QVirtualKeyboardSelectionListModel INHERIT QAbstractListModel
@@ -62,20 +62,21 @@ RETURN
 
 #include <QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethod>
 
-    // ~QVirtualKeyboardSelectionListModel()
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QVirtualKeyboardSelectionListModel *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QVirtualKeyboardSelectionListModel()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_DELETE)
 {
-  auto obj = qobject_cast<QVirtualKeyboardSelectionListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // int count() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_COUNT)
 {
-  auto obj = qobject_cast<QVirtualKeyboardSelectionListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -93,7 +94,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_COUNT)
 // void setDataSource(QVirtualKeyboardAbstractInputMethod *dataSource, QVirtualKeyboardSelectionListModel::Type type)
 HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_SETDATASOURCE)
 {
-  auto obj = qobject_cast<QVirtualKeyboardSelectionListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,13 +108,13 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_SETDATASOURCE)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // QVirtualKeyboardAbstractInputMethod *dataSource() const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_DATASOURCE)
 {
-  auto obj = qobject_cast<QVirtualKeyboardSelectionListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +133,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_DATASOURCE)
 // int rowCount(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_ROWCOUNT)
 {
-  auto obj = qobject_cast<QVirtualKeyboardSelectionListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +151,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_ROWCOUNT)
 // QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
 HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_DATA)
 {
-  auto obj = qobject_cast<QVirtualKeyboardSelectionListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +169,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_DATA)
 // Q_INVOKABLE void selectItem(int index)
 HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_SELECTITEM)
 {
-  auto obj = qobject_cast<QVirtualKeyboardSelectionListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,13 +183,13 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_SELECTITEM)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // Q_INVOKABLE void removeItem(int index)
 HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_REMOVEITEM)
 {
-  auto obj = qobject_cast<QVirtualKeyboardSelectionListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +203,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_REMOVEITEM)
 #endif
   }
 
-  RETURN_SELF();
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 // Q_INVOKABLE QVariant dataAt(int index, Role role = Role::Display) const
@@ -210,7 +211,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_REMOVEITEM)
 // void countChanged()
 HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONCOUNTCHANGED)
 {
-  auto sender = qobject_cast<QVirtualKeyboardSelectionListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -230,7 +231,6 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONCOUNTCHANGED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONCOUNTCHANGED)
 // void activeItemChanged(int index)
 HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONACTIVEITEMCHANGED)
 {
-  auto sender = qobject_cast<QVirtualKeyboardSelectionListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -271,7 +271,6 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONACTIVEITEMCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -290,7 +289,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONACTIVEITEMCHANGED)
 // void itemSelected(int index)
 HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONITEMSELECTED)
 {
-  auto sender = qobject_cast<QVirtualKeyboardSelectionListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -312,7 +311,6 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONITEMSELECTED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
