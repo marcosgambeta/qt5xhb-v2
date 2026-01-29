@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QINAPPPRODUCT
+REQUEST QInAppProduct
 #endif
 
 CLASS QInAppStore INHERIT QObject
@@ -59,7 +59,9 @@ RETURN
 
 #include <QtPurchasing/QInAppTransaction>
 
-    // QInAppStore(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QInAppStore *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QInAppStore(QObject *parent = nullptr)
 HB_FUNC_STATIC(QINAPPSTORE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -73,17 +75,15 @@ HB_FUNC_STATIC(QINAPPSTORE_NEW)
 // ~QInAppStore()
 HB_FUNC_STATIC(QINAPPSTORE_DELETE)
 {
-  auto obj = qobject_cast<QInAppStore *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // Q_INVOKABLE void restorePurchases()
 HB_FUNC_STATIC(QINAPPSTORE_RESTOREPURCHASES)
 {
-  auto obj = qobject_cast<QInAppStore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QINAPPSTORE_RESTOREPURCHASES)
 // Q_INVOKABLE void registerProduct(QInAppProduct::ProductType productType, const QString &identifier)
 HB_FUNC_STATIC(QINAPPSTORE_REGISTERPRODUCT)
 {
-  auto obj = qobject_cast<QInAppStore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QINAPPSTORE_REGISTERPRODUCT)
 // Q_INVOKABLE QInAppProduct *registeredProduct(const QString &identifier) const
 HB_FUNC_STATIC(QINAPPSTORE_REGISTEREDPRODUCT)
 {
-  auto obj = qobject_cast<QInAppStore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QINAPPSTORE_REGISTEREDPRODUCT)
 // Q_INVOKABLE void setPlatformProperty(const QString &propertyName, const QString &value)
 HB_FUNC_STATIC(QINAPPSTORE_SETPLATFORMPROPERTY)
 {
-  auto obj = qobject_cast<QInAppStore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QINAPPSTORE_SETPLATFORMPROPERTY)
 // void productRegistered(QInAppProduct *product)
 HB_FUNC_STATIC(QINAPPSTORE_ONPRODUCTREGISTERED)
 {
-  auto sender = qobject_cast<QInAppStore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -184,7 +184,6 @@ HB_FUNC_STATIC(QINAPPSTORE_ONPRODUCTREGISTERED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -203,7 +202,7 @@ HB_FUNC_STATIC(QINAPPSTORE_ONPRODUCTREGISTERED)
 // void productUnknown(QInAppProduct::ProductType productType, const QString &identifier)
 HB_FUNC_STATIC(QINAPPSTORE_ONPRODUCTUNKNOWN)
 {
-  auto sender = qobject_cast<QInAppStore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -228,7 +227,6 @@ HB_FUNC_STATIC(QINAPPSTORE_ONPRODUCTUNKNOWN)
                                  hb_itemRelease(pArg2);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -247,7 +245,7 @@ HB_FUNC_STATIC(QINAPPSTORE_ONPRODUCTUNKNOWN)
 // void transactionReady(QInAppTransaction *transaction)
 HB_FUNC_STATIC(QINAPPSTORE_ONTRANSACTIONREADY)
 {
-  auto sender = qobject_cast<QInAppStore *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -269,7 +267,6 @@ HB_FUNC_STATIC(QINAPPSTORE_ONTRANSACTIONREADY)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
