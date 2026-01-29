@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QGEOAREAMONITORSOURCE
-REQUEST QGEOPOSITIONINFOSOURCE
-REQUEST QGEOSATELLITEINFOSOURCE
+REQUEST QGeoAreaMonitorSource
+REQUEST QGeoPositionInfoSource
+REQUEST QGeoSatelliteInfoSource
 #endif
 
 CLASS QGeoPositionInfoSourceFactory
@@ -63,11 +63,13 @@ RETURN
 #endif
 #endif
 
-    // virtual QGeoPositionInfoSource *positionInfoSource(QObject *parent) = 0
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QGeoPositionInfoSourceFactory *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// virtual QGeoPositionInfoSource *positionInfoSource(QObject *parent) = 0
 HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCEFACTORY_POSITIONINFOSOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QGeoPositionInfoSourceFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCEFACTORY_POSITIONINFOSOURCE)
 HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCEFACTORY_SATELLITEINFOSOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QGeoPositionInfoSourceFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +111,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCEFACTORY_SATELLITEINFOSOURCE)
 HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCEFACTORY_AREAMONITOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QGeoPositionInfoSourceFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

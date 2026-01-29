@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QGEOAREAMONITORINFO
-REQUEST QGEOPOSITIONINFOSOURCE
+REQUEST QGeoAreaMonitorInfo
+REQUEST QGeoPositionInfoSource
 #endif
 
 CLASS QGeoAreaMonitorSource INHERIT QObject
@@ -70,13 +70,13 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_DELETE)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SETPOSITIONINFOSOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SETPOSITIONINFOSOURCE)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_POSITIONINFOSOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_POSITIONINFOSOURCE)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SOURCENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SOURCENAME)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ERROR)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SUPPORTEDAREAMONITORFEATURES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SUPPORTEDAREAMONITORFEATURES)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_STARTMONITORING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_STARTMONITORING)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_STOPMONITORING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_STOPMONITORING)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_REQUESTUPDATE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,14 +249,14 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ACTIVEMONITORS)
   if (ISNUMPAR(0)) {
     // virtual QList<QGeoAreaMonitorInfo> activeMonitors() const = 0
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto list = obj->activeMonitors();
       auto pDynSym = hb_dynsymFindName("QGEOAREAMONITORINFO");
       auto pArray = hb_itemArrayNew(0);
       if (pDynSym != nullptr) {
-        for (const auto &item : list) {
+        for (auto &item : list) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ACTIVEMONITORS)
   } else if (ISNUMPAR(1) && ISQGEOSHAPE(1)) {
     // virtual QList<QGeoAreaMonitorInfo> activeMonitors(const QGeoShape &lookupArea) const = 0
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    auto obj = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       auto list = obj->activeMonitors(*PQGEOSHAPE(1));
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_AVAILABLESOURCES)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAENTERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto sender = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -392,7 +392,6 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAENTERED)
                                  hb_itemRelease(pArg2);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -415,7 +414,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAENTERED)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAEXITED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto sender = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -440,7 +439,6 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAEXITED)
                                  hb_itemRelease(pArg2);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -463,7 +461,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONAREAEXITED)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONMONITOREXPIRED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto sender = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -486,7 +484,6 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONMONITOREXPIRED)
                                  hb_itemRelease(pArg1);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -509,7 +506,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONMONITOREXPIRED)
 HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto sender = qobject_cast<QGeoAreaMonitorSource *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -532,7 +529,6 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ONERROR)
                                  hb_itemRelease(pArg1);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDATETIME
-REQUEST QGEOSHAPE
+REQUEST QDateTime
+REQUEST QGeoShape
 #endif
 
 CLASS QGeoAreaMonitorInfo
@@ -73,6 +73,8 @@ RETURN
 
 #include <QtCore/QDateTime>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QGeoAreaMonitorInfo *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_NEW)
 {
   if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
@@ -95,10 +97,8 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_NEW)
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QGeoAreaMonitorInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_DELETE)
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QGeoAreaMonitorInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_NAME)
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QGeoAreaMonitorInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETNAME)
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_IDENTIFIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QGeoAreaMonitorInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_IDENTIFIER)
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QGeoAreaMonitorInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_ISVALID)
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_AREA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QGeoAreaMonitorInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_AREA)
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETAREA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QGeoAreaMonitorInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETAREA)
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_EXPIRATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QGeoAreaMonitorInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_EXPIRATION)
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETEXPIRATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QGeoAreaMonitorInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETEXPIRATION)
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_ISPERSISTENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QGeoAreaMonitorInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_ISPERSISTENT)
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETPERSISTENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  auto obj = static_cast<QGeoAreaMonitorInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
