@@ -53,20 +53,20 @@ RETURN
 
 #include <QtCore/QStringList>
 
-    // virtual ~QMediaContainerControl()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QMediaContainerControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual ~QMediaContainerControl()
 HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_DELETE)
 {
-  auto obj = qobject_cast<QMediaContainerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QString containerDescription(const QString &formatMimeType) const = 0
 HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_CONTAINERDESCRIPTION)
 {
-  auto obj = qobject_cast<QMediaContainerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_CONTAINERDESCRIPTION)
 // virtual QString containerFormat() const = 0
 HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_CONTAINERFORMAT)
 {
-  auto obj = qobject_cast<QMediaContainerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_CONTAINERFORMAT)
 // virtual void setContainerFormat(const QString &format) = 0
 HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_SETCONTAINERFORMAT)
 {
-  auto obj = qobject_cast<QMediaContainerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_SETCONTAINERFORMAT)
 // virtual QStringList supportedContainers() const = 0
 HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_SUPPORTEDCONTAINERS)
 {
-  auto obj = qobject_cast<QMediaContainerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

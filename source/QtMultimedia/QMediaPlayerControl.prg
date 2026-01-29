@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QIODEVICE
-REQUEST QMEDIACONTENT
-REQUEST QMEDIATIMERANGE
+REQUEST QIODevice
+REQUEST QMediaContent
+REQUEST QMediaTimeRange
 #endif
 
 CLASS QMediaPlayerControl INHERIT QMediaControl
@@ -87,20 +87,20 @@ RETURN
 #include <QtMultimedia/QMediaPlayerControl>
 #endif
 
-    // ~QMediaPlayerControl()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QMediaPlayerControl()
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_DELETE)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QMediaTimeRange availablePlaybackRanges() const = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_AVAILABLEPLAYBACKRANGES)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_AVAILABLEPLAYBACKRANGES)
 // virtual int bufferStatus() const = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_BUFFERSTATUS)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_BUFFERSTATUS)
 // virtual qint64 duration() const = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_DURATION)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_DURATION)
 // virtual bool isAudioAvailable() const = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ISAUDIOAVAILABLE)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ISAUDIOAVAILABLE)
 // virtual bool isMuted() const = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ISMUTED)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ISMUTED)
 // virtual bool isSeekable() const = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ISSEEKABLE)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ISSEEKABLE)
 // virtual bool isVideoAvailable() const = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ISVIDEOAVAILABLE)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ISVIDEOAVAILABLE)
 // virtual QMediaContent media() const = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_MEDIA)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_MEDIA)
 // virtual QMediaPlayer::MediaStatus mediaStatus() const = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_MEDIASTATUS)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,13 +262,13 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_MEDIASTATUS)
 // virtual const QIODevice *mediaStream() const = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_MEDIASTREAM)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      auto ptr = obj->mediaStream();
+      const auto ptr = obj->mediaStream();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_MEDIASTREAM)
 // virtual void pause() = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_PAUSE)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_PAUSE)
 // virtual void play() = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_PLAY)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_PLAY)
 // virtual qreal playbackRate() const = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_PLAYBACKRATE)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_PLAYBACKRATE)
 // virtual qint64 position() const = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_POSITION)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -357,7 +357,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_POSITION)
 // virtual void setMedia(const QMediaContent &media, QIODevice *stream) = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETMEDIA)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETMEDIA)
 // virtual void setMuted(bool mute) = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETMUTED)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETMUTED)
 // virtual void setPlaybackRate(qreal rate) = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETPLAYBACKRATE)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETPLAYBACKRATE)
 // virtual void setPosition(qint64 position) = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETPOSITION)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -437,7 +437,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETPOSITION)
 // virtual void setVolume(int volume) = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETVOLUME)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETVOLUME)
 // virtual QMediaPlayer::State state() const = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_STATE)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -475,7 +475,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_STATE)
 // virtual void stop() = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_STOP)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -495,7 +495,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_STOP)
 // virtual int volume() const = 0
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_VOLUME)
 {
-  auto obj = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -513,7 +513,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_VOLUME)
 // void audioAvailableChanged(bool audio)
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONAUDIOAVAILABLECHANGED)
 {
-  auto sender = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -535,7 +535,6 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONAUDIOAVAILABLECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -554,7 +553,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONAUDIOAVAILABLECHANGED)
 // void availablePlaybackRangesChanged(const QMediaTimeRange &ranges)
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONAVAILABLEPLAYBACKRANGESCHANGED)
 {
-  auto sender = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -577,7 +576,6 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONAVAILABLEPLAYBACKRANGESCHANGED)
                                  hb_itemRelease(pArg1);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -596,7 +594,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONAVAILABLEPLAYBACKRANGESCHANGED)
 // void bufferStatusChanged(int progress)
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONBUFFERSTATUSCHANGED)
 {
-  auto sender = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -618,7 +616,6 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONBUFFERSTATUSCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -637,7 +634,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONBUFFERSTATUSCHANGED)
 // void durationChanged(qint64 duration)
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONDURATIONCHANGED)
 {
-  auto sender = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -659,7 +656,6 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONDURATIONCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -678,7 +674,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONDURATIONCHANGED)
 // void error(int error, const QString &errorString)
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONERROR)
 {
-  auto sender = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -702,7 +698,6 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONERROR)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -721,7 +716,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONERROR)
 // void mediaChanged(const QMediaContent &content)
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONMEDIACHANGED)
 {
-  auto sender = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -743,7 +738,6 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONMEDIACHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -762,7 +756,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONMEDIACHANGED)
 // void mediaStatusChanged(QMediaPlayer::MediaStatus status)
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONMEDIASTATUSCHANGED)
 {
-  auto sender = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -785,7 +779,6 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONMEDIASTATUSCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -804,7 +797,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONMEDIASTATUSCHANGED)
 // void mutedChanged(bool mute)
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONMUTEDCHANGED)
 {
-  auto sender = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -826,7 +819,6 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONMUTEDCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -845,7 +837,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONMUTEDCHANGED)
 // void playbackRateChanged(qreal rate)
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONPLAYBACKRATECHANGED)
 {
-  auto sender = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -867,7 +859,6 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONPLAYBACKRATECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -886,7 +877,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONPLAYBACKRATECHANGED)
 // void positionChanged(qint64 position)
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONPOSITIONCHANGED)
 {
-  auto sender = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -908,7 +899,6 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONPOSITIONCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -927,7 +917,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONPOSITIONCHANGED)
 // void seekableChanged(bool seekable)
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONSEEKABLECHANGED)
 {
-  auto sender = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -949,7 +939,6 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONSEEKABLECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -968,7 +957,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONSEEKABLECHANGED)
 // void stateChanged(QMediaPlayer::State state)
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONSTATECHANGED)
 {
-  auto sender = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -990,7 +979,6 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONSTATECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1009,7 +997,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONSTATECHANGED)
 // void videoAvailableChanged(bool video)
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONVIDEOAVAILABLECHANGED)
 {
-  auto sender = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1031,7 +1019,6 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONVIDEOAVAILABLECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1050,7 +1037,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONVIDEOAVAILABLECHANGED)
 // void volumeChanged(int volume)
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONVOLUMECHANGED)
 {
-  auto sender = qobject_cast<QMediaPlayerControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -1072,7 +1059,6 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_ONVOLUMECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

@@ -510,7 +510,6 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONBUFFERFORMATCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -553,7 +552,6 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONCAPTUREDESTINATIONCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -599,7 +597,6 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONERROR)
                 hb_itemRelease(pArg3);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -643,7 +640,6 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGEAVAILABLE)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -686,7 +682,6 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGECAPTURED)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -727,7 +722,6 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGEEXPOSED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -773,7 +767,6 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGEMETADATAAVAILABLE)
                                  hb_itemRelease(pArg3);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -816,7 +809,6 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONIMAGESAVED)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -857,7 +849,6 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ONREADYFORCAPTURECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

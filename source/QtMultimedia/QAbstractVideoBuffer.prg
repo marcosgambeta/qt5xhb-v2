@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
+REQUEST QVariant
 #endif
 
 CLASS QAbstractVideoBuffer
@@ -62,22 +62,22 @@ RETURN
 
 #include <QtCore/QVariant>
 
-    // QAbstractVideoBuffer(QAbstractVideoBuffer::HandleType type) [ABSTRACT]
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAbstractVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem())
 
-    // virtual ~QAbstractVideoBuffer()
+// QAbstractVideoBuffer(QAbstractVideoBuffer::HandleType type) [ABSTRACT]
+
+// virtual ~QAbstractVideoBuffer()
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_DELETE)
 {
-  auto obj = static_cast<QAbstractVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QVariant handle() const
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_HANDLE)
 {
-  auto obj = static_cast<QAbstractVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_HANDLE)
 // QAbstractVideoBuffer::HandleType handleType() const
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_HANDLETYPE)
 {
-  auto obj = static_cast<QAbstractVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_HANDLETYPE)
 // virtual QAbstractVideoBuffer::MapMode mapMode() const = 0
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_MAPMODE)
 {
-  auto obj = static_cast<QAbstractVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_MAPMODE)
 // virtual void unmap() = 0
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_UNMAP)
 {
-  auto obj = static_cast<QAbstractVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_UNMAP)
 // virtual void release()
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_RELEASE)
 {
-  auto obj = static_cast<QAbstractVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -146,7 +146,6 @@ HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_ONCAPTUREDESTINATIONCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

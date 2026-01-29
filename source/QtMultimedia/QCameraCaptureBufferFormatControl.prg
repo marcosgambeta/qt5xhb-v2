@@ -152,7 +152,6 @@ HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

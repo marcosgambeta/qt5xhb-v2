@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMEDIAOBJECT
+REQUEST QMediaObject
 #endif
 
 CLASS QMediaBindableInterface
@@ -56,20 +56,20 @@ RETURN
 #include <QtMultimedia/QMediaBindableInterface>
 #endif
 
-    // virtual ~QMediaBindableInterface()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QMediaBindableInterface *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// virtual ~QMediaBindableInterface()
 HB_FUNC_STATIC(QMEDIABINDABLEINTERFACE_DELETE)
 {
-  auto obj = static_cast<QMediaBindableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QMediaObject *mediaObject() const = 0
 HB_FUNC_STATIC(QMEDIABINDABLEINTERFACE_MEDIAOBJECT)
 {
-  auto obj = static_cast<QMediaBindableInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

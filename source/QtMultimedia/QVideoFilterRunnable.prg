@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVIDEOFRAME
+REQUEST QVideoFrame
 #endif
 
 CLASS QVideoFilterRunnable
@@ -60,14 +60,14 @@ RETURN
 #endif
 #endif
 
-    // virtual ~QVideoFilterRunnable()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QVideoFilterRunnable *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// virtual ~QVideoFilterRunnable()
 HB_FUNC_STATIC(QVIDEOFILTERRUNNABLE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-  auto obj = static_cast<QVideoFilterRunnable *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QVIDEOFILTERRUNNABLE_DELETE)
 HB_FUNC_STATIC(QVIDEOFILTERRUNNABLE_RUN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-  auto obj = static_cast<QVideoFilterRunnable *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

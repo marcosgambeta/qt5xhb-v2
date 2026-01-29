@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
+REQUEST QVariant
 #endif
 
 CLASS QMetaDataWriterControl INHERIT QMediaControl
@@ -58,20 +58,20 @@ RETURN
 #include <QtMultimedia/QMetaDataWriterControl>
 #endif
 
-    // ~QMetaDataWriterControl()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QMetaDataWriterControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QMetaDataWriterControl()
 HB_FUNC_STATIC(QMETADATAWRITERCONTROL_DELETE)
 {
-  auto obj = qobject_cast<QMetaDataWriterControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual bool isWritable() const = 0
 HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ISWRITABLE)
 {
-  auto obj = qobject_cast<QMetaDataWriterControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ISWRITABLE)
 // virtual bool isMetaDataAvailable() const = 0
 HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ISMETADATAAVAILABLE)
 {
-  auto obj = qobject_cast<QMetaDataWriterControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ISMETADATAAVAILABLE)
 // virtual QVariant metaData(const QString &key) const = 0
 HB_FUNC_STATIC(QMETADATAWRITERCONTROL_METADATA)
 {
-  auto obj = qobject_cast<QMetaDataWriterControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_METADATA)
 // virtual void setMetaData(const QString &key, const QVariant &value) = 0
 HB_FUNC_STATIC(QMETADATAWRITERCONTROL_SETMETADATA)
 {
-  auto obj = qobject_cast<QMetaDataWriterControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_SETMETADATA)
 // virtual QStringList availableMetaData() const = 0
 HB_FUNC_STATIC(QMETADATAWRITERCONTROL_AVAILABLEMETADATA)
 {
-  auto obj = qobject_cast<QMetaDataWriterControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_AVAILABLEMETADATA)
 // void metaDataChanged()
 HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ONMETADATACHANGED1)
 {
-  auto sender = qobject_cast<QMetaDataWriterControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -183,7 +183,6 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ONMETADATACHANGED1)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -202,7 +201,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ONMETADATACHANGED1)
 // void metaDataChanged(const QString &key, const QVariant &value)
 HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ONMETADATACHANGED2)
 {
-  auto sender = qobject_cast<QMetaDataWriterControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -227,7 +226,6 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ONMETADATACHANGED2)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -246,7 +244,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ONMETADATACHANGED2)
 // void writableChanged(bool writable)
 HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ONWRITABLECHANGED)
 {
-  auto sender = qobject_cast<QMetaDataWriterControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -268,7 +266,6 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ONWRITABLECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -287,7 +284,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ONWRITABLECHANGED)
 // void metaDataAvailableChanged(bool available)
 HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ONMETADATAAVAILABLECHANGED)
 {
-  auto sender = qobject_cast<QMetaDataWriterControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -309,7 +306,6 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ONMETADATAAVAILABLECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

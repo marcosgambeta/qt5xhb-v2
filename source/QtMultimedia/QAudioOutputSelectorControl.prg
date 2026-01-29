@@ -55,20 +55,21 @@ RETURN
 #include <QtMultimedia/QAudioOutputSelectorControl>
 #endif
 
-    // virtual ~QAudioOutputSelectorControl()
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QAudioOutputSelectorControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual ~QAudioOutputSelectorControl()
 HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_DELETE)
 {
-  auto obj = qobject_cast<QAudioOutputSelectorControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QString activeOutput() const = 0
 HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_ACTIVEOUTPUT)
 {
-  auto obj = qobject_cast<QAudioOutputSelectorControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -86,7 +87,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_ACTIVEOUTPUT)
 // virtual QList<QString> availableOutputs() const = 0
 HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_AVAILABLEOUTPUTS)
 {
-  auto obj = qobject_cast<QAudioOutputSelectorControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +112,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_AVAILABLEOUTPUTS)
 // virtual QString defaultOutput() const = 0
 HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_DEFAULTOUTPUT)
 {
-  auto obj = qobject_cast<QAudioOutputSelectorControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +130,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_DEFAULTOUTPUT)
 // virtual QString outputDescription(const QString &name) const = 0
 HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_OUTPUTDESCRIPTION)
 {
-  auto obj = qobject_cast<QAudioOutputSelectorControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +148,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_OUTPUTDESCRIPTION)
 // virtual void setActiveOutput(const QString &name) = 0
 HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_SETACTIVEOUTPUT)
 {
-  auto obj = qobject_cast<QAudioOutputSelectorControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +168,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_SETACTIVEOUTPUT)
 // void activeOutputChanged(const QString &name)
 HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_ONACTIVEOUTPUTCHANGED)
 {
-  auto sender = qobject_cast<QAudioOutputSelectorControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -189,7 +190,6 @@ HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_ONACTIVEOUTPUTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_ONACTIVEOUTPUTCHANGED)
 // void availableOutputsChanged()
 HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_ONAVAILABLEOUTPUTSCHANGED)
 {
-  auto sender = qobject_cast<QAudioOutputSelectorControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -228,7 +228,6 @@ HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_ONAVAILABLEOUTPUTSCHANGED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

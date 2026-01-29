@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMEDIASERVICE
+REQUEST QMediaService
 #endif
 
 CLASS QMediaServiceProviderPlugin INHERIT QObject,QMediaServiceProviderFactoryInterface
@@ -52,19 +52,20 @@ RETURN
 
 #include <QtMultimedia/QMediaService>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QMediaServiceProviderPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QMEDIASERVICEPROVIDERPLUGIN_DELETE)
 {
-  auto obj = qobject_cast<QMediaServiceProviderPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QMediaService *create(const QString &key) override = 0
 HB_FUNC_STATIC(QMEDIASERVICEPROVIDERPLUGIN_CREATE)
 {
-  auto obj = qobject_cast<QMediaServiceProviderPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -83,7 +84,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERPLUGIN_CREATE)
 // virtual void release(QMediaService *service) override = 0
 HB_FUNC_STATIC(QMEDIASERVICEPROVIDERPLUGIN_RELEASE)
 {
-  auto obj = qobject_cast<QMediaServiceProviderPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

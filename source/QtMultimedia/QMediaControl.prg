@@ -47,13 +47,13 @@ RETURN
 #include <QtMultimedia/QMediaControl>
 #endif
 
-    // ~QMediaControl()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QMediaControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QMediaControl()
 HB_FUNC_STATIC(QMEDIACONTROL_DELETE)
 {
-  auto obj = qobject_cast<QMediaControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 

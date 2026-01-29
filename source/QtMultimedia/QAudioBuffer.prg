@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QAUDIOFORMAT
+REQUEST QAudioFormat
 #endif
 
 CLASS QAudioBuffer
@@ -64,6 +64,8 @@ RETURN
 #include <QtMultimedia/QAudioBuffer>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAudioBuffer *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QAUDIOBUFFER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -90,17 +92,15 @@ HB_FUNC_STATIC(QAUDIOBUFFER_NEW)
 // ~QAudioBuffer()
 HB_FUNC_STATIC(QAUDIOBUFFER_DELETE)
 {
-  auto obj = static_cast<QAudioBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // int byteCount() const
 HB_FUNC_STATIC(QAUDIOBUFFER_BYTECOUNT)
 {
-  auto obj = static_cast<QAudioBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_BYTECOUNT)
 // void *data()
 HB_FUNC_STATIC(QAUDIOBUFFER_DATA)
 {
-  auto obj = static_cast<QAudioBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_DATA)
 // qint64 duration() const
 HB_FUNC_STATIC(QAUDIOBUFFER_DURATION)
 {
-  auto obj = static_cast<QAudioBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_DURATION)
 // QAudioFormat format() const
 HB_FUNC_STATIC(QAUDIOBUFFER_FORMAT)
 {
-  auto obj = static_cast<QAudioBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_FORMAT)
 // int frameCount() const
 HB_FUNC_STATIC(QAUDIOBUFFER_FRAMECOUNT)
 {
-  auto obj = static_cast<QAudioBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_FRAMECOUNT)
 // bool isValid() const
 HB_FUNC_STATIC(QAUDIOBUFFER_ISVALID)
 {
-  auto obj = static_cast<QAudioBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_ISVALID)
 // int sampleCount() const
 HB_FUNC_STATIC(QAUDIOBUFFER_SAMPLECOUNT)
 {
-  auto obj = static_cast<QAudioBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_SAMPLECOUNT)
 // qint64 startTime() const
 HB_FUNC_STATIC(QAUDIOBUFFER_STARTTIME)
 {
-  auto obj = static_cast<QAudioBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

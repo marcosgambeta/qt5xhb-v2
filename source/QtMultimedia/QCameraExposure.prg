@@ -685,7 +685,6 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONAPERTURECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -724,7 +723,6 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONAPERTURERANGECHANGED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -765,7 +763,6 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -805,7 +802,6 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONFLASHREADY)
             hb_itemRelease(pArg1);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -846,7 +842,6 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -887,7 +882,6 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -926,7 +920,6 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

@@ -55,7 +55,9 @@ RETURN
 #include <QtMultimedia/QSound>
 #endif
 
-    // QSound(const QString &filename, QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QSound *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QSound(const QString &filename, QObject *parent = nullptr)
 HB_FUNC_STATIC(QSOUND_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
@@ -69,17 +71,15 @@ HB_FUNC_STATIC(QSOUND_NEW)
 // ~QSound()
 HB_FUNC_STATIC(QSOUND_DELETE)
 {
-  auto obj = qobject_cast<QSound *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // int loops() const
 HB_FUNC_STATIC(QSOUND_LOOPS)
 {
-  auto obj = qobject_cast<QSound *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QSOUND_LOOPS)
 // int loopsRemaining() const
 HB_FUNC_STATIC(QSOUND_LOOPSREMAINING)
 {
-  auto obj = qobject_cast<QSound *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QSOUND_LOOPSREMAINING)
 // void setLoops(int)
 HB_FUNC_STATIC(QSOUND_SETLOOPS)
 {
-  auto obj = qobject_cast<QSound *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QSOUND_SETLOOPS)
 // QString fileName() const
 HB_FUNC_STATIC(QSOUND_FILENAME)
 {
-  auto obj = qobject_cast<QSound *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QSOUND_FILENAME)
 // bool isFinished() const
 HB_FUNC_STATIC(QSOUND_ISFINISHED)
 {
-  auto obj = qobject_cast<QSound *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QSOUND_ISFINISHED)
 // void stop()
 HB_FUNC_STATIC(QSOUND_STOP)
 {
-  auto obj = qobject_cast<QSound *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QSOUND_PLAY)
 {
   if (ISNUMPAR(0)) {
     // void play()
-    auto obj = qobject_cast<QSound *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->play();
@@ -201,9 +201,7 @@ HB_FUNC_STATIC(QSOUND_PLAY)
     RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static void play(const QString &filename)
-
     QSound::play(PQSTRING(1));
-
     RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

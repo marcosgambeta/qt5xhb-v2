@@ -224,7 +224,6 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONCURRENTDIGITALZOOMCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -265,7 +264,6 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONCURRENTOPTICALZOOMCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -306,7 +304,6 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONMAXIMUMDIGITALZOOMCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -347,7 +344,6 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONMAXIMUMOPTICALZOOMCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -388,7 +384,6 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONREQUESTEDDIGITALZOOMCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -429,7 +424,6 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ONREQUESTEDOPTICALZOOMCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

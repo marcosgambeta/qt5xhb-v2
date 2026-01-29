@@ -396,7 +396,6 @@ HB_FUNC_STATIC(QCAMERAFOCUS_ONDIGITALZOOMCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -434,7 +433,6 @@ HB_FUNC_STATIC(QCAMERAFOCUS_ONFOCUSZONESCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -475,7 +473,6 @@ HB_FUNC_STATIC(QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -516,7 +513,6 @@ HB_FUNC_STATIC(QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -557,7 +553,6 @@ HB_FUNC_STATIC(QCAMERAFOCUS_ONOPTICALZOOMCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

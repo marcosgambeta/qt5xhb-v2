@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QIMAGEENCODERSETTINGS
-REQUEST QSIZE
+REQUEST QImageEncoderSettings
+REQUEST QSize
 #endif
 
 CLASS QImageEncoderControl INHERIT QMediaControl
@@ -54,20 +54,20 @@ RETURN
 #include <QtMultimedia/QImageEncoderControl>
 #endif
 
-    // virtual ~QImageEncoderControl()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QImageEncoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual ~QImageEncoderControl()
 HB_FUNC_STATIC(QIMAGEENCODERCONTROL_DELETE)
 {
-  auto obj = qobject_cast<QImageEncoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QStringList supportedImageCodecs() const = 0
 HB_FUNC_STATIC(QIMAGEENCODERCONTROL_SUPPORTEDIMAGECODECS)
 {
-  auto obj = qobject_cast<QImageEncoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_SUPPORTEDIMAGECODECS)
 // virtual QString imageCodecDescription(const QString &codecName) const = 0
 HB_FUNC_STATIC(QIMAGEENCODERCONTROL_IMAGECODECDESCRIPTION)
 {
-  auto obj = qobject_cast<QImageEncoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_IMAGECODECDESCRIPTION)
 // 0
 HB_FUNC_STATIC(QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS)
 {
-  auto obj = qobject_cast<QImageEncoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS)
 // virtual QImageEncoderSettings imageSettings() const = 0
 HB_FUNC_STATIC(QIMAGEENCODERCONTROL_IMAGESETTINGS)
 {
-  auto obj = qobject_cast<QImageEncoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_IMAGESETTINGS)
 // virtual void setImageSettings(const QImageEncoderSettings &settings) = 0
 HB_FUNC_STATIC(QIMAGEENCODERCONTROL_SETIMAGESETTINGS)
 {
-  auto obj = qobject_cast<QImageEncoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

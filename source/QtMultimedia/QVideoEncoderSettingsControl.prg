@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
-REQUEST QVIDEOENCODERSETTINGS
+REQUEST QSize
+REQUEST QVideoEncoderSettings
 #endif
 
 CLASS QVideoEncoderSettingsControl INHERIT QMediaControl
@@ -55,20 +55,21 @@ RETURN
 #include <QtMultimedia/QVideoEncoderSettingsControl>
 #endif
 
-    // virtual ~QVideoEncoderSettingsControl()
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QVideoEncoderSettingsControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual ~QVideoEncoderSettingsControl()
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_DELETE)
 {
-  auto obj = qobject_cast<QVideoEncoderSettingsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual void setVideoSettings(const QVideoEncoderSettings &settings) = 0
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SETVIDEOSETTINGS)
 {
-  auto obj = qobject_cast<QVideoEncoderSettingsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +89,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SETVIDEOSETTINGS)
 // virtual QList<qreal> supportedFrameRates(const QVideoEncoderSettings &settings, bool *continuous = nullptr) const = 0
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES)
 {
-  auto obj = qobject_cast<QVideoEncoderSettingsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +111,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES)
 // 0
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS)
 {
-  auto obj = qobject_cast<QVideoEncoderSettingsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,7 +153,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS)
 // virtual QStringList supportedVideoCodecs() const = 0
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDVIDEOCODECS)
 {
-  auto obj = qobject_cast<QVideoEncoderSettingsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +171,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDVIDEOCODECS)
 // virtual QString videoCodecDescription(const QString &codecName) const = 0
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_VIDEOCODECDESCRIPTION)
 {
-  auto obj = qobject_cast<QVideoEncoderSettingsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +189,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_VIDEOCODECDESCRIPTION)
 // virtual QVideoEncoderSettings videoSettings() const = 0
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_VIDEOSETTINGS)
 {
-  auto obj = qobject_cast<QVideoEncoderSettingsControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

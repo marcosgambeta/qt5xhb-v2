@@ -162,7 +162,6 @@ HB_FUNC_STATIC(QCAMERAFLASHCONTROL_ONFLASHREADY)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

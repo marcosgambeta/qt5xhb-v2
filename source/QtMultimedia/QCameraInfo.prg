@@ -70,7 +70,7 @@ RETURN
 
 HB_FUNC_STATIC(QCAMERAINFO_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQBYTEARRAY(1)) {
+  if (ISBETWEEN(0, 1) && ISQBYTEARRAYORNIL(1)) {
     // QCameraInfo(const QByteArray &name = QByteArray())
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     auto obj = new QCameraInfo(HB_ISNIL(1) ? QByteArray() : *PQBYTEARRAY(1));
@@ -98,9 +98,7 @@ HB_FUNC_STATIC(QCAMERAINFO_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   GET_PTR_FROM_SELF(obj);
-
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }

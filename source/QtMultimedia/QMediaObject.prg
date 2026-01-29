@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMEDIASERVICE
-REQUEST QVARIANT
+REQUEST QMediaService
+REQUEST QVariant
 #endif
 
 CLASS QMediaObject INHERIT QObject
@@ -69,20 +69,20 @@ RETURN
 #include <QtCore/QVariant>
 #include <QtMultimedia/QMediaService>
 
-    // ~QMediaObject()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QMediaObject()
 HB_FUNC_STATIC(QMEDIAOBJECT_DELETE)
 {
-  auto obj = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // int notifyInterval() const
 HB_FUNC_STATIC(QMEDIAOBJECT_NOTIFYINTERVAL)
 {
-  auto obj = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_NOTIFYINTERVAL)
 // void setNotifyInterval(int milliSeconds)
 HB_FUNC_STATIC(QMEDIAOBJECT_SETNOTIFYINTERVAL)
 {
-  auto obj = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_SETNOTIFYINTERVAL)
 // virtual QMultimedia::AvailabilityStatus availability() const
 HB_FUNC_STATIC(QMEDIAOBJECT_AVAILABILITY)
 {
-  auto obj = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_AVAILABILITY)
 // QStringList availableMetaData() const
 HB_FUNC_STATIC(QMEDIAOBJECT_AVAILABLEMETADATA)
 {
-  auto obj = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_AVAILABLEMETADATA)
 // virtual bool bind(QObject *object)
 HB_FUNC_STATIC(QMEDIAOBJECT_BIND)
 {
-  auto obj = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_BIND)
 // virtual bool isAvailable() const
 HB_FUNC_STATIC(QMEDIAOBJECT_ISAVAILABLE)
 {
-  auto obj = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ISAVAILABLE)
 // bool isMetaDataAvailable() const
 HB_FUNC_STATIC(QMEDIAOBJECT_ISMETADATAAVAILABLE)
 {
-  auto obj = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ISMETADATAAVAILABLE)
 // QVariant metaData(const QString &key) const
 HB_FUNC_STATIC(QMEDIAOBJECT_METADATA)
 {
-  auto obj = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_METADATA)
 // virtual QMediaService *service() const
 HB_FUNC_STATIC(QMEDIAOBJECT_SERVICE)
 {
-  auto obj = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_SERVICE)
 // virtual void unbind(QObject *object)
 HB_FUNC_STATIC(QMEDIAOBJECT_UNBIND)
 {
-  auto obj = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_UNBIND)
 // void availabilityChanged(bool available)
 HB_FUNC_STATIC(QMEDIAOBJECT_ONAVAILABILITYCHANGED1)
 {
-  auto sender = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -289,7 +289,6 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ONAVAILABILITYCHANGED1)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -308,7 +307,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ONAVAILABILITYCHANGED1)
 // void availabilityChanged(QMultimedia::AvailabilityStatus availability)
 HB_FUNC_STATIC(QMEDIAOBJECT_ONAVAILABILITYCHANGED2)
 {
-  auto sender = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -331,7 +330,6 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ONAVAILABILITYCHANGED2)
                                  hb_itemRelease(pArg1);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -350,7 +348,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ONAVAILABILITYCHANGED2)
 // void metaDataAvailableChanged(bool available)
 HB_FUNC_STATIC(QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED)
 {
-  auto sender = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -372,7 +370,6 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -391,7 +388,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED)
 // void metaDataChanged()
 HB_FUNC_STATIC(QMEDIAOBJECT_ONMETADATACHANGED1)
 {
-  auto sender = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -411,7 +408,6 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ONMETADATACHANGED1)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -430,7 +426,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ONMETADATACHANGED1)
 // void metaDataChanged(const QString &key, const QVariant &value)
 HB_FUNC_STATIC(QMEDIAOBJECT_ONMETADATACHANGED2)
 {
-  auto sender = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -455,7 +451,6 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ONMETADATACHANGED2)
                                  hb_itemRelease(pArg2);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -474,7 +469,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ONMETADATACHANGED2)
 // void notifyIntervalChanged(int milliseconds)
 HB_FUNC_STATIC(QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED)
 {
-  auto sender = qobject_cast<QMediaObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -496,7 +491,6 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

@@ -54,7 +54,9 @@ RETURN
 #include <QtMultimedia/QAudio>
 #endif
 
-    // static qreal convertVolume(qreal volume, QAudio::VolumeScale from, QAudio::VolumeScale to)
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAudio *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// static qreal convertVolume(qreal volume, QAudio::VolumeScale from, QAudio::VolumeScale to)
 HB_FUNC_STATIC(QAUDIO_CONVERTVOLUME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))

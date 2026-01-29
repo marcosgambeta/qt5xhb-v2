@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTVIDEOSURFACE
+REQUEST QAbstractVideoSurface
 #endif
 
 CLASS QVideoRendererControl INHERIT QMediaControl
@@ -52,20 +52,20 @@ RETURN
 
 #include <QtMultimedia/QAbstractVideoSurface>
 
-    // ~QVideoRendererControl()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QVideoRendererControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QVideoRendererControl()
 HB_FUNC_STATIC(QVIDEORENDERERCONTROL_DELETE)
 {
-  auto obj = qobject_cast<QVideoRendererControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual void setSurface(QAbstractVideoSurface *surface) = 0
 HB_FUNC_STATIC(QVIDEORENDERERCONTROL_SETSURFACE)
 {
-  auto obj = qobject_cast<QVideoRendererControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QVIDEORENDERERCONTROL_SETSURFACE)
 // virtual QAbstractVideoSurface *surface() const = 0
 HB_FUNC_STATIC(QVIDEORENDERERCONTROL_SURFACE)
 {
-  auto obj = qobject_cast<QVideoRendererControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

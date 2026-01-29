@@ -61,6 +61,8 @@ RETURN
 #include <QtMultimedia/QMediaTimeInterval>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QMEDIATIMEINTERVAL_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -82,17 +84,15 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_NEW)
 
 HB_FUNC_STATIC(QMEDIATIMEINTERVAL_DELETE)
 {
-  auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool contains(qint64 time) const
 HB_FUNC_STATIC(QMEDIATIMEINTERVAL_CONTAINS)
 {
-  auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_CONTAINS)
 // qint64 end() const
 HB_FUNC_STATIC(QMEDIATIMEINTERVAL_END)
 {
-  auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_END)
 // bool isNormal() const
 HB_FUNC_STATIC(QMEDIATIMEINTERVAL_ISNORMAL)
 {
-  auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_ISNORMAL)
 // QMediaTimeInterval normalized() const
 HB_FUNC_STATIC(QMEDIATIMEINTERVAL_NORMALIZED)
 {
-  auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_NORMALIZED)
 // qint64 start() const
 HB_FUNC_STATIC(QMEDIATIMEINTERVAL_START)
 {
-  auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_START)
 // QMediaTimeInterval translated(qint64 offset) const
 HB_FUNC_STATIC(QMEDIATIMEINTERVAL_TRANSLATED)
 {
-  auto obj = static_cast<QMediaTimeInterval *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

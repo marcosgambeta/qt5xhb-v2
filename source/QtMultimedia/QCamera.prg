@@ -14,7 +14,7 @@
 REQUEST QByteArray
 REQUEST QCameraExposure
 REQUEST QCameraFocus
-REQUEST QCameraImagePROCESSING
+REQUEST QCameraImageProcessing
 REQUEST QCameraViewfinderSettings
 REQUEST QSize
 #endif
@@ -683,10 +683,8 @@ HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS)
 }
 
 // QList<FrameRateRange> supportedViewfinderFrameRateRanges(const QCameraViewfinderSettings &settings =
-// QCameraViewfinderSettings()) const
-
-// QList<QVideoFrame::PixelFormat> supportedViewfinderPixelFormats(const QCameraViewfinderSettings &settings =
-// QCameraViewfinderSettings()) const
+// QCameraViewfinderSettings()) const QList<QVideoFrame::PixelFormat> supportedViewfinderPixelFormats(const
+// QCameraViewfinderSettings &settings = QCameraViewfinderSettings()) const
 HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERPIXELFORMATS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
@@ -789,7 +787,6 @@ HB_FUNC_STATIC(QCAMERA_ONCAPTUREMODECHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -830,7 +827,6 @@ HB_FUNC_STATIC(QCAMERA_ONERROR)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -868,7 +864,6 @@ HB_FUNC_STATIC(QCAMERA_ONLOCKFAILED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -913,7 +908,6 @@ HB_FUNC_STATIC(QCAMERA_ONLOCKSTATUSCHANGED1)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -963,7 +957,6 @@ HB_FUNC_STATIC(QCAMERA_ONLOCKSTATUSCHANGED2)
                                  hb_itemRelease(pArg3);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1001,7 +994,6 @@ HB_FUNC_STATIC(QCAMERA_ONLOCKED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1042,7 +1034,6 @@ HB_FUNC_STATIC(QCAMERA_ONSTATECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -1083,7 +1074,6 @@ HB_FUNC_STATIC(QCAMERA_ONSTATUSCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

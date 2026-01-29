@@ -224,7 +224,6 @@ HB_FUNC_STATIC(QCAMERACONTROL_ONCAPTUREMODECHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -267,7 +266,6 @@ HB_FUNC_STATIC(QCAMERACONTROL_ONERROR)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -308,7 +306,6 @@ HB_FUNC_STATIC(QCAMERACONTROL_ONSTATECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -349,7 +346,6 @@ HB_FUNC_STATIC(QCAMERACONTROL_ONSTATUSCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

@@ -55,20 +55,20 @@ RETURN
 #include <QtMultimedia/QMediaServiceFeaturesInterface>
 #endif
 
-    // virtual ~QMediaServiceFeaturesInterface()
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QMediaServiceFeaturesInterface *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// virtual ~QMediaServiceFeaturesInterface()
 HB_FUNC_STATIC(QMEDIASERVICEFEATURESINTERFACE_DELETE)
 {
-  auto obj = static_cast<QMediaServiceFeaturesInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QMediaServiceProviderHint::Features supportedFeatures(const QByteArray &service) const = 0
 HB_FUNC_STATIC(QMEDIASERVICEFEATURESINTERFACE_SUPPORTEDFEATURES)
 {
-  auto obj = static_cast<QMediaServiceFeaturesInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

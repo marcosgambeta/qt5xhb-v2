@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QAUDIOBUFFER
-REQUEST QAUDIOFORMAT
-REQUEST QIODEVICE
+REQUEST QAudioBuffer
+REQUEST QAudioFormat
+REQUEST QIODevice
 #endif
 
 CLASS QAudioDecoderControl INHERIT QMediaControl
@@ -73,20 +73,20 @@ RETURN
 #include <QtMultimedia/QAudioDecoderControl>
 #endif
 
-    // ~QAudioDecoderControl()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QAudioDecoderControl()
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_DELETE)
 {
-  auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QAudioFormat audioFormat() const = 0
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_AUDIOFORMAT)
 {
-  auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_AUDIOFORMAT)
 // virtual bool bufferAvailable() const = 0
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_BUFFERAVAILABLE)
 {
-  auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_BUFFERAVAILABLE)
 // virtual qint64 duration() const = 0
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_DURATION)
 {
-  auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_DURATION)
 // virtual qint64 position() const = 0
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_POSITION)
 {
-  auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_POSITION)
 // virtual QAudioBuffer read() = 0
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_READ)
 {
-  auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_READ)
 // virtual void setAudioFormat(const QAudioFormat &format) = 0
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_SETAUDIOFORMAT)
 {
-  auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SETAUDIOFORMAT)
 // virtual QIODevice *sourceDevice() const = 0
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_SOURCEDEVICE)
 {
-  auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SOURCEDEVICE)
 // virtual void setSourceDevice(QIODevice *device) = 0
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_SETSOURCEDEVICE)
 {
-  auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SETSOURCEDEVICE)
 // virtual void setSourceFilename(const QString &fileName) = 0
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_SETSOURCEFILENAME)
 {
-  auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SETSOURCEFILENAME)
 // virtual QString sourceFilename() const = 0
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_SOURCEFILENAME)
 {
-  auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SOURCEFILENAME)
 // virtual void start() = 0
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_START)
 {
-  auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_START)
 // virtual QAudioDecoder::State state() const = 0
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_STATE)
 {
-  auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_STATE)
 // virtual void stop() = 0
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_STOP)
 {
-  auto obj = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_STOP)
 // void bufferAvailableChanged(bool available)
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONBUFFERAVAILABLECHANGED)
 {
-  auto sender = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -353,7 +353,6 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONBUFFERAVAILABLECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -372,7 +371,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONBUFFERAVAILABLECHANGED)
 // void bufferReady()
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONBUFFERREADY)
 {
-  auto sender = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -391,7 +390,6 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONBUFFERREADY)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -410,7 +408,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONBUFFERREADY)
 // void durationChanged(qint64 duration)
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONDURATIONCHANGED)
 {
-  auto sender = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -432,7 +430,6 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONDURATIONCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -451,7 +448,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONDURATIONCHANGED)
 // void error(int error, const QString &errorString)
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONERROR)
 {
-  auto sender = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -475,7 +472,6 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONERROR)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -494,7 +490,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONERROR)
 // void finished()
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONFINISHED)
 {
-  auto sender = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -513,7 +509,6 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONFINISHED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -532,7 +527,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONFINISHED)
 // void formatChanged(const QAudioFormat &format)
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONFORMATCHANGED)
 {
-  auto sender = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -554,7 +549,6 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONFORMATCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -573,7 +567,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONFORMATCHANGED)
 // void positionChanged(qint64 position)
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONPOSITIONCHANGED)
 {
-  auto sender = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -595,7 +589,6 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONPOSITIONCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -614,7 +607,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONPOSITIONCHANGED)
 // void sourceChanged()
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONSOURCECHANGED)
 {
-  auto sender = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -633,7 +626,6 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONSOURCECHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -652,7 +644,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONSOURCECHANGED)
 // void stateChanged(QAudioDecoder::State state)
 HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONSTATECHANGED)
 {
-  auto sender = qobject_cast<QAudioDecoderControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -674,7 +666,6 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_ONSTATECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

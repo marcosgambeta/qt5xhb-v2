@@ -49,16 +49,16 @@ RETURN
 #endif
 #endif
 
-    // QAbstractPlanarVideoBuffer(QAbstractVideoBuffer::HandleType type) [ABSTRACT]
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QAbstractPlanarVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem())
 
-    // virtual ~QAbstractPlanarVideoBuffer()
+// QAbstractPlanarVideoBuffer(QAbstractVideoBuffer::HandleType type) [ABSTRACT]
+
+// virtual ~QAbstractPlanarVideoBuffer()
 HB_FUNC_STATIC(QABSTRACTPLANARVIDEOBUFFER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  auto obj = static_cast<QAbstractPlanarVideoBuffer *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 #endif
 }

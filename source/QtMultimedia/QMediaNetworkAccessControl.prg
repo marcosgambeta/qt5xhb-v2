@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QNETWORKCONFIGURATION
+REQUEST QNetworkConfiguration
 #endif
 
 CLASS QMediaNetworkAccessControl INHERIT QMediaControl
@@ -52,20 +52,21 @@ RETURN
 #include <QtMultimedia/QMediaNetworkAccessControl>
 #endif
 
-    // virtual ~QMediaNetworkAccessControl()
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = qobject_cast<QMediaNetworkAccessControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual ~QMediaNetworkAccessControl()
 HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_DELETE)
 {
-  auto obj = qobject_cast<QMediaNetworkAccessControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QNetworkConfiguration currentConfiguration() const = 0
 HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION)
 {
-  auto obj = qobject_cast<QMediaNetworkAccessControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -83,7 +84,7 @@ HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION)
 // virtual void setConfigurations(const QList<QNetworkConfiguration> &configurations) = 0
 HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS)
 {
-  auto obj = qobject_cast<QMediaNetworkAccessControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +111,7 @@ HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS)
 // void configurationChanged(const QNetworkConfiguration &configuration)
 HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED)
 {
-  auto sender = qobject_cast<QMediaNetworkAccessControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -133,7 +134,6 @@ HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED)
                                  hb_itemRelease(pArg1);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

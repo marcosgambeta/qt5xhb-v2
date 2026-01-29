@@ -171,7 +171,6 @@ HB_FUNC_STATIC(QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED)
                                                hb_itemRelease(pArg3);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

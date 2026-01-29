@@ -11,10 +11,10 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMEDIAPLAYLIST
-REQUEST QMEDIARESOURCE
-REQUEST QNETWORKREQUEST
-REQUEST QURL
+REQUEST QMediaPlaylist
+REQUEST QMediaResource
+REQUEST QNetworkRequest
+REQUEST QUrl
 #endif
 
 CLASS QMediaContent
@@ -67,6 +67,8 @@ RETURN
 
 #include <QtMultimedia/QMediaPlaylist>
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QMEDIACONTENT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -100,7 +102,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_NEW)
     // QMediaContent(const QMediaContent &other)
     auto obj = new QMediaContent(*PQMEDIACONTENT(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 3) && ISQMEDIAPLAYLIST(1) && ISQURLORNIL(2) && ISOPTLOG(3)) {
+  } else if (ISBETWEEN(1, 3) && ISQMEDIAPLAYLIST(1) && ISQURLORNIL(2) && ISLOGORNIL(3)) {
     // QMediaContent(QMediaPlaylist *playlist, const QUrl &contentUrl = QUrl(), bool takeOwnership = false)
     auto obj = new QMediaContent(PQMEDIAPLAYLIST(1), HB_ISNIL(2) ? QUrl() : *PQURL(2), OPBOOL(3, false));
     Qt5xHb::returnNewObject(obj, true);
@@ -112,17 +114,15 @@ HB_FUNC_STATIC(QMEDIACONTENT_NEW)
 // ~QMediaContent()
 HB_FUNC_STATIC(QMEDIACONTENT_DELETE)
 {
-  auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QNetworkRequest canonicalRequest() const
 HB_FUNC_STATIC(QMEDIACONTENT_CANONICALREQUEST)
 {
-  auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_CANONICALREQUEST)
 // QMediaResource canonicalResource() const
 HB_FUNC_STATIC(QMEDIACONTENT_CANONICALRESOURCE)
 {
-  auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_CANONICALRESOURCE)
 // QUrl canonicalUrl() const
 HB_FUNC_STATIC(QMEDIACONTENT_CANONICALURL)
 {
-  auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_CANONICALURL)
 // bool isNull() const
 HB_FUNC_STATIC(QMEDIACONTENT_ISNULL)
 {
-  auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_ISNULL)
 // QMediaPlaylist *playlist() const
 HB_FUNC_STATIC(QMEDIACONTENT_PLAYLIST)
 {
-  auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_PLAYLIST)
 // QMediaResourceList resources() const
 HB_FUNC_STATIC(QMEDIACONTENT_RESOURCES)
 {
-  auto obj = static_cast<QMediaContent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

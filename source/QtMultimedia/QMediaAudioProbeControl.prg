@@ -52,20 +52,20 @@ RETURN
 
 #include <QtMultimedia/QAudioBuffer>
 
-    // virtual ~QMediaAudioProbeControl()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QMediaAudioProbeControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual ~QMediaAudioProbeControl()
 HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_DELETE)
 {
-  auto obj = qobject_cast<QMediaAudioProbeControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void audioBufferProbed(const QAudioBuffer &buffer)
 HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED)
 {
-  auto sender = qobject_cast<QMediaAudioProbeControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -87,7 +87,6 @@ HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -106,7 +105,7 @@ HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED)
 // void flush()
 HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_ONFLUSH)
 {
-  auto sender = qobject_cast<QMediaAudioProbeControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -125,7 +124,6 @@ HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_ONFLUSH)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

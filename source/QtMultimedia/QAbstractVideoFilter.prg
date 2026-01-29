@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVIDEOFILTERRUNNABLE
+REQUEST QVideoFilterRunnable
 #endif
 
 CLASS QAbstractVideoFilter INHERIT QObject
@@ -57,16 +57,16 @@ RETURN
 #endif
 #endif
 
-    // QAbstractVideoFilter(QObject *parent = nullptr) [ABSTRACT]
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAbstractVideoFilter *>(Qt5xHb::getQObjectPointerFromSelfItem())
 
-    // ~QAbstractVideoFilter()
+// QAbstractVideoFilter(QObject *parent = nullptr) [ABSTRACT]
+
+// ~QAbstractVideoFilter()
 HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-  auto obj = qobject_cast<QAbstractVideoFilter *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_DELETE)
 HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_ISACTIVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-  auto obj = qobject_cast<QAbstractVideoFilter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_ISACTIVE)
 HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_SETACTIVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-  auto obj = qobject_cast<QAbstractVideoFilter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_SETACTIVE)
 HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_CREATEFILTERRUNNABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-  auto obj = qobject_cast<QAbstractVideoFilter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_CREATEFILTERRUNNABLE)
 HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_ONACTIVECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-  auto sender = qobject_cast<QAbstractVideoFilter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -157,7 +157,6 @@ HB_FUNC_STATIC(QABSTRACTVIDEOFILTER_ONACTIVECHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

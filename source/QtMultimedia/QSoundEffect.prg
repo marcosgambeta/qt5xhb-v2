@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QURL
+REQUEST QUrl
 #endif
 
 CLASS QSoundEffect INHERIT QObject
@@ -76,7 +76,9 @@ RETURN
 #include <QtMultimedia/QSoundEffect>
 #endif
 
-    // QSoundEffect(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QSoundEffect(QObject *parent = nullptr)
 HB_FUNC_STATIC(QSOUNDEFFECT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -90,17 +92,15 @@ HB_FUNC_STATIC(QSOUNDEFFECT_NEW)
 // ~QSoundEffect()
 HB_FUNC_STATIC(QSOUNDEFFECT_DELETE)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // QUrl source() const
 HB_FUNC_STATIC(QSOUNDEFFECT_SOURCE)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SOURCE)
 // void setSource(const QUrl &url)
 HB_FUNC_STATIC(QSOUNDEFFECT_SETSOURCE)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SETSOURCE)
 // int loopCount() const
 HB_FUNC_STATIC(QSOUNDEFFECT_LOOPCOUNT)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_LOOPCOUNT)
 // void setLoopCount(int loopCount)
 HB_FUNC_STATIC(QSOUNDEFFECT_SETLOOPCOUNT)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SETLOOPCOUNT)
 // int loopsRemaining() const
 HB_FUNC_STATIC(QSOUNDEFFECT_LOOPSREMAINING)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_LOOPSREMAINING)
 // qreal volume() const
 HB_FUNC_STATIC(QSOUNDEFFECT_VOLUME)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_VOLUME)
 // void setVolume(qreal volume)
 HB_FUNC_STATIC(QSOUNDEFFECT_SETVOLUME)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SETVOLUME)
 // bool isMuted() const
 HB_FUNC_STATIC(QSOUNDEFFECT_ISMUTED)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ISMUTED)
 // void setMuted(bool muted)
 HB_FUNC_STATIC(QSOUNDEFFECT_SETMUTED)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SETMUTED)
 // bool isPlaying() const
 HB_FUNC_STATIC(QSOUNDEFFECT_ISPLAYING)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ISPLAYING)
 // QSoundEffect::Status status() const
 HB_FUNC_STATIC(QSOUNDEFFECT_STATUS)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_STATUS)
 // QString category() const
 HB_FUNC_STATIC(QSOUNDEFFECT_CATEGORY)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_CATEGORY)
 // void setCategory(const QString &category)
 HB_FUNC_STATIC(QSOUNDEFFECT_SETCATEGORY)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SETCATEGORY)
 // bool isLoaded() const
 HB_FUNC_STATIC(QSOUNDEFFECT_ISLOADED)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -362,7 +362,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ISLOADED)
 // void play()
 HB_FUNC_STATIC(QSOUNDEFFECT_PLAY)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_PLAY)
 // void stop()
 HB_FUNC_STATIC(QSOUNDEFFECT_STOP)
 {
-  auto obj = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SUPPORTEDMIMETYPES)
 // void sourceChanged()
 HB_FUNC_STATIC(QSOUNDEFFECT_ONSOURCECHANGED)
 {
-  auto sender = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -435,7 +435,6 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONSOURCECHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -454,7 +453,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONSOURCECHANGED)
 // void loopCountChanged()
 HB_FUNC_STATIC(QSOUNDEFFECT_ONLOOPCOUNTCHANGED)
 {
-  auto sender = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -473,7 +472,6 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONLOOPCOUNTCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -492,7 +490,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONLOOPCOUNTCHANGED)
 // void loopsRemainingChanged()
 HB_FUNC_STATIC(QSOUNDEFFECT_ONLOOPSREMAININGCHANGED)
 {
-  auto sender = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -511,7 +509,6 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONLOOPSREMAININGCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -530,7 +527,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONLOOPSREMAININGCHANGED)
 // void volumeChanged()
 HB_FUNC_STATIC(QSOUNDEFFECT_ONVOLUMECHANGED)
 {
-  auto sender = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -549,7 +546,6 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONVOLUMECHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -568,7 +564,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONVOLUMECHANGED)
 // void mutedChanged()
 HB_FUNC_STATIC(QSOUNDEFFECT_ONMUTEDCHANGED)
 {
-  auto sender = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -587,7 +583,6 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONMUTEDCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -606,7 +601,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONMUTEDCHANGED)
 // void loadedChanged()
 HB_FUNC_STATIC(QSOUNDEFFECT_ONLOADEDCHANGED)
 {
-  auto sender = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -625,7 +620,6 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONLOADEDCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -644,7 +638,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONLOADEDCHANGED)
 // void playingChanged()
 HB_FUNC_STATIC(QSOUNDEFFECT_ONPLAYINGCHANGED)
 {
-  auto sender = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -663,7 +657,6 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONPLAYINGCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -682,7 +675,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONPLAYINGCHANGED)
 // void statusChanged()
 HB_FUNC_STATIC(QSOUNDEFFECT_ONSTATUSCHANGED)
 {
-  auto sender = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -701,7 +694,6 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONSTATUSCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -720,7 +712,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONSTATUSCHANGED)
 // void categoryChanged()
 HB_FUNC_STATIC(QSOUNDEFFECT_ONCATEGORYCHANGED)
 {
-  auto sender = qobject_cast<QSoundEffect *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -739,7 +731,6 @@ HB_FUNC_STATIC(QSOUNDEFFECT_ONCATEGORYCHANGED)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

@@ -52,20 +52,20 @@ RETURN
 
 #include <QtMultimedia/QVideoFrame>
 
-    // virtual ~QMediaVideoProbeControl()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QMediaVideoProbeControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual ~QMediaVideoProbeControl()
 HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_DELETE)
 {
-  auto obj = qobject_cast<QMediaVideoProbeControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // void flush()
 HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_ONFLUSH)
 {
-  auto sender = qobject_cast<QMediaVideoProbeControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -84,7 +84,6 @@ HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_ONFLUSH)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -103,7 +102,7 @@ HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_ONFLUSH)
 // void videoFrameProbed(const QVideoFrame &frame)
 HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED)
 {
-  auto sender = qobject_cast<QMediaVideoProbeControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -125,7 +124,6 @@ HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

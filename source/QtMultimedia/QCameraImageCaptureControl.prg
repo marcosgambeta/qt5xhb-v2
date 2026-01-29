@@ -195,7 +195,6 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONERROR)
                                                hb_itemRelease(pArg3);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -239,7 +238,6 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -283,7 +281,6 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED)
                                                hb_itemRelease(pArg2);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -324,7 +321,6 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -370,7 +366,6 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE)
                                  hb_itemRelease(pArg3);
                                }
                              });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -413,7 +408,6 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED)
                 hb_itemRelease(pArg2);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -454,7 +448,6 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONREADYFORCAPTURECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

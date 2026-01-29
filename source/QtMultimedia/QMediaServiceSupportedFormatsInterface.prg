@@ -56,20 +56,21 @@ RETURN
 #include <QtMultimedia/QMediaServiceSupportedFormatsInterface>
 #endif
 
-    // virtual ~QMediaServiceSupportedFormatsInterface()
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  auto p = static_cast<QMediaServiceSupportedFormatsInterface *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// virtual ~QMediaServiceSupportedFormatsInterface()
 HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDFORMATSINTERFACE_DELETE)
 {
-  auto obj = static_cast<QMediaServiceSupportedFormatsInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QStringList &codecs) const = 0
 HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDFORMATSINTERFACE_HASSUPPORT)
 {
-  auto obj = static_cast<QMediaServiceSupportedFormatsInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -87,7 +88,7 @@ HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDFORMATSINTERFACE_HASSUPPORT)
 // virtual QStringList supportedMimeTypes() const = 0
 HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDFORMATSINTERFACE_SUPPORTEDMIMETYPES)
 {
-  auto obj = static_cast<QMediaServiceSupportedFormatsInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -56,14 +56,14 @@ RETURN
 #endif
 #endif
 
-    // virtual ~QAudioRoleControl()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAudioRoleControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual ~QAudioRoleControl()
 HB_FUNC_STATIC(QAUDIOROLECONTROL_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-  auto obj = qobject_cast<QAudioRoleControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 #endif
 }
@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QAUDIOROLECONTROL_DELETE)
 HB_FUNC_STATIC(QAUDIOROLECONTROL_AUDIOROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-  auto obj = qobject_cast<QAudioRoleControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QAUDIOROLECONTROL_AUDIOROLE)
 HB_FUNC_STATIC(QAUDIOROLECONTROL_SETAUDIOROLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-  auto obj = qobject_cast<QAudioRoleControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QAUDIOROLECONTROL_SETAUDIOROLE)
 HB_FUNC_STATIC(QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-  auto obj = qobject_cast<QAudioRoleControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES)
 HB_FUNC_STATIC(QAUDIOROLECONTROL_ONAUDIOROLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-  auto sender = qobject_cast<QAudioRoleControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -163,7 +163,6 @@ HB_FUNC_STATIC(QAUDIOROLECONTROL_ONAUDIOROLECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

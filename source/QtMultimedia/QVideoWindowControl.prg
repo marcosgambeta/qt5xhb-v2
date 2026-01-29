@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECT
-REQUEST QSIZE
+REQUEST QRect
+REQUEST QSize
 #endif
 
 CLASS QVideoWindowControl INHERIT QMediaControl
@@ -74,20 +74,20 @@ RETURN
 #include <QtMultimedia/QVideoWindowControl>
 #endif
 
-    // ~QVideoWindowControl()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QVideoWindowControl()
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_DELETE)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QRect displayRect() const = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_DISPLAYRECT)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_DISPLAYRECT)
 // virtual void setDisplayRect(const QRect &rect) = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETDISPLAYRECT)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETDISPLAYRECT)
 // virtual bool isFullScreen() const = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ISFULLSCREEN)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ISFULLSCREEN)
 // virtual void setFullScreen(bool fullScreen) = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETFULLSCREEN)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETFULLSCREEN)
 // virtual void repaint() = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_REPAINT)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_REPAINT)
 // virtual QSize nativeSize() const = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_NATIVESIZE)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_NATIVESIZE)
 // virtual Qt::AspectRatioMode aspectRatioMode() const = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ASPECTRATIOMODE)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ASPECTRATIOMODE)
 // virtual void setAspectRatioMode(Qt::AspectRatioMode mode) = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETASPECTRATIOMODE)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETASPECTRATIOMODE)
 // virtual int brightness() const = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_BRIGHTNESS)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_BRIGHTNESS)
 // virtual void setBrightness(int brightness) = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETBRIGHTNESS)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETBRIGHTNESS)
 // virtual int contrast() const = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_CONTRAST)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -295,7 +295,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_CONTRAST)
 // virtual void setContrast(int contrast) = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETCONTRAST)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETCONTRAST)
 // virtual int hue() const = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_HUE)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_HUE)
 // virtual void setHue(int hue) = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETHUE)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETHUE)
 // virtual int saturation() const = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SATURATION)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -371,7 +371,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SATURATION)
 // virtual void setSaturation(int saturation) = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETSATURATION)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETSATURATION)
 // virtual WId winId() const = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_WINID)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -409,7 +409,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_WINID)
 // virtual void setWinId(WId id) = 0
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETWINID)
 {
-  auto obj = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -429,7 +429,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETWINID)
 // void fullScreenChanged(bool fullScreen)
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONFULLSCREENCHANGED)
 {
-  auto sender = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -451,7 +451,6 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONFULLSCREENCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -470,7 +469,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONFULLSCREENCHANGED)
 // void brightnessChanged(int brightness)
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONBRIGHTNESSCHANGED)
 {
-  auto sender = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -492,7 +491,6 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONBRIGHTNESSCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -511,7 +509,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONBRIGHTNESSCHANGED)
 // void contrastChanged(int contrast)
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONCONTRASTCHANGED)
 {
-  auto sender = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -533,7 +531,6 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONCONTRASTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -552,7 +549,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONCONTRASTCHANGED)
 // void hueChanged(int hue)
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONHUECHANGED)
 {
-  auto sender = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -574,7 +571,6 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONHUECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -593,7 +589,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONHUECHANGED)
 // void saturationChanged(int saturation)
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONSATURATIONCHANGED)
 {
-  auto sender = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -615,7 +611,6 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONSATURATIONCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -634,7 +629,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONSATURATIONCHANGED)
 // void nativeSizeChanged()
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONNATIVESIZECHANGED)
 {
-  auto sender = qobject_cast<QVideoWindowControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -654,7 +649,6 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_ONNATIVESIZECHANGED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

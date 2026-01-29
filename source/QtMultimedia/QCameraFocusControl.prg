@@ -288,7 +288,6 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ONCUSTOMFOCUSPOINTCHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -329,7 +328,6 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ONFOCUSMODECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -371,7 +369,6 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ONFOCUSPOINTMODECHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -410,7 +407,6 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED)
                 hb_itemRelease(pSender);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

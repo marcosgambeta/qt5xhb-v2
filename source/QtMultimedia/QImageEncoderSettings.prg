@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
-REQUEST QVARIANT
+REQUEST QSize
+REQUEST QVariant
 #endif
 
 CLASS QImageEncoderSettings
@@ -66,6 +66,8 @@ RETURN
 #include <QtMultimedia/QImageEncoderSettings>
 #endif
 
+#define GET_PTR_FROM_SELF(p) auto p = static_cast<QImageEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -84,17 +86,15 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_NEW)
 // ~QImageEncoderSettings()
 HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_DELETE)
 {
-  auto obj = static_cast<QImageEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_OBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool isNull() const
 HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_ISNULL)
 {
-  auto obj = static_cast<QImageEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_ISNULL)
 // QString codec() const
 HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_CODEC)
 {
-  auto obj = static_cast<QImageEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_CODEC)
 // void setCodec(const QString &)
 HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_SETCODEC)
 {
-  auto obj = static_cast<QImageEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_SETCODEC)
 // QSize resolution() const
 HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_RESOLUTION)
 {
-  auto obj = static_cast<QImageEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_SETRESOLUTION)
 {
   if (ISNUMPAR(1) && ISQSIZE(1)) {
     // void setResolution(const QSize &)
-    auto obj = static_cast<QImageEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setResolution(*PQSIZE(1));
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_SETRESOLUTION)
     RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setResolution(int width, int height)
-    auto obj = static_cast<QImageEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       obj->setResolution(PINT(1), PINT(2));
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_SETRESOLUTION)
 // QMultimedia::EncodingQuality quality() const
 HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_QUALITY)
 {
-  auto obj = static_cast<QImageEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_QUALITY)
 // void setQuality(QMultimedia::EncodingQuality quality)
 HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_SETQUALITY)
 {
-  auto obj = static_cast<QImageEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_SETQUALITY)
 // QVariant encodingOption(const QString &option) const
 HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_ENCODINGOPTION)
 {
-  auto obj = static_cast<QImageEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_ENCODINGOPTION)
 // void setEncodingOption(const QString &option, const QVariant &value)
 HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_SETENCODINGOPTION)
 {
-  auto obj = static_cast<QImageEncoderSettings *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

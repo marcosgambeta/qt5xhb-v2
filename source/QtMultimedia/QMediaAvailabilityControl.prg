@@ -50,20 +50,20 @@ RETURN
 #include <QtMultimedia/QMediaAvailabilityControl>
 #endif
 
-    // ~QMediaAvailabilityControl()
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QMediaAvailabilityControl *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// ~QMediaAvailabilityControl()
 HB_FUNC_STATIC(QMEDIAAVAILABILITYCONTROL_DELETE)
 {
-  auto obj = qobject_cast<QMediaAvailabilityControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // virtual QMultimedia::AvailabilityStatus availability() const = 0
 HB_FUNC_STATIC(QMEDIAAVAILABILITYCONTROL_AVAILABILITY)
 {
-  auto obj = qobject_cast<QMediaAvailabilityControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QMEDIAAVAILABILITYCONTROL_AVAILABILITY)
 // void availabilityChanged(QMultimedia::AvailabilityStatus availability)
 HB_FUNC_STATIC(QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED)
 {
-  auto sender = qobject_cast<QMediaAvailabilityControl *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -104,7 +104,6 @@ HB_FUNC_STATIC(QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED)
                                                hb_itemRelease(pArg1);
                                              }
                                            });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_SETVALUE)
   }
 }
 
-// virtual QVariantList supportedParameterRange(QCameraExposureControl::ExposureParameter parameter, bool * continuous)
+// virtual QVariantList supportedParameterRange(QCameraExposureControl::ExposureParameter parameter, bool *continuous)
 // const = 0
 HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE)
 {
@@ -207,7 +207,6 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -248,7 +247,6 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -289,7 +287,6 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }

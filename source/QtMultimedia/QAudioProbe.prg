@@ -53,7 +53,9 @@ RETURN
 #include <QtMultimedia/QAudioProbe>
 #endif
 
-    // QAudioProbe(QObject *parent = nullptr)
+#define GET_PTR_FROM_SELF(p) auto p = qobject_cast<QAudioProbe *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QAudioProbe(QObject *parent = nullptr)
 HB_FUNC_STATIC(QAUDIOPROBE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -67,17 +69,15 @@ HB_FUNC_STATIC(QAUDIOPROBE_NEW)
 // ~QAudioProbe()
 HB_FUNC_STATIC(QAUDIOPROBE_DELETE)
 {
-  auto obj = qobject_cast<QAudioProbe *>(Qt5xHb::getQObjectPointerFromSelfItem());
-
+  GET_PTR_FROM_SELF(obj);
   DELETE_QOBJECT(obj);
-
   RETURN_SELF();
 }
 
 // bool isActive() const
 HB_FUNC_STATIC(QAUDIOPROBE_ISACTIVE)
 {
-  auto obj = qobject_cast<QAudioProbe *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != nullptr) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -96,14 +96,14 @@ HB_FUNC_STATIC(QAUDIOPROBE_SETSOURCE)
 {
   if (ISNUMPAR(1) && ISQMEDIAOBJECT(1)) {
     // bool setSource(QMediaObject *source)
-    auto obj = qobject_cast<QAudioProbe *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->setSource(PQMEDIAOBJECT(1)));
     }
   } else if (ISNUMPAR(1) && ISQMEDIARECORDER(1)) {
     // bool setSource(QMediaRecorder *source)
-    auto obj = qobject_cast<QAudioProbe *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != nullptr) {
       RBOOL(obj->setSource(PQMEDIARECORDER(1)));
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QAUDIOPROBE_SETSOURCE)
 // void audioBufferProbed(const QAudioBuffer &buffer)
 HB_FUNC_STATIC(QAUDIOPROBE_ONAUDIOBUFFERPROBED)
 {
-  auto sender = qobject_cast<QAudioProbe *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -138,7 +138,6 @@ HB_FUNC_STATIC(QAUDIOPROBE_ONAUDIOBUFFERPROBED)
                 hb_itemRelease(pArg1);
               }
             });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
@@ -157,7 +156,7 @@ HB_FUNC_STATIC(QAUDIOPROBE_ONAUDIOBUFFERPROBED)
 // void flush()
 HB_FUNC_STATIC(QAUDIOPROBE_ONFLUSH)
 {
-  auto sender = qobject_cast<QAudioProbe *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(sender);
 
   auto result = false;
 
@@ -176,7 +175,6 @@ HB_FUNC_STATIC(QAUDIOPROBE_ONFLUSH)
             hb_itemRelease(pSender);
           }
         });
-
         Qt5xHb::Signals_store_connection(indexOfCodeBlock, connection);
         result = true;
       }
